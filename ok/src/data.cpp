@@ -1,10 +1,28 @@
 #include "data.hpp"
 
+Period::Period(int start, int length)
+:
+	start(start),
+	length(length)
+{
+}
+
+bool PeriodLess::operator()(Period& p1, Period& p2)
+{
+	return p1.start < p2.start;
+}
+
+FlowshopSchedule::FlowshopSchedule(Flowshop& f)
+{
+	tasks[0].resize(f.tasks.size());
+    tasks[1].resize(f.tasks.size());
+}
+
 template<class T> istream& operator>>(istream& is, vector<T>& v)
 {
 	int n; is >> n;
 
-	v.reserve(n);
+	v.resize(n);
 	for (int i=0; i<n; i++)
 		is >> v[i];
 
@@ -67,16 +85,17 @@ istream& operator>>(istream& is, Flowshop& f)
 	return is;
 }
 
-ostream& operator<<(ostream& os, TaskSchedule& s)
+ostream& operator<<(ostream& os, TaskSchedule& ts)
 {
-    os << s.periods;
+    os << ts.periods;
 
     return os;
 };
 
-ostream& operator<<(ostream& os, FlowshopSchedule& s)
+ostream& operator<<(ostream& os, FlowshopSchedule& fs)
 {
-	os << s.tasks;
+	os << fs.tasks[0];
+	os << fs.tasks[1];
 
 	return os;
 };
