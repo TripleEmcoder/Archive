@@ -13,6 +13,7 @@ struct Period
 {
 	int start;   //moment rozpoczecia
 	int length;  //dlugosc okresu
+	int stop;    //moment zakonczenia
 	
 	Period(int start=0, int length=0);
 	bool operator<(const Period& p) const;
@@ -28,6 +29,7 @@ struct Task
 	int arrival;     //moment przybycia
 	int setups[2];   //czasy rozruchu
 	int lengths[2];  //czasy trwania
+	int sums[2];     //sumy powyzszych
 };
 
 struct Flowshop

@@ -44,6 +44,7 @@ istream& operator>>(istream& is, Period& p)
 {
 	is >> p.start;
 	is >> p.length;
+	p.stop = p.start + p.length;
 
 	return is;
 }
@@ -64,6 +65,9 @@ istream& operator>>(istream& is, Task& t)
 	is >> t.lengths[0];
 	is >> t.setups[1];
 	is >> t.lengths[1];
+	
+	t.sums[0] = t.setups[0] + t.lengths[0];
+	t.sums[1] = t.setups[1] + t.lengths[1];
 
 	return is;
 }
