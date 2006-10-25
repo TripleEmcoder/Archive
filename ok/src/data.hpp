@@ -13,17 +13,14 @@ struct Period
 {
 	int start;   //moment rozpoczecia
 	int length;  //dlugosc okresu
-	Period(int start = 0, int length = 0); 
+	
+	Period(int start=0, int length=0);
+	bool operator<(const Period& p) const;
 };
 
 struct PeriodLess
 {
 	bool operator()(Period& p1, Period& p2);
-};
-
-struct Machine
-{
-	vector<Period> offlines; //okresy bezczynnosci	
 };
 
 struct Task
@@ -35,18 +32,19 @@ struct Task
 
 struct Flowshop
 {
-	Machine machines[2];
+	vector<Period> offlines;
 	vector<Task> tasks;
 };
 
 struct TaskSchedule
 {
-	vector<Period> periods;
+	vector<Period> periods[2];
 };
 
 struct FlowshopSchedule
 {
-	vector<TaskSchedule> tasks[2];
+	vector<TaskSchedule> tasks;
+
 	FlowshopSchedule(Flowshop& f);
 };
 

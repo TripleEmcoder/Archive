@@ -7,15 +7,14 @@ Period::Period(int start, int length)
 {
 }
 
-bool PeriodLess::operator()(Period& p1, Period& p2)
+bool Period::operator<(const Period& p) const
 {
-	return p1.start < p2.start;
+	return start < p.start;
 }
 
 FlowshopSchedule::FlowshopSchedule(Flowshop& f)
 {
-	tasks[0].resize(f.tasks.size());
-    tasks[1].resize(f.tasks.size());
+    tasks.resize(f.tasks.size());
 }
 
 template<class T> istream& operator>>(istream& is, vector<T>& v)
@@ -58,13 +57,6 @@ ostream& operator<<(ostream& os, Period& p)
     return os;
 };
 
-istream& operator>>(istream& is, Machine& m)
-{
-	is >> m.offlines;
-
-	return is;
-}
-
 istream& operator>>(istream& is, Task& t)
 {
 	is >> t.arrival;
@@ -78,24 +70,25 @@ istream& operator>>(istream& is, Task& t)
 
 istream& operator>>(istream& is, Flowshop& f)
 {
-	is >> f.machines[0];
-	is >> f.machines[1];
+	is >> f.offlines;
 	is >> f.tasks;
+	
+	sort(f.offlines.begin(), f.offlines.end());
 
 	return is;
 }
 
 ostream& operator<<(ostream& os, TaskSchedule& ts)
 {
-    os << ts.periods;
+    os << ts.periods[0];
+	os << ts.periods[1];
 
     return os;
 };
 
 ostream& operator<<(ostream& os, FlowshopSchedule& fs)
 {
-	os << fs.tasks[0];
-	os << fs.tasks[1];
+	os << fs.tasks;
 
 	return os;
 };
