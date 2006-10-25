@@ -17,8 +17,9 @@ int main()
 	do 
 	{	
 		FlowshopSchedule fs(f);
-		cout << schedule(f, fs, p) << endl;
+		schedule(f, fs, p);
 		cout << fs;
+		cout << "----" << endl;
 	}
 	while (next_permutation(p.begin(), p.end()));
 
