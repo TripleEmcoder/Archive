@@ -1,12 +1,13 @@
 #include "common.hpp"
 
 #include <iostream>
+#include <algorithm>
 
 int schedule(Flowshop& f, FlowshopSchedule& fs, vector<int>& p)
 {
 	int time[2] = {0, 0};
 
-	for (int i=0; i<p.size(); i++)
+	for (unsigned i=0; i<p.size(); i++)
 	{
 		Task& t = f.tasks[p[i]];
 		TaskSchedule& ts = fs.tasks[p[i]];
