@@ -49,18 +49,18 @@ Top=125
 Width=544
 Height=376
 MaxLeft=-4
-MaxTop=107
+MaxTop=104
 MaxWidth=1032
-MaxHeight=635
+MaxHeight=638
 ClientWidth=1024
-ClientHeight=601
-LeftPanelSize=188
-LeftPanelClients=CallStackWindow,LocalVarsWindow,BreakpointWindow,CodeExplorer@EditWindow0
-LeftPanelData=00000400030000000F00000043616C6C537461636B57696E646F770F0000004C6F63616C5661727357696E646F7708000000425057696E646F77CA0100000000000000BC000000000000000100000000CA0100000C000000436F64654578706C6F726572FFFFFFFF
+ClientHeight=604
+LeftPanelSize=0
+LeftPanelClients=CallStackWindow,CodeExplorer@EditWindow0,LocalVarsWindow,BreakpointWindow
+LeftPanelData=00000400040000000F00000043616C6C537461636B57696E646F770C000000436F64654578706C6F7265720F0000004C6F63616C5661727357696E646F7708000000425057696E646F77CA0100000000000000BC00000000000000FFFFFFFF
 RightPanelSize=0
-BottomPanelSize=52
-BottomPanelClients=WatchWindow,MessageView@EditWindow0
-BottomPanelData=00000400010000000B000000576174636857696E646F7700000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
+BottomPanelSize=0
+BottomPanelClients=MessageView@EditWindow0,WatchWindow
+BottomPanelData=00000400020000000B0000004D657373616765566965770B000000576174636857696E646F770000000000000000000000000000000000FFFFFFFF
 
 [View0]
 Module=C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\vd.dpr
@@ -72,8 +72,8 @@ LeftCol=1
 [View1]
 Module=C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\main.pas
 CursorX=46
-CursorY=244
-TopLine=239
+CursorY=246
+TopLine=236
 LeftCol=1
 
 [PackageWindow0]
@@ -191,10 +191,10 @@ ClientHeight=358
 TBDockHeight=386
 LRDockWidth=190
 Dockable=1
-SplitPos=113
+SplitPos=85
 ArrangeBy=Name
-SelectedItem=Options
-ExpandedItems=Brush,HorzScrollBar,VertScrollBar
+SelectedItem=Caption
+ExpandedItems=Brush
 HiddenCategories=Legacy
 ShowStatusBar=1
 
@@ -310,23 +310,23 @@ ShowChecked=1
 
 [CodeExplorer@EditWindow0]
 Create=1
-Visible=1
+Visible=0
 State=0
 Left=0
-Top=12
+Top=207
 Width=188
-Height=516
+Height=179
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=188
-ClientHeight=516
+ClientHeight=179
 TBDockHeight=305
 LRDockWidth=188
 Dockable=1
 
 [MessageView@EditWindow0]
 Create=1
-Visible=1
+Visible=0
 State=0
 Left=12
 Top=0
