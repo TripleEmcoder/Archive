@@ -9,12 +9,12 @@ double randr(double min, double max)
 	return ((double)rand() / (double)RAND_MAX) * (max-min) + min;
 }
 
-void main()
+int main()
 {
 	int offlines,tasks;
 	double x=0;
 	srand((unsigned)time(0));
-	scanf_s("%d %d",&offlines,&tasks);
+	scanf("%d %d",&offlines,&tasks);
 	printf("%d\n",offlines); 
 	for (int i=0; i<offlines; ++i)
 	{

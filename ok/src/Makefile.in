@@ -34,7 +34,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-noinst_PROGRAMS = brute$(EXEEXT)
+noinst_PROGRAMS = brute$(EXEEXT) generator$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -47,6 +47,9 @@ PROGRAMS = $(noinst_PROGRAMS)
 am_brute_OBJECTS = brute.$(OBJEXT) data.$(OBJEXT) common.$(OBJEXT)
 brute_OBJECTS = $(am_brute_OBJECTS)
 brute_LDADD = $(LDADD)
+am_generator_OBJECTS = generator.$(OBJEXT)
+generator_OBJECTS = $(am_generator_OBJECTS)
+generator_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I. -I$(srcdir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -55,8 +58,8 @@ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
 CXXLD = $(CXX)
 CXXLINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
-SOURCES = $(brute_SOURCES)
-DIST_SOURCES = $(brute_SOURCES)
+SOURCES = $(brute_SOURCES) $(generator_SOURCES)
+DIST_SOURCES = $(brute_SOURCES) $(generator_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -136,6 +139,7 @@ sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
 brute_SOURCES = brute.cpp data.cpp common.cpp
+generator_SOURCES = generator.cpp
 all: all-am
 
 .SUFFIXES:
@@ -175,6 +179,9 @@ clean-noinstPROGRAMS:
 brute$(EXEEXT): $(brute_OBJECTS) $(brute_DEPENDENCIES) 
 	@rm -f brute$(EXEEXT)
 	$(CXXLINK) $(brute_LDFLAGS) $(brute_OBJECTS) $(brute_LDADD) $(LIBS)
+generator$(EXEEXT): $(generator_OBJECTS) $(generator_DEPENDENCIES) 
+	@rm -f generator$(EXEEXT)
+	$(CXXLINK) $(generator_LDFLAGS) $(generator_OBJECTS) $(generator_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -185,6 +192,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/brute.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/common.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/data.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/generator.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \

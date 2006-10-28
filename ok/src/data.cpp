@@ -3,7 +3,8 @@
 Period::Period(int start, int length)
 :
 	start(start),
-	length(length)
+	length(length),
+	stop(start+length)
 {
 }
 
