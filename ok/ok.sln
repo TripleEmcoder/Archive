@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "generator", "src\generator.vcproj", "{BAFF0EC3-AA02-4BE3-B234-861C43489CED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brute", "src\brute.vcproj", "{46D596BC-E176-49AF-9199-62570BD1E884}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAFF0EC3-AA02-4BE3-B234-861C43489CED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAFF0EC3-AA02-4BE3-B234-861C43489CED}.Debug|Win32.Build.0 = Debug|Win32
+		{BAFF0EC3-AA02-4BE3-B234-861C43489CED}.Release|Win32.ActiveCfg = Release|Win32
+		{BAFF0EC3-AA02-4BE3-B234-861C43489CED}.Release|Win32.Build.0 = Release|Win32
+		{46D596BC-E176-49AF-9199-62570BD1E884}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46D596BC-E176-49AF-9199-62570BD1E884}.Debug|Win32.Build.0 = Debug|Win32
+		{46D596BC-E176-49AF-9199-62570BD1E884}.Release|Win32.ActiveCfg = Release|Win32
+		{46D596BC-E176-49AF-9199-62570BD1E884}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

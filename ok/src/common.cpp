@@ -59,7 +59,7 @@ int simulate_backward(vector<Period>& onlines, int time, int length)
 	i = upper_bound(onlines.begin(), onlines.end(), time)-1;
 	cerr << "lb: " << i->start << " " << i->length << endl;
 	
-	for (; length != 0; i--)
+	for (;; i--)
 	{
 		int stop = min(i->stop, time);
 		cerr << "length: " << length << endl;
@@ -68,6 +68,9 @@ int simulate_backward(vector<Period>& onlines, int time, int length)
 		length -= part;
 		time = stop - part;
 		cerr << "new_time: " << time << endl;
+
+        if (length == 0)
+            break;
 	}
 	
 	return time;
@@ -104,7 +107,7 @@ vector<Period> schedule_periods(vector<Period>& onlines, int time, int length)
 }
 
 
-int schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
+void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 {
 	//popychamy czas do momentu przybycia zadania
 	time[0] = max(time[0], t.arrival);
