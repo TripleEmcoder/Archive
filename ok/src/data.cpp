@@ -8,9 +8,14 @@ Period::Period(int start, int length)
 {
 }
 
-bool Period::operator<(const Period& p) const
+bool operator<(const Period& p1, const Period& p2)
 {
-	return start < p.start;
+	return p1.start < p2.start;
+}
+
+bool operator<(const Period& p, int start)
+{
+	return p.start < start;
 }
 
 FlowshopSchedule::FlowshopSchedule(Flowshop& f)
@@ -57,7 +62,7 @@ ostream& operator<<(ostream& os, Period& p)
 	os << p.length;
 
     return os;
-};
+}
 
 istream& operator>>(istream& is, Task& t)
 {
@@ -77,9 +82,14 @@ istream& operator>>(istream& is, Flowshop& f)
 {
 	is >> f.offlines;
 	is >> f.tasks;
-	
-	sort(f.offlines.begin(), f.offlines.end());
 
+	//dla spojnosci kodu dodajemy pseudo-przerwy na krancach czasu
+	f.offlines.push_back(Period(0, 0));
+	f.offlines.push_back(Period(numeric_limits<int>().max(), 0));
+	
+	//nie ma sensu przegladac przerw inaczej niz chronologicznie
+	sort(f.offlines.begin(), f.offlines.end());
+	
 	return is;
 }
 
@@ -89,11 +99,11 @@ ostream& operator<<(ostream& os, TaskSchedule& ts)
 	os << ts.periods[1];
 
     return os;
-};
+}
 
 ostream& operator<<(ostream& os, FlowshopSchedule& fs)
 {
 	os << fs.tasks;
 
 	return os;
-};
+}

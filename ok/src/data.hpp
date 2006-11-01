@@ -17,8 +17,10 @@ struct Period
 	int stop;    //moment zakonczenia
 	
 	Period(int start=0, int length=0);
-	bool operator<(const Period& p) const;
 };
+
+bool operator<(const Period& p1, const Period& p2);
+bool operator<(const Period& p, int start);
 
 struct PeriodLess
 {
