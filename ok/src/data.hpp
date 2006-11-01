@@ -55,4 +55,5 @@ struct FlowshopSchedule
 };
 
 istream& operator>>(istream& is, Flowshop& f);
+ostream& operator<<(ostream& os, Flowshop& f);
 ostream& operator<<(ostream& os, FlowshopSchedule& fs);

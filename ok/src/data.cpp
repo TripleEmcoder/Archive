@@ -1,5 +1,8 @@
 #include "data.hpp"
 
+#include <algorithm>
+#include <limits>
+
 Period::Period(int start, int length)
 :
 	start(start),
@@ -38,7 +41,7 @@ template<class T> ostream& operator<<(ostream& os, vector<T>& v)
 {
 	os << v.size() << endl;
 
-    for (int i=0; i<v.size(); i++)
+    for (int i=0; i<(int)v.size(); i++)
         os << v[i] << " ";
 
 	os << endl;
@@ -93,6 +96,17 @@ istream& operator>>(istream& is, Flowshop& f)
 	return is;
 }
 
+ostream& operator<<(ostream& os, Flowshop& f)
+{
+	vector<Period> t;
+	t.insert(t.begin(),f.offlines.begin()+1,f.offlines.end()-1);
+	os << t;
+	os << f.tasks;
+
+	return os;
+}
+
+
 ostream& operator<<(ostream& os, TaskSchedule& ts)
 {
     os << ts.periods[0];
@@ -104,6 +118,13 @@ ostream& operator<<(ostream& os, TaskSchedule& ts)
 ostream& operator<<(ostream& os, FlowshopSchedule& fs)
 {
 	os << fs.tasks;
+
+	return os;
+}
+
+ostream& operator<<(ostream& os, Task& t)
+{
+	os << t.arrival << " " << t.setups[0] << " " << t.lengths[0] << " " << t.setups[1] << " " << t.lengths[1] << endl;
 
 	return os;
 }
