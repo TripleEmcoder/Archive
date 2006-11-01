@@ -2,26 +2,191 @@
 
 #include <algorithm>
 #include <iostream>
+#include <cassert>
 
-int sum(Task& t, vector<Period>& o, int time[2])
+vector<Period> offlines2onlines(vector<Period>& offlines, int setup)
 {
-	//poczatek ciagu przerw w przedziale <time[0], time[1])
-	vector<Period>::iterator o1 = lower_bound(o.begin(), o.end(), time[0]);
-			
-	//koniec ciagu przerw w przedziale <time[0], time[1])
-	vector<Period>::iterator o2 = lower_bound(o.begin(), o.end(), time[1]);
-	if (o2 != o.end() && o2->start == time[1]) o2++; //upper_bound
+	vector<Period> onlines;
+	vector<Period>::iterator i;
 
-	//suma dlugosci, przerw i odpowiedniej liczby przygotowan
-	int result = t.sums[0];
-	
-	if (o1<o2)
-		for (vector<Period>::iterator j=o1; j!=o2; j++)
+	for (i = offlines.begin(); i != offlines.end()-1; i++)
+	{
+		int start = i->stop + setup;
+		int length = (i+1)->start - start;
+
+		if (length > 0)
 		{
-			result += t.setups[0] + j->length;
+			cerr << "online(" << start << ", " << length << ")" << endl;
+			onlines.push_back(Period(start, length));
 		}
+	}
 
-	return result;
+	return onlines;
+}
+
+int simulate_forward(vector<Period>& onlines, int time, int length)
+{
+	vector<Period>::iterator i;
+	
+	//znajdujemy pierwszy mozliwy okres przetwarzania
+	i = upper_bound(onlines.begin(), onlines.end(), time);
+	
+	if (i != onlines.begin() && (i-1)->stop > time)
+		i--;
+		
+	cerr << "time: " << time <<endl;
+	cerr << "ub: " << i->start << " " << i->length << endl;
+	
+	for (; length != 0; i++)
+	{
+		int start = max(i->start, time);
+		cerr << "length: " << length << endl;
+		int part = min(i->stop - start, length);
+		cerr << "part: " << part << endl;
+		length -= part;
+		time = start + part;
+		cerr << "new_time: " << time << endl;
+	}
+
+	return time;
+}
+
+int simulate_backward(vector<Period>& onlines, int time, int length)
+{
+	vector<Period>::iterator i;
+	
+	//znajdujemy ostatni mozliwy okres przetwarzania
+	i = upper_bound(onlines.begin(), onlines.end(), time)-1;
+	cerr << "lb: " << i->start << " " << i->length << endl;
+	
+	for (; length != 0; i--)
+	{
+		int stop = min(i->stop, time);
+		cerr << "length: " << length << endl;
+		int part = min(stop - i->start, length);
+		cerr << "part: " << part << endl;
+		length -= part;
+		time = stop - part;
+		cerr << "new_time: " << time << endl;
+	}
+	
+	return time;
+}
+
+vector<Period> schedule_periods(vector<Period>& onlines, int time, int length)
+{
+	vector<Period> periods;
+	vector<Period>::iterator i;
+	
+	//znajdujemy pierwszy mozliwy okres przetwarzania
+	i = upper_bound(onlines.begin(), onlines.end(), time);
+
+	if (i != onlines.begin() && (i-1)->stop > time)
+		i--;
+
+	cerr << "time: " << time <<endl;
+	cerr << "ub: " << i->start << " " << i->length << endl;
+	
+	for (; length != 0; i++)
+	{
+		int start = max(i->start, time);
+		cerr << "length: " << length << endl;
+		int part = min(i->stop - start, length);
+		cerr << "part: " << part << endl;
+		length -= part;
+		time = start + part;
+		cerr << "new_time: " << time << endl;
+		cerr << "work(" << start << ", " << length << ")" << endl;		
+		periods.push_back(Period(start, part));
+	}
+
+	return periods;
+}
+
+
+int schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
+{
+	//popychamy czas do momentu przybycia zadania
+	time[0] = max(time[0], t.arrival);
+	
+	time[0] += t.setups[0];
+	
+	//tworzymy liste potencjalnych okresow przetwarzania
+	vector<Period> onlines = offlines2onlines(f.offlines, t.setups[0]);
+	
+	//wyliczamy najkrotsze mozliwe uszeregowanie
+	time[0] = simulate_forward(onlines, time[0], t.lengths[0]);
+	cerr << "time[0]F = " << time[0] << endl;
+
+	//druga maszyna rozpoczyna po pierwszej (jesli moze)
+	time[1] = max(time[0], time[1]);
+	cerr << "time[1]M = " << time[1] << endl;
+	
+	//dosuwamy przetwarzanie na pierwszej do poczatku drugiej
+	time[0] = simulate_backward(onlines, time[1], t.lengths[0]);
+	cerr << "time[0]B = " << time[0] << endl;
+	
+	//generujemy uszeregowanie wg obliczonego czasu
+	ts.periods[0] = schedule_periods(onlines, time[0], t.lengths[0]);
+	
+	//dodajemy calosc zadania na maszynie drugiej
+	ts.periods[1].push_back(Period(time[1]+t.setups[1], t.lengths[1]));
+	
+	time[0] = time[1];
+	time[1] += t.sums[1];
+
+	cerr << "time[0] = " << time[0] << endl;
+	cerr << "time[1] = " << time[1] << endl;
+	
+	
+	/*			
+	vector<Period>::iterator j = f.offlines.begin();
+
+		
+	while (j != f.offlines.end())
+	{
+		j = lower_bound(j, f.offlines.end(), time[0]);
+		if (j != f.offlines.end() && j->start == time[0]) j++; //upper_bound
+
+		//popychamy czas do konca poprzedniej przerwy
+		if (j != f.offlines.begin())
+			time[0] = max(time[0], (j-1)->stop);	
+
+		if (j != f.offlines.end())
+			//czy jest czas wykonac cokolwiek z zadania
+			if (j->start - time[0] > t.setups[0])
+			{
+				//czesc ktora zostanie wykonana w tym okresie
+				int part = min(remaining, j->start - time[0] - t.setups[0]);
+				ts.periods[0].push_back(Period(time[0] + t.setups[0], part));
+				
+				
+				if (part > 0)
+				{
+					remaining -= part;
+					
+					//popychamy czas na koniec okresu przetwarzania
+					time[0] = time[0] + t.setups[0] + part;
+					continue;
+				}
+			}
+		
+		//ominiecie niewykorzystanego okresu
+		time[0] = j->stop;
+	}	
+
+	if (remaining > 0)
+	{
+		//koniec przerw, wrzucamy wszystko co zostalo
+		ts.periods[0].push_back(Period(time[0] + t.setups[0], remaining));
+		time[0] = time[0] + t.setups[0] + remaining;
+	}
+	
+	
+	if (delay > 0)
+	{
+	}
+	*/	
 }
 
 int schedule(Flowshop& f, FlowshopSchedule& fs, vector<int>& p)
@@ -30,73 +195,17 @@ int schedule(Flowshop& f, FlowshopSchedule& fs, vector<int>& p)
 	
 	for (size_t i=0; i<p.size(); i++)
 	{
-		Task& t = f.tasks[p[i]];
-		TaskSchedule& ts = fs.tasks[p[i]];
+		assert(p[i] >= 0);
+		assert(p[i] < f.tasks.size());
+		assert(p[i] < fs.tasks.size());
 		
-		//popchniecie czasu do momentu przybycia
-		time[0] = max(time[0], t.arrival);
-
-		//dopasowanie do wymagania no-wait	
-		int total = sum(t, f.offlines, time);
-		if (p[i] == 5)
-			cerr << time[0] << " " << time[1] << " " << total << endl;
-			
-		time[1] = max(time[1], time[0] + total);
-		time[0] = time[1] - total;
-		
-		int remaining = t.lengths[0];
-				
-		vector<Period>::iterator j = f.offlines.begin();
-		
-		while (j != f.offlines.end())
-		{
-			j = lower_bound(j, f.offlines.end(), time[0]);
-			if (j != f.offlines.end() && j->start == time[0]) j++; //upper_bound
-
-			//popychamy czas do konca poprzedniej przerwy
-			if (j != f.offlines.begin())
-				time[0] = max(time[0], (j-1)->stop);	
-
-			if (j != f.offlines.end())
-				//czy jest czas wykonac cokolwiek z zadania
-				if (j->start - time[0] > t.setups[0])
-				{
-					//czesc ktora zostanie wykonana w tym okresie
-					int part = min(remaining, j->start - time[0] - t.setups[0]);
-					ts.periods[0].push_back(Period(time[0] + t.setups[0], part));
-				
-					remaining -= part;
-				
-					//popychamy czas na koniec okresu przetwarzania
-					time[0] = time[0] + t.setups[0] + part;
-				
-					if (remaining == 0)
-						break;
-				}
-				else
-				{
-					time[0] = j->stop;
-				}
-		}	
-
-		if (remaining > 0)
-		{
-			//koniec przerw, wrzucamy wszystko co zostalo
-			ts.periods[0].push_back(Period(time[0] + t.setups[0], remaining));
-			time[0] = time[0] + t.setups[0] + remaining;
-		}
-
-		//druga maszyna rozpoczyna natychmiast po pierwszej
-		time[1] = time[0];
-
-		ts.periods[1].push_back(Period(time[1]+t.setups[1], t.lengths[1]));
-		time[1] += t.setups[1] + t.lengths[1];
+		schedule_task(f, f.tasks[p[i]], fs.tasks[p[i]], time);
 	}
 	
 	return time[1];
 }
 
-bool verify(vector<Period>& v)
+bool verify_separation(vector<Period>& v)
 {
 	sort(v.begin(), v.end());
 
@@ -156,8 +265,8 @@ bool verify(Flowshop& f, FlowshopSchedule& fs)
 			v[0].push_back(Period(ts.periods[0][j].start-t.setups[0], t.setups[0]));
 	}
 	
-//	if (!verify(v[0]) || !verify(v[1]))
-//		return false;
+	if (!verify_separation(v[0]) || !verify_separation(v[1]))
+		return false;
 		
 	return true;
 }

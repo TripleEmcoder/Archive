@@ -14,7 +14,7 @@ int main()
 	for (int i=0; i<p.size(); i++)
 		p[i] = i;
 
-
+/*
 	p[0] = 0;
 	p[1] = 7;
 	p[2] = 5;
@@ -23,13 +23,17 @@ int main()
 	p[5] = 6;
 	p[6] = 4;
 	p[7] = 3;
-
+*/
 
 	int cmax_min = numeric_limits<int>().max();
 	FlowshopSchedule fs_min(f);
 
+	int pass = 0;
+
 	do 
 	{	
+		cerr << "pass=" << pass++ << endl;
+		
 		FlowshopSchedule fs(f);
 		int cmax = schedule(f, fs, p);
 
