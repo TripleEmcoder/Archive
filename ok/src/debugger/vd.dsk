@@ -30,7 +30,7 @@ FormOnTop=0
 FormState=0
 FormOnTop=1
 
-[C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\ProjectGroup1.bpg]
+[C:\Program Files\Borland\Delphi5\Projects\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -71,9 +71,9 @@ LeftCol=1
 
 [View1]
 Module=C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\main.pas
-CursorX=46
-CursorY=246
-TopLine=236
+CursorX=15
+CursorY=184
+TopLine=167
 LeftCol=1
 
 [PackageWindow0]
@@ -123,8 +123,8 @@ Left=0
 Top=0
 Width=800
 Height=112
-MaxLeft=-1
-MaxTop=-1
+MaxLeft=-4
+MaxTop=-4
 MaxWidth=1032
 MaxHeight=112
 ClientWidth=1024

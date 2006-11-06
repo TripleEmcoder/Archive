@@ -180,7 +180,8 @@ if OpenDialog.Execute then
     readln(f,tasks.k);
     SetLength(tasks.idle,tasks.k+1);
     for i:= 1 to tasks.k do
-        readln(f,tasks.idle[i].start,tasks.idle[i].length);
+        read(f,tasks.idle[i].start,tasks.idle[i].length);
+    readln(f);
     readln(f,tasks.n);
     SetLength(tasks.task,2*tasks.n+1);
     for i:= 1 to tasks.n do

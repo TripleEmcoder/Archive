@@ -26,7 +26,8 @@ int main()
 	printf("%d\n",tasks); 
 	for (int i=0; i<tasks; ++i)
 	{
-		double arr = randr(0,tasks*75/5);
+		//double arr = randr(0,tasks*75/5);
+		double arr = 0;
 		double p1 = randr(5,100);
 		double p2 = randr(5,100);
 		double s1 = randr(1,0.5*p1);

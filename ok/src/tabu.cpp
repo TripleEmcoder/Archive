@@ -14,9 +14,11 @@ typedef pair<unsigned,unsigned> Move;
 typedef vector<int> Order;
 typedef list<Move> Tabulist;
 
-const size_t max_tabu = 5;
-const int max_count = 10;
-const int max_reset = 3;
+const size_t max_tabu = 10;
+const int max_count = 15;
+const int max_reset = 2;
+
+int global_cmax_min;
 
 int rand(size_t max)
 {
@@ -57,25 +59,37 @@ void make_move(Order& p,unsigned i, unsigned j)
 	p.insert(p.begin()+j,temp);
 }
 
+class Move_eq
+{
+	Move m,m1;
+public:	
+	Move_eq(Move m): m(m), m1(Move(m.second,m.first)) {};
+	bool operator()(const Move& a) { return a==m || a==m1; }; 
+};
+
+
 void local_min(Flowshop& f, Order& p, Tabulist& tabu, Order& k_min, FlowshopSchedule& fs_min, int& cmax_min, Move& move_min)
 {
 	Move move(0,0);
 	while (next_move(p,move))
 	{
-		if (find(tabu.begin(),tabu.end(),move) != tabu.end())
-			continue;
-		if (find(tabu.begin(),tabu.end(),Move(move.second,move.first)) != tabu.end())
-			continue;
+		bool in_tabu = find_if(tabu.begin(),tabu.end(),Move_eq(move)) != tabu.end();
 
 		make_move(p,move.first,move.second);
 		
 		FlowshopSchedule fs(f);
 		int cmax = schedule(f, fs, p);
 
-		if (cmax < cmax_min)
+		if (cmax < global_cmax_min)
+		{
+			fs_min = fs;
+			k_min = p;
+			global_cmax_min = cmax_min = cmax;
+			move_min = move;
+		}
+		else if (cmax < cmax_min && !in_tabu)
 		{
 			k_min = p;
-			fs_min = fs;
 			cmax_min = cmax;
 			move_min = move;
 		}
@@ -99,7 +113,7 @@ int main()
 
 	FlowshopSchedule fs_min(f);
 	Order k_min = p;
-	int global_cmax_min = schedule(f,fs_min,k_min);
+	global_cmax_min = schedule(f,fs_min,k_min);
 	
 	int cmax_min = numeric_limits<int>::max();
 	int count = 0;
@@ -114,8 +128,8 @@ int main()
 		int cmax = numeric_limits<int>::max();
 		Move move;
 		local_min(f,p,tabu,k,fs,cmax,move);
-		//cerr << cmax << " " << k << move.first << "->" << move.second << endl;
-		cerr << cmax << endl;
+		cerr << cmax << " " << k << move.first << "->" << move.second << endl;
+		//cerr << cmax << endl;
 		p = k;
 		
 		if (tabu.size() == max_tabu)
@@ -142,7 +156,7 @@ int main()
 			cmax_min = numeric_limits<int>::max();
 			tabu.clear();
 			reset_count++;
-			//cerr << "reset\n";
+			cerr << "reset\n";
 		}
 	}
 	
