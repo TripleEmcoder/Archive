@@ -11,6 +11,7 @@ int main()
 	Flowshop f;
 	cin >> f;
 
+
 	vector<int> p(f.tasks.size());
 	for (int i=0; i<p.size(); i++)
 		p[i] = i;
@@ -33,7 +34,7 @@ int main()
 
 	do 
 	{	
-		cerr << "pass=" << pass++ << endl;
+		cout << "pass=" << pass++ << " " << cmax_min << endl;
 		
 		FlowshopSchedule fs(f);
 		int cmax = schedule(f, fs, p);
@@ -44,18 +45,24 @@ int main()
 			fs_min = fs;
 		}
 
-		if (!verify(f, fs))
+		try
 		{
-			cerr << "!verify" << endl;
+			verify(f, fs);
+		}
+		catch (const char* message)
+		{
+			cout << "!!!!!" << endl;
+			cout << message << endl;
+			cout << "!!!!!" << endl;
+			cout << f;
 			cout << cmax << endl;
 			cout << fs;
 			return 1;
 		}
-
-		break;
 	}
 	while (next_permutation(p.begin(), p.end()));
-	
+
+	cout << f;	
 	cout << cmax_min << endl;
 	cout << fs_min;
 

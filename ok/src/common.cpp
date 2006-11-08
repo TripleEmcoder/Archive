@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <iostream>
 #include <cassert>
+#include <string>
 
 vector<Period> offlines2onlines(vector<Period>& offlines, int setup)
 {
@@ -124,6 +125,22 @@ void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 	//druga maszyna rozpoczyna po pierwszej (jesli moze)
 	time[1] = max(time[0], time[1]);
 	cerr << "time[1]M = " << time[1] << endl;
+
+	//kwestia no-wait a trafiania time[1] w przerwe
+
+	vector<Period>::iterator i =
+		upper_bound(f.offlines.begin(), f.offlines.end(), time[1]);
+
+	if ((i-1)->start < time[1] && time[1] <= (i-1)->stop + t.setups[0] + 1)
+		time[1] = max((i-1)->stop + t.setups[0] + 1, time[1]);	
+
+/*
+    if (i != onlines.begin() && (i-1)->stop > time[1])
+        i--;
+
+	//przetwarzanie musi trwac przynajmniej jednostke czasu
+	time[1] = max(i->start + t.setups[0], time[1]);	
+*/
 	
 	//dosuwamy przetwarzanie na pierwszej do poczatku drugiej
 	time[0] = simulate_backward(onlines, time[1], t.lengths[0]);
@@ -214,13 +231,13 @@ bool verify_separation(vector<Period>& v)
 
 	for (size_t i=0; i<v.size()-1; i++)
 	{
-		/*
+/*
 		cerr << v[i].start << " " << v[i].stop;
 		cerr << " ";
 		cerr << v[i+1].start << " " << v[i+1].stop;
 		cerr << endl;
-		*/
-	
+*/		
+
 		if (v[i].stop > v[i+1].start)
 			return false;
 	}
@@ -228,7 +245,7 @@ bool verify_separation(vector<Period>& v)
 	return true;
 }
 
-bool verify(Flowshop& f, FlowshopSchedule& fs)
+void verify(Flowshop& f, FlowshopSchedule& fs)
 {
 	for (size_t i=0; i<f.tasks.size(); i++)
 	{
@@ -241,20 +258,20 @@ bool verify(Flowshop& f, FlowshopSchedule& fs)
 
 		//czy na maszynie pierwszej wykonano dokladnie tyle pracy ile trzeba
 		if (sum != t.lengths[0])
-			return false;
+			throw "bleda sumaryczna ilosc pracy";
 
 		//na drugiej maszynie jest tylko jeden okres pracy
 		if (ts.periods[1][0].length != t.lengths[1])
-			return false;
+			throw "wiele okresow pracy";
 
 		//czy jest spelniony warunek no-wait
 		if (ts.periods[0].back().stop != ts.periods[1].front().start - t.setups[1])
-			return false;
+			throw "niespelniony warunek no-wait";
 	}
 
 	//sprawdzanie nachodzenia przerw, przygotowan i pracy
 	vector<Period> v[2];
-	v[0].insert(v[0].end(), f.offlines.begin(), f.offlines.end());
+	v[0].insert(v[0].end(), f.offlines.begin()+1, f.offlines.end());
 
 	for (size_t i=0; i<f.tasks.size(); i++)
 	{
@@ -269,7 +286,5 @@ bool verify(Flowshop& f, FlowshopSchedule& fs)
 	}
 	
 	if (!verify_separation(v[0]) || !verify_separation(v[1]))
-		return false;
-		
-	return true;
+		throw "nachodzenie przerw/przygotowan/pracy";
 }
