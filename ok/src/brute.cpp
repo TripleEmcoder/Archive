@@ -50,20 +50,20 @@ int main()
 			count++;
 		}
 
-		//try
-		//{
-		//	verify(f, fs);
-		//}
-		//catch (const char* message)
-		//{
-		//	cout << "!!!!!" << endl;
-		//	cout << message << endl;
-		//	cout << "!!!!!" << endl;
-		//	cout << f;
-		//	cout << cmax << endl;
-		//	cout << fs;
-		//	return 1;
-		//}
+		try
+		{
+			verify(f, fs);
+		}
+		catch (const char* message)
+		{
+			cout << "!!!!!" << endl;
+			cout << message << endl;
+			cout << "!!!!!" << endl;
+			cout << f;
+			cout << cmax << endl;
+			cout << fs;
+			return 1;
+		}
 	}
 	while (next_permutation(p.begin(), p.end()));
 
