@@ -17,7 +17,7 @@ vector<Period> offlines2onlines(vector<Period>& offlines, int setup)
 
 		if (length > 0)
 		{
-			cerr << "online(" << start << ", " << length << ")" << endl;
+			//cerr << "online(" << start << ", " << length << ")" << endl;
 			onlines.push_back(Period(start, length));
 		}
 	}
@@ -35,18 +35,18 @@ int simulate_forward(vector<Period>& onlines, int time, int length)
 	if (i != onlines.begin() && (i-1)->stop > time)
 		i--;
 		
-	cerr << "time: " << time <<endl;
-	cerr << "ub: " << i->start << " " << i->length << endl;
+	//cerr << "time: " << time <<endl;
+	//cerr << "ub: " << i->start << " " << i->length << endl;
 	
 	for (; length != 0; i++)
 	{
 		int start = max(i->start, time);
-		cerr << "length: " << length << endl;
+		//cerr << "length: " << length << endl;
 		int part = min(i->stop - start, length);
-		cerr << "part: " << part << endl;
+		//cerr << "part: " << part << endl;
 		length -= part;
 		time = start + part;
-		cerr << "new_time: " << time << endl;
+		//cerr << "new_time: " << time << endl;
 	}
 
 	return time;
@@ -58,17 +58,17 @@ int simulate_backward(vector<Period>& onlines, int time, int length)
 	
 	//znajdujemy ostatni mozliwy okres przetwarzania
 	i = upper_bound(onlines.begin(), onlines.end(), time)-1;
-	cerr << "lb: " << i->start << " " << i->length << endl;
+	//cerr << "lb: " << i->start << " " << i->length << endl;
 	
 	for (;; i--)
 	{
 		int stop = min(i->stop, time);
-		cerr << "length: " << length << endl;
+		//cerr << "length: " << length << endl;
 		int part = min(stop - i->start, length);
-		cerr << "part: " << part << endl;
+		//cerr << "part: " << part << endl;
 		length -= part;
 		time = stop - part;
-		cerr << "new_time: " << time << endl;
+		//cerr << "new_time: " << time << endl;
 
         if (length == 0)
             break;
@@ -88,19 +88,19 @@ vector<Period> schedule_periods(vector<Period>& onlines, int time, int length)
 	if (i != onlines.begin() && (i-1)->stop > time)
 		i--;
 
-	cerr << "time: " << time <<endl;
-	cerr << "ub: " << i->start << " " << i->length << endl;
+	//cerr << "time: " << time <<endl;
+	//cerr << "ub: " << i->start << " " << i->length << endl;
 	
 	for (; length != 0; i++)
 	{
 		int start = max(i->start, time);
-		cerr << "length: " << length << endl;
+		//cerr << "length: " << length << endl;
 		int part = min(i->stop - start, length);
-		cerr << "part: " << part << endl;
+		//cerr << "part: " << part << endl;
 		length -= part;
 		time = start + part;
-		cerr << "new_time: " << time << endl;
-		cerr << "work(" << start << ", " << length << ")" << endl;		
+		//cerr << "new_time: " << time << endl;
+		//cerr << "work(" << start << ", " << length << ")" << endl;		
 		periods.push_back(Period(start, part));
 	}
 
@@ -120,11 +120,11 @@ void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 	
 	//wyliczamy najkrotsze mozliwe uszeregowanie
 	time[0] = simulate_forward(onlines, time[0], t.lengths[0]);
-	cerr << "time[0]F = " << time[0] << endl;
+	//cerr << "time[0]F = " << time[0] << endl;
 
 	//druga maszyna rozpoczyna po pierwszej (jesli moze)
 	time[1] = max(time[0], time[1]);
-	cerr << "time[1]M = " << time[1] << endl;
+	//cerr << "time[1]M = " << time[1] << endl;
 
 	//kwestia no-wait a trafiania time[1] w przerwe
 
@@ -144,7 +144,7 @@ void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 	
 	//dosuwamy przetwarzanie na pierwszej do poczatku drugiej
 	time[0] = simulate_backward(onlines, time[1], t.lengths[0]);
-	cerr << "time[0]B = " << time[0] << endl;
+	//cerr << "time[0]B = " << time[0] << endl;
 	
 	//generujemy uszeregowanie wg obliczonego czasu
 	ts.periods[0] = schedule_periods(onlines, time[0], t.lengths[0]);
@@ -155,8 +155,8 @@ void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 	time[0] = time[1];
 	time[1] += t.sums[1];
 
-	cerr << "time[0] = " << time[0] << endl;
-	cerr << "time[1] = " << time[1] << endl;
+	//cerr << "time[0] = " << time[0] << endl;
+	//cerr << "time[1] = " << time[1] << endl;
 	
 	
 	/*			
@@ -232,10 +232,10 @@ bool verify_separation(vector<Period>& v)
 	for (size_t i=0; i<v.size()-1; i++)
 	{
 /*
-		cerr << v[i].start << " " << v[i].stop;
-		cerr << " ";
-		cerr << v[i+1].start << " " << v[i+1].stop;
-		cerr << endl;
+		//cerr << v[i].start << " " << v[i].stop;
+		//cerr << " ";
+		//cerr << v[i+1].start << " " << v[i+1].stop;
+		//cerr << endl;
 */		
 
 		if (v[i].stop > v[i+1].start)

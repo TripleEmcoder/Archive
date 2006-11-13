@@ -30,11 +30,11 @@ int main()
 	int cmax_min = numeric_limits<int>().max();
 	FlowshopSchedule fs_min(f);
 
-	int pass = 0;
+	int pass = 0, count = 0;
 
 	do 
 	{	
-		cout << "pass=" << pass++ << " " << cmax_min << endl;
+		//cout << "pass=" << pass++ << " " << cmax_min << endl;
 		
 		FlowshopSchedule fs(f);
 		int cmax = schedule(f, fs, p);
@@ -43,28 +43,35 @@ int main()
 		{
 			cmax_min = cmax;
 			fs_min = fs;
+			count = 1;
+		}
+		else if (cmax == cmax_min)
+		{
+			count++;
 		}
 
-		try
-		{
-			verify(f, fs);
-		}
-		catch (const char* message)
-		{
-			cout << "!!!!!" << endl;
-			cout << message << endl;
-			cout << "!!!!!" << endl;
-			cout << f;
-			cout << cmax << endl;
-			cout << fs;
-			return 1;
-		}
+		//try
+		//{
+		//	verify(f, fs);
+		//}
+		//catch (const char* message)
+		//{
+		//	cout << "!!!!!" << endl;
+		//	cout << message << endl;
+		//	cout << "!!!!!" << endl;
+		//	cout << f;
+		//	cout << cmax << endl;
+		//	cout << fs;
+		//	return 1;
+		//}
 	}
 	while (next_permutation(p.begin(), p.end()));
 
 	cout << f;	
 	cout << cmax_min << endl;
 	cout << fs_min;
+
+	cerr << endl << cmax_min << " x " << count << endl;
 
 	return 0;
 }

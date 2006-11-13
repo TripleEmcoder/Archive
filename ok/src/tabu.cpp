@@ -14,22 +14,27 @@ typedef pair<unsigned,unsigned> Move;
 typedef vector<int> Order;
 typedef list<Move> Tabulist;
 
-const size_t max_tabu = 10;
-const int max_count = 15;
-const int max_reset = 2;
-
-int global_cmax_min;
-
-int rand(size_t max)
+class Result
 {
-	return (int)((double)rand() / (double)RAND_MAX * max);
-}
+public:
+	int cmax;
+	Order order;
+	bool operator<(const Result& a)	{ return cmax < a.cmax; }
+};
 
-void randomize_perm(Order& p)
+class Move_eq
 {
-	for (size_t i=0; i<p.size(); ++i)
-		swap(p[i],p[rand(p.size())]);
-}
+	Move m,m1;
+public:	
+	Move_eq(Move m): m(m), m1(Move(m.second,m.first)) {};
+	bool operator()(const Move& a) { return a==m || a==m1; }; 
+};
+
+const size_t max_tabu = 3;
+const int max_count = 10;
+const int max_reset = 5;
+
+Result best_result;
 
 ostream& operator<<(ostream& os, Order& p)
 {
@@ -42,8 +47,7 @@ bool next_move(Order& p, Move& move)
 {
 	do
 	{
-		move.second++;
-		if (move.second	== p.size())
+		if (++move.second == p.size())
 		{
 			move.second = 0;
 			move.first++;
@@ -59,43 +63,42 @@ void make_move(Order& p,unsigned i, unsigned j)
 	p.insert(p.begin()+j,temp);
 }
 
-class Move_eq
+void update_tabu(Tabulist& tabu, Move& move)
 {
-	Move m,m1;
-public:	
-	Move_eq(Move m): m(m), m1(Move(m.second,m.first)) {};
-	bool operator()(const Move& a) { return a==m || a==m1; }; 
-};
+	if (tabu.size() == max_tabu)
+		tabu.pop_front();
+	tabu.push_back(move);
+}
 
-
-void local_min(Flowshop& f, Order& p, Tabulist& tabu, Order& k_min, FlowshopSchedule& fs_min, int& cmax_min, Move& move_min)
+Result local_min(Flowshop& f, Order& p, Tabulist& tabu)
 {
-	Move move(0,0);
+	Result result;
+	result.cmax = numeric_limits<int>::max();
+	Move move(0,0), move_min(0,0);
+	
 	while (next_move(p,move))
 	{
 		bool in_tabu = find_if(tabu.begin(),tabu.end(),Move_eq(move)) != tabu.end();
 
 		make_move(p,move.first,move.second);
 		
-		FlowshopSchedule fs(f);
-		int cmax = schedule(f, fs, p);
+		int cmax = schedule(f, FlowshopSchedule(f), p);
 
-		if (cmax < global_cmax_min)
+		if (cmax < best_result.cmax || (cmax < result.cmax && !in_tabu))
 		{
-			fs_min = fs;
-			k_min = p;
-			global_cmax_min = cmax_min = cmax;
+			result.order = p;
+			result.cmax = cmax;
 			move_min = move;
 		}
-		else if (cmax < cmax_min && !in_tabu)
-		{
-			k_min = p;
-			cmax_min = cmax;
-			move_min = move;
-		}
-
+		
 		make_move(p,move.second,move.first);
 	}
+
+	update_tabu(tabu,move_min);
+	
+//	cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
+
+	return result;
 }
 
 int main()
@@ -105,65 +108,52 @@ int main()
 	Flowshop f;
 	cin >> f;
 
-	Order p(f.tasks.size());
-	for (unsigned i=0; i<p.size(); i++)
-		p[i] = i;
+	best_result.order.resize(f.tasks.size());
+	for (unsigned i=0; i<best_result.order.size(); i++)
+		best_result.order[i] = i;
 
-	randomize_perm(p);
+	random_shuffle(best_result.order.begin(),best_result.order.end());
 
-	FlowshopSchedule fs_min(f);
-	Order k_min = p;
-	global_cmax_min = schedule(f,fs_min,k_min);
+	best_result.cmax = schedule(f,FlowshopSchedule(f),best_result.order);
 	
 	int cmax_min = numeric_limits<int>::max();
 	int count = 0;
 	int reset_count = 0;
-
 	Tabulist tabu;
-
+	Order p = best_result.order;
+	
 	while (reset_count < max_reset)
 	{
-		Order k;
-		FlowshopSchedule fs(f);
-		int cmax = numeric_limits<int>::max();
-		Move move;
-		local_min(f,p,tabu,k,fs,cmax,move);
-		cerr << cmax << " " << k << move.first << "->" << move.second << endl;
-		//cerr << cmax << endl;
-		p = k;
+		Result result = local_min(f,p,tabu);
 		
-		if (tabu.size() == max_tabu)
-		{
-			tabu.pop_front();
-		}
-		tabu.push_back(move);
+		p = result.order;
+		
+		if (result < best_result)
+			best_result = result;
 
-		if (cmax < global_cmax_min)
+		if (result.cmax < cmax_min)
 		{
-			fs_min = fs;
-			global_cmax_min = cmax_min = cmax;
-			count = 0;
-		}
-		else if (cmax < cmax_min)
-		{
-			cmax_min = cmax;
+			cmax_min = result.cmax;
 			count = 0;
 		}
 		else if (++count == max_count)
 		{
 			count = 0;
-			randomize_perm(p);
+			random_shuffle(p.begin(),p.end());
 			cmax_min = numeric_limits<int>::max();
 			tabu.clear();
 			reset_count++;
-			cerr << "reset\n";
+			//cerr << "reset\n";
 		}
 	}
 	
 	cout << f;
-	cout << global_cmax_min << endl;
-	cout << fs_min;
-	cerr << endl << global_cmax_min << endl;
+	cout << best_result.cmax << endl;
+	FlowshopSchedule fs(f);
+	schedule(f,fs,best_result.order);
+	cout << fs;
+	
+	cerr << endl << best_result.cmax << endl;
 
 	return 0;
 }

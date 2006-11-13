@@ -60,7 +60,7 @@ LeftPanelData=00000400040000000F00000043616C6C537461636B57696E646F770C000000436F
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0,WatchWindow
-BottomPanelData=00000400020000000B0000004D657373616765566965770B000000576174636857696E646F770000000000000000000000000000000000FFFFFFFF
+BottomPanelData=00000400020000000B0000004D657373616765566965770B000000576174636857696E646F777D00000000000000000004000000000000FFFFFFFF
 
 [View0]
 Module=C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\vd.dpr
@@ -71,9 +71,9 @@ LeftCol=1
 
 [View1]
 Module=C:\Documents and Settings\Admin\Moje dokumenty\Studia\OK\Projekt\src\debugger\main.pas
-CursorX=15
-CursorY=184
-TopLine=167
+CursorX=39
+CursorY=214
+TopLine=201
 LeftCol=1
 
 [PackageWindow0]
@@ -99,7 +99,7 @@ SectionWidth1=210
 Module=c:\program files\borland\delphi5\Lib\dclusr50.dpk
 
 [Watches]
-Count=8
+Count=9
 Watch0='tasks.task[1]',16,0,18,1,0
 Watch1='tasks.task[2]',16,0,18,1,0
 Watch2='tasks.task[3]',16,0,18,1,0
@@ -108,6 +108,7 @@ Watch4='Odd',256,0,18,1,0
 Watch5='do',256,0,18,1,0
 Watch6='tasks.cmax',256,0,18,1,0
 Watch7='MainForm.Diagram.Picture.Bitmap.height',16,0,18,1,0
+Watch8='var',256,0,18,1,0
 
 [Breakpoints]
 Count=0
@@ -123,8 +124,8 @@ Left=0
 Top=0
 Width=800
 Height=112
-MaxLeft=-4
-MaxTop=-4
+MaxLeft=-1
+MaxTop=-1
 MaxWidth=1032
 MaxHeight=112
 ClientWidth=1024
@@ -193,7 +194,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=Caption
+SelectedItem=OnCreate
 ExpandedItems=Brush
 HiddenCategories=Legacy
 ShowStatusBar=1
@@ -331,12 +332,12 @@ State=0
 Left=12
 Top=0
 Width=1012
-Height=52
+Height=58
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=1012
-ClientHeight=52
-TBDockHeight=52
+ClientHeight=58
+TBDockHeight=58
 LRDockWidth=443
 Dockable=1
 

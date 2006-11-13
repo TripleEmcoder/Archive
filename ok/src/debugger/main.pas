@@ -166,14 +166,12 @@ with MainForm.Diagram.Picture.Bitmap.Canvas do
     end;
 end;
 
-procedure TMainForm.OpenClick(Sender: TObject);
+procedure ReadFromFile(name: string);
 var
 f: TextFile;
 i,j,t: Integer;
 begin
-if OpenDialog.Execute then
-    begin
-    AssignFile(f, OpenDialog.FileName);
+    AssignFile(f, name);
     Reset(f);
     tasks.Free;
     tasks:= TTasks.Create;
@@ -208,7 +206,14 @@ if OpenDialog.Execute then
             readln(f);
             end;
     CloseFile(f);
-    RefreshClick(Sender);
+    MainForm.RefreshClick(MainForm);
+end;
+
+procedure TMainForm.OpenClick(Sender: TObject);
+begin
+if OpenDialog.Execute then
+    begin
+    ReadFromFile(OpenDialog.Filename);
     end;
 end;
 
@@ -242,6 +247,8 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
 OpenDialog.InitialDir:= GetCurrentDir;
 SaveDialog.InitialDir:= GetCurrentDir;
+if ParamCount = 1 then
+    ReadFromFile(ParamStr(1));
 end;
 
 procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word;
