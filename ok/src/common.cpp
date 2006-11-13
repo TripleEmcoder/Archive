@@ -126,13 +126,19 @@ void schedule_task(Flowshop& f, Task& t, TaskSchedule& ts, int time[2])
 	time[1] = max(time[0], time[1]);
 	//cerr << "time[1]M = " << time[1] << endl;
 
-	//kwestia no-wait a trafiania time[1] w przerwe
-
+	//znalezienie pierwszej kolejnej przerwy
 	vector<Period>::iterator i =
 		upper_bound(f.offlines.begin(), f.offlines.end(), time[1]);
 
+	//sprawdzenie czy time[1] trafia w przerwe
 	if ((i-1)->start < time[1] && time[1] <= (i-1)->stop + t.setups[0] + 1)
+	{
+		//znalezienie pierwszego miejsca dla 1 jednostki pracy
+		while (i->start - (i-1)->stop < t.setups[0]+1)
+			i++;
+		
 		time[1] = max((i-1)->stop + t.setups[0] + 1, time[1]);	
+	}
 
 /*
     if (i != onlines.begin() && (i-1)->stop > time[1])

@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "generator", "src\generator.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "brute", "src\brute.vcproj", "{46D596BC-E176-49AF-9199-62570BD1E884}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tabu", "src\tabu.vcproj", "{3DA62DCD-50B4-438A-816A-58DE7E4FD595}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{46D596BC-E176-49AF-9199-62570BD1E884}.Debug|Win32.Build.0 = Debug|Win32
 		{46D596BC-E176-49AF-9199-62570BD1E884}.Release|Win32.ActiveCfg = Release|Win32
 		{46D596BC-E176-49AF-9199-62570BD1E884}.Release|Win32.Build.0 = Release|Win32
+		{3DA62DCD-50B4-438A-816A-58DE7E4FD595}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3DA62DCD-50B4-438A-816A-58DE7E4FD595}.Debug|Win32.Build.0 = Debug|Win32
+		{3DA62DCD-50B4-438A-816A-58DE7E4FD595}.Release|Win32.ActiveCfg = Release|Win32
+		{3DA62DCD-50B4-438A-816A-58DE7E4FD595}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
