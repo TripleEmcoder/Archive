@@ -9,12 +9,19 @@ double randr(double min, double max)
 	return ((double)rand() / (double)RAND_MAX) * (max-min) + min;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
 	int offlines,tasks;
+	if (argc==3)
+	{
+		offlines = atoi(argv[1]);
+		tasks = atoi(argv[2]);
+	}
+	else
+		return 1;
+
 	double x=0;
 	srand((unsigned)time(0));
-	scanf("%d %d",&offlines,&tasks);
 	printf("%d\n",offlines); 
 	for (int i=0; i<offlines; ++i)
 	{

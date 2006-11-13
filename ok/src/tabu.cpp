@@ -32,9 +32,9 @@ public:
 	bool operator()(const Move& a) { return a==m || a==m1; }; 
 };
 
-const size_t max_tabu = 3;
-const int max_count = 10;
-const int max_reset = 5;
+size_t max_tabu;
+int max_count;
+int max_reset;
 
 ostream& operator<<(ostream& os, Order& p)
 {
@@ -103,10 +103,19 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 	return result;
 }
 
-int main()
+int main(int argc, char* argv[])
 {
+	if (argc==4)
+	{
+		max_tabu = atoi(argv[1]);
+		max_count = atoi(argv[2]);
+		max_reset = atoi(argv[3]);
+	}
+	else
+		return 1;
+	
 	srand((unsigned)time(0));
-
+	
 	Flowshop f;
 	cin >> f;
 
