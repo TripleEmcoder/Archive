@@ -11,44 +11,31 @@ int main()
 	Flowshop f;
 	cin >> f;
 
-
 	vector<int> p(f.tasks.size());
 	for (int i=0; i<p.size(); i++)
 		p[i] = i;
 
-/*
-	p[0] = 0;
-	p[1] = 7;
-	p[2] = 5;
-	p[3] = 2;
-	p[4] = 1;
-	p[5] = 6;
-	p[6] = 4;
-	p[7] = 3;
-*/
-
 	int cmax_min = numeric_limits<int>().max();
-	FlowshopSchedule fs_min(f);
-
+	vector<int> p_min;
 	int pass = 0, count = 0;
 
 	do 
 	{	
-		//cout << "pass=" << pass++ << " " << cmax_min << endl;
-		
-		FlowshopSchedule fs(f);
-		int cmax = schedule(f, fs, p);
+		int cmax = simulate(f, p);
 
 		if (cmax < cmax_min)
 		{
 			cmax_min = cmax;
-			fs_min = fs;
+			p_min = p;
 			count = 1;
 		}
 		else if (cmax == cmax_min)
 		{
 			count++;
 		}
+
+		//weryfikacja dla kazdej permutacji
+		FlowshopSchedule fs = schedule(f, p);
 
 		try
 		{
@@ -69,9 +56,7 @@ int main()
 
 	cout << f;	
 	cout << cmax_min << endl;
-	cout << fs_min;
-
-	cerr << endl << cmax_min << " x " << count << endl;
+	cout << schedule(f, p_min);
 
 	return 0;
 }

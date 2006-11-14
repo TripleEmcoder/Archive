@@ -18,8 +18,6 @@ struct Result
 {
 	int cmax;
 	Order order;
-	FlowshopSchedule fs;
-	Result(FlowshopSchedule fs): fs(fs) { }
 	bool operator<(const Result& a)	{ return cmax < a.cmax; }
 };
 
@@ -63,6 +61,7 @@ void make_move(Order& p,unsigned i, unsigned j)
 	int temp = p[i];
 	p.erase(p.begin()+i);
 	p.insert(p.begin()+j,temp);
+	//swap(p[i], p[j]);
 }
 
 void update_tabu(Tabulist& tabu, Move& move)
@@ -74,7 +73,7 @@ void update_tabu(Tabulist& tabu, Move& move)
 
 Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 {
-	Result result(f);
+	Result result;
 	result.cmax = numeric_limits<int>::max();
 	Move move(0,0), move_min(0,0);
 	
@@ -84,14 +83,12 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 
 		make_move(p,move.first,move.second);
 		
-		FlowshopSchedule fs(f);
-		int cmax = schedule(f, fs, p);
+		int cmax = simulate(f, p);
 
 		if (cmax < best_result.cmax || (cmax < result.cmax && !in_tabu))
 		{
 			result.order = p;
 			result.cmax = cmax;
-			result.fs = fs;
 			move_min = move;
 		}
 		
@@ -100,7 +97,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 
 	update_tabu(tabu,move_min);
 	
-	cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
+	//cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
 
 	return result;
 }
@@ -121,7 +118,7 @@ int main(int argc, char* argv[])
 	Flowshop f;
 	cin >> f;
 
-	Result best_result(f);
+	Result best_result;
 
 	best_result.order.resize(f.tasks.size());
 	for (unsigned i=0; i<best_result.order.size(); i++)
@@ -129,7 +126,7 @@ int main(int argc, char* argv[])
 
 	random_shuffle(best_result.order.begin(),best_result.order.end());
 
-	best_result.cmax = schedule(f,best_result.fs,best_result.order);
+	best_result.cmax = simulate(f,best_result.order);
 	
 	int cmax_min = numeric_limits<int>::max();
 	int count = 0;
@@ -164,7 +161,8 @@ int main(int argc, char* argv[])
 	
 	cout << f;
 	cout << best_result.cmax << endl;
-	cout << best_result.fs;
+
+	cout << schedule(f, best_result.order);
 	
 	cerr << endl << best_result.cmax << endl;
 

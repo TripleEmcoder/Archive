@@ -3,6 +3,29 @@
 #include <algorithm>
 #include <limits>
 
+template<class T> ostream& operator<<(ostream& os, const vector<T>& v)
+{
+	os << v.size() << endl;
+
+    for (int i=0; i<(int)v.size(); i++)
+        os << v[i] << " ";
+
+	os << endl;
+
+    return os;
+}
+
+template<class T> istream& operator>>(istream& is, vector<T>& v)
+{
+	int n; is >> n;
+
+	v.resize(n);
+	for (int i=0; i<n; i++)
+		is >> v[i];
+
+	return is;
+}
+
 Period::Period(int start, int length)
 :
 	start(start),
@@ -21,30 +44,11 @@ bool operator<(const Period& p, int start)
 	return p.start < start;
 }
 
-FlowshopSchedule::FlowshopSchedule(Flowshop& f)
+ostream& operator<<(ostream& os, const Period& p)
 {
-    tasks.resize(f.tasks.size());
-}
-
-template<class T> istream& operator>>(istream& is, vector<T>& v)
-{
-	int n; is >> n;
-
-	v.resize(n);
-	for (int i=0; i<n; i++)
-		is >> v[i];
-
-	return is;
-}
-
-template<class T> ostream& operator<<(ostream& os, vector<T>& v)
-{
-	os << v.size() << endl;
-
-    for (int i=0; i<(int)v.size(); i++)
-        os << v[i] << " ";
-
-	os << endl;
+    os << p.start;
+	os << " ";
+	os << p.length;
 
     return os;
 }
@@ -58,13 +62,15 @@ istream& operator>>(istream& is, Period& p)
 	return is;
 }
 
-ostream& operator<<(ostream& os, Period& p)
+ostream& operator<<(ostream& os, const Task& t)
 {
-    os << p.start;
-	os << " ";
-	os << p.length;
+	os << t.arrival << " ";
+	os << t.setups[0] << " ";
+	os << t.lengths[0] << " ";
+	os << t.setups[1] << " ";
+	os << t.lengths[1] << endl;
 
-    return os;
+	return os;
 }
 
 istream& operator>>(istream& is, Task& t)
@@ -79,6 +85,16 @@ istream& operator>>(istream& is, Task& t)
 	t.sums[1] = t.setups[1] + t.lengths[1];
 
 	return is;
+}
+
+ostream& operator<<(ostream& os, const Flowshop& f)
+{
+	vector<Period> t;
+	t.insert(t.begin(), f.offlines.begin()+1, f.offlines.end()-1);
+	os << t;
+	os << f.tasks;
+
+	return os;
 }
 
 istream& operator>>(istream& is, Flowshop& f)
@@ -96,18 +112,7 @@ istream& operator>>(istream& is, Flowshop& f)
 	return is;
 }
 
-ostream& operator<<(ostream& os, Flowshop& f)
-{
-	vector<Period> t;
-	t.insert(t.begin(),f.offlines.begin()+1,f.offlines.end()-1);
-	os << t;
-	os << f.tasks;
-
-	return os;
-}
-
-
-ostream& operator<<(ostream& os, TaskSchedule& ts)
+ostream& operator<<(ostream& os, const TaskSchedule& ts)
 {
     os << ts.periods[0];
 	os << ts.periods[1];
@@ -115,16 +120,14 @@ ostream& operator<<(ostream& os, TaskSchedule& ts)
     return os;
 }
 
-ostream& operator<<(ostream& os, FlowshopSchedule& fs)
+FlowshopSchedule::FlowshopSchedule(Flowshop& f)
 {
-	os << fs.tasks;
-
-	return os;
+    tasks.resize(f.tasks.size());
 }
 
-ostream& operator<<(ostream& os, const Task& t)
+ostream& operator<<(ostream& os, const FlowshopSchedule& fs)
 {
-	os << t.arrival << " " << t.setups[0] << " " << t.lengths[0] << " " << t.setups[1] << " " << t.lengths[1] << endl;
+	os << fs.tasks;
 
 	return os;
 }

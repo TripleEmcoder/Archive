@@ -2,5 +2,6 @@
 
 #include "data.hpp"
 
-int schedule(Flowshop& f, FlowshopSchedule& fs, vector<int>& p);
+int simulate(Flowshop& f, vector<int>& p);
+FlowshopSchedule schedule(Flowshop& f, vector<int>& p);
 void verify(Flowshop& f, FlowshopSchedule& fs);

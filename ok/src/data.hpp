@@ -9,6 +9,9 @@ using namespace std;
     typedef __typeof__(c) c##_type; \
     for(c##_type::iterator i = c.begin(); i != c.end(); ++i)
 
+template<class T> ostream& operator<<(ostream& os, const vector<T>& v);
+template<class T> istream& operator>>(istream& is, vector<T>& v);
+
 struct Period
 {
 	int start;   //moment rozpoczecia
@@ -22,10 +25,8 @@ struct Period
 bool operator<(const Period& p1, const Period& p2);
 bool operator<(const Period& p, int start);
 
-struct PeriodLess
-{
-	bool operator()(Period& p1, Period& p2);
-};
+ostream& operator<<(ostream& os, const Period& p);
+istream& operator>>(istream& is, Period& p);
 
 struct Task
 {
@@ -36,16 +37,25 @@ struct Task
 	int sums[2];     //sumy powyzszych
 };
 
+ostream& operator<<(ostream& os, const Task& t);
+istream& operator>>(istream& is, Task& t);
+
 struct Flowshop
 {
 	vector<Period> offlines;
 	vector<Task> tasks;
 };
 
+ostream& operator<<(ostream& os, const Flowshop& f);
+istream& operator>>(istream& is, Flowshop& f);
+
 struct TaskSchedule
 {
 	vector<Period> periods[2];
 };
+
+ostream& operator<<(ostream& os, const TaskSchedule& fs);
+istream& operator>>(istream& is, TaskSchedule& fs);
 
 struct FlowshopSchedule
 {
@@ -54,8 +64,5 @@ struct FlowshopSchedule
 	FlowshopSchedule(Flowshop& f);
 };
 
-istream& operator>>(istream& is, Flowshop& f);
-ostream& operator<<(ostream& os, Flowshop& f);
-ostream& operator<<(ostream& os, FlowshopSchedule& fs);
-ostream& operator<<(ostream& os, const Task& t);
-template<class T> ostream& operator<<(ostream& os, vector<T>& v);
+ostream& operator<<(ostream& os, const FlowshopSchedule& fs);
+istream& operator>>(istream& is, FlowshopSchedule& fs);
