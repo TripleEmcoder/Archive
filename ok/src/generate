@@ -1,0 +1,18 @@
+#!/bin/sh
+OFFLINES="5 5 15"
+TASKS="20 1 20"
+REPEATS="1 1 15"
+TOOLS=`dirname $0`
+
+for offlines in `seq $OFFLINES`; do
+for tasks in `seq $TASKS`; do
+for repeat in `seq $REPEATS`; do
+	file="$offlines-$tasks-$repeat"
+	if [ ! -f $file ]; then
+		echo "Regenerating $file..." >&2
+		$TOOLS/generator $offlines $tasks > $file.in
+		echo tag,date,tabus,counts,resets,cmax,time > $file.csv
+	fi
+done
+done
+done
