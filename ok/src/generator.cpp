@@ -1,49 +1,46 @@
-#include <cstdlib>
-#include <cstdio>
 #include <ctime>
 #include <algorithm>
 #include <numeric>
 #include <iostream>
-#include <math.h>
 #include <vector>
 
 #include "data.hpp"
 
 using namespace std;
 
-struct Task_gen
+struct TaskGen
 {
 	int a,b;
 	Task operator()();
-	Task_gen(int a, int b): a(a), b(b) { }
+	TaskGen(int a, int b): a(a), b(b) { }
 };
 
-struct Task_sum
+struct TaskSum
 {
 	int x;
-	Task_sum(int x): x(x) { }
+	TaskSum(int x): x(x) { }
 	int operator()(int val,Task& t)	{ return val + t.sums[x]; }
 };
 
-struct Task_cmp
+struct TaskCmp
 {
 	int x;
-	Task_cmp(int x): x(x) { }
+	TaskCmp(int x): x(x) { }
 	bool operator()(const Task& a, const Task& b) { return a.sums[x] < b.sums[x]; }
 };
 
-struct Offline_sum
+struct OfflineSum
 {
 	int operator()(int val, Period& t)	{ return val + t.length; }
 };
 
-struct Offline_gen
+struct OfflineGen
 {
 	int a,b,total,min_dist;
 	vector<Period>& offlines;
 	bool verify(Period& x);
 	Period operator()();
-	Offline_gen(int a, int b, int total, int min_dist, vector<Period>& offlines) 
+	OfflineGen(int a, int b, int total, int min_dist, vector<Period>& offlines) 
 		:a(a), b(b), min_dist(min_dist), total(total), offlines(offlines)  { }
 };
 
@@ -52,7 +49,7 @@ int randint(int min, int max)
 	return ((double)rand() / (double)RAND_MAX) * (max-min) + min;
 }
 
-Task Task_gen::operator()()
+Task TaskGen::operator()()
 {
 	Task t;
 	t.arrival = 0;
@@ -65,19 +62,19 @@ Task Task_gen::operator()()
 	return t;
 }
 
-bool Offline_gen::verify(Period& x)
+bool OfflineGen::verify(Period& x)
 {
 	for (vector<Period>::iterator i = offlines.begin(); i!= offlines.end(); ++i)
 	{
-		if ( (x.start-min_dist > i->start && x.start-min_dist < i->stop) ||
-			 (x.stop+min_dist > i->start && x.stop+min_dist < i->stop) ||
-			 (x.start-min_dist < i->start && x.stop+min_dist > i->stop) )
+		if ( (x.start-min_dist >= i->start && x.start-min_dist <= i->stop) ||
+			 (x.stop+min_dist >= i->start && x.stop+min_dist <= i->stop) ||
+			 (x.start-min_dist <= i->start && x.stop+min_dist >= i->stop) )
 			 return false;
 	}
 	return true;
 }
 
-Period Offline_gen::operator ()()
+Period OfflineGen::operator ()()
 {
 	Period t;
 	do
@@ -108,17 +105,17 @@ int main(int argc, char* argv[])
 	vector<Period> offlines(a);
 	vector<Task> tasks(b);
 	
-	generate(tasks.begin(),tasks.end(),Task_gen(5,100));
+	generate(tasks.begin(),tasks.end(),TaskGen(5,100));
 
-	int m1 = accumulate(tasks.begin(),tasks.end(),0,Task_sum(0));
-	int m2 = accumulate(tasks.begin(),tasks.end(),0,Task_sum(1));
+	int m1 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(0));
+	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 
-	generate(offlines.begin(),offlines.end(),Offline_gen(10,30,m1*1.1,40,offlines));
+	generate(offlines.begin(),offlines.end(),OfflineGen(10,30,m1+offlines.size()*20,30,offlines));
 	sort(offlines.begin(),offlines.end());
 
-	m1 = accumulate(offlines.begin(),offlines.end(),m1,Offline_sum());
-	m1 += min_element(tasks.begin(),tasks.end(),Task_cmp(1))->sums[1];
-	m2 += min_element(tasks.begin(),tasks.end(),Task_cmp(0))->sums[0];
+	m1 = accumulate(offlines.begin(),offlines.end(),m1,OfflineSum());
+	m1 += min_element(tasks.begin(),tasks.end(),TaskCmp(1))->sums[1];
+	m2 += min_element(tasks.begin(),tasks.end(),TaskCmp(0))->sums[0];
 
 	cout << offlines;
 	
@@ -128,50 +125,3 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//int x = 0;
-
-	//int best1 = 0;
-	//int best2 = 0;
-
-	//srand((unsigned)time(0));
-	//printf("%d\n",offlines); 
-	//for (int i=0; i<offlines; ++i)
-	//{
-	//	int start = randint(x,x+(tasks*75-x)/(offlines-i));
-	//	int length = randint(1,50);
-	//	best1 += length;
-	//	x = start + length;
-	//	printf("%.0f %.0f\n",start,length);
-	//}
-	//printf("%d\n",tasks); 
-	//int min1 = 200;
-	//int min2 = 200;
-	//for (int i=0; i<tasks; ++i)
-	//{
-	//	//int arr = randint(0,tasks*75/5);
-	//	int arr = 0;
-	//	int p1 = randint(5,100);
-	//	int p2 = randint(5,100);
-	//	int s1 = randint(1,0.5*p1);
-	//	int s2 = randint(1,0.5*p2);
-	//	best1 += p1 + s1;
-	//	best2 += p2 + s2;
-	//	min1 = min(min1,p1+s1);
-	//	min2 = min(min2,p2+s2);
-	//	printf("%.0f %.0f %.0f %.0f %.0f\n",arr,s1,p1,s2,p2);
-	//}
-	//cerr << max(best1+min2,best2+min1);
