@@ -122,7 +122,7 @@ ostream& operator<<(ostream& os, FlowshopSchedule& fs)
 	return os;
 }
 
-ostream& operator<<(ostream& os, Task& t)
+ostream& operator<<(ostream& os, const Task& t)
 {
 	os << t.arrival << " " << t.setups[0] << " " << t.lengths[0] << " " << t.setups[1] << " " << t.lengths[1] << endl;
 

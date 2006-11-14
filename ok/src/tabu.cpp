@@ -14,9 +14,8 @@ typedef pair<unsigned,unsigned> Move;
 typedef vector<int> Order;
 typedef list<Move> Tabulist;
 
-class Result
+struct Result
 {
-public:
 	int cmax;
 	Order order;
 	FlowshopSchedule fs;
@@ -24,12 +23,15 @@ public:
 	bool operator<(const Result& a)	{ return cmax < a.cmax; }
 };
 
-class Move_eq
+struct Move_eq
 {
 	Move m,m1;
-public:	
 	Move_eq(Move m): m(m), m1(Move(m.second,m.first)) {};
-	bool operator()(const Move& a) { return a==m || a==m1; }; 
+	bool operator()(const Move& a) 
+	{ 
+		return a==m || a==m1; 
+		//return a.first == m.first || a.second == m.first || a.second == m1.first || a.second == m1.first;
+	}
 };
 
 size_t max_tabu;
@@ -98,7 +100,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 
 	update_tabu(tabu,move_min);
 	
-//	cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
+	cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
 
 	return result;
 }
@@ -156,7 +158,7 @@ int main(int argc, char* argv[])
 			cmax_min = numeric_limits<int>::max();
 			tabu.clear();
 			reset_count++;
-			//cerr << "reset\n";
+			cerr << "reset\n";
 		}
 	}
 	
