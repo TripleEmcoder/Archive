@@ -4,15 +4,21 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <list>
+#include <set>
 #include <limits>
 #include <ctime>
 
 using namespace std;
 
-typedef pair<unsigned,unsigned> Move;
+unsigned max_tabu = 5;
+int max_count = 5;
+int max_reset = 5;
+unsigned range = 5;
+
+struct Move;
+
 typedef vector<int> Order;
-typedef list<Move> Tabulist;
+typedef set<Move> Tabulist;
 
 struct Result
 {
@@ -21,21 +27,66 @@ struct Result
 	bool operator<(const Result& a)	{ return cmax < a.cmax; }
 };
 
-struct Move_eq
+struct Move
 {
-	Move m,m1;
-	Move_eq(Move m): m(m), m1(Move(m.second,m.first)) {};
-	bool operator()(const Move& a) 
-	{ 
-		return a==m || a==m1; 
-		//return a.first == m.first || a.second == m.first || a.second == m1.first || a.second == m1.first;
-	}
+	unsigned first, second, valid, range;
+	Order* order;
+	bool next();
+	void make();
+	void make_inv();
+	bool isnotvalid() { return valid == 0; }
+	void update() { --valid; }
+	Move invert() {	return Move(second,first,valid,range,order);	}
+	Move(unsigned first, unsigned second, unsigned valid,unsigned range, Order* order): 
+		first(first), second(second), valid(valid), range(range), order(order) { }
 };
 
-size_t max_tabu;
-int max_count;
-int max_reset;
+bool operator<(const Move& a,const Move& b) 
+{ 
+	return a.first < b.first || (a.first == b.first && a.second < b.second); 
+}
 
+bool operator==(const Move& a,const Move& b) 
+{ 
+	return b.first == a.first && b.second == a.second; 
+}
+
+bool Move::next()
+{
+	if (second + 2 == first)
+		second += 3;
+	else
+		second++;
+
+	if (second == order->size() || second > first + range)
+	{
+		first++;
+		if (range == 1)
+			first = (second == order->size()) ? second : first;
+		else if (first == 1)
+			second = 2;
+		else if (first+1 > range)
+			second = first - range;
+		else
+			second = 0;
+	}
+
+	return first < order->size();
+}
+
+void Move::make()
+{
+	int temp = (*order)[first];
+	order->erase(order->begin()+first);
+	order->insert(order->begin()+second,temp);
+	//swap(p[i], p[j]);
+}
+
+void Move::make_inv()
+{
+	invert().make();
+}
+	
 ostream& operator<<(ostream& os, Order& p)
 {
 	for (size_t i=0; i<p.size(); ++i)
@@ -43,56 +94,42 @@ ostream& operator<<(ostream& os, Order& p)
 	return os;
 }
 
-bool next_move(Order& p, Move& move)
-{
-	do
-	{
-		if (++move.second == p.size())
-		{
-			move.second = 0;
-			move.first++;
-		}
-	} while (move.first<p.size() && move.second <= move.first && move.first <= move.second+1);
-	return move.first<p.size();
-}
-
-void make_move(Order& p,unsigned i, unsigned j)
-{
-	int temp = p[i];
-	p.erase(p.begin()+i);
-	p.insert(p.begin()+j,temp);
-	//swap(p[i], p[j]);
-}
-
 void update_tabu(Tabulist& tabu, Move& move)
 {
-	if (tabu.size() == max_tabu)
-		tabu.pop_front();
-	tabu.push_back(move);
+	if (max_tabu > 0)
+	{
+		for_each(tabu.begin(),tabu.end(),mem_fun_ref(&Move::update));
+		Tabulist::iterator new_end = remove_if(tabu.begin(),tabu.end(),mem_fun_ref(&Move::isnotvalid));
+		tabu.erase(new_end,tabu.end());
+		tabu.insert(move);
+		tabu.insert(move.invert());
+	}
 }
 
 Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 {
 	Result result;
 	result.cmax = numeric_limits<int>::max();
-	Move move(0,0), move_min(0,0);
-	
-	while (next_move(p,move))
-	{
-		bool in_tabu = find_if(tabu.begin(),tabu.end(),Move_eq(move)) != tabu.end();
 
-		make_move(p,move.first,move.second);
+	Move move(0,0,max_tabu,range,&p);
+	Move move_min(0,0,max_tabu,range,&p);
+
+	while (move.next())
+	{
+		bool in_tabu = tabu.find(move) != tabu.end();
+
+		move.make();
 		
 		int cmax = simulate(f, p);
-
-		if (cmax < best_result.cmax || (cmax < result.cmax && !in_tabu))
+		
+		if (cmax < result.cmax && (cmax < best_result.cmax || !in_tabu))
 		{
 			result.order = p;
 			result.cmax = cmax;
 			move_min = move;
 		}
-		
-		make_move(p,move.second,move.first);
+
+		move.make_inv();
 	}
 
 	update_tabu(tabu,move_min);
@@ -104,11 +141,12 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 
 int main(int argc, char* argv[])
 {
-	if (argc==4)
+	if (argc==5)
 	{
 		max_tabu = atoi(argv[1]);
 		max_count = atoi(argv[2]);
 		max_reset = atoi(argv[3]);
+		range = atoi(argv[4]);
 	}
 	else
 		return 1;

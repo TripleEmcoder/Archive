@@ -110,6 +110,9 @@ int main(int argc, char* argv[])
 	int m1 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(0));
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 
+	cerr << "M1: " << m1 << endl;
+	cerr << "M2: " << m2 << endl;
+
 	generate(offlines.begin(),offlines.end(),OfflineGen(10,30,m1+offlines.size()*20,30,offlines));
 	sort(offlines.begin(),offlines.end());
 
