@@ -1,7 +1,8 @@
 #!/bin/sh
-TABUS="10 3 45"
-COUNTS="20 5 45"
+TABUS="10 5 50"
+COUNTS="20 5 50"
 RESETS="5 1 5"
+DISTANCE="1 2 10"
 TOOLS=`dirname $0`
 
 tag=$1
@@ -26,14 +27,16 @@ for file in $*; do
 	for tabus in `seq $TABUS`; do
 	for counts in `seq $COUNTS`; do
 	for resets in `seq $RESETS`; do
-		tabu="$TOOLS/tabu $tabus $counts $resets < $file.in > $file.out 2>&-"
+	for distance in `seq $DISTANCE`; do
+		tabu="$TOOLS/tabu $tabus $counts $resets $distance < $file.in > $file.out 2>&-"
 		time=`echo $tabu | /usr/bin/time -f %U sh 2>&1`
 		cmax=`cat $file.out | $TOOLS/cmax`
 		date=`date +"%F %T"`
 		
-		echo $tag,$date,$tabus,$counts,$resets,$cmax,$time >> $file.csv 
+		echo $tag,$date,$tabus,$counts,$resets,$distance,$cmax,$time >> $file.csv 
 		
 		rm $file.out
+	done
 	done
 	done
 	done

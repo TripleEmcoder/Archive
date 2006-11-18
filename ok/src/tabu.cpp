@@ -29,14 +29,15 @@ struct Result
 
 struct Move
 {
-	unsigned first, second, valid, range;
+	unsigned first, second, range;
+	mutable unsigned valid;
 	Order* order;
 	bool next();
 	void make();
 	void make_inv();
-	bool isnotvalid() { return valid == 0; }
-	void update() { --valid; }
-	Move invert() {	return Move(second,first,valid,range,order);	}
+	bool isnotvalid() const { return valid == 0; }
+	void update() const { --valid; }
+	Move invert() const { return Move(second,first,valid,range,order);	}
 	Move(unsigned first, unsigned second, unsigned valid,unsigned range, Order* order): 
 		first(first), second(second), valid(valid), range(range), order(order) { }
 };
@@ -99,8 +100,9 @@ void update_tabu(Tabulist& tabu, Move& move)
 	if (max_tabu > 0)
 	{
 		for_each(tabu.begin(),tabu.end(),mem_fun_ref(&Move::update));
-		Tabulist::iterator new_end = remove_if(tabu.begin(),tabu.end(),mem_fun_ref(&Move::isnotvalid));
-		tabu.erase(new_end,tabu.end());
+		Tabulist::const_iterator notvalid;
+		while ((notvalid = find_if(tabu.begin(),tabu.end(),mem_fun_ref(&Move::isnotvalid))) != tabu.end())
+			tabu.erase(notvalid);
 		tabu.insert(move);
 		tabu.insert(move.invert());
 	}
