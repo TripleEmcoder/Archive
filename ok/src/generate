@@ -8,7 +8,7 @@ for offlines in `seq $OFFLINES`; do
 for tasks in `seq $TASKS`; do
 for repeat in `seq $REPEAT`; do
 	file="$offlines-$tasks-$repeat"
-	if [ ! -f $file ]; then
+	if [ ! -f $file.in ]; then
 		echo "Regenerating $file..." >&2
 		$TOOLS/generator $offlines $tasks > $file.in
 		echo tag,date,tabus,counts,resets,distance,cmax,time > $file.csv
