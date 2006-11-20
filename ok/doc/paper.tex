@@ -99,9 +99,18 @@ $$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m p'_j$$
 
 \section{Opis algorytmu}
 \subsection{Idea algorytmu}
-idea, wersje, przyk³ad na ma³ej instancji, bad case
+\subsubsection{Algorytm si³owy}
+Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_max$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu O(m!). W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_max$.
+Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_max$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $m \leq 10$, dlatego w dalszych rozwa¿aniach zostanie pominiêty.
+\subsubsection{Algorytm aproksymacyjny}
+Do rozwi¹zania postawionego problemu wykorzystany zosta³ ogólny schemat algorytmu typu \emph{tabu search}.
+\section{Usprawnienia algorytmu}
+\subsection{Ograniczenie liczby ruchów}
+\subsection{Zach³anna inicjalizacja}
+\section{(przyk³ad na ma³ej instancji)}
+\section{(bad case)}
 \section{Wyniki eksperymentu}
-czas i jakoœæ, dalsze ograniczenie, parametry
+(czas i jakoœæ, dalsze ograniczenie, parametry)
 
 \end{document}
 
