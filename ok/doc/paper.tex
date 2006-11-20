@@ -51,7 +51,54 @@
 \maketitle
 
 \section{Opis problemu}
+Celem projektu by³o opracowanie algorytmu znajduj¹cego rozwi¹zania mo¿liwie bliskie optymalnym dla optymalizacyjnego problemu szeregowania zadañ okreœlonego nastêpuj¹co:
+
+\begin{quote}
+$F2$, $h_{1k}$ | $SRS$ , $r_j$, $no-wait$ | $C_{max}$
+\end{quote}
+
+Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
+\begin{description}
+\item[$F2$] - szeregowanie zadañ typu flow shop na 2 maszynach (przetwarzanie dwufazowe - najpierw I maszyna, potem II maszyna),
+\item[$h_{1k}$] - wystêpowanie okresów niedostêpnoœci na I maszynie,
+\item[$SRS$] - mo¿liwoœæ wznawiania zadañ (zatrzymanie zadania mo¿liwe jest jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
+\item[$r_j$] - dane s¹ momenty przybycia zadañ,
+\item[$no-wait$] - przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I,
+\item[$C_{max}$] - kryterium optymalizacyjne stanowi moment ostatecznego zakoñczenia ostatniego zadania (mo¿liwie jak najwczeœniej).
+\end{description}
+
+Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
+\begin{description}
+\item[$n$] - liczba okresów niedostêpnoœci, dla $i=1,2,...,n$:
+	\begin{description}
+	\item[$r_i$] - czas rozpoczêcia okresu niedostêpnoœci,
+	\item[$p_i$] - d³ugoœæ okresu niedostêpnoœci;
+	\end{description}
+\item[$m$] - liczba szeregowanych zadañ, dla $j=1,2,...,m$:
+	\begin{description}
+	\item[$r'_j$] - czas przybycia zadania,
+	\item[$s'_j$] - czas przygotowania na I maszynie,
+	\item[$p'_j$] - czas przetwarzania na I maszynie, 
+	\item[$s''_j$] - czas przygotowania II maszynie,
+	\item[$p''_j$] - czas przetwarzania na II maszynie.
+	\end{description}
+\end{description}
+
+Diedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in N$ oraz $r_i, p_i, r'_j, s'_j, s''_j, p''_j \in N$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
+
+Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
+$$\forall j=1,2,...,n$$
+\begin{enumerate}
+\item $1 \leq p'_j, s'_j \leq 100$,
+\item $s'_j \leq p'_j$
+\item $1 \leq p''_j, s''_j \leq 100$,
+\item $s''_j \leq p''_j$
+\end{enumerate}
+oraz sumaryczne czasy przestojów i przetwarzania:
+$$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m p'_j$$
+
 \section{Opis algorytmu}
+\subsection{Idea algorytmu}
 idea, wersje, przyk³ad na ma³ej instancji, bad case
 \section{Wyniki eksperymentu}
 czas i jakoœæ, dalsze ograniczenie, parametry
