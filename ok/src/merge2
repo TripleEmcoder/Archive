@@ -1,0 +1,17 @@
+#!/bin/sh
+TABUS="10 3 45"
+COUNTS="20 5 45"
+RESETS="5 1 5"
+TOOLS=`dirname $0`
+
+target=$1
+shift
+
+echo -n offlines,tasks,repeat, > $target
+head -1 $1 | sed s/file,// >> $target
+
+for file in $*; do
+	file=`basename $file .csv`
+	echo "Processing $file..."
+	grep ^[^f] $file.csv | sed -r 's/^([0-9]+)-([0-9]+)-([0-9]+)/\1,\2,\3/' >> $target
+done
