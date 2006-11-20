@@ -84,7 +84,7 @@ Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
 	\end{description}
 \end{description}
 
-Diedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in N$ oraz $r_i, p_i, r'_j, s'_j, s''_j, p''_j \in N$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
+Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in N$ oraz $r_i, p_i, r'_j, s'_j, s''_j, p''_j \in N$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
 $$\forall j=1,2,...,n$$
@@ -99,8 +99,8 @@ $$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m p'_j$$
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
-Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_max$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu O(m!). W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_max$.
-Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_max$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $m \leq 10$, dlatego w dalszych rozwa¿aniach zostanie pominiêty.
+Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_{max}$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu O(m!). W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_{max}$.
+Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_{max}$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $m \leq 10$, dlatego w dalszych rozwa¿aniach zostanie pominiêty.
 \subsection{Algorytm aproksymacyjny}
 \subsubsection{Idea algorytmu}
 Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same operacje. Warunek stopu okreœla siê w implementacji algorytmu.
