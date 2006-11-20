@@ -1,19 +1,25 @@
 #!/bin/sh
 TOOLS=`dirname $0`
 
-
-for offlines in `seq $OFFLINES`; do
 for tasks in `seq $TASKS`; do
+for offlines in `seq $OFFLINES`; do
 for repeat in `seq $REPEAT`; do
 	
-	offlines2=`echo "$offlines*$tasks/100" | bc | cut -d . -f 1`
-	
-	file="$offlines-$tasks-$repeat"
+	file="$tasks-$offlines-$OFFLINES2-$repeat"
+	file=`echo $file | sed "s/[*\/]/_/g"`
+
+	offlines2=$OFFLINES2
+
+	offlines2=`echo $offlines2 | sed "s/offlines/$offlines/"`
+	offlines2=`echo $offlines2 | sed "s/tasks/$tasks/"`
+
+	offlines2=`echo $offlines2 | bc | cut -d . -f 1`
+
 	if [ ! -f $file.in ]; then
 		command="$TOOLS/generator $offlines2 $tasks > $file.in"
 		echo $command >&2
 		sh -c "$command 2>&-"
-		echo tag,date,tabus,counts,resets,distance,cmax,time > $file.csv
+		echo tag,date,tabus,chances,resets,distance,cmax,time > $file.csv
 	fi
 
 done

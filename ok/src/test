@@ -10,28 +10,40 @@ shift
 
 for file in $*; do
 	file=`basename $file .in`
-	offlines=`echo $file | cut -d - -f 1`
-	tasks=`echo $file | cut -d - -f 2`
+	tasks=`echo $file | cut -d - -f 1`
+	offlines=`echo $file | cut -d - -f 2`
 
 	for distance in $DISTANCE; do
 	for tabus in $TABUS; do
-	for counts in $COUNTS; do
+	for chances in $CHANCES; do
 	for resets in $RESETS; do
-		moves=`echo "$tasks*(2*$distance-1)" | bc | cut -d . -f 1`
-		tabus2=`echo "$tabus*$moves/100" | bc | cut -d . -f 1`
-		counts2=`echo "$counts*$tabus2/100" | bc | cut -d . -f 1`
-		resets2=$resets
 
-		command="$TOOLS/tabu $tabus2 $counts2 $resets2 $distance < $file.in > $file.out"
+		echo s/tasks/$tasks/ >> $file.sed
+		echo s/offlines/$offlines/ >> $file.sed
+
+		distance2=`echo $DISTANCE2 | sed -e "s/distance/$distance/" -f $file.sed | bc | cut -d . -f 1`
+		echo s/distance/$distance2/ >> $file.sed
+
+		tabus2=`echo $TABUS2 | sed -e "s/tabus/$tabus/" -f $file.sed | bc | cut -d . -f 1`
+		echo s/tabus/$tabus2/ >> $file.sed
+
+		chances2=`echo $CHANCES2 | sed -e "s/chances/$chances/" -f $file.sed | bc | cut -d . -f 1`
+		echo s/chances/$chances2/ >> $file.sed
+
+		resets2=`echo $RESETS2 | sed -e "s/resets/$resets/" -f $file.sed | bc | cut -d . -f 1`
+		echo s/resets/$resets2/ >> $file.sed
+
+		command="$TOOLS/tabu $tabus2 $chances2 $resets2 $distance2 < $file.in > $file.out"
 		echo $command >&2
 		
 		time=`/usr/bin/time -f %U sh -c "$command 2>&-" 2>&1`
 		cmax=`cat $file.out | $TOOLS/cmax`
 		date=`date +"%F %T"`
 		
-		echo $tag,$date,$tabus,$counts,$resets,$distance,$cmax,$time >> $file.csv 
+		echo $tag,$date,$tabus,$chances,$resets,$distance,$cmax,$time >> $file.csv 
 		
 		rm $file.out
+		rm $file.sed
 	done
 	done
 	done

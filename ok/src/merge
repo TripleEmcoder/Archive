@@ -1,17 +1,16 @@
 #!/bin/sh
-TABUS="10 3 45"
-COUNTS="20 5 45"
-RESETS="5 1 5"
-TOOLS=`dirname $0`
-
 target=$1
 shift
 
-echo -n file, > $target
+echo -n tasks,offlines,repeat, > $target
 head -1 $1 >> $target
 
 for file in $*; do
 	file=`basename $file .csv`
+	tasks=`echo $file | cut -d - -f 1`
+	offlines=`echo $file | cut -d - -f 2`
+	repeat=`echo $file | cut -d - -f 4`
+
 	echo "Processing $file..."
-	grep ^[^t] $file.csv | sed s/^/$file,/ >> $target
+	grep ^[^t] $file.csv | sed -r "s/^/$tasks,$offlines,$repeat,/" >> $target
 done
