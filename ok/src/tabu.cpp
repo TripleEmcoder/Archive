@@ -10,7 +10,7 @@
 
 using namespace std;
 
-unsigned max_tabu = 5;
+unsigned max_tabu = 3;
 int max_count = 5;
 int max_reset = 5;
 unsigned range = 5;
@@ -30,8 +30,9 @@ struct Result
 struct Move
 {
 	unsigned first, second, range;
+	int a,b;
 	mutable unsigned valid;
-	Order* order;
+	Order* order; 
 	bool next();
 	void make();
 	void make_inv();
@@ -42,14 +43,9 @@ struct Move
 		first(first), second(second), valid(valid), range(range), order(order) { }
 };
 
-bool operator<(const Move& a,const Move& b) 
+bool operator<(const Move& a, const Move& b) 
 { 
-	return a.first < b.first || (a.first == b.first && a.second < b.second); 
-}
-
-bool operator==(const Move& a,const Move& b) 
-{ 
-	return b.first == a.first && b.second == a.second; 
+	return a.first < b.first || (a.first == b.first && a.second < b.second);
 }
 
 bool Move::next()
@@ -100,7 +96,7 @@ void update_tabu(Tabulist& tabu, Move& move)
 	if (max_tabu > 0)
 	{
 		for_each(tabu.begin(),tabu.end(),mem_fun_ref(&Move::update));
-		Tabulist::const_iterator notvalid;
+		Tabulist::iterator notvalid;
 		while ((notvalid = find_if(tabu.begin(),tabu.end(),mem_fun_ref(&Move::isnotvalid))) != tabu.end())
 			tabu.erase(notvalid);
 		tabu.insert(move);
@@ -110,9 +106,10 @@ void update_tabu(Tabulist& tabu, Move& move)
 
 Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 {
-	Result result;
+	Result result, result_asp;
 	result.cmax = numeric_limits<int>::max();
-
+	result_asp.cmax = numeric_limits<int>::max();
+	
 	Move move(0,0,max_tabu,range,&p);
 	Move move_min(0,0,max_tabu,range,&p);
 
@@ -123,23 +120,47 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 		move.make();
 		
 		int cmax = simulate(f, p);
-		
-		if (cmax < result.cmax && (cmax < best_result.cmax || !in_tabu))
+
+		if (cmax < result.cmax && ( (!in_tabu) || (cmax < best_result.cmax) ))
 		{
 			result.order = p;
 			result.cmax = cmax;
 			move_min = move;
 		}
 
+		if (cmax < result_asp.cmax)
+		{
+			result_asp.order = p;
+			result_asp.cmax = cmax;
+		}	
+
 		move.make_inv();
 	}
 
-	update_tabu(tabu,move_min);
-	
-	//cerr << result.cmax << " " << result.order << move_min.first << "->" << move_min.second << endl;
-
-	return result;
+	if (result.cmax < numeric_limits<int>::max())
+	{
+		//cerr << result.cmax << " " /*<< result.order */ << move_min.first << "->" << move_min.second << endl;
+		update_tabu(tabu,move_min);
+		return result;
+	}
+	else	
+	{
+		//cerr << result_asp.cmax << " " /*<< result_asp.order*/  << endl;
+		//cerr << "asp" << endl;
+		tabu.clear();
+		return result_asp;
+	}
 }
+
+struct TaskArrivalCmp
+{
+	vector<Task>& p;
+	bool operator()(const int& a, const int& b)
+	{
+		return p[a].arrival < p[b].arrival;
+	}
+	TaskArrivalCmp(vector<Task>& p): p(p) { };
+};
 
 int main(int argc, char* argv[])
 {
@@ -152,7 +173,7 @@ int main(int argc, char* argv[])
 	}
 	else
 		return 1;
-	
+
 	srand((unsigned)time(0));
 	
 	Flowshop f;
@@ -161,10 +182,11 @@ int main(int argc, char* argv[])
 	Result best_result;
 
 	best_result.order.resize(f.tasks.size());
-	for (unsigned i=0; i<best_result.order.size(); i++)
+	for (unsigned i=0; i<best_result.order.size(); ++i)
 		best_result.order[i] = i;
 
-	random_shuffle(best_result.order.begin(),best_result.order.end());
+	//random_shuffle(best_result.order.begin(),best_result.order.end());
+	sort(best_result.order.begin(),best_result.order.end(),TaskArrivalCmp(f.tasks));
 
 	best_result.cmax = simulate(f,best_result.order);
 	
@@ -188,14 +210,14 @@ int main(int argc, char* argv[])
 			cmax_min = result.cmax;
 			count = 0;
 		}
-		else if (++count == max_count)
+		else if (++count >= max_count)
 		{
 			count = 0;
 			random_shuffle(p.begin(),p.end());
 			cmax_min = numeric_limits<int>::max();
 			tabu.clear();
 			reset_count++;
-			cerr << "reset\n";
+			//cerr << "reset" << endl;
 		}
 	}
 	

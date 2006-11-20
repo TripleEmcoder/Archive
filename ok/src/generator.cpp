@@ -10,9 +10,9 @@ using namespace std;
 
 struct TaskGen
 {
-	int a,b;
+	int a,b,total;
 	Task operator()();
-	TaskGen(int a, int b): a(a), b(b) { }
+	TaskGen(int a, int b, int total): a(a), b(b), total(total) { }
 };
 
 struct TaskSum
@@ -52,7 +52,8 @@ int randint(int min, int max)
 Task TaskGen::operator()()
 {
 	Task t;
-	t.arrival = 0;
+	t.arrival = randint(0,0.5*total);
+	//t.arrival = 0;
 	t.lengths[0] = randint(a,b);
 	t.lengths[1] = randint(a,b);
 	t.setups[0] = randint(1,t.lengths[0]/2);
@@ -105,16 +106,16 @@ int main(int argc, char* argv[])
 	vector<Period> offlines(a);
 	vector<Task> tasks(b);
 	
-	generate(tasks.begin(),tasks.end(),TaskGen(5,100));
+	generate(offlines.begin(),offlines.end(),OfflineGen(10,30,tasks.size()*75+offlines.size()*20,30,offlines));
+	sort(offlines.begin(),offlines.end());
+	
+	generate(tasks.begin(),tasks.end(),TaskGen(5,100,tasks.size()*75));
 
 	int m1 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(0));
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 
 	cerr << "M1: " << m1 << endl;
 	cerr << "M2: " << m2 << endl;
-
-	generate(offlines.begin(),offlines.end(),OfflineGen(10,30,m1+offlines.size()*20,30,offlines));
-	sort(offlines.begin(),offlines.end());
 
 	m1 = accumulate(offlines.begin(),offlines.end(),m1,OfflineSum());
 	m1 += min_element(tasks.begin(),tasks.end(),TaskCmp(1))->sums[1];
