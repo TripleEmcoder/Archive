@@ -59,37 +59,37 @@ $F2$, $h_{1k}$ | $SRS$ , $r_j$, $no-wait$ | $C_{max}$
 
 Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
 \begin{description}
-\item[$F2$] - szeregowanie zadañ typu flow shop na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo - najpierw na I maszynie, potem na II maszynie),
-\item[$h_{1k}$] - wystêpowanie okresów niedostêpnoœci na I maszynie,
-\item[$SRS$] - mo¿liwoœæ wznawiania zadañ (ale zatrzymanie zadania mo¿liwe jest jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
-\item[$r_j$] - dane s¹ momenty przybycia zadañ,
-\item[$no-wait$] - przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I,
-\item[$C_{max}$] - kryterium optymalizacyjne stanowi moment ostatecznego zakoñczenia ostatniego zadania (mo¿liwie jak najwczeœniej).
+\item[$F2$] -- szeregowanie zadañ typu flow shop na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
+\item[$h_{1k}$] -- wystêpowanie okresów niedostêpnoœci na I maszynie,
+\item[$SRS$] -- mo¿liwoœæ wznawiania zadañ (ale zatrzymanie zadania mo¿liwe jest jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
+\item[$r_j$] -- dane s¹ momenty przybycia zadañ,
+\item[$no-wait$] -- przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I,
+\item[$C_{max}$] -- kryterium optymalizacyjne stanowi moment ostatecznego zakoñczenia ostatniego zadania (mo¿liwie jak najwczeœniej).
 \end{description}
 
 Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
 \begin{description}
-\item[$n$] - liczba okresów niedostêpnoœci, dla $i=1,2,...,n$:
+\item[$n$] -- liczba okresów niedostêpnoœci, dla $i=1,2,\ldots,n$:
 	\begin{description}
-	\item[$r_i$] - czas rozpoczêcia okresu niedostêpnoœci,
-	\item[$p_i$] - d³ugoœæ okresu niedostêpnoœci;
+	\item[$r_i$] -- czas rozpoczêcia okresu niedostêpnoœci,
+	\item[$p_i$] -- d³ugoœæ okresu niedostêpnoœci;
 	\end{description}
-\item[$m$] - liczba szeregowanych zadañ, dla $j=1,2,...,m$:
+\item[$m$] -- liczba szeregowanych zadañ, dla $j=1,2,\ldots,m$:
 	\begin{description}
-	\item[$r'_j$] - czas przybycia zadania,
-	\item[$s'_j$] - czas przygotowania na I maszynie,
-	\item[$p'_j$] - czas przetwarzania na I maszynie, 
-	\item[$s''_j$] - czas przygotowania II maszynie,
-	\item[$p''_j$] - czas przetwarzania na II maszynie.
+	\item[$r'_j$] -- czas przybycia zadania,
+	\item[$s'_j$] -- czas przygotowania na I maszynie,
+	\item[$p'_j$] -- czas przetwarzania na I maszynie, 
+	\item[$s''_j$] -- czas przygotowania II maszynie,
+	\item[$p''_j$] -- czas przetwarzania na II maszynie.
 	\end{description}
 \end{description}
 
 Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in N$ oraz $r_i, p_i, r'_j, s'_j, s''_j, p''_j \in N$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
-$$\forall i=1,2,...,n$$
+$$\forall i=1,2,\ldots,n$$
 $1 \leq p_i \leq 100$
-$$\forall j=1,2,...,m$$
+$$\forall j=1,2,\ldots,m$$
 \begin{enumerate}
 \item $1 \leq p'_j, s'_j \leq 100$,
 \item $s'_j \leq 50\% p'_j$
@@ -97,13 +97,13 @@ $$\forall j=1,2,...,m$$
 \item $s''_j \leq 50\% p''_j$
 \end{enumerate}
 oraz sumaryczne czasy przestojów i przetwarzania:
-$$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m p'_j$$
+$$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m (s'_j + p'_j)$$
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
-Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_{max}$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu O(m!). W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_{max}$.
+Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_{max}$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu $O(m!)$. W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_{max}$.
 Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_{max}$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $m \leq 10$, dlatego w dalszych rozwa¿aniach zostanie on pominiêty.
-W implementacji algorytmu si³owego wydzielona zosta³a czêœæ odpowiedzialna za obliczanie wartoœci $C_{max}$, w celu jej póŸniejszego wykorzystania w algorytmie aproksymacyjnym. Obliczenie wspomnianego parametru wymaga wyznaczenia momentu zakoñczenia ka¿dego z $m$ zadañ, co z kolei wymaga odszukania ewentualnych okresów niedostêpnoœci przerywaj¹cych wykonywanie zadania. (...)
+W implementacji algorytmu si³owego wydzielona zosta³a czêœæ odpowiedzialna za obliczanie wartoœci $C_{max}$, w celu jej póŸniejszego wykorzystania w algorytmie aproksymacyjnym. Obliczenie wspomnianego parametru wymaga wyznaczenia momentu zakoñczenia ka¿dego z $m$ zadañ, co z kolei wymaga odszukania ewentualnych okresów niedostêpnoœci przerywaj¹cych wykonywanie zadania. (\ldots)
 \subsection{Algorytm aproksymacyjny}
 \subsubsection{Idea algorytmu}
 Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same operacje. Warunek stopu okreœla siê w implementacji algorytmu.
@@ -112,24 +112,25 @@ Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu 
 Program rozwi¹zuj¹cy postawiony problem zosta³ podzielony na dwie czêœci: procedury obliczaj¹ce optymalny sposób przetwarzania zadañ dla pewnej ustalonej ich kolejnoœci (permutacji) oraz czêœæ zwi¹zan¹ z poszukiwaniem tej kolejnoœci, dla której wartoœæ $C_{max}$ bêdzie jak najmniejsza. W ramach pierwszej czêœci wykorzystany zosta³ algorytm opracowany na potrzeby rozwi¹zania si³owego, druga zosta³a zaimplementowana z wykorzystaniem idei algorytmu \emph{tabu search}, którego elementy sprecyzowano w opisany ni¿ej sposób.
 
 \paragraph{Krok elementarny}
-Jako krok elementarny algorytmu zosta³a wybrana operacja zamiany pary zadañ miejscami w permutacji wyznaczaj¹cej kolejnoœæ ich przetwarzania. W przypadku ogólnym istnieje $m*(m-1)$ mo¿liwych ruchów, a sprawdzenie ka¿dego z nich (obliczenie $C_{max}$ dla powsta³ej permutacji zadañ) wymaga wykonania dalszych $m$ operacji, jak zosta³o to wczeœniej opisane. Daje z³o¿onoœæ iteracji algorytmu rzêdu $O(m^3)$.
+Jako krok elementarny algorytmu zosta³a wybrana operacja przemieszczenia zadania w inne miejsce w permutacji wyznaczaj¹cej kolejnoœæ ich przetwarzania. W przypadku ogólnym istnieje $(m-1)^2$ mo¿liwych ruchów, a sprawdzenie ka¿dego z nich (obliczenie $C_{max}$ dla powsta³ej permutacji zadañ) wymaga wykonania dalszych $O(m)$ operacji, jak zosta³o to wczeœniej opisane. Daje to z³o¿onoœæ algorytmu rzêdu $O(m^3)$.
 
 \paragraph{Lista tabu}
-Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby umo¿liwiæ szybkie sprawdzanie dostêpnoœci kroków, ich opisy s¹ przechowywane w drzewie binarnym. (...) D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szczególnoœci, dla d³ugoœci równej 0, implementacja staje siê realizacj¹ algorytmu \emph{local search}.
+Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby umo¿liwiæ szybkie sprawdzanie dostêpnoœci kroków, ich opisy s¹ przechowywane w drzewie binarnym. (\ldots) D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szczególnoœci, dla d³ugoœci równej 0, implementacja staje siê realizacj¹ algorytmu \emph{local search}.
 
 \paragraph{Warunek stopu}
 Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
 
 \paragraph{Kryterium aspiracji}
-Dodatkowym elementem algorytmu \emph{tabu search} mo¿e byæ tzw. kryterium aspiracji. Mówi ono, ¿e krok elementarny mo¿e zostaæ wykonany mimo znajdowania siê na liœcie tabu o ile prowadzi on do uzyskania rozwi¹zania o lepszej wartoœci funkcji celu. (...)
+Dodatkowym elementem algorytmu \emph{tabu search} mo¿e byæ tzw. kryterium aspiracji. Mówi ono, ¿e krok elementarny mo¿e zostaæ wykonany mimo znajdowania siê na liœcie tabu o ile prowadzi on do uzyskania rozwi¹zania o lepszej wartoœci funkcji celu. (\ldots)
 
 \subsubsection{Usprawnienia algorytmu}
 \paragraph{Ograniczenie liczby ruchów}
-W celu ograniczenia z³o¿onoœci algorytmu wprowadzony zosta³ dodatkowy parametr, zwany dalej \emph{distance}. Mówi on, jaka mo¿e byæ maksymalna odleg³oœæ w permutacji pomiêdzy zamienianymi w kroku elementarnym zadaniami. W szczególnoœci, dla odleg³oœci równej 1, rozwa¿ane s¹ jedynie s¹siednie zadania, co daje z³o¿onoœæ algorytmu rzêdu $O(m^2)$.
+W celu ograniczenia z³o¿onoœci algorytmu wprowadzony zosta³ dodatkowy parametr, zwany dalej \emph{distance}. Mówi on, jaka mo¿e byæ maksymalna odleg³oœæ w permutacji pomiêdzy zadaniem, a miejscem w które zostanie przesuniête w kroku elementarnym. W szczególnoœci, dla odleg³oœci równej 1, rozwa¿ane s¹ jedynie s¹siednie zadania, co daje z³o¿onoœæ algorytmu rzêdu $O(m^2)$.
 
 \paragraph{Zach³anna inicjalizacja}
 W pierwszej implementacji pocz¹tkowa permutacja by³a losowana. Metoda ta nie sprawdza siê jednak przy niezerowych czasach przybycia, gdy¿ prowadzi do rozwi¹zañ dalekich od optymalnych. Znacznie lepsze efekty przynosi wstêpne posortowanie zadañ rosn¹co wed³ug ich momentów przybycia, czyli rozwa¿anie pewnego ,,naturalnego'', chronologicznego porz¹dku zadañ.
-Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w sposób zach³anny, tj. kolejno wybieraj¹c zadania, które w danym momencie prowadz¹ do najkrótszego uszeregowania. Nale¿y dodaæ, ¿e optymalizacja ta ma sens jedynie dla niezerowej liczby okresów niedostêpnoœci.
+
+Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w sposób zach³anny, tj. kolejno wybieraj¹c zadania, które w danym momencie prowadz¹ do najkrótszego uszeregowania.
 
 \subsubsection{(przyk³ad na ma³ej instancji)}
 \subsubsection{(bad case)}
