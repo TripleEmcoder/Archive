@@ -1,37 +1,31 @@
 #!/bin/sh
-TABUS="10 10 50"
-COUNTS="20 10 50"
-RESETS="5 1 5"
-DISTANCE="2 1 2"
+#TABUS="10 10 50"
+#COUNTS="20 10 50"
+#RESETS="5 1 5"
+#DISTANCE="2 1 2"
 TOOLS=`dirname $0`
 
 tag=$1
 shift
 
 for file in $*; do
-	for tabus in `seq $TABUS`; do
-	for counts in `seq $COUNTS`; do
-	for resets in `seq $RESETS`; do
-	for distance in `seq $DISTANCE`; do
-		rounds=`expr $rounds + 1`
-	done
-	done
-	done
-	done
-done
-
-echo "Running $rounds times." >&2
-
-for file in $*; do
 	file=`basename $file .in`
-	echo "Testing $file..." >&2
-	
-	for tabus in `seq $TABUS`; do
-	for counts in `seq $COUNTS`; do
-	for resets in `seq $RESETS`; do
-	for distance in `seq $DISTANCE`; do
-		tabu="$TOOLS/tabu $tabus $counts $resets $distance < $file.in > $file.out 2>&-"
-		time=`echo $tabu | /usr/bin/time -f %U sh 2>&1`
+	offlines=`echo $file | cut -d - -f 1`
+	tasks=`echo $file | cut -d - -f 2`
+
+	for distance in $DISTANCE; do
+	for tabus in $TABUS; do
+	for counts in $COUNTS; do
+	for resets in $RESETS; do
+		moves=`echo "$tasks*(2*$distance-1)" | bc | cut -d . -f 1`
+		tabus2=`echo "$tabus*$moves/100" | bc | cut -d . -f 1`
+		counts2=`echo "$counts*$tabus2/100" | bc | cut -d . -f 1`
+		resets2=$resets
+
+		command="$TOOLS/tabu $tabus2 $counts2 $resets2 $distance < $file.in > $file.out"
+		echo $command >&2
+		
+		time=`/usr/bin/time -f %U sh -c "$command 2>&-" 2>&1`
 		cmax=`cat $file.out | $TOOLS/cmax`
 		date=`date +"%F %T"`
 		

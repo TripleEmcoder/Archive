@@ -98,17 +98,25 @@ oraz sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{i=1}^n p_i \leq 20\% \sum_{j=1}^m p'_j$$
 
 \section{Opis algorytmu}
-\subsection{Idea algorytmu}
-\subsubsection{Algorytm si³owy}
+\subsection{Algorytm si³owy}
 Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_max$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $m$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu O(m!). W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_max$.
 Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_max$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $m \leq 10$, dlatego w dalszych rozwa¿aniach zostanie pominiêty.
-\subsubsection{Algorytm aproksymacyjny}
-Do rozwi¹zania postawionego problemu wykorzystany zosta³ ogólny schemat algorytmu typu \emph{tabu search}.
-\section{Usprawnienia algorytmu}
-\subsection{Ograniczenie liczby ruchów}
-\subsection{Zach³anna inicjalizacja}
-\section{(przyk³ad na ma³ej instancji)}
-\section{(bad case)}
+\subsection{Algorytm aproksymacyjny}
+\subsubsection{Idea algorytmu}
+Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same operacje. Warunek stopu okreœla siê w implementacji algorytmu.
+
+\subsubsection{Implementacja algorytmu}
+\paragraph{Krok elementarny}
+\paragraph{Lista tabu}
+\paragraph{Kryterium aspiracji}
+\paragraph{Warunek stopu}
+
+\subsubsection{Usprawnienia algorytmu}
+\paragraph{Ograniczenie liczby ruchów}
+\paragraph{Zach³anna inicjalizacja}
+
+\subsubsection{(przyk³ad na ma³ej instancji)}
+\subsubsection{(bad case)}
 \section{Wyniki eksperymentu}
 (czas i jakoœæ, dalsze ograniczenie, parametry)
 

@@ -6,6 +6,8 @@
 
 #include "data.hpp"
 
+#include <sys/time.h>
+
 using namespace std;
 
 struct TaskGen
@@ -89,7 +91,9 @@ Period OfflineGen::operator ()()
 
 int main(int argc, char* argv[])
 {
-	srand((unsigned)time(0));
+	timeval t1;
+	gettimeofday(&t1,NULL);
+	srand(t1.tv_usec);
 	
 	int a,b;	
 	
