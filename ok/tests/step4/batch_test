@@ -1,0 +1,14 @@
+#!/bin/sh
+TAG="sort i asp"
+SMALL=" *-50-*.in"
+#LARGE=" *-70-*.in *-90-*.in *-100-*.in *-200-*.in *-300-*.in *-400-*.in *-500-*.in"
+
+#TABUS="0" COUNTS="0" RESETS="1" DISTANCE="1 2 3 4 5 7 9" ../../src/test "$TAG" "$SMALL"
+#TABUS="5 15 25 50" COUNTS="50 100 200" RESETS="1" DISTANCE="1 2 3 4 5 7 9" ../../src/test "$TAG" "$SMALL"
+
+#TABUS="0" COUNTS="0" RESETS="1" DISTANCE="1" ../src/test "$TAG" "$LARGE"
+#TABUS="5 15 25 50" COUNTS="50 100 200" RESETS="1" DISTANCE="1" ../../src/test "$TAG" "$LARGE"
+
+#TABUS="0" COUNTS="0" RESETS="1" DISTANCE="1 2 3 5" ../../src/test "$TAG" "$SMALL"
+#TABUS="5 15 25 50" COUNTS="50 100 200" RESETS="1" DISTANCE="1 2 3 5" ../../src/test "$TAG" "$SMALL"
+TABUS="75" COUNTS="50 100 200" RESETS="1" DISTANCE="1 2 3 5" ../../src/test "$TAG" "$SMALL"

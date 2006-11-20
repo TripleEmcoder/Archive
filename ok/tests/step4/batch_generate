@@ -1,0 +1,4 @@
+#!/bin/sh
+#OFFLINES="0 40 80" TASKS="10 20 100" REPEAT="1 1 15" ../../src/generate
+#OFFLINES="0 40 80" TASKS="100 100 500" REPEAT="1 1 15" ../../src/generate
+OFFLINES="0 40 80" TASKS="50 1 50" REPEAT="1 1 15" ../../src/generate
