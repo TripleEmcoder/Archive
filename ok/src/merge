@@ -2,8 +2,9 @@
 target=$1
 shift
 
-echo -n tasks,offlines,repeat, > $target
-head -1 $1 >> $target
+headers=`head -1 $1`
+echo tasks,offlines,repeat,$headers,cmax_min > $target
+
 
 for file in $*; do
 	file=`basename $file .csv`
@@ -11,6 +12,8 @@ for file in $*; do
 	offlines=`echo $file | cut -d - -f 2`
 	repeat=`echo $file | cut -d - -f 4`
 
-	echo "Processing $file..."
-	grep -v tag $file.csv | sed -r "s/^/$tasks,$offlines,$repeat,/" >> $target
+	echo "Processing $file..." >&2
+
+	cmax_min=`cat $file.csv | cut -d , -f 7 | sort | head -1`
+	grep -v tag $file.csv | sed -r "s/^(.*)$/$tasks,$offlines,$repeat,\1,$cmax_min/" >> $target
 done

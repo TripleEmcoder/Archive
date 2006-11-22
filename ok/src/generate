@@ -19,6 +19,9 @@ for repeat in `seq $REPEAT`; do
 		command="$TOOLS/generator $offlines2 $tasks > $file.in"
 		echo $command >&2
 		sh -c "$command 2>&-"
+	fi
+
+	if [ ! -f $file.csv ]; then
 		echo tag,date,tabus,chances,resets,distance,cmax,time > $file.csv
 	fi
 
