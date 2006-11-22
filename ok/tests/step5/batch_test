@@ -1,0 +1,9 @@
+#!/bin/sh
+TAG="test tabulisty"
+SMALL="50-*.in"
+
+DISTANCE="3" DISTANCE2="distance" \
+TABUS=`seq 0 20 200` TABUS2="tabus" \
+CHANCES="25 50 75" CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+../../src/test "$TAG" "$SMALL"

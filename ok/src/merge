@@ -12,5 +12,5 @@ for file in $*; do
 	repeat=`echo $file | cut -d - -f 4`
 
 	echo "Processing $file..."
-	grep ^[^t] $file.csv | sed -r "s/^/$tasks,$offlines,$repeat,/" >> $target
+	grep -v tag $file.csv | sed -r "s/^/$tasks,$offlines,$repeat,/" >> $target
 done
