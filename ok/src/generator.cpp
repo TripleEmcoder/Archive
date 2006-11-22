@@ -1,14 +1,16 @@
+#define _CRT_SECURE_NO_DEPRECATE
+
 #include <ctime>
 #include <algorithm>
 #include <numeric>
 #include <iostream>
 #include <vector>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 #include "data.hpp"
 
-#include <sys/time.h>
-
 using namespace std;
+using namespace boost::posix_time;
 
 struct TaskGen
 {
@@ -91,10 +93,10 @@ Period OfflineGen::operator ()()
 
 int main(int argc, char* argv[])
 {
-	timeval t1;
-	gettimeofday(&t1,NULL);
-	srand(t1.tv_usec);
-	
+	ptime t = microsec_clock::local_time();
+	cerr << t.time_of_day().total_microseconds() << endl;
+	srand((unsigned)t.time_of_day().total_microseconds());
+
 	int a,b;	
 	
 	if (argc==3)
@@ -110,10 +112,10 @@ int main(int argc, char* argv[])
 	vector<Period> offlines(a);
 	vector<Task> tasks(b);
 	
-	generate(offlines.begin(),offlines.end(),OfflineGen(10,30,tasks.size()*75+offlines.size()*20,30,offlines));
+	generate(offlines.begin(),offlines.end(),OfflineGen(1,100,tasks.size()*75+offlines.size()*50,1,offlines));
 	sort(offlines.begin(),offlines.end());
 	
-	generate(tasks.begin(),tasks.end(),TaskGen(5,100,tasks.size()*75));
+	generate(tasks.begin(),tasks.end(),TaskGen(2,100,tasks.size()*75));
 
 	int m1 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(0));
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
