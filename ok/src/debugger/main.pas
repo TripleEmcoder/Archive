@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls, ExtDlgs;
+  ExtCtrls, StdCtrls, ExtDlgs, CheckLst;
 
 type
   TMainForm = class(TForm)
@@ -26,6 +26,7 @@ type
     DrawRuler: TCheckBox;
     Save: TButton;
     SaveDialog: TSavePictureDialog;
+    CheckList: TCheckListBox;
     procedure OpenClick(Sender: TObject);
     procedure RefreshClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -111,7 +112,8 @@ with MainForm.Diagram.Picture.Bitmap.Canvas do
     Brush.Style:= style;
     end;
 for i:= 1 to 2*n do
-    task[i].Draw((i+1) div 2,width,hpos,vpos,height);
+    if MainForm.CheckList.Checked[(i+1) div 2 - 1] then
+        task[i].Draw((i+1) div 2,width,hpos,vpos,height);
 end;
 
 procedure TTasks.DrawIdle(color: TColor; style: TBrushStyle);
@@ -206,7 +208,16 @@ begin
             readln(f);
             end;
     CloseFile(f);
-    MainForm.RefreshClick(MainForm);
+    with MainForm do
+        begin
+        CheckList.Items.Clear;
+        for i:= 1 to tasks.n do
+            begin
+            CheckList.Items.Add('Task '+IntToStr(i));
+            CheckList.Checked[i-1]:= True;
+            end;
+        RefreshClick(MainForm);
+        end;
 end;
 
 procedure TMainForm.OpenClick(Sender: TObject);

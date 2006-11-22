@@ -1,10 +1,10 @@
 object MainForm: TMainForm
-  Left = 218
-  Top = 179
+  Left = 226
+  Top = 156
   AutoScroll = False
   Caption = 'Visual Debuger'
-  ClientHeight = 303
-  ClientWidth = 580
+  ClientHeight = 368
+  ClientWidth = 583
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -46,8 +46,8 @@ object MainForm: TMainForm
     Caption = 'Width:'
   end
   object Open: TButton
-    Left = 232
-    Top = 200
+    Left = 16
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Open'
@@ -55,8 +55,8 @@ object MainForm: TMainForm
     OnClick = OpenClick
   end
   object Refresh: TButton
-    Left = 232
-    Top = 232
+    Left = 104
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Refresh'
@@ -102,7 +102,7 @@ object MainForm: TMainForm
   object ScrollBox: TScrollBox
     Left = 0
     Top = 0
-    Width = 580
+    Width = 583
     Height = 185
     HorzScrollBar.Tracking = True
     VertScrollBar.Visible = False
@@ -111,12 +111,12 @@ object MainForm: TMainForm
     object Diagram: TImage
       Left = 0
       Top = 0
-      Width = 576
+      Width = 579
       Height = 181
     end
   end
   object DrawTasks: TCheckBox
-    Left = 352
+    Left = 200
     Top = 200
     Width = 97
     Height = 17
@@ -127,7 +127,7 @@ object MainForm: TMainForm
     OnClick = RefreshClick
   end
   object DrawIdle: TCheckBox
-    Left = 352
+    Left = 200
     Top = 224
     Width = 97
     Height = 17
@@ -138,7 +138,7 @@ object MainForm: TMainForm
     OnClick = RefreshClick
   end
   object DrawRuler: TCheckBox
-    Left = 352
+    Left = 200
     Top = 248
     Width = 97
     Height = 17
@@ -149,23 +149,32 @@ object MainForm: TMainForm
     OnClick = RefreshClick
   end
   object Save: TButton
-    Left = 232
-    Top = 264
+    Left = 192
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Save'
     TabOrder = 10
     OnClick = SaveClick
   end
+  object CheckList: TCheckListBox
+    Left = 320
+    Top = 200
+    Width = 241
+    Height = 153
+    OnClickCheck = RefreshClick
+    ItemHeight = 13
+    TabOrder = 11
+  end
   object OpenDialog: TOpenDialog
     FileName = 'test.txt'
     Filter = 'Pliki tekstowe (*.txt)|*.txt'
     Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing]
-    Left = 192
-    Top = 264
+    Left = 280
+    Top = 280
   end
   object SaveDialog: TSavePictureDialog
-    Left = 192
-    Top = 232
+    Left = 280
+    Top = 312
   end
 end

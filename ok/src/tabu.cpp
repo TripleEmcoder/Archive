@@ -4,7 +4,6 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <set>
 #include <list>
 #include <limits>
 #include <ctime>
@@ -145,7 +144,7 @@ ostream& operator<<(ostream& os, Order& p)
 	return os;
 }
 
-Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
+Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 {
 	Result result, result_asp;
 	result.cmax = numeric_limits<int>::max();
@@ -162,7 +161,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, Result& best_result)
 		
 		int cmax = simulate(f, p);
 
-		if (cmax < result.cmax && ( (!in_tabu) || (cmax < best_result.cmax) ))
+		if (cmax < result.cmax && ( (!in_tabu) || (cmax < cmax_min) ))
 		{
 			result.order = p;
 			result.cmax = cmax;
@@ -222,12 +221,11 @@ int main(int argc, char* argv[])
 	for (unsigned i=0; i<best_result.order.size(); ++i)
 		best_result.order[i] = i;
 
-	//random_shuffle(best_result.order.begin(),best_result.order.end());
 	sort(best_result.order.begin(),best_result.order.end(),TaskArrivalCmp(f.tasks));
 
 	best_result.cmax = simulate(f,best_result.order);
 	
-	int cmax_min = numeric_limits<int>::max();
+	int cmax_min = best_result.cmax;
 	int count = 0;
 	int reset_count = 0;
 	Tabulist tabu(f.tasks.size(),max_tabu);
@@ -235,7 +233,7 @@ int main(int argc, char* argv[])
 	
 	while (reset_count < max_reset)
 	{
-		Result result = local_min(f,p,tabu,best_result);
+		Result result = local_min(f,p,tabu,cmax_min);
 		
 		p = result.order;
 		

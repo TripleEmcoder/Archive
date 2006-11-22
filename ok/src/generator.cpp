@@ -1,12 +1,15 @@
-#define _CRT_SECURE_NO_DEPRECATE
+#pragma warning(push)
+#pragma warning(disable : 4996 4244)
+
+#include <boost/date_time/posix_time/posix_time.hpp>
+
+#pragma warning(pop)
 
 #include <ctime>
 #include <algorithm>
 #include <numeric>
 #include <iostream>
 #include <vector>
-#include <boost/date_time/posix_time/posix_time.hpp>
-
 #include "data.hpp"
 
 using namespace std;
@@ -50,14 +53,13 @@ struct OfflineGen
 
 int randint(int min, int max)
 {
-	return ((double)rand() / (double)RAND_MAX) * (max-min) + min;
+	return (int)(((double)rand() / (double)RAND_MAX) * (max-min) + min);
 }
 
 Task TaskGen::operator()()
 {
 	Task t;
-	t.arrival = randint(0,0.5*total);
-	//t.arrival = 0;
+	t.arrival = randint(0,total/2);
 	t.lengths[0] = randint(a,b);
 	t.lengths[1] = randint(a,b);
 	t.setups[0] = randint(1,t.lengths[0]/2);
@@ -79,7 +81,7 @@ bool OfflineGen::verify(Period& x)
 	return true;
 }
 
-Period OfflineGen::operator ()()
+Period OfflineGen::operator()()
 {
 	Period t;
 	do
@@ -93,9 +95,7 @@ Period OfflineGen::operator ()()
 
 int main(int argc, char* argv[])
 {
-	ptime t = microsec_clock::local_time();
-	cerr << t.time_of_day().total_microseconds() << endl;
-	srand((unsigned)t.time_of_day().total_microseconds());
+	srand((unsigned)microsec_clock::local_time().time_of_day().total_microseconds());
 
 	int a,b;	
 	
@@ -112,10 +112,10 @@ int main(int argc, char* argv[])
 	vector<Period> offlines(a);
 	vector<Task> tasks(b);
 	
-	generate(offlines.begin(),offlines.end(),OfflineGen(1,100,tasks.size()*75+offlines.size()*50,1,offlines));
+	generate(offlines.begin(),offlines.end(),OfflineGen(1,100,(int)(tasks.size()*64+offlines.size()*50),1,offlines));
 	sort(offlines.begin(),offlines.end());
 	
-	generate(tasks.begin(),tasks.end(),TaskGen(2,100,tasks.size()*75));
+	generate(tasks.begin(),tasks.end(),TaskGen(2,100,(int)(tasks.size()*64)));
 
 	int m1 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(0));
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
