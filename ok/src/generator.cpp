@@ -1,9 +1,4 @@
-#pragma warning(push)
-#pragma warning(disable : 4996 4244)
-
 #include <boost/date_time/posix_time/posix_time.hpp>
-
-#pragma warning(pop)
 
 #include <ctime>
 #include <algorithm>
@@ -43,7 +38,7 @@ struct OfflineSum
 
 struct OfflineGen
 {
-	int a,b,total,min_dist;
+	int a,b,min_dist,total;
 	vector<Period>& offlines;
 	bool verify(Period& x);
 	Period operator()();

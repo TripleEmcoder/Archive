@@ -1,5 +1,5 @@
 #include "data.hpp"
-#include "common.hpp"
+#include "schedule.hpp"
 
 #include <iostream>
 #include <algorithm>
@@ -99,7 +99,7 @@ void Move::make_inv()
 ostream& operator<<(ostream& os, Move& m)
 {
 	return os << m.first << "->" << m.second;
-};
+}
 
 Tabulist::Tabulist(size_t tasks, size_t len)
 	:tasks(tasks),length(len)

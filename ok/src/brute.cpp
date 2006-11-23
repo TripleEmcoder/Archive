@@ -1,5 +1,6 @@
 #include "data.hpp"
-#include "common.hpp"
+#include "schedule.hpp"
+#include "verify.hpp"
 
 #include <iostream>
 #include <algorithm>
@@ -12,12 +13,12 @@ int main()
 	cin >> f;
 
 	vector<int> p(f.tasks.size());
-	for (int i=0; i<p.size(); i++)
+	for (size_t i=0; i<p.size(); i++)
 		p[i] = i;
 
 	int cmax_min = numeric_limits<int>().max();
 	vector<int> p_min;
-	int pass = 0, count = 0;
+	int count = 0;
 
 	do 
 	{	
@@ -57,8 +58,6 @@ int main()
 	cout << f;	
 	cout << cmax_min << endl;
 	cout << schedule(f, p_min);
-
-	cerr << cmax_min << " x " << count << endl;
 
 	return 0;
 }

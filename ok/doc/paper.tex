@@ -52,7 +52,7 @@
 \maketitle
 
 \section{Opis problemu}
-Celem projektu by³o opracowanie algorytmu znajduj¹cego rozwi¹zania mo¿liwie bliskie optymalnym dla optymalizacyjnego problemu szeregowania zadañ okreœlonego nastêpuj¹co:
+Celem projektu by³o opracowanie algorytmu znajduj¹cego rozwi¹zania mo¿liwie bliskie optymalnym dla optymalizacyjnego problemu szeregowania zadañ okreœlonego w notacji trójpolowej nastêpuj¹co:
 
 \begin{quote}
 $F2$, $h_{1k}$ | $SRS$ , $r_i$, $no-wait$ | $C_{max}$
@@ -60,7 +60,7 @@ $F2$, $h_{1k}$ | $SRS$ , $r_i$, $no-wait$ | $C_{max}$
 
 Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
 \begin{description}
-\item[$F2$] -- szeregowanie zadañ typu flow shop na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
+\item[$F2$] -- szeregowanie zadañ w systemie przep³ywowym na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
 \item[$h_{1k}$] -- wystêpowanie okresów niedostêpnoœci na I maszynie,
 \item[$SRS$] -- mo¿liwoœæ wznawiania zadañ (ale zatrzymanie zadania mo¿liwe jest jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
 \item[$r_i$] -- dane s¹ momenty przybycia zadañ,
@@ -89,23 +89,17 @@ Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in \mathbb{N}
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
 
-$$\forall i=1,2,\ldots,n$$
-\begin{enumerate}
-%\item $1 \leq p'_j, s'_j \leq 100$,
-%\item $s'_j \leq 50\%\; p'_j$
-%\item $1 \leq p''_j, s''_j \leq 100$,
-%\item $s''_j \leq 50\%\; p''_j$
-\item $1 \leq p'_i \leq 100$,
-\item $1 \leq s'_i \leq \frac{p'_i}{2}$
-\item $1 \leq p''_i \leq 100$,
-\item $1 \leq s''_i \leq \frac{p''_i}{2}$
-\end{enumerate}
+$$\forall i=1,2,\ldots,n:$$
+$$1 \leq p'_i \leq 100$$
+$$1 \leq s'_i \leq 50\%\; p'_i$$
+$$1 \leq p''_i \leq 100$$
+$$1 \leq s''_i \leq 50\%\; p''_i$$
 
-$$\forall j=1,2,\ldots,m$$
-$1 \leq p_j \leq 100$
+$$\forall j=1,2,\ldots,m:$$
+$$1 \leq p_j \leq 100$$
 
 oraz sumaryczne czasy przestojów i przetwarzania:
-$$\sum_{j=1}^m p_j \leq 20\%\; \sum_{i=1}^n (s'_i + p'_i)$$
+$$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
@@ -114,7 +108,7 @@ Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako nar
 W implementacji algorytmu si³owego wydzielona zosta³a czêœæ odpowiedzialna za obliczanie wartoœci $C_{max}$, w celu jej póŸniejszego wykorzystania w algorytmie aproksymacyjnym. Obliczenie wspomnianego parametru wymaga wyznaczenia momentu zakoñczenia ka¿dego z $m$ zadañ, co z kolei wymaga odszukania ewentualnych okresów niedostêpnoœci przerywaj¹cych wykonywanie zadania. (\ldots)
 \subsection{Algorytm aproksymacyjny}
 \subsubsection{Idea algorytmu}
-Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same operacje. Warunek stopu okreœla siê w implementacji algorytmu.
+Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, spoœród mo¿liwych, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same kroki. Krok znajduj¹cy siê na liœcie tabu mo¿e zostaæ wykonany jedynie wtedy, kiedy spe³nia pewien dodatkowy warunek, zwany kryterium aspiracji. Warunek stopu okreœla siê w implementacji algorytmu.
 
 \subsubsection{Implementacja algorytmu}
 Program rozwi¹zuj¹cy postawiony problem zosta³ podzielony na dwie czêœci: procedury obliczaj¹ce optymalny sposób przetwarzania zadañ dla pewnej ustalonej ich kolejnoœci (permutacji) oraz czêœæ zwi¹zan¹ z poszukiwaniem tej kolejnoœci, dla której wartoœæ $C_{max}$ bêdzie jak najmniejsza. W ramach pierwszej czêœci wykorzystany zosta³ algorytm opracowany na potrzeby rozwi¹zania si³owego, druga zosta³a zaimplementowana z wykorzystaniem idei algorytmu \emph{tabu search}, którego elementy sprecyzowano w opisany ni¿ej sposób.
@@ -129,7 +123,7 @@ Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby
 Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
 
 \paragraph{Kryterium aspiracji}
-Dodatkowym elementem algorytmu \emph{tabu search} mo¿e byæ tzw. kryterium aspiracji. Mówi ono, ¿e krok elementarny mo¿e zostaæ wykonany mimo znajdowania siê na liœcie tabu o ile prowadzi on do uzyskania rozwi¹zania o lepszej wartoœci funkcji celu. (\ldots)
+
 
 \subsubsection{Usprawnienia algorytmu}
 \paragraph{Ograniczenie liczby ruchów}

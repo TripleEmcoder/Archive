@@ -1,9 +1,8 @@
 #include "data.hpp"
-#include "common.hpp"
+#include "schedule.hpp"
+#include "verify.hpp"
 
 #include <iostream>
-#include <algorithm>
-#include <iterator>
 using namespace std;
 
 int main()
@@ -13,8 +12,10 @@ int main()
 	cout << f;	
 
 	vector<int> p;
-	copy(istream_iterator<int>(cin), istream_iterator<int>(), back_inserter(p));
-	//cout << p;
+	cin >> p;
+	cout << p;
+
+cout << simulate(f, p) << endl;
 
 	FlowshopSchedule fs = schedule(f, p);
 	cout << fs.tasks[p.back()].periods[1][0].stop << endl;
@@ -22,7 +23,7 @@ int main()
 	
 	int sum = 0;
 
-	for (int i=0; i<p.size(); i++)
+	for (size_t i=0; i<p.size(); i++)
 		sum += fs.tasks[i].periods[1][0].stop;
 	
 	cout << sum << endl;

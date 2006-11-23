@@ -26,6 +26,9 @@ template<class T> istream& operator>>(istream& is, vector<T>& v)
 	return is;
 }
 
+template ostream& operator<<<int>(ostream& is, const vector<int>& v);
+template istream& operator>><int>(istream& is, vector<int>& v);
+
 Period::Period(int start, int length)
 :
 	start(start),
@@ -120,7 +123,7 @@ ostream& operator<<(ostream& os, const TaskSchedule& ts)
     return os;
 }
 
-FlowshopSchedule::FlowshopSchedule(Flowshop& f)
+FlowshopSchedule::FlowshopSchedule(const Flowshop& f)
 {
     tasks.resize(f.tasks.size());
 }

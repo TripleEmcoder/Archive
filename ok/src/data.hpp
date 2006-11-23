@@ -61,7 +61,7 @@ struct FlowshopSchedule
 {
 	vector<TaskSchedule> tasks;
 
-	FlowshopSchedule(Flowshop& f);
+	FlowshopSchedule(const Flowshop& f);
 };
 
 ostream& operator<<(ostream& os, const FlowshopSchedule& fs);
