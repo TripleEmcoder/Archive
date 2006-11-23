@@ -179,11 +179,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\common.cpp"
+				RelativePath=".\data.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\data.cpp"
+				RelativePath=".\schedule.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\verify.cpp"
 				>
 			</File>
 		</Filter>
@@ -193,11 +197,15 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\common.hpp"
+				RelativePath=".\data.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\data.hpp"
+				RelativePath=".\schedule.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\verify.hpp"
 				>
 			</File>
 		</Filter>

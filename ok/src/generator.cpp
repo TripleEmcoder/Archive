@@ -1,6 +1,5 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 
-#include <ctime>
 #include <algorithm>
 #include <numeric>
 #include <iostream>

@@ -175,15 +175,23 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\common.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\data.cpp"
 				>
 			</File>
 			<File
+				RelativePath=".\move.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\schedule.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\tabu.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tabulist.cpp"
 				>
 			</File>
 		</Filter>
@@ -193,11 +201,19 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\common.hpp"
+				RelativePath=".\data.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\data.hpp"
+				RelativePath=".\move.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\schedule.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tabulist.hpp"
 				>
 			</File>
 		</Filter>

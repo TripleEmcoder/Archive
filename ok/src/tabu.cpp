@@ -1,43 +1,18 @@
+#pragma once
+
 #include "data.hpp"
 #include "schedule.hpp"
+#include "move.hpp"
+#include "tabulist.hpp"
 
 #include <iostream>
 #include <algorithm>
-#include <vector>
-#include <list>
 #include <limits>
 #include <ctime>
 
 using namespace std;
 
 typedef vector<int> Order;
-
-class Move
-{
-	unsigned first, second;
-public:
-	Move(unsigned first =0, unsigned second =0);
-	bool next();
-	void make(Order& order);
-	void make_inv(Order& order);
-	friend class Tabulist;
-	friend ostream& operator<<(ostream& os, Move& m);
-	static unsigned range;
-	static size_t size;
-};
-
-class Tabulist
-{
-	vector<bool> a;
-	list<Move> b;
-	size_t tasks, length;
-	void update_tab(Move& m, bool val);
-public:
-	Tabulist(size_t tasks, size_t len);
-	void update(Move& m);
-	bool is_tabu(Move& m);
-	void clear();
-};
 
 struct Result
 {
@@ -53,89 +28,6 @@ public:
 	bool operator()(const int& a, const int& b)	{return p[a].arrival < p[b].arrival;}
 	TaskArrivalCmp(vector<Task>& p): p(p) { };
 };
-
-Move::Move(unsigned first, unsigned second)
-	:first(first), second(second) 
-{
-
-}
-	
-bool Move::next()
-{
-	if (second + 2 == first)
-		second += 3;
-	else
-		second++;
-
-	if (second == size || second > first + range)
-	{
-		first++;
-		if (range == 1)
-			first = (second == size) ? second : first;
-		else if (first == 1)
-			second = 2;
-		else if (first+1 > range)
-			second = first - range;
-		else
-			second = 0;
-	}
-
-	return first < size;
-}
-
-void Move::make(Order& order)
-{
-	int temp = order[first];
-	order.erase(order.begin()+first);
-	order.insert(order.begin()+second,temp);
-	//swap(p[i], p[j]);
-}
-
-void Move::make_inv(Order& order)
-{
-	Move(second,first).make(order);
-}
-
-ostream& operator<<(ostream& os, Move& m)
-{
-	return os << m.first << "->" << m.second;
-}
-
-Tabulist::Tabulist(size_t tasks, size_t len)
-	:tasks(tasks),length(len)
-{
-	a.resize(tasks*tasks);
-	a.assign(a.size(),false);
-}
-
-void Tabulist::update(Move &m)
-{
-	if (b.size() > 0 && b.size() >= length)
-	{
-		update_tab(b.front(),false);
-		b.pop_front();
-	}
-	update_tab(m,true);
-	b.push_back(m);
-}
-
-bool Tabulist::is_tabu(Move &m)
-{
-	return (length > 0) && (a[m.first*tasks + m.second] || a[m.second*tasks + m.first]);
-}
-
-void Tabulist::update_tab(Move& m, bool val)
-{
-	a[m.first*tasks + m.second] = val;
-	a[m.second*tasks + m.first] = val;
-}
-
-void Tabulist::clear()
-{
-	for (list<Move>::iterator i = b.begin(); i != b.end(); ++i)
-		update_tab(*i,false);
-	b.clear();	
-}
 
 ostream& operator<<(ostream& os, Order& p)
 {
@@ -191,8 +83,6 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 	}
 }
 
-unsigned Move::range;
-unsigned Move::size;
 
 int main(int argc, char* argv[])
 {
