@@ -15,15 +15,15 @@ typedef vector<int> Order;
 class Move
 {
 	unsigned first, second;
-	Order* order; 
 public:
-	Move(unsigned first, unsigned second, Order* order);
+	Move(unsigned first =0, unsigned second =0);
 	bool next();
-	void make();
-	void make_inv();
+	void make(Order& order);
+	void make_inv(Order& order);
 	friend class Tabulist;
 	friend ostream& operator<<(ostream& os, Move& m);
 	static unsigned range;
+	static size_t size;
 };
 
 class Tabulist
@@ -54,8 +54,8 @@ public:
 	TaskArrivalCmp(vector<Task>& p): p(p) { };
 };
 
-Move::Move(unsigned first, unsigned second, Order* order)
-	:first(first), second(second), order(order) 
+Move::Move(unsigned first, unsigned second)
+	:first(first), second(second) 
 {
 
 }
@@ -67,11 +67,11 @@ bool Move::next()
 	else
 		second++;
 
-	if (second == order->size() || second > first + range)
+	if (second == size || second > first + range)
 	{
 		first++;
 		if (range == 1)
-			first = (second == order->size()) ? second : first;
+			first = (second == size) ? second : first;
 		else if (first == 1)
 			second = 2;
 		else if (first+1 > range)
@@ -80,20 +80,20 @@ bool Move::next()
 			second = 0;
 	}
 
-	return first < order->size();
+	return first < size;
 }
 
-void Move::make()
+void Move::make(Order& order)
 {
-	int temp = (*order)[first];
-	order->erase(order->begin()+first);
-	order->insert(order->begin()+second,temp);
+	int temp = order[first];
+	order.erase(order.begin()+first);
+	order.insert(order.begin()+second,temp);
 	//swap(p[i], p[j]);
 }
 
-void Move::make_inv()
+void Move::make_inv(Order& order)
 {
-	Move(second,first,order).make();
+	Move(second,first).make(order);
 }
 
 ostream& operator<<(ostream& os, Move& m)
@@ -150,14 +150,13 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 	result.cmax = numeric_limits<int>::max();
 	result_asp.cmax = numeric_limits<int>::max();
 	
-	Move move(0,0,&p);
-	Move move_min(0,0,&p);
-
+	Move move, move_min;
+	
 	while (move.next())
 	{
 		bool in_tabu = tabu.is_tabu(move);
 
-		move.make();
+		move.make(p);
 		
 		int cmax = simulate(f, p);
 
@@ -174,7 +173,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 			result_asp.cmax = cmax;
 		}	
 
-		move.make_inv();
+		move.make_inv(p);
 	}
 
 	if (result.cmax < numeric_limits<int>::max())
@@ -192,7 +191,8 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 	}
 }
 
-unsigned Move::range = 1;
+unsigned Move::range;
+unsigned Move::size;
 
 int main(int argc, char* argv[])
 {
@@ -215,8 +215,9 @@ int main(int argc, char* argv[])
 	Flowshop f;
 	cin >> f;
 
-	Result best_result;
+	Move::size = f.tasks.size();
 
+	Result best_result;
 	best_result.order.resize(f.tasks.size());
 	for (unsigned i=0; i<best_result.order.size(); ++i)
 		best_result.order[i] = i;
