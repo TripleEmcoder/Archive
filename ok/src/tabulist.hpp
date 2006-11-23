@@ -11,12 +11,12 @@ using namespace std;
 class Tabulist
 {
 	vector<bool> a;
-	list<Move> b;
+	list<Move*> b;
 	size_t tasks, length;
-	void update_tab(Move& m, bool val);
+	void update_tab(const Move* m, bool val);
 public:
 	Tabulist(size_t tasks, size_t len);
-	void update(Move& m);
-	bool is_tabu(Move& m);
+	void update(Move* m);
+	bool is_tabu(const Move* m);
 	void clear();
 };

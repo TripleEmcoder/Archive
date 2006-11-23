@@ -9,7 +9,7 @@ template<class T> ostream& operator<<(ostream& os, const vector<T>& v)
 
     for (int i=0; i<(int)v.size(); i++)
         os << v[i] << " ";
-
+	
 	os << endl;
 
     return os;
@@ -25,9 +25,6 @@ template<class T> istream& operator>>(istream& is, vector<T>& v)
 
 	return is;
 }
-
-template ostream& operator<<<int>(ostream& is, const vector<int>& v);
-template istream& operator>><int>(istream& is, vector<int>& v);
 
 Period::Period(int start, int length)
 :
