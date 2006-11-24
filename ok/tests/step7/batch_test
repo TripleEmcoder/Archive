@@ -1,0 +1,10 @@
+#!/bin/sh
+SMALL="*.in"
+
+TAG="Move Tabulist"
+
+DISTANCE="1 3" DISTANCE2="distance" \
+TABUS="80 10 120" TABUS2="tabus*30*tasks*(2*distance-1)/100/100" \
+CHANCES="80 10 120" CHANCES2="chances*tabus/100" \
+RESETS="1" RESETS2="resets" \
+../../src/test "$TAG" "$SMALL"
