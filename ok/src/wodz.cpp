@@ -13,9 +13,6 @@ int main()
 
 	vector<int> p;
 	cin >> p;
-	cout << p;
-
-cout << simulate(f, p) << endl;
 
 	FlowshopSchedule fs = schedule(f, p);
 	cout << fs.tasks[p.back()].periods[1][0].stop << endl;
@@ -27,6 +24,7 @@ cout << simulate(f, p) << endl;
 		sum += fs.tasks[i].periods[1][0].stop;
 	
 	cout << sum << endl;
+
 	verify(f, fs);
 	
 	return 0;

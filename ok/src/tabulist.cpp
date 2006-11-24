@@ -7,6 +7,11 @@ Tabulist::Tabulist(size_t tasks, size_t len)
 	a.assign(a.size(), false);
 }
 
+
+Tabulist::~Tabulist()
+{
+}
+
 void Tabulist::update(Move *m)
 {
 	if (b.size() > 0 && b.size() >= length)

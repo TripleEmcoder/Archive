@@ -17,6 +17,7 @@ protected:
 	virtual void update_tab(const Move* m, bool val);
 public:
 	Tabulist(size_t tasks, size_t len);
+	virtual ~Tabulist();
 	void update(Move* m);
 	virtual bool is_tabu(const Move* m);
 	void clear();

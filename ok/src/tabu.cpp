@@ -1,5 +1,3 @@
-#pragma once
-
 #include "data.hpp"
 #include "schedule.hpp"
 #include "move.hpp"

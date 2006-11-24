@@ -26,6 +26,9 @@ template<class T> istream& operator>>(istream& is, vector<T>& v)
 	return is;
 }
 
+template ostream& operator<<(ostream& os, const vector<int>& v);
+template istream& operator>>(istream& is, vector<int>& v);
+
 Period::Period(int start, int length)
 :
 	start(start),

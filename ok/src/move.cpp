@@ -8,8 +8,12 @@ Move::Move(unsigned first, unsigned second)
 {
 
 }
+
+Move::~Move()
+{
+}
 	
-bool Move::next(vector<int>& order)
+bool Move::next(vector<int>&)
 {
 	if (second + 2 == first)
 		second += 3;
@@ -56,7 +60,7 @@ MoveSwap::MoveSwap(unsigned first, unsigned second)
 {
 }
 
-bool MoveSwap::next(vector<int>& order)
+bool MoveSwap::next(vector<int>&)
 {
 	second++;
 

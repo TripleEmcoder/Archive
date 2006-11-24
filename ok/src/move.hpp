@@ -14,6 +14,7 @@ protected:
 	unsigned first, second;
 public:
 	Move(unsigned first =0, unsigned second =0);
+	virtual ~Move();
 	virtual bool next(vector<int>& order);
 	virtual void make(vector<int>& order);
 	virtual void make_inv(vector<int>& order);
