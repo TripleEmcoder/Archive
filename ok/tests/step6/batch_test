@@ -1,18 +1,26 @@
 #!/bin/sh
 SMALL="50-*.in"
 
-TAG="Move Tabulist test tabulisty"
+#TAG="Move Tabulist test tabulisty"
+
+#DISTANCE="3" DISTANCE2="distance" \
+#TABUS=`seq 0 10 150` TABUS2="tabus" \
+#CHANCES=`seq 25 25 100` CHANCES2="chances" \
+#RESETS="1" RESETS2="resets" \
+#../../src/test "$TAG" "$SMALL"
+
+#TAG="Move Tabulist test chances"
+
+#DISTANCE="3" DISTANCE2="distance" \
+#TABUS=`seq 0 25 100` TABUS2="tabus" \
+#CHANCES=`seq 0 10 150` CHANCES2="chances" \
+#RESETS="1" RESETS2="resets" \
+#../../src/test "$TAG" "$SMALL"
+
+TAG="Move Tabulist test wszystkiego"
 
 DISTANCE="3" DISTANCE2="distance" \
-TABUS=`seq 0 10 150` TABUS2="tabus" \
-CHANCES=`seq 25 25 100` CHANCES2="chances" \
-RESETS="1" RESETS2="resets" \
-../../src/test "$TAG" "$SMALL"
-
-TAG="Move Tabulist test chances"
-
-DISTANCE="3" DISTANCE2="distance" \
-TABUS=`seq 0 25 100` TABUS2="tabus" \
-CHANCES=`seq 0 10 150` CHANCES2="chances" \
+TABUS=`seq 0 10 200` TABUS2="tabus" \
+CHANCES=`seq 0 10 200` CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 ../../src/test "$TAG" "$SMALL"
