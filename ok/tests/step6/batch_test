@@ -25,6 +25,8 @@ TAG="Move Tabulist test wszystkiego"
 #RESETS="1" RESETS2="resets" \
 #../../src/test "$TAG" "$SMALL"
 
+SMALL="75-*.in"
+
 DISTANCE="3" DISTANCE2="distance" \
 TABUS=`seq 0 20 300` TABUS2="tabus" \
 CHANCES=`seq 0 20 300` CHANCES2="chances" \
