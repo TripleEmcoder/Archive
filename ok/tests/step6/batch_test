@@ -19,8 +19,14 @@ SMALL="50-*.in"
 
 TAG="Move Tabulist test wszystkiego"
 
+#DISTANCE="3" DISTANCE2="distance" \
+#TABUS=`seq 0 10 200` TABUS2="tabus" \
+#CHANCES=`seq 0 10 200` CHANCES2="chances" \
+#RESETS="1" RESETS2="resets" \
+#../../src/test "$TAG" "$SMALL"
+
 DISTANCE="3" DISTANCE2="distance" \
-TABUS=`seq 0 10 200` TABUS2="tabus" \
-CHANCES=`seq 0 10 200` CHANCES2="chances" \
+TABUS=`seq 0 20 300` TABUS2="tabus" \
+CHANCES=`seq 0 20 300` CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 ../../src/test "$TAG" "$SMALL"
