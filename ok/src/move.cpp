@@ -9,7 +9,7 @@ Move::Move(unsigned first, unsigned second)
 
 }
 	
-bool Move::next()
+bool Move::next(vector<int>& order)
 {
 	if (second + 2 == first)
 		second += 3;
@@ -56,7 +56,7 @@ MoveSwap::MoveSwap(unsigned first, unsigned second)
 {
 }
 
-bool MoveSwap::next()
+bool MoveSwap::next(vector<int>& order)
 {
 	second++;
 
@@ -79,3 +79,41 @@ void MoveSwap::make_inv(vector<int>& order)
 	swap(order[second], order[first]);
 }
 
+MoveTask::MoveTask(unsigned first, unsigned second)
+	:Move(0, 0), a(first), b(second)
+{
+}
+
+bool MoveTask::next(vector<int>& order)
+{
+	b++;
+
+	if (b > a + range || b >= size)
+	{
+		a++;
+		b = a+1;
+	}
+
+	if (a < size && b < size)
+	{
+		first = order[a];
+		second = order[b];
+	}
+
+	return a+1 < size;
+}
+
+void MoveTask::make(vector<int>& order)
+{
+	swap(order[a], order[b]);
+}
+
+void MoveTask::make_inv(vector<int>& order)
+{
+	swap(order[b], order[a]);
+}
+
+ostream& operator<<(ostream& os, MoveTask& m)
+{
+	return os << m.a << "->" << m.b;
+}

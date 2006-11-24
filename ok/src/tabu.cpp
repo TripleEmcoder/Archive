@@ -14,6 +14,7 @@ using namespace std;
 
 typedef vector<int> Order;
 typedef Move MoveType;
+typedef Tabulist TabuType;
 
 struct Result
 {
@@ -39,7 +40,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 	MoveType* move = new MoveType;
 	MoveType* move_min = new MoveType;
 	
-	while (move->next())
+	while (move->next(p))
 	{
 		bool in_tabu = tabu.is_tabu(move);
 
@@ -67,12 +68,13 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 
 	if (result.cmax < numeric_limits<int>::max())
 	{
-		//cerr << result.cmax << " " << move_min << endl;
+		//cerr << result.cmax << " " << *move_min << endl;
 		tabu.update(move_min);
 		return result;
 	}
 	else	
 	{
+		//cerr << "ASP" << endl;
 		tabu.clear();
 		return result_asp;
 	}
@@ -99,7 +101,7 @@ Result tabusearch(Flowshop& f, int tabus, int chances, int resets, int distance)
 	int count = 0;
 	int cmax_min = best_result.cmax;
 	
-	Tabulist tabu(f.tasks.size(), tabus);
+	TabuType tabu(f.tasks.size(), tabus);
 	Move::size = f.tasks.size();
 	Move::range = distance;
 	Order p = best_result.order;
@@ -116,7 +118,7 @@ Result tabusearch(Flowshop& f, int tabus, int chances, int resets, int distance)
 		if (result.cmax < cmax_min)
 		{
 			cmax_min = result.cmax;
-			count = 0;
+			//count = 0;
 		}
 		else if (++count >= chances)
 		{

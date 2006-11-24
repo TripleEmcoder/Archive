@@ -39,3 +39,20 @@ void Tabulist::clear()
 	}
 	b.clear();	
 }
+
+Tabulist2::Tabulist2(size_t tasks, size_t len)
+	:Tabulist(tasks,len)
+{
+	a.resize(tasks);
+}
+
+bool Tabulist2::is_tabu(const Move *m)
+{
+	return (length > 0) && (a[m->first] || a[m->second]);
+}
+
+void Tabulist2::update_tab(const Move *m, bool val)
+{
+	a[m->first] = val;
+	a[m->second] = val;
+}
