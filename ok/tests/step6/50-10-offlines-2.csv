@@ -1,145 +1,145 @@
 tag,date,tabus,chances,resets,distance,cmax,time
-Move test tabulisty,2006-11-26 13:01:13,0,25,1,3,3964,0.36
-Move test tabulisty,2006-11-26 13:01:14,0,50,1,3,3964,0.66
-Move test tabulisty,2006-11-26 13:01:15,0,75,1,3,3964,0.82
-Move test tabulisty,2006-11-26 13:01:16,0,100,1,3,3964,1.00
-Move test tabulisty,2006-11-26 13:01:16,10,25,1,3,3964,0.38
-Move test tabulisty,2006-11-26 13:01:17,10,50,1,3,3964,0.64
-Move test tabulisty,2006-11-26 13:01:18,10,75,1,3,3964,0.78
-Move test tabulisty,2006-11-26 13:01:19,10,100,1,3,3964,1.03
-Move test tabulisty,2006-11-26 13:01:20,20,25,1,3,3964,0.38
-Move test tabulisty,2006-11-26 13:01:20,20,50,1,3,3964,0.60
-Move test tabulisty,2006-11-26 13:01:23,20,75,1,3,3856,2.77
-Move test tabulisty,2006-11-26 13:01:26,20,100,1,3,3856,2.96
-Move test tabulisty,2006-11-26 13:01:27,30,25,1,3,3964,0.39
-Move test tabulisty,2006-11-26 13:01:28,30,50,1,3,3897,1.62
-Move test tabulisty,2006-11-26 13:01:31,30,75,1,3,3859,2.50
-Move test tabulisty,2006-11-26 13:01:34,30,100,1,3,3859,2.65
-Move test tabulisty,2006-11-26 13:01:34,40,25,1,3,3964,0.40
-Move test tabulisty,2006-11-26 13:01:35,40,50,1,3,3953,1.00
-Move test tabulisty,2006-11-26 13:01:37,40,75,1,3,3953,1.22
-Move test tabulisty,2006-11-26 13:01:38,40,100,1,3,3953,1.44
-Move test tabulisty,2006-11-26 13:01:39,50,25,1,3,3964,0.42
-Move test tabulisty,2006-11-26 13:01:41,50,50,1,3,3830,1.87
-Move test tabulisty,2006-11-26 13:01:43,50,75,1,3,3830,2.06
-Move test tabulisty,2006-11-26 13:01:45,50,100,1,3,3830,2.31
-Move test tabulisty,2006-11-26 13:01:46,60,25,1,3,3964,0.39
-Move test tabulisty,2006-11-26 13:01:48,60,50,1,3,3821,1.61
-Move test tabulisty,2006-11-26 13:01:50,60,75,1,3,3821,1.81
-Move test tabulisty,2006-11-26 13:01:52,60,100,1,3,3821,2.03
-Move test tabulisty,2006-11-26 13:01:52,70,25,1,3,3964,0.40
-Move test tabulisty,2006-11-26 13:01:55,70,50,1,3,3773,2.20
-Move test tabulisty,2006-11-26 13:01:57,70,75,1,3,3773,2.40
-Move test tabulisty,2006-11-26 13:02:00,70,100,1,3,3773,2.58
-Move test tabulisty,2006-11-26 13:02:00,80,25,1,3,3964,0.42
-Move test tabulisty,2006-11-26 13:02:02,80,50,1,3,3856,1.66
-Move test tabulisty,2006-11-26 13:02:04,80,75,1,3,3856,1.87
-Move test tabulisty,2006-11-26 13:02:06,80,100,1,3,3856,2.08
-Move test tabulisty,2006-11-26 13:02:07,90,25,1,3,3964,0.35
-Move test tabulisty,2006-11-26 13:02:08,90,50,1,3,3912,1.22
-Move test tabulisty,2006-11-26 13:02:10,90,75,1,3,3912,1.50
-Move test tabulisty,2006-11-26 13:02:11,90,100,1,3,3912,1.69
-Move test tabulisty,2006-11-26 13:02:12,100,25,1,3,3964,0.40
-Move test tabulisty,2006-11-26 13:02:13,100,50,1,3,3912,1.34
-Move test tabulisty,2006-11-26 13:02:15,100,75,1,3,3912,1.53
-Move test tabulisty,2006-11-26 13:02:17,100,100,1,3,3912,1.74
-Move test tabulisty,2006-11-26 13:02:18,110,25,1,3,3964,0.36
-Move test tabulisty,2006-11-26 13:02:19,110,50,1,3,3897,1.55
-Move test tabulisty,2006-11-26 13:02:21,110,75,1,3,3897,1.80
-Move test tabulisty,2006-11-26 13:02:23,110,100,1,3,3897,1.98
-Move test tabulisty,2006-11-26 13:02:24,120,25,1,3,3964,0.43
-Move test tabulisty,2006-11-26 13:02:25,120,50,1,3,3912,1.35
-Move test tabulisty,2006-11-26 13:02:27,120,75,1,3,3912,1.57
-Move test tabulisty,2006-11-26 13:02:29,120,100,1,3,3912,1.78
-Move test tabulisty,2006-11-26 13:02:29,130,25,1,3,3964,0.38
-Move test tabulisty,2006-11-26 13:02:31,130,50,1,3,3912,1.37
-Move test tabulisty,2006-11-26 13:02:32,130,75,1,3,3912,1.52
-Move test tabulisty,2006-11-26 13:02:34,130,100,1,3,3912,1.75
-Move test tabulisty,2006-11-26 13:02:35,140,25,1,3,3964,0.40
-Move test tabulisty,2006-11-26 13:02:36,140,50,1,3,3912,1.36
-Move test tabulisty,2006-11-26 13:02:38,140,75,1,3,3912,1.52
-Move test tabulisty,2006-11-26 13:02:40,140,100,1,3,3912,1.78
-Move test tabulisty,2006-11-26 13:02:40,150,25,1,3,3964,0.40
-Move test tabulisty,2006-11-26 13:02:42,150,50,1,3,3912,1.39
-Move test tabulisty,2006-11-26 13:02:44,150,75,1,3,3912,1.53
-Move test tabulisty,2006-11-26 13:02:46,150,100,1,3,3912,1.82
-Move test chances,2006-11-26 13:30:37,0,0,1,3,3964,0.20
-Move test chances,2006-11-26 13:30:38,0,10,1,3,3964,0.27
-Move test chances,2006-11-26 13:30:38,0,20,1,3,3964,0.35
-Move test chances,2006-11-26 13:30:39,0,30,1,3,3964,0.45
-Move test chances,2006-11-26 13:30:39,0,40,1,3,3964,0.52
-Move test chances,2006-11-26 13:30:40,0,50,1,3,3964,0.62
-Move test chances,2006-11-26 13:30:41,0,60,1,3,3964,0.72
-Move test chances,2006-11-26 13:30:42,0,70,1,3,3964,0.79
-Move test chances,2006-11-26 13:30:43,0,80,1,3,3964,0.88
-Move test chances,2006-11-26 13:30:44,0,90,1,3,3964,0.98
-Move test chances,2006-11-26 13:30:45,0,100,1,3,3964,1.02
-Move test chances,2006-11-26 13:30:46,0,110,1,3,3964,1.15
-Move test chances,2006-11-26 13:30:48,0,120,1,3,3964,1.20
-Move test chances,2006-11-26 13:30:49,0,130,1,3,3964,1.35
-Move test chances,2006-11-26 13:30:51,0,140,1,3,3964,1.38
-Move test chances,2006-11-26 13:30:52,0,150,1,3,3964,1.45
-Move test chances,2006-11-26 13:30:52,25,0,1,3,3964,0.20
-Move test chances,2006-11-26 13:30:53,25,10,1,3,3964,0.27
-Move test chances,2006-11-26 13:30:53,25,20,1,3,3964,0.36
-Move test chances,2006-11-26 13:30:54,25,30,1,3,3964,0.44
-Move test chances,2006-11-26 13:30:54,25,40,1,3,3964,0.55
-Move test chances,2006-11-26 13:30:55,25,50,1,3,3964,0.60
-Move test chances,2006-11-26 13:30:57,25,60,1,3,3895,1.73
-Move test chances,2006-11-26 13:30:59,25,70,1,3,3895,1.83
-Move test chances,2006-11-26 13:31:01,25,80,1,3,3895,1.93
-Move test chances,2006-11-26 13:31:03,25,90,1,3,3895,1.99
-Move test chances,2006-11-26 13:31:05,25,100,1,3,3895,2.05
-Move test chances,2006-11-26 13:31:08,25,110,1,3,3895,2.23
-Move test chances,2006-11-26 13:31:10,25,120,1,3,3895,2.28
-Move test chances,2006-11-26 13:31:16,25,130,1,3,3823,6.27
-Move test chances,2006-11-26 13:31:23,25,140,1,3,3823,6.30
-Move test chances,2006-11-26 13:31:32,25,150,1,3,3815,8.69
-Move test chances,2006-11-26 13:31:32,50,0,1,3,3964,0.18
-Move test chances,2006-11-26 13:31:32,50,10,1,3,3964,0.26
-Move test chances,2006-11-26 13:31:33,50,20,1,3,3964,0.32
-Move test chances,2006-11-26 13:31:33,50,30,1,3,3964,0.46
-Move test chances,2006-11-26 13:31:35,50,40,1,3,3830,1.75
-Move test chances,2006-11-26 13:31:37,50,50,1,3,3830,1.92
-Move test chances,2006-11-26 13:31:39,50,60,1,3,3830,1.99
-Move test chances,2006-11-26 13:31:42,50,70,1,3,3830,2.00
-Move test chances,2006-11-26 13:31:44,50,80,1,3,3830,2.10
-Move test chances,2006-11-26 13:31:46,50,90,1,3,3830,2.18
-Move test chances,2006-11-26 13:31:48,50,100,1,3,3830,2.31
-Move test chances,2006-11-26 13:31:51,50,110,1,3,3830,2.37
-Move test chances,2006-11-26 13:31:54,50,120,1,3,3830,2.48
-Move test chances,2006-11-26 13:31:56,50,130,1,3,3830,2.55
-Move test chances,2006-11-26 13:31:59,50,140,1,3,3830,2.63
-Move test chances,2006-11-26 13:32:02,50,150,1,3,3830,2.69
-Move test chances,2006-11-26 13:32:02,75,0,1,3,3964,0.20
-Move test chances,2006-11-26 13:32:02,75,10,1,3,3964,0.27
-Move test chances,2006-11-26 13:32:03,75,20,1,3,3964,0.35
-Move test chances,2006-11-26 13:32:03,75,30,1,3,3964,0.44
-Move test chances,2006-11-26 13:32:06,75,40,1,3,3811,2.06
-Move test chances,2006-11-26 13:32:08,75,50,1,3,3811,2.15
-Move test chances,2006-11-26 13:32:10,75,60,1,3,3811,2.26
-Move test chances,2006-11-26 13:32:13,75,70,1,3,3811,2.32
-Move test chances,2006-11-26 13:32:15,75,80,1,3,3811,2.36
-Move test chances,2006-11-26 13:32:18,75,90,1,3,3811,2.41
-Move test chances,2006-11-26 13:32:20,75,100,1,3,3811,2.52
-Move test chances,2006-11-26 13:32:23,75,110,1,3,3811,2.58
-Move test chances,2006-11-26 13:32:26,75,120,1,3,3811,2.72
-Move test chances,2006-11-26 13:32:29,75,130,1,3,3811,2.77
-Move test chances,2006-11-26 13:32:32,75,140,1,3,3811,2.85
-Move test chances,2006-11-26 13:32:35,75,150,1,3,3811,2.98
-Move test chances,2006-11-26 13:32:35,100,0,1,3,3964,0.16
-Move test chances,2006-11-26 13:32:36,100,10,1,3,3964,0.23
-Move test chances,2006-11-26 13:32:36,100,20,1,3,3964,0.33
-Move test chances,2006-11-26 13:32:37,100,30,1,3,3964,0.42
-Move test chances,2006-11-26 13:32:38,100,40,1,3,3912,1.30
-Move test chances,2006-11-26 13:32:40,100,50,1,3,3912,1.34
-Move test chances,2006-11-26 13:32:41,100,60,1,3,3912,1.43
-Move test chances,2006-11-26 13:32:43,100,70,1,3,3912,1.51
-Move test chances,2006-11-26 13:32:44,100,80,1,3,3912,1.60
-Move test chances,2006-11-26 13:32:46,100,90,1,3,3912,1.70
-Move test chances,2006-11-26 13:32:48,100,100,1,3,3912,1.77
-Move test chances,2006-11-26 13:32:50,100,110,1,3,3912,1.92
-Move test chances,2006-11-26 13:32:52,100,120,1,3,3912,1.89
-Move test chances,2006-11-26 13:32:54,100,130,1,3,3912,2.00
-Move test chances,2006-11-26 13:32:57,100,140,1,3,3912,2.09
-Move test chances,2006-11-26 13:33:00,100,150,1,3,3831,3.82
+Move Tabulist test tabulisty,2006-11-26 16:22:52,0,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:52,0,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:52,0,75,1,3,4118,0.12
+Move Tabulist test tabulisty,2006-11-26 16:22:52,0,100,1,3,4118,0.14
+Move Tabulist test tabulisty,2006-11-26 16:22:53,10,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:53,10,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:53,10,75,1,3,4118,0.12
+Move Tabulist test tabulisty,2006-11-26 16:22:53,10,100,1,3,4118,0.14
+Move Tabulist test tabulisty,2006-11-26 16:22:53,20,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:54,20,50,1,3,4118,0.07
+Move Tabulist test tabulisty,2006-11-26 16:22:54,20,75,1,3,4118,0.11
+Move Tabulist test tabulisty,2006-11-26 16:22:54,20,100,1,3,4118,0.15
+Move Tabulist test tabulisty,2006-11-26 16:22:54,30,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:54,30,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:55,30,75,1,3,4118,0.12
+Move Tabulist test tabulisty,2006-11-26 16:22:55,30,100,1,3,4118,0.14
+Move Tabulist test tabulisty,2006-11-26 16:22:55,40,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:55,40,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:56,40,75,1,3,4118,0.12
+Move Tabulist test tabulisty,2006-11-26 16:22:56,40,100,1,3,4118,0.13
+Move Tabulist test tabulisty,2006-11-26 16:22:56,50,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:56,50,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:56,50,75,1,3,4118,0.13
+Move Tabulist test tabulisty,2006-11-26 16:22:57,50,100,1,3,4118,0.13
+Move Tabulist test tabulisty,2006-11-26 16:22:57,60,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:57,60,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:57,60,75,1,3,4118,0.10
+Move Tabulist test tabulisty,2006-11-26 16:22:57,60,100,1,3,4102,0.14
+Move Tabulist test tabulisty,2006-11-26 16:22:58,70,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:58,70,50,1,3,4118,0.07
+Move Tabulist test tabulisty,2006-11-26 16:22:58,70,75,1,3,4008,0.11
+Move Tabulist test tabulisty,2006-11-26 16:22:58,70,100,1,3,4008,0.14
+Move Tabulist test tabulisty,2006-11-26 16:22:58,80,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:22:59,80,50,1,3,4118,0.08
+Move Tabulist test tabulisty,2006-11-26 16:22:59,80,75,1,3,4087,0.10
+Move Tabulist test tabulisty,2006-11-26 16:22:59,80,100,1,3,4008,0.16
+Move Tabulist test tabulisty,2006-11-26 16:22:59,90,25,1,3,4118,0.03
+Move Tabulist test tabulisty,2006-11-26 16:22:59,90,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:00,90,75,1,3,4087,0.13
+Move Tabulist test tabulisty,2006-11-26 16:23:00,90,100,1,3,4087,0.13
+Move Tabulist test tabulisty,2006-11-26 16:23:00,100,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:23:00,100,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:01,100,75,1,3,4087,0.14
+Move Tabulist test tabulisty,2006-11-26 16:23:01,100,100,1,3,4087,0.12
+Move Tabulist test tabulisty,2006-11-26 16:23:01,110,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:23:01,110,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:01,110,75,1,3,4087,0.18
+Move Tabulist test tabulisty,2006-11-26 16:23:02,110,100,1,3,4087,0.13
+Move Tabulist test tabulisty,2006-11-26 16:23:02,120,25,1,3,4118,0.03
+Move Tabulist test tabulisty,2006-11-26 16:23:02,120,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:02,120,75,1,3,4087,0.10
+Move Tabulist test tabulisty,2006-11-26 16:23:03,120,100,1,3,4087,0.19
+Move Tabulist test tabulisty,2006-11-26 16:23:03,130,25,1,3,4118,0.03
+Move Tabulist test tabulisty,2006-11-26 16:23:03,130,50,1,3,4118,0.10
+Move Tabulist test tabulisty,2006-11-26 16:23:03,130,75,1,3,4087,0.09
+Move Tabulist test tabulisty,2006-11-26 16:23:03,130,100,1,3,4087,0.18
+Move Tabulist test tabulisty,2006-11-26 16:23:04,140,25,1,3,4118,0.03
+Move Tabulist test tabulisty,2006-11-26 16:23:04,140,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:04,140,75,1,3,4087,0.13
+Move Tabulist test tabulisty,2006-11-26 16:23:04,140,100,1,3,4087,0.12
+Move Tabulist test tabulisty,2006-11-26 16:23:04,150,25,1,3,4118,0.04
+Move Tabulist test tabulisty,2006-11-26 16:23:05,150,50,1,3,4118,0.06
+Move Tabulist test tabulisty,2006-11-26 16:23:05,150,75,1,3,4087,0.13
+Move Tabulist test tabulisty,2006-11-26 16:23:05,150,100,1,3,4087,0.12
+Move Tabulist test chances,2006-11-26 16:28:35,0,0,1,3,4118,0.01
+Move Tabulist test chances,2006-11-26 16:28:35,0,10,1,3,4118,0.02
+Move Tabulist test chances,2006-11-26 16:28:35,0,20,1,3,4118,0.04
+Move Tabulist test chances,2006-11-26 16:28:35,0,30,1,3,4118,0.05
+Move Tabulist test chances,2006-11-26 16:28:35,0,40,1,3,4118,0.07
+Move Tabulist test chances,2006-11-26 16:28:35,0,50,1,3,4118,0.08
+Move Tabulist test chances,2006-11-26 16:28:36,0,60,1,3,4118,0.10
+Move Tabulist test chances,2006-11-26 16:28:36,0,70,1,3,4118,0.11
+Move Tabulist test chances,2006-11-26 16:28:36,0,80,1,3,4118,0.12
+Move Tabulist test chances,2006-11-26 16:28:36,0,90,1,3,4118,0.14
+Move Tabulist test chances,2006-11-26 16:28:37,0,100,1,3,4118,0.14
+Move Tabulist test chances,2006-11-26 16:28:37,0,110,1,3,4118,0.17
+Move Tabulist test chances,2006-11-26 16:28:37,0,120,1,3,4118,0.18
+Move Tabulist test chances,2006-11-26 16:28:37,0,130,1,3,4118,0.19
+Move Tabulist test chances,2006-11-26 16:28:38,0,140,1,3,4118,0.21
+Move Tabulist test chances,2006-11-26 16:28:38,0,150,1,3,4118,0.24
+Move Tabulist test chances,2006-11-26 16:28:38,25,0,1,3,4118,0.01
+Move Tabulist test chances,2006-11-26 16:28:38,25,10,1,3,4118,0.02
+Move Tabulist test chances,2006-11-26 16:28:38,25,20,1,3,4118,0.04
+Move Tabulist test chances,2006-11-26 16:28:39,25,30,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:39,25,40,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:39,25,50,1,3,4118,0.08
+Move Tabulist test chances,2006-11-26 16:28:39,25,60,1,3,4118,0.09
+Move Tabulist test chances,2006-11-26 16:28:39,25,70,1,3,4118,0.10
+Move Tabulist test chances,2006-11-26 16:28:40,25,80,1,3,4118,0.12
+Move Tabulist test chances,2006-11-26 16:28:40,25,90,1,3,4118,0.14
+Move Tabulist test chances,2006-11-26 16:28:40,25,100,1,3,4118,0.15
+Move Tabulist test chances,2006-11-26 16:28:40,25,110,1,3,4118,0.17
+Move Tabulist test chances,2006-11-26 16:28:41,25,120,1,3,4118,0.17
+Move Tabulist test chances,2006-11-26 16:28:41,25,130,1,3,4118,0.19
+Move Tabulist test chances,2006-11-26 16:28:41,25,140,1,3,4118,0.21
+Move Tabulist test chances,2006-11-26 16:28:42,25,150,1,3,4118,0.21
+Move Tabulist test chances,2006-11-26 16:28:42,50,0,1,3,4118,0.01
+Move Tabulist test chances,2006-11-26 16:28:42,50,10,1,3,4118,0.02
+Move Tabulist test chances,2006-11-26 16:28:42,50,20,1,3,4118,0.04
+Move Tabulist test chances,2006-11-26 16:28:42,50,30,1,3,4118,0.05
+Move Tabulist test chances,2006-11-26 16:28:42,50,40,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:43,50,50,1,3,4118,0.08
+Move Tabulist test chances,2006-11-26 16:28:43,50,60,1,3,4118,0.09
+Move Tabulist test chances,2006-11-26 16:28:43,50,70,1,3,4118,0.10
+Move Tabulist test chances,2006-11-26 16:28:43,50,80,1,3,4118,0.11
+Move Tabulist test chances,2006-11-26 16:28:44,50,90,1,3,4118,0.15
+Move Tabulist test chances,2006-11-26 16:28:44,50,100,1,3,4118,0.14
+Move Tabulist test chances,2006-11-26 16:28:44,50,110,1,3,4118,0.16
+Move Tabulist test chances,2006-11-26 16:28:44,50,120,1,3,4118,0.19
+Move Tabulist test chances,2006-11-26 16:28:45,50,130,1,3,4118,0.18
+Move Tabulist test chances,2006-11-26 16:28:45,50,140,1,3,4118,0.20
+Move Tabulist test chances,2006-11-26 16:28:45,50,150,1,3,4118,0.20
+Move Tabulist test chances,2006-11-26 16:28:46,75,0,1,3,4118,0.01
+Move Tabulist test chances,2006-11-26 16:28:46,75,10,1,3,4118,0.02
+Move Tabulist test chances,2006-11-26 16:28:46,75,20,1,3,4118,0.04
+Move Tabulist test chances,2006-11-26 16:28:46,75,30,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:46,75,40,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:46,75,50,1,3,4118,0.07
+Move Tabulist test chances,2006-11-26 16:28:47,75,60,1,3,4118,0.08
+Move Tabulist test chances,2006-11-26 16:28:47,75,70,1,3,4102,0.12
+Move Tabulist test chances,2006-11-26 16:28:47,75,80,1,3,4008,0.12
+Move Tabulist test chances,2006-11-26 16:28:47,75,90,1,3,4008,0.14
+Move Tabulist test chances,2006-11-26 16:28:48,75,100,1,3,4008,0.14
+Move Tabulist test chances,2006-11-26 16:28:48,75,110,1,3,4008,0.18
+Move Tabulist test chances,2006-11-26 16:28:48,75,120,1,3,4008,0.17
+Move Tabulist test chances,2006-11-26 16:28:49,75,130,1,3,4008,0.21
+Move Tabulist test chances,2006-11-26 16:28:49,75,140,1,3,4008,0.19
+Move Tabulist test chances,2006-11-26 16:28:49,75,150,1,3,4008,0.25
+Move Tabulist test chances,2006-11-26 16:28:49,100,0,1,3,4118,0.01
+Move Tabulist test chances,2006-11-26 16:28:49,100,10,1,3,4118,0.02
+Move Tabulist test chances,2006-11-26 16:28:50,100,20,1,3,4118,0.03
+Move Tabulist test chances,2006-11-26 16:28:50,100,30,1,3,4118,0.04
+Move Tabulist test chances,2006-11-26 16:28:50,100,40,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:50,100,50,1,3,4118,0.06
+Move Tabulist test chances,2006-11-26 16:28:50,100,60,1,3,4118,0.08
+Move Tabulist test chances,2006-11-26 16:28:50,100,70,1,3,4102,0.08
+Move Tabulist test chances,2006-11-26 16:28:51,100,80,1,3,4087,0.12
+Move Tabulist test chances,2006-11-26 16:28:51,100,90,1,3,4087,0.11
+Move Tabulist test chances,2006-11-26 16:28:51,100,100,1,3,4087,0.17
+Move Tabulist test chances,2006-11-26 16:28:52,100,110,1,3,4087,0.13
+Move Tabulist test chances,2006-11-26 16:28:52,100,120,1,3,4025,0.19
+Move Tabulist test chances,2006-11-26 16:28:52,100,130,1,3,4025,0.22
+Move Tabulist test chances,2006-11-26 16:28:53,100,140,1,3,4025,0.23
+Move Tabulist test chances,2006-11-26 16:28:53,100,150,1,3,4025,0.24
