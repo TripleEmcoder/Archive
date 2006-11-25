@@ -4,4 +4,10 @@ TASKS="25 1 25" \
 OFFLINES="5 1 5" \
 OFFLINES2="offlines" \
 REPEAT="1 1 20" \
+#../../src/generate
+
+TASKS="50 1 50" \
+OFFLINES="10 1 10" \
+OFFLINES2="offlines" \
+REPEAT="1 1 20" \
 ../../src/generate

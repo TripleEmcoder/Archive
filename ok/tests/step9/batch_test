@@ -1,57 +1,114 @@
 #!/bin/sh
 TOOLS=../../src
-SMALL="*.in"
 
-TAG="Move Tabulist"
-cp $TOOLS/tabu-Move-Tabulist-r76 $TOOLS/tabu
+TESTS="25-*.in"
 
-DISTANCE="3" DISTANCE2="distance" \
-TABUS=`seq 0 20 100` TABUS2="tabus" \
-CHANCES=`seq 0 20 160` CHANCES2="chances" \
-RESETS="1" RESETS2="resets" \
-#$TOOLS/test "$TAG" "$SMALL"
-
-TAG="MoveSwap Tabulist"
-cp $TOOLS/tabu-MoveSwap-Tabulist-r76 $TOOLS/tabu
-
-DISTANCE="5" DISTANCE2="distance" \
-TABUS=`seq 0 20 100` TABUS2="tabus" \
-CHANCES=`seq 0 20 160` CHANCES2="chances" \
-RESETS="1" RESETS2="resets" \
-#$TOOLS/test "$TAG" "$SMALL"
-
-TAG="MoveTask Tabulist"
-cp $TOOLS/tabu-MoveTask-Tabulist-r76 $TOOLS/tabu
-
-DISTANCE="5" DISTANCE2="distance" \
-TABUS=`seq 0 20 100` TABUS2="tabus" \
-CHANCES=`seq 0 20 160` CHANCES2="chances" \
-RESETS="1" RESETS2="resets" \
-#$TOOLS/test "$TAG" "$SMALL"
-
-TAG="Move Tabulist2"
-cp $TOOLS/tabu-Move-Tabulist2-r76 $TOOLS/tabu
+TAG="Move-Tabulist$SUFFIX"
+cp $TOOLS/tabu-Move-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE="3" DISTANCE2="distance" \
+TABUS=`seq 0 20 100` TABUS2="tabus" \
+CHANCES=`seq 0 20 160` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+#$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveSwap-Tabulist$SUFFIX"
+cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 20 100` TABUS2="tabus" \
+CHANCES=`seq 0 20 160` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+#$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveTask-Tabulist$SUFFIX"
+cp $TOOLS/tabu-MoveTask-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 20 100` TABUS2="tabus" \
+CHANCES=`seq 0 20 160` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+#$TOOLS/test "$TAG" "$TESTS"
+
+TAG="Move-Tabulist2$SUFFIX"
+cp $TOOLS/tabu-Move-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="3" DISTANCE2="distance" \
 TABUS=`seq 0 2 10` TABUS2="tabus" \
 CHANCES=`seq 0 20 160` CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
-$TOOLS/test "$TAG" "$SMALL"
+#$TOOLS/test "$TAG" "$TESTS"
 
-TAG="MoveSwap Tabulist2"
-cp $TOOLS/tabu-MoveSwap-Tabulist2-r76 $TOOLS/tabu
+TAG="MoveSwap-Tabulist2$SUFFIX"
+cp $TOOLS/tabu-MoveSwap-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE="5" DISTANCE2="distance" \
 TABUS=`seq 0 2 10` TABUS2="tabus" \
 CHANCES=`seq 0 20 160` CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
-$TOOLS/test "$TAG" "$SMALL"
+#$TOOLS/test "$TAG" "$TESTS"
 
-TAG="MoveTask Tabulist2"
-cp $TOOLS/tabu-MoveTask-Tabulist2-r76 $TOOLS/tabu
+TAG="MoveTask-Tabulist2$SUFFIX"
+cp $TOOLS/tabu-MoveTask-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE="5" DISTANCE2="distance" \
 TABUS=`seq 0 2 10` TABUS2="tabus" \
 CHANCES=`seq 0 20 160` CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
-$TOOLS/test "$TAG" "$SMALL"
+#$TOOLS/test "$TAG" "$TESTS"
+
+TESTS="50-*.in"
+
+TAG="Move-Tabulist$SUFFIX"
+cp $TOOLS/tabu-Move-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="3" DISTANCE2="distance" \
+TABUS=`seq 0 25 200` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveSwap-Tabulist$SUFFIX"
+cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 25 200` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveTask-Tabulist-$SUFFIX"
+cp $TOOLS/tabu-MoveTask-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 25 200` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="Move-Tabulist2-$SUFFIX"
+cp $TOOLS/tabu-Move-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="3" DISTANCE2="distance" \
+TABUS=`seq 0 4 20` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveSwap-Tabulist2$SUFFIX"
+cp $TOOLS/tabu-MoveSwap-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 4 20` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveTask-Tabulist2$SUFFIX"
+cp $TOOLS/tabu-MoveTask-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="5" DISTANCE2="distance" \
+TABUS=`seq 0 4 20` TABUS2="tabus" \
+CHANCES=`seq 0 25 300` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
