@@ -17,13 +17,13 @@ SMALL="50-*.in"
 #RESETS="1" RESETS2="resets" \
 #../../src/test "$TAG" "$SMALL"
 
-TAG="Move Tabulist test wszystkiego"
+TAG="Move Tabulist test wszystkiego$SUFFIX"
 
-#DISTANCE="3" DISTANCE2="distance" \
-#TABUS=`seq 0 10 200` TABUS2="tabus" \
-#CHANCES=`seq 0 10 200` CHANCES2="chances" \
-#RESETS="1" RESETS2="resets" \
-#../../src/test "$TAG" "$SMALL"
+DISTANCE="3" DISTANCE2="distance" \
+TABUS=`seq 0 10 200` TABUS2="tabus" \
+CHANCES=`seq 0 10 200` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+../../src/test "$TAG" "$SMALL"
 
 SMALL="75-*.in"
 
