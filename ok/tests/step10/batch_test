@@ -7,25 +7,25 @@ TAG="MoveIndex-DoubleBlock$SUFFIX"
 cp $TOOLS/tabu-Move-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE=`seq 1 1 15` DISTANCE2="distance" \
-TABUS="45" TABUS2="tabus*tasks*(2*distance-1)/100" \
+TABUS="30" TABUS2="tabus*tasks*(2*distance-1)/100" \
 CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
-$TOOLS/test "$TAG" "$TESTS"
+#$TOOLS/test "$TAG" "$TESTS"
 
 TAG="SwapIndex-DoubleBlock$SUFFIX"
 cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE=`seq 1 2 29` DISTANCE2="distance" \
-TABUS="45" TABUS2="tabus*tasks*distance/100" \
+TABUS="30" TABUS2="tabus*tasks*distance/100" \
 CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
-$TOOLS/test "$TAG" "$TESTS"
+#$TOOLS/test "$TAG" "$TESTS"
 
 TAG="MoveIndex-DoubleBlock$SUFFIX"
 cp $TOOLS/tabu-Move-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE=`seq 1 1 15` DISTANCE2="distance" \
-TABUS="60" TABUS2="tabus*tasks*(2*distance-1)/100" \
+TABUS="45 60" TABUS2="tabus*tasks*(2*distance-1)/100" \
 CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 $TOOLS/test "$TAG" "$TESTS"
@@ -34,7 +34,7 @@ TAG="SwapIndex-DoubleBlock$SUFFIX"
 cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE=`seq 1 2 29` DISTANCE2="distance" \
-TABUS="60" TABUS2="tabus*tasks*distance/100" \
+TABUS="45 60" TABUS2="tabus*tasks*distance/100" \
 CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 $TOOLS/test "$TAG" "$TESTS"
