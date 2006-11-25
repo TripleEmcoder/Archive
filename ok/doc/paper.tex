@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,titlepage,twoside]{article}
+\documentclass[12pt,a4paper,titlepage,twoside]{article}
 \usepackage[T1]{fontenc}
 \usepackage[cp1250]{inputenc}
 \usepackage[english,polish]{babel}
@@ -32,21 +32,22 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\begin{titlepage}
-\title{Optymalizacja kombinatoryczna \\ (tytu³)}
-\author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
-\end{titlepage}
-
 \hypersetup
 {
 	bookmarksnumbered=true,
 	colorlinks=true,
 	linkcolor=blue,
 	bookmarksopen=true,
-	bookmarksopenlevel=2
+	bookmarksopenlevel=2,
+	pdfstartview=FitW
 }
 
 \SIdecimalsign{,}
+
+\begin{titlepage}
+\title{Optymalizacja kombinatoryczna \\ (tytu³)}
+\author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
+\end{titlepage}
 
 \begin{document}
 
@@ -65,42 +66,55 @@ Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
 \begin{description}
 \item[$F2$] -- szeregowanie zadañ w systemie przep³ywowym na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
 \item[$h_{1k}$] -- wystêpowanie okresów niedostêpnoœci na I maszynie,
-\item[$SRS$] -- mo¿liwoœæ wznawiania zadañ (ale zatrzymanie zadania mo¿liwe jest jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
+\item[$SRS$] -- mo¿liwoœæ wznawiania zadañ (z zastrze¿eniem, ¿e zatrzymanie zadania mo¿e nast¹piæ jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
 \item[$r_i$] -- dane s¹ momenty przybycia zadañ,
 \item[$no-wait$] -- przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I,
-\item[$C_{max}$] -- kryterium optymalizacyjne stanowi moment ostatecznego zakoñczenia ostatniego zadania (mo¿liwie jak najwczeœniej).
+\item[$C_{max}$] -- kryterium optymalizacyjne stanowi moment zakoñczenia przetwarzania ostatniego zadania (mo¿liwie jak najwczeœniej).
 \end{description}
 
 \subsection{Opis wejœcia}
 Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
 \begin{description}
-\item[$n$] -- liczba szeregowanych zadañ, dla $i=1,2,\ldots,n$:
+\item[$n$] -- liczba szeregowanych zadañ,
 	\begin{description}
 	\item[$r'_i$] -- czas przybycia zadania,
 	\item[$s'_i$] -- czas przygotowania na I maszynie,
 	\item[$p'_i$] -- czas przetwarzania na I maszynie, 
 	\item[$s''_i$] -- czas przygotowania II maszynie,
-	\item[$p''_i$] -- czas przetwarzania na II maszynie.
+	\item[$p''_i$] -- czas przetwarzania na II maszynie (dla $i=1,2,\ldots,n$);
 	\end{description}
-\item[$m$] -- liczba okresów niedostêpnoœci, dla $j=1,2,\ldots,m$:
+\item[$m$] -- liczba okresów niedostêpnoœci,
 	\begin{description}
 	\item[$r_j$] -- czas rozpoczêcia okresu niedostêpnoœci,
-	\item[$p_j$] -- d³ugoœæ okresu niedostêpnoœci;
+	\item[$p_j$] -- d³ugoœæ okresu niedostêpnoœci dla ($j=1,2,\ldots,m$).
 	\end{description}
 \end{description}
 
 Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in \mathbb{N}$ oraz $r_j, p_j, r_i, s'_i, s''_i, p''_i \in \mathbb{N}$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
 
+\newpage
+
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
+\begin{itemize}
+\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednostek:
+\begin{displaymath}
+\forall i=1,2,\ldots,n:
+1 \leq p'_i \leq 100
+\wedge
+1 \leq p''_i \leq 100
+\end{displaymath}
 
-$$\forall i=1,2,\ldots,n:$$
-$$1 \leq p'_i \leq 100$$
-$$1 \leq s'_i \leq 50\%\; p'_i$$
-$$1 \leq p''_i \leq 100$$
-$$1 \leq s''_i \leq 50\%\; p''_i$$
+\item dla ka¿dego zadania czas przygotowania na danej maszynie nie przekracza 50\% czasu przetwarzania na tej maszynie:
+\begin{displaymath}
+\forall i=1,2,\ldots,n:
+1 \leq s'_i \leq 50\%\; p'_i
+\wedge
+1 \leq s''_i \leq 50\%\; p''_i
+\end{displaymath}
 
-$$\forall j=1,2,\ldots,m:$$
-$$1 \leq p_j \leq 100$$
+\item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale  $\left[ 1, 100\right]$ jednostek:
+$$\forall j=1,2,\ldots,m: 1 \leq p_j \leq 100$$
+\end{itemize}
 
 oraz sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
