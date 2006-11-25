@@ -1,0 +1,30 @@
+#!/bin/sh
+TOOLS=../../src
+SMALL="50-*.in"
+
+TAG="Move Tabulist"
+cp $TOOLS/tabu-Move-Tabulist-r76 $TOOLS/tabu
+
+DISTANCE="1 3 5" DISTANCE2="distance" \
+TABUS=`seq 0 20 200` TABUS2="tabus" \
+CHANCES=`seq 0 20 200` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$SMALL"
+
+TAG="MoveSwap Tabulist"
+cp $TOOLS/tabu-MoveSwap-Tabulist-r76 $TOOLS/tabu
+
+DISTANCE="1 3 5" DISTANCE2="distance" \
+TABUS=`seq 0 20 200` TABUS2="tabus" \
+CHANCES=`seq 0 20 200` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$SMALL"
+
+TAG="MoveTask Tabulist"
+cp $TOOLS/tabu-MoveTask-Tabulist-r76 $TOOLS/tabu
+
+DISTANCE="1 3 5" DISTANCE2="distance" \
+TABUS=`seq 0 20 200` TABUS2="tabus" \
+CHANCES=`seq 0 20 200` CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$SMALL"
