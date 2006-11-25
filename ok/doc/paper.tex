@@ -106,7 +106,9 @@ oraz sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
 
 [ca³ka Stieltiesa]
-Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, a zmienna losowa $Y$ czasowi przygotowania na I maszynie. Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=2,3,\ldots,100$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
+Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, a zmienna losowa $Y$ czasowi przygotowania na I maszynie, a zmienna $Z$ d³ugoœci okresu niedostêpnoœci. 
+
+Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=2,3,\ldots,100$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
 $$ \textrm{p}(X=x_i) = \frac{1}{99}$$
 
 Wartoœæ œredni¹ zmiennej $X$ mo¿na obliczyæ wg wzoru:
@@ -137,6 +139,22 @@ Koñcowy wzór ma postaæ:
 \begin{displaymath}
 \textrm{E}(Y) = \sum _{i=1} ^{100} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
 \end{displaymath}
+
+Zmienna $Z$ przyjmuje wartoœci $Z_i$ dla $i=1,2,3,\ldots,100$, gdzie $z_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $Z$ jest równomierny, zatem:
+$$ \textrm{p}(Z=z_i) = \frac{1}{100}$$
+
+Wartoœæ œredni¹ zmiennej $Z$ mo¿na obliczyæ wg wzoru:
+
+$$ \textrm{E}(Z) = \sum _{i=1} ^{100} z_i p(z_i) = 50{,}5$$
+
+Z wartoœci œrednich zmiennych losowych $X$, $Y$, $Z$  mo¿na wyznaczyæ oczekiwany stosunek liczby zadañ do liczby okresów niedostêpnoœci tak aby spe³nione by³y warunki zadania:
+
+$$m \textrm{E}(Z) \leq 20\%\, n (\textrm{E}(X)+\textrm{E}(Y))$$
+
+Po przekszta³ceniu i podstawieniu wartoœci:
+
+$$m \leq 25{,}4\% n$$
+
 
 \subsection{Opis wyjœcia}
 Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych elementów:
