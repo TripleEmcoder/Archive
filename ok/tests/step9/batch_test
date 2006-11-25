@@ -133,7 +133,7 @@ CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 $TOOLS/test "$TAG" "$TESTS"
 
-TAG="MoveTask-Tabulist-$SUFFIX"
+TAG="MoveTask-Tabulist$SUFFIX"
 cp $TOOLS/tabu-MoveTask-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE="5" DISTANCE2="distance" \
@@ -142,7 +142,7 @@ CHANCES="500" CHANCES2="chances" \
 RESETS="1" RESETS2="resets" \
 $TOOLS/test "$TAG" "$TESTS"
 
-TAG="Move-Tabulist2-$SUFFIX"
+TAG="Move-Tabulist2$SUFFIX"
 cp $TOOLS/tabu-Move-Tabulist2-r76$SUFFIX $TOOLS/tabu$SUFFIX
 
 DISTANCE="3" DISTANCE2="distance" \
