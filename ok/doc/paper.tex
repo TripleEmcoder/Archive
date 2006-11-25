@@ -99,23 +99,23 @@ Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instan
 \item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednostek, czyli:
 \begin{displaymath}
 \forall i=1,2,\ldots,n:
-1 \leq p'_i \leq 100
-\wedge
-1 \leq p''_i \leq 100
+		1 \leq p'_i \leq 100
+	\wedge
+		1 \leq p''_i \leq 100
 \end{displaymath}
 
 \item dla ka¿dego zadania czas przygotowania na danej maszynie nie przekracza 50\% czasu przetwarzania na tej maszynie, czyli:
 \begin{displaymath}
 \forall i=1,2,\ldots,n:
-1 \leq s'_i \leq 50\%\; p'_i
-\wedge
-1 \leq s''_i \leq 50\%\; p''_i
+		1 \leq s'_i \leq 50\%\; p'_i
+	\wedge
+		1 \leq s''_i \leq 50\%\; p''_i
 \end{displaymath}
 
 \item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale  $\left[ 1, 100\right]$ jednostek, czyli:
 \begin{displaymath}
 \forall j=1,2,\ldots,m:
-1 \leq p_j \leq 100
+	1 \leq p_j \leq 100
 \end{displaymath}
 \end{itemize}
 
@@ -127,40 +127,49 @@ W dalszych rozwa¿aniach wygodniejsze bêdzie pos³ugiwanie siê jedynie wartoœciami
 Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, zmienna losowa $Y$ czasowi przygotowania na II maszynie, a zmienna $Z$ d³ugoœci okresu niedostêpnoœci. 
 
 Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=1,2,3,\ldots,99$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i+1$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
-$$ \textrm{P}(X=x_i) = \frac{1}{99}$$
+$$\textrm{P}(X=x_i) = p(x_i) = \frac{1}{99}$$
 
 Wartoœæ œredni¹ zmiennej $X$ mo¿na obliczyæ wg wzoru:
-$$ \textrm{E}(X) = \sum _{i=1} ^{99} x_i p(x_i) = 51$$
+$$\textrm{E}(X) = \sum _{i=1} ^{99} x_i p(x_i) = 51$$
 
 Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=1,2,3,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
 
 \begin{displaymath}
-\textrm{P}(Y=y_k | X=x_i) = \left\{ \begin{array}{ll}
-\frac{1}{(i+1)/2} & k \leq (i+1)/2\\
-0 & k>(i+1)/2
-\end{array} \right.
+\textrm{P}(Y=y_k | X=x_i) =
+\left\{ 
+	\begin{array}{ll}
+	\frac{1}{(i+1)/2} & k \leq (i+1)/2 \\
+	0 & k>(i+1)/2
+	\end{array} 
+\right.
 \end{displaymath}
 
 Wartoœæ œredni¹ zmiennej $Y$ mo¿na obliczyæ korzystaj¹c z nastêpuj¹cych zale¿noœci:
 
 \begin{displaymath}
-\textrm{E}(Y|X) = \int _{-\infty }^{\infty } y\; \textrm{d} F(y|x)= \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i})
+\textrm{E}(Y|X) = 
+\int_{-\infty}^{\infty} y\; \textrm{d} F(y|x) =
+\sum_{k=1}^{50} \textrm{p}({y_k}|{x_i})
 \end{displaymath}
 
 \begin{displaymath}
-\textrm{E}(Y) = \int _{-\infty }^{\infty } \textrm{E}(Y|X)\; \textrm{d} F_1(x) = \sum _{i=1} ^{99} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
+\textrm{E}(Y) =
+\int_{-\infty}^{\infty} \textrm{E}(Y|X)\; \textrm{d} F_1(x) =
+\sum_{i=1}^{99} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
 \end{displaymath}
 
 Koñcowy wzór ma postaæ:
 \begin{displaymath}
-\textrm{E}(Y) = \sum _{i=1} ^{99} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
+\textrm{E}(Y) =
+\sum_{i=1}^{99} \sum_{k=1}^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) =
+\SI{13.13}
 \end{displaymath}
 
 Zmienna $Z$ przyjmuje wartoœci $Z_i$ dla $i=1,2,3,\ldots,100$, gdzie $z_i$ odpowiada czasowi niedostêpnoœci równemu $i$ jednostek czasu. Rozk³ad zmiennej $Z$ jest równomierny, zatem:
-$$ \textrm{P}(Z=z_i) = \frac{1}{100}$$
+$$\textrm{P}(Z=z_i) = \frac{1}{100}$$
 
 Wartoœæ œredni¹ zmiennej $Z$ mo¿na obliczyæ wg wzoru:
-$$ \textrm{E}(Z) = \sum _{i=1} ^{100} z_i p(z_i) = 50{,}5$$
+$$\textrm{E}(Z) = \sum_{i=1}^{100} z_i p(z_i) = \SI{50.5}{}$$
 
 Z wartoœci œrednich zmiennych losowych $X$, $Y$, $Z$  mo¿na wyznaczyæ oczekiwany stosunek liczby zadañ do liczby okresów niedostêpnoœci tak aby spe³nione by³y warunki zadania:
 $$m \textrm{E}(Z) \leq 20\%\, n (\textrm{E}(X)+\textrm{E}(Y))$$
@@ -208,12 +217,12 @@ gdzie jako zadanie o numerze $i=0$ przyjmujemy dodatkowe zadanie o okresach prze
 
 okresy zawarte w zbiorze A odpowiadaj¹ parami roz³¹cznym przedzia³om czasu, czyli:
 \begin{eqnarray*}
-& \forall (i_1, j_1), (i_2, j_2) \in A, (i_1, j_1) \neq (i_2, j_2): \\
-& [ r'_{i_1j_1} - s'_{i_1j_1}, r'_{i_1j_1} +p '_{i_1j_1} )
-\cap
-[ r'_{i_2j_2} - s'_{i_2j_2}, r'_{i_2j_2} +p '_{i_2j_2} )
-=
-\emptyset
+&	\forall (i_1, j_1), (i_2, j_2) \in A, (i_1, j_1) \neq (i_2, j_2): \\
+&		[ r'_{i_1j_1} - s'_{i_1j_1}, r'_{i_1j_1} + p'_{i_1j_1} )
+	\cap
+		[ r'_{i_2j_2} - s'_{i_2j_2}, r'_{i_2j_2} + p'_{i_2j_2} )
+	=
+		\emptyset
 \end{eqnarray*}
 
 \item dla okreœlonej kolejnoœci zadañ przetwarzanie ka¿dego z nich zaczyna siê w pierwszej mo¿liwej chwili czasu, tj. nie wystêpuj¹ opóŸnienia inne, ni¿ wynikaj¹ce z opisanych wy¿ej warunków.
@@ -281,7 +290,16 @@ Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w s
 \section{Wyniki eksperymentu}
 Faza doœwiadczalna opiera³a siê na serii zautomatyzowanych testów wykonanych na losowo generowanych instancjach. Pomiary wykonywano w œrodowisku GNU/Linux przy pomocy kompilatora GCC w wersji 4.1.2 na komputerach z procesorami AMD Athlon XP \SI{1.8}{GHz} i Intel Celeron M \SI{1.4}{GHz}. Podczas analizy pomiary wykonane na ró¿nych komputerach nie by³y wzajemnie porównywane.
 
+Pomiaru czasu dokonywano systemowym poleceniem \emph{time}, odnotowuj¹c jedynie czas spêdzony przez proces w trybie u¿ytkownika, zmniejszaj¹c w ten sposób wp³yw operacji wejœcia/wyjœcia na wyniki pomiaru, który dla szybko wykonuj¹cych siê testów móg³ byæ znacz¹cy. Czas mierzono w sekundach, z dok³adnoœci¹ do drugiego miejsca po przecinku. Wiêksza dok³adnoœæ na typowym systemie klasy PC jest w praktyce nieosi¹galna.
 
+Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej \emph{cmax\_error}, przy czym jako wartoœæ dok³adn¹ przyjmowano najmniejsz¹ wartoœæ $C_{max}$ osi¹gniêt¹ w trakcie wykonywania pomiarów dla danej instancji:
+\begin{displaymath}
+\forall p \in \textrm{P}(\mathbb{I}):
+	\emph{cmax\_error}(p) = 
+		\frac
+			{\emph{cmax}(p)}
+			{\max_{q \in \textrm{P}(\mathbb{I})} \emph{cmax}(p)} - 1
+\end{displaymath}
 \subsection{Wybór implementacji}
 Pierwszym eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. 
 
