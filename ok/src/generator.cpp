@@ -47,7 +47,7 @@ struct OfflineGen
 
 int randint(int min, int max)
 {
-	return (int)(((double)rand() / (double)RAND_MAX) * (max-min) + min);
+	return (int)(((double)rand() / (double)RAND_MAX) * (max-min+1) + min);
 }
 
 Task TaskGen::operator()()
