@@ -18,6 +18,7 @@ public:
 	virtual bool next(vector<int>& order);
 	virtual void make(vector<int>& order);
 	virtual void make_inv(vector<int>& order);
+	virtual int diff();
 	static unsigned range;
 	static size_t size;
 };
@@ -40,4 +41,5 @@ public:
 	bool next(vector<int>& order);
 	void make(vector<int>& order);
 	void make_inv(vector<int>& order);
+	int diff();
 };

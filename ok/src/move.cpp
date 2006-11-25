@@ -50,6 +50,11 @@ void Move::make_inv(vector<int>& order)
 	order.insert(order.begin()+first, temp);
 }
 
+int Move::diff()
+{
+	return abs(second-first);
+}
+
 ostream& operator<<(ostream& os, Move& m)
 {
 	return os << m.first << "->" << m.second;
@@ -116,6 +121,12 @@ void MoveTask::make_inv(vector<int>& order)
 {
 	swap(order[b], order[a]);
 }
+
+int MoveTask::diff()
+{
+	return abs(b-a);
+}
+
 
 ostream& operator<<(ostream& os, MoveTask& m)
 {

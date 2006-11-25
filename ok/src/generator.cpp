@@ -115,10 +115,10 @@ int main(int argc, char* argv[])
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 	int off = accumulate(offlines.begin(),offlines.end(),0,OfflineSum());
 
-	cerr << "M1: " << m1 << endl;
-	cerr << "M2: " << m2 << endl;
-	cerr << "Off: " << off << endl;
-	cerr << "Off/M1: " << 100*(double)off/(double)m1 << "%" << endl;
+	//cerr << "M1: " << m1 << endl;
+	//cerr << "M2: " << m2 << endl;
+	//cerr << "Off: " << off << endl;
+	//cerr << "Off/M1: " << 100*(double)off/(double)m1 << "%" << endl;
 
 	m1 += off; 
 	m1 += min_element(tasks.begin(),tasks.end(),TaskCmp(1))->sums[1];
@@ -128,7 +128,7 @@ int main(int argc, char* argv[])
 	
 	cout << tasks;
 
-	cerr << "Teoretyczne minimum: " << max(m1,m2) << endl;
+	//cerr << "Teoretyczne minimum: " << max(m1,m2) << endl;
 
 	return 0;
 }

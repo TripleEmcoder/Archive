@@ -11,8 +11,10 @@
 using namespace std;
 
 typedef vector<int> Order;
-typedef MoveTask MoveType;
-typedef Tabulist2 TabuType;
+typedef Move MoveType;
+typedef Tabulist TabuType;
+
+vector<int> distances;
 
 struct Result
 {
@@ -67,6 +69,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 	if (result.cmax < numeric_limits<int>::max())
 	{
 		//cerr << result.cmax << " " << *move_min << endl;
+		distances[move_min->diff()]++;
 		tabu.update(move_min);
 		return result;
 	}
@@ -143,13 +146,21 @@ int main(int argc, char* argv[])
 	Flowshop f;
 	cin >> f;
 
+	distances.resize(f.tasks.size());
+
 	Result result = tabusearch(f, atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]));
 
 	cout << f;
 	cout << result.cmax << endl;
 	cout << schedule(f, result.order);
+
+	for (int i = 1; i < distances.size(); ++i)
+	{
+		cerr << distances[i] << endl;
+	}
+	cerr << endl << endl;
 	
-	cerr << endl << result.cmax << endl;
+	//cerr << endl << result.cmax << endl;
 
 	return 0;
 }
