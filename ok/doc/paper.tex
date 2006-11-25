@@ -52,6 +52,8 @@
 \maketitle
 
 \section{Opis problemu}
+
+\subsection{Notacja trójpolowa}
 Celem projektu by³o opracowanie algorytmu znajduj¹cego rozwi¹zania mo¿liwie bliskie optymalnym dla optymalizacyjnego problemu szeregowania zadañ okreœlonego w notacji trójpolowej nastêpuj¹co:
 
 \begin{quote}
@@ -68,6 +70,7 @@ Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
 \item[$C_{max}$] -- kryterium optymalizacyjne stanowi moment ostatecznego zakoñczenia ostatniego zadania (mo¿liwie jak najwczeœniej).
 \end{description}
 
+\subsection{Opis wejœcia}
 Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
 \begin{description}
 \item[$n$] -- liczba szeregowanych zadañ, dla $i=1,2,\ldots,n$:
@@ -100,6 +103,21 @@ $$1 \leq p_j \leq 100$$
 
 oraz sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
+
+[ca³ka Stieltiesa]
+
+\subsection{Opis wyjœcia}
+Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych elementów:
+\begin{description}
+	\item $k_i$ - iloœæ okresów przetwarzania i-tego zadania na I maszynie, dla $j=1,2,\ldots,k_i$:
+		\begin{description}
+		\item[$r'_{ij}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
+		\item[$p'_{ij}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania;
+		\end{description}
+	\item $r''_i$ - czas rozpoczêcia przetwarzania i-tego zadania na II maszynie,
+	\item $p''_i$ - czas przetwarzania i-tego zadania na II maszynie.
+\end{description}
+
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
@@ -137,7 +155,14 @@ Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w s
 \subsubsection{(przyk³ad na ma³ej instancji)}
 \subsubsection{(bad case)}
 \section{Wyniki eksperymentu}
-(czas i jakoœæ, dalsze ograniczenie, parametry)
+\subsection{Wybór implementacji}
+\subsection{Optymalizacja parametrów}
+\subsubsection{Wp³yw parametrów na czas obliczeñ}
+tabus(step6)
+chances(step6)
+distance(sta³e chances)
+\subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
+\subsection{Testy wydajnoœæiowe}
 
 \end{document}
 
