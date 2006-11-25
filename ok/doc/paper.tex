@@ -10,6 +10,7 @@
 \usepackage{slashbox}
 \usepackage{sistyle}
 \usepackage{amsfonts}
+\usepackage{latexsym}
 
 \setlength{\textheight}{24cm}
 \setlength{\textwidth}{15.92cm}
@@ -105,6 +106,39 @@ oraz sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
 
 [ca³ka Stieltiesa]
+Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, a zmienna losowa $Y$ czasowi przygotowania na I maszynie. Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=2,3,\ldots,100$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
+$$ \textrm{p}(X=x_i) = \frac{1}{99}$$
+
+Wartoœæ œredni¹ zmiennej $X$ mo¿na obliczyæ wg wzoru:
+
+$$ \textrm{E}(X) = \sum _{i=2} ^{100} x_i p(x_i) = 51$$
+
+Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=2,3,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
+
+\begin{displaymath}
+\textrm{p}(Y=y_k | X=x_i) = \left\{ \begin{array}{ll}
+\frac{1}{i/2} & k \leq i/2\\
+0 & k>i/2
+\end{array} \right.
+\end{displaymath}
+
+Wartoœæ œredni¹ zmiennej $Y$ mo¿na obliczyæ korzystaj¹c z nastêpuj¹cych zale¿noœci:
+
+\begin{displaymath}
+\textrm{E}(Y|X) = \int _{-\infty }^{\infty } y\; \textrm{d} F(y|x)= \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i})
+\end{displaymath}
+
+\begin{displaymath}
+\textrm{E}(Y) = \int _{-\infty }^{\infty } \textrm{E}(Y|X)\; \textrm{d} F_1(x) = \sum _{i=1} ^{100} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
+\end{displaymath}
+
+Koñcowy wzór ma postaæ:
+
+\begin{displaymath}
+\textrm{E}(Y) = \sum _{i=1} ^{100} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
+\end{displaymath}
+
+
 
 \subsection{Opis wyjœcia}
 Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych elementów:
