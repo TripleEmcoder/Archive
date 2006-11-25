@@ -96,7 +96,7 @@ Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in \mathbb{N}
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
 \begin{itemize}
-\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednoste, czyli:
+\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednostek, czyli:
 \begin{displaymath}
 \forall i=1,2,\ldots,n:
 1 \leq p'_i \leq 100
@@ -209,9 +209,9 @@ gdzie jako zadanie o numerze $i=0$ przyjmujemy dodatkowe zadanie o okresach prze
 okresy zawarte w zbiorze A odpowiadaj¹ parami roz³¹cznym przedzia³om czasu, czyli:
 \begin{eqnarray*}
 & \forall (i_1, j_1), (i_2, j_2) \in A, (i_1, j_1) \neq (i_2, j_2): \\
-& \left[ r'_{i_1j_1} - s'_{i_1j_1}, r'_{i_1j_1} +p '_{i_1j_1} \right)
+& [ r'_{i_1j_1} - s'_{i_1j_1}, r'_{i_1j_1} +p '_{i_1j_1} )
 \cap
-\left[ r'_{i_2j_2} - s'_{i_2j_2}, r'_{i_2j_2} +p '_{i_2j_2} \right)
+[ r'_{i_2j_2} - s'_{i_2j_2}, r'_{i_2j_2} +p '_{i_2j_2} )
 =
 \emptyset
 \end{eqnarray*}
@@ -248,9 +248,9 @@ Sprawdzenie ka¿dego z kroków wymaga obliczenia wartoœci $C_{max}$ dla powsta³ej 
 \hline
 Metoda & Iloœæ kroków & Z³o¿onoœæ \\
 \hline
-MoveIndex & & \\
-SwapIndex & & \\
-SwapTask & & \\
+MoveIndex & $(n-1)^2$ & $O(n^3)$ \\
+SwapIndex & $\frac{n (n-1)}{2}$ & $O(n^3)$ \\
+SwapTask & $\frac{n (n-1)}{2}$ & $O(n^3)$ \\
 \hline
 \end{tabular}
 \end{table}
