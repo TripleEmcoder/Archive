@@ -11,8 +11,8 @@
 using namespace std;
 
 typedef vector<int> Order;
-typedef Move MoveType;
-typedef Tabulist TabuType;
+typedef MoveTask MoveType;
+typedef Tabulist2 TabuType;
 
 struct Result
 {

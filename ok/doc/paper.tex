@@ -109,15 +109,26 @@ $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
 \subsection{Opis wyjœcia}
 Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych elementów:
 \begin{description}
-	\item $k_i$ - iloœæ okresów przetwarzania i-tego zadania na I maszynie, dla $j=1,2,\ldots,k_i$:
+	\item[$k_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie, dla $j=1,2,\ldots,k_i$:
 		\begin{description}
 		\item[$r'_{ij}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
 		\item[$p'_{ij}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania;
 		\end{description}
-	\item $r''_i$ - czas rozpoczêcia przetwarzania i-tego zadania na II maszynie,
-	\item $p''_i$ - czas przetwarzania i-tego zadania na II maszynie.
+	\item[$r''_i$] -- czas rozpoczêcia przetwarzania i-tego zadania na II maszynie.
 \end{description}
 
+Zgodnie z postawionym problemem liczby wymienione powy¿ej musz¹ spe³niaæ nastêpuj¹ce warunki:
+\begin{itemize}
+
+\item sumaryczna d³ugoœæ okresów pracy zaplanowanych na I maszynie musi byæ równa czasowi zadanemu w instancji, czyli:
+$$\forall i=1,2,\ldots,n: \sum_{j=1}^{k_i} p'_{ij} = p'_i$$
+
+\item przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I, czyli:
+$$\forall i=1,2,\ldots,n: r'_{ik_i} + p'_{ik_i} = r''_i$$
+
+\item niemo¿liwe jest przetwarzanie w podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, czyli
+$$\bigcap_{j=1}$$
+\end{itemize}
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}

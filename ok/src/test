@@ -33,11 +33,11 @@ for file in $*; do
 		resets2=`echo $RESETS2 | sed -e "s/resets/$resets/" -f $file.sed | bc | cut -d . -f 1`
 		echo s/resets/$resets2/ >> $file.sed
 
-		command="$TOOLS/tabu $tabus2 $chances2 $resets2 $distance2 < $file.in > $file.out"
+		command="$TOOLS/tabu$SUFFIX $tabus2 $chances2 $resets2 $distance2 < $file.in > $file.out"
 		echo $command >&2
 		
 		time=`/usr/bin/time -f %U sh -c "$command 2>&-" 2>&1`
-		cmax=`cat $file.out | $TOOLS/cmax`
+		cmax=`cat $file.out | $TOOLS/cmax$SUFFIX`
 		date=`date +"%F %T"`
 		
 		echo $tag,$date,$tabus,$chances,$resets,$distance,$cmax,$time >> $file.csv 
