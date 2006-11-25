@@ -325,31 +325,50 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \includegraphics[width=0.9\textwidth]{time-tabus}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{time-chances}
-\end{figure}
+-d³. tabulisty praktycznie nie wp³ywa, bo wszystkie operacje s¹ wykonywane w czasie O(1)
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{time-chances}
 \end{figure}
+
+- liniowy wp³yw na d³. dzia³ania, bo algorytm wykona x+chances iteracji. x = iteracje w których poprawia siê wynik
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{time-distance}
+\end{figure}
+
+- wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance
 
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\textwidth]{cmax-tabus-50}
+\includegraphics[width=0.9\textwidth]{cmax_distance_move}
 \end{figure}
+
+- du¿a poprawa dla pierwszych kilku, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
+
+-!!! distance oznacza tutaj maksymaln¹ odleg³oœæ w lewo + maksymaln¹ odl. w prawo !!!! trzeba to jakoœ objaœniæ albo zmieniæ
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax-tabus-75}
+\includegraphics[width=0.8\textwidth]{cmax_distance_swap}
 \end{figure}
 
-chances(step6)
-distance(sta³e chances)
+- du¿a poprawa mniej wiêcej do distance 20, póŸniej mniejsza, z tego samego powodu co dla MoveIndex
 
-\subsection{Testy wydajnoœæiowe}
+
+- teraz albo tu, albo dla ka¿dego osobno trzeba daæ te wykresy czêstoœci wyboru ruchu
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{cmax_distance_50}
+\end{figure}
+
+- move bardziej op³acalny dla ma³ego distance, swap dla du¿ego
+
+\subsection{Testy wydajnoœciowe}
 
 \end{document}
 
