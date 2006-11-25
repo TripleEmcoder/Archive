@@ -138,31 +138,58 @@ Koñcowy wzór ma postaæ:
 \textrm{E}(Y) = \sum _{i=1} ^{100} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
 \end{displaymath}
 
-
-
 \subsection{Opis wyjœcia}
 Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych elementów:
 \begin{description}
-	\item[$k_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie, dla $j=1,2,\ldots,k_i$:
+	\item[$l_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie, dla $k=1,2,\ldots,l_i$:
 		\begin{description}
-		\item[$r'_{ij}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
-		\item[$p'_{ij}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania;
+		\item[$r'_{ik}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
+		\item[$p'_{ik}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania;
 		\end{description}
 	\item[$r''_i$] -- czas rozpoczêcia przetwarzania i-tego zadania na II maszynie.
 \end{description}
 
+Przy tak przyjêtym opisie rozwi¹zania zachodzi równoœæ:
+$$C_{max} = \max_{i=1}^n r''_i + p''_i$$
+
 Zgodnie z postawionym problemem liczby wymienione powy¿ej musz¹ spe³niaæ nastêpuj¹ce warunki:
 \begin{itemize}
+\item przetwarzanie ka¿dego z zadañ rozpoczyna siê najwczeœniej w momencie jego przybycia, czyli:
+$$\forall i=1,2,\ldots,n: p'_{i1} \geq r'_i$$
 
-\item sumaryczna d³ugoœæ okresów pracy zaplanowanych na I maszynie musi byæ równa czasowi zadanemu w instancji, czyli:
-$$\forall i=1,2,\ldots,n: \sum_{j=1}^{k_i} p'_{ij} = p'_i$$
+\item dla ka¿dego zadania sumaryczna d³ugoœæ okresów pracy zaplanowanych na I maszynie musi byæ równa czasowi zadanemu w instancji, czyli:
+$$\forall i=1,2,\ldots,n: \sum_{k=1}^{l_i} p'_{ik} = p'_i$$
 
-\item przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I, czyli:
-$$\forall i=1,2,\ldots,n: r'_{ik_i} + p'_{ik_i} = r''_i$$
+\item dla ka¿dego zadania przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I, czyli:
+$$\forall i=1,2,\ldots,n: r'_{il_i} + p'_{il_i} = r''_i$$
 
-\item niemo¿liwe jest przetwarzanie w podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, czyli
-$$\bigcap_{j=1}$$
+\item niemo¿liwe jest przetwarzanie zadania podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, innymi s³owy dla zbiorów:
+\begin{description}
+\item{$H$} -- wszystkich okresów niedostêpnoœci,
+\item[$M_1$] -- wszystkich okresów zajêtoœci na I maszynie,
+\item[$M_2$] -- wszystkich okresów zajêtoœci na II maszynie,
+\end{description}
+zbiory $H$ oraz $M_1$ s¹ roz³¹czne, a zbiory $H \cup M1$ oraz $M2$ zawieraj¹ parami roz³¹czne przedzia³y, czyli:
+$$H=\left\{ \left[t_1, t_2 \right): 
+\exists j=1,2,\ldots,m:
+t_1 = r'_{ij} \wedge t_2 = r'_{ij} + p'_{ij} \right\}$$
+
+$$M_1 = \left\{ \left[t_1, t_2 \right): 
+\exists i=1,2,\ldots,n:
+\exists k=1,2,\ldots,m:
+t_1 = s'_i + r'_{ik} \wedge t_2 = r'_{ik} + p'_{ik} \right\}$$
+
+$$M_2 = \left\{ \left[t_1, t_2 \right): 
+\exists i=1,2,\ldots,n:
+t_1 = s''_i + r''_i \wedge t_2 = r''_i + p''_i \right\}$$
+
+$$\forall a,b \in (H \cup M1): a \cap b = \emptyset$$
+$$\forall a,b \in M2: a \cap b  = \emptyset$$
+
+\item dla okreœlonej kolejnoœci zadañ przetwarzanie ka¿dego z nich zaczyna siê w pierwszej mo¿liwej chwili czasu, tj. nie wystêpuj¹ opóŸnienia inne, ni¿ wynikaj¹ce z opisanych wy¿ej warunków.
 \end{itemize}
+
+Wszystkie z powy¿szych warunków by³y automatycznie sprawdzane dla ka¿dego rozwi¹zania wygenerowanego w fazie testów poprawnoœciowych projektu.
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
