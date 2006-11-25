@@ -96,7 +96,7 @@ Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in \mathbb{N}
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
 \begin{itemize}
-\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednostek:
+\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednoste, czyli:
 \begin{displaymath}
 \forall i=1,2,\ldots,n:
 1 \leq p'_i \leq 100
@@ -104,7 +104,7 @@ Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instan
 1 \leq p''_i \leq 100
 \end{displaymath}
 
-\item dla ka¿dego zadania czas przygotowania na danej maszynie nie przekracza 50\% czasu przetwarzania na tej maszynie:
+\item dla ka¿dego zadania czas przygotowania na danej maszynie nie przekracza 50\% czasu przetwarzania na tej maszynie, czyli:
 \begin{displaymath}
 \forall i=1,2,\ldots,n:
 1 \leq s'_i \leq 50\%\; p'_i
@@ -112,14 +112,14 @@ Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instan
 1 \leq s''_i \leq 50\%\; p''_i
 \end{displaymath}
 
-\item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale  $\left[ 1, 100\right]$ jednostek:
+\item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale  $\left[ 1, 100\right]$ jednostek, czyli:
 \begin{displaymath}
 \forall j=1,2,\ldots,m:
 1 \leq p_j \leq 100
 \end{displaymath}
 \end{itemize}
 
-oraz sumaryczne czasy przestojów i przetwarzania:
+oraz ze wzglêdu na sumaryczne czasy przestojów i przetwarzania:
 $$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
 
 W dalszych rozwa¿aniach wygodniejsze bêdzie pos³ugiwanie siê jedynie wartoœciami $n$ i $m$, dlatego powy¿sza zale¿noœæ zostanie odpowiednio przekszta³cona z wykorzystaniem teorii prawdopodobieñstwa tak, aby uwzglêdnia³a losow¹ naturê generowanych testów.
@@ -166,21 +166,21 @@ Z wartoœci œrednich zmiennych losowych $X$, $Y$, $Z$  mo¿na wyznaczyæ oczekiwany
 $$m \textrm{E}(Z) \leq 20\%\, n (\textrm{E}(X)+\textrm{E}(Y))$$
 
 Po przekszta³ceniu i podstawieniu wartoœci:
-$$m \leq \SI{25,4}{\%} n$$
+$$m \leq \SI{25.4}{\%} n$$
 
 \subsection{Opis wyjœcia}
 Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych liczb:
 \begin{description}
-	\item[$l_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie,
+	\item[$l'_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie,
 		\begin{description}
 		\item[$r'_{ik}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
-		\item[$p'_{ik}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania (dla $k=1,2,\ldots,l_i$);
+		\item[$p'_{ik}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania (dla $k=1,2,\ldots,l'_i$);
 		\end{description}
 	\item[$r''_i$] -- czas rozpoczêcia przetwarzania i-tego zadania na II maszynie (dla $i=1,2,\ldots,n$).
 \end{description}
 
 W dalszych rozwa¿aniach przyjêto, ¿e okresy przetwarzania na I maszynie s¹ w obrêbie danego zadania posortowane chronologicznie, tj. zgodnie z rosn¹c¹ wartoœci¹ $r'_{ik}$:
-$$\forall i=1,2,\ldots,n: \forall j=1,2,\ldots,l_i-1: r'_{ij} < r''_{i(j+1)}$$
+$$\forall i=1,2,\ldots,n: \forall j=1,2,\ldots,l'_i-1: r'_{ij} < r''_{i(j+1)}$$
 
 Przy tak przyjêtym opisie rozwi¹zania zachodzi równoœæ:
 $$C_{max} = \max_{i=1}^n r''_i + p''_i$$
@@ -191,33 +191,30 @@ Zgodnie z postawionym problemem liczby wymienione powy¿ej musz¹ spe³niaæ nastêpu
 $$\forall i=1,2,\ldots,n: p'_{i1} \geq r'_i$$
 
 \item dla ka¿dego zadania sumaryczna d³ugoœæ okresów pracy zaplanowanych na I maszynie musi byæ równa czasowi zadanemu w instancji, czyli:
-$$\forall i=1,2,\ldots,n: \sum_{k=1}^{l_i} p'_{ik} = p'_i$$
+$$\forall i=1,2,\ldots,n: \sum_{k=1}^{l'_i} p'_{ik} = p'_i$$
 
 \item dla ka¿dego zadania przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I, czyli:
-$$\forall i=1,2,\ldots,n: r'_{il_i} + p'_{il_i} = r''_i$$
+$$\forall i=1,2,\ldots,n: r'_{il'_i} + p'_{il'_i} = r''_i$$
 
-\item niemo¿liwe jest przetwarzanie zadania podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, innymi s³owy dla zbiorów:
-\begin{description}
-\item{$H$} -- wszystkich okresów niedostêpnoœci,
-\item[$M_1$] -- wszystkich okresów zajêtoœci na I maszynie,
-\item[$M_2$] -- wszystkich okresów zajêtoœci na II maszynie;
-\end{description}
-zbiory $H \cup M_1$ oraz $M_2$ zawieraj¹ parami roz³¹czne przedzia³y, czyli:
-$$H=\left\{ \left[t_1, t_2 \right): 
-\exists j=1,2,\ldots,m:
-t_1 = r'_{ij} \wedge t_2 = r'_{ij} + p'_{ij} \right\}$$
+\item niemo¿liwe jest przetwarzanie zadania podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, innymi s³owy dla zbioru okresów przetwarzania:
+$$A=\left\{ (i, j): i=0,1,\ldots,n \wedge j=1,2,\ldots,l'_i \right\}$$
 
-$$M_1 = \left\{ \left[t_1, t_2 \right): 
-\exists i=1,2,\ldots,n:
-\exists k=1,2,\ldots,m:
-t_1 = s'_i + r'_{ik} \wedge t_2 = r'_{ik} + p'_{ik} \right\}$$
+gdzie jako zadanie o numerze $i=0$ przyjmujemy dodatkowe zadanie o okresach przetwarzania pokrywaj¹cych siê z okresami niedostêpnoœci, czyli:
+\begin{eqnarray*}
+& s'_0 = 0 \\
+& l'_0 = m \\
+& \forall j=1,2,\ldots,m: r'_{ij} = r_j \wedge  p'_{ij} = p_j
+\end{eqnarray*}
 
-$$M_2 = \left\{ \left[t_1, t_2 \right): 
-\exists i=1,2,\ldots,n:
-t_1 = s''_i + r''_i \wedge t_2 = r''_i + p''_i \right\}$$
-
-$$\forall a,b \in (H \cup M1): a \cap b = \emptyset$$
-$$\forall a,b \in M2: a \cap b  = \emptyset$$
+okresy zawarte w zbiorze A odpowiadaj¹ parami roz³¹cznym przedzia³om czasu, czyli:
+\begin{eqnarray*}
+& \forall (i_1, j_1), (i_2, j_2) \in A, (i_1, j_1) \neq (i_2, j_2): \\
+& \left[ r'_{i_1j_1} - s'_{i_1j_1}, r'_{i_1j_1} +p '_{i_1j_1} \right)
+\cap
+\left[ r'_{i_2j_2} - s'_{i_2j_2}, r'_{i_2j_2} +p '_{i_2j_2} \right)
+=
+\emptyset
+\end{eqnarray*}
 
 \item dla okreœlonej kolejnoœci zadañ przetwarzanie ka¿dego z nich zaczyna siê w pierwszej mo¿liwej chwili czasu, tj. nie wystêpuj¹ opóŸnienia inne, ni¿ wynikaj¹ce z opisanych wy¿ej warunków.
 \end{itemize}
@@ -237,10 +234,34 @@ Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu 
 Program rozwi¹zuj¹cy postawiony problem zosta³ podzielony na dwie czêœci: procedury obliczaj¹ce optymalny sposób przetwarzania zadañ dla pewnej ustalonej ich kolejnoœci (permutacji) oraz czêœæ zwi¹zan¹ z poszukiwaniem tej kolejnoœci, dla której wartoœæ $C_{max}$ bêdzie jak najmniejsza. W ramach pierwszej czêœci wykorzystany zosta³ algorytm opracowany na potrzeby rozwi¹zania si³owego, druga zosta³a zaimplementowana z wykorzystaniem idei algorytmu \emph{tabu search}, którego elementy sprecyzowano w opisany ni¿ej sposób.
 
 \paragraph{Krok elementarny}
-Jako krok elementarny algorytmu zosta³a wybrana operacja przemieszczenia zadania w inne miejsce w permutacji wyznaczaj¹cej kolejnoœæ ich przetwarzania. W przypadku ogólnym istnieje $(n-1)^2$ mo¿liwych ruchów, a sprawdzenie ka¿dego z nich (obliczenie $C_{max}$ dla powsta³ej permutacji zadañ) wymaga wykonania dalszych $O(n)$ operacji, jak zosta³o to wczeœniej opisane. Daje to z³o¿onoœæ algorytmu rzêdu $O(n^3)$.
+W fazie doœwiadczalnej projektu testowane by³y algorytmy korzystaj¹ce z trzech ró¿nie zdefiniowanych kroków elementarnych. Wersje te, zwane dalej \emph{MoveIndex}, \emph{SwapIndex} i \emph{SwapTask}, operuj¹ na permutacji wyznaczaj¹cej kolejnoœæ przetwarzania zadañ i realizuj¹ krok elementarny opisany par¹ liczb $(a, b)$ w nastêpuj¹cy sposób:
+\begin{description}
+\item[\emph{MoveIndex}] -- przemieszczenia zadania z pozycji $a$ na pozycjê $b$,
+\item[\emph{SwapIndex}] -- zamiana miejscami zadañ na pozycjach $a$ i $b$,
+\item[\emph{SwapTask}] -- zamiana miejscami zadañ o numerach $a$ i $b$.
+\end{description}
+Sprawdzenie ka¿dego z kroków wymaga obliczenia wartoœci $C_{max}$ dla powsta³ej permutacji zadañ, czyli wykonania - zgodnie z wczeœniejszymi ustaleniami - $O(n)$ operacji. Iloœci mo¿liwych kroków oraz wynikaj¹c¹ z nich z³o¿onoœæ obliczeniow¹ algorytmu dla poszczególnych wersji przedstawia tabela.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Metoda & Iloœæ kroków & Z³o¿onoœæ \\
+\hline
+MoveIndex & & \\
+SwapIndex & & \\
+SwapTask & & \\
+\hline
+\end{tabular}
+\end{table}
 
 \paragraph{Lista tabu}
-Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby umo¿liwiæ szybkie sprawdzanie dostêpnoœci kroków, ich opisy s¹ przechowywane w drzewie binarnym. (\ldots) D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szczególnoœci, dla d³ugoœci równej 0, implementacja staje siê realizacj¹ algorytmu \emph{local search}.
+Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby umo¿liwiæ szybkie sprawdzanie dostêpnoœci kroków, ich opisy s¹ przechowywane w drzewie binarnym. W fazie doœwiadczalnej projektu testowane by³y dwie koncepcje listy tabu, zwane dalej \emph{DoubleBlock} i \emph{MultiBlock}, które dla kroku opisanego przez parê liczb $(a, b)$ powoduj¹ zablokowanie:
+\begin{description}
+\item[\emph{DoubleBlock}] -- danego kroku i kroku odwrotnego, tj. kroków $(a, b)$ i $(b, a)$,
+\item[\emph{MultiBlock}] -- wszystkich kroków zawieraj¹cych w opisie liczby $a$ i $b$, czyli takich kroków $(x, y)$ i $(y, x)$, ¿e $x \neq y$ i $x \in \{a, b\}$, a $y$ jest dowoln¹ liczb¹ tworz¹c¹ razem z $x$ prawid³owy krok.
+\end{description}
+D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szczególnoœci, dla d³ugoœci równej 0, implementacja staje siê realizacj¹ algorytmu \emph{local search}.
 
 \paragraph{Warunek stopu}
 Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
@@ -257,20 +278,49 @@ W pierwszej implementacji pocz¹tkowa permutacja by³a losowana. Metoda ta nie spr
 
 Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w sposób zach³anny, tj. kolejno wybieraj¹c zadania, które w danym momencie prowadz¹ do najkrótszego uszeregowania.
 
+\section{Wyniki eksperymentu}
+Faza doœwiadczalna opiera³a siê na serii zautomatyzowanych testów wykonanych na losowo generowanych instancjach. Pomiary wykonywano w œrodowisku GNU/Linux przy pomocy kompilatora GCC w wersji 4.1.2 na komputerach z procesorami AMD Athlon XP \SI{1.8}{GHz} i Intel Celeron M \SI{1.4}{GHz}. Podczas analizy pomiary wykonane na ró¿nych komputerach nie by³y wzajemnie porównywane.
+
+
+\subsection{Wybór implementacji}
+Pierwszym eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{impl}
+\end{figure}
+
 \subsubsection{(przyk³ad na ma³ej instancji)}
 \subsubsection{(bad case)}
-\section{Wyniki eksperymentu}
-\subsection{Wybór implementacji}
+
 \subsection{Optymalizacja parametrów}
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
-\begin{figure}[t]
+Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawdzenie jaki wp³yw maj¹ one na czas trwania obliczeñ, aby w dalszym toku eksperymentu preferowaæ takie zmiany parametrów, które powoduj¹ mo¿liwie najmniejsze opóŸnienia w otrzymywaniu wyników.
+
+\begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{cmax-tabus-50}
+\includegraphics[width=0.9\textwidth]{time-tabus}
 \end{figure}
-tabus(step6)
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{time-chances}
+\end{figure}
+
+\subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{cmax-tabus-50}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{cmax-tabus-75}
+\end{figure}
+
 chances(step6)
 distance(sta³e chances)
-\subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
+
 \subsection{Testy wydajnoœæiowe}
 
 \end{document}
