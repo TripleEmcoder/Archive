@@ -1,0 +1,22 @@
+#!/bin/sh
+TOOLS=../../src
+
+TESTS="50-*.in"
+
+TAG="Move-Tabulist$SUFFIX"
+cp $TOOLS/tabu-Move-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE=`seq 1 1 15` DISTANCE2="distance" \
+TABUS="30" TABUS2="tabus*tasks*(2*distance-1)/100" \
+CHANCES="500" CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
+TAG="MoveSwap-Tabulist$SUFFIX"
+cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE=`seq 1 1 15` DISTANCE2="distance" \
+TABUS="30" TABUS2="tabus*distance/100" \
+CHANCES="500" CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
