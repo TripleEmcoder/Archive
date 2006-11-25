@@ -126,18 +126,18 @@ W dalszych rozwa¿aniach wygodniejsze bêdzie pos³ugiwanie siê jedynie wartoœciami
 
 Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, zmienna losowa $Y$ czasowi przygotowania na II maszynie, a zmienna $Z$ d³ugoœci okresu niedostêpnoœci. 
 
-Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=2,3,\ldots,100$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
+Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=1,2,3,\ldots,99$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i+1$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
 $$ \textrm{P}(X=x_i) = \frac{1}{99}$$
 
 Wartoœæ œredni¹ zmiennej $X$ mo¿na obliczyæ wg wzoru:
-$$ \textrm{E}(X) = \sum _{i=2} ^{100} x_i p(x_i) = 51$$
+$$ \textrm{E}(X) = \sum _{i=1} ^{99} x_i p(x_i) = 51$$
 
-Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=2,3,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
+Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=1,2,3,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
 
 \begin{displaymath}
 \textrm{P}(Y=y_k | X=x_i) = \left\{ \begin{array}{ll}
-\frac{1}{i/2} & k \leq i/2\\
-0 & k>i/2
+\frac{1}{(i+1)/2} & k \leq (i+1)/2\\
+0 & k>(i+1)/2
 \end{array} \right.
 \end{displaymath}
 
@@ -148,15 +148,15 @@ Wartoœæ œredni¹ zmiennej $Y$ mo¿na obliczyæ korzystaj¹c z nastêpuj¹cych zale¿noœ
 \end{displaymath}
 
 \begin{displaymath}
-\textrm{E}(Y) = \int _{-\infty }^{\infty } \textrm{E}(Y|X)\; \textrm{d} F_1(x) = \sum _{i=1} ^{100} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
+\textrm{E}(Y) = \int _{-\infty }^{\infty } \textrm{E}(Y|X)\; \textrm{d} F_1(x) = \sum _{i=1} ^{99} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
 \end{displaymath}
 
 Koñcowy wzór ma postaæ:
 \begin{displaymath}
-\textrm{E}(Y) = \sum _{i=1} ^{100} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
+\textrm{E}(Y) = \sum _{i=1} ^{99} \sum _{k=1} ^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) = 13{,}13
 \end{displaymath}
 
-Zmienna $Z$ przyjmuje wartoœci $Z_i$ dla $i=1,2,3,\ldots,100$, gdzie $z_i$ odpowiada czasowi przetwarzania równemu $i$ jednostek czasu. Rozk³ad zmiennej $Z$ jest równomierny, zatem:
+Zmienna $Z$ przyjmuje wartoœci $Z_i$ dla $i=1,2,3,\ldots,100$, gdzie $z_i$ odpowiada czasowi niedostêpnoœci równemu $i$ jednostek czasu. Rozk³ad zmiennej $Z$ jest równomierny, zatem:
 $$ \textrm{P}(Z=z_i) = \frac{1}{100}$$
 
 Wartoœæ œredni¹ zmiennej $Z$ mo¿na obliczyæ wg wzoru:
@@ -202,7 +202,7 @@ $$\forall i=1,2,\ldots,n: r'_{il_i} + p'_{il_i} = r''_i$$
 \item[$M_1$] -- wszystkich okresów zajêtoœci na I maszynie,
 \item[$M_2$] -- wszystkich okresów zajêtoœci na II maszynie;
 \end{description}
-zbiory $H \cup M1$ oraz $M2$ zawieraj¹ parami roz³¹czne przedzia³y, czyli:
+zbiory $H \cup M_1$ oraz $M_2$ zawieraj¹ parami roz³¹czne przedzia³y, czyli:
 $$H=\left\{ \left[t_1, t_2 \right): 
 \exists j=1,2,\ldots,m:
 t_1 = r'_{ij} \wedge t_2 = r'_{ij} + p'_{ij} \right\}$$
