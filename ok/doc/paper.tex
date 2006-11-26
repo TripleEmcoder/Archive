@@ -300,18 +300,18 @@ Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej 
 			{\emph{cmax}(p)}
 			{\min_{q \in \textrm{P}(\mathbb{I})} \emph{cmax}(p)} - 1
 \end{displaymath}
-\subsection{Wybór implementacji}
-Pierwszym eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. 
 
-\begin{figure}[h]
+W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich - odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=20\%\,m$. (\emph{dlaczego?})
+
+\subsection{Wybór implementacji}
+Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznaczego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}, zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}).
+
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{impl}
+\label{fig:impl}
+\caption{Porównanie jakoœci i prêdkoœci poszczególnych wersji algorytmu}
 \end{figure}
-
-- 6 opcji
-- niewielkie ró¿nice w jakoœci (4,0\% do 4,5\%)
-- w czasie wiêksze (0,9 - 1,3)
-- wybrano 2 najszybsze
 
 \subsubsection{(przyk³ad na ma³ej instancji)}
 \subsubsection{(bad case)}
@@ -320,21 +320,21 @@ Pierwszym eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu.
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
 Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawdzenie jaki wp³yw maj¹ one na czas trwania obliczeñ, aby w dalszym toku eksperymentu preferowaæ takie zmiany parametrów, które powoduj¹ mo¿liwie najmniejsze opóŸnienia w otrzymywaniu wyników.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-tabus}
 \end{figure}
 
 -d³. tabulisty praktycznie nie wp³ywa, bo wszystkie operacje s¹ wykonywane w czasie O(1)
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-chances}
 \end{figure}
 
 - liniowy wp³yw na d³. dzia³ania, bo algorytm wykona x+chances iteracji. x = iteracje w których poprawia siê wynik
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-distance}
 \end{figure}
@@ -342,19 +342,16 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 - wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance
 
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
-
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax_distance_swap}
 \end{figure}
 
 - du¿a poprawa mniej wiêcej do distance 20, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
 
-
 - teraz tu trzeba daæ te wykresy czêstoœci wyboru ruchu
 
-
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-chances-50}
 \end{figure}
@@ -366,7 +363,7 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 - dla idealnie dobranego tabus (seria 80) nastêpuje sta³a poprawa wyniku
 - je¿eli chances < tabus, to tabulista czêsto nie zd¹¿y siê wype³niæ przed przerwaniem algorytmu i dzia³a wtedy tak jakby mia³a d³. chances a nie tabus, szczególnie widoczne dla du¿ych tabus, np. 50, 80 i 120. Tabus 50 przeszkadza dalej ulepszaæ rozwi¹zanie, bo pozwala wróciæ do wczeœniejszych, tabus 120 blokuje zbyt wiele ruchów, tabus 80 jest idealnie
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-tabus-50}
 \end{figure}
