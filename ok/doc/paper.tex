@@ -257,9 +257,9 @@ Sprawdzenie ka¿dego z kroków wymaga obliczenia wartoœci $C_{max}$ dla powsta³ej 
 \hline
 Metoda & Iloœæ kroków & Z³o¿onoœæ \\
 \hline
-MoveIndex & $(n-1)^2$ & $O(n^3)$ \\
-SwapIndex & $\frac{n (n-1)}{2}$ & $O(n^3)$ \\
-SwapTask & $\frac{n (n-1)}{2}$ & $O(n^3)$ \\
+\rule{0pt}{20pt} MoveIndex & $(n-1)^2$ & $O(n^3)$ \\[10pt]
+SwapIndex & $\displaystyle \frac{n (n-1)}{2}$ & $O(n^3)$ \\[10pt]
+SwapTask & $\displaystyle \frac{n (n-1)}{2}$ & $O(n^3)$ \\[10pt]
 \hline
 \end{tabular}
 \end{table}
@@ -281,6 +281,15 @@ Aby zwiêkszyæ skutecznoœæ algorytmu wprowadzono dodatkowe kryterium umo¿liwiaj¹c
 \subsubsection{Usprawnienia algorytmu}
 \paragraph{Ograniczenie liczby ruchów}
 W celu ograniczenia z³o¿onoœci algorytmu wprowadzony zosta³ dodatkowy parametr, zwany dalej \emph{distance}. Mówi on, jaka mo¿e byæ maksymalna odleg³oœæ w permutacji pomiêdzy zadaniem, a miejscem w które zostanie przesuniête w kroku elementarnym. W szczególnoœci, dla odleg³oœci równej 1, rozwa¿ane s¹ jedynie s¹siednie zadania, co daje z³o¿onoœæ algorytmu rzêdu $O(n^2)$.
+
+Dok³adne wzory na iloœæ mo¿liwych ruchów w zale¿noœci od liczby zadañ i parametru \emph{distance} wygl¹daj¹ nastêpuj¹co:
+
+\begin{itemize}
+\item dla implementacji \emph{SwapTask} i \emph{SwapIndex}:
+$$ \sum_{i = 0}^{n-1} \min (distance,n - i - 1) $$
+\item dla implementacji \emph{MoveIndex}:
+$$ \sum_{i = 0}^{n-1}( \min(distance,i) + \min(distance,n - i - 1)) + 1 $$
+\end{itemize}
 
 \paragraph{Zach³anna inicjalizacja}
 W pierwszej implementacji pocz¹tkowa permutacja by³a losowana. Metoda ta nie sprawdza siê jednak przy niezerowych czasach przybycia, gdy¿ prowadzi do rozwi¹zañ dalekich od optymalnych. Znacznie lepsze efekty przynosi wstêpne posortowanie zadañ rosn¹co wed³ug ich momentów przybycia, czyli rozwa¿anie pewnego ,,naturalnego'', chronologicznego porz¹dku zadañ.
@@ -309,8 +318,8 @@ Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algoryt
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{impl}
-\label{fig:impl}
 \caption{Porównanie jakoœci i prêdkoœci poszczególnych wersji algorytmu}
+\label{fig:impl}
 \end{figure}
 
 \subsubsection{(przyk³ad na ma³ej instancji)}
@@ -412,8 +421,8 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-distance}
-\label{fig:time-distance}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
+\label{fig:time-distance}
 \end{figure}
 
 \paragraph{Parametr \emph{distance}}
@@ -422,8 +431,8 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-tabus}
-\label{fig:time-tabus}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
+\label{fig:time-tabus}
 \end{figure}
 
 \paragraph{Parametr \emph{tabus}}
@@ -432,8 +441,8 @@ Badania wp³ywu d³ugoœci listy tabu na czas obliczeñ potwierdzi³y teoretyczne prz
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-chances}
-\label{fig:time-chances}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{chances}}
+\label{fig:time-chances}
 \end{figure}
 
 \paragraph{Parametr \emph{chances}}
@@ -445,8 +454,8 @@ Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku zd
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-distance-swap}
-\label{fig:cmax-distance-swap}
 \caption{Porównanie jakoœci i prêdkoœci dla zmieniaj¹cego siê \emph{distance}}
+\label{fig:cmax-distance-swap}
 \end{figure}
 
 \paragraph{Parametr \emph{chances}}
@@ -455,15 +464,15 @@ Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{frequency-swap}
-\label{fig:frequency-swap}
 \caption{Czêstoœæ wyboru ruchu w zale¿noœci od jego \emph{distance}}
+\label{fig:frequency-swap}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-chances-50}
-\label{fig:cmax-chances-50}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
+\label{fig:cmax-chances-50}
 \end{figure}
 
 \paragraph{Parametr \emph{chances}}
@@ -481,8 +490,8 @@ Powy¿sze fakty mo¿na wyt³umaczyæ w nastêpuj¹cy sposób. Je¿eli $\emph{chances} < 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-tabus-50}
-\label{fig:cmax-tabus-50}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
+\label{fig:cmax-tabus-50}
 \end{figure}
 
 \paragraph{Parametr \emph{tabus}}
@@ -492,8 +501,8 @@ Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zani
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-tabus-75}
-\label{fig:cmax-tabus-75}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
+\label{fig:cmax-tabus-75}
 \end{figure}
 
 \subsubsection{Wnioski koñcowe}
