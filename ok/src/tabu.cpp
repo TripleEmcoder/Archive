@@ -163,8 +163,8 @@ Result tabusearch(Flowshop& f, int tabus, int chances, int resets, int distance)
 
 int main(int argc, char* argv[])
 {
-	if (argc != 5)
-		return 1;
+	//if (argc != 5)
+	//	return 1;
 
 	srand((unsigned)time(0));
 
@@ -173,7 +173,8 @@ int main(int argc, char* argv[])
 
 	//distances.resize(f.tasks.size());
 
-	Result result = tabusearch(f, atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]));
+	//Result result = tabusearch(f, atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]));
+	Result result = tabusearch(f, 3, 5, 1, 1);
 
 	cout << f;
 	cout << result.cmax << endl;
