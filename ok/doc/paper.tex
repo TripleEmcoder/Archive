@@ -443,7 +443,7 @@ Ruch ten pogorsza funkcjê celu, co powoduje obni¿enie parametru \emph{chances} d
 \end{enumerate}
 
 \subsection{Optymalizacja parametrów}
-W celu znalezienia optymalnych parametrów algorytmu przeprowadzono seriê pomiarów na stosunkowo niewielkich ($n=50$) instancjach ,,próbnych''.
+W celu znalezienia optymalnych parametrów dla algorytmu przeprowadzono seriê pomiarów na stosunkowo niewielkich ($n=50$) instancjach ,,próbnych''.
 
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
 Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawdzenie jaki wp³yw maj¹ one na czas trwania obliczeñ, aby w dalszym toku eksperymentu preferowaæ takie zmiany parametrów, które powoduj¹ mo¿liwie najmniejsze opóŸnienia w otrzymywaniu wyników.
@@ -456,7 +456,7 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \end{figure}
 
 \paragraph{Parametr \emph{distance}}
-\emph{wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance} Obrazuje to wykres rysunku \ref{fig:time-distance}
+Rysunek \ref{fig:time-distance} przedstawia wykres zale¿noœci czasu obliczeñ od zmieniaj¹cej siê maksymalnej odleg³oœci miêdzy zamienianymi zadaniami. Wykres jest zgodny ze wzorem na iloœæ mo¿liwych ruchów, danym w \ref{Usprawnienia algorytmu}, i przedstawia zale¿noœæ zbli¿on¹ do liniowej.
 
 \begin{figure}[h!]
 \centering
@@ -479,7 +479,7 @@ Badania wp³ywu d³ugoœci listy tabu na czas obliczeñ potwierdzi³y teoretyczne prz
 Zgodnie z przewidywaniami iloœæ dodatkowych iteracji ma liniowy wp³yw na czas obliczeñ. Algorytm wykonuje zawsze $x + \emph{chances}$ iteracji, gdzie $x$ to sumaryczna iloœæ iteracji, w których poprawia siê wynik. Obrazuje to wykres na rysunku \ref{fig:time-chances}.
 
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
-Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku zdecydowano przeprowadziæ stosunkowo niewielk¹ iloœæ pomiarów dla parametru \emph{distance}(du¿y koszt czasowy), wiêksz¹ uwagê poœwiêcaj¹c parametrom \emph{tabus} i \emph{chances}.
+Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku eksperymentu zdecydowano siê przeprowadziæ stosunkowo niewielk¹ iloœæ pomiarów dla parametru \emph{distance} (du¿y koszt czasowy), wiêksz¹ uwagê poœwiêcaj¹c parametrom \emph{tabus} i \emph{chances}.
 
 \begin{figure}[h!]
 \centering
@@ -538,7 +538,7 @@ Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zani
 \subsubsection{Wnioski koñcowe}
 Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
 \begin{enumerate}
-\item Najlepsza wartoœæ \emph{tabus} wynosi ok. \SI{30}{\%} mo¿liwych ruchów.
+\item Najlepsza wartoœæ \emph{tabus} wynosi ok. 30\% mo¿liwych ruchów.
 \item najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
 \end{enumerate}
 
