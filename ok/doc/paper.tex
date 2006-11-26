@@ -301,10 +301,10 @@ Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej 
 			{\min_{q \in \textrm{P}(\mathbb{I})} \emph{cmax}(p)} - 1
 \end{displaymath}
 
-W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich - odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=20\%\,m$. (\emph{dlaczego?})
+W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich -- odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=20\%\,m$. (\emph{dlaczego?})
 
 \subsection{Wybór implementacji}
-Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}), zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}).
+Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie na rysunku \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}, zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}). Do dalszych rozwa¿añ wybrano zatem algorytm w wersji \emph{SwapIndex-DoubleBlock}, czyli algorytm dokonuj¹cy zamian miejscami zadañ o danych pozycjach, zapamiêtaj¹cy na liœcie tabu wykonany krok i krok do niego odwrotny.
 
 \begin{figure}[h!]
 \centering
@@ -404,67 +404,104 @@ Mo¿liwy jest tylko ruch (4,5), a ¿aden z ruchów na liœcie tabu nie prowadzi do p
 Ruch ten pogorszy³ funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci 118 z kroku 7.
 
 \subsection{Optymalizacja parametrów}
+W celu znalezienia optymalnych parametrów algorytmu przeprowadzono seriê pomiarów na stosunkowo niewielkich ($n=50$) instancjach ,,próbnych''.
+
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
 Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawdzenie jaki wp³yw maj¹ one na czas trwania obliczeñ, aby w dalszym toku eksperymentu preferowaæ takie zmiany parametrów, które powoduj¹ mo¿liwie najmniejsze opóŸnienia w otrzymywaniu wyników.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{time-tabus}
+\includegraphics[width=0.9\textwidth]{time-distance}
+\label{fig:time-distance}
+\caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
 \end{figure}
 
--d³. tabulisty praktycznie nie wp³ywa, bo wszystkie operacje s¹ wykonywane w czasie O(1)
+\paragraph{Parametr \emph{distance}}
+\emph{wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance} Obrazuje to wykres rysunku \ref{fig:time-distance}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{time-tabus}
+\label{fig:time-tabus}
+\caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
+\end{figure}
+
+\paragraph{Parametr \emph{tabus}}
+Badania wp³ywu d³ugoœci listy tabu na czas obliczeñ potwierdzi³y teoretyczne przewidywania oparte na analizie kodu. Ze wzglêdu na sta³y koszt $O(1)$ operacji wykonywanych na liœcie tabu, parametr ten nie wp³ywa na czas obliczeñ. Obrazuje to wykres na rysunku \ref{fig:time-tabus}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{time-chances}
+\label{fig:time-chances}
+\caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{chances}}
 \end{figure}
 
-- liniowy wp³yw na d³. dzia³ania, bo algorytm wykona x+chances iteracji. x = iteracje w których poprawia siê wynik
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.9\textwidth]{time-distance}
-\end{figure}
-
-- wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance
+\paragraph{Parametr \emph{chances}}
+Zgodnie z przewidywaniami iloœæ dodatkowych iteracji ma liniowy wp³yw na czas obliczeñ. Algorytm wykonuje zawsze $x + \emph{chances}$ iteracji, gdzie $x$ to sumaryczna iloœæ iteracji, w których poprawia siê wynik. Obrazuje to wykres na rysunku \ref{fig:time-chances}.
 
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
+Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku zdecydowano przeprowadziæ stosunkowo niewielk¹ iloœæ pomiarów dla parametru \emph{distance}(du¿y koszt czasowy), wiêksz¹ uwagê poœwiêcaj¹c parametrom \emph{tabus} i \emph{chances}.
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-distance-swap}
+\label{fig:cmax-distance-swap}
+\caption{Porównanie jakoœci i prêdkoœci dla zmieniaj¹cego siê \emph{distance}}
 \end{figure}
 
-- du¿a poprawa mniej wiêcej do distance 20, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
+\paragraph{Parametr \emph{chances}}
+Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi¹zania i czasu jego obliczania od zmieniaj¹cej siê maksymalnej odleg³oœci miêdzy zamienianymi zadaniami. Dobrym przybli¿eniem krzywej jakoœci rozwi¹zania jest krzywa wyk³adnicza. Powodem takiego zachowania algorytmu jest to, ¿e w praktyce zamiany bardziej odleg³ych pozycji s¹ wybierane znacznie rzadziej. Fakt ten obrazuje wykres na rysunku \ref{fig:frequency-swap}.
 
-- teraz tu trzeba daæ te wykresy czêstoœci wyboru ruchu
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{frequency-swap}
+\label{fig:frequency-swap}
+\caption{Czêstoœæ wyboru ruchu w zale¿noœci od jego \emph{distance}}
+\end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-chances-50}
+\label{fig:cmax-chances-50}
+\caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
 \end{figure}
 
-- zwiêkszanie chances daje najlepsze efekty do wartoœci chances <= tabus
-- powy¿ej tej wartoœci mo¿e wyst¹piæ dalsza poprawa, ale nie musi, nigdy nie wystêpuje pogorszenie
-- dla tej samej wartoœci chances (ten sam czas dzia³ania) wa¿ne jest dobranie tabus
-- tabus mo¿e byæ za du¿e (patrz seria 120) lub za ma³e (seria 20) i zwiêkszanie chances daje niewiele
-- dla idealnie dobranego tabus (seria 80) nastêpuje sta³a poprawa wyniku
-- je¿eli chances < tabus, to tabulista czêsto nie zd¹¿y siê wype³niæ przed przerwaniem algorytmu i dzia³a wtedy tak jakby mia³a d³. chances a nie tabus, szczególnie widoczne dla du¿ych tabus, np. 50, 80 i 120. Tabus 50 przeszkadza dalej ulepszaæ rozwi¹zanie, bo pozwala wróciæ do wczeœniejszych, tabus 120 blokuje zbyt wiele ruchów, tabus 80 jest idealnie
+\paragraph{Parametr \emph{chances}}
+Rysunek \ref{fig:cmax-chances-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zania od zmieniaj¹cej siê iloœci dodatkowych iteracji. Analiza wykresu prowadzi do nastêpuj¹cych wniosków:
+\begin{itemize}
+\item zwiêkszanie wartoœci \emph{chances} daje najlepsze efekty dla $\emph{chances} \leq \emph{tabus}$,
+\item dla $\emph{chances} > \emph{tabus}$ mo¿e wyst¹piæ dalsza poprawa, ale nie musi, nigdy natomiast nie wystêpuje pogorszenie,
+\item dla tej samej wartoœci \emph{chances} (ten sam czas dzia³ania) wa¿ne jest odpowiednie dobranie wartoœci \emph{tabus},
+\item wartoœæ \emph{tabus} mo¿e byæ za du¿a (seria 120) lub za ma³a (seria 20) i zwiêkszanie \emph{chances} przynosi niewielk¹ poprawê,
+\item dla idealnie dobranego \emph{tabus} (seria 80) nastêpuje sta³a poprawa wyniku.
+\end{itemize}
+
+Powy¿sze fakty mo¿na wyt³umaczyæ w nastêpuj¹cy sposób. Je¿eli $\emph{chances} < \emph{tabus}$, to lista tabu czêsto nie zd¹¿y siê wype³niæ przed przerwaniem algorytmu i dzia³a wtedy tak, jakby mia³a d³ugoœæ równ¹ \emph{chances} a nie \emph{tabus}. Szczególnie widoczne jest to dla du¿ych wartoœci \emph{tabus}, np. 50, 80 i 120. W przypadek $\emph{tabus}=50$ niemo¿liwe jest dalsze ulepszanie rozwi¹zania, poniewa¿ zbyt krótka lista tabu pozwala wróciæ do wczeœniejszych rozwi¹zañ, natomiast w przypadku $\emph{tabus}=120$ blokowanych jest zbyt wiele ruchów. Przypadek poœredni, $\emph{tabus}=80$ daje najlepsze rezultaty.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax-tabus-50}
+\label{fig:cmax-tabus-50}
+\caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
 \end{figure}
 
-- zwiêkszanie tabus powy¿ej poziomu chances nie ma sensu, tabulista i tak nie zd¹¿y siê wype³niæ, o tym by³o trochê w poprzednim punkcie
-- najlepsza wartoœæ tabus ujawnia siê dopiero dla chances > tabus (dla serii chances = 80 nie ma dziury, dla 120 jest wyraŸna)
+\paragraph{Parametr \emph{tabus}}
+Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zania od zmieniaj¹cej siê d³ugoœci listy tabu. Analiza wykresu prowadzi do wniosków pokrywaj¹cych siê z rozwa¿aniami nad wykresem na rysunku \ref{fig:cmax-chances-50}. WyraŸnie widoczne jest tutaj, ¿e najlepsza wartoœæ \emph{tabus} ujawnia siê dopiero dla $\emph{chances} > \emph{tabus}$, na wykresie objawia siê to ,,do³kiem'' dla serii $\emph{chances} > 80$. Analiza kolejnego wykresu, przedstawionego na rysunku 
+\ref{fig:cmax-tabus-75} prowadzi do wniosku, ¿e ów ,,do³ek'', czyli obszar o najmniejszym b³êdzie wzglêdnym, wystêpuje dla $\emph{tabus} \approx \SI{30}{\%}\;\frac{n (n-1)}{2}$, gdzie $\frac{n (n-1)}{2}$ to iloœæ mo¿liwych ruchów.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{cmax-tabus-75}
+\label{fig:cmax-tabus-75}
+\caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
+\end{figure}
 
-mo¿na tu daæ jeszcze wykresy dla n=75 i pokazaæ ¿e s¹ podobne, czyli to nie przypadek
-
-
-Ogólne wnioski dla SwapIndex:
-- najlepsza wartoœæ tabus to ok. 30\% mo¿liwych ruchów
-- najlepsza wartoœæ chances to na pewno wiêcej ni¿ tabus, im wiêcej tym lepiej, ale uwaga na czas
+\subsubsection{Wnioski koñcowe}
+Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
+\begin{enumerate}
+\item Najlepsza wartoœæ \emph{tabus} wynosi ok. \SI{30}{\%} mo¿liwych ruchów.
+\item najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
+\end{enumerate}
 
 \subsection{Testy wydajnoœciowe}
 
