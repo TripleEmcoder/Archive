@@ -408,6 +408,8 @@ Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4), (2, 3)\}$. Ruch doprowa
 
 Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuniêty zostaje ruch dodany najwczeœniej, czyli $(4, 5)$. Po dodaniu $(1, 2)$ na liœcie tabu znajduj¹ siê nastêpuj¹ce ruchy: $\{(3, 4), (2, 3), (1, 2)\}$. Ruch $(1, 2)$ doprowadza do pogorszenia rozwi¹zania, wiêc \emph{chances} zostaje obni¿one o 1 i wynosi teraz 3.
 
+\newpage
+
 \item Jedynym mo¿liwym ruchem jest $(4, 5)$, wiêc zostaje wykonany:
 \begin{figure}[h!]
 \centering
@@ -457,6 +459,8 @@ W celu znalezienia optymalnych parametrów dla algorytmu przeprowadzono seriê pom
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
 Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawdzenie jaki wp³yw maj¹ one na czas trwania obliczeñ, aby w dalszym toku eksperymentu preferowaæ takie zmiany parametrów, które powoduj¹ mo¿liwie najmniejsze opóŸnienia w otrzymywaniu wyników.
 
+\newpage
+
 \begin{figure}[!h]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{time-distance}
@@ -467,7 +471,6 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \paragraph{Parametr \emph{distance}}
 Rysunek \ref{fig:time-distance} przedstawia wykres zale¿noœci czasu obliczeñ od zmieniaj¹cej siê maksymalnej odleg³oœci miêdzy zamienianymi zadaniami. Wykres jest zgodny ze wzorem na iloœæ mo¿liwych ruchów, danym w \ref{seq:upgrades}, i przedstawia zale¿noœæ zbli¿on¹ do liniowej.
 
-\newpage 
 \begin{figure}[!h]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{time-tabus}
@@ -477,6 +480,8 @@ Rysunek \ref{fig:time-distance} przedstawia wykres zale¿noœci czasu obliczeñ od 
 
 \paragraph{Parametr \emph{tabus}}
 Badania wp³ywu d³ugoœci listy tabu na czas obliczeñ potwierdzi³y teoretyczne przewidywania oparte na analizie kodu. Ze wzglêdu na sta³y koszt $O(1)$ operacji wykonywanych na liœcie tabu, parametr ten nie wp³ywa na czas obliczeñ. Obrazuje to wykres na rysunku \ref{fig:time-tabus}.
+
+\newpage
 
 \begin{figure}[!h]
 \centering
@@ -498,7 +503,7 @@ Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku ek
 \label{fig:cmax-distance-swap}
 \end{figure}
 
-\paragraph{Parametr \emph{chances}}
+\paragraph{Parametr \emph{distance}}
 Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi¹zania i czasu jego obliczania od zmieniaj¹cej siê maksymalnej odleg³oœci miêdzy zamienianymi zadaniami. Dobrym przybli¿eniem krzywej jakoœci rozwi¹zania jest krzywa wyk³adnicza. Powodem takiego zachowania algorytmu jest to, ¿e w praktyce zamiany bardziej odleg³ych pozycji s¹ wybierane znacznie rzadziej. Fakt ten obrazuje wykres na rysunku \ref{fig:frequency-swap}.
 
 \begin{figure}[h!]
@@ -516,7 +521,11 @@ Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi
 \end{figure}
 
 \paragraph{Parametr \emph{chances}}
-Rysunek \ref{fig:cmax-chances-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zania od zmieniaj¹cej siê iloœci dodatkowych iteracji. Analiza wykresu prowadzi do nastêpuj¹cych wniosków:
+Rysunek \ref{fig:cmax-chances-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zania od zmieniaj¹cej siê iloœci dodatkowych iteracji.
+
+\newpage
+
+Analiza wykresu prowadzi do nastêpuj¹cych wniosków:
 \begin{itemize}
 \item zwiêkszanie wartoœci \emph{chances} daje najlepsze efekty dla $\emph{chances} \leq \emph{tabus}$,
 \item dla $\emph{chances} > \emph{tabus}$ mo¿e wyst¹piæ dalsza poprawa, ale nie musi, nigdy natomiast nie wystêpuje pogorszenie,
@@ -551,8 +560,6 @@ Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
 \item Najlepsza wartoœæ \emph{tabus} wynosi ok. 30\% mo¿liwych ruchów.
 \item najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
 \end{enumerate}
-
-\newpage
 
 \subsection{Testy wydajnoœciowe}
 
