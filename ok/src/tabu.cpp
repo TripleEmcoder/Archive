@@ -4,17 +4,21 @@
 #include "tabulist.hpp"
 
 #include <iostream>
+#include <fstream>
 #include <algorithm>
 #include <limits>
 #include <ctime>
+#include <string>
+#include <boost/lexical_cast.hpp>
 
 using namespace std;
+using namespace boost;
 
 typedef vector<int> Order;
-typedef Move MoveType;
+typedef MoveSwap MoveType;
 typedef Tabulist TabuType;
 
-vector<int> distances;
+//vector<int> distances;
 
 struct Result
 {
@@ -35,7 +39,7 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 {
 	Result result, result_asp;
 	result.cmax = numeric_limits<int>::max();
-	result_asp.cmax = numeric_limits<int>::max();
+	//result_asp.cmax = numeric_limits<int>::max();
 	
 	MoveType* move = new MoveType;
 	MoveType* move_min = new MoveType;
@@ -55,11 +59,11 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 			*move_min = *move;
 		}
 
-		if (cmax < result_asp.cmax)
-		{
-			result_asp.order = p;
-			result_asp.cmax = cmax;
-		}	
+		//if (cmax < result_asp.cmax)
+		//{
+		//	result_asp.order = p;
+		//	result_asp.cmax = cmax;
+		//}	
 
 		move->make_inv(p);
 	}
@@ -68,16 +72,17 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 
 	if (result.cmax < numeric_limits<int>::max())
 	{
-		//cerr << result.cmax << " " << *move_min << endl;
-		distances[move_min->diff()]++;
+		cerr << result.cmax << " " << *move_min << endl;
+		//distances[move_min->diff()]++;
 		tabu.update(move_min);
 		return result;
 	}
 	else	
 	{
-		//cerr << "ASP" << endl;
-		tabu.clear();
-		return result_asp;
+		cerr << "ASP" << endl;
+		//return 1;
+		//tabu.clear();
+		//return result_asp;
 	}
 }
 
@@ -107,11 +112,31 @@ Result tabusearch(Flowshop& f, int tabus, int chances, int resets, int distance)
 	Move::range = distance;
 	Order p = best_result.order;
 
+	//ofstream os("krok0.txt");
+
+	//os << f;
+	//os << best_result.cmax << endl;
+	//os << schedule(f, best_result.order);
+
+	//os.close();
+
+	//int t = 0;
+
 	while (resets > 0)
 	{
 		Result result = local_min(f, p, tabu, cmax_min);
 		
 		p = result.order;
+
+		//string s = string("krok")+lexical_cast<string>(++t)+".txt";
+
+		//ofstream os(s.c_str());
+
+		//os << f;
+		//os << result.cmax << endl;
+		//os << schedule(f, result.order);
+
+		//os.close();
 		
 		if (result < best_result)
 			best_result = result;
@@ -146,7 +171,7 @@ int main(int argc, char* argv[])
 	Flowshop f;
 	cin >> f;
 
-	distances.resize(f.tasks.size());
+	//distances.resize(f.tasks.size());
 
 	Result result = tabusearch(f, atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]));
 
@@ -154,13 +179,13 @@ int main(int argc, char* argv[])
 	cout << result.cmax << endl;
 	cout << schedule(f, result.order);
 
-	for (int i = 1; i < distances.size(); ++i)
-	{
-		cerr << distances[i] << endl;
-	}
-	cerr << endl << endl;
+	//for (int i = 1; i < distances.size(); ++i)
+	//{
+	//	cerr << distances[i] << endl;
+	//}
+	//cerr << endl << endl;
 	
-	//cerr << endl << result.cmax << endl;
+	cerr << endl << result.cmax << endl;
 
 	return 0;
 }
