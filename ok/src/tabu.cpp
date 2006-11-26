@@ -70,20 +70,20 @@ Result local_min(Flowshop& f, Order& p, Tabulist& tabu, int cmax_min)
 
 	delete move;
 
-	if (result.cmax < numeric_limits<int>::max())
-	{
+	//if (result.cmax < numeric_limits<int>::max())
+	//{
 		cerr << result.cmax << " " << *move_min << endl;
 		//distances[move_min->diff()]++;
 		tabu.update(move_min);
 		return result;
-	}
-	else	
-	{
-		cerr << "ASP" << endl;
+	//}
+	//else	
+	//{
+		//cerr << "ASP" << endl;
 		//return 1;
 		//tabu.clear();
 		//return result_asp;
-	}
+	//}
 }
 
 Result initialize(Flowshop& f)
