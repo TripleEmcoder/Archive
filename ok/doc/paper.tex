@@ -557,15 +557,17 @@ Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zani
 Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
 \begin{enumerate}
 \item Najlepsza wartoœæ \emph{tabus} wynosi ok. 30\% mo¿liwych ruchów.
-\item najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
+\item Najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
 \end{enumerate}
 
 \subsection{Testy wydajnoœciowe}
+Ostatnim z etapów eksperymentu by³ test wydajnoœciowy, który mia³ na celu pokazanie jak algorytm zachowuje siê dla ró¿nych liczb zadañ przy ustalonych wczeœniej parametrach. Wykres na rysunki \ref{fig:speed} przedstawia wyniki pomiarów, oraz idealnie dopasowane do nich krzywe wielomianowe. Potwierdza to w sposób ostateczny wyznaczon¹ z³o¿onoœæ rzêdu $O(n^2)$.
+
 \begin{figure}[h]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{speed}
-\caption{}
+\caption{Czas obliczeñ w zale¿noœci od liczby zadañ}
 \label{fig:speed}
 \end{figure}
-\end{document}
 
+\end{document}
