@@ -342,31 +342,45 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 - wzrost proporcjonalny do iloœci mo¿liwych ruchów w ka¿dej iteracji, wzory s¹ w moves.nb, mo¿na je wpisaæ tu lub w opisie algorytmu gdzie piszemy o distance
 
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{cmax_distance_move}
-\end{figure}
-
-- du¿a poprawa dla pierwszych kilku, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
-
--!!! distance oznacza tutaj maksymaln¹ odleg³oœæ w lewo + maksymaln¹ odl. w prawo !!!! trzeba to jakoœ objaœniæ albo zmieniæ
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{cmax_distance_swap}
 \end{figure}
 
-- du¿a poprawa mniej wiêcej do distance 20, póŸniej mniejsza, z tego samego powodu co dla MoveIndex
+- du¿a poprawa mniej wiêcej do distance 20, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
 
 
-- teraz albo tu, albo dla ka¿dego osobno trzeba daæ te wykresy czêstoœci wyboru ruchu
+- teraz tu trzeba daæ te wykresy czêstoœci wyboru ruchu
+
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax_distance_50}
+\includegraphics[width=0.8\textwidth]{cmax-chances-50}
 \end{figure}
 
-- move bardziej op³acalny dla ma³ego distance, swap dla du¿ego
+- zwiêkszanie chances daje najlepsze efekty do wartoœci chances <= tabus
+- powy¿ej tej wartoœci mo¿e wyst¹piæ dalsza poprawa, ale nie musi, nigdy nie wystêpuje pogorszenie
+- dla tej samej wartoœci chances (ten sam czas dzia³ania) wa¿ne jest dobranie tabus
+- tabus mo¿e byæ za du¿e (patrz seria 120) lub za ma³e (seria 20) i zwiêkszanie chances daje niewiele
+- dla idealnie dobranego tabus (seria 80) nastêpuje sta³a poprawa wyniku
+- je¿eli chances < tabus, to tabulista czêsto nie zd¹¿y siê wype³niæ przed przerwaniem algorytmu i dzia³a wtedy tak jakby mia³a d³. chances a nie tabus, szczególnie widoczne dla du¿ych tabus, np. 50, 80 i 120. Tabus 50 przeszkadza dalej ulepszaæ rozwi¹zanie, bo pozwala wróciæ do wczeœniejszych, tabus 120 blokuje zbyt wiele ruchów, tabus 80 jest idealnie
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{cmax-tabus-50}
+\end{figure}
+
+- zwiêkszanie tabus powy¿ej poziomu chances nie ma sensu, tabulista i tak nie zd¹¿y siê wype³niæ, o tym by³o trochê w poprzednim punkcie
+- najlepsza wartoœæ tabus ujawnia siê dopiero dla chances > tabus (dla serii chances = 80 nie ma dziury, dla 120 jest wyraŸna)
+
+
+mo¿na tu daæ jeszcze wykresy dla n=75 i pokazaæ ¿e s¹ podobne, czyli to nie przypadek
+
+
+Ogólne wnioski dla SwapIndex:
+- najlepsza wartoœæ tabus to ok. 30\% mo¿liwych ruchów
+- najlepsza wartoœæ chances to na pewno wiêcej ni¿ tabus, im wiêcej tym lepiej, ale uwaga na czas
 
 \subsection{Testy wydajnoœciowe}
 
