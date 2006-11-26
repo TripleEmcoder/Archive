@@ -336,9 +336,10 @@ Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej 
 \end{displaymath}
 gdzie $\textrm{P}(\mathbb{I})$ oznacza zbiór pomiarów wykonanych dla pewnej instacji $\mathbb{I}$.
 
-W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich -- odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=\SI{20}{\%}\,n$. (\emph{dlaczego?})
+W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich -- odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=\SI{20}{\%}\,n$.
 
 \subsection{Wybór implementacji}
+Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. 
 
 \begin{figure}[!h]
 \centering
@@ -347,7 +348,7 @@ W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$
 \label{fig:impl}
 \end{figure}
 
-Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie na rysunku \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania równie¿ nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od 3,9\% (wersja \emph{SwapTask-MultiBlock}) do 4,6\% (wersja \emph{MoveIndex-MultiBlock}), zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie od 0,9 s -- dla \emph{SwapIndex-DoubleBlock} -- do 1,3 s -- dla \emph{MoveIndex-MultiBlock}). Do dalszych rozwa¿añ wybrano zatem algorytm w wersji \emph{SwapIndex-DoubleBlock}, czyli algorytm dokonuj¹cy zamian miejscami zadañ o danych pozycjach, zapamiêtuj¹cy na liœcie tabu wykonany krok i krok do niego odwrotny.
+Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie na rysunku \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania równie¿ nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od 3,9\% (wersja \emph{SwapTask-MultiBlock}) do 4,6\% (wersja \emph{MoveIndex-MultiBlock}), zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie od 0,9 s -- dla \emph{SwapIndex-DoubleBlock} -- do 1,3 s -- dla \emph{MoveIndex-MultiBlock}). Do dalszych rozwa¿añ wybrano zatem algorytm w wersji \emph{SwapIndex-DoubleBlock}, czyli algorytm dokonuj¹cy zamian miejscami zadañ o danych pozycjach, zapamiêtuj¹cy na liœcie tabu wykonany krok i krok do niego odwrotny.
 
 \subsection{Przyk³ad dzia³ania}
 Do celów demonstracyjnych wylosowano nastêpuj¹c¹ instancjê problemu:
@@ -438,6 +439,7 @@ Do listy dodany zostaje wykonany ruch: $\{(4, 5), (3, 4), (1, 2)\}$. Nastêpuje p
 \centering
 \includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok8}
 \end{figure}
+
 Do listy dodany zostaje wykonany ruch: $\{(3, 4), (1, 2), (2, 3)\}$. Nastêpuje poprawienie rozwi¹zania, wiêc \emph{chances} pozostaje bez zmian.
 
 \item Mo¿liwy jest tylko ruch $(4, 5)$, a ¿aden z ruchów na liœcie tabu nie prowadzi do poprawienia najlepszego rozwi¹zania. Zatem ruch $(4, 5)$ zostaje wykonany:
@@ -448,8 +450,6 @@ Do listy dodany zostaje wykonany ruch: $\{(3, 4), (1, 2), (2, 3)\}$. Nastêpuje p
 
 Ruch ten pogorsza funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci $C_{max}=118$ z kroku 8.
 \end{enumerate}
-
-\newpage
 
 \subsection{Optymalizacja parametrów}
 W celu znalezienia optymalnych parametrów dla algorytmu przeprowadzono seriê pomiarów na stosunkowo niewielkich ($n=50$) instancjach ,,próbnych''.
@@ -503,7 +503,7 @@ Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi
 
 \begin{figure}[h!]
 \centering
-\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{frequency-swap}
+\includegraphics[trim=0 30mm 0 25mm, clip, width=0.9\textwidth]{frequency-swap}
 \caption{Czêstoœæ wyboru ruchu w zale¿noœci od jego \emph{distance}}
 \label{fig:frequency-swap}
 \end{figure}
@@ -536,7 +536,7 @@ Powy¿sze fakty mo¿na wyt³umaczyæ w nastêpuj¹cy sposób. Je¿eli $\emph{chances} < 
 
 \paragraph{Parametr \emph{tabus}}
 Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zania od zmieniaj¹cej siê d³ugoœci listy tabu. Analiza wykresu prowadzi do wniosków pokrywaj¹cych siê z rozwa¿aniami nad wykresem na rysunku \ref{fig:cmax-chances-50}. WyraŸnie widoczne jest tutaj, ¿e najlepsza wartoœæ \emph{tabus} ujawnia siê dopiero dla $\emph{chances} > \emph{tabus}$, na wykresie objawia siê to ,,do³kiem'' dla serii $\emph{chances} > 80$. Analiza kolejnego wykresu, przedstawionego na rysunku 
-\ref{fig:cmax-tabus-75} prowadzi do wniosku, ¿e ów ,,do³ek'', czyli obszar o najmniejszym b³êdzie wzglêdnym, wystêpuje dla $\emph{tabus} \approx \SI{30}{\%}\;moves$, gdzie $moves$ to iloœæ mo¿liwych ruchów, okreœlona wzorem z punktu \ref{seq:upgrades}.
+\ref{fig:cmax-tabus-75} prowadzi do wniosku, ¿e ów ,,do³ek'', czyli obszar o najmniejszym b³êdzie wzglêdnym, wystêpuje dla $\emph{tabus} \approx \SI{30}{\%}\;\emph{moves}$, gdzie \emph{moves} to iloœæ mo¿liwych ruchów, okreœlona wzorem z punktu \ref{seq:upgrades}.
 
 \begin{figure}[h!]
 \centering
