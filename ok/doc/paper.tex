@@ -265,7 +265,7 @@ SwapTask & $\frac{n (n-1)}{2}$ & $O(n^3)$ \\
 \end{table}
 
 \paragraph{Lista tabu}
-Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby umo¿liwiæ szybkie sprawdzanie dostêpnoœci kroków, ich opisy s¹ przechowywane w drzewie binarnym. W fazie doœwiadczalnej projektu testowane by³y dwie koncepcje listy tabu, zwane dalej \emph{DoubleBlock} i \emph{MultiBlock}, które dla kroku opisanego przez parê liczb $(a, b)$ powoduj¹ zablokowanie:
+Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Pocz¹tkowo listê tabu zaimplementowano jako drzewo binarne. Aby poprawiæ wydajnoœæ opisy kroków s¹ przechowywane w strukturze danych umo¿liwiaj¹cej dodawanie, usuwanie oraz sprawdzanie czy element nale¿y do struktury w czasie sta³ym. W fazie doœwiadczalnej projektu testowane by³y dwie koncepcje listy tabu, zwane dalej \emph{DoubleBlock} i \emph{MultiBlock}, które dla kroku opisanego przez parê liczb $(a, b)$ powoduj¹ zablokowanie:
 \begin{description}
 \item[\emph{DoubleBlock}] -- danego kroku i kroku odwrotnego, tj. kroków $(a, b)$ i $(b, a)$,
 \item[\emph{MultiBlock}] -- wszystkich kroków zawieraj¹cych w opisie liczby $a$ i $b$, czyli takich kroków $(x, y)$ i $(y, x)$, ¿e $x \neq y$ i $x \in \{a, b\}$, a $y$ jest dowoln¹ liczb¹ tworz¹c¹ razem z $x$ prawid³owy krok.
@@ -273,10 +273,10 @@ Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Aby
 D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szczególnoœci, dla d³ugoœci równej 0, implementacja staje siê realizacj¹ algorytmu \emph{local search}.
 
 \paragraph{Warunek stopu}
-Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
+Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Sumaryczna iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
 
 \paragraph{Kryterium aspiracji}
-
+Aby zwiêkszyæ skutecznoœæ algorytmu wprowadzono dodatkowe kryterium umo¿liwiaj¹ce wykonanie ruchu pomimo, ¿e znajduje siê na liœcie tabu. Jest to mo¿liwe w przypadku je¿eli wykonanie zabronionego ruchu prowadzi do uzyskania rozwi¹zania lepszego ni¿ najlepsze dotychczas znalezione.  
 
 \subsubsection{Usprawnienia algorytmu}
 \paragraph{Ograniczenie liczby ruchów}
@@ -304,7 +304,7 @@ Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej 
 W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich - odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=20\%\,m$. (\emph{dlaczego?})
 
 \subsection{Wybór implementacji}
-Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznaczego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}, zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}).
+Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}), zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}).
 
 \begin{figure}[h!]
 \centering
@@ -314,7 +314,94 @@ Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algoryt
 \end{figure}
 
 \subsubsection{(przyk³ad na ma³ej instancji)}
-\subsubsection{(bad case)}
+Wylosowano nastêpuj¹c¹ instancjê problemu:
+\begin{verbatim}
+2
+26 7 54 9 
+5
+29 1 2 5 11
+12 9 19 5 12
+32 3 8 6 12
+23 2 19 2 4
+4 1 3 8 16
+\end{verbatim}
+
+Program wywo³ano z parametrami: \emph{distance} = 1, \emph{tabus} = 3, \emph{chances} = 5, wybrano implementacjê \emph{SwapIndex DoubleBlock}.
+
+Po posortowaniu wg czasów przybycia otrzymano nastêpuj¹ce uporz¹dkowanie o funkcji celu równej 135.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok0}
+\end{figure}
+
+Lista tabu jest pusta, chances = 5. Spoœród 4 mo¿liwych ruchów najlepszy jest ruch polegaj¹cy na zamianie miejscami zadañ na pozycjach 4 i 5. Ruch ten prowadzi do nastêpuj¹cego uszeregowania:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok1}
+\end{figure}
+
+Do listy tabu dodano ruch (4,5) i ruch do niego odwrotny (5,4). Dla ruchu polegaj¹cego na zamianie zadañ jest to dok³adnie ten sam ruch, ale w ogólnoœci nie musi tak byæ. Dla implementacji \emph{MoveIndex DoubleBlock} i parametru  \emph{distance} > 1 te ruchy mog¹ byæ ró¿ne. W dalszej czêœci przyk³adu pominiemy ruch odwrotny jako nieistotny w tym przypadku. Ruch nie doprowadzi³ do poprawienia wyniku zatem \emph{chances} zostaje zmniejszone o 1 i wynosi 4.
+
+Spoœród mo¿liwych 3 ruchów najlepszy jest ruch (3,4). Nie znajduje siê on na liœcie tabu, zatem ten ruch zostaje wykonany:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok2}
+\end{figure}
+
+Lista tabu wygl¹da teraz nastêpuj¹co: ( (4,5), (3,4) ). Ruch doprowadzi³ do poprawienia wyniku zatem \emph{chances} pozostaje bez zmian.
+
+Spoœród mo¿liwych 2 ruchów najlepszy jest ruch (1,2). Nie znajduje siê on na liœcie tabu, zatem ten ruch zostaje wykonany:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok3}
+\end{figure}
+
+Lista tabu wygl¹da teraz nastêpuj¹co: ( (4,5), (3,4), (2,3) ). Ruch doprowadzi³ do poprawienia wyniku zatem \emph{chances} pozostaje bez zmian.
+
+Najlepszym ruchem w obecnej sytuacji jest ruch (2,3). Znajduje siê on jednak na liœcie tabu, a jednoczeœnie nie spe³nia kryterium aspiracji (nie prowadzi do poprawienia najlepszego znalezionego rozwi¹zania). Jedynym mo¿liwym ruchem jest (1,2) i musi zostaæ wykonany:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok4}
+\end{figure}
+
+Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuwamy ruch dodany najwczeœniej, czyli (4,5). Po dodaniu (1,2) na liœcie tabu znajduj¹ siê nastêpuj¹ce ruchy ( (3,4), (2,3), (1,2) ). Ruch (1,2) doprowadzi³ do pogorszenia rozwi¹zania, wiêc \emph{chances} zostaje obni¿one o 1 i wynosi teraz 3.
+
+Jedynym mo¿liwym ruchem jest (4,5):
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok5}
+\end{figure}
+
+Znowu pogorszono rezultat, zatem \emph{chances} wynosi 2. Na liœcie tabu ( (2,3), (1,2), (4,5) ).
+
+Po raz kolejny trzeba wykonaæ jedyny ruch nie znajduj¹cy siê na liœcie tabu, czyli (3,4).
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok6}
+\end{figure}
+
+Rozwi¹zanie uleg³o dalszemu pogorszeniu i wynosi 144. Parametr \emph{chances} zosta³ obni¿ony do 1, a lista tabu zaktualizowana: ( (1,2), (4,5), (3,4) ).
+
+Przy aktualnym uporz¹dkowaniu najlepszy jest ruch (1,2). Znajduje siê na liœcie tabu, ale mo¿e byæ wykonany poniewa¿ spe³nia kryterium aspiracji. Prowadzi bowiem do uzyskania rozwi¹zania o $C_{max}$ = 120, które jest lepsze od dotychczasowego najlepszego o wartoœci 133.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok7}
+\end{figure}
+Do listy dodajemy w³aœnie wykonany ruch: ( (4,5), (3,4), (1,2) ). Poprawiono rozwi¹zanie, wiêc \emph{chances} pozostaje bez zmian.
+
+Jedyny mo¿liwy ruch (2,3) okazuje siê byæ najlepszym i zostaje wykonany:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok8}
+\end{figure}
+Do listy dodajemy w³aœnie wykonany ruch: ( (3,4), (1,2), (2,3) ). Poprawiono rozwi¹zanie, wiêc \emph{chances} pozostaje bez zmian.
+
+Mo¿liwy jest tylko ruch (4,5), a ¿aden z ruchów na liœcie tabu nie prowadzi do poprawienia najlepszego rozwi¹zania. Zatem ruch (4,5) musi byæ wykonany:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{krok9}
+\end{figure}
+Ruch ten pogorszy³ funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci 118 z kroku 7.
 
 \subsection{Optymalizacja parametrów}
 \subsubsection{Wp³yw parametrów na czas obliczeñ}
@@ -344,7 +431,7 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 \subsubsection{Wp³yw parametrów na jakoœæ rozwi¹zania}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax_distance_swap}
+\includegraphics[width=0.8\textwidth]{cmax-distance-swap}
 \end{figure}
 
 - du¿a poprawa mniej wiêcej do distance 20, póŸniej coraz mniejsza, wynika z tego, ¿e dalekie ruch s¹ rzadko wykonywane
