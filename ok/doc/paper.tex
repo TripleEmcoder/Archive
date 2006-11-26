@@ -340,7 +340,7 @@ Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algoryt
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{impl}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{impl}
 \caption{Porównanie jakoœci i prêdkoœci poszczególnych wersji algorytmu}
 \label{fig:impl}
 \end{figure}
@@ -365,13 +365,13 @@ Algorytm wykonano z parametrami: $\emph{distance}=1$, $\emph{tabus}=3$, $\emph{c
 \item Po posortowaniu wed³ug czasów przybycia powstaje wstêpne uszeregowanie o funkcji celu $C_{max}=135$:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok0}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok0}
 \end{figure}
 
 \item Lista tabu jest pocz¹tkowo pusta: $\{\}$, $\emph{chances}=5$. Spoœród 4 mo¿liwych ruchów najlepszy jest ruch polegaj¹cy na zamianie miejscami zadañ na pozycjach 4 i 5. Ruch ten prowadzi do nastêpuj¹cego uszeregowania:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok1}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok1}
 \end{figure}
 
 Do listy tabu dodany ruch $(4, 5)$ i ruch do niego odwrotny $(5, 4)$. Dla ruchu polegaj¹cego na zamianie zadañ jest to dok³adnie ten sam ruch, ale w ogólnoœci nie musi tak byæ. Dla implementacji \emph{MoveIndex-DoubleBlock} i parametru $\emph{distance} > 1$ ruchy te mog¹ byæ ró¿ne. W dalszej czêœci przyk³adu pominiêto ruchy odwrotne jako nieistotne w tym przypadku. 
@@ -380,7 +380,7 @@ Ruch $(4, 5)$ nie doprowadza do poprawienia wyniku zatem \emph{chances} zostaje 
 \item Spoœród 3 mo¿liwych ruchów najlepszy jest ruch $(3, 4)$. Nie znajduje siê on na liœcie tabu, zatem zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok2}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok2}
 \end{figure}
 
 Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4)\}$. Ruch doprowadza do poprawienia wyniku, zatem \emph{chances} pozostaje bez zmian.
@@ -388,7 +388,7 @@ Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4)\}$. Ruch doprowadza do p
 \item Spoœród 2 mo¿liwych ruchów najlepszy jest ruch $(1, 2)$. Nie znajduje siê on na liœcie tabu, zatem zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok3}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok3}
 \end{figure}
 
 Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4), (2, 3)\}$. Ruch doprowadza do poprawienia wyniku, zatem \emph{chances} pozostaje bez zmian.
@@ -396,7 +396,7 @@ Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4), (2, 3)\}$. Ruch doprowa
 \item Najlepszym ruchem w obecnej sytuacji jest ruch $(2, 3)$. Znajduje siê on jednak na liœcie tabu, a jednoczeœnie nie spe³nia kryterium aspiracji (nie prowadzi do poprawienia najlepszego znalezionego rozwi¹zania). Jedynym mo¿liwym ruchem jest $(1, 2)$, wiêc zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok4}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok4}
 \end{figure}
 
 Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuniêty zostaje ruch dodany najwczeœniej, czyli $(4, 5)$. Po dodaniu $(1, 2)$ na liœcie tabu znajduj¹ siê nastêpuj¹ce ruchy: $\{(3, 4), (2, 3), (1, 2)\}$. Ruch $(1, 2)$ doprowadza do pogorszenia rozwi¹zania, wiêc \emph{chances} zostaje obni¿one o 1 i wynosi teraz 3.
@@ -404,7 +404,7 @@ Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuniêty zo
 \item Jedynym mo¿liwym ruchem jest $(4, 5)$, wiêc zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok5}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok5}
 \end{figure}
 
 Nastêpuje ponowne pogorszenie wyniku, zatem \emph{chances} zostaje zmniejszone do 2. Na liœcie tabu: $\{(2, 3), (1, 2), (4, 5)\}$.
@@ -412,7 +412,7 @@ Nastêpuje ponowne pogorszenie wyniku, zatem \emph{chances} zostaje zmniejszone d
 \item Po raz kolejny wykonany zostaje jedyny ruch nie znajduj¹cy siê na liœcie tabu, czyli $(3, 4)$:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok6}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok6}
 \end{figure}
 
 Rozwi¹zanie ulega dalszemu pogorszeniu: $C_{max}=144$. Parametr \emph{chances} zostaje obni¿ony do 1, a lista tabu zaktualizowana: $\{(1, 2), (4, 5), (3, 4)\}$.
@@ -420,7 +420,7 @@ Rozwi¹zanie ulega dalszemu pogorszeniu: $C_{max}=144$. Parametr \emph{chances} z
 \item Przy aktualnym uporz¹dkowaniu najlepszy jest ruch $(1, 2)$. Znajduje siê na liœcie tabu, ale mo¿e byæ wykonany poniewa¿ spe³nia kryterium aspiracji. Prowadzi bowiem do uzyskania rozwi¹zania o $C_{max}=120$, które jest lepsze od dotychczasowego najlepszego o wartoœci 133.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok7}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok7}
 \end{figure}
 
 Do listy dodany zostaje wykonany ruch: $\{(4, 5), (3, 4), (1, 2)\}$. Nastêpuje poprawienie rozwi¹zania, wiêc \emph{chances} pozostaje bez zmian.
@@ -428,7 +428,7 @@ Do listy dodany zostaje wykonany ruch: $\{(4, 5), (3, 4), (1, 2)\}$. Nastêpuje p
 \item Jedyny mo¿liwy ruch $(2, 3)$ okazuje siê byæ najlepszym i zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok8}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok8}
 \end{figure}
 
 Do listy dodany zostaje wykonany ruch: $\{(3, 4), (1, 2), (2, 3)\}$. Nastêpuje poprawienie rozwi¹zania, wiêc \emph{chances} pozostaje bez zmian.
@@ -436,10 +436,10 @@ Do listy dodany zostaje wykonany ruch: $\{(3, 4), (1, 2), (2, 3)\}$. Nastêpuje p
 \item Mo¿liwy jest tylko ruch $(4, 5)$, a ¿aden z ruchów na liœcie tabu nie prowadzi do poprawienia najlepszego rozwi¹zania. Zatem ruch $(4, 5)$ zostaje wykonany:
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{krok9}
+\includegraphics[trim=0 5mm 0 0, clip, width=0.9\textwidth]{krok9}
 \end{figure}
 
-Ruch ten pogorsza funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci $C_{max}=118$ z kroku 7.
+Ruch ten pogorsza funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci $C_{max}=118$ z kroku 8.
 \end{enumerate}
 
 \subsection{Optymalizacja parametrów}
@@ -450,7 +450,7 @@ Przed przyst¹pieniem do optymalizacji parametrów algorytmu konieczne by³o sprawd
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{time-distance}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{time-distance}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
 \label{fig:time-distance}
 \end{figure}
@@ -460,7 +460,7 @@ Rysunek \ref{fig:time-distance} przedstawia wykres zale¿noœci czasu obliczeñ od 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{time-tabus}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{time-tabus}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
 \label{fig:time-tabus}
 \end{figure}
@@ -470,7 +470,7 @@ Badania wp³ywu d³ugoœci listy tabu na czas obliczeñ potwierdzi³y teoretyczne prz
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth]{time-chances}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{time-chances}
 \caption{Czas obliczeñ w zale¿noœci od zmieniaj¹cego siê \emph{chances}}
 \label{fig:time-chances}
 \end{figure}
@@ -483,7 +483,7 @@ Na podstawie wyników pomiarów prêdkoœci dzia³ania algorytmu w nastêpnym kroku ek
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax-distance-swap}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{cmax-distance-swap}
 \caption{Porównanie jakoœci i prêdkoœci dla zmieniaj¹cego siê \emph{distance}}
 \label{fig:cmax-distance-swap}
 \end{figure}
@@ -493,14 +493,14 @@ Rysunek \ref{fig:cmax-distance-swap} przedstawia wykres zale¿noœci jakoœci rozwi
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{frequency-swap}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{frequency-swap}
 \caption{Czêstoœæ wyboru ruchu w zale¿noœci od jego \emph{distance}}
 \label{fig:frequency-swap}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax-chances-50}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{cmax-chances-50}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{distance}}
 \label{fig:cmax-chances-50}
 \end{figure}
@@ -519,7 +519,7 @@ Powy¿sze fakty mo¿na wyt³umaczyæ w nastêpuj¹cy sposób. Je¿eli $\emph{chances} < 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax-tabus-50}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{cmax-tabus-50}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
 \label{fig:cmax-tabus-50}
 \end{figure}
@@ -530,7 +530,7 @@ Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zani
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{cmax-tabus-75}
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{cmax-tabus-75}
 \caption{Jakoœæ rozwi¹zania w zale¿noœci od zmieniaj¹cego siê \emph{tabus}}
 \label{fig:cmax-tabus-75}
 \end{figure}
