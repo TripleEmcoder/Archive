@@ -52,7 +52,7 @@ void Move::make_inv(vector<int>& order)
 
 int Move::diff()
 {
-	return abs(second-first);
+	return (first>second)? first-second : second-first;
 }
 
 ostream& operator<<(ostream& os, Move& m)
@@ -124,7 +124,7 @@ void MoveTask::make_inv(vector<int>& order)
 
 int MoveTask::diff()
 {
-	return abs(b-a);
+	return (a>b)? a-b : b-a;
 }
 
 
