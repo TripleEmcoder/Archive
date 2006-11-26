@@ -32,8 +32,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\sloppy
-
 \hypersetup
 {
 	bookmarksnumbered=true,
@@ -54,6 +52,10 @@
 \begin{document}
 
 \maketitle
+
+\tableofcontents
+
+\newpage
 
 \section{Opis problemu}
 
@@ -556,12 +558,14 @@ Rysunek \ref{fig:cmax-tabus-50} przedstawia wykres zale¿noœci jakoœci rozwi¹zani
 \subsubsection{Wnioski koñcowe}
 Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
 \begin{enumerate}
+\item Najwiêkszy wp³yw zarówno na jakoœæ jak i czas ma parametr \emph{distance}. W praktyce najlepiej stosowaæ wartoœci rzêdu kilka-kilkanaœcie, w zale¿noœci od oczekiwanej jakoœci i dostêpnego czasu.
 \item Najlepsza wartoœæ \emph{tabus} wynosi ok. 30\% mo¿liwych ruchów.
 \item Najlepsza wartoœæ \emph{chances} jest z pewnoœci¹ wiêksza od \emph{tabus}, w ogólnoœci im wiêksza, tym lepsza (ale uwaga na czas obliczeñ).
 \end{enumerate}
 
+\newpage
 \subsection{Testy wydajnoœciowe}
-Ostatnim z etapów eksperymentu by³ test wydajnoœciowy, który mia³ na celu pokazanie jak algorytm zachowuje siê dla ró¿nych liczb zadañ przy ustalonych wczeœniej parametrach. Wykres na rysunki \ref{fig:speed} przedstawia wyniki pomiarów, oraz idealnie dopasowane do nich krzywe wielomianowe. Potwierdza to w sposób ostateczny wyznaczon¹ z³o¿onoœæ rzêdu $O(n^2)$.
+Ostatnim z etapów eksperymentu by³ test wydajnoœciowy, który mia³ na celu pokazanie jak algorytm zachowuje siê dla ró¿nych liczb zadañ przy ustalonych wczeœniej parametrach. Wykres na rysunku \ref{fig:speed} przedstawia wyniki pomiarów, oraz idealnie dopasowane do nich krzywe wielomianowe. Potwierdza to w sposób ostateczny wyznaczon¹ z³o¿onoœæ rzêdu $O(n^2)$.
 
 \begin{figure}[h]
 \centering
