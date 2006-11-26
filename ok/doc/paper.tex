@@ -24,7 +24,7 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[LE,RO]{\textsf{\thepage}}
-\fancyhead[RE,LO]{\textsf{(tytu³)}}
+\fancyhead[RE,LO]{\textsf{Algorytm aproksymacyjny}}
 \fancyhead[CE,CO]{\ }
 \fancyfoot[LE,RO]{\ }
 \fancyfoot[RE,LO]{\ }
@@ -45,7 +45,7 @@
 \SIdecimalsign{,}
 
 \begin{titlepage}
-\title{Optymalizacja kombinatoryczna \\ (tytu³)}
+\title{Optymalizacja kombinatoryczna \\ Algorytm aproksymacyjny}
 \author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
 \end{titlepage}
 
@@ -64,9 +64,9 @@ $F2$, $h_{1k}$ | $SRS$ , $r_i$, $no-wait$ | $C_{max}$
 
 Poszczególne symbole opisu precyzuj¹ problem w nastêpuj¹cy sposób:
 \begin{description}
-\item[$F2$] -- szeregowanie zadañ w systemie przep³ywowym na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
-\item[$h_{1k}$] -- wystêpowanie okresów niedostêpnoœci na I maszynie,
-\item[$SRS$] -- mo¿liwoœæ wznawiania zadañ (z zastrze¿eniem, ¿e zatrzymanie zadania mo¿e nast¹piæ jedynie w przypadku wyst¹pienia okresu niedostêpnoœci),
+\item[$F2$] -- szeregowanie zadañ odbywa siê w systemie przep³ywowym na 2 maszynach (ka¿de zadanie przetwarzane jest dwufazowo -- najpierw na I maszynie, potem na II maszynie),
+\item[$h_{1k}$] -- na I maszynie wystêpuj¹ okresy niedostêpnoœci,
+\item[$SRS$] -- istnieje mo¿liwoœæ wznawiania zadañ (z zastrze¿eniem, ¿e zatrzymanie zadania mo¿e nast¹piæ jedynie w przypadku wyst¹pienia okresu niedostêpnoœci, ponadto po wznowieniu konieczne jest ponowne wykonanie prac przygotowawczych),
 \item[$r_i$] -- dane s¹ momenty przybycia zadañ,
 \item[$no-wait$] -- przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I,
 \item[$C_{max}$] -- kryterium optymalizacyjne stanowi moment zakoñczenia przetwarzania ostatniego zadania (mo¿liwie jak najwczeœniej).
@@ -90,78 +90,80 @@ Opis instancji problemu sprowadza siê do podania nastêpuj¹cych danych:
 	\end{description}
 \end{description}
 
-Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n, m \in \mathbb{N}$ oraz $r_j, p_j, r_i, s'_i, s''_i, p''_i \in \mathbb{N}$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
+Dziedzinê problemu stanowi¹ liczby ca³kowite nieujemne, tj. $n$, $m \in \mathbb{N}$ oraz $r'_i$, $s'_i$, $p'_i$, $s''_i$, $p''_i$, $r_j$, $p_j \in \mathbb{N}$ dla wszystkich dopuszczalnych wartoœci $i$ oraz $j$.
 
 \newpage
 
 Dodatkowo problem zosta³ ograniczony ze wzglêdu na wartoœci wystêpuj¹ce w instancji, które musz¹ spe³niaæ nastêpuj¹ce warunki:
 \begin{itemize}
-\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale $\left[ 1, 100\right]$ jednostek, czyli:
+\item dla ka¿dego zadania czasy przetwarzania na obu maszynach zawieraj¹ siê w przedziale 1-100 jednostek, czyli:
 \begin{displaymath}
-\forall i=1,2,\ldots,n:
+\forall i=1,2,\ldots,n:\;
 		1 \leq p'_i \leq 100
-	\wedge
+	\,\wedge\,
 		1 \leq p''_i \leq 100
 \end{displaymath}
 
 \item dla ka¿dego zadania czas przygotowania na danej maszynie nie przekracza 50\% czasu przetwarzania na tej maszynie, czyli:
 \begin{displaymath}
-\forall i=1,2,\ldots,n:
-		1 \leq s'_i \leq 50\%\; p'_i
-	\wedge
-		1 \leq s''_i \leq 50\%\; p''_i
+\forall i=1,2,\ldots,n:\;
+		1 \leq s'_i \leq \SI{50}{\%}\, p'_i
+	\,\wedge\,
+		1 \leq s''_i \leq \SI{50}{\%}\, p''_i
 \end{displaymath}
 
-\item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale  $\left[ 1, 100\right]$ jednostek, czyli:
+\item czasy trwania wszystkich okresów niedostêpnoœci zawieraj¹ siê w przedziale 1-100 jednostek, czyli:
 \begin{displaymath}
-\forall j=1,2,\ldots,m:
+\forall j=1,2,\ldots,m:\;
 	1 \leq p_j \leq 100
 \end{displaymath}
 \end{itemize}
 
 oraz ze wzglêdu na sumaryczne czasy przestojów i przetwarzania:
-$$\sum_{j=1}^m p_j \leq 20\%\, \sum_{i=1}^n (s'_i + p'_i)$$
+$$\sum_{j=1}^m p_j \leq \SI{20}{\%}\, \sum_{i=1}^n (s'_i + p'_i)$$
 
 W dalszych rozwa¿aniach wygodniejsze bêdzie pos³ugiwanie siê jedynie wartoœciami $n$ i $m$, dlatego powy¿sza zale¿noœæ zostanie odpowiednio przekszta³cona z wykorzystaniem teorii prawdopodobieñstwa tak, aby uwzglêdnia³a losow¹ naturê generowanych testów.
 
 Niech zmienna losowa $X$ odpowiada czasowi przetwarzania na I maszynie, zmienna losowa $Y$ czasowi przygotowania na II maszynie, a zmienna $Z$ d³ugoœci okresu niedostêpnoœci. 
 
-Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=1,2,3,\ldots,99$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i+1$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
-$$\textrm{P}(X=x_i) = p(x_i) = \frac{1}{99}$$
+Zmienna $X$ przyjmuje wartoœci $x_i$ dla $i=1,2,\ldots,99$, gdzie $x_i$ odpowiada czasowi przetwarzania równemu $i+1$ jednostek czasu. Rozk³ad zmiennej $X$ jest równomierny, zatem:
+\begin{displaymath}
+\forall i=1,2,\ldots,99:\;
+	\textrm{P}(X=x_i) = \frac{1}{99}
+\end{displaymath}
 
 Wartoœæ œredni¹ zmiennej $X$ mo¿na obliczyæ wg wzoru:
-$$\textrm{E}(X) = \sum _{i=1} ^{99} x_i p(x_i) = 51$$
+$$\textrm{E}(X) = \sum_{i=1}^{99} x_i \textrm{P}(X=x_i) = 51$$
 
-Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=1,2,3,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
-
+Zmienna $Y$ przyjmuje wartoœci $y_k$ dla $k=1,2,\ldots,50$, gdzie $y_k$ odpowiada czasowi przetwarzania równemu $k$ jednostek czasu. Rozk³ad zmiennej $Y$ jest równomierny, zatem:
 \begin{displaymath}
 \textrm{P}(Y=y_k | X=x_i) =
 \left\{ 
 	\begin{array}{ll}
-	\frac{1}{(i+1)/2} & k \leq (i+1)/2 \\
-	0 & k>(i+1)/2
+	\frac{1}{x_i/2} & k \leq x_i/2 \\
+	0 & k>x_i/2
 	\end{array} 
 \right.
 \end{displaymath}
 
 Wartoœæ œredni¹ zmiennej $Y$ mo¿na obliczyæ korzystaj¹c z nastêpuj¹cych zale¿noœci:
-
 \begin{displaymath}
 \textrm{E}(Y|X) = 
-\int_{-\infty}^{\infty} y\; \textrm{d} F(y|x) =
-\sum_{k=1}^{50} \textrm{p}({y_k}|{x_i})
+\int_{-\infty}^{\infty} y\; \textrm{dF}(y|x) =
+\sum_{k=1}^{50} \textrm{P}(Y=y_k | X=x_i)
 \end{displaymath}
 
 \begin{displaymath}
 \textrm{E}(Y) =
-\int_{-\infty}^{\infty} \textrm{E}(Y|X)\; \textrm{d} F_1(x) =
-\sum_{i=1}^{99} \textrm{E}(Y|X=x_i) \textrm{p}(x_i)
+\int_{-\infty}^{\infty} \textrm{E}(Y|X)\; \textrm{dF}_1(x) =
+\sum_{i=1}^{99} \textrm{E}(Y | X=x_i) \textrm{P}(X=x_i)
 \end{displaymath}
 
-Koñcowy wzór ma postaæ:
+Koñcowy wzór ma zatem postaæ:
 \begin{displaymath}
 \textrm{E}(Y) =
-\sum_{i=1}^{99} \sum_{k=1}^{50} \textrm{p}({y_k}|{x_i}) \textrm{p}(x_i) =
+\sum_{i=1}^{99} \sum_{k=1}^{50} 
+\textrm{P}(Y=y_k | X=x_i) \textrm{P}(X=x_i) =
 \SI{13.13}{}
 \end{displaymath}
 
@@ -169,16 +171,16 @@ Zmienna $Z$ przyjmuje wartoœci $Z_i$ dla $i=1,2,3,\ldots,100$, gdzie $z_i$ odpow
 $$\textrm{P}(Z=z_i) = \frac{1}{100}$$
 
 Wartoœæ œredni¹ zmiennej $Z$ mo¿na obliczyæ wg wzoru:
-$$\textrm{E}(Z) = \sum_{i=1}^{100} z_i p(z_i) = \SI{50.5}{}$$
+$$\textrm{E}(Z) = \sum_{i=1}^{100} z_i \textrm{P}(Z=z_i) = \SI{50.5}{}$$
 
-Z wartoœci œrednich zmiennych losowych $X$, $Y$, $Z$  mo¿na wyznaczyæ oczekiwany stosunek liczby zadañ do liczby okresów niedostêpnoœci tak aby spe³nione by³y warunki zadania:
-$$m \textrm{E}(Z) \leq 20\%\, n (\textrm{E}(X)+\textrm{E}(Y))$$
+Z wartoœci œrednich zmiennych losowych $X$, $Y$, $Z$  mo¿na wyznaczyæ oczekiwany stosunek liczby zadañ do liczby okresów niedostêpnoœci tak, aby spe³nione by³y warunki zadania:
+$$m\, \textrm{E}(Z) \leq \SI{20}{\%}\, n\, (\textrm{E}(X)+\textrm{E}(Y))$$
 
-Po przekszta³ceniu i podstawieniu wartoœci:
-$$m \leq \SI{25.4}{\%} n$$
+Po przekszta³ceniu i podstawieniu wartoœci otrzymujemy:
+$$m \leq \SI{25.4}{\%}\, n$$
 
 \subsection{Opis wyjœcia}
-Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z których ka¿dy jest zestawem nastêpuj¹cych liczb:
+Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, czyli zestaw nastêpuj¹cych liczb:
 \begin{description}
 	\item[$l'_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie,
 		\begin{description}
@@ -189,30 +191,35 @@ Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, z
 \end{description}
 
 W dalszych rozwa¿aniach przyjêto, ¿e okresy przetwarzania na I maszynie s¹ w obrêbie danego zadania posortowane chronologicznie, tj. zgodnie z rosn¹c¹ wartoœci¹ $r'_{ik}$:
-$$\forall i=1,2,\ldots,n: \forall j=1,2,\ldots,l'_i-1: r'_{ij} < r''_{i(j+1)}$$
+\begin{displaymath}
+\forall i=1,2,\ldots,n\, \forall j=1,2,\ldots,l'_i-1:\;
+r'_{ij} < r'_{i(j+1)}
+\end{displaymath}
 
 Przy tak przyjêtym opisie rozwi¹zania zachodzi równoœæ:
 $$C_{max} = \max_{i=1}^n r''_i + p''_i$$
 
-Zgodnie z postawionym problemem liczby wymienione powy¿ej musz¹ spe³niaæ nastêpuj¹ce warunki:
+\newpage
+
+Zgodnie z definicj¹ postawionego problemu liczby wymienione powy¿ej musz¹ spe³niaæ nastêpuj¹ce warunki:
 \begin{itemize}
-\item przetwarzanie ka¿dego z zadañ rozpoczyna siê najwczeœniej w momencie jego przybycia, czyli:
+\item przetwarzanie ka¿dego z zadañ rozpoczyna siê  najwczeœniej w momencie jego przybycia (rozwa¿amy pierwszy okres przetwarzania tego zadania na maszynie I), czyli:
 $$\forall i=1,2,\ldots,n: p'_{i1} \geq r'_i$$
 
 \item dla ka¿dego zadania sumaryczna d³ugoœæ okresów pracy zaplanowanych na I maszynie musi byæ równa czasowi zadanemu w instancji, czyli:
 $$\forall i=1,2,\ldots,n: \sum_{k=1}^{l'_i} p'_{ik} = p'_i$$
 
-\item dla ka¿dego zadania przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I, czyli:
+\item dla ka¿dego zadania przetwarzanie na maszynie II musi rozpocz¹æ siê natychmiast po zakoñczeniu przetwarzania na maszynie I (rozwa¿amy ostatni okres przetwarzania tego zadania na maszynie I), czyli:
 $$\forall i=1,2,\ldots,n: r'_{il'_i} + p'_{il'_i} = r''_i$$
 
 \item niemo¿liwe jest przetwarzanie zadania podczas okresu niedostêpnoœci oraz jednoczesne przetwarzanie wiêcej ni¿ jednej czêœci tego samego zadania lub ró¿nych zadañ, innymi s³owy dla zbioru okresów przetwarzania:
-$$A=\left\{ (i, j): i=0,1,\ldots,n \wedge j=1,2,\ldots,l'_i \right\}$$
+$$A=\left\{ (i, j):\, i=0,1,\ldots,n \,\wedge\, j=1,2,\ldots,l'_i \right\}$$
 
 gdzie jako zadanie o numerze $i=0$ przyjmujemy dodatkowe zadanie o okresach przetwarzania pokrywaj¹cych siê z okresami niedostêpnoœci, czyli:
 \begin{eqnarray*}
 & s'_0 = 0 \\
 & l'_0 = m \\
-& \forall j=1,2,\ldots,m: r'_{ij} = r_j \wedge  p'_{ij} = p_j
+& \forall j=1,2,\ldots,m: r'_{0j} = r_j \wedge  p'_{0j} = p_j
 \end{eqnarray*}
 
 okresy zawarte w zbiorze A odpowiadaj¹ parami roz³¹cznym przedzia³om czasu, czyli:
@@ -232,12 +239,14 @@ Wszystkie z powy¿szych warunków by³y automatycznie sprawdzane dla ka¿dego rozwi¹
 
 \section{Opis algorytmu}
 \subsection{Algorytm si³owy}
-Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_{max}$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $n$-elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu $O(n!)$. W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_{max}$.
+Si³owe rozwi¹zanie postawionego problemu wymaga sprawdzenia wartoœci kryterium $C_{max}$ dla wszystkich mo¿liwych kolejnoœci wykonania zadañ, czyli wszystkich permutacji $n$ - elementowego ci¹gu, co daje algorytm o z³o¿onoœci rzêdu $O(n!)$. W obrêbie danej kolejnoœci zadañ rozpatrywane jest jedynie uszeregowanie o najmniejszej wartoœci $C_{max}$.
 Algorytm typu \emph{brute force} zosta³ zaimplementowany jako pierwszy, jako narzêdzie umo¿liwiaj¹ce sprawdzenie poprawnoœci algorytmu obliczaj¹cego wartoœæ $C_{max}$. W praktyce algorytm taki ma rozs¹dny czas dzia³ania dla instancji o liczbie zadañ $n \leq 10$, dlatego w dalszych rozwa¿aniach zostanie on pominiêty.
-W implementacji algorytmu si³owego wydzielona zosta³a czêœæ odpowiedzialna za obliczanie wartoœci $C_{max}$, w celu jej póŸniejszego wykorzystania w algorytmie aproksymacyjnym. Obliczenie wspomnianego parametru wymaga wyznaczenia momentu zakoñczenia ka¿dego z $n$ zadañ, co z kolei wymaga wyszukania wœród $m$ okresów niedostêpnoœci tych, które przerywaj¹ wykonywanie zadania. Poniewa¿ implementacja algorytmu wykorzystuje liniowo uporz¹dkowane struktury tablicowe do przechowywania opisów zarówno zadañ jak i okresów niedostêpnoœci, jej z³o¿onoœæ obliczeniowa jest rzêdu $O(n+m)$. Przy za³o¿eniu, ¿e $m \leq \SI{25,4}{\%} n$, z³o¿onoœæ jest rzêdu $O(n)$.
+
+W implementacji algorytmu si³owego wydzielona zosta³a czêœæ odpowiedzialna za obliczanie wartoœci $C_{max}$, w celu jej póŸniejszego wykorzystania w algorytmie aproksymacyjnym. Obliczenie wspomnianego parametru wymaga wyznaczenia momentu zakoñczenia ka¿dego z $n$ zadañ, co z kolei wymaga wyszukania wœród $m$ okresów niedostêpnoœci tych, które przerywaj¹ wykonywanie zadania. Poniewa¿ implementacja algorytmu wykorzystuje liniowo uporz¹dkowane struktury tablicowe do przechowywania opisów zarówno zadañ jak i okresów niedostêpnoœci, jej z³o¿onoœæ obliczeniowa jest rzêdu $O(n+m)$. Przy za³o¿eniu, ¿e $m \leq \SI{25,4}{\%}\, n$, z³o¿onoœæ wynosi $O(n)$.
+
 \subsection{Algorytm aproksymacyjny}
 \subsubsection{Idea algorytmu}
-Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (w sensie np. leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej krokiem elementarnym, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, spoœród mo¿liwych, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej list¹ tabu, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same kroki. Krok znajduj¹cy siê na liœcie tabu mo¿e zostaæ wykonany jedynie wtedy, kiedy spe³nia pewien dodatkowy warunek, zwany kryterium aspiracji. Warunek stopu okreœla siê w implementacji algorytmu.
+Do rozwi¹zania postawionego problemu wykorzystany zosta³ schemat algorytmu typu \emph{tabu search}. Ogólna idea tego algorytmu polega na iteracyjnym poprawianiu pewnego rozwi¹zania, ustalonego na pocz¹tku dzia³ania algorytmu. Rozwi¹zanie to mo¿e byæ wylosowane, oszacowane przy pomocy algorytmu zach³annego lub wyliczone jako pierwsze (np. w sensie leksykograficznym) dozwolone w warunkach zadania, przy czym, im bli¿sze jest ono rozwi¹zaniu optymalnemu, tym szybciej i z lepszymi efektem zakoñczy siê dzia³anie algorytmu. Proces poprawiania rozwi¹zania polega na sekwencyjnym wykonywaniu na nim pewnej operacji, zwanej \emph{krokiem elementarnym}, która prowadzi do innego rozwi¹zania. Zbiór wszystkich rozwi¹zañ, które mo¿na otrzymaæ przez wykonanie dowolnego z mo¿liwych kroków elementarnym nazywane jest s¹siedztwem rozwi¹zania. Krokiem wykonywanym w danej iteracji jest ten, spoœród mo¿liwych, który prowadzi do rozwi¹zania najlepszego w aktualnym s¹siedztwie. Po wykonaniu operacji jest ona umieszczana na liœcie kroków zabronionych, zwanej \emph{list¹ tabu}, co ma na celu wykluczenie sytuacji, w której algorytm zapêtli siê, wykonuj¹c naprzemiennie te same kroki. Krok znajduj¹cy siê na liœcie tabu mo¿e zostaæ wykonany jedynie wtedy, kiedy spe³nia pewien dodatkowy warunek, zwany \emph{kryterium aspiracji}. Warunek stopu okreœla siê w implementacji algorytmu.
 
 \subsubsection{Implementacja algorytmu}
 Program rozwi¹zuj¹cy postawiony problem zosta³ podzielony na dwie czêœci: procedury obliczaj¹ce optymalny sposób przetwarzania zadañ dla pewnej ustalonej ich kolejnoœci (permutacji) oraz czêœæ zwi¹zan¹ z poszukiwaniem tej kolejnoœci, dla której wartoœæ $C_{max}$ bêdzie jak najmniejsza. W ramach pierwszej czêœci wykorzystany zosta³ algorytm opracowany na potrzeby rozwi¹zania si³owego, druga zosta³a zaimplementowana z wykorzystaniem idei algorytmu \emph{tabu search}, którego elementy sprecyzowano w opisany ni¿ej sposób.
@@ -245,13 +254,13 @@ Program rozwi¹zuj¹cy postawiony problem zosta³ podzielony na dwie czêœci: proced
 \paragraph{Krok elementarny}
 W fazie doœwiadczalnej projektu testowane by³y algorytmy korzystaj¹ce z trzech ró¿nie zdefiniowanych kroków elementarnych. Wersje te, zwane dalej \emph{MoveIndex}, \emph{SwapIndex} i \emph{SwapTask}, operuj¹ na permutacji wyznaczaj¹cej kolejnoœæ przetwarzania zadañ i realizuj¹ krok elementarny opisany par¹ liczb $(a, b)$ w nastêpuj¹cy sposób:
 \begin{description}
-\item[\emph{MoveIndex}] -- przemieszczenia zadania z pozycji $a$ na pozycjê $b$,
+\item[\emph{MoveIndex}] -- przemieszczenie zadania z pozycji $a$ na pozycjê $b$,
 \item[\emph{SwapIndex}] -- zamiana miejscami zadañ na pozycjach $a$ i $b$,
 \item[\emph{SwapTask}] -- zamiana miejscami zadañ o numerach $a$ i $b$.
 \end{description}
-Sprawdzenie ka¿dego z kroków wymaga obliczenia wartoœci $C_{max}$ dla powsta³ej permutacji zadañ, czyli wykonania - zgodnie z wczeœniejszymi ustaleniami - $O(n)$ operacji. Iloœci mo¿liwych kroków oraz wynikaj¹c¹ z nich z³o¿onoœæ obliczeniow¹ algorytmu dla poszczególnych wersji przedstawia tabela.
+Sprawdzenie ka¿dego z kroków wymaga obliczenia wartoœci $C_{max}$ dla powsta³ej permutacji zadañ, czyli wykonania -- zgodnie z wczeœniejszymi ustaleniami -- $O(n)$ operacji. Iloœci mo¿liwych kroków oraz wynikaj¹c¹ z nich z³o¿onoœæ obliczeniow¹ algorytmu dla poszczególnych wersji przedstawia tabela \ref{tab:versions}.
 
-\begin{table}[t]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
@@ -262,10 +271,12 @@ SwapIndex & $\displaystyle \frac{n (n-1)}{2}$ & $O(n^3)$ \\[10pt]
 SwapTask & $\displaystyle \frac{n (n-1)}{2}$ & $O(n^3)$ \\[10pt]
 \hline
 \end{tabular}
+\caption{Iloœæ kroków i z³o¿onoœæ dla poszczególnych wersji algorytmu}
+\label{tab:versions}
 \end{table}
 
 \paragraph{Lista tabu}
-Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Pocz¹tkowo listê tabu zaimplementowano jako drzewo binarne. Aby poprawiæ wydajnoœæ opisy kroków s¹ przechowywane w strukturze danych umo¿liwiaj¹cej dodawanie, usuwanie oraz sprawdzanie czy element nale¿y do struktury w czasie sta³ym. W fazie doœwiadczalnej projektu testowane by³y dwie koncepcje listy tabu, zwane dalej \emph{DoubleBlock} i \emph{MultiBlock}, które dla kroku opisanego przez parê liczb $(a, b)$ powoduj¹ zablokowanie:
+Wykonanie kroku elementarnego wi¹¿e siê z jego umieszczeniem na liœcie tabu. Pocz¹tkowo listê tabu zaimplementowano jako drzewo binarne. Ostatecznie, w celu poprawienia wydajnoœci, opisy kroków umieszczono w strukturze danych umo¿liwiaj¹cej dodawanie, usuwanie oraz sprawdzanie zawierania elementów w czasie sta³ym. W fazie doœwiadczalnej projektu testowane by³y dwie koncepcje listy tabu, zwane dalej \emph{DoubleBlock} i \emph{MultiBlock}, które dla kroku opisanego przez parê liczb $(a, b)$ powoduj¹ zablokowanie:
 \begin{description}
 \item[\emph{DoubleBlock}] -- danego kroku i kroku odwrotnego, tj. kroków $(a, b)$ i $(b, a)$,
 \item[\emph{MultiBlock}] -- wszystkich kroków zawieraj¹cych w opisie liczby $a$ i $b$, czyli takich kroków $(x, y)$ i $(y, x)$, ¿e $x \neq y$ i $x \in \{a, b\}$, a $y$ jest dowoln¹ liczb¹ tworz¹c¹ razem z $x$ prawid³owy krok.
@@ -276,19 +287,28 @@ D³ugoœæ listy tabu jest parametrem algorytmu (zwanym dalej \emph{tabus}). W szcz
 Iteracje algorytmu wykonywane s¹ bezwarunkowo dopóty, dopóki poprawia siê wartoœæ $C_{max}$. Nastêpnie wykonywana jest pewna iloœæ dodatkowych iteracji, w trakcie których mo¿liwa jest dalsza zmiana s¹siedztwa rozwi¹zania, a¿ do ewentualnego znalezienia obszaru o lepszej wartoœci $C_{max}$. W przypadku nie znalezienia takiego obszaru algorytm koñczy siê. Sumaryczna iloœæ dodatkowych iteracji jest parametrem algorytmu (zwanym dalej \emph{chances}).
 
 \paragraph{Kryterium aspiracji}
-Aby zwiêkszyæ skutecznoœæ algorytmu wprowadzono dodatkowe kryterium umo¿liwiaj¹ce wykonanie ruchu pomimo, ¿e znajduje siê na liœcie tabu. Jest to mo¿liwe w przypadku je¿eli wykonanie zabronionego ruchu prowadzi do uzyskania rozwi¹zania lepszego ni¿ najlepsze dotychczas znalezione.  
+Aby zwiêkszyæ skutecznoœæ algorytmu wprowadzono dodatkowe kryterium umo¿liwiaj¹ce wykonanie ruchu w sytuacji, gdy znajduje siê on na liœcie tabu. Jest to mo¿liwe w przypadku, kiedy wykonanie zabronionego ruchu prowadzi do uzyskania rozwi¹zania lepszego ni¿ najlepsze dotychczas znalezione.  
 
 \subsubsection{Usprawnienia algorytmu}
 \paragraph{Ograniczenie liczby ruchów}
 W celu ograniczenia z³o¿onoœci algorytmu wprowadzony zosta³ dodatkowy parametr, zwany dalej \emph{distance}. Mówi on, jaka mo¿e byæ maksymalna odleg³oœæ w permutacji pomiêdzy zadaniem, a miejscem w które zostanie przesuniête w kroku elementarnym. W szczególnoœci, dla odleg³oœci równej 1, rozwa¿ane s¹ jedynie s¹siednie zadania, co daje z³o¿onoœæ algorytmu rzêdu $O(n^2)$.
 
-Dok³adne wzory na iloœæ mo¿liwych ruchów w zale¿noœci od liczby zadañ i parametru \emph{distance} wygl¹daj¹ nastêpuj¹co:
-
+Dok³adne wzory na iloœæ mo¿liwych ruchów w zale¿noœci od liczby zadañ i parametru \emph{distance} s¹ nastêpuj¹ce:
 \begin{itemize}
-\item dla implementacji \emph{SwapTask} i \emph{SwapIndex}:
-$$ \sum_{i = 0}^{n-1} \min (distance,n - i - 1) $$
+\item dla implementacji \emph{SwapIndex} i \emph{SwapTask}:
+\begin{displaymath}
+\sum_{i=0}^{n-1}
+\min\{\emph{distance}, n-i-1\}
+\end{displaymath}
+
 \item dla implementacji \emph{MoveIndex}:
-$$ \sum_{i = 0}^{n-1}( \min(distance,i) + \min(distance,n - i - 1)) + 1 $$
+\begin{displaymath}
+\sum_{i=0}^{n-1}
+	\left(
+		\min\{\emph{distance}, i\} + \min\{\emph{distance}, n-i-1\}
+	\right)
+	+ 1
+\end{displaymath}
 \end{itemize}
 
 \paragraph{Zach³anna inicjalizacja}
@@ -296,24 +316,27 @@ W pierwszej implementacji pocz¹tkowa permutacja by³a losowana. Metoda ta nie spr
 
 Dalsze usprawnienie algorytmu mo¿liwe jest dziêki wstêpnemu ustawieniu zadañ w sposób zach³anny, tj. kolejno wybieraj¹c zadania, które w danym momencie prowadz¹ do najkrótszego uszeregowania.
 
+\newpage
+
 \section{Wyniki eksperymentu}
-Faza doœwiadczalna opiera³a siê na serii zautomatyzowanych testów wykonanych na losowo generowanych instancjach. Pomiary wykonywano w œrodowisku GNU/Linux przy pomocy kompilatora GCC w wersji 4.1.2 na komputerach z procesorami AMD Athlon XP \SI{1.8}{GHz} i Intel Celeron M \SI{1.4}{GHz}. Podczas analizy pomiary wykonane na ró¿nych komputerach nie by³y wzajemnie porównywane.
+Faza doœwiadczalna opiera³a siê na serii zautomatyzowanych testów dokonywanych na losowo generowanych instancjach. Pomiary wykonywano w œrodowisku GNU/Linux przy pomocy kompilatora GCC w wersji 4.1.2 na komputerach z procesorami AMD Athlon XP \SI{1.8}{GHz} i Intel Celeron M \SI{1.4}{GHz}. Podczas analizy pomiary wykonane na ró¿nych komputerach nie by³y wzajemnie porównywane.
 
 Pomiaru czasu dokonywano systemowym poleceniem \emph{time}, odnotowuj¹c jedynie czas spêdzony przez proces w trybie u¿ytkownika, zmniejszaj¹c w ten sposób wp³yw operacji wejœcia/wyjœcia na wyniki pomiaru, który dla szybko wykonuj¹cych siê testów móg³ byæ znacz¹cy. Czas mierzono w sekundach, z dok³adnoœci¹ do drugiego miejsca po przecinku. Wiêksza dok³adnoœæ na typowym systemie klasy PC jest w praktyce nieosi¹galna.
 
-Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej \emph{cmax\_error}, przy czym jako wartoœæ dok³adn¹ przyjmowano najmniejsz¹ wartoœæ $C_{max}$ osi¹gniêt¹ w trakcie wykonywania pomiarów dla danej instancji:
+Jakoœæ rozwi¹zania mierzono porównuj¹c b³êdy wzglêdne pomiarów, oznaczane dalej jako \emph{cmax\_error}, przy czym jako wartoœæ dok³adn¹ przyjmowano najmniejsz¹ wartoœæ $C_{max}$ osi¹gniêt¹ w trakcie wykonywania pomiarów dla danej instancji:
 \begin{displaymath}
 \forall p \in \textrm{P}(\mathbb{I}):
 	\emph{cmax\_error}(p) = 
 		\frac
 			{\emph{cmax}(p)}
-			{\min_{q \in \textrm{P}(\mathbb{I})} \emph{cmax}(p)} - 1
+			{\min_{q \in \textrm{P}(\mathbb{I})} \emph{cmax}(q)} - 1
 \end{displaymath}
+gdzie $\textrm{P}(\mathbb{I})$ oznacza zbiór pomiarów wykonanych dla pewnej instacji $\mathbb{I}$.
 
-W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich -- odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=20\%\,m$. (\emph{dlaczego?})
+W celu zwiêkszenia pewnoœci pomiarów, instancje o zadanych parametrach $n$ i $m$ by³y generowane w 20 egzemplarzach, a pomiary przeprowadzone na nich -- odpowiednio uœredniane. Tam, gdzie nie jest to wyszczególnione, iloœæ okresów niedostêpnoœci wynosi³a $m=\SI{20}{\%}\,n$. (\emph{dlaczego?})
 
 \subsection{Wybór implementacji}
-Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie na rysunku \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od \SI{3.9}{\%} (wersja \emph{SwapTask-MultiBlock}) do \SI{4.6}{\%} (wersja \emph{MoveIndex-MultiBlock}, zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie  od \SI{0.9}{s} -- dla \emph{SwapIndex-DoubleBlock} -- do \SI{1.3}{s} -- dla \emph{MoveIndex-MultiBlock}). Do dalszych rozwa¿añ wybrano zatem algorytm w wersji \emph{SwapIndex-DoubleBlock}, czyli algorytm dokonuj¹cy zamian miejscami zadañ o danych pozycjach, zapamiêtaj¹cy na liœcie tabu wykonany krok i krok do niego odwrotny.
+Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algorytmu. W tym celu przeprowadzono 3 serie pomiarów, odpowiednio dla $n=25$, $n=50$ i $n=75$. Testy nie wy³oni³y jednoznacznego zwyciêzcy, dlatego wszystkie wyniki uœredniono do postaci przedstawionej na wykresie na rysunku \ref{fig:impl}. Wykres pokazuje, ¿e dla przypadku œredniego kryterium jakoœci rozwi¹zania równie¿ nie jest rozstrzygaj¹ce. Wzglêdny b³¹d rozwi¹zañ kszta³tuje siê w poziomie od 3,9\% (wersja \emph{SwapTask-MultiBlock}) do 4,6\% (wersja \emph{MoveIndex-MultiBlock}), zatem ró¿nica w jakoœci jest minimalna. Dlatego zdecydowano siê na wybór wersji najszybszej, która daje dla badanych instancji œrednio ok. 30\% oszczêdnoœæ (czas wykonania na poziomie od 0,9 s -- dla \emph{SwapIndex-DoubleBlock} -- do 1,3 s -- dla \emph{MoveIndex-MultiBlock}). Do dalszych rozwa¿añ wybrano zatem algorytm w wersji \emph{SwapIndex-DoubleBlock}, czyli algorytm dokonuj¹cy zamian miejscami zadañ o danych pozycjach, zapamiêtuj¹cy na liœcie tabu wykonany krok i krok do niego odwrotny.
 
 \begin{figure}[h!]
 \centering
@@ -322,11 +345,12 @@ Pierwszym etapem eksperymentu by³ wybór najlepszej z opracowanych wersji algoryt
 \label{fig:impl}
 \end{figure}
 
-\subsubsection{(przyk³ad na ma³ej instancji)}
-Wylosowano nastêpuj¹c¹ instancjê problemu:
+\subsection{Przyk³ad dzia³ania}
+Do celów demonstracyjnych wylosowano nastêpuj¹c¹ instancjê problemu:
 \begin{verbatim}
 2
-26 7 54 9 
+26 7
+54 9 
 5
 29 1 2 5 11
 12 9 19 5 12
@@ -335,82 +359,88 @@ Wylosowano nastêpuj¹c¹ instancjê problemu:
 4 1 3 8 16
 \end{verbatim}
 
-Program wywo³ano z parametrami: \emph{distance} = 1, \emph{tabus} = 3, \emph{chances} = 5, wybrano implementacjê \emph{SwapIndex DoubleBlock}.
+Algorytm wykonano z parametrami: $\emph{distance}=1$, $\emph{tabus}=3$, $\emph{chances}=5$. Przebieg dzia³ania algorytmu jest nastêpuj¹cy:
 
-Po posortowaniu wg czasów przybycia otrzymano nastêpuj¹ce uporz¹dkowanie o funkcji celu równej 135.
+\begin{enumerate} 
+\item Po posortowaniu wed³ug czasów przybycia powstaje wstêpne uszeregowanie o funkcji celu $C_{max}=135$:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok0}
 \end{figure}
 
-Lista tabu jest pusta, chances = 5. Spoœród 4 mo¿liwych ruchów najlepszy jest ruch polegaj¹cy na zamianie miejscami zadañ na pozycjach 4 i 5. Ruch ten prowadzi do nastêpuj¹cego uszeregowania:
+\item Lista tabu jest pocz¹tkowo pusta: $\{\}$, $\emph{chances}=5$. Spoœród 4 mo¿liwych ruchów najlepszy jest ruch polegaj¹cy na zamianie miejscami zadañ na pozycjach 4 i 5. Ruch ten prowadzi do nastêpuj¹cego uszeregowania:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok1}
 \end{figure}
 
-Do listy tabu dodano ruch (4,5) i ruch do niego odwrotny (5,4). Dla ruchu polegaj¹cego na zamianie zadañ jest to dok³adnie ten sam ruch, ale w ogólnoœci nie musi tak byæ. Dla implementacji \emph{MoveIndex DoubleBlock} i parametru  \emph{distance} > 1 te ruchy mog¹ byæ ró¿ne. W dalszej czêœci przyk³adu pominiemy ruch odwrotny jako nieistotny w tym przypadku. Ruch nie doprowadzi³ do poprawienia wyniku zatem \emph{chances} zostaje zmniejszone o 1 i wynosi 4.
+Do listy tabu dodany ruch $(4, 5)$ i ruch do niego odwrotny $(5, 4)$. Dla ruchu polegaj¹cego na zamianie zadañ jest to dok³adnie ten sam ruch, ale w ogólnoœci nie musi tak byæ. Dla implementacji \emph{MoveIndex-DoubleBlock} i parametru $\emph{distance} > 1$ ruchy te mog¹ byæ ró¿ne. W dalszej czêœci przyk³adu pominiêto ruchy odwrotne jako nieistotne w tym przypadku. 
+Ruch $(4, 5)$ nie doprowadza do poprawienia wyniku zatem \emph{chances} zostaje zmniejszone o 1 i wynosi 4.
 
-Spoœród mo¿liwych 3 ruchów najlepszy jest ruch (3,4). Nie znajduje siê on na liœcie tabu, zatem ten ruch zostaje wykonany:
+\item Spoœród 3 mo¿liwych ruchów najlepszy jest ruch $(3, 4)$. Nie znajduje siê on na liœcie tabu, zatem zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok2}
 \end{figure}
 
-Lista tabu wygl¹da teraz nastêpuj¹co: ( (4,5), (3,4) ). Ruch doprowadzi³ do poprawienia wyniku zatem \emph{chances} pozostaje bez zmian.
+Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4)\}$. Ruch doprowadza do poprawienia wyniku, zatem \emph{chances} pozostaje bez zmian.
 
-Spoœród mo¿liwych 2 ruchów najlepszy jest ruch (1,2). Nie znajduje siê on na liœcie tabu, zatem ten ruch zostaje wykonany:
+\item Spoœród 2 mo¿liwych ruchów najlepszy jest ruch $(1, 2)$. Nie znajduje siê on na liœcie tabu, zatem zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok3}
 \end{figure}
 
-Lista tabu wygl¹da teraz nastêpuj¹co: ( (4,5), (3,4), (2,3) ). Ruch doprowadzi³ do poprawienia wyniku zatem \emph{chances} pozostaje bez zmian.
+Lista tabu wygl¹da teraz nastêpuj¹co: $\{(4, 5), (3, 4), (2, 3)\}$. Ruch doprowadza do poprawienia wyniku, zatem \emph{chances} pozostaje bez zmian.
 
-Najlepszym ruchem w obecnej sytuacji jest ruch (2,3). Znajduje siê on jednak na liœcie tabu, a jednoczeœnie nie spe³nia kryterium aspiracji (nie prowadzi do poprawienia najlepszego znalezionego rozwi¹zania). Jedynym mo¿liwym ruchem jest (1,2) i musi zostaæ wykonany:
+\item Najlepszym ruchem w obecnej sytuacji jest ruch $(2, 3)$. Znajduje siê on jednak na liœcie tabu, a jednoczeœnie nie spe³nia kryterium aspiracji (nie prowadzi do poprawienia najlepszego znalezionego rozwi¹zania). Jedynym mo¿liwym ruchem jest $(1, 2)$, wiêc zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok4}
 \end{figure}
 
-Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuwamy ruch dodany najwczeœniej, czyli (4,5). Po dodaniu (1,2) na liœcie tabu znajduj¹ siê nastêpuj¹ce ruchy ( (3,4), (2,3), (1,2) ). Ruch (1,2) doprowadzi³ do pogorszenia rozwi¹zania, wiêc \emph{chances} zostaje obni¿one o 1 i wynosi teraz 3.
+Lista tabu jest pe³na, zatem przed dodaniem do niej nastêpnego ruchu usuniêty zostaje ruch dodany najwczeœniej, czyli $(4, 5)$. Po dodaniu $(1, 2)$ na liœcie tabu znajduj¹ siê nastêpuj¹ce ruchy: $\{(3, 4), (2, 3), (1, 2)\}$. Ruch $(1, 2)$ doprowadza do pogorszenia rozwi¹zania, wiêc \emph{chances} zostaje obni¿one o 1 i wynosi teraz 3.
 
-Jedynym mo¿liwym ruchem jest (4,5):
+\item Jedynym mo¿liwym ruchem jest $(4, 5)$, wiêc zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok5}
 \end{figure}
 
-Znowu pogorszono rezultat, zatem \emph{chances} wynosi 2. Na liœcie tabu ( (2,3), (1,2), (4,5) ).
+Nastêpuje ponowne pogorszenie wyniku, zatem \emph{chances} zostaje zmniejszone do 2. Na liœcie tabu: $\{(2, 3), (1, 2), (4, 5)\}$.
 
-Po raz kolejny trzeba wykonaæ jedyny ruch nie znajduj¹cy siê na liœcie tabu, czyli (3,4).
+\item Po raz kolejny wykonany zostaje jedyny ruch nie znajduj¹cy siê na liœcie tabu, czyli $(3, 4)$:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok6}
 \end{figure}
 
-Rozwi¹zanie uleg³o dalszemu pogorszeniu i wynosi 144. Parametr \emph{chances} zosta³ obni¿ony do 1, a lista tabu zaktualizowana: ( (1,2), (4,5), (3,4) ).
+Rozwi¹zanie ulega dalszemu pogorszeniu: $C_{max}=144$. Parametr \emph{chances} zostaje obni¿ony do 1, a lista tabu zaktualizowana: $\{(1, 2), (4, 5), (3, 4)\}$.
 
-Przy aktualnym uporz¹dkowaniu najlepszy jest ruch (1,2). Znajduje siê na liœcie tabu, ale mo¿e byæ wykonany poniewa¿ spe³nia kryterium aspiracji. Prowadzi bowiem do uzyskania rozwi¹zania o $C_{max}$ = 120, które jest lepsze od dotychczasowego najlepszego o wartoœci 133.
+\item Przy aktualnym uporz¹dkowaniu najlepszy jest ruch $(1, 2)$. Znajduje siê na liœcie tabu, ale mo¿e byæ wykonany poniewa¿ spe³nia kryterium aspiracji. Prowadzi bowiem do uzyskania rozwi¹zania o $C_{max}=120$, które jest lepsze od dotychczasowego najlepszego o wartoœci 133.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok7}
 \end{figure}
-Do listy dodajemy w³aœnie wykonany ruch: ( (4,5), (3,4), (1,2) ). Poprawiono rozwi¹zanie, wiêc \emph{chances} pozostaje bez zmian.
 
-Jedyny mo¿liwy ruch (2,3) okazuje siê byæ najlepszym i zostaje wykonany:
+Do listy dodany zostaje wykonany ruch: $\{(4, 5), (3, 4), (1, 2)\}$. Nastêpuje poprawienie rozwi¹zania, wiêc \emph{chances} pozostaje bez zmian.
+
+\item Jedyny mo¿liwy ruch $(2, 3)$ okazuje siê byæ najlepszym i zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok8}
 \end{figure}
-Do listy dodajemy w³aœnie wykonany ruch: ( (3,4), (1,2), (2,3) ). Poprawiono rozwi¹zanie, wiêc \emph{chances} pozostaje bez zmian.
 
-Mo¿liwy jest tylko ruch (4,5), a ¿aden z ruchów na liœcie tabu nie prowadzi do poprawienia najlepszego rozwi¹zania. Zatem ruch (4,5) musi byæ wykonany:
+Do listy dodany zostaje wykonany ruch: $\{(3, 4), (1, 2), (2, 3)\}$. Nastêpuje poprawienie rozwi¹zania, wiêc \emph{chances} pozostaje bez zmian.
+
+\item Mo¿liwy jest tylko ruch $(4, 5)$, a ¿aden z ruchów na liœcie tabu nie prowadzi do poprawienia najlepszego rozwi¹zania. Zatem ruch $(4, 5)$ zostaje wykonany:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth]{krok9}
 \end{figure}
-Ruch ten pogorszy³ funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci 118 z kroku 7.
+
+Ruch ten pogorsza funkcjê celu, co powoduje obni¿enie parametru \emph{chances} do 0. To z kolei jest warunkiem zakoñczenia algorytmu. Najlepszym znalezionym rozwi¹zaniem jest uporz¹dkowanie o wartoœci $C_{max}=118$ z kroku 7.
+\end{enumerate}
 
 \subsection{Optymalizacja parametrów}
 W celu znalezienia optymalnych parametrów algorytmu przeprowadzono seriê pomiarów na stosunkowo niewielkich ($n=50$) instancjach ,,próbnych''.
