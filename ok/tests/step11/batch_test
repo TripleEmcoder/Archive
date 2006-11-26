@@ -1,0 +1,14 @@
+#!/bin/sh
+TOOLS=../../src
+
+TESTS="*.in"
+
+TAG="SwapIndex-DoubleBlock$SUFFIX"
+#cp $TOOLS/tabu-MoveSwap-Tabulist-r76$SUFFIX $TOOLS/tabu$SUFFIX
+
+DISTANCE="1" DISTANCE2="distance" \
+TABUS="30" TABUS2="tabus*tasks*distance/100" \
+CHANCES="400" CHANCES2="chances" \
+RESETS="1" RESETS2="resets" \
+$TOOLS/test "$TAG" "$TESTS"
+
