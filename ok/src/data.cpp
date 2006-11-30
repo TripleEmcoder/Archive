@@ -1,3 +1,5 @@
+#include "stdafx.h"
+
 #include "data.hpp"
 
 #include <algorithm>

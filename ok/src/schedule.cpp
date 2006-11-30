@@ -1,6 +1,7 @@
+#include "stdafx.h"
+
 #include "schedule.hpp"
 
-typedef vector<Period>::const_iterator Step;
 
 #include <iostream>
 

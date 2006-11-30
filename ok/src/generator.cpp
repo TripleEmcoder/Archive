@@ -23,11 +23,23 @@ struct TaskSum
 	int operator()(int val,Task& t)	{ return val + t.sums[x]; }
 };
 
-struct TaskCmp
+struct TaskSumCmp
 {
 	int x;
-	TaskCmp(int x): x(x) { }
+	TaskSumCmp(int x): x(x) { }
 	bool operator()(const Task& a, const Task& b) { return a.sums[x] < b.sums[x]; }
+};
+
+struct TaskArrivalCmp
+{
+	TaskArrivalCmp() { }
+	bool operator()(const Task& a, const Task& b) { return a.arrival < b.arrival; }
+};
+
+struct TaskCmp
+{
+	TaskCmp() { }
+	bool operator()(const Task& a, const Task& b) { return a.sums[0]+a.arrival < b.sums[0] + b.arrival; }
 };
 
 struct OfflineSum
@@ -115,19 +127,20 @@ int main(int argc, char* argv[])
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 	int off = accumulate(offlines.begin(),offlines.end(),0,OfflineSum());
 
-	cerr << "M1: " << m1 << endl;
-	cerr << "M2: " << m2 << endl;
-	cerr << "Off: " << off << endl;
 	cerr << "Off/M1: " << 100*(double)off/(double)m1 << "%" << endl;
 
 	m1 += off; 
-	m1 += min_element(tasks.begin(),tasks.end(),TaskCmp(1))->sums[1];
-	m2 += min_element(tasks.begin(),tasks.end(),TaskCmp(0))->sums[0];
+	m1 += min_element(tasks.begin(),tasks.end(),TaskArrivalCmp())->arrival;
+	m1 += min_element(tasks.begin(),tasks.end(),TaskSumCmp(1))->sums[1];
+	vector<Task>::iterator min = min_element(tasks.begin(),tasks.end(),TaskCmp());  
+	m2 += min->sums[0] + min->arrival;
 
 	cout << offlines;
 	
 	cout << tasks;
 
+	cerr << "M1: " << m1 << endl;
+	cerr << "M2: " << m2 << endl;
 	cerr << "Teoretyczne minimum: " << max(m1,m2) << endl;
 
 	return 0;

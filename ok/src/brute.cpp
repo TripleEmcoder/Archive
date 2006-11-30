@@ -59,5 +59,7 @@ int main()
 	cout << cmax_min << endl;
 	cout << schedule(f, p_min);
 
+	cerr << cmax_min;
+
 	return 0;
 }
