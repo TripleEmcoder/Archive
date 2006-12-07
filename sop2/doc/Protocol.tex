@@ -1,0 +1,123 @@
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[cp1250]{inputenc}
+\usepackage[english,polish]{babel}
+\usepackage[T1]{polski}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{slashbox}
+
+\hypersetup
+{
+	bookmarksnumbered=true,
+	colorlinks=true,
+	linkcolor=blue,
+	bookmarksopen=true,
+	bookmarksopenlevel=2,
+	pdfstartview={FitH}
+}
+
+\setlength{\textheight}{24cm}
+\setlength{\textwidth}{15.92cm}
+\setlength{\footskip}{10mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{15.0pt}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE,RO]{\textsf{\thepage}}
+\fancyhead[RE,LO]{\textsf{IRC -- Specyfikacja}}
+\fancyhead[CE,CO]{\ }
+\fancyfoot[LE,RO]{\ }
+\fancyfoot[RE,LO]{\ }
+\fancyfoot[CE,CO]{\ }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{titlepage}
+\title{Systemy operacyjne 2 \\ IRC -- Specyfikacja}
+\author{Grupa I1B + $\frac{2}{15}$I3A}
+\end{titlepage}
+
+\begin{document}
+
+\maketitle
+
+\section{Ogólna architektura}
+Ogólnie ktoœ przed wys³aniem móg³by poubieraæ to w ³adne zdania. Wszystko jest raczej chaotycznie popisane, ale godzina ju¿ póŸna, a chce do jakiegoœ etapu kompletnoœci to doprowadziæ.
+
+Has³owo:
+\begin{itemize}
+\item publiczna kolejna do inicjowania po³¹czeñ przez klientów
+\item ka¿dy klient ma prywatn¹ kolejkê do dalszej komunikacji
+\item wykorzystywane s¹ dwa typy komunikatów:
+	\begin{itemize}
+	\item \emph{type}=1 -- komunikaty od klienta do serwera,
+	\item \emph{type}=2 -- komunikaty od serwera do klienta.
+	\end{itemize}
+\item znaczenie komunikatu okreœla dodatkowe pole \emph{subtype}
+\end{itemize}
+
+\section{Struktura komunikatów}
+Kilka s³ów wstêpu na temat UML-a, ¿eby ka¿dy wiedzia³ co ja tu nabazgroli³em. Otó¿ kolejne punkty przedstawiaj¹ tzw. sygna³y, czyli w nomenklaturze UML (dodam na marginesie, ¿e UML to jest standard modelowania systemów komputerowych: ich architektury, zachowania itp., itd.) po prostu asynchroniczne komunikaty. Czyli to co jest u nas. Niewa¿ne. Najwa¿niejsze jest to, ¿e w nag³owku boldem jest nazwa komunikatu (czyli to bêdzie póŸniej w C taki struct) a pod spodem s¹ tzw. atrybuty (czyli pola structa) w postaci "nazwa: typ".
+
+Konwencje w nazewnictwie:
+\begin{itemize}
+\item *\_request -- komunikaty wysy³ane przez klienta do serwera  (\emph{type}=1, \emph{subtype} zgodnie z *)
+\item *\_notify -- asynchroniczne powiadamianie o zdarzeniu  (\emph{type}=2, \emph{subtype} zgodnie z *)
+\item *\_reply -- bezpoœrednie odpowiedzi serwera na zadanie (traktowane raczej j.w.)
+\item join/part -- wejœcie/wyjœcie do/z grupy (nazwy zgodne z prawdziwym IRC ;-) )
+\item private/group -- wiadomoœæ prywatna/grupowa (istnieje grupa "wszyscy")
+\end{itemize}
+
+\begin{itemize}
+\item klientów w komunikatach zawsze identyfikuje PID (likwiduje to przynajmniej problem nag³ej zmiany nicka)
+\item istnieje specjalna grupa "wszyscy", do której ka¿dy wchodzi automatycznie przy login i wychodzi przy logout (pozbywamy siê typu publicznej wiadomoœci, mo¿na tez pomin¹æ login\_notify i logout\_notify)
+\item wy¿ej rozrysowane struktury mo¿na praktycznie na gotowo prze³o¿yæ na C (z tym, ze promuje to podejœcie z rzutowaniem)
+\item lista u¿ytkowników odsy³ana jest w jednej wiadomoœci (wymaga to ograniczenia na ich iloœæ, ale to przecie¿ nie musi siê skalowaæ na setki u¿ytkowników)
+\end{itemize}
+
+Jeœli chodzi o dziwne typy danych na rysunkach to w C maj¹ byæ takie:
+\begin{itemize}
+\item nick = char[10+1],
+\item group = char[10+1],
+\item message = char[1000+1],
+\item pid[] = char[50][10+1],
+\item nick[] = char[50][10+1],
+\item group[] = char[10][10+1].
+\end{itemize}
+
+Czyli innymi s³owy nick i nazwa grupy maj¹ maks. 10 liter (+1 bo znak pusty), mo¿e byæ maks. 50 userów i 10 grup jednoczeœnie, wiadomoœæ ma maks. 1000 znaków.
+
+\subsection{Komunikaty zwi¹zane z po³¹czeniem}
+\begin{figure}[h!]
+\centering
+\includegraphics{Connection}
+\end{figure}
+
+\subsection{Komunikaty zwi¹zane z grupami}
+\begin{figure}[h!]
+\centering
+\includegraphics{Groups}
+\end{figure}
+
+\subsection{Komunikaty zwi¹zane z wiadomoœciami}
+\begin{figure}[h!]
+\centering
+\includegraphics{Messages}
+\end{figure}
+
+\section{Dzia³anie serwera}
+\begin{figure}[h!]
+\centering
+\includegraphics{Session}
+\end{figure}
+itp. itd.
+
+
+\end{document}
