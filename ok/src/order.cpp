@@ -2,18 +2,35 @@
 #include "order.hpp"
 #include "schedule.hpp"
 
+struct TaskArrivalCmp
+{
+	vector<Task>& p;
+	bool operator()(const int& a, const int& b)	{return p[a].arrival < p[b].arrival;}
+	TaskArrivalCmp(vector<Task>& p): p(p) { };
+};
+
+struct TaskSumCmp
+{
+	vector<Task>& p;
+	int x;
+	bool operator()(const int& a, const int& b) { return p[a].sums[x] < p[b].sums[x];}
+	TaskSumCmp(vector<Task>& p, int x): p(p), x(x) { };
+};
+
 Order::Order(Flowshop& f) :f(f)
 {
 	a.resize(f.tasks.size());
 	sum[0] = 0;
 	sum[1] = 0;
+	int min_arrival = numeric_limits<int>::max();
 	for (int i = 0; i < (int)a.size(); ++i)
 	{
 		a[i] = i;
 		sum[0] += f.tasks[i].sums[0];
 		sum[1] += f.tasks[i].sums[1];
+		min_arrival = min(min_arrival,f.tasks[i].arrival);
 	}
-	time[0] = 0;
+	time[0] = min_arrival;
 	time[1] = 0;
 	offline = f.offlines.begin();
 	n = 0;
@@ -103,14 +120,6 @@ int Order::offlines()
 	return t;
 }
 
-class TaskArrivalCmp
-{
-	vector<Task>& p;
-public:
-	bool operator()(const int& a, const int& b)	{return p[a].arrival < p[b].arrival;}
-	TaskArrivalCmp(vector<Task>& p): p(p) { };
-};
-
 void Order::init_sort()
 {
 	sort(left_begin(), left_end(), TaskArrivalCmp(f.tasks));
@@ -140,4 +149,20 @@ void Order::init_greedy()
 	while (tasks_size() > 0)
 		remove(tasks_end()-1);
 	setState(start);
+}
+
+int Order::shortest_left(int machine)
+{
+	if (left_size() > 0)
+		return f.tasks[*min_element(left_begin(),left_end(),TaskSumCmp(f.tasks,machine))].sums[machine];
+	else
+		return 0;
+}
+
+int Order::soonest_left()
+{
+	if (left_size() > 0)
+		return f.tasks[*min_element(left_begin(),left_end(),TaskArrivalCmp(f.tasks))].arrival;
+	else
+		return 0;
 }

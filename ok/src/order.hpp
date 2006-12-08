@@ -43,4 +43,6 @@ public:
 	int time_left(int machine);
 	int time_passed(int machine);
 	int offlines();
+	int shortest_left(int machine);
+	int soonest_left();
 };
