@@ -8,8 +8,12 @@ using namespace boost;
 
 #include <unistd.h>
 #include <errno.h>
+
+extern "C" 
+{
 #include "protocol.h"
 #include "requests.h"
+}
 
 list<shared_ptr<thread> > threads;
 
@@ -57,7 +61,7 @@ void read_client_queue(int qid)
 
 #define MAX_COMMAND 10
 
-void read_stdin_command(int qid)
+void handle_stdin_command(int qid)
 {
 	char command[MAX_COMMAND+1];
 	scanf("%s", command);
@@ -71,15 +75,15 @@ void read_stdin_commands(int qid)
 	
 	while (!shutdown)
 	{
-		char first = getc();
+		char first = getc(stdin);
 		
 		if (first != '/')
 		{
-			ungetc(first);
+			ungetc(first, stdin);
 			continue;
 		}
 	
-		process_stdin_command(qid);
+		handle_stdin_command(qid);
 	}	
 }
 
@@ -121,7 +125,7 @@ void handle_client_queue(pid_t pid)
 	threads.push_back(shared_ptr<thread>(
 		new thread(bind(read_client_queue, client))));
 		
-	read_stdin_queue(client);
+	read_stdin_commands(client);
 	
 	printf("Removing client message queue...\n");
 	msgctl(client, IPC_RMID, 0);

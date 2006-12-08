@@ -14,7 +14,7 @@ void send_private_notify(int queue, int sender, const char* message)
 	printf("private_notify(%d, %d, \"%s\")\n",
 		queue, sender, message);
 
-	private_notify notify;
+	struct private_notify notify;
 	notify.sender = sender;
 	strncpy((char*)&notify.message, message, MAX_MESSAGE+1);
 	send_notify(queue, PRIVATE_SUBTYPE, &notify, sizeof(notify));
@@ -26,7 +26,7 @@ void send_group_notify(int queue, int sender, const char* group, const char* mes
 	printf("group_notify(%d, %d, \"%s\", \"%s\")\n", 
 		queue, sender, group, message);
 
-	group_notify notify;
+	struct group_notify notify;
 	notify.sender = sender;
 	strncpy((char*)&notify.group, group, MAX_GROUP+1);
 	strncpy((char*)&notify.message, message, MAX_MESSAGE+1);

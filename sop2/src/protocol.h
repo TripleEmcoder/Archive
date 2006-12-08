@@ -36,7 +36,7 @@ struct packet_common
 	char data[MAX_DATA];
 };
 
-#define MAX_PACKET      sizeof(packet_common)-sizeof(long)
+#define MAX_PACKET      sizeof(struct packet_common)-sizeof(long)
 
 //klient wysyla publicznym kanalem w celu otwarcia sesji
 struct login_request

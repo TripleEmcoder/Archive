@@ -14,9 +14,13 @@ using namespace boost;
     for(c##_for::iterator i = c.begin(); i != c.end(); ++i)
 
 #include <errno.h>
+
+extern "C" 
+{
 #include "protocol.h"
 #include "replies.h"
 #include "notifies.h"
+}
 
 set<string> nicks;
 map<int, string> users;
