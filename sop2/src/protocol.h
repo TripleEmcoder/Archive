@@ -1,8 +1,13 @@
+#pragma once
+
+#include <sys/msg.h>
+
 #define MAX_NICK        10                //maksymalna dlugosc nicka
 #define MAX_NICKS       50                //maksymalna ilosc uzytkownikow
 #define MAX_GROUP       10                //maksymalna dlugosc nazwy grupy
 #define MAX_GROUPS      10                //maksymalna ilosc grup
-#define MAX_MESSAGE     1000              //maksymalna dlugosc wiadomosci
+#define MAX_MESSAGE     500              //maksymalna dlugosc wiadomosci
+#define MAX_DATA		700              //maksymalna dlugosc danych
 
 #define SERVER_KEY      23                //klucz kolejki publicznej
 #define REQUEST_TYPE    1                 //typ komunikatu do serwera
@@ -19,18 +24,24 @@
 #define PRIVATE_SUBTYPE 8                 //podtyp wiadomosci prywatnej
 #define GROUP_SUBTYPE   9                 //podtyp wiadomosci grupowej
 
+#define SYSTEM_QID      0
+#define SYSTEM_NICK     "SYSTEM"
+#define USERS_GROUP     "WSZYSCY"
+
 //wspolna struktura komunikatu/pakietu/wiadomoœci w sensie msg*()
 struct packet_common
 {
-	int type;
+	long type;
 	int subtype;
-	char data[1];
+	char data[MAX_DATA];
 };
+
+#define MAX_PACKET      sizeof(packet_common)-sizeof(long)
 
 //klient wysyla publicznym kanalem w celu otwarcia sesji
 struct login_request
 {
-	int pid;                              //pid wysylajacego klienta
+	pid_t pid;                              //pid wysylajacego klienta
 };
 
 //klient dostaje prywatnym kanalem jako pierwszy komunikat liste wszystkich
@@ -38,7 +49,7 @@ struct login_request
 struct login_reply
 {
 	int count;                            //ilosc uzytkownikow
-	int pids[MAX_NICKS];                  //tablica pidow
+	int qids[MAX_NICKS];                  //tablica qidow
 	char nicks[MAX_NICKS][MAX_NICK+1];    //tablica nickow
 };
 
@@ -51,13 +62,13 @@ struct logout_request
 struct nick_request
 {
 	char nick[MAX_NICK+1];                //nowy nick 
-}
+};
 
 //serwer wysyla prywatnymi kanalami wszystkim klientom aby ich powiadomic
 //ze uzytkownik zmienil nicka
 struct nick_notify
 {
-	int pid;                              //pid zmieniajacego klienta
+	int qid;                              //qid zmieniajacego klienta
 	char nick[MAX_NICK+1];                //nowy nick 
 };
 
@@ -85,7 +96,7 @@ struct join_request
 struct join_notify
 {
 	char group[MAX_GROUP+1];              //nazwa grupy lub "WSZYSCY"
-	int pid;                              //pid nowego klienta
+	int qid;                              //qid nowego klienta
 };
 
 //klient wysyla prywatnym kanalem w celu odlaczenia siê od grupy
@@ -100,7 +111,7 @@ struct part_request
 struct part_notify
 {
 	char group[MAX_GROUP+1];              //nazwa grupy lub "WSZYSCY"
-	int pid;                              //pid nowego klienta
+	int qid;                              //qid nowego klienta
 };
 
 
@@ -116,7 +127,7 @@ struct users_reply
 {
 	char group[MAX_GROUP+1];             //nazwa grupy lub "WSZYSCY"
 	int count;                           //ilosc u¿ytkownikow w grupie
-	int pids[MAX_NICKS];                 //tablica pidow tych uzytkownikow
+	int qids[MAX_NICKS];                 //tablica qidow tych uzytkownikow
 };
 
 struct private_request
