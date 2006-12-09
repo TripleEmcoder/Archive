@@ -70,13 +70,13 @@ void send_users_request(int qid, const char* group)
 	send_request(qid, USERS_SUBTYPE, &request, sizeof(request));
 }
 
-void send_private_request(int qid, const char* recipient, const char* message)
+void send_private_request(int qid, const char* nick, const char* message)
 {
 	fprintf(stderr, "private_request(%d, %d, \"%s\")\n",
-		qid, recipient, message);
+		qid, nick, message);
 
 	struct private_request request;
-	strncpy((char*)&request.recipient, recipient, MAX_NICK+1);
+	strncpy((char*)&request.nick, nick, MAX_NICK+1);
 	strncpy((char*)&request.message, message, MAX_MESSAGE+1);
 	send_request(qid, PRIVATE_SUBTYPE, &request, sizeof(request));
 }

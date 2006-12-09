@@ -1,0 +1,128 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[cp1250]{inputenc}
+\usepackage[english,polish]{babel}
+\usepackage[T1]{polski}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{slashbox}
+\usepackage{fancyvrb}
+\usepackage{listings}
+
+\hypersetup
+{
+	bookmarksnumbered=true,
+	colorlinks=true,
+	linkcolor=blue,
+	bookmarksopen=true,
+	bookmarksopenlevel=2,
+	pdfstartview={FitH}
+}
+
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}
+{
+	numbers=left,
+	numberblanklines=false,
+	fontsize=\small,
+	obeytabs=true,
+	tabsize=4
+}
+
+\lstset
+{
+	language=C,
+	fancyvrb=true
+}
+
+\setlength{\textheight}{24cm}
+\setlength{\textwidth}{15.92cm}
+\setlength{\footskip}{10mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{15.0pt}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE,RO]{\textsf{\thepage}}
+\fancyhead[RE,LO]{\textsf{IRC -- Specyfikacja}}
+\fancyhead[CE,CO]{\ }
+\fancyfoot[LE,RO]{\ }
+\fancyfoot[RE,LO]{\ }
+\fancyfoot[CE,CO]{\ }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{titlepage}
+\title{Systemy operacyjne 2 \\ IRC -- Specyfikacja}
+\author{Grupa I1B + $\frac{2}{15}$I3A}
+\end{titlepage}
+
+\begin{document}
+
+\maketitle
+
+\section{Ogólna architektura}
+\begin{itemize}
+\item publiczna kolejna do inicjowania po³¹czeñ przez klientów
+\item ka¿dy klient ma prywatn¹ kolejkê do dalszej komunikacji
+\item wykorzystywane s¹ dwa typy komunikatów:
+	\begin{itemize}
+	\item \emph{type}=1 -- komunikaty od klienta do serwera,
+	\item \emph{type}=2 -- komunikaty od serwera do klienta.
+	\end{itemize}
+\item znaczenie komunikatu okreœla dodatkowe pole \emph{subtype}
+\end{itemize}
+
+\section{Struktura komunikatów}
+Poprzez kolejki przesy³ane s¹ komunikaty postaci (\emph{type}, \emph{subtype}, \emph{data}). Znaczenie pola \emph{data} okreœla pole \emph{subtype}, jego strukturê przedstawiaj¹ kolejne punkty.
+
+W nazewnictwie struktur zastosowano nastêpuj¹ce konwencje:
+\begin{itemize}
+\item *\_request -- komunikaty wysy³ane przez klienta do serwera  (\emph{type}=1, \emph{subtype} zgodnie z *)
+\item *\_notify -- asynchroniczne powiadamianie o zdarzeniu,
+\item *\_reply -- bezpoœrednie odpowiedzi serwera na ¿¹danie,
+\item login/logout -- otwarcie/zamkniêcie sesji,
+\item join/part -- wejœcie/wyjœcie do/z grupy,
+\item users/groups -- pobranie listy u¿ytkowników/grup,
+\item private/group -- wiadomoœæ prywatna/grupowa.
+\end{itemize}
+
+W przesy³anych komunikatach klienci identyfikowani s¹ przez swoje pseudonimy (pola \emph{nick}), a w przypadku ich nieustawienia przez tekstow¹ reprezentacjê identyfikatora prywatnej kolejki. Grupy identyfikowane s¹ przez ich nazwy (pola \emph{group}), przy czym istnieje specjalna grupa o nazwie ,,WSZYSCY'', do której ka¿dy klient do³¹czany jest automatycznie w momencie otwarcia sesji (i od³¹czany podczas zamykania). Oznacza to, ¿e wys³anie wiadomoœci publicznej i pobranie listy wszystkich u¿ytkowników realizuje siê poprzez -- odpowiednio -- wys³anie wiadomoœci do grupy WSZYSCY i pobranie listy u¿ytkowników nale¿¹cych do tej grupy. Pozwala to zmniejszyæ liczbê komunikatów bez utraty ogólnoœci.
+
+Typy danych opisuj¹ce tekstowe identyfikatory (\emph{nick}, \emph{group}, \emph{message}) oraz ich tablice (\emph{nick[]}, \emph{group[]}) oznaczono na diagramach w postaci schematycznej. W celu wyra¿enia wymienionych typów w jêzyku C wprowadzono nastêpuj¹ce ograniczenia na ich wymiary:
+\begin{itemize}
+\item maksymaln¹ d³ugoœæ pseudonimu -- 10 znaków ($\emph{MAX\_NICK}=10$),
+\item maksymaln¹ d³ugoœæ nazwy grupy -- 10 znaków ($\emph{MAX\_GROUP}=10$),
+\item maksymaln¹ d³ugoœæ wiadomoœci -- 500 znaków ($\emph{MAX\_MESSAGE}=500$),
+\item maksymaln¹ iloœæ pseudonimów -- 20 ($\emph{MAX\_NICKS}=20$),
+\item maksymaln¹ iloœæ nazw grup -- 10 ($\emph{MAX\_GROUPS}=10$).
+\end{itemize}
+
+Struktury przedstawione na diagramie mo¿na w bezpoœredni sposób prze³o¿yæ na jêzyk C lub wyraziæ je za pomoc¹ jednej unii. Dopóki zachowana zostanie kolejnoœæ pól, stanowi to nieistotny szczegó³ implementacyjny. Przy definiowaniu struktur nale¿y jednak pamiêtaæ o zarezerwowaniu dodatkowego bajtu na znak pusty, którym musz¹ byæ zakoñczone wszystkie pola napisowe.
+
+\subsection{Komunikaty zwi¹zane z po³¹czeniem}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{connection}
+\end{figure}
+
+\subsection{Komunikaty zwi¹zane z grupami}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{groups}
+\end{figure}
+
+\subsection{Komunikaty zwi¹zane z wiadomoœciami}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{messages}
+\end{figure}
+
+\section{Plik protocol.h}
+\VerbatimInput{../src/protocol.h}
+
+\end{document}

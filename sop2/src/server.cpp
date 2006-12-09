@@ -156,11 +156,11 @@ void handle_users_request(int qid, users_request* request)
 void handle_private_request(int qid, private_request* request)
 {
 	fprintf(stderr, "private_request(%d, \"%s\", \"%s\")\n", 
-		qid, request->recipient, request->message);
+		qid, request->nick, request->message);
 		
-	if (qids.count(request->recipient) != 0)
+	if (qids.count(request->nick) != 0)
 	{
-		send_private_notify(qids[request->recipient], nicks[qid].c_str(), request->message);
+		send_private_notify(qids[request->nick], nicks[qid].c_str(), request->message);
 		send_private_notify(qid, SYSTEM_NICK, "message sent!");
 	}
 	else

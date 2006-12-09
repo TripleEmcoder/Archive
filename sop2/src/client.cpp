@@ -25,17 +25,17 @@ void handle_groups_reply(int qid, groups_reply* reply)
 void handle_private_notify(int qid, private_notify* notify)
 {
 	fprintf(stderr, "private_notify(%d, \"%s\", \"%s\")\n", 
-		qid, notify->sender, notify->message);
+		qid, notify->nick, notify->message);
 		
-	printf("[%s] %s\n", notify->sender, notify->message);
+	printf("[%s] %s\n", notify->nick, notify->message);
 }
 
 void handle_group_notify(int qid, group_notify* notify)
 {
 	fprintf(stderr, "group_notify(%d, \"%s\", \"%s\", \"%s\")\n",
-		qid, notify->sender, notify->group, notify->message);
+		qid, notify->nick, notify->group, notify->message);
 		
-	printf("<%s> [%s] %s\n", notify->group, notify->sender, notify->message);
+	printf("<%s> [%s] %s\n", notify->group, notify->nick, notify->message);
 }
 
 void handle_users_reply(int qid, users_reply* reply)
