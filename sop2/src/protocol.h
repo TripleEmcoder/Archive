@@ -7,7 +7,7 @@
 #define MAX_GROUP       10                //maksymalna dlugosc nazwy grupy
 #define MAX_GROUPS      10                //maksymalna ilosc grup
 #define MAX_MESSAGE     500              //maksymalna dlugosc wiadomosci
-#define MAX_DATA		700              //maksymalna dlugosc danych
+#define MAX_DATA        700              //maksymalna dlugosc danych
 
 #define SERVER_KEY      23                //klucz kolejki publicznej
 #define REQUEST_TYPE    1                 //typ komunikatu do serwera
