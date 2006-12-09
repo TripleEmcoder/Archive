@@ -1,3 +1,4 @@
+#include <map>
 using namespace std;
 
 #include <boost/format.hpp>
@@ -15,18 +16,26 @@ extern "C"
 #include "requests.h"
 }
 
+map<int, string> nicks;
+map<string, int> qids;
+
+
 list<shared_ptr<thread> > threads;
 
 void handle_private_notify(int qid, private_notify* notify)
 {
-	printf("private_notify(%d, %d, \"%s\")\n", 
+	fprintf(stderr, "private_notify(%d, \"%s\", \"%s\")\n", 
 		qid, notify->sender, notify->message);
+		
+	printf("[%s] %s\n", notify->sender, notify->message);
 }
 
 void handle_group_notify(int qid, group_notify* notify)
 {
-	printf("group_notify(%d, %d, \"%s\", \"%s\")\n",
+	fprintf(stderr, "group_notify(%d, \"%s\", \"%s\", \"%s\")\n",
 		qid, notify->sender, notify->group, notify->message);
+		
+	printf("<%s> [%s] %s\n", notify->group, notify->sender, notify->message);
 }
 
 void handle_client_notify(int qid, packet_common* packet)
@@ -59,14 +68,67 @@ void read_client_queue(int qid)
 	
 }
 
-#define MAX_COMMAND 10
-
-void handle_stdin_command(int qid)
+void handle_nick_command(int qid)
 {
-	char command[MAX_COMMAND+1];
-	scanf("%s", command);
-	printf("%s\n", command);
-	//if (strcmp(command, 
+	char nick[MAX_NICK+1];
+	scanf("%s", nick);
+	send_nick_request(qid, nick);
+}
+
+void handle_join_command(int qid)
+{
+	char group[MAX_GROUP+1];
+	scanf("%s",group);
+	send_join_request(qid, group);
+}
+
+void handle_part_command(int qid)
+{
+	char group[MAX_GROUP+1];
+	scanf("%s",group);
+	send_part_request(qid, group);
+}
+
+void handle_private_command(int qid)
+{
+	char nick[MAX_NICK+1];
+	char message[MAX_MESSAGE+1];
+	scanf("%s %[^\n]s", nick, message);
+	send_private_request(qid, nick, message);
+}
+
+void handle_group_command(int qid)
+{
+	char group[MAX_GROUP+1];
+	char message[MAX_MESSAGE+1];
+	scanf("%s %[^\n]s", group, message);
+	send_group_request(qid, group, message);
+}
+
+#define MAX_COMMAND 10
+#define LOGOUT_COMMAND "/logout"
+#define NICK_COMMAND "/nick"
+#define JOIN_COMMAND "/join"
+#define PART_COMMAND "/part"
+#define PRIVATE_COMMAND "/private"
+#define GROUP_COMMAND "/group"
+
+void handle_stdin_command(int qid, const char* command)
+{
+	if (strcmp(command, NICK_COMMAND) == 0)
+		handle_nick_command(qid);
+		
+	else if (strcmp(command, JOIN_COMMAND) == 0)
+		handle_join_command(qid);
+		
+	else if (strcmp(command, PART_COMMAND) == 0)
+		handle_part_command(qid);
+		
+	else if (strcmp(command, PRIVATE_COMMAND) == 0)
+		handle_private_command(qid);
+		
+	else if (strcmp(command, GROUP_COMMAND) == 0)
+		handle_group_command(qid);
 }
 
 void read_stdin_commands(int qid)
@@ -75,16 +137,14 @@ void read_stdin_commands(int qid)
 	
 	while (!shutdown)
 	{
-		char first = getc(stdin);
+		char command[MAX_COMMAND+1];
+		scanf("%s", command);
 		
-		if (first != '/')
-		{
-			ungetc(first, stdin);
-			continue;
-		}
-	
-		handle_stdin_command(qid);
-	}	
+		handle_stdin_command(qid, command);
+		
+		if (strcmp(command, LOGOUT_COMMAND) == 0)
+			break;
+	}
 }
 
 void handle_client_queue(pid_t pid)
@@ -110,8 +170,7 @@ void handle_client_queue(pid_t pid)
 	printf("Sending login request...\n");
 	send_login_request(server, pid);
 	
-	send_nick_request(client, SYSTEM_NICK);
-	send_nick_request(client, "Memfis");
+	/*
 	send_private_request(client, client, "private");
 	send_join_request(client, USERS_GROUP);
 	send_part_request(client, USERS_GROUP);
@@ -120,6 +179,7 @@ void handle_client_queue(pid_t pid)
 	send_group_request(client, "group", "group");
 	send_part_request(client, "group");
 	send_group_request(client, "group", "group");
+	*/
 	
 	//read_client_queue(client);
 	threads.push_back(shared_ptr<thread>(
@@ -127,13 +187,15 @@ void handle_client_queue(pid_t pid)
 		
 	read_stdin_commands(client);
 	
+	printf("Sending logout request...\n");
+	send_logout_request(client);
+	
 	printf("Removing client message queue...\n");
 	msgctl(client, IPC_RMID, 0);
 }
 
 int main()
 {
-	setbuf(stdout, NULL);
 	handle_client_queue(getpid());
 	return 0;
 }

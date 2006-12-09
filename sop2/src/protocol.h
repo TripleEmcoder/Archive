@@ -24,9 +24,8 @@
 #define PRIVATE_SUBTYPE 8                 //podtyp wiadomosci prywatnej
 #define GROUP_SUBTYPE   9                 //podtyp wiadomosci grupowej
 
-#define SYSTEM_QID      0
 #define SYSTEM_NICK     "SYSTEM"
-#define USERS_GROUP     "WSZYSCY"
+#define SYSTEM_GROUP    "WSZYSCY"
 
 //wspolna struktura komunikatu/pakietu/wiadomoœci w sensie msg*()
 struct packet_common
@@ -44,15 +43,6 @@ struct login_request
 	pid_t pid;                              //pid wysylajacego klienta
 };
 
-//klient dostaje prywatnym kanalem jako pierwszy komunikat liste wszystkich
-//pozostalych uzytkownikow
-struct login_reply
-{
-	int count;                            //ilosc uzytkownikow
-	int qids[MAX_NICKS];                  //tablica qidow
-	char nicks[MAX_NICKS][MAX_NICK+1];    //tablica nickow
-};
-
 //klient wysyla prywatnym kanalem w celu zakonczenia sesji
 struct logout_request
 {
@@ -61,14 +51,6 @@ struct logout_request
 //klient wysyla prywatnym kanalem w celu zmiany 
 struct nick_request
 {
-	char nick[MAX_NICK+1];                //nowy nick 
-};
-
-//serwer wysyla prywatnymi kanalami wszystkim klientom aby ich powiadomic
-//ze uzytkownik zmienil nicka
-struct nick_notify
-{
-	int qid;                              //qid zmieniajacego klienta
 	char nick[MAX_NICK+1];                //nowy nick 
 };
 
@@ -91,29 +73,12 @@ struct join_request
 	char group[MAX_GROUP+1];              //nazwa grupy
 };
 
-//serwer wysyla prywatnymi kanalami wszystkim klientom aby ich powiadomic
-//ze do grupy dolaczyl sie nowy uzytkownik
-struct join_notify
-{
-	char group[MAX_GROUP+1];              //nazwa grupy lub "WSZYSCY"
-	int qid;                              //qid nowego klienta
-};
-
 //klient wysyla prywatnym kanalem w celu odlaczenia siê od grupy
 //(pusta grupa jest automatycznie kasowana przez serwer)
 struct part_request
 {
 	char group[MAX_GROUP+1];              //nazwa grupy
 };
-
-//serwer wysyla prywatnymi kanalami wszystkim klientom aby ich powiadomic
-//ze uzytkownik odlaczyl sie od grupy
-struct part_notify
-{
-	char group[MAX_GROUP+1];              //nazwa grupy lub "WSZYSCY"
-	int qid;                              //qid nowego klienta
-};
-
 
 //klient wysyla prywatnym kanalem w celu otrzymania listy uzytkownikow
 //dolaczonych do grupy
@@ -127,18 +92,18 @@ struct users_reply
 {
 	char group[MAX_GROUP+1];             //nazwa grupy lub "WSZYSCY"
 	int count;                           //ilosc u¿ytkownikow w grupie
-	int qids[MAX_NICKS];                 //tablica qidow tych uzytkownikow
+	char nicks[MAX_NICKS][MAX_NICK+1];   //tablica qidow tych uzytkownikow
 };
 
 struct private_request
 {
-	int recipient;
+	char recipient[MAX_NICK+1];
 	char message[MAX_MESSAGE+1];
 };
 
 struct private_notify
 {
-	int sender;
+	char sender[MAX_NICK+1];
 	char message[MAX_MESSAGE+1];
 };
 
@@ -150,7 +115,7 @@ struct group_request
 
 struct group_notify
 {
-	int sender;
+	char sender[MAX_NICK+1];
 	char group[MAX_GROUP+1];	
 	char message[MAX_MESSAGE+1];
 };

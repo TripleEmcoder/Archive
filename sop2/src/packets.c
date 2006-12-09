@@ -6,7 +6,7 @@
 
 void send_packet(int queue, int type, int subtype, void* data, int size)
 {
-	//printf("PACKET: %d %d\n", type, subtype);
+	//fprintf(stderr, "send_packet(%d, %d)\n", type, subtype);
 
 	struct packet_common packet;
 	packet.type = type;
