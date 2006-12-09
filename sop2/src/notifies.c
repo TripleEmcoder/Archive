@@ -4,20 +4,20 @@
 #include <string.h>
 #include <stdio.h>
 
-void send_notify(int queue, int subtype, void* data, int size)
+void send_notify(int qid, int subtype, void* data, int size)
 {
-	send_packet(queue, NOTIFY_TYPE, subtype, data, size);	
+	send_packet(qid, NOTIFY_TYPE, subtype, data, size);	
 }
 
-void send_private_notify(int queue, const char* sender, const char* message)
+void send_private_notify(int qid, const char* sender, const char* message)
 {
 	fprintf(stderr, "private_notify(%d, %d, \"%s\")\n",
-		queue, sender, message);
+		qid, sender, message);
 
 	struct private_notify notify;
 	strncpy((char*)&notify.sender, sender, MAX_NICK+1);
 	strncpy((char*)&notify.message, message, MAX_MESSAGE+1);
-	send_notify(queue, PRIVATE_SUBTYPE, &notify, sizeof(notify));
+	send_notify(qid, PRIVATE_SUBTYPE, &notify, sizeof(notify));
 }
 
 

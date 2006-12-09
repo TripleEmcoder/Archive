@@ -4,73 +4,90 @@
 #include <string.h>
 #include <stdio.h>
 
-void send_request(int queue, int subtype, void* data, int size)
+void send_request(int qid, int subtype, void* data, int size)
 {
-	send_packet(queue, REQUEST_TYPE, subtype, data, size);
+	send_packet(qid, REQUEST_TYPE, subtype, data, size);
 }
 
-void send_login_request(int queue, pid_t pid)
+void send_login_request(int qid, pid_t pid)
 {
-	fprintf(stderr, "login_request(%d, %d)\n", queue, pid);
+	fprintf(stderr, "login_request(%d, %d)\n", qid, pid);
 
 	struct login_request request;
 	request.pid = pid;
-	send_request(queue, LOGIN_SUBTYPE, &request, sizeof(request));
+	send_request(qid, LOGIN_SUBTYPE, &request, sizeof(request));
 }
 
-void send_logout_request(int queue)
+void send_logout_request(int qid)
 {
-	fprintf(stderr, "login_request(%d)\n", queue);
+	fprintf(stderr, "login_request(%d)\n", qid);
 
 	struct logout_request request;
-	send_request(queue, LOGOUT_SUBTYPE, &request, sizeof(request));
+	send_request(qid, LOGOUT_SUBTYPE, &request, sizeof(request));
 }
 
-void send_nick_request(int queue, const char* nick)
+void send_nick_request(int qid, const char* nick)
 {
-	fprintf(stderr, "nick_request(%d, \"%s\")\n", queue, nick);
+	fprintf(stderr, "nick_request(%d, \"%s\")\n", qid, nick);
 
 	struct nick_request request;
 	strncpy((char*)&request.nick, nick, MAX_NICK+1);
-	send_request(queue, NICK_SUBTYPE, &request, sizeof(request));
+	send_request(qid, NICK_SUBTYPE, &request, sizeof(request));
 }
 
-void send_join_request(int queue, const char* group)
+void send_groups_request(int qid)
 {
-	fprintf(stderr, "join_request(%d, \"%s\")\n", queue, group);
+	fprintf(stderr, "groups_request(%d)\n", qid);
+
+	struct groups_request request;
+	send_request(qid, GROUPS_SUBTYPE, &request, sizeof(request));
+}
+
+void send_join_request(int qid, const char* group)
+{
+	fprintf(stderr, "join_request(%d, \"%s\")\n", qid, group);
 	
 	struct join_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
-	send_request(queue, JOIN_SUBTYPE, &request, sizeof(request));
+	send_request(qid, JOIN_SUBTYPE, &request, sizeof(request));
 }
 
-void send_part_request(int queue, const char* group)
+void send_part_request(int qid, const char* group)
 {
-	fprintf(stderr, "part_request(%d, \"%s\")\n", queue, group);
+	fprintf(stderr, "part_request(%d, \"%s\")\n", qid, group);
 
 	struct part_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
-	send_request(queue, PART_SUBTYPE, &request, sizeof(request));
+	send_request(qid, PART_SUBTYPE, &request, sizeof(request));
 }
 
-void send_private_request(int queue, const char* recipient, const char* message)
+void send_users_request(int qid, const char* group)
+{
+	fprintf(stderr, "users_request(%d, \"%s\")\n", qid, group);
+	
+	struct users_request request;
+	strncpy((char*)&request.group, group, MAX_GROUP+1);
+	send_request(qid, USERS_SUBTYPE, &request, sizeof(request));
+}
+
+void send_private_request(int qid, const char* recipient, const char* message)
 {
 	fprintf(stderr, "private_request(%d, %d, \"%s\")\n",
-		queue, recipient, message);
+		qid, recipient, message);
 
 	struct private_request request;
 	strncpy((char*)&request.recipient, recipient, MAX_NICK+1);
 	strncpy((char*)&request.message, message, MAX_MESSAGE+1);
-	send_request(queue, PRIVATE_SUBTYPE, &request, sizeof(request));
+	send_request(qid, PRIVATE_SUBTYPE, &request, sizeof(request));
 }
 
-void send_group_request(int queue, const char* group, const char* message)
+void send_group_request(int qid, const char* group, const char* message)
 {
 	fprintf(stderr, "group_request(%d, \"%s\", \"%s\")\n",
-		queue, group, message);
+		qid, group, message);
 		
 	struct group_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
 	strncpy((char*)&request.message, message, MAX_MESSAGE+1);
-	send_request(queue, GROUP_SUBTYPE, &request, sizeof(request));
+	send_request(qid, GROUP_SUBTYPE, &request, sizeof(request));
 }

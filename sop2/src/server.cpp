@@ -3,45 +3,29 @@
 #include <set>
 using namespace std;
 
-#include <boost/lexical_cast.hpp>
 #include <boost/thread/thread.hpp>
-#include <boost/shared_ptr.hpp>
 #include <boost/bind.hpp>
+#include <boost/lexical_cast.hpp>
 using namespace boost;
 
 #define foreach(c, i) \
     typedef __typeof__(c) c##_for; \
     for(c##_for::iterator i = c.begin(); i != c.end(); ++i)
 
-#include <sys/msg.h>
-#include <errno.h>
-
 extern "C" 
 {
+#include <errno.h>
 #include "protocol.h"
 #include "replies.h"
 #include "notifies.h"
+#include "server.h"
 }
 
 map<int, string> nicks;
 map<string, int> qids;
 map<string, set<int> > groups;
 
-list<shared_ptr<thread> > threads;
-
-#define NICK_CHANGED_NOTIFY   "Uzytkownik %s zmienil nick na %s."
-#define NICK_CHANGED_REPLY    "Nick zostal zmieniony."
-#define DUPLICATE_NICK_REPLY  "Nick jest juz zajety."
-
-#define GROUP_JOINED_NOTIFY   "Uzytkownik %s wszedl do grupy %s."
-#define GROUP_JOINED_REPLY    "group joined!"
-#define ALREADY_JOINED_REPLY  "already joined!"
-
-#define GROUP_PARTED_NOTIFY   "Uzytkownik %s wyszedl z grupy %s."
-#define GROUP_PARTED_REPLY    "group parted!"
-#define ALREADY_PARTED_REPLY  "already parted!"
-
-#define NOT_ALLOWED_REPLY     "Ta operacja jest niedozwolona."
+list<thread*> threads;
 
 void send_system_notify(int qid, const char* message)
 {
@@ -49,7 +33,6 @@ void send_system_notify(int qid, const char* message)
 		if (iterator->first != qid && iterator->second != SYSTEM_NICK)
 			send_private_notify(iterator->first, SYSTEM_NICK, message);
 }
-
 
 void send_system_reply(int qid, const char* message)
 {
@@ -85,7 +68,14 @@ void handle_groups_request(int qid, groups_request* request)
 {
 	fprintf(stderr, "groups_request(%d)\n", qid);
 	
-	//...
+	char temp[MAX_GROUPS][MAX_GROUP+1];
+	
+	int count = 0;
+	
+	foreach (groups, iterator)
+		strncpy(temp[count++], iterator->first.c_str(), MAX_GROUP+1);
+	
+	send_groups_reply(qid, count, temp);	
 }
 
 void handle_join_request(int qid, join_request* request)
@@ -151,7 +141,16 @@ void handle_users_request(int qid, users_request* request)
 {
 	fprintf(stderr, "users_request(%d, \"%s\")\n", qid, request->group);
 	
-	//...
+	set<int>& members = groups[request->group];
+	
+	char temp[MAX_NICKS][MAX_NICK+1];
+	
+	int count = 0;
+	
+	foreach (members, iterator)
+		strncpy(temp[count++], nicks[*iterator].c_str(), MAX_NICK+1);
+		
+	send_users_reply(qid, request->group, count, temp);
 }
 
 void handle_private_request(int qid, private_request* request)
@@ -222,6 +221,10 @@ void handle_client_request(int qid, packet_common* packet)
 		case GROUP_SUBTYPE:
 			handle_group_request(qid, (group_request*)&packet->data);
 			break;
+			
+		default:
+			printf("Unknown client request (%d).\n", packet->subtype);
+			break;
 	}
 }
 
@@ -236,10 +239,10 @@ void read_client_queue(int qid)
 		
 		if (packet.type == REQUEST_TYPE)
 		{
-			handle_client_request(qid, &packet);
-			
 			if (packet.subtype == LOGOUT_SUBTYPE)
 				break;
+				
+			handle_client_request(qid, &packet);
 		}
 	}
 }
@@ -259,9 +262,9 @@ void handle_client_queue(pid_t pid)
 	qids[lexical_cast<string>(qid)] = qid;
 	groups[SYSTEM_GROUP].insert(qid);
 	
-	send_private_notify(qid, SYSTEM_NICK, "hello!");
+	send_system_reply(qid, AFTER_LOGIN_REPLY);
 	read_client_queue(qid);
-	send_private_notify(qid, SYSTEM_NICK, "bye bye!");
+	send_system_reply(qid, BEFORE_LOGOUT_REPLY);
 	
 	//part groups
 	groups[SYSTEM_GROUP].erase(qid);
@@ -273,11 +276,9 @@ void handle_client_queue(pid_t pid)
 
 void handle_login_request(int qid, login_request* request)
 {
-	printf("login_request(%d, %d)\n", qid, request->pid);
+	fprintf(stderr, "login_request(%d, %d)\n", qid, request->pid);
 	
-	threads.push_back(shared_ptr<thread>(
-		new thread(bind(handle_client_queue, request->pid))));
-			
+	threads.push_back(new thread(bind(handle_client_queue, request->pid)));
 	//handle_client_queue(request->pid);
 }
 
@@ -287,6 +288,10 @@ void handle_server_request(int qid, packet_common* packet)
 	{
 		case LOGIN_SUBTYPE:
 			handle_login_request(qid, (login_request*)&packet->data);
+			break;
+		
+		default:
+			printf("Unknown server request (%d).\n", packet->subtype);
 			break;
 	}
 }
@@ -302,10 +307,10 @@ void read_server_queue(int qid)
 		
 		if (packet.type == REQUEST_TYPE)
 		{
-			handle_server_request(qid, &packet);
-			
 			if (packet.subtype == LOGOUT_SUBTYPE)
 				break;
+				
+			handle_server_request(qid, &packet);
 		}
 	}
 }

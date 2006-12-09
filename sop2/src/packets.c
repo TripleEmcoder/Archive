@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-void send_packet(int queue, int type, int subtype, void* data, int size)
+void send_packet(int qid, int type, int subtype, void* data, int size)
 {
 	//fprintf(stderr, "send_packet(%d, %d)\n", type, subtype);
 
@@ -14,6 +14,6 @@ void send_packet(int queue, int type, int subtype, void* data, int size)
 	
 	memcpy(&packet.data, data, size);
 	
-	if (msgsnd(queue, &packet, MAX_PACKET, 0) == -1)
+	if (msgsnd(qid, &packet, MAX_PACKET, 0) == -1)
 		printf("%s\n", strerror(errno));
 }
