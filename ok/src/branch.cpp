@@ -2,12 +2,8 @@
 
 #include "schedule.hpp"
 #include "order.hpp"
-#include <boost/date_time/posix_time/posix_time.hpp>
-
 
 using namespace std;
-using namespace boost::posix_time;
-
 
 int call_count = 0;
 int found = 0;
@@ -96,25 +92,20 @@ void branch(Flowshop& f, Order& p, Result& best)
 
 int main(int argc, char* argv[])
 {
-	int start, finish;
 	if (argc == 2)
 		app = atoi(argv[1]);
 	
 	Flowshop f;
 	cin >> f;
 
-	start = microsec_clock::local_time().time_of_day().total_milliseconds();
 
 	Order p(f);
 	p.init_greedy();
 		
 	Result best;
-//	best.cmax = numeric_limits<int>::max();
-	best.cmax = 999999999;
-
+	best.cmax = numeric_limits<int>::max();
+	
 	branch(f,p,best);
-
-	finish = microsec_clock::local_time().time_of_day().total_milliseconds();
 
 	cout << f;
 	cout << best.cmax << endl;
@@ -123,7 +114,6 @@ int main(int argc, char* argv[])
 	cerr << best.cmax << endl;
 	cerr << "Calls: " << call_count << endl;
 	cerr << "Best found at: " << found << endl;
-	cerr << "Time: " << (finish-start) << endl;
 
 	return 0;
 }
