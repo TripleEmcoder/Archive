@@ -3,11 +3,6 @@
 #include <set>
 using namespace std;
 
-#include <boost/thread/thread.hpp>
-#include <boost/bind.hpp>
-#include <boost/lexical_cast.hpp>
-using namespace boost;
-
 #define foreach(c, i) \
     typedef __typeof__(c) c##_for; \
     for(c##_for::iterator i = c.begin(); i != c.end(); ++i)
@@ -15,6 +10,7 @@ using namespace boost;
 extern "C" 
 {
 #include <errno.h>
+#include <pthread.h>
 #include "protocol.h"
 #include "replies.h"
 #include "notifies.h"
@@ -24,8 +20,7 @@ extern "C"
 map<int, string> nicks;
 map<string, int> qids;
 map<string, set<int> > groups;
-
-list<thread*> threads;
+//list<pthread_t> threads;
 
 void send_system_notify(int qid, const char* message)
 {
@@ -258,13 +253,16 @@ void handle_client_queue(pid_t pid)
 		return;
 	}
 	
-	nicks[qid] = lexical_cast<string>(qid);
-	qids[lexical_cast<string>(qid)] = qid;
+	char buffer[100];
+	sprintf(buffer, "%d", qid);
+	
+	nicks[qid] = buffer;
+	qids[buffer] = qid;
 	groups[SYSTEM_GROUP].insert(qid);
 	
 	send_system_reply(qid, AFTER_LOGIN_REPLY);
 	read_client_queue(qid);
-	send_system_reply(qid, BEFORE_LOGOUT_REPLY);
+	//send_system_reply(qid, BEFORE_LOGOUT_REPLY);
 	
 	//part groups
 	groups[SYSTEM_GROUP].erase(qid);
@@ -278,7 +276,10 @@ void handle_login_request(int qid, login_request* request)
 {
 	fprintf(stderr, "login_request(%d, %d)\n", qid, request->pid);
 	
-	threads.push_back(new thread(bind(handle_client_queue, request->pid)));
+	pthread_t id;
+	pthread_create(&id, NULL, 
+		(void* (*)(void*))handle_client_queue,
+		(void*)request->pid);
 	//handle_client_queue(request->pid);
 }
 

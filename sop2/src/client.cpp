@@ -1,10 +1,6 @@
 #include <list>
 using namespace std;
 
-#include <boost/thread/thread.hpp>
-#include <boost/bind.hpp>
-using namespace boost;
-
 extern "C" 
 {
 #include <unistd.h>
@@ -14,7 +10,7 @@ extern "C"
 #include "client.h"
 }
 
-list<thread*> threads;
+//list<pthread_t> threads;
 
 void handle_groups_reply(int qid, groups_reply* reply)
 {
@@ -200,9 +196,12 @@ void handle_client_queue(pid_t pid)
 	printf("Sending login request...\n");
 	send_login_request(server, pid);
 	
+	pthread_t id;	
+	pthread_create(&id, NULL,
+		(void* (*)(void*))read_client_queue,
+		(void*)client);
 	//read_client_queue(client);
-	threads.push_back(new thread(bind(read_client_queue, client)));
-		
+	
 	read_stdin_commands(client);
 	
 	printf("Sending logout request...\n");
