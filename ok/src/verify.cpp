@@ -18,13 +18,17 @@ void verify(const Flowshop& f, const FlowshopSchedule& fs)
 		const Task& t = f.tasks[i];
         const TaskSchedule& ts = fs.tasks[i];
 
+		//czy pierwsza maszyna zaczyna po przybyciu zadania
+		if (t.arrival > ts.periods[0].front().start)
+			throw "zignorowany czas przybycia";
+
 		int sum = 0;
 		for (size_t j=0; j<ts.periods[0].size(); j++)
 			sum += ts.periods[0][j].length;
 
 		//czy na maszynie pierwszej wykonano dokladnie tyle pracy ile trzeba
 		if (sum != t.lengths[0])
-			throw "bleda sumaryczna ilosc pracy";
+			throw "bledna sumaryczna ilosc pracy";
 
 		//na drugiej maszynie jest tylko jeden okres pracy
 		if (ts.periods[1][0].length != t.lengths[1])

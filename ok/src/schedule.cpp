@@ -2,17 +2,24 @@
 
 #include "schedule.hpp"
 
-
 #include <iostream>
+#include <cassert>
 
 void simulate_forward(int setup, int length, int& time, Step& offline)
 {
-	//cerr << "-> 1: " << *offline << endl; 
+	//cerr << "-> time: " << time << endl;
 	
 	while (offline->stop > time)
 		--offline;
 		
-	//cerr << "-> 2: " << *offline << endl; 
+	while ((offline+1)->start < time)
+		++offline;
+	
+	//cerr << "-> offline: " << *offline << endl; 		
+	//cerr << "-> offline+1: " << *(offline+1) << endl; 
+	
+	assert(offline->start <= time);
+	assert((offline+1)->start >= time);
 		
 	for (; length != 0; ++offline)
 	{
@@ -26,18 +33,25 @@ void simulate_forward(int setup, int length, int& time, Step& offline)
 		if (time > (offline+1)->start)
 			time = (offline+1)->stop;
 		
-		//cerr << "-> *: " << time << " " << start << " " << part << endl;
+		//cerr << "-> work: " << time << " " << start << " " << part << endl;
 	}
 }
 
 void simulate_backward(int setup, int length, int& time, Step& offline)
-{
-	//cerr << "<- 1: " << *offline << endl; 
+{	
+	//cerr << "<- time: " << time << endl;		
 	
 	while (offline->start < time)
 		++offline;
 		
-	//cerr << "<- 2: " << *offline << endl; 
+	while ((offline-1)->stop > time)
+		--offline;
+
+	//cerr << "<- offline: " << *offline << endl;
+	//cerr << "<- offline-1: " << *(offline-1) << endl;
+
+	assert(offline->start >= time);
+	assert((offline-1)->stop <= time);
 
 	for (; length != 0; --offline)
 	{
@@ -51,7 +65,7 @@ void simulate_backward(int setup, int length, int& time, Step& offline)
 		if (time < (offline-1)->stop)
 			time = (offline-1)->start;
 		
-		//cerr << "<- *: " << time << " " << stop << " " << part << endl;
+		//cerr << "<- work: " << time << " " << stop << " " << part << endl;
 	}
 }
 
@@ -62,13 +76,18 @@ vector<Period> schedule_periods(int setup, int length, int& time, Step& offline)
 
 	while (offline->stop > time)
 		--offline;
+		
+	while ((offline+1)->start < time)
+		++offline;
+	
+	assert(offline->start <= time);
+	assert((offline+1)->start >= time);
 	
 	for (; length != 0; ++offline)
 	{
 		int start = max(offline->stop, time) + setup;
 		int space = max((offline+1)->start - start, 0);
 		int part = min(space, length);
-
 
 		length -= part;
 		time = start + part;
