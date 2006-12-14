@@ -74,7 +74,12 @@ void read_client_queue(int qid)
 	while (!shutdown)
 	{
 		packet_common packet;
-		msgrcv(qid, &packet, MAX_PACKET, NOTIFY_TYPE, 0);
+		
+		if (msgrcv(qid, &packet, MAX_PACKET, NOTIFY_TYPE, 0) == -1)
+		{
+			printf("%s.\n", strerror(errno));
+			return;
+		}	
 		
 		if (packet.type == NOTIFY_TYPE)
 			handle_client_notify(qid, &packet);

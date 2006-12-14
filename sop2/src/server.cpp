@@ -20,7 +20,9 @@ extern "C"
 map<int, string> nicks;
 map<string, int> qids;
 map<string, set<int> > groups;
+
 //list<pthread_t> threads;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void send_system_notify(int qid, const char* message)
 {
@@ -155,12 +157,17 @@ void handle_private_request(int qid, private_request* request)
 		
 	if (qids.count(request->nick) != 0)
 	{
-		send_private_notify(qids[request->nick], nicks[qid].c_str(), request->message);
-		send_private_notify(qid, SYSTEM_NICK, "message sent!");
+		send_private_notify(qids[request->nick], 
+			nicks[qid].c_str(), request->message);
+			
+		send_private_notify(qid, 
+			nicks[qid].c_str(), request->message);
+			
+		//send_system_reply(qid, MESSAGE_SENT_REPLY);
 	}
 	else
 	{
-		send_private_notify(qid, SYSTEM_NICK, "invalid recipient!");		
+		send_system_reply(qid, INVALID_RECIPIENT_REPLY);		
 	}
 }
 
@@ -174,19 +181,22 @@ void handle_group_request(int qid, group_request* request)
 		set<int>& members = groups[request->group];
 		
 		foreach (members, member)
-			if (*member != qid)
-				send_group_notify(*member, nicks[qid].c_str(), request->group, request->message);
+			//if (*member != qid)
+				send_group_notify(*member, nicks[qid].c_str(), 
+					request->group, request->message);
 			
-		send_private_notify(qid, SYSTEM_NICK, "message sent!");
+		//send_system_reply(qid, MESSAGE_SENT_REPLY);
 	}
 	else
 	{
-		send_private_notify(qid, SYSTEM_NICK, "invalid group!");		
+		send_system_reply(qid, INVALID_RECIPIENT_REPLY);		
 	}
 }
 
 void handle_client_request(int qid, packet_common* packet)
 {
+	pthread_mutex_lock(&mutex);
+	
 	switch (packet->subtype)
 	{
 		case NICK_SUBTYPE:
@@ -221,6 +231,8 @@ void handle_client_request(int qid, packet_common* packet)
 			printf("Unknown client request (%d).\n", packet->subtype);
 			break;
 	}
+	
+	pthread_mutex_unlock(&mutex);
 }
 
 void read_client_queue(int qid)
@@ -230,7 +242,11 @@ void read_client_queue(int qid)
 	while (!shutdown)
 	{
 		packet_common packet;
-		msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0);
+		if (msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0) == -1)
+		{
+			printf("%s.\n", strerror(errno));
+			return;
+		}	
 		
 		if (packet.type == REQUEST_TYPE)
 		{
@@ -240,6 +256,50 @@ void read_client_queue(int qid)
 			handle_client_request(qid, &packet);
 		}
 	}
+}
+
+void handle_client_login(int qid)
+{
+	pthread_mutex_lock(&mutex);
+	
+	printf("Initializing client structures...\n");
+	
+	char buffer[100];
+	sprintf(buffer, "%d", qid);
+	
+	nicks[qid] = buffer;
+	qids[buffer] = qid;
+	groups[SYSTEM_GROUP].insert(qid);
+	
+	char message[MAX_MESSAGE+1];
+	sprintf(message, AFTER_LOGIN_NOTIFY, nicks[qid].c_str());
+		
+	send_system_notify(qid, message);
+	send_system_reply(qid, AFTER_LOGIN_REPLY);
+	
+	pthread_mutex_unlock(&mutex);
+}
+
+void handle_client_logut(int qid)
+{
+	pthread_mutex_lock(&mutex);
+	
+	printf("Finalizing client structures...\n");
+	
+	char message[MAX_MESSAGE+1];
+	sprintf(message, BEFORE_LOGOUT_NOTIFY, nicks[qid].c_str());
+		
+	send_system_notify(qid, message);
+	//send_system_reply(qid, BEFORE_LOGOUT_REPLY);
+	
+	foreach (groups, iterator)
+		iterator->second.erase(qid);
+		
+	groups[SYSTEM_GROUP].erase(qid);
+	qids.erase(nicks[qid]);
+	nicks.erase(qid);
+	
+	pthread_mutex_unlock(&mutex);
 }
 
 void handle_client_queue(pid_t pid)
@@ -252,22 +312,10 @@ void handle_client_queue(pid_t pid)
 		printf("%s.\n", strerror(errno));
 		return;
 	}
-	
-	char buffer[100];
-	sprintf(buffer, "%d", qid);
-	
-	nicks[qid] = buffer;
-	qids[buffer] = qid;
-	groups[SYSTEM_GROUP].insert(qid);
-	
-	send_system_reply(qid, AFTER_LOGIN_REPLY);
+
+	handle_client_login(qid);
 	read_client_queue(qid);
-	//send_system_reply(qid, BEFORE_LOGOUT_REPLY);
-	
-	//part groups
-	groups[SYSTEM_GROUP].erase(qid);
-	qids.erase(nicks[qid]);
-	nicks.erase(qid);
+	handle_client_logut(qid);
 	
 	printf("Client message queue handler finished.\n");
 }
@@ -304,7 +352,12 @@ void read_server_queue(int qid)
 	while (!shutdown)
 	{
 		packet_common packet;
-		msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0);
+		
+		if (msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0) == -1)
+		{
+			printf("%s.\n", strerror(errno));
+			return;
+		}		
 		
 		if (packet.type == REQUEST_TYPE)
 		{
