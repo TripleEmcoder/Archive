@@ -42,7 +42,11 @@ public:
 
 	int time_left(int machine);
 	int time_passed(int machine);
-	int offlines();
+	int offlines_sum();
 	int shortest_left(int machine);
+	int longest_left(int machine);
 	int soonest_left();
+	int m2_start(int time);
+	bool contain_offlines(int a, int b);
+	int nowait_shift();
 };

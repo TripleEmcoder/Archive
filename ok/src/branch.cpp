@@ -19,17 +19,17 @@ struct Result
 int approx1(Flowshop& f, Order& p)
 {
 	int m1_begin = p.time_passed(0);
-	int m2_begin = max(p.time_passed(1), m1_begin + p.shortest_left(0));
-	int m1 = m1_begin + p.time_left(0) + p.offlines() + p.shortest_left(1);
+	int m2_begin = p.time_passed(1);
+	int m1 = m1_begin + p.time_left(0) + p.offlines_sum();
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
 
 int approx2(Flowshop& f, Order& p)
 {
-	int m1_begin = max(p.time_passed(0), p.soonest_left());
-	int m2_begin = max(p.time_passed(1), m1_begin + p.shortest_left(0));
-	int m1 = m1_begin + p.time_left(0) + p.offlines() + p.shortest_left(1);
+	int m1_begin = p.time_passed(0);
+	int m2_begin = p.m2_start(m1_begin);
+	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1);
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
@@ -37,8 +37,8 @@ int approx2(Flowshop& f, Order& p)
 int approx3(Flowshop& f, Order& p)
 {
 	int m1_begin = p.time_passed(0);
-	int m2_begin = max(p.time_passed(1), m1_begin + p.shortest_left(0));
-	int m1 = m1_begin + p.time_left(0) + p.offlines()+ p.shortest_left(1);
+	int m2_begin = p.m2_start(m1_begin);
+	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1) + p.nowait_shift();
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
@@ -90,6 +90,7 @@ void branch(Flowshop& f, Order& p, Result& best)
 	}
 }
 
+
 int main(int argc, char* argv[])
 {
 	if (argc == 2)
@@ -105,16 +106,21 @@ int main(int argc, char* argv[])
 	Result best;
 	best.cmax = numeric_limits<int>::max();
 	
+	boost::timer t;
 	branch(f,p,best);
+	double time = t.elapsed();
 
 	cout << f;
 	cout << best.cmax << endl;
 	cout << schedule(f, best.order);
 	
-	cerr << best.cmax << endl;
-	cerr << "Calls: " << call_count << endl;
-	cerr << "Best found at: " << found << endl;
-
+	//cerr << best.cmax << endl;
+	//cerr << "Calls: " << call_count << endl;
+	//cerr << "Best found at: " << found << endl;
+	//cerr << "Calls after best found: " << call_count-found << endl;
+	//cerr << "Percentage of all calls: " << 100.0*(call_count-found)/call_count << endl;
+	//cerr << "Time: " << time << endl;
+	cerr << app << "," << time << "," << call_count << "," << found << endl;
+	
 	return 0;
 }
-

@@ -9,12 +9,12 @@ struct TaskArrivalCmp
 	TaskArrivalCmp(vector<Task>& p): p(p) { };
 };
 
-struct TaskSumCmp
+struct TaskSumsCmp
 {
 	vector<Task>& p;
 	int x;
 	bool operator()(const int& a, const int& b) { return p[a].sums[x] < p[b].sums[x];}
-	TaskSumCmp(vector<Task>& p, int x): p(p), x(x) { };
+	TaskSumsCmp(vector<Task>& p, int x): p(p), x(x) { };
 };
 
 Order::Order(Flowshop& f) :f(f)
@@ -112,7 +112,7 @@ int Order::time_passed(int machine)
 	return time[machine];
 }
 
-int Order::offlines()
+int Order::offlines_sum()
 {
 	int t = 0;
 	for (Step x = offline; (*x) < time_passed(0)+time_left(0); ++x)
@@ -154,7 +154,15 @@ void Order::init_greedy()
 int Order::shortest_left(int machine)
 {
 	if (left_size() > 0)
-		return f.tasks[*min_element(left_begin(),left_end(),TaskSumCmp(f.tasks,machine))].sums[machine];
+		return f.tasks[*min_element(left_begin(),left_end(),TaskSumsCmp(f.tasks,machine))].sums[machine];
+	else
+		return 0;
+}
+
+int Order::longest_left(int machine)
+{
+	if (left_size() > 0)
+		return f.tasks[*max_element(left_begin(),left_end(),TaskSumsCmp(f.tasks,machine))].sums[machine];
 	else
 		return 0;
 }
@@ -165,4 +173,47 @@ int Order::soonest_left()
 		return f.tasks[*min_element(left_begin(),left_end(),TaskArrivalCmp(f.tasks))].arrival;
 	else
 		return 0;
+}
+
+struct TaskM1EndCmp
+{
+	int t;
+	vector<Task>& tasks;
+	TaskM1EndCmp(vector<Task>& tasks, int t): tasks(tasks), t(t) { };
+	bool operator()(const int& a, const int& b) 
+	{ 
+		return max(t, tasks[a].arrival) + tasks[a].sums[0] < 
+			   max(t, tasks[b].arrival) + tasks[b].sums[0]; 
+	}
+};
+
+int Order::m2_start(int time)
+{
+	VI x = min_element(left_begin(),left_end(),TaskM1EndCmp(f.tasks, time));
+	int start = max(time, f.tasks[*x].arrival);
+	int setup = f.tasks[*x].setups[0];
+	int length = f.tasks[*x].lengths[0];
+	return max(time_passed(1), start + setup + length);
+}
+
+bool Order::contain_offlines(int a, int b)
+{
+	Step x = offline;
+	while (x->start < b)
+	{
+		if (a <= x->start)
+			return true;
+		x++;
+	}
+	return false;
+}
+
+int Order::nowait_shift()
+{
+	if (contain_offlines(time_passed(0), time_passed(1)))
+		return 0;
+	int shift = time_passed(1) - time_passed(0) - longest_left(0);
+	if (shift < 0)
+		shift = 0;
+	return shift;
 }
