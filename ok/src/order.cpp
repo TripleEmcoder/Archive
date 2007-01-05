@@ -177,8 +177,8 @@ int Order::soonest_left()
 
 struct TaskM1EndCmp
 {
-	int t;
 	vector<Task>& tasks;
+	int t;
 	TaskM1EndCmp(vector<Task>& tasks, int t): tasks(tasks), t(t) { };
 	bool operator()(const int& a, const int& b) 
 	{ 

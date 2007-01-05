@@ -5,7 +5,6 @@ shift
 headers=`head -1 $1`
 echo tasks,offlines,repeat,$headers,cmax_min > $target
 
-
 for file in $*; do
 	file=`basename $file .csv`
 	tasks=`echo $file | cut -d - -f 1`

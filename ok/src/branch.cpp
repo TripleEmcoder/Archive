@@ -16,7 +16,7 @@ struct Result
 	bool operator<(const Result& a)	{ return cmax < a.cmax; }
 };
 
-int approx1(Flowshop& f, Order& p)
+int approx1(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0);
 	int m2_begin = p.time_passed(1);
@@ -25,7 +25,7 @@ int approx1(Flowshop& f, Order& p)
 	return max(m1,m2);
 }
 
-int approx2(Flowshop& f, Order& p)
+int approx2(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0);
 	int m2_begin = p.m2_start(m1_begin);
@@ -34,7 +34,7 @@ int approx2(Flowshop& f, Order& p)
 	return max(m1,m2);
 }
 
-int approx3(Flowshop& f, Order& p)
+int approx3(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0);
 	int m2_begin = p.m2_start(m1_begin);

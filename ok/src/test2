@@ -1,6 +1,7 @@
 #!/bin/sh
-#INITS="1 2 3"
-#APPROXS="1 2 3"
+#INITS="1 1 3"
+#APPROXS="1 1 3"
+#TIMEOUT="60"
 TOOLS=`dirname $0`
 
 tag=$1
@@ -14,18 +15,17 @@ for file in $*; do
 	for init in $INITS; do
 	for approx in $APPROXS; do
 
-		#command="$TOOLS/tabu$SUFFIX $tabus2 $chances2 $resets2 $distance2 < $file.in > $file.out"
-		command=$tag
+		command="$TOOLS/branch $init $approx < $file.in > $file.out"
+		#command=$tag
 		echo $command >&2
 		
 		time=`/usr/bin/time -f %U sh -c "timeout $TIMEOUT $command 2>&-" 2>&1`
-		cmax=`cat $file.out | $TOOLS/cmax$SUFFIX`
+		cmax=`cat $file.out | $TOOLS/cmax`
 		date=`date +"%F %T"`
 		
 		echo $tag,$date,$init,$approx,$cmax,$time >> $file.csv 
 		
 		rm $file.out
-		rm $file.time
 	done
 	done
 done
