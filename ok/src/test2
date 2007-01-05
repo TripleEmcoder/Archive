@@ -1,0 +1,31 @@
+#!/bin/sh
+#INITS="1 2 3"
+#APPROXS="1 2 3"
+TOOLS=`dirname $0`
+
+tag=$1
+shift
+
+for file in $*; do
+	file=`basename $file .in`
+	tasks=`echo $file | cut -d - -f 1`
+	offlines=`echo $file | cut -d - -f 2`
+
+	for init in $INITS; do
+	for approx in $APPROXS; do
+
+		#command="$TOOLS/tabu$SUFFIX $tabus2 $chances2 $resets2 $distance2 < $file.in > $file.out"
+		command=$tag
+		echo $command >&2
+		
+		time=`/usr/bin/time -f %U sh -c "timeout $TIMEOUT $command 2>&-" 2>&1`
+		cmax=`cat $file.out | $TOOLS/cmax$SUFFIX`
+		date=`date +"%F %T"`
+		
+		echo $tag,$date,$init,$approx,$cmax,$time >> $file.csv 
+		
+		rm $file.out
+		rm $file.time
+	done
+	done
+done
