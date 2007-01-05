@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <set>
 #include <limits>
+#include <list>
 #include <boost/timer.hpp>
 
 

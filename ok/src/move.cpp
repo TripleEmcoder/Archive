@@ -1,3 +1,5 @@
+#include "stdafx.h"
+
 #include "move.hpp"
 
 unsigned Move::range;

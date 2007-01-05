@@ -21,11 +21,13 @@ class Order
 	int time[2];
 	int sum[2];
 	vector<Period>::const_iterator offline;
+	bool contain_offlines(int a, int b);
 public:
 	Order(Flowshop& f);
 
 	void init_sort();
 	void init_greedy();
+	void init_tabu();
 
 	State getState();
 	void setState(const State& s);
@@ -47,6 +49,5 @@ public:
 	int longest_left(int machine);
 	int soonest_left();
 	int m2_start(int time);
-	bool contain_offlines(int a, int b);
 	int nowait_shift();
 };

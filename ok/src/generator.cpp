@@ -101,17 +101,19 @@ Period OfflineGen::operator()()
 
 int main(int argc, char* argv[])
 {
-	srand((unsigned)microsec_clock::local_time().time_of_day().total_microseconds());
-
-	int a,b;	
+	int a,b,c;	
 	
-	if (argc==3)
+	if (argc==4)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[2]);
+		c = atoi(argv[3]);
 	}
 	else
 		return 1;
+
+	srand((unsigned)microsec_clock::local_time().time_of_day().total_microseconds()*c);
+
 
 	//cin >> a >> b;
 	
@@ -127,7 +129,7 @@ int main(int argc, char* argv[])
 	int m2 = accumulate(tasks.begin(),tasks.end(),0,TaskSum(1));
 	int off = accumulate(offlines.begin(),offlines.end(),0,OfflineSum());
 
-	cerr << "Off/M1: " << 100*(double)off/(double)m1 << "%" << endl;
+	//cerr << "Off/M1: " << 100*(double)off/(double)m1 << "%" << endl;
 
 	m1 += off; 
 	m1 += min_element(tasks.begin(),tasks.end(),TaskArrivalCmp())->arrival;

@@ -1,9 +1,5 @@
 #pragma once
-
-#include <iostream>
-#include <vector>
-#include <list>
-
+#include "stdafx.h"
 #include "move.hpp"
 
 using namespace std;

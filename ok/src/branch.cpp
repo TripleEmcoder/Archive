@@ -2,19 +2,15 @@
 
 #include "schedule.hpp"
 #include "order.hpp"
+#include "tabusearch.hpp"
 
 using namespace std;
 
 int call_count = 0;
 int found = 0;
 int app = 1;
-
-struct Result
-{
-	int cmax;
-	vector<int> order;
-	bool operator<(const Result& a)	{ return cmax < a.cmax; }
-};
+boost::timer timer;
+const double time_limit = 2.0;
 
 int approx1(Flowshop&, Order& p)
 {
@@ -29,7 +25,7 @@ int approx2(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0);
 	int m2_begin = p.m2_start(m1_begin);
-	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1);
+	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1) + p.nowait_shift();
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
@@ -45,6 +41,9 @@ int approx3(Flowshop&, Order& p)
 
 void branch(Flowshop& f, Order& p, Result& best)
 {
+	if (timer.elapsed() > time_limit)
+		return;
+
 	call_count++;
 
 	if (p.tasks_size() == f.tasks.size())
@@ -93,22 +92,40 @@ void branch(Flowshop& f, Order& p, Result& best)
 
 int main(int argc, char* argv[])
 {
-	if (argc == 2)
-		app = atoi(argv[1]);
+	int init = 2, test;
+	
+	if (argc == 4)
+	{
+		init = atoi(argv[1]);
+		app = atoi(argv[2]);
+		test = atoi(argv[3]);
+	}
 	
 	Flowshop f;
 	cin >> f;
 
-
 	Order p(f);
-	p.init_greedy();
+	
+	switch (init)
+	{
+		case 1: p.init_sort(); break;
+		case 2: p.init_greedy(); break;
+		case 3: p.init_tabu(); break;
+	}
+	double init_time = timer.elapsed();
 		
 	Result best;
 	best.cmax = numeric_limits<int>::max();
 	
-	boost::timer t;
+	timer.restart();
 	branch(f,p,best);
-	double time = t.elapsed();
+	double time = timer.elapsed();
+
+	if (time > time_limit)
+	{
+		cerr << "Time limit exceeded." << endl;
+		return 0;
+	}
 
 	cout << f;
 	cout << best.cmax << endl;
@@ -120,7 +137,7 @@ int main(int argc, char* argv[])
 	//cerr << "Calls after best found: " << call_count-found << endl;
 	//cerr << "Percentage of all calls: " << 100.0*(call_count-found)/call_count << endl;
 	//cerr << "Time: " << time << endl;
-	cerr << app << "," << time << "," << call_count << "," << found << endl;
+	cerr << f.offlines.size()-2 << "," << f.tasks.size() << "," << test << "," << init << "," << app << "," << init_time << "," << time << "," << init_time+time << "," << call_count << "," << found << endl;
 	
 	return 0;
 }

@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "tabulist.hpp"
 
 Tabulist::Tabulist(size_t tasks, size_t len)

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "order.hpp"
 #include "schedule.hpp"
+#include "tabusearch.hpp"
 
 struct TaskArrivalCmp
 {
@@ -151,6 +152,11 @@ void Order::init_greedy()
 	setState(start);
 }
 
+void Order::init_tabu()
+{
+	a = tabusearch(f, 60, 300, 1, 15).order;
+}
+
 int Order::shortest_left(int machine)
 {
 	if (left_size() > 0)
@@ -191,9 +197,8 @@ int Order::m2_start(int time)
 {
 	VI x = min_element(left_begin(),left_end(),TaskM1EndCmp(f.tasks, time));
 	int start = max(time, f.tasks[*x].arrival);
-	int setup = f.tasks[*x].setups[0];
-	int length = f.tasks[*x].lengths[0];
-	return max(time_passed(1), start + setup + length);
+	int length = f.tasks[*x].sums[0];
+	return max(time_passed(1), start + length);
 }
 
 bool Order::contain_offlines(int a, int b)
@@ -212,8 +217,14 @@ int Order::nowait_shift()
 {
 	if (contain_offlines(time_passed(0), time_passed(1)))
 		return 0;
-	int shift = time_passed(1) - time_passed(0) - longest_left(0);
-	if (shift < 0)
-		shift = 0;
+	int shift = time_passed(1) - time_passed(0);
+	for (VI i = left_begin(); i != left_end(); ++i)
+	{
+		int start = max(time_passed(0), f.tasks[*i].arrival);
+		start = max(start, time_passed(1)-f.tasks[*i].sums[0]);
+		shift = min(shift, start - time_passed(0));
+		if (shift == 0)
+			break;
+	}
 	return shift;
 }
