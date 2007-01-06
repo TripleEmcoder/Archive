@@ -1,4 +1,3 @@
-#pragma once
 #include "stdafx.h"
 #include "tabusearch.hpp"
 #include "schedule.hpp"

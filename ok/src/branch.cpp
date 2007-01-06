@@ -10,7 +10,13 @@ int call_count = 0;
 int found = 0;
 int app = 1;
 boost::timer timer;
-const double time_limit = 2.0;
+const double time_limit = 120.0;
+
+
+int approx0(Flowshop&, Order& p)
+{
+	return p.time_passed(1);
+}
 
 int approx1(Flowshop&, Order& p)
 {
@@ -60,6 +66,9 @@ void branch(Flowshop& f, Order& p, Result& best)
 		int cmax;
 		switch (app)
 		{
+			case 0:
+				cmax = approx0(f,p);
+				break;
 			case 1:
 				cmax = approx1(f,p);
 				break;
