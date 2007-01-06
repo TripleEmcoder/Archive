@@ -1,6 +1,7 @@
 #include "notifies.h"
 #include "packets.h"
 #include "protocol.h"
+#include "windows.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -11,7 +12,7 @@ void send_notify(int qid, int subtype, void* data, int size)
 
 void send_private_notify(int qid, const char* nick, const char* message)
 {
-	fprintf(stderr, "private_notify(%d, \"%s\", \"%s\")\n",
+	write_debug_output("private_notify(%d, \"%s\", \"%s\")\n",
 		qid, nick, message);
 
 	struct private_notify notify;
@@ -23,7 +24,7 @@ void send_private_notify(int qid, const char* nick, const char* message)
 
 void send_group_notify(int queue, const char* nick, const char* group, const char* message)
 {
-	fprintf(stderr, "group_notify(%d, \"%s\", \"%s\", \"%s\")\n", 
+	write_debug_output("group_notify(%d, \"%s\", \"%s\", \"%s\")\n", 
 		queue, nick, group, message);
 
 	struct group_notify notify;

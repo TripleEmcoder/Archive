@@ -11,17 +11,17 @@ extern "C"
 {
 #include <errno.h>
 #include <pthread.h>
+#include "server.h"
 #include "protocol.h"
 #include "replies.h"
 #include "notifies.h"
-#include "server.h"
+#include "windows.h"
 }
 
 map<int, string> nicks;
 map<string, int> qids;
 map<string, set<int> > groups;
 
-//list<pthread_t> threads;
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void send_system_notify(int qid, const char* message)
@@ -38,7 +38,7 @@ void send_system_reply(int qid, const char* message)
 
 void handle_nick_request(int qid, nick_request* request)
 {
-	fprintf(stderr, "nick_request(%d, \"%s\")\n", qid, request->nick);
+	write_debug_output("nick_request(%d, \"%s\")\n", qid, request->nick);
 		
 	if (qids.count(request->nick) == 0)
 	{
@@ -63,7 +63,7 @@ void handle_nick_request(int qid, nick_request* request)
 
 void handle_groups_request(int qid, groups_request* request)
 {
-	fprintf(stderr, "groups_request(%d)\n", qid);
+	write_debug_output("groups_request(%d)\n", qid);
 	
 	char temp[MAX_GROUPS][MAX_GROUP+1];
 	
@@ -77,7 +77,7 @@ void handle_groups_request(int qid, groups_request* request)
 
 void handle_join_request(int qid, join_request* request)
 {
-	fprintf(stderr, "join_request(%d, \"%s\")\n", qid, request->group);
+	write_debug_output("join_request(%d, \"%s\")\n", qid, request->group);
 
 	if (strcmp(request->group, SYSTEM_GROUP) != 0)
 	{
@@ -105,7 +105,7 @@ void handle_join_request(int qid, join_request* request)
 
 void handle_part_request(int qid, part_request* request)
 {
-	fprintf(stderr, "part_request(%d, \"%s\")\n", qid, request->group);
+	write_debug_output("part_request(%d, \"%s\")\n", qid, request->group);
 
 	if (strcmp(request->group, SYSTEM_GROUP) != 0)
 	{
@@ -136,7 +136,7 @@ void handle_part_request(int qid, part_request* request)
 
 void handle_users_request(int qid, users_request* request)
 {
-	fprintf(stderr, "users_request(%d, \"%s\")\n", qid, request->group);
+	write_debug_output("users_request(%d, \"%s\")\n", qid, request->group);
 	
 	set<int>& members = groups[request->group];
 	
@@ -152,7 +152,7 @@ void handle_users_request(int qid, users_request* request)
 
 void handle_private_request(int qid, private_request* request)
 {
-	fprintf(stderr, "private_request(%d, \"%s\", \"%s\")\n", 
+	write_debug_output("private_request(%d, \"%s\", \"%s\")\n", 
 		qid, request->nick, request->message);
 		
 	if (qids.count(request->nick) != 0)
@@ -173,7 +173,7 @@ void handle_private_request(int qid, private_request* request)
 
 void handle_group_request(int qid, group_request* request)
 {
-	fprintf(stderr, "group_request(%d, \"%s\", \"%s\")\n",
+	write_debug_output("group_request(%d, \"%s\", \"%s\")\n",
 		qid, request->group, request->message);
 		
 	if (groups.count(request->group) != 0)
@@ -228,7 +228,7 @@ void handle_client_request(int qid, packet_common* packet)
 			break;
 			
 		default:
-			printf("Unknown client request (%d).\n", packet->subtype);
+			write_output("Unknown client request (%d).\n", packet->subtype);
 			break;
 	}
 	
@@ -244,7 +244,7 @@ void read_client_queue(int qid)
 		packet_common packet;
 		if (msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0) == -1)
 		{
-			printf("%s.\n", strerror(errno));
+			write_output("%s.\n", strerror(errno));
 			return;
 		}	
 		
@@ -262,7 +262,7 @@ void handle_client_login(int qid)
 {
 	pthread_mutex_lock(&mutex);
 	
-	printf("Initializing client structures...\n");
+	write_output("Initializing client structures...\n");
 	
 	char buffer[100];
 	sprintf(buffer, "%d", qid);
@@ -284,7 +284,7 @@ void handle_client_logut(int qid)
 {
 	pthread_mutex_lock(&mutex);
 	
-	printf("Finalizing client structures...\n");
+	write_output("Finalizing client structures...\n");
 	
 	char message[MAX_MESSAGE+1];
 	sprintf(message, BEFORE_LOGOUT_NOTIFY, nicks[qid].c_str());
@@ -304,12 +304,12 @@ void handle_client_logut(int qid)
 
 void handle_client_queue(pid_t pid)
 {
-	printf("Accessing client message queue...\n");
+	write_output("Accessing client message queue...\n");
 	int qid = msgget(pid, 0);
 	
 	if (qid == -1)
 	{
-		printf("%s.\n", strerror(errno));
+		write_output("%s.\n", strerror(errno));
 		return;
 	}
 
@@ -317,12 +317,12 @@ void handle_client_queue(pid_t pid)
 	read_client_queue(qid);
 	handle_client_logut(qid);
 	
-	printf("Client message queue handler finished.\n");
+	write_output("Client message queue handler finished.\n");
 }
 
 void handle_login_request(int qid, login_request* request)
 {
-	fprintf(stderr, "login_request(%d, %d)\n", qid, request->pid);
+	write_debug_output("login_request(%d, %d)\n", qid, request->pid);
 	
 	pthread_t id;
 	pthread_create(&id, NULL, 
@@ -340,7 +340,7 @@ void handle_server_request(int qid, packet_common* packet)
 			break;
 		
 		default:
-			printf("Unknown server request (%d).\n", packet->subtype);
+			write_output("Unknown server request (%d).\n", packet->subtype);
 			break;
 	}
 }
@@ -355,7 +355,7 @@ void read_server_queue(int qid)
 		
 		if (msgrcv(qid, &packet, MAX_PACKET, REQUEST_TYPE, 0) == -1)
 		{
-			printf("%s.\n", strerror(errno));
+			write_output("%s.\n", strerror(errno));
 			return;
 		}		
 		
@@ -371,12 +371,12 @@ void read_server_queue(int qid)
 
 void handle_server_queue(key_t key)
 {
-	printf("Creating server message queue...\n");
+	write_output("Creating server message queue...\n");
 	int qid = msgget(SERVER_KEY, IPC_CREAT | 0660);
 	
 	if (qid == -1)
 	{
-		printf("%s.\n", strerror(errno));
+		write_output("%s.\n", strerror(errno));
 		return;
 	}
 
@@ -388,12 +388,14 @@ void handle_server_queue(key_t key)
 	qids.erase(SYSTEM_NICK);
 	nicks.erase(qid);
 	
-	printf("Removing server message queue...\n");
+	write_output("Removing server message queue...\n");
 	msgctl(qid, IPC_RMID, 0);
 }
 
 int main()
 {
+	create_windows();
 	handle_server_queue(SERVER_KEY);
+	destroy_windows();
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include "requests.h"
 #include "packets.h"
 #include "protocol.h"
+#include "windows.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -11,7 +12,7 @@ void send_request(int qid, int subtype, void* data, int size)
 
 void send_login_request(int qid, pid_t pid)
 {
-	fprintf(stderr, "login_request(%d, %d)\n", qid, pid);
+	write_debug_output("login_request(%d, %d)\n", qid, pid);
 
 	struct login_request request;
 	request.pid = pid;
@@ -20,7 +21,7 @@ void send_login_request(int qid, pid_t pid)
 
 void send_logout_request(int qid)
 {
-	fprintf(stderr, "login_request(%d)\n", qid);
+	write_debug_output("login_request(%d)\n", qid);
 
 	struct logout_request request;
 	send_request(qid, LOGOUT_SUBTYPE, &request, sizeof(request));
@@ -28,7 +29,7 @@ void send_logout_request(int qid)
 
 void send_nick_request(int qid, const char* nick)
 {
-	fprintf(stderr, "nick_request(%d, \"%s\")\n", qid, nick);
+	write_debug_output("nick_request(%d, \"%s\")\n", qid, nick);
 
 	struct nick_request request;
 	strncpy((char*)&request.nick, nick, MAX_NICK+1);
@@ -37,7 +38,7 @@ void send_nick_request(int qid, const char* nick)
 
 void send_groups_request(int qid)
 {
-	fprintf(stderr, "groups_request(%d)\n", qid);
+	write_debug_output("groups_request(%d)\n", qid);
 
 	struct groups_request request;
 	send_request(qid, GROUPS_SUBTYPE, &request, sizeof(request));
@@ -45,7 +46,7 @@ void send_groups_request(int qid)
 
 void send_join_request(int qid, const char* group)
 {
-	fprintf(stderr, "join_request(%d, \"%s\")\n", qid, group);
+	write_debug_output("join_request(%d, \"%s\")\n", qid, group);
 	
 	struct join_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
@@ -54,7 +55,7 @@ void send_join_request(int qid, const char* group)
 
 void send_part_request(int qid, const char* group)
 {
-	fprintf(stderr, "part_request(%d, \"%s\")\n", qid, group);
+	write_debug_output("part_request(%d, \"%s\")\n", qid, group);
 
 	struct part_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
@@ -63,7 +64,7 @@ void send_part_request(int qid, const char* group)
 
 void send_users_request(int qid, const char* group)
 {
-	fprintf(stderr, "users_request(%d, \"%s\")\n", qid, group);
+	write_debug_output("users_request(%d, \"%s\")\n", qid, group);
 	
 	struct users_request request;
 	strncpy((char*)&request.group, group, MAX_GROUP+1);
@@ -72,7 +73,7 @@ void send_users_request(int qid, const char* group)
 
 void send_private_request(int qid, const char* nick, const char* message)
 {
-	fprintf(stderr, "private_request(%d, %d, \"%s\")\n",
+	write_debug_output("private_request(%d, %d, \"%s\")\n",
 		qid, nick, message);
 
 	struct private_request request;
@@ -83,7 +84,7 @@ void send_private_request(int qid, const char* nick, const char* message)
 
 void send_group_request(int qid, const char* group, const char* message)
 {
-	fprintf(stderr, "group_request(%d, \"%s\", \"%s\")\n",
+	write_debug_output("group_request(%d, \"%s\", \"%s\")\n",
 		qid, group, message);
 		
 	struct group_request request;
