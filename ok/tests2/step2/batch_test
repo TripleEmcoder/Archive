@@ -1,7 +1,9 @@
 #!/bin/sh
 TOOLS=../../src
-TESTS="*.in"
+
 TAG="init_best"
+
+TESTS="*.in"
 
 INITS="1 2 3" \
 APPROXS="0" \
@@ -16,4 +18,12 @@ TIMEOUT="60" \
 INITS="1 2 3" \
 APPROXS="2" \
 TIMEOUT="60" \
+#$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="24*.in"
+
+INITS="3" \
+APPROXS="1 2" \
+TIMEOUT="60" \
 $TOOLS/test2 "$TAG" "$TESTS"
+

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TASKS="5 1 21" \
+TASKS="5 1 24" \
 OFFLINES="25 1 25" \
 OFFLINES2="offlines*tasks/100" \
 REPEAT="1 1 20" \

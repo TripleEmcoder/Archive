@@ -1559,6 +1559,166 @@ tasks,offlines,repeat,tag,date,init,approx,time,calls
 20,25,9,init_best,2007-01-06 23:41:27,1,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
 20,25,9,init_best,2007-01-06 23:42:27,2,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
 20,25,9,init_best,2007-01-06 23:42:31,3,2,3.18,3832827
+21,25,10,init_best,2007-01-06 23:56:59,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,10,init_best,2007-01-06 23:57:59,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,11,init_best,2007-01-06 23:58:28,3,1,29.38,103615894
+21,25,11,init_best,2007-01-06 23:59:01,3,2,32.19,48957591
+21,25,12,init_best,2007-01-07 00:00:01,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,12,init_best,2007-01-07 00:01:01,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,13,init_best,2007-01-07 00:02:01,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,13,init_best,2007-01-07 00:03:01,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,14,init_best,2007-01-07 00:03:13,3,1,11.53,36755207
+21,25,14,init_best,2007-01-07 00:03:29,3,2,15.39,19525323
+21,25,15,init_best,2007-01-07 00:04:29,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,15,init_best,2007-01-07 00:05:29,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,16,init_best,2007-01-07 00:06:29,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,16,init_best,2007-01-07 00:07:29,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,17,init_best,2007-01-07 00:08:29,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,17,init_best,2007-01-07 00:08:40,3,2,10.58,13756288
+21,25,18,init_best,2007-01-07 00:09:39,3,1,58.72,170270203
+21,25,18,init_best,2007-01-07 00:10:22,3,2,43.30,51992664
+21,25,19,init_best,2007-01-07 00:10:28,3,1,5.94,16992496
+21,25,19,init_best,2007-01-07 00:10:37,3,2,8.36,10484253
+21,25,1,init_best,2007-01-06 23:54:58,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,1,init_best,2007-01-06 23:55:58,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,20,init_best,2007-01-07 00:13:37,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,20,init_best,2007-01-07 00:14:37,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,2,init_best,2007-01-07 00:11:37,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,2,init_best,2007-01-07 00:12:37,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,3,init_best,2007-01-07 00:14:51,3,1,13.58,42666245
+21,25,3,init_best,2007-01-07 00:14:59,3,2,7.70,10314450
+21,25,4,init_best,2007-01-07 00:15:05,3,1,6.56,20029071
+21,25,4,init_best,2007-01-07 00:15:08,3,2,3.26,4053676
+21,25,5,init_best,2007-01-07 00:15:33,3,1,24.06,82038179
+21,25,5,init_best,2007-01-07 00:15:42,3,2,9.53,12945359
+21,25,6,init_best,2007-01-07 00:16:42,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,6,init_best,2007-01-07 00:17:43,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,7,init_best,2007-01-07 00:18:43,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,7,init_best,2007-01-07 00:19:43,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+21,25,8,init_best,2007-01-07 00:20:42,3,1,58.91,179234125
+21,25,8,init_best,2007-01-07 00:20:57,3,2,14.68,19210843
+21,25,9,init_best,2007-01-07 00:21:45,3,1,47.85,143660163
+21,25,9,init_best,2007-01-07 00:22:15,3,2,30.08,42064430
+22,25,10,init_best,2007-01-07 00:29:15,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,10,init_best,2007-01-07 00:30:15,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,11,init_best,2007-01-07 00:31:15,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,11,init_best,2007-01-07 00:31:40,3,2,24.23,32416989
+22,25,12,init_best,2007-01-07 00:32:02,3,1,21.30,65420332
+22,25,12,init_best,2007-01-07 00:32:44,3,2,41.56,52786950
+22,25,13,init_best,2007-01-07 00:33:44,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,13,init_best,2007-01-07 00:34:44,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,14,init_best,2007-01-07 00:35:44,3,1,59.81,164296071
+22,25,14,init_best,2007-01-07 00:36:44,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,15,init_best,2007-01-07 00:37:43,3,1,58.64,167775229
+22,25,15,init_best,2007-01-07 00:38:43,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,16,init_best,2007-01-07 00:39:23,3,1,39.44,112545084
+22,25,16,init_best,2007-01-07 00:39:57,3,2,34.50,42908779
+22,25,17,init_best,2007-01-07 00:40:07,3,1,9.38,27549285
+22,25,17,init_best,2007-01-07 00:40:17,3,2,10.22,13135161
+22,25,18,init_best,2007-01-07 00:41:17,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,18,init_best,2007-01-07 00:42:17,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,19,init_best,2007-01-07 00:43:17,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,19,init_best,2007-01-07 00:44:17,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,1,init_best,2007-01-07 00:28:01,3,1,19.30,50081974
+22,25,1,init_best,2007-01-07 00:28:15,3,2,14.20,16451523
+22,25,20,init_best,2007-01-07 00:45:36,3,1,51.92,160696252
+22,25,20,init_best,2007-01-07 00:45:37,3,2,0.59,245391
+22,25,2,init_best,2007-01-07 00:44:43,3,1,25.12,82294456
+22,25,2,init_best,2007-01-07 00:44:44,3,2,1.14,852136
+22,25,3,init_best,2007-01-07 00:45:37,3,1,0.42,298
+22,25,3,init_best,2007-01-07 00:45:38,3,2,0.43,298
+22,25,4,init_best,2007-01-07 00:45:49,3,1,11.73,33033973
+22,25,4,init_best,2007-01-07 00:46:01,3,2,11.65,14478339
+22,25,5,init_best,2007-01-07 00:46:09,3,1,7.47,22241744
+22,25,5,init_best,2007-01-07 00:46:09,3,2,0.54,43946
+22,25,6,init_best,2007-01-07 00:46:10,3,1,0.44,285
+22,25,6,init_best,2007-01-07 00:46:10,3,2,0.42,285
+22,25,7,init_best,2007-01-07 00:47:10,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,7,init_best,2007-01-07 00:47:11,3,2,0.70,363657
+22,25,8,init_best,2007-01-07 00:48:11,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,8,init_best,2007-01-07 00:48:17,3,2,5.36,7132292
+22,25,9,init_best,2007-01-07 00:49:17,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+22,25,9,init_best,2007-01-07 00:50:17,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,10,init_best,2007-01-07 00:58:06,3,1,42.30,126506673
+23,25,10,init_best,2007-01-07 00:58:56,3,2,50.21,63228854
+23,25,11,init_best,2007-01-07 00:58:59,3,1,3.18,8073845
+23,25,11,init_best,2007-01-07 00:59:04,3,2,4.44,4907231
+23,25,12,init_best,2007-01-07 00:59:48,3,1,43.71,133243942
+23,25,12,init_best,2007-01-07 00:59:55,3,2,7.39,9236421
+23,25,13,init_best,2007-01-07 01:00:55,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,13,init_best,2007-01-07 01:01:56,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,14,init_best,2007-01-07 01:02:56,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,14,init_best,2007-01-07 01:03:56,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,15,init_best,2007-01-07 01:04:25,3,1,28.83,92175822
+23,25,15,init_best,2007-01-07 01:04:37,3,2,12.04,15414743
+23,25,16,init_best,2007-01-07 01:05:37,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,16,init_best,2007-01-07 01:06:37,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,17,init_best,2007-01-07 01:07:37,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,17,init_best,2007-01-07 01:08:37,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,18,init_best,2007-01-07 01:08:40,3,1,3.12,9135151
+23,25,18,init_best,2007-01-07 01:08:43,3,2,2.66,2849567
+23,25,19,init_best,2007-01-07 01:08:52,3,1,8.76,25306036
+23,25,19,init_best,2007-01-07 01:09:02,3,2,9.41,11217397
+23,25,1,init_best,2007-01-07 00:56:23,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,1,init_best,2007-01-07 00:57:23,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,20,init_best,2007-01-07 01:12:02,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,20,init_best,2007-01-07 01:13:02,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,2,init_best,2007-01-07 01:10:02,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,2,init_best,2007-01-07 01:11:02,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,3,init_best,2007-01-07 01:14:02,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,3,init_best,2007-01-07 01:15:02,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,4,init_best,2007-01-07 01:16:02,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,4,init_best,2007-01-07 01:17:02,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,5,init_best,2007-01-07 01:17:37,3,1,34.80,111363918
+23,25,5,init_best,2007-01-07 01:17:55,3,2,17.28,20495701
+23,25,6,init_best,2007-01-07 01:18:55,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,6,init_best,2007-01-07 01:19:55,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,7,init_best,2007-01-07 01:20:55,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,7,init_best,2007-01-07 01:21:39,3,2,43.34,57319495
+23,25,8,init_best,2007-01-07 01:22:19,3,1,40.65,123223073
+23,25,8,init_best,2007-01-07 01:22:34,3,2,14.46,18131717
+23,25,9,init_best,2007-01-07 01:23:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+23,25,9,init_best,2007-01-07 01:24:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,10,init_best,2007-01-07 01:32:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,10,init_best,2007-01-07 01:33:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,11,init_best,2007-01-07 01:34:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,11,init_best,2007-01-07 01:35:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,12,init_best,2007-01-07 01:36:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,12,init_best,2007-01-07 01:37:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,13,init_best,2007-01-07 01:38:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,13,init_best,2007-01-07 01:39:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,14,init_best,2007-01-07 01:40:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,14,init_best,2007-01-07 01:41:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,15,init_best,2007-01-07 01:42:49,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,15,init_best,2007-01-07 01:43:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,16,init_best,2007-01-07 01:44:50,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,16,init_best,2007-01-07 01:45:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,17,init_best,2007-01-07 01:46:50,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,17,init_best,2007-01-07 01:47:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,18,init_best,2007-01-07 01:48:50,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,18,init_best,2007-01-07 01:49:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,19,init_best,2007-01-07 01:50:50,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,19,init_best,2007-01-07 01:51:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,1,init_best,2007-01-07 01:30:48,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,1,init_best,2007-01-07 01:31:49,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,20,init_best,2007-01-07 01:54:33,3,1,42.86,123065946
+24,25,20,init_best,2007-01-07 01:55:33,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,2,init_best,2007-01-07 01:52:50,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,2,init_best,2007-01-07 01:53:50,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,3,init_best,2007-01-07 01:56:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,3,init_best,2007-01-07 01:57:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,4,init_best,2007-01-07 01:58:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,4,init_best,2007-01-07 01:59:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,5,init_best,2007-01-07 02:00:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,5,init_best,2007-01-07 02:01:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,6,init_best,2007-01-07 02:02:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,6,init_best,2007-01-07 02:03:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,7,init_best,2007-01-07 02:04:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,7,init_best,2007-01-07 02:05:34,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,8,init_best,2007-01-07 02:06:34,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,8,init_best,2007-01-07 02:07:35,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,9,init_best,2007-01-07 02:08:35,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+24,25,9,init_best,2007-01-07 02:09:35,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
 5,25,10,init_best,2007-01-06 19:12:38,1,0,0.00,302
 5,25,10,init_best,2007-01-06 19:12:38,2,0,0.00,296
 5,25,10,init_best,2007-01-06 19:12:38,3,0,0.00,296
