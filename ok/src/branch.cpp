@@ -95,12 +95,13 @@ void branch(Flowshop& f, Order& p, Result& best)
 
 int main(int argc, char* argv[])
 {
-	int init = 3;
+	int init, init2;
 	
-	if (argc == 3)
+	if (argc == 4)
 	{
 		init = atoi(argv[1]);
 		app = atoi(argv[2]);
+		init2 = atoi(argv[3]);
 	}
 	else
 	{
@@ -120,6 +121,12 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 	
+	if (init2 < 1 || init2 > 2)
+	{
+		cerr << "Zla wartosc init2: " << init2 << endl;
+		return 1;
+	}
+	
 	Flowshop f;
 	cin >> f;
 
@@ -127,11 +134,14 @@ int main(int argc, char* argv[])
 	
 	Result best;
 	
-	switch (init)
+	switch (init*init2)
 	{
 		case 1: best = p.init_sort(); break;
 		case 2: best = p.init_greedy(); break;
 		case 3: best = p.init_tabu(); break;
+		case 4: best = p.init2_sort(); break;
+		case 5: best = p.init2_greedy(); break;
+		case 6: best = p.init2_tabu(); break;
 	}
 	
 	double init_time = timer.elapsed();

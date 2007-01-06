@@ -176,6 +176,27 @@ Result Order::init_tabu()
 	return tabusearch(f, tabus, chances, 1, range);
 }
 
+Result Order::init2_sort()
+{
+	Result result = init_sort();
+	a = result.order;
+	return result;
+}
+
+Result Order::init2_greedy()
+{
+	Result result = init_greedy();
+	a = result.order;
+	return result;
+}
+
+Result Order::init2_tabu()
+{
+	Result result = init_tabu();
+	a = result.order;
+	return result;
+}
+
 int Order::shortest_left(int machine)
 {
 	if (left_size() > 0)

@@ -30,6 +30,10 @@ public:
 	Result init_greedy();
 	Result init_tabu();
 
+	Result init2_sort();
+	Result init2_greedy();
+	Result init2_tabu();
+	
 	State getState();
 	void setState(const State& s);
 
