@@ -1,0 +1,17 @@
+#!/bin/sh
+target=$1
+shift
+
+headers=`head -1 $1`
+echo tasks,offlines,repeat,$headers > $target
+
+for file in $*; do
+	file=`basename $file .csv`
+	tasks=`echo $file | cut -d - -f 1`
+	offlines=`echo $file | cut -d - -f 2`
+	repeat=`echo $file | cut -d - -f 4`
+
+	echo "Processing $file..." >&2
+
+	grep -v tag $file.csv | sed -r "s/^(.*)$/$tasks,$offlines,$repeat,\1/" >> $target
+done

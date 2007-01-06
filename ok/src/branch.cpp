@@ -71,6 +71,7 @@ void branch(Flowshop& f, Order& p, Result& best)
 				cmax = approx2(f, p);
 				break;
 			case 3:
+			default:
 				cmax = approx3(f, p);
 				break;
 		}

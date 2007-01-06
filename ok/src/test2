@@ -15,15 +15,15 @@ for file in $*; do
 	for init in $INITS; do
 	for approx in $APPROXS; do
 
-		command="$TOOLS/branch $init $approx < $file.in > $file.out"
+		command="$TOOLS/branch $init $approx <$file.in 2>$file.out 1>&-"
 		#command=$tag
 		echo $command >&2
 		
-		time=`/usr/bin/time -f %U sh -c "timeout $TIMEOUT $command 2>&-" 2>&1`
-		cmax=`cat $file.out | $TOOLS/cmax`
+		time=`/usr/bin/time -f %U sh -c "timeout $TIMEOUT $command" 2>&1`
+		calls=`cat $file.out | cut -d , -f 1`
 		date=`date +"%F %T"`
 		
-		echo $tag,$date,$init,$approx,$cmax,$time >> $file.csv 
+		echo $tag,$date,$init,$approx,$time,$calls >> $file.csv 
 		
 		rm $file.out
 	done

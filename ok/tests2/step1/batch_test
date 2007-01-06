@@ -6,4 +6,9 @@ TAG="pusty"
 INITS="1 2 3" \
 APPROXS="1 2 3" \
 TIMEOUT="60" \
+#$TOOLS/test2 "$TAG" "$TESTS"
+
+INITS="1 2 3" \
+APPROXS="0" \
+TIMEOUT="60" \
 $TOOLS/test2 "$TAG" "$TESTS"
