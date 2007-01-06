@@ -1,6 +1,7 @@
 #pragma once
 
 #include "data.hpp"
+#include "tabusearch.hpp"
 
 using namespace std;
 
@@ -25,9 +26,9 @@ class Order
 public:
 	Order(Flowshop& f);
 
-	void init_sort();
-	void init_greedy();
-	void init_tabu();
+	Result init_sort();
+	Result init_greedy();
+	Result init_tabu();
 
 	State getState();
 	void setState(const State& s);

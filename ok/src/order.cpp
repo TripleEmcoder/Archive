@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "order.hpp"
 #include "schedule.hpp"
-#include "tabusearch.hpp"
 
 struct TaskArrivalCmp
 {
@@ -29,7 +28,7 @@ Order::Order(Flowshop& f) :f(f)
 		a[i] = i;
 		sum[0] += f.tasks[i].sums[0];
 		sum[1] += f.tasks[i].sums[1];
-		min_arrival = min(min_arrival,f.tasks[i].arrival);
+		min_arrival = min(min_arrival, f.tasks[i].arrival);
 	}
 	time[0] = min_arrival;
 	time[1] = 0;
@@ -121,14 +120,20 @@ int Order::offlines_sum()
 	return t;
 }
 
-void Order::init_sort()
+Result Order::init_sort()
 {
-	sort(left_begin(), left_end(), TaskArrivalCmp(f.tasks));
+	Result result;
+	result.order = a;
+	sort(result.order.begin(), result.order.end(), TaskArrivalCmp(f.tasks));
+	result.cmax = simulate(f, result.order);
+	return result;
 }
 
-void Order::init_greedy()
+Result Order::init_greedy()
 {
+	vector<int> b = a;
 	State start = getState();
+
 	while (tasks_size() != f.tasks.size())
 	{
 		int best = numeric_limits<int>::max();
@@ -147,14 +152,28 @@ void Order::init_greedy()
 		}
 		add(t);
 	}
+
+	Result result;
+	result.order = a;
+	result.cmax = time_passed(1);
+	
 	while (tasks_size() > 0)
 		remove(tasks_end()-1);
+
+	a = b;
 	setState(start);
+
+	return result;
 }
 
-void Order::init_tabu()
+Result Order::init_tabu()
 {
-	a = tabusearch(f, 60, 300, 1, 15).order;
+	int n = (int)a.size();
+	int moves = n*(n-1)/2;
+	int tabus = moves * 2 / 3;
+	int chances = tabus * 4;
+	int range = n;
+	return tabusearch(f, tabus, chances, 1, range);
 }
 
 int Order::shortest_left(int machine)

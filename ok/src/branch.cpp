@@ -8,10 +8,8 @@ using namespace std;
 
 int call_count = 0;
 int found = 0;
-int app = 1;
+int app;
 boost::timer timer;
-const double time_limit = 120.0;
-
 
 int approx0(Flowshop&, Order& p)
 {
@@ -47,9 +45,6 @@ int approx3(Flowshop&, Order& p)
 
 void branch(Flowshop& f, Order& p, Result& best)
 {
-	if (timer.elapsed() > time_limit)
-		return;
-
 	call_count++;
 
 	if (p.tasks_size() == f.tasks.size())
@@ -67,19 +62,17 @@ void branch(Flowshop& f, Order& p, Result& best)
 		switch (app)
 		{
 			case 0:
-				cmax = approx0(f,p);
+				cmax = approx0(f, p);
 				break;
 			case 1:
-				cmax = approx1(f,p);
+				cmax = approx1(f, p);
 				break;
 			case 2:
-				cmax = approx2(f,p);
+				cmax = approx2(f, p);
 				break;
 			case 3:
-				cmax = approx3(f,p);
+				cmax = approx3(f, p);
 				break;
-			default:
-				cmax = approx1(f,p);
 		}
 	
 		for (VI i = p.left_begin(); i != p.left_end(); ++i)
@@ -101,13 +94,29 @@ void branch(Flowshop& f, Order& p, Result& best)
 
 int main(int argc, char* argv[])
 {
-	int init = 2, test;
+	int init = 3;
 	
-	if (argc == 4)
+	if (argc == 3)
 	{
 		init = atoi(argv[1]);
 		app = atoi(argv[2]);
-		test = atoi(argv[3]);
+	}
+	else
+	{
+		cerr << "Zla liczba argumentow: " << argc << endl;
+		return 1;
+	}
+
+	if (init < 1 || init > 3)
+	{
+		cerr << "Zla wartosc init: " << init << endl;
+		return 1;
+	}
+
+	if (app < 0 || app > 3)
+	{
+		cerr << "Zla wartosc app: " << app << endl;
+		return 1;
 	}
 	
 	Flowshop f;
@@ -115,38 +124,26 @@ int main(int argc, char* argv[])
 
 	Order p(f);
 	
+	Result best;
+	
 	switch (init)
 	{
-		case 1: p.init_sort(); break;
-		case 2: p.init_greedy(); break;
-		case 3: p.init_tabu(); break;
+		case 1: best = p.init_sort(); break;
+		case 2: best = p.init_greedy(); break;
+		case 3: best = p.init_tabu(); break;
 	}
+	
 	double init_time = timer.elapsed();
-		
-	Result best;
-	best.cmax = numeric_limits<int>::max();
 	
 	timer.restart();
-	branch(f,p,best);
+	branch(f, p, best);
 	double time = timer.elapsed();
-
-	if (time > time_limit)
-	{
-		cerr << "Time limit exceeded." << endl;
-		return 0;
-	}
 
 	cout << f;
 	cout << best.cmax << endl;
 	cout << schedule(f, best.order);
 	
-	//cerr << best.cmax << endl;
-	//cerr << "Calls: " << call_count << endl;
-	//cerr << "Best found at: " << found << endl;
-	//cerr << "Calls after best found: " << call_count-found << endl;
-	//cerr << "Percentage of all calls: " << 100.0*(call_count-found)/call_count << endl;
-	//cerr << "Time: " << time << endl;
-	cerr << f.offlines.size()-2 << "," << f.tasks.size() << "," << test << "," << init << "," << app << "," << init_time << "," << time << "," << init_time+time << "," << call_count << "," << found << endl;
+	cerr << call_count << "," << init_time << "," << time << "," << init_time+time << endl;
 	
 	return 0;
 }
