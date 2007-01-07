@@ -64,9 +64,37 @@ $F2$, $h_{1k}$ | $SRS$ , $r_i$, $no-wait$ | $C_{max}$
 \end{quote}
 
 \section{Opis algorytmu}
+W fazie drugiej projektu konieczne by³o zaimplementowanie algorytmu dok³adnego, tj. takiego, który znajduje dla postawionego problemu rozwi¹zanie optymalne. Jako ogólny schemat postêpowania przyjêto \emph{metodê rozga³êzieñ i ograniczeñ}.
+
 \subsection{Idea algorytmu}
-\subsection{Wykorzystane ograniczenia}
-\subsection{Metody inicjalizacji}
+Idea algorytmu korzystaj¹cego z metody rozga³êzieñ i ograniczeñ opiera siê na systematycznym przeszukiwaniu drzewa dopuszczalnych rozwi¹zañ. W trakcie obliczeñ pomijane s¹ poddrzewa odpowiadaj¹ce rozwi¹zaniom, o których na danym etapie przeszukiwania z pewnoœci¹ mo¿na stwierdziæ, ¿e prowadz¹ do rozwi¹zañ nieoptymalnych.
+
+Dla postawionego problemu szeregowania zadañ drzewo to jest budowane w nastêpuj¹cy sposób:
+\begin{itemize}
+\item korzeñ drzewa odpowiada pustej permutacji zadañ,
+\item ka¿dy wierzcho³ek wewnêtrzny ma $n$ potomków, odpowiadaj¹cych $n$ szeregowanym zadaniom,
+\item wysokoœæ drzewa równa jest $n$, œcie¿ka od korzenia do liœcia wyznacza pewn¹ permutacjê zadañ o okreœlonej wartoœci optymalizowanego parametru \emph{cmax}.
+\end{itemize}
+
+Poniewa¿ zadanie polega na znalezieniu minimalnej wartoœci parametru \emph{cmax}, kluczem do skutecznego wykonywania odciêæ jest umiejêtnoœæ znajdywania dla danej pocz¹tkowej permutacji dolnego ograniczenia tego parametru, zwanego dalej \emph{cmax\_min}. Jeœli jego wartoœæ jest niemniejsza od aktualnie znalezionej najmniejszej wartoœci \emph{cmax}, zwanej dalej \emph{cmax\_best}, dalsze obliczenia s¹ bezcelowe, gdy¿ doprowadz¹ do uszeregowania o wartoœci \emph{cmax} niemniejszej ni¿ ju¿ znaleziona. Rozumowanie odwrotne nie jest poprawne, tzn. spe³nienie dolnego ograniczenia nie daje gwarancji znalezienia lepszego rozwi¹zania, co przy s³abym ograniczeniu powoduje wykonanie wielu zbêdnych obliczeñ. Moment decyzyjny mo¿na przedstawiæ w pseudokodzie nastêpuj¹co:
+\begin{verbatim}
+if (cmax_min < cmax_best)
+	continue; //znalezienie lepszego rozwi¹zania jest mozliwe, ale nie pewne
+else
+	break; //w danym poddrzewie z pewnoœci¹ nie ma lepszego rozwi¹zania
+\end{verbatim}
+
+Na zmniejszenie iloœci zbêdnych wywo³añ rekurencyjnej funkcji przeszukuj¹cej drzewo rozwi¹zañ maj¹ zatem wp³yw dwa czynniki:
+\begin{enumerate}
+\item Przyjêcie wstêpnej wartoœci \emph{cmax} jak najbli¿szej optymalnej.
+\item Wykorzystanie mo¿liwie rygorystycznej funkcji dolnego ograniczenia.
+\end{enumerate}
+
+W implementacji algorytmu wykorzystanych zosta³o kilka ró¿nych metod spe³niaj¹cych powy¿sze zalecenia, opisanych w kolejnych punktach.
+
+\subsection{Rozwi¹zanie wstêpne}
+\subsection{Dolne ograniczenie}
+\subsection{Optymalizacje techniczne}
 
 \section{Wyniki eksperymentu}
 
