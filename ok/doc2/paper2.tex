@@ -72,14 +72,14 @@ Idea algorytmu korzystaj¹cego z metody rozga³êzieñ i ograniczeñ opiera siê na sy
 Dla postawionego problemu szeregowania zadañ drzewo to jest budowane w nastêpuj¹cy sposób:
 \begin{itemize}
 \item korzeñ drzewa odpowiada pustej permutacji zadañ,
-\item ka¿dy wierzcho³ek wewnêtrzny ma $n$ potomków, odpowiadaj¹cych $n$ szeregowanym zadaniom,
+\item ka¿dy wierzcho³ek wewnêtrzny ma $n-i$ potomków, gdzie $i$ to poziom wierzcho³ka w drzewie, odpowiadaj¹cych $n-i$ pozosta³ym do uszeregowanym zadaniom,
 \item wysokoœæ drzewa równa jest $n$, œcie¿ka od korzenia do liœcia wyznacza pewn¹ permutacjê zadañ o okreœlonej wartoœci optymalizowanego parametru \emph{cmax}.
 \end{itemize}
 
 Poniewa¿ zadanie polega na znalezieniu minimalnej wartoœci parametru \emph{cmax}, kluczem do skutecznego wykonywania odciêæ jest umiejêtnoœæ znajdywania dla danej pocz¹tkowej permutacji dolnego ograniczenia tego parametru, zwanego dalej \emph{cmax\_min}. Jeœli jego wartoœæ jest niemniejsza od aktualnie znalezionej najmniejszej wartoœci \emph{cmax}, zwanej dalej \emph{cmax\_best}, dalsze obliczenia s¹ bezcelowe, gdy¿ doprowadz¹ do uszeregowania o wartoœci \emph{cmax} niemniejszej ni¿ ju¿ znaleziona. Rozumowanie odwrotne nie jest poprawne, tzn. spe³nienie dolnego ograniczenia nie daje gwarancji znalezienia lepszego rozwi¹zania, co przy s³abym ograniczeniu powoduje wykonanie wielu zbêdnych obliczeñ. Moment decyzyjny mo¿na przedstawiæ w pseudokodzie nastêpuj¹co:
 \begin{verbatim}
 if (cmax_min < cmax_best)
-    continue; //znalezienie lepszego rozwi¹zania jest mozliwe
+    continue; //znalezienie lepszego rozwi¹zania jest mo¿liwe
 else
     break; //w danym poddrzewie nie ma lepszego rozwi¹zania
 \end{verbatim}
@@ -99,12 +99,12 @@ Na podstawie wniosków z pierwszej fazy projektu do testów przyjêto trzy metody w
 \item Uszeregowanie zadañ w sposób zach³anny.
 \item Uszeregowanie zadañ przy pomocy algorytmu tabu search.
 \end{enumerate}
-Wyboru metody dokonuje siê poprzez ustawienie parametru algorytmu zwanego dalej \emph{init}. Ponadto mo¿liwe jest okreœlenie czy powy¿sza metoda inicjalizacji jedynie definiuje wstêpn¹ wartoœæ \emph{cmax\_best}, czy powoduje te¿ narzucenie porz¹dku przeszukiwania -- rozpoczyna siê ono wtedy od rozwi¹zania wstêpnego. Decyduje o tym parametr \emph{order}.
+Wyboru metody dokonuje siê poprzez ustawienie parametru algorytmu zwanego dalej \emph{init}. Ponadto mo¿liwe jest okreœlenie czy powy¿sza metoda inicjalizacji jedynie definiuje wstêpn¹ wartoœæ \emph{cmax\_best}, czy powoduje te¿ narzucenie porz¹dku przeszukiwania -- rozpoczyna siê ono wtedy od rozwi¹zania wstêpnego. Decyduje o tym parametr \emph{setup}, przyjmuj¹cy dla opisanych sytuacji wartoœci odpowiednio 1 i 2.
 
 \subsection{Dolne ograniczenie}
-W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych, o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{approx}. Opieraj¹ siê one na nastêpuj¹cych obserwacjach, uporz¹dkowanych zgodnie z rosn¹c¹ si³¹ odpowiadaj¹cych im ograniczeñ:
+W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych, o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{limit}. Opieraj¹ siê one na nastêpuj¹cych obserwacjach, uporz¹dkowanych zgodnie z rosn¹c¹ si³¹ odpowiadaj¹cych im ograniczeñ:
 \begin{itemize}
-\item wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego ($\emph{approx}=0$),
+\item wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego ($\emph{limit}=0$),
 \item 
 \item 
 \end{itemize}
