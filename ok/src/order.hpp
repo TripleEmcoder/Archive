@@ -55,6 +55,6 @@ public:
 	int soonest_left();
 	int m1_start();
 	int m2_start();
-	pair<int, int> Order::machine_starts();
+	pair<int, int> machine_starts();
 	int nowait_shift();
 };

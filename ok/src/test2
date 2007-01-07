@@ -15,7 +15,7 @@ for file in $*; do
 	for init in $INITS; do
 	for approx in $APPROXS; do
 
-		command="$TOOLS/branch $init $approx <$file.in 2>$file.out 1>&-"
+		command="$TOOLS/branch $init $approx 1 <$file.in 2>$file.out 1>&-"
 		#command=$tag
 		echo $command >&2
 		

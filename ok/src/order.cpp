@@ -313,7 +313,6 @@ pair<int, int> Order::machine_starts()
 
 	int time[2];
 	Step x;
-	int time2[2];
 	Step x2;
 
 	for (VI i = left_begin(); i != left_end(); ++i)

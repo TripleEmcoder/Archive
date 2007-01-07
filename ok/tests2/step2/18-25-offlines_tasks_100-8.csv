@@ -2,6 +2,3 @@ tag,date,init,approx,time,calls
 init_best,2007-01-06 20:23:43,1,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
 init_best,2007-01-06 20:24:44,2,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
 init_best,2007-01-06 20:25:33,3,1,48.78,141584655
-init_best,2007-01-06 22:30:47,1,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
-init_best,2007-01-06 22:31:47,2,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
-init_best,2007-01-06 22:32:07,3,2,19.87,27795655

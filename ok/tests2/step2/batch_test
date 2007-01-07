@@ -20,10 +20,10 @@ APPROXS="2" \
 TIMEOUT="60" \
 #$TOOLS/test2 "$TAG" "$TESTS"
 
-TESTS="24*.in"
+TESTS="1[567]-*.in"
 
-INITS="3" \
-APPROXS="1 2" \
+INITS="1 2 3" \
+APPROXS="2 3" \
 TIMEOUT="60" \
 $TOOLS/test2 "$TAG" "$TESTS"
 

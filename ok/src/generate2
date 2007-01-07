@@ -16,13 +16,13 @@ for repeat in `seq $REPEAT`; do
 	offlines2=`echo $offlines2 | bc | cut -d . -f 1`
 
 	if [ ! -f $file.in ]; then
-		command="$TOOLS/generator $offlines2 $tasks > $file.in"
+		command="$TOOLS/generator $offlines2 $tasks $repeat > $file.in"
 		echo $command >&2
 		sh -c "$command 2>&-"
 	fi
 
 	if [ ! -f $file.csv ]; then
-		echo tag,date,init,approx,cmax,time > $file.csv
+		echo tag,date,init,approx,time,calls > $file.csv
 	fi
 
 done
