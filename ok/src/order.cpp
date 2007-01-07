@@ -168,10 +168,11 @@ Result Order::init_tabu()
 {
 	int n = (int)a.size();
 	int moves = n*(n-1)/2;
-	int tabus = moves * 2 / 3;
-	int chances = tabus * 4;
-	int range = n;
-	return tabusearch(f, tabus, chances, 1, range);
+	Result result = tabusearch(f, moves / 3, moves * 2, 1, n);
+	Result result2 = tabusearch(f, moves / 2, moves * 2, 1, n);
+	Result result3 = tabusearch(f, moves * 2 / 3, moves * 2, 1, n);
+	result = min(result, result2);
+	return min(result, result3);
 }
 
 Result Order::init2_sort()

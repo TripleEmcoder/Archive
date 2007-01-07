@@ -144,7 +144,7 @@ int main(int argc, char* argv[])
 		case 5: best = p.init2_greedy(); break;
 		case 6: best = p.init2_tabu(); break;
 	}
-	
+
 	double init_time = timer.elapsed();
 	
 	timer.restart();

@@ -18,6 +18,11 @@ public:
 	TaskArrivalCmp(vector<Task>& p): p(p) { };
 };
 
+bool operator<(const Result& a, const Result& b)
+{
+	return a.cmax < b.cmax;
+}
+
 Result local_min(Flowshop& f, vector<int>& p, Tabulist& tabu, int cmax_min)
 {
 	Result result, result_asp;
