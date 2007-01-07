@@ -102,7 +102,7 @@ Na podstawie wniosków z pierwszej fazy projektu do testów przyjêto trzy metody w
 Wyboru metody dokonuje siê poprzez ustawienie parametru algorytmu zwanego dalej \emph{init}. Ponadto mo¿liwe jest okreœlenie czy powy¿sza metoda inicjalizacji jedynie definiuje wstêpn¹ wartoœæ \emph{cmax\_best}, czy powoduje te¿ narzucenie porz¹dku przeszukiwania -- rozpoczyna siê ono wtedy od rozwi¹zania wstêpnego. Decyduje o tym parametr \emph{order}.
 
 \subsection{Dolne ograniczenie}
-W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych, o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{approx}. Opieraj¹ siê one na nastêpuj¹cych obserwacjach, uporz¹dkowanych zgodnie z ich rosn¹c¹ si³¹:
+W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych, o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{approx}. Opieraj¹ siê one na nastêpuj¹cych obserwacjach, uporz¹dkowanych zgodnie z rosn¹c¹ si³¹ odpowiadaj¹cych im ograniczeñ:
 \begin{itemize}
 \item wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego ($\emph{approx}=0$),
 \item 
