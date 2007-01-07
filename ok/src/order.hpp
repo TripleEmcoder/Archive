@@ -53,6 +53,8 @@ public:
 	int shortest_left(int machine);
 	int longest_left(int machine);
 	int soonest_left();
-	int m2_start(int time);
+	int m1_start();
+	int m2_start();
+	pair<int, int> Order::machine_starts();
 	int nowait_shift();
 };

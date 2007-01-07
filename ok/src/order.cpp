@@ -22,24 +22,22 @@ Order::Order(Flowshop& f) :f(f)
 	a.resize(f.tasks.size());
 	sum[0] = 0;
 	sum[1] = 0;
-	int min_arrival = numeric_limits<int>::max();
 	for (int i = 0; i < (int)a.size(); ++i)
 	{
 		a[i] = i;
 		sum[0] += f.tasks[i].sums[0];
 		sum[1] += f.tasks[i].sums[1];
-		min_arrival = min(min_arrival, f.tasks[i].arrival);
 	}
-	time[0] = min_arrival;
+	time[0] = 0;
 	time[1] = 0;
-	offline = f.offlines.begin();
+	offline = f.offlines.begin()+1;
 	n = 0;
 	line = a.begin();
 }
 
 void Order::add(VI i)
 {
-	simulate_task(f.tasks[*i], time, offline);
+	simulate_task2(f.tasks[*i], time, offline);
 	sum[0] -= f.tasks[*i].sums[0];
 	sum[1] -= f.tasks[*i].sums[1];
 	swap(*line,*i);
@@ -115,7 +113,7 @@ int Order::time_passed(int machine)
 int Order::offlines_sum()
 {
 	int t = 0;
-	for (Step x = offline; (*x) < time_passed(0)+time_left(0); ++x)
+	for (Step x = offline; x->stop < time_passed(0)+time_left(0); ++x)
 		t += x->length;
 	return t;
 }
@@ -233,12 +231,26 @@ struct TaskM1EndCmp
 	}
 };
 
-int Order::m2_start(int time)
+//int Order::m2_start()
+//{
+//	VI x = min_element(left_begin(), left_end(), TaskM1EndCmp(f.tasks, time_passed(0)));
+//	int start = max(time_passed(0), f.tasks[*x].arrival);
+//	int length = f.tasks[*x].sums[0];
+//	if (start + length > time_passed(1))
+//		return start + length - time_passed(1);
+//	else
+//		return 0;
+//}
+
+int Order::m2_start()
 {
-	VI x = min_element(left_begin(),left_end(),TaskM1EndCmp(f.tasks, time));
-	int start = max(time, f.tasks[*x].arrival);
+	VI x = min_element(left_begin(), left_end(), TaskM1EndCmp(f.tasks, time_passed(0)));
+	int start = max(time_passed(0), f.tasks[*x].arrival);
 	int length = f.tasks[*x].sums[0];
-	return max(time_passed(1), start + length);
+	if (start + length > time_passed(1))
+		return start + length - time_passed(1);
+	else
+		return 0;
 }
 
 bool Order::contain_offlines(int a, int b)
@@ -267,4 +279,78 @@ int Order::nowait_shift()
 			break;
 	}
 	return shift;
+}
+
+int Order::m1_start()
+{
+	int shift = numeric_limits<int>::max();
+
+	for (VI i = left_begin(); i != left_end(); ++i)
+	{
+		if (f.tasks[*i].arrival >= offline->start)
+			shift = min(shift, offline->start - time_passed(0));
+		else
+		{
+			int start = max(time_passed(0), f.tasks[*i].arrival);
+			if (start + f.tasks[*i].setups[0] > offline->start)
+				shift = min(shift, offline->start - time_passed(0));
+			else if (start + f.tasks[*i].sums[0] > offline->start)
+				shift = min(shift, f.tasks[*i].setups[0]);
+			else 
+				shift = 0;
+		}
+
+		if (shift == 0)
+			break;
+	}
+
+	return shift;
+}
+
+pair<int, int> Order::machine_starts()
+{
+	int shift[2] = {numeric_limits<int>::max(), numeric_limits<int>::max()};
+
+	int time[2];
+	Step x;
+	int time2[2];
+	Step x2;
+
+	for (VI i = left_begin(); i != left_end(); ++i)
+	{
+		time[0] = time_passed(0);
+		time[1] = time_passed(1);
+		x = offline;
+		simulate_task2(f.tasks[*i], time, x);
+
+		//time2[0] = time_passed(0);
+		//time2[1] = time_passed(1);
+		//x2 = offline;
+		//simulate_task2(f.tasks[*i], time2, x2);
+
+		//if (( (x->start) != (x2->start)) || (time[0] != time2[0]) || (time[1] != time2[1]))
+		//{
+		//	cerr << "zonk\n";
+		//	time2[0] = time_passed(0);
+		//	time2[1] = time_passed(1);
+		//	x2 = offline;
+		//	simulate_task2(f.tasks[*i], time2, x2);
+		//}
+
+		while (x > offline)
+			time[0] -= (--x)->length;
+		
+		for (int j = 0; j < 2; ++j)
+		{
+			time[j] -= time_passed(j);
+			time[j] -= f.tasks[*i].sums[j];
+
+			shift[j] = min(shift[j], time[j]);
+		}
+
+		if (shift[0] == 0 && shift[1] == 0)
+			break;
+	}
+
+	return make_pair(shift[0], shift[1]);
 }

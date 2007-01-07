@@ -9,6 +9,7 @@ using namespace std;
 int call_count = 0;
 int found = 0;
 int app;
+//int shortage[500];
 boost::timer timer;
 
 int approx0(Flowshop&, Order& p)
@@ -27,19 +28,18 @@ int approx1(Flowshop&, Order& p)
 
 int approx2(Flowshop&, Order& p)
 {
-	int m1_begin = p.time_passed(0);
-	int m2_begin = p.m2_start(m1_begin);
-	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1) + p.nowait_shift();
+	int m1_begin = p.time_passed(0) + p.m1_start() + p.nowait_shift();
+	int m2_begin = p.time_passed(1) + p.m2_start();
+	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1);
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
 
 int approx3(Flowshop&, Order& p)
 {
-	int m1_begin = p.time_passed(0);
-	int m2_begin = p.m2_start(m1_begin);
-	int m1 = m1_begin + p.time_left(0) + p.offlines_sum() + p.shortest_left(1) + p.nowait_shift();
-	int m2 = m2_begin + p.time_left(1);
+	pair<int, int> starts = p.machine_starts();
+	int m1 = p.time_passed(0) + starts.first + p.time_left(0) + p.offlines_sum() + p.shortest_left(1);
+	int m2 = p.time_passed(1) + starts.second + p.time_left(1);
 	return max(m1,m2);
 }
 
@@ -71,7 +71,6 @@ void branch(Flowshop& f, Order& p, Result& best)
 				cmax = approx2(f, p);
 				break;
 			case 3:
-			default:
 				cmax = approx3(f, p);
 				break;
 		}
@@ -80,6 +79,7 @@ void branch(Flowshop& f, Order& p, Result& best)
 		{
 			if (cmax < best.cmax)
 			{
+				//shortage[(best.cmax - cmax - 1)/5]++;
 				State s = p.getState();
 				p.add(i);
 				branch(f,p,best);
@@ -153,8 +153,13 @@ int main(int argc, char* argv[])
 	cout << f;
 	cout << best.cmax << endl;
 	cout << schedule(f, best.order);
+
+	//cerr << best.cmax << endl;
 	
-	cerr << call_count << "," << init_time << "," << time << "," << init_time+time << endl;
+	cerr << call_count << "," << init_time << "," << time << "," << init_time+time << endl << endl;
+
+	//for (int i = 0; i < 20; ++i)
+	//	cerr << i*5+1 << "-" << i*5+5 << ": " << shortage[i] << endl; 
 	
 	return 0;
 }

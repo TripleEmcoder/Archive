@@ -193,3 +193,53 @@ FlowshopSchedule schedule(const Flowshop& f, const vector<int>& p)
 	
 	return fs;
 }
+
+void simulate_forward2(const Task& task, int time[2], Step& offline, int length_left)
+{
+	while (length_left > task.setups[0])
+	{
+		if (offline->start - time[0] >= length_left)
+		{
+			time[0] += length_left;
+			length_left = task.setups[0];
+		}
+		else if (offline->start - time[0] > task.setups[0])
+		{
+			length_left -= offline->start - time[0] - task.setups[0];
+			time[0] = offline->stop;
+			offline++;		
+		}
+		else
+		{
+			time[0] = offline->stop;
+			offline++;
+		}
+	}
+}
+
+void simulate_task2(const Task& task, int time[2], Step& offline)
+{
+	time[0] = max(task.arrival, time[0]);
+
+	while (!(((offline-1)->start <= time[0]) && (offline->start > time[0])))
+		offline++;
+
+	if ((offline-1)->start <= time[0] && (offline-1)->stop > time[0])
+		time[0] = (offline-1)->stop;
+
+	simulate_forward2(task, time, offline, task.sums[0]);
+
+	time[0] = max(time[0], time[1]);
+
+	while (!(((offline-1)->start < time[0]) && (offline->start >= time[0])))
+		offline++;
+
+	if (((offline-1)->start < time[0] && (offline-1)->stop > time[0]) ||
+		((offline-1)->stop + task.setups[0] + 1 > time[0]))
+	{
+		time[0] = (offline-1)->stop;
+		simulate_forward2(task, time, offline, task.setups[0]+1);
+	}
+
+	time[1] = time[0] + task.sums[1];
+}
