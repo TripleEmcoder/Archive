@@ -9,7 +9,7 @@ void simulate_forward(int setup, int length, int& time, Step& offline)
 {
 	//cerr << "-> time: " << time << endl;
 	
-	while (offline->stop > time)
+	while (offline->start > time)
 		--offline;
 		
 	while ((offline+1)->start < time)
@@ -41,7 +41,7 @@ void simulate_backward(int setup, int length, int& time, Step& offline)
 {	
 	//cerr << "<- time: " << time << endl;		
 	
-	while (offline->start < time)
+	while (offline->stop < time)
 		++offline;
 		
 	while ((offline-1)->stop > time)
@@ -50,7 +50,7 @@ void simulate_backward(int setup, int length, int& time, Step& offline)
 	//cerr << "<- offline: " << *offline << endl;
 	//cerr << "<- offline-1: " << *(offline-1) << endl;
 
-	assert(offline->start >= time);
+	assert(offline->stop >= time);
 	assert((offline-1)->stop <= time);
 
 	for (; length != 0; --offline)
@@ -69,12 +69,11 @@ void simulate_backward(int setup, int length, int& time, Step& offline)
 	}
 }
 
-//log(onlines.size())+length
 vector<Period> schedule_periods(int setup, int length, int& time, Step& offline)
 {
 	vector<Period> periods;
 
-	while (offline->stop > time)
+	while (offline->start > time)
 		--offline;
 		
 	while ((offline+1)->start < time)
@@ -82,7 +81,7 @@ vector<Period> schedule_periods(int setup, int length, int& time, Step& offline)
 	
 	assert(offline->start <= time);
 	assert((offline+1)->start >= time);
-	
+		
 	for (; length != 0; ++offline)
 	{
 		int start = max(offline->stop, time) + setup;
