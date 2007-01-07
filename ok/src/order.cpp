@@ -297,6 +297,25 @@ int Order::m1_start()
 	return shift;
 }
 
+//int Order::m1_start()
+//{
+//	int shift = numeric_limits<int>::max();
+//
+//	for (VI i = left_begin(); i != left_end() && shift > 0; ++i)
+//	{
+//		int start = max(time_passed(0), f.tasks[*i].arrival);
+//
+//		if (start + f.tasks[*i].setups[0] + 1 > offline->start)
+//			shift = min(shift, offline->start - time_passed(0));
+//		else if (start + f.tasks[*i].sums[0] > offline->start)
+//			shift = min(shift, f.tasks[*i].setups[0] + start - time_passed(0));
+//		else 
+//			shift = start - time_passed(0); 
+//	}
+//
+//	return shift;
+//}
+
 pair<int, int> Order::machine_starts()
 {
 	int shift[2] = {numeric_limits<int>::max(), numeric_limits<int>::max()};
