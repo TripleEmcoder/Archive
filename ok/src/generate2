@@ -22,7 +22,7 @@ for repeat in `seq $REPEAT`; do
 	fi
 
 	if [ ! -f $file.csv ]; then
-		echo tag,date,init,approx,time,calls > $file.csv
+		echo tag,date,init,limit,setup,time,calls > $file.csv
 	fi
 
 done

@@ -1,0 +1,12 @@
+#!/bin/sh
+TOOLS=../../src
+
+TAG="pusty"
+
+TESTS="*.in"
+
+INITS="3" \
+LIMITS="3" \
+SETUPS="1 2" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
