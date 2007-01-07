@@ -12,7 +12,7 @@ struct State
 	int time[2];
 	vector<Period>::const_iterator offline;
 };
-	
+
 class Order
 {
 	Flowshop& f;

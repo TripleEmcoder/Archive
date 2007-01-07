@@ -231,17 +231,6 @@ struct TaskM1EndCmp
 	}
 };
 
-//int Order::m2_start()
-//{
-//	VI x = min_element(left_begin(), left_end(), TaskM1EndCmp(f.tasks, time_passed(0)));
-//	int start = max(time_passed(0), f.tasks[*x].arrival);
-//	int length = f.tasks[*x].sums[0];
-//	if (start + length > time_passed(1))
-//		return start + length - time_passed(1);
-//	else
-//		return 0;
-//}
-
 int Order::m2_start()
 {
 	VI x = min_element(left_begin(), left_end(), TaskM1EndCmp(f.tasks, time_passed(0)));
@@ -313,28 +302,13 @@ pair<int, int> Order::machine_starts()
 
 	int time[2];
 	Step x;
-	Step x2;
-
+	
 	for (VI i = left_begin(); i != left_end(); ++i)
 	{
 		time[0] = time_passed(0);
 		time[1] = time_passed(1);
 		x = offline;
 		simulate_task2(f.tasks[*i], time, x);
-
-		//time2[0] = time_passed(0);
-		//time2[1] = time_passed(1);
-		//x2 = offline;
-		//simulate_task2(f.tasks[*i], time2, x2);
-
-		//if (( (x->start) != (x2->start)) || (time[0] != time2[0]) || (time[1] != time2[1]))
-		//{
-		//	cerr << "zonk\n";
-		//	time2[0] = time_passed(0);
-		//	time2[1] = time_passed(1);
-		//	x2 = offline;
-		//	simulate_task2(f.tasks[*i], time2, x2);
-		//}
 
 		while (x > offline)
 			time[0] -= (--x)->length;
