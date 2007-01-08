@@ -86,14 +86,14 @@ else
 
 Na zmniejszenie iloœci zbêdnych wywo³añ rekurencyjnej funkcji przeszukuj¹cej drzewo rozwi¹zañ maj¹ zatem wp³yw dwa czynniki:
 \begin{enumerate}
-\item Przyjêcie wstêpnej wartoœci \emph{cmax\_best} jak najbli¿szej optymalnej.
+\item Mo¿liwie wczesne przypisanie \emph{cmax\_best} wartoœci jak najbli¿szej optymalnej.
 \item Wykorzystanie mo¿liwie rygorystycznej funkcji dolnego ograniczenia.
 \end{enumerate}
 
-W implementacji algorytmu wykorzystanych zosta³o kilka ró¿nych metod spe³niaj¹cych powy¿sze zalecenia, opisanych w kolejnych punktach.
+W implementacji algorytmu wykorzystanych zosta³o kilka ró¿nych podejœæ pozwalaj¹cych spe³niæ powy¿sze zalecenia. Zosta³y one opisane w kolejnych punktach.
 
 \subsection{Rozwi¹zanie wstêpne}
-Na podstawie wniosków z pierwszej fazy projektu do testów przyjêto trzy metody wstêpnego oszacowania wartoœci \emph{cmax}, opieraj¹ce siê na permutacji otrzymanej poprzez, odpowiednio:
+W celu przypisania \emph{cmax\_best} mo¿liwie wczeœnie wartoœci bliskiej optymalnej, zdecydowano siê okreœliæ t¹ wartoœæ jeszcze przed przyst¹pieniem do przeszukiwania drzewa rozwi¹zañ. Na podstawie wniosków z pierwszej fazy projektu do testów wykorzystano trzy metody wstêpnego oszacowania wartoœci \emph{cmax}, opieraj¹ce siê na permutacji otrzymanej poprzez, odpowiednio:
 \begin{enumerate}
 \item Posortowanie zadañ wed³ug czasów przybycia.
 \item Uszeregowanie zadañ w sposób zach³anny.
@@ -102,47 +102,42 @@ Na podstawie wniosków z pierwszej fazy projektu do testów przyjêto trzy metody w
 Wyboru metody dokonuje siê poprzez ustawienie parametru algorytmu zwanego dalej \emph{init}. Ponadto mo¿liwe jest okreœlenie czy powy¿sza metoda inicjalizacji jedynie definiuje wstêpn¹ wartoœæ \emph{cmax\_best}, czy powoduje te¿ narzucenie porz¹dku przeszukiwania -- rozpoczyna siê ono wtedy od rozwi¹zania wstêpnego. Decyduje o tym parametr \emph{setup}, przyjmuj¹cy dla opisanych sytuacji wartoœci odpowiednio 1 i 2.
 
 \subsection{Dolne ograniczenie}
-W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych, o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{limit}. Opieraj¹ siê one na nastêpuj¹cych obserwacjach, uporz¹dkowanych zgodnie z rosn¹c¹ si³¹ odpowiadaj¹cych im ograniczeñ:
+W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{limit}. Najprostsza z nich, wybierana wartoœci¹ $\emph{limit}=0$, wynika z obserwacji, ¿e wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego. Innymi s³owy szeregowanie kolejnych zadañ mo¿e j¹ jedynie zwiêkszaæ, co jest oczywist¹ konsekwencj¹ nieujemnych czasów przetwarzania. Kolejne funkcje ograniczaj¹ce uwzglêdniaj¹ powy¿sz¹ obserwacjê oraz pewne dodatkowe, opisane w kolejnych punktach, dotycz¹ce zadañ jeszcze nieuszeregowanych. W ogólnoœci mo¿na powiedzieæ, ¿e wartoœæ ograniczenia \emph{cmax\_min} jest równa sumie parametru \emph{cmax} dla cz¹stkowego uszeregowania otrzymanego na danym etapie przeszukiwania i pewnej wartoœci optymistycznie szacuj¹cej minimalny czas konieczny do wykonania pozosta³ych zadañ, zwanej dalej \emph{approx}:
+$$\emph{cmax\_min} = \emph{cmax} + \emph{approx}$$
+Ograniczenie to jest wyliczane dla obu maszyn osobno, a nastêpnie zostaje wybrana wiêksza z wartoœci, przy czym za \emph{cmax} dla danej maszyny przyjmuje siê czas zakoñczenia ostatniego zadania na tej maszynie.
+
+\subsubsection{Wariant $\emph{limit}=1$}
+Druga z zaimplementowanych funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=1$, szacuje minimalny pozosta³y czas, czyli \emph{approx}, jako:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\item sumê czasów przetwarzania pozosta³ych zadañ i czasów niedostêpnoœci   bêd¹cych w ich zasiêgu, obliczonym przy za³o¿eniu, wykonaj¹ siê bez dodatkowych opóŸnieñ  -- dla pierwszej maszyny,
+\item sumê czasów przetwarzania pozosta³ych zadañ -- dla drugiej maszyny.
+\end{enumerate}
+
+\subsubsection{Wariant $\emph{limit}=2$}
+Kolejna funkcja ograniczaj¹ca, wybierana wartoœci¹ $\emph{limit}=2$, dodaje przy szacowaniu minimalnego pozosta³ego czasu dodatkowo opóŸnienia wynikaj¹ce z nastêpuj¹cych faktów, dotycz¹cych pozosta³ych zadañ:
 \begin{itemize}
-\item wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego ($\emph{limit}=0$),
-\item 
-\item 
+\item przetwarzanie na pierwszej maszynie nie mo¿e siê rozpocz¹æ przed przybyciem najwczeœniejszego zadania,
+\item je¿eli w zasiêgu najkrótszego zadania znajduje siê okres niedostêpnoœci, to podzia³ zadania na tym okresie jest nieunikniony,
+\item przetwarzanie na drugiej maszynie mo¿e siê rozpocz¹æ dopiero z chwil¹ najwczeœniejszego mo¿liwego ukoñczenia zadania na maszynie pierwszej,
+\item dla wszystkich zadañ musi byæ spe³niony warunek \emph{nowait}, dlatego przetwarzanie na pierwszej maszynie mo¿e siê rozpocz¹æ najwczeœniej w chwili, dla której dla najbardziej dopasowanego zadania ten warunek bêdzie zachodzi³,
+\item po zakoñczeniu przetwarzania na maszynie pierwszej, na maszynie drugiej musi zostaæ wykonana przynajmniej praca zwi¹zana z zadaniem o najkrótszym czasie przetwarzania dla tej maszyny.
 \end{itemize}
 
-optymalizacje
-
-approx1
-
-time_passed, time_left to wiadomo
-
-offline_sum liczy offlines od time[0] do time[0] + time_left(0), ¿eby nie policzyæ offlines które s¹ za przewidywanym koñcem
-
-approx2
-
-approx1 +
-
-m1_start - zwraca minimalne przesuniêcie rozpoczêcia pracy na pierwszej maszynie w stosunku do time[0]. Przesuniêcie mo¿e wynikaæ z tego, ¿e dla wszystkich zadañ arrival > time[0] lub z koniecznoœci podzielenia zadania. (trochê mo¿na poprawiæ tê funkcjê, jak starczy czasu to tak zrobimy, bo teraz te dwie sytuacje, tzn. za du¿e arrivals i podzia³ s¹ wykrywane roz³¹cznie, a mo¿na wykrywaæ obie naraz)
-
-m2_start - zwraca minimalne przesuniêcie rozpoczêcia pracy na drugiej maszynie w stosunku do time[1]. Za najwczeœniejszy mo¿liwy pocz¹tek uznaje najmniejsz¹ z wartoœci x = max(time[0], arrival) + sums[0] liczon¹ dla wszystkich pozosta³ych zadañ. Je¿eli x > time[1] to zwraca x - time[1], wpp. 0. Nie uwzglêdnia istnienia offlines.
-
-nowait_shift - wykrywa sytuacjê w której warunek nowait lub arrival wymusza rozpoczêcie zadania po time[0] (zamiast dok³adnie w time[0]). Nie uwzglêdnia istnienia offlines. Tu jest ciê¿ka sprawa, bo nowait_shift robi podobn¹ rzecz jak m1_start i trzeba uwa¿aæ ¿eby nie policzyæ 2 razy tego samego, wiêc mo¿e jednak nie da siê poprawiæ m1_start tak jak myœla³em. Ogólnie jest to nietrywialne i mo¿e lepiej nie tykaæ :D 
-
-shortest_left - wybiera najkrótsze zadanie wg czêœci na drugiej maszynie. Zwrócon¹ wartoœæ mo¿na bezpiecznie dodaæ do czasu na pierwszej maszynie, bo druga musi skoñczyæ dzia³anie po pierwszej o co najmniej tyle jednostek czasu ile wynosi d³. najkrótszego zadania.
-
-approx 3
-
-m1start , m2_start i no-waitshift zawieraj¹ siê w machine_starts wiêc nie mo¿na ich dodawaæ drugi raz, shortest_left mo¿e zostaæ
-
-machine_starts - wylicza wszystkie przesuniêcia zwi¹zane z ustawieniem zadania (po prostu je ustawia i odejmuje jego d³ugoœæ i ewentualnie d³ugoœæ offline'ów)
-Wylicza minimalne mo¿liwe przesuniêcia oddzielnie dla obu maszyn.
-
-Tak w ogóle to trzeba napisaæ, ¿e liczymy oddzielnie dla obu maszyn ograniczenie i wybieramy z nich maksa, mo¿e ciekawa bêdzie statystyka która maszyna czêœciej daje wiêksz¹ wartoœæ, chocia¿ to zale¿y g³ównie od parametrów testu, a nie optymalizacji (parametrów w sensie suma zadañ na pierwszej + suma offlineów a suma zadañ na drugiej).
-
-
-
+\subsubsection{Wariant $\emph{limit}=3$}
+Ostatnia z funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=3$, wykorzystuje dla pierwszego zadania pe³en algorytm szeregowania danego, dziêki czemu uwzglêdnia wszystkiego opóŸnienia wynikaj¹ce z warunków zawartych w postawionym problemie, w tym m.in. czasy przygotowania wymuszone podzia³em zadania przez wszystkie maj¹ce na nie wp³yw okresy niedostêpnoœci. O ile prowadzi to do ograniczenia najdok³adniejszego spoœród opisanych, wymaga to wiêkszej iloœci obliczeñ i co za tym idzie -- otrzymana funkcja ograniczaj¹ca powoduje dla pewnych instancji d³u¿szy dzia³ania algorytmu ni¿ jego pozornie gorsze warianty. Dla pozosta³ych zadañ stosowane s¹ zwyk³e sumy, tak jak w przypadku pozosta³ych funkcji ograniczaj¹cych. Uwzglêdniane jest równie¿ opóŸnienie wynikaj¹ce z wykonania na drugiej maszynie na zakoñczenie przynajmniej zadania o najkrótszym czasie przetwarzania dla tej maszyny.
 
 \subsection{Optymalizacje techniczne}
+Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszukiwania drzewa rozwi¹zañ. W celu zapewnienia sta³ego czasu wykonania operacji dodania i usuniêcia zadania na koñcu cz¹stkowej permutacji wykorzystywana jest jedna tablica o sta³ym rozmiarze równym iloœæ zadañ wystêpuj¹cych w instancji, przechowuj¹ca ich indeksy. Dodatkowo pamiêtany jest indeks, oznaczony dalej \emph{line}, rozdzielaj¹cy tablicê na czêœæ pocz¹tkow¹, reprezentuj¹c¹ aktualn¹ cz¹stkow¹ permutacjê, oraz czêœæ koñcow¹, zawieraj¹c¹ listê zadañ pozosta³ych do uszeregowania. Etap rozga³êzienia algorytmu polega na iteracyjnym przejrzeniu tej listy i wykonaniu dla ka¿dego z jej elementów nastêpuj¹cych kroków:
+\begin{enumerate}
+\item Zamiany wybranego elementu z elementem o pozycji \emph{line}.
+\item Zwiêkszenia wartoœci \emph{line} o 1.
+\item Rekurencyjnego wywo³ania algorytmu.
+\item Zmniejszenia wartoœci \emph{line} o 1.
+\item Ponownej zamiany wybranego elementu z elementem o pozycji \emph{line}.
+\end{enumerate}
 
 \section{Wyniki eksperymentu}
+W celu przetestowania efektywnoœci zaimplementowanego algorytmu przeprowadzono szereg pomiarów dla ró¿nych wielkoœci instancji. Zbadany zosta³ zakres od 5 zadañ do 13 -- w przypadku metody $\emph{limit}=0$ -- oraz do 25 -- w pozosta³ych przypadkach. W celu zwiêkszenia obiektywnoœci przeprowadzanych testów ka¿da iloœæ zadañ z badanego zakresu by³a reprezentowana przez 20 losowo wygenerowanych instancji. W ramach ka¿dej z nich przetestowano wszystkie kombinacje parametrów \emph{init}, \emph{setup} i \emph{limit}, z wyj¹tkiem opisanym wczeœniej. Wymienione górne granice zosta³y przyjête jako maksymalna iloœæ zadañ, dla której dany wariant algorytmu zdo³a³ wyliczyæ przynajmniej 3 instancje. Jako limit czasowy przyjêto 60 sekund -- obliczenia trwaj¹ce d³u¿ej by³y przerywane, a dana instancja oznaczana jako ,,niewyliczalna'' przez badany wariant algorytmu. 
 
 \end{document}
