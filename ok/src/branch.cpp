@@ -17,6 +17,14 @@ int approx0(Flowshop&, Order& p)
 	return p.time_passed(1);
 }
 
+/*
+approx1
+
+time_passed, time_left to wiadomo
+
+offline_sum liczy offlines od time[0] do time[0] + time_left(0), ¿eby nie policzyæ offlines które s¹ za przewidywanym koñcem
+*/
+
 int approx1(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0);
@@ -26,6 +34,20 @@ int approx1(Flowshop&, Order& p)
 	return max(m1,m2);
 }
 
+/*
+approx2
+
+approx1 +
+
+m1_start - zwraca minimalne przesuniêcie rozpoczêcia pracy na pierwszej maszynie w stosunku do time[0]. Przesuniêcie mo¿e wynikaæ z tego, ¿e dla wszystkich zadañ arrival > time[0] lub z koniecznoœci podzielenia zadania. (trochê mo¿na poprawiæ tê funkcjê, jak starczy czasu to tak zrobimy, bo teraz te dwie sytuacje, tzn. za du¿e arrivals i podzia³ s¹ wykrywane roz³¹cznie, a mo¿na wykrywaæ obie naraz)
+
+m2_start - zwraca minimalne przesuniêcie rozpoczêcia pracy na drugiej maszynie w stosunku do time[1]. Za najwczeœniejszy mo¿liwy pocz¹tek uznaje najmniejsz¹ z wartoœci x = max(time[0], arrival) + sums[0] liczon¹ dla wszystkich pozosta³ych zadañ. Je¿eli x > time[1] to zwraca x - time[1], wpp. 0. Nie uwzglêdnia istnienia offlines.
+
+nowait_shift - wykrywa sytuacjê w której warunek nowait lub arrival wymusza rozpoczêcie zadania po time[0] (zamiast dok³adnie w time[0]). Nie uwzglêdnia istnienia offlines. Tu jest ciê¿ka sprawa, bo nowait_shift robi podobn¹ rzecz jak m1_start i trzeba uwa¿aæ ¿eby nie policzyæ 2 razy tego samego, wiêc mo¿e jednak nie da siê poprawiæ m1_start tak jak myœla³em. Ogólnie jest to nietrywialne i mo¿e lepiej nie tykaæ :D 
+
+shortest_left - wybiera najkrótsze zadanie wg czêœci na drugiej maszynie. Zwrócon¹ wartoœæ mo¿na bezpiecznie dodaæ do czasu na pierwszej maszynie, bo druga musi skoñczyæ dzia³anie po pierwszej o co najmniej tyle jednostek czasu ile wynosi d³. najkrótszego zadania.
+*/
+
 int approx2(Flowshop&, Order& p)
 {
 	int m1_begin = p.time_passed(0) + p.m1_start() + p.nowait_shift();
@@ -34,6 +56,14 @@ int approx2(Flowshop&, Order& p)
 	int m2 = m2_begin + p.time_left(1);
 	return max(m1,m2);
 }
+
+/*
+approx 3
+
+m1start , m2_start i no-waitshift zawieraj¹ siê w machine_starts wiêc nie mo¿na ich dodawaæ drugi raz, shortest_left mo¿e zostaæ
+
+machine_starts - wylicza wszystkie przesuniêcia zwi¹zane z ustawieniem zadania (po prostu je ustawia i odejmuje jego d³ugoœæ i ewentualnie d³ugoœæ offline'ów)
+*/
 
 int approx3(Flowshop&, Order& p)
 {
