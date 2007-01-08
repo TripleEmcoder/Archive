@@ -1,0 +1,7 @@
+tag,date,init,limit,setup,time,calls
+pusty,2007-01-08 05:42:21,3,1,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 05:42:33,3,2,2,11.90,15337150
+pusty,2007-01-08 05:42:44,3,3,2,10.68,9595766
+pusty,2007-01-08 17:39:51,3,1,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 17:40:12,3,2,1,21.26,28288934
+pusty,2007-01-08 17:40:32,3,3,1,19.87,17960016

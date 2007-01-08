@@ -1,0 +1,52 @@
+#!/bin/sh
+TOOLS=../../src
+
+TAG="pusty"
+
+TESTS="[56789]-*.in 1[0123]-*.in"
+
+INITS="1 2 3" \
+LIMITS="0 1 2 3" \
+SETUPS="2" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="1[456789]-*.in 20-*.in"
+
+INITS="1 2 3" \
+LIMITS="1 2 3" \
+SETUPS="2" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="2[12345]-*.in"
+
+INITS="3" \
+LIMITS="1 2 3" \
+SETUPS="2" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="[56789]-*.in 1[0123]-*.in"
+
+INITS="1 2 3" \
+LIMITS="0 1 2 3" \
+SETUPS="1" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="1[456789]-*.in 20-*.in"
+
+INITS="1 2 3" \
+LIMITS="1 2 3" \
+SETUPS="1" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"
+
+TESTS="2[12345]-*.in"
+
+INITS="3" \
+LIMITS="1 2 3" \
+SETUPS="1" \
+TIMEOUT="60" \
+$TOOLS/test2 "$TAG" "$TESTS"

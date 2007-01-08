@@ -1,0 +1,19 @@
+tag,date,init,limit,setup,time,calls
+pusty,2007-01-08 02:41:56,1,1,2,56.51,273965973
+pusty,2007-01-08 02:42:56,1,2,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 02:43:52,1,3,2,56.13,68066426
+pusty,2007-01-08 02:44:21,2,1,2,29.00,138948613
+pusty,2007-01-08 02:44:49,2,2,2,27.37,40468355
+pusty,2007-01-08 02:45:14,2,3,2,24.71,27951663
+pusty,2007-01-08 02:45:26,3,1,2,12.20,55826124
+pusty,2007-01-08 02:45:38,3,2,2,11.55,15905317
+pusty,2007-01-08 02:45:49,3,3,2,11.13,11073432
+pusty,2007-01-08 13:58:12,1,1,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 13:59:12,1,2,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 14:00:12,1,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 14:01:09,2,1,1,56.63,273965973
+pusty,2007-01-08 14:02:09,2,2,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-08 14:03:05,2,3,1,56.13,68066426
+pusty,2007-01-08 14:03:16,3,1,1,10.40,47139617
+pusty,2007-01-08 14:03:26,3,2,1,10.11,13934959
+pusty,2007-01-08 14:03:36,3,3,1,9.44,9735132
