@@ -5,3 +5,9 @@ pusty,2007-01-08 07:21:04,3,3,2,3.63,1261750
 pusty,2007-01-08 19:30:00,3,1,1,6.82,23625868
 pusty,2007-01-08 19:30:05,3,2,1,5.37,4429032
 pusty,2007-01-08 19:30:09,3,3,1,4.01,1645982
+pusty,2007-01-10 01:27:49,1,1,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 01:28:49,1,2,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 01:29:49,1,3,2,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 01:30:17,2,1,2,26.75,127530502
+pusty,2007-01-10 01:30:33,2,2,2,16.19,19542822
+pusty,2007-01-10 01:30:44,2,3,2,10.90,7919155
