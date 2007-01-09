@@ -11,3 +11,9 @@ pusty,2007-01-10 01:29:49,1,3,2,Command exited with non-zero status 137 0.00,Tim
 pusty,2007-01-10 01:30:17,2,1,2,26.75,127530502
 pusty,2007-01-10 01:30:33,2,2,2,16.19,19542822
 pusty,2007-01-10 01:30:44,2,3,2,10.90,7919155
+pusty,2007-01-10 11:05:25,1,1,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 11:06:25,1,2,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 11:07:26,1,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 11:08:26,2,1,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 11:09:26,2,2,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
+pusty,2007-01-10 11:10:26,2,3,1,Command exited with non-zero status 137 0.00,Timeout: aborting command ``../../src/branch'' with signal 9 Killed
