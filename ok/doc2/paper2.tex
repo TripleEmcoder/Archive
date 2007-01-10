@@ -102,7 +102,7 @@ W celu przypisania \emph{cmax\_best} mo¿liwie wczeœnie wartoœci bliskiej optymal
 Wyboru metody dokonuje siê poprzez ustawienie parametru algorytmu zwanego dalej \emph{init}. Ponadto mo¿liwe jest okreœlenie czy powy¿sza metoda inicjalizacji jedynie definiuje wstêpn¹ wartoœæ \emph{cmax\_best}, czy powoduje te¿ narzucenie porz¹dku przeszukiwania -- rozpoczyna siê ono wtedy od rozwi¹zania wstêpnego. Decyduje o tym parametr \emph{setup}, przyjmuj¹cy dla opisanych sytuacji wartoœci odpowiednio 1 i 2.
 
 \subsection{Dolne ograniczenie}
-W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{limit}. Najprostsza z nich, wybierana wartoœci¹ $\emph{limit}=0$, wynika z obserwacji, ¿e wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego. Innymi s³owy szeregowanie kolejnych zadañ mo¿e j¹ jedynie zwiêkszaæ, co jest oczywist¹ konsekwencj¹ nieujemnych czasów przetwarzania. Kolejne funkcje ograniczaj¹ce uwzglêdniaj¹ powy¿sz¹ obserwacjê oraz pewne dodatkowe, opisane w kolejnych punktach, dotycz¹ce zadañ jeszcze nieuszeregowanych. W ogólnoœci mo¿na powiedzieæ, ¿e wartoœæ ograniczenia \emph{cmax\_min} jest równa sumie parametru \emph{cmax} dla cz¹stkowego uszeregowania otrzymanego na danym etapie przeszukiwania i pewnej wartoœci optymistycznie szacuj¹cej minimalny czas konieczny do wykonania pozosta³ych zadañ, zwanej dalej \emph{approx}:
+W trakcie implementacji algorytmu opracowano kilka funkcji ograniczaj¹cych o zró¿nicowanej skutecznoœci. Ich wyboru dokonuje siê parametrem \emph{limit}. Najprostsza z nich, wybierana wartoœci¹ $\emph{limit}=0$, wynika z obserwacji, ¿e wartoœæ parametru \emph{cmax} dla pe³nego uszeregowania jest niemniejsza ni¿ dla pewnego uszeregowania cz¹stkowego. Innymi s³owy szeregowanie kolejnych zadañ mo¿e j¹ jedynie zwiêkszaæ, co jest oczywist¹ konsekwencj¹ nieujemnych czasów przetwarzania. Kolejne funkcje ograniczaj¹ce uwzglêdniaj¹ powy¿sz¹ obserwacjê oraz pewne dodatkowe, opisane w kolejnych punktach, dotycz¹ce zadañ jeszcze nieuszeregowanych. W ogólnoœci mo¿na powiedzieæ, ¿e wartoœæ ograniczenia \emph{cmax\_min} jest równa sumie parametru \emph{cmax} dla cz¹stkowego uszeregowania otrzymanego na danym etapie przeszukiwania i pewnej wartoœci szacuj¹cej minimalny czas konieczny do wykonania pozosta³ych zadañ, zwanej dalej \emph{approx}:
 $$\emph{cmax\_min} = \emph{cmax} + \emph{approx}$$
 Ograniczenie to jest wyliczane dla obu maszyn osobno, a nastêpnie zostaje wybrana wiêksza z wartoœci, przy czym za \emph{cmax} dla danej maszyny przyjmuje siê czas zakoñczenia ostatniego zadania na tej maszynie.
 
@@ -125,7 +125,7 @@ Kolejna funkcja ograniczaj¹ca, wybierana wartoœci¹ $\emph{limit}=2$, dodaje przy
 \end{itemize}
 
 \subsubsection{Wariant $\emph{limit}=3$}
-Ostatnia z funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=3$, wykorzystuje dla pierwszego zadania pe³en algorytm szeregowania danego, dziêki czemu uwzglêdnia wszystkiego opóŸnienia wynikaj¹ce z warunków zawartych w postawionym problemie, w tym m.in. czasy przygotowania wymuszone podzia³em zadania przez wszystkie maj¹ce na nie wp³yw okresy niedostêpnoœci. O ile prowadzi to do ograniczenia najdok³adniejszego spoœród opisanych, wymaga to wiêkszej iloœci obliczeñ i co za tym idzie -- otrzymana funkcja ograniczaj¹ca powoduje dla pewnych instancji d³u¿szy dzia³ania algorytmu ni¿ jego pozornie gorsze warianty. Dla pozosta³ych zadañ stosowane s¹ zwyk³e sumy, tak jak w przypadku pozosta³ych funkcji ograniczaj¹cych. Uwzglêdniane jest równie¿ opóŸnienie wynikaj¹ce z wykonania na drugiej maszynie na zakoñczenie przynajmniej zadania o najkrótszym czasie przetwarzania dla tej maszyny.
+Ostatnia z funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=3$, wykorzystuje algorytm dok³adnego szeregowania, dziêki czemu uwzglêdnia wszystkie opóŸnienia wynikaj¹ce z warunków zawartych w postawionym problemie, w tym m.in. czasy przygotowania wymuszone podzia³em zadania przez wszystkie maj¹ce na nie wp³yw okresy niedostêpnoœci. O ile prowadzi to do ograniczenia najdok³adniejszego spoœród opisanych, wymaga to wiêkszej iloœci obliczeñ i co za tym idzie -- otrzymana funkcja ograniczaj¹ca powoduje dla pewnych instancji d³u¿szy czas dzia³ania algorytmu ni¿ jego pozornie gorsze warianty. Jej dzia³anie polega na dok³adnym uszeregowaniu na pierwszej pozycji kolejno ka¿dego z pozosta³ych zadañ, a nastêpnie wybraniu spoœród nich tego, które koñczy siê najwczeœniej. W celu oszacowania czasu przetwarzania pozosta³ych zadañ stosowane s¹ zwyk³e sumy, tak jak w przypadku wczeœniejszych funkcji ograniczaj¹cych. Uwzglêdniane jest równie¿ opóŸnienie wynikaj¹ce z wykonania na drugiej maszynie na zakoñczenie przynajmniej zadania o najkrótszym czasie przetwarzania dla tej maszyny.
 
 \subsection{Optymalizacje techniczne}
 Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszukiwania drzewa rozwi¹zañ. W celu zapewnienia sta³ego czasu wykonania operacji dodania i usuniêcia zadania na koñcu cz¹stkowej permutacji wykorzystywana jest jedna tablica o sta³ym rozmiarze równym iloœæ zadañ wystêpuj¹cych w instancji, przechowuj¹ca ich indeksy. Dodatkowo pamiêtany jest indeks, oznaczony dalej \emph{line}, rozdzielaj¹cy tablicê na czêœæ pocz¹tkow¹, reprezentuj¹c¹ aktualn¹ cz¹stkow¹ permutacjê, oraz czêœæ koñcow¹, zawieraj¹c¹ listê zadañ pozosta³ych do uszeregowania. Etap rozga³êzienia algorytmu polega na iteracyjnym przejrzeniu tej listy i wykonaniu dla ka¿dego z jej elementów nastêpuj¹cych kroków:
@@ -137,7 +137,77 @@ Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszu
 \item Ponownej zamiany wybranego elementu z elementem o pozycji \emph{line}.
 \end{enumerate}
 
+Dziêki sumowaniu wykonywanemu na bie¿¹co przy dodawaniu i usuwaniu zadañ, funkcje ograniczaj¹ce wybierane wartoœciami $\emph{limit}=0$ i $\emph{limit}=1$ dzia³aj¹ w czasie sta³ym. Pozosta³e s¹ zale¿ne liniowo od iloœci pozosta³ych zadañ.
+
 \section{Wyniki eksperymentu}
-W celu przetestowania efektywnoœci zaimplementowanego algorytmu przeprowadzono szereg pomiarów dla ró¿nych wielkoœci instancji. Zbadany zosta³ zakres od 5 zadañ do 13 -- w przypadku metody $\emph{limit}=0$ -- oraz do 25 -- w pozosta³ych przypadkach. W celu zwiêkszenia obiektywnoœci przeprowadzanych testów ka¿da iloœæ zadañ z badanego zakresu by³a reprezentowana przez 20 losowo wygenerowanych instancji. W ramach ka¿dej z nich przetestowano wszystkie kombinacje parametrów \emph{init}, \emph{setup} i \emph{limit}, z wyj¹tkiem opisanym wczeœniej. Wymienione górne granice zosta³y przyjête jako maksymalna iloœæ zadañ, dla której dany wariant algorytmu zdo³a³ wyliczyæ przynajmniej 3 instancje. Jako limit czasowy przyjêto 60 sekund -- obliczenia trwaj¹ce d³u¿ej by³y przerywane, a dana instancja oznaczana jako ,,niewyliczalna'' przez badany wariant algorytmu. 
+\subsection{Procedura testowa}
+W celu przetestowania efektywnoœci zaimplementowanego algorytmu przeprowadzono szereg pomiarów dla ró¿nych wielkoœci instancji. Zbadany zosta³ zakres od 5 zadañ do 13 -- w przypadku metody $\emph{limit}=0$ -- oraz do 25 -- w pozosta³ych przypadkach. W celu zwiêkszenia obiektywnoœci przeprowadzanych testów ka¿da iloœæ zadañ z badanego zakresu by³a reprezentowana przez 20 losowo wygenerowanych instancji. W ramach ka¿dej z nich przetestowano wszystkie kombinacje parametrów \emph{init}, \emph{setup} i \emph{limit}, z wyj¹tkiem opisanym wczeœniej. Wymienione górne granice zosta³y przyjête jako maksymalna iloœæ zadañ, dla której dany wariant algorytmu zdo³a³ wyliczyæ przynajmniej 3 instancje. Jako limit czasowy przyjêto 60 sekund -- obliczenia trwaj¹ce d³u¿ej by³y przerywane, a dana instancja oznaczana jako niewyliczona przez badany wariant algorytmu. 
+
+\subsection{Analiza jakoœciowa}
+Pierwsz¹ z wykonanych analiz by³o sprawdzenie skutecznoœci poszczególnych wariantów algorytmu, rozumianej jako iloœæ instancji wyliczonych w ustalonym limicie czasowym. Wyniki tej analizy przedstawiaj¹ wykresy na rysunkach \ref{fig:done_setup}, \ref{fig:done_limit} i \ref{fig:done_init}, porównuj¹ce iloœæ wyliczonych instancji przy kolejnych ich wielkoœciach dla wariantów algorytmu wybieranych odpowiednio parametrami \emph{setup}, \emph{limit} i \emph{init}. Iloœæ instancji wyliczonych przy ustalonej wartoœci analizowanego parametru by³a przyjmowana jako suma po wszystkich wartoœciach pozosta³ych parametrów, za wyj¹tkiem opisanym dalej. Pozwoli³o to na ³atwe wyznaczenie wariantu algorytmu statystycznie najskuteczniejszego. Dla czytelnoœci wykresów iloœæ wyliczonych instancji by³a przedstawiana jako procentowy udzia³ wywo³añ algorytmu zakoñczonych sukcesem w ca³kowitej ich liczbie.
+Przed omówieniem wniosków p³yn¹cych z wykonanej analizy nale¿y zaznaczyæ, ¿e jakiekolwiek ró¿nice w skutecznoœci ujawniaj¹ siê dopiero dla iloœci zadañ wiêkszej od 11. Dla mniejszych instancji wybór wariantu algorytmu jest ca³kowicie dowolny. W kolejnych punktach zostanie pokazane, ¿e przy tak ograniczonej wielkoœci instancji równie¿ pod wzglêdem czasu obliczeñ nie ma wyraŸnych ró¿nic.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_9}
+\caption{Udzia³ obliczonych instancji w zale¿noœci od liczby zadañ i parametru \emph{setup}}
+\label{fig:done_setup}
+\end{figure}
+
+Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybierana wartoœci¹ $\emph{setup}=2$, czyli narzucaj¹ca porz¹dek przeszukiwania wynikaj¹cy z oszacowanego rozwi¹zania, pozwala na wyliczaæ wyraŸnie wiêksze iloœci instancji. Dalsze analizy obejmuj¹ wy³¹cznie warianty algorytmu wykorzystuj¹ce t¹ metodê.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_1}
+\caption{Udzia³ obliczonych instancji w zale¿noœci od liczby zadañ i parametru \emph{limit}}
+\label{fig:done_limit}
+\end{figure}
+
+Wykres na rysunku \ref{fig:done_limit} wyraŸnie obrazuje nisk¹ skutecznoœæ funkcji ograniczaj¹cej wybieranej wartoœci¹ $\emph{limit}=0$, czyli korzystaj¹cej jedynie z faktu, ¿e szeregowanie zadañ nie zmniejsza wartoœci parametru \emph{cmax}. Pozwala ona wyliczaæ instancje o maksymalnej wielkoœci 13 zadañ, przy czym spadek iloœci wyliczonych instancji dla tej wielkoœci jest bliski 80\%, co œwiadczy o bardzo ma³ej sile ograniczenia.
+Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywaln¹ skutecznoœci¹. Szczegó³owa analiza pod wzglêdem iloœciowych zostanie przedstawiona w kolejnych punktach.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_2}
+\caption{Udzia³ obliczonych instancji w zale¿noœci od liczby zadañ i parametru \emph{init}.}
+\label{fig:done_init}
+\end{figure}
+
+Analiza wykresu na rysunku \ref{fig:done_init} równie¿ nie prowadzi do zaskakuj¹cych wniosków. Jak mo¿na siê by³o spodziewaæ, metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=3$, czyli wykorzystuj¹ca opracowany w pierwszej fazie projektu algorytm typu \emph{tabu search}, daje najlepsze rezultaty. Warto zaznaczyæ, ¿e ró¿nice w iloœciach wyliczonych instancji s¹ znacznie wyraŸniejsze ni¿ dla parametru \emph{limit}, co potwierdza, ¿e odpowiednie wstêpne oszacowanie rozwi¹zania jest kluczowe dla sprawnego dzia³ania ca³ego algorytmu. Metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=1$, czyli wykorzystuj¹ca rozwi¹zanie otrzymane przez posortowanie zadañ, nie wyliczy³a ¿adnej instancji o wielkoœci 24 i 25, nawet przy zastosowaniu najlepszej funkcji ograniczaj¹cej.
+Dla poprawienia czytelnoœci przy tworzeniu wykresu pominiêto testy przeprowadzone dla wartoœci $\emph{limit}=0$. Powodowa³a ona znacznym niezwi¹zany z parametrem \emph{init} spadek skutecznoæi dla instancji o wielkoœciach 13 zadañ i wiêkszych. 
+
+\subsection{Analiza iloœciowa}
+, z niewielkim, negatywnych odstêpstwem dla funkcji wybieranej wartoœci¹ $\emph{limit}=1$.
+Ju¿ najprostsze ulepszenie funkcji ograniczaj¹cej, uwzglêdniaj¹ce tylko sumy d³ugoœci zadañ i okresów niedostêpnoœci Ogromne poprawê przynosi uwzglêdnienie 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_4}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_5}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_6}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_7}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_8}
+\end{figure}
 
 \end{document}
