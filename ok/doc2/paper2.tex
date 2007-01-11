@@ -111,7 +111,7 @@ Ograniczenie to jest wyliczane dla obu maszyn osobno, a nastêpnie zostaje wybran
 Druga z zaimplementowanych funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=1$, szacuje minimalny pozosta³y czas, czyli \emph{approx}, jako:
 \begin{enumerate}
 \renewcommand{\labelenumi}{\alph{enumi})}
-\item sumê czasów przetwarzania pozosta³ych zadañ i czasów niedostêpnoœci   bêd¹cych w ich zasiêgu, obliczonym przy za³o¿eniu, wykonaj¹ siê bez dodatkowych opóŸnieñ  -- dla pierwszej maszyny,
+\item sumê czasów przetwarzania pozosta³ych zadañ i czasów niedostêpnoœci   bêd¹cych w ich zasiêgu, obliczonym przy za³o¿eniu, ¿e wykonaj¹ siê bez dodatkowych opóŸnieñ  -- dla pierwszej maszyny,
 \item sumê czasów przetwarzania pozosta³ych zadañ -- dla drugiej maszyny.
 \end{enumerate}
 
@@ -167,7 +167,7 @@ Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybie
 \end{figure}
 
 Wykres na rysunku \ref{fig:done_limit} wyraŸnie obrazuje nisk¹ skutecznoœæ funkcji ograniczaj¹cej wybieranej wartoœci¹ $\emph{limit}=0$, czyli korzystaj¹cej jedynie z faktu, ¿e szeregowanie zadañ nie zmniejsza wartoœci parametru \emph{cmax}. Pozwala ona wyliczaæ instancje o maksymalnej wielkoœci 13 zadañ, przy czym spadek iloœci wyliczonych instancji dla tej wielkoœci jest bliski 80\%, co œwiadczy o bardzo ma³ej sile ograniczenia.
-Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywaln¹ skutecznoœci¹. Szczegó³owa analiza pod wzglêdem iloœciowych zostanie przedstawiona w kolejnych punktach.
+Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywaln¹ skutecznoœci¹. Szczegó³owa analiza pod wzglêdem iloœciowym zostanie przedstawiona w kolejnych punktach.
 
 \begin{figure}[h!]
 \centering
@@ -235,7 +235,7 @@ Ostatni¹ z wykonanych analiz przedstawia wykres na rysunku \ref{fig:time_limit_r
 \label{fig:time_limit_repeat}
 \end{figure}
 
-Jak widaæ z wykresu, wystêpuj¹ skrajane rozbie¿noœci w dzia³aniu algorytmu dla ró¿nych instancji o tej samej wielkoœci. Zdarzaj¹ siê instancje:
+Jak widaæ z wykresu, wystêpuj¹ skrajne rozbie¿noœci w dzia³aniu algorytmu dla ró¿nych instancji o tej samej wielkoœci. Zdarzaj¹ siê instancje:
 \begin{enumerate}
 \item wyliczane bardzo szybko (13),
 \item wyliczane w czasach zgodnych ze œredni¹ tendencj¹ opisan¹ w poprzednich punktach (4),
