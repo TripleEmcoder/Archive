@@ -12,7 +12,7 @@
 
 #define GROUP_JOINED_NOTIFY     "Uzytkownik %s wszedl do grupy %s."
 #define GROUP_JOINED_REPLY      "Dolaczono do grupy."
-#define ALREADY_JOINED_REPLY    "Juz nalezysz do tej grupie."
+#define ALREADY_JOINED_REPLY    "Juz nalezysz do tej grupy."
 
 #define GROUP_PARTED_NOTIFY     "Uzytkownik %s wyszedl z grupy %s."
 #define GROUP_PARTED_REPLY      "Odlaczono od grupy."
