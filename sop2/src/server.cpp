@@ -17,6 +17,7 @@ extern "C"
 #include "replies.h"
 #include "notifies.h"
 #include "windows.h"
+#include "messages.h"
 }
 
 map<int, string> nicks;
@@ -42,26 +43,31 @@ void handle_nick_request(int qid, nick_request* request)
 	request->nick[MAX_NICK] = '\0';
 	
 	write_debug_output("nick_request(%d, \"%s\")\n", qid, request->nick);
-		
-	if (qids.count(request->nick) == 0)
+	
+	if (strlen(request->nick) == 0)
 	{
-		char message[MAX_MESSAGE+1];
-		sprintf(message, NICK_CHANGED_NOTIFY,
-			nicks[qid].c_str(), request->nick);
-		
-		send_system_notify(qid, message);
-		send_system_reply(qid, NICK_CHANGED_REPLY);
-
-		qids.erase(nicks[qid]);
-		nicks.erase(qid);
-		
-		nicks[qid] = request->nick;
-		qids[request->nick] = qid;
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
 	}
-	else
+	
+	if (qids.count(request->nick) != 0)
 	{
 		send_system_reply(qid, DUPLICATE_NICK_REPLY);
+		return;
 	}
+
+	char message[MAX_MESSAGE+1];
+	sprintf(message, NICK_CHANGED_NOTIFY,
+		nicks[qid].c_str(), request->nick);
+		
+	send_system_notify(qid, message);
+	send_system_reply(qid, NICK_CHANGED_REPLY);
+	
+	qids.erase(nicks[qid]);
+	nicks.erase(qid);
+	
+	nicks[qid] = request->nick;
+	qids[request->nick] = qid;
 }
 
 void handle_groups_request(int qid, groups_request* request)
@@ -84,6 +90,12 @@ void handle_join_request(int qid, join_request* request)
 	
 	write_debug_output("join_request(%d, \"%s\")\n", qid, request->group);
 
+	if (strlen(request->group) == 0)
+	{
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
+
 	if (strcmp(request->group, SYSTEM_GROUP) == 0)
 	{
 		send_system_reply(qid, NOT_ALLOWED_REPLY);
@@ -92,13 +104,19 @@ void handle_join_request(int qid, join_request* request)
 
 	if (groups.count(request->group) == 0 && groups.size() == MAX_GROUPS)
 	{
-		send_system_reply(qid, MAX_GROUPS_REACHED);
+		send_system_reply(qid, MAX_GROUPS_REPLY);
 		return;
 	}
 
 	if (groups[request->group].count(qid) != 0)
 	{
 		send_system_reply(qid, ALREADY_JOINED_REPLY);
+		return;
+	}
+	
+	if (groups[request->group].size() == MAX_NICKS)
+	{
+		send_system_reply(qid, MAX_NICKS_REPLY);
 		return;
 	}
 
@@ -117,6 +135,12 @@ void handle_part_request(int qid, part_request* request)
 	request->group[MAX_GROUP] = '\0';
 	
 	write_debug_output("part_request(%d, \"%s\")\n", qid, request->group);
+
+	if (strlen(request->group) == 0)
+	{
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
 
 	if (strcmp(request->group, SYSTEM_GROUP) == 0)
 	{
@@ -149,6 +173,18 @@ void handle_users_request(int qid, users_request* request)
 	
 	write_debug_output("users_request(%d, \"%s\")\n", qid, request->group);
 	
+	if (strlen(request->group) == 0)
+	{
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
+
+	if (groups.count(request->group) == 0)
+	{
+		send_system_reply(qid, NONEXISTANT_GROUP_REPLY);
+		return;
+	}
+
 	set<int>& members = groups[request->group];
 	
 	char temp[MAX_NICKS][MAX_NICK+1];
@@ -168,21 +204,38 @@ void handle_private_request(int qid, private_request* request)
 	
 	write_debug_output("private_request(%d, \"%s\", \"%s\")\n", 
 		qid, request->nick, request->message);
-		
-	if (qids.count(request->nick) != 0)
+
+	if (strlen(request->nick) == 0)
 	{
-		send_private_notify(qids[request->nick], 
-			nicks[qid].c_str(), request->message);
-			
-		send_private_notify(qid, 
-			nicks[qid].c_str(), request->message);
-			
-		//send_system_reply(qid, MESSAGE_SENT_REPLY);
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
 	}
-	else
+
+	if (strlen(request->message) == 0)
 	{
-		send_system_reply(qid, INVALID_RECIPIENT_REPLY);		
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
 	}
+	
+	if (strcmp(request->nick, SYSTEM_NICK) == 0)
+	{
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
+
+	if (qids.count(request->nick) == 0)
+	{
+		send_system_reply(qid, INVALID_RECIPIENT_REPLY);
+		return;
+	}
+
+	send_private_notify(qids[request->nick], 
+		nicks[qid].c_str(), request->message);
+			
+	send_private_notify(qid, 
+		nicks[qid].c_str(), request->message);
+			
+	//send_system_reply(qid, MESSAGE_SENT_REPLY);
 }
 
 void handle_group_request(int qid, group_request* request)
@@ -192,22 +245,33 @@ void handle_group_request(int qid, group_request* request)
 
 	write_debug_output("group_request(%d, \"%s\", \"%s\")\n",
 		qid, request->group, request->message);
-		
-	if (groups.count(request->group) != 0)
+	
+	if (strlen(request->group) == 0)
 	{
-		set<int>& members = groups[request->group];
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
+
+	if (strlen(request->message) == 0)
+	{
+		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
+	}
+	
+	if (groups.count(request->group) == 0)
+	{
+		send_system_reply(qid, INVALID_RECIPIENT_REPLY);
+		return;
+	}
+
+	set<int>& members = groups[request->group];
 		
-		foreach (members, member)
-			//if (*member != qid)
-				send_group_notify(*member, nicks[qid].c_str(), 
-					request->group, request->message);
+	foreach (members, member)
+		//if (*member != qid)
+			send_group_notify(*member, nicks[qid].c_str(), 
+				request->group, request->message);
 			
-		//send_system_reply(qid, MESSAGE_SENT_REPLY);
-	}
-	else
-	{
-		send_system_reply(qid, INVALID_RECIPIENT_REPLY);		
-	}
+	//send_system_reply(qid, MESSAGE_SENT_REPLY);
 }
 
 void handle_client_request(int qid, packet_common* packet)
@@ -275,9 +339,15 @@ void read_client_queue(int qid)
 	}
 }
 
-void handle_client_login(int qid)
+bool handle_client_login(int qid)
 {
 	pthread_mutex_lock(&mutex);
+	
+	if (nicks.size() == MAX_NICKS)
+	{
+		send_system_reply(qid, MAX_NICKS_REPLY);
+		return false;
+	}
 	
 	write_output(CREATING_CLIENT_RECORD, qid);
 	
@@ -295,9 +365,11 @@ void handle_client_login(int qid)
 	send_system_reply(qid, AFTER_LOGIN_REPLY);
 	
 	pthread_mutex_unlock(&mutex);
+
+	return true;
 }
 
-void handle_client_logut(int qid)
+void handle_client_logout(int qid)
 {
 	pthread_mutex_lock(&mutex);
 	
@@ -330,9 +402,11 @@ void handle_client_queue(pid_t pid)
 		return;
 	}
 
-	handle_client_login(qid);
-	read_client_queue(qid);
-	handle_client_logut(qid);
+	if (handle_client_login(qid))
+	{
+		read_client_queue(qid);
+		handle_client_logout(qid);
+	}
 	
 	write_output(PARTING_CLIENT_QUEUE, qid);
 }
@@ -402,9 +476,11 @@ void handle_server_queue(key_t key)
 
 	nicks[qid] = SYSTEM_NICK;	
 	qids[SYSTEM_NICK] = qid;
+	groups[SYSTEM_GROUP].insert(qid);
 	
 	read_server_queue(qid);
 	
+	groups[SYSTEM_GROUP].erase(qid);
 	qids.erase(SYSTEM_NICK);
 	nicks.erase(qid);
 	

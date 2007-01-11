@@ -1,7 +1,7 @@
 #include "commands.h"
 #include "protocol.h"
 #include "requests.h"
-#include "client.h"
+#include "messages.h"
 #include <stdio.h>
 
 void handle_nick_command(int qid, const char* line)

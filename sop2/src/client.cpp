@@ -10,12 +10,15 @@ extern "C"
 #include "requests.h"
 #include "windows.h"
 #include "commands.h"
+#include "messages.h"
 }
 
 void handle_groups_reply(int qid, groups_reply* reply)
 {
+	write_output("Lista grup:\n");
+	
 	for (int i=0; i<reply->count; i++)
-		write_output("Grupa: %s\n", reply->groups[i]);
+		write_output("-> %s\n", reply->groups[i]);
 }
 
 void handle_private_notify(int qid, private_notify* notify)
@@ -36,9 +39,10 @@ void handle_group_notify(int qid, group_notify* notify)
 
 void handle_users_reply(int qid, users_reply* reply)
 {
-	write_output("Grupa: %s\n", reply->group);
+	write_output("Lista uzytkownikow w grupie %s:\n", reply->group);
+	
 	for (int i=0; i<reply->count; i++)
-		write_output("User: %s\n", reply->nicks[i]);
+		write_output("-> %s\n", reply->nicks[i]);
 }
 
 void handle_client_notify(int qid, packet_common* packet)
