@@ -73,7 +73,7 @@ void send_users_request(int qid, const char* group)
 
 void send_private_request(int qid, const char* nick, const char* message)
 {
-	write_debug_output("private_request(%d, %d, \"%s\")\n",
+	write_debug_output("private_request(%d, %s, \"%s\")\n",
 		qid, nick, message);
 
 	struct private_request request;

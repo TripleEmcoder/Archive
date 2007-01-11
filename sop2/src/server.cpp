@@ -245,7 +245,7 @@ void handle_client_request(int qid, packet_common* packet)
 			break;
 			
 		default:
-			write_output("Unknown client request (%d).\n", packet->subtype);
+			write_output(UNKNOWN_CLIENT_REQUEST, packet->subtype);
 			break;
 	}
 	
@@ -279,7 +279,7 @@ void handle_client_login(int qid)
 {
 	pthread_mutex_lock(&mutex);
 	
-	write_output("Initializing client structures...\n");
+	write_output(CREATING_CLIENT_RECORD, qid);
 	
 	char buffer[100];
 	sprintf(buffer, "%d", qid);
@@ -301,7 +301,7 @@ void handle_client_logut(int qid)
 {
 	pthread_mutex_lock(&mutex);
 	
-	write_output("Finalizing client structures...\n");
+	write_output(REMOVING_CLIENT_RECORD, qid);
 	
 	char message[MAX_MESSAGE+1];
 	sprintf(message, BEFORE_LOGOUT_NOTIFY, nicks[qid].c_str());
@@ -321,7 +321,7 @@ void handle_client_logut(int qid)
 
 void handle_client_queue(pid_t pid)
 {
-	write_output("Accessing client message queue...\n");
+	write_output(JOINING_CLIENT_QUEUE, pid);
 	int qid = msgget(pid, 0);
 	
 	if (qid == -1)
@@ -334,7 +334,7 @@ void handle_client_queue(pid_t pid)
 	read_client_queue(qid);
 	handle_client_logut(qid);
 	
-	write_output("Client message queue handler finished.\n");
+	write_output(PARTING_CLIENT_QUEUE, qid);
 }
 
 void handle_login_request(int qid, login_request* request)
@@ -345,6 +345,7 @@ void handle_login_request(int qid, login_request* request)
 	pthread_create(&id, NULL, 
 		(void* (*)(void*))handle_client_queue,
 		(void*)request->pid);
+		
 	//handle_client_queue(request->pid);
 }
 
@@ -357,7 +358,7 @@ void handle_server_request(int qid, packet_common* packet)
 			break;
 		
 		default:
-			write_output("Unknown server request (%d).\n", packet->subtype);
+			write_output(UNKNOWN_SERVER_REQUEST, packet->subtype);
 			break;
 	}
 }
@@ -390,7 +391,7 @@ int qid;
 
 void handle_server_queue(key_t key)
 {
-	write_output("Creating server message queue...\n");
+	write_output(CREATING_SERVER_QUEUE, key);
 	qid = msgget(SERVER_KEY, IPC_CREAT | 0660);
 	
 	if (qid == -1)
@@ -407,7 +408,7 @@ void handle_server_queue(key_t key)
 	qids.erase(SYSTEM_NICK);
 	nicks.erase(qid);
 	
-	write_output("Removing server message queue...\n");
+	write_output(REMOVING_SERVER_QUEUE, qid);
 	msgctl(qid, IPC_RMID, 0);
 }
 

@@ -62,7 +62,7 @@ void handle_client_notify(int qid, packet_common* packet)
 			break;
 			
 		default:
-			write_output("Unknown client notify (%d).\n", packet->subtype);
+			write_output(UNKNOWN_CLIENT_NOTIFY, packet->subtype);
 			break;
 	}
 }
@@ -113,7 +113,7 @@ void handle_stdin_command(int qid, const char* line)
 		handle_group_command(qid, line);
 	
 	else
-		write_output("Unknown client command (\"%s\").\n", command);
+		write_output(UNKNOWN_CLIENT_COMMAND, command);
 }
 
 void read_stdin_commands(int qid)
@@ -137,7 +137,7 @@ void read_stdin_commands(int qid)
 
 void handle_client_queue(pid_t pid)
 {
-	write_output("Creating client message queue...\n");
+	write_output(CREATING_CLIENT_QUEUE, pid);
 	int client = msgget(pid, IPC_CREAT | 0660);
 	
 	if (client == -1)
@@ -146,7 +146,7 @@ void handle_client_queue(pid_t pid)
 		return;
 	}
 	
-	write_output("Accessing server message queue...\n");
+	write_output(JOINING_SERVER_QUEUE, SERVER_KEY);
 	int server = msgget(SERVER_KEY, 0);
 	
 	if (server == -1)
@@ -155,21 +155,23 @@ void handle_client_queue(pid_t pid)
 		return;
 	}
 	
-	write_output("Sending login request...\n");
+	write_output(SENDING_LOGIN_REQUEST, server);
 	send_login_request(server, pid);
+	
+	write_output(PARTING_SERVER_QUEUE, server);
 	
 	pthread_t id;	
 	pthread_create(&id, NULL,
 		(void* (*)(void*))read_client_queue,
 		(void*)client);
-	//read_client_queue(client);
 	
+	//read_client_queue(client);
 	read_stdin_commands(client);
 	
-	write_output("Sending logout request...\n");
+	write_output(SENDING_LOGOUT_REQUEST, client);
 	send_logout_request(client);
 	
-	write_output("Removing client message queue...\n");
+	write_output(REMOVING_CLIENT_QUEUE, client);
 	msgctl(client, IPC_RMID, 0);
 }
 
