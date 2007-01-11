@@ -22,3 +22,4 @@
 #define MESSAGE_SENT_REPLY      "Wiadomosc wyslana."
 
 #define NOT_ALLOWED_REPLY       "Ta operacja jest niedozwolona."
+#define MAX_GROUPS_REACHED      "Maksymalna liczba grup osiagnieta."

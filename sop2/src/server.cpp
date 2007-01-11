@@ -11,6 +11,7 @@ extern "C"
 {
 #include <errno.h>
 #include <pthread.h>
+#include <signal.h>
 #include "server.h"
 #include "protocol.h"
 #include "replies.h"
@@ -83,28 +84,32 @@ void handle_join_request(int qid, join_request* request)
 	
 	write_debug_output("join_request(%d, \"%s\")\n", qid, request->group);
 
-	if (strcmp(request->group, SYSTEM_GROUP) != 0)
-	{
-		if (groups[request->group].count(qid) == 0)
-		{
-			groups[request->group].insert(qid);
-		
-			char message[MAX_MESSAGE+1];
-			sprintf(message, GROUP_JOINED_NOTIFY,
-				nicks[qid].c_str(), request->group);
-		
-			send_system_notify(qid, message);
-			send_system_reply(qid, GROUP_JOINED_REPLY);
-		}
-		else
-		{
-			send_system_reply(qid, ALREADY_JOINED_REPLY);
-		}
-	}
-	else
+	if (strcmp(request->group, SYSTEM_GROUP) == 0)
 	{
 		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
 	}
+
+	if (groups.count(request->group) == 0 && groups.size() == MAX_GROUPS)
+	{
+		send_system_reply(qid, MAX_GROUPS_REACHED);
+		return;
+	}
+
+	if (groups[request->group].count(qid) != 0)
+	{
+		send_system_reply(qid, ALREADY_JOINED_REPLY);
+		return;
+	}
+
+	groups[request->group].insert(qid);
+		
+	char message[MAX_MESSAGE+1];
+	sprintf(message, GROUP_JOINED_NOTIFY,
+		nicks[qid].c_str(), request->group);
+		
+	send_system_notify(qid, message);
+	send_system_reply(qid, GROUP_JOINED_REPLY);
 }
 
 void handle_part_request(int qid, part_request* request)
@@ -113,31 +118,29 @@ void handle_part_request(int qid, part_request* request)
 	
 	write_debug_output("part_request(%d, \"%s\")\n", qid, request->group);
 
-	if (strcmp(request->group, SYSTEM_GROUP) != 0)
-	{
-		if (groups[request->group].count(qid) != 0)
-		{
-			groups[request->group].erase(qid);
-			
-			char message[MAX_MESSAGE+1];
-			sprintf(message, GROUP_PARTED_NOTIFY,
-				nicks[qid].c_str(), request->group);
-		
-			send_system_notify(qid, message);
-			send_system_reply(qid, GROUP_PARTED_REPLY);
-		}
-		else
-		{
-			send_system_reply(qid, ALREADY_PARTED_REPLY);
-		}
-		
-		if (groups[request->group].size() == 0)
-			groups.erase(request->group);
-	}
-	else
+	if (strcmp(request->group, SYSTEM_GROUP) == 0)
 	{
 		send_system_reply(qid, NOT_ALLOWED_REPLY);
+		return;
 	}
+	
+	if (groups[request->group].count(qid) == 0)
+	{
+		send_system_reply(qid, ALREADY_PARTED_REPLY);
+		return;
+	}
+
+	groups[request->group].erase(qid);
+	
+	char message[MAX_MESSAGE+1];
+	sprintf(message, GROUP_PARTED_NOTIFY,
+		nicks[qid].c_str(), request->group);
+	
+	send_system_notify(qid, message);
+	send_system_reply(qid, GROUP_PARTED_REPLY);
+
+	if (groups[request->group].size() == 0)
+		groups.erase(request->group);
 }
 
 void handle_users_request(int qid, users_request* request)
@@ -383,10 +386,12 @@ void read_server_queue(int qid)
 	}
 }
 
+int qid;
+
 void handle_server_queue(key_t key)
 {
 	write_output("Creating server message queue...\n");
-	int qid = msgget(SERVER_KEY, IPC_CREAT | 0660);
+	qid = msgget(SERVER_KEY, IPC_CREAT | 0660);
 	
 	if (qid == -1)
 	{
@@ -406,9 +411,16 @@ void handle_server_queue(key_t key)
 	msgctl(qid, IPC_RMID, 0);
 }
 
+void handle_server_signal(int number)
+{
+	signal(SIGINT, handle_server_signal);
+	msgctl(qid, IPC_RMID, 0);
+}
+
 int main()
 {
 	create_windows();
+	signal(SIGINT, handle_server_signal);
 	handle_server_queue(SERVER_KEY);
 	sleep(2);
 	destroy_windows();
