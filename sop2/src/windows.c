@@ -57,6 +57,8 @@ void write_output(const char* format, ...)
 	va_start(args, format);
 	vwprintw(output, format, args);
 	va_end(args);
+	
+	wrefresh(output);
 }
 
 void write_debug_output(const char* format, ...)
@@ -65,4 +67,6 @@ void write_debug_output(const char* format, ...)
 	va_start(args, format);
 	vwprintw(debug_output, format, args);
 	va_end(args);
+	
+	wrefresh(debug_output);
 }

@@ -177,6 +177,7 @@ int main()
 {
 	create_windows();
 	handle_client_queue(getpid());
+	sleep(2);
 	destroy_windows();
 	return 0;
 }

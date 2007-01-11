@@ -38,6 +38,8 @@ void send_system_reply(int qid, const char* message)
 
 void handle_nick_request(int qid, nick_request* request)
 {
+	request->nick[MAX_NICK] = '\0';
+	
 	write_debug_output("nick_request(%d, \"%s\")\n", qid, request->nick);
 		
 	if (qids.count(request->nick) == 0)
@@ -77,6 +79,8 @@ void handle_groups_request(int qid, groups_request* request)
 
 void handle_join_request(int qid, join_request* request)
 {
+	request->group[MAX_GROUP] = '\0';
+	
 	write_debug_output("join_request(%d, \"%s\")\n", qid, request->group);
 
 	if (strcmp(request->group, SYSTEM_GROUP) != 0)
@@ -105,6 +109,8 @@ void handle_join_request(int qid, join_request* request)
 
 void handle_part_request(int qid, part_request* request)
 {
+	request->group[MAX_GROUP] = '\0';
+	
 	write_debug_output("part_request(%d, \"%s\")\n", qid, request->group);
 
 	if (strcmp(request->group, SYSTEM_GROUP) != 0)
@@ -136,6 +142,8 @@ void handle_part_request(int qid, part_request* request)
 
 void handle_users_request(int qid, users_request* request)
 {
+	request->group[MAX_GROUP] = '\0';
+	
 	write_debug_output("users_request(%d, \"%s\")\n", qid, request->group);
 	
 	set<int>& members = groups[request->group];
@@ -152,6 +160,9 @@ void handle_users_request(int qid, users_request* request)
 
 void handle_private_request(int qid, private_request* request)
 {
+	request->nick[MAX_NICK] = '\0';
+	request->message[MAX_MESSAGE] = '\0';
+	
 	write_debug_output("private_request(%d, \"%s\", \"%s\")\n", 
 		qid, request->nick, request->message);
 		
@@ -173,6 +184,9 @@ void handle_private_request(int qid, private_request* request)
 
 void handle_group_request(int qid, group_request* request)
 {
+	request->group[MAX_GROUP] = '\0';
+	request->message[MAX_MESSAGE] = '\0';
+
 	write_debug_output("group_request(%d, \"%s\", \"%s\")\n",
 		qid, request->group, request->message);
 		
@@ -396,6 +410,7 @@ int main()
 {
 	create_windows();
 	handle_server_queue(SERVER_KEY);
+	sleep(2);
 	destroy_windows();
 	return 0;
 }
