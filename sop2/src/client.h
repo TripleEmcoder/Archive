@@ -11,7 +11,7 @@
 #define GROUP_COMMAND            "/group"
 
 #define UNKNOWN_CLIENT_COMMAND   "Unknown client command (\"%s\").\n"
-#define MALFORMED_CLIENT_COMMAND "Malformed command (\"%s\").\n"
+#define MALFORMED_CLIENT_COMMAND "Malformed client command (\"%s\").\n"
 
 #define CREATING_CLIENT_QUEUE    "Creating client message queue (%d).\n"
 #define REMOVING_CLIENT_QUEUE    "Removing client message queue...\n"
