@@ -1,0 +1,7 @@
+#!/bin/sh
+
+TASKS="16 1 16" \
+OFFLINES="0 1 6" \
+OFFLINES2="offlines" \
+REPEAT="1 1 20" \
+../../src/generate2

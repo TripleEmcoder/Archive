@@ -59,24 +59,6 @@ SETUPS="2" \
 TIMEOUT="60" \
 #$TOOLS/test2 "$TAG" "$TESTS"
 
-#<fix>
-TESTS="23-*-1[0123456789].in 23-*-2*.in 23-*-[3456789].in"
-
-INITS="1 2" \
-LIMITS="1 2 3" \
-SETUPS="2" \
-TIMEOUT="60" \
-$TOOLS/test2 "$TAG" "$TESTS"
-
-TESTS="2[45]-*.in"
-
-INITS="1 2" \
-LIMITS="1 2 3" \
-SETUPS="2" \
-TIMEOUT="60" \
-$TOOLS/test2 "$TAG" "$TESTS"
-#</fix>
-
 TESTS="2[12345]-*.in"
 
 INITS="1 2" \
@@ -84,13 +66,3 @@ LIMITS="1 2 3" \
 SETUPS="1" \
 TIMEOUT="60" \
 $TOOLS/test2 "$TAG" "$TESTS"
-
-#<fix>
-TESTS="25-*-[3456789].in"
-
-INITS="3" \
-LIMITS="1 2 3" \
-SETUPS="1" \
-TIMEOUT="60" \
-$TOOLS/test2 "$TAG" "$TESTS"
-#</fix>
