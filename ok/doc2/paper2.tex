@@ -67,7 +67,7 @@ $F2$, $h_{1k}$ | $SRS$ , $r_i$, $no-wait$ | $C_{max}$
 W fazie drugiej projektu konieczne by³o zaimplementowanie algorytmu dok³adnego, tj. takiego, który znajduje dla postawionego problemu rozwi¹zanie optymalne. Jako ogólny schemat postêpowania przyjêto \emph{metodê rozga³êzieñ i ograniczeñ}.
 
 \subsection{Idea algorytmu}
-Idea algorytmu korzystaj¹cego z metody rozga³êzieñ i ograniczeñ opiera siê na systematycznym przeszukiwaniu drzewa dopuszczalnych rozwi¹zañ. W trakcie obliczeñ pomijane s¹ poddrzewa odpowiadaj¹ce rozwi¹zaniom, o których na danym etapie przeszukiwania z pewnoœci¹ mo¿na stwierdziæ, ¿e prowadz¹ do rozwi¹zañ nieoptymalnych.
+Idea algorytmu korzystaj¹cego z metody rozga³êzieñ i ograniczeñ (ang. \emph{branch and bound}) opiera siê na systematycznym przeszukiwaniu drzewa dopuszczalnych rozwi¹zañ. W trakcie obliczeñ pomijane s¹ poddrzewa odpowiadaj¹ce rozwi¹zaniom, o których na danym etapie przeszukiwania z pewnoœci¹ mo¿na stwierdziæ, ¿e prowadz¹ do rozwi¹zañ nieoptymalnych.
 
 Dla postawionego problemu szeregowania zadañ drzewo to jest budowane w nastêpuj¹cy sposób:
 \begin{itemize}
@@ -107,6 +107,7 @@ $$\emph{cmax\_min} = \emph{cmax} + \emph{approx}$$
 Ograniczenie to jest wyliczane dla obu maszyn osobno, a nastêpnie zostaje wybrana wiêksza z wartoœci, przy czym za \emph{cmax} dla danej maszyny przyjmuje siê czas zakoñczenia ostatniego zadania na tej maszynie.
 
 \subsubsection{Wariant $\emph{limit}=1$}
+\label{sec:limit1}
 Druga z zaimplementowanych funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=1$, szacuje minimalny pozosta³y czas, czyli \emph{approx}, jako:
 \begin{enumerate}
 \renewcommand{\labelenumi}{\alph{enumi})}
@@ -128,6 +129,7 @@ Kolejna funkcja ograniczaj¹ca, wybierana wartoœci¹ $\emph{limit}=2$, dodaje przy
 Ostatnia z funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=3$, wykorzystuje algorytm dok³adnego szeregowania, dziêki czemu uwzglêdnia wszystkie opóŸnienia wynikaj¹ce z warunków zawartych w postawionym problemie, w tym m.in. czasy przygotowania wymuszone podzia³em zadania przez wszystkie maj¹ce na nie wp³yw okresy niedostêpnoœci. O ile prowadzi to do ograniczenia najdok³adniejszego spoœród opisanych, wymaga to wiêkszej iloœci obliczeñ i co za tym idzie -- otrzymana funkcja ograniczaj¹ca powoduje dla pewnych instancji d³u¿szy czas dzia³ania algorytmu ni¿ jego pozornie gorsze warianty. Jej dzia³anie polega na dok³adnym uszeregowaniu na pierwszej pozycji kolejno ka¿dego z pozosta³ych zadañ, a nastêpnie wybraniu spoœród nich tego, które koñczy siê najwczeœniej. W celu oszacowania czasu przetwarzania pozosta³ych zadañ stosowane s¹ zwyk³e sumy, tak jak w przypadku wczeœniejszych funkcji ograniczaj¹cych. Uwzglêdniane jest równie¿ opóŸnienie wynikaj¹ce z wykonania na drugiej maszynie na zakoñczenie przynajmniej zadania o najkrótszym czasie przetwarzania dla tej maszyny.
 
 \subsection{Optymalizacje techniczne}
+\label{sec:tricks}
 Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszukiwania drzewa rozwi¹zañ. W celu zapewnienia sta³ego czasu wykonania operacji dodania i usuniêcia zadania na koñcu cz¹stkowej permutacji wykorzystywana jest jedna tablica o sta³ym rozmiarze równym iloœæ zadañ wystêpuj¹cych w instancji, przechowuj¹ca ich indeksy. Dodatkowo pamiêtany jest indeks, oznaczony dalej \emph{line}, rozdzielaj¹cy tablicê na czêœæ pocz¹tkow¹, reprezentuj¹c¹ aktualn¹ cz¹stkow¹ permutacjê, oraz czêœæ koñcow¹, zawieraj¹c¹ listê zadañ pozosta³ych do uszeregowania. Etap rozga³êzienia algorytmu polega na iteracyjnym przejrzeniu tej listy i wykonaniu dla ka¿dego z jej elementów nastêpuj¹cych kroków:
 \begin{enumerate}
 \item Zamiany wybranego elementu z elementem o pozycji \emph{line}.
@@ -144,6 +146,7 @@ Dziêki sumowaniu wykonywanemu na bie¿¹co przy dodawaniu i usuwaniu zadañ, funkcj
 W celu przetestowania efektywnoœci zaimplementowanego algorytmu przeprowadzono szereg pomiarów dla ró¿nych wielkoœci instancji. Zbadany zosta³ zakres od 5 zadañ do 13 -- w przypadku metody $\emph{limit}=0$ -- oraz do 25 -- w pozosta³ych przypadkach. W celu zwiêkszenia obiektywnoœci przeprowadzanych testów ka¿da iloœæ zadañ z badanego zakresu by³a reprezentowana przez 20 losowo wygenerowanych instancji. W ramach ka¿dej z nich przetestowano wszystkie kombinacje parametrów \emph{init}, \emph{setup} i \emph{limit}, z wyj¹tkiem opisanym wczeœniej. Wymienione górne granice zosta³y przyjête jako maksymalna iloœæ zadañ, dla której dany wariant algorytmu zdo³a³ wyliczyæ przynajmniej 3 instancje. Jako limit czasowy przyjêto 60 sekund -- obliczenia trwaj¹ce d³u¿ej by³y przerywane, a dana instancja oznaczana jako niewyliczona przez badany wariant algorytmu. 
 
 \subsection{Analiza jakoœciowa}
+\label{sec:overview}
 Pierwsz¹ z wykonanych analiz by³o sprawdzenie skutecznoœci poszczególnych wariantów algorytmu, rozumianej jako iloœæ instancji wyliczonych w ustalonym limicie czasowym. Wyniki tej analizy przedstawiaj¹ wykresy na rysunkach \ref{fig:done_setup}, \ref{fig:done_limit} i \ref{fig:done_init}, porównuj¹ce iloœæ wyliczonych instancji przy kolejnych ich wielkoœciach dla wariantów algorytmu wybieranych odpowiednio parametrami \emph{setup}, \emph{limit} i \emph{init}. Iloœæ instancji wyliczonych przy ustalonej wartoœci analizowanego parametru by³a przyjmowana jako suma po wszystkich wartoœciach pozosta³ych parametrów, za wyj¹tkiem opisanym dalej. Pozwoli³o to na ³atwe wyznaczenie wariantu algorytmu statystycznie najskuteczniejszego. Dla czytelnoœci wykresów iloœæ wyliczonych instancji by³a przedstawiana jako procentowy udzia³ wywo³añ algorytmu zakoñczonych sukcesem w ca³kowitej ich liczbie.
 Przed omówieniem wniosków p³yn¹cych z wykonanej analizy nale¿y zaznaczyæ, ¿e jakiekolwiek ró¿nice w skutecznoœci ujawniaj¹ siê dopiero dla iloœci zadañ wiêkszej od 11. Dla mniejszych instancji wybór wariantu algorytmu jest ca³kowicie dowolny. W kolejnych punktach zostanie pokazane, ¿e przy tak ograniczonej wielkoœci instancji równie¿ pod wzglêdem czasu obliczeñ nie ma wyraŸnych ró¿nic.
 
@@ -154,7 +157,7 @@ Przed omówieniem wniosków p³yn¹cych z wykonanej analizy nale¿y zaznaczyæ, ¿e jak
 \label{fig:done_setup}
 \end{figure}
 
-Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybierana wartoœci¹ $\emph{setup}=2$, czyli narzucaj¹ca porz¹dek przeszukiwania wynikaj¹cy z oszacowanego rozwi¹zania, pozwala na wyliczaæ wyraŸnie wiêksze iloœci instancji. Dalsze analizy obejmuj¹ wy³¹cznie warianty algorytmu wykorzystuj¹ce t¹ metodê.
+Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybierana wartoœci¹ $\emph{setup}=2$, czyli narzucaj¹ca porz¹dek przeszukiwania wynikaj¹cy z oszacowanego rozwi¹zania, pozwala wyliczaæ wyraŸnie wiêksze iloœci instancji. Dalsze analizy obejmuj¹ wy³¹cznie warianty algorytmu wykorzystuj¹ce t¹ metodê.
 
 \begin{figure}[h!]
 \centering
@@ -174,40 +177,72 @@ Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywal
 \end{figure}
 
 Analiza wykresu na rysunku \ref{fig:done_init} równie¿ nie prowadzi do zaskakuj¹cych wniosków. Jak mo¿na siê by³o spodziewaæ, metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=3$, czyli wykorzystuj¹ca opracowany w pierwszej fazie projektu algorytm typu \emph{tabu search}, daje najlepsze rezultaty. Warto zaznaczyæ, ¿e ró¿nice w iloœciach wyliczonych instancji s¹ znacznie wyraŸniejsze ni¿ dla parametru \emph{limit}, co potwierdza, ¿e odpowiednie wstêpne oszacowanie rozwi¹zania jest kluczowe dla sprawnego dzia³ania ca³ego algorytmu. Metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=1$, czyli wykorzystuj¹ca rozwi¹zanie otrzymane przez posortowanie zadañ, nie wyliczy³a ¿adnej instancji o wielkoœci 24 i 25, nawet przy zastosowaniu najlepszej funkcji ograniczaj¹cej.
-Dla poprawienia czytelnoœci przy tworzeniu wykresu pominiêto testy przeprowadzone dla wartoœci $\emph{limit}=0$. Powodowa³a ona znacznym niezwi¹zany z parametrem \emph{init} spadek skutecznoæi dla instancji o wielkoœciach 13 zadañ i wiêkszych. 
+Dla poprawienia czytelnoœci przy tworzeniu wykresu pominiêto testy przeprowadzone dla wartoœci $\emph{limit}=0$. Powodowa³a ona znaczny, niezwi¹zany z parametrem \emph{init} spadek skutecznoœci dla instancji o wielkoœciach 13 zadañ i wiêkszych. 
 
 \subsection{Analiza iloœciowa}
-, z niewielkim, negatywnych odstêpstwem dla funkcji wybieranej wartoœci¹ $\emph{limit}=1$.
-Ju¿ najprostsze ulepszenie funkcji ograniczaj¹cej, uwzglêdniaj¹ce tylko sumy d³ugoœci zadañ i okresów niedostêpnoœci Ogromne poprawê przynosi uwzglêdnienie 
-
+Bardziej szczegó³ow¹ analizê zachowania algorytmu przeprowadzono badaj¹c iloœæ wykonanych wywo³añ rekurencyjnych (iloœæ odwiedzonych wierzcho³ków przeszukiwanego drzewa rozwi¹zañ), zwan¹ dalej \emph{calls}, oraz ca³kowity czas obliczeñ. Wyniki tej analizy dla pe³nego zakresu wielkoœci instancji przedstawiaj¹ wykresy na rysunkach \ref{fig:calls_limit_all} i \ref{fig:time_limit_all}, a dla instancji o wielkoœci 14 zadañ i wiêkszych - wykresy na rysunkach \ref{fig:calls_limit_big} i \ref{fig:time_limit_big}.
+ 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_3}
+\caption{Œrednia iloœæ wywo³añ rekurencyjnych w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
+\label{fig:calls_limit_all}
 \end{figure}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_4}
-\end{figure}
+Wykres na rysunku \ref{fig:calls_limit_all} obrazuje si³ê ograniczeñ poszczególnych funkcji ograniczaj¹cych. Pierwsz¹ z nich ($\emph{limit}=0$) cechuje bardzo szybki wzrost iloœci rekurencyjnych wywo³añ wraz ze wzrostem wielkoœci instancji. Ju¿ niewielkie ulepszenie funkcji ograniczaj¹cej, polegaj¹ce na uwzglêdnieniu sumy czasów pozosta³ych zadañ i okresów niedostêpnoœci ($\emph{limit}=1$), daje ogromn¹ redukcjê iloœci wywo³añ. Kolejn¹ znacz¹c¹ poprawê przynosi uwzglêdnienie pewnych specyficznych sytuacji i wynikaj¹cych z nich opóŸnieñ, opisanych szczegó³owo w punkcie \ref{sec:limit1} ($\emph{limit}=2$). Mimo, ¿e maj¹ one co do wartoœci niewielki wk³ad w wyliczane dolne ograniczenie, powoduj¹ znacz¹ce zmniejszenie iloœci wywo³añ. W trakcie badania dzia³ania programu zaobserwowano, ¿e iloœæ sytuacji, w których do wykonania odciêcia wartoœæ ograniczenia by³a za ma³a jedynie o ok. 1-10 jednostek, by³o o rz¹d wielkoœci wiêcej ni¿ sytuacji, w których to niedoszacowanie by³o wiêksze. Wynika z tego, ¿e ka¿de, nawet najmniejsze ulepszenie funkcji ograniczaj¹cej mo¿e potencjalnie przynieœæ du¿e korzyœci. Ostatnia z funkcji  ($\emph{limit}=3$) przynosi jednak du¿o mniejsz¹ redukcjê iloœci wywo³añ. Mo¿na przypuszczaæ, ¿e opóŸnienia, które dodatkowo uwzglêdnia, wystêpuj¹ stosunkowo rzadko.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_5}
+\caption{Œredni czas obliczeñ w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
+\label{fig:time_limit_all}
+\end{figure}
+
+Zbli¿ony charakter wykresów na rysunkach \ref{fig:calls_limit_all} i \ref{fig:time_limit_all} pokazuje, ¿e iloœæ wywo³añ wprost przenosi siê na czas obliczeñ. Bardziej szczegó³owe porównanie tych wykresów prowadzi jednak do wa¿nej obserwacji dotycz¹cej kosztu funkcji ograniczaj¹cych. Mimo znacz¹cej ró¿nicy w iloœci wywo³añ dla funkcji wybieranych wartoœciami $\emph{limit}=1$ i $\emph{limit}=2$, zysk czasowy wynikaj¹cy z wyboru tej drugiej jest stosunkowo niewielki. Jak zosta³o wspomniane w punkcie \ref{sec:tricks}, funkcje te ró¿ni¹ siê z³o¿onoœci¹ obliczeniow¹. Pierwsza z nich dzia³a w czasie sta³ym, druga jest liniowo zale¿na od iloœci pozosta³ych do uszeregowania zadañ. Jak pokazuj¹ wyniki eksperymentu, d³u¿szy czas potrzebny na wyliczenie ograniczenia w du¿ej czêœci równowa¿y oszczêdnoœci wynikaj¹ce ze znacznie czêœciej wykonywanych odciêæ. Jak wa¿ne jest znalezienie odpowiedniego kompromisu pomiêdzy dok³adnoœci¹ funkcji ograniczaj¹cej a jej kosztem czasowym, najlepiej dowodzi porównanie dla funkcji wybieranych wartoœciami $\emph{limit}=2$ i $\emph{limit}=3$. Funkcje te s¹ równie kosztowne co do z³o¿onoœci obliczeniowej, jednak wiêksza sta³a wystêpuj¹ca w tej drugiej powoduje, ¿e jej wybór w wielu przypadkach jest nieop³acalny -- przynosi wiêksze czasy obliczeñ ni¿ funkcje o s³abszych ograniczeniach.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_4}
+\caption{Œrednia iloœæ wywo³añ w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
+\label{fig:calls_limit_big}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_6}
+\caption{Œredni czas obliczeñ w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
+\label{fig:time_limit_big}
 \end{figure}
+
+Wykresy na rysunkach \ref{fig:calls_limit_big} i \ref{fig:time_limit_big} przedstawiaj¹ te same dane co wykresy omówione wczeœniej. Zosta³y zamieszczone ze wzglêdu na wiêksz¹ czytelnoœæ w zakresie instancji o wielkoœciach 14-25 zadañ.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_7}
+\caption{Œredni czas obliczeñ w zale¿noœci od liczby zadañ i parametru \emph{init}.}
+\label{fig:time_init_all}
 \end{figure}
+
+Wykres na rysunku \ref{fig:time_init_all} pokazuje, jak kszta³towa³ siê œredni czas obliczeñ dla poszczególnych metod inicjalizuj¹cych. Wnioski z wykresu pokrywaj¹ siê z omówionymi w punkcie \ref{sec:overview} -- metody wybierane kolejnymi wartoœciami parametru \emph{init} daj¹ coraz mniejsze czasy obliczeñ. Komentarza wymaga fragment wykresu dotycz¹cy instancji o wielkoœciach 23, 24 i 25 zadañ. Zaburzenie w stosunku do wymienionej prawid³owoœci jest spowodowane faktem, ¿e iloœæ wyliczonych instancji dla poszczególnych metod jest ró¿na (a w szczególnoœci bywa zerowa - wykres na rysunku \ref{fig:done_init}), a wiêc uœrednianie nie prowadzi do sprawiedliwej oceny.
+
+\subsection{Analiza przypadku}
+Ostatni¹ z wykonanych analiz przedstawia wykres na rysunku \ref{fig:time_limit_repeat}. Pokazuje on najwiêksz¹ s³aboœæ rozwi¹zania korzystaj¹cego z metody \emph{branch and bound}, jak¹ jest ma³a stabilnoœæ. 
 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_8}
+\caption{Œredni czas obliczeñ dla instancji o wielkoœci 17 zadañ i parametru \emph{limit}.}
+\label{fig:time_limit_repeat}
 \end{figure}
+
+Jak widaæ z wykresu, wystêpuj¹ skrajane rozbie¿noœci w dzia³aniu algorytmu dla ró¿nych instancji o tej samej wielkoœci. Zdarzaj¹ siê instancje:
+\begin{enumerate}
+\item wyliczane bardzo szybko (13),
+\item wyliczane w czasach zgodnych ze œredni¹ tendencj¹ opisan¹ w poprzednich punktach (4),
+\item prezentuj¹ce spektakularn¹ poprawê czasu dzia³ania (10)
+\item ca³kowicie zaprzeczaj¹ce wczeœniejszym wnioskom (17),
+\item niewyliczone przez ¿aden wariant algorytmu (12).
+\end{enumerate}  
+Ocena dzia³ania takiego algorytmu nie mo¿e zatem opieraæ siê o analizê pojedynczych instancji. Ka¿da modyfikacja powinna zostaæ przetestowana na du¿ej grupie instancji, w celu odpowiedniego uœrednienia wyników. Przyjêt¹ tutaj iloœæ 20 instancji nale¿a³oby uznaæ za absolutne minimum dla tego rodzaju rozwa¿añ. Niestety, ze wzglêdu na du¿y udzia³ instancji niewyliczanych, przeprowadzenie testów dla wiêkszej iloœci wariantów algorytmu, zw³aszcza w górnym zakresie wielkoœci instancji, jest niezwykle czasoch³onne, nawet przy wykorzystaniu stosunkowo wydajnego sprzêtu.
 
 \end{document}
