@@ -84,6 +84,8 @@ else
     break; //w danym poddrzewie nie ma lepszego rozwi¹zania
 \end{verbatim}
 
+\newpage
+
 Na zmniejszenie iloœci zbêdnych wywo³añ rekurencyjnej funkcji przeszukuj¹cej drzewo rozwi¹zañ maj¹ zatem wp³yw dwa czynniki:
 \begin{enumerate}
 \item Mo¿liwie wczesne przypisanie \emph{cmax\_best} wartoœci jak najbli¿szej optymalnej.
@@ -145,10 +147,14 @@ Dziêki sumowaniu wykonywanemu na bie¿¹co przy dodawaniu i usuwaniu zadañ, funkcj
 \subsection{Procedura testowa}
 W celu przetestowania efektywnoœci zaimplementowanego algorytmu przeprowadzono szereg pomiarów dla ró¿nych wielkoœci instancji. Zbadany zosta³ zakres od 5 zadañ do 13 -- w przypadku metody $\emph{limit}=0$ -- oraz do 25 -- w pozosta³ych przypadkach. W celu zwiêkszenia obiektywnoœci przeprowadzanych testów ka¿da iloœæ zadañ z badanego zakresu by³a reprezentowana przez 20 losowo wygenerowanych instancji. W ramach ka¿dej z nich przetestowano wszystkie kombinacje parametrów \emph{init}, \emph{setup} i \emph{limit}, z wyj¹tkiem opisanym wczeœniej. Wymienione górne granice zosta³y przyjête jako maksymalna iloœæ zadañ, dla której dany wariant algorytmu zdo³a³ wyliczyæ przynajmniej 3 instancje. Jako limit czasowy przyjêto 60 sekund -- obliczenia trwaj¹ce d³u¿ej by³y przerywane, a dana instancja oznaczana jako niewyliczona przez badany wariant algorytmu. 
 
+\newpage
+
 \subsection{Analiza jakoœciowa}
 \label{sec:overview}
 Pierwsz¹ z wykonanych analiz by³o sprawdzenie skutecznoœci poszczególnych wariantów algorytmu, rozumianej jako iloœæ instancji wyliczonych w ustalonym limicie czasowym. Wyniki tej analizy przedstawiaj¹ wykresy na rysunkach \ref{fig:done_setup}, \ref{fig:done_limit} i \ref{fig:done_init}, porównuj¹ce iloœæ wyliczonych instancji przy kolejnych ich wielkoœciach dla wariantów algorytmu wybieranych odpowiednio parametrami \emph{setup}, \emph{limit} i \emph{init}. Iloœæ instancji wyliczonych przy ustalonej wartoœci analizowanego parametru by³a przyjmowana jako suma po wszystkich wartoœciach pozosta³ych parametrów, za wyj¹tkiem opisanym dalej. Pozwoli³o to na ³atwe wyznaczenie wariantu algorytmu statystycznie najskuteczniejszego. Dla czytelnoœci wykresów iloœæ wyliczonych instancji by³a przedstawiana jako procentowy udzia³ wywo³añ algorytmu zakoñczonych sukcesem w ca³kowitej ich liczbie.
 Przed omówieniem wniosków p³yn¹cych z wykonanej analizy nale¿y zaznaczyæ, ¿e jakiekolwiek ró¿nice w skutecznoœci ujawniaj¹ siê dopiero dla iloœci zadañ wiêkszej od 11. Dla mniejszych instancji wybór wariantu algorytmu jest ca³kowicie dowolny. W kolejnych punktach zostanie pokazane, ¿e przy tak ograniczonej wielkoœci instancji równie¿ pod wzglêdem czasu obliczeñ nie ma wyraŸnych ró¿nic.
+
+\subsubsection{Parametr \emph{setup}}
 
 \begin{figure}[h!]
 \centering
@@ -157,7 +163,7 @@ Przed omówieniem wniosków p³yn¹cych z wykonanej analizy nale¿y zaznaczyæ, ¿e jak
 \label{fig:done_setup}
 \end{figure}
 
-Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybierana wartoœci¹ $\emph{setup}=2$, czyli narzucaj¹ca porz¹dek przeszukiwania wynikaj¹cy z oszacowanego rozwi¹zania, pozwala wyliczaæ wyraŸnie wiêksze iloœci instancji. Dalsze analizy obejmuj¹ wy³¹cznie warianty algorytmu wykorzystuj¹ce t¹ metodê.
+Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybierana wartoœci¹ $\emph{setup}=2$, czyli narzucaj¹ca porz¹dek przeszukiwania wynikaj¹cy z oszacowanego rozwi¹zania, pozwala wyliczaæ wyraŸnie wiêksze iloœci instancji. Zwi¹zane jest to prawdopodobnie z faktem, ¿e takie rozwi¹zanie jest zbli¿one do optymalnego, które w drzewie poszukiwañ znajduje siê wtedy w stosunkowo niewielkiej odleg³oœci od rozwi¹zania pocz¹tkowego. Jak wynika z zasady dzia³ania metody \emph{branch and bound}, szybsze natrafienie na rozwi¹zanie optymalne lub w ogólnoœci poprawienie najlepszego znalezionego dotychczas rozwi¹zania, prowadzi do wiêkszej iloœci odciêæ i -- co za tym idzie -- szybszego dzia³ania algorytmu. Dalsze analizy obejmuj¹ wy³¹cznie warianty algorytmu wykorzystuj¹ce tê metodê inicjalizacji.
 
 \begin{figure}[h!]
 \centering
@@ -166,8 +172,14 @@ Jak wynika z wykresu na rysunku \ref{fig:done_setup}, metoda inicjalizacji wybie
 \label{fig:done_limit}
 \end{figure}
 
+\newpage 
+
+\subsubsection{Parametr \emph{limit}}
+
 Wykres na rysunku \ref{fig:done_limit} wyraŸnie obrazuje nisk¹ skutecznoœæ funkcji ograniczaj¹cej wybieranej wartoœci¹ $\emph{limit}=0$, czyli korzystaj¹cej jedynie z faktu, ¿e szeregowanie zadañ nie zmniejsza wartoœci parametru \emph{cmax}. Pozwala ona wyliczaæ instancje o maksymalnej wielkoœci 13 zadañ, przy czym spadek iloœci wyliczonych instancji dla tej wielkoœci jest bliski 80\%, co œwiadczy o bardzo ma³ej sile ograniczenia.
 Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywaln¹ skutecznoœci¹. Szczegó³owa analiza pod wzglêdem iloœciowym zostanie przedstawiona w kolejnych punktach.
+
+\subsubsection{Parametr \emph{init}}
 
 \begin{figure}[h!]
 \centering
@@ -176,16 +188,18 @@ Pozosta³e funkcje ograniczaj¹ce wykaza³y siê pod wzglêdem jakoœciowym porównywal
 \label{fig:done_init}
 \end{figure}
 
+\newpage
+
 Analiza wykresu na rysunku \ref{fig:done_init} równie¿ nie prowadzi do zaskakuj¹cych wniosków. Jak mo¿na siê by³o spodziewaæ, metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=3$, czyli wykorzystuj¹ca opracowany w pierwszej fazie projektu algorytm typu \emph{tabu search}, daje najlepsze rezultaty. Warto zaznaczyæ, ¿e ró¿nice w iloœciach wyliczonych instancji s¹ znacznie wyraŸniejsze ni¿ dla parametru \emph{limit}, co potwierdza, ¿e odpowiednie wstêpne oszacowanie rozwi¹zania jest kluczowe dla sprawnego dzia³ania ca³ego algorytmu. Metoda inicjalizacji wybierana wartoœci¹ $\emph{init}=1$, czyli wykorzystuj¹ca rozwi¹zanie otrzymane przez posortowanie zadañ, nie wyliczy³a ¿adnej instancji o wielkoœci 24 i 25, nawet przy zastosowaniu najlepszej funkcji ograniczaj¹cej.
 Dla poprawienia czytelnoœci przy tworzeniu wykresu pominiêto testy przeprowadzone dla wartoœci $\emph{limit}=0$. Powodowa³a ona znaczny, niezwi¹zany z parametrem \emph{init} spadek skutecznoœci dla instancji o wielkoœciach 13 zadañ i wiêkszych. 
 
 \subsection{Analiza iloœciowa}
 Bardziej szczegó³ow¹ analizê zachowania algorytmu przeprowadzono badaj¹c iloœæ wykonanych wywo³añ rekurencyjnych (iloœæ odwiedzonych wierzcho³ków przeszukiwanego drzewa rozwi¹zañ), zwan¹ dalej \emph{calls}, oraz ca³kowity czas obliczeñ. Wyniki tej analizy dla pe³nego zakresu wielkoœci instancji przedstawiaj¹ wykresy na rysunkach \ref{fig:calls_limit_all} i \ref{fig:time_limit_all}, a dla instancji o wielkoœci 14 zadañ i wiêkszych - wykresy na rysunkach \ref{fig:calls_limit_big} i \ref{fig:time_limit_big}.
- 
+
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 35mm 0 25mm, clip, width=0.9\textwidth]{step4_3}
-\caption{Œrednia iloœæ wywo³añ rekurencyjnych w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
+\caption{Œrednia iloœæ wywo³añ w zale¿noœci od liczby zadañ i parametru \emph{limit}.}
 \label{fig:calls_limit_all}
 \end{figure}
 
@@ -223,7 +237,7 @@ Wykresy na rysunkach \ref{fig:calls_limit_big} i \ref{fig:time_limit_big} przeds
 \label{fig:time_init_all}
 \end{figure}
 
-Wykres na rysunku \ref{fig:time_init_all} pokazuje, jak kszta³towa³ siê œredni czas obliczeñ dla poszczególnych metod inicjalizuj¹cych. Wnioski z wykresu pokrywaj¹ siê z omówionymi w punkcie \ref{sec:overview} -- metody wybierane kolejnymi wartoœciami parametru \emph{init} daj¹ coraz mniejsze czasy obliczeñ. Komentarza wymaga fragment wykresu dotycz¹cy instancji o wielkoœciach 23, 24 i 25 zadañ. Zaburzenie w stosunku do wymienionej prawid³owoœci jest spowodowane faktem, ¿e iloœæ wyliczonych instancji dla poszczególnych metod jest ró¿na (a w szczególnoœci bywa zerowa - wykres na rysunku \ref{fig:done_init}), a wiêc uœrednianie nie prowadzi do sprawiedliwej oceny.
+Wykres na rysunku \ref{fig:time_init_all} pokazuje, jak kszta³towa³ siê œredni czas obliczeñ dla poszczególnych metod inicjalizuj¹cych. Wnioski z wykresu pokrywaj¹ siê z omówionymi w punkcie \ref{sec:overview} -- metody wybierane kolejnymi wartoœciami parametru \emph{init} daj¹ coraz mniejsze czasy obliczeñ. Komentarza wymaga fragment wykresu dotycz¹cy instancji o wielkoœciach 23, 24 i 25 zadañ. Zaburzenie w stosunku do wymienionej prawid³owoœci jest spowodowane faktem, ¿e iloœæ wyliczonych instancji dla poszczególnych metod jest ró¿na (a w szczególnoœci bywa zerowa -- wykres na rysunku \ref{fig:done_init}), a wiêc uœrednianie nie prowadzi do sprawiedliwej oceny.
 
 \subsection{Analiza przypadku}
 Ostatni¹ z wykonanych analiz przedstawia wykres na rysunku \ref{fig:time_limit_repeat}. Pokazuje on najwiêksz¹ s³aboœæ rozwi¹zania korzystaj¹cego z metody \emph{branch and bound}, jak¹ jest ma³a stabilnoœæ. 
