@@ -9,4 +9,4 @@ INITS="1 2 3" \
 LIMITS="1 2 3" \
 SETUPS="2" \
 TIMEOUT="60" \
-#$TOOLS/test2 "$TAG" "$TESTS"
+$TOOLS/test2 "$TAG" "$TESTS"
