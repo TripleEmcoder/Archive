@@ -147,6 +147,12 @@ void handle_part_request(int qid, part_request* request)
 		send_system_reply(qid, NOT_ALLOWED_REPLY);
 		return;
 	}
+
+	if (groups.count(request->group) == 0)
+	{
+		send_system_reply(qid, NONEXISTANT_GROUP_REPLY);
+		return;
+	}
 	
 	if (groups[request->group].count(qid) == 0)
 	{
