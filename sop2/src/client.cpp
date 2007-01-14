@@ -93,7 +93,8 @@ void read_client_queue(int qid)
 void handle_stdin_command(int qid, const char* line)
 {
 	char command[MAX_COMMAND+1];
-	sscanf(line, "%s", command);
+	if (sscanf(line, "%s", command) != 1)
+		return;
 
 	if (strcmp(command, NICK_COMMAND) == 0)
 		handle_nick_command(qid, line);

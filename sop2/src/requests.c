@@ -21,7 +21,7 @@ void send_login_request(int qid, pid_t pid)
 
 void send_logout_request(int qid)
 {
-	write_debug_output("login_request(%d)\n", qid);
+	write_debug_output("logout_request(%d)\n", qid);
 
 	struct logout_request request;
 	send_request(qid, LOGOUT_SUBTYPE, &request, sizeof(request));

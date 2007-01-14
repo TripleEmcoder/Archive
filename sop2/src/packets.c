@@ -14,6 +14,6 @@ void send_packet(int qid, int type, int subtype, void* data, int size)
 	
 	memcpy(&packet.data, data, size);
 	
-	if (msgsnd(qid, &packet, MAX_PACKET, 0) == -1)
-		printf("%s\n", strerror(errno));
+	if (msgsnd(qid, &packet, MAX_PACKET, IPC_NOWAIT) == -1)
+		write_output("%s.\n", strerror(errno));
 }

@@ -1,5 +1,5 @@
 #define CREATING_CLIENT_QUEUE    "Creating client message queue (%d).\n"
-#define REMOVING_CLIENT_QUEUE    "Removing client message queue...\n"
+#define REMOVING_CLIENT_QUEUE    "Removing client message queue.\n"
 #define JOINING_CLIENT_QUEUE     "Joining client message queue (%d).\n"
 #define PARTING_CLIENT_QUEUE     "Parting client message queue (%d)\n"
 #define UNKNOWN_CLIENT_REQUEST   "Unknown client request (%d).\n"

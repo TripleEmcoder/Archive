@@ -274,6 +274,7 @@ void handle_group_request(int qid, group_request* request)
 		
 	foreach (members, member)
 		//if (*member != qid)
+		if (nicks[*member] != SYSTEM_NICK)
 			send_group_notify(*member, nicks[qid].c_str(), 
 				request->group, request->message);
 			
@@ -283,7 +284,7 @@ void handle_group_request(int qid, group_request* request)
 void handle_client_request(int qid, packet_common* packet)
 {
 	pthread_mutex_lock(&mutex);
-	
+	write_debug_output("i\nn");
 	switch (packet->subtype)
 	{
 		case NICK_SUBTYPE:
@@ -319,6 +320,7 @@ void handle_client_request(int qid, packet_common* packet)
 			break;
 	}
 	
+	write_debug_output("out\n");
 	pthread_mutex_unlock(&mutex);
 }
 
