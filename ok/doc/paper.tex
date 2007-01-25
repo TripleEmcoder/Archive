@@ -188,8 +188,8 @@ Dla danej instancji problemu rozwi¹zanie stanowi $n$ opisów uszeregowañ zadañ, c
 \begin{description}
 	\item[$l'_i$] -- iloœæ okresów przetwarzania i-tego zadania na I maszynie,
 		\begin{description}
-		\item[$r'_{ik}$] -- czas rozpoczêcia j-tego okresu przetwarzania i-tego zadania,
-		\item[$p'_{ik}$] -- d³ugoœæ j-tego okresu przetwarzania i-tego zadania (dla $k=1,2,\ldots,l'_i$);
+		\item[$r'_{ik}$] -- czas rozpoczêcia k-tego okresu przetwarzania i-tego zadania,
+		\item[$p'_{ik}$] -- d³ugoœæ k-tego okresu przetwarzania i-tego zadania (dla $k=1,2,\ldots,l'_i$);
 		\end{description}
 	\item[$r''_i$] -- czas rozpoczêcia przetwarzania i-tego zadania na II maszynie (dla $i=1,2,\ldots,n$).
 \end{description}
@@ -565,11 +565,7 @@ Powy¿sze rozwa¿ania prowadz¹ do dwóch g³ównych wniosków:
 
 \newpage
 \subsection{Testy wydajnoœciowe}
-<<<<<<< .mine
 Ostatnim z etapów eksperymentu by³ test wydajnoœciowy, który mia³ na celu pokazanie jak algorytm zachowuje siê dla ró¿nych liczb zadañ przy ustalonych wczeœniej parametrach. Wykres na rysunku \ref{fig:speed} przedstawia wyniki pomiarów oraz idealnie dopasowane do nich krzywe wielomianowe. Potwierdza to w sposób ostateczny wyznaczon¹ z³o¿onoœæ rzêdu $O(n^2)$.
-=======
-Ostatnim z etapów eksperymentu by³ test wydajnoœciowy, który mia³ na celu pokazanie jak algorytm zachowuje siê dla ró¿nych liczb zadañ przy ustalonych wczeœniej parametrach. Wykres na rysunku \ref{fig:speed} przedstawia wyniki pomiarów, oraz idealnie dopasowane do nich krzywe wielomianowe. Potwierdza to w sposób ostateczny wyznaczon¹ z³o¿onoœæ rzêdu $O(n^2)$.
->>>>>>> .r132
 
 \begin{figure}[h]
 \centering

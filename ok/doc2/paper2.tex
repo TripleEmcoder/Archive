@@ -132,7 +132,7 @@ Ostatnia z funkcji ograniczaj¹cych, wybierana wartoœci¹ $\emph{limit}=3$, wykorz
 
 \subsection{Optymalizacje techniczne}
 \label{sec:tricks}
-Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszukiwania drzewa rozwi¹zañ. W celu zapewnienia sta³ego czasu wykonania operacji dodania i usuniêcia zadania na koñcu cz¹stkowej permutacji wykorzystywana jest jedna tablica o sta³ym rozmiarze równym iloœæ zadañ wystêpuj¹cych w instancji, przechowuj¹ca ich indeksy. Dodatkowo pamiêtany jest indeks, oznaczony dalej \emph{line}, rozdzielaj¹cy tablicê na czêœæ pocz¹tkow¹, reprezentuj¹c¹ aktualn¹ cz¹stkow¹ permutacjê, oraz czêœæ koñcow¹, zawieraj¹c¹ listê zadañ pozosta³ych do uszeregowania. Etap rozga³êzienia algorytmu polega na iteracyjnym przejrzeniu tej listy i wykonaniu dla ka¿dego z jej elementów nastêpuj¹cych kroków:
+Wartym wspomnienia jest sposób przechowywania permutacji zadañ w trakcie przeszukiwania drzewa rozwi¹zañ. W celu zapewnienia sta³ego czasu wykonania operacji dodania i usuniêcia zadania na koñcu cz¹stkowej permutacji wykorzystywana jest jedna tablica o sta³ym rozmiarze równym iloœci zadañ wystêpuj¹cych w instancji, przechowuj¹ca ich indeksy. Dodatkowo pamiêtany jest indeks, oznaczony dalej \emph{line}, rozdzielaj¹cy tablicê na czêœæ pocz¹tkow¹, reprezentuj¹c¹ aktualn¹ cz¹stkow¹ permutacjê, oraz czêœæ koñcow¹, zawieraj¹c¹ listê zadañ pozosta³ych do uszeregowania. Etap rozga³êzienia algorytmu polega na iteracyjnym przejrzeniu tej listy i wykonaniu dla ka¿dego z jej elementów nastêpuj¹cych kroków:
 \begin{enumerate}
 \item Zamiany wybranego elementu z elementem o pozycji \emph{line}.
 \item Zwiêkszenia wartoœci \emph{line} o 1.
