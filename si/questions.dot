@@ -1,0 +1,43 @@
+digraph
+{
+	lokalizacja1    [ label = "Gdzie zostanie posadzona roslina?"       ];
+	lokalizacja2    [ label = "Gdzie zostanie posadzona roslina?"       ];
+	lokalizacja3    [ label = "Gdzie zostanie posadzona roslina?"       ];
+	orientacja      [ label = "Jakie jest umiejscowienie okna/balkonu?" ];
+	zasloniecie     [ label = "Jakie jest umiejscowienie okna/balkonu?" ];
+	pielegnacja     [ label = "Czy masz czas pielegnowac rosline?"      ];
+	naslonecznienie [ label = "Jakie jest planowane stanowisko?"        ];
+	wilgotnosc      [ label = "Jakie jest planowane stanowisko?"        ];
+	prochnica       [ label = "Czy na stanowisku wystepuje prochnica?"  ];
+
+	START           -> lokalizacja1
+
+	//dom
+	lokalizacja1    -> lokalizacja2    [ label = "w domu"         ];
+	lokalizacja2    -> orientacja      [ label = "na balkonie"    ];
+	lokalizacja2    -> orientacja      [ label = "na parapecie"   ];
+	lokalizacja2    -> lokalizacja3    [ label = "w pokoju"       ];
+	orientacja      -> pielegnacja     [ label = "od polnocy"     ];
+	orientacja      -> zasloniecie     [ label = "od poludnia"    ];
+	lokalizacja3    -> orientacja      [ label = "w poblizu okna" ];
+	lokalizacja3    -> pielegnacja     [ label = "zdala od okna"  ];
+	zasloniecie     -> pielegnacja     [ label = "wsrod budynkow" ];
+	zasloniecie     -> pielegnacja     [ label = "wsrod drzew"    ];
+	zasloniecie     -> pielegnacja     [ label = "niezasloniete"  ];
+
+	//ogrod
+	lokalizacja1    -> naslonecznienie [ label = "w ogrodzie"     ];
+	naslonecznienie -> wilgotnosc      [ label = "sloneczne"      ];
+	naslonecznienie -> wilgotnosc      [ label = "polcieniste"    ];
+	naslonecznienie -> wilgotnosc      [ label = "cieniste"       ];
+	wilgotnosc      -> prochnica       [ label = "wilgotne"       ];
+	wilgotnosc      -> prochnica       [ label = "suche"          ];
+	wilgotnosc      -> prochnica       [ label = "przecietne"     ];
+	prochnica       -> pielegnacja     [ label = "tak"            ];
+	prochnica       -> pielegnacja     [ label = "nie"            ];
+
+	//ogolne
+	pielegnacja     -> STOP            [ label = "tak"            ];
+	pielegnacja     -> STOP            [ label = "nie"            ];
+}
+
