@@ -8,7 +8,10 @@ digraph
 	pielegnacja     [ label = "Czy masz czas pielegnowac rosline?"      ];
 	naslonecznienie [ label = "Jakie jest planowane stanowisko?"        ];
 	wilgotnosc      [ label = "Jakie jest planowane stanowisko?"        ];
+	sikawki         [ label = "Czy jest automatyczne podlewanie?"       ];
 	prochnica       [ label = "Czy na stanowisku wystepuje prochnica?"  ];
+	kwiaty          [ label = "Czy roslina ma miec kwiaty?"             ];
+	kolor           [ label = "Jakiego kolory maja byc kwiaty?"         ];
 
 	START           -> lokalizacja1
 
@@ -20,10 +23,10 @@ digraph
 	orientacja      -> pielegnacja     [ label = "od polnocy"     ];
 	orientacja      -> zasloniecie     [ label = "od poludnia"    ];
 	lokalizacja3    -> orientacja      [ label = "w poblizu okna" ];
-	lokalizacja3    -> pielegnacja     [ label = "zdala od okna"  ];
-	zasloniecie     -> pielegnacja     [ label = "wsrod budynkow" ];
-	zasloniecie     -> pielegnacja     [ label = "wsrod drzew"    ];
-	zasloniecie     -> pielegnacja     [ label = "niezasloniete"  ];
+	lokalizacja3    -> kwiaty          [ label = "zdala od okna"  ];
+	zasloniecie     -> kwiaty          [ label = "wsrod budynkow" ];
+	zasloniecie     -> kwiaty          [ label = "wsrod drzew"    ];
+	zasloniecie     -> kwiaty          [ label = "niezasloniete"  ];
 
 	//ogrod
 	lokalizacja1    -> naslonecznienie [ label = "w ogrodzie"     ];
@@ -31,12 +34,19 @@ digraph
 	naslonecznienie -> wilgotnosc      [ label = "polcieniste"    ];
 	naslonecznienie -> wilgotnosc      [ label = "cieniste"       ];
 	wilgotnosc      -> prochnica       [ label = "wilgotne"       ];
-	wilgotnosc      -> prochnica       [ label = "suche"          ];
-	wilgotnosc      -> prochnica       [ label = "przecietne"     ];
-	prochnica       -> pielegnacja     [ label = "tak"            ];
-	prochnica       -> pielegnacja     [ label = "nie"            ];
+	wilgotnosc      -> sikawki         [ label = "suche"          ];
+	wilgotnosc      -> sikawki         [ label = "przecietne"     ];
+	sikawki         -> prochnica       [ label = "tak"            ];
+	sikawki         -> prochnica       [ label = "nie"            ];
+	prochnica       -> kwiaty          [ label = "tak"            ];
+	prochnica       -> kwiaty          [ label = "nie"            ];
 
 	//ogolne
+	kwiaty          -> kolor           [ label = "tak"            ];
+	kwiaty          -> pielegnacja     [ label = "nie"            ];
+	kolor           -> pielegnacja     [ label = "biale"          ];
+	kolor           -> pielegnacja     [ label = "..."            ];
+	kolor           -> pielegnacja     [ label = "dowolne"        ];
 	pielegnacja     -> STOP            [ label = "tak"            ];
 	pielegnacja     -> STOP            [ label = "nie"            ];
 }
