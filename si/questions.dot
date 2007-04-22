@@ -1,18 +1,19 @@
-digraph
+﻿digraph
 {
-	lokalizacja1    [ label = "Gdzie zostanie posadzona roslina?"        ];
-	lokalizacja2    [ label = "Gdzie zostanie posadzona roslina?"        ];
-	lokalizacja3    [ label = "Gdzie zostanie posadzona roslina?"        ];
+	lokalizacja1    [ label = "Gdzie zostanie posadzona roślina?"        ];
+	lokalizacja2    [ label = "Gdzie zostanie posadzona roślina?"        ];
+	lokalizacja3    [ label = "Gdzie zostanie posadzona roślina?"        ];
 	orientacja      [ label = "Jakie jest umiejscowienie okna/balkonu?"  ];
-	zasloniecie     [ label = "Jakie jest umiejscowienie okna/balkonu?"  ];
-	pielegnacja     [ label = "Czy masz czas pielegnowac rosline?"       ];
-	naslonecznienie [ label = "Jakie jest planowane stanowisko?"         ];
-	wilgotnosc      [ label = "Jakie jest planowane stanowisko?"         ];
+	osłonięcie1     [ label = "Jakie jest umiejscowienie okna/balkonu?"  ];
+	pielęgnacja     [ label = "Czy masz czas pielęgnowac roślinę?"       ];
+	nasłonecznienie [ label = "Jakie jest planowane stanowisko?"         ];
+	wilgotność      [ label = "Jakie jest planowane stanowisko?"         ];
 	sikawki         [ label = "Czy jest automatyczne podlewanie?"        ];
-	prochnica       [ label = "Czy na stanowisku wystepuje prochnica?"   ];
-	osloniecie      [ label = "Czy stanowisko jest osloniete od wiatru?" ];
-	kwiaty          [ label = "Czy roslina ma miec kwiaty?"              ];
-	kolor           [ label = "Jakiego kolory maja byc kwiaty?"          ];
+	próchnica       [ label = "Czy na stanowisku występuje próchnica?"   ];
+	osłonięcie2     [ label = "Czy stanowisko jest osłonięte od wiatru?" ];
+	kwiaty          [ label = "Czy roślina ma mieć kwiaty?"              ];
+	kolor           [ label = "Jakiego koloru mają być kwiaty?"          ];
+	pochodzenie     [ label = "Skąd ma pochodzić roślina?"               ];
 
 	START           -> lokalizacja1
 
@@ -21,36 +22,45 @@ digraph
 	lokalizacja2    -> orientacja      [ label = "na balkonie"    ];
 	lokalizacja2    -> orientacja      [ label = "na parapecie"   ];
 	lokalizacja2    -> lokalizacja3    [ label = "w pokoju"       ];
-	orientacja      -> kwiaty          [ label = "od polnocy"     ];
-	orientacja      -> zasloniecie     [ label = "od poludnia"    ];
-	lokalizacja3    -> orientacja      [ label = "w poblizu okna" ];
+	orientacja      -> kwiaty          [ label = "od północy"     ];
+	orientacja      -> osłonięcie1     [ label = "od południa"    ];
+	lokalizacja3    -> orientacja      [ label = "w pobliżu okna" ];
 	lokalizacja3    -> kwiaty          [ label = "zdala od okna"  ];
-	zasloniecie     -> kwiaty          [ label = "wsrod budynkow" ];
-	zasloniecie     -> kwiaty          [ label = "wsrod drzew"    ];
-	zasloniecie     -> kwiaty          [ label = "nieosloniete"   ];
+	osłonięcie1     -> kwiaty          [ label = "wśrod budynków" ];
+	osłonięcie1     -> kwiaty          [ label = "wśrod drzew"    ];
+	osłonięcie1     -> kwiaty          [ label = "nieosłonięte"   ];
 
 	//ogrod
-	lokalizacja1    -> naslonecznienie [ label = "w ogrodzie"     ];
-	naslonecznienie -> wilgotnosc      [ label = "sloneczne"      ];
-	naslonecznienie -> wilgotnosc      [ label = "polcieniste"    ];
-	naslonecznienie -> wilgotnosc      [ label = "cieniste"       ];
-	wilgotnosc      -> prochnica       [ label = "wilgotne"       ];
-	wilgotnosc      -> sikawki         [ label = "suche"          ];
-	wilgotnosc      -> sikawki         [ label = "przecietne"     ];
-	sikawki         -> prochnica       [ label = "tak"            ];
-	sikawki         -> prochnica       [ label = "nie"            ];
-	prochnica       -> osloniecie      [ label = "tak"            ];
-	prochnica       -> osloniecie      [ label = "nie"            ];
-	osloniecie      -> kwiaty          [ label = "tak"            ];
-	osloniecie      -> kwiaty          [ label = "nie"            ];
+	lokalizacja1    -> nasłonecznienie [ label = "w ogrodzie"     ];
+	nasłonecznienie -> wilgotność      [ label = "słoneczne"      ];
+	nasłonecznienie -> wilgotność      [ label = "półcieniste"    ];
+	nasłonecznienie -> wilgotność      [ label = "cieniste"       ];
+	wilgotność      -> próchnica       [ label = "wilgotne"       ];
+	wilgotność      -> sikawki         [ label = "suche"          ];
+	wilgotność      -> sikawki         [ label = "przeciętne"     ];
+	sikawki         -> próchnica       [ label = "tak"            ];
+	sikawki         -> próchnica       [ label = "nie"            ];
+	próchnica       -> osłonięcie2     [ label = "tak"            ];
+	próchnica       -> osłonięcie2     [ label = "nie"            ];
+	osłonięcie2     -> kwiaty          [ label = "tak"            ];
+	osłonięcie2     -> kwiaty          [ label = "nie"            ];
 
 	//ogolne
 	kwiaty          -> kolor           [ label = "tak"            ];
-	kwiaty          -> pielegnacja     [ label = "nie"            ];
-	kolor           -> pielegnacja     [ label = "biale"          ];
-	kolor           -> pielegnacja     [ label = "..."            ];
-	kolor           -> pielegnacja     [ label = "dowolne"        ];
-	pielegnacja     -> STOP            [ label = "tak"            ];
-	pielegnacja     -> STOP            [ label = "nie"            ];
+	kwiaty          -> pochodzenie     [ label = "nie"            ];
+	kolor           -> pochodzenie     [ label = "białe"          ];
+	kolor           -> pochodzenie     [ label = "czerwone"       ];
+	kolor           -> pochodzenie     [ label = "fioletowe"      ];
+	kolor           -> pochodzenie     [ label = "malinowe"       ];
+	kolor           -> pochodzenie     [ label = "niebieskie"     ];
+	kolor           -> pochodzenie     [ label = "pomarańczowe"   ];
+	kolor           -> pochodzenie     [ label = "różowe"         ];
+	kolor           -> pochodzenie     [ label = "żółte"          ];
+	kolor           -> pochodzenie     [ label = "różnobarwne"    ];
+	kolor           -> pochodzenie     [ label = "dowolne"        ];
+	pochodzenie     -> pielęgnacja     [ label = "..."            ];
+	pochodzenie     -> pielęgnacja     [ label = "dowolne"        ];
+	pielęgnacja     -> STOP            [ label = "tak"            ];
+	pielęgnacja     -> STOP            [ label = "nie"            ];
 }
 

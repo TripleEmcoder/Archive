@@ -64,7 +64,7 @@ public class QuestionPanel extends JPanel
 	public void clearQuestion()
 	{
 		questionLabel.setText("");
-		//group.clearSelection();
+		group.clearSelection();
 		radioPanel.removeAll();
 	}
 	
