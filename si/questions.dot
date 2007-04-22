@@ -1,17 +1,18 @@
 digraph
 {
-	lokalizacja1    [ label = "Gdzie zostanie posadzona roslina?"       ];
-	lokalizacja2    [ label = "Gdzie zostanie posadzona roslina?"       ];
-	lokalizacja3    [ label = "Gdzie zostanie posadzona roslina?"       ];
-	orientacja      [ label = "Jakie jest umiejscowienie okna/balkonu?" ];
-	zasloniecie     [ label = "Jakie jest umiejscowienie okna/balkonu?" ];
-	pielegnacja     [ label = "Czy masz czas pielegnowac rosline?"      ];
-	naslonecznienie [ label = "Jakie jest planowane stanowisko?"        ];
-	wilgotnosc      [ label = "Jakie jest planowane stanowisko?"        ];
-	sikawki         [ label = "Czy jest automatyczne podlewanie?"       ];
-	prochnica       [ label = "Czy na stanowisku wystepuje prochnica?"  ];
-	kwiaty          [ label = "Czy roslina ma miec kwiaty?"             ];
-	kolor           [ label = "Jakiego kolory maja byc kwiaty?"         ];
+	lokalizacja1    [ label = "Gdzie zostanie posadzona roslina?"        ];
+	lokalizacja2    [ label = "Gdzie zostanie posadzona roslina?"        ];
+	lokalizacja3    [ label = "Gdzie zostanie posadzona roslina?"        ];
+	orientacja      [ label = "Jakie jest umiejscowienie okna/balkonu?"  ];
+	zasloniecie     [ label = "Jakie jest umiejscowienie okna/balkonu?"  ];
+	pielegnacja     [ label = "Czy masz czas pielegnowac rosline?"       ];
+	naslonecznienie [ label = "Jakie jest planowane stanowisko?"         ];
+	wilgotnosc      [ label = "Jakie jest planowane stanowisko?"         ];
+	sikawki         [ label = "Czy jest automatyczne podlewanie?"        ];
+	prochnica       [ label = "Czy na stanowisku wystepuje prochnica?"   ];
+	osloniecie      [ label = "Czy stanowisko jest osloniete od wiatru?" ];
+	kwiaty          [ label = "Czy roslina ma miec kwiaty?"              ];
+	kolor           [ label = "Jakiego kolory maja byc kwiaty?"          ];
 
 	START           -> lokalizacja1
 
@@ -26,7 +27,7 @@ digraph
 	lokalizacja3    -> kwiaty          [ label = "zdala od okna"  ];
 	zasloniecie     -> kwiaty          [ label = "wsrod budynkow" ];
 	zasloniecie     -> kwiaty          [ label = "wsrod drzew"    ];
-	zasloniecie     -> kwiaty          [ label = "niezasloniete"  ];
+	zasloniecie     -> kwiaty          [ label = "nieosloniete"   ];
 
 	//ogrod
 	lokalizacja1    -> naslonecznienie [ label = "w ogrodzie"     ];
@@ -38,8 +39,10 @@ digraph
 	wilgotnosc      -> sikawki         [ label = "przecietne"     ];
 	sikawki         -> prochnica       [ label = "tak"            ];
 	sikawki         -> prochnica       [ label = "nie"            ];
-	prochnica       -> kwiaty          [ label = "tak"            ];
-	prochnica       -> kwiaty          [ label = "nie"            ];
+	prochnica       -> osloniecie      [ label = "tak"            ];
+	prochnica       -> osloniecie      [ label = "nie"            ];
+	osloniecie      -> kwiaty          [ label = "tak"            ];
+	osloniecie      -> kwiaty          [ label = "nie"            ];
 
 	//ogolne
 	kwiaty          -> kolor           [ label = "tak"            ];

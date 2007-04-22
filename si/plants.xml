@@ -7,7 +7,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="białe z żółtym środkiem" />
-    <property name="Ciekawe cechy" value="roślina bardzo szybko rosnąca, silnie&#xD;&#xA;rozgałęziona, wcześnie i officie&#xD;&#xA;kwitnąca. Doskonała na balkony&#xD;&#xA;i tarasy" />
+    <property name="Ciekawe cechy" value="roślina bardzo szybko rosnąca, silnie rozgałęziona, wcześnie i officie kwitnąca. Doskonała na balkony i tarasy" />
     <photo path="encfoto/ArgyranthemumFrutescens.jpg" />
   </plant>
   <plant name="Brassica oleracea" path="481,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -19,7 +19,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="ozdobna z liści" />
-    <property name="Ciekawe cechy" value="Największą  ozdoba tej rośliny są wewnętrzne liście , które mają barwę od białej poprzez różne odcienie różu i purpury . Coraz częściej można ją spotkać w aranżacjach balkonowych . Ze względu na nieco egzotyczny wygląd i niekłopotliwą uprawę warta większego zainteresowania . Uprawiana głównie z nasion , sadzonki są raczej rzadko dostępne ." />
+    <property name="Ciekawe cechy" value="Największą ozdoba tej rośliny są wewnętrzne liście , które mają barwę od białej poprzez różne odcienie różu i purpury . Coraz częściej można ją spotkać w aranżacjach balkonowych . Ze względu na nieco egzotyczny wygląd i niekłopotliwą uprawę warta większego zainteresowania . Uprawiana głównie z nasion , sadzonki są raczej rzadko dostępne ." />
     <photo path="encfoto_redakcja/kapusta ozdobna.jpg" />
   </plant>
   <plant name="Campanula" path="124,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -31,7 +31,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="niebieskie" />
-    <property name="Ciekawe cechy" value="mocno krzewiąca roślina, idealna&#xD;&#xA;do uprawy w wiszących pojemnikach&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="mocno krzewiąca roślina, idealna do uprawy w wiszących pojemnikach" />
     <photo path="encfoto/Campanula.jpg" />
   </plant>
   <plant name="Centradenia" path="125,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -43,7 +43,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="różowe" />
-    <property name="Ciekawe cechy" value="mocno krzewiąca roślina, idealna&#xD;&#xA;do uprawy w wiszących pojemnikach, brązowo-czerwone liście" />
+    <property name="Ciekawe cechy" value="mocno krzewiąca roślina, idealna do uprawy w wiszących pojemnikach, brązowo-czerwone liście" />
     <photo path="encfoto/Centradenia.jpg" />
   </plant>
   <plant name="Fuksja x hybrida" path="126,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -54,8 +54,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="widne lub słoneczne" />
-    <property name="Kwiaty" value="pełne lub pojedyńcze,&#xD;&#xA;różnokolorowe, przekształcają się&#xD;&#xA;w czerwone, podobne do śliwki&#xD;&#xA;owoce" />
-    <property name="Ciekawe cechy" value="uprawiana głównie na tarasach,&#xD;&#xA;balkonach i w ogrodach ale dobrze&#xD;&#xA;rośnie także w widnych&#xD;&#xA;pomieszczeniach" />
+    <property name="Kwiaty" value="pełne lub pojedyńcze, różnokolorowe, przekształcają się w czerwone, podobne do śliwki owoce" />
+    <property name="Ciekawe cechy" value="uprawiana głównie na tarasach, balkonach i w ogrodach ale dobrze rośnie także w widnych pomieszczeniach" />
     <photo path="encfoto/Fuksjapelna.jpg" />
   </plant>
   <plant name="Helichrysum bracteatum" path="127,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -90,8 +90,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="niebieskie, delikatne, kwitnie od&#xD;&#xA;wiosny do późnej jesieni" />
-    <property name="Ciekawe cechy" value="polecana do uprawy w wiszących&#xD;&#xA;pojemnikach ze względu na silnie&#xD;&#xA;rosnące i zwisające pędy" />
+    <property name="Kwiaty" value="niebieskie, delikatne, kwitnie od wiosny do późnej jesieni" />
+    <property name="Ciekawe cechy" value="polecana do uprawy w wiszących pojemnikach ze względu na silnie rosnące i zwisające pędy" />
     <photo path="encfoto/LobeliaPendula.jpg" />
   </plant>
   <plant name="Mentha suaveolens" path="131,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -102,8 +102,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="nie mają znaczenia zdobniczego&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="polecana do uprawy w wiszących&#xD;&#xA;pojemnikach ze względu na silnie&#xD;&#xA;rosnące i zwisające pędy, wydziela&#xD;&#xA;aromatyczny zapach" />
+    <property name="Kwiaty" value="nie mają znaczenia zdobniczego" />
+    <property name="Ciekawe cechy" value="polecana do uprawy w wiszących pojemnikach ze względu na silnie rosnące i zwisające pędy, wydziela aromatyczny zapach" />
     <photo path="encfoto/MenthaSuaveolens.jpg" />
   </plant>
   <plant name="Pelargonium peltatum" path="133,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -138,18 +138,18 @@
     <property name="Podlewanie" value="częste" />
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="duże różnobarwne " />
-    <property name="Ciekawe cechy" value="Jest to jedna z najczęściej uprawianych roślin balkonowych . Kwitnie niezwykle obficie i długo , w bogatej gamie barw . Czasami kwiaty są pachnące- pojedyncze lub pełne . Wymaga regularnego oczyszczania i nawożenia co wspomaga kwitnienie. łatwo rozmnaża się z nasion , chociaż obecnie oferta rozsady jest tak bogata i przystępna cenowo , że jej samodzielna hodowla jest zbędna . " />
+    <property name="Kwiaty" value="duże różnobarwne" />
+    <property name="Ciekawe cechy" value="Jest to jedna z najczęściej uprawianych roślin balkonowych . Kwitnie niezwykle obficie i długo , w bogatej gamie barw . Czasami kwiaty są pachnące- pojedyncze lub pełne . Wymaga regularnego oczyszczania i nawożenia co wspomaga kwitnienie. łatwo rozmnaża się z nasion , chociaż obecnie oferta rozsady jest tak bogata i przystępna cenowo , że jej samodzielna hodowla jest zbędna ." />
     <photo path="encfoto_redakcja/petunia.jpg" />
   </plant>
   <plant name="Sanvitalia procumbens" path="463,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
     <property name="Nazwa" value="Sanwitalia rozesłana, Polegnatka" />
     <property name="Rodzina" value="Asteraceae" />
     <property name="Pochodzenie" value="Meksyk" />
-    <property name="Rozmiary" value=" wys.10 - 20cm" />
+    <property name="Rozmiary" value="wys.10 - 20cm" />
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="słoneczne, widne" />
+    <property name="Stanowisko" value="słoneczne lub widne" />
     <property name="Kwiaty" value="żółte z ciemnym środkiem" />
     <property name="Ciekawe cechy" value="Roślina jednoroczna o płożącym pokroju. Doskonała do wiszących koszy, skrzynek balkonowych itp. Zastosowanie również w ogrodzie t.j. jako rośl. okrywowa czy na obwódki . Kwitnienie VII-X, przekwitłe kwiaty nie wymagają usuwania. Słoneczne stanowisko korzystniejsze dla pokroju i jakości kwitnienia." />
     <photo path="encfoto_redakcja/sanvitalia.jpg" />
@@ -163,7 +163,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="siwe, średnie" />
-    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę&#xD;&#xA;Suntory" />
+    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę Suntory" />
     <photo path="encfoto/SurfiniaBlueVein.jpg" />
   </plant>
   <plant name="Surfinia 'Hot Pink'" path="141,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -175,7 +175,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="malinowe, duże" />
-    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę&#xD;&#xA;Suntory" />
+    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę Suntory" />
     <photo path="encfoto/SurfiniaHotPink.jpg" />
   </plant>
   <plant name="Surfinia 'Purple Vein'" path="143,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -187,7 +187,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="niebieskie, duże" />
-    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę&#xD;&#xA;Suntory" />
+    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę Suntory" />
     <photo path="encfoto/SurfiniaPurpleVein.jpg" />
   </plant>
   <plant name="Surfinia 'White'" path="145,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -199,7 +199,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="białe, duże" />
-    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę&#xD;&#xA;Suntory" />
+    <property name="Ciekawe cechy" value="roślina wyhodowana przez japońską firmę Suntory" />
     <photo path="encfoto/SurfiniaWhite.jpg" />
   </plant>
   <plant name="Thunbergia alata" path="273,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -221,9 +221,9 @@
     <property name="Rozmiary" value="15 do 25 cm" />
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="słoneczne-widne" />
+    <property name="Stanowisko" value="słoneczne lub widne" />
     <property name="Kwiaty" value="duże różnobarwne często z plamką" />
-    <property name="Ciekawe cechy" value="Obficie kwitnąca roślina ,  od wczesnej wiosny do końca lata . Bardzo łatwy w uprawie i rozmnażaniu , dobrze rośnie zarówno w skrzynkach jaki w ogrodzie  . W ostatnich latach pojawiło sie na rynku wiele ciekawych odmian , które pięknie prezentują się w kompozycjach balkonowych ." />
+    <property name="Ciekawe cechy" value="Obficie kwitnąca roślina , od wczesnej wiosny do końca lata . Bardzo łatwy w uprawie i rozmnażaniu , dobrze rośnie zarówno w skrzynkach jaki w ogrodzie . W ostatnich latach pojawiło sie na rynku wiele ciekawych odmian , które pięknie prezentują się w kompozycjach balkonowych ." />
     <photo path="encfoto_redakcja/bratek.jpg" />
   </plant>
   <plant name="Werbena Tukana 'Denim Blue'" path="148,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -235,7 +235,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="niebieskie" />
-    <property name="Ciekawe cechy" value="roślina o pędach zwisających lub&#xD;&#xA;płożących. Polecana do wiszących&#xD;&#xA;pojemników i na rabaty" />
+    <property name="Ciekawe cechy" value="roślina o pędach zwisających lub płożących. Polecana do wiszących pojemników i na rabaty" />
     <photo path="encfoto/WerbenaTukanaNiebieska.jpg" />
   </plant>
   <plant name="Werbena Tukana 'Scarlet'" path="150,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="balkonowe">
@@ -247,7 +247,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="czerwone" />
-    <property name="Ciekawe cechy" value="roślina o pędach zwisających lub&#xD;&#xA;płożących. Polecana do wiszących&#xD;&#xA;pojemników i na rabaty" />
+    <property name="Ciekawe cechy" value="roślina o pędach zwisających lub płożących. Polecana do wiszących pojemników i na rabaty" />
     <photo path="encfoto/WerbenaTukanaCzerwona.jpg" />
   </plant>
   <plant name="Achillea millefolium" path="503,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -258,7 +258,7 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="zebrane w baldachy " />
+    <property name="Kwiaty" value="zebrane w baldachy" />
     <property name="Ciekawe cechy" value="Krwawnik to odporna na suszę bylina , która dziko rośnie na łąkach i jako chwast stanowi plagę na trawnikach . Szlachetne odmiany tej rośliny są jednak prawdziwą ozdoba ogrodu , występują w kolorach , różowym ,czerwonym , pomarańczowym lub białym . Polecana dla ludzi zapracowanych , którzy nie mogą zbyt wiele czasu przeznaczyć na pielęgnację roślin . Nadaje sie na suche bukiety ." />
     <photo path="encfoto_redakcja/krwawnikpospolity.jpg" />
   </plant>
@@ -271,7 +271,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="sloneczne" />
     <property name="Kwiaty" value="siarkowo żółte - drobne" />
-    <property name="Ciekawe cechy" value="Jest to bylina poduszkowa o srebrzystych liściach i pojawiających sie w nieprzebranej ilości siarkowo żółtych kwiatach . Smagliczka sadzona jest zazwyczaj w ogrodach skalnych . Niezwykle wytrzymała na suszę , znosi silne nasłonecznienie  . Kwitnie wczesna wiosna , po przekwitnięciu warto ją przyciąć co zapobiega łysieniu  kęp ." />
+    <property name="Ciekawe cechy" value="Jest to bylina poduszkowa o srebrzystych liściach i pojawiających sie w nieprzebranej ilości siarkowo żółtych kwiatach . Smagliczka sadzona jest zazwyczaj w ogrodach skalnych . Niezwykle wytrzymała na suszę , znosi silne nasłonecznienie . Kwitnie wczesna wiosna , po przekwitnięciu warto ją przyciąć co zapobiega łysieniu kęp ." />
     <photo path="encfoto_redakcja/smagliczkaskalna.jpg" />
   </plant>
   <plant name="Anemone x hybrida" path="260,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -281,7 +281,7 @@
     <property name="Rozmiary" value="do 120 cm wysokości" />
     <property name="Podlewanie" value="częste" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="wilgotne, lekko zacienione" />
+    <property name="Stanowisko" value="półcieniste, wilgotne" />
     <property name="Kwiaty" value="od białych do czerwonych, 5-7 cm średnicy, zebrane po 15 sztuk" />
     <property name="Ciekawe cechy" value="Kwiaty nadaja się do ciecia i układania stylowych bukietów, są trwałe w wazonie, wymagają okrycia na zimę w pierwszych latach po posadzeniu." />
     <photo path="encfoto_redakcja/zawilec.jpg" />
@@ -312,7 +312,7 @@
     <property name="Rodzina" value="Cruciferae" />
     <property name="Rozmiary" value="Tworzy zwarty kobierzec dorastający do 10 cm" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="IV-V, ciemnofioletowe, drobne " />
+    <property name="Kwiaty" value="IV-V, ciemnofioletowe, drobne" />
     <property name="Ciekawe cechy" value="Pokaż komentarze[1]" />
   </plant>
   <plant name="Bellis perennis" path="513,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -323,8 +323,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="różowe, białe , karminowe " />
-    <property name="Ciekawe cechy" value="Stokrotka to jedna z tych roślin , którą zna każdy . Niewymagająca , skromna , nadaje się do kompozycji rabatowych , ogrodów skalnych , na trawniki oraz na małe bukiety . Urocza bylina o dość długim okresie kwitnienia . Nowe odmiany tej byliny maja kwiaty , pełne , półpełne lub pojedyncze w całej gamie różowego aż po karminowy . " />
+    <property name="Kwiaty" value="różowe, białe , karminowe" />
+    <property name="Ciekawe cechy" value="Stokrotka to jedna z tych roślin , którą zna każdy . Niewymagająca , skromna , nadaje się do kompozycji rabatowych , ogrodów skalnych , na trawniki oraz na małe bukiety . Urocza bylina o dość długim okresie kwitnienia . Nowe odmiany tej byliny maja kwiaty , pełne , półpełne lub pojedyncze w całej gamie różowego aż po karminowy ." />
     <photo path="encfoto_redakcja/stokrotka.jpg" />
   </plant>
   <plant name="Campanula carpatica" path="186,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -332,8 +332,8 @@
     <property name="Rodzina" value="Campanulaceae" />
     <property name="Rozmiary" value="do 25 cm" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="VII-IX, w kształcie niewielkich jasnoniebieskich dzwoneczków  " />
-    <property name="Ciekawe cechy" value="charakteryzują się długim okresem kwitnienia " />
+    <property name="Kwiaty" value="VII-IX, w kształcie niewielkich jasnoniebieskich dzwoneczków" />
+    <property name="Ciekawe cechy" value="charakteryzują się długim okresem kwitnienia" />
   </plant>
   <plant name="Campanula persicifolia" path="512,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
     <property name="Nazwa" value="Dzwonek brzoskwiniolistny" />
@@ -343,8 +343,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="białe lub niebieskie " />
-    <property name="Ciekawe cechy" value="Kwitnąca latem bylina , niewymagająca i łatwa w uprawie . Rozmnaża sie przez samosiew lub podział kępy . " />
+    <property name="Kwiaty" value="białe lub niebieskie" />
+    <property name="Ciekawe cechy" value="Kwitnąca latem bylina , niewymagająca i łatwa w uprawie . Rozmnaża sie przez samosiew lub podział kępy ." />
     <photo path="encfoto_redakcja/dzwonekbrzoskwiniolistny.jpg" />
   </plant>
   <plant name="Cerastium biebersteinii" path="325,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -352,11 +352,11 @@
     <property name="Rodzina" value="Caryophyllaceae" />
     <property name="Pochodzenie" value="pochodzi z Krymu" />
     <property name="Rozmiary" value="bylina zadarniająca, ekspansywna" />
-    <property name="Podlewanie" value="żadkie lub umiarkowane" />
+    <property name="Podlewanie" value="rzadkie lub umiarkowane" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="białe trąbkowate" />
-    <property name="Ciekawe cechy" value="Roślina cała pokryta białym puszkiem, kwitnie długo w maju i czetwcu, po podcięciu zakwitnie drugi raz. Odpowiednia na szczeliny murków i skarp skaliniaków, ładnie wygląda wraz z roślinami cebulowymi. " />
+    <property name="Ciekawe cechy" value="Roślina cała pokryta białym puszkiem, kwitnie długo w maju i czetwcu, po podcięciu zakwitnie drugi raz. Odpowiednia na szczeliny murków i skarp skaliniaków, ładnie wygląda wraz z roślinami cebulowymi." />
     <photo path="encfoto_redakcja/rogownica.jpg" />
   </plant>
   <plant name="Cobaea" path="332,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -379,8 +379,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="wielobarwne " />
-    <property name="Ciekawe cechy" value="Znanych jest wiele gatunków tej wiosennej roślinki  np ;Crocus speciosus ,Crocus versicolor ,Crocus sieberi ,Crocus angustifolius . W ogrodach krokusy są jednymi z najwcześniej zakwitających roślin . nadają sie do sadzenia w grupach na trawnikach , w ogródkach skalnych lub  rabatach . Krokus - a raczej jego gatunki , szafran uprawny i szafran siewny , jest bardzo cenną przyprawą . " />
+    <property name="Kwiaty" value="wielobarwne" />
+    <property name="Ciekawe cechy" value="Znanych jest wiele gatunków tej wiosennej roślinki np ;Crocus speciosus ,Crocus versicolor ,Crocus sieberi ,Crocus angustifolius . W ogrodach krokusy są jednymi z najwcześniej zakwitających roślin . nadają sie do sadzenia w grupach na trawnikach , w ogródkach skalnych lub rabatach . Krokus - a raczej jego gatunki , szafran uprawny i szafran siewny , jest bardzo cenną przyprawą ." />
     <photo path="encfoto_redakcja/crocus.jpg" />
   </plant>
   <plant name="Dianthus gratianopolitanus" path="101,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -422,7 +422,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="purpurowe koszyczki" />
-    <property name="Ciekawe cechy" value="Jeżówka kwitnie od lipca do października.&#xD;&#xA;Roślina lecznicza. Surowcami zielarskimi są ziele i korzeń jeżówki purpurowej." />
+    <property name="Ciekawe cechy" value="Jeżówka kwitnie od lipca do października. Roślina lecznicza. Surowcami zielarskimi są ziele i korzeń jeżówki purpurowej." />
     <photo path="encfoto_redakcja/Echinacea.jpg" />
   </plant>
   <plant name="Geranium dalmaticum" path="179,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -431,7 +431,7 @@
     <property name="Pochodzenie" value="Hiszpania" />
     <property name="Rozmiary" value="wysokość 15 cm. szerokość 30 cm" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="VI-VII drobne różowe " />
+    <property name="Kwiaty" value="VI-VII drobne różowe" />
     <property name="Ciekawe cechy" value="polecane na skalniaki" />
   </plant>
   <plant name="Helleborus niger" path="501,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -443,7 +443,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe" />
-    <property name="Ciekawe cechy" value="Ciekawa bylina o nietypowej porze kwitnienia - czasami zakwita już w styczniu i potrafi  kwitnąć aż do kwietnia . Liście ma częściowo zimozielone . " />
+    <property name="Ciekawe cechy" value="Ciekawa bylina o nietypowej porze kwitnienia - czasami zakwita już w styczniu i potrafi kwitnąć aż do kwietnia . Liście ma częściowo zimozielone ." />
     <photo path="encfoto_redakcja/ciemiernik.jpg" />
   </plant>
   <plant name="Hemerocallis fulva" path="279,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -452,8 +452,8 @@
     <property name="Pochodzenie" value="połódniowa Europa, Azja o umiarkowanym klimacie" />
     <property name="Rozmiary" value="liście wstęgowate do 70 cm, pędy kwiatowe 1,2 m" />
     <property name="Podlewanie" value="umiarkowane lub rzadkie" />
-    <property name="Nawożenie" value="gleba żyzna" />
-    <property name="Stanowisko" value="miejsca wilgotne i słoneczne lub częściowo zacienione" />
+    <property name="Nawożenie" value="częste" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste, wilgotne" />
     <property name="Kwiaty" value="pomarańczowo rdzawe, trąmkowate" />
     <property name="Ciekawe cechy" value="Liliowcom najbardziej odpowiada gleba żyzna i wilgotna, lecz rónież znoszą suszę dzięki grubym bulwiastym korzeniom magazynującym wodę, mocno się rozrasta tworząc malowniczą kępę zielonych liści nad którą górują mocne w kolorach kwiaty, polecam do ogródków naturalistycznych." />
     <photo path="encfoto_redakcja/liliowiec.jpg" />
@@ -508,7 +508,7 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="różnobarwne , duże " />
+    <property name="Kwiaty" value="różnobarwne , duże" />
     <property name="Ciekawe cechy" value="Jest to znana wszystkim bylina o ciekawych kwiatach i pięknych szablastych liściach . Ogromna ilość odmian i kolorów umożliwia tworzenie barwnych aranżacji . Niekłopotliwy w uprawie zyskuje coraz większą popularność i zastosowanie w nowoczesnych ogrodach . Rozmnaża sie przez podział kłączy po kwitnieniu lub wczesną wiosną ." />
     <photo path="encfoto_redakcja/irys.jpg" />
   </plant>
@@ -517,7 +517,7 @@
     <property name="Rodzina" value="Compositae" />
     <property name="Pochodzenie" value="Występuje od Europy przez Chiny, aż do Japonii" />
     <property name="Rozmiary" value="do 15 cm, zwarty pokrój" />
-    <property name="Stanowisko" value="nasłonecznione" />
+    <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="VI-VII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe" />
     <property name="Ciekawe cechy" value="powinna rosnąć w mało żyznej ziemi wtedy zachowa zwarty pokrój" />
     <photo path="encfoto/Szarotka.jpg" />
@@ -563,7 +563,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="niebieskie zebrane w grona" />
-    <property name="Ciekawe cechy" value="Jedna z najpopularniejszych roślin wiosennych . Rozmnaża się go przez cebulki przybyszowe lub z nasion . Rosnąc wiele lat w jednym miejscu tworzy zwarte błękitne  kobierce .  Pięknie wygląda w zestawieniu z żonkilami ." />
+    <property name="Ciekawe cechy" value="Jedna z najpopularniejszych roślin wiosennych . Rozmnaża się go przez cebulki przybyszowe lub z nasion . Rosnąc wiele lat w jednym miejscu tworzy zwarte błękitne kobierce . Pięknie wygląda w zestawieniu z żonkilami ." />
     <photo path="encfoto_redakcja/muscariarmeniacum.jpg" />
   </plant>
   <plant name="Narcissus" path="514,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -575,17 +575,17 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="Pachnące, z przykoronkiem w środku" />
-    <property name="Ciekawe cechy" value="Rozróżniamy wiele gatunków tej wczesnowiosennej rośliny cebulowej np ; narcyzy trąbkowe&#xD;&#xA;, narcyzy wielkoprzykoronkowe&#xD;&#xA;,narcyzy drobnoprzykoronkowe , mieszańce Cyclamineus, mieszańce Jonquilla , mieszańce Tazetta i inne.   Piękne kwiaty są docenianie przez wszystkich , rzadko spotyka się ogrody w których nie goszczą te piękne rośliny ." />
+    <property name="Ciekawe cechy" value="Rozróżniamy wiele gatunków tej wczesnowiosennej rośliny cebulowej np ; narcyzy trąbkowe , narcyzy wielkoprzykoronkowe ,narcyzy drobnoprzykoronkowe , mieszańce Cyclamineus, mieszańce Jonquilla , mieszańce Tazetta i inne. Piękne kwiaty są docenianie przez wszystkich , rzadko spotyka się ogrody w których nie goszczą te piękne rośliny ." />
     <photo path="encfoto_redakcja/narcyz.jpg" />
   </plant>
   <plant name="Nepeta x faassenii" path="272,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
     <property name="Nazwa" value="Kocimiętka Faassena" />
     <property name="Rodzina" value="Lamiaceae (Labiatae)" />
     <property name="Pochodzenie" value="roślina śródziemnomorska" />
-    <property name="Rozmiary" value="gęste kępy pędów  30 - 50 cm wysokości" />
+    <property name="Rozmiary" value="gęste kępy pędów 30 - 50 cm wysokości" />
     <property name="Podlewanie" value="rzadkie lub umiarkowane" />
     <property name="Nawożenie" value="umiarkowane lub rzadkie" />
-    <property name="Stanowisko" value="słoneczne i suche" />
+    <property name="Stanowisko" value="słoneczne, suche" />
     <property name="Kwiaty" value="gęste niebieskoliliowe" />
     <property name="Ciekawe cechy" value="Jest miododajna, przyciąga roje przczół i trzmieli, posiada charakterystyczny cytrynowy zapach, bujnie się rozrasta lecz nie zagraża innym roślinom, doskonała na murki kwiatowe i skalniaki." />
     <photo path="encfoto_redakcja/kocimietka.jpg" />
@@ -597,7 +597,7 @@
     <property name="Rozmiary" value="do 30 cm" />
     <property name="Podlewanie" value="rzadkie lub umiarkowane" />
     <property name="Nawożenie" value="rzadkie" />
-    <property name="Stanowisko" value="słoneczne i ciepłe, raczej suche" />
+    <property name="Stanowisko" value="słoneczne, ciepłe, raczej suche" />
     <property name="Kwiaty" value="duże, żółte, średnicy 8 cm" />
     <property name="Ciekawe cechy" value="Jest to roślina przydatna na suche skarpy i słoneczne murki. Odznacza się trwałościa i wytrzymałościa na mróz, mocno się rozrasta dzięki podziemnym rozłogom, z których wyrastają rozetki liściowe." />
     <photo path="encfoto_redakcja/wiesiolek.jpg" />
@@ -607,7 +607,7 @@
     <property name="Rodzina" value="Labiate" />
     <property name="Rozmiary" value="do 30 cm, płożacy pokrój" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="VII-VIII,jasnoróżowe,drobne " />
+    <property name="Kwiaty" value="VII-VIII,jasnoróżowe,drobne" />
     <property name="Ciekawe cechy" value="polecana do ogródków skalnych" />
   </plant>
   <plant name="Papaver orientale" path="471,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -619,7 +619,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="czerwone z czarną plamką ok.15cm" />
-    <property name="Ciekawe cechy" value="Piękna bylina do ogrodów o charakterze naturalistycznym . Po przekwitnięciu ozdoba są kuliste owocostany tzw. makówki .  Podczas ścinania kwiatów należy zachować ostrożność , gdyż roślina wydziela biały trujący sok . Obecnie  w hodowli są też odmiany o kwiatach różowych , łososiowych lub białych , czy wiśniowych . " />
+    <property name="Ciekawe cechy" value="Piękna bylina do ogrodów o charakterze naturalistycznym . Po przekwitnięciu ozdoba są kuliste owocostany tzw. makówki . Podczas ścinania kwiatów należy zachować ostrożność , gdyż roślina wydziela biały trujący sok . Obecnie w hodowli są też odmiany o kwiatach różowych , łososiowych lub białych , czy wiśniowych ." />
     <photo path="encfoto_redakcja/papaver.jpg" />
   </plant>
   <plant name="Phlox douglasii" path="176,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -637,7 +637,7 @@
     <property name="Rodzina" value="Polemoniaceae" />
     <property name="Rozmiary" value="do 10 cm, dywanowy pokrój" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="IV-V,drobne jasnoliliowe " />
+    <property name="Kwiaty" value="IV-V,drobne jasnoliliowe" />
     <property name="Ciekawe cechy" value="  " />
   </plant>
   <plant name="Phlox subulata" path="456,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -645,7 +645,7 @@
     <property name="Rodzina" value="Polemoniaceae" />
     <property name="Rozmiary" value="do 10 cm, dywanowy pokrój" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="IV-V,drobne jasnoliliowe " />
+    <property name="Kwiaty" value="IV-V,drobne jasnoliliowe" />
     <property name="Ciekawe cechy" value="  " />
   </plant>
   <plant name="Pulsatilla vulgaris" path="181,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
@@ -664,7 +664,7 @@
     <property name="Rozmiary" value="łodygi dorastają do 70 cm" />
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
-    <property name="Stanowisko" value="zaciszne, ciepłe i słoneczne" />
+    <property name="Stanowisko" value="słoneczne, ciepłe" />
     <property name="Kwiaty" value="wargowe fioletowe rzadko białe" />
     <property name="Ciekawe cechy" value="Jest rośliną leczniczą i przyprawową cenioną już w starożytności. Ma też walory dekoracyjne. Łodygi są proste łukowato przewieszające się, liście lancetowate kutnerowato owłosione. Cała roślina mocno przyjemnie pachnie a w porze kwitnienia przyciąga roje pszczól i trzemieli. Roślina raczej słabo odporna na mrozy, odmiany pstre właściwie zawsze przemarzną dlatego lepiej sadzić w przenośnych donicach." />
     <photo path="encfoto_redakcja/szalwia.jpg" />
@@ -673,18 +673,18 @@
     <property name="Nazwa" value="Skalnica" />
     <property name="Rodzina" value="Saxifragaceae" />
     <property name="Rozmiary" value="do 10 cm wysokości" />
-    <property name="Stanowisko" value="słoneczne, półcień" />
-    <property name="Kwiaty" value="IV-VI&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="roślina na skalniaki&#xD;&#xA;" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste" />
+    <property name="Kwiaty" value="IV-VI" />
+    <property name="Ciekawe cechy" value="roślina na skalniaki" />
     <photo path="encfoto/SaxifragaArendsii.jpg" />
   </plant>
   <plant name="Sedum album 'Coral Carpet'" path="178,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
     <property name="Nazwa" value="Rozchodnik biały" />
     <property name="Rodzina" value="Crasullaceae" />
     <property name="Rozmiary" value="roślina okrywowa, dorasta do 10 cm" />
-    <property name="Stanowisko" value="słoneczne, widne" />
-    <property name="Kwiaty" value="VI-VII białe, drobne, gwiazdkowe " />
-    <property name="Ciekawe cechy" value="polecana na skalniaki, " />
+    <property name="Stanowisko" value="słoneczne lub widne" />
+    <property name="Kwiaty" value="VI-VII białe, drobne, gwiazdkowe" />
+    <property name="Ciekawe cechy" value="polecana na skalniaki," />
   </plant>
   <plant name="Sempervivum" path="187,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
     <property name="Nazwa" value="Rojnik" />
@@ -692,13 +692,13 @@
     <property name="Rozmiary" value="do 10 cm, roślina rozłogowa" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="VII-VIII, białe drobne" />
-    <property name="Ciekawe cechy" value="część rośliny zanika po okresie kwitnienia  " />
+    <property name="Ciekawe cechy" value="część rośliny zanika po okresie kwitnienia" />
   </plant>
   <plant name="Thymus serpyllum" path="197,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="byliny">
     <property name="Nazwa" value="Macierzanka piaskowa" />
     <property name="Rodzina" value="Labiatae" />
     <property name="Rozmiary" value="rozrasta się dywanowo do 10 cm" />
-    <property name="Stanowisko" value="nasłonecznione" />
+    <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="VI-VII, bladoróżowe drobne" />
     <property name="Ciekawe cechy" value="ich liście wydzielają aromatyczny zapach, mogą być stosowane jako przyprawa" />
   </plant>
@@ -720,8 +720,8 @@
     <property name="Pochodzenie" value="Europa i Azja" />
     <property name="Rozmiary" value="od 60 do 100 cm wysokości" />
     <property name="Podlewanie" value="częste" />
-    <property name="Nawożenie" value="średnie, próchnicze" />
-    <property name="Stanowisko" value="wilgotne i słoneczne, lub częściowo zacienione" />
+    <property name="Nawożenie" value="umiarkowane, próchnicze" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste, wilgotne" />
     <property name="Kwiaty" value="od żóltego do pomarańczowego" />
     <property name="Ciekawe cechy" value="Roślina na miejsca podmokłe, np. koło sadzawki której woda przesiąka do otoczenia. Kwiaty wonne, nadają się do cięcia, długo zachowują świeżość w wazonie. " />
     <photo path="encfoto_redakcja/pelnik.jpg" />
@@ -733,7 +733,7 @@
     <property name="Rozmiary" value="do 30 cm wysokości" />
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
-    <property name="Stanowisko" value="słoneczne i ciepłe" />
+    <property name="Stanowisko" value="słoneczne, ciepłe" />
     <property name="Kwiaty" value="zebrane w kłosy, niebieskie" />
     <property name="Ciekawe cechy" value="Tworzy niską darń, szaro owłosionych lisci, z rozety lisciowej wyrastają pędy z gęsto osadzonymi kwiatami nadającymi się do zaszuszania. Roślina na murki kwiatowe i ogródki skalne." />
     <photo path="encfoto_redakcja/przetacznik.jpg" />
@@ -745,7 +745,7 @@
     <property name="Rozmiary" value="niska roślina darniowa, ok 8 cm wysokości" />
     <property name="Podlewanie" value="umiarkowane lub częste" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="cieniste i wilgotne, próchnicze" />
+    <property name="Stanowisko" value="cieniste, wilgotne, próchnicze" />
     <property name="Kwiaty" value="głównie ciemnofioletowe, również białe, rzadko pomarańczowe" />
     <property name="Ciekawe cechy" value="Gatunek ten sadzono już w ogrodach starożytnych, roślina obrzędowa, częsty temat mitów i legend, występuje w poezji równie często jak róża, woń kwiatów zaliczana do najszlachetniejszych aromatów, raz posadzona w ogrodzie pozostaje w nim na zawsze, nasiona przenoszone są przez mrówki." />
     <photo path="encfoto_redakcja/fiolek.jpg" />
@@ -758,7 +758,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne lub słoneczne" />
-    <property name="Kwiaty" value="dzwonkowate, czerwono-żółte " />
+    <property name="Kwiaty" value="dzwonkowate, czerwono-żółte" />
     <property name="Ciekawe cechy" value="Jest to wiotka krzewinka wymagajaca podpór(często zaliczana do pnączy). Ma bardzo ozdobne żółtonakrapiane ulistnienie oraz piękne dzwoneczkowate kwiaty pojawiajace się od wiosny do późnego lata." />
     <photo path="encfoto_redakcja/Klonik.jpg" />
   </plant>
@@ -795,7 +795,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="różowe" />
-    <property name="Ciekawe cechy" value="kwiatostany mogą pozostawać na&#xD;&#xA;roślinie przez kilka miesęcy;&#xD;&#xA;roślina bardzo wytrzymała&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="kwiatostany mogą pozostawać na roślinie przez kilka miesęcy; roślina bardzo wytrzymała" />
     <photo path="encfoto/AechmeaFasciata.jpg" />
   </plant>
   <plant name="Agava americana 'Marginata'" path="8,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -806,8 +806,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="agawy kwitną tylko raz wżyciu, gdy&#xD;&#xA;osiągną kilkadziesiąt lat. Wówczas ze&#xD;&#xA;środka rośliny wyrasta potężny&#xD;&#xA;kwiatostan. Po przekwitniciu roślina&#xD;&#xA;ginie" />
-    <property name="Ciekawe cechy" value="z kwiatostanów agave atrovirens&#xD;&#xA;(agawa ciemnozielona) sporządza się w Meksyku wódkę o nazwie polque." />
+    <property name="Kwiaty" value="agawy kwitną tylko raz wżyciu, gdy osiągną kilkadziesiąt lat. Wówczas ze środka rośliny wyrasta potężny kwiatostan. Po przekwitniciu roślina ginie" />
+    <property name="Ciekawe cechy" value="z kwiatostanów agave atrovirens (agawa ciemnozielona) sporządza się w Meksyku wódkę o nazwie polque." />
     <photo path="encfoto/Agawa.jpg" />
   </plant>
   <plant name="Aglonema commutatum" path="172,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -815,9 +815,9 @@
     <property name="Rodzina" value="Araceae" />
     <property name="Pochodzenie" value="Filipiny" />
     <property name="Rozmiary" value="do 1 wysokości" />
-    <property name="Podlewanie" value="umiarkowanie" />
-    <property name="Nawożenie" value="umiarkowanie" />
-    <property name="Stanowisko" value="półcień, widno" />
+    <property name="Podlewanie" value="umiarkowane" />
+    <property name="Nawożenie" value="umiarkowane" />
+    <property name="Stanowisko" value="półcieniste lub widne" />
     <property name="Kwiaty" value="tak jak wszystkie rośliny z rodziny Araceae tworzy kwiatostany w kształcie kolby" />
     <property name="Ciekawe cechy" value="-" />
   </plant>
@@ -829,8 +829,8 @@
     <property name="Podlewanie" value="umiarkowane, ziemia stale wilgotna, zimą ograniczamy podlewanie" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
-    <property name="Kwiaty" value="kolbowate kwiatostany&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="spokrewniona z Colocasia esculenta,&#xD;&#xA;z bulw tej rośliny wytwarza się taro-&#xD;&#xA;podstawowy posiłek w Azji&#xD;&#xA;Południowej" />
+    <property name="Kwiaty" value="kolbowate kwiatostany" />
+    <property name="Ciekawe cechy" value="spokrewniona z Colocasia esculenta, z bulw tej rośliny wytwarza się taro- podstawowy posiłek w Azji Południowej" />
     <photo path="encfoto/AlocasiaLowii.jpg" />
   </plant>
   <plant name="Ananas comosus" path="174,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -838,9 +838,9 @@
     <property name="Rodzina" value="Bromeliaceae" />
     <property name="Pochodzenie" value="Brazylia" />
     <property name="Rozmiary" value="rozeta do 1m wysokości i szerokości" />
-    <property name="Podlewanie" value="umiarkowanie do podstawka" />
-    <property name="Nawożenie" value="umiarkowanie" />
-    <property name="Stanowisko" value="półcień, widno" />
+    <property name="Podlewanie" value="umiarkowane do podstawka" />
+    <property name="Nawożenie" value="umiarkowane" />
+    <property name="Stanowisko" value="półcieniste lub widne" />
     <property name="Kwiaty" value="-" />
     <property name="Ciekawe cechy" value="-" />
   </plant>
@@ -853,7 +853,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe, różowe, żółte, czerwone lub dwukolorowe" />
-    <property name="Ciekawe cechy" value="Kwiaty tej rośliny pokryte są wełnistymi włoskami, gdy rozkwitają cały kwiatostan przegina się do dołu upodabniając się do łapy kangura. Jest to doskonały dodatek do kwiatów ciętych gdyż w wazonie utrzymują świeżość przez ok. 3 tygodnie. " />
+    <property name="Ciekawe cechy" value="Kwiaty tej rośliny pokryte są wełnistymi włoskami, gdy rozkwitają cały kwiatostan przegina się do dołu upodabniając się do łapy kangura. Jest to doskonały dodatek do kwiatów ciętych gdyż w wazonie utrzymują świeżość przez ok. 3 tygodnie." />
     <photo path="encfoto_redakcja/lapa.jpg" />
   </plant>
   <plant name="Anthurium scherzerianum" path="173,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -861,9 +861,9 @@
     <property name="Rodzina" value="Araceae" />
     <property name="Pochodzenie" value="Ameryka Południowa" />
     <property name="Rozmiary" value="do 1 m wysokości" />
-    <property name="Podlewanie" value="umiarkowanie, nie lubi przesuszania, należy spryskiwać" />
-    <property name="Nawożenie" value="umiarkowanie" />
-    <property name="Stanowisko" value="półcień, widno" />
+    <property name="Podlewanie" value="umiarkowane, nie lubi przesuszania, należy spryskiwać" />
+    <property name="Nawożenie" value="umiarkowane" />
+    <property name="Stanowisko" value="półcieniste lub widne" />
     <property name="Kwiaty" value="czerwone lub różowe w kształcie kolby" />
     <property name="Ciekawe cechy" value="-" />
   </plant>
@@ -876,7 +876,7 @@
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="żółte" />
-    <property name="Ciekawe cechy" value="Najpiękniejszą częścia rośliny są liście.Wspaniale połyskliwe,głęboko osadzone, o żyłkach w kolorze kości słoniowej. To właśnie dzięki nim roślina jest niezwykle dekoracyjna, nawet jeżeli nie kwitnie. Wnaszych warunkach Afelandra kwitnie zazwyczaj  pomiędzy kwietniem a sierpniem, nieprzerwanie przez 3 - 8 tygodni. Stanowiski możliwie jasne i ciepłe. Zarówno światło jak i ciepło są niezbędne do kwitnienia. W zimie wystarczy 12-15 stopni i dużo światła. Podlewanie od początku okresu intensywnego wzrostu obfite - miękką wodą, lubi częste zraszanie. Kiedy przekwitnie należy jej się 2 miesięczny odpoczynek w temp. 10- 25 stopni i skromniejsze podlewanie.&#xD;&#xA;Nawożenie w lecie co tydzień. Rozmnażanie z zadzonek wierzxhokowych ukorzenianych w ciepłej mnożarce.&#xD;&#xA;Przy zbyt suchym powietrzu mogą wystąpić wełnowce i tarczniki. Przesuszenie ziemi powoduje brązowienie i opadanie liści." />
+    <property name="Ciekawe cechy" value="Najpiękniejszą częścia rośliny są liście.Wspaniale połyskliwe,głęboko osadzone, o żyłkach w kolorze kości słoniowej. To właśnie dzięki nim roślina jest niezwykle dekoracyjna, nawet jeżeli nie kwitnie. Wnaszych warunkach Afelandra kwitnie zazwyczaj pomiędzy kwietniem a sierpniem, nieprzerwanie przez 3 - 8 tygodni. Stanowiski możliwie jasne i ciepłe. Zarówno światło jak i ciepło są niezbędne do kwitnienia. W zimie wystarczy 12-15 stopni i dużo światła. Podlewanie od początku okresu intensywnego wzrostu obfite - miękką wodą, lubi częste zraszanie. Kiedy przekwitnie należy jej się 2 miesięczny odpoczynek w temp. 10- 25 stopni i skromniejsze podlewanie. Nawożenie w lecie co tydzień. Rozmnażanie z zadzonek wierzxhokowych ukorzenianych w ciepłej mnożarce. Przy zbyt suchym powietrzu mogą wystąpić wełnowce i tarczniki. Przesuszenie ziemi powoduje brązowienie i opadanie liści." />
     <photo path="encfoto_redakcja/afelandra.jpg" />
   </plant>
   <plant name="Areca catechu" path="318,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -899,8 +899,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
-    <property name="Kwiaty" value="białe, drobne&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="latem może rosnąć na dworze;&#xD;&#xA;ze względu na podobieństwo do&#xD;&#xA;paproci bywa z nią mylony;&#xD;&#xA;roślina łatwa w uprawie" />
+    <property name="Kwiaty" value="białe, drobne" />
+    <property name="Ciekawe cechy" value="latem może rosnąć na dworze; ze względu na podobieństwo do paproci bywa z nią mylony; roślina łatwa w uprawie" />
     <photo path="encfoto/AsparagusSetaceus.jpg" />
   </plant>
   <plant name="Asplenium nidus" path="301,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -910,7 +910,7 @@
     <property name="Rozmiary" value="1 m wysokości i szerokości" />
     <property name="Podlewanie" value="częste" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="widne lecz nie słoneczne" />
+    <property name="Stanowisko" value="widne ale nie słoneczne" />
     <property name="Kwiaty" value="nie kwitnie" />
     <property name="Ciekawe cechy" value="Jest paprocią o całobrzegich liściach, pod którymi pojawiaja sie okresowo charakterystyczne cienkie paseczki zarodni. W warunkach naturalnych roślina ta porasta pnie tropikalnych drzew." />
     <photo path="encfoto_redakcja/Asplenium.jpg" />
@@ -920,7 +920,7 @@
     <property name="Rodzina" value="Cornaceae" />
     <property name="Pochodzenie" value="subtropikalne lasy Japonii i Korei" />
     <property name="Rozmiary" value="krzew do 2 m wysokości" />
-    <property name="Podlewanie" value="umiarkowene" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="drobne, purpurowe, zebrane w wiechę" />
@@ -960,7 +960,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="drobne" />
-    <property name="Ciekawe cechy" value="ma wielobarwnych liście&#xD;&#xA;o przeróżnych wzorach" />
+    <property name="Ciekawe cechy" value="ma wielobarwnych liście o przeróżnych wzorach" />
     <photo path="encfoto/BegoniaRex.jpg" />
   </plant>
   <plant name="Beloperone gutta" path="285,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -992,11 +992,11 @@
     <property name="Rodzina" value="-" />
     <property name="Pochodzenie" value="-" />
     <property name="Rozmiary" value="200 cm" />
-    <property name="Podlewanie" value="Umiarkowanie" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="częste" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe" />
-    <property name="Ciekawe cechy" value="Jeżeli nasze nieco nadwrażliwe drzewko kawowe przetrwa pierwsze cztery lata, zadziwi nas bogactwem wspaniale pachnących kwiatów. Jednak uzyskanie nasion, czyli ziaren kawy jest możliwe tylko wtedy, gdy za pomocą pędzelka przeniesiemy pyłek z jednego kwiatu na inny.&#xD;&#xA;Stanowisko bardzo jasne, ale osłonięte przed bezpośrednim działaniem promieni słonecznych.&#xD;&#xA;Podlewanie umiarkowane, ale regularne i spryskiwanie miękką wodą. Twarda i zimna woda to dla kawy trucizna!!!&#xD;&#xA;Nawożenie od wiosny do jesieni co tydzień nawozem dla rododendronów.&#xD;&#xA;Rozmnażanie możliwe cały rok. Najlepiej jednak wysiewać dojrzałe nasiona od listopada do stycznia. Trzymać w ciemności przykryte kartonem. Kiełkuje w różnych odstępach czasu.&#xD;&#xA;Zbytnie przesuszenia powietrza lub zbyt ciepłe stanowisko mogą prowadzić do pojawienia sie tarczników. Nagła utrata liści to skutek zmiany miejsca lub przeciągów. Brak wilgotności w powietrzu prowadzi do zwijania sie liści i zrzucania pąków natomiast brązowienie liściwywołane jest zbyt dużym nasłonecznieniem." />
+    <property name="Ciekawe cechy" value="Jeżeli nasze nieco nadwrażliwe drzewko kawowe przetrwa pierwsze cztery lata, zadziwi nas bogactwem wspaniale pachnących kwiatów. Jednak uzyskanie nasion, czyli ziaren kawy jest możliwe tylko wtedy, gdy za pomocą pędzelka przeniesiemy pyłek z jednego kwiatu na inny. Stanowisko bardzo jasne, ale osłonięte przed bezpośrednim działaniem promieni słonecznych. Podlewanie umiarkowane, ale regularne i spryskiwanie miękką wodą. Twarda i zimna woda to dla kawy trucizna!!! Nawożenie od wiosny do jesieni co tydzień nawozem dla rododendronów. Rozmnażanie możliwe cały rok. Najlepiej jednak wysiewać dojrzałe nasiona od listopada do stycznia. Trzymać w ciemności przykryte kartonem. Kiełkuje w różnych odstępach czasu. Zbytnie przesuszenia powietrza lub zbyt ciepłe stanowisko mogą prowadzić do pojawienia sie tarczników. Nagła utrata liści to skutek zmiany miejsca lub przeciągów. Brak wilgotności w powietrzu prowadzi do zwijania sie liści i zrzucania pąków natomiast brązowienie liściwywołane jest zbyt dużym nasłonecznieniem." />
     <photo path="encfoto_redakcja/kawa.jpg" />
   </plant>
   <plant name="Calathea makoyana" path="323,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1020,7 +1020,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe, bezpłatkowe, drobne" />
-    <property name="Ciekawe cechy" value="szybko się rozkrzewia, nadaje się&#xD;&#xA;do wiszących pojemników lub do&#xD;&#xA;zadarniania większych powierzchnii&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="szybko się rozkrzewia, nadaje się do wiszących pojemników lub do zadarniania większych powierzchnii" />
     <photo path="encfoto/CalisiaRepans.jpg" />
   </plant>
   <plant name="Capiscum annuum" path="21,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1028,11 +1028,11 @@
     <property name="Rodzina" value="Solanaceae" />
     <property name="Pochodzenie" value="Meksyk Ameryka Łacińska" />
     <property name="Rozmiary" value="do 0,5 m wysokości" />
-    <property name="Podlewanie" value="umiarkowane, do podstawki" />
+    <property name="Podlewanie" value="umiarkowane, do podstawka" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value=" widne" />
-    <property name="Kwiaty" value="białe, drobne&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="nazwa capsicum wywodzi się od&#xD;&#xA;greckiego słowa kapto-gryźć,&#xD;&#xA;co jest związane z palącym smakiem&#xD;&#xA;owoców. Z capsicum produkuje się&#xD;&#xA;ostre przyprawy&#xD;&#xA;" />
+    <property name="Stanowisko" value="widne" />
+    <property name="Kwiaty" value="białe, drobne" />
+    <property name="Ciekawe cechy" value="nazwa capsicum wywodzi się od greckiego słowa kapto-gryźć, co jest związane z palącym smakiem owoców. Z capsicum produkuje się ostre przyprawy" />
     <photo path="encfoto/CapiscumAnnuum.jpg" />
   </plant>
   <plant name="Chameadora elegans" path="23,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1043,8 +1043,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne lub cieniste" />
-    <property name="Kwiaty" value="zakwita rzadko&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="jedna z najłatwiejszych do uprawy&#xD;&#xA;palm doniczkowych&#xD;&#xA;" />
+    <property name="Kwiaty" value="zakwita rzadko" />
+    <property name="Ciekawe cechy" value="jedna z najłatwiejszych do uprawy palm doniczkowych" />
     <photo path="encfoto/ChamaedoraElegans.jpg" />
   </plant>
   <plant name="Cissus antarctica" path="25,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1056,7 +1056,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="nie kwitnie w mieszkaniach" />
-    <property name="Ciekawe cechy" value="pnącze z wąsami czepnymi&#xD;&#xA;charakteryzuje się silnym wzrostem&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="pnącze z wąsami czepnymi charakteryzuje się silnym wzrostem" />
     <photo path="encfoto/CissusAntarctica.jpg" />
   </plant>
   <plant name="Citrofortunella mitis" path="447,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1068,7 +1068,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne lub słoneczne" />
     <property name="Kwiaty" value="białe, o przyjemnym zapachu" />
-    <property name="Ciekawe cechy" value="Roślina powstała ze skrzyżowania limonki z kumkwatem. Rośnie powoli ale można z niej wyprowadzić ciekawe drzewko. Częste przycinanie końcówek pędów spowoduje zagęszczenie się rośliny przez co w przyszłości zawiąże więcej owoców. " />
+    <property name="Ciekawe cechy" value="Roślina powstała ze skrzyżowania limonki z kumkwatem. Rośnie powoli ale można z niej wyprowadzić ciekawe drzewko. Częste przycinanie końcówek pędów spowoduje zagęszczenie się rośliny przez co w przyszłości zawiąże więcej owoców." />
     <photo path="encfoto_redakcja/Mandar.jpg" />
   </plant>
   <plant name="Clivia minata" path="343,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1091,8 +1091,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
-    <property name="Kwiaty" value="białe, pięciopłatkowe, wonne&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="owoce kawy to pestkowce,&#xD;&#xA;zawierają po dwa nasiona&#xD;&#xA;Kawę sporządza się z wypalonych ziaren." />
+    <property name="Kwiaty" value="białe, pięciopłatkowe, wonne" />
+    <property name="Ciekawe cechy" value="owoce kawy to pestkowce, zawierają po dwa nasiona Kawę sporządza się z wypalonych ziaren." />
     <photo path="encfoto/CoffeaArabica.jpg" />
   </plant>
   <plant name="Cordyline fruticosa" path="31,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1104,7 +1104,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="rzadko" />
-    <property name="Ciekawe cechy" value="spokrewniona z rodzajem Dracena.&#xD;&#xA;Podobnie jak dracena ma liście&#xD;&#xA;osadzone na pniu.&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="spokrewniona z rodzajem Dracena. Podobnie jak dracena ma liście osadzone na pniu." />
     <photo path="encfoto/Cordyline.jpg" />
   </plant>
   <plant name="Crassula" path="30,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1115,8 +1115,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="rzadko&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="rośnie na obrzeżach piaszczystych stepów, pustyń i półpustyń.&#xD;&#xA;" />
+    <property name="Kwiaty" value="rzadko" />
+    <property name="Ciekawe cechy" value="rośnie na obrzeżach piaszczystych stepów, pustyń i półpustyń." />
     <photo path="encfoto/Crassula.jpg" />
   </plant>
   <plant name="Cthenanthe oppenheimiana" path="223,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1139,7 +1139,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
-    <property name="Kwiaty" value="główną ozdobą sa jasnozielone  pędy" />
+    <property name="Kwiaty" value="główną ozdobą sa jasnozielone pędy" />
     <property name="Ciekawe cechy" value="po roztarciu pędy wydzielają charakterystyczny zapach, lubi zraszanie" />
     <photo path="encfoto/CupressusMacrocarpa.jpg" />
   </plant>
@@ -1152,7 +1152,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="-" />
-    <property name="Ciekawe cechy" value="sagowce są rozdzielnopłciowe, przypominają palmy, ale są spokrewnione z paprociami.&#xD;&#xA;Egzemplarze żeńskie wytwarzają kwiatostany podobne do szyszki, egzemplarze męskie mają kwiatostany złożone z samych pręcików " />
+    <property name="Ciekawe cechy" value="sagowce są rozdzielnopłciowe, przypominają palmy, ale są spokrewnione z paprociami. Egzemplarze żeńskie wytwarzają kwiatostany podobne do szyszki, egzemplarze męskie mają kwiatostany złożone z samych pręcików" />
     <photo path="encfoto/CycasRevoluta.jpg" />
   </plant>
   <plant name="Cyperus papyrus" path="294,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1175,7 +1175,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
-    <property name="Kwiaty" value="paprocie nie tworzą kwiatów&#xD;&#xA;" />
+    <property name="Kwiaty" value="paprocie nie tworzą kwiatów" />
     <property name="Ciekawe cechy" value="Pokaż komentarze[1]" />
     <photo path="encfoto/DavaliaBullata.jpg" />
   </plant>
@@ -1188,11 +1188,11 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="Białe wyrastajace ponad roślinę" />
-    <property name="Ciekawe cechy" value="Jest to roślina mięsożerna, która chwyta swoje ofiary w specyficznie wykształcone liście- kolczaste pułapki zatrzaskowe. Brzeg blaszki liściowej jest zaopatrzony w sztywne zęby które zamykają się z ofiarą w środku. Dzieje się tak dzięki włoskom czuciowym które znajdują się na płacie blaszki- to one po dwukrotnym dotknięciu informują roślinkę o &quot;obiadku&quot;. Ofiara zwabiana jest nektarem znajdującym się na górnej powierzchni liści. Po &quot;zatrzaśnięciu&quot; liść pozostanie zamkniety przez około tygodnia, dlatego ważne jest aby sztucznie nie pobudzać rośliny do uruchamiania pułapek- gdyż można w ten sposób &quot;zagłodzić&quot; ją na śmierć! " />
+    <property name="Ciekawe cechy" value="Jest to roślina mięsożerna, która chwyta swoje ofiary w specyficznie wykształcone liście- kolczaste pułapki zatrzaskowe. Brzeg blaszki liściowej jest zaopatrzony w sztywne zęby które zamykają się z ofiarą w środku. Dzieje się tak dzięki włoskom czuciowym które znajdują się na płacie blaszki- to one po dwukrotnym dotknięciu informują roślinkę o &quot;obiadku&quot;. Ofiara zwabiana jest nektarem znajdującym się na górnej powierzchni liści. Po &quot;zatrzaśnięciu&quot; liść pozostanie zamkniety przez około tygodnia, dlatego ważne jest aby sztucznie nie pobudzać rośliny do uruchamiania pułapek- gdyż można w ten sposób &quot;zagłodzić&quot; ją na śmierć!" />
     <photo path="encfoto_redakcja/mucholowka.jpg" />
   </plant>
   <plant name="Dracaena deremensis 'Lemon'" path="303,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
-    <property name="Nazwa" value="Dracena  deremeńska" />
+    <property name="Nazwa" value="Dracena deremeńska" />
     <property name="Rodzina" value="Agavaceae" />
     <property name="Pochodzenie" value="Afryka" />
     <property name="Rozmiary" value="1-1,8 m wys." />
@@ -1212,7 +1212,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="rzadko" />
-    <property name="Ciekawe cechy" value="rośnie na pustyniach i półpustyniach&#xD;&#xA;razem z agawami, kaktusami i yukami &#xD;&#xA;Nazwa rodzajowa pochodzi od&#xD;&#xA;greckiego słowa drakania-&#xD;&#xA;oznaczającego samicę smoka&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="rośnie na pustyniach i półpustyniach razem z agawami, kaktusami i yukami Nazwa rodzajowa pochodzi od greckiego słowa drakania- oznaczającego samicę smoka" />
     <photo path="encfoto/DracenaIndia.jpg" />
   </plant>
   <plant name="Dracena sanderiana" path="289,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1221,8 +1221,8 @@
     <property name="Pochodzenie" value="Tajwan, Chiny i inne kraje Dalekiego Wschodu" />
     <property name="Rozmiary" value="niewielka roślina domowa" />
     <property name="Podlewanie" value="częste" />
-    <property name="Nawożenie" value="nie jest konieczne" />
-    <property name="Stanowisko" value="widne, ale nie na pełnym słońcu" />
+    <property name="Nawożenie" value="-" />
+    <property name="Stanowisko" value="widne ale nie słoneczne" />
     <property name="Kwiaty" value="-" />
     <property name="Ciekawe cechy" value="Lucky bamboo rośnie w wodzie jak kwiaty cięte, ale o kilkuletniej trwałości. Praktycznie nie można go zniszczyć. Pęd bambusa należy zanurzyć w wodzie na ok. 1-5 cm, np. w wazonie. Dla uzyskania najlepszych rezultatów zmieniaj wodę co dwa tygodnie. Lucku Bamboo bardzo łatwo adaptuje się do nowego środowiska. Preferuje temperaturę 10-27 st. C. W Azji roślinę tę kupuje się na powitanie chińskiego Nowego Roku, by uświetnić rozpoczęcie biznesu, zakup domu, albo po prostu - na szczęście!" />
     <photo path="encfoto/bamboo.jpg" />
@@ -1236,7 +1236,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="żółte" />
-    <property name="Ciekawe cechy" value="zwany potocznie &quot;fotel teściowej&quot;&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="zwany potocznie &quot;fotel teściowej&quot;" />
     <photo path="encfoto/EchinocactusGrusonii.jpg" />
   </plant>
   <plant name="Euphorbia caput-medusae" path="46,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1247,8 +1247,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="żółte kwiaty wyrastają na&#xD;&#xA;wieszchołkach pędów" />
-    <property name="Ciekawe cechy" value="w warunkach naturalnych łodyga jest&#xD;&#xA;prawie całkowicie ukryta w piasku;&#xD;&#xA;rośnie na pustyniach&#xD;&#xA;  &#xD;&#xA;" />
+    <property name="Kwiaty" value="żółte kwiaty wyrastają na wieszchołkach pędów" />
+    <property name="Ciekawe cechy" value="w warunkach naturalnych łodyga jest prawie całkowicie ukryta w piasku; rośnie na pustyniach" />
     <photo path="encfoto/EuphorbiaCaputmedusae.jpg" />
   </plant>
   <plant name="Euphorbia milii" path="47,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1260,7 +1260,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="białe, czerwone, różowe" />
-    <property name="Ciekawe cechy" value="ciernisty krzew; znany pod nazwą&#xD;&#xA;korony cierniowej" />
+    <property name="Ciekawe cechy" value="ciernisty krzew; znany pod nazwą korony cierniowej" />
     <photo path="encfoto/EuphorbiaMilii.jpg" />
   </plant>
   <plant name="Euphorbia trigona" path="48,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1272,7 +1272,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="rzadko" />
-    <property name="Ciekawe cechy" value="tworzy kanciastą łodygę ozdobioną liśćmi, które opadają zimą. Podobna&#xD;&#xA;i często mylona z kaktusami" />
+    <property name="Ciekawe cechy" value="tworzy kanciastą łodygę ozdobioną liśćmi, które opadają zimą. Podobna i często mylona z kaktusami" />
     <photo path="encfoto/EuphorbiaTrigona.jpg" />
   </plant>
   <plant name="Ficus benjamina" path="50,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1284,7 +1284,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="rzadko" />
-    <property name="Ciekawe cechy" value="ma wygięte pędy i małe skórzaste liście. Wydaje kuliste owoce.&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="ma wygięte pędy i małe skórzaste liście. Wydaje kuliste owoce." />
     <photo path="encfoto/FicusBenjamina.jpg" />
   </plant>
   <plant name="Ficus lyrata" path="52,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1296,7 +1296,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="rzadko" />
-    <property name="Ciekawe cechy" value="tworzy charakterystyczne liście&#xD;&#xA;w kształcie korpusu skrzypiec.&#xD;&#xA;Dobrze czuje się w mieszkaniach&#xD;&#xA;z centralnym ogrzewaniem" />
+    <property name="Ciekawe cechy" value="tworzy charakterystyczne liście w kształcie korpusu skrzypiec. Dobrze czuje się w mieszkaniach z centralnym ogrzewaniem" />
     <photo path="encfoto/FicusLyrata.jpg" />
   </plant>
   <plant name="Fittonia verschaffeltii" path="320,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1316,7 +1316,7 @@
     <property name="Rodzina" value="Bromeliaceae" />
     <property name="Pochodzenie" value="Panama, Kolumbia" />
     <property name="Rozmiary" value="dorasta do ok.30cm" />
-    <property name="Podlewanie" value="częste do doniczki, lub środka rozety" />
+    <property name="Podlewanie" value="częste, do doniczki lub środka rozety" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="pomarańczowe, lub czerwone w kształcie gwiazdy" />
@@ -1344,7 +1344,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="różowe, kłosowate na szczytach pędów" />
-    <property name="Ciekawe cechy" value="Roślina ta ma drobne błyszczące listki i drewniejące pędydzięki czemu można ją  prowadzć na krzewikę (często przycinając) lub drzewko (pozostawiając jeden główny pęd i formując koronkę)." />
+    <property name="Ciekawe cechy" value="Roślina ta ma drobne błyszczące listki i drewniejące pędydzięki czemu można ją prowadzć na krzewikę (często przycinając) lub drzewko (pozostawiając jeden główny pęd i formując koronkę)." />
     <photo path="encfoto_redakcja/hebeb.jpg" />
   </plant>
   <plant name="Hedera helix 'Helvig'" path="59,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1392,7 +1392,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="rzadko zakwita w mieszkaniach" />
-    <property name="Ciekawe cechy" value="jest to pnącze, które przytwierdza się&#xD;&#xA;do podpór licznymi korzeniami&#xD;&#xA;czepnymi" />
+    <property name="Ciekawe cechy" value="jest to pnącze, które przytwierdza się do podpór licznymi korzeniami czepnymi" />
     <photo path="encfoto/HederaHelixCanariensisSvendborg.jpg" />
   </plant>
   <plant name="Hypoestes sanguinoleta Hypoestes phyllostachya" path="65,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1403,8 +1403,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
-    <property name="Kwiaty" value="fioletowe, drobne&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="w słabym oświetleniu liście tracą&#xD;&#xA;przebarwienia" />
+    <property name="Kwiaty" value="fioletowe, drobne" />
+    <property name="Ciekawe cechy" value="w słabym oświetleniu liście tracą przebarwienia" />
     <photo path="encfoto/HypoestesPhyllostachya.jpg" />
   </plant>
   <plant name="Kalanchoe blossfeldiana" path="212,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1415,8 +1415,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="małe, drobne gwiazdki zebrane w baldachy, pełna gama kolorów " />
-    <property name="Ciekawe cechy" value="roślina dnia krótkiego tzn. kwitnie zimą " />
+    <property name="Kwiaty" value="małe, drobne gwiazdki zebrane w baldachy, pełna gama kolorów" />
+    <property name="Ciekawe cechy" value="roślina dnia krótkiego tzn. kwitnie zimą" />
     <photo path="encfoto/Kalanchoe.jpg" />
   </plant>
   <plant name="Kalanchoe manginii" path="213,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1427,8 +1427,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="drobne, pomarańczowe dzwonki " />
-    <property name="Ciekawe cechy" value="roślina dnia krótkiego tzn. kwitnie zimą " />
+    <property name="Kwiaty" value="drobne, pomarańczowe dzwonki" />
+    <property name="Ciekawe cechy" value="roślina dnia krótkiego tzn. kwitnie zimą" />
     <photo path="encfoto/KalanchoeDzwonek.jpg" />
   </plant>
   <plant name="Laurus nobilis" path="293,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1463,8 +1463,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
-    <property name="Kwiaty" value="drobne&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="maranty, jak również spokrewnione&#xD;&#xA;z nimi kalatee zwijają liście na noc" />
+    <property name="Kwiaty" value="drobne" />
+    <property name="Ciekawe cechy" value="maranty, jak również spokrewnione z nimi kalatee zwijają liście na noc" />
     <photo path="encfoto/MarantaLeuconeura.jpg" />
   </plant>
   <plant name="Mulenbekia" path="70,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1475,8 +1475,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
-    <property name="Kwiaty" value="drobne, przekształcają się&#xD;&#xA;w przezroczyste jagody&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="ma giętkie pędy, które można&#xD;&#xA;zaplatywać w warkoczyki, pędy &#xD;&#xA;z czasem drewnieją" />
+    <property name="Kwiaty" value="drobne, przekształcają się w przezroczyste jagody" />
+    <property name="Ciekawe cechy" value="ma giętkie pędy, które można zaplatywać w warkoczyki, pędy z czasem drewnieją" />
     <photo path="encfoto/Mulenbekia.jpg" />
   </plant>
   <plant name="Musa cavendishii" path="69,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1488,7 +1488,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="drobne" />
-    <property name="Ciekawe cechy" value="uprawiany dla jadalnych owoców-&#xD;&#xA;bananów; niestety w mieszkaniu&#xD;&#xA;bardzo rzadko owocuje" />
+    <property name="Ciekawe cechy" value="uprawiany dla jadalnych owoców- bananów; niestety w mieszkaniu bardzo rzadko owocuje" />
     <photo path="encfoto/MusaCavendishii.jpg" />
   </plant>
   <plant name="Nephrolepis exaltata" path="71,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1499,8 +1499,8 @@
     <property name="Podlewanie" value="umiarkowane, wrażliwy zarówno na nadmiar wody jak i przesuszenie" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
-    <property name="Kwiaty" value="paprocie nie tworzą kwiatów&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="gatunek ma kilka odmian uprawnych,&#xD;&#xA;różniących się listkami oraz ogólnym&#xD;&#xA;pokrojem" />
+    <property name="Kwiaty" value="paprocie nie tworzą kwiatów" />
+    <property name="Ciekawe cechy" value="gatunek ma kilka odmian uprawnych, różniących się listkami oraz ogólnym pokrojem" />
     <photo path="encfoto/NephrolepisExaltata.jpg" />
   </plant>
   <plant name="Nertera granadensis" path="291,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1510,7 +1510,7 @@
     <property name="Rozmiary" value="niska, płożąca roślinka" />
     <property name="Podlewanie" value="częste" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="widne, ale nie na pełnym słońcu" />
+    <property name="Stanowisko" value="widne ale nie słoneczne" />
     <property name="Kwiaty" value="niepozorne przekształcające się w owoce o kolorze białym, żółtym lub czerwonym" />
     <property name="Ciekawe cechy" value="  " />
     <photo path="encfoto/Nertera.jpg" />
@@ -1523,7 +1523,7 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="rzadko zakwita w mieszkaniach&#xD;&#xA;" />
+    <property name="Kwiaty" value="rzadko zakwita w mieszkaniach" />
     <property name="Ciekawe cechy" value="Jest sukulentem, choć przypomina kaktusy kolumnowe. W swojej ojczyznie osiaga wysokość do 10 m." />
     <photo path="encfoto/PachypodiumLamerei.jpg" />
   </plant>
@@ -1535,8 +1535,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="błękitne, utrzymują się na roślinie&#xD;&#xA;ok. dobę, po czym więdną" />
-    <property name="Ciekawe cechy" value="zawdzięcza nazwę misjonarzom,&#xD;&#xA;którzy odkryli ją w Ameryce&#xD;&#xA;Południowej w XVIII w.&#xD;&#xA;Kwiaty passiflory symbolizują mękę&#xD;&#xA;Chrystusa" />
+    <property name="Kwiaty" value="błękitne, utrzymują się na roślinie ok. dobę, po czym więdną" />
+    <property name="Ciekawe cechy" value="zawdzięcza nazwę misjonarzom, którzy odkryli ją w Ameryce Południowej w XVIII w. Kwiaty passiflory symbolizują mękę Chrystusa" />
     <photo path="encfoto/PassifloraCaerulea.jpg" />
   </plant>
   <plant name="Peperomia" path="75,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1548,7 +1548,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="białe kłosy" />
-    <property name="Ciekawe cechy" value="roślina spokrewniona z pieprzem&#xD;&#xA;czarnym" />
+    <property name="Ciekawe cechy" value="roślina spokrewniona z pieprzem czarnym" />
     <photo path="encfoto/Peperomia.jpg" />
   </plant>
   <plant name="Phalaenopsis" path="365,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1560,7 +1560,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe, różowe, żółte, najczęściej dwubarwne" />
-    <property name="Ciekawe cechy" value="Nazwa Phalaenopsis oznacza roślinę przypominającą ćmę- a więc motylokształtną. Storczyk ten jest epifitem, który w warunkach naturalnych porasta konary drzew, w związku z czym potrzebuje specyficznego podłoża, które najlepiej zrobić samemu mieszając korę, patyki, styropian, pocięta gąbkę oraz włóknisty torf. Podłoże takie ma luźną strukturę umożliwiającą dostęp tlenu do korzeni. " />
+    <property name="Ciekawe cechy" value="Nazwa Phalaenopsis oznacza roślinę przypominającą ćmę- a więc motylokształtną. Storczyk ten jest epifitem, który w warunkach naturalnych porasta konary drzew, w związku z czym potrzebuje specyficznego podłoża, które najlepiej zrobić samemu mieszając korę, patyki, styropian, pocięta gąbkę oraz włóknisty torf. Podłoże takie ma luźną strukturę umożliwiającą dostęp tlenu do korzeni." />
     <photo path="encfoto_redakcja/falenopsis.jpg" />
   </plant>
   <plant name="Philodendron erubescens 'New Red'" path="311,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1583,8 +1583,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
-    <property name="Kwiaty" value="nie mają znaczenia zdobniczego&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="nazywana aluminiową rośliną&#xD;&#xA;(srebrzyste plamy na liściach)&#xD;&#xA;lub rośliną z ogniem sztucznym&#xD;&#xA;(w momencie podlewania kwiaty&#xD;&#xA;wyrzucają dużą ilość pyłku)" />
+    <property name="Kwiaty" value="nie mają znaczenia zdobniczego" />
+    <property name="Ciekawe cechy" value="nazywana aluminiową rośliną (srebrzyste plamy na liściach) lub rośliną z ogniem sztucznym (w momencie podlewania kwiaty wyrzucają dużą ilość pyłku)" />
     <photo path="encfoto/PileaCadierei.jpg" />
   </plant>
   <plant name="Pinguicula moranensis" path="364,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1596,7 +1596,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="Różowe, wzniesione ponad rozetę liści" />
-    <property name="Ciekawe cechy" value="Roślina owadożerna, do wychwytywania ofiar używa gruczołów znajdujących sie na liściach. Gruczoły te wydzielaja lepką substancję która zwabia i unieruchamia owady które następnie są trawione przez enzymy znajdujące się w gruczołach śluzowych. " />
+    <property name="Ciekawe cechy" value="Roślina owadożerna, do wychwytywania ofiar używa gruczołów znajdujących sie na liściach. Gruczoły te wydzielaja lepką substancję która zwabia i unieruchamia owady które następnie są trawione przez enzymy znajdujące się w gruczołach śluzowych." />
     <photo path="encfoto_redakcja/pinguicula.jpg" />
   </plant>
   <plant name="Platycerium bifurcatum" path="79,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1608,7 +1608,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
     <property name="Kwiaty" value="paprocie nie tworzą kwiatów" />
-    <property name="Ciekawe cechy" value="nie należy usuwać dolnych liści (tych zeschniętych). Nie należy również usuwać nalotu z liści górnych&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="nie należy usuwać dolnych liści (tych zeschniętych). Nie należy również usuwać nalotu z liści górnych" />
     <photo path="encfoto/PlatyceriumBifurcatum.jpg" />
   </plant>
   <plant name="Plumbago auriculata" path="449,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1620,7 +1620,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="niebieskie" />
-    <property name="Ciekawe cechy" value="Ołownik jest pnączem wymagającym podpory. W okresie wiosenno-letnim można wystawiać roślinę na zewnątrz. " />
+    <property name="Ciekawe cechy" value="Ołownik jest pnączem wymagającym podpory. W okresie wiosenno-letnim można wystawiać roślinę na zewnątrz." />
     <photo path="encfoto_redakcja/Olownikx.jpg" />
   </plant>
   <plant name="Polyscias balfouriana 'Fabian'" path="304,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1643,7 +1643,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
-    <property name="Kwiaty" value="pełna gama kolorów&#xD;&#xA;" />
+    <property name="Kwiaty" value="pełna gama kolorów" />
     <property name="Ciekawe cechy" value="-" />
     <photo path="encfoto/PrimulaVulgaris.jpg" />
   </plant>
@@ -1668,7 +1668,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="białe, żółte" />
-    <property name="Ciekawe cechy" value="Zdziwienie wywołuje informacja że Reo jest spokrewniona z Trzykrotką, a nie z roślinami z rodziny ananasowatych i dracenami. Rheo jest bowiem tajemniczym unikatem, rodzajem reprezentowanym przez jeden jedyny gatunek. Rheo posiada pięknie ubarwione liście. Od końca maja do lipca z muszelkowatych przykwiatków wyłaniają się skupiska niezwykłych kwiatostanów.&#xD;&#xA;Stanowisko jasne lub półcieniste. Przez cały rok należy zapewnić roślinie temperaturę pokojowa.&#xD;&#xA;Podlewać nalezy systematycznie miękką wodą o stałej temperaturze. Roślina nie toleruje nadmiaru wody ani &quot;zimnych stóp&quot;&#xD;&#xA;Nawożenie raz w tygodniu wiosną i latem, w pozostałym okresie raz w miesiącu.&#xD;&#xA;Przesadzać nalezy roślinę co roku.&#xD;&#xA;Rozmnażanie z odpowiednie wielkości pędów bocznych, wierzchołków pędów, lub nasion." />
+    <property name="Ciekawe cechy" value="Zdziwienie wywołuje informacja że Reo jest spokrewniona z Trzykrotką, a nie z roślinami z rodziny ananasowatych i dracenami. Rheo jest bowiem tajemniczym unikatem, rodzajem reprezentowanym przez jeden jedyny gatunek. Rheo posiada pięknie ubarwione liście. Od końca maja do lipca z muszelkowatych przykwiatków wyłaniają się skupiska niezwykłych kwiatostanów. Stanowisko jasne lub półcieniste. Przez cały rok należy zapewnić roślinie temperaturę pokojowa. Podlewać nalezy systematycznie miękką wodą o stałej temperaturze. Roślina nie toleruje nadmiaru wody ani &quot;zimnych stóp&quot; Nawożenie raz w tygodniu wiosną i latem, w pozostałym okresie raz w miesiącu. Przesadzać nalezy roślinę co roku. Rozmnażanie z odpowiednie wielkości pędów bocznych, wierzchołków pędów, lub nasion." />
     <photo path="encfoto_redakcja/reo.jpg" />
   </plant>
   <plant name="Rosa" path="84,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1679,7 +1679,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne lub słoneczne" />
-    <property name="Kwiaty" value="kwitnie przez cały rok, pełna gama&#xD;&#xA;kolorów" />
+    <property name="Kwiaty" value="kwitnie przez cały rok, pełna gama kolorów" />
     <property name="Ciekawe cechy" value="-" />
     <photo path="encfoto/Rosa.jpg" />
   </plant>
@@ -1691,7 +1691,7 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
-    <property name="Kwiaty" value="pełna gama kolorów; kwitnie prawie&#xD;&#xA;bez przerwy przez cały rok" />
+    <property name="Kwiaty" value="pełna gama kolorów; kwitnie prawie bez przerwy przez cały rok" />
     <property name="Ciekawe cechy" value="podczas podlewania trzeba uważać, aby nie moczyć liści, gdyż powoduje to powstawanie plam i gnicie" />
     <photo path="encfoto/SaintpauliaIonantha.jpg" />
   </plant>
@@ -1704,7 +1704,7 @@
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="Drobne, białe" />
-    <property name="Ciekawe cechy" value="Liscie tych roślin sa zwinęte w rurkę i złączone na brzegach. Górna część liścia wyglądem przypomina purpurowy kaptur, którym roślina zwabia ofiary. Dodatkowo cała powierzchnia liścia pokryta jest nektarem. Oczywiście najbardziej nęcące i niebezpieczne jest wnętrze &quot;tuby&quot; gdzie zapuszczają się owady. Pokrywaja go długie i śliskie włoski skierowane w dół liścia które zazwyczaj niosą zgubę zachłannym obżartuchom- śmierć w cieczy znajdującej się na samym dnie liści. " />
+    <property name="Ciekawe cechy" value="Liscie tych roślin sa zwinęte w rurkę i złączone na brzegach. Górna część liścia wyglądem przypomina purpurowy kaptur, którym roślina zwabia ofiary. Dodatkowo cała powierzchnia liścia pokryta jest nektarem. Oczywiście najbardziej nęcące i niebezpieczne jest wnętrze &quot;tuby&quot; gdzie zapuszczają się owady. Pokrywaja go długie i śliskie włoski skierowane w dół liścia które zazwyczaj niosą zgubę zachłannym obżartuchom- śmierć w cieczy znajdującej się na samym dnie liści." />
     <photo path="encfoto_redakcja/kapturnica.jpg" />
   </plant>
   <plant name="Saxifraga stolonifera 'Tricolor'" path="87,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1716,7 +1716,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
     <property name="Kwiaty" value="białe, drobne, zebrane w baldachy" />
-    <property name="Ciekawe cechy" value="roślina spokrewniona z porzeczką&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="roślina spokrewniona z porzeczką" />
     <photo path="encfoto/SaxifragaStoloniferaTricolor.jpg" />
   </plant>
   <plant name="Scindapsus aureus" path="89,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1727,8 +1727,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
-    <property name="Kwiaty" value="kolbowate kwiatostany&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="nazwa rodzajowa wywodzi się z greki&#xD;&#xA;i oznacza &quot;podobny do bluszczu&quot;" />
+    <property name="Kwiaty" value="kolbowate kwiatostany" />
+    <property name="Ciekawe cechy" value="nazwa rodzajowa wywodzi się z greki i oznacza &quot;podobny do bluszczu&quot;" />
     <photo path="encfoto/ScindapsusAureus.jpg" />
   </plant>
   <plant name="Scirpus cernuus Isolepis gracilis" path="1,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1737,7 +1737,7 @@
     <property name="Pochodzenie" value="Indie Azja" />
     <property name="Rozmiary" value="szerokość 30cm, wysokość 20cm" />
     <property name="Podlewanie" value="częste, najlepiej ustawić w pojemniku z wodą; roślina bagienna" />
-    <property name="Nawożenie" value="rzadkie. Lubi ubogą, kwaśną glebę" />
+    <property name="Nawożenie" value="rzadkie, lubi ubogą, kwaśną glebę" />
     <property name="Stanowisko" value="cieniste lub widne" />
     <property name="Kwiaty" value="na końcu każdego pędu wyrasta białawy kłos kryjący miniaturowe kwiaty" />
     <property name="Ciekawe cechy" value="wykorzystywany przy obsadzaniu strumieni w ogrodach japońskich. Zadomowił się w rejonie śródziemnomorskim. Trzeba przesadzać co roku wiosną." />
@@ -1763,8 +1763,8 @@
     <property name="Podlewanie" value="rzadkie" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="koszyczek z kilku żółtych kwiatów&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="bardzo podobny do bluszczu&#xD;&#xA;pstrolistnego. W odróżnieniu od&#xD;&#xA;hedery ma grube, skórzaste liście,&#xD;&#xA;zdolne do gromadzenia wody.&#xD;&#xA;Świadczy to o przynależności&#xD;&#xA;Senecio macroglossus do&#xD;&#xA;sukulentów." />
+    <property name="Kwiaty" value="koszyczek z kilku żółtych kwiatów" />
+    <property name="Ciekawe cechy" value="bardzo podobny do bluszczu pstrolistnego. W odróżnieniu od hedery ma grube, skórzaste liście, zdolne do gromadzenia wody. Świadczy to o przynależności Senecio macroglossus do sukulentów." />
     <photo path="encfoto/SenecioMacroglossusVarirgata.jpg" />
   </plant>
   <plant name="Solanum pseudocapiscum" path="220,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1788,7 +1788,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste" />
     <property name="Kwiaty" value="białe" />
-    <property name="Ciekawe cechy" value="Skrzydłokwiat lubi zacienione miejsca, w jasnych lub słonecznych jest bladozielona i bardzo wolno rośnie. Przelewanej roślinie żółkną i więdną liście. " />
+    <property name="Ciekawe cechy" value="Skrzydłokwiat lubi zacienione miejsca, w jasnych lub słonecznych jest bladozielona i bardzo wolno rośnie. Przelewanej roślinie żółkną i więdną liście." />
     <photo path="encfoto_redakcja/Spatyfilum.jpg" />
   </plant>
   <plant name="Stereospermum sinicum" path="348,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1796,7 +1796,7 @@
     <property name="Rodzina" value="-" />
     <property name="Pochodzenie" value="Chiny" />
     <property name="Rozmiary" value="do 150 cm" />
-    <property name="Podlewanie" value="Umiarkowanie" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="rzadkie" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="-" />
@@ -1809,8 +1809,8 @@
     <property name="Pochodzenie" value="Brazylia" />
     <property name="Rozmiary" value="do 20 cm" />
     <property name="Podlewanie" value="umiarkowane" />
-    <property name="Nawożenie" value="częste podczas kwitnienia" />
-    <property name="Stanowisko" value="widne, nie słoneczne" />
+    <property name="Nawożenie" value="częste, podczas kwitnienia" />
+    <property name="Stanowisko" value="widne ale nie słoneczne" />
     <property name="Kwiaty" value="kielichy o rożnych kolorach,także dwubarwne" />
     <property name="Ciekawe cechy" value="pięknie długo kwitnie, rozmnażać przez szczepki liści po przekwitnięciu rośliny." />
     <photo path="encfoto_redakcja/syningia.jpg" />
@@ -1824,7 +1824,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="zakwita bardzo rzadko" />
-    <property name="Ciekawe cechy" value="roślina spokrewniona z porzeczką&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="roślina spokrewniona z porzeczką" />
     <photo path="encfoto/TolmiaMenziesii.jpg" />
   </plant>
   <plant name="Vriesea" path="355,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1832,11 +1832,11 @@
     <property name="Rodzina" value="-" />
     <property name="Pochodzenie" value="-" />
     <property name="Rozmiary" value="50 cm" />
-    <property name="Podlewanie" value="Umiarkowanie" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
     <property name="Kwiaty" value="pomarańczowe, czerwone" />
-    <property name="Ciekawe cechy" value="Najbardziej znany gatunek to Vriesea splendens, słynna Frizea lśniąca. Posiada blisko półmetrowej długości liście z widocznym brązowo czerwonymi poprzecznymi paskami.&#xD;&#xA;Prawdziwe rarytasy to Vriesea gigantea, frizea szachownica.&#xD;&#xA;Stanowisko jasne lub półcieniste.Podlewać należy systematycznie i umiarkowanie miękką wodą o stałej temperaturze i nie dopuszczeć do nadmiaru wilgoci. Wodę wlewa się do rozety i lekko nawilża się bryłę korzeniową. Nawożenie latem co tydzień słabym roztworem nawozu.&#xD;&#xA;Przesadzać należy co dwa lata po okresie kwitnienia.&#xD;&#xA;Rozmnażanie z odrostów bocznych." />
+    <property name="Ciekawe cechy" value="Najbardziej znany gatunek to Vriesea splendens, słynna Frizea lśniąca. Posiada blisko półmetrowej długości liście z widocznym brązowo czerwonymi poprzecznymi paskami. Prawdziwe rarytasy to Vriesea gigantea, frizea szachownica. Stanowisko jasne lub półcieniste.Podlewać należy systematycznie i umiarkowanie miękką wodą o stałej temperaturze i nie dopuszczeć do nadmiaru wilgoci. Wodę wlewa się do rozety i lekko nawilża się bryłę korzeniową. Nawożenie latem co tydzień słabym roztworem nawozu. Przesadzać należy co dwa lata po okresie kwitnienia. Rozmnażanie z odrostów bocznych." />
     <photo path="encfoto_redakcja/frizea.jpg" />
   </plant>
   <plant name="Yucca elephantipes" path="97,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1847,8 +1847,8 @@
     <property name="Podlewanie" value="umiarkowane, zimą przesuszamy" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="cieniste lub widne" />
-    <property name="Kwiaty" value="białe, zapylane jedynie przez&#xD;&#xA;specjalny gatunek ćmy występujący&#xD;&#xA;tylko w Ameryce łacińskiej" />
-    <property name="Ciekawe cechy" value="rośnie ma półpustyniach razem&#xD;&#xA;z agawami, dracenami i kaktusami&#xD;&#xA;" />
+    <property name="Kwiaty" value="białe, zapylane jedynie przez specjalny gatunek ćmy występujący tylko w Ameryce łacińskiej" />
+    <property name="Ciekawe cechy" value="rośnie ma półpustyniach razem z agawami, dracenami i kaktusami" />
     <photo path="encfoto/YuccaElephantipes.jpg" />
   </plant>
   <plant name="Zantedeschia aethiopca" path="356,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1860,7 +1860,7 @@
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="białe" />
-    <property name="Ciekawe cechy" value="Ta wytworna piękność nie pochodzi z Etiopii jak można by się spodziewać po jej przydomku lecz z suchych w okresie lata, bagiennych obszarów Afryki Południowej.Osiąga wielkość około 80 cm i kwitnie wiosną. Podobnie jak anturium i skrzydłokwiat, wytwarza typowy dla obrazkowatych kwiat.Wielu amatorów nie decyduje się na uprawę Kalli, gdyż jej rytm wzrostu wydaje się być skomplikowany. Jednak roślina ta, podobnie jak słynna sansewieria, jest odporna nawet na poważne błędy uprawowe i podobnie jak jej rodaczka kliwia, najbardziej ceni sobie pozostawienie w spokoju.&#xD;&#xA;Stanowisko jasne i słoneczne. Latem można roślinę umieścić na balkonie lub w ogrodzie. Od pażdziernika do grudnia trzeba zapewnić roślinie temperaturę około 10 stopni i suche podłoże.&#xD;&#xA;Gdy kłącza znów zaczną rosnąć przenosi się ją w cieplejsze miejsce.&#xD;&#xA;Podlewanie po okresie kwitnienia od maja do końca czerwca skąpe, gdyż roślina przechodzi w okres spoczynku. Latem podlewać od czasu do czasu, tak jak przywykła w naturalnym środowisku. W okresie wzrostu podlewać obficie.&#xD;&#xA;W okresie kwitnienia nawozić co tydzień.&#xD;&#xA;Przesadzać w pażdzierniku.&#xD;&#xA;Rozmnażanie przez podział kłącza." />
+    <property name="Ciekawe cechy" value="Ta wytworna piękność nie pochodzi z Etiopii jak można by się spodziewać po jej przydomku lecz z suchych w okresie lata, bagiennych obszarów Afryki Południowej.Osiąga wielkość około 80 cm i kwitnie wiosną. Podobnie jak anturium i skrzydłokwiat, wytwarza typowy dla obrazkowatych kwiat.Wielu amatorów nie decyduje się na uprawę Kalli, gdyż jej rytm wzrostu wydaje się być skomplikowany. Jednak roślina ta, podobnie jak słynna sansewieria, jest odporna nawet na poważne błędy uprawowe i podobnie jak jej rodaczka kliwia, najbardziej ceni sobie pozostawienie w spokoju. Stanowisko jasne i słoneczne. Latem można roślinę umieścić na balkonie lub w ogrodzie. Od pażdziernika do grudnia trzeba zapewnić roślinie temperaturę około 10 stopni i suche podłoże. Gdy kłącza znów zaczną rosnąć przenosi się ją w cieplejsze miejsce. Podlewanie po okresie kwitnienia od maja do końca czerwca skąpe, gdyż roślina przechodzi w okres spoczynku. Latem podlewać od czasu do czasu, tak jak przywykła w naturalnym środowisku. W okresie wzrostu podlewać obficie. W okresie kwitnienia nawozić co tydzień. Przesadzać w pażdzierniku. Rozmnażanie przez podział kłącza." />
     <photo path="encfoto_redakcja/kalla.jpg" />
   </plant>
   <plant name="Zingiber officinale" path="99,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="domowe">
@@ -1871,8 +1871,8 @@
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="widne" />
-    <property name="Kwiaty" value="żółtofioletowe, przypominające&#xD;&#xA;storczyki" />
-    <property name="Ciekawe cechy" value="cenna przyprawa. Palczaste kłącza&#xD;&#xA;zawierają substancje działające&#xD;&#xA;pobudzająco." />
+    <property name="Kwiaty" value="żółtofioletowe, przypominające storczyki" />
+    <property name="Ciekawe cechy" value="cenna przyprawa. Palczaste kłącza zawierają substancje działające pobudzająco." />
     <photo path="encfoto/Imbir.jpg" />
   </plant>
   <plant name="Chamaecyparis nootkanesis 'Tatra'" path="234,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1904,9 +1904,9 @@
     <property name="Rodzina" value="Ginko biloba" />
     <property name="Pochodzenie" value="Japonia" />
     <property name="Rozmiary" value="wysokość do 30 m" />
-    <property name="Podlewanie" value="umiarkowanie" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="widne lub cieniste i wilgotne" />
+    <property name="Stanowisko" value="widne lub cieniste, wilgotne" />
     <property name="Kwiaty" value="niepozorne" />
     <property name="Ciekawe cechy" value="Niezwykle odporny na niesprzyjające warunki, gdy w Hiroszimie wybuchła bomba atomowa tylko ta roślina odrodziła się z korzeni, ogniwo łączące drzewa iglaste z liściastymi, żywa skamielina." />
     <photo path="encfoto_redakcja/milozab.jpg" />
@@ -1915,16 +1915,16 @@
     <property name="Nazwa" value="Jałowiec chiński" />
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 3 metrów wysokości i 2,5 metra szerokości, o przyroście rocznym ok. 15 cm" />
-    <property name="Stanowisko" value="słoneczne lub półcień" />
-    <property name="Ciekawe cechy" value="odmiana silnie rosnąca o srebrzysto-&#xD;&#xA;niebieskim ulistnieniu&#xD;&#xA;" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste" />
+    <property name="Ciekawe cechy" value="odmiana silnie rosnąca o srebrzysto- niebieskim ulistnieniu" />
     <photo path="encfoto/JunChinBlueAlps.jpg" />
   </plant>
   <plant name="Juniperus communis 'Green Carpet'" path="108,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
     <property name="Nazwa" value="Jałowiec pospolity" />
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 10 cm wysokości i 1,5 m szerokości, o przyrościerocznym ok. 15 cm" />
-    <property name="Stanowisko" value="słoneczne lub półcień" />
-    <property name="Ciekawe cechy" value="odmiana płożąca o zielonym&#xD;&#xA;ulistnieniu, pędy ścielają się nisko&#xD;&#xA;po ziemi" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste" />
+    <property name="Ciekawe cechy" value="odmiana płożąca o zielonym ulistnieniu, pędy ścielają się nisko po ziemi" />
     <photo path="encfoto/JunCommGreenCarpet.jpg" />
   </plant>
   <plant name="Juniperus horizontalis 'Andorra Compact'" path="235,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1939,8 +1939,8 @@
     <property name="Nazwa" value="Jałowiec płożący" />
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 10 cm wysokości i 2 metrów szerokości, o przyroście rocznym ok. 15 cm" />
-    <property name="Stanowisko" value="słoneczne lub półcień" />
-    <property name="Ciekawe cechy" value="odmiana płożąca, rośnie prawie&#xD;&#xA;całkowicie płasko, roślina okrywowa,&#xD;&#xA;gałązki zielono-niebieskie&#xD;&#xA;" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste" />
+    <property name="Ciekawe cechy" value="odmiana płożąca, rośnie prawie całkowicie płasko, roślina okrywowa, gałązki zielono-niebieskie" />
     <photo path="encfoto/JunHorWiltonii.jpg" />
   </plant>
   <plant name="Juniperus media 'Pfitzeriana Aurea'" path="112,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1948,7 +1948,7 @@
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 3 m wysokości i 6 m szerokości, o przyrościerocznym ok. 15 cm" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Ciekawe cechy" value="odmiana silnie rosnąca o złocistym&#xD;&#xA;zabarwieniu młodych pędów&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="odmiana silnie rosnąca o złocistym zabarwieniu młodych pędów" />
     <photo path="encfoto/JunMediaPfitzerianaAurea.jpg" />
   </plant>
   <plant name="Juniperus pingii 'Loderi'" path="228,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1963,8 +1963,8 @@
     <property name="Nazwa" value="Jałowiec łuskowaty" />
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 0,8 metra wysokości i 4 metrów szerokości, o przyrościerocznym ok. 15 cm" />
-    <property name="Stanowisko" value="słoneczne, widne lub półcień" />
-    <property name="Ciekawe cechy" value="odmiana płożąca, bardzo&#xD;&#xA;ekspansywna, igły niebieskie" />
+    <property name="Stanowisko" value="słoneczne lub widne lub półcieniste" />
+    <property name="Ciekawe cechy" value="odmiana płożąca, bardzo ekspansywna, igły niebieskie" />
     <photo path="encfoto/JunSqBlueCarpet.jpg" />
   </plant>
   <plant name="Juniperus virginiana 'Skyrocket'" path="169,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1974,9 +1974,9 @@
     <property name="Rozmiary" value="dorasta do 4 metrów wysokości i 0,4 m średnicy o przyroście rocznym ok. 15 cm" />
     <property name="Podlewanie" value="-" />
     <property name="Nawożenie" value="-" />
-    <property name="Stanowisko" value="słoneczne lub półcień" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste" />
     <property name="Kwiaty" value="-" />
-    <property name="Ciekawe cechy" value="odmiana wąskostożkowa, z wyprostowanymi,&#xD;&#xA;przylegającymi do pnia gałęziami. Odcień niebieskawy." />
+    <property name="Ciekawe cechy" value="odmiana wąskostożkowa, z wyprostowanymi, przylegającymi do pnia gałęziami. Odcień niebieskawy." />
     <photo path="encfoto/Skyrocket.jpg" />
   </plant>
   <plant name="Thuja occidentalis 'Abel Twa'" path="115,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1984,7 +1984,7 @@
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 3 metrów wysokości o przyroście rocznym ok. 15 cm" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Ciekawe cechy" value="gałązki zielone, zimą nabierają&#xD;&#xA;koloru brunatnego.&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="gałązki zielone, zimą nabierają koloru brunatnego." />
     <photo path="encfoto/ThOccAbelTwa.jpg" />
   </plant>
   <plant name="Thuja occidentalis 'Filiformis'" path="240,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -1992,7 +1992,7 @@
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="rośnie powoli do ok. 1,5 m wysokości" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Ciekawe cechy" value="krzew o dekoracyjnych zwisających, sznurkowatych pędach. " />
+    <property name="Ciekawe cechy" value="krzew o dekoracyjnych zwisających, sznurkowatych pędach." />
     <photo path="encfoto/ThOccFiliformis.jpg" />
   </plant>
   <plant name="Thuja occidentalis 'Little Dorrit'" path="116,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -2008,7 +2008,7 @@
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 5 metrów wysokości, o przyroście rocznym ok. 15 cm" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Ciekawe cechy" value="gałązki zielone, nie zmienia barwy&#xD;&#xA;w okresie zimowym&#xD;&#xA;Odmiana polecana nażywopłoty&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="gałązki zielone, nie zmienia barwy w okresie zimowym Odmiana polecana nażywopłoty" />
     <photo path="encfoto/ThOccSmaragd.jpg" />
   </plant>
   <plant name="Thuja occidentalis 'Teddy'" path="443,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="iglaste">
@@ -2028,7 +2028,7 @@
     <property name="Rodzina" value="Cupressaceae" />
     <property name="Rozmiary" value="dorasta do 5 metrów wysokości o przyroście rocznym ok. 15 cm" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Ciekawe cechy" value="ciemnozielone, błyszczące gałązki&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="ciemnozielone, błyszczące gałązki" />
     <photo path="encfoto/ThPlicKornik.jpg" />
   </plant>
   <plant name="Budldleja davidii" path="201,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
@@ -2056,9 +2056,9 @@
     <property name="Rodzina" value="Cotinus" />
     <property name="Pochodzenie" value="południowo-wschodnia Europa" />
     <property name="Rozmiary" value="do 2-3 m wysokości" />
-    <property name="Podlewanie" value="umiarkowanie, dobrze znosi suszę" />
+    <property name="Podlewanie" value="umiarkowane, dobrze znosi suszę" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="słoneczne i ciepłe" />
+    <property name="Stanowisko" value="słoneczne, ciepłe" />
     <property name="Kwiaty" value="bladoróżowe" />
     <property name="Ciekawe cechy" value="nazwa krzewów pochodzi od niezwykłych - puszystych i kolistych owocostanów, które po przekwitnięciu przypominają perukę" />
     <photo path="encfoto_redakcja/Perukowiec.jpg" />
@@ -2077,7 +2077,7 @@
     <property name="Rodzina" value="Oleaceae" />
     <property name="Rozmiary" value="do 3,5 m, można przycinać" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Kwiaty" value="III-IV, żółte, pojawiają się zanim wyrosną liście " />
+    <property name="Kwiaty" value="III-IV, żółte, pojawiają się zanim wyrosną liście" />
     <property name="Ciekawe cechy" value="Pokaż komentarze[1]" />
   </plant>
   <plant name="Hydrangea macrophylla" path="493,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
@@ -2108,8 +2108,8 @@
     <property name="Nazwa" value="Wiciokrzew japoński" />
     <property name="Rodzina" value="Rozmiary" />
     <property name="Rozmiary" value="pnącze dorastające do 5 m wysokości, o przyroście rocznymok. 0,5 m" />
-    <property name="Stanowisko" value="słoneczne lub półcień, osłonięte" />
-    <property name="Ciekawe cechy" value="liście żółto żyłkowane, kwiaty czerwono-białe w lipcu&#xD;&#xA;" />
+    <property name="Stanowisko" value="słoneczne lub półcieniste, osłonięte" />
+    <property name="Ciekawe cechy" value="liście żółto żyłkowane, kwiaty czerwono-białe w lipcu" />
     <photo path="encfoto/LoniceraJaponicaAureoreticulata.jpg" />
   </plant>
   <plant name="Magnolia liliflora" path="453,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
@@ -2135,11 +2135,11 @@
   <plant name="Pyracantha coccinea" path="259,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
     <property name="Nazwa" value="Ognik szkarłatny" />
     <property name="Rodzina" value="Pyracantha" />
-    <property name="Pochodzenie" value="Południowowschodnia  Europa" />
+    <property name="Pochodzenie" value="Południowowschodnia Europa" />
     <property name="Rozmiary" value="2-3 metrów wysokości" />
     <property name="Podlewanie" value="umiarkowane lub rzadkie" />
     <property name="Nawożenie" value="umiarkowane" />
-    <property name="Stanowisko" value="słoneczne, osłonięte od wiatru" />
+    <property name="Stanowisko" value="słoneczne, osłonięte" />
     <property name="Kwiaty" value="lekko kremowe" />
     <property name="Ciekawe cechy" value="Gatunek zawdzięcza swą nazwę jaskrawo zabarwionym owocom, które obficie pojawiają się na krzewie gdy inne rosliny kończą już swą wegetację." />
     <photo path="encfoto_redakcja/ognikszkarlatny.jpg" />
@@ -2147,32 +2147,32 @@
   <plant name="Rosa 'Barkarole'" path="474,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
     <property name="Nazwa" value="Róża &quot;Barkarole&quot;" />
     <property name="Rodzina" value="Rosaceae" />
-    <property name="Pochodzenie" value="Azjia, Europa,  Ameryka Północ" />
+    <property name="Pochodzenie" value="Azjia, Europa, Ameryka Północ" />
     <property name="Rozmiary" value="80-100 cm" />
     <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="ciemno-bordowe pełne" />
-    <property name="Ciekawe cechy" value="Barkarole jest wyhodowaną przez Tantau w 1988r piękną różą wielkokwiatową o intensywnym zapachu , ciemnozielonych liściach i  czarnych pąkach z których rozwijają się bardzo ciemne bordowe kwiaty . Przepiękna odmiana  , która oprócz walorów estetycznych posiada także użytkowe ,jej kwiaty nadają się na przetwory . Najlepiej wygląda sadzona w grupach ." />
+    <property name="Ciekawe cechy" value="Barkarole jest wyhodowaną przez Tantau w 1988r piękną różą wielkokwiatową o intensywnym zapachu , ciemnozielonych liściach i czarnych pąkach z których rozwijają się bardzo ciemne bordowe kwiaty . Przepiękna odmiana , która oprócz walorów estetycznych posiada także użytkowe ,jej kwiaty nadają się na przetwory . Najlepiej wygląda sadzona w grupach ." />
     <photo path="encfoto_redakcja/rosabarkarole.jpg" />
   </plant>
   <plant name="Spirea kaponica 'Goldflame'" path="199,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
     <property name="Nazwa" value="Tawuła japońska" />
     <property name="Rodzina" value="Rosaceae" />
-    <property name="Rozmiary" value="do 120 cm,  zaokrąglony kształt" />
+    <property name="Rozmiary" value="do 120 cm, zaokrąglony kształt" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="VII-VIII, bladoróżowe zebrzne w baldachimy" />
-    <property name="Ciekawe cechy" value="Główną ozdobą są pomarańczowożółte drobne liście " />
+    <property name="Ciekawe cechy" value="Główną ozdobą są pomarańczowożółte drobne liście" />
   </plant>
   <plant name="Weigela" path="257,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="krzewy">
     <property name="Nazwa" value="Krzewuszka" />
     <property name="Rodzina" value="weigela florida" />
     <property name="Pochodzenie" value="Azja Wschodnia" />
     <property name="Rozmiary" value="do 2-2,5 metrów wysokości" />
-    <property name="Podlewanie" value="umiarkowanie" />
+    <property name="Podlewanie" value="umiarkowane" />
     <property name="Nawożenie" value="umiarkowane" />
     <property name="Stanowisko" value="słoneczne lub widne" />
-    <property name="Kwiaty" value="od barwy białej do &#xD;&#xA;ciemnoczerwonej" />
+    <property name="Kwiaty" value="od barwy białej do  ciemnoczerwonej" />
     <property name="Ciekawe cechy" value="przy dobrej pielęgnacji krzew kwitnie dwa razy, tj na wiosne obficie i na jesieni powtarza kwitnienie lecz nie tak mocno" />
     <photo path="encfoto_redakcja/krzewuszka.jpg" />
   </plant>
@@ -2192,7 +2192,7 @@
     <property name="Rozmiary" value="kępa do 1 m wysokości" />
     <property name="Stanowisko" value="słoneczne" />
     <property name="Kwiaty" value="VII-VIII" />
-    <property name="Ciekawe cechy" value="roślina kłączowa o dużej sile&#xD;&#xA;rozrastania. Niekiedy zachodzi&#xD;&#xA;potrzeba ograniczania jej wzrostu&#xD;&#xA;np. poprzez umieszczenie w ziemi&#xD;&#xA;grubej folii. Część nadziemna zasycha&#xD;&#xA;jesienią, jednak powinno się ją&#xD;&#xA;usuwać dopiero wiosną następnego&#xD;&#xA;roku&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="roślina kłączowa o dużej sile rozrastania. Niekiedy zachodzi potrzeba ograniczania jej wzrostu np. poprzez umieszczenie w ziemi grubej folii. Część nadziemna zasycha jesienią, jednak powinno się ją usuwać dopiero wiosną następnego roku" />
     <photo path="encfoto/LeymusArenarius.jpg" />
   </plant>
   <plant name="Festuca gautieri" path="155,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="trawy">
@@ -2221,7 +2221,7 @@
     <property name="Rodzina" value="Juncaceae" />
     <property name="Rozmiary" value="kępa do 30 cm wysokości" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Ciekawe cechy" value="roślina do oczek wodnych&#xD;&#xA;" />
+    <property name="Ciekawe cechy" value="roślina do oczek wodnych" />
     <photo path="encfoto/JuncusEnsifolius.jpg" />
   </plant>
   <plant name="Miskant chiński" path="380,encyklopedia.html?sid=2a99bcbaf08ed1d6309a15b9e1823db2" group="trawy">
@@ -2241,8 +2241,8 @@
     <property name="Rodzina" value="Gramineae" />
     <property name="Rozmiary" value="kępa do 1,5 m wysokości" />
     <property name="Stanowisko" value="słoneczne" />
-    <property name="Kwiaty" value="VIII-IX&#xD;&#xA;" />
-    <property name="Ciekawe cechy" value="część nadziemna zasycha&#xD;&#xA;jesienią, jednak powinno się ją&#xD;&#xA;usuwać dopiero wiosną następnego&#xD;&#xA;roku&#xD;&#xA;" />
+    <property name="Kwiaty" value="VIII-IX" />
+    <property name="Ciekawe cechy" value="część nadziemna zasycha jesienią, jednak powinno się ją usuwać dopiero wiosną następnego roku" />
     <photo path="encfoto/SpartinaPectinataAureom.jpg" />
   </plant>
 </encyclopedia>
