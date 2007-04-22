@@ -20,7 +20,7 @@ digraph
 	lokalizacja2    -> orientacja      [ label = "na balkonie"    ];
 	lokalizacja2    -> orientacja      [ label = "na parapecie"   ];
 	lokalizacja2    -> lokalizacja3    [ label = "w pokoju"       ];
-	orientacja      -> pielegnacja     [ label = "od polnocy"     ];
+	orientacja      -> kwiaty          [ label = "od polnocy"     ];
 	orientacja      -> zasloniecie     [ label = "od poludnia"    ];
 	lokalizacja3    -> orientacja      [ label = "w poblizu okna" ];
 	lokalizacja3    -> kwiaty          [ label = "zdala od okna"  ];
