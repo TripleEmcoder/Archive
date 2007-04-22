@@ -7,7 +7,7 @@
   
   <xsl:template match="/">
     <summary>
-      <xsl:for-each select="//plant[1]/property">
+      <xsl:for-each select="//plant[2]/property">
         <property name="{@name}">
           <xsl:variable name="name" select="@name" />
           <xsl:for-each select="distinct-values(//property[@name=$name]/@value)">
