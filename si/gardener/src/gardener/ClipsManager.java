@@ -17,13 +17,9 @@ public class ClipsManager implements Observer
 		Pattern.compile("^question;(.*?);(.*)$");
 	
 	private JClips jClips;
-	private QuestionPanel questionPanel;
-	private HistoryPanel historyPanel;
-
-	public ClipsManager(QuestionPanel questionPanel, HistoryPanel historyPanel)
+	
+	public ClipsManager()
 	{
-		this.questionPanel = questionPanel;
-		this.historyPanel = historyPanel;
 		this.jClips = JClips.getInstance();
 		this.jClips.init();
 		this.jClips.addObserver(this);
@@ -68,10 +64,10 @@ public class ClipsManager implements Observer
 		Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
 		if (questionMatcher.find())
 		{
-			if (questionPanel.isAnswerSelected())
-				historyPanel.addQuestion(
-						questionPanel.getQuestion(), questionPanel.getAnswer());
-			questionPanel.setQuestion(questionMatcher.group(1),questionMatcher.group(2));											
+			if (SI.questionPanel.isAnswerSelected())
+				SI.historyPanel.addQuestion(
+						SI.questionPanel.getQuestion(), SI.questionPanel.getAnswer());
+			SI.questionPanel.setQuestion(questionMatcher.group(1),questionMatcher.group(2));											
 		}
 	}
 
