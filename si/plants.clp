@@ -1,10 +1,4 @@
-﻿(deffacts fakty
-	(property "podlewanie" "dowolne")
-	(property "nawożenie" "dowolne")
-	(property "stanowisko" "dowolne")
-)
-
-(defrule plant_argyranthemum_frutescens
+﻿(defrule plant_argyranthemum_frutescens
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")

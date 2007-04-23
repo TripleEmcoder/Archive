@@ -1,9 +1,9 @@
 ﻿(defrule tool_setup_facts
 	(initial-fact)
 =>
-	(assert (podlewanie dowolne))
-	(assert (nawozenie dowolne))
-	(assert (stanowisko dowolne))
+	(assert (property "podlewanie" "dowolne"))
+	(assert (property "nawożenie" "dowolne"))
+	(assert (property "stanowisko" "dowolne"))
 )
 
 (defrule tool_send_answer
