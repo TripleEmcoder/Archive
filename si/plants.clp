@@ -259,7 +259,7 @@
 =>
 	(assert (plant "Helleborus niger"))
 )
-(defrule plant_hemerocallis fulva
+(defrule plant_hemerocallis_fulva
 	(property "podlewanie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "nawożenie" "dowolne"|"gleba żyzna")
 	(property "stanowisko" "dowolne"|"miejsca wilgotne i słoneczne"|"częściowo zacienione")
@@ -1202,7 +1202,7 @@
 =>
 	(assert (plant "Cornus alba"))
 )
-(defrule plant_cotinus coggygria
+(defrule plant_cotinus_coggygria
 	(property "podlewanie" "dowolne"|"umiarkowanie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne i ciepłe")
