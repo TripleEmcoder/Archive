@@ -44,7 +44,7 @@ namespace plants
                 property.WriteQueries(output);
 
             output.WriteLine("=>");
-            output.WriteLine("\t(assert (answer \"{0}\"))", Name);
+            output.WriteLine("\t(assert (plant \"{0}\"))", Name);
             output.WriteLine(")");
         }
     }
