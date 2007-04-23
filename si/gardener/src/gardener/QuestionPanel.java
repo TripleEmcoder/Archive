@@ -25,18 +25,23 @@ public class QuestionPanel extends JPanel
 		{
 			if (e.getActionCommand() == "next")
 			{
-				if (SI.questionPanel.isAnswerSelected())
-					SI.clipsManager.assertFact(SI.questionPanel.getFact());
+				SI.clipsManager.assertFact(SI.questionPanel.getFact());
 			}
 			else if (e.getActionCommand() == "previous")
 			{
-				
+				SI.historyPanel.removeQuestion();
+				SI.questionPanel.clearQuestion();
+				SI.clipsManager.retractFact();
 			}
 			else if (e.getActionCommand() == "restart")
 			{
 				SI.historyPanel.removeAllQuestions();
 				SI.questionPanel.clearQuestion();
 				SI.clipsManager.reset();
+			}
+			else
+			{
+				next.setEnabled(true);
 			}
 		}
 
@@ -53,11 +58,15 @@ public class QuestionPanel extends JPanel
 	
 	private JButton next, previous, restart;
 	
+	private ActionHandler actionHandler;
+	
 	public QuestionPanel()
 	{
-		ActionHandler actionHandler = new ActionHandler();
+		actionHandler = new ActionHandler();
 
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+		
+		group = new ButtonGroup();
 		
 		next = new JButton("next");
 		next.addActionListener(actionHandler);
@@ -92,8 +101,6 @@ public class QuestionPanel extends JPanel
 		buttonPanel.add(restart);
 		buttonPanel.add(Box.createHorizontalGlue());
 		
-		group = new ButtonGroup();
-		
 		add(Box.createVerticalGlue());
 		add(questionLabel);
 		add(Box.createVerticalGlue());
@@ -115,9 +122,13 @@ public class QuestionPanel extends JPanel
 		{
 			JRadioButton button = new JRadioButton(answerMatcher.group(1));
 			button.setActionCommand(answerMatcher.group(1)+"="+answerMatcher.group(2));
+			button.addActionListener(actionHandler);
 			group.add(button);
 			radioPanel.add(button);
 		}
+		
+		next.setEnabled(false);
+		previous.setEnabled(!SI.historyPanel.isEmpty());
 	}
 	
 	public void clearQuestion()
@@ -125,6 +136,8 @@ public class QuestionPanel extends JPanel
 		questionLabel.setText("");
 		group.clearSelection();
 		radioPanel.removeAll();
+		next.setEnabled(false);
+		previous.setEnabled(false);
 	}
 	
 	public String getQuestion()

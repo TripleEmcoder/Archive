@@ -6,18 +6,16 @@ import java.awt.Dimension;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 public class SI
 {
-
 	static QuestionPanel questionPanel;
 	static HistoryPanel historyPanel;
-	static JButton next, previous, restart;
 	static ClipsManager clipsManager;
+	static PlantFinder plantFinder;
 		
 	private static void createAndShowGUI()
 	{
@@ -32,12 +30,12 @@ public class SI
 		
 		JPanel leftPanel = new JPanel();
 		leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.PAGE_AXIS));
-		leftPanel.setPreferredSize(new Dimension(400-10, 550-10));
+		leftPanel.setPreferredSize(new Dimension(400, 550-10));
 		
-		historyPanel.setPreferredSize(new Dimension(400-10, 350-10));
+		historyPanel.setPreferredSize(new Dimension(400, 350-10));
 		historyPanel.setBorder(blackline);
 		
-		questionPanel.setPreferredSize(new Dimension(400-10, 200-10));
+		questionPanel.setPreferredSize(new Dimension(400, 200-10));
 		questionPanel.setBorder(blackline);
 		
 		leftPanel.add(historyPanel);
@@ -53,6 +51,7 @@ public class SI
 		historyPanel = new HistoryPanel();
 		questionPanel = new QuestionPanel();
 		clipsManager = new ClipsManager();
+		plantFinder = new PlantFinder("plants.xml");
 		
 		javax.swing.SwingUtilities.invokeLater(new Runnable()
 		{
@@ -63,6 +62,8 @@ public class SI
 		});
 		
 		clipsManager.load("test.clp");
+		clipsManager.load("test1.clp");
+		clipsManager.run();
 	}
 
 }

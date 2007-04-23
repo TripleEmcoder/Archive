@@ -40,4 +40,9 @@ public class HistoryPanel extends JPanel
 	{
 		listModel.removeAllElements();
 	}
+	
+	public boolean isEmpty()
+	{
+		return listModel.isEmpty();		
+	}
 }
