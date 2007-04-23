@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <summary>
-   <property name="Nazwa">
+   <property name="nazwa">
       <value>-</value>
       <value>Adenium arabskie</value>
       <value>Afelandra czworokątna</value>
@@ -188,7 +188,7 @@
       <value>Żywotnik zachodni 'Teddy'</value>
       <value>Żywotnik zachodni Tuja</value>
    </property>
-   <property name="Rodzina">
+   <property name="rodzina">
       <value>-</value>
       <value>Acanthaceae</value>
       <value>Agavaceae</value>
@@ -286,7 +286,7 @@
       <value>orchideaceae</value>
       <value>weigela florida</value>
    </property>
-   <property name="Pochodzenie">
+   <property name="pochodzenie">
       <value>-</value>
       <value>Afryka</value>
       <value>Afryka Południowa</value>
@@ -380,7 +380,7 @@
       <value>występuje na całym świecie</value>
       <value>Środkowa Ameryka</value>
    </property>
-   <property name="Rozmiary">
+   <property name="rozmiary">
       <value>-</value>
       <value>0,3 m średnicy</value>
       <value>1 m wys.</value>
@@ -550,66 +550,82 @@
       <value>zależy od wysokości użytego pnia;do kilku metrów wysokości</value>
       <value>łodygi dorastają do 70 cm</value>
    </property>
-   <property name="Podlewanie">
+   <property name="podlewanie">
       <value>-</value>
+      <value>Umiarkowanie</value>
       <value>częste</value>
-      <value>częste, do doniczki lub środka rozety</value>
+      <value>częste do doniczki, lub środka rozety</value>
       <value>częste, najlepiej ustawić w pojemniku z wodą; roślina bagienna</value>
       <value>rzadkie</value>
       <value>rzadkie lub umiarkowane</value>
       <value>umiarkowane</value>
-      <value>umiarkowane do podstawka</value>
       <value>umiarkowane lub częste</value>
       <value>umiarkowane lub rzadkie</value>
-      <value>umiarkowane, do podstawka</value>
-      <value>umiarkowane, dobrze znosi suszę</value>
+      <value>umiarkowane, do podstawki</value>
       <value>umiarkowane, należy przesuszać</value>
-      <value>umiarkowane, nie lubi przesuszania, należy spryskiwać</value>
       <value>umiarkowane, nie może przeschnąć</value>
       <value>umiarkowane, wrażliwy zarówno na nadmiar wody jak i przesuszenie</value>
       <value>umiarkowane, ziemia stale wilgotna, zimą ograniczamy podlewanie</value>
       <value>umiarkowane, zimą przesuszamy</value>
+      <value>umiarkowanie</value>
+      <value>umiarkowanie do podstawka</value>
+      <value>umiarkowanie, dobrze znosi suszę</value>
+      <value>umiarkowanie, nie lubi przesuszania, należy spryskiwać</value>
+      <value>umiarkowene</value>
+      <value>żadkie lub umiarkowane</value>
    </property>
-   <property name="Nawożenie">
+   <property name="nawożenie">
       <value>-</value>
       <value>częste</value>
-      <value>częste, podczas kwitnienia</value>
+      <value>częste podczas kwitnienia</value>
       <value>częste, próchnicze</value>
+      <value>gleba żyzna</value>
+      <value>nie jest konieczne</value>
       <value>rzadkie</value>
-      <value>rzadkie, lubi ubogą, kwaśną glebę</value>
+      <value>rzadkie. Lubi ubogą, kwaśną glebę</value>
       <value>umiarkowane</value>
       <value>umiarkowane lub rzadkie</value>
-      <value>umiarkowane, próchnicze</value>
+      <value>umiarkowanie</value>
+      <value>średnie, próchnicze</value>
    </property>
-   <property name="Stanowisko">
+   <property name="stanowisko">
       <value>-</value>
       <value>cieniste</value>
+      <value>cieniste i wilgotne, próchnicze</value>
       <value>cieniste lub półcieniste</value>
       <value>cieniste lub widne</value>
       <value>cieniste lub widne, wilgotne</value>
-      <value>cieniste, wilgotne, próchnicze</value>
+      <value>miejsca wilgotne i słoneczne lub częściowo zacienione</value>
+      <value>nasłonecznione</value>
       <value>półcieniste</value>
-      <value>półcieniste lub widne</value>
-      <value>półcieniste, wilgotne</value>
+      <value>półcień, widno</value>
       <value>sloneczne</value>
       <value>słoneczne</value>
+      <value>słoneczne i ciepłe</value>
+      <value>słoneczne i ciepłe, raczej suche</value>
+      <value>słoneczne i suche</value>
       <value>słoneczne lub półcieniste</value>
-      <value>słoneczne lub półcieniste, osłonięte</value>
-      <value>słoneczne lub półcieniste, wilgotne</value>
+      <value>słoneczne lub półcień</value>
+      <value>słoneczne lub półcień, osłonięte</value>
       <value>słoneczne lub widne</value>
-      <value>słoneczne lub widne lub półcieniste</value>
-      <value>słoneczne, ciepłe</value>
-      <value>słoneczne, ciepłe, raczej suche</value>
-      <value>słoneczne, osłonięte</value>
-      <value>słoneczne, suche</value>
+      <value>słoneczne, osłonięte od wiatru</value>
+      <value>słoneczne, półcień</value>
+      <value>słoneczne, widne</value>
+      <value>słoneczne, widne lub półcień</value>
+      <value>słoneczne-widne</value>
       <value>słoneczne lub widne</value>
       <value>widne</value>
-      <value>widne ale nie słoneczne</value>
+      <value>widne lecz nie słoneczne</value>
       <value>widne lub cieniste</value>
-      <value>widne lub cieniste, wilgotne</value>
+      <value>widne lub cieniste i wilgotne</value>
       <value>widne lub słoneczne</value>
+      <value>widne, ale nie na pełnym słońcu</value>
+      <value>widne, nie słoneczne</value>
+      <value>wilgotne i słoneczne, lub częściowo zacienione</value>
+      <value>wilgotne, lekko zacienione</value>
+      <value>zaciszne, ciepłe i słoneczne</value>
    </property>
-   <property name="Kwiaty">
+   <property name="kwiaty">
       <value>-</value>
       <value>3-5 cm średnicy, od białych, fioletowych do bordowych</value>
       <value>Białe wyrastajace ponad roślinę</value>
@@ -752,7 +768,7 @@
       <value>żółte z ciemnym środkiem</value>
       <value>żółtofioletowe, przypominające storczyki</value>
    </property>
-   <property name="Ciekawe cechy">
+   <property name="ciekawe cechy">
       <value>-</value>
       <value>Barkarole jest wyhodowaną przez Tantau w 1988r piękną różą wielkokwiatową o intensywnym zapachu , ciemnozielonych liściach i czarnych pąkach z których rozwijają się bardzo ciemne bordowe kwiaty . Przepiękna odmiana , która oprócz walorów estetycznych posiada także użytkowe ,jej kwiaty nadają się na przetwory . Najlepiej wygląda sadzona w grupach .</value>
       <value>Bylina o niezwykle długim kwitnieniu (czerwiec / wrzesień) ponieważ kwiaty na noc i w dzień pochmurny zamykają płatki. Po przekwitnięciu jednych kwiatów "w kolejce" do kwitnienia pojawiają się następne. Tak że pod koniec września z wierzchołków rośliny zwisają grona torebek nasiennych. Cała roślina przesycona wodą, pędy połamane wiatrem w kolankach unoszą się po pewnym czasie. Dobrze się rozrasta, odporna na choroby grzybowe i mrozy.</value>
