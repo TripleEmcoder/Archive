@@ -2,47 +2,52 @@ package gardener;
 
 import java.awt.GridLayout;
 
-import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 
-public class HistoryPanel extends JPanel
+public class ListPanel extends JPanel
 {
 	private static final long serialVersionUID = 1L;
 	private DefaultListModel listModel;
 	private JList list;
-		
-	public HistoryPanel()
+	private boolean numbered;
+
+	public ListPanel(boolean numbered)
 	{
-		super(new GridLayout(1,1));
+		super(new GridLayout(1, 1));
 		
+		this.numbered = numbered;
 		listModel = new DefaultListModel();
-		
 		list = new JList(listModel);
-		list.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		add(list);
+
+		JScrollPane listScroller = new JScrollPane(list);
+		
+		add(listScroller);
 	}
-	
-	public void addQuestion(String question, String answer)
+
+	public void addElement(String element)
 	{
-		listModel.addElement(question + " " + answer);
+		if (numbered)
+			element = Integer.toString(listModel.getSize()+1) + ". " + element;
+		listModel.addElement(element);
 	}
-	
-	public void removeQuestion()
+
+	public void removeElement()
 	{
 		listModel.removeElement(listModel.lastElement());
 	}
-	
-	public void removeAllQuestions()
+
+	public void removeAllElements()
 	{
 		listModel.removeAllElements();
 	}
-	
+
 	public boolean isEmpty()
 	{
-		return listModel.isEmpty();		
+		return listModel.isEmpty();
 	}
 }

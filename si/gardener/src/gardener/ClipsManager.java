@@ -1,9 +1,5 @@
 package gardener;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.net.URI;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -15,81 +11,99 @@ import jclips.JClips;
 
 public class ClipsManager implements Observer
 {
-	private static final Pattern QUESTION_PATTERN = 
-		Pattern.compile("^question;(.*?);(.*)$");
+	private static final Pattern QUESTION_PATTERN = Pattern
+			.compile("^question;(.*?);(.*)$");
+	private static final Pattern PLANT_PATTERN = Pattern
+			.compile("^plant;(.*)$");
 	private static final String ASSERT_COMMAND = "(assert (%s))";
-	private static final String RETRACT_COMMAND = "(assert (cancel %s))";
-	
+	private static final String ANSWER_FORMAT = "answer \"%s\"";
+	private static final String CANCEL_FORMAT = "cancel \"%s\"";
+
 	private JClips jClips;
-	private List<String> facts;
-	
+	private List<String> answers;
+
 	public ClipsManager()
 	{
 		this.jClips = JClips.getInstance();
 		this.jClips.init();
 		this.jClips.addObserver(this);
-		this.facts = new ArrayList<String>();
+		this.answers = new ArrayList<String>();
 	}
 
 	public void load(String filename)
 	{
-		URL fileUrl = ClipsManager.class.getResource(filename);
-		
-		try
-		{
-			if (fileUrl == null)
-			{
-				throw new FileNotFoundException(filename);
-			}
-			File file = new File(new URI(fileUrl.toString()));
-			jClips.load(file.getPath());
-			jClips.reset();
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
+		// URL fileUrl = ClipsManager.class.getResource(filename);
+		//
+		// try
+		// {
+		// if (fileUrl == null)
+		// {
+		// throw new FileNotFoundException(filename);
+		// }
+		// File file = new File(new URI(fileUrl.toString()));
+		// jClips.load(file.getPath());
+		// jClips.reset();
+		// }
+		// catch (Exception e)
+		// {
+		// e.printStackTrace();
+		// }
+		System.err.println("Loading: " + filename);
+		jClips.load(filename);
+		jClips.reset();
 	}
-	
+
 	public void reset()
 	{
-		facts.clear();
+		answers.clear();
 		jClips.reset();
 		jClips.run();
 	}
-	
+
 	public void run()
 	{
 		jClips.run();
 	}
-	
-	public void assertFact(String fact)
+
+	private void assertFact(String fact)
 	{
-		facts.add(fact);
-		jClips.executeCommand(String.format(ASSERT_COMMAND, fact));
+		String cmd = String.format(ASSERT_COMMAND, fact);
+		System.err.println(cmd);
+		jClips.executeCommand(cmd);
 		jClips.run();
 	}
-	
-	public void retractFact()
+
+	public void sendAnswer(String answer)
 	{
-		if (!facts.isEmpty())
+		answers.add(answer);
+		assertFact(String.format(ANSWER_FORMAT, answer));
+	}
+
+	public void cancelLastAnswer()
+	{
+		if (!answers.isEmpty())
 		{
-			String fact = facts.remove(facts.size()-1);
-			jClips.executeCommand(String.format(RETRACT_COMMAND, fact));
-			jClips.run();			
+			String fact = answers.remove(answers.size() - 1);
+			assertFact(String.format(CANCEL_FORMAT, fact));
 		}
 	}
-	
+
 	public void update(Observable o, Object arg)
 	{
-		String message = (String)arg;
+		String message = (String) arg;
 		Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
+		Matcher plantMatcher = PLANT_PATTERN.matcher(message);
 		if (questionMatcher.find())
 		{
 			if (SI.questionPanel.isAnswerSelected())
-				SI.historyPanel.addQuestion(
-						SI.questionPanel.getQuestion(), SI.questionPanel.getAnswer());
-			SI.questionPanel.setQuestion(questionMatcher.group(1),questionMatcher.group(2));											
+				SI.historyPanel.addElement(SI.questionPanel.getQuestion() + " "
+						+ SI.questionPanel.getAnswer());
+			SI.questionPanel.setQuestion(questionMatcher.group(1),
+					questionMatcher.group(2));
+		}
+		else if (plantMatcher.find())
+		{
+			SI.plantListPanel.addElement(plantMatcher.group(1));
 		}
 	}
 

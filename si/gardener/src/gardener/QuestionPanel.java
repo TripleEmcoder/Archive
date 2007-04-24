@@ -1,12 +1,11 @@
 package gardener;
 
-import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -16,26 +15,23 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 
-public class QuestionPanel extends JPanel
+public class QuestionPanel extends JPanel implements ActionListener
 {
-	private class ActionHandler implements ActionListener
-	{
-
-		public void actionPerformed(ActionEvent e)
+	public void actionPerformed(ActionEvent e)
 		{
 			if (e.getActionCommand() == "next")
 			{
-				SI.clipsManager.assertFact(SI.questionPanel.getFact());
+				SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 			}
 			else if (e.getActionCommand() == "previous")
 			{
-				SI.historyPanel.removeQuestion();
+				SI.historyPanel.removeElement();
 				SI.questionPanel.clearQuestion();
-				SI.clipsManager.retractFact();
+				SI.clipsManager.cancelLastAnswer();
 			}
 			else if (e.getActionCommand() == "restart")
 			{
-				SI.historyPanel.removeAllQuestions();
+				SI.historyPanel.removeAllElements();
 				SI.questionPanel.clearQuestion();
 				SI.clipsManager.reset();
 			}
@@ -45,10 +41,9 @@ public class QuestionPanel extends JPanel
 			}
 		}
 
-	}
 	
 	private static final long serialVersionUID = 1L;
-	private static final Pattern ANSWER_PATTERN = Pattern.compile("(.*?)=(.*?)(;|$)");
+	private static final Pattern ANSWER_PATTERN = Pattern.compile("(.*?)(;|$)");
 	
 	private JLabel questionLabel;
 	
@@ -58,40 +53,37 @@ public class QuestionPanel extends JPanel
 	
 	private JButton next, previous, restart;
 	
-	private ActionHandler actionHandler;
-	
 	public QuestionPanel()
 	{
-		actionHandler = new ActionHandler();
-
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		
 		group = new ButtonGroup();
 		
 		next = new JButton("next");
-		next.addActionListener(actionHandler);
+		next.addActionListener(this);
 		next.setActionCommand("next");
 		
 		previous = new JButton("previous"); 
-		previous.addActionListener(actionHandler);
+		previous.addActionListener(this);
 		previous.setActionCommand("previous");
 		
 		restart = new JButton("restart");
-		restart.addActionListener(actionHandler);
+		restart.addActionListener(this);
 		restart.setActionCommand("restart");
 		
 		questionLabel = new JLabel();
-		questionLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-		questionLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+		//questionLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		//questionLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 		
 		radioPanel = new JPanel();
 		radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.PAGE_AXIS));
-		radioPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		radioPanel.setMinimumSize(new Dimension(350,200));
+		//radioPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		
-		radioPanel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+		//radioPanel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 		
 		buttonPanel = new JPanel();	
-		buttonPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		//buttonPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
 		buttonPanel.add(Box.createHorizontalGlue());
 		buttonPanel.add(next);
@@ -108,6 +100,8 @@ public class QuestionPanel extends JPanel
 		add(Box.createVerticalGlue());
 		add(buttonPanel);
 		add(Box.createVerticalGlue());
+		
+		clearQuestion();
 	}
 	
 	public void setQuestion(String question, String answers)
@@ -121,8 +115,8 @@ public class QuestionPanel extends JPanel
 		while (answerMatcher.find())
 		{
 			JRadioButton button = new JRadioButton(answerMatcher.group(1));
-			button.setActionCommand(answerMatcher.group(1)+"="+answerMatcher.group(2));
-			button.addActionListener(actionHandler);
+			button.setActionCommand(answerMatcher.group(1));
+			button.addActionListener(this);
 			group.add(button);
 			radioPanel.add(button);
 		}
@@ -147,12 +141,7 @@ public class QuestionPanel extends JPanel
 	
 	public String getAnswer()
 	{
-		return group.getSelection().getActionCommand().split("=")[0];
-	}
-	
-	public String getFact()
-	{
-		return group.getSelection().getActionCommand().split("=")[1];
+		return group.getSelection().getActionCommand();
 	}
 	
 	public boolean isAnswerSelected()

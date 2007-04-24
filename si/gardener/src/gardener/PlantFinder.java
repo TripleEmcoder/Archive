@@ -57,7 +57,7 @@ public class PlantFinder
 				}
 				else if (child.getNodeName() == "photo")
 				{
-					String path = child.getAttributes().getNamedItem("value")
+					String path = child.getAttributes().getNamedItem("path")
 							.getNodeValue();
 					plant.setProperty("photo", path);
 				}
