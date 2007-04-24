@@ -1,82 +1,82 @@
 (defrule question_lokalizacja1
 	(step "lokalizacja1")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w domu;w ogrodzie;"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w domu;w ogrodzie"))
 )
 (defrule question_lokalizacja2
 	(step "lokalizacja2")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w pokoju;na balkonie;na parapecie;"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w pokoju;na balkonie;na parapecie"))
 )
 (defrule question_lokalizacja3
 	(step "lokalizacja3")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w pobliżu okna;zdala od okna;"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w pobliżu okna;zdala od okna"))
 )
 (defrule question_orientacja
 	(step "orientacja")
 =>
-	(assert (question "Jakie jest umiejscowienie okna/balkonu?;od południa;od północy;"))
+	(assert (question "Jakie jest umiejscowienie okna/balkonu?;od południa;od północy"))
 )
 (defrule question_osloniecie1
 	(step "osłonięcie1")
 =>
-	(assert (question "Jakie jest umiejscowienie okna/balkonu?;wśrod drzew;nieosłonięte;wśrod budynków;"))
+	(assert (question "Jakie jest umiejscowienie okna/balkonu?;wśrod drzew;nieosłonięte;wśrod budynków"))
 )
 (defrule question_pielegnacja
 	(step "pielęgnacja")
 =>
-	(assert (question "Czy masz czas pielęgnowac roślinę?;tak;nie;"))
+	(assert (question "Czy masz czas pielęgnowac roślinę?;tak;nie"))
 )
 (defrule question_naslonecznienie
 	(step "nasłonecznienie")
 =>
-	(assert (question "Jakie jest planowane stanowisko?;słoneczne;półcieniste;cieniste;"))
+	(assert (question "Jakie jest planowane stanowisko?;słoneczne;półcieniste;cieniste"))
 )
 (defrule question_wilgotnosc
 	(step "wilgotność")
 =>
-	(assert (question "Jakie jest planowane stanowisko?;suche;przeciętne;wilgotne;"))
+	(assert (question "Jakie jest planowane stanowisko?;suche;przeciętne;wilgotne"))
 )
 (defrule question_sikawki
 	(step "sikawki")
 =>
-	(assert (question "Czy jest automatyczne podlewanie?;tak;nie;"))
+	(assert (question "Czy jest automatyczne podlewanie?;tak;nie"))
 )
 (defrule question_prochnica
 	(step "próchnica")
 =>
-	(assert (question "Czy na stanowisku występuje próchnica?;tak;nie;"))
+	(assert (question "Czy na stanowisku występuje próchnica?;tak;nie"))
 )
 (defrule question_osloniecie2
 	(step "osłonięcie2")
 =>
-	(assert (question "Czy stanowisko jest osłonięte od wiatru?;tak;nie;"))
+	(assert (question "Czy stanowisko jest osłonięte od wiatru?;tak;nie"))
 )
 (defrule question_kwiaty
 	(step "kwiaty")
 =>
-	(assert (question "Czy roślina ma mieć kwiaty?;tak;nie;"))
+	(assert (question "Czy roślina ma mieć kwiaty?;tak;nie"))
 )
 (defrule question_kolor
 	(step "kolor")
 =>
-	(assert (question "Jakiego koloru mają być kwiaty?;białe;czerwone;fioletowe;malinowe;niebieskie;pomarańczowe;różowe;żółte;różnobarwne;dowolne;"))
+	(assert (question "Jakiego koloru mają być kwiaty?;białe;czerwone;fioletowe;malinowe;niebieskie;pomarańczowe;różowe;żółte;różnobarwne;dowolne"))
 )
 (defrule question_pochodzenie
 	(step "pochodzenie")
 =>
-	(assert (question "Skąd ma pochodzić roślina?;...;dowolne;"))
+	(assert (question "Skąd ma pochodzić roślina?;...;dowolne"))
 )
 (defrule question_start
 	(step "START")
 =>
-	(assert (question "START;solid;"))
+	(assert (question "START;solid"))
 )
 (defrule question_stop
 	(step "STOP")
 =>
-	(assert (question "STOP;"))
+	(assert (question "STOP"))
 )
 (defrule answer_lokalizacja1_w_domu
 	?i <- (step "lokalizacja1")

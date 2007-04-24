@@ -29,10 +29,10 @@ namespace questions
             output.WriteLine("(defrule question_{0}", Identifier);
             output.WriteLine("\t(step \"{0}\")", Tag);
             output.WriteLine("=>");
-            output.Write("\t(assert (question \"{0};", Content);
+            output.Write("\t(assert (question \"{0}", Content);
 
             foreach (Answer answer in Answers)
-                output.Write("{0};", answer.Content);
+                output.Write(";{0}", answer.Content);
 
             output.WriteLine("\"))");
             output.WriteLine(")");
