@@ -4,6 +4,7 @@
 	(assert (property "podlewanie" "dowolne"))
 	(assert (property "nawożenie" "dowolne"))
 	(assert (property "stanowisko" "dowolne"))
+	(assert (step "lokalizacja1"))
 )
 
 (defrule tool_send_question
