@@ -1185,7 +1185,7 @@
 =>
 	(assert (plant "Thuja occidentalis 'Teddy'"))
 )
-(defrule plant_thuja_plicata_kórnik_iii
+(defrule plant_thuja_plicata_kornik_iii
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
 =>
 	(assert (plant "Thuja plicata 'Kórnik III'"))

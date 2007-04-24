@@ -17,25 +17,7 @@ namespace plants
 
         public string Identifier
         {
-            get
-            {
-                string result = Name.ToLower();
-
-                result = result.Replace(' ', ' ');
-                result = result.Replace('ą', 'a');
-                result = result.Replace('ć', 'c');
-                result = result.Replace('ę', 'e');
-                result = result.Replace('ć', 'c');
-                result = result.Replace('ń', 'n');
-                result = result.Replace('ś', 's');
-                result = result.Replace('ź', 'z');
-                result = result.Replace('ż', 'z');
-
-                result = result.Replace(' ', '_');
-                result = result.Replace("\'", "");
-
-                return result;
-            }
+            get { return ClipsTools.MakeIdentifier(Name); }
         }
 	
         public void WriteRule(TextWriter output)

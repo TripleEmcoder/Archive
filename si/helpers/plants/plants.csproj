@@ -39,6 +39,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tools\tools.csproj">
+      <Project>{CA769FCF-A42D-4BFD-94A4-93EFAA7B0E44}</Project>
+      <Name>tools</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

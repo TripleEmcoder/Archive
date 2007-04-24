@@ -4,11 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F9E44774-20A3-4233-AC4A-F35A7117FAC2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{CA769FCF-A42D-4BFD-94A4-93EFAA7B0E44}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>questions</RootNamespace>
-    <AssemblyName>questions</AssemblyName>
+    <RootNamespace>tools</RootNamespace>
+    <AssemblyName>tools</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,16 +33,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Answer.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ClipsTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Question.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\tools\tools.csproj">
-      <Project>{CA769FCF-A42D-4BFD-94A4-93EFAA7B0E44}</Project>
-      <Name>tools</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

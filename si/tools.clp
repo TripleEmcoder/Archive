@@ -6,11 +6,18 @@
 	(assert (property "stanowisko" "dowolne"))
 )
 
+(defrule tool_send_question
+	?i <- (question ?question)
+=>
+	(retract ?i)
+	(send-to-java "question;"?question)
+)
+
 (defrule tool_send_plant
 	?i <- (plant ?plant)
 =>
 	(retract ?i)
-	(send-to-java "plant;" ?plant)
+	(send-to-java "plant;"?plant)
 )
 
 (defrule tool_cancel_answer
