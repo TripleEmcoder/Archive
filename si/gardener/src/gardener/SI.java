@@ -13,7 +13,8 @@ import javax.swing.border.EtchedBorder;
 public class SI
 {
 	static QuestionPanel questionPanel;
-	static ListPanel historyPanel, plantListPanel;
+	static ListPanel historyPanel;
+	static PlantListPanel plantListPanel;
 	static ClipsManager clipsManager;
 	static PlantFinder plantFinder;
 	static PlantInfoPanel plantInfoPanel;
@@ -81,7 +82,7 @@ public class SI
 		historyPanel = new ListPanel(true);
 		questionPanel = new QuestionPanel();
 		plantInfoPanel = new PlantInfoPanel();
-		plantListPanel = new ListPanel(false);
+		plantListPanel = new PlantListPanel();
 		clipsManager = new ClipsManager();
 		plantFinder = new PlantFinder("plants.xml");
 		

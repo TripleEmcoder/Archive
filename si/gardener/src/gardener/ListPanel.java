@@ -11,32 +11,55 @@ import javax.swing.ListSelectionModel;
 public class ListPanel extends JPanel
 {
 	private static final long serialVersionUID = 1L;
-	private DefaultListModel listModel;
-	private JList list;
+	protected DefaultListModel listModel;
+	protected JList list;
 	private boolean numbered;
 
 	public ListPanel(boolean numbered)
 	{
 		super(new GridLayout(1, 1));
-		
+
 		this.numbered = numbered;
 		listModel = new DefaultListModel();
 		list = new JList(listModel);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 		JScrollPane listScroller = new JScrollPane(list);
-		
+
 		add(listScroller);
 	}
+
+//	public void sort()
+//	{
+//		int size = listModel.getSize();
+//		Vector<String> vec = new Vector<String>();
+//		for (int x = 0; x < size; ++x)
+//		{
+//			String o = (String)listModel.get(x);
+//			vec.addElement(o);
+//		}
+//
+//		Collections.sort(vec);
+//		
+//		for (int x = 0; x < size; ++x)
+//		{
+//			if (listModel.getElementAt(x) != vec.elementAt(x))
+//			{
+//				listModel.set(x, vec.elementAt(x));
+//			}
+//		}
+//	}
 
 	public void addElement(String element)
 	{
 		if (numbered)
-			element = Integer.toString(listModel.getSize()+1) + ". " + element;
+			element = Integer.toString(listModel.getSize() + 1) + ". "
+					+ element;
 		listModel.addElement(element);
+		//sort();
 	}
 
-	public void removeElement()
+	public void removeLastElement()
 	{
 		listModel.removeElement(listModel.lastElement());
 	}

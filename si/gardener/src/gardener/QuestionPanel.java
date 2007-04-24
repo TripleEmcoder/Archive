@@ -25,7 +25,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 			}
 			else if (e.getActionCommand() == "previous")
 			{
-				SI.historyPanel.removeElement();
+				SI.historyPanel.removeLastElement();
 				SI.questionPanel.clearQuestion();
 				SI.clipsManager.cancelLastAnswer();
 			}
