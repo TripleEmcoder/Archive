@@ -1,6 +1,9 @@
 package gardener;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URI;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,11 +22,19 @@ public class PlantFinder
 	{
 		super();
 		this.plants = new HashMap<String, Plant>();
+				
 		try
 		{
-			DocumentBuilder builder = DocumentBuilderFactory.newInstance()
-					.newDocumentBuilder();
-			Document document = builder.parse(new File(filename));
+			URL fileUrl = PlantFinder.class.getResource(filename);
+
+			if (fileUrl == null)
+			{
+				throw new FileNotFoundException(filename);
+			}
+			File file = new File(new URI(fileUrl.toString()));
+			
+			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			Document document = builder.parse(file);
 			addPlants(document.getElementsByTagName("plant"), plants);
 		}
 		catch (Exception e)
