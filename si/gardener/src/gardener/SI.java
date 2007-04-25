@@ -1,4 +1,5 @@
 package gardener;
+
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -18,74 +19,81 @@ public class SI
 	static ClipsManager clipsManager;
 	static PlantFinder plantFinder;
 	static PlantInfoPanel plantInfoPanel;
-		
+	static String clipsFiles[] = { 
+		"java.clp", 
+		"plants.clp", 
+		"questions.clp",
+		"rules.clp", 
+		"tools.clp", 
+		"winclips.clp" 
+		};
+
 	private static void createAndShowGUI()
 	{
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(50, 50, 900, 600);
-		
+
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
-		
+
 		Container pane = frame.getContentPane();
 		pane.setLayout(new BorderLayout());
-		
+
 		JPanel leftPanel = new JPanel();
 		leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.PAGE_AXIS));
-		leftPanel.setPreferredSize(new Dimension(500, 550-10));
-		leftPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-		
+		leftPanel.setPreferredSize(new Dimension(500, 550 - 10));
+		leftPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
 		JPanel rightPanel = new JPanel();
 		rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.PAGE_AXIS));
-		rightPanel.setPreferredSize(new Dimension(400-5, 550-10));
-		rightPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-		
-		historyPanel.setPreferredSize(new Dimension(350, 350-10));
-		historyPanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createTitledBorder(lowered, "Historia pytañ"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-		
-		questionPanel.setPreferredSize(new Dimension(150, 200-10));
+		rightPanel.setPreferredSize(new Dimension(400 - 5, 550 - 10));
+		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
+		historyPanel.setPreferredSize(new Dimension(350, 350 - 10));
+		historyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory
+				.createTitledBorder(lowered, "Historia pytañ"), BorderFactory
+				.createEmptyBorder(5, 5, 5, 5)));
+
+		questionPanel.setPreferredSize(new Dimension(150, 200 - 10));
 		questionPanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createTitledBorder(lowered, "Pytanie"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-		
-		plantListPanel.setPreferredSize(new Dimension(200, 200-10));
+				BorderFactory.createTitledBorder(lowered, "Pytanie"),
+				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+
+		plantListPanel.setPreferredSize(new Dimension(200, 200 - 10));
 		plantListPanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-		
-		
-		//plantInfoPanel.setPreferredSize(new Dimension(200, 200-10));
+				BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
+				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+
+		// plantInfoPanel.setPreferredSize(new Dimension(200, 200-10));
 		plantInfoPanel.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createTitledBorder(lowered, "Opis roœliny"),
-                BorderFactory.createEmptyBorder(5,5,5,5)));
-		
+				BorderFactory.createTitledBorder(lowered, "Opis roœliny"),
+				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+
 		JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.LINE_AXIS));
 		panel.add(historyPanel);
 		panel.add(plantListPanel);
-		
+
 		leftPanel.add(panel);
 		leftPanel.add(questionPanel);
-		
+
 		rightPanel.add(plantInfoPanel);
-		
+
 		pane.add(leftPanel, BorderLayout.LINE_START);
 		pane.add(rightPanel, BorderLayout.LINE_END);
-				
+
 		frame.setVisible(true);
 	}
-	
+
 	public static void main(String[] args)
-	{		
+	{
 		historyPanel = new ListPanel(true);
 		questionPanel = new QuestionPanel();
 		plantInfoPanel = new PlantInfoPanel();
 		plantListPanel = new PlantListPanel();
 		clipsManager = new ClipsManager();
 		plantFinder = new PlantFinder("plants.xml");
-		
+
 		javax.swing.SwingUtilities.invokeLater(new Runnable()
 		{
 			public void run()
@@ -93,13 +101,9 @@ public class SI
 				createAndShowGUI();
 			}
 		});
-		
-		clipsManager.load("java.clp");
-		clipsManager.load("plants.clp");
-		clipsManager.load("questions.clp");
-		clipsManager.load("rules.clp");
-		clipsManager.load("tools.clp");
-		clipsManager.load("winclips.clp");
+
+		for (String filename : clipsFiles)
+			clipsManager.load(filename);
 		clipsManager.run();
 	}
 
