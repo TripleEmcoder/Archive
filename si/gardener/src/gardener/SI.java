@@ -21,11 +21,11 @@ public class SI
 	static PlantInfoPanel plantInfoPanel;
 	static String clipsFiles[] = { 
 		"java.clp", 
-		"plants.clp", 
+		"winclips.clp",
+		"tools.clp", 
 		"questions.clp",
 		"rules.clp", 
-		"tools.clp", 
-		"winclips.clp" 
+		"plants.clp",
 		};
 
 	private static void createAndShowGUI()
