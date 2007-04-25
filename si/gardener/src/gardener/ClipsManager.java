@@ -1,5 +1,9 @@
 package gardener;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -12,9 +16,9 @@ import jclips.JClips;
 public class ClipsManager implements Observer
 {
 	private static final Pattern QUESTION_PATTERN = Pattern
-			.compile("^question;(.*?);(.*)$");
+			.compile("^question;(.+?);(.+)$");
 	private static final Pattern PLANT_PATTERN = Pattern
-			.compile("^plant;(.*)$");
+			.compile("^plant;(.+)$");
 	private static final String ASSERT_COMMAND = "(assert (%s))";
 	private static final String ANSWER_FORMAT = "answer \"%s\"";
 	private static final String CANCEL_FORMAT = "cancel \"%s\"";
@@ -32,25 +36,24 @@ public class ClipsManager implements Observer
 
 	public void load(String filename)
 	{
-		// URL fileUrl = ClipsManager.class.getResource(filename);
-		//
-		// try
-		// {
-		// if (fileUrl == null)
-		// {
-		// throw new FileNotFoundException(filename);
-		// }
-		// File file = new File(new URI(fileUrl.toString()));
-		// jClips.load(file.getPath());
+		URL fileUrl = ClipsManager.class.getResource(filename);
+
+		try
+		{
+			if (fileUrl == null)
+			{
+				throw new FileNotFoundException(filename);
+			}
+			File file = new File(new URI(fileUrl.toString()));
+			jClips.load(file.getPath());
+			jClips.reset();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		// jClips.load(filename);
 		// jClips.reset();
-		// }
-		// catch (Exception e)
-		// {
-		// e.printStackTrace();
-		// }
-		System.err.println("Loading: " + filename);
-		jClips.load(filename);
-		jClips.reset();
 	}
 
 	public void reset()
@@ -91,6 +94,7 @@ public class ClipsManager implements Observer
 	public void update(Observable o, Object arg)
 	{
 		String message = (String) arg;
+		System.err.println(message);
 		Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
 		Matcher plantMatcher = PLANT_PATTERN.matcher(message);
 		if (questionMatcher.find())

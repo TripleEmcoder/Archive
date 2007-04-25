@@ -42,7 +42,9 @@ public class PlantFinder
 		for (int i = 0; i < nodeList.getLength(); ++i)
 		{
 			Node node = nodeList.item(i);
-			Plant plant = new Plant();
+			String plantName = node.getAttributes().getNamedItem("name").getNodeValue();
+			Plant plant = new Plant(plantName);
+					
 			NodeList children = node.getChildNodes();
 			for (int j = 0; j < children.getLength(); ++j)
 			{
@@ -62,11 +64,8 @@ public class PlantFinder
 					plant.setProperty("photo", path);
 				}
 			}
-			plants.put(
-					node.getAttributes().getNamedItem("name").getNodeValue(),
-					plant);
+			plants.put(plantName, plant);
 		}
 
 	}
-
 }

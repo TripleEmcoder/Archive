@@ -1,5 +1,6 @@
 package gardener;
 
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,28 +22,29 @@ public class PlantInfoPanel extends JPanel
 		String[] labels = { "Nazwa", "Rodzina", "Rozmiary", "Podlewanie",
 				"Nawo¿enie", "Stanowisko", "Kwiaty", "Ciekawe cechy" };
 		
-		int numPairs = labels.length;
-		
-		JPanel p = new JPanel(new SpringLayout());
+		JPanel formPanel = new JPanel(new SpringLayout());
 		for (String label : labels)
 		{
 			JLabel l = new JLabel(label, JLabel.TRAILING);
-			p.add(l);
+			formPanel.add(l);
 			JTextField textField = new JTextField(20);
 			l.setLabelFor(textField);
-			p.add(textField);
+			formPanel.add(textField);
 			fields.put(label.toLowerCase(), textField);
 		}
 
-		SpringUtilities.makeCompactGrid(p, numPairs, 2, // rows, cols
+		SpringUtilities.makeCompactGrid(formPanel, labels.length, 2, // rows, cols
 				6, 6, // initX, initY
 				20, 10); // xPad, yPad
 
-		add(p);
+		add(formPanel);
 	}
 	
 	public void setPlant(Plant plant)
 	{
+		URL imgURL = SI.class.getResource("plants/" + plant.getLatinName() + ".jpg");
+		if (imgURL != null)
+			System.err.println(imgURL.getPath());
 		for (String label : fields.keySet())
 		{
 			fields.get(label).setText(plant.getProperty(label));

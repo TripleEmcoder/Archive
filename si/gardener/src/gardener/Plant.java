@@ -5,10 +5,12 @@ import java.util.Map;
 
 public class Plant
 {
+	private String latinName;
 	private Map<String, String> properties;
 
-	public Plant()
+	public Plant(String name)
 	{
+		latinName = name;
 		properties = new HashMap<String, String>();
 	}
 	
@@ -20,5 +22,10 @@ public class Plant
 	public String getProperty(String name)
 	{
 		return properties.get(name);
+	}
+
+	public String getLatinName()
+	{
+		return latinName;
 	}
 }

@@ -94,9 +94,8 @@ public class SI
 			}
 		});
 		
+		clipsManager.load("java.clp");
 		clipsManager.load("plants.clp");
-		clipsManager.load("tools.clp");
-		clipsManager.load("questions.clp");
 		clipsManager.run();
 	}
 

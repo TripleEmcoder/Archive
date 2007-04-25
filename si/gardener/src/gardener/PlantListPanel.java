@@ -1,5 +1,6 @@
 package gardener;
 
+import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
@@ -10,7 +11,7 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 	public PlantListPanel()
 	{
 		super(false);
-		list.addListSelectionListener(this);
+		list.getSelectionModel().addListSelectionListener(this);
 	}
 
 	public void addElement(String element)
@@ -24,8 +25,12 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 
 	public void valueChanged(ListSelectionEvent e)
 	{
-		String plantname = (String)listModel.get(e.getFirstIndex());
-		Plant plant = SI.plantFinder.find(plantname);
-		SI.plantInfoPanel.setPlant(plant);
+		ListSelectionModel lsm = (ListSelectionModel)e.getSource();
+		if (!e.getValueIsAdjusting() && !lsm.isSelectionEmpty())
+		{
+			String plantname = (String)listModel.get(e.getFirstIndex());
+			Plant plant = SI.plantFinder.find(plantname);
+			SI.plantInfoPanel.setPlant(plant);
+		}
 	}
 }
