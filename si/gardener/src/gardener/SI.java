@@ -30,6 +30,12 @@ public class SI
 
 	private static void createAndShowGUI()
 	{
+		historyPanel = new ListPanel(true);
+		questionPanel = new QuestionPanel();
+		plantInfoPanel = new PlantInfoPanel();
+		plantListPanel = new PlantListPanel();
+		plantFinder = new PlantFinder("plants.xml");
+
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(50, 50, 900, 600);
@@ -87,24 +93,24 @@ public class SI
 
 	public static void main(String[] args)
 	{
-		historyPanel = new ListPanel(true);
-		questionPanel = new QuestionPanel();
-		plantInfoPanel = new PlantInfoPanel();
-		plantListPanel = new PlantListPanel();
-		clipsManager = new ClipsManager();
-		plantFinder = new PlantFinder("plants.xml");
-
-		javax.swing.SwingUtilities.invokeLater(new Runnable()
+		try
 		{
-			public void run()
+			javax.swing.SwingUtilities.invokeAndWait(new Runnable()
 			{
-				createAndShowGUI();
-			}
-		});
-
+				public void run()
+				{
+					createAndShowGUI();
+				}
+			});
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		clipsManager = new ClipsManager();
 		for (String filename : clipsFiles)
 			clipsManager.load(filename);
-		clipsManager.run();
+		clipsManager.restart();
 	}
 
 }

@@ -1,9 +1,12 @@
 package gardener;
 
+import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
+import javax.swing.AbstractButton;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -24,8 +27,12 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 	private JButton next, previous, restart;
 
+	private Random rand;
+
 	public QuestionPanel()
 	{
+		rand = new Random();
+
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
 		group = new ButtonGroup();
@@ -81,20 +88,21 @@ public class QuestionPanel extends JPanel implements ActionListener
 	{
 		if (e.getActionCommand().equals("next"))
 		{
+			updateHistory();
 			SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 		}
 		else if (e.getActionCommand().equals("previous"))
 		{
 			SI.historyPanel.removeLastElement();
-			SI.questionPanel.clearQuestion();
+			clearQuestion();
 			SI.clipsManager.cancelLastAnswer();
 		}
 		else if (e.getActionCommand().equals("restart"))
 		{
 			SI.historyPanel.removeAllElements();
 			SI.plantListPanel.removeAllElements();
-			SI.questionPanel.clearQuestion();
-			SI.clipsManager.reset();
+			clearQuestion();
+			SI.clipsManager.restart();
 		}
 		else
 		{
@@ -105,10 +113,15 @@ public class QuestionPanel extends JPanel implements ActionListener
 	public void clearQuestion()
 	{
 		questionLabel.setText("");
+
 		group.clearSelection();
+		for (Component button : radioPanel.getComponents())
+			group.remove((AbstractButton) button);
+
 		radioPanel.removeAll();
-		next.setEnabled(false);
-		previous.setEnabled(false);
+
+		next.setEnabled(isAnswerSelected());
+		previous.setEnabled(!SI.historyPanel.isEmpty());
 	}
 
 	public String getAnswer()
@@ -147,7 +160,18 @@ public class QuestionPanel extends JPanel implements ActionListener
 			radioPanel.add(button);
 		}
 
-		next.setEnabled(false);
+		JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
+				.nextInt(radioPanel.getComponentCount()));
+		button.setSelected(true);
+		// System.err.println(group.getButtonCount());
+
+		next.setEnabled(isAnswerSelected());
 		previous.setEnabled(!SI.historyPanel.isEmpty());
+	}
+
+	private void updateHistory()
+	{
+		if (isAnswerSelected())
+			SI.historyPanel.addElement(getQuestion() + " " + getAnswer());
 	}
 }

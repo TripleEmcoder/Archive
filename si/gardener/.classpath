@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry including="gardener/*.clp|gardener/*.xml|gardener/plants/*.jpg" kind="src" path="res"/>
+	<classpathentry including="gardener/*.clp|gardener/plants.xml|gardener/plants/*.jpg" kind="src" path="res"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="jclips.jar">
 		<attributes>

@@ -15,6 +15,8 @@ import jclips.JClips;
 
 public class ClipsManager implements Observer
 {
+	private static final Pattern FINAL_QUESTION_PATTERN = Pattern
+			.compile("^question;STOP$");
 	private static final Pattern QUESTION_PATTERN = Pattern
 			.compile("^question;(.+?);(.+)$");
 	private static final Pattern PLANT_PATTERN = Pattern
@@ -46,26 +48,28 @@ public class ClipsManager implements Observer
 			}
 			File file = new File(new URI(fileUrl.toString()));
 			jClips.load(file.getPath());
-			jClips.reset();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		// jClips.load(filename);
-		// jClips.reset();
 	}
 
 	public void reset()
 	{
 		answers.clear();
 		jClips.reset();
-		jClips.run();
 	}
 
 	public void run()
 	{
 		jClips.run();
+	}
+
+	public void restart()
+	{
+		reset();
+		run();
 	}
 
 	private void assertFact(String fact)
@@ -95,20 +99,32 @@ public class ClipsManager implements Observer
 	{
 		String message = (String) arg;
 		System.err.println(message);
-		Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
-		Matcher plantMatcher = PLANT_PATTERN.matcher(message);
-		if (questionMatcher.find())
+
+		final Matcher finalQuestionMatcher = FINAL_QUESTION_PATTERN
+				.matcher(message);
+		final Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
+		final Matcher plantMatcher = PLANT_PATTERN.matcher(message);
+
+		javax.swing.SwingUtilities.invokeLater(new Runnable()
 		{
-			if (SI.questionPanel.isAnswerSelected())
-				SI.historyPanel.addElement(SI.questionPanel.getQuestion() + " "
-						+ SI.questionPanel.getAnswer());
-			SI.questionPanel.setQuestion(questionMatcher.group(1),
-					questionMatcher.group(2));
-		}
-		else if (plantMatcher.find())
-		{
-			SI.plantListPanel.addElement(plantMatcher.group(1));
-		}
+			public void run()
+			{
+				if (finalQuestionMatcher.matches())
+				{
+					SI.questionPanel.clearQuestion();
+				}
+				else if (questionMatcher.matches())
+				{
+					SI.questionPanel.setQuestion(questionMatcher.group(1),
+							questionMatcher.group(2));
+				}
+				else if (plantMatcher.matches())
+				{
+					SI.plantListPanel.addElement(plantMatcher.group(1));
+				}
+			}
+		});
+
 	}
 
 }
