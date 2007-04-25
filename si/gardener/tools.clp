@@ -1,4 +1,4 @@
-﻿(defrule tool_setup_facts
+(defrule tool_setup_facts
 	(initial-fact)
 =>
 	(assert (property "podlewanie" "dowolne"))
@@ -7,18 +7,12 @@
 	(assert (step "lokalizacja1"))
 )
 
-(defrule tool_send_question
-	?i <- (question ?question)
+(defrule tool_store_answer
+	(step ?step)
+	?i <- (answer ?answer)
 =>
 	(retract ?i)
-	(send-to-java (str-cat "question;" ?question))
-)
-
-(defrule tool_send_plant
-	?i <- (plant ?plant)
-=>
-	(retract ?i)
-	(send-to-java (str-cat "plant;" ?plant))
+	(assert (answer ?step ?answer))
 )
 
 (defrule tool_cancel_answer
