@@ -28,7 +28,7 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 		ListSelectionModel lsm = (ListSelectionModel)e.getSource();
 		if (!e.getValueIsAdjusting() && !lsm.isSelectionEmpty())
 		{
-			String plantname = (String)listModel.get(e.getFirstIndex());
+			String plantname = (String)listModel.get(lsm.getMinSelectionIndex());
 			Plant plant = SI.plantFinder.find(plantname);
 			SI.plantInfoPanel.setPlant(plant);
 		}

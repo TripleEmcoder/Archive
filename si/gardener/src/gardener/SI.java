@@ -96,6 +96,10 @@ public class SI
 		
 		clipsManager.load("java.clp");
 		clipsManager.load("plants.clp");
+		clipsManager.load("questions.clp");
+		clipsManager.load("rules.clp");
+		clipsManager.load("tools.clp");
+		clipsManager.load("winclips.clp");
 		clipsManager.run();
 	}
 

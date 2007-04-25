@@ -79,17 +79,17 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 	public void actionPerformed(ActionEvent e)
 	{
-		if (e.getActionCommand() == "next")
+		if (e.getActionCommand().equals("next"))
 		{
 			SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 		}
-		else if (e.getActionCommand() == "previous")
+		else if (e.getActionCommand().equals("previous"))
 		{
 			SI.historyPanel.removeLastElement();
 			SI.questionPanel.clearQuestion();
 			SI.clipsManager.cancelLastAnswer();
 		}
-		else if (e.getActionCommand() == "restart")
+		else if (e.getActionCommand().equals("restart"))
 		{
 			SI.historyPanel.removeAllElements();
 			SI.plantListPanel.removeAllElements();

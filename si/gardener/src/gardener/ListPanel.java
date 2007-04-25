@@ -29,27 +29,6 @@ public class ListPanel extends JPanel
 		add(listScroller);
 	}
 
-//	public void sort()
-//	{
-//		int size = listModel.getSize();
-//		Vector<String> vec = new Vector<String>();
-//		for (int x = 0; x < size; ++x)
-//		{
-//			String o = (String)listModel.get(x);
-//			vec.addElement(o);
-//		}
-//
-//		Collections.sort(vec);
-//		
-//		for (int x = 0; x < size; ++x)
-//		{
-//			if (listModel.getElementAt(x) != vec.elementAt(x))
-//			{
-//				listModel.set(x, vec.elementAt(x));
-//			}
-//		}
-//	}
-
 	public void addElement(String element)
 	{
 		if (numbered)
