@@ -85,7 +85,7 @@
 (defrule plant_sanvitalia_procumbens
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
 =>
 	(assert (plant "Sanvitalia procumbens"))
 )
@@ -127,7 +127,7 @@
 (defrule plant_viola_wittrockiana
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"słoneczne-widne")
+	(property "stanowisko" "dowolne"|"słonecznenieokreślonewidne")
 =>
 	(assert (plant "Viola wittrockiana"))
 )
@@ -162,7 +162,7 @@
 (defrule plant_anemone_x_hybrida
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"wilgotne")
+	(property "stanowisko" "dowolne"|"półcieniste")
 =>
 	(assert (plant "Anemone x hybrida"))
 )
@@ -203,7 +203,7 @@
 	(assert (plant "Campanula persicifolia"))
 )
 (defrule plant_cerastium_biebersteinii
-	(property "podlewanie" "dowolne"|"żadkie"|"umiarkowane")
+	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
 =>
@@ -261,8 +261,8 @@
 )
 (defrule plant_hemerocallis_fulva
 	(property "podlewanie" "dowolne"|"umiarkowane"|"rzadkie")
-	(property "nawożenie" "dowolne"|"gleba żyzna")
-	(property "stanowisko" "dowolne"|"miejsca wilgotne i słoneczne"|"częściowo zacienione")
+	(property "nawożenie" "dowolne"|"częste")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Hemerocallis fulva"))
 )
@@ -298,7 +298,7 @@
 	(assert (plant "Iris Barbata syn. Iris Germanica"))
 )
 (defrule plant_leontopodium_alpinum
-	(property "stanowisko" "dowolne"|"nasłonecznione")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Leontopodium alpinum"))
 )
@@ -310,9 +310,9 @@
 	(assert (plant "Leucanthemum vulgare"))
 )
 (defrule plant_lilium_martagon
-	(property "podlewanie" "dowolne"|"-")
-	(property "nawożenie" "dowolne"|"-")
-	(property "stanowisko" "dowolne"|"-")
+	(property "podlewanie" "dowolne"|"brak")
+	(property "nawożenie" "dowolne"|"brak")
+	(property "stanowisko" "dowolne"|"nieokreślone")
 =>
 	(assert (plant "Lilium martagon"))
 )
@@ -338,14 +338,14 @@
 (defrule plant_nepeta_x_faassenii
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane"|"rzadkie")
-	(property "stanowisko" "dowolne"|"słoneczne i suche")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Nepeta x faassenii"))
 )
 (defrule plant_oenothera_missouriensis
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
-	(property "stanowisko" "dowolne"|"słoneczne i ciepłe")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Oenothera missouriensis"))
 )
@@ -384,17 +384,17 @@
 (defrule plant_salvia_officinalis
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
-	(property "stanowisko" "dowolne"|"zaciszne")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Salvia officinalis"))
 )
 (defrule plant_saxifraga_arendsii
-	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Saxifraga arendsii"))
 )
 (defrule plant_sedum_album_coral_carpet
-	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
 =>
 	(assert (plant "Sedum album 'Coral Carpet'"))
 )
@@ -404,7 +404,7 @@
 	(assert (plant "Sempervivum"))
 )
 (defrule plant_thymus_serpyllum
-	(property "stanowisko" "dowolne"|"nasłonecznione")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Thymus serpyllum"))
 )
@@ -417,22 +417,22 @@
 )
 (defrule plant_trollius_cultorum
 	(property "podlewanie" "dowolne"|"częste")
-	(property "nawożenie" "dowolne"|"średnie")
-	(property "stanowisko" "dowolne"|"wilgotne i słoneczne")
+	(property "nawożenie" "dowolne"|"umiarkowane")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Trollius cultorum"))
 )
 (defrule plant_veronica_incana
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
-	(property "stanowisko" "dowolne"|"słoneczne i ciepłe")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Veronica incana"))
 )
 (defrule plant_viola_odorata
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"cieniste i wilgotne")
+	(property "stanowisko" "dowolne"|"cieniste")
 =>
 	(assert (plant "Viola odorata"))
 )
@@ -472,9 +472,9 @@
 	(assert (plant "Agava americana 'Marginata'"))
 )
 (defrule plant_aglonema_commutatum
-	(property "podlewanie" "dowolne"|"umiarkowanie")
-	(property "nawożenie" "dowolne"|"umiarkowanie")
-	(property "stanowisko" "dowolne"|"półcień")
+	(property "podlewanie" "dowolne"|"umiarkowane")
+	(property "nawożenie" "dowolne"|"umiarkowane")
+	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
 =>
 	(assert (plant "Aglonema commutatum"))
 )
@@ -486,9 +486,9 @@
 	(assert (plant "Alocasia lowii"))
 )
 (defrule plant_ananas_comosus
-	(property "podlewanie" "dowolne"|"umiarkowanie do podstawka")
-	(property "nawożenie" "dowolne"|"umiarkowanie")
-	(property "stanowisko" "dowolne"|"półcień")
+	(property "podlewanie" "dowolne"|"umiarkowane")
+	(property "nawożenie" "dowolne"|"umiarkowane")
+	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
 =>
 	(assert (plant "Ananas comosus"))
 )
@@ -500,9 +500,9 @@
 	(assert (plant "Anigozanthos"))
 )
 (defrule plant_anthurium_scherzerianum
-	(property "podlewanie" "dowolne"|"umiarkowanie")
-	(property "nawożenie" "dowolne"|"umiarkowanie")
-	(property "stanowisko" "dowolne"|"półcień")
+	(property "podlewanie" "dowolne"|"umiarkowane")
+	(property "nawożenie" "dowolne"|"umiarkowane")
+	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
 =>
 	(assert (plant "Anthurium scherzerianum"))
 )
@@ -530,12 +530,12 @@
 (defrule plant_asplenium_nidus
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"widne lecz nie słoneczne")
+	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
 =>
 	(assert (plant "Asplenium nidus"))
 )
 (defrule plant_aucuba_japonica
-	(property "podlewanie" "dowolne"|"umiarkowene")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
 =>
@@ -577,7 +577,7 @@
 	(assert (plant "Bougainvillea glabra"))
 )
 (defrule plant_caffea_arabica
-	(property "podlewanie" "dowolne"|"Umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne")
 =>
@@ -711,8 +711,8 @@
 )
 (defrule plant_dracena_sanderiana
 	(property "podlewanie" "dowolne"|"częste")
-	(property "nawożenie" "dowolne"|"nie jest konieczne")
-	(property "stanowisko" "dowolne"|"widne")
+	(property "nawożenie" "dowolne"|"brak")
+	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
 =>
 	(assert (plant "Dracena sanderiana"))
 )
@@ -766,7 +766,7 @@
 	(assert (plant "Fittonia verschaffeltii"))
 )
 (defrule plant_guzmania_dissitiflora
-	(property "podlewanie" "dowolne"|"częste do doniczki")
+	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
 =>
@@ -880,7 +880,7 @@
 (defrule plant_nertera_granadensis
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"widne")
+	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
 =>
 	(assert (plant "Nertera granadensis"))
 )
@@ -1012,7 +1012,7 @@
 )
 (defrule plant_scirpus_cernuus_isolepis_gracilis
 	(property "podlewanie" "dowolne"|"częste")
-	(property "nawożenie" "dowolne"|"rzadkie. Lubi ubogą")
+	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
 =>
 	(assert (plant "Scirpus cernuus Isolepis gracilis"))
@@ -1046,7 +1046,7 @@
 	(assert (plant "Spathiphyllum"))
 )
 (defrule plant_stereospermum_sinicum
-	(property "podlewanie" "dowolne"|"Umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
 =>
@@ -1054,8 +1054,8 @@
 )
 (defrule plant_synningia_speciosa_hybrid
 	(property "podlewanie" "dowolne"|"umiarkowane")
-	(property "nawożenie" "dowolne"|"częste podczas kwitnienia")
-	(property "stanowisko" "dowolne"|"widne")
+	(property "nawożenie" "dowolne"|"częste")
+	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
 =>
 	(assert (plant "Synningia speciosa hybrid"))
 )
@@ -1067,7 +1067,7 @@
 	(assert (plant "Tolmia menziesii"))
 )
 (defrule plant_vriesea
-	(property "podlewanie" "dowolne"|"Umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
 =>
@@ -1110,19 +1110,19 @@
 	(assert (plant "Chamaecyparis pisifera 'Plumosa'"))
 )
 (defrule plant_ginkgo_biloba
-	(property "podlewanie" "dowolne"|"umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"widne"|"cieniste i wilgotne")
+	(property "stanowisko" "dowolne"|"widne"|"cieniste")
 =>
 	(assert (plant "Ginkgo biloba"))
 )
 (defrule plant_juniperus_chinensis_blue_alps
-	(property "stanowisko" "dowolne"|"słoneczne"|"półcień")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Juniperus chinensis 'Blue Alps'"))
 )
 (defrule plant_juniperus_communis_green_carpet
-	(property "stanowisko" "dowolne"|"słoneczne"|"półcień")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Juniperus communis 'Green Carpet'"))
 )
@@ -1132,7 +1132,7 @@
 	(assert (plant "Juniperus horizontalis 'Andorra Compact'"))
 )
 (defrule plant_juniperus_horizontalis_wiltonii
-	(property "stanowisko" "dowolne"|"słoneczne"|"półcień")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Juniperus horizontalis 'Wiltonii'"))
 )
@@ -1147,14 +1147,14 @@
 	(assert (plant "Juniperus pingii 'Loderi'"))
 )
 (defrule plant_juniperus_squamata_blue_carpet
-	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "stanowisko" "dowolne"|"słoneczne"|"widne"|"półcieniste")
 =>
 	(assert (plant "Juniperus squamata 'Blue Carpet'"))
 )
 (defrule plant_juniperus_virginiana_skyrocket
-	(property "podlewanie" "dowolne"|"-")
-	(property "nawożenie" "dowolne"|"-")
-	(property "stanowisko" "dowolne"|"słoneczne"|"półcień")
+	(property "podlewanie" "dowolne"|"brak")
+	(property "nawożenie" "dowolne"|"brak")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Juniperus virginiana 'Skyrocket'"))
 )
@@ -1203,9 +1203,9 @@
 	(assert (plant "Cornus alba"))
 )
 (defrule plant_cotinus_coggygria
-	(property "podlewanie" "dowolne"|"umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"słoneczne i ciepłe")
+	(property "stanowisko" "dowolne"|"słoneczne")
 =>
 	(assert (plant "Cotinus coggygria"))
 )
@@ -1234,7 +1234,7 @@
 	(assert (plant "Ilex aquifolium"))
 )
 (defrule plant_lonicera_japonica_aureoreticulata
-	(property "stanowisko" "dowolne"|"słoneczne"|"półcień")
+	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
 =>
 	(assert (plant "Lonicera japonica 'Aureoreticulata'"))
 )
@@ -1270,7 +1270,7 @@
 	(assert (plant "Spirea kaponica 'Goldflame'"))
 )
 (defrule plant_weigela
-	(property "podlewanie" "dowolne"|"umiarkowanie")
+	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne lub widne")
 =>

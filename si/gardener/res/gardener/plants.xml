@@ -150,7 +150,7 @@
     <property name="rozmiary" value="wys.10 - 20cm" />
     <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="słoneczne, widne" />
+    <property name="stanowisko" value="słoneczne lub widne" />
     <property name="kwiaty" value="żółte z ciemnym środkiem" />
     <property name="ciekawe cechy" value="Roślina jednoroczna o płożącym pokroju. Doskonała do wiszących koszy, skrzynek balkonowych itp. Zastosowanie również w ogrodzie t.j. jako rośl. okrywowa czy na obwódki . Kwitnienie VII-X, przekwitłe kwiaty nie wymagają usuwania. Słoneczne stanowisko korzystniejsze dla pokroju i jakości kwitnienia." />
     <photo path="encfoto_redakcja/sanvitalia.jpg" />
@@ -222,7 +222,7 @@
     <property name="rozmiary" value="15 do 25 cm" />
     <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="słoneczne-widne" />
+    <property name="stanowisko" value="słonecznenieokreślonewidne" />
     <property name="kwiaty" value="duże różnobarwne często z plamką" />
     <property name="ciekawe cechy" value="Obficie kwitnąca roślina , od wczesnej wiosny do końca lata . Bardzo łatwy w uprawie i rozmnażaniu , dobrze rośnie zarówno w skrzynkach jaki w ogrodzie . W ostatnich latach pojawiło sie na rynku wiele ciekawych odmian , które pięknie prezentują się w kompozycjach balkonowych ." />
     <photo path="encfoto_redakcja/bratek.jpg" />
@@ -282,7 +282,7 @@
     <property name="rozmiary" value="do 120 cm wysokości" />
     <property name="podlewanie" value="częste" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="wilgotne, lekko zacienione" />
+    <property name="stanowisko" value="półcieniste, wilgotne" />
     <property name="kwiaty" value="od białych do czerwonych, 5-7 cm średnicy, zebrane po 15 sztuk" />
     <property name="ciekawe cechy" value="Kwiaty nadaja się do ciecia i układania stylowych bukietów, są trwałe w wazonie, wymagają okrycia na zimę w pierwszych latach po posadzeniu." />
     <photo path="encfoto_redakcja/zawilec.jpg" />
@@ -353,7 +353,7 @@
     <property name="rodzina" value="Caryophyllaceae" />
     <property name="pochodzenie" value="pochodzi z Krymu" />
     <property name="rozmiary" value="bylina zadarniająca, ekspansywna" />
-    <property name="podlewanie" value="żadkie lub umiarkowane" />
+    <property name="podlewanie" value="rzadkie lub umiarkowane" />
     <property name="nawożenie" value="rzadkie" />
     <property name="stanowisko" value="słoneczne" />
     <property name="kwiaty" value="białe trąbkowate" />
@@ -453,8 +453,8 @@
     <property name="pochodzenie" value="połódniowa Europa, Azja o umiarkowanym klimacie" />
     <property name="rozmiary" value="liście wstęgowate do 70 cm, pędy kwiatowe 1,2 m" />
     <property name="podlewanie" value="umiarkowane lub rzadkie" />
-    <property name="nawożenie" value="gleba żyzna" />
-    <property name="stanowisko" value="miejsca wilgotne i słoneczne lub częściowo zacienione" />
+    <property name="nawożenie" value="częste" />
+    <property name="stanowisko" value="słoneczne lub półcieniste, wilgotne" />
     <property name="kwiaty" value="pomarańczowo rdzawe, trąmkowate" />
     <property name="ciekawe cechy" value="Liliowcom najbardziej odpowiada gleba żyzna i wilgotna, lecz rónież znoszą suszę dzięki grubym bulwiastym korzeniom magazynującym wodę, mocno się rozrasta tworząc malowniczą kępę zielonych liści nad którą górują mocne w kolorach kwiaty, polecam do ogródków naturalistycznych." />
     <photo path="encfoto_redakcja/liliowiec.jpg" />
@@ -518,7 +518,7 @@
     <property name="rodzina" value="Compositae" />
     <property name="pochodzenie" value="Występuje od Europy przez Chiny, aż do Japonii" />
     <property name="rozmiary" value="do 15 cm, zwarty pokrój" />
-    <property name="stanowisko" value="nasłonecznione" />
+    <property name="stanowisko" value="słoneczne" />
     <property name="kwiaty" value="VI-VII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe" />
     <property name="ciekawe cechy" value="powinna rosnąć w mało żyznej ziemi wtedy zachowa zwarty pokrój" />
     <photo path="encfoto/Szarotka.jpg" />
@@ -540,9 +540,9 @@
     <property name="rodzina" value="Liliaceae" />
     <property name="pochodzenie" value="Europa" />
     <property name="rozmiary" value="niewielka bylina" />
-    <property name="podlewanie" value="-" />
-    <property name="nawożenie" value="-" />
-    <property name="stanowisko" value="-" />
+    <property name="podlewanie" value="brak" />
+    <property name="nawożenie" value="brak" />
+    <property name="stanowisko" value="nieokreślone" />
     <property name="kwiaty" value="-" />
     <property name="ciekawe cechy" value="zdjęcie wykonane w Bieszczadzkim Parku Narodowym (BdPN) na Połoninie Caryńskiej. Roślina pod ścisłą ochroną gatunkową. W Polsce występuje w Karpatach." />
     <photo path="encfoto/Lilia.jpg" />
@@ -586,7 +586,7 @@
     <property name="rozmiary" value="gęste kępy pędów 30 - 50 cm wysokości" />
     <property name="podlewanie" value="rzadkie lub umiarkowane" />
     <property name="nawożenie" value="umiarkowane lub rzadkie" />
-    <property name="stanowisko" value="słoneczne i suche" />
+    <property name="stanowisko" value="słoneczne, suche" />
     <property name="kwiaty" value="gęste niebieskoliliowe" />
     <property name="ciekawe cechy" value="Jest miododajna, przyciąga roje przczół i trzmieli, posiada charakterystyczny cytrynowy zapach, bujnie się rozrasta lecz nie zagraża innym roślinom, doskonała na murki kwiatowe i skalniaki." />
     <photo path="encfoto_redakcja/kocimietka.jpg" />
@@ -598,7 +598,7 @@
     <property name="rozmiary" value="do 30 cm" />
     <property name="podlewanie" value="rzadkie lub umiarkowane" />
     <property name="nawożenie" value="rzadkie" />
-    <property name="stanowisko" value="słoneczne i ciepłe, raczej suche" />
+    <property name="stanowisko" value="słoneczne, ciepłe, raczej suche" />
     <property name="kwiaty" value="duże, żółte, średnicy 8 cm" />
     <property name="ciekawe cechy" value="Jest to roślina przydatna na suche skarpy i słoneczne murki. Odznacza się trwałościa i wytrzymałościa na mróz, mocno się rozrasta dzięki podziemnym rozłogom, z których wyrastają rozetki liściowe." />
     <photo path="encfoto_redakcja/wiesiolek.jpg" />
@@ -665,7 +665,7 @@
     <property name="rozmiary" value="łodygi dorastają do 70 cm" />
     <property name="podlewanie" value="rzadkie" />
     <property name="nawożenie" value="rzadkie" />
-    <property name="stanowisko" value="zaciszne, ciepłe i słoneczne" />
+    <property name="stanowisko" value="słoneczne, ciepłe" />
     <property name="kwiaty" value="wargowe fioletowe rzadko białe" />
     <property name="ciekawe cechy" value="Jest rośliną leczniczą i przyprawową cenioną już w starożytności. Ma też walory dekoracyjne. Łodygi są proste łukowato przewieszające się, liście lancetowate kutnerowato owłosione. Cała roślina mocno przyjemnie pachnie a w porze kwitnienia przyciąga roje pszczól i trzemieli. Roślina raczej słabo odporna na mrozy, odmiany pstre właściwie zawsze przemarzną dlatego lepiej sadzić w przenośnych donicach." />
     <photo path="encfoto_redakcja/szalwia.jpg" />
@@ -674,7 +674,7 @@
     <property name="nazwa" value="Skalnica" />
     <property name="rodzina" value="Saxifragaceae" />
     <property name="rozmiary" value="do 10 cm wysokości" />
-    <property name="stanowisko" value="słoneczne, półcień" />
+    <property name="stanowisko" value="słoneczne lub półcieniste" />
     <property name="kwiaty" value="IV-VI" />
     <property name="ciekawe cechy" value="roślina na skalniaki" />
     <photo path="encfoto/SaxifragaArendsii.jpg" />
@@ -683,7 +683,7 @@
     <property name="nazwa" value="Rozchodnik biały" />
     <property name="rodzina" value="Crasullaceae" />
     <property name="rozmiary" value="roślina okrywowa, dorasta do 10 cm" />
-    <property name="stanowisko" value="słoneczne, widne" />
+    <property name="stanowisko" value="słoneczne lub widne" />
     <property name="kwiaty" value="VI-VII białe, drobne, gwiazdkowe" />
     <property name="ciekawe cechy" value="polecana na skalniaki," />
   </plant>
@@ -699,7 +699,7 @@
     <property name="nazwa" value="Macierzanka piaskowa" />
     <property name="rodzina" value="Labiatae" />
     <property name="rozmiary" value="rozrasta się dywanowo do 10 cm" />
-    <property name="stanowisko" value="nasłonecznione" />
+    <property name="stanowisko" value="słoneczne" />
     <property name="kwiaty" value="VI-VII, bladoróżowe drobne" />
     <property name="ciekawe cechy" value="ich liście wydzielają aromatyczny zapach, mogą być stosowane jako przyprawa" />
   </plant>
@@ -721,8 +721,8 @@
     <property name="pochodzenie" value="Europa i Azja" />
     <property name="rozmiary" value="od 60 do 100 cm wysokości" />
     <property name="podlewanie" value="częste" />
-    <property name="nawożenie" value="średnie, próchnicze" />
-    <property name="stanowisko" value="wilgotne i słoneczne, lub częściowo zacienione" />
+    <property name="nawożenie" value="umiarkowane, próchnicze" />
+    <property name="stanowisko" value="słoneczne lub półcieniste, wilgotne" />
     <property name="kwiaty" value="od żóltego do pomarańczowego" />
     <property name="ciekawe cechy" value="Roślina na miejsca podmokłe, np. koło sadzawki której woda przesiąka do otoczenia. Kwiaty wonne, nadają się do cięcia, długo zachowują świeżość w wazonie. " />
     <photo path="encfoto_redakcja/pelnik.jpg" />
@@ -734,7 +734,7 @@
     <property name="rozmiary" value="do 30 cm wysokości" />
     <property name="podlewanie" value="rzadkie" />
     <property name="nawożenie" value="rzadkie" />
-    <property name="stanowisko" value="słoneczne i ciepłe" />
+    <property name="stanowisko" value="słoneczne, ciepłe" />
     <property name="kwiaty" value="zebrane w kłosy, niebieskie" />
     <property name="ciekawe cechy" value="Tworzy niską darń, szaro owłosionych lisci, z rozety lisciowej wyrastają pędy z gęsto osadzonymi kwiatami nadającymi się do zaszuszania. Roślina na murki kwiatowe i ogródki skalne." />
     <photo path="encfoto_redakcja/przetacznik.jpg" />
@@ -746,7 +746,7 @@
     <property name="rozmiary" value="niska roślina darniowa, ok 8 cm wysokości" />
     <property name="podlewanie" value="umiarkowane lub częste" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="cieniste i wilgotne, próchnicze" />
+    <property name="stanowisko" value="cieniste, wilgotne, próchnicze" />
     <property name="kwiaty" value="głównie ciemnofioletowe, również białe, rzadko pomarańczowe" />
     <property name="ciekawe cechy" value="Gatunek ten sadzono już w ogrodach starożytnych, roślina obrzędowa, częsty temat mitów i legend, występuje w poezji równie często jak róża, woń kwiatów zaliczana do najszlachetniejszych aromatów, raz posadzona w ogrodzie pozostaje w nim na zawsze, nasiona przenoszone są przez mrówki." />
     <photo path="encfoto_redakcja/fiolek.jpg" />
@@ -816,9 +816,9 @@
     <property name="rodzina" value="Araceae" />
     <property name="pochodzenie" value="Filipiny" />
     <property name="rozmiary" value="do 1 wysokości" />
-    <property name="podlewanie" value="umiarkowanie" />
-    <property name="nawożenie" value="umiarkowanie" />
-    <property name="stanowisko" value="półcień, widno" />
+    <property name="podlewanie" value="umiarkowane" />
+    <property name="nawożenie" value="umiarkowane" />
+    <property name="stanowisko" value="półcieniste lub widne" />
     <property name="kwiaty" value="tak jak wszystkie rośliny z rodziny Araceae tworzy kwiatostany w kształcie kolby" />
     <property name="ciekawe cechy" value="-" />
   </plant>
@@ -839,9 +839,9 @@
     <property name="rodzina" value="Bromeliaceae" />
     <property name="pochodzenie" value="Brazylia" />
     <property name="rozmiary" value="rozeta do 1m wysokości i szerokości" />
-    <property name="podlewanie" value="umiarkowanie do podstawka" />
-    <property name="nawożenie" value="umiarkowanie" />
-    <property name="stanowisko" value="półcień, widno" />
+    <property name="podlewanie" value="umiarkowane, do podstawka" />
+    <property name="nawożenie" value="umiarkowane" />
+    <property name="stanowisko" value="półcieniste lub widne" />
     <property name="kwiaty" value="-" />
     <property name="ciekawe cechy" value="-" />
   </plant>
@@ -862,9 +862,9 @@
     <property name="rodzina" value="Araceae" />
     <property name="pochodzenie" value="Ameryka Południowa" />
     <property name="rozmiary" value="do 1 m wysokości" />
-    <property name="podlewanie" value="umiarkowanie, nie lubi przesuszania, należy spryskiwać" />
-    <property name="nawożenie" value="umiarkowanie" />
-    <property name="stanowisko" value="półcień, widno" />
+    <property name="podlewanie" value="umiarkowane, nie lubi przesuszania, należy spryskiwać" />
+    <property name="nawożenie" value="umiarkowane" />
+    <property name="stanowisko" value="półcieniste lub widne" />
     <property name="kwiaty" value="czerwone lub różowe w kształcie kolby" />
     <property name="ciekawe cechy" value="-" />
   </plant>
@@ -911,7 +911,7 @@
     <property name="rozmiary" value="1 m wysokości i szerokości" />
     <property name="podlewanie" value="częste" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="widne lecz nie słoneczne" />
+    <property name="stanowisko" value="widne ale nie słoneczne" />
     <property name="kwiaty" value="nie kwitnie" />
     <property name="ciekawe cechy" value="Jest paprocią o całobrzegich liściach, pod którymi pojawiaja sie okresowo charakterystyczne cienkie paseczki zarodni. W warunkach naturalnych roślina ta porasta pnie tropikalnych drzew." />
     <photo path="encfoto_redakcja/Asplenium.jpg" />
@@ -921,7 +921,7 @@
     <property name="rodzina" value="Cornaceae" />
     <property name="pochodzenie" value="subtropikalne lasy Japonii i Korei" />
     <property name="rozmiary" value="krzew do 2 m wysokości" />
-    <property name="podlewanie" value="umiarkowene" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="drobne, purpurowe, zebrane w wiechę" />
@@ -993,7 +993,7 @@
     <property name="rodzina" value="-" />
     <property name="pochodzenie" value="-" />
     <property name="rozmiary" value="200 cm" />
-    <property name="podlewanie" value="Umiarkowanie" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="częste" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="białe" />
@@ -1029,7 +1029,7 @@
     <property name="rodzina" value="Solanaceae" />
     <property name="pochodzenie" value="Meksyk Ameryka Łacińska" />
     <property name="rozmiary" value="do 0,5 m wysokości" />
-    <property name="podlewanie" value="umiarkowane, do podstawki" />
+    <property name="podlewanie" value="umiarkowane, do podstawka" />
     <property name="nawożenie" value="umiarkowane" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="białe, drobne" />
@@ -1222,8 +1222,8 @@
     <property name="pochodzenie" value="Tajwan, Chiny i inne kraje Dalekiego Wschodu" />
     <property name="rozmiary" value="niewielka roślina domowa" />
     <property name="podlewanie" value="częste" />
-    <property name="nawożenie" value="nie jest konieczne" />
-    <property name="stanowisko" value="widne, ale nie na pełnym słońcu" />
+    <property name="nawożenie" value="brak" />
+    <property name="stanowisko" value="widne ale nie słoneczne" />
     <property name="kwiaty" value="-" />
     <property name="ciekawe cechy" value="Lucky bamboo rośnie w wodzie jak kwiaty cięte, ale o kilkuletniej trwałości. Praktycznie nie można go zniszczyć. Pęd bambusa należy zanurzyć w wodzie na ok. 1-5 cm, np. w wazonie. Dla uzyskania najlepszych rezultatów zmieniaj wodę co dwa tygodnie. Lucku Bamboo bardzo łatwo adaptuje się do nowego środowiska. Preferuje temperaturę 10-27 st. C. W Azji roślinę tę kupuje się na powitanie chińskiego Nowego Roku, by uświetnić rozpoczęcie biznesu, zakup domu, albo po prostu - na szczęście!" />
     <photo path="encfoto/bamboo.jpg" />
@@ -1317,7 +1317,7 @@
     <property name="rodzina" value="Bromeliaceae" />
     <property name="pochodzenie" value="Panama, Kolumbia" />
     <property name="rozmiary" value="dorasta do ok.30cm" />
-    <property name="podlewanie" value="częste do doniczki, lub środka rozety" />
+    <property name="podlewanie" value="częste, do doniczki lub środka rozety" />
     <property name="nawożenie" value="rzadkie" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="pomarańczowe, lub czerwone w kształcie gwiazdy" />
@@ -1511,7 +1511,7 @@
     <property name="rozmiary" value="niska, płożąca roślinka" />
     <property name="podlewanie" value="częste" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="widne, ale nie na pełnym słońcu" />
+    <property name="stanowisko" value="widne ale nie słoneczne" />
     <property name="kwiaty" value="niepozorne przekształcające się w owoce o kolorze białym, żółtym lub czerwonym" />
     <property name="ciekawe cechy" value="  " />
     <photo path="encfoto/Nertera.jpg" />
@@ -1738,7 +1738,7 @@
     <property name="pochodzenie" value="Indie Azja" />
     <property name="rozmiary" value="szerokość 30cm, wysokość 20cm" />
     <property name="podlewanie" value="częste, najlepiej ustawić w pojemniku z wodą; roślina bagienna" />
-    <property name="nawożenie" value="rzadkie. Lubi ubogą, kwaśną glebę" />
+    <property name="nawożenie" value="rzadkie, lubi ubogą, kwaśną glebę" />
     <property name="stanowisko" value="cieniste lub widne" />
     <property name="kwiaty" value="na końcu każdego pędu wyrasta białawy kłos kryjący miniaturowe kwiaty" />
     <property name="ciekawe cechy" value="wykorzystywany przy obsadzaniu strumieni w ogrodach japońskich. Zadomowił się w rejonie śródziemnomorskim. Trzeba przesadzać co roku wiosną." />
@@ -1797,7 +1797,7 @@
     <property name="rodzina" value="-" />
     <property name="pochodzenie" value="Chiny" />
     <property name="rozmiary" value="do 150 cm" />
-    <property name="podlewanie" value="Umiarkowanie" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="rzadkie" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="-" />
@@ -1810,8 +1810,8 @@
     <property name="pochodzenie" value="Brazylia" />
     <property name="rozmiary" value="do 20 cm" />
     <property name="podlewanie" value="umiarkowane" />
-    <property name="nawożenie" value="częste podczas kwitnienia" />
-    <property name="stanowisko" value="widne, nie słoneczne" />
+    <property name="nawożenie" value="częste, podczas kwitnienia" />
+    <property name="stanowisko" value="widne ale nie słoneczne" />
     <property name="kwiaty" value="kielichy o rożnych kolorach,także dwubarwne" />
     <property name="ciekawe cechy" value="pięknie długo kwitnie, rozmnażać przez szczepki liści po przekwitnięciu rośliny." />
     <photo path="encfoto_redakcja/syningia.jpg" />
@@ -1833,7 +1833,7 @@
     <property name="rodzina" value="-" />
     <property name="pochodzenie" value="-" />
     <property name="rozmiary" value="50 cm" />
-    <property name="podlewanie" value="Umiarkowanie" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
     <property name="stanowisko" value="widne" />
     <property name="kwiaty" value="pomarańczowe, czerwone" />
@@ -1905,9 +1905,9 @@
     <property name="rodzina" value="Ginko biloba" />
     <property name="pochodzenie" value="Japonia" />
     <property name="rozmiary" value="wysokość do 30 m" />
-    <property name="podlewanie" value="umiarkowanie" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="widne lub cieniste i wilgotne" />
+    <property name="stanowisko" value="widne lub cieniste, wilgotne" />
     <property name="kwiaty" value="niepozorne" />
     <property name="ciekawe cechy" value="Niezwykle odporny na niesprzyjające warunki, gdy w Hiroszimie wybuchła bomba atomowa tylko ta roślina odrodziła się z korzeni, ogniwo łączące drzewa iglaste z liściastymi, żywa skamielina." />
     <photo path="encfoto_redakcja/milozab.jpg" />
@@ -1916,7 +1916,7 @@
     <property name="nazwa" value="Jałowiec chiński" />
     <property name="rodzina" value="Cupressaceae" />
     <property name="rozmiary" value="dorasta do 3 metrów wysokości i 2,5 metra szerokości, o przyroście rocznym ok. 15 cm" />
-    <property name="stanowisko" value="słoneczne lub półcień" />
+    <property name="stanowisko" value="słoneczne lub półcieniste" />
     <property name="ciekawe cechy" value="odmiana silnie rosnąca o srebrzysto- niebieskim ulistnieniu" />
     <photo path="encfoto/JunChinBlueAlps.jpg" />
   </plant>
@@ -1924,7 +1924,7 @@
     <property name="nazwa" value="Jałowiec pospolity" />
     <property name="rodzina" value="Cupressaceae" />
     <property name="rozmiary" value="dorasta do 10 cm wysokości i 1,5 m szerokości, o przyrościerocznym ok. 15 cm" />
-    <property name="stanowisko" value="słoneczne lub półcień" />
+    <property name="stanowisko" value="słoneczne lub półcieniste" />
     <property name="ciekawe cechy" value="odmiana płożąca o zielonym ulistnieniu, pędy ścielają się nisko po ziemi" />
     <photo path="encfoto/JunCommGreenCarpet.jpg" />
   </plant>
@@ -1940,7 +1940,7 @@
     <property name="nazwa" value="Jałowiec płożący" />
     <property name="rodzina" value="Cupressaceae" />
     <property name="rozmiary" value="dorasta do 10 cm wysokości i 2 metrów szerokości, o przyroście rocznym ok. 15 cm" />
-    <property name="stanowisko" value="słoneczne lub półcień" />
+    <property name="stanowisko" value="słoneczne lub półcieniste" />
     <property name="ciekawe cechy" value="odmiana płożąca, rośnie prawie całkowicie płasko, roślina okrywowa, gałązki zielono-niebieskie" />
     <photo path="encfoto/JunHorWiltonii.jpg" />
   </plant>
@@ -1964,7 +1964,7 @@
     <property name="nazwa" value="Jałowiec łuskowaty" />
     <property name="rodzina" value="Cupressaceae" />
     <property name="rozmiary" value="dorasta do 0,8 metra wysokości i 4 metrów szerokości, o przyrościerocznym ok. 15 cm" />
-    <property name="stanowisko" value="słoneczne, widne lub półcień" />
+    <property name="stanowisko" value="słoneczne lub widne lub półcieniste" />
     <property name="ciekawe cechy" value="odmiana płożąca, bardzo ekspansywna, igły niebieskie" />
     <photo path="encfoto/JunSqBlueCarpet.jpg" />
   </plant>
@@ -1973,9 +1973,9 @@
     <property name="rodzina" value="Cupressaceae" />
     <property name="pochodzenie" value="-" />
     <property name="rozmiary" value="dorasta do 4 metrów wysokości i 0,4 m średnicy o przyroście rocznym ok. 15 cm" />
-    <property name="podlewanie" value="-" />
-    <property name="nawożenie" value="-" />
-    <property name="stanowisko" value="słoneczne lub półcień" />
+    <property name="podlewanie" value="brak" />
+    <property name="nawożenie" value="brak" />
+    <property name="stanowisko" value="słoneczne lub półcieniste" />
     <property name="kwiaty" value="-" />
     <property name="ciekawe cechy" value="odmiana wąskostożkowa, z wyprostowanymi, przylegającymi do pnia gałęziami. Odcień niebieskawy." />
     <photo path="encfoto/Skyrocket.jpg" />
@@ -2057,9 +2057,9 @@
     <property name="rodzina" value="Cotinus" />
     <property name="pochodzenie" value="południowo-wschodnia Europa" />
     <property name="rozmiary" value="do 2-3 m wysokości" />
-    <property name="podlewanie" value="umiarkowanie, dobrze znosi suszę" />
+    <property name="podlewanie" value="umiarkowane, dobrze znosi suszę" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="słoneczne i ciepłe" />
+    <property name="stanowisko" value="słoneczne, ciepłe" />
     <property name="kwiaty" value="bladoróżowe" />
     <property name="ciekawe cechy" value="nazwa krzewów pochodzi od niezwykłych - puszystych i kolistych owocostanów, które po przekwitnięciu przypominają perukę" />
     <photo path="encfoto_redakcja/Perukowiec.jpg" />
@@ -2109,7 +2109,7 @@
     <property name="nazwa" value="Wiciokrzew japoński" />
     <property name="rodzina" value="Rozmiary" />
     <property name="rozmiary" value="pnącze dorastające do 5 m wysokości, o przyroście rocznymok. 0,5 m" />
-    <property name="stanowisko" value="słoneczne lub półcień, osłonięte" />
+    <property name="stanowisko" value="słoneczne lub półcieniste, osłonięte" />
     <property name="ciekawe cechy" value="liście żółto żyłkowane, kwiaty czerwono-białe w lipcu" />
     <photo path="encfoto/LoniceraJaponicaAureoreticulata.jpg" />
   </plant>
@@ -2140,7 +2140,7 @@
     <property name="rozmiary" value="2-3 metrów wysokości" />
     <property name="podlewanie" value="umiarkowane lub rzadkie" />
     <property name="nawożenie" value="umiarkowane" />
-    <property name="stanowisko" value="słoneczne, osłonięte od wiatru" />
+    <property name="stanowisko" value="słoneczne, osłonięte" />
     <property name="kwiaty" value="lekko kremowe" />
     <property name="ciekawe cechy" value="Gatunek zawdzięcza swą nazwę jaskrawo zabarwionym owocom, które obficie pojawiają się na krzewie gdy inne rosliny kończą już swą wegetację." />
     <photo path="encfoto_redakcja/ognikszkarlatny.jpg" />
@@ -2170,7 +2170,7 @@
     <property name="rodzina" value="weigela florida" />
     <property name="pochodzenie" value="Azja Wschodnia" />
     <property name="rozmiary" value="do 2-2,5 metrów wysokości" />
-    <property name="podlewanie" value="umiarkowanie" />
+    <property name="podlewanie" value="umiarkowane" />
     <property name="nawożenie" value="umiarkowane" />
     <property name="stanowisko" value="słoneczne lub widne" />
     <property name="kwiaty" value="od barwy białej do  ciemnoczerwonej" />

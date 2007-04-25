@@ -5,4 +5,5 @@
 	(load "questions.clp")
 	(load "rules.clp")
 	;(load "plants.clp")
+	(assert (step "lokalizacja1"))
 )

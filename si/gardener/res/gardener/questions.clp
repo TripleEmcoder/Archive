@@ -1,65 +1,60 @@
 (defrule question_lokalizacja1
 	(step "lokalizacja1")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w domu;w ogrodzie"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w domu;w ogrodzie;nie wiem"))
 )
 (defrule question_lokalizacja2
 	(step "lokalizacja2")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w pokoju;na balkonie;na parapecie"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w pokoju;na balkonie;na parapecie;nie wiem"))
 )
 (defrule question_lokalizacja3
 	(step "lokalizacja3")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w pobliżu okna;zdala od okna"))
+	(assert (question "Gdzie zostanie posadzona roślina?;w pobliżu okna;zdala od okna;nie wiem"))
 )
 (defrule question_orientacja
 	(step "orientacja")
 =>
-	(assert (question "Jakie jest umiejscowienie okna/balkonu?;od południa;od północy"))
+	(assert (question "Jakie jest umiejscowienie stanowiska?;od południa;od północy;nie wiem"))
 )
 (defrule question_osloniecie1
 	(step "osłonięcie1")
 =>
-	(assert (question "Jakie jest umiejscowienie okna/balkonu?;wśrod drzew;nieosłonięte;wśrod budynków"))
-)
-(defrule question_pielegnacja
-	(step "pielęgnacja")
-=>
-	(assert (question "Czy masz czas pielęgnowac roślinę?;tak;nie"))
-)
-(defrule question_naslonecznienie
-	(step "nasłonecznienie")
-=>
-	(assert (question "Jakie jest planowane stanowisko?;słoneczne;półcieniste;cieniste"))
-)
-(defrule question_wilgotnosc
-	(step "wilgotność")
-=>
-	(assert (question "Jakie jest planowane stanowisko?;suche;przeciętne;wilgotne"))
-)
-(defrule question_sikawki
-	(step "sikawki")
-=>
-	(assert (question "Czy jest automatyczne podlewanie?;tak;nie"))
-)
-(defrule question_prochnica
-	(step "próchnica")
-=>
-	(assert (question "Czy na stanowisku występuje próchnica?;tak;nie"))
+	(assert (question "Jakie jest umiejscowienie stanowiska?;wśrod budynków;wśrod drzew;nieosłonięte;nie wiem"))
 )
 (defrule question_osloniecie2
 	(step "osłonięcie2")
 =>
-	(assert (question "Czy stanowisko jest osłonięte od wiatru?;tak;nie"))
+	(assert (question "Czy stanowisko jest osłonięte od opadów?;nie;nie wiem;tak"))
 )
-(defrule question_kwiaty
-	(step "kwiaty")
+(defrule question_opady
+	(step "opady")
 =>
-	(assert (question "Czy roślina ma mieć kwiaty?;tak;nie"))
+	(assert (question "Jakie jest występowanie opadów?;częste;rzadkie;przeciętne;nie wiem"))
 )
-(defrule question_kolor
-	(step "kolor")
+(defrule question_sikawki
+	(step "sikawki")
+=>
+	(assert (question "Czy automatyczne podlewanie sięga stanowiska?;tak;nie;nie wiem"))
+)
+(defrule question_prochnica
+	(step "próchnica")
+=>
+	(assert (question "Czy na stanowisku występuje próchnica?;tak;nie;nie wiem"))
+)
+(defrule question_osloniecie3
+	(step "osłonięcie3")
+=>
+	(assert (question "Czy stanowisko jest osłonięte od wiatru?;tak;nie;nie wiem"))
+)
+(defrule question_kwiaty1
+	(step "kwiaty1")
+=>
+	(assert (question "Czy roślina ma mieć kwiaty?;tak;nie;obojętnie"))
+)
+(defrule question_kwiaty2
+	(step "kwiaty2")
 =>
 	(assert (question "Jakiego koloru mają być kwiaty?;białe;czerwone;fioletowe;malinowe;niebieskie;pomarańczowe;różowe;żółte;różnobarwne;dowolne"))
 )
@@ -67,6 +62,11 @@
 	(step "pochodzenie")
 =>
 	(assert (question "Skąd ma pochodzić roślina?;...;dowolne"))
+)
+(defrule question_pielegnacja
+	(step "pielęgnacja")
+=>
+	(assert (question "Czy masz czas pielęgnowac roślinę?;tak;nie;nie wiem"))
 )
 (defrule question_start
 	(step "START")
@@ -92,7 +92,15 @@
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "nasłonecznienie"))
+	(assert (step "osłonięcie2"))
+)
+(defrule answer_lokalizacja1_nie_wiem
+	?i <- (step "lokalizacja1")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
 )
 (defrule answer_lokalizacja2_w_pokoju
 	?i <- (step "lokalizacja2")
@@ -118,6 +126,14 @@
 	(retract ?j)
 	(assert (step "orientacja"))
 )
+(defrule answer_lokalizacja2_nie_wiem
+	?i <- (step "lokalizacja2")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
+)
 (defrule answer_lokalizacja3_w_poblizu_okna
 	?i <- (step "lokalizacja3")
 	?j <- (answer "w pobliżu okna")
@@ -132,7 +148,15 @@
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "kwiaty1"))
+)
+(defrule answer_lokalizacja3_nie_wiem
+	?i <- (step "lokalizacja3")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
 )
 (defrule answer_orientacja_od_poludnia
 	?i <- (step "orientacja")
@@ -148,23 +172,15 @@
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "kwiaty1"))
 )
-(defrule answer_osloniecie1_wsrod_drzew
-	?i <- (step "osłonięcie1")
-	?j <- (answer "wśrod drzew")
+(defrule answer_orientacja_nie_wiem
+	?i <- (step "orientacja")
+	?j <- (answer "nie wiem")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
-)
-(defrule answer_osloniecie1_nieosloniete
-	?i <- (step "osłonięcie1")
-	?j <- (answer "nieosłonięte")
-=>
-	(retract ?i)
-	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "kwiaty1"))
 )
 (defrule answer_osloniecie1_wsrod_budynkow
 	?i <- (step "osłonięcie1")
@@ -172,71 +188,87 @@
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "kwiaty1"))
 )
-(defrule answer_pielegnacja_tak
-	?i <- (step "pielęgnacja")
-	?j <- (answer "tak")
+(defrule answer_osloniecie1_wsrod_drzew
+	?i <- (step "osłonięcie1")
+	?j <- (answer "wśrod drzew")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "STOP"))
+	(assert (step "kwiaty1"))
 )
-(defrule answer_pielegnacja_nie
-	?i <- (step "pielęgnacja")
+(defrule answer_osloniecie1_nieosloniete
+	?i <- (step "osłonięcie1")
+	?j <- (answer "nieosłonięte")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
+)
+(defrule answer_osloniecie1_nie_wiem
+	?i <- (step "osłonięcie1")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
+)
+(defrule answer_osloniecie2_nie
+	?i <- (step "osłonięcie2")
 	?j <- (answer "nie")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "STOP"))
+	(assert (step "opady"))
 )
-(defrule answer_naslonecznienie_sloneczne
-	?i <- (step "nasłonecznienie")
-	?j <- (answer "słoneczne")
+(defrule answer_osloniecie2_nie_wiem
+	?i <- (step "osłonięcie2")
+	?j <- (answer "nie wiem")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "wilgotność"))
+	(assert (step "opady"))
 )
-(defrule answer_naslonecznienie_polcieniste
-	?i <- (step "nasłonecznienie")
-	?j <- (answer "półcieniste")
-=>
-	(retract ?i)
-	(retract ?j)
-	(assert (step "wilgotność"))
-)
-(defrule answer_naslonecznienie_cieniste
-	?i <- (step "nasłonecznienie")
-	?j <- (answer "cieniste")
-=>
-	(retract ?i)
-	(retract ?j)
-	(assert (step "wilgotność"))
-)
-(defrule answer_wilgotnosc_suche
-	?i <- (step "wilgotność")
-	?j <- (answer "suche")
+(defrule answer_osloniecie2_tak
+	?i <- (step "osłonięcie2")
+	?j <- (answer "tak")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "sikawki"))
 )
-(defrule answer_wilgotnosc_przecietne
-	?i <- (step "wilgotność")
+(defrule answer_opady_czeste
+	?i <- (step "opady")
+	?j <- (answer "częste")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "sikawki"))
+)
+(defrule answer_opady_rzadkie
+	?i <- (step "opady")
+	?j <- (answer "rzadkie")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "sikawki"))
+)
+(defrule answer_opady_przecietne
+	?i <- (step "opady")
 	?j <- (answer "przeciętne")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "sikawki"))
 )
-(defrule answer_wilgotnosc_wilgotne
-	?i <- (step "wilgotność")
-	?j <- (answer "wilgotne")
+(defrule answer_opady_nie_wiem
+	?i <- (step "opady")
+	?j <- (answer "nie wiem")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "próchnica"))
+	(assert (step "sikawki"))
 )
 (defrule answer_sikawki_tak
 	?i <- (step "sikawki")
@@ -254,13 +286,21 @@
 	(retract ?j)
 	(assert (step "próchnica"))
 )
+(defrule answer_sikawki_nie_wiem
+	?i <- (step "sikawki")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "próchnica"))
+)
 (defrule answer_prochnica_tak
 	?i <- (step "próchnica")
 	?j <- (answer "tak")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "osłonięcie2"))
+	(assert (step "osłonięcie3"))
 )
 (defrule answer_prochnica_nie
 	?i <- (step "próchnica")
@@ -268,114 +308,138 @@
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "osłonięcie2"))
+	(assert (step "osłonięcie3"))
 )
-(defrule answer_osloniecie2_tak
-	?i <- (step "osłonięcie2")
+(defrule answer_prochnica_nie_wiem
+	?i <- (step "próchnica")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "osłonięcie3"))
+)
+(defrule answer_osloniecie3_tak
+	?i <- (step "osłonięcie3")
 	?j <- (answer "tak")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "orientacja"))
 )
-(defrule answer_osloniecie2_nie
-	?i <- (step "osłonięcie2")
+(defrule answer_osloniecie3_nie
+	?i <- (step "osłonięcie3")
 	?j <- (answer "nie")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kwiaty"))
+	(assert (step "orientacja"))
 )
-(defrule answer_kwiaty_tak
-	?i <- (step "kwiaty")
+(defrule answer_osloniecie3_nie_wiem
+	?i <- (step "osłonięcie3")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "orientacja"))
+)
+(defrule answer_kwiaty1_tak
+	?i <- (step "kwiaty1")
 	?j <- (answer "tak")
 =>
 	(retract ?i)
 	(retract ?j)
-	(assert (step "kolor"))
+	(assert (step "kwiaty2"))
 )
-(defrule answer_kwiaty_nie
-	?i <- (step "kwiaty")
+(defrule answer_kwiaty1_nie
+	?i <- (step "kwiaty1")
 	?j <- (answer "nie")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_biale
-	?i <- (step "kolor")
+(defrule answer_kwiaty1_obojetnie
+	?i <- (step "kwiaty1")
+	?j <- (answer "obojętnie")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pochodzenie"))
+)
+(defrule answer_kwiaty2_biale
+	?i <- (step "kwiaty2")
 	?j <- (answer "białe")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_czerwone
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_czerwone
+	?i <- (step "kwiaty2")
 	?j <- (answer "czerwone")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_fioletowe
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_fioletowe
+	?i <- (step "kwiaty2")
 	?j <- (answer "fioletowe")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_malinowe
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_malinowe
+	?i <- (step "kwiaty2")
 	?j <- (answer "malinowe")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_niebieskie
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_niebieskie
+	?i <- (step "kwiaty2")
 	?j <- (answer "niebieskie")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_pomaranczowe
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_pomaranczowe
+	?i <- (step "kwiaty2")
 	?j <- (answer "pomarańczowe")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_rozowe
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_rozowe
+	?i <- (step "kwiaty2")
 	?j <- (answer "różowe")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_zolte
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_zolte
+	?i <- (step "kwiaty2")
 	?j <- (answer "żółte")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_roznobarwne
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_roznobarwne
+	?i <- (step "kwiaty2")
 	?j <- (answer "różnobarwne")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pochodzenie"))
 )
-(defrule answer_kolor_dowolne
-	?i <- (step "kolor")
+(defrule answer_kwiaty2_dowolne
+	?i <- (step "kwiaty2")
 	?j <- (answer "dowolne")
 =>
 	(retract ?i)
@@ -397,6 +461,30 @@
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pielęgnacja"))
+)
+(defrule answer_pielegnacja_tak
+	?i <- (step "pielęgnacja")
+	?j <- (answer "tak")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "STOP"))
+)
+(defrule answer_pielegnacja_nie
+	?i <- (step "pielęgnacja")
+	?j <- (answer "nie")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "STOP"))
+)
+(defrule answer_pielegnacja_nie_wiem
+	?i <- (step "pielęgnacja")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "STOP"))
 )
 (defrule answer_start_solid
 	?i <- (step "START")

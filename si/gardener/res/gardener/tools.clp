@@ -1,24 +1,32 @@
-(defrule tool_setup_facts
-	(initial-fact)
-=>
-	(assert (property "podlewanie" "dowolne"))
-	(assert (property "nawożenie" "dowolne"))
-	(assert (property "stanowisko" "dowolne"))
-	(assert (step "lokalizacja1"))
-)
-
 (defrule tool_store_answer
 	(step ?step)
-	?i <- (answer ?answer)
+	(answer ?answer)
 =>
-	(retract ?i)
 	(assert (answer ?step ?answer))
 )
 
-(defrule tool_cancel_answer
-	?i <- (cancel ?fact)
-	?j <- (answer ?fact)
+;dodajemy własności, które są zabronione lub nie są dozwolone
+(defrule tool_retract_property
+	(property retract|~assert $?arguments)
+	?i <- (property $?arguments)
 =>
 	(retract ?i)
-	(retract ?j)
+)
+
+;dodajemy własności, które są dozwolone i nie są zabronione
+(defrule tool_assert_property
+	?i <- (property assert $?arguments)
+	(not (property retract $?arguments))
+=>
+	(retract ?i)
+	(assert (property $?arguments))
+)
+
+;po dodaniu odpowiednich własności usuwany wszystkie zakazy
+(defrule tool_retract_negative
+	?i <- (property retract $?arguments)
+	(not (property assert $?arguments))
+	(not (property $?arguments))
+=>
+	(retract ?i)
 )
