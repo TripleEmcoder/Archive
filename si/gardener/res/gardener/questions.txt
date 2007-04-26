@@ -1,30 +1,30 @@
-graph 1.000 13.000 16.194
-node lokalizacja1  3.306 14.917 3.027 0.500 "Gdzie zostanie posadzona roślina?" solid ellipse black lightgrey
-node lokalizacja2  3.306 10.028 3.027 0.500 "Gdzie zostanie posadzona roślina?" solid ellipse black lightgrey
+graph 1.000 14.556 16.194
+node lokalizacja1  3.556 14.917 3.027 0.500 "Gdzie zostanie posadzona roślina?" solid ellipse black lightgrey
+node lokalizacja2  3.556 10.028 3.027 0.500 "Gdzie zostanie posadzona roślina?" solid ellipse black lightgrey
 node lokalizacja3  2.542 8.806 3.027 0.500 "Gdzie zostanie posadzona roślina?" solid ellipse black lightgrey
 node orientacja  5.958 7.583 3.319 0.500 "Jakie jest umiejscowienie stanowiska?" solid ellipse black lightgrey
 node osłonięcie1  7.444 6.361 3.319 0.500 "Jakie jest umiejscowienie stanowiska?" solid ellipse black lightgrey
-node osłonięcie2  6.472 13.694 3.652 0.500 "Czy stanowisko jest osłonięte od opadów?" solid ellipse black lightgrey
-node opady  8.000 12.472 2.985 0.500 "Jakie jest występowanie opadów?" solid ellipse black lightgrey
-node sikawki  7.861 11.250 4.152 0.500 "Czy automatyczne podlewanie sięga stanowiska?" solid ellipse black lightgrey
+node osłonięcie2  6.264 13.694 3.652 0.500 "Czy stanowisko jest osłonięte od opadów?" solid ellipse black lightgrey
+node opady  7.792 12.472 2.985 0.500 "Jakie jest występowanie opadów?" solid ellipse black lightgrey
+node sikawki  7.778 11.250 4.152 0.500 "Czy automatyczne podlewanie sięga stanowiska?" solid ellipse black lightgrey
 node próchnica  8.361 10.028 3.541 0.500 "Czy na stanowisku występuje próchnica?" solid ellipse black lightgrey
 node osłonięcie3  8.944 8.806 3.513 0.500 "Czy stanowisko jest osłonięte od wiatru?" solid ellipse black lightgrey
 node kwiaty1  3.722 5.139 2.596 0.500 "Czy roślina ma mieć kwiaty?" solid ellipse black lightgrey
 node kwiaty2  8.083 3.917 2.902 0.500 "Jakiego koloru mają być kwiaty?" solid ellipse black lightgrey
 node pochodzenie  7.542 2.694 2.527 0.500 "Skąd ma pochodzić roślina?" solid ellipse black lightgrey
 node pielęgnacja  7.542 1.472 3.180 0.500 "Czy masz czas pielęgnowac roślinę?" solid ellipse black lightgrey
-node START  3.306 15.944 0.944 0.500 START solid ellipse black lightgrey
+node START  3.556 15.944 0.944 0.500 START solid ellipse black lightgrey
 node STOP  7.542 0.250 0.833 0.500 STOP solid ellipse black lightgrey
-edge lokalizacja1 lokalizacja2 10 3.306 14.667 3.306 14.417 3.306 14.028 3.306 13.694 3.306 13.694 3.306 13.694 3.306 11.250 3.306 10.958 3.306 10.653 3.306 10.417 "w domu" 3.625 12.472 solid black
-edge lokalizacja1 osłonięcie2 4 3.903 14.681 4.417 14.486 5.167 14.194 5.736 13.986 "w ogrodzie" 5.514 14.306 solid black
-edge lokalizacja1 kwiaty1 10 2.264 14.736 1.292 14.542 0.000 14.181 0.000 13.694 0.000 13.694 0.000 13.694 0.000 6.361 0.000 5.819 1.417 5.486 2.500 5.306 "nie wiem" 0.361 10.028 solid black
-edge lokalizacja2 lokalizacja3 4 3.153 9.778 3.042 9.611 2.889 9.375 2.764 9.181 "w pokoju" 3.389 9.417 solid black
-edge lokalizacja2 orientacja 10 3.556 9.778 3.639 9.694 3.736 9.611 3.819 9.528 4.236 9.097 4.306 8.958 4.750 8.556 4.986 8.333 5.278 8.097 5.514 7.917 "na balkonie" 5.194 8.806 solid black
-edge lokalizacja2 orientacja 7 4.306 9.833 4.778 9.694 5.319 9.458 5.653 9.056 5.889 8.750 5.958 8.292 5.972 7.972 "na parapecie" 6.347 8.806 solid black
-edge lokalizacja2 kwiaty1 10 2.486 9.819 1.708 9.597 0.639 9.208 0.639 8.806 0.639 8.806 0.639 8.806 0.639 6.361 0.639 5.917 1.764 5.556 2.667 5.347 "nie wiem" 1.000 7.583 solid black
+edge lokalizacja1 lokalizacja2 10 3.556 14.667 3.556 14.417 3.556 14.028 3.556 13.694 3.556 13.694 3.556 13.694 3.556 11.250 3.556 10.958 3.556 10.653 3.556 10.417 "w domu" 3.875 12.472 solid black
+edge lokalizacja1 osłonięcie2 4 4.083 14.681 4.514 14.472 5.139 14.208 5.597 13.986 "w ogrodzie" 5.500 14.306 solid black
+edge lokalizacja1 kwiaty1 10 2.431 14.750 1.389 14.556 0.000 14.208 0.000 13.694 0.000 13.694 0.000 13.694 0.000 6.361 0.000 5.819 1.417 5.486 2.500 5.306 "nie wiem" 0.361 10.028 solid black
+edge lokalizacja2 lokalizacja3 4 3.347 9.778 3.194 9.597 3.000 9.361 2.833 9.167 "w pokoju" 3.528 9.417 solid black
+edge lokalizacja2 orientacja 7 3.764 9.778 4.083 9.361 4.722 8.569 4.750 8.556 4.972 8.319 5.264 8.097 5.500 7.917 "na balkonie" 5.194 8.806 solid black
+edge lokalizacja2 orientacja 7 4.417 9.819 4.847 9.681 5.347 9.431 5.653 9.056 5.889 8.750 5.958 8.292 5.972 7.972 "na parapecie" 6.347 8.806 solid black
+edge lokalizacja2 kwiaty1 10 2.639 9.833 1.792 9.611 0.639 9.236 0.639 8.806 0.639 8.806 0.639 8.806 0.639 6.361 0.639 5.917 1.764 5.556 2.667 5.347 "nie wiem" 1.000 7.583 solid black
 edge lokalizacja3 orientacja 7 2.694 8.556 2.792 8.389 2.958 8.194 3.153 8.083 3.389 7.944 3.931 7.833 4.486 7.750 "w pobliżu okna" 3.750 8.194 solid black
 edge lokalizacja3 kwiaty1 13 2.347 8.556 2.014 8.111 1.347 7.250 1.292 7.083 1.264 6.986 1.264 6.944 1.292 6.861 1.583 6.153 1.861 6.056 2.486 5.639 2.611 5.556 2.764 5.472 2.917 5.417 "zdala od okna" 1.875 6.972 solid black
-edge lokalizacja3 kwiaty1 7 2.597 8.556 2.708 8.000 3.014 6.681 3.444 5.639 3.458 5.597 3.486 5.556 3.500 5.514 "nie wiem" 3.389 6.972 solid black
+edge lokalizacja3 kwiaty1 7 2.597 8.556 2.722 8.000 3.056 6.681 3.472 5.639 3.486 5.597 3.500 5.556 3.528 5.514 "nie wiem" 3.417 6.972 solid black
 edge orientacja osłonięcie1 4 6.264 7.333 6.472 7.153 6.792 6.903 7.028 6.708 "od południa" 7.236 6.972 solid black
 edge orientacja kwiaty1 7 4.847 7.403 4.389 7.264 3.917 7.028 3.653 6.611 3.444 6.292 3.500 5.847 3.583 5.528 "od północy" 4.083 6.361 solid black
 edge orientacja kwiaty1 13 5.681 7.333 5.472 7.139 5.181 6.861 4.944 6.611 4.736 6.389 4.722 6.306 4.514 6.111 4.375 5.972 4.306 5.986 4.181 5.861 4.083 5.764 4.000 5.639 3.917 5.514 "nie wiem" 5.306 6.361 solid black
@@ -32,16 +32,16 @@ edge osłonięcie1 kwiaty1 7 6.236 6.194 5.486 6.083 4.611 5.931 4.458 5.861 4.2
 edge osłonięcie1 kwiaty1 10 6.736 6.139 6.542 6.056 6.319 5.958 6.125 5.861 5.958 5.778 5.958 5.708 5.806 5.639 5.514 5.500 5.181 5.403 4.875 5.319 "wśrod drzew" 6.667 5.750 solid black
 edge osłonięcie1 kwiaty1 7 7.403 6.111 7.361 5.944 7.278 5.750 7.139 5.639 6.819 5.389 5.931 5.264 5.125 5.208 nieosłonięte 7.778 5.750 solid black
 edge osłonięcie1 kwiaty1 7 8.014 6.125 8.264 5.986 8.472 5.819 8.306 5.639 8.097 5.403 6.389 5.264 5.125 5.194 "nie wiem" 8.708 5.750 solid black
-edge osłonięcie2 opady 7 6.694 13.444 6.833 13.292 7.014 13.111 7.194 12.972 7.278 12.903 7.361 12.847 7.444 12.792 nie 7.319 13.083 solid black
-edge osłonięcie2 opady 7 7.028 13.458 7.181 13.389 7.319 13.292 7.444 13.194 7.556 13.083 7.667 12.958 7.764 12.833 "nie wiem" 7.972 13.083 solid black
-edge osłonięcie2 sikawki 7 6.333 13.444 6.181 13.139 5.972 12.639 6.125 12.222 6.222 11.889 6.500 11.681 6.819 11.528 tak 6.250 12.472 solid black
-edge opady sikawki 7 7.181 12.264 6.917 12.181 6.681 12.083 6.611 11.972 6.486 11.792 6.597 11.639 6.806 11.528 częste 6.847 11.861 solid black
-edge opady sikawki 7 7.625 12.222 7.542 12.153 7.458 12.069 7.417 11.972 7.361 11.847 7.389 11.722 7.472 11.611 rzadkie 7.708 11.861 solid black
-edge opady sikawki 7 8.014 12.222 8.014 12.083 8.014 11.903 8.000 11.750 8.000 11.708 7.986 11.681 7.972 11.639 przeciętne 8.403 11.861 solid black
-edge opady sikawki 7 8.583 12.236 8.819 12.111 9.000 11.944 8.875 11.750 8.833 11.681 8.778 11.625 8.708 11.569 "nie wiem" 9.250 11.861 solid black
-edge sikawki próchnica 7 7.611 11.000 7.500 10.861 7.417 10.681 7.500 10.528 7.528 10.458 7.583 10.403 7.639 10.347 tak 7.625 10.639 solid black
-edge sikawki próchnica 7 7.917 11.000 7.958 10.861 8.014 10.681 8.083 10.528 8.097 10.486 8.125 10.444 8.139 10.403 nie 8.208 10.639 solid black
-edge sikawki próchnica 7 8.153 11.000 8.222 10.931 8.292 10.847 8.333 10.750 8.375 10.639 8.389 10.528 8.389 10.417 "nie wiem" 8.722 10.639 solid black
+edge osłonięcie2 opady 7 6.486 13.444 6.625 13.292 6.806 13.111 6.986 12.972 7.069 12.903 7.153 12.847 7.236 12.792 nie 7.111 13.083 solid black
+edge osłonięcie2 opady 7 6.819 13.458 6.972 13.389 7.111 13.292 7.236 13.194 7.347 13.083 7.458 12.958 7.556 12.833 "nie wiem" 7.764 13.083 solid black
+edge osłonięcie2 sikawki 7 6.111 13.444 5.958 13.139 5.736 12.625 5.917 12.222 6.056 11.889 6.347 11.667 6.667 11.528 tak 6.042 12.472 solid black
+edge opady sikawki 7 6.903 12.278 6.750 12.194 6.611 12.097 6.528 11.972 6.403 11.792 6.514 11.639 6.708 11.528 częste 6.764 11.861 solid black
+edge opady sikawki 7 7.500 12.222 7.431 12.153 7.361 12.069 7.333 11.972 7.278 11.847 7.319 11.722 7.403 11.611 rzadkie 7.625 11.861 solid black
+edge opady sikawki 7 7.875 12.222 7.903 12.083 7.931 11.903 7.917 11.750 7.917 11.708 7.903 11.681 7.889 11.639 przeciętne 8.319 11.861 solid black
+edge opady sikawki 7 8.472 12.250 8.722 12.125 8.917 11.958 8.792 11.750 8.750 11.681 8.694 11.625 8.625 11.569 "nie wiem" 9.167 11.861 solid black
+edge sikawki próchnica 7 7.569 11.000 7.486 10.861 7.417 10.681 7.500 10.528 7.528 10.458 7.583 10.403 7.639 10.347 tak 7.625 10.639 solid black
+edge sikawki próchnica 7 7.875 11.000 7.931 10.861 8.014 10.681 8.083 10.528 8.111 10.486 8.125 10.444 8.153 10.403 nie 8.208 10.639 solid black
+edge sikawki próchnica 7 8.125 11.000 8.208 10.931 8.278 10.847 8.333 10.750 8.389 10.653 8.403 10.528 8.403 10.417 "nie wiem" 8.722 10.639 solid black
 edge próchnica osłonięcie3 7 8.153 9.778 8.069 9.639 8.000 9.458 8.083 9.306 8.111 9.236 8.167 9.181 8.222 9.125 tak 8.208 9.417 solid black
 edge próchnica osłonięcie3 7 8.458 9.778 8.514 9.639 8.597 9.458 8.667 9.306 8.694 9.264 8.708 9.222 8.736 9.181 nie 8.792 9.417 solid black
 edge próchnica osłonięcie3 7 8.708 9.778 8.792 9.708 8.861 9.625 8.917 9.528 8.972 9.431 8.986 9.306 8.986 9.194 "nie wiem" 9.306 9.417 solid black
@@ -50,7 +50,7 @@ edge osłonięcie3 orientacja 7 8.583 8.556 8.347 8.403 8.028 8.208 7.722 8.083 
 edge osłonięcie3 orientacja 7 8.833 8.556 8.750 8.389 8.625 8.194 8.458 8.083 8.264 7.958 7.819 7.847 7.361 7.778 "nie wiem" 9.042 8.194 solid black
 edge kwiaty1 kwiaty2 4 4.458 4.931 5.208 4.722 6.375 4.403 7.181 4.167 tak 6.278 4.528 solid black
 edge kwiaty1 pochodzenie 10 3.542 4.889 3.403 4.694 3.250 4.431 3.167 4.167 3.056 3.708 3.139 3.417 3.528 3.194 3.958 2.944 5.167 2.819 6.153 2.750 nie 3.333 3.917 solid black
-edge kwiaty1 pochodzenie 7 3.681 4.889 3.639 4.472 3.597 3.625 4.069 3.194 4.222 3.042 5.319 2.903 6.236 2.806 obojętnie 4.111 3.917 solid black
+edge kwiaty1 pochodzenie 7 3.681 4.889 3.639 4.472 3.611 3.625 4.069 3.194 4.222 3.042 5.319 2.903 6.236 2.806 obojętnie 4.125 3.917 solid black
 edge kwiaty2 pochodzenie 10 6.736 3.833 5.667 3.750 4.361 3.611 4.194 3.417 4.125 3.333 4.125 3.264 4.194 3.194 4.319 3.042 5.361 2.889 6.236 2.806 białe 4.417 3.306 solid black
 edge kwiaty2 pochodzenie 10 6.819 3.792 5.986 3.694 5.028 3.569 4.903 3.417 4.833 3.333 4.833 3.264 4.903 3.194 5.069 2.972 5.639 2.847 6.194 2.778 czerwone 5.292 3.306 solid black
 edge kwiaty2 pochodzenie 7 6.917 3.764 6.500 3.694 6.097 3.569 5.972 3.417 5.764 3.153 6.014 2.986 6.375 2.889 fioletowe 6.333 3.306 solid black
@@ -61,10 +61,18 @@ edge kwiaty2 pochodzenie 7 9.333 3.792 9.819 3.694 10.222 3.514 9.958 3.194 9.80
 edge kwiaty2 pochodzenie 10 9.403 3.819 9.958 3.736 10.514 3.625 10.681 3.417 10.736 3.333 10.736 3.264 10.681 3.194 10.556 3.042 9.639 2.903 8.819 2.819 żółte 10.917 3.306 solid black
 edge kwiaty2 pochodzenie 10 9.333 3.792 10.125 3.694 11.042 3.556 11.167 3.417 11.222 3.333 11.222 3.264 11.167 3.194 11.014 3.014 9.833 2.875 8.875 2.792 różnobarwne 11.722 3.306 solid black
 edge kwiaty2 pochodzenie 7 9.514 3.875 10.875 3.806 12.694 3.639 12.292 3.194 12.069 2.944 10.250 2.819 8.931 2.750 dowolne 12.667 3.306 solid black
-edge pochodzenie pielęgnacja 7 7.403 2.444 7.361 2.361 7.333 2.278 7.319 2.194 7.292 2.083 7.306 1.958 7.347 1.861 "..." 7.389 2.083 solid black
-edge pochodzenie pielęgnacja 4 7.542 2.444 7.542 2.278 7.542 2.056 7.542 1.861 dowolne 7.875 2.083 solid black
+edge pochodzenie pielęgnacja 7 6.333 2.625 5.208 2.542 3.681 2.403 3.500 2.194 3.153 1.792 4.583 1.611 5.847 1.542 Polska 3.819 2.083 solid black
+edge pochodzenie pielęgnacja 10 6.403 2.583 5.542 2.486 4.486 2.347 4.361 2.194 4.292 2.111 4.292 2.042 4.361 1.972 4.472 1.833 5.278 1.708 6.042 1.611 Europa 4.653 2.083 solid black
+edge pochodzenie pielęgnacja 10 6.417 2.583 5.917 2.500 5.403 2.389 5.250 2.194 5.181 2.111 5.181 2.042 5.250 1.972 5.361 1.819 5.708 1.722 6.083 1.639 Afryka 5.528 2.083 solid black
+edge pochodzenie pielęgnacja 7 6.597 2.528 6.222 2.417 5.931 2.236 6.125 1.972 6.181 1.875 6.347 1.806 6.542 1.722 Azja 6.319 2.083 solid black
+edge pochodzenie pielęgnacja 7 7.069 2.458 6.972 2.389 6.889 2.306 6.833 2.194 6.750 2.056 6.833 1.917 6.944 1.806 "Azja Mniejsza" 7.403 2.083 solid black
+edge pochodzenie pielęgnacja 7 7.806 2.444 7.875 2.375 7.931 2.292 7.972 2.194 8.014 2.069 7.972 1.944 7.917 1.833 Australia 8.333 2.083 solid black
+edge pochodzenie pielęgnacja 7 8.361 2.500 8.514 2.431 8.653 2.333 8.750 2.194 8.875 2.000 8.750 1.847 8.528 1.736 "Ameryka Północna" 9.528 2.083 solid black
+edge pochodzenie pielęgnacja 10 8.750 2.625 9.403 2.556 10.125 2.431 10.333 2.194 10.389 2.111 10.389 2.042 10.333 1.972 10.167 1.778 9.681 1.667 9.153 1.583 "Ameryka Środkowa" 11.153 2.083 solid black
+edge pochodzenie pielęgnacja 10 8.778 2.639 10.014 2.569 11.792 2.431 12.000 2.194 12.056 2.111 12.056 2.042 12.000 1.972 11.819 1.764 10.389 1.625 9.208 1.556 "Ameryka Południowa" 12.889 2.083 solid black
+edge pochodzenie pielęgnacja 10 8.778 2.639 10.542 2.556 13.611 2.375 13.792 2.194 13.847 2.111 13.847 2.042 13.792 1.972 13.625 1.792 11.000 1.639 9.208 1.542 obojętnie 14.194 2.083 solid black
 edge pielęgnacja STOP 7 7.167 1.222 7.097 1.153 7.014 1.069 6.972 0.972 6.889 0.806 7.000 0.653 7.139 0.514 tak 7.097 0.861 solid black
 edge pielęgnacja STOP 4 7.542 1.222 7.542 1.056 7.542 0.833 7.542 0.639 nie 7.667 0.861 solid black
-edge pielęgnacja STOP 7 7.694 1.222 7.736 1.139 7.778 1.056 7.806 0.972 7.833 0.847 7.806 0.722 7.764 0.611 "nie wiem" 8.167 0.861 solid black
-edge START lokalizacja1 4 3.306 15.694 3.306 15.569 3.306 15.444 3.306 15.306 solid black
+edge pielęgnacja STOP 7 7.708 1.222 7.778 1.083 7.833 0.903 7.806 0.750 7.792 0.708 7.778 0.653 7.750 0.611 "nie wiem" 8.167 0.861 solid black
+edge START lokalizacja1 4 3.556 15.694 3.556 15.569 3.556 15.444 3.556 15.306 solid black
 stop

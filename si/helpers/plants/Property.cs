@@ -28,6 +28,15 @@ namespace plants
                 output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
                     Name, parts[0].Replace(" lub ", "\"|\""));
             }
+
+            if (Name == "pochodzenie")
+            {
+                string[] parts = Value.Split(
+                    new string[] { ", " }, StringSplitOptions.None);
+
+                output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
+                    Name, parts[0].Replace(" i ", "\"|\""));
+            }
         }
     }
 }

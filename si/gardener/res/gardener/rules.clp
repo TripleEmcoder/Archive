@@ -17,6 +17,8 @@
 	(assert (property assert "nawożenie" "częste"))
 	(assert (property assert "nawożenie" "umiarkowane"))
 	(assert (property assert "nawożenie" "rzadkie"))
+	(assert (property assert "pochodzenie" "dowolne"))
+	(assert (property assert "kwiaty" "dowolne"))
 )
 
 (defrule rule_stanowisko1
@@ -139,6 +141,18 @@
 	(assert (property retract "nawożenie" "umiarkowane"))
 )
 
+(defrule rule_pochodzenie
+	(answer "pochodzenie" ?pochodzenie&~"obojętnie")
+=>
+	(assert (property assert "pochodzenie" ?pochodzenie))
+)
+
+(defrule rule_kwiaty1
+	(answer "kwiaty1" "nie")
+=>
+	(assert (property assert "kwiaty" "brak"))
+)
+
 (defrule rule_kwiaty1
 	(answer "kwiaty1" "nie")
 =>
@@ -146,7 +160,7 @@
 )
 
 (defrule rule_kwiaty2
-	(answer "kwiaty2" ?kolor)
+	(answer "kwiaty2" ?kolor&~"dowolny")
 =>
 	(assert (property assert "kwiaty" ?kolor))
 )

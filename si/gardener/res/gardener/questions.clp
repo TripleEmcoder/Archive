@@ -86,7 +86,7 @@
 	(declare (salience -20))
 	(step "pochodzenie")
 =>
-	(assert (question "Skąd ma pochodzić roślina?;...;dowolne"))
+	(assert (question "Skąd ma pochodzić roślina?;Polska;Europa;Afryka;Azja;Azja Mniejsza;Australia;Ameryka Północna;Ameryka Środkowa;Ameryka Południowa;obojętnie"))
 )
 
 (defrule question_pielegnacja
@@ -570,20 +570,100 @@
 	(assert (step "pochodzenie"))
 )
 
-(defrule answer_pochodzenie_...
+(defrule answer_pochodzenie_polska
 	(declare (salience -20))
 	?i <- (step "pochodzenie")
-	?j <- (answer "...")
+	?j <- (answer "Polska")
 =>
 	(retract ?i)
 	(retract ?j)
 	(assert (step "pielęgnacja"))
 )
 
-(defrule answer_pochodzenie_dowolne
+(defrule answer_pochodzenie_europa
 	(declare (salience -20))
 	?i <- (step "pochodzenie")
-	?j <- (answer "dowolne")
+	?j <- (answer "Europa")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_afryka
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Afryka")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_azja
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Azja")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_azja_mniejsza
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Azja Mniejsza")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_australia
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Australia")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_ameryka_polnocna
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Ameryka Północna")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_ameryka_srodkowa
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Ameryka Środkowa")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_ameryka_poludniowa
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "Ameryka Południowa")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pielęgnacja"))
+)
+
+(defrule answer_pochodzenie_obojetnie
+	(declare (salience -20))
+	?i <- (step "pochodzenie")
+	?j <- (answer "obojętnie")
 =>
 	(retract ?i)
 	(retract ?j)
