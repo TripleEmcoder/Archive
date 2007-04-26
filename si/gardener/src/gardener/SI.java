@@ -37,7 +37,7 @@ public class SI
 
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(50, 50, 900, 600);
+		frame.setBounds(50, 50, 950, 620);
 
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 
@@ -46,15 +46,15 @@ public class SI
 
 		JPanel leftPanel = new JPanel();
 		leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.PAGE_AXIS));
-		leftPanel.setPreferredSize(new Dimension(500, 550 - 10));
+		leftPanel.setPreferredSize(new Dimension(540, 550 - 10));
 		leftPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 		JPanel rightPanel = new JPanel();
 		rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.PAGE_AXIS));
-		rightPanel.setPreferredSize(new Dimension(400 - 5, 550 - 10));
+		rightPanel.setPreferredSize(new Dimension(410 - 5, 550 - 10));
 		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-		historyPanel.setPreferredSize(new Dimension(350, 350 - 10));
+		historyPanel.setPreferredSize(new Dimension(400, 350 - 10));
 		historyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory
 				.createTitledBorder(lowered, "Historia pytañ"), BorderFactory
 				.createEmptyBorder(5, 5, 5, 5)));
