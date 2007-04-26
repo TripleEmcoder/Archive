@@ -19,13 +19,8 @@ public class SI
 	static ClipsManager clipsManager;
 	static PlantFinder plantFinder;
 	static PlantInfoPanel plantInfoPanel;
-	static String clipsFiles[] = { 
-		"java.clp", 
-		"tools.clp", 
-		"questions.clp",
-		"rules.clp", 
-		"plants.clp",
-		};
+	static String clipsFiles[] = { "java.clp", "tools.clp", "questions.clp",
+			"rules.clp", "plants.clp", };
 
 	private static void createAndShowGUI()
 	{
@@ -37,7 +32,7 @@ public class SI
 
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(50, 50, 950, 620);
+		frame.setBounds(50, 50, 950, 650);
 
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 
@@ -54,7 +49,7 @@ public class SI
 		rightPanel.setPreferredSize(new Dimension(410 - 5, 550 - 10));
 		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-		historyPanel.setPreferredSize(new Dimension(400, 350 - 10));
+		historyPanel.setPreferredSize(new Dimension(400, 375 - 10));
 		historyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory
 				.createTitledBorder(lowered, "Historia pytañ"), BorderFactory
 				.createEmptyBorder(5, 5, 5, 5)));
@@ -64,7 +59,7 @@ public class SI
 				BorderFactory.createTitledBorder(lowered, "Pytanie"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
-		plantListPanel.setPreferredSize(new Dimension(200, 200 - 10));
+		plantListPanel.setPreferredSize(new Dimension(200, 375 - 10));
 		plantListPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
@@ -92,26 +87,18 @@ public class SI
 
 	public static void main(String[] args)
 	{
-		try
+		javax.swing.SwingUtilities.invokeLater(new Runnable()
 		{
-			javax.swing.SwingUtilities.invokeAndWait(new Runnable()
+			public void run()
 			{
-				public void run()
-				{
-					createAndShowGUI();
-					clipsManager = new ClipsManager();
-					for (String filename : clipsFiles)
-						clipsManager.load(filename);
-					clipsManager.restart();
-				}
-				
-			});
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		
+				createAndShowGUI();
+				clipsManager = new ClipsManager();
+				for (String filename : clipsFiles)
+					clipsManager.load(filename);
+				clipsManager.restart();
+			}
+
+		});
 	}
 
 }

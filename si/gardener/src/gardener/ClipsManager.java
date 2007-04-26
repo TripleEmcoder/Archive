@@ -77,9 +77,7 @@ public class ClipsManager implements Observer
 		String cmd = String.format(ASSERT_COMMAND, fact);
 		System.err.println(cmd);
 		jClips.executeCommand(cmd);
-		System.err.println("jClips.run()");
 		jClips.run();
-		System.err.println("jClips.run() finished");
 	}
 
 	public void sendAnswer(String answer)
@@ -100,14 +98,14 @@ public class ClipsManager implements Observer
 	public void update(Observable o, Object arg)
 	{
 		String message = (String) arg;
-		System.err.println(message);
+		if (!message.startsWith("plant"))
+			System.err.println(message);
 
 		final Matcher finalQuestionMatcher = FINAL_QUESTION_PATTERN
 				.matcher(message);
 		final Matcher questionMatcher = QUESTION_PATTERN.matcher(message);
 		final Matcher plantMatcher = PLANT_PATTERN.matcher(message);
 
-		//System.err.println("Entering run");
 		javax.swing.SwingUtilities.invokeLater(new Runnable()
 		{
 			public void run()
@@ -127,7 +125,6 @@ public class ClipsManager implements Observer
 				}
 			}
 		});
-		//System.err.println("Leaving run");
 	}
 
 }

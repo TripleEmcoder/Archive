@@ -115,8 +115,9 @@ public class PlantInfoPanel extends JPanel
 
 		fieldProperties.add(new FieldProperty("Nazwa", 1, 20));
 		fieldProperties.add(new FieldProperty("Rodzina", 1, 20));
+		fieldProperties.add(new FieldProperty("Pochodzenie", 1, 20));
 		fieldProperties.add(new FieldProperty("Rozmiary", 1, 20));
-		fieldProperties.add(new FieldProperty("Podlewanie", 1, 20));
+		fieldProperties.add(new FieldProperty("Podlewanie", 2, 20));
 		fieldProperties.add(new FieldProperty("Nawo¿enie", 1, 20));
 		fieldProperties.add(new FieldProperty("Stanowisko", 1, 20));
 		fieldProperties.add(new FieldProperty("Kwiaty", 2, 20));
@@ -130,6 +131,7 @@ public class PlantInfoPanel extends JPanel
 			JTextArea textField = new JTextArea(field.rows, field.cols);
 			textField.setLineWrap(true);
 			textField.setWrapStyleWord(true);
+			textField.setEditable(false);
 			JScrollPane scrollPane = new JScrollPane(textField);
 			scrollPane
 					.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
