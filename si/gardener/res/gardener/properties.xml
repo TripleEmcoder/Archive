@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <summary>
+   <property name="grupa">
+      <value>balkonowe</value>
+      <value>byliny</value>
+      <value>domowe</value>
+      <value>iglaste</value>
+      <value>krzewy</value>
+      <value>trawy</value>
+   </property>
    <property name="nazwa">
       <value>-</value>
       <value>Adenium arabskie</value>

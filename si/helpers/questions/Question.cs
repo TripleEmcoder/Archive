@@ -36,7 +36,8 @@ namespace questions
                 output.Write(";{0}", answer.Content);
 
             output.WriteLine("\"))");
-            output.WriteLine(")\n");
+            output.WriteLine(")");
+            output.WriteLine();
         }
     }
 }

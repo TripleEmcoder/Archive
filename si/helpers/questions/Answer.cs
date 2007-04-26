@@ -35,7 +35,8 @@ namespace questions
             output.WriteLine("\t(retract ?i)");
             output.WriteLine("\t(retract ?j)");
             output.WriteLine("\t(assert (step \"{0}\"))", Destination.Tag);
-            output.WriteLine(")\n");
+            output.WriteLine(")");
+            output.WriteLine();
         }
     }
 }

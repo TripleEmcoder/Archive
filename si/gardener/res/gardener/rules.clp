@@ -1,6 +1,12 @@
-﻿(defrule rule_stanowisko1
+(defrule tool_initial_properties
 	(initial-fact)
 =>
+	(assert (property assert "grupa" "balkonowe"))
+	(assert (property assert "grupa" "byliny"))
+	(assert (property assert "grupa" "domowe"))
+	(assert (property assert "grupa" "iglaste"))
+	(assert (property assert "grupa" "krzewy"))
+	(assert (property assert "grupa" "trawy"))
 	(assert (property assert "stanowisko" "słoneczne"))
 	(assert (property assert "stanowisko" "widne"))
 	(assert (property assert "stanowisko" "półcieniste"))
@@ -13,32 +19,55 @@
 	(assert (property assert "nawożenie" "rzadkie"))
 )
 
+(defrule rule_stanowisko1
+	(answer "lokalizacja1" "w domu")
+=>
+	(assert (property retract "grupa" "byliny"))
+	(assert (property retract "grupa" "iglaste"))
+	(assert (property retract "grupa" "krzewy"))
+	(assert (property retract "grupa" "trawy"))
+)
+
 (defrule rule_stanowisko2
+	(answer "lokalizacja2" "w pokoju"|"na parapecie")
+=>
+	(assert (property retract "grupa" "balkonowe"))
+	(assert (property retract "grupa" "krzewy"))
+	(assert (property retract "grupa" "trawy"))
+)
+
+(defrule rule_stanowisko3
+	(answer "lokalizacja1" "na balkonie")
+=>
+	(assert (property retract "grupa" "domowe"))
+)
+
+(defrule rule_stanowisko4
 	(answer "lokalizacja3" "zdala od okna")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 	(assert (property retract "stanowisko" "widne"))
 )
 
-(defrule rule_stanowisko3
+(defrule rule_stanowisko5
 	(answer "orientacja" "od północy")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 )
 
-(defrule rule_stanowisko4
+(defrule rule_stanowisko6
 	(answer "orientacja" "od południa")
 =>
 	(assert (property retract "stanowisko" "cieniste"))
 )
 
-(defrule rule_stanowisko5
+(defrule rule_stanowisko7
 	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 )
 
-(defrule rule_stanowisko6
+(defrule rule_stanowisko8
 	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))

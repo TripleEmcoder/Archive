@@ -32,7 +32,8 @@ namespace plants
 
             output.WriteLine("=>");
             output.WriteLine("\t(assert (plant \"{0}\"))", Name);
-            output.WriteLine(")\n");
+            output.WriteLine(")");
+            output.WriteLine();
         }
     }
 }

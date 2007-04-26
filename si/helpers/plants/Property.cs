@@ -17,7 +17,8 @@ namespace plants
 
         public void WriteQueries(TextWriter output)
         {
-            if (Name == "podlewanie" ||
+            if (Name == "grupa" ||
+                Name == "podlewanie" ||
                 Name == "nawożenie" ||
                 Name == "stanowisko")
             {
