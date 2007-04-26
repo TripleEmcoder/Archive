@@ -27,6 +27,7 @@ namespace questions
         public void WriteRule(TextWriter output)
         {
             output.WriteLine("(defrule question_{0}", Identifier);
+            output.WriteLine("\t(declare (salience -20))");
             output.WriteLine("\t(step \"{0}\")", Tag);
             output.WriteLine("=>");
             output.Write("\t(assert (question \"{0}", Content);
@@ -35,7 +36,7 @@ namespace questions
                 output.Write(";{0}", answer.Content);
 
             output.WriteLine("\"))");
-            output.WriteLine(")");
+            output.WriteLine(")\n");
         }
     }
 }

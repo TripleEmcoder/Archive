@@ -23,13 +23,16 @@ namespace plants
         public void WriteRule(TextWriter output)
         {
             output.WriteLine("(defrule plant_{0}", Identifier);
+            output.WriteLine("\t(declare (salience -10))");
 
             foreach (Property property in Properties)
                 property.WriteQueries(output);
+            
+            output.WriteLine("\t(refresh)");
 
             output.WriteLine("=>");
             output.WriteLine("\t(assert (plant \"{0}\"))", Name);
-            output.WriteLine(")");
+            output.WriteLine(")\n");
         }
     }
 }

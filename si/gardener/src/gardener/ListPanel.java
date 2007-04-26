@@ -35,7 +35,6 @@ public class ListPanel extends JPanel
 			element = Integer.toString(listModel.getSize() + 1) + ". "
 					+ element;
 		listModel.addElement(element);
-		//sort();
 	}
 
 	public void removeLastElement()
@@ -45,6 +44,7 @@ public class ListPanel extends JPanel
 
 	public void removeAllElements()
 	{
+		System.err.println(listModel.getSize());
 		listModel.removeAllElements();
 	}
 

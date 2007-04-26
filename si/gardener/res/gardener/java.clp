@@ -1,7 +1,11 @@
 (defrule tool_load_tools
 	(initial-fact)
 =>
-	(load "winclips.clp")
+;	(load "tools.clp")
+;	(load "questions.clp")
+;	(load "rules.clp")
+;	(load "plants.clp")
+	(assert (step "lokalizacja1"))
 )
 
 (defrule tool_send_question
@@ -22,5 +26,5 @@
 	?i <- (debug ?action ?name ?value)
 =>
 	(retract ?i)
-	(send-to-java (str-cat ?action (str-cat ?name ?value))))
+	(printout t ?action ": " ?name "=" ?value crlf)
 )

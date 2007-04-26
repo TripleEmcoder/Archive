@@ -3,6 +3,23 @@
 	(answer ?answer)
 =>
 	(assert (answer ?step ?answer))
+	(assert (refresh reassert))
+)
+
+(defrule tool_initial_refresh
+	(initial-fact)
+=>
+	(assert (refresh))
+)
+
+(defrule tool_reassert_refresh
+	?i <- (refresh reassert)
+	?j <- (refresh)
+=>
+
+	(retract ?i)
+	(retract ?j)
+	(assert (refresh))
 )
 
 ;dodajemy własności, które są zabronione lub nie są dozwolone

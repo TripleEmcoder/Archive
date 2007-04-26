@@ -28,13 +28,14 @@ namespace questions
         public void WriteRule(TextWriter output)
         {
             output.WriteLine("(defrule answer_{0}_{1}", Source.Identifier, Identifier);
+            output.WriteLine("\t(declare (salience -20))");
             output.WriteLine("\t?i <- (step \"{0}\")", Source.Tag);
             output.WriteLine("\t?j <- (answer \"{0}\")", Content);
             output.WriteLine("=>");
             output.WriteLine("\t(retract ?i)");
             output.WriteLine("\t(retract ?j)");
             output.WriteLine("\t(assert (step \"{0}\"))", Destination.Tag);
-            output.WriteLine(")");
+            output.WriteLine(")\n");
         }
     }
 }

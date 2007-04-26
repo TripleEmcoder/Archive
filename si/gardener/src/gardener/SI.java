@@ -21,7 +21,6 @@ public class SI
 	static PlantInfoPanel plantInfoPanel;
 	static String clipsFiles[] = { 
 		"java.clp", 
-		"winclips.clp",
 		"tools.clp", 
 		"questions.clp",
 		"rules.clp", 
@@ -100,17 +99,19 @@ public class SI
 				public void run()
 				{
 					createAndShowGUI();
+					clipsManager = new ClipsManager();
+					for (String filename : clipsFiles)
+						clipsManager.load(filename);
+					clipsManager.restart();
 				}
+				
 			});
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		clipsManager = new ClipsManager();
-		for (String filename : clipsFiles)
-			clipsManager.load(filename);
-		clipsManager.restart();
+		
 	}
 
 }

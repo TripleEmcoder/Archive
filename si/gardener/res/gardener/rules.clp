@@ -1,5 +1,5 @@
 ﻿(defrule rule_stanowisko1
-	(answer "lokalizacja1" "nie wiem"|"w domu"|"w ogrodzie")
+	(initial-fact)
 =>
 	(assert (property assert "stanowisko" "słoneczne"))
 	(assert (property assert "stanowisko" "widne"))
@@ -8,8 +8,11 @@
 	(assert (property assert "podlewanie" "częste"))
 	(assert (property assert "podlewanie" "umiarkowane"))
 	(assert (property assert "podlewanie" "rzadkie"))
+	(assert (property assert "nawożenie" "częste"))
+	(assert (property assert "nawożenie" "umiarkowane"))
+	(assert (property assert "nawożenie" "rzadkie"))
 )
-	
+
 (defrule rule_stanowisko2
 	(answer "lokalizacja3" "zdala od okna")
 =>
@@ -87,7 +90,7 @@
 (defrule rule_nawozenie1
 	(answer "prochnica" "tak")
 =>
-	(assert (property retract "nawożenie" "umiarkowanie"))
+	(assert (property retract "nawożenie" "umiarkowane"))
 	(assert (property retract "nawożenie" "rzadkie"))
 )
 
@@ -96,7 +99,7 @@
 	(answer "pielęgnacja" "nie")
 =>
 	(assert (property retract "nawożenie" "częste"))
-	(assert (property retract "nawożenie" "umiarkowanie"))
+	(assert (property retract "nawożenie" "umiarkowane"))
 )
 
 (defrule rule_nawozenie3
@@ -104,7 +107,7 @@
 	(answer "pielęgnacja" "nie")
 =>
 	(assert (property retract "nawożenie" "częste"))
-	(assert (property retract "nawożenie" "umiarkowanie"))
+	(assert (property retract "nawożenie" "umiarkowane"))
 )
 
 (defrule rule_kwiaty1

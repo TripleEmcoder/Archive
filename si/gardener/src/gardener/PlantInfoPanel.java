@@ -126,4 +126,9 @@ public class PlantInfoPanel extends JPanel
 			fields.get(label).setText(plant.getProperty(label));
 		}
 	}
+	
+	public void clearPlant()
+	{
+		
+	}
 }

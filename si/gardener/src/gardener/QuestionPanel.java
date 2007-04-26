@@ -89,6 +89,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		if (e.getActionCommand().equals("next"))
 		{
 			updateHistory();
+			SI.plantListPanel.removeAllElements();
 			SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 		}
 		else if (e.getActionCommand().equals("previous"))
@@ -101,6 +102,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		{
 			SI.historyPanel.removeAllElements();
 			SI.plantListPanel.removeAllElements();
+			SI.plantInfoPanel.clearPlant();
 			clearQuestion();
 			SI.clipsManager.restart();
 		}
