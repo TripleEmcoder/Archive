@@ -1,4 +1,4 @@
-(defrule tool_initial_properties
+﻿(defrule tool_initial_properties
 	(initial-fact)
 =>
 	(assert (property assert "grupa" "balkonowe"))
@@ -34,12 +34,10 @@
 	(answer "lokalizacja2" "w pokoju"|"na parapecie")
 =>
 	(assert (property retract "grupa" "balkonowe"))
-	(assert (property retract "grupa" "krzewy"))
-	(assert (property retract "grupa" "trawy"))
 )
 
 (defrule rule_stanowisko3
-	(answer "lokalizacja1" "na balkonie")
+	(answer "lokalizacja2" "na balkonie")
 =>
 	(assert (property retract "grupa" "domowe"))
 )

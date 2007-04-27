@@ -25,7 +25,7 @@ namespace plants
                 string[] parts = Value.Split(
                     new string[] { ", " }, StringSplitOptions.None);
 
-                if (!parts[0].Contains("nieokreślone"))
+                //if (!parts[0].Contains("nieokreślone"))
                     output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
                         Name, parts[0].Replace(" lub ", "\"|\""));
             }
@@ -35,9 +35,34 @@ namespace plants
                 string[] parts = Value.Split(
                     new string[] { ", " }, StringSplitOptions.None);
 
-                if (!parts[0].Contains("nieokreślone"))
+                //if (!parts[0].Contains("nieokreślone"))
                     output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
                         Name, parts[0].Replace(" i ", "\"|\""));
+            }
+
+            if (Name == "kwiaty")
+            {
+                output.Write("\t(property \"kwiaty\" \"dowolne\"");
+
+                Dictionary<string, string[]> groups = new Dictionary<string, string[]>();
+
+                groups["brak"] = new string[] { "brak" };
+                groups["białe"] = new string[] { "biał", "siw", "kremow" };
+                groups["czerwone"] = new string[] { "czerwon", "rdzaw", "bordow", "malinow" };
+                groups["fioletowe"] = new string[] { "fioletow", "liliow" };
+                groups["niebieskie"] = new string[] { "niebieskie", "błękit" };
+                groups["pomarańczowe"] = new string[] { "pamarańczow" };
+                groups["purpurowe"] = new string[] { "purpurow" };
+                groups["różowe"] = new string[] { "różow", "pąsow" };
+                groups["żółte"] = new string[] { "żółt", "złot" };
+                groups["różnobarwne"] = new string[] { "różnobarwn" };
+
+                foreach (KeyValuePair<string, string[]> group in groups)
+                    foreach (string part in group.Value)
+                        if (Value.ToLower().Contains(part))
+                            output.Write("|\"{0}\"", group.Key);
+
+                output.WriteLine(")");
             }
         }
     }
