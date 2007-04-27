@@ -10,6 +10,7 @@
     <property name="stanowisko" value="słoneczne"></property>
     <property name="kwiaty" value="białe z żółtym środkiem"></property>
     <property name="ciekawe cechy" value="roślina bardzo szybko rosnąca, silnie rozgałęziona, wcześnie i officie kwitnąca. Doskonała na balkony i tarasy"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
   </plant>
   <plant name="Brassica oleracea">
     <property name="grupa" value="balkonowe"></property>
@@ -116,7 +117,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="częste"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="mocno krzewiąca roślina"></property>
   </plant>
   <plant name="Pelargonium peltatum">
@@ -128,7 +129,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="częste"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="mocno krzewiąca roślina"></property>
   </plant>
   <plant name="Petunia hybrida">
@@ -272,7 +273,7 @@
     <property name="podlewanie" value="rzadkie"></property>
     <property name="nawożenie" value="rzadkie"></property>
     <property name="stanowisko" value="sloneczne"></property>
-    <property name="kwiaty" value="siarkowo żółte - drobne"></property>
+    <property name="kwiaty" value="siarkowo żółte brak drobne"></property>
     <property name="ciekawe cechy" value="Jest to bylina poduszkowa o srebrzystych liściach i pojawiających sie w nieprzebranej ilości siarkowo żółtych kwiatach . Smagliczka sadzona jest zazwyczaj w ogrodach skalnych . Niezwykle wytrzymała na suszę , znosi silne nasłonecznienie . Kwitnie wczesna wiosna , po przekwitnięciu warto ją przyciąć co zapobiega łysieniu kęp ."></property>
   </plant>
   <plant name="Anemone x hybrida">
@@ -284,7 +285,7 @@
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="półcieniste, wilgotne"></property>
-    <property name="kwiaty" value="od białych do czerwonych, 5-7 cm średnicy, zebrane po 15 sztuk"></property>
+    <property name="kwiaty" value="od białych do czerwonych, 5brak7 cm średnicy, zebrane po 15 sztuk"></property>
     <property name="ciekawe cechy" value="Kwiaty nadaja się do ciecia i układania stylowych bukietów, są trwałe w wazonie, wymagają okrycia na zimę w pierwszych latach po posadzeniu."></property>
   </plant>
   <plant name="Armeria maritima">
@@ -294,8 +295,10 @@
     <property name="pochodzenie" value="nieokreślone, piaszczyste wybrzeża nadmorskie"></property>
     <property name="rozmiary" value="15 cm, tworzt gęste kobierce"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="V-VII, pompony na krótkich bezlistnych łodyżkach"></property>
+    <property name="kwiaty" value="VbrakVII, pompony na krótkich bezlistnych łodyżkach"></property>
     <property name="ciekawe cechy" value="jest to jedna z najmniej wymagających roślin do ogródków skalnych"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Aster amellus">
     <property name="grupa" value="byliny"></property>
@@ -306,7 +309,7 @@
     <property name="podlewanie" value="rzadkie"></property>
     <property name="nawożenie" value="rzadkie"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="3-5 cm średnicy, od białych, fioletowych do bordowych"></property>
+    <property name="kwiaty" value="3brak5 cm średnicy, od białych, fioletowych do bordowych"></property>
     <property name="ciekawe cechy" value="Roślina kwitnie do ostatnich mrozów i dlatego często nazywana jest Marcinkami, kwitnie obficie zasłaniając wąskie do 12 cm liście. Rośnie w gęstych kępach, sadzona na słońcu przyciąga roje zapylających owadów. Nie wymarza."></property>
   </plant>
   <plant name="Aubrieta cultorum">
@@ -315,8 +318,11 @@
     <property name="rodzina" value="Cruciferae"></property>
     <property name="rozmiary" value="Tworzy zwarty kobierzec dorastający do 10 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="IV-V, ciemnofioletowe, drobne"></property>
+    <property name="kwiaty" value="IVbrakV, ciemnofioletowe, drobne"></property>
     <property name="ciekawe cechy" value="Pokaż komentarze[1]"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Bellis perennis">
     <property name="grupa" value="byliny"></property>
@@ -336,8 +342,11 @@
     <property name="rodzina" value="Campanulaceae"></property>
     <property name="rozmiary" value="do 25 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-IX, w kształcie niewielkich jasnoniebieskich dzwoneczków"></property>
+    <property name="kwiaty" value="VIIbrakIX, w kształcie niewielkich jasnoniebieskich dzwoneczków"></property>
     <property name="ciekawe cechy" value="charakteryzują się długim okresem kwitnienia"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Campanula persicifolia">
     <property name="grupa" value="byliny"></property>
@@ -384,7 +393,7 @@
     <property name="podlewanie" value="rzadkie"></property>
     <property name="nawożenie" value="rzadkie"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="wielobarwne"></property>
+    <property name="kwiaty" value="różnobarwne"></property>
     <property name="ciekawe cechy" value="Znanych jest wiele gatunków tej wiosennej roślinki np ;Crocus speciosus ,Crocus versicolor ,Crocus sieberi ,Crocus angustifolius . W ogrodach krokusy są jednymi z najwcześniej zakwitających roślin . nadają sie do sadzenia w grupach na trawnikach , w ogródkach skalnych lub rabatach . Krokus - a raczej jego gatunki , szafran uprawny i szafran siewny , jest bardzo cenną przyprawą ."></property>
   </plant>
   <plant name="Dianthus gratianopolitanus">
@@ -393,8 +402,11 @@
     <property name="rodzina" value="Caryophyllaceae"></property>
     <property name="rozmiary" value="dorasta do 15 cm, tworzy zwarty kobierzec niebieskozielonych liści"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="V-VI, pachnące o postrzępionych płatkach"></property>
+    <property name="kwiaty" value="VbrakVI, pachnące o postrzępionych płatkach"></property>
     <property name="ciekawe cechy" value="roślina na skalniaki"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Dianthus plumarius 'Ine'">
     <property name="grupa" value="byliny"></property>
@@ -402,8 +414,11 @@
     <property name="rodzina" value="Caryophyllaceae"></property>
     <property name="rozmiary" value="dorasta do 35 cm, tworzy zwarty kobierzec"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="V- VII"></property>
+    <property name="kwiaty" value="Vbrak VII"></property>
     <property name="ciekawe cechy" value="roślina na skalniaki"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Dicentra spectabilis">
     <property name="grupa" value="byliny"></property>
@@ -436,8 +451,10 @@
     <property name="pochodzenie" value="Europa, Hiszpania"></property>
     <property name="rozmiary" value="wysokość 15 cm. szerokość 30 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VI-VII drobne różowe"></property>
+    <property name="kwiaty" value="VIbrakVII drobne różowe"></property>
     <property name="ciekawe cechy" value="polecane na skalniaki"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Helleborus niger">
     <property name="grupa" value="byliny"></property>
@@ -494,8 +511,10 @@
     <property name="pochodzenie" value="Ameryka Północna"></property>
     <property name="rozmiary" value="do 10 cm, płożący pokrój"></property>
     <property name="stanowisko" value="półcieniste"></property>
-    <property name="kwiaty" value="V-VI, jasnoniebieskie z żółtym oczkiem"></property>
+    <property name="kwiaty" value="VbrakVI, jasnoniebieskie z żółtym oczkiem"></property>
     <property name="ciekawe cechy" value="roślinna łatwo się rozmnaża przez podział kępek"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Houttuynia cordata 'Kameleon'">
     <property name="grupa" value="byliny"></property>
@@ -504,8 +523,10 @@
     <property name="pochodzenie" value="Azja, Chiny i Japonia"></property>
     <property name="rozmiary" value="do 30 cm, rozrasta się rozłożyście"></property>
     <property name="stanowisko" value="widne"></property>
-    <property name="kwiaty" value="VI-VIII,drobne,żółte, otoczone białymi płatkami"></property>
+    <property name="kwiaty" value="VIbrakVIII,drobne,żółte, otoczone białymi płatkami"></property>
     <property name="ciekawe cechy" value="houttuynia posiada bardzo ozdobne czerwono-żółtozielone liście, które wydzielają charakterystyczny zapach,powinna rosnąć na podmokłym podłożu"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Iris Barbata syn. Iris Germanica">
     <property name="grupa" value="byliny"></property>
@@ -526,8 +547,10 @@
     <property name="pochodzenie" value="Europa i Azja"></property>
     <property name="rozmiary" value="do 15 cm, zwarty pokrój"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VI-VII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe"></property>
+    <property name="kwiaty" value="VIbrakVII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe"></property>
     <property name="ciekawe cechy" value="powinna rosnąć w mało żyznej ziemi wtedy zachowa zwarty pokrój"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Leucanthemum vulgare">
     <property name="grupa" value="byliny"></property>
@@ -547,10 +570,10 @@
     <property name="rodzina" value="Liliaceae"></property>
     <property name="pochodzenie" value="Europa"></property>
     <property name="rozmiary" value="niewielka bylina"></property>
-    <property name="podlewanie" value="brak"></property>
-    <property name="nawożenie" value="brak"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
     <property name="stanowisko" value="nieokreślone"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="zdjęcie wykonane w Bieszczadzkim Parku Narodowym (BdPN) na Połoninie Caryńskiej. Roślina pod ścisłą ochroną gatunkową. W Polsce występuje w Karpatach."></property>
   </plant>
   <plant name="Lysimachia nummularia">
@@ -559,8 +582,11 @@
     <property name="rodzina" value="Primulaceae"></property>
     <property name="rozmiary" value="5cm, szybko formuje gęsty dywan"></property>
     <property name="stanowisko" value="widne lub cieniste"></property>
-    <property name="kwiaty" value="V-VII, jasnożółte, drobne"></property>
+    <property name="kwiaty" value="VbrakVII, jasnożółte, drobne"></property>
     <property name="ciekawe cechy" value="nadaje się do oczek wodnych"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Muscari armeniacum">
     <property name="grupa" value="byliny"></property>
@@ -616,8 +642,11 @@
     <property name="rodzina" value="Labiate"></property>
     <property name="rozmiary" value="do 30 cm, płożacy pokrój"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-VIII,jasnoróżowe,drobne"></property>
+    <property name="kwiaty" value="VIIbrakVIII,jasnoróżowe,drobne"></property>
     <property name="ciekawe cechy" value="polecana do ogródków skalnych"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Papaver orientale">
     <property name="grupa" value="byliny"></property>
@@ -638,8 +667,10 @@
     <property name="pochodzenie" value="nieokreślone"></property>
     <property name="rozmiary" value="5-10 cm wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="białe, drobne, kwiecień-maj"></property>
+    <property name="kwiaty" value="białe, drobne, kwiecieńbrakmaj"></property>
     <property name="ciekawe cechy" value="zadarniająca roślina na skalniaki"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Phlox subulata">
     <property name="grupa" value="byliny"></property>
@@ -647,8 +678,11 @@
     <property name="rodzina" value="Polemoniaceae"></property>
     <property name="rozmiary" value="do 10 cm, dywanowy pokrój"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="IV-V,drobne jasnoliliowe"></property>
+    <property name="kwiaty" value="IVbrakV,drobne jasnoliliowe"></property>
     <property name="ciekawe cechy" value="  "></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Phlox subulata">
     <property name="grupa" value="byliny"></property>
@@ -656,8 +690,11 @@
     <property name="rodzina" value="Polemoniaceae"></property>
     <property name="rozmiary" value="do 10 cm, dywanowy pokrój"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="IV-V,drobne jasnoliliowe"></property>
+    <property name="kwiaty" value="IVbrakV,drobne jasnoliliowe"></property>
     <property name="ciekawe cechy" value="  "></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Pulsatilla vulgaris">
     <property name="grupa" value="byliny"></property>
@@ -666,8 +703,10 @@
     <property name="pochodzenie" value="nieokreślone, tereny górksie"></property>
     <property name="rozmiary" value="dorasta do 25 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="III-IV, fioletowopurpurowe z żółtym środkiem"></property>
+    <property name="kwiaty" value="IIIbrakIV, fioletowopurpurowe z żółtym środkiem"></property>
     <property name="ciekawe cechy" value="Pokaż komentarze[1]"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Salvia officinalis">
     <property name="grupa" value="byliny"></property>
@@ -687,8 +726,11 @@
     <property name="rodzina" value="Saxifragaceae"></property>
     <property name="rozmiary" value="do 10 cm wysokości"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste"></property>
-    <property name="kwiaty" value="IV-VI"></property>
+    <property name="kwiaty" value="IVbrakVI"></property>
     <property name="ciekawe cechy" value="roślina na skalniaki"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Sedum album 'Coral Carpet'">
     <property name="grupa" value="byliny"></property>
@@ -696,8 +738,11 @@
     <property name="rodzina" value="Crasullaceae"></property>
     <property name="rozmiary" value="roślina okrywowa, dorasta do 10 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
-    <property name="kwiaty" value="VI-VII białe, drobne, gwiazdkowe"></property>
+    <property name="kwiaty" value="VIbrakVII białe, drobne, gwiazdkowe"></property>
     <property name="ciekawe cechy" value="polecana na skalniaki,"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Sempervivum">
     <property name="grupa" value="byliny"></property>
@@ -705,8 +750,11 @@
     <property name="rodzina" value="Crasullaceae"></property>
     <property name="rozmiary" value="do 10 cm, roślina rozłogowa"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-VIII, białe drobne"></property>
+    <property name="kwiaty" value="VIIbrakVIII, białe drobne"></property>
     <property name="ciekawe cechy" value="część rośliny zanika po okresie kwitnienia"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Thymus serpyllum">
     <property name="grupa" value="byliny"></property>
@@ -714,8 +762,11 @@
     <property name="rodzina" value="Labiatae"></property>
     <property name="rozmiary" value="rozrasta się dywanowo do 10 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VI-VII, bladoróżowe drobne"></property>
+    <property name="kwiaty" value="VIbrakVII, bladoróżowe drobne"></property>
     <property name="ciekawe cechy" value="ich liście wydzielają aromatyczny zapach, mogą być stosowane jako przyprawa"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Tradescantia virginica">
     <property name="grupa" value="byliny"></property>
@@ -774,7 +825,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne lub słoneczne"></property>
-    <property name="kwiaty" value="dzwonkowate, czerwono-żółte"></property>
+    <property name="kwiaty" value="dzwonkowate, czerwonobrakżółte"></property>
     <property name="ciekawe cechy" value="Jest to wiotka krzewinka wymagajaca podpór(często zaliczana do pnączy). Ma bardzo ozdobne żółtonakrapiane ulistnienie oraz piękne dzwoneczkowate kwiaty pojawiajace się od wiosny do późnego lata."></property>
   </plant>
   <plant name="Acalypha hispida">
@@ -858,7 +909,7 @@
     <property name="podlewanie" value="umiarkowane, do podstawka"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="półcieniste lub widne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="-"></property>
   </plant>
   <plant name="Anigozanthos">
@@ -954,7 +1005,7 @@
     <property name="podlewanie" value="umiarkowane, należy przesuszać"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="w zdrewniałej części roślina magazynuje wodę. Z tego powodu jest klasyfikowana jako sukulent."></property>
   </plant>
   <plant name="Begonia boweri 'Tiger'">
@@ -990,7 +1041,7 @@
     <property name="podlewanie" value="umiarkowane lub częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste lub widne, wilgotne"></property>
-    <property name="kwiaty" value="kłosowate kwiatostany czerwono-żółte, do 10 cm długości"></property>
+    <property name="kwiaty" value="kłosowate kwiatostany czerwonobrakżółte, do 10 cm długości"></property>
     <property name="ciekawe cechy" value="Na czas letni krzew może stać zagłębiony w gruncie wraz z doniczką w cienistym miejscu. Aby utrzymać ładny krzaczasty wygląd silnie przyciąć w lutym. Miejsce zimowego spoczynku powinno być umierkowanie chłodne, może zimować w stanie spoczynku. Sadzonki łatwo się ukorzeniają na wiosnę w wilgotnym i ciepłym podłożu."></property>
   </plant>
   <plant name="Bougainvillea glabra">
@@ -1170,7 +1221,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="sagowce są rozdzielnopłciowe, przypominają palmy, ale są spokrewnione z paprociami. Egzemplarze żeńskie wytwarzają kwiatostany podobne do szyszki, egzemplarze męskie mają kwiatostany złożone z samych pręcików"></property>
   </plant>
   <plant name="Cyperus papyrus">
@@ -1182,7 +1233,7 @@
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="-"></property>
   </plant>
   <plant name="Davallia bullata">
@@ -1194,7 +1245,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste"></property>
-    <property name="kwiaty" value="paprocie nie tworzą kwiatów"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="Pokaż komentarze[1]"></property>
   </plant>
   <plant name="Dionaea muscipula">
@@ -1240,9 +1291,9 @@
     <property name="pochodzenie" value="Azja, daleki wschód"></property>
     <property name="rozmiary" value="niewielka roślina domowa"></property>
     <property name="podlewanie" value="częste"></property>
-    <property name="nawożenie" value="brak"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
     <property name="stanowisko" value="widne ale nie słoneczne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="Lucky bamboo rośnie w wodzie jak kwiaty cięte, ale o kilkuletniej trwałości. Praktycznie nie można go zniszczyć. Pęd bambusa należy zanurzyć w wodzie na ok. 1-5 cm, np. w wazonie. Dla uzyskania najlepszych rezultatów zmieniaj wodę co dwa tygodnie. Lucku Bamboo bardzo łatwo adaptuje się do nowego środowiska. Preferuje temperaturę 10-27 st. C. W Azji roślinę tę kupuje się na powitanie chińskiego Nowego Roku, by uświetnić rozpoczęcie biznesu, zakup domu, albo po prostu - na szczęście!"></property>
   </plant>
   <plant name="Echinocactus grusonii">
@@ -1458,7 +1509,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne lub słoneczne"></property>
-    <property name="kwiaty" value="jest rośliną dwupienną. Na jednej roślinie rozwijają sie kwiaty męskie - na innej żeńskie. Zapylone rośliny przekształcają się w ciemne jagody."></property>
+    <property name="kwiaty" value="jest rośliną dwupienną. Na jednej roślinie rozwijają sie kwiaty męskie brak na innej żeńskie. Zapylone rośliny przekształcają się w ciemne jagody."></property>
     <property name="ciekawe cechy" value="do rodziny Wawrzynowatych należy także Awokado, Cynamonowiec oraz Drzewo kamforowe. Liście laurowe to cenna przyprawa."></property>
   </plant>
   <plant name="Lithops">
@@ -1518,7 +1569,7 @@
     <property name="podlewanie" value="umiarkowane, wrażliwy zarówno na nadmiar wody jak i przesuszenie"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste"></property>
-    <property name="kwiaty" value="paprocie nie tworzą kwiatów"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="gatunek ma kilka odmian uprawnych, różniących się listkami oraz ogólnym pokrojem"></property>
   </plant>
   <plant name="Nertera granadensis">
@@ -1626,7 +1677,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste lub widne"></property>
-    <property name="kwiaty" value="paprocie nie tworzą kwiatów"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="nie należy usuwać dolnych liści (tych zeschniętych). Nie należy również usuwać nalotu z liści górnych"></property>
   </plant>
   <plant name="Plumbago auriculata">
@@ -1794,7 +1845,7 @@
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne"></property>
-    <property name="kwiaty" value="biale drobne"></property>
+    <property name="kwiaty" value="białe drobne"></property>
     <property name="ciekawe cechy" value="główną ozdobą są jagody, które przebarwiają się na czerwono"></property>
   </plant>
   <plant name="Spathiphyllum">
@@ -1818,7 +1869,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="rzadkie"></property>
     <property name="stanowisko" value="widne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="STEREOSPERMUM SINICUM - pochodzi z Chin, rośnie tam jako wiecznie zielone dzrzewko o zielonkawych kwatach i jasnozielonych liściach. Rosnąc w doniczce, dobrze pielęgnowane po kilku latach zakwitają. Stanowisko jasne lecz nie nasłonecznione.W zimie temperatura powinna spaść do 10 stopni, w przeciwnym razie roślina poddatna jest na atak mszyc i przędziorków.Podlewać należy umiarkowanie, aby zachować stałą wilgotność. Zimą podlewać tylko tyle by liście nie opadły. W okresie wegetacji nawozić co 14 dni. Przesadzać co rok lub co dwa. Rozmnażać ze świerzych importowanych nasion."></property>
   </plant>
   <plant name="Synningia speciosa hybrid">
@@ -1900,6 +1951,10 @@
     <property name="rozmiary" value="po 10 latach osiąga wysokość 2 m"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="ciekawe cechy" value="odmiana szerokostożkowa, o dość szybkim wzroście, ulistnienie niebieskozielone."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Chamaecyparis pisifera 'Curly Tops'">
     <property name="grupa" value="iglaste"></property>
@@ -1908,6 +1963,10 @@
     <property name="rozmiary" value="dorasta do 0,5 m wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="ciekawe cechy" value="odmiana karłowa, wolnorosnąca, pędy opadające, złocistożółte. Polecana do ogródków skalnych."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Chamaecyparis pisifera 'Plumosa'">
     <property name="grupa" value="iglaste"></property>
@@ -1916,6 +1975,10 @@
     <property name="rozmiary" value="drzewo dorastające do 10 m wysokości i 3 m szerokości, o przyroście rocznym ok. 20 cm"></property>
     <property name="stanowisko" value="widne lub słoneczne"></property>
     <property name="ciekawe cechy" value="odmiana o pierzastych, zielonych gałązkach"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Ginkgo biloba">
     <property name="grupa" value="iglaste"></property>
@@ -1936,6 +1999,10 @@
     <property name="rozmiary" value="dorasta do 3 metrów wysokości i 2,5 metra szerokości, o przyroście rocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste"></property>
     <property name="ciekawe cechy" value="odmiana silnie rosnąca o srebrzysto- niebieskim ulistnieniu"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus communis 'Green Carpet'">
     <property name="grupa" value="iglaste"></property>
@@ -1944,6 +2011,10 @@
     <property name="rozmiary" value="dorasta do 10 cm wysokości i 1,5 m szerokości, o przyrościerocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste"></property>
     <property name="ciekawe cechy" value="odmiana płożąca o zielonym ulistnieniu, pędy ścielają się nisko po ziemi"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus horizontalis 'Andorra Compact'">
     <property name="grupa" value="iglaste"></property>
@@ -1952,6 +2023,10 @@
     <property name="rozmiary" value="odmiana rozrastająca się na boki o średnicy 1 m"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="ciekawe cechy" value="roślina okrywowa, pędy wyrastające dookoła nadają roślinie kształt misy, ulistnienie niebieskoszare."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus horizontalis 'Wiltonii'">
     <property name="grupa" value="iglaste"></property>
@@ -1960,6 +2035,10 @@
     <property name="rozmiary" value="dorasta do 10 cm wysokości i 2 metrów szerokości, o przyroście rocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste"></property>
     <property name="ciekawe cechy" value="odmiana płożąca, rośnie prawie całkowicie płasko, roślina okrywowa, gałązki zielono-niebieskie"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus media 'Pfitzeriana Aurea'">
     <property name="grupa" value="iglaste"></property>
@@ -1968,6 +2047,10 @@
     <property name="rozmiary" value="dorasta do 3 m wysokości i 6 m szerokości, o przyrościerocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="odmiana silnie rosnąca o złocistym zabarwieniu młodych pędów"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus pingii 'Loderi'">
     <property name="grupa" value="iglaste"></property>
@@ -1976,6 +2059,10 @@
     <property name="rozmiary" value="do 80 cm wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="ciekawe cechy" value="polecany do nasadzeń w ogródkach skalnych i do dużych donic."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus squamata 'Blue Carpet'">
     <property name="grupa" value="iglaste"></property>
@@ -1984,6 +2071,10 @@
     <property name="rozmiary" value="dorasta do 0,8 metra wysokości i 4 metrów szerokości, o przyrościerocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne lub półcieniste"></property>
     <property name="ciekawe cechy" value="odmiana płożąca, bardzo ekspansywna, igły niebieskie"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Juniperus virginiana 'Skyrocket'">
     <property name="grupa" value="iglaste"></property>
@@ -1991,10 +2082,10 @@
     <property name="rodzina" value="Cupressaceae"></property>
     <property name="pochodzenie" value="nieokreślone"></property>
     <property name="rozmiary" value="dorasta do 4 metrów wysokości i 0,4 m średnicy o przyroście rocznym ok. 15 cm"></property>
-    <property name="podlewanie" value="brak"></property>
-    <property name="nawożenie" value="brak"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="odmiana wąskostożkowa, z wyprostowanymi, przylegającymi do pnia gałęziami. Odcień niebieskawy."></property>
   </plant>
   <plant name="Thuja occidentalis 'Abel Twa'">
@@ -2004,6 +2095,10 @@
     <property name="rozmiary" value="dorasta do 3 metrów wysokości o przyroście rocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="gałązki zielone, zimą nabierają koloru brunatnego."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Thuja occidentalis 'Filiformis'">
     <property name="grupa" value="iglaste"></property>
@@ -2012,6 +2107,10 @@
     <property name="rozmiary" value="rośnie powoli do ok. 1,5 m wysokości"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="krzew o dekoracyjnych zwisających, sznurkowatych pędach."></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Thuja occidentalis 'Little Dorrit'">
     <property name="grupa" value="iglaste"></property>
@@ -2020,6 +2119,10 @@
     <property name="rozmiary" value="dorasta do 0,5 metra wysokości o przyroście rocznym ok. 4 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="forma karłowa, wolnorosnąca"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Thuja occidentalis 'Smaragd'">
     <property name="grupa" value="iglaste"></property>
@@ -2028,6 +2131,10 @@
     <property name="rozmiary" value="dorasta do 5 metrów wysokości, o przyroście rocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="gałązki zielone, nie zmienia barwy w okresie zimowym Odmiana polecana nażywopłoty"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Thuja occidentalis 'Teddy'">
     <property name="grupa" value="iglaste"></property>
@@ -2038,7 +2145,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="Karłowa, kulista odmiana żywotnika polecana do małych przydomowych ogródków."></property>
   </plant>
   <plant name="Thuja plicata 'Kórnik III'">
@@ -2048,6 +2155,10 @@
     <property name="rozmiary" value="dorasta do 5 metrów wysokości o przyroście rocznym ok. 15 cm"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="ciekawe cechy" value="ciemnozielone, błyszczące gałązki"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Budldleja davidii">
     <property name="grupa" value="krzewy"></property>
@@ -2055,8 +2166,11 @@
     <property name="rodzina" value="Loganiaceae"></property>
     <property name="rozmiary" value="około 2 m"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VIII-IX, różowe kiście na końcach pędów, wydzielają intensywny zapach"></property>
+    <property name="kwiaty" value="VIIIbrakIX, różowe kiście na końcach pędów, wydzielają intensywny zapach"></property>
     <property name="ciekawe cechy" value="wiosną wymagają przycinania starych pędów, na zimę powinny być okrywane"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Cornus alba">
     <property name="grupa" value="krzewy"></property>
@@ -2089,8 +2203,10 @@
     <property name="pochodzenie" value="Europa i Afryka, rejon morza śródziemnego"></property>
     <property name="rozmiary" value="około 1,5 m, krzaczastego pokroju"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="IV-V, złotożółte drobne"></property>
+    <property name="kwiaty" value="IVbrakV, złotożółte drobne"></property>
     <property name="ciekawe cechy" value="pędy szczodrzeńca wydzielają charakterystyczny zapach"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Forsythia">
     <property name="grupa" value="krzewy"></property>
@@ -2098,8 +2214,11 @@
     <property name="rodzina" value="Oleaceae"></property>
     <property name="rozmiary" value="do 3,5 m, można przycinać"></property>
     <property name="stanowisko" value="słoneczne lub widne"></property>
-    <property name="kwiaty" value="III-IV, żółte, pojawiają się zanim wyrosną liście"></property>
+    <property name="kwiaty" value="IIIbrakIV, żółte, pojawiają się zanim wyrosną liście"></property>
     <property name="ciekawe cechy" value="Pokaż komentarze[1]"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Hydrangea macrophylla">
     <property name="grupa" value="krzewy"></property>
@@ -2110,7 +2229,7 @@
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne"></property>
-    <property name="kwiaty" value="zebrane w baldachy - kuliste"></property>
+    <property name="kwiaty" value="zebrane w baldachy brak kuliste"></property>
     <property name="ciekawe cechy" value="Ciekawa roślina kwasolubna , która zależnie od odczynu gleby potrafi zmieniać kolor kwiatów z różowego[ na glebach zasadowych ] na niebieski [ gleby o odczynie kwaśnym ] . Nieco wrażliwa na mróz , wymaga okrycia na zimę . Krzew kwitnie na pędach zeszłorocznych , dlatego należy ja przycinać dopiero po kwitnieniu ."></property>
   </plant>
   <plant name="Ilex aquifolium">
@@ -2132,6 +2251,10 @@
     <property name="rozmiary" value="pnącze dorastające do 5 m wysokości, o przyroście rocznymok. 0,5 m"></property>
     <property name="stanowisko" value="słoneczne lub półcieniste, osłonięte"></property>
     <property name="ciekawe cechy" value="liście żółto żyłkowane, kwiaty czerwono-białe w lipcu"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Magnolia liliflora">
     <property name="grupa" value="krzewy"></property>
@@ -2151,8 +2274,11 @@
     <property name="rodzina" value="Rosaceae"></property>
     <property name="rozmiary" value="do 120 cm, krzaczasty pokrój"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="V-IX, żółte, delikatne"></property>
+    <property name="kwiaty" value="VbrakIX, żółte, delikatne"></property>
     <property name="ciekawe cechy" value="jest rośliną uniwersalną może rosnąć na skalniakach,skarpach i tarasach"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Pyracantha coccinea">
     <property name="grupa" value="krzewy"></property>
@@ -2175,7 +2301,7 @@
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="ciemno-bordowe pełne"></property>
+    <property name="kwiaty" value="ciemnobrakbordowe pełne"></property>
     <property name="ciekawe cechy" value="Barkarole jest wyhodowaną przez Tantau w 1988r piękną różą wielkokwiatową o intensywnym zapachu , ciemnozielonych liściach i czarnych pąkach z których rozwijają się bardzo ciemne bordowe kwiaty . Przepiękna odmiana , która oprócz walorów estetycznych posiada także użytkowe ,jej kwiaty nadają się na przetwory . Najlepiej wygląda sadzona w grupach ."></property>
   </plant>
   <plant name="Spirea kaponica 'Goldflame'">
@@ -2184,8 +2310,11 @@
     <property name="rodzina" value="Rosaceae"></property>
     <property name="rozmiary" value="do 120 cm, zaokrąglony kształt"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-VIII, bladoróżowe zebrzne w baldachimy"></property>
+    <property name="kwiaty" value="VIIbrakVIII, bladoróżowe zebrzne w baldachimy"></property>
     <property name="ciekawe cechy" value="Główną ozdobą są pomarańczowożółte drobne liście"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Weigela">
     <property name="grupa" value="krzewy"></property>
@@ -2206,8 +2335,10 @@
     <property name="pochodzenie" value="nieokreślone"></property>
     <property name="rozmiary" value="kępa do 0,5 m wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-VIII"></property>
+    <property name="kwiaty" value="VIIbrakVIII"></property>
     <property name="ciekawe cechy" value="  "></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Elymus arenarius">
     <property name="grupa" value="trawy"></property>
@@ -2215,8 +2346,11 @@
     <property name="rodzina" value="Gramineae"></property>
     <property name="rozmiary" value="kępa do 1 m wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VII-VIII"></property>
+    <property name="kwiaty" value="VIIbrakVIII"></property>
     <property name="ciekawe cechy" value="roślina kłączowa o dużej sile rozrastania. Niekiedy zachodzi potrzeba ograniczania jej wzrostu np. poprzez umieszczenie w ziemi grubej folii. Część nadziemna zasycha jesienią, jednak powinno się ją usuwać dopiero wiosną następnego roku"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Festuca gautieri">
     <property name="grupa" value="trawy"></property>
@@ -2224,8 +2358,11 @@
     <property name="rodzina" value="Gramineae"></property>
     <property name="rozmiary" value="kępa do 20 cm wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="-"></property>
+    <property name="kwiaty" value="brak"></property>
     <property name="ciekawe cechy" value="-"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
   <plant name="Festuca scoparia">
     <property name="grupa" value="trawy"></property>
@@ -2246,6 +2383,10 @@
     <property name="rozmiary" value="kępa do 30 cm wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="ciekawe cechy" value="roślina do oczek wodnych"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
+    <property name="kwiaty" value="nieokreślone"></property>
   </plant>
   <plant name="Miskant chiński">
     <property name="grupa" value="trawy"></property>
@@ -2265,7 +2406,10 @@
     <property name="rodzina" value="Gramineae"></property>
     <property name="rozmiary" value="kępa do 1,5 m wysokości"></property>
     <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="VIII-IX"></property>
+    <property name="kwiaty" value="VIIIbrakIX"></property>
     <property name="ciekawe cechy" value="część nadziemna zasycha jesienią, jednak powinno się ją usuwać dopiero wiosną następnego roku"></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
+    <property name="podlewanie" value="nieokreślone"></property>
+    <property name="nawożenie" value="nieokreślone"></property>
   </plant>
 </encyclopedia>

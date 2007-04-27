@@ -535,10 +535,10 @@
       <value>łodygi dorastają do 70 cm</value>
    </property>
    <property name="podlewanie">
-      <value>brak</value>
       <value>częste</value>
       <value>częste, do doniczki lub środka rozety</value>
       <value>częste, najlepiej ustawić w pojemniku z wodą; roślina bagienna</value>
+      <value>nieokreślone</value>
       <value>rzadkie</value>
       <value>rzadkie lub umiarkowane</value>
       <value>umiarkowane</value>
@@ -554,10 +554,10 @@
       <value>umiarkowane, zimą przesuszamy</value>
    </property>
    <property name="nawożenie">
-      <value>brak</value>
       <value>częste</value>
       <value>częste, podczas kwitnienia</value>
       <value>częste, próchnicze</value>
+      <value>nieokreślone</value>
       <value>rzadkie</value>
       <value>rzadkie, lubi ubogą, kwaśną glebę</value>
       <value>umiarkowane</value>
@@ -593,39 +593,38 @@
       <value>widne lub słoneczne</value>
    </property>
    <property name="kwiaty">
-      <value>-</value>
-      <value>3-5 cm średnicy, od białych, fioletowych do bordowych</value>
+      <value>3brak5 cm średnicy, od białych, fioletowych do bordowych</value>
       <value>Białe wyrastajace ponad roślinę</value>
       <value>Drobne, białe</value>
-      <value>III-IV, fioletowopurpurowe z żółtym środkiem</value>
-      <value>III-IV, żółte, pojawiają się zanim wyrosną liście</value>
-      <value>IV-V, ciemnofioletowe, drobne</value>
-      <value>IV-V, złotożółte drobne</value>
-      <value>IV-V,drobne jasnoliliowe</value>
-      <value>IV-VI</value>
+      <value>IIIbrakIV, fioletowopurpurowe z żółtym środkiem</value>
+      <value>IIIbrakIV, żółte, pojawiają się zanim wyrosną liście</value>
+      <value>IVbrakV, ciemnofioletowe, drobne</value>
+      <value>IVbrakV, złotożółte drobne</value>
+      <value>IVbrakV,drobne jasnoliliowe</value>
+      <value>IVbrakVI</value>
       <value>Pachnące, z przykoronkiem w środku</value>
       <value>Różowe, wzniesione ponad rozetę liści</value>
-      <value>V- VII</value>
-      <value>V-IX, żółte, delikatne</value>
-      <value>V-VI, jasnoniebieskie z żółtym oczkiem</value>
-      <value>V-VI, pachnące o postrzępionych płatkach</value>
-      <value>V-VII, jasnożółte, drobne</value>
-      <value>V-VII, pompony na krótkich bezlistnych łodyżkach</value>
-      <value>VI-VII białe, drobne, gwiazdkowe</value>
-      <value>VI-VII drobne różowe</value>
-      <value>VI-VII, bladoróżowe drobne</value>
-      <value>VI-VII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe</value>
-      <value>VI-VIII,drobne,żółte, otoczone białymi płatkami</value>
-      <value>VII-IX, w kształcie niewielkich jasnoniebieskich dzwoneczków</value>
-      <value>VII-VIII</value>
-      <value>VII-VIII, białe drobne</value>
-      <value>VII-VIII, bladoróżowe zebrzne w baldachimy</value>
-      <value>VII-VIII,jasnoróżowe,drobne</value>
-      <value>VIII-IX</value>
-      <value>VIII-IX, różowe kiście na końcach pędów, wydzielają intensywny zapach</value>
+      <value>VIIIbrakIX</value>
+      <value>VIIIbrakIX, różowe kiście na końcach pędów, wydzielają intensywny zapach</value>
+      <value>VIIbrakIX, w kształcie niewielkich jasnoniebieskich dzwoneczków</value>
+      <value>VIIbrakVIII</value>
+      <value>VIIbrakVIII, białe drobne</value>
+      <value>VIIbrakVIII, bladoróżowe zebrzne w baldachimy</value>
+      <value>VIIbrakVIII,jasnoróżowe,drobne</value>
+      <value>VIbrakVII białe, drobne, gwiazdkowe</value>
+      <value>VIbrakVII drobne różowe</value>
+      <value>VIbrakVII, bladoróżowe drobne</value>
+      <value>VIbrakVII, na długich pokrytych włoskami łodygach wyrastająbiałe główki kwiatowe</value>
+      <value>VIbrakVIII,drobne,żółte, otoczone białymi płatkami</value>
+      <value>Vbrak VII</value>
+      <value>VbrakIX, żółte, delikatne</value>
+      <value>VbrakVI, jasnoniebieskie z żółtym oczkiem</value>
+      <value>VbrakVI, pachnące o postrzępionych płatkach</value>
+      <value>VbrakVII, jasnożółte, drobne</value>
+      <value>VbrakVII, pompony na krótkich bezlistnych łodyżkach</value>
       <value>agawy kwitną tylko raz wżyciu, gdy osiągną kilkadziesiąt lat. Wówczas ze środka rośliny wyrasta potężny kwiatostan. Po przekwitniciu roślina ginie</value>
-      <value>biale drobne</value>
       <value>białe</value>
+      <value>białe drobne</value>
       <value>białe kłosy</value>
       <value>białe lub niebieskie</value>
       <value>białe trąbkowate</value>
@@ -634,7 +633,7 @@
       <value>białe, bezpłatkowe, drobne</value>
       <value>białe, czerwone, różowe</value>
       <value>białe, drobne</value>
-      <value>białe, drobne, kwiecień-maj</value>
+      <value>białe, drobne, kwiecieńbrakmaj</value>
       <value>białe, drobne, zebrane w baldachy</value>
       <value>białe, duże</value>
       <value>białe, o przyjemnym zapachu</value>
@@ -646,8 +645,9 @@
       <value>białe, żółte</value>
       <value>biało kremowe, dwupienny</value>
       <value>bladoróżowe</value>
+      <value>brak</value>
       <value>błękitne, utrzymują się na roślinie ok. dobę, po czym więdną</value>
-      <value>ciemno-bordowe pełne</value>
+      <value>ciemnobrakbordowe pełne</value>
       <value>czerwone</value>
       <value>czerwone lub różowe w kształcie kolby</value>
       <value>czerwone z czarną plamką ok.15cm</value>
@@ -660,7 +660,7 @@
       <value>duże różnobarwne</value>
       <value>duże różnobarwne często z plamką</value>
       <value>duże, żółte, średnicy 8 cm</value>
-      <value>dzwonkowate, czerwono-żółte</value>
+      <value>dzwonkowate, czerwonobrakżółte</value>
       <value>fioletowe</value>
       <value>fioletowe, drobne</value>
       <value>gęste niebieskoliliowe</value>
@@ -668,7 +668,7 @@
       <value>główną ozdobą sa jasnozielone pędy</value>
       <value>intensywnie pomarańczowe z środkowym czarnym oczkiem, żółte i białe</value>
       <value>jasnożółte</value>
-      <value>jest rośliną dwupienną. Na jednej roślinie rozwijają sie kwiaty męskie - na innej żeńskie. Zapylone rośliny przekształcają się w ciemne jagody.</value>
+      <value>jest rośliną dwupienną. Na jednej roślinie rozwijają sie kwiaty męskie brak na innej żeńskie. Zapylone rośliny przekształcają się w ciemne jagody.</value>
       <value>kielichowate, purpurowe</value>
       <value>kielichy o rożnych kolorach,także dwubarwne</value>
       <value>kolbowate kwiatostany</value>
@@ -677,7 +677,7 @@
       <value>kwitnie przez cały rok, pełna gama kolorów</value>
       <value>kwitnie raz do roku, wczesną wiosną</value>
       <value>kłosowate</value>
-      <value>kłosowate kwiatostany czerwono-żółte, do 10 cm długości</value>
+      <value>kłosowate kwiatostany czerwonobrakżółte, do 10 cm długości</value>
       <value>kłosowate wyrastające ponad roślinę</value>
       <value>lekko kremowe</value>
       <value>malinowe, duże</value>
@@ -690,17 +690,17 @@
       <value>niebieskie zebrane w grona</value>
       <value>niebieskie, delikatne, kwitnie od wiosny do późnej jesieni</value>
       <value>niebieskie, duże</value>
+      <value>nieokreślone</value>
       <value>niepozorne</value>
       <value>niepozorne kremowobiałe</value>
       <value>niepozorne przekształcające się w owoce o kolorze białym, żółtym lub czerwonym</value>
       <value>niezbyt dekoracyjne suche kłosy</value>
       <value>od białych do ciemnoróżowych</value>
-      <value>od białych do czerwonych, 5-7 cm średnicy, zebrane po 15 sztuk</value>
+      <value>od białych do czerwonych, 5brak7 cm średnicy, zebrane po 15 sztuk</value>
       <value>od białych do pąsowych</value>
       <value>od żóltego do pomarańczowego</value>
       <value>od barwy białej do  ciemnoczerwonej</value>
       <value>ozdobna z liści</value>
-      <value>paprocie nie tworzą kwiatów</value>
       <value>pełna gama kolorów</value>
       <value>pełna gama kolorów; kwitnie prawie bez przerwy przez cały rok</value>
       <value>pełne lub pojedyńcze, różnokolorowe, przekształcają się w czerwone, podobne do śliwki owoce</value>
@@ -714,21 +714,21 @@
       <value>rzadko kwitnie w domach</value>
       <value>rzadko kwitnie w mieszkaniach</value>
       <value>rzadko zakwita w mieszkaniach</value>
+      <value>różnobarwne</value>
       <value>różnobarwne , duże</value>
       <value>różowe</value>
       <value>różowe ogony</value>
       <value>różowe, białe , karminowe</value>
       <value>różowe, kłosowate na szczytach pędów</value>
-      <value>siarkowo żółte - drobne</value>
+      <value>siarkowo żółte brak drobne</value>
       <value>siwe, średnie</value>
       <value>tak jak wszystkie rośliny z rodziny Araceae tworzy kwiatostany w kształcie kolby</value>
       <value>trzypłatkowe niebieskie, fioletowe, białe</value>
       <value>wargowe fioletowe rzadko białe</value>
-      <value>wielobarwne</value>
       <value>zakwita bardzo rzadko</value>
       <value>zakwita rzadko</value>
       <value>zebrane w baldachy</value>
-      <value>zebrane w baldachy - kuliste</value>
+      <value>zebrane w baldachy brak kuliste</value>
       <value>zebrane w kłosy, niebieskie</value>
       <value>żółte</value>
       <value>żółte kwiaty wyrastają na wieszchołkach pędów</value>

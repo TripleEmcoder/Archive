@@ -79,7 +79,7 @@
 	(declare (salience -20))
 	(step "kwiaty2")
 =>
-	(assert (question "Jakiego koloru mają być kwiaty?;białe;czerwone;fioletowe;malinowe;niebieskie;pomarańczowe;różowe;żółte;różnobarwne;dowolne"))
+	(assert (question "Jakiego koloru mają być kwiaty?;białe;czerwone;fioletowe;niebieskie;pomarańczowe;purpurowe;różowe;żółte;różnobarwne;inne;dowolne"))
 )
 
 (defrule question_pochodzenie
@@ -500,16 +500,6 @@
 	(assert (step "pochodzenie"))
 )
 
-(defrule answer_kwiaty2_malinowe
-	(declare (salience -20))
-	?i <- (step "kwiaty2")
-	?j <- (answer "malinowe")
-=>
-	(retract ?i)
-	(retract ?j)
-	(assert (step "pochodzenie"))
-)
-
 (defrule answer_kwiaty2_niebieskie
 	(declare (salience -20))
 	?i <- (step "kwiaty2")
@@ -524,6 +514,16 @@
 	(declare (salience -20))
 	?i <- (step "kwiaty2")
 	?j <- (answer "pomarańczowe")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pochodzenie"))
+)
+
+(defrule answer_kwiaty2_purpurowe
+	(declare (salience -20))
+	?i <- (step "kwiaty2")
+	?j <- (answer "purpurowe")
 =>
 	(retract ?i)
 	(retract ?j)
@@ -554,6 +554,16 @@
 	(declare (salience -20))
 	?i <- (step "kwiaty2")
 	?j <- (answer "różnobarwne")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "pochodzenie"))
+)
+
+(defrule answer_kwiaty2_inne
+	(declare (salience -20))
+	?i <- (step "kwiaty2")
+	?j <- (answer "inne")
 =>
 	(retract ?i)
 	(retract ?j)

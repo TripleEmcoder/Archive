@@ -61,12 +61,13 @@
 	kwiaty2         -> pochodzenie     [ label = "białe"          ];
 	kwiaty2         -> pochodzenie     [ label = "czerwone"       ];
 	kwiaty2         -> pochodzenie     [ label = "fioletowe"      ];
-	kwiaty2         -> pochodzenie     [ label = "malinowe"       ];
 	kwiaty2         -> pochodzenie     [ label = "niebieskie"     ];
 	kwiaty2         -> pochodzenie     [ label = "pomarańczowe"   ];
+	kwiaty2         -> pochodzenie     [ label = "purpurowe"   ];
 	kwiaty2         -> pochodzenie     [ label = "różowe"         ];
 	kwiaty2         -> pochodzenie     [ label = "żółte"          ];
 	kwiaty2         -> pochodzenie     [ label = "różnobarwne"    ];
+	kwiaty2         -> pochodzenie     [ label = "inne"           ];
 	kwiaty2         -> pochodzenie     [ label = "dowolne"        ];
 	pochodzenie     -> pielęgnacja     [ label = "Polska"         ];
 	pochodzenie     -> pielęgnacja     [ label = "Europa"         ];

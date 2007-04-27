@@ -144,6 +144,7 @@
 (defrule rule_pochodzenie
 	(answer "pochodzenie" ?pochodzenie&~"obojętnie")
 =>
+	(assert (property retract "pochodzenie" "dowolne"))
 	(assert (property assert "pochodzenie" ?pochodzenie))
 )
 
@@ -153,14 +154,9 @@
 	(assert (property assert "kwiaty" "brak"))
 )
 
-(defrule rule_kwiaty1
-	(answer "kwiaty1" "nie")
-=>
-	(assert (property assert "kwiaty" "brak"))
-)
-
 (defrule rule_kwiaty2
-	(answer "kwiaty2" ?kolor&~"dowolny")
+	(answer "kwiaty2" ?kolor&~"dowolne")
 =>
+	(assert (property retract "kwiaty" "dowolne"))
 	(assert (property assert "kwiaty" ?kolor))
 )

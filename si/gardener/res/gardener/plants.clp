@@ -4,6 +4,8 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"żółte")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Argyranthemum frutescens"))
@@ -16,6 +18,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Brassica oleracea"))
@@ -24,9 +27,11 @@
 (defrule plant_campanula
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Campanula"))
@@ -35,9 +40,11 @@
 (defrule plant_centradenia
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Centradenia"))
@@ -50,6 +57,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Fuksja x hybrida"))
@@ -58,9 +66,11 @@
 (defrule plant_helichrysum_bracteatum
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Helichrysum bracteatum"))
@@ -69,9 +79,11 @@
 (defrule plant_impatiens
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Impatiens"))
@@ -80,9 +92,11 @@
 (defrule plant_lobelia_pendula
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Lobelia pendula"))
@@ -91,9 +105,11 @@
 (defrule plant_mentha_suaveolens
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Mentha suaveolens"))
@@ -106,6 +122,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Pelargonium peltatum"))
@@ -118,6 +135,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Pelargonium peltatum"))
@@ -130,6 +148,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Petunia hybrida"))
@@ -142,6 +161,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Sanvitalia procumbens"))
@@ -154,6 +174,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Surfinia 'Blue Vein'"))
@@ -166,6 +187,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Surfinia 'Hot Pink'"))
@@ -178,6 +200,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Surfinia 'Purple Vein'"))
@@ -190,6 +213,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Surfinia 'White'"))
@@ -202,6 +226,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Thunbergia alata"))
@@ -214,6 +239,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Viola wittrockiana"))
@@ -226,6 +252,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Werbena Tukana 'Denim Blue'"))
@@ -238,6 +265,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Werbena Tukana 'Scarlet'"))
@@ -250,6 +278,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Achillea millefolium"))
@@ -262,6 +291,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"sloneczne")
+	(property "kwiaty" "dowolne"|"brak"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Alyssum saxatile"))
@@ -270,9 +300,11 @@
 (defrule plant_anemone_x_hybrida
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"brak"|"białe"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Anemone x hybrida"))
@@ -281,7 +313,11 @@
 (defrule plant_armeria_maritima
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Armeria maritima"))
@@ -294,6 +330,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"białe"|"czerwone"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Aster amellus"))
@@ -303,6 +340,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"fioletowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Aubrieta cultorum"))
@@ -315,6 +356,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Bellis perennis"))
@@ -324,6 +366,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Campanula carpatica"))
@@ -336,6 +382,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Campanula persicifolia"))
@@ -348,6 +395,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Cerastium biebersteinii"))
@@ -360,6 +408,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"białe"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Cobaea"))
@@ -372,6 +421,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Crocus"))
@@ -381,6 +431,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Dianthus gratianopolitanus"))
@@ -390,6 +444,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Dianthus plumarius 'Ine'"))
@@ -402,6 +460,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"cieniste"|"półcieniste")
+	(property "kwiaty" "dowolne"|"białe"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Dicentra spectabilis"))
@@ -414,6 +473,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"purpurowe")
 	(refresh)
 =>
 	(assert (plant "Echinacea purpurea"))
@@ -424,6 +484,9 @@
 	(property "grupa" "dowolne"|"byliny")
 	(property "pochodzenie" "dowolne"|"Europa")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"różowe")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Geranium dalmaticum"))
@@ -436,6 +499,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Helleborus niger"))
@@ -448,6 +512,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Hemerocallis fulva"))
@@ -460,6 +525,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"białe"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Heuchera"))
@@ -468,9 +534,11 @@
 (defrule plant_hosta_sieboldiana
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Hosta sieboldiana"))
@@ -481,6 +549,9 @@
 	(property "grupa" "dowolne"|"byliny")
 	(property "pochodzenie" "dowolne"|"Ameryka Północna")
 	(property "stanowisko" "dowolne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"brak"|"niebieskie"|"żółte")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Houstonia"))
@@ -491,6 +562,9 @@
 	(property "grupa" "dowolne"|"byliny")
 	(property "pochodzenie" "dowolne"|"Azja")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"brak"|"białe"|"żółte")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Houttuynia cordata 'Kameleon'"))
@@ -499,9 +573,11 @@
 (defrule plant_iris_barbata_syn._iris_germanica
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Iris Barbata syn. Iris Germanica"))
@@ -512,6 +588,9 @@
 	(property "grupa" "dowolne"|"byliny")
 	(property "pochodzenie" "dowolne"|"Europa"|"Azja")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"białe")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Leontopodium alpinum"))
@@ -524,6 +603,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Leucanthemum vulgare"))
@@ -533,8 +613,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "pochodzenie" "dowolne"|"Europa")
-	(property "podlewanie" "dowolne"|"brak")
-	(property "nawożenie" "dowolne"|"brak")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "stanowisko" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Lilium martagon"))
@@ -544,6 +626,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"widne"|"cieniste")
+	(property "kwiaty" "dowolne"|"brak"|"żółte")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Lysimachia nummularia"))
@@ -556,6 +642,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Muscari armeniacum"))
@@ -568,6 +655,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Narcissus"))
@@ -580,6 +668,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Nepeta x faassenii"))
@@ -592,6 +681,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Oenothera missouriensis"))
@@ -601,6 +691,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"różowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Origanum 'Kent Beauty'"))
@@ -613,6 +707,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Papaver orientale"))
@@ -621,7 +716,11 @@
 (defrule plant_phlox_douglasii
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"białe")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Phlox douglasii"))
@@ -631,6 +730,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"fioletowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Phlox subulata"))
@@ -640,6 +743,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"fioletowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Phlox subulata"))
@@ -648,7 +755,11 @@
 (defrule plant_pulsatilla_vulgaris
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"fioletowe"|"purpurowe"|"żółte")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Pulsatilla vulgaris"))
@@ -661,6 +772,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Salvia officinalis"))
@@ -670,6 +782,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Saxifraga arendsii"))
@@ -679,6 +795,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"brak"|"białe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Sedum album 'Coral Carpet'"))
@@ -688,6 +808,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"białe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Sempervivum"))
@@ -697,6 +821,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"różowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Thymus serpyllum"))
@@ -709,6 +837,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"fioletowe"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Tradescantia virginica"))
@@ -721,6 +850,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Trollius cultorum"))
@@ -733,6 +863,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Veronica incana"))
@@ -745,6 +876,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"białe"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Viola odorata"))
@@ -757,6 +889,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"czerwone"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Abutilon megapotamicum"))
@@ -769,6 +902,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Acalypha hispida"))
@@ -781,6 +915,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"czerwone"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Adenium obessum"))
@@ -793,6 +928,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Aechmea fasciata"))
@@ -805,6 +941,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Agava americana 'Marginata'"))
@@ -817,6 +954,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Aglonema commutatum"))
@@ -829,6 +967,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Alocasia lowii"))
@@ -841,6 +980,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Ananas comosus"))
@@ -853,6 +993,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe"|"czerwone"|"różowe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Anigozanthos"))
@@ -865,6 +1006,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"półcieniste"|"widne")
+	(property "kwiaty" "dowolne"|"czerwone"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Anthurium scherzerianum"))
@@ -877,6 +1019,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Aphelandra squarrosa"))
@@ -889,6 +1032,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Areca catechu"))
@@ -901,6 +1045,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Asparagus plumosus"))
@@ -913,6 +1058,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Asplenium nidus"))
@@ -925,6 +1071,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"purpurowe")
 	(refresh)
 =>
 	(assert (plant "Aucuba japonica"))
@@ -937,6 +1084,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Beaucarnea recurvata"))
@@ -949,6 +1097,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Begonia boweri 'Tiger'"))
@@ -961,6 +1110,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Begonia rex"))
@@ -973,6 +1123,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"brak"|"czerwone"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Beloperone gutta"))
@@ -985,6 +1136,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Bougainvillea glabra"))
@@ -993,9 +1145,11 @@
 (defrule plant_caffea_arabica
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Caffea Arabica"))
@@ -1008,6 +1162,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Calathea makoyana"))
@@ -1020,6 +1175,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Callisia repens"))
@@ -1032,6 +1188,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Capiscum annuum"))
@@ -1044,6 +1201,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Chameadora elegans"))
@@ -1056,6 +1214,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Cissus antarctica"))
@@ -1068,6 +1227,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Citrofortunella mitis"))
@@ -1080,6 +1240,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Clivia minata"))
@@ -1092,6 +1253,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Coffea arabica"))
@@ -1104,6 +1266,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Cordyline fruticosa"))
@@ -1116,6 +1279,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Crassula"))
@@ -1128,6 +1292,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Cthenanthe oppenheimiana"))
@@ -1140,6 +1305,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Cupressus macrocarpa"))
@@ -1152,6 +1318,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Cycas revoluta"))
@@ -1164,6 +1331,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Cyperus papyrus"))
@@ -1176,6 +1344,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Davallia bullata"))
@@ -1188,6 +1357,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Dionaea muscipula"))
@@ -1200,6 +1370,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Dracaena deremensis 'Lemon'"))
@@ -1212,6 +1383,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Dracena india"))
@@ -1222,8 +1394,9 @@
 	(property "grupa" "dowolne"|"domowe")
 	(property "pochodzenie" "dowolne"|"Azja")
 	(property "podlewanie" "dowolne"|"częste")
-	(property "nawożenie" "dowolne"|"brak")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Dracena sanderiana"))
@@ -1236,6 +1409,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Echinocactus grusonii"))
@@ -1248,6 +1422,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Euphorbia caput-medusae"))
@@ -1260,6 +1435,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"czerwone"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Euphorbia milii"))
@@ -1272,6 +1448,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Euphorbia trigona"))
@@ -1284,6 +1461,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Ficus benjamina"))
@@ -1296,6 +1474,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Ficus lyrata"))
@@ -1308,6 +1487,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Fittonia verschaffeltii"))
@@ -1320,6 +1500,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Guzmania dissitiflora"))
@@ -1332,6 +1513,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Gynura scandens"))
@@ -1344,6 +1526,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Hebe bukszpanowate"))
@@ -1356,6 +1539,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Hedera helix 'Helvig'"))
@@ -1368,6 +1552,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Hedera helix 'Mini Heron'"))
@@ -1380,6 +1565,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Hedera helix 'Variegata'"))
@@ -1392,6 +1578,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Hedera helix ssp. canariensis 'Svendborg'"))
@@ -1404,6 +1591,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Hypoestes sanguinoleta Hypoestes phyllostachya"))
@@ -1416,6 +1604,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Kalanchoe blossfeldiana"))
@@ -1428,6 +1617,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Kalanchoe manginii"))
@@ -1440,6 +1630,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Laurus nobilis"))
@@ -1452,6 +1643,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Lithops"))
@@ -1464,6 +1656,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Maranta leuconeura"))
@@ -1476,6 +1669,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Mulenbekia"))
@@ -1488,6 +1682,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Musa cavendishii"))
@@ -1500,6 +1695,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Nephrolepis exaltata"))
@@ -1508,9 +1704,11 @@
 (defrule plant_nertera_granadensis
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"czerwone"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Nertera granadensis"))
@@ -1523,6 +1721,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Pachypodium lamerei"))
@@ -1535,6 +1734,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Passiflora caerulea"))
@@ -1547,6 +1747,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Peperomia"))
@@ -1559,6 +1760,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe"|"różowe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Phalaenopsis"))
@@ -1571,6 +1773,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"cieniste"|"półcieniste")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Philodendron erubescens 'New Red'"))
@@ -1583,6 +1786,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Pilea cadierei"))
@@ -1595,6 +1799,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Pinguicula moranensis"))
@@ -1607,6 +1812,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Platycerium bifurcatum"))
@@ -1619,6 +1825,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"niebieskie")
 	(refresh)
 =>
 	(assert (plant "Plumbago auriculata"))
@@ -1631,6 +1838,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Polyscias balfouriana 'Fabian'"))
@@ -1643,6 +1851,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Primula vulgaris"))
@@ -1655,6 +1864,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Punica granatum"))
@@ -1667,6 +1877,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Rheo spathacea"))
@@ -1675,9 +1886,11 @@
 (defrule plant_rosa
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Rosa"))
@@ -1690,6 +1903,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Saintpaulia ionantha"))
@@ -1702,6 +1916,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Sarracenia purpurea"))
@@ -1714,6 +1929,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Saxifraga stolonifera 'Tricolor'"))
@@ -1726,6 +1942,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Scindapsus aureus"))
@@ -1738,6 +1955,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Scirpus cernuus Isolepis gracilis"))
@@ -1750,6 +1968,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Sedum rubrotinctum"))
@@ -1762,6 +1981,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Senecio macroglossus 'Variegatus'"))
@@ -1774,6 +1994,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Solanum pseudocapiscum"))
@@ -1786,6 +2007,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Spathiphyllum"))
@@ -1798,6 +2020,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Stereospermum sinicum"))
@@ -1810,6 +2033,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Synningia speciosa hybrid"))
@@ -1822,6 +2046,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Tolmia menziesii"))
@@ -1830,9 +2055,11 @@
 (defrule plant_vriesea
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Vriesea"))
@@ -1845,6 +2072,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Yucca elephantipes"))
@@ -1857,6 +2085,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Zantedeschia aethiopca"))
@@ -1869,6 +2098,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"fioletowe"|"żółte")
 	(refresh)
 =>
 	(assert (plant "Zingiber officinale"))
@@ -1878,6 +2108,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Chamaecyparis nootkanesis 'Tatra'"))
@@ -1887,6 +2121,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Chamaecyparis pisifera 'Curly Tops'"))
@@ -1896,6 +2134,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Chamaecyparis pisifera 'Plumosa'"))
@@ -1908,6 +2150,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"cieniste")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Ginkgo biloba"))
@@ -1917,6 +2160,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus chinensis 'Blue Alps'"))
@@ -1926,6 +2173,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus communis 'Green Carpet'"))
@@ -1935,6 +2186,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus horizontalis 'Andorra Compact'"))
@@ -1944,6 +2199,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus horizontalis 'Wiltonii'"))
@@ -1953,6 +2212,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus media 'Pfitzeriana Aurea'"))
@@ -1962,6 +2225,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus pingii 'Loderi'"))
@@ -1971,6 +2238,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne"|"półcieniste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juniperus squamata 'Blue Carpet'"))
@@ -1979,9 +2250,11 @@
 (defrule plant_juniperus_virginiana_skyrocket
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
-	(property "podlewanie" "dowolne"|"brak")
-	(property "nawożenie" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Juniperus virginiana 'Skyrocket'"))
@@ -1991,6 +2264,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Thuja occidentalis 'Abel Twa'"))
@@ -2000,6 +2277,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Thuja occidentalis 'Filiformis'"))
@@ -2009,6 +2290,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Thuja occidentalis 'Little Dorrit'"))
@@ -2018,6 +2303,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Thuja occidentalis 'Smaragd'"))
@@ -2026,9 +2315,11 @@
 (defrule plant_thuja_occidentalis_teddy
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Thuja occidentalis 'Teddy'"))
@@ -2038,6 +2329,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Thuja plicata 'Kórnik III'"))
@@ -2047,6 +2342,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"różowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Budldleja davidii"))
@@ -2059,6 +2358,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe"|"białe")
 	(refresh)
 =>
 	(assert (plant "Cornus alba"))
@@ -2071,6 +2371,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Cotinus coggygria"))
@@ -2081,6 +2382,9 @@
 	(property "grupa" "dowolne"|"krzewy")
 	(property "pochodzenie" "dowolne"|"Europa"|"Afryka")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"żółte"|"żółte")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Cytisus"))
@@ -2090,6 +2394,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
+	(property "kwiaty" "dowolne"|"brak"|"żółte")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Forsythia"))
@@ -2102,6 +2410,7 @@
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"brak")
 	(refresh)
 =>
 	(assert (plant "Hydrangea macrophylla"))
@@ -2114,6 +2423,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne"|"białe"|"białe")
 	(refresh)
 =>
 	(assert (plant "Ilex aquifolium"))
@@ -2123,6 +2433,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Lonicera japonica 'Aureoreticulata'"))
@@ -2135,6 +2449,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"purpurowe")
 	(refresh)
 =>
 	(assert (plant "Magnolia liliflora"))
@@ -2144,6 +2459,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"żółte")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Potentilla fruticosa"))
@@ -2156,6 +2475,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"białe")
 	(refresh)
 =>
 	(assert (plant "Pyracantha coccinea"))
@@ -2168,6 +2488,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Rosa 'Barkarole'"))
@@ -2177,6 +2498,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak"|"różowe")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Spirea kaponica 'Goldflame'"))
@@ -2189,6 +2514,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne lub widne")
+	(property "kwiaty" "dowolne"|"białe"|"czerwone")
 	(refresh)
 =>
 	(assert (plant "Weigela"))
@@ -2197,7 +2523,11 @@
 (defrule plant_arrhenaterum_bulbosum_variegatum
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Arrhenaterum bulbosum 'Variegatum'"))
@@ -2207,6 +2537,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Elymus arenarius"))
@@ -2216,6 +2550,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Festuca gautieri"))
@@ -2228,6 +2566,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Festuca scoparia"))
@@ -2237,6 +2576,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Juncus ensifolius"))
@@ -2249,6 +2592,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne")
 	(refresh)
 =>
 	(assert (plant "Miskant chiński"))
@@ -2258,6 +2602,10 @@
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
 	(property "stanowisko" "dowolne"|"słoneczne")
+	(property "kwiaty" "dowolne"|"brak")
+	(property "pochodzenie" "dowolne"|"nieokreślone")
+	(property "podlewanie" "dowolne"|"nieokreślone")
+	(property "nawożenie" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Spartina pectinata 'Aureomarginata'"))
