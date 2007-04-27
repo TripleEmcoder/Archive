@@ -99,7 +99,7 @@
     <property name="grupa" value="balkonowe"></property>
     <property name="nazwa" value="Mięta balkonowa"></property>
     <property name="rodzina" value="Labiatae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="nieokreślone, umiarkowana strefa klimatyczna"></property>
     <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="częste"></property>
@@ -223,7 +223,7 @@
     <property name="rozmiary" value="15 do 25 cm"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
-    <property name="stanowisko" value="słonecznenieokreślonewidne"></property>
+    <property name="stanowisko" value="słoneczne lub widne"></property>
     <property name="kwiaty" value="duże różnobarwne często z plamką"></property>
     <property name="ciekawe cechy" value="Obficie kwitnąca roślina , od wczesnej wiosny do końca lata . Bardzo łatwy w uprawie i rozmnażaniu , dobrze rośnie zarówno w skrzynkach jaki w ogrodzie . W ostatnich latach pojawiło sie na rynku wiele ciekawych odmian , które pięknie prezentują się w kompozycjach balkonowych ."></property>
   </plant>
@@ -231,7 +231,7 @@
     <property name="grupa" value="balkonowe"></property>
     <property name="nazwa" value="Werbena"></property>
     <property name="rodzina" value="Verbenaceae"></property>
-    <property name="pochodzenie" value="Ameryka, mieszaniec"></property>
+    <property name="pochodzenie" value="Ameryka Północna mieszaniec"></property>
     <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="częste"></property>
@@ -243,7 +243,7 @@
     <property name="grupa" value="balkonowe"></property>
     <property name="nazwa" value="Werbena"></property>
     <property name="rodzina" value="Verbenaceae"></property>
-    <property name="pochodzenie" value="Ameryka, mieszaniec"></property>
+    <property name="pochodzenie" value="Ameryka Północna mieszaniec"></property>
     <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="częste"></property>
@@ -279,7 +279,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Zawilec mieszańcowy"></property>
     <property name="rodzina" value="Ranunculaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="nieokreślone"></property>
     <property name="rozmiary" value="do 120 cm wysokości"></property>
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -291,7 +291,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Zawciąg Nadmorski"></property>
     <property name="rodzina" value="Plumbaginaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="nieokreślone, piaszczyste wybrzeża nadmorskie"></property>
     <property name="rozmiary" value="15 cm, tworzt gęste kobierce"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="kwiaty" value="V-VII, pompony na krótkich bezlistnych łodyżkach"></property>
@@ -355,7 +355,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Rogownica Biebersteina"></property>
     <property name="rodzina" value="Caryophyllaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="Europa, Krym"></property>
     <property name="rozmiary" value="bylina zadarniająca, ekspansywna"></property>
     <property name="podlewanie" value="rzadkie lub umiarkowane"></property>
     <property name="nawożenie" value="rzadkie"></property>
@@ -501,7 +501,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Houttuynia"></property>
     <property name="rodzina" value="Saururaceae"></property>
-    <property name="pochodzenie" value="Azja, Chiny i Azja, Japonia"></property>
+    <property name="pochodzenie" value="Azja, Chiny i Japonia"></property>
     <property name="rozmiary" value="do 30 cm, rozrasta się rozłożyście"></property>
     <property name="stanowisko" value="widne"></property>
     <property name="kwiaty" value="VI-VIII,drobne,żółte, otoczone białymi płatkami"></property>
@@ -533,7 +533,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Margerytka, Złocień właściwy"></property>
     <property name="rodzina" value="Compositae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="Polska, rośnie na łąkach, pastwiskach"></property>
     <property name="rozmiary" value="do 50 cm wysokości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -590,7 +590,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Kocimiętka Faassena"></property>
     <property name="rodzina" value="Lamiaceae (Labiatae)"></property>
-    <property name="pochodzenie" value="Europa i Afryka, roślina śródziemnomorska"></property>
+    <property name="pochodzenie" value="Europa i Afryka i Azja Mniejsza, roślina śródziemnomorska"></property>
     <property name="rozmiary" value="gęste kępy pędów 30 - 50 cm wysokości"></property>
     <property name="podlewanie" value="rzadkie lub umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane lub rzadkie"></property>
@@ -663,7 +663,7 @@
     <property name="grupa" value="byliny"></property>
     <property name="nazwa" value="Sasanka"></property>
     <property name="rodzina" value="Ranunculaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="nieokreślone, tereny górksie"></property>
     <property name="rozmiary" value="dorasta do 25 cm"></property>
     <property name="stanowisko" value="słoneczne"></property>
     <property name="kwiaty" value="III-IV, fioletowopurpurowe z żółtym środkiem"></property>
@@ -1177,7 +1177,7 @@
     <property name="grupa" value="domowe"></property>
     <property name="nazwa" value="Cibora"></property>
     <property name="rodzina" value="Cyperaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="Afryka i Azja i Ameryka Południowa, rejony tropikalne"></property>
     <property name="rozmiary" value="do 1,5 m wysokości"></property>
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -1453,7 +1453,7 @@
     <property name="grupa" value="domowe"></property>
     <property name="nazwa" value="Laur szlachetny, Wawrzyn"></property>
     <property name="rodzina" value="Lauraceae"></property>
-    <property name="pochodzenie" value="Europa i Afryka, basen Morza śródziemnego"></property>
+    <property name="pochodzenie" value="Europa i Afryka i Azja Mniejsza, basen Morza śródziemnego"></property>
     <property name="rozmiary" value="krzew średniej wielkości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -1513,7 +1513,7 @@
     <property name="grupa" value="domowe"></property>
     <property name="nazwa" value="Nefrolepsis wysoki Paproć"></property>
     <property name="rodzina" value="Nephrolepidaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="Afryka i Azja i Ameryka Południowa, rejony tropikalne"></property>
     <property name="rozmiary" value="liście długości 80 cm"></property>
     <property name="podlewanie" value="umiarkowane, wrażliwy zarówno na nadmiar wody jak i przesuszenie"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -1573,7 +1573,7 @@
     <property name="grupa" value="domowe"></property>
     <property name="nazwa" value="Falenopsis"></property>
     <property name="rodzina" value="orchideaceae"></property>
-    <property name="pochodzenie" value=""></property>
+    <property name="pochodzenie" value="Azja i Australia i Ameryka Południowa"></property>
     <property name="rozmiary" value="50-70 cm"></property>
     <property name="podlewanie" value="rzadkie"></property>
     <property name="nawożenie" value="rzadkie"></property>
@@ -2117,7 +2117,7 @@
     <property name="grupa" value="krzewy"></property>
     <property name="nazwa" value="Ostrokrzew kolczasty"></property>
     <property name="rodzina" value="Ilicaceae"></property>
-    <property name="pochodzenie" value="Europa Południowa, Afryka Północna i Azja Mniejsza"></property>
+    <property name="pochodzenie" value="Europa i Afryka i Azja Mniejsza"></property>
     <property name="rozmiary" value="dorasta do 10 m"></property>
     <property name="podlewanie" value="umiarkowane lub częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -2158,7 +2158,7 @@
     <property name="grupa" value="krzewy"></property>
     <property name="nazwa" value="Ognik szkarłatny"></property>
     <property name="rodzina" value="Pyracantha"></property>
-    <property name="pochodzenie" value="Europa Południowowschodnia"></property>
+    <property name="pochodzenie" value="Europa, tereny południowowschodnie"></property>
     <property name="rozmiary" value="2-3 metrów wysokości"></property>
     <property name="podlewanie" value="umiarkowane lub rzadkie"></property>
     <property name="nawożenie" value="umiarkowane"></property>
@@ -2251,7 +2251,7 @@
     <property name="grupa" value="trawy"></property>
     <property name="nazwa" value="Miscanthus sinensis"></property>
     <property name="rodzina" value="Gramineae"></property>
-    <property name="pochodzenie" value="Azja, Chiny i Azja, Japonia"></property>
+    <property name="pochodzenie" value="Azja, Chiny i Japonia"></property>
     <property name="rozmiary" value="1-1,5 m"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>

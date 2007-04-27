@@ -24,7 +24,6 @@
 (defrule plant_campanula
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -36,7 +35,6 @@
 (defrule plant_centradenia
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -60,7 +58,6 @@
 (defrule plant_helichrysum_bracteatum
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
@@ -72,7 +69,6 @@
 (defrule plant_impatiens
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
@@ -84,7 +80,6 @@
 (defrule plant_lobelia_pendula
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -96,7 +91,6 @@
 (defrule plant_mentha_suaveolens
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -219,7 +213,7 @@
 	(property "pochodzenie" "dowolne"|"Europa")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
-	(property "stanowisko" "dowolne"|"słonecznenieokreślonewidne")
+	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
 	(refresh)
 =>
 	(assert (plant "Viola wittrockiana"))
@@ -228,7 +222,7 @@
 (defrule plant_werbena_tukana_denim_blue
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"Ameryka")
+	(property "pochodzenie" "dowolne"|"Ameryka Północna mieszaniec")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -240,7 +234,7 @@
 (defrule plant_werbena_tukana_scarlet
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"balkonowe")
-	(property "pochodzenie" "dowolne"|"Ameryka")
+	(property "pochodzenie" "dowolne"|"Ameryka Północna mieszaniec")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -276,7 +270,6 @@
 (defrule plant_anemone_x_hybrida
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"półcieniste")
@@ -288,7 +281,6 @@
 (defrule plant_armeria_maritima
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"")
 	(property "stanowisko" "dowolne"|"słoneczne")
 	(refresh)
 =>
@@ -352,7 +344,7 @@
 (defrule plant_cerastium_biebersteinii
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"")
+	(property "pochodzenie" "dowolne"|"Europa")
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -476,7 +468,6 @@
 (defrule plant_hosta_sieboldiana
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste"|"widne")
@@ -508,7 +499,6 @@
 (defrule plant_iris_barbata_syn._iris_germanica
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -530,7 +520,7 @@
 (defrule plant_leucanthemum_vulgare
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"")
+	(property "pochodzenie" "dowolne"|"Polska")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -545,7 +535,6 @@
 	(property "pochodzenie" "dowolne"|"Europa")
 	(property "podlewanie" "dowolne"|"brak")
 	(property "nawożenie" "dowolne"|"brak")
-	(property "stanowisko" "dowolne"|"nieokreślone")
 	(refresh)
 =>
 	(assert (plant "Lilium martagon"))
@@ -587,7 +576,7 @@
 (defrule plant_nepeta_x_faassenii
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"Europa"|"Afryka")
+	(property "pochodzenie" "dowolne"|"Europa"|"Afryka"|"Azja Mniejsza")
 	(property "podlewanie" "dowolne"|"rzadkie"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -632,7 +621,6 @@
 (defrule plant_phlox_douglasii
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
 	(refresh)
 =>
@@ -660,7 +648,6 @@
 (defrule plant_pulsatilla_vulgaris
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"byliny")
-	(property "pochodzenie" "dowolne"|"")
 	(property "stanowisko" "dowolne"|"słoneczne")
 	(refresh)
 =>
@@ -1006,7 +993,6 @@
 (defrule plant_caffea_arabica
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"częste")
 	(property "stanowisko" "dowolne"|"widne")
@@ -1174,7 +1160,7 @@
 (defrule plant_cyperus_papyrus
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"")
+	(property "pochodzenie" "dowolne"|"Afryka"|"Azja"|"Ameryka Południowa")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
@@ -1450,7 +1436,7 @@
 (defrule plant_laurus_nobilis
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"Europa"|"Afryka")
+	(property "pochodzenie" "dowolne"|"Europa"|"Afryka"|"Azja Mniejsza")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
@@ -1510,7 +1496,7 @@
 (defrule plant_nephrolepis_exaltata
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"")
+	(property "pochodzenie" "dowolne"|"Afryka"|"Azja"|"Ameryka Południowa")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
@@ -1522,7 +1508,6 @@
 (defrule plant_nertera_granadensis
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne ale nie słoneczne")
@@ -1570,7 +1555,7 @@
 (defrule plant_phalaenopsis
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"")
+	(property "pochodzenie" "dowolne"|"Azja"|"Australia"|"Ameryka Południowa")
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"widne")
@@ -1690,7 +1675,6 @@
 (defrule plant_rosa
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne"|"słoneczne")
@@ -1846,7 +1830,6 @@
 (defrule plant_vriesea
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"domowe")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
@@ -1996,7 +1979,6 @@
 (defrule plant_juniperus_virginiana_skyrocket
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"brak")
 	(property "nawożenie" "dowolne"|"brak")
 	(property "stanowisko" "dowolne"|"słoneczne"|"półcieniste")
@@ -2044,7 +2026,6 @@
 (defrule plant_thuja_occidentalis_teddy
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"iglaste")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "podlewanie" "dowolne"|"umiarkowane")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne"|"widne")
@@ -2129,7 +2110,7 @@
 (defrule plant_ilex_aquifolium
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
-	(property "pochodzenie" "dowolne"|"Europa Południowa")
+	(property "pochodzenie" "dowolne"|"Europa"|"Afryka"|"Azja Mniejsza")
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"widne")
@@ -2171,7 +2152,7 @@
 (defrule plant_pyracantha_coccinea
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"krzewy")
-	(property "pochodzenie" "dowolne"|"Europa Południowowschodnia")
+	(property "pochodzenie" "dowolne"|"Europa")
 	(property "podlewanie" "dowolne"|"umiarkowane"|"rzadkie")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"słoneczne")
@@ -2216,7 +2197,6 @@
 (defrule plant_arrhenaterum_bulbosum_variegatum
 	(declare (salience -10))
 	(property "grupa" "dowolne"|"trawy")
-	(property "pochodzenie" "dowolne"|"nieokreślone")
 	(property "stanowisko" "dowolne"|"słoneczne")
 	(refresh)
 =>

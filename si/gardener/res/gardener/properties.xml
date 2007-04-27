@@ -295,8 +295,8 @@
       <value>weigela florida</value>
    </property>
    <property name="pochodzenie">
-      <value/>
       <value>Afryka</value>
+      <value>Afryka i Azja i Ameryka Południowa, rejony tropikalne</value>
       <value>Afryka, Madagaskar</value>
       <value>Afryka, Wyspy Kanaryjskie</value>
       <value>Afryka, rejony południowe</value>
@@ -309,13 +309,13 @@
       <value>Ameryka Południowa, Kolumbia i Wenezuela</value>
       <value>Ameryka Południowa, mieszaniec</value>
       <value>Ameryka Północna</value>
+      <value>Ameryka Północna mieszaniec</value>
       <value>Ameryka Północna, Kalifornia</value>
       <value>Ameryka Północna, Karolina Północna i Południowa</value>
       <value>Ameryka Środkowa</value>
       <value>Ameryka Środkowa, Meksyk</value>
       <value>Ameryka Środkowa, Meksyk i Gwatemala</value>
       <value>Ameryka Środkowa, Panama i Kolumbia</value>
-      <value>Ameryka, mieszaniec</value>
       <value>Australia</value>
       <value>Australia i Azja, Indonezja</value>
       <value>Australia, Nowa Zelandia</value>
@@ -323,13 +323,14 @@
       <value>Azja</value>
       <value>Azja Mniejsza</value>
       <value>Azja Mniejsza i Europa, kraje śródziemnomorksie</value>
+      <value>Azja i Australia i Ameryka Południowa</value>
       <value>Azja i Europa</value>
       <value>Azja i Europa i Ameryka Północna</value>
       <value>Azja i Europa, kraje śródziemnomorskie</value>
       <value>Azja i Polska</value>
       <value>Azja, Archipelag Malajski</value>
       <value>Azja, Chiny</value>
-      <value>Azja, Chiny i Azja, Japonia</value>
+      <value>Azja, Chiny i Japonia</value>
       <value>Azja, Filipiny</value>
       <value>Azja, Indie</value>
       <value>Azja, Indonezja</value>
@@ -344,19 +345,24 @@
       <value>Azja, rejony południowowschodnie </value>
       <value>Azja, rejony wschodnie</value>
       <value>Europa</value>
-      <value>Europa Południowa, Afryka Północna i Azja Mniejsza</value>
-      <value>Europa Południowowschodnia</value>
-      <value>Europa i Afryka, basen Morza śródziemnego</value>
+      <value>Europa i Afryka i Azja Mniejsza</value>
+      <value>Europa i Afryka i Azja Mniejsza, basen Morza śródziemnego</value>
+      <value>Europa i Afryka i Azja Mniejsza, roślina śródziemnomorska</value>
       <value>Europa i Afryka, rejon morza śródziemnego</value>
-      <value>Europa i Afryka, roślina śródziemnomorska</value>
       <value>Europa i Azja</value>
       <value>Europa i Azja i Australia</value>
       <value>Europa i Azja, umiarkowany klimat</value>
       <value>Europa, Hiszpania</value>
+      <value>Europa, Krym</value>
       <value>Europa, Pireneje</value>
       <value>Europa, rejony południowowschodnie </value>
+      <value>Europa, tereny południowowschodnie</value>
       <value>Polska</value>
+      <value>Polska, rośnie na łąkach, pastwiskach</value>
       <value>nieokreślone</value>
+      <value>nieokreślone, piaszczyste wybrzeża nadmorskie</value>
+      <value>nieokreślone, tereny górksie</value>
+      <value>nieokreślone, umiarkowana strefa klimatyczna</value>
    </property>
    <property name="rozmiary">
       <value>-</value>
@@ -579,7 +585,6 @@
       <value>słoneczne, ciepłe, raczej suche</value>
       <value>słoneczne, osłonięte</value>
       <value>słoneczne, suche</value>
-      <value>słonecznenieokreślonewidne</value>
       <value>słoneczne lub widne</value>
       <value>widne</value>
       <value>widne ale nie słoneczne</value>
