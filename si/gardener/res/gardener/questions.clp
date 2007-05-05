@@ -30,7 +30,7 @@
 	(declare (salience -20))
 	(step "osłonięcie1")
 =>
-	(assert (question "Jakie jest umiejscowienie stanowiska?;wśrod budynków;wśrod drzew;nieosłonięte;nie wiem"))
+	(assert (question "Jakie jest umiejscowienie stanowiska?;wśród budynków;wśród drzew;nieosłonięte;nie wiem"))
 )
 
 (defrule question_osloniecie2
@@ -243,7 +243,7 @@
 (defrule answer_osloniecie1_wsrod_budynkow
 	(declare (salience -20))
 	?i <- (step "osłonięcie1")
-	?j <- (answer "wśrod budynków")
+	?j <- (answer "wśród budynków")
 =>
 	(retract ?i)
 	(retract ?j)
@@ -253,7 +253,7 @@
 (defrule answer_osloniecie1_wsrod_drzew
 	(declare (salience -20))
 	?i <- (step "osłonięcie1")
-	?j <- (answer "wśrod drzew")
+	?j <- (answer "wśród drzew")
 =>
 	(retract ?i)
 	(retract ?j)

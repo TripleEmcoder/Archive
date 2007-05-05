@@ -26,8 +26,8 @@ namespace plants
                     new string[] { ", " }, StringSplitOptions.None);
 
                 //if (!parts[0].Contains("nieokreślone"))
-                    output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
-                        Name, parts[0].Replace(" lub ", "\"|\""));
+                output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
+                    Name, parts[0].Replace(" lub ", "\"|\""));
             }
 
             if (Name == "pochodzenie")
@@ -36,33 +36,42 @@ namespace plants
                     new string[] { ", " }, StringSplitOptions.None);
 
                 //if (!parts[0].Contains("nieokreślone"))
-                    output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
-                        Name, parts[0].Replace(" i ", "\"|\""));
+                output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
+                    Name, parts[0].Replace(" i ", "\"|\""));
             }
 
             if (Name == "kwiaty")
             {
-                output.Write("\t(property \"kwiaty\" \"dowolne\"");
+                output.Write("\t(property \"kwiaty\" ");
 
                 Dictionary<string, string[]> groups = new Dictionary<string, string[]>();
 
-                groups["brak"] = new string[] { "brak" };
+                groups["brak"] = new string[] { "brak", "rzadk" };
                 groups["białe"] = new string[] { "biał", "siw", "kremow" };
                 groups["czerwone"] = new string[] { "czerwon", "rdzaw", "bordow", "malinow" };
                 groups["fioletowe"] = new string[] { "fioletow", "liliow" };
                 groups["niebieskie"] = new string[] { "niebieskie", "błękit" };
-                groups["pomarańczowe"] = new string[] { "pamarańczow" };
+                groups["pomarańczowe"] = new string[] { "pomarańczow" };
                 groups["purpurowe"] = new string[] { "purpurow" };
                 groups["różowe"] = new string[] { "różow", "pąsow" };
                 groups["żółte"] = new string[] { "żółt", "złot" };
                 groups["różnobarwne"] = new string[] { "różnobarwn" };
 
+                List<string> selectors = new List<string>();
+                string value = Value.ToLower();
+
                 foreach (KeyValuePair<string, string[]> group in groups)
                     foreach (string part in group.Value)
-                        if (Value.ToLower().Contains(part))
-                            output.Write("|\"{0}\"", group.Key);
+                        if (value.Contains(part) && !selectors.Contains(group.Key))
+                            selectors.Add(group.Key);
 
-                output.WriteLine(")");
+                if (selectors.Count == 0)
+                    selectors.Add("inne");
+
+                if (!selectors.Contains("brak"))
+                    selectors.Insert(0, "dowolne");
+
+                output.WriteLine("\"{0}\")", string.Join("\"|\"", selectors.ToArray()));
             }
         }
     }

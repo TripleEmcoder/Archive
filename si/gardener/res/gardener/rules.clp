@@ -17,8 +17,8 @@
 	(assert (property assert "nawożenie" "częste"))
 	(assert (property assert "nawożenie" "umiarkowane"))
 	(assert (property assert "nawożenie" "rzadkie"))
-	(assert (property assert "pochodzenie" "dowolne"))
 	(assert (property assert "kwiaty" "dowolne"))
+	(assert (property assert "pochodzenie" "dowolne"))
 )
 
 (defrule rule_stanowisko1
@@ -56,21 +56,16 @@
 )
 
 (defrule rule_stanowisko6
-	(answer "orientacja" "od południa")
+	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
 =>
-	(assert (property retract "stanowisko" "cieniste"))
+	(assert (property retract "stanowisko" "słoneczne"))
 )
 
 (defrule rule_stanowisko7
-	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
+	(answer "osłonięcie1" ~"wśród budynków"&~"wśród drzew")
 =>
-	(assert (property retract "stanowisko" "słoneczne"))
-)
-
-(defrule rule_stanowisko8
-	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
-=>
-	(assert (property retract "stanowisko" "słoneczne"))
+	(assert (property retract "stanowisko" "półcieniste"))
+	(assert (property retract "stanowisko" "cieniste"))
 )
 
 (defrule rule_podlewanie1
@@ -149,6 +144,7 @@
 (defrule rule_kwiaty1
 	(answer "kwiaty1" "nie")
 =>
+	(assert (property retract "kwiaty" "dowolne"))
 	(assert (property assert "kwiaty" "brak"))
 )
 

@@ -29,8 +29,8 @@
 	lokalizacja3    -> orientacja      [ label = "w pobliżu okna" ];
 	lokalizacja3    -> kwiaty1         [ label = "zdala od okna"  ];
 	lokalizacja3    -> kwiaty1         [ label = "nie wiem"       ];
-	osłonięcie1     -> kwiaty1         [ label = "wśrod budynków" ];
-	osłonięcie1     -> kwiaty1         [ label = "wśrod drzew"    ];
+	osłonięcie1     -> kwiaty1         [ label = "wśród budynków" ];
+	osłonięcie1     -> kwiaty1         [ label = "wśród drzew"    ];
 	osłonięcie1     -> kwiaty1         [ label = "nieosłonięte"   ];
 	osłonięcie1     -> kwiaty1         [ label = "nie wiem"       ];
 
