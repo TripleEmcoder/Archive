@@ -55,21 +55,11 @@ public class ClipsManager implements Observer
 		}
 	}
 
-	public void reset()
+	public void restart()
 	{
 		answers.clear();
 		jClips.reset();
-	}
-
-	public void run()
-	{
 		jClips.run();
-	}
-
-	public void restart()
-	{
-		reset();
-		run();
 	}
 
 	private void assertFact(String fact)
@@ -77,21 +67,26 @@ public class ClipsManager implements Observer
 		String cmd = String.format(ASSERT_COMMAND, fact);
 		System.err.println(cmd);
 		jClips.executeCommand(cmd);
-		jClips.run();
 	}
 
 	public void sendAnswer(String answer)
 	{
 		answers.add(answer);
 		assertFact(String.format(ANSWER_FORMAT, answer));
+		jClips.run();
 	}
 
 	public void cancelLastAnswer()
 	{
 		if (!answers.isEmpty())
 		{
-			String fact = answers.remove(answers.size() - 1);
-			assertFact(String.format(CANCEL_FORMAT, fact));
+			jClips.reset();
+			answers.remove(answers.size() - 1);
+			for (String answer : answers)
+			{
+				assertFact(String.format(ANSWER_FORMAT, answer));
+			}
+			jClips.run();
 		}
 	}
 

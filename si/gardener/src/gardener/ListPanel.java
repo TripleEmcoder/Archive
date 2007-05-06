@@ -22,7 +22,7 @@ public class ListPanel extends JPanel
 		this.numbered = numbered;
 		listModel = new DefaultListModel();
 		list = new JList(listModel);
-		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
 		JScrollPane listScroller = new JScrollPane(list);
 
