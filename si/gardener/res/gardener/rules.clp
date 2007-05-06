@@ -31,37 +31,44 @@
 )
 
 (defrule rule_stanowisko2
+	(answer "lokalizacja1" "w ogrodzie")
+=>
+	(assert (property retract "grupa" "balkonowe"))
+	(assert (property retract "grupa" "domowe"))
+)
+
+(defrule rule_stanowisko3
 	(answer "lokalizacja2" "w pokoju"|"na parapecie")
 =>
 	(assert (property retract "grupa" "balkonowe"))
 )
 
-(defrule rule_stanowisko3
+(defrule rule_stanowisko4
 	(answer "lokalizacja2" "na balkonie")
 =>
 	(assert (property retract "grupa" "domowe"))
 )
 
-(defrule rule_stanowisko4
+(defrule rule_stanowisko5
 	(answer "lokalizacja3" "zdala od okna")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 	(assert (property retract "stanowisko" "widne"))
 )
 
-(defrule rule_stanowisko5
+(defrule rule_stanowisko6
 	(answer "orientacja" "od północy")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 )
 
-(defrule rule_stanowisko6
+(defrule rule_stanowisko7
 	(answer "osłonięcie1" "wśród budynków"|"wśród drzew")
 =>
 	(assert (property retract "stanowisko" "słoneczne"))
 )
 
-(defrule rule_stanowisko7
+(defrule rule_stanowisko8
 	(answer "osłonięcie1" ~"wśród budynków"&~"wśród drzew")
 =>
 	(assert (property retract "stanowisko" "półcieniste"))
@@ -81,15 +88,16 @@
 	(answer "osłonięcie2" "nie")
 	(answer "opady" "częste")
 =>
-	(assert (property retract "podlewanie" "umiarkowanie"))
-	(assert (property retract "podlewanie" "rzadko"))
+	(assert (property retract "podlewanie" "umiarkowane"))
+	(assert (property retract "podlewanie" "rzadkie"))
 )
+
 
 (defrule rule_podlewanie3
 	(answer "osłonięcie2" "nie")
 	(answer "opady" "przeciętne")
 =>
-	(assert (property retract "podlewanie" "rzadko"))
+	(assert (property retract "podlewanie" "rzadkie"))
 )
 
 (defrule rule_podlewanie4
@@ -99,7 +107,7 @@
 	(answer "pielęgnacja" "nie")
 =>
 	(assert (property retract "podlewanie" "umiarkowane"))
-	(assert (property retract "podlewanie" "częśte"))
+	(assert (property retract "podlewanie" "częste"))
 )
 
 (defrule rule_podlewanie5

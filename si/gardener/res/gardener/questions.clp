@@ -1,4 +1,4 @@
-(defrule question_lokalizacja1
+﻿(defrule question_lokalizacja1
 	(declare (salience -20))
 	(step "lokalizacja1")
 =>
@@ -37,7 +37,7 @@
 	(declare (salience -20))
 	(step "osłonięcie2")
 =>
-	(assert (question "Czy stanowisko jest osłonięte od opadów?;nie;nie wiem;tak"))
+	(assert (question "Czy stanowisko jest osłonięte od opadów?;tak;nie;nie wiem"))
 )
 
 (defrule question_opady

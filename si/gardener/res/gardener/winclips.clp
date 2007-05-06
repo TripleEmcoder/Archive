@@ -9,6 +9,7 @@
 )
 
 (defrule tool_send_debug
+	(declare (salience 20))
 	?i <- (debug ?action ?name ?value)
 =>
 	(retract ?i)

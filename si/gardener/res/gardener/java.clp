@@ -12,7 +12,7 @@
 	?i <- (debug ?action ?name ?value)
 =>
 	(retract ?i)
-	(printout t ?action ": " ?name "=" ?value crlf)
+	(send-to-java (str-cat ?action ": " ?name "=" ?value))
 )
 
 (defrule tool_send_question

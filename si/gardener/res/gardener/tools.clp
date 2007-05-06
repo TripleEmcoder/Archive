@@ -4,6 +4,7 @@
 =>
 	(assert (answer ?step ?answer))
 	(assert (refresh reassert))
+	(assert (debug store ?step ?answer))
 )
 
 (defrule tool_initial_refresh
@@ -48,4 +49,5 @@
 	(not (property ?name ?value))
 =>
 	(retract ?i)
+;	(assert (debug cleanup ?name ?value))
 )
