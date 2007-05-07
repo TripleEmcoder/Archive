@@ -772,7 +772,7 @@
 	(property "podlewanie" "dowolne"|"rzadkie")
 	(property "nawożenie" "dowolne"|"rzadkie")
 	(property "stanowisko" "dowolne"|"słoneczne")
-	(property "kwiaty" "brak"|"białe"|"fioletowe")
+	(property "kwiaty" "dowolne"|"białe"|"fioletowe")
 	(refresh)
 =>
 	(assert (plant "Salvia officinalis"))
@@ -876,7 +876,7 @@
 	(property "podlewanie" "dowolne"|"umiarkowane"|"częste")
 	(property "nawożenie" "dowolne"|"umiarkowane")
 	(property "stanowisko" "dowolne"|"cieniste")
-	(property "kwiaty" "brak"|"białe"|"fioletowe"|"pomarańczowe")
+	(property "kwiaty" "dowolne"|"białe"|"fioletowe"|"pomarańczowe")
 	(refresh)
 =>
 	(assert (plant "Viola odorata"))

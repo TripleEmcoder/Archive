@@ -20,6 +20,12 @@
       <load source="{$output}.htm" mode="html" />
       <transform stylesheet="SuperOgrodPlant.xslt" />
 
+      <split query="/plant/photo" threads="1">
+        <download source="{$input}/{/photo/@path}" destination="{$output}.jpg" />
+      </split>
+    </split>
+
+    <split query="/encyclopedia/plant">
       <replace query="/plant/property[@name='pochodzenie']/@value">
         <occurrence original="Azja Południowo-Wschodnia" replacement="Azja, rejony południowowschodnie " />
         <occurrence original="południowo-wschodnia Europa" replacement="Europa, rejony południowowschodnie " />
@@ -161,10 +167,12 @@
       <replace query="/plant/property[@name='ciekawe cechy']/@value">
         <occurrence original="^-$" replacement="brak" />
       </replace>
+    </split>
 
-      <split query="/plant/photo" threads="1">
-        <download source="{$input}/{/photo/@path}" destination="{$output}.jpg" />
-      </split>
+    <split query="/encyclopedia/plant[@group!='balkonowe' and @group!='domowe']">
+      <replace query="/plant/property[@name='kwiaty']/@value">
+        <occurrence original="rzadko" replacement="sporadycznie" />
+      </replace>
     </split>
 
     <transform stylesheet="SuperOgrodCleanup.xslt" />

@@ -717,7 +717,7 @@
     <property name="podlewanie" value="rzadkie"></property>
     <property name="nawożenie" value="rzadkie"></property>
     <property name="stanowisko" value="słoneczne, ciepłe"></property>
-    <property name="kwiaty" value="wargowe fioletowe rzadko białe"></property>
+    <property name="kwiaty" value="wargowe fioletowe sporadycznie białe"></property>
     <property name="ciekawe cechy" value="Jest rośliną leczniczą i przyprawową cenioną już w starożytności. Ma też walory dekoracyjne. Łodygi są proste łukowato przewieszające się, liście lancetowate kutnerowato owłosione. Cała roślina mocno przyjemnie pachnie a w porze kwitnienia przyciąga roje pszczól i trzemieli. Roślina raczej słabo odporna na mrozy, odmiany pstre właściwie zawsze przemarzną dlatego lepiej sadzić w przenośnych donicach."></property>
   </plant>
   <plant name="Saxifraga arendsii">
@@ -813,7 +813,7 @@
     <property name="podlewanie" value="umiarkowane lub częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="cieniste, wilgotne, próchnicze"></property>
-    <property name="kwiaty" value="głównie ciemnofioletowe, również białe, rzadko pomarańczowe"></property>
+    <property name="kwiaty" value="głównie ciemnofioletowe, również białe, sporadycznie pomarańczowe"></property>
     <property name="ciekawe cechy" value="Gatunek ten sadzono już w ogrodach starożytnych, roślina obrzędowa, częsty temat mitów i legend, występuje w poezji równie często jak róża, woń kwiatów zaliczana do najszlachetniejszych aromatów, raz posadzona w ogrodzie pozostaje w nim na zawsze, nasiona przenoszone są przez mrówki."></property>
   </plant>
   <plant name="Abutilon megapotamicum">
