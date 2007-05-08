@@ -32,7 +32,7 @@ public class SI
 
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(50, 50, 950, 650);
+		frame.setBounds(50, 50, 950, 670);
 
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 
@@ -97,7 +97,6 @@ public class SI
 					clipsManager.load(filename);
 				clipsManager.restart();
 			}
-
 		});
 	}
 

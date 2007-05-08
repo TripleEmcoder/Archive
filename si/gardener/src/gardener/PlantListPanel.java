@@ -14,15 +14,6 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 		list.getSelectionModel().addListSelectionListener(this);
 	}
 
-	public void addElement(String element)
-	{
-		int index = 0;
-		while (index < listModel.getSize()
-				&& element.compareTo((String) listModel.get(index)) > 0)
-			index++;
-		listModel.add(index, element);
-	}
-
 	public void valueChanged(ListSelectionEvent e)
 	{
 		ListSelectionModel lsm = (ListSelectionModel)e.getSource();
