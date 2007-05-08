@@ -63,7 +63,7 @@ public class SI
 		plantListPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
-
+		
 		plantInfoPanel.setPreferredSize(new Dimension(200, 200-10));
 		plantInfoPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Opis roœliny"),

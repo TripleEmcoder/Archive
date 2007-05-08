@@ -1,5 +1,7 @@
 package gardener;
 
+import java.util.List;
+
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -24,4 +26,15 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 			SI.plantInfoPanel.setPlant(plant);
 		}
 	}
+
+	public void updateList(List<String> newList)
+	{
+		for (String element : newList)
+		{
+			if (!listModel.contains(element))
+				addElement(element);	
+		}
+		//Enumeration<String> x = listModel.elements();
+	}
+	
 }

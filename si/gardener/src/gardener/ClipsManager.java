@@ -12,6 +12,9 @@ import java.util.Observer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.TitledBorder;
+
 import jclips.JClips;
 
 public class ClipsManager implements Observer
@@ -88,7 +91,7 @@ public class ClipsManager implements Observer
 	{
 		String message = (String) arg;
 		if (!message.startsWith("plant"))
-			System.err.println(message);
+		System.err.println(message);
 
 		final Matcher finalQuestionMatcher = FINAL_QUESTION_PATTERN
 				.matcher(message);
@@ -124,6 +127,11 @@ public class ClipsManager implements Observer
 		for (String plant : plants)
 			SI.plantListPanel.addElement(plant);
 
+		String title = String.format("Lista roœlin (%d)", plants.size());
+		((TitledBorder) ((CompoundBorder) SI.plantListPanel.getBorder())
+				.getOutsideBorder()).setTitle(title);
+		SI.plantListPanel.repaint();
+		
 		if (currentQuestion != null && plants.size() > 1)
 			SI.questionPanel.setQuestion(currentQuestion, currentAnswers);
 		else
