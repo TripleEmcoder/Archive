@@ -177,3 +177,22 @@
 	(assert (property "kwiaty" "!=" "dowolne"))
 	(assert (property "kwiaty" "=" ?kolor))
 )
+
+(defrule rule_wysokosc1
+	(answer "lokalizacja2" "na parapecie")
+=>
+	(assert (property "wysokość" "<=" 100))
+)
+
+(defrule rule_wysokosc2
+	(answer "lokalizacja3" "na kredensie")
+=>
+	(assert (property "wysokość" "<=" 100))
+)
+
+(defrule rule_wysokosc3
+	(answer "lokalizacja3" "na szafie")
+=>
+	(assert (property "wysokość" "<=" 50))
+)
+

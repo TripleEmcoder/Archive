@@ -2,7 +2,8 @@
 {
 	lokalizacja1    [ label = "Gdzie zostanie posadzona roślina?"             ];
 	lokalizacja2    [ label = "Gdzie zostanie posadzona roślina?"             ];
-	lokalizacja3    [ label = "Gdzie zostanie posadzona roślina?"             ];
+	lokalizacja3    [ label = "Gdzie będzie stać doniczka?"                   ];
+	lokalizacja4    [ label = "Gdzie będzie stać doniczka?"                   ];
 	orientacja      [ label = "Jakie jest umiejscowienie stanowiska?"         ];
 	osłonięcie1     [ label = "Jakie jest umiejscowienie stanowiska?"         ];
 	osłonięcie2     [ label = "Czy stanowisko jest osłonięte od opadów?"      ];
@@ -23,16 +24,20 @@
 	lokalizacja2    -> orientacja      [ label = "na balkonie"    ];
 	lokalizacja2    -> orientacja      [ label = "na parapecie"   ];
 	lokalizacja2    -> kwiaty1         [ label = "nie wiem"       ];
-	orientacja      -> kwiaty1         [ label = "od północy"     ];
+	lokalizacja3    -> lokalizacja4         [ label = "na podłodze"    ];
+	lokalizacja3    -> lokalizacja4         [ label = "na kredensie"   ];
+	lokalizacja3    -> lokalizacja4         [ label = "na szafie"      ];
+	lokalizacja3    -> kwiaty1         [ label = "nie wiem"       ];
+	orientacja      -> kwiaty1    [ label = "od północy"     ];
 	orientacja      -> osłonięcie1     [ label = "od południa"    ];
 	orientacja      -> kwiaty1         [ label = "nie wiem"       ];
-	lokalizacja3    -> orientacja      [ label = "w pobliżu okna" ];
-	lokalizacja3    -> kwiaty1         [ label = "zdala od okna"  ];
-	lokalizacja3    -> kwiaty1         [ label = "nie wiem"       ];
-	osłonięcie1     -> kwiaty1         [ label = "wśród budynków" ];
-	osłonięcie1     -> kwiaty1         [ label = "wśród drzew"    ];
-	osłonięcie1     -> kwiaty1         [ label = "nieosłonięte"   ];
-	osłonięcie1     -> kwiaty1         [ label = "nie wiem"       ];
+	lokalizacja4    -> orientacja      [ label = "w pobliżu okna" ];
+	lokalizacja4    -> kwiaty1    [ label = "zdala od okna"  ];
+	lokalizacja4    -> kwiaty1         [ label = "nie wiem"       ];
+	osłonięcie1     -> kwiaty1    [ label = "wśród budynków" ];
+	osłonięcie1     -> kwiaty1    [ label = "wśród drzew"    ];
+	osłonięcie1     -> kwiaty1    [ label = "nieosłonięte"   ];
+	osłonięcie1     -> kwiaty1    [ label = "nie wiem"       ];
 
 	//ogrod
 	lokalizacja1    -> osłonięcie2     [ label = "w ogrodzie"     ];

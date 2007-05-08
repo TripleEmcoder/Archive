@@ -16,7 +16,14 @@
 	(declare (salience -20))
 	(step "lokalizacja3")
 =>
-	(assert (question "Gdzie zostanie posadzona roślina?;w pobliżu okna;zdala od okna;nie wiem"))
+	(assert (question "Gdzie będzie stać doniczka?;na podłodze;na kredensie;na szafie;nie wiem"))
+)
+
+(defrule question_lokalizacja4
+	(declare (salience -20))
+	(step "lokalizacja4")
+=>
+	(assert (question "Gdzie będzie stać doniczka?;w pobliżu okna;zdala od okna;nie wiem"))
 )
 
 (defrule question_orientacja
@@ -180,9 +187,49 @@
 	(assert (step "kwiaty1"))
 )
 
-(defrule answer_lokalizacja3_w_poblizu_okna
+(defrule answer_lokalizacja3_na_podlodze
 	(declare (salience -20))
 	?i <- (step "lokalizacja3")
+	?j <- (answer "na podłodze")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "lokalizacja4"))
+)
+
+(defrule answer_lokalizacja3_na_kredensie
+	(declare (salience -20))
+	?i <- (step "lokalizacja3")
+	?j <- (answer "na kredensie")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "lokalizacja4"))
+)
+
+(defrule answer_lokalizacja3_na_szafie
+	(declare (salience -20))
+	?i <- (step "lokalizacja3")
+	?j <- (answer "na szafie")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "lokalizacja4"))
+)
+
+(defrule answer_lokalizacja3_nie_wiem
+	(declare (salience -20))
+	?i <- (step "lokalizacja3")
+	?j <- (answer "nie wiem")
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (step "kwiaty1"))
+)
+
+(defrule answer_lokalizacja4_w_poblizu_okna
+	(declare (salience -20))
+	?i <- (step "lokalizacja4")
 	?j <- (answer "w pobliżu okna")
 =>
 	(retract ?i)
@@ -190,9 +237,9 @@
 	(assert (step "orientacja"))
 )
 
-(defrule answer_lokalizacja3_zdala_od_okna
+(defrule answer_lokalizacja4_zdala_od_okna
 	(declare (salience -20))
-	?i <- (step "lokalizacja3")
+	?i <- (step "lokalizacja4")
 	?j <- (answer "zdala od okna")
 =>
 	(retract ?i)
@@ -200,9 +247,9 @@
 	(assert (step "kwiaty1"))
 )
 
-(defrule answer_lokalizacja3_nie_wiem
+(defrule answer_lokalizacja4_nie_wiem
 	(declare (salience -20))
-	?i <- (step "lokalizacja3")
+	?i <- (step "lokalizacja4")
 	?j <- (answer "nie wiem")
 =>
 	(retract ?i)
