@@ -60,7 +60,7 @@ public class SI
 				BorderFactory.createTitledBorder(lowered, "Pytanie"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
-		//plantListPanel.setPreferredSize(new Dimension(250, 375 - 10));
+		plantListPanel.setPreferredSize(new Dimension(250, 375 - 10));
 		plantListPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));

@@ -68,8 +68,6 @@ public class QuestionPanel extends JPanel implements ActionListener
 		add(Box.createVerticalGlue());
 		add(buttonPanel);
 		add(Box.createVerticalStrut(10));
-
-		// clearQuestion();
 	}
 
 	public void actionPerformed(ActionEvent e)
