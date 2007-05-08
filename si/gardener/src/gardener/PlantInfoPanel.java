@@ -1,9 +1,7 @@
 package gardener;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -121,7 +118,6 @@ public class PlantInfoPanel extends JPanel
 	{
 		fields = new HashMap<String, JTextComponent>();
 		imagePanel = new ImagePanel();
-		//imagePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 5));
 		List<FieldProperty> fieldProperties = new ArrayList<FieldProperty>();
 
 		fieldProperties.add(new FieldProperty("Nazwa", 1, 20));

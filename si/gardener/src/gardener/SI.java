@@ -1,6 +1,5 @@
 package gardener;
 
-import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 
@@ -32,7 +31,7 @@ public class SI
 
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(50, 50, 950, 670);
+		frame.setBounds(50, 50, 950, 680);
 
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 
@@ -49,7 +48,7 @@ public class SI
 		rightPanel.setPreferredSize(new Dimension(410 - 5, 550 - 10));
 		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-		historyPanel.setPreferredSize(new Dimension(400, 375 - 10));
+		historyPanel.setPreferredSize(new Dimension(450, 375 - 10));
 		//historyPanel.setMaximumSize(historyPanel.getPreferredSize());
 		historyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory
 				.createTitledBorder(lowered, "Historia pytañ"), BorderFactory
