@@ -239,8 +239,15 @@
       <replace query="/plant/property[@name='kwiaty']/@value">
         <occurrence original="brak" replacement="różowe" />
       </replace>
-    </split>    
+    </split>
 
+    <split query="/encyclopedia/plant[@name='Echinocactus grusonii']">
+      <trace message="(fix) => {/plant/@name}" />
+      <replace query="/plant/property[@name='rozmiary']/@value">
+        <occurrence original="do 1,3 m wysokości i 0,8 średnicy;" replacement="do 30 cm wysokości" />
+      </replace>
+    </split>
+    
     <save destination="{$output}.xml" />
   </flow>
 </job>

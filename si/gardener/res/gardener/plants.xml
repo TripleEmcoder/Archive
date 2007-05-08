@@ -817,16 +817,16 @@
     <property name="ciekawe cechy" value="Jeżówka kwitnie od lipca do października. Roślina lecznicza. Surowcami zielarskimi są ziele i korzeń jeżówki purpurowej."></property>
   </plant>
   <plant name="Echinocactus grusonii">
-    <property name="grupa" value="domowe"></property>
-    <property name="nazwa" value="Echinokaktus Grusona"></property>
-    <property name="rodzina" value="Cactaceae"></property>
-    <property name="pochodzenie" value="Ameryka Środkowa, Meksyk"></property>
-    <property name="rozmiary" value="do 1,3 m wysokości i 0,8 średnicy;"></property>
-    <property name="podlewanie" value="rzadkie"></property>
-    <property name="nawożenie" value="rzadkie"></property>
-    <property name="stanowisko" value="słoneczne"></property>
-    <property name="kwiaty" value="żółte"></property>
-    <property name="ciekawe cechy" value="zwany potocznie &quot;fotel teściowej&quot;"></property>
+    <property name="grupa" value="domowe" />
+    <property name="nazwa" value="Echinokaktus Grusona" />
+    <property name="rodzina" value="Cactaceae" />
+    <property name="pochodzenie" value="Ameryka Środkowa, Meksyk" />
+    <property name="rozmiary" value="do 30 cm wysokości" />
+    <property name="podlewanie" value="rzadkie" />
+    <property name="nawożenie" value="rzadkie" />
+    <property name="stanowisko" value="słoneczne" />
+    <property name="kwiaty" value="żółte" />
+    <property name="ciekawe cechy" value="zwany potocznie &quot;fotel teściowej&quot;" />
   </plant>
   <plant name="Elymus arenarius">
     <property name="grupa" value="trawy"></property>

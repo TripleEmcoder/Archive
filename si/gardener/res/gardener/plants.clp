@@ -1119,7 +1119,7 @@
 	(property "wysokość" ">=" ?min)
 	(test (>= 0 ?min))
 	(property "wysokość" "<=" ?max)
-	(test (<= 130 ?max))
+	(test (<= 30 ?max))
 	(property "podlewanie" "=" "dowolne"|"rzadkie")
 	(property "nawożenie" "=" "dowolne"|"rzadkie")
 	(property "stanowisko" "=" "dowolne"|"słoneczne")
