@@ -17,6 +17,7 @@
 	(assert (property "nawożenie" "=" "częste"))
 	(assert (property "nawożenie" "=" "umiarkowane"))
 	(assert (property "nawożenie" "=" "rzadkie"))
+	(assert (property "kwiaty" "=" "brak"))
 	(assert (property "kwiaty" "=" "dowolne"))
 	(assert (property "pochodzenie" "=" "dowolne"))
 	(assert (property "wysokość" ">=" 0))
@@ -162,7 +163,6 @@
 	(answer "kwiaty1" "nie")
 =>
 	(assert (property "kwiaty" "!=" "dowolne"))
-	(assert (property "kwiaty" "=" "brak"))
 )
 
 (defrule rule_kwiaty2
