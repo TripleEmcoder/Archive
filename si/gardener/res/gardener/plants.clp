@@ -131,6 +131,13 @@
 (defrule plant_mentha_suaveolens
 	(declare (salience -10))
 	(property "grupa" "=" "dowolne"|"balkonowe")
+	(property "wysokość" ">=" ?min)
+	(test (>= 0 ?min))
+	(property "wysokość" "<=" ?max)
+	(test (<= 100 ?max))
+	(property "podlewanie" "=" "dowolne"|"umiarkowane")
+	(property "nawożenie" "=" "dowolne"|"częste")
+	(property "stanowisko" "=" "dowolne"|"słoneczne")
 	(property "kwiaty" "=" "dowolne"|"inne")
 	(refresh)
 =>
@@ -140,7 +147,15 @@
 (defrule plant_pelargonium_peltatum
 	(declare (salience -10))
 	(property "grupa" "=" "dowolne"|"balkonowe")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "pochodzenie" "=" "dowolne"|"Afryka")
+	(property "wysokość" ">=" ?min)
+	(test (>= 0 ?min))
+	(property "wysokość" "<=" ?max)
+	(test (<= 100 ?max))
+	(property "podlewanie" "=" "dowolne"|"umiarkowane")
+	(property "nawożenie" "=" "dowolne"|"częste")
+	(property "stanowisko" "=" "dowolne"|"słoneczne")
+	(property "kwiaty" "=" "brak")
 	(refresh)
 =>
 	(assert (plant "Pelargonium peltatum"))
@@ -149,7 +164,15 @@
 (defrule plant_pelargonium_peltatum
 	(declare (salience -10))
 	(property "grupa" "=" "dowolne"|"balkonowe")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "pochodzenie" "=" "dowolne"|"Afryka")
+	(property "wysokość" ">=" ?min)
+	(test (>= 0 ?min))
+	(property "wysokość" "<=" ?max)
+	(test (<= 100 ?max))
+	(property "podlewanie" "=" "dowolne"|"umiarkowane")
+	(property "nawożenie" "=" "dowolne"|"częste")
+	(property "stanowisko" "=" "dowolne"|"słoneczne")
+	(property "kwiaty" "=" "brak")
 	(refresh)
 =>
 	(assert (plant "Pelargonium peltatum"))

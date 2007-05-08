@@ -98,39 +98,39 @@
   </plant>
   <plant name="Mentha suaveolens">
     <property name="grupa" value="balkonowe"></property>
-    <property name="nazwa" value="nieokreślone"></property>
-    <property name="rodzina" value="nieokreślone"></property>
-    <property name="pochodzenie" value="nieokreślone"></property>
-    <property name="rozmiary" value="nieokreślone"></property>
-    <property name="podlewanie" value="nieokreślone"></property>
-    <property name="nawożenie" value="nieokreślone"></property>
-    <property name="stanowisko" value="nieokreślone"></property>
-    <property name="kwiaty" value="nieokreślone"></property>
-    <property name="ciekawe cechy" value="nieokreślone"></property>
+    <property name="nazwa" value="Mięta balkonowa"></property>
+    <property name="rodzina" value="Labiatae"></property>
+    <property name="pochodzenie" value="nieokreślone, umiarkowana strefa klimatyczna"></property>
+    <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
+    <property name="podlewanie" value="umiarkowane"></property>
+    <property name="nawożenie" value="częste"></property>
+    <property name="stanowisko" value="słoneczne"></property>
+    <property name="kwiaty" value="nie mają znaczenia zdobniczego"></property>
+    <property name="ciekawe cechy" value="polecana do uprawy w wiszących pojemnikach ze względu na silnie rosnące i zwisające pędy, wydziela aromatyczny zapach"></property>
   </plant>
   <plant name="Pelargonium peltatum">
     <property name="grupa" value="balkonowe"></property>
-    <property name="nazwa" value="nieokreślone"></property>
-    <property name="rodzina" value="nieokreślone"></property>
-    <property name="pochodzenie" value="nieokreślone"></property>
-    <property name="rozmiary" value="nieokreślone"></property>
-    <property name="podlewanie" value="nieokreślone"></property>
-    <property name="nawożenie" value="nieokreślone"></property>
-    <property name="stanowisko" value="nieokreślone"></property>
-    <property name="kwiaty" value="nieokreślone"></property>
-    <property name="ciekawe cechy" value="nieokreślone"></property>
+    <property name="nazwa" value="Pelargonia bluszczolistna biała"></property>
+    <property name="rodzina" value="Geraniaceae"></property>
+    <property name="pochodzenie" value="Afryka, rejony południowe, mieszaniec"></property>
+    <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
+    <property name="podlewanie" value="umiarkowane"></property>
+    <property name="nawożenie" value="częste"></property>
+    <property name="stanowisko" value="słoneczne"></property>
+    <property name="kwiaty" value="brak"></property>
+    <property name="ciekawe cechy" value="mocno krzewiąca roślina"></property>
   </plant>
   <plant name="Pelargonium peltatum">
     <property name="grupa" value="balkonowe"></property>
-    <property name="nazwa" value="nieokreślone"></property>
-    <property name="rodzina" value="nieokreślone"></property>
-    <property name="pochodzenie" value="nieokreślone"></property>
-    <property name="rozmiary" value="nieokreślone"></property>
-    <property name="podlewanie" value="nieokreślone"></property>
-    <property name="nawożenie" value="nieokreślone"></property>
-    <property name="stanowisko" value="nieokreślone"></property>
-    <property name="kwiaty" value="nieokreślone"></property>
-    <property name="ciekawe cechy" value="nieokreślone"></property>
+    <property name="nazwa" value="Pelargonia bluszczolistna biała"></property>
+    <property name="rodzina" value="Geraniaceae"></property>
+    <property name="pochodzenie" value="Afryka, rejony południowe, mieszaniec"></property>
+    <property name="rozmiary" value="roślina zwisająca, pędy do 1 m długości"></property>
+    <property name="podlewanie" value="umiarkowane"></property>
+    <property name="nawożenie" value="częste"></property>
+    <property name="stanowisko" value="słoneczne"></property>
+    <property name="kwiaty" value="brak"></property>
+    <property name="ciekawe cechy" value="mocno krzewiąca roślina"></property>
   </plant>
   <plant name="Petunia hybrida">
     <property name="grupa" value="balkonowe"></property>
