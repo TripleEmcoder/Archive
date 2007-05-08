@@ -8,8 +8,22 @@
 
     <load source="{$output}.htm" mode="html" />
     <transform stylesheet="SuperOgrodEncyclopedia.xslt" />
+    <transform stylesheet="SuperOgrodPrepare.xslt" />
+    <split query="/encyclopedia/plant[@name='Pelargonium peltatum'][1]">
+      <replace query="/plant/@name">
+        <occurrence original="$" replacement=" 1" />
+      </replace>
+      <trace message="(pelargonia) => {/plant/@name}" />
+    </split>
 
-    <split query="/encyclopedia/plant" threads="1">
+    <split query="/encyclopedia/plant[@name='Pelargonium peltatum'][1]">
+      <replace query="/plant/@name">
+        <occurrence original="$" replacement=" 2" />
+      </replace>
+      <trace message="(pelargonia) => {/plant/@name}" />
+    </split>
+    
+    <split query="/encyclopedia/plant">
       <variable name="plant" value="{/plant/@name}" />
       <variable name="output" value="{$output}/{$plant}" />
 
@@ -121,6 +135,7 @@
         <occurrence original="Umiarkowanie" replacement="umiarkowanie" />
         <occurrence original="umiarkowanie" replacement="umiarkowane" />
         <occurrence original="umiarkowene" replacement="umiarkowane" />
+        <occurrence original="umaiarkowane" replacement="umiarkowane" />
         <occurrence original="umiarkowane do podstawka" replacement="umiarkowane, do podstawka" />
         <occurrence original="do podstawki" replacement="do podstawka" />
         <occurrence original="żadkie" replacement="rzadkie" />
@@ -132,6 +147,7 @@
         <occurrence original="częste podczas kwitnienia" replacement="częste, podczas kwitnienia" />
         <occurrence original="gleba żyzna" replacement="częste" />
         <occurrence original="umiarkowanie" replacement="umiarkowane" />
+        <occurrence original="umaiarkowane" replacement="umiarkowane" />
         <occurrence original="średnie" replacement="umiarkowane" />
         <occurrence original="rzadkie. Lubi ubogą, kwaśną glebę" replacement="rzadkie, lubi ubogą, kwaśną glebę" />
       </replace>
@@ -166,6 +182,7 @@
 
       <replace query="/plant/property[@name='ciekawe cechy']/@value">
         <occurrence original="^-$" replacement="brak" />
+        <occurrence original="Pokaż komentarze.*" replacement="brak" />
       </replace>
 
       <replace query="/plant/property[@name='rozmiary']/@value">
@@ -202,6 +219,21 @@
     </split>
 
     <transform stylesheet="SuperOgrodCleanup.xslt" />
+
+    <split query="/encyclopedia/plant[property[@name='grupa']/@value='iglaste']">
+      <trace message="(fix) => {/plant/@name}" />
+      <replace query="/plant/property[@name='kwiaty']/@value">
+        <occurrence original="nieokreślone" replacement="brak" />
+      </replace>
+    </split>
+
+    <split query="/encyclopedia/plant[@name='Pelargonium peltatum 1']">
+      <trace message="(fix) => {/plant/@name}" />
+      <replace query="/plant/property[@name='kwiaty']/@value">
+        <occurrence original="brak" replacement="białe" />
+      </replace>
+    </split>
+
     <save destination="{$output}.xml" />
   </flow>
 </job>

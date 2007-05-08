@@ -7,7 +7,10 @@
   
   <xsl:template match="/">
     <encyclopedia>
-      <xsl:apply-templates select="//td[@bgcolor='#f0f0f0']/a[not(img)]" />
+      <xsl:apply-templates select="//td[@bgcolor='#f0f0f0']/a[not(img)]">
+        <xsl:sort select="." />
+        <xsl:sort select="position()" />
+      </xsl:apply-templates>
     </encyclopedia>
   </xsl:template>
 
