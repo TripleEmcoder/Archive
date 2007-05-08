@@ -32,8 +32,7 @@ public class PlantInfoPanel extends JPanel
 			{
 				try
 				{
-					URL imgURL = SI.class
-							.getResource("plants/" + name + ".jpg");
+					URL imgURL = SI.class.getResource("plants/" + name + ".jpg");
 					if (imgURL == null)
 					{
 						throw new FileNotFoundException();
@@ -132,11 +131,9 @@ public class PlantInfoPanel extends JPanel
 			textField.setLineWrap(true);
 			textField.setWrapStyleWord(true);
 			textField.setEditable(false);
-			JScrollPane scrollPane = new JScrollPane(textField);
-			scrollPane
-					.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-			scrollPane
-					.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+			JScrollPane scrollPane = new JScrollPane(textField,
+					ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+					ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 			l.setLabelFor(textField);
 			formPanel.add(scrollPane);
 			fields.put(field.label.toLowerCase(), textField);
@@ -158,7 +155,9 @@ public class PlantInfoPanel extends JPanel
 			for (String label : fields.keySet())
 			{
 				fields.get(label).setText(plant.getProperty(label));
+				fields.get(label).setCaretPosition(0);
 			}
+		
 		}
 		else
 		{

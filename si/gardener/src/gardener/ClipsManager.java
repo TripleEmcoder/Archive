@@ -23,8 +23,7 @@ public class ClipsManager implements Observer
 			.compile("^plant;(.+)$");
 	private static final String ASSERT_COMMAND = "(assert (%s))";
 	private static final String ANSWER_FORMAT = "answer \"%s\"";
-	private static final String CANCEL_FORMAT = "cancel \"%s\"";
-
+	private static final String REFRESH_FACT = "refresh reassert";
 	private JClips jClips;
 	private List<String> answers;
 
@@ -73,6 +72,7 @@ public class ClipsManager implements Observer
 	{
 		answers.add(answer);
 		assertFact(String.format(ANSWER_FORMAT, answer));
+		assertFact(REFRESH_FACT);
 		jClips.run();
 	}
 
@@ -86,6 +86,7 @@ public class ClipsManager implements Observer
 			{
 				assertFact(String.format(ANSWER_FORMAT, answer));
 			}
+			assertFact(REFRESH_FACT);
 			jClips.run();
 		}
 	}

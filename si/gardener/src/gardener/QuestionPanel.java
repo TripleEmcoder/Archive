@@ -37,30 +37,23 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 		group = new ButtonGroup();
 
-		next = new JButton("next");
+		next = new JButton("Nastêpne");
 		next.addActionListener(this);
 		next.setActionCommand("next");
 
-		previous = new JButton("previous");
+		previous = new JButton("Poprzednie");
 		previous.addActionListener(this);
 		previous.setActionCommand("previous");
 
-		restart = new JButton("restart");
+		restart = new JButton("Restart");
 		restart.addActionListener(this);
 		restart.setActionCommand("restart");
 
 		questionLabel = new JLabel();
 		questionLabel.setAlignmentX(CENTER_ALIGNMENT);
-		// questionLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0,
-		// 0));
-
+		
 		radioPanel = new JPanel();
-		// radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.PAGE_AXIS));
-		// radioPanel.setLayout(new GridLayout(0,1));
-		// radioPanel.setMinimumSize(new Dimension(350,200));
 		radioPanel.setAlignmentX(CENTER_ALIGNMENT);
-
-		// radioPanel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 
 		buttonPanel = new JPanel();
 		buttonPanel.setAlignmentX(CENTER_ALIGNMENT);
@@ -90,11 +83,14 @@ public class QuestionPanel extends JPanel implements ActionListener
 		{
 			updateHistory();
 			SI.plantListPanel.removeAllElements();
+			SI.plantInfoPanel.clearPlant();
 			SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 		}
 		else if (e.getActionCommand().equals("previous"))
 		{
 			SI.historyPanel.removeLastElement();
+			SI.plantListPanel.removeAllElements();
+			SI.plantInfoPanel.clearPlant();
 			clearQuestion();
 			SI.clipsManager.cancelLastAnswer();
 		}
@@ -106,10 +102,9 @@ public class QuestionPanel extends JPanel implements ActionListener
 			clearQuestion();
 			SI.clipsManager.restart();
 		}
-		else
-		{
-			next.setEnabled(true);
-		}
+		
+		next.setEnabled(isAnswerSelected());
+		previous.setEnabled(!SI.historyPanel.isEmpty());
 	}
 
 	public void clearQuestion()
@@ -119,7 +114,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		group.clearSelection();
 		for (Component button : radioPanel.getComponents())
 			group.remove((AbstractButton) button);
-
+		
 		radioPanel.removeAll();
 
 		next.setEnabled(isAnswerSelected());
@@ -165,8 +160,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
 				.nextInt(radioPanel.getComponentCount()));
 		button.setSelected(true);
-		// System.err.println(group.getButtonCount());
-
+		
 		next.setEnabled(isAnswerSelected());
 		previous.setEnabled(!SI.historyPanel.isEmpty());
 	}
