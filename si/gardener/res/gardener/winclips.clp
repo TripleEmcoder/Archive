@@ -1,4 +1,4 @@
-(defrule tool_load_rules
+(defrule tool_load_files
 	(initial-fact)
 =>
 	(load "tools.clp")
@@ -9,11 +9,10 @@
 )
 
 (defrule tool_send_debug
-	(declare (salience 20))
-	?i <- (debug ?action ?name ?value)
+	?i <- (debug ?debug)
 =>
 	(retract ?i)
-	(printout t ?action ": " ?name "=" ?value crlf)
+	(printout t "debug;" ?debug crlf)
 )
 
 (defrule tool_send_question

@@ -1,4 +1,4 @@
-﻿(defrule tool_store_answer
+(defrule tool_store_answer
 	(step ?step)
 	(answer ?answer)
 =>
@@ -7,7 +7,7 @@
 	(assert (debug store ?step ?answer))
 )
 
-(defrule tool_initial_refresh
+(defrule tool_assert_refresh
 	?i <- (refresh reassert)
 	(not (refresh))
 =>
@@ -25,31 +25,44 @@
 	(assert (refresh))
 )
 
-;dodajemy własności, które są zabronione lub nie są dozwolone
-(defrule tool_retract_property
-	(property retract|~assert ?name ?value)
-	?i <- (property ?name ?value)
+
+(defrule tool_write_property_debug
+	(property ?name ?operator ?value)
 =>
-	(retract ?i)
-	(assert (debug retract ?name ?value))
+	(assert (debug property ?name ?operator ?value))
 )
 
-;dodajemy własności, które są dozwolone i nie są zabronione
-(defrule tool_assert_property
-	?i <- (property assert ?name ?value)
-	(not (property retract ?name ?value))
+(defrule tool_constrain_property_equal
+	?i <- (property ?name "=" ?value)
+	?j <- (property ?name "!=" ?value)
 =>
 	(retract ?i)
-	(assert (property ?name ?value))
-	(assert (debug assert ?name ?value))
+	(retract ?j)
 )
 
-;po dodaniu odpowiednich własności usuwany wszystkie zakazy
-(defrule tool_retract_negative
-	?i <- (property retract ?name ?value)
-	(not (property assert ?name ?value))
-	(not (property ?name ?value))
+(defrule tool_constrain_property_max
+	?i <- (property ?name "<=" ?left)
+	?j <- (property ?name "<=" ?right&~?left)
+	(test (<= ?left ?right))
 =>
 	(retract ?i)
-;	(assert (debug cleanup ?name ?value))
+	(retract ?j)
+	(assert (property ?name "<=" ?left))
+)
+
+(defrule tool_constrain_property_min
+	?i <- (property ?name ">=" ?left)
+	?j <- (property ?name ">=" ?right&~?left)
+	(test (>= ?left ?right))
+=>
+	(retract ?i)
+	(retract ?j)
+	(assert (property ?name ">=" ?left))
+)
+
+(defrule tool_format_property_debug
+	?i <- (debug property ?name ?operator ?value)
+=>
+	(retract ?i)
+	(assert (debug (str-cat "property " ?name " " ?operator " " ?value)))
 )

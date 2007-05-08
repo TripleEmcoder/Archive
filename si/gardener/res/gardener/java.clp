@@ -1,4 +1,4 @@
-(defrule tool_load_tools
+(defrule tool_load_files
 	(initial-fact)
 =>
 ;	(load "tools.clp")
@@ -9,10 +9,10 @@
 )
 
 (defrule tool_send_debug
-	?i <- (debug ?action ?name ?value)
+	?i <- (debug ?debug)
 =>
 	(retract ?i)
-	(send-to-java (str-cat ?action ": " ?name "=" ?value))
+	(send-to-java (str-cat "debug;" ?debug))
 )
 
 (defrule tool_send_question

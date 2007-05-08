@@ -30,7 +30,7 @@ namespace plants
                     new string[] { ", " }, StringSplitOptions.None);
 
                 //if (!parts[0].Contains("nieokreślone"))
-                output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
+                output.WriteLine("\t(property \"{0}\" \"=\" \"dowolne\"|\"{1}\")",
                     Name, parts[0].Replace(" lub ", "\"|\""));
             }
 
@@ -44,7 +44,7 @@ namespace plants
                     new string[] { ", " }, StringSplitOptions.None);
 
                 //if (!parts[0].Contains("nieokreślone"))
-                output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
+                output.WriteLine("\t(property \"{0}\" \"=\" \"dowolne\"|\"{1}\")",
                     Name, parts[0].Replace(" i ", "\"|\""));
             }
 
@@ -54,7 +54,7 @@ namespace plants
 
             if (Name == "kwiaty")
             {
-                output.Write("\t(property \"kwiaty\" ");
+                output.Write("\t(property \"kwiaty\" \"=\" ");
 
                 Dictionary<string, string[]> groups = new Dictionary<string, string[]>();
 
@@ -166,12 +166,11 @@ namespace plants
 
                     #region Output
 
-                    output.WriteLine("\t(property \"wysokość_min\" ?min)");
-                    output.WriteLine("\t(property \"wysokość_max\" ?max)");
-                    output.WriteLine("\t(or");
-                    output.WriteLine("\t\t(and (test (< ?min {0})) (test (< {0} ?max)))", _min);
-                    output.WriteLine("\t\t(and (test (< ?min {0})) (test (< {0} ?max)))", _max);
-                    output.WriteLine("\t)");
+                    output.WriteLine("\t(property \"wysokość\" \">=\" ?min)");
+                    output.WriteLine("\t(test (>= {0} ?min))", _min);
+
+                    output.WriteLine("\t(property \"wysokość\" \"<=\" ?max)");
+                    output.WriteLine("\t(test (<= {0} ?max))", _max);
 
                     #endregion
                 }

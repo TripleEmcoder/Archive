@@ -87,7 +87,7 @@ public class ClipsManager implements Observer
 	public void update(Observable o, Object arg)
 	{
 		String message = (String) arg;
-		// if (!message.startsWith("plant"))
+		if (!message.startsWith("plant"))
 			System.err.println(message);
 
 		final Matcher finalQuestionMatcher = FINAL_QUESTION_PATTERN
