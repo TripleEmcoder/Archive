@@ -67,7 +67,7 @@ namespace plants
                 groups["purpurowe"] = new string[] { "purpurow" };
                 groups["różowe"] = new string[] { "różow", "pąsow" };
                 groups["żółte"] = new string[] { "żółt", "złot" };
-                groups["różnobarwne"] = new string[] { "różnobarwn" };
+                groups["różnobarwne"] = new string[] { "różnobarwn", "gam" };
 
                 List<string> selectors = new List<string>();
                 string value = Value.ToLower();

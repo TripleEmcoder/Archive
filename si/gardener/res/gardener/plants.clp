@@ -1628,7 +1628,7 @@
 	(property "podlewanie" "=" "dowolne"|"częste")
 	(property "nawożenie" "=" "dowolne"|"częste")
 	(property "stanowisko" "=" "dowolne"|"widne"|"słoneczne")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "kwiaty" "=" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Impatiens"))
@@ -1787,7 +1787,7 @@
 	(property "podlewanie" "=" "dowolne"|"rzadkie")
 	(property "nawożenie" "=" "dowolne"|"umiarkowane")
 	(property "stanowisko" "=" "dowolne"|"słoneczne")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "kwiaty" "=" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Kalanchoe blossfeldiana"))
@@ -2454,7 +2454,7 @@
 	(property "podlewanie" "=" "dowolne"|"umiarkowane")
 	(property "nawożenie" "=" "dowolne"|"umiarkowane")
 	(property "stanowisko" "=" "dowolne"|"widne")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "kwiaty" "=" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Primula vulgaris"))
@@ -2535,7 +2535,7 @@
 	(property "podlewanie" "=" "dowolne"|"umiarkowane")
 	(property "nawożenie" "=" "dowolne"|"umiarkowane")
 	(property "stanowisko" "=" "dowolne"|"widne"|"słoneczne")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "kwiaty" "=" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Rosa"))
@@ -2569,7 +2569,7 @@
 	(property "podlewanie" "=" "dowolne"|"umiarkowane")
 	(property "nawożenie" "=" "dowolne"|"umiarkowane")
 	(property "stanowisko" "=" "dowolne"|"cieniste")
-	(property "kwiaty" "=" "dowolne"|"inne")
+	(property "kwiaty" "=" "dowolne"|"różnobarwne")
 	(refresh)
 =>
 	(assert (plant "Saintpaulia ionantha"))
