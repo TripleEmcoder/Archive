@@ -1,7 +1,9 @@
 package gardener;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Insets;
 import java.awt.image.BufferedImage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,6 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -56,7 +61,7 @@ public class PlantInfoPanel extends JPanel
 	{
 		private static final long serialVersionUID = 1L;
 		private BufferedImage img;
-
+		
 		public ImagePanel()
 		{
 			super();
@@ -66,12 +71,18 @@ public class PlantInfoPanel extends JPanel
 		{
 			return new Dimension(200, 200);
 		}
+		
+		public Dimension getMaximumSize()
+		{
+			return new Dimension(200, 200);
+		}
 
 		public void paint(Graphics g)
 		{
 			if (img != null)
 			{
-				g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), null);
+				g.drawRect(0, 0, this.getWidth()-1, this.getHeight()-1);
+				g.drawImage(img, 1, 1, this.getWidth()-2, this.getHeight()-2, null);
 			}
 			else
 			{
@@ -110,6 +121,7 @@ public class PlantInfoPanel extends JPanel
 	{
 		fields = new HashMap<String, JTextComponent>();
 		imagePanel = new ImagePanel();
+		//imagePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 5));
 		List<FieldProperty> fieldProperties = new ArrayList<FieldProperty>();
 
 		fieldProperties.add(new FieldProperty("Nazwa", 1, 20));
@@ -140,9 +152,11 @@ public class PlantInfoPanel extends JPanel
 		}
 
 		SpringUtilities.makeCompactGrid(formPanel, fieldProperties.size(), 2,
-				20, 6, 20, 10);
+				20, 20, 20, 10);
 
+		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		add(imagePanel);
+		add(Box.createVerticalGlue());
 		add(formPanel);
 	}
 

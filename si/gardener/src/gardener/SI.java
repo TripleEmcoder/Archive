@@ -37,7 +37,7 @@ public class SI
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 
 		Container pane = frame.getContentPane();
-		pane.setLayout(new BorderLayout());
+		pane.setLayout(new BoxLayout(pane, BoxLayout.LINE_AXIS));
 
 		JPanel leftPanel = new JPanel();
 		leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.PAGE_AXIS));
@@ -50,16 +50,18 @@ public class SI
 		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 		historyPanel.setPreferredSize(new Dimension(400, 375 - 10));
+		//historyPanel.setMaximumSize(historyPanel.getPreferredSize());
 		historyPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory
 				.createTitledBorder(lowered, "Historia pytañ"), BorderFactory
 				.createEmptyBorder(5, 5, 5, 5)));
 
-		questionPanel.setPreferredSize(new Dimension(150, 200 - 10));
+		questionPanel.setPreferredSize(new Dimension(650, 220));
+		questionPanel.setMaximumSize(questionPanel.getPreferredSize());
 		questionPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Pytanie"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
-		plantListPanel.setPreferredSize(new Dimension(200, 375 - 10));
+		//plantListPanel.setPreferredSize(new Dimension(250, 375 - 10));
 		plantListPanel.setBorder(BorderFactory.createCompoundBorder(
 				BorderFactory.createTitledBorder(lowered, "Lista roœlin"),
 				BorderFactory.createEmptyBorder(5, 5, 5, 5)));
@@ -79,8 +81,8 @@ public class SI
 
 		rightPanel.add(plantInfoPanel);
 
-		pane.add(leftPanel, BorderLayout.LINE_START);
-		pane.add(rightPanel, BorderLayout.LINE_END);
+		pane.add(leftPanel);
+		pane.add(rightPanel);
 
 		frame.setVisible(true);
 	}
