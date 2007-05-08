@@ -21,7 +21,7 @@
 	(assert (property "kwiaty" "=" "dowolne"))
 	(assert (property "pochodzenie" "=" "dowolne"))
 	(assert (property "wysokość" ">=" 0))
-	(assert (property "wysokość" "<=" 1000))
+	(assert (property "wysokość" "<=" 0))
 )
 
 (defrule rule_stanowisko1

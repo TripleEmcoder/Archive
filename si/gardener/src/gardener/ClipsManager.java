@@ -25,9 +25,14 @@ public class ClipsManager implements Observer
 			.compile("^question;(.+?);(.+)$");
 	private static final Pattern PLANT_PATTERN = Pattern
 			.compile("^plant;(.+)$");
+
 	private static final String ASSERT_COMMAND = "(assert (%s))";
 	private static final String ANSWER_FORMAT = "answer \"%s\"";
 	private static final String REFRESH_FACT = "refresh reassert";
+
+	private static final String MULTIPLE_PLANTS_COMMENT = "Dziekujê. Nie mam wiêcej pytañ.";
+	private static final String SINGLE_PLANT_COMMENT = "Patrz i podziwiaj. Oto Twoja Roœlina.";
+	private static final String NO_PLANTS_COMMENT = "Nie znalaz³em odpowiednich roœlin. Proponujê inne hobby.";
 	private JClips jClips;
 	private List<String> answers, plants;
 	private String currentQuestion, currentAnswers;
@@ -47,13 +52,13 @@ public class ClipsManager implements Observer
 		{
 			jClips.reset();
 			answers.remove(answers.size() - 1);
-			
+
 			for (String answer : answers)
 			{
 				assertFact(String.format(ANSWER_FORMAT, answer));
 				jClips.run();
 			}
-			
+
 			run();
 		}
 	}
@@ -95,7 +100,7 @@ public class ClipsManager implements Observer
 	public void update(Observable o, Object arg)
 	{
 		String message = (String) arg;
-		
+
 		if (!message.startsWith("plant"))
 			System.err.println(message);
 
@@ -130,18 +135,23 @@ public class ClipsManager implements Observer
 	private void sendInfo()
 	{
 		Collections.sort(plants);
-		for (String plant : plants)
-			SI.plantListPanel.addElement(plant);
+		//for (String plant : plants)
+		//	SI.plantListPanel.addElement(plant);
+		SI.plantListPanel.updateList(plants);
 
 		String title = String.format("Lista roœlin (%d)", plants.size());
 		((TitledBorder) ((CompoundBorder) SI.plantListPanel.getBorder())
 				.getOutsideBorder()).setTitle(title);
 		SI.plantListPanel.repaint();
-		
+
 		if (currentQuestion != null && plants.size() > 1)
 			SI.questionPanel.setQuestion(currentQuestion, currentAnswers);
-		else
-			SI.questionPanel.clearQuestion();
+		else if (plants.size() > 1)
+			SI.questionPanel.setQuestion(MULTIPLE_PLANTS_COMMENT, null);
+		else if (plants.size() == 1)
+			SI.questionPanel.setQuestion(SINGLE_PLANT_COMMENT, null);
+		else if (plants.size() == 0)
+			SI.questionPanel.setQuestion(NO_PLANTS_COMMENT, null);
 	}
 
 	private void run()

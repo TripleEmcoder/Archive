@@ -46,7 +46,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 		questionLabel = new JLabel();
 		questionLabel.setAlignmentX(CENTER_ALIGNMENT);
-		
+
 		radioPanel = new JPanel();
 		radioPanel.setAlignmentX(CENTER_ALIGNMENT);
 
@@ -61,7 +61,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		buttonPanel.add(restart);
 		buttonPanel.add(Box.createHorizontalGlue());
 
-		add(Box.createVerticalGlue());
+		add(Box.createVerticalStrut(10));
 		add(questionLabel);
 		add(Box.createVerticalGlue());
 		add(radioPanel);
@@ -69,7 +69,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		add(buttonPanel);
 		add(Box.createVerticalStrut(10));
 
-		//clearQuestion();
+		// clearQuestion();
 	}
 
 	public void actionPerformed(ActionEvent e)
@@ -77,27 +77,21 @@ public class QuestionPanel extends JPanel implements ActionListener
 		if (e.getActionCommand().equals("next"))
 		{
 			updateHistory();
-			SI.plantListPanel.removeAllElements();
-			SI.plantInfoPanel.clearPlant();
 			SI.clipsManager.sendAnswer(SI.questionPanel.getAnswer());
 		}
 		else if (e.getActionCommand().equals("previous"))
 		{
 			SI.historyPanel.removeLastElement();
-			SI.plantListPanel.removeAllElements();
-			SI.plantInfoPanel.clearPlant();
-			clearQuestion();
 			SI.clipsManager.cancelLastAnswer();
 		}
 		else if (e.getActionCommand().equals("restart"))
 		{
 			SI.historyPanel.removeAllElements();
 			SI.plantListPanel.removeAllElements();
-			SI.plantInfoPanel.clearPlant();
 			clearQuestion();
 			SI.clipsManager.restart();
 		}
-		
+
 		updateButtonsState();
 	}
 
@@ -125,30 +119,31 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 	public void setQuestion(String question, String answer)
 	{
-		questionLabel.setText("");
 		clearAnswers();
-		
+
+		questionLabel.setText("");
 		questionLabel.setText(question);
-		
-		String[] answers = answer.split(";");
 
-		int colCount = answers.length / 4 + 1;
-
-		radioPanel.setLayout(new GridLayout(0, colCount));
-
-		for (String s : answers)
+		if (answer != null)
 		{
-			JRadioButton button = new JRadioButton(s);
-			button.setActionCommand(s);
-			button.addActionListener(this);
-			group.add(button);
-			radioPanel.add(button);
+			String[] answers = answer.split(";");
+
+			radioPanel.setLayout(new GridLayout(0, answers.length / 4 + 1));
+
+			for (String s : answers)
+			{
+				JRadioButton button = new JRadioButton(s);
+				button.setActionCommand(s);
+				button.addActionListener(this);
+				group.add(button);
+				radioPanel.add(button);
+			}
+
+			JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
+					.nextInt(radioPanel.getComponentCount()));
+			button.setSelected(true);
 		}
 
-		JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
-				.nextInt(radioPanel.getComponentCount()));
-		button.setSelected(true);
-		
 		updateButtonsState();
 	}
 
@@ -157,7 +152,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 		if (isAnswerSelected())
 			SI.historyPanel.addElement(getQuestion() + " " + getAnswer());
 	}
-	
+
 	private void clearAnswers()
 	{
 		group.clearSelection();
@@ -165,7 +160,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 			group.remove((AbstractButton) button);
 		radioPanel.removeAll();
 	}
-	
+
 	private void updateButtonsState()
 	{
 		next.setEnabled(isAnswerSelected());

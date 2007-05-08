@@ -18,23 +18,29 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 
 	public void valueChanged(ListSelectionEvent e)
 	{
-		ListSelectionModel lsm = (ListSelectionModel)e.getSource();
-		if (!e.getValueIsAdjusting() && !lsm.isSelectionEmpty())
+		if (!e.getValueIsAdjusting())
 		{
-			String plantname = (String)listModel.get(lsm.getMinSelectionIndex());
-			Plant plant = SI.plantFinder.find(plantname);
-			SI.plantInfoPanel.setPlant(plant);
+			System.err.println("valueChanged(ListSelectionEvent e)");
+			ListSelectionModel lsm = (ListSelectionModel)e.getSource();
+			if (!lsm.isSelectionEmpty())
+			{
+				String plantname = (String)listModel.get(lsm.getMinSelectionIndex());
+				Plant plant = SI.plantFinder.find(plantname);
+				SI.plantInfoPanel.setPlant(plant);
+			}
+			else
+			{
+				SI.plantInfoPanel.clearPlant();
+			}
 		}
 	}
 
 	public void updateList(List<String> newList)
 	{
-		for (String element : newList)
-		{
-			if (!listModel.contains(element))
-				addElement(element);	
-		}
-		//Enumeration<String> x = listModel.elements();
+		Object o = list.getSelectedValue();
+		removeAllElements();
+		for (String s : newList)
+			addElement(s);
 	}
 	
 }
