@@ -166,6 +166,12 @@
 )
 
 (defrule rule_kwiaty2
+	(answer "kwiaty1" "tak")
+=>
+	(assert (property "kwiaty" "!=" "brak"))
+)
+
+(defrule rule_kwiaty3
 	(answer "kwiaty2" ?kolor&~"dowolne")
 =>
 	(assert (property "kwiaty" "!=" "dowolne"))
