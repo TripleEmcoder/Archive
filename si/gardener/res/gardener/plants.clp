@@ -1867,7 +1867,7 @@
 	(test (>= 0 ?min))
 	(property "wysokość" "<=" ?max)
 	(test (<= 50 ?max))
-	(property "kwiaty" "=" "brak")
+	(property "kwiaty" "=" "dowolne"|"różowe")
 	(refresh)
 =>
 	(assert (plant "Lilium martagon"))

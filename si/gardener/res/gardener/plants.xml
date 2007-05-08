@@ -1381,16 +1381,16 @@
     <property name="ciekawe cechy" value="Złocień może rosnąć na trawnikach w dużych kępach, gdzie prezentuje się wyśmienicie, długo kwitnie i długo zachowuje świeżość w wazonie. Rozmnaża się go przez podział starych roślin."></property>
   </plant>
   <plant name="Lilium martagon">
-    <property name="grupa" value="byliny"></property>
-    <property name="nazwa" value="Lilia złotogłów"></property>
-    <property name="rodzina" value="Liliaceae"></property>
-    <property name="pochodzenie" value="Europa"></property>
-    <property name="rozmiary" value="niewielka bylina, do 50 cm"></property>
-    <property name="podlewanie" value="nieokreślone"></property>
-    <property name="nawożenie" value="nieokreślone"></property>
-    <property name="stanowisko" value="nieokreślone"></property>
-    <property name="kwiaty" value="brak"></property>
-    <property name="ciekawe cechy" value="zdjęcie wykonane w Bieszczadzkim Parku Narodowym (BdPN) na Połoninie Caryńskiej. Roślina pod ścisłą ochroną gatunkową. W Polsce występuje w Karpatach."></property>
+    <property name="grupa" value="byliny" />
+    <property name="nazwa" value="Lilia złotogłów" />
+    <property name="rodzina" value="Liliaceae" />
+    <property name="pochodzenie" value="Europa" />
+    <property name="rozmiary" value="niewielka bylina, do 50 cm" />
+    <property name="podlewanie" value="nieokreślone" />
+    <property name="nawożenie" value="nieokreślone" />
+    <property name="stanowisko" value="nieokreślone" />
+    <property name="kwiaty" value="różowe" />
+    <property name="ciekawe cechy" value="zdjęcie wykonane w Bieszczadzkim Parku Narodowym (BdPN) na Połoninie Caryńskiej. Roślina pod ścisłą ochroną gatunkową. W Polsce występuje w Karpatach." />
   </plant>
   <plant name="Lithops">
     <property name="grupa" value="domowe"></property>

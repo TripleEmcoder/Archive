@@ -234,6 +234,13 @@
       </replace>
     </split>
 
+    <split query="/encyclopedia/plant[@name='Lilium martagon']">
+      <trace message="(fix) => {/plant/@name}" />
+      <replace query="/plant/property[@name='kwiaty']/@value">
+        <occurrence original="brak" replacement="różowe" />
+      </replace>
+    </split>    
+
     <save destination="{$output}.xml" />
   </flow>
 </job>
