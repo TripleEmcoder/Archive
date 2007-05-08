@@ -20,7 +20,6 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 	{
 		if (!e.getValueIsAdjusting())
 		{
-			System.err.println("valueChanged(ListSelectionEvent e)");
 			ListSelectionModel lsm = (ListSelectionModel)e.getSource();
 			if (!lsm.isSelectionEmpty())
 			{
@@ -37,10 +36,11 @@ public class PlantListPanel extends ListPanel implements ListSelectionListener
 
 	public void updateList(List<String> newList)
 	{
-		Object o = list.getSelectedValue();
+		Object oldSelection = list.getSelectedValue();
 		removeAllElements();
 		for (String s : newList)
 			addElement(s);
+		list.setSelectedValue(oldSelection, true);
 	}
 	
 }

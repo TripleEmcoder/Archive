@@ -140,7 +140,7 @@ public class PlantInfoPanel extends JPanel
 		}
 
 		SpringUtilities.makeCompactGrid(formPanel, fieldProperties.size(), 2,
-				6, 6, 20, 10);
+				20, 6, 20, 10);
 
 		add(imagePanel);
 		add(formPanel);
