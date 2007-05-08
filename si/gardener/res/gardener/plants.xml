@@ -77,7 +77,7 @@
     <property name="nazwa" value="Impatiens nowogwinejski Niecierpek"></property>
     <property name="rodzina" value="Balsaminaceae"></property>
     <property name="pochodzenie" value="nieokreślone"></property>
-    <property name="rozmiary" value="Niska roślina rabatowa (parapetowa)"></property>
+    <property name="rozmiary" value="niska roślina rabatowa, do 30 cm"></property>
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="częste"></property>
     <property name="stanowisko" value="widne lub słoneczne"></property>
@@ -1841,7 +1841,7 @@
     <property name="nazwa" value="Solanum Psianka pieprzowa"></property>
     <property name="rodzina" value="Solanaceae"></property>
     <property name="pochodzenie" value="Ameryka Południowa, Brazylia"></property>
-    <property name="rozmiary" value="niewielki krzew, do 25 cm dorastający do 30cm"></property>
+    <property name="rozmiary" value="niewielki krzew dorastający do 30cm"></property>
     <property name="podlewanie" value="częste"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="widne"></property>

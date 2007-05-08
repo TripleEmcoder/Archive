@@ -163,13 +163,35 @@
         <occurrence original="wielobarwne" replacement="różnobarwne" />
         <occurrence original="paprocie nie tworzą kwiatów" replacement="brak" />
       </replace>
-      
+
       <replace query="/plant/property[@name='ciekawe cechy']/@value">
         <occurrence original="^-$" replacement="brak" />
       </replace>
 
       <replace query="/plant/property[@name='rozmiary']/@value">
+        <occurrence original="^-$" replacement="nieokreślone" />
         <occurrence original="do 1 wysokości" replacement="do 1 m wysokości" />
+        <occurrence original="niska ro(s|ś)lina okrywowa" replacement="niska roślina okrywowa, do 30 cm" />
+        <occurrence original="roślina kobiercowa, niska" replacement="niska roślina kobiercowa, do 50 cm" />
+        <occurrence original="bylina zadarniająca, ekspansywna" replacement="bylina zadarniająca, ekspansywna, do 30 cm" />
+        <occurrence original="krzewik" replacement="krzew" />
+        <occurrence original="niewielki krzew$" replacement="niewielki krzew, do 25 cm" />
+        <occurrence original="niewielka roślina płożąca" replacement="niewielka roślina płożąca, do 25 cm" />
+        <occurrence original="wysokie drzewo$" replacement="wysokie drzewo, w mieszkaniu do 1,5 m" />
+        <occurrence original="wysokie drzewo, w mieszkaniu wymaga cięcia" replacement="wysokie drzewo, w mieszkaniu wymaga cięcia, do 1,5 m" />
+        <occurrence original="Niska roślina rabatowa \(parapetowa\)" replacement="niska roślina rabatowa, do 30 cm" />
+        <occurrence original="niska roślina parapetowa$" replacement="niska roślina parapetowa, do 30 cm" />
+        <occurrence original="krzew średniej wielkości" replacement="krzew średniej wielkości, do 1 m" />
+        <occurrence original="niewielka bylina" replacement="niewielka bylina, do 50 cm" />
+        <occurrence original="niska roślina parapetowa.*" replacement="niska roślina parapetowa, do 40 cm" />
+        <occurrence original="niska krzewinka" replacement="niska krzewinka, do 50 cm" />
+        <occurrence original="pnącze wspinające się za pomocą korzeni powietrznych" replacement="pnącze wspinające się za pomocą korzeni powietrznych, do 100 cm" />
+        <occurrence original="niewielkie pnącze" replacement="niewielkie pnącze, do 70 cm" />
+        <occurrence original="zależy od wysokości użytego pnia;do kilku metrów wysokości" replacement="zależy od wysokości użytego pnia, do 2 m wysokości" />
+      </replace>
+
+      <replace query="/plant/property[@name='rodzina']/@value">
+        <occurrence original="^-$" replacement="nieokreślone" />
       </replace>
     </split>
 
