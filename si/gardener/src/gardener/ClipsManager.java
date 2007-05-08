@@ -58,6 +58,7 @@ public class ClipsManager implements Observer
 	{
 		answers.clear();
 		jClips.reset();
+		assertFact(REFRESH_FACT);
 		jClips.run();
 	}
 
@@ -81,10 +82,12 @@ public class ClipsManager implements Observer
 		if (!answers.isEmpty())
 		{
 			jClips.reset();
+			jClips.run();
 			answers.remove(answers.size() - 1);
 			for (String answer : answers)
 			{
 				assertFact(String.format(ANSWER_FORMAT, answer));
+				jClips.run();
 			}
 			assertFact(REFRESH_FACT);
 			jClips.run();
@@ -94,7 +97,7 @@ public class ClipsManager implements Observer
 	public void update(Observable o, Object arg)
 	{
 		String message = (String) arg;
-		if (!message.startsWith("plant"))
+		//if (!message.startsWith("plant"))
 			System.err.println(message);
 
 		final Matcher finalQuestionMatcher = FINAL_QUESTION_PATTERN

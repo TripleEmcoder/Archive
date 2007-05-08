@@ -44,7 +44,6 @@ public class ListPanel extends JPanel
 
 	public void removeAllElements()
 	{
-		System.err.println(listModel.getSize());
 		listModel.removeAllElements();
 	}
 

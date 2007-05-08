@@ -3,13 +3,15 @@
 	(answer ?answer)
 =>
 	(assert (answer ?step ?answer))
-	(assert (refresh reassert))
+;	(assert (refresh reassert))
 	(assert (debug store ?step ?answer))
 )
 
 (defrule tool_initial_refresh
-	(initial-fact)
+	?i <- (refresh reassert)
+	(not (refresh))
 =>
+
 	(assert (refresh))
 )
 

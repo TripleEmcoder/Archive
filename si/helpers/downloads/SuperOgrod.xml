@@ -163,9 +163,13 @@
         <occurrence original="wielobarwne" replacement="różnobarwne" />
         <occurrence original="paprocie nie tworzą kwiatów" replacement="brak" />
       </replace>
-
+      
       <replace query="/plant/property[@name='ciekawe cechy']/@value">
         <occurrence original="^-$" replacement="brak" />
+      </replace>
+
+      <replace query="/plant/property[@name='rozmiary']/@value">
+        <occurrence original="do 1 wysokości" replacement="do 1 m wysokości" />
       </replace>
     </split>
 

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
+using System.Globalization;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
 namespace plants
@@ -17,6 +19,8 @@ namespace plants
 
         public void WriteQueries(TextWriter output)
         {
+            #region Pozostałe
+
             if (Name == "grupa" ||
                 Name == "podlewanie" ||
                 Name == "nawożenie" ||
@@ -30,6 +34,10 @@ namespace plants
                     Name, parts[0].Replace(" lub ", "\"|\""));
             }
 
+            #endregion
+
+            #region Pochodzenie
+
             if (Name == "pochodzenie")
             {
                 string[] parts = Value.Split(
@@ -39,6 +47,10 @@ namespace plants
                 output.WriteLine("\t(property \"{0}\" \"dowolne\"|\"{1}\")",
                     Name, parts[0].Replace(" i ", "\"|\""));
             }
+
+            #endregion
+
+            #region Kwiaty
 
             if (Name == "kwiaty")
             {
@@ -73,6 +85,99 @@ namespace plants
 
                 output.WriteLine("\"{0}\")", string.Join("\"|\"", selectors.ToArray()));
             }
+
+            #endregion
+
+            #region Rozmiary
+
+            if (Name == "rozmiary")
+            {
+                #region Regex
+
+                const string number = @"(\d+(,\d+)?)|metra";
+                const string seperator = @"\s*(-|do)\s*";
+                const string postfix = @"\w+";
+
+                Regex regex = new Regex(String.Format(
+                    @"((?<min>{0}){1})?(?<max>{0})\s*(?<unit>{2})",
+                    number, seperator, postfix));
+
+                #endregion
+
+                #region Search
+
+                int start = 0;
+
+            Retry:
+                Match match = regex.Match(Value, start);
+
+                string min = match.Groups["min"].Value;
+                string max = match.Groups["max"].Value;
+                string unit = match.Groups["unit"].Value;
+
+                if (unit == "latach")
+                {
+                    start = match.Index + match.Length;
+                    goto Retry;
+                }
+
+                #endregion 
+
+                if (min != "" || max != "" || unit != "")
+                {
+                    #region Parse
+
+                    if (min == "")
+                        min = "0";
+
+                    if (max == "metra")
+                    {
+                        max = "1";
+                        unit = "m";
+                    }
+
+                    if (unit.StartsWith("metr"))
+                        unit = "m";
+
+                    CultureInfo culture = CultureInfo.GetCultureInfo("pl-PL");
+                    float _min = float.Parse(min, culture.NumberFormat);
+                    float _max = float.Parse(max, culture.NumberFormat);
+
+                    #endregion
+
+                    #region Unit
+
+                    if (unit == "cm")
+                    {
+                        _min *= 1;
+                        _max *= 1;
+                    }
+                    else if (unit == "m")
+                    {
+                        _min *= 100;
+                        _max *= 100;
+                    }
+                    else
+                    {
+                        throw new Exception(unit);
+                    }
+
+                    #endregion
+
+                    #region Output
+
+                    output.WriteLine("\t(property \"wysokość_min\" ?min)");
+                    output.WriteLine("\t(property \"wysokość_max\" ?max)");
+                    output.WriteLine("\t(or");
+                    output.WriteLine("\t\t(and (test (< ?min {0})) (test (< {0} ?max)))", _min);
+                    output.WriteLine("\t\t(and (test (< ?min {0})) (test (< {0} ?max)))", _max);
+                    output.WriteLine("\t)");
+
+                    #endregion
+                }
+            }
+
+            #endregion
         }
     }
 }

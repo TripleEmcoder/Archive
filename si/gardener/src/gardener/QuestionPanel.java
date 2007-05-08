@@ -79,6 +79,8 @@ public class QuestionPanel extends JPanel implements ActionListener
 
 	public void actionPerformed(ActionEvent e)
 	{
+		System.err.println("--- " + e.getActionCommand() + " ---");
+		
 		if (e.getActionCommand().equals("next"))
 		{
 			updateHistory();

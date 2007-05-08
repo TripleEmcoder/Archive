@@ -881,7 +881,7 @@
     <property name="nazwa" value="Aglonema"></property>
     <property name="rodzina" value="Araceae"></property>
     <property name="pochodzenie" value="Azja, Filipiny"></property>
-    <property name="rozmiary" value="do 1 wysokości"></property>
+    <property name="rozmiary" value="do 1 m wysokości"></property>
     <property name="podlewanie" value="umiarkowane"></property>
     <property name="nawożenie" value="umiarkowane"></property>
     <property name="stanowisko" value="półcieniste lub widne"></property>
