@@ -24,21 +24,21 @@
 	lokalizacja2    -> orientacja      [ label = "na balkonie"    ];
 	lokalizacja2    -> orientacja      [ label = "na parapecie"   ];
 	lokalizacja2    -> kwiaty1         [ label = "nie wiem"       ];
-	lokalizacja3    -> lokalizacja4         [ label = "na podłodze"    ];
-	lokalizacja3    -> lokalizacja4         [ label = "na kredensie"   ];
-	lokalizacja3    -> lokalizacja4         [ label = "na szafie"      ];
+	lokalizacja3    -> lokalizacja4    [ label = "na podłodze"    ];
+	lokalizacja3    -> lokalizacja4    [ label = "na kredensie"   ];
+	lokalizacja3    -> lokalizacja4    [ label = "na szafie"      ];
 	lokalizacja3    -> kwiaty1         [ label = "nie wiem"       ];
-	orientacja      -> kwiaty1    [ label = "od północy"     ];
+	orientacja      -> kwiaty1         [ label = "od północy"     ];
 	orientacja      -> osłonięcie1     [ label = "od południa"    ];
 	orientacja      -> kwiaty1         [ label = "nie wiem"       ];
 	lokalizacja4    -> orientacja      [ label = "w pobliżu okna" ];
-	lokalizacja4    -> kwiaty1    [ label = "zdala od okna"  ];
+	lokalizacja4    -> kwiaty1         [ label = "zdala od okna"  ];
 	lokalizacja4    -> kwiaty1         [ label = "nie wiem"       ];
-	osłonięcie1     -> kwiaty1    [ label = "wśród budynków" ];
-	osłonięcie1     -> kwiaty1    [ label = "wśród drzew"    ];
-	osłonięcie1     -> kwiaty1    [ label = "nieosłonięte"   ];
-	osłonięcie1     -> kwiaty1    [ label = "nie wiem"       ];
-
+	osłonięcie1     -> kwiaty1         [ label = "wśród budynków" ];
+	osłonięcie1     -> kwiaty1         [ label = "wśród drzew"    ];
+	osłonięcie1     -> kwiaty1         [ label = "nieosłonięte"   ];
+	osłonięcie1     -> kwiaty1         [ label = "nie wiem"       ];
+	
 	//ogrod
 	lokalizacja1    -> osłonięcie2     [ label = "w ogrodzie"     ];
 	osłonięcie2     -> sikawki         [ label = "tak"            ];
@@ -59,33 +59,33 @@
 	osłonięcie3     -> orientacja      [ label = "nie wiem"       ];
 
 	//ogolne
-	lokalizacja1    -> kwiaty1         [ label = "nie wiem"       ];
-	kwiaty1         -> kwiaty2         [ label = "tak"            ];
-	kwiaty1         -> pochodzenie     [ label = "nie"            ];
-	kwiaty1         -> pochodzenie     [ label = "obojętnie"      ];
-	kwiaty2         -> pochodzenie     [ label = "białe"          ];
-	kwiaty2         -> pochodzenie     [ label = "czerwone"       ];
-	kwiaty2         -> pochodzenie     [ label = "fioletowe"      ];
-	kwiaty2         -> pochodzenie     [ label = "niebieskie"     ];
-	kwiaty2         -> pochodzenie     [ label = "pomarańczowe"   ];
-	kwiaty2         -> pochodzenie     [ label = "purpurowe"   ];
-	kwiaty2         -> pochodzenie     [ label = "różowe"         ];
-	kwiaty2         -> pochodzenie     [ label = "żółte"          ];
-	kwiaty2         -> pochodzenie     [ label = "różnobarwne"    ];
-	kwiaty2         -> pochodzenie     [ label = "inne"           ];
-	kwiaty2         -> pochodzenie     [ label = "dowolne"        ];
-	pochodzenie     -> pielęgnacja     [ label = "Polska"         ];
-	pochodzenie     -> pielęgnacja     [ label = "Europa"         ];
-	pochodzenie     -> pielęgnacja     [ label = "Afryka"         ];
-	pochodzenie     -> pielęgnacja     [ label = "Azja"           ];
-	pochodzenie     -> pielęgnacja     [ label = "Azja Mniejsza"  ];
-	pochodzenie     -> pielęgnacja     [ label = "Australia"      ];
-	pochodzenie     -> pielęgnacja     [ label = "Ameryka Północna"   ];
-	pochodzenie     -> pielęgnacja     [ label = "Ameryka Środkowa"   ];
-	pochodzenie     -> pielęgnacja     [ label = "Ameryka Południowa" ];
-	pochodzenie     -> pielęgnacja     [ label = "obojętnie"      ];
-	pielęgnacja     -> STOP            [ label = "tak"            ];
-	pielęgnacja     -> STOP            [ label = "nie"            ];
-	pielęgnacja     -> STOP            [ label = "nie wiem"       ];
-}
+	lokalizacja1    -> kwiaty1        [ label = "nie wiem"       ];
+	kwiaty1         -> kwiaty2        [ label = "tak"            ];
+	kwiaty1         -> pochodzenie    [ label = "nie"            ];
+	kwiaty1         -> pochodzenie    [ label = "obojętnie"      ];
+	kwiaty2         -> pochodzenie    [ label = "białe"          ];
+	kwiaty2         -> pochodzenie    [ label = "czerwone"       ];
+	kwiaty2         -> pochodzenie    [ label = "fioletowe"      ];
+	kwiaty2         -> pochodzenie    [ label = "niebieskie"     ];
+	kwiaty2         -> pochodzenie    [ label = "pomarańczowe"   ];
+	kwiaty2         -> pochodzenie    [ label = "purpurowe"   ];
+	kwiaty2         -> pochodzenie    [ label = "różowe"         ];
+	kwiaty2         -> pochodzenie    [ label = "żółte"          ];
+	kwiaty2         -> pochodzenie    [ label = "różnobarwne"    ];
+	kwiaty2         -> pochodzenie    [ label = "inne"           ];
+	kwiaty2         -> pochodzenie    [ label = "dowolne"        ];
+	pochodzenie     -> pielęgnacja    [ label = "Polska"         ];
+	pochodzenie     -> pielęgnacja    [ label = "Europa"         ];
+	pochodzenie     -> pielęgnacja    [ label = "Afryka"         ];
+	pochodzenie     -> pielęgnacja    [ label = "Azja"           ];
+	pochodzenie     -> pielęgnacja    [ label = "Azja Mniejsza"  ];
+	pochodzenie     -> pielęgnacja    [ label = "Australia"      ];
+	pochodzenie     -> pielęgnacja    [ label = "Ameryka Północna"   ];
+	pochodzenie     -> pielęgnacja    [ label = "Ameryka Środkowa"   ];
+	pochodzenie     -> pielęgnacja    [ label = "Ameryka Południowa" ];
+	pochodzenie     -> pielęgnacja    [ label = "obojętnie"      ];
+	pielęgnacja     -> STOP           [ label = "tak"            ];
+	pielęgnacja     -> STOP           [ label = "nie"            ];
+	pielęgnacja     -> STOP           [ label = "nie wiem"       ];
+	}
 
