@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 import javax.swing.AbstractButton;
 import javax.swing.Box;
@@ -25,8 +24,6 @@ public class QuestionPanel extends JPanel implements ActionListener
 	
 	public QuestionPanel()
 	{
-		rand = new Random();
-
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
 		group = new ButtonGroup();
@@ -136,10 +133,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 				radioPanel.add(button);
 			}
 
-			// JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
-			// .nextInt(radioPanel.getComponentCount()));
-			JRadioButton button = (JRadioButton) radioPanel
-					.getComponent(radioPanel.getComponentCount()-1);
+			JRadioButton button = (JRadioButton) radioPanel.getComponent(radioPanel.getComponentCount()-1);
 			button.setSelected(true);
 		}
 

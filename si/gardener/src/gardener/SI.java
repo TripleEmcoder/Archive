@@ -31,7 +31,7 @@ public class SI
 
 		JFrame frame = new JFrame("Gardener");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(50, 50, 950, 680);
+		frame.setBounds(50, 20, 950, 690);
 
 		Border lowered = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 

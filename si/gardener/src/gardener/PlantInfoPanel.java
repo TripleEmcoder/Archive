@@ -122,7 +122,7 @@ public class PlantInfoPanel extends JPanel
 
 		fieldProperties.add(new FieldProperty("Nazwa", 1, 20));
 		fieldProperties.add(new FieldProperty("Rodzina", 1, 20));
-		fieldProperties.add(new FieldProperty("Pochodzenie", 1, 20));
+		fieldProperties.add(new FieldProperty("Pochodzenie", 2, 20));
 		fieldProperties.add(new FieldProperty("Rozmiary", 2, 20));
 		fieldProperties.add(new FieldProperty("Podlewanie", 2, 20));
 		fieldProperties.add(new FieldProperty("Nawo¿enie", 1, 20));
