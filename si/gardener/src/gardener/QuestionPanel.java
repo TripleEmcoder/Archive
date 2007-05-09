@@ -22,8 +22,7 @@ public class QuestionPanel extends JPanel implements ActionListener
 	private JPanel radioPanel, buttonPanel;
 	private ButtonGroup group;
 	private JButton next, previous, restart;
-	private Random rand;
-
+	
 	public QuestionPanel()
 	{
 		rand = new Random();
@@ -137,8 +136,10 @@ public class QuestionPanel extends JPanel implements ActionListener
 				radioPanel.add(button);
 			}
 
-			JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
-					.nextInt(radioPanel.getComponentCount()));
+			// JRadioButton button = (JRadioButton) radioPanel.getComponent(rand
+			// .nextInt(radioPanel.getComponentCount()));
+			JRadioButton button = (JRadioButton) radioPanel
+					.getComponent(radioPanel.getComponentCount()-1);
 			button.setSelected(true);
 		}
 
