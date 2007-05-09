@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="3">
+  <map>
+    <name>test</name>
+    <tests>
+      <count>1</count>
+      <item>test2</item>
+    </tests>
+  </map>
+</boost_serialization>
