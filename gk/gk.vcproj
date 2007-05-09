@@ -182,6 +182,14 @@
 				RelativePath=".\map.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\quad.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\vertex.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -194,6 +202,18 @@
 			</File>
 			<File
 				RelativePath=".\map.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\quad.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\vector.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\vertex.hpp"
 				>
 			</File>
 		</Filter>

@@ -3,9 +3,58 @@
 <boost_serialization signature="serialization::archive" version="3">
   <map>
     <name>test</name>
-    <tests>
-      <count>1</count>
-      <item>test2</item>
-    </tests>
+    <quads>
+      <count>2</count>
+      <item>
+        <vertices>
+          <count>4</count>
+          <item>
+            <x>2</x>
+            <y>2</y>
+            <z>0</z>
+          </item>
+          <item>
+            <x>2</x>
+            <y>-2</y>
+            <z>0</z>
+          </item>
+          <item>
+            <x>-2</x>
+            <y>-2</y>
+            <z>0</z>
+          </item>
+          <item>
+            <x>-2</x>
+            <y>2</y>
+            <z>0</z>
+          </item>
+        </vertices>
+      </item>
+      <item>
+        <vertices>
+          <count>4</count>
+          <item>
+            <x>2</x>
+            <y>4</y>
+            <z>2</z>
+          </item>
+          <item>
+            <x>2</x>
+            <y>4</y>
+            <z>-2</z>
+          </item>
+          <item>
+            <x>-2</x>
+            <y>4</y>
+            <z>-2</z>
+          </item>
+          <item>
+            <x>-2</x>
+            <y>4</y>
+            <z>2</z>
+          </item>
+        </vertices>
+      </item>
+    </quads>
   </map>
 </boost_serialization>

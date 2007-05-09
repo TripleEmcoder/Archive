@@ -1,16 +1,16 @@
-#ifndef LIST_HPP
-#define LIST_HPP
+#ifndef VECTOR_HPP
+#define VECTOR_HPP
 
-#include <list>
+#include <vector>
 
-#include <boost/serialization/list.hpp>
+#include <boost/serialization/vector.hpp>
 
 namespace boost 
 { 
 	namespace serialization 
 	{ 
 		template<class T> 
-		struct implementation_level<std::list<T> > 
+		struct implementation_level<std::vector<T> > 
 		{ 
 			typedef mpl::integral_c_tag tag; 
 			typedef mpl::int_< boost::serialization::object_serializable > type; 
@@ -19,4 +19,4 @@ namespace boost
 	}
 }
 
-#endif //LIST_HPP
+#endif //VECTOR_HPP

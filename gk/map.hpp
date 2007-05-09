@@ -7,20 +7,23 @@
 
 #include <boost/serialization/utility.hpp>
 
-#include "list.hpp"
+#include "vector.hpp"
+#include "quad.hpp"
 
 class map
 {
 public:
 	std::string name;
-	std::list<std::string> tests;
+	std::vector<quad> quads;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
 		archive & BOOST_SERIALIZATION_NVP(name);
-		archive & BOOST_SERIALIZATION_NVP(tests);
+		archive & BOOST_SERIALIZATION_NVP(quads);
 	}
+
+	void draw();
 };
 
 BOOST_CLASS_IMPLEMENTATION(map, boost::serialization::object_serializable);
