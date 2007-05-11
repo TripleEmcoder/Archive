@@ -3,7 +3,7 @@
 #include <boost/serialization/nvp.hpp>
 
 #include "map.hpp"
-#include "foreach.hpp"
+//#include "foreach.hpp"
 
 std::istream& operator>> (std::istream& is, map& m)
 {
