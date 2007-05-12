@@ -9,8 +9,10 @@
 #include "map.hpp"
 #include "Camera.hpp"
 #include "FPSCounter.hpp"
+#include "HUDManager.hpp"
 
 map m;
+HUDManager* hudManager;
 Camera* camera;
 FPSCounter* fpsCounter;
 int width = 800, heigth = 800;
@@ -70,7 +72,7 @@ void draw(void)
 
 	m.draw();
 
-	fpsCounter->draw();
+	hudManager->draw();
 
 	glutSwapBuffers();
 }
@@ -98,7 +100,9 @@ int main(int argc, char* argv[])
 	//glShadeModel(GL_SMOOTH);
 
 	camera = new Camera(10, 0, 10, -140, 0);
-	fpsCounter = new FPSCounter(width, heigth);
+	hudManager = new HUDManager(width, heigth);
+	fpsCounter = new FPSCounter();
+	hudManager->add(fpsCounter);
 
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);

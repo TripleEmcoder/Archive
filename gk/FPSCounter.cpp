@@ -2,59 +2,20 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <GL/glut.h>
 #include <cstdio>
+#include <GL/glut.h>
 
-FPSCounter::FPSCounter(int width, int heigth)
-	:time(0), timebase(0), frame(0), width(width), heigth(heigth)
+FPSCounter::FPSCounter()
+	:time(0), timebase(0), frame(0)
 {
+	s[0] = '\0';
 }
 
 FPSCounter::~FPSCounter(void)
 {
 }
 
-void FPSCounter::setOrthographicProjection() 
-{
-	// switch to projection mode
-	glMatrixMode(GL_PROJECTION);
-	// save previous matrix which contains the 
-	//settings for the perspective projection
-	glPushMatrix();
-	// reset matrix
-	glLoadIdentity();
-	// set a 2D orthographic projection
-	gluOrtho2D(0, width, 0, heigth);
-	// invert the y axis, down is positive
-	glScalef(1, -1, 1);
-	// mover the origin from the bottom left corner
-	// to the upper left corner
-	glTranslatef(0, -heigth, 0);
-	glMatrixMode(GL_MODELVIEW);
-}
 
-void FPSCounter::resetPerspectiveProjection() 
-{
-	// set the current matrix to GL_PROJECTION
-	glMatrixMode(GL_PROJECTION);
-	// restore previous settings
-	glPopMatrix();
-	// get back to GL_MODELVIEW matrix
-	glMatrixMode(GL_MODELVIEW);
-}
-
-void FPSCounter::renderBitmapString(float x, float y, void *font, char *string)
-{
-  
-  char *c;
-  // set position to start drawing fonts
-  glRasterPos2f(x, y);
-  // loop all the characters in the string
-  for (c = string; *c != '\0'; c++) 
-  {
-	glutBitmapCharacter(font, *c);
-  }
-}
 
 void FPSCounter::draw()
 {
@@ -68,11 +29,5 @@ void FPSCounter::draw()
 		frame = 0;
 	}
 
-	glColor3f(0.0f, 1.0f, 1.0f);
-	glPushMatrix();
-	glLoadIdentity();
-	setOrthographicProjection();
 	renderBitmapString(30, 35, GLUT_BITMAP_8_BY_13, s);
-	glPopMatrix();
-	resetPerspectiveProjection();
 }

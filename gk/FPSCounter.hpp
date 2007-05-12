@@ -1,15 +1,14 @@
 #pragma once
 
-class FPSCounter
+#include "HUDElement.hpp"
+
+class FPSCounter : public HUDElement
 {
 private:
-	int frame, time, timebase, heigth, width;
 	char s[30];
-	void setOrthographicProjection();
-	void resetPerspectiveProjection();
-	void renderBitmapString(float x, float y, void *font, char *string);
+	int frame, time, timebase;
 public:
-	FPSCounter(int width, int heigth);
+	FPSCounter();
 	~FPSCounter(void);
-	void draw();
+	virtual void draw();
 };

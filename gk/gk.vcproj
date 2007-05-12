@@ -183,6 +183,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\HUDElement.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\HUDManager.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
 				>
 			</File>
@@ -210,6 +218,14 @@
 			</File>
 			<File
 				RelativePath=".\FPSCounter.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\HUDElement.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\HUDManager.hpp"
 				>
 			</File>
 			<File
