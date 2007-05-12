@@ -21,6 +21,7 @@ public class SI
 	static String clipsFiles[] = { "java.clp", "tools.clp", "questions.clp",
 			"rules.clp", "plants.clp", };
 
+
 	private static void createAndShowGUI()
 	{
 		historyPanel = new ListPanel(true);
@@ -29,7 +30,7 @@ public class SI
 		plantListPanel = new PlantListPanel();
 		plantFinder = new PlantFinder("plants.xml");
 
-		JFrame frame = new JFrame("Gardener");
+		JFrame frame = new JFrame("Ogrodnik");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBounds(50, 20, 950, 690);
 

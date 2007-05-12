@@ -2,8 +2,10 @@ package gardener;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URI;
-import java.net.URL;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -63,18 +65,49 @@ public class ClipsManager implements Observer
 		}
 	}
 
+//	public void load(String filename)
+//	{
+//		URL fileUrl = ClipsManager.class.getResource(filename);
+//
+//		try
+//		{
+//			if (fileUrl == null)
+//			{
+//				throw new FileNotFoundException(filename);
+//			}
+//			File file = new File(fileUrl.toURI());
+//			jClips.load(file.getPath());
+//		}
+//		catch (Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
+	
 	public void load(String filename)
 	{
-		URL fileUrl = ClipsManager.class.getResource(filename);
+		InputStream inputStream = ClipsManager.class.getResourceAsStream(filename);
 
 		try
 		{
-			if (fileUrl == null)
+			if (inputStream == null)
 			{
 				throw new FileNotFoundException(filename);
 			}
-			File file = new File(new URI(fileUrl.toString()));
+			InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
+			File file = new File("temp.txt");
+			FileOutputStream fileOutputStream = new FileOutputStream(file);
+			OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, "UTF-8");
+			while (inputStreamReader.ready())
+			{
+				char cbuf[] = new char[1024];
+				int count = inputStreamReader.read(cbuf);
+				outputStreamWriter.write(cbuf, 0, count);
+			}
+			inputStreamReader.close();
+			outputStreamWriter.close();
 			jClips.load(file.getPath());
+			file.delete();
 		}
 		catch (Exception e)
 		{
@@ -135,13 +168,12 @@ public class ClipsManager implements Observer
 	private void sendInfo()
 	{
 		Collections.sort(plants);
-		//for (String plant : plants)
-		//	SI.plantListPanel.addElement(plant);
+		// for (String plant : plants)
+		// SI.plantListPanel.addElement(plant);
 		SI.plantListPanel.updateList(plants);
 
 		String title = String.format("Lista roœlin (%d)", plants.size());
-		((TitledBorder) ((CompoundBorder) SI.plantListPanel.getBorder())
-				.getOutsideBorder()).setTitle(title);
+		((TitledBorder) ((CompoundBorder) SI.plantListPanel.getBorder()).getOutsideBorder()).setTitle(title);
 		SI.plantListPanel.repaint();
 
 		if (currentQuestion != null && plants.size() > 1)

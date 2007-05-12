@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry including="gardener/*.clp|gardener/plants.xml|gardener/plants/*.jpg" kind="src" path="res"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="jclips.jar">
+	<classpathentry excluding="*svn*" including="gardener/*.clp|gardener/plants.xml|gardener/plants/*.jpg" kind="src" path="res"/>
+	<classpathentry exported="true" kind="lib" path="jclips.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="http://www.cs.vu.nl/~mrmenken/jclips/javadoc/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
