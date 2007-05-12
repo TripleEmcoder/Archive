@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <GL/gl.h>
 	
-void quad::draw()
+void quad::draw() const
 {
 	glBegin(GL_QUADS);
 

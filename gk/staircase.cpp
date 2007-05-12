@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <GL/gl.h>
 	
-void staircase::draw()
+void staircase::draw() const
 {
 	stair repeat = model;
 

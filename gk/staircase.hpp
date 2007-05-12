@@ -18,7 +18,7 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(count);
 	}
 
-	void draw();
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(staircase, boost::serialization::object_serializable);

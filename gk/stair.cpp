@@ -4,7 +4,7 @@
 #include <windows.h>
 #include <GL/gl.h>
 	
-void stair::draw()
+void stair::draw() const
 {
 	glColor3d(1, 0, 0);
 	cuboid vertical(start, vertex(width, height, -thickness));

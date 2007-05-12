@@ -24,19 +24,9 @@ std::ostream& operator<< (std::ostream& os, const map& m)
 #include <GL/gl.h>
 #include <GL/glaux.h>
 
-void map::draw()
+void map::draw() const
 {
-	for (size_t i=0; i<quads.size(); i++)
-		quads[i].draw();
-
-	for (size_t i=0; i<cuboids.size(); i++)
-		cuboids[i].draw();
-
-	for (size_t i=0; i<stairs.size(); i++)
-		stairs[i].draw();
-
-	for (size_t i=0; i<staircases.size(); i++)
-		staircases[i].draw();
+	group::draw();
 
 	glColor3d(1, 1, 1);
 	auxSolidSphere(0.2);

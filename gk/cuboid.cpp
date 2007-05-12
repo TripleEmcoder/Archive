@@ -11,7 +11,7 @@ cuboid::cuboid(vertex start, vertex size) : start(start), size(size)
 #include <windows.h>
 #include <GL/gl.h>
 
-void cuboid::draw()
+void cuboid::draw() const
 {
 	glBegin(GL_QUADS);
 	

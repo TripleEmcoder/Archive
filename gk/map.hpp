@@ -7,32 +7,18 @@
 
 #include <boost/serialization/utility.hpp>
 
-#include "vector.hpp"
-#include "quad.hpp"
-#include "cuboid.hpp"
-#include "stair.hpp"
-#include "staircase.hpp"
+#include "group.hpp"
 
-class map
+class map : public group
 {
 public:
-	std::string name;
-	std::vector<quad> quads;
-	std::vector<cuboid> cuboids;
-	std::vector<stair> stairs;
-	std::vector<staircase> staircases;
-
 	template<class A> 
-	void serialize(A& archive, const unsigned int)
+	void serialize(A& archive, const unsigned int version)
 	{
-		archive & BOOST_SERIALIZATION_NVP(name);
-		archive & BOOST_SERIALIZATION_NVP(quads);
-		archive & BOOST_SERIALIZATION_NVP(cuboids);
-		archive & BOOST_SERIALIZATION_NVP(stairs);
-		archive & BOOST_SERIALIZATION_NVP(staircases);
+		group::serialize(archive, version);
 	}
 
-	void draw();
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(map, boost::serialization::object_serializable);

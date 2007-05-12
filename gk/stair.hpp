@@ -26,7 +26,7 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(overhang);
 	}
 
-	void draw();
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(stair, boost::serialization::object_serializable);

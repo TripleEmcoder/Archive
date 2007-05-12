@@ -8,7 +8,7 @@ vertex::vertex(double x, double y, double z) : x(x), y(y), z(z)
 {
 }
 
-vertex vertex::operator+(vertex v)
+vertex vertex::operator+(vertex v) const
 {
 	return vertex(x+v.x, y+v.y, z+v.z);
 }
@@ -16,7 +16,7 @@ vertex vertex::operator+(vertex v)
 #include <windows.h>
 #include <GL/gl.h>
 
-void vertex::draw()
+void vertex::draw() const
 {
 	glVertex3d(x, y, z);
 }

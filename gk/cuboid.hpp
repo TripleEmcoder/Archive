@@ -21,7 +21,7 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(size);
 	}
 
-	void draw();
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(cuboid, boost::serialization::object_serializable);

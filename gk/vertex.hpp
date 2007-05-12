@@ -12,7 +12,6 @@ public:
 
 	vertex();
 	vertex(double x, double y, double z);
-	vertex operator+(vertex v);
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
@@ -22,7 +21,8 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(z);
 	}
 
-	void draw();
+	vertex operator+(vertex v) const;
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(vertex, boost::serialization::object_serializable);

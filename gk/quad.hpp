@@ -17,7 +17,7 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(vertices);
 	}
 
-	void draw();
+	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(quad, boost::serialization::object_serializable);
