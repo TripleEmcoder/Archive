@@ -46,6 +46,7 @@ void Camera::draw()
 void Camera::drawHUD()
 {
 	renderBitmapString(650, 35, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
+	renderBitmapString(650, 55, "(%3.1f, %3.1f)", angleX, angleY);
 }
 
 void Camera::move(Axis a, double s)
