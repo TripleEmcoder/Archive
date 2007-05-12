@@ -20,16 +20,16 @@ void pressNormalKey(unsigned char c, int x, int y)
 	switch (c)
 	{
 	case 'w':
-		cam->move(camera::forward, 1);
+		cam->move(camera::AXIS_X, 10);
 		break;
 	case 's':
-		cam->move(camera::backward, 1);
+		cam->move(camera::AXIS_X, -10);
 		break;
 	case 'a':
-		cam->move(camera::left, 1);
+		cam->move(camera::AXIS_Y, -10);
 		break;
 	case 'd':
-		cam->move(camera::right, 1);
+		cam->move(camera::AXIS_Y, 10);
 		break;
 	}
 }
@@ -40,9 +40,11 @@ void releaseNormalKey(unsigned char c, int x, int y) {
 	{
 	case 'w':
 	case 's':
+		cam->move(camera::AXIS_X, 0);
+		break;
 	case 'a':
 	case 'd':
-		cam->move(camera::forward, 0);
+		cam->move(camera::AXIS_Y, 0);
 		break;
 	}
 }
