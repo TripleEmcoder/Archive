@@ -3,7 +3,6 @@
 #include <boost/serialization/nvp.hpp>
 
 #include "map.hpp"
-//#include "foreach.hpp"
 
 std::istream& operator>> (std::istream& is, map& m)
 {
@@ -23,13 +22,22 @@ std::ostream& operator<< (std::ostream& os, const map& m)
 
 #include <windows.h>
 #include <GL/gl.h>
+#include <GL/glaux.h>
 
 void map::draw()
 {
-	glBegin(GL_QUADS);
-
 	for (size_t i=0; i<quads.size(); i++)
 		quads[i].draw();
 
-	glEnd();
+	for (size_t i=0; i<cuboids.size(); i++)
+		cuboids[i].draw();
+
+	for (size_t i=0; i<stairs.size(); i++)
+		stairs[i].draw();
+
+	for (size_t i=0; i<staircases.size(); i++)
+		staircases[i].draw();
+
+	glColor3d(1, 1, 1);
+	auxSolidSphere(0.2);
 }

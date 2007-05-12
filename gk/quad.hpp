@@ -22,4 +22,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(quad, boost::serialization::object_serializable);
 
-#endif //PLANE_HPP 
+#endif //QUAD_HPP 

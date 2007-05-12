@@ -10,6 +10,10 @@ public:
 	double y;
 	double z;
 
+	vertex();
+	vertex(double x, double y, double z);
+	vertex operator+(vertex v);
+
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{

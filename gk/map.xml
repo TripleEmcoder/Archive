@@ -4,32 +4,7 @@
   <map>
     <name>test</name>
     <quads>
-      <count>2</count>
-      <item>
-        <vertices>
-          <count>4</count>
-          <item>
-            <x>2</x>
-            <y>2</y>
-            <z>0</z>
-          </item>
-          <item>
-            <x>2</x>
-            <y>-2</y>
-            <z>0</z>
-          </item>
-          <item>
-            <x>-2</x>
-            <y>-2</y>
-            <z>0</z>
-          </item>
-          <item>
-            <x>-2</x>
-            <y>2</y>
-            <z>0</z>
-          </item>
-        </vertices>
-      </item>
+      <count>1</count>
       <item>
         <vertices>
           <count>4</count>
@@ -56,5 +31,53 @@
         </vertices>
       </item>
     </quads>
+    <cuboids>
+      <count>1</count>
+      <item>
+        <start>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </start>
+        <size>
+          <x>3</x>
+          <y>0.2</y>
+          <z>4</z>
+        </size>
+      </item>
+    </cuboids>
+    <stairs>
+      <count>1</count>
+      <item>
+        <start>
+          <x>1</x>
+          <y>1</y>
+          <z>1</z>
+        </start>
+        <width>2</width>
+        <height>0.5</height>
+        <depth>1</depth>
+        <thickness>0.2</thickness>
+        <overhang>0</overhang>
+      </item>
+    </stairs>
+    <staircases>
+      <count>1</count>
+      <item>
+        <model>
+          <start>
+            <x>1</x>
+            <y>2</y>
+            <z>2</z>
+          </start>
+          <width>2</width>
+          <height>0.5</height>
+          <depth>1</depth>
+          <thickness>0.2</thickness>
+          <overhang>0.1</overhang>
+        </model>
+        <count>5</count>
+      </item>
+    </staircases>
   </map>
 </boost_serialization>
