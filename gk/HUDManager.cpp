@@ -6,31 +6,43 @@
 
 void HUDManager::setOrthographicProjection() 
 {
-	// switch to projection mode
-	glMatrixMode(GL_PROJECTION);
-	// save previous matrix which contains the 
-	//settings for the perspective projection
+	glDisable(GL_LIGHTING);
+	glDisable(GL_TEXTURE_2D);
+
+	glMatrixMode(GL_TEXTURE);
 	glPushMatrix();
-	// reset matrix
 	glLoadIdentity();
-	// set a 2D orthographic projection
+
+	glMatrixMode(GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
 	gluOrtho2D(0, width, 0, heigth);
-	// invert the y axis, down is positive
 	glScalef(1, -1, 1);
-	// mover the origin from the bottom left corner
-	// to the upper left corner
 	glTranslatef(0, -heigth, 0);
+
 	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glLoadIdentity();
+
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_BLEND);
 }
 
 void HUDManager::resetPerspectiveProjection() 
 {
-	// set the current matrix to GL_PROJECTION
-	glMatrixMode(GL_PROJECTION);
-	// restore previous settings
+	glMatrixMode(GL_TEXTURE);
 	glPopMatrix();
-	// get back to GL_MODELVIEW matrix
+
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+
 	glMatrixMode(GL_MODELVIEW);
+	glPopMatrix();
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_TEXTURE_2D);
 }
 
 void HUDManager::draw()
@@ -40,7 +52,7 @@ void HUDManager::draw()
 	glLoadIdentity();
 	setOrthographicProjection();
 
-	for_each(elements.begin(), elements.end(), std::mem_fun(&HUDElement::draw));
+	for_each(elements.begin(), elements.end(), std::mem_fun(&HUDElement::drawHUD));
 	
 	glPopMatrix();
 	resetPerspectiveProjection();

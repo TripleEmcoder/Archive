@@ -43,6 +43,11 @@ void Camera::draw()
 	timebase = time;
 }
 
+void Camera::drawHUD()
+{
+	renderBitmapString(650, 35, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
+}
+
 void Camera::move(Axis a, double s)
 {
 	speed[a] = s;

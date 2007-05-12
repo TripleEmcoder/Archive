@@ -1,13 +1,16 @@
 #pragma once
 #include <boost/numeric/ublas/vector.hpp>
 
-class Camera
+#include "HUDElement.hpp"
+
+class Camera : public HUDElement
 {
 public:
 	enum Axis {AXIS_X, AXIS_Y};
 	Camera(double eyeX, double eyeY, double eyeZ, double angleX, double angleY);
 	~Camera(void);
 	void draw();
+	virtual void drawHUD();
 	void rotate(double x, double y);
 	void move(Axis a, double speed);
 private:

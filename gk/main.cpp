@@ -103,6 +103,7 @@ int main(int argc, char* argv[])
 	hudManager = new HUDManager(width, heigth);
 	fpsCounter = new FPSCounter();
 	hudManager->add(fpsCounter);
+	hudManager->add(camera);
 
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);

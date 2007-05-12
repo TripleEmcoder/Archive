@@ -5,10 +5,10 @@
 class FPSCounter : public HUDElement
 {
 private:
-	char s[30];
+	double fps;
 	int frame, time, timebase;
 public:
 	FPSCounter();
 	~FPSCounter(void);
-	virtual void draw();
+	virtual void drawHUD();
 };

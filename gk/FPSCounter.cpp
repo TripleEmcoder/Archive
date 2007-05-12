@@ -2,13 +2,11 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <cstdio>
 #include <GL/glut.h>
 
 FPSCounter::FPSCounter()
-	:time(0), timebase(0), frame(0)
+	:time(0), timebase(0), frame(0), fps(0)
 {
-	s[0] = '\0';
 }
 
 FPSCounter::~FPSCounter(void)
@@ -17,17 +15,17 @@ FPSCounter::~FPSCounter(void)
 
 
 
-void FPSCounter::draw()
+void FPSCounter::drawHUD()
 {
 	frame++;
 	time = glutGet(GLUT_ELAPSED_TIME);
 	
 	if (time - timebase > 1000) 
 	{
-		sprintf(s, "FPS:%4.2f", frame*1000.0/(time-timebase));
+		fps = frame*1000.0/(time-timebase);
 		timebase = time;		
 		frame = 0;
 	}
 
-	renderBitmapString(30, 35, GLUT_BITMAP_8_BY_13, s);
+	renderBitmapString(30, 35, "FPS:%6.2f", fps);
 }

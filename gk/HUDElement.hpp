@@ -3,8 +3,8 @@
 class HUDElement
 {
 protected:
-	void renderBitmapString(float x, float y, void *font, char *string);
+	void renderBitmapString(float x, float y, const char *fmt, ... );
 public:
-	virtual void draw() = 0;
+	virtual void drawHUD() = 0;
 	virtual ~HUDElement(void);
 };
