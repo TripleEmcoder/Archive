@@ -1,20 +1,20 @@
-#include "fps_counter.hpp"
+#include "FPSCounter.hpp"
 
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <GL/glut.h>
 #include <cstdio>
 
-fps_counter::fps_counter(int width, int heigth)
+FPSCounter::FPSCounter(int width, int heigth)
 	:time(0), timebase(0), frame(0), width(width), heigth(heigth)
 {
 }
 
-fps_counter::~fps_counter(void)
+FPSCounter::~FPSCounter(void)
 {
 }
 
-void fps_counter::setOrthographicProjection() 
+void FPSCounter::setOrthographicProjection() 
 {
 	// switch to projection mode
 	glMatrixMode(GL_PROJECTION);
@@ -33,7 +33,7 @@ void fps_counter::setOrthographicProjection()
 	glMatrixMode(GL_MODELVIEW);
 }
 
-void fps_counter::resetPerspectiveProjection() 
+void FPSCounter::resetPerspectiveProjection() 
 {
 	// set the current matrix to GL_PROJECTION
 	glMatrixMode(GL_PROJECTION);
@@ -43,7 +43,7 @@ void fps_counter::resetPerspectiveProjection()
 	glMatrixMode(GL_MODELVIEW);
 }
 
-void fps_counter::renderBitmapString(float x, float y, void *font, char *string)
+void FPSCounter::renderBitmapString(float x, float y, void *font, char *string)
 {
   
   char *c;
@@ -56,7 +56,7 @@ void fps_counter::renderBitmapString(float x, float y, void *font, char *string)
   }
 }
 
-void fps_counter::draw()
+void FPSCounter::draw()
 {
 	frame++;
 	time = glutGet(GLUT_ELAPSED_TIME);

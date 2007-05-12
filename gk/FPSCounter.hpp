@@ -1,6 +1,6 @@
 #pragma once
 
-class fps_counter
+class FPSCounter
 {
 private:
 	int frame, time, timebase, heigth, width;
@@ -9,7 +9,7 @@ private:
 	void resetPerspectiveProjection();
 	void renderBitmapString(float x, float y, void *font, char *string);
 public:
-	fps_counter(int width, int heigth);
-	~fps_counter(void);
+	FPSCounter(int width, int heigth);
+	~FPSCounter(void);
 	void draw();
 };

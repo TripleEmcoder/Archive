@@ -7,12 +7,12 @@
 #include <GL/glut.h>
 
 #include "map.hpp"
-#include "camera.hpp"
-#include "fps_counter.hpp"
+#include "Camera.hpp"
+#include "FPSCounter.hpp"
 
 map m;
-camera* cam;
-fps_counter* fps;
+Camera* camera;
+FPSCounter* fpsCounter;
 int width = 800, heigth = 800;
 
 void pressNormalKey(unsigned char c, int x, int y) 
@@ -20,16 +20,16 @@ void pressNormalKey(unsigned char c, int x, int y)
 	switch (c)
 	{
 	case 'w':
-		cam->move(camera::AXIS_X, 10);
+		camera->move(Camera::AXIS_Y, 10);
 		break;
 	case 's':
-		cam->move(camera::AXIS_X, -10);
+		camera->move(Camera::AXIS_Y, -10);
 		break;
 	case 'a':
-		cam->move(camera::AXIS_Y, -10);
+		camera->move(Camera::AXIS_X, -10);
 		break;
 	case 'd':
-		cam->move(camera::AXIS_Y, 10);
+		camera->move(Camera::AXIS_X, 10);
 		break;
 	}
 }
@@ -40,11 +40,11 @@ void releaseNormalKey(unsigned char c, int x, int y) {
 	{
 	case 'w':
 	case 's':
-		cam->move(camera::AXIS_X, 0);
+		camera->move(Camera::AXIS_Y, 0);
 		break;
 	case 'a':
 	case 'd':
-		cam->move(camera::AXIS_Y, 0);
+		camera->move(Camera::AXIS_X, 0);
 		break;
 	}
 }
@@ -53,7 +53,7 @@ void processMousePassiveMotion(int x, int y)
 {
 	double angle_x = 360 * ((double)x / width - 0.5);
 	double angle_y = 360 * ((double)y / width - 0.5);
-	cam->rotate(angle_x, -angle_y);
+	camera->rotate(angle_x, -angle_y);
 }
 
 void draw(void)
@@ -64,13 +64,13 @@ void draw(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
-	cam->draw();
+	camera->draw();
 
 	glColor3b(20, 40, 60);
 
 	m.draw();
 
-	fps->draw();
+	fpsCounter->draw();
 
 	glutSwapBuffers();
 }
@@ -97,8 +97,8 @@ int main(int argc, char* argv[])
 	glEnable(GL_COLOR_MATERIAL);
 	//glShadeModel(GL_SMOOTH);
 
-	cam = new camera(10, 0, 10, -140, 0);
-	fps = new fps_counter(width, heigth);
+	camera = new Camera(10, 0, 10, -140, 0);
+	fpsCounter = new FPSCounter(width, heigth);
 
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);
