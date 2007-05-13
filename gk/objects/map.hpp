@@ -1,5 +1,5 @@
-#ifndef MAP_HPP
-#define MAP_HPP
+#ifndef OBJECTS_MAP_HPP
+#define OBJECTS_MAP_HPP
 
 #include <string>
 #include <istream>
@@ -26,4 +26,4 @@ BOOST_CLASS_IMPLEMENTATION(map, boost::serialization::object_serializable);
 std::istream& operator>> (std::istream& is, map& m);
 std::ostream& operator<< (std::ostream& os, const map& m);
 
-#endif //MAP_HPP
+#endif //OBJECTS_MAP_HPP

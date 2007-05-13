@@ -204,47 +204,51 @@
 				Name="objects"
 				>
 				<File
-					RelativePath=".\ceiling.cpp"
+					RelativePath=".\objects\ceiling.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\cuboid.cpp"
+					RelativePath=".\objects\cuboid.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\door.cpp"
+					RelativePath=".\objects\door.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\group.cpp"
+					RelativePath=".\objects\group.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\map.cpp"
+					RelativePath=".\objects\map.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\material.cpp"
+					RelativePath=".\objects\material.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\quad.cpp"
+					RelativePath=".\objects\object.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\stair.cpp"
+					RelativePath=".\objects\quad.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\staircase.cpp"
+					RelativePath=".\objects\stair.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\vertex.cpp"
+					RelativePath=".\objects\staircase.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\wall.cpp"
+					RelativePath=".\objects\vertex.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\wall.cpp"
 					>
 				</File>
 			</Filter>
@@ -252,7 +256,7 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\cache.cpp"
+					RelativePath=".\helpers\cache.cpp"
 					>
 				</File>
 			</Filter>
@@ -286,11 +290,15 @@
 				Name="traits"
 				>
 				<File
-					RelativePath=".\list.hpp"
+					RelativePath=".\traits\list.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\vector.hpp"
+					RelativePath=".\traits\map.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\traits\vector.hpp"
 					>
 				</File>
 			</Filter>
@@ -298,47 +306,51 @@
 				Name="objects"
 				>
 				<File
-					RelativePath=".\ceiling.hpp"
+					RelativePath=".\objects\ceiling.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\cuboid.hpp"
+					RelativePath=".\objects\cuboid.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\door.hpp"
+					RelativePath=".\objects\door.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\group.hpp"
+					RelativePath=".\objects\group.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\map.hpp"
+					RelativePath=".\objects\map.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\material.hpp"
+					RelativePath=".\objects\material.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\quad.hpp"
+					RelativePath=".\objects\object.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\stair.hpp"
+					RelativePath=".\objects\quad.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\staircase.hpp"
+					RelativePath=".\objects\stair.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\vertex.hpp"
+					RelativePath=".\objects\staircase.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\wall.hpp"
+					RelativePath=".\objects\vertex.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\wall.hpp"
 					>
 				</File>
 			</Filter>
@@ -346,7 +358,7 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\cache.hpp"
+					RelativePath=".\helpers\cache.hpp"
 					>
 				</File>
 			</Filter>

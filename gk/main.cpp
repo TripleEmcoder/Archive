@@ -6,7 +6,7 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
-#include "map.hpp"
+#include "objects/map.hpp"
 #include "Camera.hpp"
 #include "FPSCounter.hpp"
 #include "HUDManager.hpp"
@@ -100,6 +100,7 @@ void draw(void)
 	glutSwapBuffers();
 }
 
+
 int main(int argc, char* argv[])
 {
 	std::ifstream ifs("map.xml");
@@ -116,8 +117,8 @@ int main(int argc, char* argv[])
 	glLoadIdentity();
 	gluPerspective(50, 1, 1, 50);
 
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHTING);
+	//glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
 	glShadeModel(GL_SMOOTH);

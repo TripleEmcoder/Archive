@@ -5,12 +5,15 @@
 #include <windows.h>
 #include <GL/gl.h>
 
-#include "tga.h"
+#include "../tga.h"
 
 std::map<std::string, int> cache::textures;
 
 int cache::texture(std::string name)
 {
+	if (name == "")
+		return 0;
+
 	if (textures.count(name) == 0)
 	{
 		unsigned int id;

@@ -1,34 +1,34 @@
-#ifndef WALL_HPP
-#define WALL_HPP
+#ifndef OBJECTS_STAIR_HPP
+#define OBJECTS_STAIR_HPP
 
 #include <boost/serialization/utility.hpp>
 
 #include "vertex.hpp"
-#include "vector.hpp"
-#include "door.hpp"
 
-class wall
+class stair
 {
 public:
 	vertex position;
-	double length;
+	double width;
 	double height;
+	double depth;
 	double thickness;
-	std::vector<door> doors;
+	double overhang;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
 		archive & BOOST_SERIALIZATION_NVP(position);
-		archive & BOOST_SERIALIZATION_NVP(length);
+		archive & BOOST_SERIALIZATION_NVP(width);
 		archive & BOOST_SERIALIZATION_NVP(height);
+		archive & BOOST_SERIALIZATION_NVP(depth);
 		archive & BOOST_SERIALIZATION_NVP(thickness);
-		archive & BOOST_SERIALIZATION_NVP(doors);
+		archive & BOOST_SERIALIZATION_NVP(overhang);
 	}
 
 	void draw() const;
 };
 
-BOOST_CLASS_IMPLEMENTATION(wall, boost::serialization::object_serializable);
+BOOST_CLASS_IMPLEMENTATION(stair, boost::serialization::object_serializable);
 
-#endif //WALL_HPP 
+#endif //OBJECTS_STAIR_HPP 

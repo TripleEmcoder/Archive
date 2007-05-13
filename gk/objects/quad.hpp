@@ -1,9 +1,10 @@
-#ifndef QUAD_HPP
-#define QUAD_HPP
+#ifndef OBJECTS_QUAD_HPP
+#define OBJECTS_QUAD_HPP
 
 #include <boost/serialization/utility.hpp>
 
-#include "vector.hpp"
+#include "../traits/vector.hpp"
+
 #include "vertex.hpp"
 
 class quad
@@ -22,4 +23,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(quad, boost::serialization::object_serializable);
 
-#endif //QUAD_HPP 
+#endif //OBJECTS_QUAD_HPP 

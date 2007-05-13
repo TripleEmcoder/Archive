@@ -1,5 +1,5 @@
-#ifndef DOOR_HPP
-#define DOOR_HPP
+#ifndef OBJECTS_DOOR_HPP
+#define OBJECTS_DOOR_HPP
 
 #include <boost/serialization/utility.hpp>
 
@@ -28,4 +28,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(door, boost::serialization::object_serializable);
 
-#endif //DOOR_HPP 
+#endif //OBJECTS_DOOR_HPP 

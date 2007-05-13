@@ -14,7 +14,10 @@ using boost::lambda::_2;
 void wall::draw() const
 {
 	material brick("brick.tga");
-	brick.draw();
+
+	cuboid wall;
+	wall.materials["front"] = brick;
+	wall.materials["back"] = brick;
 
 	std::vector<door> sorted(doors);
 	sorted.push_back(door(0, 0, 0));
@@ -32,15 +35,17 @@ void wall::draw() const
 		before_position.x += previous.position + previous.width;
 
 		double before_width = current.position - previous.position - previous.width;
-		cuboid before(before_position, vertex(before_width, height, -thickness));
-		before.draw();
+		wall.position = before_position;
+		wall.size = vertex(before_width, height, -thickness);
+		wall.draw();
 
 		vertex above_position(position);
 		above_position.x += current.position;
 		above_position.y += current.height;
 
 		double above_height = height - current.height;
-		cuboid above(above_position, vertex(current.width, above_height, -thickness));
-		above.draw();
+		wall.position = above_position;
+		wall.size = vertex(current.width, above_height, -thickness);
+		wall.draw();
 	}
 }

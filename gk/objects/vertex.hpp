@@ -1,5 +1,5 @@
-#ifndef VERTEX_HPP
-#define VERTEX_HPP
+#ifndef OBJECTS_VERTEX_HPP
+#define OBJECTS_VERTEX_HPP
 
 #include <boost/serialization/utility.hpp>
 
@@ -27,4 +27,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(vertex, boost::serialization::object_serializable);
 
-#endif //VERTEX_HPP 
+#endif //OBJECTS_VERTEX_HPP 

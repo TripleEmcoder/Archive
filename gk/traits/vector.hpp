@@ -1,5 +1,5 @@
-#ifndef VECTOR_HPP
-#define VECTOR_HPP
+#ifndef TRAITS_VECTOR_HPP
+#define TRAITS_VECTOR_HPP
 
 #include <vector>
 
@@ -13,10 +13,10 @@ namespace boost
 		struct implementation_level<std::vector<T> > 
 		{ 
 			typedef mpl::integral_c_tag tag; 
-			typedef mpl::int_< boost::serialization::object_serializable > type; 
+			typedef mpl::int_<boost::serialization::object_serializable> type; 
 			static const int value = implementation_level::type::value; 
 		}; 
 	}
 }
 
-#endif //VECTOR_HPP
+#endif //TRAITS_VECTOR_HPP

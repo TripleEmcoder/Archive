@@ -1,9 +1,10 @@
-#ifndef GROUP_HPP
-#define GROUP_HPP
+#ifndef OBJECTS_GROUP_HPP
+#define OBJECTS_GROUP_HPP
 
 #include <boost/serialization/utility.hpp>
 
-#include "vector.hpp"
+#include "../traits/vector.hpp"
+
 #include "quad.hpp"
 #include "cuboid.hpp"
 #include "staircase.hpp"
@@ -41,4 +42,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(group, boost::serialization::object_serializable);
 
-#endif //GROUP_HPP
+#endif //OBJECTS_GROUP_HPP

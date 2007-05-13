@@ -1,5 +1,5 @@
-#ifndef STAIRCASE_HPP
-#define STAIRCASE_HPP
+#ifndef OBJECTS_STAIRCASE_HPP
+#define OBJECTS_STAIRCASE_HPP
 
 #include <boost/serialization/utility.hpp>
 
@@ -23,4 +23,4 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(staircase, boost::serialization::object_serializable);
 
-#endif //STAIRCASE_HPP 
+#endif //OBJECTS_STAIRCASE_HPP 
