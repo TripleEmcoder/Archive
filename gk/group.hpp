@@ -6,8 +6,8 @@
 #include "vector.hpp"
 #include "quad.hpp"
 #include "cuboid.hpp"
-#include "stair.hpp"
 #include "staircase.hpp"
+#include "wall.hpp"
 
 class group
 {
@@ -17,8 +17,8 @@ public:
 
 	std::vector<quad> quads;
 	std::vector<cuboid> cuboids;
-	std::vector<stair> stairs;
 	std::vector<staircase> staircases;
+	std::vector<wall> walls;
 
 	std::vector<group> groups;
 
@@ -30,8 +30,8 @@ public:
 
 		archive & BOOST_SERIALIZATION_NVP(quads);
 		archive & BOOST_SERIALIZATION_NVP(cuboids);
-		archive & BOOST_SERIALIZATION_NVP(stairs);
 		archive & BOOST_SERIALIZATION_NVP(staircases);
+		archive & BOOST_SERIALIZATION_NVP(walls);
 
 		archive & BOOST_SERIALIZATION_NVP(groups);
 	}

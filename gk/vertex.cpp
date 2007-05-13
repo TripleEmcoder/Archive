@@ -4,7 +4,8 @@ vertex::vertex()
 {
 }
 
-vertex::vertex(double x, double y, double z) : x(x), y(y), z(z)
+vertex::vertex(double x, double y, double z)
+: x(x), y(y), z(z)
 {
 }
 

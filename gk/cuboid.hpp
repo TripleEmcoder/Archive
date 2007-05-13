@@ -8,16 +8,16 @@
 class cuboid
 {
 public:
-	vertex start;
+	vertex position;
 	vertex size;
 
 	cuboid();
-	cuboid(vertex start, vertex size);
+	cuboid(vertex position, vertex size);
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
-		archive & BOOST_SERIALIZATION_NVP(start);
+		archive & BOOST_SERIALIZATION_NVP(position);
 		archive & BOOST_SERIALIZATION_NVP(size);
 	}
 

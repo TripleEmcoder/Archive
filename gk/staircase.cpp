@@ -5,14 +5,14 @@
 	
 void staircase::draw() const
 {
-	stair repeat = model;
+	stair instance(model);
 
 	for (int i=0; i<count; i++)
 	{
-		repeat.start.x = model.start.x;
-		repeat.start.y = model.start.y + i*(model.height+model.thickness);
-		repeat.start.z = model.start.z - i*(model.depth-model.thickness);
+		instance.position.x = model.position.x;
+		instance.position.y = model.position.y + i*(model.height+model.thickness);
+		instance.position.z = model.position.z - i*(model.depth-model.thickness);
 
-		repeat.draw();
+		instance.draw();
 	}
 }

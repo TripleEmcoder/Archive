@@ -204,6 +204,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\door.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\group.cpp"
 					>
 				</File>
@@ -225,6 +229,10 @@
 				</File>
 				<File
 					RelativePath=".\vertex.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\wall.cpp"
 					>
 				</File>
 			</Filter>
@@ -270,6 +278,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\door.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\group.hpp"
 					>
 				</File>
@@ -291,6 +303,10 @@
 				</File>
 				<File
 					RelativePath=".\vertex.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\wall.hpp"
 					>
 				</File>
 			</Filter>

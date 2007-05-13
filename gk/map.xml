@@ -35,11 +35,11 @@
     <cuboids>
       <count>1</count>
       <item>
-        <start>
+        <position>
           <x>0</x>
           <y>0</y>
           <z>0</z>
-        </start>
+        </position>
         <size>
           <x>3</x>
           <y>0.2</y>
@@ -47,30 +47,15 @@
         </size>
       </item>
     </cuboids>
-    <stairs>
-      <count>1</count>
-      <item>
-        <start>
-          <x>1</x>
-          <y>1</y>
-          <z>1</z>
-        </start>
-        <width>2</width>
-        <height>0.5</height>
-        <depth>1</depth>
-        <thickness>0.2</thickness>
-        <overhang>0</overhang>
-      </item>
-    </stairs>
     <staircases>
       <count>1</count>
       <item>
         <model>
-          <start>
+          <position>
             <x>1</x>
             <y>2</y>
             <z>2</z>
-          </start>
+          </position>
           <width>2</width>
           <height>0.5</height>
           <depth>1</depth>
@@ -80,6 +65,32 @@
         <count>5</count>
       </item>
     </staircases>
+    <walls>
+      <count>1</count>
+      <item>
+        <position>
+          <x>1</x>
+          <y>1</y>
+          <z>4</z>
+        </position>
+        <length>5</length>
+        <height>4</height>
+        <thickness>0.2</thickness>
+        <doors>
+          <count>2</count>
+          <item>
+            <position>1</position>
+            <width>1</width>
+            <height>3</height>
+          </item>
+          <item>
+            <position>3</position>
+            <width>1</width>
+            <height>3</height>
+          </item>
+        </doors>
+      </item>
+    </walls>
     <groups>
       <count>0</count>
     </groups>
