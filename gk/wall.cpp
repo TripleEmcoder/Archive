@@ -1,18 +1,21 @@
 #include "wall.hpp"
 #include "cuboid.hpp"
+#include "material.hpp"
 
 #include <algorithm>
 
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
 
-	
 using boost::lambda::bind;
 using boost::lambda::_1;
 using boost::lambda::_2;
 
 void wall::draw() const
 {
+	material brick("brick.tga");
+	brick.draw();
+
 	std::vector<door> sorted(doors);
 	sorted.push_back(door(0, 0, 0));
 	sorted.push_back(door(length, 0, 0));

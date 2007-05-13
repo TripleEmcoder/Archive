@@ -196,6 +196,10 @@
 				RelativePath=".\main.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\tga.cpp"
+				>
+			</File>
 			<Filter
 				Name="objects"
 				>
@@ -213,6 +217,10 @@
 				</File>
 				<File
 					RelativePath=".\map.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\material.cpp"
 					>
 				</File>
 				<File
@@ -236,6 +244,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="helpers"
+				>
+				<File
+					RelativePath=".\cache.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -256,6 +272,10 @@
 			</File>
 			<File
 				RelativePath=".\HUDManager.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\tga.h"
 				>
 			</File>
 			<Filter
@@ -290,6 +310,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\material.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\quad.hpp"
 					>
 				</File>
@@ -307,6 +331,14 @@
 				</File>
 				<File
 					RelativePath=".\wall.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="helpers"
+				>
+				<File
+					RelativePath=".\cache.hpp"
 					>
 				</File>
 			</Filter>

@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 {
 	std::ifstream ifs("map.xml");
 	ifs >> m;
-	std::cout << "Map: " << m.name << std::endl;
+	std::cerr << "Map: " << m.name << std::endl;
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -120,7 +120,8 @@ int main(int argc, char* argv[])
 	glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
-	//glShadeModel(GL_SMOOTH);
+	glShadeModel(GL_SMOOTH);
+	glEnable(GL_TEXTURE_2D);
 
 	camera = new Camera(0, 2, 10, -70, 0);
 	hudManager = new HUDManager(width, heigth);
