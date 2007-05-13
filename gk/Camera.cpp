@@ -12,6 +12,8 @@ Camera::Camera(double eyeX, double eyeY, double eyeZ, double angleX, double angl
 	eye[2] = eyeZ;
 	initAngleX = angleX;
 	initAngleY = angleY;
+	this->angleX = angleX;
+	this->angleY = angleY; 
 	speed[AXIS_X] = speed[AXIS_Y] = 0;
 	timebase = glutGet(GLUT_ELAPSED_TIME);
 }
@@ -22,8 +24,10 @@ Camera::~Camera(void)
 
 void Camera::rotate(double x, double y)
 {
-	angleX = initAngleX + x;
-	angleY = initAngleY + y;
+	//angleX = initAngleX + x;
+	//angleY = initAngleY + y;
+	angleX += x;
+	angleY += y;
 }
 
 void Camera::draw()
