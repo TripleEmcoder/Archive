@@ -21,6 +21,9 @@ void pressNormalKey(unsigned char c, int x, int y)
 {
 	switch (c)
 	{
+	case 27:
+		exit(0);
+		break;
 	case 'w':
 		camera->move(Camera::AXIS_Y, 10);
 		break;
@@ -35,6 +38,12 @@ void pressNormalKey(unsigned char c, int x, int y)
 		break;
 	}
 }
+
+void pressSpecialKey(int key, int x, int y) 
+{
+	
+}
+
 
 void releaseNormalKey(unsigned char c, int x, int y) {
 
@@ -61,7 +70,7 @@ void processMousePassiveMotion(int x, int y)
 	//camera->rotate(angle_x, -angle_y);
 	
 	if (!mouseJump)
-		camera->rotate(10.0f * (x - oldX) * 3.1416 / 180.0f, 10.0f * -(y - oldY) * 3.1416 / 180.0f);
+		camera->rotate(20.0f * (x - oldX) * 3.1416 / 180.0f, 20.0f * -(y - oldY) * 3.1416 / 180.0f);
 	mouseJump = false;
 	oldX = x;
 	oldY = y;
@@ -123,6 +132,7 @@ int main(int argc, char* argv[])
 	glutIdleFunc(draw);
 
 	glutIgnoreKeyRepeat(1);
+	glutSpecialFunc(pressSpecialKey);
 	glutKeyboardFunc(pressNormalKey);
 	glutKeyboardUpFunc(releaseNormalKey);
 	glutWarpPointer(width/2, heigth/2);
