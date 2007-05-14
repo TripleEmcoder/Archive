@@ -185,6 +185,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Crosshair.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\FPSCounter.cpp"
 				>
 			</File>
@@ -276,6 +280,10 @@
 			</File>
 			<File
 				RelativePath=".\Character.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Crosshair.hpp"
 				>
 			</File>
 			<File

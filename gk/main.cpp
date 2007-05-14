@@ -75,18 +75,22 @@ void releaseNormalKey(unsigned char c, int x, int y)
 
 void processMousePassiveMotion(int x, int y) 
 {
-	static int oldX = 400, oldY = 400;
-	static bool mouseJump = false;
+	static int oldX, oldY;
+	static bool mouseJump = true;
 
 	if (!mouseJump)
-		camera->rotate(MOUSE_SENSIVITY * -(x - oldX) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - oldY) * 3.1416 / 180.0f);
-	mouseJump = false;
-	oldX = x;
-	oldY = y;
-	if (x < 50 || x > (width-50) || y < 50 || y > heigth-50)
 	{
+		camera->rotate(MOUSE_SENSIVITY * -(x - oldX) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - oldY) * 3.1416 / 180.0f);
+		oldX = x;
+		oldY = y;
 		mouseJump = true;
 		glutWarpPointer(width/2, heigth/2);
+	}
+	else
+	{
+		oldX = x;
+		oldY = y;
+		mouseJump = false;
 	}
 }
 
@@ -162,6 +166,7 @@ int main(int argc, char* argv[])
 	glutKeyboardFunc(pressNormalKey);
 	glutKeyboardUpFunc(releaseNormalKey);
 	glutWarpPointer(width/2, heigth/2);
+	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
 	
 	glutPassiveMotionFunc(processMousePassiveMotion);
 	glutMainLoop();
