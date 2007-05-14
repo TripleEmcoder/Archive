@@ -91,10 +91,10 @@ void Character::setLocation(const Matrix& matrix)
 
 void Character::setForce(const Vector& f)
 {
-	std::cerr << "Character::setForce(const Vector& f)" << std::endl;
+	//std::cerr << "Character::setForce(const Vector& f)" << std::endl;
 	force = f;
-	std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
-	std::cerr << "Character::setForce(const Vector& f) exit" << std::endl;
+	//std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
+	//std::cerr << "Character::setForce(const Vector& f) exit" << std::endl;
 }
 
 Vector Character::getLocation()
@@ -118,9 +118,9 @@ void Character::applyForceAndTorque()
 	
 	NewtonBodyGetMassMatrix (body, &mass, &Ixx, &Iyy, &Izz);
 	float torque[] = {0.0f, 10.0f, 0.0f};
-	std::cerr << "Character::applyForceAndTorque()" << std::endl;
-	std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
+	//std::cerr << "Character::applyForceAndTorque()" << std::endl;
+	//std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
 	NewtonBodySetVelocity(body, force.data());
-	std::cerr << "Character::applyForceAndTorque() exit" << std::endl;
+	//std::cerr << "Character::applyForceAndTorque() exit" << std::endl;
 	//NewtonBodySetTorque(body, torque);
 }

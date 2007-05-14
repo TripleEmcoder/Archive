@@ -13,7 +13,7 @@ inline Matrix rollMatrix(float angle)
 	result(0,0) = cos(angle);
 	result(0,1) = -sin(angle);
 	result(1,0) = sin(angle);
-	result(1,1) = -cos(angle);
+	result(1,1) = cos(angle);
 	return result;
 }
 
@@ -23,7 +23,7 @@ inline Matrix yawMatrix(float angle)
 	result(0,0) = cos(angle);
 	result(0,2) = -sin(angle);
 	result(2,0) = sin(angle);
-	result(2,2) = -cos(angle);
+	result(2,2) = cos(angle);
 	return result;
 }
 
@@ -33,7 +33,7 @@ inline Matrix pitchMatrix(float angle)
 	result(1,1) = cos(angle);
 	result(1,2) = -sin(angle);
 	result(2,1) = sin(angle);
-	result(2,2) = -cos(angle);
+	result(2,2) = cos(angle);
 	return result;
 }
 	

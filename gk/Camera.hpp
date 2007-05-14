@@ -19,4 +19,5 @@ public:
 	void setDirection(const Vector& eye);
 	void rotate(float x, float y);
 	Matrix getRotationMatrix();
+	Matrix getReversedRotationMatrix();
 };

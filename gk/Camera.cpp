@@ -46,7 +46,7 @@ void Camera::drawHUD()
 {
 	renderBitmapString(650, 35, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
 	renderBitmapString(650, 55, "(%3.1f, %3.1f, %3.1f)", direction[0], direction[1], direction[2]);
-	//renderBitmapString(650, 55, "(%3.1f, %3.1f)", angleX, angleY);
+	renderBitmapString(650, 75, "(%3.1f, %3.1f)", angleX, angleY);
 }
 
 Vector Camera::calculateDirection(float angleX, float angleY)
@@ -72,4 +72,9 @@ void Camera::normalizeAngle(float& angle)
 Matrix Camera::getRotationMatrix()
 {
 	return prod(rollMatrix(angleY), yawMatrix(angleX));
+}
+
+Matrix Camera::getReversedRotationMatrix()
+{
+	return prod(-yawMatrix(angleX), -rollMatrix(angleY));
 }

@@ -30,21 +30,24 @@ void setCharacterForce()
 	Vector force;
 	
 	if (keyPressed[(int)'w'])
-		force[0] = 5.0f;
+		force[0] = 15.0f;
 	else if (keyPressed[(int)'s'])
-		force[0] = -5.0f;
+		force[0] = -15.0f;
 	else
 		force[0] = 0.0f;
 
 	if (keyPressed[(int)'a'])
-		force[2] = -5.0f;
+		force[2] = -15.0f;
 	else if (keyPressed[(int)'d'])
-		force[2] = 5.0f;
+		force[2] = 15.0f;
 	else
 		force[2] = 0.0f;
 	
 	
-	force[1] = force[3] = 0;
+	force[1] = 0;
+	force[3] = 0;
+
+	//force = prod(force, camera->getRotationMatrix());
 
 	force = prod(force, camera->getRotationMatrix());
 
