@@ -147,7 +147,7 @@ int main(int argc, char* argv[])
 	m.build(nWorld);
 	atexit(cleanUp); 
 
-	character = new Character(nWorld, 0.8, 1.8, 0.4, 0, 2, 10);
+	character = new Character(nWorld, 2.0, 1.8, 2.0, 0, 2, 10);
 	camera = new Camera(0, 2, 10, 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
 	hudManager = new HUDManager(width, heigth);

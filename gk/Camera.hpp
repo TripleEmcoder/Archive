@@ -8,8 +8,6 @@ class Camera : public HUDElement
 private:
 	Vector eye, direction;
 	float angleX, angleY;
-	Vector calculateDirection(float angleX, float angleY);
-	void normalizeAngle(float& angle);
 public:
 	Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY);
 	~Camera(void);
@@ -19,5 +17,4 @@ public:
 	void setDirection(const Vector& eye);
 	void rotate(float x, float y);
 	Matrix getRotationMatrix();
-	Matrix getReversedRotationMatrix();
 };

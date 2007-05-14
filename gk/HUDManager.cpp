@@ -41,7 +41,7 @@ void HUDManager::resetPerspectiveProjection()
 	glPopMatrix();
 
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_LIGHTING);
+	//glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
 }
 

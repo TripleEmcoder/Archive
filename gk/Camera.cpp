@@ -49,32 +49,7 @@ void Camera::drawHUD()
 	renderBitmapString(650, 75, "(%3.1f, %3.1f)", angleX, angleY);
 }
 
-Vector Camera::calculateDirection(float angleX, float angleY)
-{
-	Vector result;
-	normalizeAngle(angleX);
-	normalizeAngle(angleY);
-	result[0] = cos(angleY) * cos(angleX);
-	result[1] = sin(angleY);
-	result[2] = cos(angleY) * sin(angleX);
-	return result;
-}
-
-void Camera::normalizeAngle(float& angle)
-{
-	while (angle < -180)
-		angle += 360;
-	while (angle > 180)
-		angle -= 360;	
-	angle *= 3.141592653589793 / 180.0;
-}
-
 Matrix Camera::getRotationMatrix()
 {
 	return prod(rollMatrix(angleY), yawMatrix(angleX));
-}
-
-Matrix Camera::getReversedRotationMatrix()
-{
-	return prod(-yawMatrix(angleX), -rollMatrix(angleY));
 }
