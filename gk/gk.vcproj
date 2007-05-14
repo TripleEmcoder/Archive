@@ -60,7 +60,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib"
+				AdditionalDependencies="glaux.lib &quot;C:\Program Files\NewtonSDK\sdk\dll\newton.lib&quot;"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -181,6 +181,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Character.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\FPSCounter.cpp"
 				>
 			</File>
@@ -271,6 +275,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Character.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\FPSCounter.hpp"
 				>
 			</File>
@@ -280,6 +288,10 @@
 			</File>
 			<File
 				RelativePath=".\HUDManager.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\math.hpp"
 				>
 			</File>
 			<File

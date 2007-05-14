@@ -57,7 +57,6 @@ void pressNormalKey(unsigned char c, int x, int y)
 		exit(0);
 	
 	keyPressed[c] = true;
-	setCharacterForce();
 }
 
 void pressSpecialKey(int key, int x, int y) 
@@ -69,7 +68,6 @@ void pressSpecialKey(int key, int x, int y)
 void releaseNormalKey(unsigned char c, int x, int y) 
 {
 	keyPressed[c] = false;
-	setCharacterForce();
 }
 
 void processMousePassiveMotion(int x, int y) 
@@ -96,6 +94,8 @@ void draw(void)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
+	setCharacterForce();
 
 	NewtonUpdate(nWorld, 1.0f/60.0f);
 	
