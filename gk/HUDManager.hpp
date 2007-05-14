@@ -7,12 +7,11 @@
 class HUDManager
 {
 private:
-	int heigth, width;
 	std::set<HUDElement*> elements;
 	void setOrthographicProjection();
 	void resetPerspectiveProjection();
 public:
-	HUDManager(int width, int heigth);
+	HUDManager();
 	void add(HUDElement* element);
 	void remove(HUDElement* element);
 	void draw();

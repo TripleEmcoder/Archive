@@ -3,8 +3,9 @@
 
 class Crosshair : public HUDElement
 {
+	float red, green, blue, size;
 public:
-	Crosshair(void);
+	Crosshair(float colorRed, float colorGreen, float colorBlue, float size);
 	~Crosshair(void);
 	void drawHUD();
 };

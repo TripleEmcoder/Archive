@@ -7,7 +7,7 @@
 #include <cstring>
 #include <cstdio>
 
-void HUDElement::renderBitmapString(float x, float y, const char *fmt, ... )
+void HUDElement::renderBitmapString(float x, float y, float colorRed, float colorGreen, float colorBlue, const char *fmt, ... )
 {
 	char string[1024];
 	
@@ -17,6 +17,7 @@ void HUDElement::renderBitmapString(float x, float y, const char *fmt, ... )
 	vsprintf(string, fmt, argptr);
 	va_end(argptr);
 
+	glColor3f(colorRed, colorGreen, colorBlue);
 	glRasterPos3f(x, y, 0);
 	int len = (int) strlen(string);
 	for (int i = 0; i < len; i++) 

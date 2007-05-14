@@ -11,6 +11,7 @@
 #include "FPSCounter.hpp"
 #include "HUDManager.hpp"
 #include "Character.hpp"
+#include "Crosshair.hpp"
 #include "math.hpp"
 #include <Newton.h>
 
@@ -20,7 +21,8 @@ HUDManager* hudManager;
 Camera* camera;
 FPSCounter* fpsCounter;
 Character* character;
-int width = 800, heigth = 800;
+Crosshair* crosshair;
+int width = 800, height = 800;
 bool keyPressed[255];
 
 const float MOUSE_SENSIVITY = 0.5f;
@@ -84,7 +86,7 @@ void processMousePassiveMotion(int x, int y)
 		oldX = x;
 		oldY = y;
 		mouseJump = true;
-		glutWarpPointer(width/2, heigth/2);
+		glutWarpPointer(width/2, height/2);
 	}
 	else
 	{
@@ -132,7 +134,7 @@ int main(int argc, char* argv[])
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(width, heigth);
+	glutInitWindowSize(width, height);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("gk");
 
@@ -154,9 +156,11 @@ int main(int argc, char* argv[])
 	character = new Character(nWorld, 2.0, 1.8, 2.0, 0, 2, 10);
 	camera = new Camera(0, 2, 10, 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
-	hudManager = new HUDManager(width, heigth);
+	crosshair = new Crosshair(0.0f, 1.0f, 1.0f, 8.0f);
+	hudManager = new HUDManager();
 	hudManager->add(fpsCounter);
 	hudManager->add(camera);
+	hudManager->add(crosshair);
 
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);
@@ -165,8 +169,8 @@ int main(int argc, char* argv[])
 	glutSpecialFunc(pressSpecialKey);
 	glutKeyboardFunc(pressNormalKey);
 	glutKeyboardUpFunc(releaseNormalKey);
-	glutWarpPointer(width/2, heigth/2);
-	glutSetCursor(GLUT_CURSOR_CROSSHAIR);
+	glutWarpPointer(width/2, height/2);
+	glutSetCursor(GLUT_CURSOR_NONE);
 	
 	glutPassiveMotionFunc(processMousePassiveMotion);
 	glutMainLoop();

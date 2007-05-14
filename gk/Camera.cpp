@@ -44,9 +44,9 @@ void Camera::draw()
 
 void Camera::drawHUD()
 {
-	renderBitmapString(650, 35, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
-	renderBitmapString(650, 55, "(%3.1f, %3.1f, %3.1f)", direction[0], direction[1], direction[2]);
-	renderBitmapString(650, 75, "(%3.1f, %3.1f)", angleX, angleY);
+	renderBitmapString(650, 35, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
+	renderBitmapString(650, 55, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f, %3.1f)", direction[0], direction[1], direction[2]);
+	renderBitmapString(650, 75, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f)", angleX, angleY);
 }
 
 Matrix Camera::getRotationMatrix()

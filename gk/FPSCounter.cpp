@@ -27,5 +27,5 @@ void FPSCounter::drawHUD()
 		frame = 0;
 	}
 
-	renderBitmapString(30, 35, "FPS:%6.2f", fps);
+	renderBitmapString(30, 35, 0.0f, 1.0f, 1.0f, "FPS:%6.2f", fps);
 }

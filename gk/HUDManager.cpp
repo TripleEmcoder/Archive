@@ -6,6 +6,9 @@
 
 void HUDManager::setOrthographicProjection() 
 {
+	int width = glutGet(GLUT_WINDOW_WIDTH);
+	int height = glutGet(GLUT_WINDOW_HEIGHT);
+	
 	glDisable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
 
@@ -16,9 +19,9 @@ void HUDManager::setOrthographicProjection()
 	glMatrixMode(GL_PROJECTION);
 	glPushMatrix();
 	glLoadIdentity();
-	gluOrtho2D(0, width, 0, heigth);
+	gluOrtho2D(0, width, 0, height);
 	glScalef(1, -1, 1);
-	glTranslatef(0, -heigth, 0);
+	glTranslatef(0, -height, 0);
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -47,7 +50,6 @@ void HUDManager::resetPerspectiveProjection()
 
 void HUDManager::draw()
 {
-	glColor3f(0.0f, 1.0f, 1.0f);
 	glPushMatrix();
 	glLoadIdentity();
 	setOrthographicProjection();
@@ -67,8 +69,7 @@ void HUDManager::remove(HUDElement* element)
 	elements.erase(element);
 }
 	
-HUDManager::HUDManager(int width, int heigth) 
-	: width(width), heigth(heigth)
+HUDManager::HUDManager() 
 {
 }
 
