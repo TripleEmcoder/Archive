@@ -1,10 +1,9 @@
 #include "staircase.hpp"
+#include "engine.hpp"
 
-#include <windows.h>
-#include <GL/gl.h>
-	
 void staircase::draw() const
 {
+	/*
 	glPushMatrix();
 	object::draw();
 
@@ -15,8 +14,14 @@ void staircase::draw() const
 		instance.position.y = 0 + i*model.height;
 		instance.position.z = 0 - i*model.depth;
 
-		instance.draw();
+		instance.draw(map);
 	}
 
 	glPopMatrix();
+	*/
+}
+
+void staircase::compile(const object* parent)
+{
+	object::compile(parent);
 }

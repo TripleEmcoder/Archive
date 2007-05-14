@@ -3,14 +3,13 @@
 
 #include <boost/serialization/utility.hpp>
 
+#include "../traits/string.hpp"
 #include "../traits/vector.hpp"
 
 #include "object.hpp"
 #include "cuboid.hpp"
 #include "staircase.hpp"
 #include "wall.hpp"
-
-#include "Newton.h"
 
 class group : public object
 {
@@ -39,8 +38,9 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(groups);
 	}
 
-	void draw() const;
-	void build(NewtonCollision* collision) const;
+public:
+	virtual void draw() const;
+	virtual void compile(const object* parent);
 };
 
 BOOST_CLASS_IMPLEMENTATION(group, boost::serialization::object_serializable);

@@ -6,7 +6,7 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
-#include "objects/map.hpp"
+#include "objects/world.hpp"
 #include "Camera.hpp"
 #include "FPSCounter.hpp"
 #include "HUDManager.hpp"
@@ -15,8 +15,7 @@
 #include "math.hpp"
 #include <Newton.h>
 
-map m;
-NewtonWorld* nWorld;
+world w;
 HUDManager* hudManager;
 Camera* camera;
 FPSCounter* fpsCounter;
@@ -106,7 +105,7 @@ void draw(void)
 
 	setCharacterForce();
 
-	NewtonUpdate(nWorld, 1.0f/60.0f);
+	NewtonUpdate(w.newton.get(), 1.0f/60.0f);
 	
 	camera->setEye(character->getLocation());
 	//camera->setDirection(character->getDirection());
@@ -114,7 +113,7 @@ void draw(void)
 
 	glColor3b(20, 40, 60);
 
-	m.draw();
+	w.draw();
 
 	hudManager->draw();
 
@@ -123,14 +122,14 @@ void draw(void)
 
 void cleanUp()
 {
-	NewtonDestroy(nWorld);
+	//NewtonDestroy(nWorld);
 }
 
 int main(int argc, char* argv[])
 {
 	std::ifstream ifs("map.xml");
-	ifs >> m;
-	std::cerr << "Map: " << m.name << std::endl;
+	ifs >> w;
+	w.compile();
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -149,11 +148,11 @@ int main(int argc, char* argv[])
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
 
-	nWorld = NewtonCreate(NULL, NULL);
-	m.build(nWorld);
+	//nWorld = NewtonCreate(NULL, NULL);
+	//m.build(nWorld);
 	atexit(cleanUp); 
 
-	character = new Character(nWorld, 2.0, 1.8, 2.0, 0, 2, 10);
+	character = new Character(w.newton.get(), 2.0, 1.8, 2.0, 0, 2, 10);
 	camera = new Camera(0, 2, 10, 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
 	crosshair = new Crosshair(0.0f, 1.0f, 1.0f, 8.0f);

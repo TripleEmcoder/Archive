@@ -6,12 +6,9 @@
 class vertex
 {
 public:
-	double x;
-	double y;
-	double z;
-
-	vertex();
-	vertex(double x, double y, double z);
+	float x;
+	float y;
+	float z;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
@@ -21,8 +18,10 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(z);
 	}
 
+public:
+	vertex();
+	vertex(float x, float y, float z);
 	vertex operator+(vertex v) const;
-	void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(vertex, boost::serialization::object_serializable);

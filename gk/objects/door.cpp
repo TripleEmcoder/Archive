@@ -4,7 +4,7 @@ door::door()
 {
 }
 
-door::door(double position, double width, double height) 
-: position(position), width(width), height(height)
+door::door(float offset, float width, float height) 
+: offset(offset), width(width), height(height)
 {
 }

@@ -11,9 +11,9 @@
 class wall : public object
 {
 public:
-	double length;
-	double height;
-	double thickness;
+	float length;
+	float height;
+	float thickness;
 	std::vector<door> doors;
 
 	template<class A> 
@@ -26,7 +26,9 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(doors);
 	}
 
-	void draw() const;
+public:
+	virtual void draw() const;
+	virtual void compile(const object* parent);
 };
 
 BOOST_CLASS_IMPLEMENTATION(wall, boost::serialization::object_serializable);

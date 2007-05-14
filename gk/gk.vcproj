@@ -60,7 +60,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib newton.lib"
+				AdditionalDependencies="glaux.lib newton.lib corona.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -204,10 +204,6 @@
 				RelativePath=".\main.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\tga.cpp"
-				>
-			</File>
 			<Filter
 				Name="objects"
 				>
@@ -228,19 +224,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\map.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\material.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\objects\object.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\quad.cpp"
 					>
 				</File>
 				<File
@@ -252,12 +240,38 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\texture.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\vertex.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\objects\wall.cpp"
 					>
+				</File>
+				<File
+					RelativePath=".\objects\world.cpp"
+					>
+					<FileConfiguration
+						Name="Debug|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							ObjectFile="$(IntDir)\$(InputName)1.obj"
+							XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							ObjectFile="$(IntDir)\$(InputName)1.obj"
+							XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+						/>
+					</FileConfiguration>
 				</File>
 			</Filter>
 			<Filter
@@ -302,10 +316,6 @@
 				RelativePath=".\math.hpp"
 				>
 			</File>
-			<File
-				RelativePath=".\tga.h"
-				>
-			</File>
 			<Filter
 				Name="traits"
 				>
@@ -315,6 +325,10 @@
 				</File>
 				<File
 					RelativePath=".\traits\map.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\traits\string.hpp"
 					>
 				</File>
 				<File
@@ -338,11 +352,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\group.hpp"
+					RelativePath=".\objects\engine.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\objects\map.hpp"
+					RelativePath=".\objects\group.hpp"
 					>
 				</File>
 				<File
@@ -354,10 +368,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\quad.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\stair.hpp"
 					>
 				</File>
@@ -366,11 +376,19 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\texture.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\vertex.hpp"
 					>
 				</File>
 				<File
 					RelativePath=".\objects\wall.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\world.hpp"
 					>
 				</File>
 			</Filter>
@@ -390,6 +408,10 @@
 			>
 			<File
 				RelativePath=".\map.xml"
+				>
+			</File>
+			<File
+				RelativePath=".\objects\map2.xml"
 				>
 			</File>
 		</Filter>

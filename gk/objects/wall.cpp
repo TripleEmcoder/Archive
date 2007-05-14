@@ -1,6 +1,6 @@
 #include "wall.hpp"
 #include "cuboid.hpp"
-#include "material.hpp"
+#include "engine.hpp"
 
 #include <algorithm>
 
@@ -11,19 +11,17 @@ using boost::lambda::bind;
 using boost::lambda::_1;
 using boost::lambda::_2;
 
-#include <windows.h>
-#include <GL/gl.h>
-
 void wall::draw() const
 {
+	/*
 	glPushMatrix();
 	object::draw();
 
-	material brick("brick.tga");
+	//material brick("brick.tga");
 
 	cuboid wall;
-	wall.materials["front"] = brick;
-	wall.materials["back"] = brick;
+	//wall.materials["front"] = brick;
+	//wall.materials["back"] = brick;
 
 	std::vector<door> sorted(doors);
 	sorted.push_back(door(0, 0, 0));
@@ -40,20 +38,26 @@ void wall::draw() const
 		vertex before_position;
 		before_position.x += previous.position + previous.width;
 
-		double before_width = current.position - previous.position - previous.width;
+		float before_width = current.position - previous.position - previous.width;
 		wall.position = before_position;
 		wall.size = vertex(before_width, height, -thickness);
-		wall.draw();
+		wall.draw(map);
 
 		vertex above_position;
 		above_position.x += current.position;
 		above_position.y += current.height;
 
-		double above_height = height - current.height;
+		float above_height = height - current.height;
 		wall.position = above_position;
 		wall.size = vertex(current.width, above_height, -thickness);
-		wall.draw();
+		wall.draw(map);
 	}
 
 	glPopMatrix();
+	*/
+}
+
+void wall::compile(const object* parent)
+{
+	object::compile(parent);
 }

@@ -3,18 +3,14 @@
 
 #include <boost/serialization/utility.hpp>
 
-#include <string>
-
+#include "texture.hpp"
 #include "vertex.hpp"
 
 class material
 {
 public:
-	std::string texture;
+	texture texture;	
 	vertex color;
-
-	material();
-	material(std::string texture);
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
@@ -23,7 +19,11 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(color);
 	}
 
-	void draw() const;
+public:
+	material();
+	material(vertex color);
+
+	virtual void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(material, boost::serialization::object_serializable);

@@ -10,7 +10,7 @@ class staircase : public object
 {
 public:
 	stair model;
-	unsigned int count;
+	int count;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int version)
@@ -20,7 +20,9 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(count);
 	}
 
-	void draw() const;
+public:
+	virtual void draw() const;
+	virtual void compile(const object* parent);
 };
 
 BOOST_CLASS_IMPLEMENTATION(staircase, boost::serialization::object_serializable);

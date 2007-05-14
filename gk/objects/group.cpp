@@ -1,24 +1,33 @@
 #include "group.hpp"
 
 #include <algorithm>
-#include <functional>
+
+#include <boost/lambda/lambda.hpp>
+#include <boost/lambda/bind.hpp>
+
+using boost::lambda::bind;
+using boost::lambda::_1;
 
 void group::draw() const
 {
 	if (visible)
 	{
-		std::for_each(cuboids.begin(), cuboids.end(), std::mem_fun_ref(&cuboid::draw));
-		std::for_each(staircases.begin(), staircases.end(), std::mem_fun_ref(&staircase::draw));
-		std::for_each(walls.begin(), walls.end(), std::mem_fun_ref(&wall::draw));
-		std::for_each(groups.begin(), groups.end(), std::mem_fun_ref(&group::draw));
+		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::draw, _1));
+		std::for_each(staircases.begin(), staircases.end(), bind(&object::draw, _1));
+		std::for_each(walls.begin(), walls.end(), bind(&object::draw, _1));
+		std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));
 	}
 }
 
-void group::build(NewtonCollision* collision) const
+void group::compile(const object* parent)
 {
+	object::compile(parent);
+
 	if (visible)
 	{
-		for (size_t i=0; i<cuboids.size(); i++)
-			cuboids[i].build(collision);
+		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::compile, _1, this));
+		std::for_each(staircases.begin(), staircases.end(), bind(&object::compile, _1, this));
+		std::for_each(walls.begin(), walls.end(), bind(&object::compile, _1, this));
+		std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, this));
 	}
 }

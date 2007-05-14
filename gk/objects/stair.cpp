@@ -1,19 +1,16 @@
 #include "stair.hpp"
 #include "cuboid.hpp"
 
-#include <windows.h>
-#include <GL/gl.h>
-	
-void stair::draw() const
+/*
+void stair::draw(const map& map) const
 {
-	double height(height-thickness);
-	double depth(depth+thickness+overhang);
+	float height(height-thickness);
+	float depth(depth+thickness+overhang);
 
-	glColor3d(1, 0, 0);
 	cuboid vertical(position, vertex(width, height, -thickness));
-	vertical.draw();
+	vertical.draw(map);
 
-	glColor3d(0, 1, 0);
 	cuboid horizontal(position+vertex(0, height, overhang), vertex(width, thickness, -depth));
-	horizontal.draw();
+	horizontal.draw(map);
 }
+*/
