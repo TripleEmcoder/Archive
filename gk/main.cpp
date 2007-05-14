@@ -10,33 +10,54 @@
 #include "Camera.hpp"
 #include "FPSCounter.hpp"
 #include "HUDManager.hpp"
+#include "Character.hpp"
+#include "math.hpp"
+#include <Newton.h>
 
 map m;
+NewtonWorld* nWorld;
 HUDManager* hudManager;
 Camera* camera;
 FPSCounter* fpsCounter;
+Character* character;
 int width = 800, heigth = 800;
+bool keyPressed[255];
+
+const float MOUSE_SENSIVITY = 0.5f;
+
+void setCharacterForce()
+{
+	Vector force;
+	
+	if (keyPressed[(int)'w'])
+		force[0] = 5.0f;
+	else if (keyPressed[(int)'s'])
+		force[0] = -5.0f;
+	else
+		force[0] = 0.0f;
+
+	if (keyPressed[(int)'a'])
+		force[2] = -5.0f;
+	else if (keyPressed[(int)'d'])
+		force[2] = 5.0f;
+	else
+		force[2] = 0.0f;
+	
+	
+	force[1] = force[3] = 0;
+
+	force = prod(force, camera->getRotationMatrix());
+
+	character->setForce(force);
+}
 
 void pressNormalKey(unsigned char c, int x, int y) 
 {
-	switch (c)
-	{
-	case 27:
+	if (c == 27)
 		exit(0);
-		break;
-	case 'w':
-		camera->move(Camera::AXIS_Y, 10);
-		break;
-	case 's':
-		camera->move(Camera::AXIS_Y, -10);
-		break;
-	case 'a':
-		camera->move(Camera::AXIS_X, -10);
-		break;
-	case 'd':
-		camera->move(Camera::AXIS_X, 10);
-		break;
-	}
+	
+	keyPressed[c] = true;
+	setCharacterForce();
 }
 
 void pressSpecialKey(int key, int x, int y) 
@@ -45,19 +66,10 @@ void pressSpecialKey(int key, int x, int y)
 }
 
 
-void releaseNormalKey(unsigned char c, int x, int y) {
-
-	switch (c)
-	{
-	case 'w':
-	case 's':
-		camera->move(Camera::AXIS_Y, 0);
-		break;
-	case 'a':
-	case 'd':
-		camera->move(Camera::AXIS_X, 0);
-		break;
-	}
+void releaseNormalKey(unsigned char c, int x, int y) 
+{
+	keyPressed[c] = false;
+	setCharacterForce();
 }
 
 void processMousePassiveMotion(int x, int y) 
@@ -65,12 +77,8 @@ void processMousePassiveMotion(int x, int y)
 	static int oldX = 400, oldY = 400;
 	static bool mouseJump = false;
 
-	//double angle_x = 360 * ((double)x / width - 0.5);
-	//double angle_y = 360 * ((double)y / heigth - 0.5);
-	//camera->rotate(angle_x, -angle_y);
-	
 	if (!mouseJump)
-		camera->rotate(20.0f * (x - oldX) * 3.1416 / 180.0f, 20.0f * -(y - oldY) * 3.1416 / 180.0f);
+		camera->rotate(MOUSE_SENSIVITY * -(x - oldX) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - oldY) * 3.1416 / 180.0f);
 	mouseJump = false;
 	oldX = x;
 	oldY = y;
@@ -88,7 +96,11 @@ void draw(void)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+
+	NewtonUpdate(nWorld, 1.0f/60.0f);
 	
+	camera->setEye(character->getLocation());
+	//camera->setDirection(character->getDirection());
 	camera->draw();
 
 	glColor3b(20, 40, 60);
@@ -100,6 +112,10 @@ void draw(void)
 	glutSwapBuffers();
 }
 
+void cleanUp()
+{
+	NewtonDestroy(nWorld);
+}
 
 int main(int argc, char* argv[])
 {
@@ -124,9 +140,13 @@ int main(int argc, char* argv[])
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
 
-	camera = new Camera(0, 2, 10, -70, 0);
-	hudManager = new HUDManager(width, heigth);
+	nWorld = NewtonCreate(NULL, NULL);
+	atexit(cleanUp); 
+
+	character = new Character(nWorld, 0.8, 1.8, 0.4, 0, 2, 10);
+	camera = new Camera(0, 2, 10, 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
+	hudManager = new HUDManager(width, heigth);
 	hudManager->add(fpsCounter);
 	hudManager->add(camera);
 
