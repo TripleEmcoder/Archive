@@ -136,7 +136,7 @@ int main(int argc, char* argv[])
 	glLoadIdentity();
 	gluPerspective(50, 1, 1, 50);
 
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	//glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
@@ -144,6 +144,7 @@ int main(int argc, char* argv[])
 	glEnable(GL_TEXTURE_2D);
 
 	nWorld = NewtonCreate(NULL, NULL);
+	m.build(nWorld);
 	atexit(cleanUp); 
 
 	character = new Character(nWorld, 0.8, 1.8, 0.4, 0, 2, 10);

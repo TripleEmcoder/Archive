@@ -5,22 +5,21 @@
 
 #include "../traits/vector.hpp"
 
-#include "vertex.hpp"
+#include "object.hpp"
 #include "door.hpp"
 
-class wall
+class wall : public object
 {
 public:
-	vertex position;
 	double length;
 	double height;
 	double thickness;
 	std::vector<door> doors;
 
 	template<class A> 
-	void serialize(A& archive, const unsigned int)
+	void serialize(A& archive, const unsigned int version)
 	{
-		archive & BOOST_SERIALIZATION_NVP(position);
+		object::serialize(archive, version);
 		archive & BOOST_SERIALIZATION_NVP(length);
 		archive & BOOST_SERIALIZATION_NVP(height);
 		archive & BOOST_SERIALIZATION_NVP(thickness);

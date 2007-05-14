@@ -18,7 +18,6 @@ public:
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
-		archive & BOOST_SERIALIZATION_NVP(position);
 		archive & BOOST_SERIALIZATION_NVP(width);
 		archive & BOOST_SERIALIZATION_NVP(height);
 		archive & BOOST_SERIALIZATION_NVP(depth);

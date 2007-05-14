@@ -60,7 +60,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib &quot;C:\Program Files\NewtonSDK\sdk\dll\newton.lib&quot;"
+				AdditionalDependencies="glaux.lib newton.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"

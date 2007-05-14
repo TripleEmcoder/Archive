@@ -3,6 +3,7 @@
 #include <boost/serialization/nvp.hpp>
 
 #include "map.hpp"
+#include "../math.hpp"
 
 std::istream& operator>> (std::istream& is, map& m)
 {
@@ -30,4 +31,29 @@ void map::draw() const
 
 	glColor3d(1, 1, 1);
 	auxSolidSphere(0.2);
+}
+
+void map::build(NewtonWorld *world) const
+{
+	NewtonCollision* collision = NewtonCreateTreeCollision(world, NULL);
+	NewtonTreeCollisionBeginBuild(collision);
+
+	group::build(collision);
+
+	NewtonTreeCollisionEndBuild(collision, 1);
+
+	NewtonBody* body = NewtonCreateBody(world, collision);
+
+	// release the collision tree (this way the application does not have to do book keeping of Newton objects
+	NewtonReleaseCollision(world, collision);
+
+	Matrix location = identity_matrix<float>(4);
+
+	matrix_row<Matrix> row(location, 3);
+	row[0] = 0;
+	row[1] = 0;
+	row[2] = 0;
+
+	// set the global position of this body
+	NewtonBodySetMatrix(body, location.data());
 }

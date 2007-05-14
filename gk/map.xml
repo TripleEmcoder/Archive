@@ -4,17 +4,74 @@
   <map>
     <name>test</name>
     <visible>1</visible>
-    <quads>
+    <position>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </position>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <materials>
       <count>0</count>
-    </quads>
+    </materials>
     <cuboids>
-      <count>2</count>
+      <count>3</count>
       <item>
         <position>
           <x>0</x>
           <y>0</y>
           <z>0</z>
         </position>
+        <rotation>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </rotation>
+        <materials>
+          <count>2</count>
+          <item>
+            <first>front</first>
+            <second>
+              <texture>brick.tga</texture>
+              <color>
+                <x>1</x>
+                <y>1</y>
+                <z>1</z>
+              </color>
+            </second>
+          </item>
+          <item>
+            <first>back</first>
+            <second>
+              <texture>brick.tga</texture>
+              <color>
+                <x>1</x>
+                <y>1</y>
+                <z>1</z>
+              </color>
+            </second>
+          </item>
+        </materials>
+        <size>
+          <x>5</x>
+          <y>5</y>
+          <z>-0.2</z>
+        </size>
+      </item>
+      <item>
+        <position>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </position>
+        <rotation>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </rotation>
         <materials>
           <count>1</count>
           <item>
@@ -41,6 +98,11 @@
           <y>4.8</y>
           <z>-8</z>
         </position>
+        <rotation>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </rotation>
         <materials>
           <count>0</count>
         </materials>
@@ -54,12 +116,20 @@
     <staircases>
       <count>1</count>
       <item>
+        <position>
+          <x>2</x>
+          <y>0</y>
+          <z>-2</z>
+        </position>
+        <rotation>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
+        </rotation>
+        <materials>
+          <count>0</count>
+        </materials>
         <model>
-          <position>
-            <x>2</x>
-            <y>0</y>
-            <z>-2</z>
-          </position>
           <width>2</width>
           <height>0.8</height>
           <depth>1</depth>
@@ -77,6 +147,14 @@
           <y>4.8</y>
           <z>-15</z>
         </position>
+        <rotation>
+          <x>0</x>
+          <y>45</y>
+          <z>0</z>
+        </rotation>
+        <materials>
+          <count>0</count>
+        </materials>
         <length>5</length>
         <height>4</height>
         <thickness>0.2</thickness>

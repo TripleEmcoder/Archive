@@ -5,18 +5,19 @@
 
 #include "../traits/vector.hpp"
 
-#include "quad.hpp"
+#include "object.hpp"
 #include "cuboid.hpp"
 #include "staircase.hpp"
 #include "wall.hpp"
 
-class group
+#include "Newton.h"
+
+class group : public object
 {
 public:
 	std::string name;
 	bool visible;
 
-	std::vector<quad> quads;
 	std::vector<cuboid> cuboids;
 	std::vector<staircase> staircases;
 	std::vector<wall> walls;
@@ -24,12 +25,13 @@ public:
 	std::vector<group> groups;
 
 	template<class A> 
-	void serialize(A& archive, const unsigned int)
+	void serialize(A& archive, const unsigned int version)
 	{
 		archive & BOOST_SERIALIZATION_NVP(name);
 		archive & BOOST_SERIALIZATION_NVP(visible);
 
-		archive & BOOST_SERIALIZATION_NVP(quads);
+		object::serialize(archive, version);
+
 		archive & BOOST_SERIALIZATION_NVP(cuboids);
 		archive & BOOST_SERIALIZATION_NVP(staircases);
 		archive & BOOST_SERIALIZATION_NVP(walls);
@@ -38,6 +40,7 @@ public:
 	}
 
 	void draw() const;
+	void build(NewtonCollision* collision) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(group, boost::serialization::object_serializable);

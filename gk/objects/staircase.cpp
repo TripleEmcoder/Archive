@@ -5,14 +5,18 @@
 	
 void staircase::draw() const
 {
+	glPushMatrix();
+	object::draw();
+
 	stair instance(model);
 
-	for (int i=0; i<count; i++)
+	for (size_t i=0; i<count; i++)
 	{
-		instance.position.x = model.position.x;
-		instance.position.y = model.position.y + i*model.height;
-		instance.position.z = model.position.z - i*model.depth;
+		instance.position.y = 0 + i*model.height;
+		instance.position.z = 0 - i*model.depth;
 
 		instance.draw();
 	}
+
+	glPopMatrix();
 }

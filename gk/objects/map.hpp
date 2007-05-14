@@ -7,6 +7,8 @@
 
 #include <boost/serialization/utility.hpp>
 
+#include <Newton.h>
+
 #include "group.hpp"
 
 class map : public group
@@ -19,6 +21,7 @@ public:
 	}
 
 	void draw() const;
+	void build(NewtonWorld* world) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(map, boost::serialization::object_serializable);

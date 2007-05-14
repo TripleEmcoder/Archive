@@ -3,17 +3,19 @@
 
 #include <boost/serialization/utility.hpp>
 
+#include "object.hpp"
 #include "stair.hpp"
 
-class staircase
+class staircase : public object
 {
 public:
 	stair model;
 	unsigned int count;
 
 	template<class A> 
-	void serialize(A& archive, const unsigned int)
+	void serialize(A& archive, const unsigned int version)
 	{
+		object::serialize(archive, version);
 		archive & BOOST_SERIALIZATION_NVP(model);
 		archive & BOOST_SERIALIZATION_NVP(count);
 	}

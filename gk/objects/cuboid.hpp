@@ -5,6 +5,8 @@
 
 #include "object.hpp"
 
+#include "Newton.h"
+
 class cuboid : public object
 {
 public:
@@ -21,6 +23,7 @@ public:
 	}
 
 	void draw() const;
+	void build(NewtonCollision* collision) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(cuboid, boost::serialization::object_serializable);
