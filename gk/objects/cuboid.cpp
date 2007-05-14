@@ -79,19 +79,68 @@ void cuboid::draw() const
 
 void cuboid::build(NewtonCollision* collision) const
 {
-	dFloat front[4][3] =  {
-		{0, 0, 0},
-		{0, size.y, 0},
-		{size.x, size.y, 0},
-		{size.x, 0, 0}
+	float left[4][3] =
+	{
+		{0,      0,      size.z},
+		{0,      size.y, size.z},
+		{0,      size.y, 0     },
+		{0,      0,      0     }
 	};
-	NewtonTreeCollisionAddFace(collision, 4, (dFloat*)front, sizeof(front[0]), 1);
 
-	dFloat back[4][3] =  {
-		{0, 0, size.z},
-		{0, size.y, size.z},
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(left)/sizeof(left[0]), (float*)left, sizeof(left[0]), 1);
+
+	float right[4][3] =
+	{
+		{size.x, 0,      size.z},
 		{size.x, size.y, size.z},
-		{size.x, 0, size.z}
+		{size.x, size.y, 0     },
+		{size.x, 0,      0     },
 	};
-	NewtonTreeCollisionAddFace(collision, 4, (dFloat*)back, sizeof(back[0]), 1);
+
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(right)/sizeof(right[0]), (float*)right, sizeof(right[0]), 1);
+
+	float bottom[4][3] =
+	{
+		{0,      0,      size.z},
+		{0,      0,      0     },
+		{size.x, 0,      0     },
+		{size.x, 0,      size.z}
+	};
+
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(bottom)/sizeof(bottom[0]), (float*)bottom, sizeof(bottom[0]), 1);
+
+	float top[4][3] =
+	{
+		{0,      size.y, size.z},
+		{0,      size.y, 0     },
+		{size.x, size.y, 0     },
+		{size.x, size.y, size.z}
+	};
+
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(top)/sizeof(top[0]), (float*)top, sizeof(top[0]), 1);
+
+	float front[4][3] =
+	{
+		{0,      0,      0     },
+		{0,      size.y, 0     },
+		{size.x, size.y, 0     },
+		{size.x, 0,      0     }
+	};
+
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(front)/sizeof(front[0]), (float*)front, sizeof(front[0]), 1);
+
+	float back[4][3] = 
+	{
+		{0,      0,      size.z},
+		{0,      size.y, size.z},
+		{size.x, size.y, size.z},
+		{size.x, 0,      size.z}
+	};
+	NewtonTreeCollisionAddFace(collision,
+		sizeof(back)/sizeof(back[0]), (float*)back, sizeof(back[0]), 1);
 }

@@ -16,5 +16,9 @@ void group::draw() const
 
 void group::build(NewtonCollision* collision) const
 {
-	cuboids[0].build(collision);
+	if (visible)
+	{
+		for (size_t i=0; i<cuboids.size(); i++)
+			cuboids[i].build(collision);
+	}
 }
