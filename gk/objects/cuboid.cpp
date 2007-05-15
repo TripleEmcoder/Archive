@@ -17,7 +17,7 @@ void cuboid::compile(const object* parent)
 {
 	object::compile(parent);
 
-	NewtonCollision* collision = NewtonCreateBox(root->newton.get(), size.x+2, size.y+2, size.z+2, NULL);
+	NewtonCollision* collision = NewtonCreateBox(root->newton.get(), size.x, size.y, size.z, NULL);
 	NewtonBody* body = NewtonCreateBody(root->newton.get(), collision);
 	NewtonReleaseCollision(root->newton.get(), collision);
 
