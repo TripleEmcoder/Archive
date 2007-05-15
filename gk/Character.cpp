@@ -120,10 +120,17 @@ void Character::processCollision(const NewtonMaterial* material)
 	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
 	if (collisionID == FEET_COLLISION)
 	{
+		NewtonMaterialSetContactFrictionState(material, 1, 0);
+		NewtonMaterialSetContactFrictionState(material, 1, 1);
 		if (count)
 			count--;
 		else
 			jumping = false;
+	}
+	else if (collisionID == BODY_COLLISION)
+	{
+		NewtonMaterialSetContactFrictionState(material, 0, 0);
+		NewtonMaterialSetContactFrictionState(material, 0, 1);
 	}
 }
 

@@ -57,7 +57,7 @@ world::world()
 	NewtonMaterialSetDefaultSoftness(nWorld, defaultID, defaultID, 0.05f);
 	NewtonMaterialSetDefaultElasticity(nWorld, defaultID, defaultID, 0.0f);
 	NewtonMaterialSetDefaultCollidable(nWorld, defaultID, defaultID, 1);
-	NewtonMaterialSetDefaultFriction(nWorld, defaultID, defaultID, 0.0f, 0.0f);
+	//NewtonMaterialSetDefaultFriction(nWorld, defaultID, defaultID, 0.0f, 0.0f);
 	NewtonMaterialSetCollisionCallback(nWorld, defaultID, defaultID, NULL, GenericContactBegin, GenericContactProcess, NULL); 
 }
 
