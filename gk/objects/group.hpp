@@ -8,6 +8,7 @@
 
 #include "object.hpp"
 #include "cuboid.hpp"
+#include "ceiling.hpp"
 #include "staircase.hpp"
 #include "wall.hpp"
 
@@ -18,6 +19,7 @@ public:
 	bool visible;
 
 	std::vector<cuboid> cuboids;
+	std::vector<ceiling> ceilings;
 	std::vector<staircase> staircases;
 	std::vector<wall> walls;
 
@@ -32,6 +34,7 @@ public:
 		object::serialize(archive, version);
 
 		archive & BOOST_SERIALIZATION_NVP(cuboids);
+		archive & BOOST_SERIALIZATION_NVP(ceilings);
 		archive & BOOST_SERIALIZATION_NVP(staircases);
 		archive & BOOST_SERIALIZATION_NVP(walls);
 

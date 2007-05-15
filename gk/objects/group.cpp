@@ -15,6 +15,7 @@ void group::compile(const object* parent)
 	if (visible)
 	{
 		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::compile, _1, this));
+		std::for_each(ceilings.begin(), ceilings.end(), bind(&object::compile, _1, this));
 		std::for_each(staircases.begin(), staircases.end(), bind(&object::compile, _1, this));
 		std::for_each(walls.begin(), walls.end(), bind(&object::compile, _1, this));
 		std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, this));
@@ -26,6 +27,7 @@ void group::draw() const
 	if (visible)
 	{
 		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::draw, _1));
+		std::for_each(ceilings.begin(), ceilings.end(), bind(&object::draw, _1));
 		std::for_each(staircases.begin(), staircases.end(), bind(&object::draw, _1));
 		std::for_each(walls.begin(), walls.end(), bind(&object::draw, _1));
 		std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));

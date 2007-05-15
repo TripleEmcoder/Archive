@@ -65,7 +65,7 @@ void world::draw() const
 	std::for_each(groups.begin(), groups.end(), bind(&group::draw, _1));
 
 	glColor3d(1, 1, 1);
-	auxSolidSphere(2);
+	auxSolidSphere(0.5);
 }
 
 void world::compile()

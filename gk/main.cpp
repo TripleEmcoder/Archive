@@ -138,13 +138,13 @@ int main(int argc, char* argv[])
 	gluPerspective(50, 1, 1, 50);
 
 	glEnable(GL_LIGHTING);
-	//glEnable(GL_LIGHT0);
+	glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
 
-	character = new Character(w.newton.get(), 0.9, 0.9, 0.9, 20, 5, -20);
+	character = new Character(w.newton.get(), 0.5, 0.5, 0.5, 3, 20, -3);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();

@@ -3,14 +3,14 @@
 <boost_serialization signature="serialization::archive" version="3">
   <world>
     <materials>
-      <count>2</count>
+      <count>3</count>
       <item>
         <first>brick</first>
         <second>
           <texture>
             <image>brick.jpg</image>
-            <width>10</width>
-            <height>10</height>
+            <width>1</width>
+            <height>1</height>
           </texture>
           <color>
             <x>1</x>
@@ -26,6 +26,21 @@
             <image>stone.jpg</image>
             <width>10</width>
             <height>10</height>
+          </texture>
+          <color>
+            <x>1</x>
+            <y>1</y>
+            <z>1</z>
+          </color>
+        </second>
+      </item>
+      <item>
+        <first>marble</first>
+        <second>
+          <texture>
+            <image>marble.jpg</image>
+            <width>1</width>
+            <height>1</height>
           </texture>
           <color>
             <x>1</x>
@@ -50,6 +65,7 @@
     </bindings>
     <groups>
       <count>3</count>
+
       <item>
         <name>floor</name>
         <visible>1</visible>
@@ -64,14 +80,10 @@
           <z>0</z>
         </rotation>
         <bindings>
-          <count>2</count>
-          <item>
-            <first>top</first>
-            <second>stone</second>
-          </item>
+          <count>1</count>
           <item>
             <first>bottom</first>
-            <second>stone</second>
+            <second>marble</second>
           </item>
         </bindings>
         <cuboids>
@@ -91,12 +103,32 @@
               <count>0</count>
             </bindings>
             <size>
-              <x>40</x>
-              <y>-1</y>
-              <z>-40</z>
+              <x>5</x>
+              <y>-0.2</y>
+              <z>-5</z>
             </size>
           </item>
         </cuboids>
+        <ceilings>
+          <count>1</count>
+          <item>
+            <position>
+              <x>0</x>
+              <y>42</y>
+              <z>0</z>
+            </position>
+            <rotation>
+              <x>0</x>
+              <y>0</y>
+              <z>0</z>
+            </rotation>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <width>20</width>
+            <depth>20</depth>
+          </item>
+        </ceilings>
         <staircases>
           <count>0</count>
         </staircases>
@@ -107,6 +139,7 @@
           <count>0</count>
         </groups>
       </item>
+
       <item>
         <name>walls</name>
         <visible>1</visible>
@@ -132,7 +165,7 @@
           </item>
         </bindings>
         <cuboids>
-          <count>3</count>
+          <count>2</count>
           <item>
             <translation>
               <x>0</x>
@@ -148,16 +181,16 @@
               <count>0</count>
             </bindings>
             <size>
-              <x>40</x>
-              <y>10</y>
-              <z>-1</z>
+              <x>5</x>
+              <y>2.5</y>
+              <z>-0.2</z>
             </size>
           </item>
           <item>
             <translation>
               <x>0</x>
               <y>0</y>
-              <z>-40</z>
+              <z>-5</z>
             </translation>
             <rotation>
               <x>0</x>
@@ -168,32 +201,15 @@
               <count>0</count>
             </bindings>
             <size>
-              <x>40</x>
-              <y>10</y>
-              <z>-1</z>
-            </size>
-          </item>
-          <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>-10</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <size>
-              <x>20</x>
-              <y>10</y>
-              <z>-1</z>
+              <x>5</x>
+              <y>2.5</y>
+              <z>-0.2</z>
             </size>
           </item>
         </cuboids>
+        <ceilings>
+          <count>0</count>
+        </ceilings>
         <staircases>
           <count>0</count>
         </staircases>
@@ -204,6 +220,7 @@
           <count>0</count>
         </groups>
       </item>
+
       <item>
         <name>platforms</name>
         <visible>1</visible>
@@ -232,9 +249,9 @@
           <count>2</count>
           <item>
             <translation>
-              <x>10</x>
-              <y>1.5</y>
-              <z>-10</z>
+              <x>1</x>
+              <y>1</y>
+              <z>-1</z>
             </translation>
             <rotation>
               <x>0</x>
@@ -245,16 +262,16 @@
               <count>0</count>
             </bindings>
             <size>
-              <x>5</x>
-              <y>1</y>
-              <z>5</z>
+              <x>1</x>
+              <y>0.2</y>
+              <z>1</z>
             </size>
           </item>
           <item>
             <translation>
-              <x>10</x>
-              <y>3</y>
-              <z>-20</z>
+              <x>1</x>
+              <y>2</y>
+              <z>-2</z>
             </translation>
             <rotation>
               <x>0</x>
@@ -265,12 +282,15 @@
               <count>0</count>
             </bindings>
             <size>
-              <x>5</x>
-              <y>1</y>
-              <z>5</z>
+              <x>1</x>
+              <y>0.2</y>
+              <z>1</z>
             </size>
           </item>
         </cuboids>
+        <ceilings>
+          <count>0</count>
+        </ceilings>
         <staircases>
           <count>0</count>
         </staircases>
