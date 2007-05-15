@@ -276,7 +276,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\transformation.cpp"
+					RelativePath=".\helpers\transformation.cpp"
 					>
 				</File>
 				<File

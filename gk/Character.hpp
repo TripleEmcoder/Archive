@@ -16,7 +16,7 @@ private:
 	Matrix location;
 	Vector size, force, velocity, movement;
 	int count;
-	bool jumpInd, jumping, skipCollision;
+	bool jumpInd, jumping;
 	NewtonBody* body;
 	NewtonWorld* nWorld;
 	NewtonJoint* upVector;

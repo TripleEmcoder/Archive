@@ -70,6 +70,11 @@ inline Vector createVector(float x, float y, float z, float w = 1)
 	return vec;
 }
 
+inline Vector cross_prod(const Vector& a, const Vector& b)
+{
+	return createVector(-a[2] * b[1] + a[1] * b[2], a[2] * b[0] - a[0] * b[2], -a[1] * b[0] + a[0] * b[1], 0);
+}
+
 
 
 

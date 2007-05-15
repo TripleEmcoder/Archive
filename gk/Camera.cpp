@@ -5,13 +5,13 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 
-Camera::Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY)
-	: angleX(angleX), angleY(angleY)
+Camera::Camera(float eyeX, float eyeY, float eyeZ, float x, float y)
 {
+	angleX = angleY = 0;
 	eye[0] = eyeX;
 	eye[1] = eyeY;
 	eye[2] = eyeZ;
-	rotate(angleX, angleY);
+	rotate(x, y);
 }
 
 Camera::~Camera(void)

@@ -1,6 +1,7 @@
 #include "Character.hpp"
 
 #include <iostream>
+#include <cmath>
 
 using namespace boost::numeric::ublas;
 	
@@ -82,10 +83,7 @@ void Character::setTransform(const NewtonBody* body, const float* matrix)
 
 void Character::destructor(const NewtonBody* body)
 {
-	Character* player;
-
-	player = (Character*)NewtonBodyGetUserData(body);
-
+	Character* player = (Character*)NewtonBodyGetUserData(body);
 	delete player;
 }
 
@@ -146,21 +144,28 @@ void Character::applyForceAndTorque()
 	if (norm_2(movement) > 0.0001f)
 		movement /= norm_2(movement);
 
-	movement *= 10.0f;
+	Vector force = createVector(0, -9.8f * mass, 0);
+		
+	if (!jumping)
+	{
+		NewtonBodyGetVelocity(body, velocity.data());
+		
+		movement *= 5.0f;
+		velocity[0] = movement[0];
+		velocity[2] = movement[2];
 
-	NewtonBodyGetVelocity(body, velocity.data());
+		NewtonBodySetVelocity(body, velocity.data());
+	}
+	else
+	{
+		force += movement * 2.0f * mass;
+	}
 
-	velocity[0] = movement[0];
-	velocity[2] = movement[2];
-
-	NewtonBodySetVelocity(body, velocity.data());
-
-	float gravity[] = {0.0f, -9.8f * mass, 0.0f};
-	NewtonBodySetForce(body, gravity);	
+	NewtonBodySetForce(body, force.data());
 	
 	if (jumpInd)
 	{
-		float jumpVelocity[] = {0.0f, 7.5f, 0.0f};
+		float jumpVelocity[] = {0.0f, 6.5f, 0.0f};
 		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
 		jumpInd = false;
 		jumping = true;
@@ -168,8 +173,11 @@ void Character::applyForceAndTorque()
 	}
 }
 
+
+
 void Character::drawHUD()
 {
+	NewtonBodyGetVelocity(body, velocity.data());
 	renderBitmapString(350, 35, 1.0f, 0.0f, 0.0f, "(%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
 	if (jumping)
 		renderBitmapString(350, 55, 1.0f, 0.0f, 0.0f, "JUMPING");
