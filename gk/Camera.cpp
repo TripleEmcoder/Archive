@@ -6,12 +6,12 @@
 #include <GL/glut.h>
 
 Camera::Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY)
+	: angleX(angleX), angleY(angleY)
 {
 	eye[0] = eyeX;
 	eye[1] = eyeY;
 	eye[2] = eyeZ;
-	this->angleX = angleX;
-	this->angleY = angleY; 
+	rotate(angleX, angleY);
 }
 
 Camera::~Camera(void)
@@ -22,6 +22,7 @@ void Camera::rotate(float x, float y)
 {
 	angleX += x;
 	angleY += y;
+	rotation = prod(rollMatrix(angleY), yawMatrix(angleX));
 }
 
 void Camera::setEye(const Vector& e)
@@ -29,15 +30,9 @@ void Camera::setEye(const Vector& e)
 	eye = e;
 }
 
-void Camera::setDirection(const Vector& d)
-{
-	direction = d;
-}
-
 void Camera::draw()
 {
-	direction = matrix_row<Matrix>(getRotationMatrix(), 0);
-	//Vector direction = calculateDirection(angleX, angleY);
+	direction = matrix_row<Matrix>(rotation, 0);
 	Vector center = eye + direction;		
 	gluLookAt(eye[0], eye[1], eye[2], center[0], center[1], center[2], 0, 1, 0);
 }
@@ -51,5 +46,15 @@ void Camera::drawHUD()
 
 Matrix Camera::getRotationMatrix()
 {
-	return prod(rollMatrix(angleY), yawMatrix(angleX));
+	return rotation;
+}
+
+float Camera::getAngleX()
+{
+	return angleX;
+}
+
+float Camera::getAngleY()
+{
+	return angleY;
 }

@@ -1,7 +1,10 @@
 #pragma once
+#pragma warning(push)
+#pragma warning(disable : 4267; disable : 4244)
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/matrix_proxy.hpp>
+#pragma warning(pop)
 
 using namespace boost::numeric::ublas;
 typedef c_matrix<float, 4, 4> Matrix;
@@ -50,6 +53,21 @@ inline Matrix rotationMatrix(float angleX, float angleY, float angleZ)
 {
 	Matrix m = prod(yawMatrix(angleY), rollMatrix(angleZ));
 	return prod(pitchMatrix(angleX), m);
+}
+
+inline Vector rotate(const Vector& vec, float angleX, float angleY, float angleZ)
+{
+	return prod(vec, rotationMatrix(angleX, angleY, angleZ));
+}
+
+inline Vector createVector(float x, float y, float z, float w = 1)
+{
+	Vector vec;
+	vec[0] = x;
+	vec[1] = y;
+	vec[2] = z;
+	vec[3] = w;
+	return vec;
 }
 
 

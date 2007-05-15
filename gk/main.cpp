@@ -23,36 +23,35 @@ Character* character;
 Crosshair* crosshair;
 int width = 800, height = 800;
 bool keyPressed[255];
+int timebase;
 
 const float MOUSE_SENSIVITY = 0.5f;
 
-void setCharacterForce()
+void moveCharacter()
 {
-	Vector force;
+	Vector vec;
 	
 	if (keyPressed[(int)'w'])
-		force[0] = 15.0f;
+		vec[0] = 1.0f;
 	else if (keyPressed[(int)'s'])
-		force[0] = -15.0f;
+		vec[0] = -1.0f;
 	else
-		force[0] = 0.0f;
+		vec[0] = 0.0f;
 
 	if (keyPressed[(int)'a'])
-		force[2] = -15.0f;
+		vec[2] = -1.0f;
 	else if (keyPressed[(int)'d'])
-		force[2] = 15.0f;
+		vec[2] = 1.0f;
 	else
-		force[2] = 0.0f;
+		vec[2] = 0.0f;
 	
 	
-	force[1] = 0;
-	force[3] = 0;
+	vec[1] = 0;
+	vec[3] = 0;
 
-	//force = prod(force, camera->getRotationMatrix());
+	vec = rotate(vec, 0, camera->getAngleX(), 0);
 
-	force = prod(force, camera->getRotationMatrix());
-
-	character->setForce(force);
+	character->move(vec);
 }
 
 void pressNormalKey(unsigned char c, int x, int y) 
@@ -76,23 +75,24 @@ void releaseNormalKey(unsigned char c, int x, int y)
 
 void processMousePassiveMotion(int x, int y) 
 {
-	static int oldX, oldY;
 	static bool mouseJump = true;
 
 	if (!mouseJump)
 	{
-		camera->rotate(MOUSE_SENSIVITY * -(x - oldX) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - oldY) * 3.1416 / 180.0f);
-		oldX = x;
-		oldY = y;
+		camera->rotate(MOUSE_SENSIVITY * -(x - width/2) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - height/2) * 3.1416 / 180.0f);
 		mouseJump = true;
 		glutWarpPointer(width/2, height/2);
 	}
 	else
 	{
-		oldX = x;
-		oldY = y;
 		mouseJump = false;
 	}
+}
+
+void processMouse(int button, int state, int x, int y)
+{
+	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+		character->jump();
 }
 
 void draw(void)
@@ -103,12 +103,13 @@ void draw(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	setCharacterForce();
+	moveCharacter();
 
 	NewtonUpdate(w.newton.get(), 1.0f/60.0f);
 	
-	camera->setEye(character->getLocation());
-	//camera->setDirection(character->getDirection());
+	Vector eye = character->getLocation();
+	eye[1] += 0.8f;
+	camera->setEye(eye);
 	camera->draw();
 
 	glColor3b(20, 40, 60);
@@ -118,11 +119,6 @@ void draw(void)
 	hudManager->draw();
 
 	glutSwapBuffers();
-}
-
-void cleanUp()
-{
-	//NewtonDestroy(nWorld);
 }
 
 int main(int argc, char* argv[])
@@ -148,18 +144,16 @@ int main(int argc, char* argv[])
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
 
-	//nWorld = NewtonCreate(NULL, NULL);
-	//m.build(nWorld);
-	atexit(cleanUp); 
-
-	character = new Character(w.newton.get(), 2.0, 1.8, 2.0, 0, 2, 10);
-	camera = new Camera(0, 2, 10, 90.0 * 3.1416 / 180.0, 0);
+	character = new Character(w.newton.get(), 0.9, 0.9, 0.9, 20, 5, -20);
+	Vector location = character->getLocation();
+	camera = new Camera(location[0], location[1], location[2], 90.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
 	crosshair = new Crosshair(0.0f, 1.0f, 1.0f, 8.0f);
 	hudManager = new HUDManager();
 	hudManager->add(fpsCounter);
 	hudManager->add(camera);
 	hudManager->add(crosshair);
+	hudManager->add(character);
 
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);
@@ -170,8 +164,9 @@ int main(int argc, char* argv[])
 	glutKeyboardUpFunc(releaseNormalKey);
 	glutWarpPointer(width/2, height/2);
 	glutSetCursor(GLUT_CURSOR_NONE);
-	
 	glutPassiveMotionFunc(processMousePassiveMotion);
+	glutMouseFunc(processMouse);
+	
 	glutMainLoop();
 	return 0;
 }

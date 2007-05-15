@@ -20,12 +20,17 @@ Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, flo
 	row[1] = locationY;
 	row[2] = locationZ;
 
-	NewtonCollision* sphere = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
-	//NewtonCollision* collision = NewtonCreateConvexHullModifier(nWorld, sphere);
+	NewtonCollision* collisionParts[2];
+
+	collisionParts[0] = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
+	collisionParts[1] = NewtonCreateBox(nWorld, size[0]/2, 0.05f, size[2]/2, translationMatrix(0, -size[1]-0.1f, 0).data());
+	NewtonConvexCollisionSetUserID(collisionParts[0], BODY_COLLISION);
+	NewtonConvexCollisionSetUserID(collisionParts[1], FEET_COLLISION);
+	NewtonCollision* collision = NewtonCreateCompoundCollision(nWorld, 2, collisionParts);
 	
-	body = NewtonCreateBody(nWorld, sphere);
-	//NewtonReleaseCollision(nWorld, collision);
-	NewtonReleaseCollision(nWorld, sphere);		
+	body = NewtonCreateBody(nWorld, collision);
+	NewtonReleaseCollision(nWorld, collisionParts[0]);
+	NewtonReleaseCollision(nWorld, collisionParts[1]);		
 	
 	NewtonBodySetUserData(body, this);
 
@@ -39,7 +44,7 @@ Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, flo
 	NewtonBodySetForceAndTorqueCallback(body, applyForceAndTorque);
 
 	// set the mass matrix
-	NewtonBodySetMassMatrix(body, 10.0f, 10.0f, 10.0f, 10.0f);
+	NewtonBodySetMassMatrix(body, 80.0f, 80.0f, 80.0f, 80.0f);
 
 	// set the matrix for both the rigid body and the graphic body
 	NewtonBodySetMatrix(body, location.data());
@@ -55,6 +60,9 @@ Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, flo
 	NewtonBodySetAutoFreeze(body, 0);
 
 	NewtonWorldUnfreezeBody(nWorld, body);
+
+	jumpInd = false;
+	jumping = true;
 }
 
 Character::~Character(void)
@@ -89,12 +97,15 @@ void Character::setLocation(const Matrix& matrix)
 	location = matrix;
 }
 
-void Character::setForce(const Vector& f)
+void Character::move(const Vector& v)
 {
-	//std::cerr << "Character::setForce(const Vector& f)" << std::endl;
-	force = f;
-	//std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
-	//std::cerr << "Character::setForce(const Vector& f) exit" << std::endl;
+	movement = v;
+}
+
+void Character::jump()
+{
+	if (!jumping)
+		jumpInd = true;
 }
 
 Vector Character::getLocation()
@@ -107,6 +118,21 @@ Vector Character::getDirection()
 	return matrix_row<Matrix>(location, 0);
 }
 
+void Character::processCollision(const NewtonMaterial* material)
+{
+	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
+	if (collisionID == FEET_COLLISION)
+	{
+		if (jumpInd)
+			jumpInd = false;
+		else
+			jumping = false;
+	}
+	else if (collisionID == BODY_COLLISION)
+	{
+		exit(0);
+	}
+}
 
 void Character::applyForceAndTorque()
 {
@@ -114,13 +140,36 @@ void Character::applyForceAndTorque()
 	dFloat Iyy;
 	dFloat Izz;
 	dFloat mass;
-
 	
 	NewtonBodyGetMassMatrix (body, &mass, &Ixx, &Iyy, &Izz);
-	float torque[] = {0.0f, 10.0f, 0.0f};
-	//std::cerr << "Character::applyForceAndTorque()" << std::endl;
-	//std::cerr << force[0] << " " << force[1] << " " << force[2] << " " << std::endl;
-	NewtonBodySetVelocity(body, force.data());
-	//std::cerr << "Character::applyForceAndTorque() exit" << std::endl;
-	//NewtonBodySetTorque(body, torque);
+
+	if (norm_2(movement) > 0.0001f)
+		movement /= norm_2(movement);
+
+	movement *= 10.0f;
+
+	NewtonBodyGetVelocity(body, velocity.data());
+
+	velocity[0] = movement[0];
+	velocity[2] = movement[2];
+
+	NewtonBodySetVelocity(body, velocity.data());
+
+	float gravity[] = {0.0f, -9.8f * mass, 0.0f};
+	NewtonBodySetForce(body, gravity);	
+	
+	if (jumpInd)
+	{
+		float jumpVelocity[] = {0.0f, 7.5f, 0.0f};
+		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
+		//jumpInd = false;
+		jumping = true;
+	}
+}
+
+void Character::drawHUD()
+{
+	renderBitmapString(350, 35, 1.0f, 0.0f, 0.0f, "(%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
+	if (jumping)
+		renderBitmapString(350, 55, 1.0f, 0.0f, 0.0f, "JUMPING");
 }

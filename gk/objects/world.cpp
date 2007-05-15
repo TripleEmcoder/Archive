@@ -10,9 +10,24 @@
 
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
+#include "../Character.hpp"
 
 using boost::lambda::bind;
 using boost::lambda::_1;
+
+Character* player;
+
+int GenericContactBegin(const NewtonMaterial* material, const NewtonBody* body0, const NewtonBody* body1)
+{
+	player = (Character*)(NewtonBodyGetUserData(body0));
+	return 1;
+}
+
+int  GenericContactProcess(const NewtonMaterial* material, const NewtonContact* contact)
+{
+	player->processCollision(material);
+	return 1;	
+}
 
 std::istream& operator>> (std::istream& is, world& world)
 {
@@ -33,6 +48,17 @@ std::ostream& operator<< (std::ostream& os, const world& world)
 world::world()
 : newton(NewtonCreate(NULL, NULL), NewtonDestroy)
 {
+	NewtonWorld* nWorld = newton.get();
+	
+	// get the default material ID
+	int defaultID = NewtonMaterialGetDefaultGroupID (nWorld);
+
+	// set default material properties
+	NewtonMaterialSetDefaultSoftness(nWorld, defaultID, defaultID, 0.05f);
+	NewtonMaterialSetDefaultElasticity(nWorld, defaultID, defaultID, 0.0f);
+	NewtonMaterialSetDefaultCollidable(nWorld, defaultID, defaultID, 1);
+	NewtonMaterialSetDefaultFriction(nWorld, defaultID, defaultID, 0.0f, 0.0f);
+	NewtonMaterialSetCollisionCallback(nWorld, defaultID, defaultID, NULL, GenericContactBegin, GenericContactProcess, NULL); 
 }
 
 void world::draw() const

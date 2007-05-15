@@ -7,6 +7,7 @@ class Camera : public HUDElement
 {
 private:
 	Vector eye, direction;
+	Matrix rotation;
 	float angleX, angleY;
 public:
 	Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY);
@@ -14,7 +15,8 @@ public:
 	void draw();
 	virtual void drawHUD();
 	void setEye(const Vector& eye);
-	void setDirection(const Vector& eye);
 	void rotate(float x, float y);
+	float getAngleX();
+	float getAngleY();
 	Matrix getRotationMatrix();
 };
