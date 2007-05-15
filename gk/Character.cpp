@@ -165,8 +165,8 @@ void Character::applyForceAndTorque()
 	
 	if (jumpInd)
 	{
-		float jumpVelocity[] = {0.0f, 16.5f, 0.0f};
-		NewtonAddBodyImpulse(body, jumpVelocity, location.data());
+		float jumpVelocity[] = {0.0f, 6.5f, 0.0f};
+		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
 		jumpInd = false;
 		jumping = true;
 		count = 4;
