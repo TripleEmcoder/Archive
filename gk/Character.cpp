@@ -158,15 +158,15 @@ void Character::applyForceAndTorque()
 	}
 	else
 	{
-		force += movement * 2.0f * mass;
+		force += movement * 1.0f * mass;
 	}
 
 	NewtonBodySetForce(body, force.data());
 	
 	if (jumpInd)
 	{
-		float jumpVelocity[] = {0.0f, 6.5f, 0.0f};
-		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
+		float jumpVelocity[] = {0.0f, 16.5f, 0.0f};
+		NewtonAddBodyImpulse(body, jumpVelocity, location.data());
 		jumpInd = false;
 		jumping = true;
 		count = 4;

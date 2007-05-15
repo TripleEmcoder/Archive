@@ -22,6 +22,10 @@ void Camera::rotate(float x, float y)
 {
 	angleX += x;
 	angleY += y;
+	if (angleY >= 90.0f * 3.1416f / 180.0f)
+		angleY = 90.0f * 3.1416f / 180.0f;
+	if (angleY <= -90.0f * 3.1416f / 180.0f)
+		angleY = -90.0f * 3.1416f / 180.0f;
 	rotation = prod(rollMatrix(angleY), yawMatrix(angleX));
 }
 

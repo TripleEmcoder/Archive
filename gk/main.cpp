@@ -135,7 +135,7 @@ int main(int argc, char* argv[])
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, 1, 1, 50);
+	gluPerspective(50, 1, 0.1, 50);
 
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
