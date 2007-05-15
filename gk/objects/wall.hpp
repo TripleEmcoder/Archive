@@ -3,14 +3,32 @@
 
 #include <boost/serialization/utility.hpp>
 
-#include "../traits/vector.hpp"
-
+#include "vector.hpp"
 #include "object.hpp"
-#include "door.hpp"
 
 class wall : public object
 {
 public:
+	class door
+	{
+	public:
+		float offset;
+		float width;
+		float height;
+
+		template<class A> 
+		void serialize(A& archive, const unsigned int)
+		{
+			archive & BOOST_SERIALIZATION_NVP(offset);
+			archive & BOOST_SERIALIZATION_NVP(width);
+			archive & BOOST_SERIALIZATION_NVP(height);
+		}
+
+	public:
+		door();
+		door(float offset, float width, float height);
+	};
+
 	float length;
 	float height;
 	float thickness;
@@ -31,6 +49,7 @@ public:
 	virtual void compile(const object* parent);
 };
 
+BOOST_CLASS_IMPLEMENTATION(wall::door, boost::serialization::object_serializable);
 BOOST_CLASS_IMPLEMENTATION(wall, boost::serialization::object_serializable);
 
-#endif //OBJECTS_WALL_HPP 
+#endif //OBJECTS_WALL_HPP

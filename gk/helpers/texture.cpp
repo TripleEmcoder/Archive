@@ -1,16 +1,21 @@
 #include "texture.hpp"
+#include "cache.hpp"
 #include "engine.hpp"
-
-#include "../helpers/cache.hpp"
 
 texture::texture()
 : image(""), width(0), height(0)
 {
+
 }
 
 texture::texture(std::string image, float width, float height)
 : image(image), width(width), height(height)
 {
+}
+
+void texture::compile()
+{
+	cache::texture(image);
 }
 
 void texture::draw() const

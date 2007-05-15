@@ -1,10 +1,10 @@
-#ifndef OBJECTS_TEXTURE_HPP
-#define OBJECTS_TEXTURE_HPP
+#ifndef HELPERS_TEXTURE_HPP
+#define HELPERS_TEXTURE_HPP
 
 #include <boost/serialization/utility.hpp>
 #include <boost/tuple/tuple.hpp>
 
-#include "../traits/string.hpp"
+#include "string.hpp"
 
 class texture
 {
@@ -25,10 +25,12 @@ public:
 	texture();
 	texture(std::string image, float width, float height);
 
+	virtual void compile();
 	virtual void draw() const;
-	virtual boost::tuple<float, float> ratio(float width, float height) const;
+	
+	boost::tuple<float, float> ratio(float width, float height) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(texture, boost::serialization::object_serializable);
 
-#endif //OBJECTS_TEXTURE_HPP 
+#endif //HELPERS_TEXTURE_HPP

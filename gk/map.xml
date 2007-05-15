@@ -35,11 +35,11 @@
         </second>
       </item>
     </materials>
-    <position>
+    <translation>
       <x>0</x>
       <y>0</y>
       <z>0</z>
-    </position>
+    </translation>
     <rotation>
       <x>0</x>
       <y>0</y>
@@ -53,11 +53,11 @@
       <item>
         <name>floor</name>
         <visible>1</visible>
-        <position>
+        <translation>
           <x>0</x>
           <y>0</y>
           <z>0</z>
-        </position>
+        </translation>
         <rotation>
           <x>0</x>
           <y>0</y>
@@ -77,11 +77,11 @@
         <cuboids>
           <count>1</count>
           <item>
-            <position>
+            <translation>
               <x>0</x>
               <y>0</y>
               <z>0</z>
-            </position>
+            </translation>
             <rotation>
               <x>0</x>
               <y>0</y>
@@ -110,11 +110,11 @@
       <item>
         <name>walls</name>
         <visible>1</visible>
-        <position>
+        <translation>
           <x>0</x>
           <y>0</y>
           <z>0</z>
-        </position>
+        </translation>
         <rotation>
           <x>0</x>
           <y>0</y>
@@ -132,13 +132,13 @@
           </item>
         </bindings>
         <cuboids>
-          <count>2</count>
+          <count>3</count>
           <item>
-            <position>
+            <translation>
               <x>0</x>
               <y>0</y>
               <z>0</z>
-            </position>
+            </translation>
             <rotation>
               <x>0</x>
               <y>0</y>
@@ -154,11 +154,11 @@
             </size>
           </item>
           <item>
-            <position>
+            <translation>
               <x>0</x>
               <y>0</y>
               <z>-40</z>
-            </position>
+            </translation>
             <rotation>
               <x>0</x>
               <y>0</y>
@@ -169,6 +169,26 @@
             </bindings>
             <size>
               <x>40</x>
+              <y>10</y>
+              <z>-1</z>
+            </size>
+          </item>
+          <item>
+            <translation>
+              <x>0</x>
+              <y>0</y>
+              <z>-10</z>
+            </translation>
+            <rotation>
+              <x>0</x>
+              <y>0</y>
+              <z>0</z>
+            </rotation>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <size>
+              <x>20</x>
               <y>10</y>
               <z>-1</z>
             </size>
@@ -187,11 +207,11 @@
       <item>
         <name>platforms</name>
         <visible>1</visible>
-        <position>
+        <translation>
           <x>0</x>
           <y>0</y>
           <z>0</z>
-        </position>
+        </translation>
         <rotation>
           <x>0</x>
           <y>0</y>
@@ -211,11 +231,11 @@
         <cuboids>
           <count>2</count>
           <item>
-            <position>
+            <translation>
               <x>10</x>
               <y>1.5</y>
               <z>-10</z>
-            </position>
+            </translation>
             <rotation>
               <x>0</x>
               <y>0</y>
@@ -231,11 +251,11 @@
             </size>
           </item>
           <item>
-            <position>
+            <translation>
               <x>10</x>
               <y>3</y>
               <z>-20</z>
-            </position>
+            </translation>
             <rotation>
               <x>0</x>
               <y>0</y>

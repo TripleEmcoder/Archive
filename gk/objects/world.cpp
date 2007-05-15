@@ -4,30 +4,14 @@
 
 #include "world.hpp"
 #include "engine.hpp"
-#include "../math.hpp"
 
 #include <algorithm>
 
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
-#include "../Character.hpp"
 
 using boost::lambda::bind;
 using boost::lambda::_1;
-
-Character* player;
-
-int GenericContactBegin(const NewtonMaterial* material, const NewtonBody* body0, const NewtonBody* body1)
-{
-	player = (Character*)(NewtonBodyGetUserData(body0));
-	return 1;
-}
-
-int  GenericContactProcess(const NewtonMaterial* material, const NewtonContact* contact)
-{
-	player->processCollision(material);
-	return 1;	
-}
 
 std::istream& operator>> (std::istream& is, world& world)
 {
@@ -43,6 +27,21 @@ std::ostream& operator<< (std::ostream& os, const world& world)
 	oa << boost::serialization::make_nvp("world", world);
 
 	return os;
+}
+
+#include "../Character.hpp"
+Character* player;
+
+int GenericContactBegin(const NewtonMaterial* material, const NewtonBody* body0, const NewtonBody* body1)
+{
+	player = (Character*)(NewtonBodyGetUserData(body0));
+	return 1;
+}
+
+int  GenericContactProcess(const NewtonMaterial* material, const NewtonContact* contact)
+{
+	player->processCollision(material);
+	return 1;	
 }
 
 world::world()
@@ -63,16 +62,25 @@ world::world()
 
 void world::draw() const
 {
-	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));
+	std::for_each(groups.begin(), groups.end(), bind(&group::draw, _1));
 
 	glColor3d(1, 1, 1);
-	auxSolidSphere(0.2);
+	auxSolidSphere(2);
 }
 
 void world::compile()
 {
+	parent= NULL;
 	root = this;
-	std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, this));
+	
+	composition.reset(new transformation());
+	composition->translate(translation);
+	composition->rotate(rotation);
+
+	//std::for_each(materials.begin(), materials.end(), 
+	//	bind(&material::compile, bind(&std::pair<std::string, material>::second, _1)));
+
+	std::for_each(groups.begin(), groups.end(), bind(&group::compile, _1, this));
 	/*
 	NewtonCollision* collision = NewtonCreateTreeCollision(world, NULL);
 	NewtonTreeCollisionBeginBuild(collision);
@@ -93,12 +101,12 @@ void world::compile()
 	row[1] = 0;
 	row[2] = 0;
 
-	// set the global position of this body
+	// set the global translation of this body
 	NewtonBodySetMatrix(body, location.data());
 	*/
 }
 
-const material* world::resolve(std::string name) const
+const material* world::bound_material(std::string name) const
 {
 	if (bindings.count(name))
 		name = bindings.find(name)->second;

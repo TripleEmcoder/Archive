@@ -6,16 +6,21 @@ material::material()
 {
 }
 
-material::material(vertex color)
+material::material(const vertex& color)
 : color(color)
 {
+}
+
+void material::compile()
+{
+	texture.compile();
 }
 
 void material::draw() const
 {
 	texture.draw();
 
-	glColor3d(color.x, color.y, color.z);
+	glColor3f(color.x, color.y, color.z);
 	//glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
 	//glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
 	//glMaterialfv(GL_FRONT, GL_SPECULAR, specular);

@@ -7,8 +7,8 @@
 #include <boost/serialization/utility.hpp>
 #include <boost/shared_ptr.hpp>
 
-#include "../traits/map.hpp"
-#include "../traits/vector.hpp"
+#include "map.hpp"
+#include "vector.hpp"
 
 #include "object.hpp"
 #include "material.hpp"
@@ -34,11 +34,11 @@ public:
 
 	world();
 
-	void draw() const;
 	void compile();
+	void draw() const;
 
 protected:
-	virtual const material* resolve(std::string name) const;
+	virtual const material* bound_material(std::string name) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(world, boost::serialization::object_serializable);

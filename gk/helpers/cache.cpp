@@ -1,12 +1,7 @@
 #include "cache.hpp"
+#include "engine.hpp"
 
 #include <iostream>
-#include <memory>
-
-#include <windows.h>
-#include <GL/gl.h>
-
-#include <corona.h>
 
 std::map<std::string, int> cache::textures;
 

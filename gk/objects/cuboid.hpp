@@ -19,10 +19,10 @@ public:
 
 public:
 	cuboid();
-	cuboid(vertex position, vertex size);
+	cuboid(const vertex& translation, const vertex& size);
 
-	virtual void draw() const;
 	virtual void compile(const object* parent);
+	virtual void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(cuboid, boost::serialization::object_serializable);

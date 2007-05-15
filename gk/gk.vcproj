@@ -40,6 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/objects&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -116,6 +117,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/objects&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -216,15 +218,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\door.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\group.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\material.cpp"
 					>
 				</File>
 				<File
@@ -232,19 +226,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\stair.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\staircase.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\texture.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\vertex.cpp"
 					>
 				</File>
 				<File
@@ -279,6 +261,26 @@
 				>
 				<File
 					RelativePath=".\helpers\cache.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\material.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\scope.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\texture.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\transformation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\vertex.cpp"
 					>
 				</File>
 			</Filter>
@@ -348,19 +350,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\door.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\engine.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\group.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\material.hpp"
 					>
 				</File>
 				<File
@@ -368,19 +358,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\stair.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\staircase.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\texture.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\vertex.hpp"
 					>
 				</File>
 				<File
@@ -397,6 +375,30 @@
 				>
 				<File
 					RelativePath=".\helpers\cache.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\engine.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\material.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\scope.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\texture.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\transformation.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\vertex.hpp"
 					>
 				</File>
 			</Filter>

@@ -11,6 +11,20 @@ using boost::lambda::bind;
 using boost::lambda::_1;
 using boost::lambda::_2;
 
+wall::door::door()
+{
+}
+
+wall::door::door(float offset, float width, float height) 
+: offset(offset), width(width), height(height)
+{
+}
+
+void wall::compile(const object* parent)
+{
+	object::compile(parent);
+}
+
 void wall::draw() const
 {
 	/*
@@ -28,36 +42,31 @@ void wall::draw() const
 	sorted.push_back(door(length, 0, 0));
 
 	std::sort(sorted.begin(), sorted.end(), 
-		bind(&door::position, _1) < bind(&door::position, _2));
+		bind(&door::translation, _1) < bind(&door::translation, _2));
 
 	for (size_t i=1; i<sorted.size(); i++)
 	{
 		door& previous(sorted[i-1]);
 		door& current(sorted[i]);
 
-		vertex before_position;
-		before_position.x += previous.position + previous.width;
+		vertex before_translation;
+		before_translation.x += previous.translation + previous.width;
 
-		float before_width = current.position - previous.position - previous.width;
-		wall.position = before_position;
+		float before_width = current.translation - previous.translation - previous.width;
+		wall.translation = before_translation;
 		wall.size = vertex(before_width, height, -thickness);
 		wall.draw(map);
 
-		vertex above_position;
-		above_position.x += current.position;
-		above_position.y += current.height;
+		vertex above_translation;
+		above_translation.x += current.translation;
+		above_translation.y += current.height;
 
 		float above_height = height - current.height;
-		wall.position = above_position;
+		wall.translation = above_translation;
 		wall.size = vertex(current.width, above_height, -thickness);
 		wall.draw(map);
 	}
 
 	glPopMatrix();
 	*/
-}
-
-void wall::compile(const object* parent)
-{
-	object::compile(parent);
 }

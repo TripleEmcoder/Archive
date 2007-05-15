@@ -1,5 +1,5 @@
-#ifndef OBJECTS_MATERIAL_HPP
-#define OBJECTS_MATERIAL_HPP
+#ifndef HELPERS_MATERIAL_HPP
+#define HELPERS_MATERIAL_HPP
 
 #include <boost/serialization/utility.hpp>
 
@@ -21,11 +21,12 @@ public:
 
 public:
 	material();
-	material(vertex color);
+	material(const vertex& color);
 
+	virtual void compile();
 	virtual void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(material, boost::serialization::object_serializable);
 
-#endif //OBJECTS_MATERIAL_HPP 
+#endif //HELPERS_MATERIAL_HPP

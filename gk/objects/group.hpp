@@ -3,8 +3,8 @@
 
 #include <boost/serialization/utility.hpp>
 
-#include "../traits/string.hpp"
-#include "../traits/vector.hpp"
+#include "string.hpp"
+#include "vector.hpp"
 
 #include "object.hpp"
 #include "cuboid.hpp"
@@ -39,8 +39,8 @@ public:
 	}
 
 public:
-	virtual void draw() const;
 	virtual void compile(const object* parent);
+	virtual void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(group, boost::serialization::object_serializable);
