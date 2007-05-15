@@ -34,28 +34,15 @@ Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, flo
 	
 	NewtonBodySetUserData(body, this);
 
-	// set a destructor for this rigid body
-	//NewtonBodySetDestructorCallback(body, PhysicsBodyDestructor);
-
-	// set the transform call back function
+	NewtonBodySetDestructorCallback(body, destructor);
 	NewtonBodySetTransformCallback(body, setTransform);
-
-	// set the force and torque call back function
 	NewtonBodySetForceAndTorqueCallback(body, applyForceAndTorque);
 
-	// set the mass matrix
 	NewtonBodySetMassMatrix(body, 80.0f, 80.0f, 80.0f, 80.0f);
 
-	// set the matrix for both the rigid body and the graphic body
 	NewtonBodySetMatrix(body, location.data());
 	
-  	// add and up vector constraint to help in keeping the body upright
-	Vector upDirection;
-	upDirection[0] = 0.0;
-	upDirection[1] = 1.0;
-	upDirection[2] = 0.0;
-	upDirection[3] = 0.0;
-	upVector = NewtonConstraintCreateUpVector(nWorld, upDirection.data(), body); 
+  	upVector = NewtonConstraintCreateUpVector(nWorld, createVector(0, 1, 0).data(), body); 
 
 	NewtonBodySetAutoFreeze(body, 0);
 
@@ -63,6 +50,7 @@ Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, flo
 
 	jumpInd = false;
 	jumping = true;
+	count = 0;
 }
 
 Character::~Character(void)
@@ -90,6 +78,15 @@ void Character::setTransform(const NewtonBody* body, const float* matrix)
 			mat(i,j) = matrix[i*4 + j];
 
 	player->setLocation(mat);
+}
+
+void Character::destructor(const NewtonBody* body)
+{
+	Character* player;
+
+	player = (Character*)NewtonBodyGetUserData(body);
+
+	delete player;
 }
 
 void Character::setLocation(const Matrix& matrix)
@@ -123,14 +120,10 @@ void Character::processCollision(const NewtonMaterial* material)
 	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
 	if (collisionID == FEET_COLLISION)
 	{
-		if (jumpInd)
-			jumpInd = false;
+		if (count)
+			count--;
 		else
 			jumping = false;
-	}
-	else if (collisionID == BODY_COLLISION)
-	{
-		exit(0);
 	}
 }
 
@@ -162,8 +155,9 @@ void Character::applyForceAndTorque()
 	{
 		float jumpVelocity[] = {0.0f, 7.5f, 0.0f};
 		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
-		//jumpInd = false;
+		jumpInd = false;
 		jumping = true;
+		count = 4;
 	}
 }
 
