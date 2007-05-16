@@ -7,7 +7,6 @@
 texture::texture()
 : name(""), width(0), height(0), id(new unsigned int(0))
 {
-
 }
 
 texture::texture(std::string name, float width, float height)
