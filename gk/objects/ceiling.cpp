@@ -15,3 +15,11 @@ void ceiling::draw() const
 {
 	body->draw();
 }
+
+const material* ceiling::bound_material(std::string name) const
+{
+	if (name == "bottom")
+		name = "ceiling";
+
+	return object::bound_material(name);
+}

@@ -30,9 +30,6 @@ public:
 public:
 	boost::shared_ptr<transformation> composition;
 
-	object();
-	object(const vertex& translation);
-
 	virtual void compile(const object* parent);
 	virtual void draw() const;
 

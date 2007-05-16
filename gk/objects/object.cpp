@@ -1,15 +1,6 @@
 #include "object.hpp"
 #include "engine.hpp"
 
-object::object()
-{
-}
-
-object::object(const vertex& translation)
-: translation(translation)
-{
-}
-
 void object::compile(const object* parent)
 {
 	this->parent = parent;

@@ -218,6 +218,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\ground.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\group.cpp"
 					>
 				</File>
@@ -347,6 +351,10 @@
 				</File>
 				<File
 					RelativePath=".\objects\cuboid.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\ground.hpp"
 					>
 				</File>
 				<File

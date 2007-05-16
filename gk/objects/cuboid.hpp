@@ -18,9 +18,6 @@ public:
 	}
 
 public:
-	cuboid();
-	cuboid(const vertex& translation, const vertex& size);
-
 	virtual void compile(const object* parent);
 	virtual void draw() const;
 };

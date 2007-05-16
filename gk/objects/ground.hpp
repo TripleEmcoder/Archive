@@ -1,5 +1,5 @@
-#ifndef OBJECTS_CEILING_HPP
-#define OBJECTS_CEILING_HPP
+#ifndef OBJECTS_GROUND_HPP
+#define OBJECTS_GROUND_HPP
 
 #include <boost/shared_ptr.hpp>
 #include <boost/serialization/utility.hpp>
@@ -8,7 +8,7 @@
 
 class cuboid;
 
-class ceiling : public object
+class ground : public object
 {
 public:
 	float width;
@@ -31,6 +31,6 @@ public:
 	const material* bound_material(std::string name) const;
 };
 
-BOOST_CLASS_IMPLEMENTATION(ceiling, boost::serialization::object_serializable);
+BOOST_CLASS_IMPLEMENTATION(ground, boost::serialization::object_serializable);
 
-#endif //OBJECTS_CEILING_HPP 
+#endif //OBJECTS_GROUND_HPP 

@@ -4,25 +4,18 @@
 #include "world.hpp"
 #include "engine.hpp"
 
-cuboid::cuboid()
-{
-}
-
-cuboid::cuboid(const vertex& translation, const vertex& size)
-: object(translation), size(size)
-{
-}
-
 void cuboid::compile(const object* parent)
 {
 	object::compile(parent);
 
-	NewtonCollision* collision = NewtonCreateBox(root->newton.get(), size.x, size.y, size.z, NULL);
+	transformation offset;
+	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
+	NewtonCollision* collision = NewtonCreateBox(root->newton.get(), size.x, size.y, size.z, offset.row_major_data());
 	NewtonBody* body = NewtonCreateBody(root->newton.get(), collision);
 	NewtonReleaseCollision(root->newton.get(), collision);
 
 	transformation local(*composition);
-	local.translate(vertex(size.x/2, size.y/2, size.z/2));
+	//local.translate(vertex(size.x/2, size.y/2, size.z/2));
 	NewtonBodySetMatrix(body, local.row_major_data());
 
 	/*
@@ -99,7 +92,7 @@ void cuboid::draw() const
 
 	float s, t;
 	
-	const material* left = bound_material("left");
+	const material* left = bound_material(size.x > 0 ? "left" : "right");
 	left->draw();
 
 	glBegin(GL_QUADS);
@@ -110,7 +103,7 @@ void cuboid::draw() const
 	glTexCoord2d(s, 0); glVertex3d(0,      0,      0     );
 	glEnd();
 
-	const material* right = bound_material("right");
+	const material* right = bound_material(size.x > 0 ? "right" : "left");
 	right->draw();
 
 	glBegin(GL_QUADS);
@@ -122,7 +115,7 @@ void cuboid::draw() const
 	glEnd();
 
 	//glColor3d(0,1,0);
-	const material* bottom = bound_material("bottom");
+	const material* bottom = bound_material(size.y > 0 ? "bottom" : "top");
 	bottom->draw();
 
 	glBegin(GL_QUADS);
@@ -133,7 +126,7 @@ void cuboid::draw() const
 	glTexCoord2d(s, 0); glVertex3d(size.x, 0,      size.z);
 	glEnd();
 
-	const material* top = bound_material("top");
+	const material* top = bound_material(size.y > 0 ? "top" : "bottom");
 	top->draw();
 
 	glBegin(GL_QUADS);
@@ -144,7 +137,7 @@ void cuboid::draw() const
 	glTexCoord2d(s, 0); glVertex3d(size.x, size.y, size.z);
 	glEnd();
 
-	const material* front = bound_material("front");
+	const material* front = bound_material(size.z > 0 ? "back" : "front");
 	front->draw();
 
 	glBegin(GL_QUADS);
@@ -155,7 +148,7 @@ void cuboid::draw() const
 	glTexCoord2d(s, 0); glVertex3d(size.x, 0,      0     );
 	glEnd();
 
-	const material* back = bound_material("back");
+	const material* back = bound_material(size.z > 0 ? "front" : "back");
 	back->draw();
 
 	glBegin(GL_QUADS);
