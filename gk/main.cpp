@@ -105,7 +105,7 @@ void draw(void)
 
 	moveCharacter();
 
-	NewtonUpdate(w.newton.get(), 1.0f/60.0f);
+	NewtonUpdate(w.newton(), 1.0f/60.0f);
 	
 	Vector eye = character->getLocation();
 	eye[1] += 0.8f;
@@ -132,6 +132,7 @@ int main(int argc, char* argv[])
 	std::ifstream ifs("map.xml");
 	ifs >> w;
 	w.compile();
+	w.draw();
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
@@ -145,7 +146,7 @@ int main(int argc, char* argv[])
 	glEnable(GL_TEXTURE_2D);
 
 	//character = new Character(w.newton.get(), 0.4, 0.9, 0.4, 20, 5, -20);
-	character = new Character(w.newton.get(), 0.4, 0.9, 0.4, 3, 20, -3);
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 3, 20, -3);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], 0.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();

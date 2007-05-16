@@ -72,6 +72,7 @@
 			/>
 			<Tool
 				Name="VCManifestTool"
+				EmbedManifest="false"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -149,6 +150,7 @@
 			/>
 			<Tool
 				Name="VCManifestTool"
+				EmbedManifest="false"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -210,11 +212,15 @@
 				Name="objects"
 				>
 				<File
+					RelativePath=".\objects\box.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\ceiling.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\objects\cuboid.cpp"
+					RelativePath=".\objects\elevator.cpp"
 					>
 				</File>
 				<File
@@ -263,6 +269,10 @@
 			<Filter
 				Name="helpers"
 				>
+				<File
+					RelativePath=".\helpers\body.cpp"
+					>
+				</File>
 				<File
 					RelativePath=".\helpers\material.cpp"
 					>
@@ -322,11 +332,15 @@
 				Name="objects"
 				>
 				<File
+					RelativePath=".\objects\box.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\ceiling.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\objects\cuboid.hpp"
+					RelativePath=".\objects\elevator.hpp"
 					>
 				</File>
 				<File
@@ -357,6 +371,10 @@
 			<Filter
 				Name="helpers"
 				>
+				<File
+					RelativePath=".\helpers\body.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\helpers\engine.hpp"
 					>

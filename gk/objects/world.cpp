@@ -3,6 +3,7 @@
 #include <boost/serialization/nvp.hpp>
 
 #include "world.hpp"
+#include "transformation.hpp"
 #include "engine.hpp"
 
 #include <algorithm>
@@ -10,6 +11,7 @@
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
 
+using boost::ref;
 using boost::lambda::bind;
 using boost::lambda::var;
 using boost::lambda::_1;
@@ -53,9 +55,9 @@ void compile_second(std::map<std::string, material>& m, const std::pair<std::str
 
 void world::compile()
 {
-	newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
+	_newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
 
-	NewtonWorld* nWorld = newton.get();
+	NewtonWorld* nWorld = _newton.get();
 	
 	// get the default material ID
 	int defaultID = NewtonMaterialGetDefaultGroupID (nWorld);
@@ -69,14 +71,14 @@ void world::compile()
 
 	std::for_each(materials.begin(), materials.end(), bind(compile_second, var(materials), _1));
 
-	parent= NULL;
-	root = this;
+	_parent = NULL;
+	_root = this;
 	
-	composition.reset(new transformation());
-	composition->translate(translation);
-	composition->rotate(rotation);
+	_composition.reset(new transformation());
+	_composition->translate(translation);
+	_composition->rotate(rotation);
 	
-	std::for_each(groups.begin(), groups.end(), bind(&group::compile, _1, this));
+	std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
 	/*
 	NewtonCollision* collision = NewtonCreateTreeCollision(world, NULL);
 	NewtonTreeCollisionBeginBuild(collision);
@@ -104,13 +106,17 @@ void world::compile()
 
 void world::draw() const
 {
-	std::for_each(groups.begin(), groups.end(), bind(&group::draw, _1));
+	object::draw();
 
-	glColor3d(1, 1, 1);
-	auxSolidSphere(0.5);
+	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));
 }
 
-const material* world::bound_material(std::string name) const
+const NewtonWorld* world::newton() const
+{
+	return _newton.get();
+}
+
+const material& world::bound_material(std::string name) const
 {
 	if (bindings.count(name))
 		name = bindings.find(name)->second;
@@ -119,9 +125,9 @@ const material* world::bound_material(std::string name) const
 		name = bindings.find("default")->second;
 
 	if (materials.count(name))
-		return &materials.find(name)->second;
+		return materials.find(name)->second;
 
-	static const material default(vertex(1, 0, 0));
+	static const material none(vertex(1, 0, 0));
 	
-	return &default;
+	return none;
 }

@@ -1,5 +1,5 @@
 #include "wall.hpp"
-#include "cuboid.hpp"
+#include "box.hpp"
 #include "engine.hpp"
 
 #include <algorithm>
@@ -20,7 +20,7 @@ wall::door::door(float offset, float width, float height)
 {
 }
 
-void wall::compile(const object* parent)
+void wall::compile(const object& parent)
 {
 	object::compile(parent);
 }
@@ -33,7 +33,7 @@ void wall::draw() const
 
 	//material brick("brick.tga");
 
-	cuboid wall;
+	box wall;
 	//wall.materials["front"] = brick;
 	//wall.materials["back"] = brick;
 

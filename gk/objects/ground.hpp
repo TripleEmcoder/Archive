@@ -6,7 +6,7 @@
 
 #include "object.hpp"
 
-class cuboid;
+class box;
 
 class ground : public object
 {
@@ -23,12 +23,13 @@ public:
 	}
 
 public:
-	boost::shared_ptr<cuboid> body;
-
-	virtual void compile(const object* parent);
+	virtual void compile(const object& parent);
 	virtual void draw() const;
 
-	const material* bound_material(std::string name) const;
+	const material& bound_material(std::string name) const;
+
+private:
+	boost::shared_ptr<box> _body;
 };
 
 BOOST_CLASS_IMPLEMENTATION(ground, boost::serialization::object_serializable);

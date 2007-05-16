@@ -18,12 +18,12 @@ private:
 	int count;
 	bool jumpInd, jumping;
 	NewtonBody* body;
-	NewtonWorld* nWorld;
+	const NewtonWorld* nWorld;
 	NewtonJoint* upVector;
 	void applyForceAndTorque();
 	void setLocation(const Matrix& matrix);
 public:
-	Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ);
+	Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ);
 	Vector getLocation();
 	Vector getDirection();
 	void drawHUD();

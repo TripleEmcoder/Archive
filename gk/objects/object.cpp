@@ -1,21 +1,42 @@
 #include "object.hpp"
+#include "transformation.hpp"
+#include "scope.hpp"
 #include "engine.hpp"
 
-void object::compile(const object* parent)
+void object::compile(const object& parent)
 {
-	this->parent = parent;
-	root = parent->root;
+	this->_parent = &parent;
+	_root = _parent->_root;
 
-	composition.reset(new transformation(*parent->composition));
-	composition->translate(translation);
-	composition->rotate(rotation);	
+	_composition.reset(new transformation(*_parent->_composition));
+	_composition->translate(translation);
+	_composition->rotate(rotation);	
 }
 
 void object::draw() const
 {
+#ifdef _DEBUG
+	scope local(*_composition);
+	auxSolidSphere(0.1);
+#endif
 }
 
-const material* object::bound_material(std::string name) const
+const object& object::parent() const
+{
+	return *_parent;
+}
+
+const world& object::root() const
+{
+	return *_root;
+}
+
+const transformation& object::composition() const
+{
+	return *_composition;
+}
+
+const material& object::bound_material(std::string name) const
 {
 	if (bindings.count(name))
 		name = bindings.find(name)->second;
@@ -23,5 +44,5 @@ const material* object::bound_material(std::string name) const
 	else if (bindings.count("default"))
 		name = bindings.find("default")->second;
 
-	return parent->bound_material(name);
+	return _parent->bound_material(name);
 }

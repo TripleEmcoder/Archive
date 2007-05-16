@@ -5,7 +5,7 @@
 
 using namespace boost::numeric::ublas;
 	
-Character::Character(NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
+Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
 	:nWorld(nw)
 {
 	force[0] = force[1] = force[2] = 0.0f;

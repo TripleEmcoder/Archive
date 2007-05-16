@@ -7,7 +7,7 @@
 #include "vector.hpp"
 
 #include "object.hpp"
-#include "cuboid.hpp"
+#include "box.hpp"
 #include "ceiling.hpp"
 #include "staircase.hpp"
 #include "wall.hpp"
@@ -18,7 +18,7 @@ public:
 	std::string name;
 	bool visible;
 
-	std::vector<cuboid> cuboids;
+	std::vector<box> boxes;
 	std::vector<ceiling> ceilings;
 	std::vector<staircase> staircases;
 	std::vector<wall> walls;
@@ -33,7 +33,7 @@ public:
 
 		object::serialize(archive, version);
 
-		archive & BOOST_SERIALIZATION_NVP(cuboids);
+		archive & BOOST_SERIALIZATION_NVP(boxes);
 		archive & BOOST_SERIALIZATION_NVP(ceilings);
 		archive & BOOST_SERIALIZATION_NVP(staircases);
 		archive & BOOST_SERIALIZATION_NVP(walls);
@@ -42,7 +42,7 @@ public:
 	}
 
 public:
-	virtual void compile(const object* parent);
+	virtual void compile(const object& parent);
 	virtual void draw() const;
 };
 

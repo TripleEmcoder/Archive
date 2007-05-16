@@ -46,7 +46,7 @@ public:
 
 public:
 	virtual void draw() const;
-	virtual void compile(const object* parent);
+	virtual void compile(const object& parent);
 };
 
 BOOST_CLASS_IMPLEMENTATION(wall::door, boost::serialization::object_serializable);

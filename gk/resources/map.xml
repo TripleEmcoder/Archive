@@ -94,7 +94,7 @@
             <second>marble</second>
           </item>
         </bindings>
-        <cuboids>
+        <boxes>
           <count>1</count>
           <item>
             <translation>
@@ -116,26 +116,9 @@
               <z>-5</z>
             </size>
           </item>
-        </cuboids>
+        </boxes>
         <ceilings>
-          <count>1</count>
-          <item>
-            <position>
-              <x>0</x>
-              <y>42</y>
-              <z>0</z>
-            </position>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <width>20</width>
-            <depth>20</depth>
-          </item>
+          <count>0</count>
         </ceilings>
         <staircases>
           <count>0</count>
@@ -172,7 +155,7 @@
             <second>brick</second>
           </item>
         </bindings>
-        <cuboids>
+        <boxes>
           <count>2</count>
           <item>
             <translation>
@@ -214,7 +197,7 @@
               <z>-0.2</z>
             </size>
           </item>
-        </cuboids>
+        </boxes>
         <ceilings>
           <count>0</count>
         </ceilings>
@@ -253,7 +236,7 @@
             <second>brick</second>
           </item>
         </bindings>
-        <cuboids>
+        <boxes>
           <count>2</count>
           <item>
             <translation>
@@ -295,7 +278,7 @@
               <z>1</z>
             </size>
           </item>
-        </cuboids>
+        </boxes>
         <ceilings>
           <count>0</count>
         </ceilings>

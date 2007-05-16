@@ -6,11 +6,11 @@
 
 #include "map.hpp"
 #include "string.hpp"
-#include "transformation.hpp"
 #include "vertex.hpp"
 
 class material;
 class world;
+class transformation;
 
 class object
 {
@@ -28,15 +28,19 @@ public:
 	}
 
 public:
-	boost::shared_ptr<transformation> composition;
-
-	virtual void compile(const object* parent);
+	virtual void compile(const object& parent);
 	virtual void draw() const;
 
+	virtual const object& parent() const;
+	virtual const world& root() const;
+	virtual const transformation& composition() const;
+	virtual const material& bound_material(std::string name) const;
+
+//private:
 protected:
-	const object* parent;
-	const world* root;
-	virtual const material* bound_material(std::string name) const;
+	const object* _parent;
+	const world* _root;
+	boost::shared_ptr<transformation> _composition;
 };
 
 BOOST_CLASS_IMPLEMENTATION(object, boost::serialization::object_serializable);

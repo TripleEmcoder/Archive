@@ -1,14 +1,12 @@
 #ifndef HELPERS_SCOPE_HPP
 #define HELPERS_SCOPE_HPP
 
-//class transformation;
-class object;
+class transformation;
 
 class scope
 {
 public:
-	//scope(const transformation& composition);
-	scope(const object& owner);
+	scope(const transformation& composition);
 	~scope();
 };
 

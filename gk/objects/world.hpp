@@ -30,13 +30,14 @@ public:
 	}
 
 public:
-	boost::shared_ptr<NewtonWorld> newton;
-
 	void compile();
 	void draw() const;
 
-protected:
-	virtual const material* bound_material(std::string name) const;
+	virtual const NewtonWorld* newton() const;
+	virtual const material& bound_material(std::string name) const;
+
+private:
+	boost::shared_ptr<NewtonWorld> _newton;
 };
 
 BOOST_CLASS_IMPLEMENTATION(world, boost::serialization::object_serializable);

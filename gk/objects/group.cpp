@@ -5,28 +5,31 @@
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
 
+using boost::ref;
 using boost::lambda::bind;
 using boost::lambda::_1;
 
-void group::compile(const object* parent)
+void group::compile(const object& parent)
 {
 	object::compile(parent);
 
 	if (visible)
 	{
-		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::compile, _1, this));
-		std::for_each(ceilings.begin(), ceilings.end(), bind(&object::compile, _1, this));
-		std::for_each(staircases.begin(), staircases.end(), bind(&object::compile, _1, this));
-		std::for_each(walls.begin(), walls.end(), bind(&object::compile, _1, this));
-		std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, this));
+		std::for_each(boxes.begin(), boxes.end(), bind(&object::compile, _1, ref(*this)));
+		std::for_each(ceilings.begin(), ceilings.end(), bind(&object::compile, _1, ref(*this)));
+		std::for_each(staircases.begin(), staircases.end(), bind(&object::compile, _1, ref(*this)));
+		std::for_each(walls.begin(), walls.end(), bind(&object::compile, _1, ref(*this)));
+		std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
 	}
 }
 
 void group::draw() const
 {
+	object::draw();
+
 	if (visible)
 	{
-		std::for_each(cuboids.begin(), cuboids.end(), bind(&object::draw, _1));
+		std::for_each(boxes.begin(), boxes.end(), bind(&object::draw, _1));
 		std::for_each(ceilings.begin(), ceilings.end(), bind(&object::draw, _1));
 		std::for_each(staircases.begin(), staircases.end(), bind(&object::draw, _1));
 		std::for_each(walls.begin(), walls.end(), bind(&object::draw, _1));

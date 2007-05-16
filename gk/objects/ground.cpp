@@ -1,22 +1,22 @@
 #include "ground.hpp"
-#include "cuboid.hpp"
+#include "box.hpp"
 #include "engine.hpp"
 
-void ground::compile(const object* parent)
+void ground::compile(const object& parent)
 {
 	object::compile(parent);
 
-	body.reset(new cuboid());
-	body->size = vertex(width, -0.2, -depth);
-	body->compile(this);
+	_body.reset(new box());
+	_body->size = vertex(width, -0.2, -depth);
+	_body->compile(*this);
 }
 
 void ground::draw() const
 {
-	body->draw();
+	_body->draw();
 }
 
-const material* ground::bound_material(std::string name) const
+const material& ground::bound_material(std::string name) const
 {
 	if (name == "top")
 		name = "ground";

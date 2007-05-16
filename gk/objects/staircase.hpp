@@ -40,7 +40,7 @@ public:
 	}
 
 public:
-	virtual void compile(const object* parent);
+	virtual void compile(const object& parent);
 	virtual void draw() const;
 };
 
