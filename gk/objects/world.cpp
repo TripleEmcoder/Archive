@@ -11,6 +11,7 @@
 #include <boost/lambda/bind.hpp>
 
 using boost::lambda::bind;
+using boost::lambda::var;
 using boost::lambda::_1;
 
 std::istream& operator>> (std::istream& is, world& world)
@@ -44,9 +45,16 @@ int  GenericContactProcess(const NewtonMaterial* material, const NewtonContact* 
 	return 1;	
 }
 
-world::world()
-: newton(NewtonCreate(NULL, NULL), NewtonDestroy)
+void compile_second(std::map<std::string, material>& m, const std::pair<std::string, material>& p)
 {
+	m[p.first].compile();
+	//p.second.compile();
+}
+
+void world::compile()
+{
+	newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
+
 	NewtonWorld* nWorld = newton.get();
 	
 	// get the default material ID
@@ -58,28 +66,16 @@ world::world()
 	NewtonMaterialSetDefaultCollidable(nWorld, defaultID, defaultID, 1);
 	//NewtonMaterialSetDefaultFriction(nWorld, defaultID, defaultID, 0.0f, 0.0f);
 	NewtonMaterialSetCollisionCallback(nWorld, defaultID, defaultID, NULL, GenericContactBegin, GenericContactProcess, NULL); 
-}
 
-void world::draw() const
-{
-	std::for_each(groups.begin(), groups.end(), bind(&group::draw, _1));
+	std::for_each(materials.begin(), materials.end(), bind(compile_second, var(materials), _1));
 
-	glColor3d(1, 1, 1);
-	auxSolidSphere(0.5);
-}
-
-void world::compile()
-{
 	parent= NULL;
 	root = this;
 	
 	composition.reset(new transformation());
 	composition->translate(translation);
 	composition->rotate(rotation);
-
-	//std::for_each(materials.begin(), materials.end(), 
-	//	bind(&material::compile, bind(&std::pair<std::string, material>::second, _1)));
-
+	
 	std::for_each(groups.begin(), groups.end(), bind(&group::compile, _1, this));
 	/*
 	NewtonCollision* collision = NewtonCreateTreeCollision(world, NULL);
@@ -104,6 +100,14 @@ void world::compile()
 	// set the global translation of this body
 	NewtonBodySetMatrix(body, location.data());
 	*/
+}
+
+void world::draw() const
+{
+	std::for_each(groups.begin(), groups.end(), bind(&group::draw, _1));
+
+	glColor3d(1, 1, 1);
+	auxSolidSphere(0.5);
 }
 
 const material* world::bound_material(std::string name) const

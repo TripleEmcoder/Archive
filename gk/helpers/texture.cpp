@@ -1,26 +1,72 @@
 #include "texture.hpp"
-#include "cache.hpp"
 #include "engine.hpp"
 
+#include <iostream>
+#include <cassert>
+
 texture::texture()
-: image(""), width(0), height(0)
+: name(""), width(0), height(0), id(new unsigned int(0))
 {
 
 }
 
-texture::texture(std::string image, float width, float height)
-: image(image), width(width), height(height)
+texture::texture(std::string name, float width, float height)
+: name(name), width(width), height(height), id(new unsigned int(0))
 {
+}
+
+unsigned int* create_single_texture()
+{
+	unsigned int* id = new unsigned int(0);
+	
+	glGenTextures(1, id);
+	assert(glGetError() == GL_NO_ERROR);
+
+	return id;
+}
+
+void delete_single_texture(unsigned int* id)
+{
+	glDeleteTextures(1, id);
+	assert(glGetError() == GL_NO_ERROR);
+
+	delete id;
 }
 
 void texture::compile()
 {
-	cache::texture(image);
+	corona::Image* image = corona::OpenImage(name.c_str(), corona::PF_R8G8B8);
+
+	if (image == NULL)
+	{
+		std::cerr << "Failed to load image \"" << name << "\"." << std::endl;
+		return;
+	}
+	
+	id.reset(create_single_texture(), delete_single_texture);
+	
+	glBindTexture(GL_TEXTURE_2D, *id);
+	assert(glGetError() == GL_NO_ERROR);
+
+	int width = image->getWidth();
+	int height = image->getHeight();
+	void* pixels = image->getPixels();
+
+	glTexImage2D(GL_TEXTURE_2D, 0, 3, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+	assert(glGetError() == GL_NO_ERROR);
+
+	delete image;
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
 void texture::draw() const
 {
-	glBindTexture(GL_TEXTURE_2D, cache::texture(image));
+	glBindTexture(GL_TEXTURE_2D, *id);
+	assert(glGetError() == GL_NO_ERROR);
 }
 
 boost::tuple<float, float> texture::ratio(float _width, float _height) const

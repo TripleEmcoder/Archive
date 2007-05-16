@@ -8,7 +8,7 @@
         <first>brick</first>
         <second>
           <texture>
-            <image>brick.jpg</image>
+            <name>brick.jpg</name>
             <width>1</width>
             <height>1</height>
           </texture>
@@ -23,7 +23,7 @@
         <first>stone</first>
         <second>
           <texture>
-            <image>stone.jpg</image>
+            <name>stone.jpg</name>
             <width>10</width>
             <height>10</height>
           </texture>
@@ -38,7 +38,7 @@
         <first>marble</first>
         <second>
           <texture>
-            <image>marble.jpg</image>
+            <name>marble.jpg</name>
             <width>1</width>
             <height>1</height>
           </texture>
@@ -90,7 +90,7 @@
         <bindings>
           <count>1</count>
           <item>
-            <first>bottom</first>
+            <first>top</first>
             <second>marble</second>
           </item>
         </bindings>

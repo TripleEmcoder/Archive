@@ -1,6 +1,7 @@
 #ifndef HELPERS_TEXTURE_HPP
 #define HELPERS_TEXTURE_HPP
 
+#include <boost/shared_ptr.hpp>
 #include <boost/serialization/utility.hpp>
 #include <boost/tuple/tuple.hpp>
 
@@ -9,21 +10,23 @@
 class texture
 {
 public:
-	std::string image;
+	std::string name;
 	float width;
 	float height;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
-		archive & BOOST_SERIALIZATION_NVP(image);
+		archive & BOOST_SERIALIZATION_NVP(name);
 		archive & BOOST_SERIALIZATION_NVP(width);
 		archive & BOOST_SERIALIZATION_NVP(height);
 	}
 
 public:
 	texture();
-	texture(std::string image, float width, float height);
+	texture(std::string name, float width, float height);
+
+	boost::shared_ptr<unsigned int> id;
 
 	virtual void compile();
 	virtual void draw() const;

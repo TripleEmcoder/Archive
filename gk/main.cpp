@@ -123,15 +123,15 @@ void draw(void)
 
 int main(int argc, char* argv[])
 {
-	std::ifstream ifs("map.xml");
-	ifs >> w;
-	w.compile();
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(width, height);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("gk");
+
+	std::ifstream ifs("map.xml");
+	ifs >> w;
+	w.compile();
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
@@ -167,7 +167,7 @@ int main(int argc, char* argv[])
 	glutSetCursor(GLUT_CURSOR_NONE);
 	glutPassiveMotionFunc(processMousePassiveMotion);
 	glutMouseFunc(processMouse);
-	
+
 	glutMainLoop();
 	return 0;
 }

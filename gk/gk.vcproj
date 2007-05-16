@@ -264,10 +264,6 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\helpers\cache.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\helpers\material.cpp"
 					>
 				</File>
@@ -323,26 +319,6 @@
 				>
 			</File>
 			<Filter
-				Name="traits"
-				>
-				<File
-					RelativePath=".\traits\list.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\traits\map.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\traits\string.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\traits\vector.hpp"
-					>
-				</File>
-			</Filter>
-			<Filter
 				Name="objects"
 				>
 				<File
@@ -382,10 +358,6 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\helpers\cache.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\helpers\engine.hpp"
 					>
 				</File>
@@ -407,6 +379,26 @@
 				</File>
 				<File
 					RelativePath=".\helpers\vertex.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="traits"
+				>
+				<File
+					RelativePath=".\traits\list.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\traits\map.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\traits\string.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\traits\vector.hpp"
 					>
 				</File>
 			</Filter>

@@ -30,9 +30,7 @@ public:
 	}
 
 public:
-	const boost::shared_ptr<NewtonWorld> newton;
-
-	world();
+	boost::shared_ptr<NewtonWorld> newton;
 
 	void compile();
 	void draw() const;
