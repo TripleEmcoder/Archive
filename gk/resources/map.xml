@@ -61,21 +61,24 @@
       <z>0</z>
     </rotation>
     <bindings>
-      <count>2</count>
-      <item>
-        <first>ceiling</first>
-        <second>brick</second>
-      </item>
+      <count>3</count>
       <item>
         <first>ground</first>
         <second>marble</second>
       </item>
+      <item>
+        <first>ceiling</first>
+        <second>marble</second>
+      </item>
+      <item>
+        <first>wall</first>
+        <second>brick</second>
+      </item>
     </bindings>
     <groups>
-      <count>3</count>
-
+      <count>1</count>
       <item>
-        <name>ground</name>
+        <name>room</name>
         <visible>1</visible>
         <translation>
           <x>0</x>
@@ -88,14 +91,10 @@
           <z>0</z>
         </rotation>
         <bindings>
-          <count>1</count>
-          <item>
-            <first>top</first>
-            <second>marble</second>
-          </item>
+          <count>0</count>
         </bindings>
-        <boxes>
-          <count>1</count>
+        <grounds>
+          <count>2</count>
           <item>
             <translation>
               <x>0</x>
@@ -110,139 +109,34 @@
             <bindings>
               <count>0</count>
             </bindings>
-            <size>
-              <x>5</x>
-              <y>-0.2</y>
-              <z>-5</z>
-            </size>
+            <width>10</width>
+            <depth>5</depth>
           </item>
-        </boxes>
+          <item>
+            <translation>
+              <x>-5</x>
+              <y>0</y>
+              <z>0</z>
+            </translation>
+            <rotation>
+              <x>0</x>
+              <y>0</y>
+              <z>30</z>
+            </rotation>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <width>10</width>
+            <depth>5</depth>
+          </item>
+        </grounds>
         <ceilings>
-          <count>0</count>
-        </ceilings>
-        <staircases>
-          <count>0</count>
-        </staircases>
-        <walls>
-          <count>0</count>
-        </walls>
-        <groups>
-          <count>0</count>
-        </groups>
-      </item>
-
-      <item>
-        <name>walls</name>
-        <visible>1</visible>
-        <translation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </translation>
-        <rotation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </rotation>
-        <bindings>
-          <count>2</count>
-          <item>
-            <first>front</first>
-            <second>brick</second>
-          </item>
-          <item>
-            <first>back</first>
-            <second>brick</second>
-          </item>
-        </bindings>
-        <boxes>
-          <count>2</count>
+          <count>1</count>
           <item>
             <translation>
               <x>0</x>
-              <y>-2</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>-45</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <size>
-              <x>5</x>
-              <y>10</y>
-              <z>-0.2</z>
-            </size>
-          </item>
-          <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>-5</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <size>
-              <x>5</x>
               <y>2.5</y>
-              <z>-0.2</z>
-            </size>
-          </item>
-        </boxes>
-        <ceilings>
-          <count>0</count>
-        </ceilings>
-        <staircases>
-          <count>0</count>
-        </staircases>
-        <walls>
-          <count>0</count>
-        </walls>
-        <groups>
-          <count>0</count>
-        </groups>
-      </item>
-
-      <item>
-        <name>platforms</name>
-        <visible>1</visible>
-        <translation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </translation>
-        <rotation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </rotation>
-        <bindings>
-          <count>2</count>
-          <item>
-            <first>default</first>
-            <second>stone</second>
-          </item>
-          <item>
-            <first>top</first>
-            <second>brick</second>
-          </item>
-        </bindings>
-        <boxes>
-          <count>2</count>
-          <item>
-            <translation>
-              <x>1</x>
-              <y>1</y>
-              <z>-1</z>
+              <z>0</z>
             </translation>
             <rotation>
               <x>0</x>
@@ -252,17 +146,17 @@
             <bindings>
               <count>0</count>
             </bindings>
-            <size>
-              <x>1</x>
-              <y>0.2</y>
-              <z>1</z>
-            </size>
+            <width>10</width>
+            <depth>5</depth>
           </item>
+        </ceilings>
+        <walls>
+          <count>2</count>
           <item>
             <translation>
-              <x>1</x>
-              <y>2</y>
-              <z>-2</z>
+              <x>0</x>
+              <y>0</y>
+              <z>0</z>
             </translation>
             <rotation>
               <x>0</x>
@@ -272,21 +166,26 @@
             <bindings>
               <count>0</count>
             </bindings>
-            <size>
-              <x>1</x>
-              <y>0.2</y>
-              <z>1</z>
-            </size>
+            <length>10</length>
+            <height>2.5</height>
           </item>
-        </boxes>
-        <ceilings>
-          <count>0</count>
-        </ceilings>
-        <staircases>
-          <count>0</count>
-        </staircases>
-        <walls>
-          <count>0</count>
+          <item>
+            <translation>
+              <x>0</x>
+              <y>0</y>
+              <z>-5</z>
+            </translation>
+            <rotation>
+              <x>0</x>
+              <y>0</y>
+              <z>0</z>
+            </rotation>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <length>10</length>
+            <height>2.5</height>
+          </item>
         </walls>
         <groups>
           <count>0</count>

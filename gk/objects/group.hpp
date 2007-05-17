@@ -7,9 +7,8 @@
 #include "vector.hpp"
 
 #include "object.hpp"
-#include "box.hpp"
+#include "ground.hpp"
 #include "ceiling.hpp"
-#include "staircase.hpp"
 #include "wall.hpp"
 
 class group : public object
@@ -18,9 +17,8 @@ public:
 	std::string name;
 	bool visible;
 
-	std::vector<box> boxes;
+	std::vector<ground> grounds;
 	std::vector<ceiling> ceilings;
-	std::vector<staircase> staircases;
 	std::vector<wall> walls;
 
 	std::vector<group> groups;
@@ -33,9 +31,8 @@ public:
 
 		object::serialize(archive, version);
 
-		archive & BOOST_SERIALIZATION_NVP(boxes);
+		archive & BOOST_SERIALIZATION_NVP(grounds);
 		archive & BOOST_SERIALIZATION_NVP(ceilings);
-		archive & BOOST_SERIALIZATION_NVP(staircases);
 		archive & BOOST_SERIALIZATION_NVP(walls);
 
 		archive & BOOST_SERIALIZATION_NVP(groups);

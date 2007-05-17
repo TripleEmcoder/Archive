@@ -236,10 +236,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\staircase.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\wall.cpp"
 					>
 				</File>
@@ -353,10 +349,6 @@
 				</File>
 				<File
 					RelativePath=".\objects\object.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\staircase.hpp"
 					>
 				</File>
 				<File

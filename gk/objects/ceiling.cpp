@@ -1,6 +1,5 @@
 #include "ceiling.hpp"
 #include "box.hpp"
-#include "engine.hpp"
 
 void ceiling::compile(const object& parent)
 {
