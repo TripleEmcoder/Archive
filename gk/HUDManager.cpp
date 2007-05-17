@@ -27,7 +27,6 @@ void HUDManager::setOrthographicProjection()
 	glPushMatrix();
 	glLoadIdentity();
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_BLEND);
 }
@@ -44,7 +43,7 @@ void HUDManager::resetPerspectiveProjection()
 	glPopMatrix();
 
 	glEnable(GL_DEPTH_TEST);
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
 }
 

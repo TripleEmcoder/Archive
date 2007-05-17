@@ -73,18 +73,27 @@ void box::draw() const
 	glTexCoord2d(s, 0); glVertex3d(size.x, size.y, size.z);
 	glEnd();
 
-	const material& front = bound_material(size.z > 0 ? "back" : "front");
+	const material& front = bound_material(size.z < 0 ? "front" : "back");
 	front.draw();
 
-	glBegin(GL_QUADS);
+
+	glBegin(GL_POINTS);
 	boost::tie(s, t) = front.texture.ratio(size.x, size.y);
-	glTexCoord2d(0, 0); glVertex3d(0,      0,      0     );
-	glTexCoord2d(0, t); glVertex3d(0,      size.y, 0     );
-	glTexCoord2d(s, t); glVertex3d(size.x, size.y, 0     );
-	glTexCoord2d(s, 0); glVertex3d(size.x, 0,      0     );
+	for (int x = 0; x<=size.x; x++)
+		for (int y = 0; y<=size.y; y++)
+		{
+			glVertex3d(x,     y,      0);
+		}
+	glEnd();;
+	
+	glBegin(GL_QUADS);
+	//glTexCoord2d(0, 0); glVertex3d(0,      0,      0     );
+	//glTexCoord2d(0, t); glVertex3d(0,      size.y, 0     );
+	//glTexCoord2d(s, t); glVertex3d(size.x, size.y, 0     );
+	//glTexCoord2d(s, 0); glVertex3d(size.x, 0,      0     );
 	glEnd();
 
-	const material& back = bound_material(size.z > 0 ? "front" : "back");
+	const material& back = bound_material(size.z < 0 ? "back" : "front");
 	back.draw();
 
 	glBegin(GL_QUADS);

@@ -71,6 +71,12 @@ void pressSpecialKey(int key, int x, int y)
 void releaseNormalKey(unsigned char c, int x, int y) 
 {
 	keyPressed[c] = false;
+
+	if (c=='l')
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+	if (c=='f')
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 }
 
 void processMousePassiveMotion(int x, int y) 
@@ -129,17 +135,21 @@ int main(int argc, char* argv[])
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("gk");
 
+	std::cerr << "Opening..." << std::endl;
 	std::ifstream ifs("map.xml");
+
+	std::cerr << "Reading..." << std::endl;
 	ifs >> w;
+
+	std::cerr << "Compiling..." << std::endl;
 	w.compile();
-	w.draw();
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(50, 1, 0.1, 50);
 
 	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
 	glShadeModel(GL_SMOOTH);

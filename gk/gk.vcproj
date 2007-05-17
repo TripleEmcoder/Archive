@@ -216,6 +216,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\bsp.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\ceiling.cpp"
 					>
 				</File>
@@ -332,6 +336,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\bsp.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\ceiling.hpp"
 					>
 				</File>
@@ -420,6 +428,10 @@
 			>
 			<File
 				RelativePath=".\resources\brick.jpg"
+				>
+			</File>
+			<File
+				RelativePath=".\resources\map.bsp"
 				>
 			</File>
 			<File
