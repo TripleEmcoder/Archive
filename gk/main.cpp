@@ -15,6 +15,7 @@
 #include "math.hpp"
 #include <Newton.h>
 
+GLuint list;
 world w;
 HUDManager* hudManager;
 Camera* camera;
@@ -124,7 +125,8 @@ void draw(void)
 
 	glColor3b(20, 40, 60);
 
-	w.draw();
+	//w.draw();
+	glCallList(list);
 
 	hudManager->draw();
 
@@ -193,7 +195,13 @@ int main(int argc, char* argv[])
 	glutPassiveMotionFunc(processMousePassiveMotion);
 	glutMouseFunc(processMouse);
 
+	list = glGenLists(1);
+	glNewList(list, GL_COMPILE);
+	w.draw();
+	glEndList();
+
 	timebase = glutGet(GLUT_ELAPSED_TIME);
+
 	glutMainLoop();
 	return 0;
 }

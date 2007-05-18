@@ -26,5 +26,6 @@ void material::draw() const
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, &diffuse.vector()[0]);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, &specular.vector()[0]);
 	glMaterialfv(GL_FRONT, GL_EMISSION, &emission.vector()[0]);
+
 	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
 }
