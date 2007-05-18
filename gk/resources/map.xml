@@ -3,7 +3,7 @@
 <boost_serialization signature="serialization::archive" version="3">
   <world>
     <materials>
-      <count>3</count>
+      <count>2</count>
       <item>
         <first>brick</first>
         <second>
@@ -17,22 +17,28 @@
             <y>1</y>
             <z>1</z>
           </color>
-        </second>
-      </item>
-      <item>
-        <first>stone</first>
-        <second>
-          <texture>
-            <name>stone.jpg</name>
-            <width>10</width>
-            <height>10</height>
-          </texture>
-          <color>
-            <x>1</x>
-            <y>1</y>
-            <z>1</z>
-          </color>
-        </second>
+          <ambient>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </ambient>
+          <diffuse>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </diffuse>
+          <specular>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </specular>
+          <emission>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </emission>
+          <shininess>0</shininess>
+         </second>
       </item>
       <item>
         <first>marble</first>
@@ -47,6 +53,27 @@
             <y>1</y>
             <z>1</z>
           </color>
+          <ambient>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </ambient>
+          <diffuse>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </diffuse>
+          <specular>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </specular>
+          <emission>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </emission>
+          <shininess>100</shininess>
         </second>
       </item>
     </materials>
@@ -61,7 +88,11 @@
       <z>0</z>
     </rotation>
     <bindings>
-      <count>3</count>
+      <count>4</count>
+      <item>
+        <first>teapot</first>
+        <second>brick</second>
+      </item>
       <item>
         <first>ground</first>
         <second>marble</second>
@@ -93,6 +124,24 @@
         <bindings>
           <count>0</count>
         </bindings>
+        <builtins>
+          <count>1</count>
+          <item>
+            <translation>
+              <x>5</x>
+              <y>1</y>
+              <z>-2.5</z>
+            </translation>
+            <rotation>
+              <x>0</x>
+              <y>0</y>
+              <z>0</z>
+            </rotation>
+            <bindings>
+              <count>0</count>
+            </bindings>
+          </item>
+        </builtins>
         <grounds>
           <count>2</count>
           <item>
@@ -210,6 +259,9 @@
         <bindings>
           <count>0</count>
         </bindings>
+        <builtins>
+          <count>0</count>
+        </builtins>
         <grounds>
           <count>0</count>
         </grounds>

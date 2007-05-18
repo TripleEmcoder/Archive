@@ -6,12 +6,14 @@ void wall::compile(const object& parent)
 	object::compile(parent);
 
 	_body.reset(new box());
-	_body->size = vertex(length, height, -0.2);
+	_body->size = vertex(length, height, -0.2f);
 	_body->compile(*this);
 }
 
 void wall::draw() const
 {
+	object::draw();
+
 	_body->draw();
 }
 

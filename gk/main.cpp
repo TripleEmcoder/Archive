@@ -148,12 +148,22 @@ int main(int argc, char* argv[])
 	glLoadIdentity();
 	gluPerspective(50, 1, 0.1, 50);
 
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
+	GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	glLightfv(GL_LIGHT0, GL_POSITION, position);	
+	glEnable(GL_LIGHT0);
 	glEnable(GL_LIGHTING);
-	//glEnable(GL_LIGHT0);
+
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_NORMALIZE);
 
 	//character = new Character(w.newton.get(), 0.4, 0.9, 0.4, 20, 5, -20);
 	character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);

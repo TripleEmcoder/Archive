@@ -15,10 +15,10 @@ void object::compile(const object& parent)
 
 void object::draw() const
 {
-#ifdef _DEBUG
-	scope local(*_composition);
-	auxSolidSphere(0.1);
-#endif
+//#ifdef _DEBUG
+//	scope local(*_composition);
+//	auxSolidSphere(0.1);
+//#endif
 }
 
 const object& object::parent() const

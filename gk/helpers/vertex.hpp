@@ -3,6 +3,8 @@
 
 #include <boost/serialization/utility.hpp>
 
+#include "vector.hpp"
+
 class vertex
 {
 public:
@@ -21,7 +23,9 @@ public:
 public:
 	vertex();
 	vertex(float x, float y, float z);
-	vertex operator+(vertex v) const;
+	vertex operator+(const vertex& v) const;
+
+	std::vector<float> vector() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(vertex, boost::serialization::object_serializable);

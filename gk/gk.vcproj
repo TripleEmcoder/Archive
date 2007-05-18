@@ -220,6 +220,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\builtin.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\ceiling.cpp"
 					>
 				</File>
@@ -337,6 +341,10 @@
 				</File>
 				<File
 					RelativePath=".\objects\bsp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\builtin.hpp"
 					>
 				</File>
 				<File

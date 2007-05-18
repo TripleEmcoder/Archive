@@ -11,12 +11,22 @@ class material
 public:
 	texture texture;	
 	vertex color;
+	vertex ambient;
+	vertex diffuse;
+	vertex specular;
+	vertex emission;
+	float shininess;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
 		archive & BOOST_SERIALIZATION_NVP(texture);
 		archive & BOOST_SERIALIZATION_NVP(color);
+		archive & BOOST_SERIALIZATION_NVP(ambient);
+		archive & BOOST_SERIALIZATION_NVP(diffuse);
+		archive & BOOST_SERIALIZATION_NVP(specular);
+		archive & BOOST_SERIALIZATION_NVP(emission);
+		archive & BOOST_SERIALIZATION_NVP(shininess);
 	}
 
 public:

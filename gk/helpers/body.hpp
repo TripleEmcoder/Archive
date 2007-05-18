@@ -30,7 +30,8 @@ public:
 	virtual const transformation& composition() const = 0;
 
 private:
-	boost::shared_ptr<NewtonBody> _newton;
+	//boost::shared_ptr<NewtonBody> _newton;
+	NewtonBody* _newton;
 };
 
 BOOST_CLASS_IMPLEMENTATION(body, boost::serialization::object_serializable);

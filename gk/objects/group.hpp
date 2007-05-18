@@ -7,6 +7,7 @@
 #include "vector.hpp"
 
 #include "object.hpp"
+#include "builtin.hpp"
 #include "ground.hpp"
 #include "ceiling.hpp"
 #include "wall.hpp"
@@ -18,6 +19,7 @@ public:
 	std::string name;
 	bool visible;
 
+	std::vector<builtin> builtins;
 	std::vector<ground> grounds;
 	std::vector<ceiling> ceilings;
 	std::vector<wall> walls;
@@ -33,6 +35,7 @@ public:
 
 		object::serialize(archive, version);
 
+		archive & BOOST_SERIALIZATION_NVP(builtins);
 		archive & BOOST_SERIALIZATION_NVP(grounds);
 		archive & BOOST_SERIALIZATION_NVP(ceilings);
 		archive & BOOST_SERIALIZATION_NVP(walls);
