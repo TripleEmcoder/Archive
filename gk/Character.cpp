@@ -8,7 +8,8 @@ using namespace boost::numeric::ublas;
 Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
 	:nWorld(nw)
 {
-	force[0] = force[1] = force[2] = 0.0f;
+	normal[0] = normal[2] = 0;
+	normal[1] = 1;
 	
 	size[0] = sizeX;
 	size[1] = sizeY;
@@ -115,13 +116,21 @@ Vector Character::getDirection()
 
 void Character::processCollision(const NewtonMaterial* material)
 {
+	Vector position;
+	NewtonMaterialGetContactPositionAndNormal(material, position.data(), normal.data());
+
 	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
 	if (collisionID == FEET_COLLISION)
 	{
+		NewtonMaterialSetContactElasticity(material, 0.2f);
 		NewtonMaterialSetContactFrictionState(material, 1, 0);
 		NewtonMaterialSetContactFrictionState(material, 1, 1);
 		if (count)
+		{
 			count--;
+			normal[0] = normal[2] = 0.0f;
+			normal[1] = 1.0f;
+		}
 		else
 			jumping = false;
 	}
@@ -138,47 +147,52 @@ void Character::applyForceAndTorque()
 	dFloat Iyy;
 	dFloat Izz;
 	dFloat mass;
+
+	float timestep = NewtonGetTimeStep(nWorld);
 	
 	NewtonBodyGetMassMatrix (body, &mass, &Ixx, &Iyy, &Izz);
 
+	Vector desiredVel;
+		
 	if (norm_2(movement) > 0.0001f)
-		movement /= norm_2(movement);
-
-	Vector force = createVector(0, -9.8f * mass, 0);
-		
-	if (!jumping)
 	{
-		NewtonBodyGetVelocity(body, velocity.data());
-		
-		movement *= 5.0f;
-		velocity[0] = movement[0];
-		velocity[2] = movement[2];
-
-		NewtonBodySetVelocity(body, velocity.data());
+		movement /= norm_2(movement);
+		desiredVel = cross_prod(normal, cross_prod(movement, normal));
+		desiredVel *= 6.0;
 	}
 	else
 	{
-		force += movement * 1.0f * mass;
+		desiredVel = movement * 0.0f;
 	}
 
-	NewtonBodySetForce(body, force.data());
+	NewtonBodyGetVelocity(body, velocity.data());
+	
+	if (velocity[1] < 0 || jumping)
+		velocity[1] = 0;
+
+	float k = (!jumping) ? 0.2f : 0.05f;
+
+	Vector force = k * mass * (desiredVel - velocity) / timestep;
+	force += createVector(0, -mass * 9.8f, 0);
 	
 	if (jumpInd)
 	{
-		float jumpVelocity[] = {0.0f, 6.5f, 0.0f};
-		NewtonAddBodyImpulse(body, jumpVelocity, getLocation().data());
+		force[1] += mass * (5.0f - velocity[1]) / timestep;
 		jumpInd = false;
 		jumping = true;
 		count = 4;
 	}
+
+	NewtonBodySetForce(body, force.data());
 }
-
-
 
 void Character::drawHUD()
 {
 	NewtonBodyGetVelocity(body, velocity.data());
-	renderBitmapString(350, 35, 1.0f, 0.0f, 0.0f, "(%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
+	velocity[3] = 0;
+	renderBitmapString(350, 35, 1.0f, 0.0f, 0.0f, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
 	if (jumping)
 		renderBitmapString(350, 55, 1.0f, 0.0f, 0.0f, "JUMPING");
+	renderBitmapString(350, 75, 1.0f, 0.0f, 0.0f, "NORMAL (%3.1f, %3.1f, %3.1f)", normal[0], normal[1], normal[2]);
+	renderBitmapString(350, 95, 1.0f, 0.0f, 0.0f, "SPEED (%3.1f)", norm_2(velocity));
 }

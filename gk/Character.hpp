@@ -14,7 +14,7 @@ private:
 	static const int FEET_COLLISION = 2;
 	
 	Matrix location;
-	Vector size, force, velocity, movement;
+	Vector size, velocity, movement, normal;
 	int count;
 	bool jumpInd, jumping;
 	NewtonBody* body;

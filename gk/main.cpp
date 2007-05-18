@@ -111,7 +111,11 @@ void draw(void)
 
 	moveCharacter();
 
-	NewtonUpdate(w.newton(), 1.0f/60.0f);
+	int time = glutGet(GLUT_ELAPSED_TIME) - timebase;
+	timebase += time;
+
+	NewtonUpdate(w.newton(), time / 1000.0f);
+	//NewtonUpdate(w.newton(), 1.0f / 40.0f);
 	
 	Vector eye = character->getLocation();
 	eye[1] += 0.8f;
@@ -189,6 +193,7 @@ int main(int argc, char* argv[])
 	glutPassiveMotionFunc(processMousePassiveMotion);
 	glutMouseFunc(processMouse);
 
+	timebase = glutGet(GLUT_ELAPSED_TIME);
 	glutMainLoop();
 	return 0;
 }
