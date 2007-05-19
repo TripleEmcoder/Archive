@@ -158,7 +158,7 @@ void Character::applyForceAndTorque()
 	{
 		movement /= norm_2(movement);
 		desiredVel = cross_prod(normal, cross_prod(movement, normal));
-		desiredVel *= 6.0;
+		desiredVel *= 60.0;
 	}
 	else
 	{
@@ -170,7 +170,7 @@ void Character::applyForceAndTorque()
 	if (velocity[1] < 0 || jumping)
 		velocity[1] = 0;
 
-	float k = (!jumping) ? 0.2f : 0.05f;
+	float k = (!jumping) ? 2.0f : 0.5f;
 
 	Vector force = k * mass * (desiredVel - velocity) / timestep;
 	//force += createVector(0, -mass * 9.8f, 0);
