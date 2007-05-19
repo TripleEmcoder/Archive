@@ -57,8 +57,13 @@ void world::compile()
 {
 	_newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
 
-	NewtonWorld* nWorld = _newton.get();
 	
+	NewtonWorld* nWorld = _newton.get();
+
+	float minPoint[] = {-500, -500, -500};
+	float maxPoint[] = {500, 500, 500};
+	NewtonSetWorldSize(nWorld, minPoint, maxPoint);
+
 	// get the default material ID
 	int defaultID = NewtonMaterialGetDefaultGroupID (nWorld);
 

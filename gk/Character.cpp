@@ -173,7 +173,7 @@ void Character::applyForceAndTorque()
 	float k = (!jumping) ? 0.2f : 0.05f;
 
 	Vector force = k * mass * (desiredVel - velocity) / timestep;
-	force += createVector(0, -mass * 9.8f, 0);
+	//force += createVector(0, -mass * 9.8f, 0);
 	
 	if (jumpInd)
 	{

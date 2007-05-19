@@ -40,7 +40,7 @@ void texture::compile()
 		std::cerr << "Failed to load image \"" << name << "\"." << std::endl;
 		return;
 	}
-	
+
 	id.reset(create_single_texture(), delete_single_texture);
 	
 	glBindTexture(GL_TEXTURE_2D, *id);

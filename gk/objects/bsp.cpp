@@ -2,274 +2,132 @@
 #include "scope.hpp"
 #include "engine.hpp"
 
-//type TVector3i = Record
-//	X, Y, Z : Integer;
-//end;
+#include <iostream>
+#include <fstream>
+#include <boost/bind.hpp>
 
-struct bsp_vector3i
+using namespace std;
+
+enum lump_id
 {
-	int x, y, z;
+	Entities, // Game-related object descriptions. 
+	Textures, // Surface descriptions. 
+	Planes, // Planes used by map geometry. 
+	Nodes, // BSP tree nodes. 
+	Leafs, // BSP tree leaves. 
+	Leaffaces, // Lists of face indices, one list per leaf. 
+	Leafbrushes, // Lists of brush indices, one list per leaf. 
+	Models, // Descriptions of rigid world geometry in map. 
+	Brushes, // Convex polyhedra used to describe solid space. 
+	Brushsides, // Brush surfaces. 
+	Vertexes, // Vertices used to describe faces. 
+	Meshverts, // Lists of offsets, one list per mesh. 
+	Effects, // List of special map effects. 
+	Faces, // Surface geometry. 
+	Lightmaps, // Packed lightmap data. 
+	Lightvols, // Local illumination data. 
+	Visdata // Cluster-cluster visibility data.
 };
 
-//type TVector2f = Record
-//	X, Y : glFloat;
-//end;
-
-struct bsp_vector2f
+enum face_type
 {
-	float x, y;
+	polygon = 1,
+	patch,
+	mesh,
+	billboard
 };
 
-//type TVector3f = Record
-//	X, Y, Z : glFloat;
-//end;
-
-struct bsp_vector3f
+template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, vector<T>& vec)
 {
-	float x, y, z;
-};
+	is.seekg(lump.offset);
+	int n = lump.length / sizeof(T);
+	vec.resize(n);
+	is.read((char*) &vec[0], n*sizeof(T));
+}
 
-//type TBSPHeader = Record
-//	strID : Array[0..3] of Char;           // This should always be 'IBSP'
-//	Version : Integer;                     // This should be 0x2e for Quake 3 files
-//end;
-
-struct bsp_header
+void convert(bsp_vertex& vertex)
 {
-	char id[4];
-	int version;
-};
+	swap(vertex.position.y, vertex.position.z);
+	vertex.position.z = -vertex.position.z;
+	vertex.texture_coordinate.y = -vertex.texture_coordinate.y;
+}
 
-//type TBSPLump = Record
-//	Offset : Integer;                      // The offset into the file for the start of this lump
-//	Length : Integer;                      // The length in bytes for this lump
-//end;
-
-struct bsp_lump
+texture convert_texture(const bsp_texture& t)
 {
-	int offset;
-	int length;
-};
-
-//type TBSPVertex = Record
-//	Position      : TVector3f;             // (x, y, z) position.
-//	TextureCoord  : TVector2f;             // (u, v) texture coordinate
-//	LightmapCoord : TVector2f;             // (u, v) lightmap coordinate
-//	Normal        : TVector3f;             // (x, y, z) normal vector
-//	Color         : Array[0..3] of Byte    // RGBA color for the vertex
-//end;
-
-struct bsp_vertex
-{
-	bsp_vector3f position;
-	bsp_vector2f texture_coordinate;
-	bsp_vector2f lightmap_coordinate;
-	bsp_vector3f normal;
-	char color[4];
-};
-
-//type TBSPFace = Record
-//	textureID : Integer;                   // The index into the texture array
-//	effect    : Integer;                   // The index for the effects (or -1 = n/a)
-//	FaceType  : Integer;                   // 1=polygon, 2=patch, 3=mesh, 4=billboard
-//	startVertIndex : Integer;              // The starting index into this face's first vertex
-//	numOfVerts     : Integer;              // The number of vertices for this face
-//	meshVertIndex  : Integer;              // The index into the first meshvertex
-//	numMeshVerts   : Integer;              // The number of mesh vertices
-//	lightmapID     : Integer;              // The texture index for the lightmap
-//	lMapCorner : Array[0..1] of Integer;   // The face's lightmap corner in the image
-//	lMapSize   : Array[0..1] of Integer;   // The size of the lightmap section
-//	lMapPos  : TVector3f;                  // The 3D origin of lightmap.
-//	lMapVecs : Array[0..1] of TVector3f;   // The 3D space for s and t unit vectors.
-//	vNormal  : TVector3f;                  // The face normal.
-//	Size : Array[0..1] of Integer;         // The bezier patch dimensions. 
-//end;
-
-struct bsp_face
-{
-	int texture_index;
-	int effect_index;
-	int face_type;
-	int start_vertex_index;
-	int vertex_count;
-	int start_mesh_vertex_index;
-	int mesh_vertex_count;
-	int lightmap_index;
-	int lightmap_corner[2];
-	int lightmap_size[2];
-	bsp_vector3f lightmap_origin[2];
-	bsp_vector3f lightmap_vectors[2];
-	bsp_vector3f normal;
-	int size[2];
-};
-
-//type TBSPTexture = Record
-//	TextureName : Array[0..63] of Char;    // The name of the texture w/o the extension
-//	flags    : Integer;                    // The surface flags (unknown)
-//	contents : Integer;                    // The content flags (unknown)
-//end;
-
-struct bsp_texture
-{
-	char name[64];
-	int flags;
-	int contents;
-};
-
-//type TBSPLightmap = Record
-//	imageBits : Array[0..127, 0..127, 0..2] of Byte;   // The RGB data in a 128x128 image
-//end;
-
-struct bsp_lightmap
-{
-	char pixels[128][128][3];
-};
+	texture result(string(t.name) + ".jpg", 0, 0);
+	result.compile();
+	return result;
+}
 
 void bsp::compile(const object& parent)
 {
+	ifstream is;
+	bsp_header header;
+	bsp_lump lumps[17];
+	vector<bsp_texture> bsp_textures;
+
 	object::compile(parent);
+
+	is.open("map.bsp", ios::binary);
+
+	is.read((char*) &header, sizeof(header));
+	is.read((char*) lumps, sizeof(lumps));
+
+	read_lump(is, lumps[Vertexes], _vertices);
+	read_lump(is, lumps[Faces], _faces);
+	read_lump(is, lumps[Textures], bsp_textures);
+
+	is.close();
+
+	for_each(_vertices.begin(), _vertices.end(), &convert);
 	
-	//wczytywanie
+	_textures.resize(bsp_textures.size());
+	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
+}
 
-/*
-{-----------------------------------------------------------}
-{---  This loads in all of the .bsp data for the level   ---}
-{-----------------------------------------------------------}
-function TQuake3BSP.LoadBSP(const FileName: String): Boolean;
-var F : File;
-    I : Integer;
-    Temp : glFloat;
-    Header : TBSPHeader;
-    Lumps  : Array of TBSPLump;
-    BSPTextures  : Array of TBSPTexture;
-begin
-  result :=FALSE;
+void bsp::draw_face(const bsp_face& face) const
+{
+	if (face.face_type == polygon)
+	{
+		glEnable(GL_TEXTURE_2D);
+		_textures[face.texture_index].draw();
+		//glDisable(GL_TEXTURE_2D);
+		glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
 
-  // Check if the .bsp file can be opened
-  AssignFile(F, filename);
-{$I-}
-  Reset(F,1);
-{$I+}
-  if IOResult <> 0 then
-  begin
-    MessageBox(0, 'Could not find the BSP file!', 'Error', MB_OK);
-    exit;
-  end;
+		//glBegin(GL_TRIANGLE_FAN);
+		//for (int i = face.start_vertex_index; i < face.start_vertex_index + face.vertex_count; ++i)
+		//{
+		//	const bsp_vertex& v(_vertices[i]);
+		//	glNormal3f(v.normal.x, v.normal.y, v.normal.z);
+		//	glColor4b(v.color[0], v.color[1], v.color[2], v.color[3]);
+		//	glVertex3f(v.position.x, v.position.y, v.position.z);
+		//}
+		//glEnd();
 
-  SetLength(Lumps, kMaxLumps);
-
-  // Read in the header and lump data
-  BlockRead(F, Header, Sizeof(Header));
-  BlockRead(F, Lumps[0], kMaxLumps*sizeof(TBSPLump));
-
-  // Allocate the vertex memory
-  numOfVerts := Round(lumps[kVertices].length / sizeof(TBSPVertex));
-  SetLength(Vertices, numOfVerts);
-
-  // Allocate the face memory
-  numOfFaces := Round(lumps[kFaces].length / sizeof(TBSPFace));
-  SetLength(Faces, numOfFaces);
-
-  // Allocate memory to read in the texture information.
-  numOfTextures := Round(lumps[kTextures].length / sizeof(TBSPTexture));
-  SetLength(BSPTextures, numOfTextures);
-  SetLength(Textures, numOfTextures);
-
-  // Seek to the position in the file that stores the vertex information
-  Seek(F, lumps[kVertices].offset);
-
-  // Go through all of the vertices that need to be read and swap axises
-  for I :=0 to numOfVerts-1 do
-  begin
-    // Read in the current vertex
-    BlockRead(F, Vertices[i], sizeOf(TBSPVertex));
-
-    // Swap the y and z values, and negate the new z so Y is up.
-    Temp := Vertices[i].Position.Y;
-    Vertices[i].Position.Y := Vertices[i].Position.Z;
-    Vertices[i].Position.Z := -temp;
-
-    // Negate the V texture coordinate because it is upside down otherwise...
-    Vertices[i].TextureCoord.Y := -Vertices[i].TextureCoord.Y;
-  end;
-
-  // Seek and read in all the face information
-  Seek(F, lumps[kFaces].offset);
-  BlockRead(F, Faces[0], numOfFaces*sizeOf(TBSPFace));
-
-  // Seek and read in all the texture information
-  Seek(F, lumps[kTextures].offset);
-  BlockRead(F, BSPTextures[0], numOfTextures*sizeOf(TBSPTexture));
-
-  // Go through all of the textures
-  for I :=0 to numOfTextures-1 do
-  begin
-    // for some reason known only to ID they dont store file extentions
-    if FileExists(BSPTextures[i].TextureName + '.jpg') then
-      LoadTexture(BSPTextures[i].TextureName + '.jpg', Textures[i], FALSE)
-    else if FileExists(BSPTextures[i].TextureName + '.tga') then
-      LoadTexture(BSPTextures[i].TextureName + '.tga', Textures[i], FALSE)
-  end;
-  CloseFile(F);
-
-  result :=TRUE;
-end;
-*/
+		assert(glGetError() == GL_NO_ERROR);
+	}
 }
 
 void bsp::draw() const
 {
 	scope local(composition());
 
-	//rysowanie
+	glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].position);
+	glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].texture_coordinate);
+	glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].normal);
+	glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(bsp_vertex), &_vertices[0].color);
+	
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
 
-/*
-{-----------------------------------------------------------}
-{--- Renders a face, determined by the passed in index   ---}
-{-----------------------------------------------------------}
-procedure TQuake3BSP.RenderFace(faceIndex: Integer);
-var Face : TBSPFace;
-begin
-  // Here we grab the face from the index passed in
-  Face := Faces[faceIndex];
+	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
 
-  glEnable(GL_TEXTURE_2D);                // Turn on texture mapping and bind the face's texture map
-  glBindTexture(GL_TEXTURE_2D, textures[Face.textureID]);
+	glDisableClientState(GL_VERTEX_ARRAY);
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	glDisableClientState(GL_NORMAL_ARRAY);
+	glDisableClientState(GL_COLOR_ARRAY);
 
-  // Draw the face in a triangle face, starting from the starting index
-  // to the starting index + the number of vertices.  This is a vertex array function.
-  glDrawArrays(GL_TRIANGLE_FAN, Face.startVertIndex, Face.numOfVerts);
-end;
-
-
-{---------------------------------------------------------------------}
-{--- Goes through all faces and draws them if type is FACE_POLYGON ---}
-{---------------------------------------------------------------------}
-procedure TQuake3BSP.RenderLevel(const Pos: TVector3f);
-var i : Integer;
-begin
-  // Give OpenGL our vertices to use for vertex arrays
-  glVertexPointer(3, GL_FLOAT, sizeof(TBSPVertex), @Vertices[0].Position);
-
-  // Since we are using vertex arrays, we need to tell OpenGL which texture
-  // coordinates to use for each texture pass.  We switch our current texture
-  // to the first one, then set our texture coordinates.
-  glTexCoordPointer(2, GL_FLOAT, sizeof(TBSPVertex), @Vertices[0].TextureCoord);
-
-  // Set our vertex array client states for vertices and texture coordinates
-  glEnableClientState(GL_VERTEX_ARRAY);
-  glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-
-  // Get the number of faces in our level and go through all the faces
-  i := numOfFaces;
-  while i > 0 do
-  begin
-    Dec(I);
-
-    // Before drawing this face, make sure it's a normal polygon
-    if Faces[i].Facetype = FACE_POLYGON then
-      RenderFace(i);
-  end;
-end;
-*/
+	assert(glGetError() == GL_NO_ERROR);
 }

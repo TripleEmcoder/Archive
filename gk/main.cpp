@@ -123,7 +123,7 @@ void draw(void)
 	camera->setEye(eye);
 	camera->draw();
 
-	glColor3b(20, 40, 60);
+	//glColor3b(20, 40, 60);
 
 	//w.draw();
 	glCallList(list);
@@ -152,7 +152,7 @@ int main(int argc, char* argv[])
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, 1, 0.1, 50);
+	gluPerspective(50, 1, 1, 500);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -171,10 +171,10 @@ int main(int argc, char* argv[])
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
 
-	//character = new Character(w.newton.get(), 0.4, 0.9, 0.4, 20, 5, -20);
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
+	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
 	Vector location = character->getLocation();
-	camera = new Camera(location[0], location[1], location[2], 0.0 * 3.1416 / 180.0, 0);
+	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();
 	crosshair = new Crosshair(0.0f, 1.0f, 1.0f, 8.0f);
 	hudManager = new HUDManager();
