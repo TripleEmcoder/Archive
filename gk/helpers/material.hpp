@@ -10,7 +10,6 @@ class material
 {
 public:
 	texture texture;	
-	vertex color;
 	vertex ambient;
 	vertex diffuse;
 	vertex specular;
@@ -21,7 +20,6 @@ public:
 	void serialize(A& archive, const unsigned int)
 	{
 		archive & BOOST_SERIALIZATION_NVP(texture);
-		archive & BOOST_SERIALIZATION_NVP(color);
 		archive & BOOST_SERIALIZATION_NVP(ambient);
 		archive & BOOST_SERIALIZATION_NVP(diffuse);
 		archive & BOOST_SERIALIZATION_NVP(specular);
@@ -31,7 +29,6 @@ public:
 
 public:
 	material();
-	material(const vertex& color);
 
 	virtual void compile();
 	virtual void draw() const;

@@ -2,7 +2,7 @@
 #include "scope.hpp"
 #include "material.hpp"
 #include "engine.hpp"
-#include <iostream>
+
 void builtin::compile(const object& parent)
 {
 	object::compile(parent);
@@ -12,9 +12,15 @@ void builtin::draw() const
 {
 	object::draw();
 
-	scope local(composition());
+	transformation_scope ts(composition());
 
-	bound_material("teapot").draw();
-	//auxSolidTeapot(0.5);
-	_ASSERT(glGetError() == GL_NO_ERROR);
+	bound_material(name).draw();
+	
+	if (name == "sphere")
+		glutSolidSphere(0.5, 20, 20);	
+
+	else if (name =="teapot")
+		glutSolidTeapot(0.5);
+	
+	_ASSERTE(glGetError() == GL_NO_ERROR);
 }

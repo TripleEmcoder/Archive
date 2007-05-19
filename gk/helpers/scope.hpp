@@ -3,11 +3,20 @@
 
 class transformation;
 
-class scope
+class transformation_scope
 {
 public:
-	scope(const transformation& composition);
-	~scope();
+	transformation_scope(const transformation& composition);
+	~transformation_scope();
+};
+
+class list_id;
+
+class list_scope
+{
+public:
+	list_scope(const list_id& id);
+	~list_scope();
 };
 
 #endif //HELPERS_SCOPE_HPP

@@ -5,6 +5,7 @@
 
 #include "object.hpp"
 #include "body.hpp"
+#include "id.hpp"
 
 class box : public body, public object
 {
@@ -24,6 +25,17 @@ public:
 
 	virtual const world& root() const;
 	virtual const transformation& composition() const;
+
+private:
+	list_id list;
+
+	void draw_faces() const;
+	void draw_left_face() const;
+	void draw_right_face() const;
+	void draw_bottom_face() const;
+	void draw_top_face() const;
+	void draw_front_face() const;
+	void draw_back_face() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(box, boost::serialization::object_serializable);

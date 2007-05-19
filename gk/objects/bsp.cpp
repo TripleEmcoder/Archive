@@ -110,7 +110,7 @@ void bsp::draw_face(const bsp_face& face) const
 
 void bsp::draw() const
 {
-	scope local(composition());
+	transformation_scope ts(composition());
 
 	glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].position);
 	glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].texture_coordinate);

@@ -18,16 +18,42 @@ void box::compile(const object& parent)
 
 	NewtonBodySetCollision(newton(), collision);
 	NewtonReleaseCollision(root().newton(), collision);
+
+	list_scope ls(list);
+	object::draw();
+	draw_faces();
 }
 
 void box::draw() const
 {
-	object::draw();
+	glCallList(list);
+}
 
-	scope local(composition());
+const world& box::root() const
+{
+	return object::root();
+}
 
+const transformation& box::composition() const
+{
+	return object::composition();
+}
+
+void box::draw_faces() const
+{
+	transformation_scope ts(composition());
+	draw_left_face();
+	draw_right_face();
+	draw_bottom_face();
+	draw_top_face();
+	draw_front_face();
+	draw_back_face();
+}
+
+void box::draw_left_face() const
+{
 	float s, t;
-	
+
 	const material& left = bound_material(size.x > 0 ? "left" : "right");
 	left.draw();
 
@@ -39,6 +65,11 @@ void box::draw() const
 	glTexCoord2f(s, t); glVertex3f(0,      size.y, 0     );
 	glTexCoord2f(s, 0); glVertex3f(0,      0,      0     );
 	glEnd();
+}
+
+void box::draw_right_face() const
+{
+	float s, t;
 
 	const material& right = bound_material(size.x > 0 ? "right" : "left");
 	right.draw();
@@ -51,8 +82,12 @@ void box::draw() const
 	glTexCoord2f(s, t); glVertex3f(size.x, size.y, 0     );
 	glTexCoord2f(s, 0); glVertex3f(size.x, 0,      0     );
 	glEnd();
+}
 
-	//glColor3f(0,1,0);
+void box::draw_bottom_face() const
+{
+	float s, t;
+
 	const material& bottom = bound_material(size.y > 0 ? "bottom" : "top");
 	bottom.draw();
 
@@ -64,6 +99,11 @@ void box::draw() const
 	glTexCoord2f(s, t); glVertex3f(size.x, 0,      0     );
 	glTexCoord2f(s, 0); glVertex3f(size.x, 0,      size.z);
 	glEnd();
+}
+
+void box::draw_top_face() const
+{
+	float s, t;
 
 	const material& top = bound_material(size.y > 0 ? "top" : "bottom");
 	top.draw();
@@ -76,6 +116,11 @@ void box::draw() const
 	glTexCoord2f(s, t); glVertex3f(size.x, size.y, 0     );
 	glTexCoord2f(s, 0); glVertex3f(size.x, size.y, size.z);
 	glEnd();
+}
+
+void box::draw_front_face() const
+{	
+	float s, t;
 
 	const material& front = bound_material(size.z < 0 ? "front" : "back");
 	front.draw();
@@ -99,6 +144,11 @@ void box::draw() const
 	//		glVertex3f(x*0.5,  0,      0     );
 	//	}
 	//glEnd();
+}
+
+void box::draw_back_face() const
+{
+	float s, t;
 
 	const material& back = bound_material(size.z < 0 ? "back" : "front");
 	back.draw();
@@ -122,14 +172,4 @@ void box::draw() const
 	//		glVertex3f(x*0.5,  0,      size.z);
 	//	}
 	//glEnd();
-}
-
-const world& box::root() const
-{
-	return object::root();
-}
-
-const transformation& box::composition() const
-{
-	return object::composition();
 }

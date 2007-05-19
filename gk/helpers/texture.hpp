@@ -6,6 +6,7 @@
 #include <boost/tuple/tuple.hpp>
 
 #include "string.hpp"
+#include "id.hpp"
 
 class texture
 {
@@ -26,12 +27,13 @@ public:
 	texture();
 	texture(std::string name, float width, float height);
 
-	boost::shared_ptr<unsigned int> id;
-
 	virtual void compile();
 	virtual void draw() const;
 	
 	boost::tuple<float, float> ratio(float width, float height) const;
+
+private:
+	boost::shared_ptr<texture_id> id;
 };
 
 BOOST_CLASS_IMPLEMENTATION(texture, boost::serialization::object_serializable);

@@ -99,7 +99,6 @@ void processMouse(int button, int state, int x, int y)
 
 void draw(void)
 {
-	glClearColor(0, 0, 0, 0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	glMatrixMode(GL_MODELVIEW);
@@ -145,18 +144,24 @@ int main(int argc, char* argv[])
 	std::cerr << "Compiling..." << std::endl;
 	w.compile();
 
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(50, 1, 1, 500);
+	//glClearColor(0.0, 0.0, 0.0, 0.0); 	   // Black Background
+	//glShadeModel(GL_SMOOTH);                 // Enables Smooth Color Shading
+	//glClearDepth(1.0);                       // Depth Buffer Setup
+	//glEnable(GL_DEPTH_TEST);                 // Enable Depth Buffer
+	//glDepthFunc(GL_LESS);		           // The Type Of Depth Test To Do
+	//glCullFace(GL_FRONT);
+	//glEnable(GL_CULL_FACE);
+	//glEnable(GL_TEXTURE_2D);                     // Enable Texture Mapping
 
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
+	//glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);   //Realy Nice perspective calculations
+	//glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHTING);
 
-	//GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
-	//GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
-	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
-	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	//glLightfv(GL_LIGHT0, GL_POSITION, position);	
+	GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
+	GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	glLightfv(GL_LIGHT0, GL_POSITION, position);	
 	glEnable(GL_LIGHT0);
 	glEnable(GL_LIGHTING);
 	
@@ -166,8 +171,15 @@ int main(int argc, char* argv[])
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
 
-	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(50, 1, 1, 500);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
+	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();

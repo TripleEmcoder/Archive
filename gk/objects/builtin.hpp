@@ -9,13 +9,13 @@
 class builtin : public object
 {
 public:
-	//std::string name;
+	std::string name;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int version)
 	{
 		object::serialize(archive, version);
-		//archive & BOOST_SERIALIZATION_NVP(name);
+		archive & BOOST_SERIALIZATION_NVP(name);
 	}
 
 public:

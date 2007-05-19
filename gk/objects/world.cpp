@@ -132,7 +132,7 @@ const material& world::bound_material(std::string name) const
 	if (materials.count(name))
 		return materials.find(name)->second;
 
-	static const material none(vertex(1, 0, 0));
+	static const material none;
 	
 	return none;
 }

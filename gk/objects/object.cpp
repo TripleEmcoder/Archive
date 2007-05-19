@@ -1,6 +1,7 @@
 #include "object.hpp"
 #include "transformation.hpp"
 #include "scope.hpp"
+#include "material.hpp"
 #include "engine.hpp"
 
 void object::compile(const object& parent)
@@ -15,10 +16,11 @@ void object::compile(const object& parent)
 
 void object::draw() const
 {
-//#ifdef _DEBUG
-//	scope local(*_composition);
-//	auxSolidSphere(0.1);
-//#endif
+#ifdef _DEBUG
+	transformation_scope ts(*_composition);
+	bound_material("debug").draw();
+	glutSolidSphere(0.1, 20, 20);
+#endif
 }
 
 const object& object::parent() const
