@@ -1,6 +1,7 @@
 #include "bsp.hpp"
 #include "scope.hpp"
 #include "engine.hpp"
+#include "world.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -59,12 +60,52 @@ texture convert_texture(const bsp_texture& t)
 	return result;
 }
 
+struct mesh_constructor
+{
+	const NewtonWorld* nWorld;
+	const vector<bsp_vertex>& vertices;
+	const vector<int>& meshverts;
+	NewtonCollision* tree;
+
+	mesh_constructor(const NewtonWorld* nWorld, const vector<bsp_vertex>& vertices, const vector<int>& meshverts)
+		:nWorld(nWorld), vertices(vertices), meshverts(meshverts)
+	{
+		tree = NewtonCreateTreeCollision(nWorld, NULL);
+		NewtonTreeCollisionBeginBuild(tree);
+	}
+
+	void operator()(const bsp_face& face)
+	{
+		for (int i = 0; i < face.mesh_vertex_count / 3; ++i)
+		{
+			float triangle[3][3];
+			for (int j = 0; j < 3; ++j)
+			{
+				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i*3 + j];
+				const bsp_vertex& v = vertices[vert_index];
+				triangle[j][0] = v.position.x;	
+				triangle[j][1] = v.position.y;
+				triangle[j][2] = v.position.z;
+			}
+			NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1); 
+		}
+	}
+
+	void finish()
+	{
+		NewtonTreeCollisionEndBuild(tree, 0);
+		NewtonCreateBody(nWorld, tree);
+		NewtonReleaseCollision(nWorld, tree);
+	}
+};
+
 void bsp::compile(const object& parent)
 {
 	ifstream is;
 	bsp_header header;
 	bsp_lump lumps[17];
 	vector<bsp_texture> bsp_textures;
+	vector<int> meshverts;
 
 	object::compile(parent);
 
@@ -76,6 +117,7 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Vertexes], _vertices);
 	read_lump(is, lumps[Faces], _faces);
 	read_lump(is, lumps[Textures], bsp_textures);
+	read_lump(is, lumps[Meshverts], meshverts);
 
 	is.close();
 
@@ -83,6 +125,8 @@ void bsp::compile(const object& parent)
 	
 	_textures.resize(bsp_textures.size());
 	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
+
+	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, meshverts)).finish();
 }
 
 void bsp::draw_face(const bsp_face& face) const

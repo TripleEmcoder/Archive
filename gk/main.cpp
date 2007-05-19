@@ -41,7 +41,6 @@ void moveCharacter()
 	else
 		vec[2] = 0.0f;
 	
-	
 	vec[1] = 0;
 	vec[3] = 0;
 
