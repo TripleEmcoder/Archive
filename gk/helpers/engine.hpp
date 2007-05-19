@@ -3,7 +3,9 @@
 
 #include <windows.h>
 #include <GL/gl.h>
-#include <GL/glaux.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#include <crtdbg.h>
 
 #include <corona.h>
 
