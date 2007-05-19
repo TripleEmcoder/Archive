@@ -1,11 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-#include <windows.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
-
 #include "objects/world.hpp"
 #include "Camera.hpp"
 #include "FPSCounter.hpp"
@@ -13,7 +8,7 @@
 #include "Character.hpp"
 #include "Crosshair.hpp"
 #include "math.hpp"
-#include <Newton.h>
+#include "engine.hpp"
 
 GLuint list;
 world w;
@@ -125,8 +120,8 @@ void draw(void)
 
 	//glColor3b(20, 40, 60);
 
-	//w.draw();
-	glCallList(list);
+	w.draw();
+	//glCallList(list);
 
 	hudManager->draw();
 
@@ -157,16 +152,16 @@ int main(int argc, char* argv[])
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
-	GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
-	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightfv(GL_LIGHT0, GL_POSITION, position);	
+	//GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
+	//GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
+	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
+	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	//glLightfv(GL_LIGHT0, GL_POSITION, position);	
 	glEnable(GL_LIGHT0);
 	glEnable(GL_LIGHTING);
-
+	
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_COLOR_MATERIAL);
+	//glEnable(GL_COLOR_MATERIAL);
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
@@ -197,7 +192,7 @@ int main(int argc, char* argv[])
 
 	list = glGenLists(1);
 	glNewList(list, GL_COMPILE);
-	w.draw();
+	//w.draw();
 	glEndList();
 
 	timebase = glutGet(GLUT_ELAPSED_TIME);
