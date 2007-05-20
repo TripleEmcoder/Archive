@@ -101,6 +101,7 @@ private:
 	std::vector<bsp_vertex> _vertices;
 	std::vector<bsp_face> _faces;
 	std::vector<texture> _textures;
+	std::vector<int> _meshverts;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

@@ -107,13 +107,53 @@ struct mesh_constructor
 	}
 };
 
+struct drawer
+{
+	const std::vector<bsp_vertex>& vertices;
+	const std::vector<int>& meshverts;
+	const std::vector<texture>& textures;
+
+	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures)
+		:vertices(vertices), meshverts(meshverts), textures(textures)
+	{
+		glEnable(GL_TEXTURE_2D);
+	}
+
+	void operator()(const bsp_face& face)
+	{
+		for (int i = 0; i < face.mesh_vertex_count; i += 3)
+		{
+			bsp_vector3f triangle[3];
+			for (int j = 0; j < 3; ++j)
+			{
+				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
+				const bsp_vertex& v = vertices[vert_index];
+				triangle[j] = v.position;
+			}
+
+			textures[face.texture_index].draw();
+
+			glBegin(GL_TRIANGLES);
+			glVertex3fv((float*)&triangle[0]);
+			glVertex3fv((float*)&triangle[1]);
+			glVertex3fv((float*)&triangle[2]);
+			glEnd();
+		}
+	}
+
+	void compile()
+	{
+
+	}
+};
+
+
 void bsp::compile(const object& parent)
 {
 	ifstream is;
 	bsp_header header;
 	bsp_lump lumps[17];
 	std::vector<bsp_texture> bsp_textures;
-	std::vector<int> meshverts;
 
 	object::compile(parent);
 
@@ -125,7 +165,7 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Vertexes], _vertices);
 	read_lump(is, lumps[Faces], _faces);
 	read_lump(is, lumps[Textures], bsp_textures);
-	read_lump(is, lumps[Meshverts], meshverts);
+	read_lump(is, lumps[Meshverts], _meshverts);
 
 	is.close();
 
@@ -151,7 +191,7 @@ void bsp::compile(const object& parent)
 	//NewtonBody* body = NewtonCreateBody(nWorld, tree);
 	//NewtonReleaseCollision(nWorld, tree);
 
-	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, meshverts)).compile();
+	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile();
 }
 
 void bsp::draw_face(const bsp_face& face) const
@@ -191,7 +231,8 @@ void bsp::draw() const
 	glEnableClientState(GL_NORMAL_ARRAY);
 	//glEnableClientState(GL_COLOR_ARRAY);
 
-	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
+	//for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
+	for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures));
 
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
