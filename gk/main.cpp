@@ -112,7 +112,7 @@ void draw(void)
 	//NewtonUpdate(w.newton(), 1.0f / 40.0f);
 	
 	Vector eye = character->getLocation();
-	eye[1] += 0.8f;
+	eye[1] += 80.0f;
 	camera->setEye(eye);
 	camera->draw();
 
@@ -156,13 +156,13 @@ int main(int argc, char* argv[])
 	//glEnable(GL_LIGHT0);
 	//glEnable(GL_LIGHTING);
 
-	GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
-	GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
-	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightfv(GL_LIGHT0, GL_POSITION, position);	
-	glEnable(GL_LIGHT0);
-	glEnable(GL_LIGHTING);
+	//GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
+	//GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
+	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
+	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	//glLightfv(GL_LIGHT0, GL_POSITION, position);	
+	//glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHTING);
 	
 	glEnable(GL_DEPTH_TEST);
 	//glEnable(GL_COLOR_MATERIAL);
@@ -177,8 +177,8 @@ int main(int argc, char* argv[])
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
-	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
+	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
+	character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();

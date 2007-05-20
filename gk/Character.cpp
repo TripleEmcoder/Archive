@@ -25,7 +25,7 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 	NewtonCollision* collisionParts[2];
 
 	collisionParts[0] = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
-	collisionParts[1] = NewtonCreateBox(nWorld, size[0]/2, 0.05f, size[2]/2, translationMatrix(0, -size[1]-0.1f, 0).data());
+	collisionParts[1] = NewtonCreateBox(nWorld, size[0]/10, 0.05f, size[2]/10, translationMatrix(0, -size[1]-0.1f, 0).data());
 	NewtonConvexCollisionSetUserID(collisionParts[0], BODY_COLLISION);
 	NewtonConvexCollisionSetUserID(collisionParts[1], FEET_COLLISION);
 	NewtonCollision* collision = NewtonCreateCompoundCollision(nWorld, 2, collisionParts);
@@ -157,9 +157,9 @@ void Character::applyForceAndTorque()
 	if (norm_2(movement) > 0.0001f)
 	{
 		movement /= norm_2(movement);
-		desiredVel = cross_prod(normal, cross_prod(movement, normal));
-		//desiredVel = movement;
-		desiredVel *= 6.0;
+		//desiredVel = cross_prod(normal, cross_prod(movement, normal));
+		desiredVel = movement;
+		desiredVel *= 400.0f;
 	}
 	else
 	{
@@ -171,12 +171,11 @@ void Character::applyForceAndTorque()
 	if (velocity[1] < 0 || jumping)
 		velocity[1] = 0;
 
-	float k = (!jumping) ? 0.2f : 0.05f;
-	//k *= 10;
+	float k = (!jumping) ? 1.0f : 1.0f;
 
 	Vector force = k * mass * (desiredVel - velocity) / timestep;
-	force += createVector(0, -mass * 9.8f, 0);
-	
+	force += createVector(0, -mass * 980.0f, 0);
+
 	if (jumpInd)
 	{
 		force[1] += mass * (5.0f - velocity[1]) / timestep;
