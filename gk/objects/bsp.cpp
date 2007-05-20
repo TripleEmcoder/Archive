@@ -123,20 +123,21 @@ struct drawer
 	{
 		for (int i = 0; i < face.mesh_vertex_count; i += 3)
 		{
-			bsp_vector3f triangle[3];
+			bsp_vertex triangle[3];
 			for (int j = 0; j < 3; ++j)
 			{
 				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-				const bsp_vertex& v = vertices[vert_index];
-				triangle[j] = v.position;
+				triangle[j] = vertices[vert_index];
 			}
 
 			textures[face.texture_index].draw();
 
 			glBegin(GL_TRIANGLES);
-			glVertex3fv((float*)&triangle[0]);
-			glVertex3fv((float*)&triangle[1]);
-			glVertex3fv((float*)&triangle[2]);
+			for (int j = 0; j < 3; ++j)
+			{
+				glTexCoord2fv((float*)&triangle[j].texture_coordinate);
+				glVertex3fv((float*)&triangle[j].position);
+			}
 			glEnd();
 		}
 	}
