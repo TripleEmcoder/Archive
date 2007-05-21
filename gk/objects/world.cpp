@@ -56,8 +56,6 @@ void compile_second(std::map<std::string, material>& m, const std::pair<std::str
 void world::compile()
 {
 	_newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
-
-	
 	NewtonWorld* nWorld = _newton.get();
 
 	float minPoint[] = {-1000, -1000, -1000};
@@ -76,42 +74,16 @@ void world::compile()
 
 	std::for_each(materials.begin(), materials.end(), bind(compile_second, var(materials), _1));
 
-	_parent = NULL;
-	_root = this;
-	
-	_composition.reset(new transformation());
-	_composition->translate(translation);
-	_composition->rotate(rotation);
+	object::compile(*this);
+	player.compile(*this);
 	
 	std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
-	/*
-	NewtonCollision* collision = NewtonCreateTreeCollision(world, NULL);
-	NewtonTreeCollisionBeginBuild(collision);
-
-	//group::build(collision);
-
-	NewtonTreeCollisionEndBuild(collision, 1);
-
-	NewtonBody* body = NewtonCreateBody(world, collision);
-
-	// release the collision tree (this way the application does not have to do book keeping of Newton objects
-	NewtonReleaseCollision(world, collision);
-
-	Matrix location = identity_matrix<float>(4);
-
-	matrix_row<Matrix> row(location, 3);
-	row[0] = 0;
-	row[1] = 0;
-	row[2] = 0;
-
-	// set the global translation of this body
-	NewtonBodySetMatrix(body, location.data());
-	*/
 }
 
 void world::draw() const
 {
 	object::draw();
+	player.draw();
 
 	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));
 }

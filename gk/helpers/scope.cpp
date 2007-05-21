@@ -1,9 +1,9 @@
 #include "scope.hpp"
-#include "transformation.hpp"
+#include "matrix.hpp"
 #include "id.hpp"
 #include "engine.hpp"
 
-transformation_scope::transformation_scope(const transformation& composition)
+matrix_scope::matrix_scope(const matrix& composition)
 {
 	glPushMatrix();
 	_ASSERTE(glGetError() == GL_NO_ERROR);
@@ -12,7 +12,7 @@ transformation_scope::transformation_scope(const transformation& composition)
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
-transformation_scope::~transformation_scope()
+matrix_scope::~matrix_scope()
 {
 	glPopMatrix();
 	_ASSERTE(glGetError() == GL_NO_ERROR);

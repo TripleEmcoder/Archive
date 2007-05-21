@@ -1,6 +1,6 @@
 #include "box.hpp"
 #include "world.hpp"
-#include "transformation.hpp"
+#include "matrix.hpp"
 #include "material.hpp"
 #include "scope.hpp"
 #include "engine.hpp"
@@ -10,7 +10,7 @@ void box::compile(const object& parent)
 	object::compile(parent);
 	body::compile();
 
-	transformation offset;
+	matrix offset;
 	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
 
 	NewtonCollision* collision = NewtonCreateBox(root().newton(),
@@ -34,14 +34,14 @@ const world& box::root() const
 	return object::root();
 }
 
-const transformation& box::composition() const
+const matrix& box::composition() const
 {
 	return object::composition();
 }
 
 void box::draw_faces() const
 {
-	transformation_scope ts(composition());
+	matrix_scope ms(composition());
 	draw_left_face();
 	draw_right_face();
 	draw_bottom_face();

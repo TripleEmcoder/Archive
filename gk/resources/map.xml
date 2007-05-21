@@ -44,19 +44,19 @@
             <height>1</height>
           </texture>
           <ambient>
-            <x>1</x>
-            <y>1</y>
-            <z>1</z>
+            <x>0.8</x>
+            <y>0.8</y>
+            <z>0.8</z>
           </ambient>
           <diffuse>
-            <x>0</x>
-            <y>0</y>
-            <z>0</z>
+            <x>0.2</x>
+            <y>0.2</y>
+            <z>0.2</z>
           </diffuse>
           <specular>
-            <x>0</x>
-            <y>0</y>
-            <z>0</z>
+            <x>0.2</x>
+            <y>0.2</y>
+            <z>0.2</z>
           </specular>
           <emission>
             <x>0</x>
@@ -67,70 +67,86 @@
         </second>
       </item>
     </materials>
-    <translation>
-      <x>0</x>
-      <y>0</y>
-      <z>0</z>
-    </translation>
-    <rotation>
-      <x>0</x>
-      <y>0</y>
-      <z>0</z>
-    </rotation>
+    <transformations>
+      <count>0</count>
+    </transformations>
     <bindings>
-      <count>5</count>
-      <item>
-        <first>debug</first>
-        <second>marble</second>
-      </item>
-      <item>
-        <first>teapot</first>
-        <second>brick</second>
-      </item>
-      <item>
-        <first>ground</first>
-        <second>marble</second>
-      </item>
-      <item>
-        <first>ceiling</first>
-        <second>marble</second>
-      </item>
-      <item>
-        <first>wall</first>
-        <second>brick</second>
-      </item>
+      <count>0</count>
     </bindings>
+    <player>
+      <transformations>
+        <count>1</count>
+        <item>
+          <name>translation</name>
+          <description>
+            <x>1</x>
+            <y>1</y>
+            <z>-1</z>
+          </description>
+        </item>
+      </transformations>
+      <bindings>
+        <count>0</count>
+      </bindings>
+      <size>
+        <x>0.4</x>
+        <y>0.9</y>
+        <z>0.4</z>
+      </size>
+    </player>
     <groups>
       <count>2</count>
       <item>
         <name>room</name>
-        <visible>0</visible>
-        <translation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </translation>
-        <rotation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </rotation>
+        <visible>1</visible>
+        <transformations>
+          <count>1</count>
+          <item>
+            <name>translation</name>
+            <description>
+              <x>-1</x>
+              <y>-1</y>
+              <z>1</z>
+            </description>
+          </item>
+        </transformations>
         <bindings>
-          <count>0</count>
+          <count>5</count>
+          <item>
+            <first>debug</first>
+            <second>marble</second>
+          </item>
+          <item>
+            <first>teapot</first>
+            <second>brick</second>
+          </item>
+          <item>
+            <first>ground</first>
+            <second>marble</second>
+          </item>
+          <item>
+            <first>ceiling</first>
+            <second>marble</second>
+          </item>
+          <item>
+            <first>wall</first>
+            <second>brick</second>
+          </item>
         </bindings>
         <builtins>
           <count>1</count>
           <item>
-            <translation>
-              <x>5</x>
-              <y>1</y>
-              <z>-2.5</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>5</x>
+                  <y>1</y>
+                  <z>-2.5</z>
+                </description>
+              </item>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>
@@ -138,35 +154,11 @@
           </item>
         </builtins>
         <grounds>
-          <count>2</count>
+          <count>1</count>
           <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
-            <bindings>
+            <transformations>
               <count>0</count>
-            </bindings>
-            <width>10</width>
-            <depth>5</depth>
-          </item>
-          <item>
-            <translation>
-              <x>-5</x>
-              <y>0</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>30</z>
-            </rotation>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>
@@ -177,16 +169,17 @@
         <ceilings>
           <count>1</count>
           <item>
-            <translation>
-              <x>0</x>
-              <y>2.5</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>0</x>
+                  <y>2.5</y>
+                  <z>0</z>
+                </description>
+              </item>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>
@@ -195,18 +188,11 @@
           </item>
         </ceilings>
         <walls>
-          <count>2</count>
+          <count>3</count>
           <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
+            <transformations>
+              <count>0</count>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>
@@ -214,20 +200,47 @@
             <height>2.5</height>
           </item>
           <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>-5</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>0</x>
+                  <y>0</y>
+                  <z>-5</z>
+                </description>
+              </item>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>
             <length>10</length>
+            <height>2.5</height>
+          </item>
+          <item>
+            <transformations>
+              <count>2</count>
+              <item>
+                <name>rotation</name>
+                <description>
+                  <x>0</x>
+                  <y>90</y>
+                  <z>0</z>
+                </description>
+              </item>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>0</x>
+                  <y>0</y>
+                  <z>10</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <length>5</length>
             <height>2.5</height>
           </item>
         </walls>
@@ -241,16 +254,9 @@
       <item>
         <name>bsp</name>
         <visible>1</visible>
-        <translation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </translation>
-        <rotation>
-          <x>0</x>
-          <y>0</y>
-          <z>0</z>
-        </rotation>
+        <transformations>
+          <count>0</count>
+        </transformations>
         <bindings>
           <count>0</count>
         </bindings>
@@ -269,16 +275,17 @@
         <bsps>
           <count>1</count>
           <item>
-            <translation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </translation>
-            <rotation>
-              <x>0</x>
-              <y>0</y>
-              <z>0</z>
-            </rotation>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>40</x>
+                  <y>-5</y>
+                  <z>-20</z>
+                </description>
+              </item>
+            </transformations>
             <bindings>
               <count>0</count>
             </bindings>

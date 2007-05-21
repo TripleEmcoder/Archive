@@ -1,6 +1,7 @@
 #ifndef HELPERS_ID_HPP
 #define HELPERS_ID_HPP
 
+//(de)alokacja identyfikatora tekstury
 class texture_id
 {
 public:
@@ -12,6 +13,7 @@ private:
 	unsigned int id;
 };
 
+//(de)alokacja identyfikatora listy
 class list_id
 {
 public:

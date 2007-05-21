@@ -23,7 +23,6 @@ public:
 public:
 	vertex();
 	vertex(float x, float y, float z);
-	vertex operator+(const vertex& v) const;
 
 	std::vector<float> vector() const;
 };

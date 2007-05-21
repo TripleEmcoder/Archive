@@ -97,6 +97,8 @@ private:
 	void draw_face(const bsp_face& face) const;
 
 private:
+	list_id list;
+
 	std::vector<material> _materials;
 	std::vector<bsp_vertex> _vertices;
 	std::vector<bsp_face> _faces;

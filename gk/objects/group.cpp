@@ -1,13 +1,12 @@
 #include "group.hpp"
+#include "transformation.hpp"
 
 #include <algorithm>
 
-#include <boost/lambda/lambda.hpp>
-#include <boost/lambda/bind.hpp>
+#include <boost/bind.hpp>
 
 using boost::ref;
-using boost::lambda::bind;
-using boost::lambda::_1;
+using boost::bind;
 
 void group::compile(const object& parent)
 {

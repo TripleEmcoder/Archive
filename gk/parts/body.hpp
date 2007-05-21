@@ -8,7 +8,7 @@
 
 class object;
 class world;
-class transformation;
+class matrix;
 
 class body
 {
@@ -27,7 +27,7 @@ public:
 
 	virtual const NewtonBody* newton() const;
 	virtual const world& root() const = 0;
-	virtual const transformation& composition() const = 0;
+	virtual const matrix& composition() const = 0;
 
 private:
 	//boost::shared_ptr<NewtonBody> _newton;

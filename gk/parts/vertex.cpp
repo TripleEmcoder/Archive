@@ -12,11 +12,6 @@ vertex::vertex(float x, float y, float z)
 {
 }
 
-vertex vertex::operator+(const vertex& v) const
-{
-	return vertex(x+v.x, y+v.y, z+v.z);
-}
-
 std::vector<float> vertex::vector() const
 {
 	return boost::assign::list_of(x)(y)(z)(1);

@@ -12,7 +12,7 @@ void builtin::draw() const
 {
 	object::draw();
 
-	transformation_scope ts(composition());
+	matrix_scope ms(composition());
 
 	bound_material(name).draw();
 	

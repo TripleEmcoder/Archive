@@ -2,7 +2,8 @@
 #include "scope.hpp"
 #include "engine.hpp"
 #include "world.hpp"
-#include "../math.hpp"
+#include "matrix.hpp"
+//#include "../math.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -113,50 +114,20 @@ struct mesh_constructor
 		}
 	}
 
-	void compile()
+	void compile(const matrix& composition)
 	{
 		NewtonTreeCollisionEndBuild(tree, 0);
 		NewtonBody* body = NewtonCreateBody(nWorld, tree);
-		
-		Vector p0, p1;
-		Matrix m;
-		NewtonBodyGetMatrix (body, m.data()); 
-		NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
-		NewtonSetWorldSize(nWorld, p0.data(), p1.data());
+		NewtonBodySetMatrix(body, composition.row_major_data());
+		//Vector p0, p1;
+		//Matrix m;
+		//NewtonBodyGetMatrix (body, m.data()); 
+		//NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
+		//NewtonSetWorldSize(nWorld, p0.data(), p1.data());
 
 		NewtonReleaseCollision(nWorld, tree);
 	}
 };
-
-void bsp::compile(const object& parent)
-{
-	ifstream is;
-	bsp_header header;
-	bsp_lump lumps[17];
-	std::vector<bsp_texture> bsp_textures;
-
-	object::compile(parent);
-
-	is.open(name.c_str(), ios::binary);
-
-	is.read((char*) &header, sizeof(header));
-	is.read((char*) lumps, sizeof(lumps));
-
-	read_lump(is, lumps[Vertexes], _vertices);
-	read_lump(is, lumps[Faces], _faces);
-	read_lump(is, lumps[Textures], bsp_textures);
-	read_lump(is, lumps[Meshverts], _meshverts);
-
-	is.close();
-
-	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
-	
-	_textures.resize(bsp_textures.size());
-	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
-	
-	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile();
-}
-
 
 struct drawer
 {
@@ -218,8 +189,44 @@ struct drawer
 	}
 };
 
+void bsp::compile(const object& parent)
+{
+	ifstream is;
+	bsp_header header;
+	bsp_lump lumps[17];
+	std::vector<bsp_texture> bsp_textures;
+
+	object::compile(parent);
+
+	is.open(name.c_str(), ios::binary);
+
+	is.read((char*) &header, sizeof(header));
+	is.read((char*) lumps, sizeof(lumps));
+
+	read_lump(is, lumps[Vertexes], _vertices);
+	read_lump(is, lumps[Faces], _faces);
+	read_lump(is, lumps[Textures], bsp_textures);
+	read_lump(is, lumps[Meshverts], _meshverts);
+
+	is.close();
+
+	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
+	
+	_textures.resize(bsp_textures.size());
+	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
+	
+	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
+
+	list_scope ls(list);
+	object::draw();
+	
+	{
+		matrix_scope ms(composition());
+		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures)).finish();;
+	}
+}
+
 void bsp::draw() const
 {
-	//transformation_scope ts(composition());
-	for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures)).finish();;
+	glCallList(list);
 }

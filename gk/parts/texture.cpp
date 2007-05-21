@@ -54,5 +54,5 @@ void texture::draw() const
 
 boost::tuple<float, float> texture::ratio(float _width, float _height) const
 {
-	return boost::make_tuple(width ? _width/width : 1, height ? _height/height : 1);
+	return boost::make_tuple(width != 0 ? _width/width : 1, height != 0 ? _height/height : 1);
 }

@@ -4,14 +4,15 @@
 #include <istream>
 #include <ostream>
 
-#include <boost/serialization/utility.hpp>
 #include <boost/shared_ptr.hpp>
+#include <boost/serialization/utility.hpp>
 
 #include "map.hpp"
 #include "vector.hpp"
 
 #include "object.hpp"
 #include "material.hpp"
+#include "character.hpp"
 #include "group.hpp"
 #include "engine.hpp"
 
@@ -19,6 +20,7 @@ class world : public object
 {
 public:
 	std::map<std::string, material> materials;
+	character player;
 	std::vector<group> groups;
 	
 	template<class A> 
@@ -26,6 +28,7 @@ public:
 	{
 		archive & BOOST_SERIALIZATION_NVP(materials);
 		object::serialize(archive, version);
+		archive & BOOST_SERIALIZATION_NVP(player);
 		archive & BOOST_SERIALIZATION_NVP(groups);
 	}
 

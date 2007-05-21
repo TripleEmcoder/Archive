@@ -1,7 +1,7 @@
 #include "body.hpp"
 #include "object.hpp"
 #include "world.hpp"
-#include "transformation.hpp"
+#include "matrix.hpp"
 
 #include <boost/lambda/bind.hpp>
 using boost::lambda::bind;

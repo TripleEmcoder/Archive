@@ -5,11 +5,14 @@
 
 #include "object.hpp"
 #include "body.hpp"
+#include "vertex.hpp"
 #include "id.hpp"
 
+//klasa reprezentujaca prostopadloscian
 class box : public body, public object
 {
 public:
+	//rozmiary prostopadloscianu
 	vertex size;
 
 	template<class A> 
@@ -24,7 +27,7 @@ public:
 	virtual void draw() const;
 
 	virtual const world& root() const;
-	virtual const transformation& composition() const;
+	virtual const matrix& composition() const;
 
 private:
 	list_id list;

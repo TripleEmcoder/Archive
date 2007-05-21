@@ -4,43 +4,61 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/serialization/utility.hpp>
 
-#include "map.hpp"
 #include "string.hpp"
-#include "vertex.hpp"
+#include "vector.hpp"
+#include "map.hpp"
+#include "transformation.hpp"
 
-class material;
 class world;
-class transformation;
+class matrix;
+class material;
 
+//klasa bazowa obiektow opisujacych swiat
 class object
 {
 public:
-	vertex translation;
-	vertex rotation;
+	//lista transformacji przestrzennych
+	std::vector<transformation> transformations;
+
+	//mapa odwzorowan nazw materialow
 	std::map<std::string, std::string> bindings;
 
 	template<class A> 
 	void serialize(A& archive, const unsigned int)
 	{
-		archive & BOOST_SERIALIZATION_NVP(translation);
-		archive & BOOST_SERIALIZATION_NVP(rotation);
+		archive & BOOST_SERIALIZATION_NVP(transformations);
 		archive & BOOST_SERIALIZATION_NVP(bindings);
 	}
 
 public:
+	//utworzenie obiektu niepowiazanego w drzewie
+	object();
+
+	//przygotowanie obiektu do pierwszego uzycia
 	virtual void compile(const object& parent);
+
+	//narysowanie obiektu na ekranie
 	virtual void draw() const;
 
+	//pobranie rodzica w drzewie obiektow
 	virtual const object& parent() const;
+
+	//pobranie korzenia drzewa obiektow
 	virtual const world& root() const;
-	virtual const transformation& composition() const;
+
+	//pobranie kompletnej macierzy transformacji
+	virtual const matrix& composition() const;
+
+	//pobranie materialu powiazanego z nazwa
 	virtual const material& bound_material(std::string name) const;
 
-//private:
 protected:
+	virtual matrix& composition();
+
+private:
 	const object* _parent;
 	const world* _root;
-	boost::shared_ptr<transformation> _composition;
+	boost::shared_ptr<matrix> _composition;
 };
 
 BOOST_CLASS_IMPLEMENTATION(object, boost::serialization::object_serializable);

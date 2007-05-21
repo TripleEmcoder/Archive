@@ -1,17 +1,19 @@
 #ifndef HELPERS_SCOPE_HPP
 #define HELPERS_SCOPE_HPP
 
-class transformation;
+class matrix;
 
-class transformation_scope
+//obsluga obszaru obowiazywania macierzy
+class matrix_scope
 {
 public:
-	transformation_scope(const transformation& composition);
-	~transformation_scope();
+	matrix_scope(const matrix& composition);
+	~matrix_scope();
 };
 
 class list_id;
 
+//obsluga obszaru budowania listy
 class list_scope
 {
 public:
