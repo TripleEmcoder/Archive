@@ -1,6 +1,3 @@
-#include <iostream>
-#include <fstream>
-
 #include "engine.hpp"
 #include "world.hpp"
 #include "objects/character.hpp"
@@ -10,6 +7,10 @@
 #include "Character.hpp"
 #include "Crosshair.hpp"
 #include "math.hpp"
+
+#include <iostream>
+#include <fstream>
+
 
 bool keys[255];
 
@@ -201,10 +202,10 @@ void initGlew()
 int main(int argc, char* argv[])
 {
 	glutInit(&argc, argv);
-	initGlew();
 	glutInitDisplayMode(GLUT_DOUBLE);
 	
 	setup_window("gk", 0, 0, 800, 800);
+	initGlew();
 	load_map("map.xml");
 
 	glEnable(GL_DEPTH_TEST);
@@ -230,8 +231,6 @@ int main(int argc, char* argv[])
 	hudManager->add(character);
 
 	setup_callbacks();
-
-	//std::cerr << glGetString(GL_EXTENSIONS) << std::endl;
 
 	glutMainLoop();
 	return 0;

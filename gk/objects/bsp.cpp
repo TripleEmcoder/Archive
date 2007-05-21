@@ -180,11 +180,11 @@ struct drawer
 			textures[face.texture_index].draw();
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
 
-			//glClientActiveTexture(GL_TEXTURE0);
+			glClientActiveTexture(GL_TEXTURE0);
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
-			//glClientActiveTexture(GL_TEXTURE1);
-			//glTexCoordPointer(2, GL_FLOAT, stride, &(vertices[offset].lightmap_coordinate));
+			glClientActiveTexture(GL_TEXTURE1);
+			glTexCoordPointer(2, GL_FLOAT, stride, &(vertices[offset].lightmap_coordinate));
 
 			glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &meshverts[face.start_mesh_vertex_index]);
 			
