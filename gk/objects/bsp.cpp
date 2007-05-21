@@ -60,9 +60,26 @@ void convert_vertex(bsp_vertex& vertex)
 
 texture convert_texture(const bsp_texture& t)
 {
-	texture result(string(t.name) + ".jpg", 0, 0);
-	result.compile();
-	return result;
+	ifstream file;
+	string name = string(t.name) + ".jpg";
+	file.open(name.c_str());
+	if (!file.is_open())
+	{
+		name = string(t.name) + ".tga";
+		file.open(name.c_str());
+	}
+	if (file.is_open())
+	{
+		file.close();
+		texture result(name);
+		result.compile();
+		return result;
+	}
+	else
+	{
+		cerr << "Texture not found: " << t.name << endl;
+		return texture();
+	}
 }
 
 struct mesh_constructor
@@ -101,15 +118,45 @@ struct mesh_constructor
 		NewtonTreeCollisionEndBuild(tree, 0);
 		NewtonBody* body = NewtonCreateBody(nWorld, tree);
 		
-		//Vector p0, p1;
-		//Matrix m;
-		//NewtonBodyGetMatrix (body, m.data()); 
-		//NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
-		//NewtonSetWorldSize(nWorld, p0.data(), p1.data());
+		Vector p0, p1;
+		Matrix m;
+		NewtonBodyGetMatrix (body, m.data()); 
+		NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
+		NewtonSetWorldSize(nWorld, p0.data(), p1.data());
 
 		NewtonReleaseCollision(nWorld, tree);
 	}
 };
+
+void bsp::compile(const object& parent)
+{
+	ifstream is;
+	bsp_header header;
+	bsp_lump lumps[17];
+	std::vector<bsp_texture> bsp_textures;
+
+	object::compile(parent);
+
+	is.open(name.c_str(), ios::binary);
+
+	is.read((char*) &header, sizeof(header));
+	is.read((char*) lumps, sizeof(lumps));
+
+	read_lump(is, lumps[Vertexes], _vertices);
+	read_lump(is, lumps[Faces], _faces);
+	read_lump(is, lumps[Textures], bsp_textures);
+	read_lump(is, lumps[Meshverts], _meshverts);
+
+	is.close();
+
+	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
+	
+	_textures.resize(bsp_textures.size());
+	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
+	
+	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile();
+}
+
 
 struct drawer
 {
@@ -120,7 +167,9 @@ struct drawer
 	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures)
 		:vertices(vertices), meshverts(meshverts), textures(textures)
 	{
+
 		glEnable(GL_TEXTURE_2D);
+		glEnable(GL_CULL_FACE);
 	}
 
 	void operator()(const bsp_face& face)
@@ -145,36 +194,6 @@ struct drawer
 
 	}
 };
-
-
-void bsp::compile(const object& parent)
-{
-	ifstream is;
-	bsp_header header;
-	bsp_lump lumps[17];
-	std::vector<bsp_texture> bsp_textures;
-
-	object::compile(parent);
-
-	is.open("map.bsp", ios::binary);
-
-	is.read((char*) &header, sizeof(header));
-	is.read((char*) lumps, sizeof(lumps));
-
-	read_lump(is, lumps[Vertexes], _vertices);
-	read_lump(is, lumps[Faces], _faces);
-	read_lump(is, lumps[Textures], bsp_textures);
-	read_lump(is, lumps[Meshverts], _meshverts);
-
-	is.close();
-
-	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
-	
-	_textures.resize(bsp_textures.size());
-	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
-	
-	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile();
-}
 
 void bsp::draw_face(const bsp_face& face) const
 {

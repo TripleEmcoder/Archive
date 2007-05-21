@@ -25,7 +25,7 @@ public:
 
 public:
 	texture();
-	texture(std::string name, float width, float height);
+	texture(std::string name, float width = 0.0f, float height = 0.0f);
 
 	virtual void compile();
 	virtual void draw() const;

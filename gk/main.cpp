@@ -118,8 +118,8 @@ void draw(void)
 
 	//glColor3b(20, 40, 60);
 
-	w.draw();
-	//glCallList(list);
+	//w.draw();
+	glCallList(list);
 
 	hudManager->draw();
 
@@ -177,7 +177,7 @@ int main(int argc, char* argv[])
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	character = new Character(w.newton(), 0.6, 0.9, 0.6, 1.6, 10, 0.32);
+	character = new Character(w.newton(), 0.6, 0.9, 0.6, -25, 10, 30);
 	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
@@ -203,7 +203,7 @@ int main(int argc, char* argv[])
 
 	list = glGenLists(1);
 	glNewList(list, GL_COMPILE);
-	//w.draw();
+	w.draw();
 	glEndList();
 
 	timebase = glutGet(GLUT_ELAPSED_TIME);
