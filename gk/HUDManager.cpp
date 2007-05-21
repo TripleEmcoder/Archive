@@ -25,7 +25,7 @@ void HUDManager::setOrthographicProjection()
 	glScalef(1, -1, 1);
 	glTranslatef(0, -height, 0);
 
-	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_ENABLE_BIT);
+	glPushAttrib(GL_ENABLE_BIT | GL_CURRENT_BIT);
 
 	glDisable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
