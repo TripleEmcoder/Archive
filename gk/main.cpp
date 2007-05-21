@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 
+#include "engine.hpp"
 #include "world.hpp"
 #include "objects/character.hpp"
 #include "Camera.hpp"
@@ -9,7 +10,6 @@
 #include "Character.hpp"
 #include "Crosshair.hpp"
 #include "math.hpp"
-#include "engine.hpp"
 
 bool keys[255];
 
@@ -177,11 +177,33 @@ void setup_callbacks()
 	glutSetCursor(GLUT_CURSOR_NONE);
 }
 
+void initGlew() 
+{
+	GLenum err = glewInit();
+
+	if (GLEW_OK != err) 
+	{
+		printf("Error: %s \n", glewGetErrorString(err));
+	}
+
+	if (GLEW_VERSION_2_0) 
+	{
+		printf("OpenGL 2.0 supported\n");
+	} 
+	else 
+	{
+		printf("OpenGL 2.0 NOT supported\n");
+		exit(0);
+	}
+}
+
+
 int main(int argc, char* argv[])
 {
 	glutInit(&argc, argv);
+	initGlew();
 	glutInitDisplayMode(GLUT_DOUBLE);
-
+	
 	setup_window("gk", 0, 0, 800, 800);
 	load_map("map.xml");
 
@@ -208,6 +230,8 @@ int main(int argc, char* argv[])
 	hudManager->add(character);
 
 	setup_callbacks();
+
+	//std::cerr << glGetString(GL_EXTENSIONS) << std::endl;
 
 	glutMainLoop();
 	return 0;

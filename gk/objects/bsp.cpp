@@ -52,7 +52,7 @@ void convert_vertex(bsp_vertex& vertex)
 {
 	swap(vertex.position.y, vertex.position.z);
 	vertex.position.z = -vertex.position.z;
-	vertex.texture_coordinate.y = -vertex.texture_coordinate.y;
+	//vertex.texture_coordinate.y = -vertex.texture_coordinate.y;
 	float scale = 50.0f;
 	vertex.position.x /= scale;
 	vertex.position.y /= scale;
@@ -138,9 +138,9 @@ struct drawer
 	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures)
 		:vertices(vertices), meshverts(meshverts), textures(textures)
 	{
-		glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].position);
-		glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].texture_coordinate);
-		glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &vertices[0].normal);
+		//glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].position);
+		//glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].texture_coordinate);
+		//glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &vertices[0].normal);
 		//glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(bsp_vertex), &vertices[0].color);
 
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
@@ -148,13 +148,13 @@ struct drawer
 
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		glEnableClientState(GL_NORMAL_ARRAY);
+		//glEnableClientState(GL_NORMAL_ARRAY);
 		//glEnableClientState(GL_COLOR_ARRAY);
 
 		glEnable(GL_TEXTURE_2D);
-		glFrontFace(GL_CW);
-		glCullFace(GL_BACK);
-		glEnable(GL_CULL_FACE);
+		//glFrontFace(GL_CW);
+		//glCullFace(GL_BACK);
+		//glEnable(GL_CULL_FACE);
 	}
 
 	void operator()(const bsp_face& face)
@@ -170,14 +170,26 @@ struct drawer
 		//		glArrayElement(vert_index);
 		//	}
 		//	glEnd();
-
-		//	
 		//}
 
-		if (face.face_type == polygon)
+		if (face.face_type == polygon || face.face_type == mesh)
 		{
+			const int offset = face.start_vertex_index;
+			const int stride = sizeof(bsp_vertex);
+			
 			textures[face.texture_index].draw();
-			glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
+			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
+
+			//glClientActiveTexture(GL_TEXTURE0);
+			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
+
+			//glClientActiveTexture(GL_TEXTURE1);
+			//glTexCoordPointer(2, GL_FLOAT, stride, &(vertices[offset].lightmap_coordinate));
+
+			glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &meshverts[face.start_mesh_vertex_index]);
+			
+			//textures[face.texture_index].draw();
+			//glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
 		}
 	}
 
