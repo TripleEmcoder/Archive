@@ -104,7 +104,7 @@
       <count>2</count>
       <item>
         <name>room</name>
-        <visible>1</visible>
+        <visible>0</visible>
         <translation>
           <x>0</x>
           <y>0</y>
@@ -242,9 +242,9 @@
         <name>bsp</name>
         <visible>1</visible>
         <translation>
-          <x>-80</x>
-          <y>-288</y>
-          <z>-16</z>
+          <x>0</x>
+          <y>0</y>
+          <z>0</z>
         </translation>
         <rotation>
           <x>0</x>
@@ -282,7 +282,7 @@
             <bindings>
               <count>0</count>
             </bindings>
-            <name>map.bsp</name>
+            <name>maps/q3dm2.bsp</name>
           </item>
         </bsps>
         <groups>

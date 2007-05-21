@@ -167,78 +167,59 @@ struct drawer
 	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures)
 		:vertices(vertices), meshverts(meshverts), textures(textures)
 	{
+		glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].position);
+		glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].texture_coordinate);
+		glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &vertices[0].normal);
+		//glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(bsp_vertex), &vertices[0].color);
+
+		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
+		glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT);
+
+		glEnableClientState(GL_VERTEX_ARRAY);
+		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+		glEnableClientState(GL_NORMAL_ARRAY);
+		//glEnableClientState(GL_COLOR_ARRAY);
 
 		glEnable(GL_TEXTURE_2D);
+		glFrontFace(GL_CW);
+		glCullFace(GL_BACK);
 		glEnable(GL_CULL_FACE);
 	}
 
 	void operator()(const bsp_face& face)
 	{
-		for (int i = 0; i < face.mesh_vertex_count; i += 3)
+		//for (int i = 0; i < face.mesh_vertex_count; i += 3)
+		//{
+		//	textures[face.texture_index].draw();
+		//	
+		//	glBegin(GL_TRIANGLES);
+		//	for (int j = 0; j < 3; ++j)
+		//	{
+		//		int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
+		//		glArrayElement(vert_index);
+		//	}
+		//	glEnd();
+
+		//	
+		//}
+
+		if (face.face_type == polygon)
 		{
 			textures[face.texture_index].draw();
-			
-			glBegin(GL_TRIANGLES);
-			for (int j = 0; j < 3; ++j)
-			{
-				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-				glTexCoord2fv((float*)&vertices[vert_index].texture_coordinate);
-				glVertex3fv((float*)&vertices[vert_index].position);
-			}
-			glEnd();
+			glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
 		}
 	}
 
-	void compile()
+	void finish()
 	{
-
-	}
-};
-
-void bsp::draw_face(const bsp_face& face) const
-{
-	if (face.face_type == polygon)
-	{
-		glEnable(GL_TEXTURE_2D);
-		_textures[face.texture_index].draw();
-		//glDisable(GL_TEXTURE_2D);
-		glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
-
-		//glBegin(GL_TRIANGLE_FAN);
-		//for (int i = face.start_vertex_index; i < face.start_vertex_index + face.vertex_count; ++i)
-		//{
-		//	const bsp_vertex& v(_vertices[i]);
-		//	glNormal3f(v.normal.x, v.normal.y, v.normal.z);
-		//	glColor4b(v.color[0], v.color[1], v.color[2], v.color[3]);
-		//	glVertex3f(v.position.x, v.position.y, v.position.z);
-		//}
-		//glEnd();
-
+		glPopAttrib();
+		glPopClientAttrib();
 		assert(glGetError() == GL_NO_ERROR);
 	}
-}
+};
 
 void bsp::draw() const
 {
 	//transformation_scope ts(composition());
-
-	glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].position);
-	glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].texture_coordinate);
-	glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &_vertices[0].normal);
-	glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(bsp_vertex), &_vertices[0].color);
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	glEnableClientState(GL_NORMAL_ARRAY);
-	//glEnableClientState(GL_COLOR_ARRAY);
-
-	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
-	//for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures));
-
-	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-	glDisableClientState(GL_NORMAL_ARRAY);
-	glDisableClientState(GL_COLOR_ARRAY);
-
-	assert(glGetError() == GL_NO_ERROR);
+	for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures)).finish();;
 }
