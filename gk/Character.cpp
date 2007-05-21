@@ -119,25 +119,39 @@ void Character::processCollision(const NewtonMaterial* material)
 	Vector position;
 	NewtonMaterialGetContactPositionAndNormal(material, position.data(), normal.data());
 
-	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
-	if (collisionID == FEET_COLLISION)
+	//int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
+	//if (collisionID == FEET_COLLISION)
+	//{
+	//	//NewtonMaterialSetContactElasticity(material, 0.2f);
+	//	NewtonMaterialSetContactFrictionState(material, 1, 0);
+	//	NewtonMaterialSetContactFrictionState(material, 1, 1);
+	//	if (count)
+	//	{
+	//		count--;
+	//		normal[0] = normal[2] = 0.0f;
+	//		normal[1] = 1.0f;
+	//	}
+	//	else
+	//		jumping = false;
+	//}
+	//else if (collisionID == BODY_COLLISION)
+	//{
+	//	NewtonMaterialSetContactFrictionState(material, 0, 0);
+	//	NewtonMaterialSetContactFrictionState(material, 0, 1);
+	//}
+
+	NewtonMaterialSetContactFrictionState(material, 0, 0);
+	NewtonMaterialSetContactFrictionState(material, 0, 1);
+
+	if (count)
 	{
-		//NewtonMaterialSetContactElasticity(material, 0.2f);
-		NewtonMaterialSetContactFrictionState(material, 1, 0);
-		NewtonMaterialSetContactFrictionState(material, 1, 1);
-		if (count)
-		{
-			count--;
-			normal[0] = normal[2] = 0.0f;
-			normal[1] = 1.0f;
-		}
-		else
-			jumping = false;
+		count--;
+		normal[0] = normal[2] = 0.0f;
+		normal[1] = 1.0f;
 	}
-	else if (collisionID == BODY_COLLISION)
+	else
 	{
-		NewtonMaterialSetContactFrictionState(material, 0, 0);
-		NewtonMaterialSetContactFrictionState(material, 0, 1);
+		jumping = false;
 	}
 }
 
