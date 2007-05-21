@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib newton.lib corona.lib glew32.lib"
+				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -137,7 +137,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib newton.lib corona.lib"
+				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="1"

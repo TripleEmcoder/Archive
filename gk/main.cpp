@@ -178,34 +178,18 @@ void setup_callbacks()
 	glutSetCursor(GLUT_CURSOR_NONE);
 }
 
-void initGlew() 
-{
-	GLenum err = glewInit();
-
-	if (GLEW_OK != err) 
-	{
-		printf("Error: %s \n", glewGetErrorString(err));
-	}
-
-	if (GLEW_VERSION_2_0) 
-	{
-		printf("OpenGL 2.0 supported\n");
-	} 
-	else 
-	{
-		printf("OpenGL 2.0 NOT supported\n");
-		exit(0);
-	}
-}
-
-
 int main(int argc, char* argv[])
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	
-	setup_window("gk", 0, 0, 800, 800);
-	initGlew();
+	setup_window("gk", 0, 0, 600, 600);
+
+	GLenum error = glewInit();
+
+	if (error != GLEW_OK) 
+		std::cerr << glewGetErrorString(error) << std::endl;
+
 	load_map("map.xml");
 
 	glEnable(GL_DEPTH_TEST);

@@ -19,14 +19,16 @@ void box::compile(const object& parent)
 	NewtonBodySetCollision(newton(), collision);
 	NewtonReleaseCollision(root().newton(), collision);
 
-	list_scope ls(list);
+	_list.reset(new list_id());
+
+	list_scope ls(*_list);
 	object::draw();
 	draw_faces();
 }
 
 void box::draw() const
 {
-	glCallList(list);
+	glCallList(*_list);
 }
 
 const world& box::root() const

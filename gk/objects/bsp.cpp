@@ -83,10 +83,10 @@ texture convert_texture(const bsp_texture& t)
 	}
 }
 
-texture_id convert_lightmap(const bsp_lightmap& l)
+boost::shared_ptr<texture_id> convert_lightmap(const bsp_lightmap& l)
 {
-	texture_id id;
-	glBindTexture(GL_TEXTURE_2D, id);
+	boost::shared_ptr<texture_id> id(new texture_id());
+	glBindTexture(GL_TEXTURE_2D, *id);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
 	return id;
 }
@@ -142,9 +142,9 @@ struct drawer
 	const std::vector<bsp_vertex>& vertices;
 	const std::vector<int>& meshverts;
 	const std::vector<texture>& textures;
-	const std::vector<texture_id>& lightmaps;
+	const std::vector<boost::shared_ptr<texture_id> >& lightmaps;
 
-	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures, const std::vector<texture_id>& lightmaps)
+	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures, const std::vector<boost::shared_ptr<texture_id> >& lightmaps)
 		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps)
 	{
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
@@ -174,9 +174,12 @@ struct drawer
 			textures[face.texture_index].draw();
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
-			glClientActiveTexture(GL_TEXTURE1);
-			glBindTexture(GL_TEXTURE_2D, lightmaps[face.lightmap_index]);
-			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
+			if (face.lightmap_index != -1)
+			{
+				glClientActiveTexture(GL_TEXTURE1);
+				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
+				glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
+			}
 
 			glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &meshverts[face.start_mesh_vertex_index]);
 		}
@@ -223,7 +226,8 @@ void bsp::compile(const object& parent)
 
 	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
 
-	list_scope ls(list);
+	_list.reset(new list_id());
+	list_scope ls(*_list);
 	object::draw();
 	
 	{
@@ -234,5 +238,5 @@ void bsp::compile(const object& parent)
 
 void bsp::draw() const
 {
-	glCallList(list);
+	glCallList(*_list);
 }

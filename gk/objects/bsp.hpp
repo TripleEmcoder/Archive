@@ -97,13 +97,13 @@ private:
 	void draw_face(const bsp_face& face) const;
 
 private:
-	list_id list;
+	boost::shared_ptr<list_id> _list;
 
 	std::vector<material> _materials;
 	std::vector<bsp_vertex> _vertices;
 	std::vector<bsp_face> _faces;
 	std::vector<texture> _textures;
-	std::vector<texture_id> _lightmaps;
+	std::vector<boost::shared_ptr<texture_id> > _lightmaps;
 	std::vector<int> _meshverts;
 };
 

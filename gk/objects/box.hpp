@@ -6,7 +6,8 @@
 #include "object.hpp"
 #include "body.hpp"
 #include "vertex.hpp"
-#include "id.hpp"
+
+class list_id;
 
 //klasa reprezentujaca prostopadloscian
 class box : public body, public object
@@ -30,7 +31,7 @@ public:
 	virtual const matrix& composition() const;
 
 private:
-	list_id list;
+	boost::shared_ptr<list_id> _list;
 
 	void draw_faces() const;
 	void draw_left_face() const;

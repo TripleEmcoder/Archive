@@ -1,8 +1,10 @@
 #ifndef HELPERS_ID_HPP
 #define HELPERS_ID_HPP
 
+#include <boost/utility.hpp>
+
 //(de)alokacja identyfikatora tekstury
-class texture_id
+class texture_id : private boost::noncopyable
 {
 public:
 	texture_id();
@@ -14,7 +16,7 @@ private:
 };
 
 //(de)alokacja identyfikatora listy
-class list_id
+class list_id : private boost::noncopyable
 {
 public:
 	list_id();
