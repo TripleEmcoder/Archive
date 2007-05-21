@@ -47,11 +47,15 @@ template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::ve
 	is.read((char*) &vec[0], n*sizeof(T));
 }
 
-void convert(bsp_vertex& vertex)
+void convert_vertex(bsp_vertex& vertex)
 {
 	swap(vertex.position.y, vertex.position.z);
 	vertex.position.z = -vertex.position.z;
 	vertex.texture_coordinate.y = -vertex.texture_coordinate.y;
+	float scale = 50.0f;
+	vertex.position.x /= scale;
+	vertex.position.y /= scale;
+	vertex.position.z /= scale;
 }
 
 texture convert_texture(const bsp_texture& t)
@@ -123,20 +127,14 @@ struct drawer
 	{
 		for (int i = 0; i < face.mesh_vertex_count; i += 3)
 		{
-			bsp_vertex triangle[3];
-			for (int j = 0; j < 3; ++j)
-			{
-				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-				triangle[j] = vertices[vert_index];
-			}
-
 			textures[face.texture_index].draw();
-
+			
 			glBegin(GL_TRIANGLES);
 			for (int j = 0; j < 3; ++j)
 			{
-				glTexCoord2fv((float*)&triangle[j].texture_coordinate);
-				glVertex3fv((float*)&triangle[j].position);
+				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
+				glTexCoord2fv((float*)&vertices[vert_index].texture_coordinate);
+				glVertex3fv((float*)&vertices[vert_index].position);
 			}
 			glEnd();
 		}
@@ -170,28 +168,11 @@ void bsp::compile(const object& parent)
 
 	is.close();
 
-	for_each(_vertices.begin(), _vertices.end(), &convert);
+	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
 	
 	_textures.resize(bsp_textures.size());
 	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
-
-	//const NewtonWorld* nWorld = root().newton();
-	//NewtonCollision* tree = NewtonCreateTreeCollision(nWorld, NULL);
-	//NewtonTreeCollisionBeginBuild(tree);
-	////float square[] = {-500, 0, 500, 
-	////				 500, 0, 500,
-	////				 500, 0,  -500,
-	////				 -500, 0, -500};
-	//bsp_vector3f triangle[3];
-	//triangle[0] = bsp_vector3f(-500, 200, 500);
-	//triangle[1] = bsp_vector3f(500, 200, 500);
-	//triangle[2] = bsp_vector3f(0, 200, -500);
-	//triangle[0] = {{-500, 200, 500}, {500, 200, 500}, {0, 200, -500}};
-	//NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, 12, 1);
-	//NewtonTreeCollisionEndBuild(tree, 0);
-	//NewtonBody* body = NewtonCreateBody(nWorld, tree);
-	//NewtonReleaseCollision(nWorld, tree);
-
+	
 	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile();
 }
 
@@ -232,8 +213,8 @@ void bsp::draw() const
 	glEnableClientState(GL_NORMAL_ARRAY);
 	//glEnableClientState(GL_COLOR_ARRAY);
 
-	//for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
-	for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures));
+	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::draw_face, *this, _1));
+	//for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures));
 
 	glDisableClientState(GL_VERTEX_ARRAY);
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);

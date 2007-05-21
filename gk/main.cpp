@@ -112,7 +112,7 @@ void draw(void)
 	//NewtonUpdate(w.newton(), 1.0f / 40.0f);
 	
 	Vector eye = character->getLocation();
-	eye[1] += 80.0f;
+	eye[1] += 0.8f;
 	camera->setEye(eye);
 	camera->draw();
 
@@ -172,13 +172,13 @@ int main(int argc, char* argv[])
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, 1, 1, 500);
+	gluPerspective(50, 1, 0.1, 100);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 1, 1, -1);
-	character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
+	character = new Character(w.newton(), 0.6, 0.9, 0.6, 1.6, 10, 0.32);
+	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
 	fpsCounter = new FPSCounter();

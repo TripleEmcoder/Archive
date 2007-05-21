@@ -25,10 +25,10 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 	NewtonCollision* collisionParts[2];
 
 	collisionParts[0] = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
-	collisionParts[1] = NewtonCreateBox(nWorld, size[0]/10, 0.05f, size[2]/10, translationMatrix(0, -size[1]-0.1f, 0).data());
+	collisionParts[1] = NewtonCreateBox(nWorld, 0.05f, 0.05f, 0.05f, translationMatrix(0, -size[1]-1.0f, 0).data());
 	NewtonConvexCollisionSetUserID(collisionParts[0], BODY_COLLISION);
-	NewtonConvexCollisionSetUserID(collisionParts[1], FEET_COLLISION);
-	NewtonCollision* collision = NewtonCreateCompoundCollision(nWorld, 2, collisionParts);
+	//NewtonConvexCollisionSetUserID(collisionParts[1], FEET_COLLISION);
+	NewtonCollision* collision = NewtonCreateCompoundCollision(nWorld, 1, collisionParts);
 	
 	body = NewtonCreateBody(nWorld, collision);
 	NewtonReleaseCollision(nWorld, collisionParts[0]);
@@ -51,7 +51,7 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 	NewtonWorldUnfreezeBody(nWorld, body);
 
 	jumpInd = false;
-	jumping = true;
+	jumping = false;
 	count = 0;
 }
 
@@ -122,7 +122,7 @@ void Character::processCollision(const NewtonMaterial* material)
 	int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
 	if (collisionID == FEET_COLLISION)
 	{
-		NewtonMaterialSetContactElasticity(material, 0.2f);
+		//NewtonMaterialSetContactElasticity(material, 0.2f);
 		NewtonMaterialSetContactFrictionState(material, 1, 0);
 		NewtonMaterialSetContactFrictionState(material, 1, 1);
 		if (count)
@@ -159,7 +159,7 @@ void Character::applyForceAndTorque()
 		movement /= norm_2(movement);
 		//desiredVel = cross_prod(normal, cross_prod(movement, normal));
 		desiredVel = movement;
-		desiredVel *= 200.0f;
+		desiredVel *= 6.0f;
 	}
 	else
 	{
@@ -171,14 +171,14 @@ void Character::applyForceAndTorque()
 	if (velocity[1] < 0 || jumping)
 		velocity[1] = 0;
 
-	float k = (!jumping) ? 0.5f : 0.1f;
+	float k = (!jumping) ? 0.25f : 0.1f;
 
 	Vector force = k * mass * (desiredVel - velocity) / timestep;
-	force += createVector(0, -mass * 980.0f, 0);
+	force += createVector(0, -mass * 9.8f, 0);
 
 	if (jumpInd)
 	{
-		force[1] += mass * (500.0f - velocity[1]) / timestep;
+		force[1] += mass * (5.0f - velocity[1]) / timestep;
 		jumpInd = false;
 		jumping = true;
 		count = 4;
