@@ -178,6 +178,7 @@ struct drawer
 			const int stride = sizeof(bsp_vertex);
 			
 			textures[face.texture_index].draw();
+
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
 
 			glClientActiveTexture(GL_TEXTURE0);
