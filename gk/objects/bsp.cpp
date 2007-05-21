@@ -87,6 +87,8 @@ boost::shared_ptr<texture_id> convert_lightmap(const bsp_lightmap& l)
 {
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
 	return id;
 }
@@ -170,12 +172,14 @@ struct drawer
 			
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
 
+			glActiveTexture(GL_TEXTURE0);
 			glClientActiveTexture(GL_TEXTURE0);
 			textures[face.texture_index].draw();
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
 			if (face.lightmap_index != -1)
 			{
+				glActiveTexture(GL_TEXTURE1);
 				glClientActiveTexture(GL_TEXTURE1);
 				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
 				glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
@@ -232,7 +236,7 @@ void bsp::compile(const object& parent)
 	
 	{
 		matrix_scope ms(composition());
-		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps)).finish();;
+		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps)).finish();
 	}
 }
 
