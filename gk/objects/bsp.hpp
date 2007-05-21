@@ -103,6 +103,7 @@ private:
 	std::vector<bsp_vertex> _vertices;
 	std::vector<bsp_face> _faces;
 	std::vector<texture> _textures;
+	std::vector<texture_id> _lightmaps;
 	std::vector<int> _meshverts;
 };
 

@@ -83,6 +83,14 @@ texture convert_texture(const bsp_texture& t)
 	}
 }
 
+texture_id convert_lightmap(const bsp_lightmap& l)
+{
+	texture_id id;
+	glBindTexture(GL_TEXTURE_2D, id);
+	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
+	return id;
+}
+
 struct mesh_constructor
 {
 	const NewtonWorld* nWorld;
@@ -134,15 +142,11 @@ struct drawer
 	const std::vector<bsp_vertex>& vertices;
 	const std::vector<int>& meshverts;
 	const std::vector<texture>& textures;
+	const std::vector<texture_id>& lightmaps;
 
-	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures)
-		:vertices(vertices), meshverts(meshverts), textures(textures)
+	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures, const std::vector<texture_id>& lightmaps)
+		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps)
 	{
-		//glVertexPointer(3, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].position);
-		//glTexCoordPointer(2, GL_FLOAT, sizeof(bsp_vertex), &vertices[0].texture_coordinate);
-		//glNormalPointer(GL_FLOAT, sizeof(bsp_vertex), &vertices[0].normal);
-		//glColorPointer(4, GL_UNSIGNED_BYTE, sizeof(bsp_vertex), &vertices[0].color);
-
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT);
 
@@ -159,38 +163,22 @@ struct drawer
 
 	void operator()(const bsp_face& face)
 	{
-		//for (int i = 0; i < face.mesh_vertex_count; i += 3)
-		//{
-		//	textures[face.texture_index].draw();
-		//	
-		//	glBegin(GL_TRIANGLES);
-		//	for (int j = 0; j < 3; ++j)
-		//	{
-		//		int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-		//		glArrayElement(vert_index);
-		//	}
-		//	glEnd();
-		//}
-
 		if (face.face_type == polygon || face.face_type == mesh)
 		{
 			const int offset = face.start_vertex_index;
 			const int stride = sizeof(bsp_vertex);
 			
-			textures[face.texture_index].draw();
-
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
 
 			glClientActiveTexture(GL_TEXTURE0);
+			textures[face.texture_index].draw();
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
 			glClientActiveTexture(GL_TEXTURE1);
-			glTexCoordPointer(2, GL_FLOAT, stride, &(vertices[offset].lightmap_coordinate));
+			glBindTexture(GL_TEXTURE_2D, lightmaps[face.lightmap_index]);
+			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
 
 			glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &meshverts[face.start_mesh_vertex_index]);
-			
-			//textures[face.texture_index].draw();
-			//glDrawArrays(GL_TRIANGLE_FAN, face.start_vertex_index, face.vertex_count);
 		}
 	}
 
@@ -208,6 +196,7 @@ void bsp::compile(const object& parent)
 	bsp_header header;
 	bsp_lump lumps[17];
 	std::vector<bsp_texture> bsp_textures;
+	std::vector<bsp_lightmap> bsp_lightmaps;
 
 	object::compile(parent);
 
@@ -217,9 +206,10 @@ void bsp::compile(const object& parent)
 	is.read((char*) lumps, sizeof(lumps));
 
 	read_lump(is, lumps[Vertexes], _vertices);
+	read_lump(is, lumps[Meshverts], _meshverts);
 	read_lump(is, lumps[Faces], _faces);
 	read_lump(is, lumps[Textures], bsp_textures);
-	read_lump(is, lumps[Meshverts], _meshverts);
+	read_lump(is, lumps[Lightmaps], bsp_lightmaps);
 
 	is.close();
 
@@ -227,7 +217,10 @@ void bsp::compile(const object& parent)
 	
 	_textures.resize(bsp_textures.size());
 	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
-	
+
+	_lightmaps.resize(bsp_lightmaps.size());
+	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), _lightmaps.begin(), &convert_lightmap);
+
 	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
 
 	list_scope ls(list);
@@ -235,7 +228,7 @@ void bsp::compile(const object& parent)
 	
 	{
 		matrix_scope ms(composition());
-		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures)).finish();;
+		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps)).finish();;
 	}
 }
 
