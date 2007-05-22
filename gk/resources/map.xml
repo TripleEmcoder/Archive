@@ -95,7 +95,7 @@
       </size>
     </player>
     <groups>
-      <count>2</count>
+      <count>3</count>
       <item>
         <name>room</name>
         <visible>0</visible>
@@ -252,6 +252,51 @@
         </groups>
       </item>
       <item>
+        <name>thing</name>
+        <visible>1</visible>
+        <transformations>
+          <count>0</count>
+        </transformations>
+        <bindings>
+          <count>0</count>
+        </bindings>
+        <builtins>
+          <count>1</count>
+          <item>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>0</x>
+                  <y>1</y>
+                  <z>0</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <name>teapot</name>
+          </item>
+        </builtins>
+        <grounds>
+          <count>0</count>
+        </grounds>
+        <ceilings>
+          <count>0</count>
+        </ceilings>
+        <walls>
+          <count>0</count>
+        </walls>
+        <bsps>
+          <count>0</count>
+        </bsps>
+        <groups>
+          <count>0</count>
+        </groups>
+      </item>
+      <item>
         <name>bsp</name>
         <visible>1</visible>
         <transformations>
@@ -281,7 +326,7 @@
                 <name>translation</name>
                 <description>
                   <x>40</x>
-                  <y>-5</y>
+                  <y>0</y>
                   <z>-20</z>
                 </description>
               </item>

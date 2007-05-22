@@ -160,7 +160,7 @@ void load_map(std::string name)
 
 void setup_displays()
 {
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 0, 0);
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 1.5, 0);
 	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
 	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
 	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
