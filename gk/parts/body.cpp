@@ -21,7 +21,7 @@ void body::compile()
 	NewtonBodySetUserData(newton(), this);
 }
 
-void body::draw() const
+void body::draw(const state& state) const
 {
 }
 

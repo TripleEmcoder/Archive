@@ -1,25 +1,29 @@
-#include "engine.hpp"
 #include "world.hpp"
+#include "projector.hpp"
 #include "objects/character.hpp"
 #include "Camera.hpp"
-#include "FPSCounter.hpp"
-#include "HUDManager.hpp"
+#include "fps_meter.hpp"
+
 #include "Character.hpp"
-#include "Crosshair.hpp"
+#include "crosshair.hpp"
 #include "math.hpp"
+#include "state.hpp"
+#include "engine.hpp"
 
 #include <iostream>
 #include <fstream>
 
-
 bool keys[255];
 
 world w;
-HUDManager* hudManager;
+projector p;
+fps_meter f;
+crosshair c(vertex(0.0f, 1.0f, 1.0f), 8.0f);
+
 Camera* camera;
-FPSCounter* fpsCounter;
+
 Character* character;
-Crosshair* crosshair;
+
 
 const float MOUSE_SENSIVITY = 0.5f;
 
@@ -95,6 +99,7 @@ void process_mouse_motion(int x, int y)
 
 void draw(void)
 {
+	state state;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 
@@ -110,11 +115,10 @@ void draw(void)
 	Vector eye = character->getLocation();
 	eye[1] += 0.8f;
 	camera->setEye(eye);
-	camera->draw();
+	camera->draw(state);
 
-	w.draw();
-
-	hudManager->draw();
+	w.draw(state);
+	p.draw(state);
 
 	glutSwapBuffers();
 }
@@ -206,13 +210,10 @@ int main(int argc, char* argv[])
 	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
-	fpsCounter = new FPSCounter();
-	crosshair = new Crosshair(0.0f, 1.0f, 1.0f, 8.0f);
-	hudManager = new HUDManager();
-	hudManager->add(fpsCounter);
-	hudManager->add(camera);
-	hudManager->add(crosshair);
-	hudManager->add(character);
+	p.add(&f);
+	//p.add(camera);
+	p.add(&c);
+	p.add(character);
 
 	setup_callbacks();
 

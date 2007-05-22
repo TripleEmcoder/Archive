@@ -10,11 +10,11 @@ void wall::compile(const object& parent)
 	_body->compile(*this);
 }
 
-void wall::draw() const
+void wall::draw(const state& state) const
 {
-	object::draw();
+	object::draw(state);
 
-	_body->draw();
+	_body->draw(state);
 }
 
 const material& wall::bound_material(std::string name) const

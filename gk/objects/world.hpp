@@ -34,7 +34,7 @@ public:
 
 public:
 	void compile();
-	void draw() const;
+	void draw(const state& state) const;
 
 	virtual const NewtonWorld* newton() const;
 	virtual const material& bound_material(std::string name) const;

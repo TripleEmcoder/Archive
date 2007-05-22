@@ -8,6 +8,8 @@
 #include "string.hpp"
 #include "id.hpp"
 
+class state;
+
 class texture
 {
 public:
@@ -28,7 +30,7 @@ public:
 	texture(std::string name, float width = 0, float height = 0);
 
 	virtual void compile();
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 	
 	boost::tuple<float, float> ratio(float width, float height) const;
 

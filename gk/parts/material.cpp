@@ -11,9 +11,9 @@ void material::compile()
 	texture.compile();
 }
 
-void material::draw() const
+void material::draw(const state& state) const
 {
-	texture.draw();
+	texture.draw(state);
 
 	glMaterialfv(GL_FRONT, GL_AMBIENT, &ambient.vector()[0]);
 	glMaterialfv(GL_FRONT, GL_DIFFUSE, &diffuse.vector()[0]);

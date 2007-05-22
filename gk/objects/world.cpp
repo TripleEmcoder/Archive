@@ -4,6 +4,7 @@
 
 #include "world.hpp"
 #include "transformation.hpp"
+#include "state.hpp"
 #include "engine.hpp"
 
 #include <algorithm>
@@ -80,12 +81,12 @@ void world::compile()
 	std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
 }
 
-void world::draw() const
+void world::draw(const state& state) const
 {
-	object::draw();
-	player.draw();
+	object::draw(state);
+	player.draw(state);
 
-	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1));
+	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1, ref(state)));
 }
 
 const NewtonWorld* world::newton() const

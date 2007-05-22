@@ -23,7 +23,7 @@ public:
 
 public:
 	virtual void compile(const object& parent);
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 
 protected:
 	boost::shared_ptr<box> _body;

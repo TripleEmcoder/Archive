@@ -8,13 +8,13 @@ void builtin::compile(const object& parent)
 	object::compile(parent);
 }
 
-void builtin::draw() const
+void builtin::draw(const state& state) const
 {
-	object::draw();
+	object::draw(state);
 
 	matrix_scope ms(composition());
 
-	bound_material(name).draw();
+	bound_material(name).draw(state);
 	
 	if (name == "sphere")
 		glutSolidSphere(0.5, 20, 20);	

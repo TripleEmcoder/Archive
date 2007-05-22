@@ -9,6 +9,7 @@
 #include "map.hpp"
 #include "transformation.hpp"
 
+class state;
 class world;
 class matrix;
 class material;
@@ -38,7 +39,7 @@ public:
 	virtual void compile(const object& parent);
 
 	//narysowanie obiektu na ekranie
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 
 	//pobranie rodzica w drzewie obiektow
 	virtual const object& parent() const;

@@ -9,6 +9,7 @@
 class object;
 class world;
 class matrix;
+class state;
 
 class body
 {
@@ -23,7 +24,7 @@ public:
 
 public:
 	virtual void compile();
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 
 	virtual const NewtonBody* newton() const;
 	virtual const world& root() const = 0;

@@ -201,7 +201,7 @@ void Character::applyForceAndTorque()
 	NewtonBodySetForce(body, force.data());
 }
 
-void Character::drawHUD()
+void Character::draw(const state& state) const
 {
 	NewtonBodyGetVelocity(body, velocity.data());
 	velocity[3] = 0;

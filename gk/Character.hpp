@@ -2,9 +2,9 @@
 
 #include <Newton.h>
 #include "math.hpp"
-#include "HUDElement.hpp"
+#include "display.hpp"
 
-class Character : public HUDElement
+class Character : public display
 {
 private:
 	static void applyForceAndTorque(const NewtonBody* body);
@@ -14,7 +14,7 @@ private:
 	static const int FEET_COLLISION = 2;
 	
 	Matrix location;
-	Vector size, velocity, movement, normal;
+	mutable Vector size, velocity, movement, normal;
 	int count;
 	bool jumpInd, jumping;
 	NewtonBody* body;
@@ -26,7 +26,7 @@ public:
 	Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ);
 	Vector getLocation();
 	Vector getDirection();
-	void drawHUD();
+	virtual void draw(const state& state) const;
 	void move(const Vector& v);
 	void jump();
 	void processCollision(const NewtonMaterial* material);

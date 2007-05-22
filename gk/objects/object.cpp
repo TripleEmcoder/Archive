@@ -46,11 +46,11 @@ void object::compile(const object& parent)
 		transformation_composer(*_composition));
 }
 
-void object::draw() const
+void object::draw(const state& state) const
 {
 #ifdef _DEBUG
 	matrix_scope ms(*_composition);
-	bound_material("debug").draw();
+	bound_material("debug").draw(state);
 	glutSolidSphere(0.1, 20, 20);
 #endif
 }

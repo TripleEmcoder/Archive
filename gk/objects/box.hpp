@@ -4,13 +4,12 @@
 #include <boost/serialization/utility.hpp>
 
 #include "object.hpp"
-#include "body.hpp"
 #include "vertex.hpp"
 
 class list_id;
 
 //klasa reprezentujaca prostopadloscian
-class box : public body, public object
+class box : public object
 {
 public:
 	//rozmiary prostopadloscianu
@@ -25,21 +24,18 @@ public:
 
 public:
 	virtual void compile(const object& parent);
-	virtual void draw() const;
-
-	virtual const world& root() const;
-	virtual const matrix& composition() const;
+	virtual void draw(const state& state) const;
 
 private:
 	boost::shared_ptr<list_id> _list;
 
-	void draw_faces() const;
-	void draw_left_face() const;
-	void draw_right_face() const;
-	void draw_bottom_face() const;
-	void draw_top_face() const;
-	void draw_front_face() const;
-	void draw_back_face() const;
+	void draw_faces(const state& state) const;
+	void draw_left_face(const state& state) const;
+	void draw_right_face(const state& state) const;
+	void draw_bottom_face(const state& state) const;
+	void draw_top_face(const state& state) const;
+	void draw_front_face(const state& state) const;
+	void draw_back_face(const state& state) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(box, boost::serialization::object_serializable);

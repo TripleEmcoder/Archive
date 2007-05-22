@@ -1,4 +1,4 @@
-#include "HUDElement.hpp"
+#include "display.hpp"
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -7,7 +7,7 @@
 #include <cstring>
 #include <cstdio>
 
-void HUDElement::renderBitmapString(float x, float y, float colorRed, float colorGreen, float colorBlue, const char *fmt, ... )
+void display::renderBitmapString(float x, float y, float colorRed, float colorGreen, float colorBlue, const char *fmt, ...) const 
 {
 	char string[1024];
 	
@@ -24,8 +24,4 @@ void HUDElement::renderBitmapString(float x, float y, float colorRed, float colo
 	{
 		glutBitmapCharacter(GLUT_BITMAP_8_BY_13, string[i]);
 	}
-}
-
-HUDElement::~HUDElement(void)
-{
 }

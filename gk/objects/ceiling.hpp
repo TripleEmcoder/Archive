@@ -24,7 +24,7 @@ public:
 
 public:
 	virtual void compile(const object& parent);
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 
 	const material& bound_material(std::string name) const;
 

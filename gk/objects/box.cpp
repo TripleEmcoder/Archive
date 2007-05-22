@@ -3,11 +3,14 @@
 #include "matrix.hpp"
 #include "material.hpp"
 #include "scope.hpp"
+#include "state.hpp"
 #include "engine.hpp"
 
 void box::compile(const object& parent)
 {
 	object::compile(parent);
+
+	/*
 	body::compile();
 
 	matrix offset;
@@ -18,19 +21,21 @@ void box::compile(const object& parent)
 
 	NewtonBodySetCollision(newton(), collision);
 	NewtonReleaseCollision(root().newton(), collision);
-
+*/
 	_list.reset(new list_id());
 
 	list_scope ls(*_list);
-	object::draw();
-	draw_faces();
+	state state;
+	object::draw(state);
+	draw_faces(state);
 }
 
-void box::draw() const
+void box::draw(const state& state) const
 {
 	glCallList(*_list);
 }
 
+/*
 const world& box::root() const
 {
 	return object::root();
@@ -40,24 +45,25 @@ const matrix& box::composition() const
 {
 	return object::composition();
 }
+*/
 
-void box::draw_faces() const
+void box::draw_faces(const state& state) const
 {
 	matrix_scope ms(composition());
-	draw_left_face();
-	draw_right_face();
-	draw_bottom_face();
-	draw_top_face();
-	draw_front_face();
-	draw_back_face();
+	draw_left_face(state);
+	draw_right_face(state);
+	draw_bottom_face(state);
+	draw_top_face(state);
+	draw_front_face(state);
+	draw_back_face(state);
 }
 
-void box::draw_left_face() const
+void box::draw_left_face(const state& state) const
 {
 	float s, t;
 
 	const material& left = bound_material(size.x > 0 ? "left" : "right");
-	left.draw();
+	left.draw(state);
 
 	glNormal3f(-size.x, 0, 0);
 	glBegin(GL_QUADS);
@@ -69,12 +75,12 @@ void box::draw_left_face() const
 	glEnd();
 }
 
-void box::draw_right_face() const
+void box::draw_right_face(const state& state) const
 {
 	float s, t;
 
 	const material& right = bound_material(size.x > 0 ? "right" : "left");
-	right.draw();
+	right.draw(state);
 
 	glNormal3f(size.x, 0, 0);
 	glBegin(GL_QUADS);
@@ -86,12 +92,12 @@ void box::draw_right_face() const
 	glEnd();
 }
 
-void box::draw_bottom_face() const
+void box::draw_bottom_face(const state& state) const
 {
 	float s, t;
 
 	const material& bottom = bound_material(size.y > 0 ? "bottom" : "top");
-	bottom.draw();
+	bottom.draw(state);
 
 	glNormal3f(0, -size.y, 0);
 	glBegin(GL_QUADS);
@@ -103,12 +109,12 @@ void box::draw_bottom_face() const
 	glEnd();
 }
 
-void box::draw_top_face() const
+void box::draw_top_face(const state& state) const
 {
 	float s, t;
 
 	const material& top = bound_material(size.y > 0 ? "top" : "bottom");
-	top.draw();
+	top.draw(state);
 
 	glNormal3f(0, size.y, 0);
 	glBegin(GL_QUADS);
@@ -120,12 +126,12 @@ void box::draw_top_face() const
 	glEnd();
 }
 
-void box::draw_front_face() const
+void box::draw_front_face(const state& state) const
 {	
 	float s, t;
 
 	const material& front = bound_material(size.z < 0 ? "front" : "back");
-	front.draw();
+	front.draw(state);
 
 	glNormal3f(0, 0, -size.z);	
 	glBegin(GL_QUADS);
@@ -148,12 +154,12 @@ void box::draw_front_face() const
 	//glEnd();
 }
 
-void box::draw_back_face() const
+void box::draw_back_face(const state& state) const
 {
 	float s, t;
 
 	const material& back = bound_material(size.z < 0 ? "back" : "front");
-	back.draw();
+	back.draw(state);
 
 	glNormal3f(0, 0, size.z);
 	glBegin(GL_QUADS);

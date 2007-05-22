@@ -46,7 +46,7 @@ void texture::compile()
 	delete image;
 }
 
-void texture::draw() const
+void texture::draw(const state& state) const
 {
 	glBindTexture(GL_TEXTURE_2D, id ? *id : 0);
 	_ASSERTE(glGetError() == GL_NO_ERROR);

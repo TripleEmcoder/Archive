@@ -10,11 +10,11 @@ void ground::compile(const object& parent)
 	_body->compile(*this);
 }
 
-void ground::draw() const
+void ground::draw(const state& state) const
 {
-	object::draw();
+	object::draw(state);
 
-	_body->draw();
+	_body->draw(state);
 }
 
 const material& ground::bound_material(std::string name) const

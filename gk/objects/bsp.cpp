@@ -3,6 +3,7 @@
 #include "engine.hpp"
 #include "world.hpp"
 #include "matrix.hpp"
+#include "state.hpp"
 //#include "../math.hpp"
 
 #include <iostream>
@@ -87,8 +88,6 @@ boost::shared_ptr<texture_id> convert_lightmap(const bsp_lightmap& l)
 {
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
 	return id;
 }
@@ -145,9 +144,10 @@ struct drawer
 	const std::vector<int>& meshverts;
 	const std::vector<texture>& textures;
 	const std::vector<boost::shared_ptr<texture_id> >& lightmaps;
+	const state& state;
 
 	drawer(const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<texture>& textures, const std::vector<boost::shared_ptr<texture_id> >& lightmaps)
-		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps)
+		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps), state(state)
 	{
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT);
@@ -173,15 +173,17 @@ struct drawer
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
 
 			glActiveTexture(GL_TEXTURE0);
+			textures[face.texture_index].draw(state);
+
 			glClientActiveTexture(GL_TEXTURE0);
-			textures[face.texture_index].draw();
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
 			if (face.lightmap_index != -1)
 			{
 				glActiveTexture(GL_TEXTURE1);
-				glClientActiveTexture(GL_TEXTURE1);
 				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
+
+				glClientActiveTexture(GL_TEXTURE1);
 				glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
 			}
 
@@ -232,15 +234,16 @@ void bsp::compile(const object& parent)
 
 	_list.reset(new list_id());
 	list_scope ls(*_list);
-	object::draw();
+	state state;
+	object::draw(state);
 	
 	{
 		matrix_scope ms(composition());
-		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps)).finish();
+		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps)).finish();;
 	}
 }
 
-void bsp::draw() const
+void bsp::draw(const state& state) const
 {
 	glCallList(*_list);
 }

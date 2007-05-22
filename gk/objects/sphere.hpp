@@ -19,7 +19,7 @@ public:
 
 public:
 	virtual void compile(const object& parent);
-	virtual void draw() const;
+	virtual void draw(const state& state) const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(sphere, boost::serialization::object_serializable);

@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/displays&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib newton.lib corona.lib glew32.lib"
+				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -118,7 +118,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/displays&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -137,7 +137,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="glaux.lib newton.lib corona.lib"
+				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -186,22 +186,6 @@
 			</File>
 			<File
 				RelativePath=".\Character.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Crosshair.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\FPSCounter.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\HUDElement.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\HUDManager.cpp"
 				>
 			</File>
 			<File
@@ -311,6 +295,10 @@
 					RelativePath=".\helpers\scope.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\helpers\state.cpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="parts"
@@ -408,6 +396,26 @@
 					</FileConfiguration>
 				</File>
 			</Filter>
+			<Filter
+				Name="displays"
+				>
+				<File
+					RelativePath=".\displays\crosshair.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\display.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\fps_meter.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\projector.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -420,22 +428,6 @@
 			</File>
 			<File
 				RelativePath=".\Character.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Crosshair.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\FPSCounter.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\HUDElement.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\HUDManager.hpp"
 				>
 			</File>
 			<File
@@ -513,6 +505,10 @@
 					RelativePath=".\helpers\scope.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\helpers\state.hpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="traits"
@@ -555,6 +551,26 @@
 				</File>
 				<File
 					RelativePath=".\parts\vertex.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="displays"
+				>
+				<File
+					RelativePath=".\displays\crosshair.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\display.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\fps_meter.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\displays\projector.hpp"
 					>
 				</File>
 			</Filter>

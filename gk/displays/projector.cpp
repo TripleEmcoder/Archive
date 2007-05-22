@@ -1,10 +1,34 @@
-#include "HUDManager.hpp"
+#include "projector.hpp"
+#include "display.hpp"
+#include "engine.hpp"
 
-#include <GL/glut.h>
 #include <algorithm>
-#include <functional>
 
-void HUDManager::setOrthographicProjection() 
+#include <boost/bind.hpp>
+
+using boost::ref;
+using boost::bind;
+
+void projector::add(const display* item)
+{
+	_displays.insert(item);
+}
+void projector::remove(const display* item)
+{
+	_displays.erase(item);
+}
+
+void projector::draw(const state& state) const
+{
+	setup_orthographic_projection();
+
+	std::for_each(_displays.begin(), _displays.end(), bind(&display::draw, _1, ref(state)));
+	
+	setup_perspective_projection();
+}
+
+
+void projector::setup_orthographic_projection() const 
 {
 	int width = glutGet(GLUT_WINDOW_WIDTH);
 	int height = glutGet(GLUT_WINDOW_HEIGHT);
@@ -33,7 +57,7 @@ void HUDManager::setOrthographicProjection()
 	glDisable(GL_BLEND);
 }
 
-void HUDManager::resetPerspectiveProjection() 
+void projector::setup_perspective_projection() const 
 {
 	glMatrixMode(GL_TEXTURE);
 	glPopMatrix();
@@ -45,30 +69,4 @@ void HUDManager::resetPerspectiveProjection()
 	glPopMatrix();
 
 	glPopAttrib();
-}
-
-void HUDManager::draw()
-{
-	setOrthographicProjection();
-
-	for_each(elements.begin(), elements.end(), std::mem_fun(&HUDElement::drawHUD));
-	
-	resetPerspectiveProjection();
-}
-
-void HUDManager::add(HUDElement* element)
-{
-	elements.insert(element);
-}
-void HUDManager::remove(HUDElement* element)
-{
-	elements.erase(element);
-}
-	
-HUDManager::HUDManager() 
-{
-}
-
-HUDManager::~HUDManager(void)
-{
 }

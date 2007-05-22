@@ -16,9 +16,9 @@ void character::compile(const object& parent)
 	//_head->compile(*this);
 }
 
-void character::draw() const
+void character::draw(const state& state) const
 {
-	object::draw();
+	object::draw(state);
 
 	//_body->draw();
 	/*_head->draw();*/
