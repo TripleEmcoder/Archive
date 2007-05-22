@@ -1,9 +1,9 @@
-#ifndef DISPLAYS_FPS_METER_HPP
-#define DISPLAYS_FPS_METER_HPP
+#ifndef WIDGETS_FPS_METER_HPP
+#define WIDGETS_FPS_METER_HPP
 
 #include "display.hpp"
 
-class fps_meter : public display
+class fps_meter : public widget
 {
 public:
 	fps_meter();
@@ -15,4 +15,4 @@ private:
 	mutable float rate;
 };
 
-#endif //DISPLAYS_FPS_METER_HPP
+#endif //WIDGETS_FPS_METER_HPP

@@ -1,9 +1,9 @@
-#ifndef DISPLAYS_COMPASS_HPP
-#define DISPLAYS_COMPASS_HPP
+#ifndef WIDGETS_COMPASS_HPP
+#define WIDGETS_COMPASS_HPP
 
 #include "display.hpp"
 
-class compass : public display
+class compass : public widget
 {
 public:
 	compass(float radius);
@@ -16,4 +16,4 @@ private:
 	void write(float x, float y, std::string text) const;
 };
 
-#endif //DISPLAYS_COMPASS_HPP
+#endif //WIDGETS_COMPASS_HPP

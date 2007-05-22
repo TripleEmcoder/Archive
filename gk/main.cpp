@@ -1,103 +1,68 @@
-#include "world.hpp"
-#include "objects/character.hpp"
-#include "Camera.hpp"
-#include "Character.hpp"
-
-#include "projector.hpp"
-#include "fps_meter.hpp"
-#include "crosshair.hpp"
-#include "compass.hpp"
-
+#include "game.hpp"
+#include "display.hpp"
+#include "movement.hpp"
 #include "state.hpp"
 #include "engine.hpp"
 
 #include <iostream>
 #include <fstream>
 
-bool keys[255];
+#include <boost/lexical_cast.hpp>
 
-world w;
-projector p;
-fps_meter f;
-crosshair c(vertex(0.0f, 1.0f, 1.0f), 8.0f);
-compass s(50);
-
-Camera* camera;
-Character* character;
-
-const float MOUSE_SENSIVITY = 0.5f;
-
-void moveCharacter()
+void load_map(std::string name)
 {
-	Vector vec;
+	std::cerr << "Opening..." << std::endl;
+	std::ifstream ifs(name.c_str());
+
+	std::cerr << "Reading..." << std::endl;
+	ifs >> w;
+
+	std::cerr << "Compiling..." << std::endl;
+	w.compile();
+
+	std::cerr << "Done." << std::endl;
+}
+
+void setup_widgets()
+{
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 1.5, 0);
+	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
+	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
+	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
+	Vector location = character->getLocation();
+	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
+	p.add(&f);
+	p.add(&c);
+	p.add(&s);
+	p.add(character);
+	p.add(camera);
+}
+
+void setup_lights()
+{
+	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  1.0f };
+	GLfloat position[]  = {  0.0f,  0.0f,  2.0f,  1.0f };
+	GLfloat ambient[]   = {  0.0f,  0.0f,  0.0f,  1.0f };
+	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
+	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
+	GLfloat direction[] = {  0.0f,  0.0f, -1.0f        };
+
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);
 	
-	if (keys[(int)'w'])
-		vec[0] = 1.0f;
-	else if (keys[(int)'s'])
-		vec[0] = -1.0f;
-	else
-		vec[0] = 0.0f;
+	glLightfv(GL_LIGHT0, GL_POSITION, position);
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
-	if (keys[(int)'a'])
-		vec[2] = -1.0f;
-	else if (keys[(int)'d'])
-		vec[2] = 1.0f;
-	else
-		vec[2] = 0.0f;
-	
-	vec[1] = 0;
-	vec[3] = 0;
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
 
-	vec = rotate(vec, 0, camera->getAngleX(), 0);
+	glEnable(GL_LIGHT0);
 
-	character->move(vec);
+	//glEnable(GL_LIGHTING);
 }
 
-
-void process_key_down(unsigned char key, int x, int y) 
-{
-	if (key == 27)
-		exit(0);
-	
-	keys[key] = true;
-}
-
-void process_key_up(unsigned char key, int x, int y) 
-{
-	keys[key] = false;
-
-	if (key == 'l')
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
-	if (key == 'f')
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-}
-
-void process_mouse_event(int button, int state, int x, int y)
-{
-	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
-		character->jump();
-}
-
-void process_mouse_motion(int x, int y) 
-{
-	static bool jump = true;
-
-	if (!jump)
-	{
-		int w = glutGet(GLUT_WINDOW_WIDTH);
-		int h = glutGet(GLUT_WINDOW_HEIGHT);
-		camera->rotate(MOUSE_SENSIVITY * -(x - w/2) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - h/2) * 3.1416 / 180.0f);
-		jump = true;
-		glutWarpPointer(w/2, h/2);
-	}
-	else
-	{
-		jump = false;
-	}
-}
-
-void draw(void)
+void draw()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
@@ -105,7 +70,7 @@ void draw(void)
 	state state;
 	state.camera = camera;
 
-	moveCharacter();
+	process_active_keys();
 
 	static int timebase = glutGet(GLUT_ELAPSED_TIME);
 	int time = glutGet(GLUT_ELAPSED_TIME) - timebase;
@@ -123,65 +88,6 @@ void draw(void)
 	p.draw(state);
 
 	glutSwapBuffers();
-}
-
-void reshape_window(int w, int h)
-{
-	glutWarpPointer(w/2, h/2);
-
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(50, w/h, 0.1, 500);
-
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-}
-
-int setup_window(std::string title, int x, int y, int w, int h)
-{
-	glutInitWindowSize(w, h);
-	glutInitWindowPosition(x, y);
-	return glutCreateWindow(title.c_str());
-}
-
-void load_map(std::string name)
-{
-	std::cerr << "Opening..." << std::endl;
-	std::ifstream ifs(name.c_str());
-
-	std::cerr << "Reading..." << std::endl;
-	ifs >> w;
-
-	std::cerr << "Compiling..." << std::endl;
-	w.compile();
-
-	std::cerr << "Done." << std::endl;
-}
-
-void setup_displays()
-{
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 1.5, 0);
-	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
-	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
-	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
-	Vector location = character->getLocation();
-	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
-	p.add(&f);
-	p.add(&c);
-	p.add(&s);
-	p.add(character);
-	p.add(camera);
-}
-
-void setup_lighting()
-{
-	GLfloat direction[] = { 0.0f, 0.0f, -1.0f};
-	GLfloat position[] = { 0.0f, 0.0f, 2.0f, 1.0f };
-	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
-	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
-	glEnable(GL_LIGHT0);
-	glEnable(GL_LIGHTING);
 }
 
 void setup_callbacks()
@@ -204,22 +110,38 @@ int main(int argc, char* argv[])
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	
-	setup_window("gk", 0, 0, 800, 600);
+	if (argc != 3)
+	{
+		std::cerr << "Parameters:" << std::endl;
+		std::cerr << "\t(window|fullscreen) - widget mode" << std::endl;
+		std::cerr << "\t(\\d+) - widget width" << std::endl;
+		std::cerr << "\t(\\d+) - widget height" << std::endl;
+		exit(1);
+	}
+
+	int width = boost::lexical_cast<int>(argv[1]);
+	int height = boost::lexical_cast<int>(argv[2]);
+
+	if (argv[0] == "window")
+		setup_window("gk", 0, 0, width, height);
+	
+	else if (argv[0] == "fullscreen")
+		setup_fullscreen(width, height, 16);
 
 	GLenum error = glewInit();
 
 	if (error != GLEW_OK) 
-		std::cerr << glewGetErrorString(error) << std::endl;
+		std::cerr << glewGetErrorString(error) << "." << std::endl;
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
-
 	glShadeModel(GL_SMOOTH);
+	
 	load_map("map.xml");
 	
-	setup_displays();
-	setup_lighting();
+	setup_widgets();
+	setup_lights();
 	setup_callbacks();
 
 	glutMainLoop();

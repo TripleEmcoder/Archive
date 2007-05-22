@@ -1,9 +1,9 @@
 #pragma once
 
-#include "display.hpp"
+#include "widgets/display.hpp"
 #include "math.hpp"
 
-class Camera : public display
+class Camera : public widget
 {
 private:
 	mutable Vector eye, direction;

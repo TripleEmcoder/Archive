@@ -9,20 +9,20 @@
 using boost::ref;
 using boost::bind;
 
-void projector::add(const display* item)
+void projector::add(const widget* item)
 {
-	_displays.insert(item);
+	_widgets.insert(item);
 }
-void projector::remove(const display* item)
+void projector::remove(const widget* item)
 {
-	_displays.erase(item);
+	_widgets.erase(item);
 }
 
 void projector::draw(const state& state) const
 {
 	setup_orthographic_projection();
 
-	std::for_each(_displays.begin(), _displays.end(), bind(&display::draw, _1, ref(state)));
+	std::for_each(_widgets.begin(), _widgets.end(), bind(&widget::draw, _1, ref(state)));
 	
 	setup_perspective_projection();
 }

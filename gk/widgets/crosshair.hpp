@@ -1,10 +1,10 @@
-#ifndef DISPLAYS_CROSSHAIR_HPP
-#define DISPLAYS_CROSSHAIR_HPP
+#ifndef WIDGETS_CROSSHAIR_HPP
+#define WIDGETS_CROSSHAIR_HPP
 
 #include "display.hpp"
 #include "vertex.hpp"
 
-class crosshair : public display
+class crosshair : public widget
 {
 public:
 	crosshair(vertex color, float size);
@@ -16,4 +16,4 @@ private:
 	float size;
 };
 
-#endif //DISPLAYS_CROSSHAIR_HPP
+#endif //WIDGETS_CROSSHAIR_HPP

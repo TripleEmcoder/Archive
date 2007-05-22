@@ -48,5 +48,5 @@ void compass::write(float x, float y, std::string text) const
 
 	float height = 10;
 	
-	display::write(x-width, y-height, GLUT_STROKE_ROMAN, 0.2, text);
+	widget::write(x-width, y-height, GLUT_STROKE_ROMAN, 0.2, text);
 }

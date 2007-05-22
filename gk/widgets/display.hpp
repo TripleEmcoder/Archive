@@ -1,12 +1,12 @@
-#ifndef DISPLAYS_DISPLAY_HPP
-#define DISPLAYS_DISPLAY_HPP
+#ifndef WIDGETS_WIDGET_HPP
+#define WIDGETS_WIDGET_HPP
 
 #include <cstdarg>
 #include <string>
 
 class state;
 
-class display
+class widget
 {
 public:
 	virtual void draw(const state& state) const = 0;
@@ -21,4 +21,4 @@ private:
 	void write(float x, float y, void* font, float size, std::string format, va_list arguments) const;
 };
 
-#endif //DISPLAYS_DISPLAY_HPP
+#endif //WIDGETS_WIDGET_HPP

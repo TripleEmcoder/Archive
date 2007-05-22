@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <cstring>
 
-void display::write(float x, float y, void* font, float size, std::string format, ...) const 
+void widget::write(float x, float y, void* font, float size, std::string format, ...) const 
 {
 	va_list arguments;
 
@@ -13,7 +13,7 @@ void display::write(float x, float y, void* font, float size, std::string format
 	va_end(arguments);
 }
 
-void display::write(float x, float y, std::string format, ...) const 
+void widget::write(float x, float y, std::string format, ...) const 
 {
 	va_list arguments;
 
@@ -22,7 +22,7 @@ void display::write(float x, float y, std::string format, ...) const
 	va_end(arguments);
 }
 
-void display::write(float x, float y, void* font, float size, std::string format, va_list arguments) const 
+void widget::write(float x, float y, void* font, float size, std::string format, va_list arguments) const 
 {
 	char text[1024];
 	

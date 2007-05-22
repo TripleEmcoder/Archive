@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/displays&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/widgets&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -118,7 +118,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/displays&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)/traits&quot;;&quot;$(ProjectDir)/helpers&quot;;&quot;$(ProjectDir)/parts&quot;;&quot;$(ProjectDir)/objects&quot;;&quot;$(ProjectDir)/widgets&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
@@ -189,7 +189,19 @@
 				>
 			</File>
 			<File
+				RelativePath=".\display.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\widgets\display.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\movement.cpp"
 				>
 			</File>
 			<Filter
@@ -405,26 +417,22 @@
 				</File>
 			</Filter>
 			<Filter
-				Name="displays"
+				Name="widgets"
 				>
 				<File
-					RelativePath=".\displays\compass.cpp"
+					RelativePath=".\widgets\compass.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\crosshair.cpp"
+					RelativePath=".\widgets\crosshair.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\display.cpp"
+					RelativePath=".\widgets\fps_meter.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\fps_meter.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\displays\projector.cpp"
+					RelativePath=".\widgets\projector.cpp"
 					>
 				</File>
 			</Filter>
@@ -443,7 +451,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\display.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\widgets\display.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\game.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\math.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\movement.hpp"
 				>
 			</File>
 			<Filter
@@ -575,26 +599,22 @@
 				</File>
 			</Filter>
 			<Filter
-				Name="displays"
+				Name="widgets"
 				>
 				<File
-					RelativePath=".\displays\compass.hpp"
+					RelativePath=".\widgets\compass.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\crosshair.hpp"
+					RelativePath=".\widgets\crosshair.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\display.hpp"
+					RelativePath=".\widgets\fps_meter.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\displays\fps_meter.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\displays\projector.hpp"
+					RelativePath=".\widgets\projector.hpp"
 					>
 				</File>
 			</Filter>

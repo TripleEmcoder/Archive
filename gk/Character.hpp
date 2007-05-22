@@ -2,9 +2,9 @@
 
 #include <Newton.h>
 #include "math.hpp"
-#include "display.hpp"
+#include "widgets/display.hpp"
 
-class Character : public display
+class Character : public widget
 {
 private:
 	static void applyForceAndTorque(const NewtonBody* body);
