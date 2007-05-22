@@ -1,5 +1,5 @@
 #include "projector.hpp"
-#include "display.hpp"
+#include "widget.hpp"
 #include "engine.hpp"
 
 #include <algorithm>
