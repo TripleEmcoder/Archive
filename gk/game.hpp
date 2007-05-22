@@ -11,13 +11,13 @@
 #include "Camera.hpp"
 #include "Character.hpp"
 
-static Camera* camera;
-static Character* character;
+extern Camera* camera;
+extern Character* character;
 
-static world w;
-static projector p;
-static fps_meter f;
-static crosshair c(vertex(0.0f, 1.0f, 1.0f), 8.0f);
-static compass s(50);
+extern world w;
+extern projector p;
+extern fps_meter f;
+extern crosshair c;
+extern compass s;
 
 #endif //GAME_HPP

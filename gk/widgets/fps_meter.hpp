@@ -1,7 +1,7 @@
 #ifndef WIDGETS_FPS_METER_HPP
 #define WIDGETS_FPS_METER_HPP
 
-#include "display.hpp"
+#include "widget.hpp"
 
 class fps_meter : public widget
 {

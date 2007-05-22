@@ -1,7 +1,7 @@
 #ifndef WIDGETS_COMPASS_HPP
 #define WIDGETS_COMPASS_HPP
 
-#include "display.hpp"
+#include "widget.hpp"
 
 class compass : public widget
 {

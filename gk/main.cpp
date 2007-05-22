@@ -110,28 +110,37 @@ int main(int argc, char* argv[])
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	
-	if (argc != 3)
+	if (argc != 4)
 	{
 		std::cerr << "Parameters:" << std::endl;
-		std::cerr << "\t(window|fullscreen) - widget mode" << std::endl;
-		std::cerr << "\t(\\d+) - widget width" << std::endl;
-		std::cerr << "\t(\\d+) - widget height" << std::endl;
-		exit(1);
+		std::cerr << "\t(window|fullscreen) - display type" << std::endl;
+		std::cerr << "\t(\\d+) - display width" << std::endl;
+		std::cerr << "\t(\\d+) - display height" << std::endl;
+		return 1;
 	}
 
-	int width = boost::lexical_cast<int>(argv[1]);
-	int height = boost::lexical_cast<int>(argv[2]);
+	int width = boost::lexical_cast<int>(argv[2]);
+	int height = boost::lexical_cast<int>(argv[3]);
 
-	if (argv[0] == "window")
+	if (strcmp(argv[1], "window") == 0)
 		setup_window("gk", 0, 0, width, height);
 	
-	else if (argv[0] == "fullscreen")
-		setup_fullscreen(width, height, 16);
+	else if (strcmp(argv[1], "fullscreen") == 0)
+		setup_fullscreen(width, height, 16, 0);
+
+	else
+	{
+		std::cerr << "Incorrect display type." << std::endl;
+		return 2;
+	}
 
 	GLenum error = glewInit();
 
-	if (error != GLEW_OK) 
+	if (error != GLEW_OK)
+	{
 		std::cerr << glewGetErrorString(error) << "." << std::endl;
+		return 3;
+	}
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);

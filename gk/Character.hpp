@@ -2,7 +2,7 @@
 
 #include <Newton.h>
 #include "math.hpp"
-#include "widgets/display.hpp"
+#include "widget.hpp"
 
 class Character : public widget
 {

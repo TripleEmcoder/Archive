@@ -193,7 +193,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\widgets\display.cpp"
+				RelativePath=".\game.cpp"
 				>
 			</File>
 			<File
@@ -435,6 +435,10 @@
 					RelativePath=".\widgets\projector.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\widgets\widget.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -452,10 +456,6 @@
 			</File>
 			<File
 				RelativePath=".\display.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\widgets\display.hpp"
 				>
 			</File>
 			<File
@@ -615,6 +615,10 @@
 				</File>
 				<File
 					RelativePath=".\widgets\projector.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\widgets\widget.hpp"
 					>
 				</File>
 			</Filter>

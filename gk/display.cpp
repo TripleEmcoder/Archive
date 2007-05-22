@@ -1,6 +1,8 @@
 #include "display.hpp"
 #include "engine.hpp"
 
+#include <boost/format.hpp>
+
 int setup_window(std::string title, int x, int y, int width, int height)
 {
 	glutInitWindowSize(width, height);
@@ -20,7 +22,10 @@ void reshape_window(int width, int height)
 	glLoadIdentity();
 }
 
-void setup_fullscreen(int width, int height, int depth)
+void setup_fullscreen(int width, int height, int depth, int frequency)
 {
+	glutGameModeString((boost::format("%1%x%2%:%3%")
+		% width % height % depth).str().c_str());
+
 	glutEnterGameMode();
 }

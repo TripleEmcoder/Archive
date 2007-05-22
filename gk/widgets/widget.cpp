@@ -1,4 +1,4 @@
-#include "display.hpp"
+#include "widget.hpp"
 #include "engine.hpp"
 
 #include <cstdio>

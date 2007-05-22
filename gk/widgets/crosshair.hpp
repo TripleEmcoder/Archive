@@ -1,7 +1,7 @@
 #ifndef WIDGETS_CROSSHAIR_HPP
 #define WIDGETS_CROSSHAIR_HPP
 
-#include "display.hpp"
+#include "widget.hpp"
 #include "vertex.hpp"
 
 class crosshair : public widget

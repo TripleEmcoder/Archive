@@ -1,6 +1,6 @@
 #pragma once
 
-#include "widgets/display.hpp"
+#include "widget.hpp"
 #include "math.hpp"
 
 class Camera : public widget
