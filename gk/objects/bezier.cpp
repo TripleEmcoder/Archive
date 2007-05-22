@@ -112,6 +112,8 @@ void bezier::draw() const
 {
 	const int stride = sizeof(bsp_vertex);
     glVertexPointer(3, GL_FLOAT, stride, &vertex[0].position);
+	glNormalPointer(GL_FLOAT, stride, &vertex[0].normal);
+	glColorPointer(4, GL_UNSIGNED_BYTE, stride, &vertex[0].color);
 
     glClientActiveTexture(GL_TEXTURE0);
     glTexCoordPointer(2, GL_FLOAT, stride, &vertex[0].texture_coordinate);

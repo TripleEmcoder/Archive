@@ -53,7 +53,10 @@ void convert_vertex(bsp_vertex& vertex)
 {
 	swap(vertex.position.y, vertex.position.z);
 	vertex.position.z = -vertex.position.z;
-	//vertex.texture_coordinate.y = -vertex.texture_coordinate.y;
+
+	swap(vertex.normal.y, vertex.normal.z);
+	vertex.normal.z = -vertex.normal.z;
+
 	float scale = 50.0f;
 	vertex.position.x /= scale;
 	vertex.position.y /= scale;
@@ -162,53 +165,46 @@ struct drawer
 
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-		//glEnableClientState(GL_NORMAL_ARRAY);
+		glEnableClientState(GL_NORMAL_ARRAY);
 		//glEnableClientState(GL_COLOR_ARRAY);
 
 		glEnable(GL_TEXTURE_2D);
-		//glFrontFace(GL_CW);
-		//glCullFace(GL_BACK);
-		//glEnable(GL_CULL_FACE);
+		glFrontFace(GL_CW);
+		glCullFace(GL_BACK);
+		glEnable(GL_CULL_FACE);
 		index = 0;
 	}
 
 	void operator()(const bsp_face& face)
 	{
+		glActiveTexture(GL_TEXTURE0);
+		textures[face.texture_index].draw(state);
+
+		if (face.lightmap_index != -1)
+		{
+			glActiveTexture(GL_TEXTURE1);
+			glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
+		}
+
 		if (face.face_type == polygon || face.face_type == mesh)
 		{
 			const int offset = face.start_vertex_index;
 			const int stride = sizeof(bsp_vertex);
 			
 			glVertexPointer(3, GL_FLOAT, stride, &vertices[offset].position);
-
-			glActiveTexture(GL_TEXTURE0);
-			textures[face.texture_index].draw(state);
+			glNormalPointer(GL_FLOAT, stride, &vertices[offset].normal);
+			glColorPointer(4, GL_UNSIGNED_BYTE, stride, &vertices[offset].color);
 
 			glClientActiveTexture(GL_TEXTURE0);
 			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].texture_coordinate);
 
-			if (face.lightmap_index != -1)
-			{
-				glActiveTexture(GL_TEXTURE1);
-				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
-
-				glClientActiveTexture(GL_TEXTURE1);
-				glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
-			}
+			glClientActiveTexture(GL_TEXTURE1);
+			glTexCoordPointer(2, GL_FLOAT, stride, &vertices[offset].lightmap_coordinate);
 
 			glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &meshverts[face.start_mesh_vertex_index]);
 		}
 		else if (face.face_type == patch)
 		{
-			glActiveTexture(GL_TEXTURE0);
-			textures[face.texture_index].draw(state);
-
-			if (face.lightmap_index != -1)
-			{
-				glActiveTexture(GL_TEXTURE1);
-				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
-			}
-
 			int count = ((face.size[0]-1)/2) * ((face.size[1]-1)/2);
 			for (int i = 0; i < count; ++i)
 				beziers[bezier_ids[index]+i].draw();
@@ -220,7 +216,6 @@ struct drawer
 	{
 		glPopAttrib();
 		glPopClientAttrib();
-		//glActiveTexture(GL_TEXTURE0);
 		assert(glGetError() == GL_NO_ERROR);
 	}
 };
