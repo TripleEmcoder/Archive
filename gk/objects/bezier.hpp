@@ -1,4 +1,5 @@
 #pragma once
+#include "engine.hpp"
 #include "bsp_struct.hpp"
 #include <vector>
 
@@ -15,6 +16,7 @@ public:
     bsp_vertex controls[9];
     void tessellate(int level);
     void draw() const;
+	void add_faces(NewtonCollision* tree) const;
 
 	bezier(const bsp_vertex* controls);
 };

@@ -100,29 +100,38 @@ struct mesh_constructor
 	const NewtonWorld* nWorld;
 	const std::vector<bsp_vertex>& vertices;
 	const std::vector<int>& meshverts;
+	const std::vector<bezier>& beziers;
 	NewtonCollision* tree;
 
-	mesh_constructor(const NewtonWorld* nWorld, const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts)
-		:nWorld(nWorld), vertices(vertices), meshverts(meshverts)
+	mesh_constructor(const NewtonWorld* nWorld, const std::vector<bsp_vertex>& vertices, const std::vector<int>& meshverts, const std::vector<bezier>& beziers)
+		:nWorld(nWorld), vertices(vertices), meshverts(meshverts), beziers(beziers)
 	{
 		tree = NewtonCreateTreeCollision(nWorld, NULL);
 		NewtonTreeCollisionBeginBuild(tree);
 	}
 
-	void operator()(const bsp_face& face)
+	void operator()(const face& face)
 	{
-		for (int i = 0; i < face.mesh_vertex_count; i += 3)
+		if (face.face_type == polygon || face.face_type == mesh)
 		{
-			bsp_vector3f triangle[3];
-			for (int j = 0; j < 3; ++j)
+			for (int i = 0; i < face.mesh_vertex_count; i += 3)
 			{
-				int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-				const bsp_vertex& v = vertices[vert_index];
-				triangle[2-j] = v.position;
+				bsp_vector3f triangle[3];
+				for (int j = 0; j < 3; ++j)
+				{
+					int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
+					const bsp_vertex& v = vertices[vert_index];
+					triangle[2-j] = v.position;
+				}
+				//NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1); 
+				//swap(triangle[0], triangle[1]);
+				NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1);
 			}
-			//NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1); 
-			//swap(triangle[0], triangle[1]);
-			NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1);
+		}
+		else if (face.face_type == patch)
+		{
+			for (int i = 0; i < face.bezier_count; ++i)
+				beziers[face.bezier_id+i].add_faces(tree);
 		}
 	}
 
@@ -274,7 +283,7 @@ void bsp::compile(const object& parent)
 	for_each(_faces.begin(), _faces.end(), bezier_constructor(_vertices, _beziers));
 	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 5));
 
-	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
+	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts, _beziers)).compile(composition());
 
 	_list.reset(new list_id());
 	list_scope ls(*_list);

@@ -59,7 +59,7 @@ void setup_lights()
 
 	glEnable(GL_LIGHT0);
 
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 }
 
 void draw()
