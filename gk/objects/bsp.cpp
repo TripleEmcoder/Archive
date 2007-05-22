@@ -148,7 +148,6 @@ struct drawer
 	const std::vector<texture>& textures;
 	const std::vector<boost::shared_ptr<texture_id> >& lightmaps;
 	const std::vector<bezier>& beziers;
-	const std::vector<int>& bezier_ids;
 	const state& state;
 	int index;
 
@@ -156,9 +155,8 @@ struct drawer
 			const std::vector<int>& meshverts, 
 			const std::vector<texture>& textures, 
 			const std::vector<boost::shared_ptr<texture_id> >& lightmaps,
-			const std::vector<bezier>& beziers,
-			const std::vector<int>& bezier_ids)
-		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps), beziers(beziers), bezier_ids(bezier_ids), state(state)
+			const std::vector<bezier>& beziers)
+		:vertices(vertices), meshverts(meshverts), textures(textures), lightmaps(lightmaps), beziers(beziers), state(state)
 	{
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
@@ -172,10 +170,9 @@ struct drawer
 		glFrontFace(GL_CW);
 		glCullFace(GL_BACK);
 		glEnable(GL_CULL_FACE);
-		index = 0;
 	}
 
-	void operator()(const bsp_face& face)
+	void operator()(const face& face)
 	{
 		glActiveTexture(GL_TEXTURE0);
 		textures[face.texture_index].draw();
@@ -205,11 +202,9 @@ struct drawer
 		}
 		else if (face.face_type == patch)
 		{
-			int count = ((face.size[0]-1)/2) * ((face.size[1]-1)/2);
-			for (int i = 0; i < count; ++i)
-				beziers[bezier_ids[index]+i].draw();
+			for (int i = 0; i < face.bezier_count; ++i)
+				beziers[face.bezier_id+i].draw();
 		}
-		index++;
 	}
 
 	void finish()
@@ -227,7 +222,8 @@ void bsp::compile(const object& parent)
 	bsp_lump lumps[17];
 	std::vector<bsp_texture> bsp_textures;
 	std::vector<bsp_lightmap> bsp_lightmaps;
-
+	std::vector<bsp_face> bsp_faces;
+	
 	object::compile(parent);
 
 	is.open(name.c_str(), ios::binary);
@@ -237,7 +233,7 @@ void bsp::compile(const object& parent)
 
 	read_lump(is, lumps[Vertexes], _vertices);
 	read_lump(is, lumps[Meshverts], _meshverts);
-	read_lump(is, lumps[Faces], _faces);
+	read_lump(is, lumps[Faces], bsp_faces);
 	read_lump(is, lumps[Textures], bsp_textures);
 	read_lump(is, lumps[Lightmaps], bsp_lightmaps);
 
@@ -251,13 +247,17 @@ void bsp::compile(const object& parent)
 	_lightmaps.resize(bsp_lightmaps.size());
 	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), _lightmaps.begin(), &convert_lightmap);
 
+	_faces.resize(bsp_faces.size());
+	copy(bsp_faces.begin(), bsp_faces.end(), _faces.begin());
+
 	_beziers_ids.resize(_faces.size());
 	for (int i = 0; i != _faces.size(); ++i)
 	{
-		const bsp_face& face = _faces[i];
+		face& face = _faces[i];
 		if (face.face_type == patch)
 		{
-			_beziers_ids[i] = (int)_beziers.size();
+			face.bezier_id = (int)_beziers.size();
+			face.bezier_count = ((face.size[0] - 1) / 2) * ((face.size[1] - 1) / 2);
 			for (int n = 0; n < (face.size[0] - 1) / 2; ++n)
 				for (int m = 0; m < (face.size[1] - 1) / 2; ++m)
 				{
@@ -271,7 +271,7 @@ void bsp::compile(const object& parent)
 		}
 	}
 
-	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 5));
+	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 10));
 
 	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
 
@@ -282,7 +282,7 @@ void bsp::compile(const object& parent)
 
 	{
 		matrix_scope ms(composition());
-		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps, _beziers, _beziers_ids)).finish();;
+		for_each(_faces.begin(), _faces.end(), drawer(_vertices, _meshverts, _textures, _lightmaps, _beziers)).finish();;
 	}
 }
 

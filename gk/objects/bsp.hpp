@@ -13,6 +13,14 @@
 #include "bsp_struct.hpp"
 #include "bezier.hpp"
 
+struct face : public bsp_face
+{
+	int bezier_id;
+	int bezier_count;
+	face() : bsp_face(), bezier_id(-1), bezier_count(0) { };
+	face(const bsp_face& f) : bsp_face(f), bezier_id(-1), bezier_count(0) { };
+};
+
 class bsp : public object
 {
 public:
@@ -34,7 +42,7 @@ private:
 
 	std::vector<material> _materials;
 	std::vector<bsp_vertex> _vertices;
-	std::vector<bsp_face> _faces;
+	std::vector<face> _faces;
 	std::vector<texture> _textures;
 	std::vector<boost::shared_ptr<texture_id> > _lightmaps;
 	std::vector<int> _meshverts;
