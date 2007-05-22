@@ -209,9 +209,9 @@ struct drawer
 				glBindTexture(GL_TEXTURE_2D, *lightmaps[face.lightmap_index]);
 			}
 
-			int count = (face.size[0]-1)/2 * (face.size[1]-1)/2;
+			int count = ((face.size[0]-1)/2) * ((face.size[1]-1)/2);
 			for (int i = 0; i < count; ++i)
-				beziers[bezier_ids[index]].draw();
+				beziers[bezier_ids[index]+i].draw();
 		}
 		index++;
 	}
@@ -270,7 +270,7 @@ void bsp::compile(const object& parent)
 					const int offset = face.start_vertex_index + 2*m*face.size[0] + 2*n;
 					for (int p = 0; p < 3; ++p)
 						for (int q = 0; q < 3; ++q)
-							controls[p*3 + q] = _vertices[offset + p*3 + q];
+							controls[p*3 + q] = _vertices[offset + p*face.size[0] + q];
 					_beziers.push_back(bezier(controls));
 				}
 		}
