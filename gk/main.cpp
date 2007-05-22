@@ -112,7 +112,7 @@ void draw(void)
 	timebase += time;
 
 	NewtonUpdate(w.newton(), time / 1000.0f);
-	//NewtonUpdate(w.newton(), 1.0f / 40.0f);
+	//NewtonUpdate(w.newton(), 1.0f);
 	
 	Vector eye = character->getLocation();
 	eye[1] += 0.8f;

@@ -196,6 +196,10 @@
 				Name="objects"
 				>
 				<File
+					RelativePath=".\objects\bezier.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\box.cpp"
 					>
 				</File>
@@ -446,11 +450,19 @@
 				Name="objects"
 				>
 				<File
+					RelativePath=".\objects\bezier.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\box.hpp"
 					>
 				</File>
 				<File
 					RelativePath=".\objects\bsp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\objects\bsp_struct.hpp"
 					>
 				</File>
 				<File
