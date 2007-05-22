@@ -11,9 +11,30 @@ bsp_vertex operator*(const bsp_vertex& v, const float x)
 
 	result.texture_coordinate.x *= x;
 	result.texture_coordinate.y *= x;
-	
+
+	result.normal.x *= x;
+	result.normal.y *= x;
+	result.normal.z *= x;
+
 	result.lightmap_coordinate.x *= x;
 	result.lightmap_coordinate.y *= x;
+	return result;
+}
+
+bsp_vector2f operator+(const bsp_vector2f& l, const bsp_vector2f& r)
+{
+	bsp_vector2f result;
+	result.x = l.x + r.x;
+	result.y = l.y + r.y;
+	return result;
+}
+
+bsp_vector3f operator+(const bsp_vector3f& l, const bsp_vector3f& r)
+{
+	bsp_vector3f result;
+	result.x = l.x + r.x;
+	result.y = l.y + r.y;
+	result.z = l.z + r.z;
 	return result;
 }
 
@@ -21,15 +42,10 @@ bsp_vertex operator+(const bsp_vertex& l, const bsp_vertex& r)
 {
 	bsp_vertex result;
 
-	result.position.x = l.position.x + r.position.x;
-	result.position.y = l.position.y + r.position.y;
-	result.position.z = l.position.z + r.position.z;
-
-	result.texture_coordinate.x = l.texture_coordinate.x + r.texture_coordinate.x;
-	result.texture_coordinate.y = l.texture_coordinate.y + r.texture_coordinate.y;
-	
-	result.lightmap_coordinate.x = l.lightmap_coordinate.x + r.lightmap_coordinate.x;
-	result.lightmap_coordinate.y = l.lightmap_coordinate.y + r.lightmap_coordinate.y;
+	result.position = l.position + r.position;
+	result.normal = l.normal + r.normal;
+	result.texture_coordinate = l.texture_coordinate + r.texture_coordinate;
+	result.lightmap_coordinate = l.lightmap_coordinate + r.lightmap_coordinate;
 
 	return result;
 }
