@@ -181,6 +181,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\objects\bezier.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Camera.cpp"
 				>
 			</File>
@@ -195,10 +199,6 @@
 			<Filter
 				Name="objects"
 				>
-				<File
-					RelativePath=".\objects\bezier.cpp"
-					>
-				</File>
 				<File
 					RelativePath=".\objects\box.cpp"
 					>
@@ -435,6 +435,14 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\objects\bezier.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\objects\bsp_struct.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Camera.hpp"
 				>
 			</File>
@@ -450,19 +458,11 @@
 				Name="objects"
 				>
 				<File
-					RelativePath=".\objects\bezier.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\box.hpp"
 					>
 				</File>
 				<File
 					RelativePath=".\objects\bsp.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\bsp_struct.hpp"
 					>
 				</File>
 				<File

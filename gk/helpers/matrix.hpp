@@ -17,7 +17,7 @@ public:
 	void translate(const vertex& description);
 	void rotate(const vertex& description);
 	void scale(const vertex& description);
-	void compose(const matrix& composition);
+	void compose(const matrix& description);
 
 private:
 	typedef boost::numeric::ublas::matrix<float> temporary_type;

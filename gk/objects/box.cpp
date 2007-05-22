@@ -24,7 +24,7 @@ void box::compile(const object& parent)
 */
 	_list.reset(new list_id());
 
-	list_scope ls(*_list);
+	list_scope scope(*_list);
 	state state;
 	object::draw(state);
 	draw_faces(state);
@@ -49,7 +49,7 @@ const matrix& box::composition() const
 
 void box::draw_faces(const state& state) const
 {
-	matrix_scope ms(composition());
+	matrix_scope scope(composition());
 	draw_left_face(state);
 	draw_right_face(state);
 	draw_bottom_face(state);
@@ -63,7 +63,7 @@ void box::draw_left_face(const state& state) const
 	float s, t;
 
 	const material& left = bound_material(size.x > 0 ? "left" : "right");
-	left.draw(state);
+	material_scope scope(left);
 
 	glNormal3f(-size.x, 0, 0);
 	glBegin(GL_QUADS);
@@ -80,7 +80,7 @@ void box::draw_right_face(const state& state) const
 	float s, t;
 
 	const material& right = bound_material(size.x > 0 ? "right" : "left");
-	right.draw(state);
+	material_scope scope(right);
 
 	glNormal3f(size.x, 0, 0);
 	glBegin(GL_QUADS);
@@ -97,7 +97,7 @@ void box::draw_bottom_face(const state& state) const
 	float s, t;
 
 	const material& bottom = bound_material(size.y > 0 ? "bottom" : "top");
-	bottom.draw(state);
+	material_scope scope(bottom);
 
 	glNormal3f(0, -size.y, 0);
 	glBegin(GL_QUADS);
@@ -114,7 +114,7 @@ void box::draw_top_face(const state& state) const
 	float s, t;
 
 	const material& top = bound_material(size.y > 0 ? "top" : "bottom");
-	top.draw(state);
+	top.draw();
 
 	glNormal3f(0, size.y, 0);
 	glBegin(GL_QUADS);
@@ -131,7 +131,7 @@ void box::draw_front_face(const state& state) const
 	float s, t;
 
 	const material& front = bound_material(size.z < 0 ? "front" : "back");
-	front.draw(state);
+	material_scope scope(front);
 
 	glNormal3f(0, 0, -size.z);	
 	glBegin(GL_QUADS);
@@ -159,7 +159,7 @@ void box::draw_back_face(const state& state) const
 	float s, t;
 
 	const material& back = bound_material(size.z < 0 ? "back" : "front");
-	back.draw(state);
+	material_scope scope(back);
 
 	glNormal3f(0, 0, size.z);
 	glBegin(GL_QUADS);

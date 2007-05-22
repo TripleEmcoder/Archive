@@ -166,7 +166,7 @@ struct drawer
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 		glEnableClientState(GL_NORMAL_ARRAY);
-		//glEnableClientState(GL_COLOR_ARRAY);
+		glEnableClientState(GL_COLOR_ARRAY);
 
 		glEnable(GL_TEXTURE_2D);
 		glFrontFace(GL_CW);
@@ -178,7 +178,7 @@ struct drawer
 	void operator()(const bsp_face& face)
 	{
 		glActiveTexture(GL_TEXTURE0);
-		textures[face.texture_index].draw(state);
+		textures[face.texture_index].draw();
 
 		if (face.lightmap_index != -1)
 		{

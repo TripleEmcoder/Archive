@@ -7,8 +7,18 @@ class matrix;
 class matrix_scope
 {
 public:
-	matrix_scope(const matrix& composition);
+	matrix_scope(const matrix& matrix);
 	~matrix_scope();
+};
+
+class material;
+
+//obsluga obszaru obowiazywania materialu
+class material_scope
+{
+public:
+	material_scope(const material& material);
+	~material_scope();
 };
 
 class list_id;

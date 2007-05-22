@@ -13,8 +13,7 @@ void builtin::draw(const state& state) const
 	object::draw(state);
 
 	matrix_scope ms(composition());
-
-	bound_material(name).draw(state);
+	material_scope(bound_material(name));
 	
 	if (name == "sphere")
 		glutSolidSphere(0.5, 20, 20);	

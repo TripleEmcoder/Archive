@@ -30,7 +30,7 @@ public:
 	texture(std::string name, float width = 0, float height = 0);
 
 	virtual void compile();
-	virtual void draw(const state& state) const;
+	virtual void draw() const;
 	
 	boost::tuple<float, float> ratio(float width, float height) const;
 

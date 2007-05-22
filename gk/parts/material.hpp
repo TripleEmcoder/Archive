@@ -31,7 +31,7 @@ public:
 	material();
 
 	virtual void compile();
-	virtual void draw(const state& state) const;
+	virtual void draw() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(material, boost::serialization::object_serializable);

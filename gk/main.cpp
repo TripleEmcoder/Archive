@@ -175,12 +175,12 @@ void setup_displays()
 
 void setup_lighting()
 {
-	//GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
-	//GLfloat position[]= { 0.0f, 0.0f, 2.0f, 1.0f };
-	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 10);
-	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	//glLightfv(GL_LIGHT0, GL_POSITION, position);
-	//glEnable(GL_LIGHT0);
+	GLfloat direction[] = { 0.0f, 0.0f, -1.0f};
+	GLfloat position[] = { 0.0f, 0.0f, 2.0f, 1.0f };
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	glLightfv(GL_LIGHT0, GL_POSITION, position);
+	glEnable(GL_LIGHT0);
 	//glEnable(GL_LIGHTING);
 }
 

@@ -75,8 +75,8 @@ void matrix::scale(const vertex& description)
 	column_major = prod(temporary, column_major);
 }
 
-void matrix::compose(const matrix& composition)
+void matrix::compose(const matrix& description)
 {
-	row_major = prod(composition.row_major, row_major);
-	column_major = prod(composition.column_major, column_major);
+	row_major = prod(description.row_major, row_major);
+	column_major = prod(description.column_major, column_major);
 }
