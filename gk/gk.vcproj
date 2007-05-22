@@ -284,6 +284,10 @@
 				Name="helpers"
 				>
 				<File
+					RelativePath=".\helpers\engine.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\helpers\id.cpp"
 					>
 				</File>
@@ -399,6 +403,10 @@
 			<Filter
 				Name="displays"
 				>
+				<File
+					RelativePath=".\displays\compass.cpp"
+					>
+				</File>
 				<File
 					RelativePath=".\displays\crosshair.cpp"
 					>
@@ -557,6 +565,10 @@
 			<Filter
 				Name="displays"
 				>
+				<File
+					RelativePath=".\displays\compass.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\displays\crosshair.hpp"
 					>

@@ -205,9 +205,9 @@ void Character::draw(const state& state) const
 {
 	NewtonBodyGetVelocity(body, velocity.data());
 	velocity[3] = 0;
-	renderBitmapString(350, 35, 1.0f, 0.0f, 0.0f, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
+	write(350, 35, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
 	if (jumping)
-		renderBitmapString(350, 55, 1.0f, 0.0f, 0.0f, "JUMPING");
-	renderBitmapString(350, 75, 1.0f, 0.0f, 0.0f, "NORMAL (%3.1f, %3.1f, %3.1f)", normal[0], normal[1], normal[2]);
-	renderBitmapString(350, 95, 1.0f, 0.0f, 0.0f, "SPEED (%3.1f)", norm_2(velocity));
+		write(350, 55, "JUMPING");
+	write(350, 75, "NORMAL (%3.1f, %3.1f, %3.1f)", normal[0], normal[1], normal[2]);
+	write(350, 95, "SPEED (%3.1f)", norm_2(velocity));
 }

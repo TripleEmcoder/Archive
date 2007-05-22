@@ -20,5 +20,5 @@ void fps_meter::draw(const state& state) const
 		count = 0;
 	}
 
-	renderBitmapString(30, 35, 0.0f, 1.0f, 1.0f, "FPS: %6.2f", rate);
+	write(30, 35, "FPS: %6.2f", rate);
 }

@@ -14,9 +14,10 @@ public:
 	~Camera(void);
 	//void draw();
 	virtual void draw(const state& state) const;
+	virtual void set(const state& state) const;
 	void setEye(const Vector& eye);
 	void rotate(float x, float y);
-	float getAngleX();
-	float getAngleY();
+	float getAngleX() const;
+	float getAngleY() const;
 	Matrix getRotationMatrix();
 };

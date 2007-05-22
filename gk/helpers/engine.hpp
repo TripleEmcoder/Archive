@@ -8,4 +8,7 @@
 #include <corona.h>
 #include <Newton.h>
 
+float radians(float degrees);
+float degrees(float radians);
+
 #endif //HELPERS_ENGINE_HPP 

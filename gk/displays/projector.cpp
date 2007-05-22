@@ -46,8 +46,8 @@ void projector::setup_orthographic_projection() const
 	glLoadIdentity();
 
 	gluOrtho2D(0, width, 0, height);
-	glScalef(1, -1, 1);
-	glTranslatef(0, -height, 0);
+	//glScalef(1, -1, 1);
+	//glTranslatef(0, -height, 0);
 
 	glPushAttrib(GL_ENABLE_BIT | GL_CURRENT_BIT);
 

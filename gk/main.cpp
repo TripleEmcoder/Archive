@@ -1,12 +1,13 @@
 #include "world.hpp"
-#include "projector.hpp"
 #include "objects/character.hpp"
 #include "Camera.hpp"
-#include "fps_meter.hpp"
-
 #include "Character.hpp"
+
+#include "projector.hpp"
+#include "fps_meter.hpp"
 #include "crosshair.hpp"
-#include "math.hpp"
+#include "compass.hpp"
+
 #include "state.hpp"
 #include "engine.hpp"
 
@@ -19,11 +20,10 @@ world w;
 projector p;
 fps_meter f;
 crosshair c(vertex(0.0f, 1.0f, 1.0f), 8.0f);
+compass s(50);
 
 Camera* camera;
-
 Character* character;
-
 
 const float MOUSE_SENSIVITY = 0.5f;
 
@@ -99,9 +99,11 @@ void process_mouse_motion(int x, int y)
 
 void draw(void)
 {
-	state state;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
+
+	state state;
+	state.camera = camera;
 
 	moveCharacter();
 
@@ -115,7 +117,7 @@ void draw(void)
 	Vector eye = character->getLocation();
 	eye[1] += 0.8f;
 	camera->setEye(eye);
-	camera->draw(state);
+	camera->set(state);
 
 	w.draw(state);
 	p.draw(state);
@@ -156,6 +158,21 @@ void load_map(std::string name)
 	std::cerr << "Done." << std::endl;
 }
 
+void setup_displays()
+{
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 0, 0);
+	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
+	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
+	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
+	Vector location = character->getLocation();
+	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
+	p.add(&f);
+	p.add(&c);
+	p.add(&s);
+	p.add(character);
+	p.add(camera);
+}
+
 void setup_lighting()
 {
 	//GLfloat direction[]= { 0.0f, 0.0f, -1.0f};
@@ -187,34 +204,22 @@ int main(int argc, char* argv[])
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	
-	setup_window("gk", 0, 0, 600, 600);
+	setup_window("gk", 0, 0, 800, 600);
 
 	GLenum error = glewInit();
 
 	if (error != GLEW_OK) 
 		std::cerr << glewGetErrorString(error) << std::endl;
 
-	load_map("map.xml");
-
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE);
 
 	glShadeModel(GL_SMOOTH);
+	load_map("map.xml");
 	
+	setup_displays();
 	setup_lighting();
-
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 0, 0);
-	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
-	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
-	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
-	Vector location = character->getLocation();
-	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
-	p.add(&f);
-	//p.add(camera);
-	p.add(&c);
-	p.add(character);
-
 	setup_callbacks();
 
 	glutMainLoop();

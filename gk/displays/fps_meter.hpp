@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DISPLAYS_FPS_METER_HPP
+#define DISPLAYS_FPS_METER_HPP
 
 #include "display.hpp"
 
@@ -13,3 +14,5 @@ private:
 	mutable int count, previous;
 	mutable float rate;
 };
+
+#endif //DISPLAYS_FPS_METER_HPP

@@ -1,6 +1,6 @@
 #include "matrix.hpp"
-
 #include "vertex.hpp"
+#include "engine.hpp"
 
 using boost::numeric::ublas::identity_matrix;
 using boost::numeric::ublas::prod;
@@ -32,11 +32,6 @@ void matrix::translate(const vertex& description)
 
 	row_major = prod(temporary, row_major);
 	column_major = prod(temporary, column_major);
-}
-
-float radians(float degrees)
-{
-	return degrees * 3.1416f / 180.0f;
 }
 
 void matrix::rotate(const vertex& description)

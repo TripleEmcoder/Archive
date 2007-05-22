@@ -34,33 +34,31 @@ void Camera::setEye(const Vector& e)
 	eye = e;
 }
 
-void Camera::draw(const state& state) const
+void Camera::set(const state& state) const
 {
 	direction = matrix_row<Matrix>(rotation, 0);
 	Vector center = eye + direction;		
 	gluLookAt(eye[0], eye[1], eye[2], center[0], center[1], center[2], 0, 1, 0);
 }
 
-/*
-void Camera::draw()
+void Camera::draw(const state& state) const
 {
-	renderBitmapString(650, 35, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
-	renderBitmapString(650, 55, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f, %3.1f)", direction[0], direction[1], direction[2]);
-	renderBitmapString(650, 75, 0.0f, 1.0f, 1.0f, "(%3.1f, %3.1f)", angleX, angleY);
+	write(650, 35, "(%3.1f, %3.1f, %3.1f)", eye[0], eye[1], eye[2]);
+	write(650, 55, "(%3.1f, %3.1f, %3.1f)", direction[0], direction[1], direction[2]);
+	write(650, 75, "(%3.1f, %3.1f)", angleX, angleY);
 }
-*/
 
 Matrix Camera::getRotationMatrix()
 {
 	return rotation;
 }
 
-float Camera::getAngleX()
+float Camera::getAngleX() const
 {
 	return angleX;
 }
 
-float Camera::getAngleY()
+float Camera::getAngleY() const
 {
 	return angleY;
 }

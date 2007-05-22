@@ -195,6 +195,7 @@ struct drawer
 	{
 		glPopAttrib();
 		glPopClientAttrib();
+		glActiveTexture(GL_TEXTURE0);
 		assert(glGetError() == GL_NO_ERROR);
 	}
 };
