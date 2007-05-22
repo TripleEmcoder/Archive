@@ -47,7 +47,6 @@ private:
 	std::vector<boost::shared_ptr<texture_id> > _lightmaps;
 	std::vector<int> _meshverts;
 	std::vector<bezier> _beziers;
-	std::vector<int> _beziers_ids;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

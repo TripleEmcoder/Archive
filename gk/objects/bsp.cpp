@@ -215,6 +215,31 @@ struct drawer
 	}
 };
 
+struct bezier_constructor
+{
+	vector<bezier>& beziers;
+	const vector<bsp_vertex>& vertices;
+	bezier_constructor(const vector<bsp_vertex>& vertices, vector<bezier>& beziers) : vertices(vertices), beziers(beziers) { };
+	void operator()(face& face)
+	{
+		if (face.face_type == patch)
+		{
+			face.bezier_id = (int)beziers.size();
+			face.bezier_count = ((face.size[0] - 1) / 2) * ((face.size[1] - 1) / 2);
+			for (int n = 0; n < (face.size[0] - 1) / 2; ++n)
+				for (int m = 0; m < (face.size[1] - 1) / 2; ++m)
+				{
+					bsp_vertex controls[9];
+					const int offset = face.start_vertex_index + 2*m*face.size[0] + 2*n;
+					for (int p = 0; p < 3; ++p)
+						for (int q = 0; q < 3; ++q)
+							controls[p*3 + q] = vertices[offset + p*face.size[0] + q];
+					beziers.push_back(bezier(controls));
+				}
+		}
+	}
+};
+
 void bsp::compile(const object& parent)
 {
 	ifstream is;
@@ -241,37 +266,13 @@ void bsp::compile(const object& parent)
 
 	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
 	
-	_textures.resize(bsp_textures.size());
-	transform(bsp_textures.begin(), bsp_textures.end(), _textures.begin(), &convert_texture);
+	transform(bsp_textures.begin(), bsp_textures.end(), back_inserter(_textures), &convert_texture);
+	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), back_inserter(_lightmaps), &convert_lightmap);
 
-	_lightmaps.resize(bsp_lightmaps.size());
-	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), _lightmaps.begin(), &convert_lightmap);
+	copy(bsp_faces.begin(), bsp_faces.end(), back_inserter(_faces));
 
-	_faces.resize(bsp_faces.size());
-	copy(bsp_faces.begin(), bsp_faces.end(), _faces.begin());
-
-	_beziers_ids.resize(_faces.size());
-	for (int i = 0; i != _faces.size(); ++i)
-	{
-		face& face = _faces[i];
-		if (face.face_type == patch)
-		{
-			face.bezier_id = (int)_beziers.size();
-			face.bezier_count = ((face.size[0] - 1) / 2) * ((face.size[1] - 1) / 2);
-			for (int n = 0; n < (face.size[0] - 1) / 2; ++n)
-				for (int m = 0; m < (face.size[1] - 1) / 2; ++m)
-				{
-					bsp_vertex controls[9];
-					const int offset = face.start_vertex_index + 2*m*face.size[0] + 2*n;
-					for (int p = 0; p < 3; ++p)
-						for (int q = 0; q < 3; ++q)
-							controls[p*3 + q] = _vertices[offset + p*face.size[0] + q];
-					_beziers.push_back(bezier(controls));
-				}
-		}
-	}
-
-	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 10));
+	for_each(_faces.begin(), _faces.end(), bezier_constructor(_vertices, _beziers));
+	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 5));
 
 	for_each(_faces.begin(), _faces.end(), mesh_constructor(root().newton(), _vertices, _meshverts)).compile(composition());
 
