@@ -123,8 +123,6 @@ struct mesh_constructor
 					const bsp_vertex& v = vertices[vert_index];
 					triangle[2-j] = v.position;
 				}
-				//NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1); 
-				//swap(triangle[0], triangle[1]);
 				NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1);
 			}
 		}

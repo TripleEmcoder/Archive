@@ -17,6 +17,11 @@ bsp_vertex operator*(const bsp_vertex& v, const float x)
 
 	result.lightmap_coordinate.x *= x;
 	result.lightmap_coordinate.y *= x;
+
+	result.color[0] *= x;
+	result.color[1] *= x;
+	result.color[2] *= x;
+	result.color[3] *= x;
 	return result;
 }
 
@@ -45,6 +50,11 @@ bsp_vertex operator+(const bsp_vertex& l, const bsp_vertex& r)
 	result.normal = l.normal + r.normal;
 	result.texture_coordinate = l.texture_coordinate + r.texture_coordinate;
 	result.lightmap_coordinate = l.lightmap_coordinate + r.lightmap_coordinate;
+
+	result.color[0] = l.color[0] + r.color[0];
+	result.color[1] = l.color[1] + r.color[1];
+	result.color[2] = l.color[2] + r.color[2];
+	result.color[3] = l.color[3] + r.color[3];
 
 	return result;
 }

@@ -49,7 +49,6 @@ void reshape_window(int width, int height)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(50, width/height, 0.1, 500);
-
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }

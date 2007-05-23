@@ -40,7 +40,7 @@ void setup_widgets()
 
 void setup_lights()
 {
-	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  1.0f };
+	GLfloat global[]    = {  0.8f,  0.8f,  0.8f,  1.0f };
 	GLfloat position[]  = {  0.0f,  0.0f,  2.0f,  1.0f };
 	GLfloat ambient[]   = {  0.0f,  0.0f,  0.0f,  1.0f };
 	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
