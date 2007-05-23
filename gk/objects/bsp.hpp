@@ -4,6 +4,7 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/serialization/utility.hpp>
+#include <set>
 
 #include "string.hpp"
 #include "vector.hpp"
@@ -12,6 +13,9 @@
 #include "texture.hpp"
 #include "bsp_struct.hpp"
 #include "bezier.hpp"
+#include "matrix.hpp"
+#include "scope.hpp"
+#include "../math.hpp"
 
 struct face : public bsp_face
 {
@@ -47,6 +51,12 @@ private:
 	void create_beziers(face& face);
 	void create_collisions() const;
 	void add_face(const face& face, const NewtonCollision* tree) const;
+
+	void find_visible_faces(const state& state) const;
+	int find_leaf(const Vector& camera_position) const;
+	bool is_cluster_visible(int visible_cluster, int test_cluster) const;
+
+
 	boost::shared_ptr<list_id> _list;
 
 	std::vector<material> _materials;
@@ -56,6 +66,14 @@ private:
 	std::vector<boost::shared_ptr<texture_id> > _lightmaps;
 	std::vector<int> _meshverts;
 	std::vector<bezier> _beziers;
+	std::vector<bsp_plane> _planes;
+	std::vector<bsp_node> _nodes;
+	std::vector<bsp_leaf> _leafs;
+	std::vector<int> _leaffaces;
+	bsp_visdata _visdata;
+
+	mutable std::set<int> _visible;
+	mutable std::vector<face> _visible_faces;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

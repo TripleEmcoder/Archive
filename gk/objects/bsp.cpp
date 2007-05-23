@@ -1,10 +1,8 @@
 #include "bsp.hpp"
-#include "scope.hpp"
 #include "engine.hpp"
 #include "world.hpp"
-#include "matrix.hpp"
 #include "state.hpp"
-//#include "../math.hpp"
+#include "../Camera.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -41,6 +39,8 @@ enum face_type
 	billboard
 };
 
+const float bsp_scale = 1.0f / 50.0f;
+
 template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::vector<T>& vec)
 {
 	is.seekg(lump.offset);
@@ -49,18 +49,47 @@ template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::ve
 	is.read((char*) &vec[0], n*sizeof(T));
 }
 
+void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
+{
+	is.seekg(lump.offset);
+	is.read((char*) &visdata.vecs_count, sizeof(visdata.vecs_count));
+	is.read((char*) &visdata.vecs_size, sizeof(visdata.vecs_size));
+	visdata.vecs = new char[visdata.vecs_count * visdata.vecs_size];
+	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
+}
+
+template <typename T> void swizzle(T& vertex)
+{
+	swap(vertex.y, vertex.z);
+	vertex.z = -vertex.z;
+}
+
+template <typename T> void scale(T& vertex, float scale)
+{
+	vertex.x *= scale;
+	vertex.y *= scale;
+	vertex.z *= scale;
+}
+
 void convert_vertex(bsp_vertex& vertex)
 {
-	swap(vertex.position.y, vertex.position.z);
-	vertex.position.z = -vertex.position.z;
+	swizzle(vertex.position);
+	swizzle(vertex.normal);
+	scale(vertex.position, bsp_scale);
+}
 
-	swap(vertex.normal.y, vertex.normal.z);
-	vertex.normal.z = -vertex.normal.z;
+void convert_plane(bsp_plane& plane)
+{
+	swizzle(plane.normal);
+	plane.distance *= bsp_scale;
+}
 
-	float scale = 50.0f;
-	vertex.position.x /= scale;
-	vertex.position.y /= scale;
-	vertex.position.z /= scale;
+template <typename T> void convert_mins_maxs(T& t)
+{
+	swizzle(t.mins);
+	swizzle(t.maxs);
+	scale(t.mins, bsp_scale);
+	scale(t.maxs, bsp_scale);
 }
 
 texture convert_texture(const bsp_texture& t)
@@ -149,7 +178,7 @@ void bsp::create_collisions() const
 	NewtonBody* body = NewtonCreateBody(nWorld, tree);
 	NewtonBodySetMatrix(body, composition().row_major_data());
 	//Vector p0, p1;
-	//Matrix m;
+	//Matrix4x4 m;
 	//NewtonBodyGetMatrix (body, m.data()); 
 	//NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
 	//NewtonSetWorldSize(nWorld, p0.data(), p1.data());
@@ -178,10 +207,18 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Faces], bsp_faces);
 	read_lump(is, lumps[Textures], bsp_textures);
 	read_lump(is, lumps[Lightmaps], bsp_lightmaps);
+	read_lump(is, lumps[Planes], _planes);
+	read_lump(is, lumps[Nodes], _nodes);
+	read_lump(is, lumps[Leafs], _leafs);
+	read_lump(is, lumps[Leaffaces], _leaffaces);
+	read_visdata(is, lumps[Visdata], _visdata);
 
 	is.close();
 
 	for_each(_vertices.begin(), _vertices.end(), &convert_vertex);
+	for_each(_planes.begin(), _planes.end(), &convert_plane);
+	for_each(_nodes.begin(), _nodes.end(), &convert_mins_maxs<bsp_node>);
+	for_each(_leafs.begin(), _leafs.end(), &convert_mins_maxs<bsp_leaf>);
 	
 	transform(bsp_textures.begin(), bsp_textures.end(), back_inserter(_textures), &convert_texture);
 	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), back_inserter(_lightmaps), &convert_lightmap);
@@ -263,9 +300,9 @@ void bsp::draw_face(const face& face) const
 	glCallList(*face.list);
 }
 
-void bsp::draw_faces(const vector<face>& faces) const
+void bsp::draw_faces(const std::vector<face>& faces) const
 {
-	glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
+	//glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
 
 	glEnable(GL_TEXTURE_2D);
@@ -273,19 +310,85 @@ void bsp::draw_faces(const vector<face>& faces) const
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 
-	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-	//for (int i = 0; i < faces.size(); i+=3)
-	//	draw_face(_faces[i]);
+	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	for (int i = 0; i < (int)faces.size(); i+=1)
+		draw_face(_faces[i]);
 
 	glPopAttrib();
-	glPopClientAttrib();
+	//glPopClientAttrib();
 	assert(glGetError() == GL_NO_ERROR);
 }
 
 void bsp::draw(const state& state) const
 {
+	//find_visible_faces(state);
 	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
 	draw_faces(_faces);
 }
+
+void bsp::find_visible_faces(const state& state) const
+{
+	_visible.clear();
+	_visible_faces.clear();
+
+	int camera_cluster = _leafs[find_leaf(state.camera->getPosition())].cluster;
+
+	for (int i = 0; i < (int)_leafs.size(); ++i)
+	{
+		const bsp_leaf& leaf = _leafs[i];
+		//if (is_cluster_visible(camera_cluster, leaf.cluster) && state.camera->isVisible(leaf.mins,leaf.maxs))
+		if (is_cluster_visible(camera_cluster, leaf.cluster))
+		{
+			for (int j = 0; j < leaf.leaffaces_count; ++j) 
+			{
+				const int f = _leaffaces[leaf.start_leafface_index + j];
+				if (_visible.count(f)) 
+				{
+					_visible.insert(f);
+					_visible_faces.push_back(_faces[f]);
+				}
+			}
+		}
+	}
+}
+
+int bsp::find_leaf(const Vector& camera_position) const
+{
+	int index = 0;
+
+	while (index >= 0)
+	{
+		const bsp_node& node = _nodes[index];
+		const bsp_plane& plane = _planes[node.plane];
+		Vector normal = createVector(plane.normal.x, plane.normal.y, plane.normal.z);
+
+		// Distance from point to a plane
+		const double distance =	inner_prod(normal, camera_position) - plane.distance;
+
+		if (distance >= 0) 
+		{
+			index = node.front;
+		} 
+		else 
+		{
+			index = node.back;
+		}
+	}
+
+	return -index - 1;
+}
+
+bool bsp::is_cluster_visible(int visible_cluster, int test_cluster) const 
+{
+    if ((_visdata.vecs == NULL) || (visible_cluster < 0)) 
+	{
+        return true;
+    }
+
+    int i = (visible_cluster * _visdata.vecs_size) + (test_cluster >> 3);
+    unsigned char visible_set = _visdata.vecs[i];
+
+    return (visible_set & (1 << (test_cluster & 7))) != 0;
+} 

@@ -13,7 +13,7 @@ private:
 	static const int BODY_COLLISION = 1;
 	static const int FEET_COLLISION = 2;
 	
-	Matrix location;
+	Matrix4x4 location;
 	mutable Vector size, velocity, movement, normal;
 	int count;
 	bool jumpInd, jumping;
@@ -21,7 +21,7 @@ private:
 	const NewtonWorld* nWorld;
 	NewtonJoint* upVector;
 	void applyForceAndTorque();
-	void setLocation(const Matrix& matrix);
+	void setLocation(const Matrix4x4& matrix);
 public:
 	Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ);
 	Vector getLocation();

@@ -7,7 +7,7 @@ class Camera : public widget
 {
 private:
 	mutable Vector eye, direction;
-	mutable Matrix rotation;
+	mutable Matrix4x4 rotation;
 	float angleX, angleY;
 public:
 	Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY);
@@ -19,5 +19,6 @@ public:
 	void rotate(float x, float y);
 	float getAngleX() const;
 	float getAngleY() const;
-	Matrix getRotationMatrix();
+	Matrix4x4 getRotationMatrix() const;
+	Vector getPosition() const;
 };

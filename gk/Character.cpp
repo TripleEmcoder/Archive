@@ -17,7 +17,7 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 
 	location = identity_matrix<float>(4);
 
-	matrix_row<Matrix> row(location, 3);
+	matrix_row<Matrix4x4> row(location, 3);
 	row[0] = locationX;
 	row[1] = locationY;
 	row[2] = locationZ;
@@ -74,7 +74,7 @@ void Character::setTransform(const NewtonBody* body, const float* matrix)
 
 	player = (Character*)NewtonBodyGetUserData(body);
 
-	Matrix mat;
+	Matrix4x4 mat;
 	for (int i = 0; i < 4; ++i)
 		for (int j = 0; j < 4; ++j)
 			mat(i,j) = matrix[i*4 + j];
@@ -88,7 +88,7 @@ void Character::destructor(const NewtonBody* body)
 	delete player;
 }
 
-void Character::setLocation(const Matrix& matrix)
+void Character::setLocation(const Matrix4x4& matrix)
 {
 	location = matrix;
 }
@@ -106,12 +106,12 @@ void Character::jump()
 
 Vector Character::getLocation()
 {
-	return matrix_row<Matrix>(location, 3);
+	return matrix_row<Matrix4x4>(location, 3);
 }
 
 Vector Character::getDirection()
 {
-	return matrix_row<Matrix>(location, 0);
+	return matrix_row<Matrix4x4>(location, 0);
 }
 
 void Character::processCollision(const NewtonMaterial* material)

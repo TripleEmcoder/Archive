@@ -1,9 +1,6 @@
 #include "Camera.hpp"
 
-#include <windows.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
+#include "engine.hpp"
 
 Camera::Camera(float eyeX, float eyeY, float eyeZ, float x, float y)
 {
@@ -36,7 +33,7 @@ void Camera::setEye(const Vector& e)
 
 void Camera::set(const state& state) const
 {
-	direction = matrix_row<Matrix>(rotation, 0);
+	direction = matrix_row<Matrix4x4>(rotation, 0);
 	Vector center = eye + direction;		
 	gluLookAt(eye[0], eye[1], eye[2], center[0], center[1], center[2], 0, 1, 0);
 }
@@ -48,9 +45,14 @@ void Camera::draw(const state& state) const
 	write(650, 75, "(%3.1f, %3.1f)", angleX, angleY);
 }
 
-Matrix Camera::getRotationMatrix()
+Matrix4x4 Camera::getRotationMatrix() const
 {
 	return rotation;
+}
+
+Vector Camera::getPosition() const
+{
+	return eye;
 }
 
 float Camera::getAngleX() const

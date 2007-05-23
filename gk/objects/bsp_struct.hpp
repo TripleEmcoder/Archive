@@ -66,3 +66,37 @@ struct bsp_lightmap
 {
 	char pixels[128][128][3];
 };
+
+struct bsp_plane
+{
+	bsp_vector3f normal;
+	float distance;
+};
+
+struct bsp_node
+{
+	int plane;
+	int front;
+	int back;
+	bsp_vector3i mins;
+	bsp_vector3i maxs;
+};
+
+struct bsp_leaf
+{
+	int cluster; 	//Visdata cluster index. 
+	int area; 	//Areaportal area. 
+	bsp_vector3i mins;
+	bsp_vector3i maxs;
+	int start_leafface_index; 	//First leafface for leaf. 
+	int leaffaces_count;	//Number of leaffaces for leaf. 
+	int start_leafbrush_index; 	//First leafbrush for leaf. 
+	int leafbrushes_count; 	//Number of leafbrushes for leaf.
+};
+
+struct bsp_visdata
+{
+	int vecs_count;
+	int vecs_size;
+	char* vecs;
+};
