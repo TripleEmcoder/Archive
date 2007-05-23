@@ -211,6 +211,11 @@ void bsp::compile_face(face& face) const
 	face.list.reset(new list_id());
 	list_scope ls(*face.list);
 	
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+
 	glActiveTexture(GL_TEXTURE0);
 	_textures[face.texture_index].draw();
 
@@ -274,6 +279,7 @@ void bsp::draw_faces(const vector<face>& faces) const
 void bsp::draw(const state& state) const
 {
 	//glCallList(*_list);
+	object::draw(state);
 	matrix_scope ms(composition());
 	draw_faces(_faces);
 }
