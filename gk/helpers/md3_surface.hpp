@@ -59,12 +59,24 @@ struct md3_xyzn
 };
 
 /*
+F32*2 ST S-T (U-V?) texture coordinate. I am a little fuzzy on the whole notion of texture coordinates. Values tend to stay within [0.0 .. 1.0], suggesting (0,0) is one corner of the shader/texture and (1,1) is the other far corner of the shader/texture, with values outside the range indicating wraparounds/repeats. Again, I am fuzzy on this notion.
+*/
+
+struct md3_st
+{
+	float s;
+	float t;
+};
+
+/*
 S32*3 INDEXES List of offset values into the list of Vertex objects that constitute the corners of the Triangle object. Vertex numbers are used instead of actual coordinates, as the coordinates are implicit in the Vertex object. (XXX: does order matter?)
 */
 
 struct md3_triangle
 {
-	int indexes[3];
+	int a;
+	int b;
+	int c;
 };
 
 class md3_surface
@@ -77,6 +89,7 @@ private:
 	md3_surface_header header;
 	std::vector<md3_shader> shaders;
 	std::vector<md3_xyzn> xyzns;
+	std::vector<md3_st> sts;
 	std::vector<md3_triangle> triangles;
 };
 

@@ -28,6 +28,8 @@ public:
 
 private:
 	std::vector<boost::shared_ptr<list_id> > lists;
+	mutable int index;
+	mutable int previous;
 };
 
 BOOST_CLASS_IMPLEMENTATION(md3, boost::serialization::object_serializable);

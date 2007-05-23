@@ -21,6 +21,12 @@ void md3::compile(const object& parent)
 
 	std::ifstream input(name.c_str(), std::ios::binary);
 	
+	if (!input.is_open())
+	{
+		std::cerr << "Failed to load model " << name << "." << std::endl;
+		return;
+	}
+
 	md3_header header;
 	binary_read(input, header);
 
@@ -62,11 +68,26 @@ void md3::compile(const object& parent)
 
 		glPopClientAttrib();
 	}
+	previous = glutGet(GLUT_ELAPSED_TIME);
 }
 
 void md3::draw(const state& state) const
 {
 	object::draw(state);
+	
 	matrix_scope scope(composition());
-	glCallList(*lists[0]);
+	
+	int current = glutGet(GLUT_ELAPSED_TIME);
+	
+	if (current - previous > 100) 
+	{
+		previous = current;
+		index++;
+	}
+
+	if (index < 0 || lists.size() <= index)
+		 index = 0;
+
+	if (lists.size() > 0)
+		glCallList(*lists[index]);
 }

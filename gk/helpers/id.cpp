@@ -1,38 +1,70 @@
 #include "id.hpp"
 #include "engine.hpp"
 
-#include <cassert>
-
 texture_id::texture_id()
 {
-	glGenTextures(1, &id);
+	glGenTextures(1, &texture);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
 texture_id::~texture_id()
 {
-	glDeleteTextures(1, &id);
+	glDeleteTextures(1, &texture);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
 texture_id::operator unsigned int() const
 {
-	return id;
+	return texture;
 }
 
 list_id::list_id()
 {
-	id = glGenLists(1);
+	list = glGenLists(1);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
 list_id::~list_id()
 {
-	glDeleteLists(id, 1);
+	glDeleteLists(list, 1);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
 list_id::operator unsigned int() const
 {
-	return id;
+	return list;
+}
+
+world_id::world_id()
+{
+	world = NewtonCreate(NULL, NULL);
+}
+
+world_id::~world_id()
+{
+	NewtonDestroy(world);
+}
+
+world_id::operator NewtonWorld*() const
+{
+	return world;
+}
+
+body_id::body_id(world_id& world)
+:
+	world(world)
+{
+	NewtonCollision* collision = NewtonCreateNull(world);
+	body = NewtonCreateBody(world, collision);
+	NewtonReleaseCollision(world, collision);
+}
+
+body_id::~body_id()
+{
+	NewtonDestroyBody(world, body);
+}
+
+body_id::operator NewtonBody*() const
+{
+	return body;
 }

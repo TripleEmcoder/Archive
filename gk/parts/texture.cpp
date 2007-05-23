@@ -15,6 +15,10 @@ texture::texture(std::string name, float width, float height)
 
 void texture::compile()
 {
+#ifdef _DEBUG
+	std::cerr << "Loading texture " << name << "..." << std::endl;
+#endif
+
 	corona::Image* image = corona::OpenImage(name.c_str(), corona::PF_R8G8B8);
 
 	if (image == NULL)

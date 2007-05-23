@@ -27,11 +27,17 @@ void md3_surface::read(std::istream &input)
 	std::for_each(shaders.begin(), shaders.end(),
 		boost::bind(&md3_shader::read, _1, boost::ref(input)));
 
-	xyzns.resize(header.vertex_count);
+	xyzns.resize(header.frame_count*header.vertex_count);
 	input.seekg(start + header.xyzn_offset);
 
 	std::for_each(xyzns.begin(), xyzns.end(),
 		boost::bind(binary_read<md3_xyzn>, boost::ref(input), _1));
+
+	sts.resize(header.vertex_count);
+	input.seekg(start + header.st_offset);
+
+	std::for_each(sts.begin(), sts.end(),
+		boost::bind(binary_read<md3_st>, boost::ref(input), _1));
 	
 	triangles.resize(header.triangle_count);
 	input.seekg(start + header.triangle_offset);
@@ -44,15 +50,6 @@ void md3_surface::read(std::istream &input)
 
 void md3_surface::draw(int frame) const
 {
-	//glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count]);
-	//glDrawElements(GL_TRIANGLES, triangles.size(), GL_UNSIGNED_INT, &triangles[0]);
-	
-	glBegin(GL_TRIANGLES);
-	for (int i=0; i<triangles.size(); i++)
-	{
-		glVertex3i(xyzns[triangles[i].indexes[0]].x, xyzns[triangles[i].indexes[0]].y, xyzns[triangles[i].indexes[0]].z);
-		glVertex3i(xyzns[triangles[i].indexes[1]].x, xyzns[triangles[i].indexes[1]].y, xyzns[triangles[i].indexes[1]].z);
-		glVertex3i(xyzns[triangles[i].indexes[2]].x, xyzns[triangles[i].indexes[2]].y, xyzns[triangles[i].indexes[2]].z);
-	}
-	glEnd();
+	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count]);
+	glDrawElements(GL_TRIANGLES, 3*triangles.size(), GL_UNSIGNED_INT, &triangles[0]);
 }
