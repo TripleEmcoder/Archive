@@ -273,9 +273,9 @@ void bsp::draw_faces(const vector<face>& faces) const
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 
-	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-	for (int i = 0; i < faces.size(); i+=2)
-		draw_face(_faces[i]);
+	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	//for (int i = 0; i < faces.size(); i+=3)
+	//	draw_face(_faces[i]);
 
 	glPopAttrib();
 	glPopClientAttrib();

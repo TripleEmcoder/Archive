@@ -262,6 +262,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\md3.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\object.cpp"
 					>
 				</File>
@@ -309,6 +313,18 @@
 				</File>
 				<File
 					RelativePath=".\helpers\matrix.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_frame.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_shader.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_surface.cpp"
 					>
 				</File>
 				<File
@@ -514,6 +530,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\md3.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\object.hpp"
 					>
 				</File>
@@ -543,6 +563,22 @@
 				</File>
 				<File
 					RelativePath=".\helpers\matrix.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_common.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_frame.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_shader.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\md3_surface.hpp"
 					>
 				</File>
 				<File

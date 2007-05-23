@@ -9,6 +9,7 @@ using boost::lambda::_1;
 
 void body::compile()
 {
+
 	NewtonCollision* collision = NewtonCreateNull(root().newton());
 	
 	//_newton.reset(NewtonCreateBody(root().newton(), collision),

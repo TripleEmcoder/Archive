@@ -10,7 +10,18 @@ void box::compile(const object& parent)
 {
 	object::compile(parent);
 
-	/*
+	matrix offset;
+	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
+
+	NewtonCollision* collision = NewtonCreateBox(root().newton(),
+		size.x, size.y, size.z, offset.row_major_data());
+
+	NewtonBody *body = NewtonCreateBody(root().newton(), collision);
+	NewtonReleaseCollision(root().newton(), collision);
+	
+	NewtonBodySetMatrix(body, composition().row_major_data());
+
+/*
 	body::compile();
 
 	matrix offset;

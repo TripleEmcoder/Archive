@@ -44,6 +44,9 @@ void cleanup_fullscreen()
 
 void reshape_window(int width, int height)
 {
+	if (width == 0 || height == 0)
+		return;
+
 	glutWarpPointer(width/2, height/2);
 
 	glMatrixMode(GL_PROJECTION);

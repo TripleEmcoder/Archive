@@ -98,14 +98,14 @@
       <count>3</count>
       <item>
         <name>room</name>
-        <visible>0</visible>
+        <visible>1</visible>
         <transformations>
           <count>1</count>
           <item>
             <name>translation</name>
             <description>
               <x>-1</x>
-              <y>-1</y>
+              <y>-10</y>
               <z>1</z>
             </description>
           </item>
@@ -154,7 +154,7 @@
           </item>
         </builtins>
         <grounds>
-          <count>1</count>
+          <count>2</count>
           <item>
             <transformations>
               <count>0</count>
@@ -165,9 +165,6 @@
             <width>10</width>
             <depth>5</depth>
           </item>
-        </grounds>
-        <ceilings>
-          <count>1</count>
           <item>
             <transformations>
               <count>1</count>
@@ -186,6 +183,9 @@
             <width>10</width>
             <depth>5</depth>
           </item>
+        </grounds>
+        <ceilings>
+          <count>0</count>
         </ceilings>
         <walls>
           <count>3</count>
@@ -247,6 +247,9 @@
         <bsps>
           <count>0</count>
         </bsps>
+        <md3s>
+          <count>0</count>
+        </md3s>
         <groups>
           <count>0</count>
         </groups>
@@ -268,7 +271,7 @@
               <item>
                 <name>translation</name>
                 <description>
-                  <x>0</x>
+                  <x>3</x>
                   <y>1</y>
                   <z>0</z>
                 </description>
@@ -292,13 +295,41 @@
         <bsps>
           <count>0</count>
         </bsps>
+        <md3s>
+          <count>1</count>
+          <item>
+            <transformations>
+              <count>2</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>2</x>
+                  <y>-6</y>
+                  <z>0</z>
+                </description>
+              </item>
+              <item>
+                <name>scale</name>
+                <description>
+                  <x>0.001</x>
+                  <y>0.001</y>
+                  <z>0.001</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <name>models/powerups/health/large_cross.md3</name>
+          </item>
+        </md3s>
         <groups>
           <count>0</count>
         </groups>
       </item>
       <item>
         <name>bsp</name>
-        <visible>1</visible>
+        <visible>0</visible>
         <transformations>
           <count>0</count>
         </transformations>
@@ -337,6 +368,9 @@
             <name>maps/q3dm2.bsp</name>
           </item>
         </bsps>
+        <md3s>
+          <count>0</count>
+        </md3s>
         <groups>
           <count>0</count>
         </groups>
