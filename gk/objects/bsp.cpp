@@ -193,6 +193,11 @@ void bsp::compile(const object& parent)
 
 	create_collisions();
 
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+
 	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::compile_face, boost::ref(*this), _1));
 	
 	//_list.reset(new list_id());
@@ -210,11 +215,6 @@ void bsp::compile_face(face& face) const
 {
 	face.list.reset(new list_id());
 	list_scope ls(*face.list);
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	glEnableClientState(GL_NORMAL_ARRAY);
-	glEnableClientState(GL_COLOR_ARRAY);
 
 	glActiveTexture(GL_TEXTURE0);
 	_textures[face.texture_index].draw();
@@ -258,11 +258,6 @@ void bsp::draw_faces(const vector<face>& faces) const
 {
 	glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
-
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	glEnableClientState(GL_NORMAL_ARRAY);
-	glEnableClientState(GL_COLOR_ARRAY);
 
 	glEnable(GL_TEXTURE_2D);
 	glFrontFace(GL_CW);
