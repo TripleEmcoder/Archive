@@ -193,13 +193,8 @@ void bsp::compile(const object& parent)
 
 	create_collisions();
 
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-	glEnableClientState(GL_NORMAL_ARRAY);
-	glEnableClientState(GL_COLOR_ARRAY);
+	compile_faces();
 
-	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::compile_face, boost::ref(*this), _1));
-	
 	//_list.reset(new list_id());
 	//list_scope ls(*_list);
 	//state state;
@@ -211,7 +206,7 @@ void bsp::compile(const object& parent)
 	//}
 }
 
-void bsp::compile_face(face& face) const
+void bsp::compile_face(face& face)
 {
 	face.list.reset(new list_id());
 	list_scope ls(*face.list);
@@ -249,6 +244,20 @@ void bsp::compile_face(face& face) const
 	}
 }
 
+void bsp::compile_faces()
+{
+	glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
+	
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+	glEnableClientState(GL_COLOR_ARRAY);
+
+	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::compile_face, boost::ref(*this), _1));
+
+	glPopClientAttrib();
+}
+
 void bsp::draw_face(const face& face) const
 {
 	glCallList(*face.list);
@@ -264,7 +273,9 @@ void bsp::draw_faces(const vector<face>& faces) const
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 
-	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	for (int i = 0; i < faces.size(); i+=2)
+		draw_face(_faces[i]);
 
 	glPopAttrib();
 	glPopClientAttrib();

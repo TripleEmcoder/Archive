@@ -42,7 +42,8 @@ public:
 private:
 	void draw_faces(const std::vector<face>& faces) const;
 	void draw_face(const face& face) const;
-	void compile_face(face& face) const;
+	void compile_faces();
+	void compile_face(face& face);
 	void create_beziers(face& face);
 	void create_collisions() const;
 	void add_face(const face& face, const NewtonCollision* tree) const;
