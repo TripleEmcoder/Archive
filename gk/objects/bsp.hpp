@@ -17,10 +17,12 @@ struct face : public bsp_face
 {
 	int bezier_id;
 	int bezier_count;
+	boost::shared_ptr<list_id> list;
 	face() : bsp_face(), bezier_id(-1), bezier_count(0) { };
 	face(const bsp_face& f) : bsp_face(f), bezier_id(-1), bezier_count(0) { };
 };
 
+struct NewtonCollison;
 class bsp : public object
 {
 public:
@@ -38,6 +40,12 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
+	void draw_faces(const std::vector<face>& faces) const;
+	void draw_face(const face& face) const;
+	void compile_face(face& face) const;
+	void create_beziers(face& face);
+	void create_collisions() const;
+	void add_face(const face& face, const NewtonCollision* tree) const;
 	boost::shared_ptr<list_id> _list;
 
 	std::vector<material> _materials;

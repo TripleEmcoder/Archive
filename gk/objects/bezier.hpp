@@ -16,7 +16,7 @@ public:
     bsp_vertex controls[9];
     void tessellate(int level);
     void draw() const;
-	void add_faces(NewtonCollision* tree) const;
+	void add_faces(const NewtonCollision* tree) const;
 
 	bezier(const bsp_vertex* controls);
 };

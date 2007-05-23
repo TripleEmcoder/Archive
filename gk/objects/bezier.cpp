@@ -151,33 +151,17 @@ void bezier::draw() const
 		glDrawElements(GL_TRIANGLE_STRIP, trianglesPerRow[i], GL_UNSIGNED_INT, rowIndexes[i]);
 }
 
-//bsp_vector3f triangle[3];
-//for (int j = 0; j < 3; ++j)
-//{
-//	int vert_index = face.start_vertex_index + meshverts[face.start_mesh_vertex_index + i + j];
-//	const bsp_vertex& v = vertices[vert_index];
-//	triangle[2-j] = v.position;
-//}
-
-
-void bezier::add_faces(NewtonCollision* tree) const
+void bezier::add_faces(const NewtonCollision* tree) const
 {
 	for (int i = 0; i < level; ++i)
 		for (int j = 0; j < (int)trianglesPerRow[i]-2; ++j)
 		{
 			bsp_vector3f triangle[3];
-			if (j % 2 == 1)
-			{
-				triangle[0] = vertex[rowIndexes[i][j]].position;
-				triangle[1] = vertex[rowIndexes[i][j+1]].position;
-				triangle[2] = vertex[rowIndexes[i][j+2]].position;
-			}
-			else
-			{
-				triangle[0] = vertex[rowIndexes[i][j+1]].position;
-				triangle[1] = vertex[rowIndexes[i][j]].position;
-				triangle[2] = vertex[rowIndexes[i][j+2]].position;
-			}
+			triangle[0] = vertex[rowIndexes[i][j]].position;
+			triangle[1] = vertex[rowIndexes[i][j+1]].position;
+			triangle[2] = vertex[rowIndexes[i][j+2]].position;
+			if (j % 2 == 0)
+				std::swap(triangle[0], triangle[1]);
 			NewtonTreeCollisionAddFace(tree, 3, (float*)triangle, sizeof(bsp_vector3f), 1);
 		}
 }
