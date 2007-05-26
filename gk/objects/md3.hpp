@@ -9,6 +9,7 @@
 #include "object.hpp"
 
 class list_id;
+class texture;
 
 class md3 : public object
 {
@@ -28,6 +29,7 @@ public:
 
 private:
 	std::vector<boost::shared_ptr<list_id> > lists;
+	std::vector<boost::shared_ptr<texture> > textures;
 	mutable int index;
 	mutable int previous;
 };

@@ -1,4 +1,5 @@
 #include "md3_surface.hpp"
+#include "texture.hpp"
 #include "engine.hpp"
 
 #include <iostream>
@@ -49,7 +50,12 @@ void md3_surface::read(std::istream &input)
 }
 
 void md3_surface::draw(int frame) const
-{
-	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count]);
+{	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count]);
+	glTexCoordPointer(2, GL_FLOAT, sizeof(md3_st), &sts[0]);
 	glDrawElements(GL_TRIANGLES, 3*triangles.size(), GL_UNSIGNED_INT, &triangles[0]);
+}
+
+std::string md3_surface::shader() const
+{
+	return shaders[0].name();
 }

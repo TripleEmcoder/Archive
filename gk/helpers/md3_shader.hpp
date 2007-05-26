@@ -19,7 +19,9 @@ class md3_shader
 public:
 	void read(std::istream& input);
 
-private:
+	std::string name() const;
+
+public:
 	md3_shader_header header;
 };
 

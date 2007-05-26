@@ -10,3 +10,8 @@ void md3_shader::read(std::istream& input)
 	std::cerr << "Shader name: " << header.name << std::endl;
 #endif
 }
+
+std::string md3_shader::name() const
+{
+	return header.name;
+}

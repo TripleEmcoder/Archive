@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+#include <boost/assign.hpp>
+#include <boost/bind.hpp>
+#include <boost/filesystem/convenience.hpp>
+
 texture::texture()
 : name(""), width(0), height(0)
 {
@@ -11,15 +15,37 @@ texture::texture()
 texture::texture(std::string name, float width, float height)
 : name(name), width(width), height(height)
 {
+	compile();
+}
+
+void test_extension(boost::filesystem::path& previous, const std::string& extension)
+{
+	boost::filesystem::path current 
+		= boost::filesystem::change_extension(previous, extension);
+
+//#ifdef _DEBUG
+//	std::cerr << "Trying filename \"" << current.string() << "\"..." << std::endl;
+//#endif
+
+	if (boost::filesystem::exists(current))
+		previous = current;
 }
 
 void texture::compile()
 {
+	static std::vector<std::string> extensions
+		= boost::assign::list_of(".jpg")(".tga");
+
+	boost::filesystem::path path(name);
+
+	std::for_each(extensions.begin(), extensions.end(),
+		boost::bind(test_extension, boost::ref(path), _1));
+
 #ifdef _DEBUG
-	std::cerr << "Loading texture " << name << "..." << std::endl;
+	std::cerr << "Loading texture \"" << path.string() << "\"..." << std::endl;
 #endif
 
-	corona::Image* image = corona::OpenImage(name.c_str(), corona::PF_R8G8B8);
+	corona::Image* image = corona::OpenImage(path.string().c_str(), corona::PF_R8G8B8);
 
 	if (image == NULL)
 	{

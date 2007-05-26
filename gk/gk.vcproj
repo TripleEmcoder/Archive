@@ -680,6 +680,10 @@
 				RelativePath=".\resources\marble.jpg"
 				>
 			</File>
+			<File
+				RelativePath=".\resources\stone.jpg"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

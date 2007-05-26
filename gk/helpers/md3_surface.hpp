@@ -79,11 +79,15 @@ struct md3_triangle
 	int c;
 };
 
+class texture;
+
 class md3_surface
 {
 public:
 	void read(std::istream& input);
 	void draw(int frame) const;
+
+	std::string shader() const;
 
 private:
 	md3_surface_header header;

@@ -3,6 +3,7 @@
 #include "md3_frame.hpp"
 #include "md3_surface.hpp"
 #include "id.hpp"
+#include "texture.hpp"
 #include "scope.hpp"
 #include "engine.hpp"
 
@@ -54,17 +55,29 @@ void md3::compile(const object& parent)
 		boost::bind(&md3_surface::read, _1, boost::ref(input)));
 
 	lists.resize(header.frame_count);
+	textures.resize(header.surface_count);
 
-	for (int index=0; index<header.frame_count; index++)
+	for (int surface=0; surface<header.surface_count; surface++)
+		textures[surface].reset(new texture(surfaces[surface].shader()));
+
+	for (int frame=0; frame<header.frame_count; frame++)
 	{
-		lists[index].reset(new list_id());
-		list_scope scope(*lists[index]);
+		if (!lists[frame])
+			lists[frame].reset(new list_id());
+
+		list_scope scope(*lists[frame]);
 
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glEnableClientState(GL_VERTEX_ARRAY);
 
-		std::for_each(surfaces.begin(), surfaces.end(),
-			boost::bind(&md3_surface::draw, _1, index));
+		//std::for_each(surfaces.begin(), surfaces.end(),
+		//	boost::bind(&md3_surface::draw, _1, index));
+
+		for (int surface=0; surface<header.surface_count; surface++)
+		{
+			textures[surface]->draw();
+			surfaces[surface].draw(frame);
+		}
 
 		glPopClientAttrib();
 	}
