@@ -1,7 +1,10 @@
 #ifndef HELPERS_MATRIX_HPP
 #define HELPERS_MATRIX_HPP
 
+#pragma warning(push)
+#pragma warning(disable : 4267; disable : 4244)
 #include <boost/numeric/ublas/matrix.hpp>
+#pragma warning(pop)
 
 class vertex;
 

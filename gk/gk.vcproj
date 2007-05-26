@@ -204,10 +204,6 @@
 				RelativePath=".\movement.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\set_vector.cpp"
-				>
-			</File>
 			<Filter
 				Name="objects"
 				>
@@ -686,10 +682,6 @@
 			</File>
 			<File
 				RelativePath=".\resources\marble.jpg"
-				>
-			</File>
-			<File
-				RelativePath=".\resources\stone.jpg"
 				>
 			</File>
 		</Filter>

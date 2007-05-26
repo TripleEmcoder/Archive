@@ -104,7 +104,7 @@ template <typename T> void convert_mins_maxs(T& t)
 
 texture convert_texture(const bsp_texture& t)
 {
-	ifstream file;
+	/*ifstream file;
 	string name = string(t.name) + ".jpg";
 	file.open(name.c_str());
 	if (!file.is_open())
@@ -123,13 +123,20 @@ texture convert_texture(const bsp_texture& t)
 	{
 		cerr << "Texture not found: " << t.name << endl;
 		return texture();
-	}
+	}*/
+	return texture(t.name);
 }
 
 boost::shared_ptr<texture_id> convert_lightmap(const bsp_lightmap& l)
 {
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
+	//glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	//glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
 	return id;
 }
@@ -242,7 +249,7 @@ void bsp::compile(const object& parent)
 
 	compile_faces();
 
-	_visible_faces.reset(_faces);
+	_visible_faces.reset(&_faces);
 
 	//_list.reset(new list_id());
 	//list_scope ls(*_list);
@@ -312,41 +319,6 @@ void bsp::draw_face(const face* face) const
 	glCallList(*face->list);
 }
 
-//void bsp::draw_faces(const std::vector<face>& faces) const
-//{
-//	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
-//
-//	glEnable(GL_TEXTURE_2D);
-//	glFrontFace(GL_CW);
-//	glCullFace(GL_BACK);
-//	glEnable(GL_CULL_FACE);
-//
-//	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-//	//for (int i = 0; i < (int)faces.size(); i+=1)
-//	//	draw_face(faces[i]);
-//
-//	glPopAttrib();
-//	assert(glGetError() == GL_NO_ERROR);
-//}
-//
-//void bsp::draw_faces(const std::vector<const face*>& faces) const
-//{
-//	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
-//
-//	glEnable(GL_TEXTURE_2D);
-//	glFrontFace(GL_CW);
-//	glCullFace(GL_BACK);
-//	glEnable(GL_CULL_FACE);
-//
-//	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-//	for (int i = 0; i < (int)faces.size(); i+=1)
-//		draw_face(*(faces[i]));
-//
-//	glPopAttrib();
-//	assert(glGetError() == GL_NO_ERROR);
-//}
-
-
 template <typename T> void bsp::draw_faces(const T& faces) const
 {
 	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
@@ -356,11 +328,7 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
 
-	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-	//for (int i = 0; i < (int)faces.size(); i+=1)
-	//	draw_face(*(faces[i]));
-	for (T::const_iterator i = faces.begin(); i != faces.end(); ++i)
-		draw_face(*i);
+	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
 
 	glPopAttrib();
 	assert(glGetError() == GL_NO_ERROR);
@@ -383,7 +351,6 @@ void bsp::draw(const state& state) const
 
 void bsp::find_visible_faces(const state& state) const
 {
-	//_visible.assign(_faces.size(), false);
 	_visible_faces.clear();
 
 	int camera_cluster = _leafs[find_leaf(state.camera->getPosition())].cluster;
@@ -399,12 +366,6 @@ void bsp::find_visible_faces(const state& state) const
 			{
 				const int f = _leaffaces[leaf.start_leafface_index + j];
 				_visible_faces.push_back(f);
-				//if (!_visible[f])
-				//{
-				//	_visible[f] = true;
-				//	_visible_faces.push_back(&(_faces[f]));
-				//}
-
 			}
 		}
 	}
@@ -423,14 +384,7 @@ int bsp::find_leaf(const Vector& camera_position) const
 		// Distance from point to a plane
 		const float distance = inner_prod(normal, camera_position) - plane.distance;
 
-		if (distance >= 0) 
-		{
-			index = node.front;
-		} 
-		else 
-		{
-			index = node.back;
-		}
+		index = (distance >= 0) ? node.front : node.back;
 	}
 
 	return -index - 1;

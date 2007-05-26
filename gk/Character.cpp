@@ -16,23 +16,13 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 	size[2] = sizeZ;
 
 	location = identity_matrix<float>(4);
+	location(3,0) = locationX;
+	location(3,1) = locationY;
+	location(3,2) = locationZ;
 
-	matrix_row<Matrix4x4> row(location, 3);
-	row[0] = locationX;
-	row[1] = locationY;
-	row[2] = locationZ;
-
-	NewtonCollision* collisionParts[2];
-
-	collisionParts[0] = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
-	collisionParts[1] = NewtonCreateBox(nWorld, 0.05f, 0.05f, 0.05f, translationMatrix(0, -size[1]-1.0f, 0).data());
-	NewtonConvexCollisionSetUserID(collisionParts[0], BODY_COLLISION);
-	//NewtonConvexCollisionSetUserID(collisionParts[1], FEET_COLLISION);
-	NewtonCollision* collision = NewtonCreateCompoundCollision(nWorld, 1, collisionParts);
-	
+	NewtonCollision* collision = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
 	body = NewtonCreateBody(nWorld, collision);
-	NewtonReleaseCollision(nWorld, collisionParts[0]);
-	NewtonReleaseCollision(nWorld, collisionParts[1]);		
+	NewtonReleaseCollision(nWorld, collision);
 	
 	NewtonBodySetUserData(body, this);
 
@@ -116,30 +106,6 @@ Vector Character::getDirection()
 
 void Character::processCollision(const NewtonMaterial* material)
 {
-	Vector position;
-	NewtonMaterialGetContactPositionAndNormal(material, position.data(), normal.data());
-
-	//int collisionID = NewtonMaterialGetBodyCollisionID(material, body);
-	//if (collisionID == FEET_COLLISION)
-	//{
-	//	//NewtonMaterialSetContactElasticity(material, 0.2f);
-	//	NewtonMaterialSetContactFrictionState(material, 1, 0);
-	//	NewtonMaterialSetContactFrictionState(material, 1, 1);
-	//	if (count)
-	//	{
-	//		count--;
-	//		normal[0] = normal[2] = 0.0f;
-	//		normal[1] = 1.0f;
-	//	}
-	//	else
-	//		jumping = false;
-	//}
-	//else if (collisionID == BODY_COLLISION)
-	//{
-	//	NewtonMaterialSetContactFrictionState(material, 0, 0);
-	//	NewtonMaterialSetContactFrictionState(material, 0, 1);
-	//}
-
 	NewtonMaterialSetContactFrictionState(material, 0, 0);
 	NewtonMaterialSetContactFrictionState(material, 0, 1);
 
@@ -185,7 +151,7 @@ void Character::applyForceAndTorque()
 	if (velocity[1] < 0 || jumping)
 		velocity[1] = 0;
 
-	float k = (!jumping) ? 0.25f : 0.1f;
+	float k = (!jumping) ? 0.2f : 0.05f;
 
 	Vector force = k * mass * (desiredVel - velocity) / timestep;
 	force += createVector(0, -mass * 9.8f, 0);
@@ -208,6 +174,5 @@ void Character::draw(const state& state) const
 	write(350, 35, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
 	if (jumping)
 		write(350, 55, "JUMPING");
-	write(350, 75, "NORMAL (%3.1f, %3.1f, %3.1f)", normal[0], normal[1], normal[2]);
-	write(350, 95, "SPEED (%3.1f)", norm_2(velocity));
+	write(350, 75, "SPEED (%3.1f)", norm_2(velocity));
 }
