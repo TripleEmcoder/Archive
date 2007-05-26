@@ -6,9 +6,10 @@
 #include <boost/numeric/ublas/matrix_proxy.hpp>
 #pragma warning(pop)
 
-using namespace boost::numeric::ublas;
-typedef c_matrix<float, 4, 4> Matrix4x4;
-typedef c_vector<float, 4> Vector;
+typedef boost::numeric::ublas::c_matrix<float, 4, 4> Matrix4x4;
+typedef boost::numeric::ublas::c_vector<float, 4> Vector;
+using boost::numeric::ublas::identity_matrix;
+using boost::numeric::ublas::matrix_row;
 
 inline Matrix4x4 pitchMatrix(float angle) // X-Axis
 {

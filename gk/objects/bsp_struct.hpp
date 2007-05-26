@@ -98,5 +98,5 @@ struct bsp_visdata
 {
 	int vecs_count;
 	int vecs_size;
-	char* vecs;
+	unsigned char* vecs;
 };

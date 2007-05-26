@@ -98,7 +98,7 @@
       <count>3</count>
       <item>
         <name>room</name>
-        <visible>1</visible>
+        <visible>0</visible>
         <transformations>
           <count>1</count>
           <item>
@@ -256,7 +256,7 @@
       </item>
       <item>
         <name>thing</name>
-        <visible>1</visible>
+        <visible>0</visible>
         <transformations>
           <count>0</count>
         </transformations>
@@ -329,7 +329,7 @@
       </item>
       <item>
         <name>bsp</name>
-        <visible>0</visible>
+        <visible>1</visible>
         <transformations>
           <count>0</count>
         </transformations>
@@ -356,9 +356,9 @@
               <item>
                 <name>translation</name>
                 <description>
-                  <x>40</x>
+                  <x>0</x>
                   <y>0</y>
-                  <z>-20</z>
+                  <z>0</z>
                 </description>
               </item>
             </transformations>

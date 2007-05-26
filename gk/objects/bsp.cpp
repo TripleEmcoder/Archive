@@ -54,7 +54,7 @@ void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 	is.seekg(lump.offset);
 	is.read((char*) &visdata.vecs_count, sizeof(visdata.vecs_count));
 	is.read((char*) &visdata.vecs_size, sizeof(visdata.vecs_size));
-	visdata.vecs = new char[visdata.vecs_count * visdata.vecs_size];
+	visdata.vecs = new unsigned char[visdata.vecs_count * visdata.vecs_size];
 	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
 }
 
@@ -69,6 +69,13 @@ template <typename T> void scale(T& vertex, float scale)
 	vertex.x *= scale;
 	vertex.y *= scale;
 	vertex.z *= scale;
+}
+
+template <typename T> void add(T& vertex, float x)
+{
+	vertex.x += x;
+	vertex.y += x;
+	vertex.z += x;
 }
 
 void convert_vertex(bsp_vertex& vertex)
@@ -88,8 +95,11 @@ template <typename T> void convert_mins_maxs(T& t)
 {
 	swizzle(t.mins);
 	swizzle(t.maxs);
+	swap(t.mins.z, t.maxs.z);
 	scale(t.mins, bsp_scale);
 	scale(t.maxs, bsp_scale);
+	add(t.mins, -1);
+	add(t.maxs, +1);
 }
 
 texture convert_texture(const bsp_texture& t)
@@ -302,7 +312,23 @@ void bsp::draw_face(const face& face) const
 
 void bsp::draw_faces(const std::vector<face>& faces) const
 {
-	//glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
+	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
+
+	glEnable(GL_TEXTURE_2D);
+	glFrontFace(GL_CW);
+	glCullFace(GL_BACK);
+	glEnable(GL_CULL_FACE);
+
+	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	//for (int i = 0; i < (int)faces.size(); i+=1)
+	//	draw_face(faces[i]);
+
+	glPopAttrib();
+	assert(glGetError() == GL_NO_ERROR);
+}
+
+void bsp::draw_faces(const std::vector<const face*>& faces) const
+{
 	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
 
 	glEnable(GL_TEXTURE_2D);
@@ -312,25 +338,30 @@ void bsp::draw_faces(const std::vector<face>& faces) const
 
 	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
 	for (int i = 0; i < (int)faces.size(); i+=1)
-		draw_face(_faces[i]);
+		draw_face(*(faces[i]));
 
 	glPopAttrib();
-	//glPopClientAttrib();
 	assert(glGetError() == GL_NO_ERROR);
 }
 
 void bsp::draw(const state& state) const
 {
-	//find_visible_faces(state);
+	static size_t old;
+	find_visible_faces(state);
 	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
-	draw_faces(_faces);
+	draw_faces(_visible_faces);
+	if (_visible_faces.size() != old)
+	{
+		std::cerr << _visible_faces.size() << "/" << _faces.size() << endl;
+		old = _visible_faces.size();
+	}
 }
 
 void bsp::find_visible_faces(const state& state) const
 {
-	_visible.clear();
+	_visible.assign(_faces.size(), false);
 	_visible_faces.clear();
 
 	int camera_cluster = _leafs[find_leaf(state.camera->getPosition())].cluster;
@@ -338,16 +369,17 @@ void bsp::find_visible_faces(const state& state) const
 	for (int i = 0; i < (int)_leafs.size(); ++i)
 	{
 		const bsp_leaf& leaf = _leafs[i];
-		//if (is_cluster_visible(camera_cluster, leaf.cluster) && state.camera->isVisible(leaf.mins,leaf.maxs))
-		if (is_cluster_visible(camera_cluster, leaf.cluster))
+		const int mins[] = {leaf.mins.x, leaf.mins.y, leaf.mins.z};
+		const int maxs[] = {leaf.maxs.x, leaf.maxs.y, leaf.maxs.z};
+		if (is_cluster_visible(camera_cluster, leaf.cluster) && state.camera->isVisible(mins, maxs))
 		{
 			for (int j = 0; j < leaf.leaffaces_count; ++j) 
 			{
 				const int f = _leaffaces[leaf.start_leafface_index + j];
-				if (_visible.count(f)) 
+				if (!_visible[f]) 
 				{
-					_visible.insert(f);
-					_visible_faces.push_back(_faces[f]);
+					_visible[f] = true;
+					_visible_faces.push_back(&_faces[f]);
 				}
 			}
 		}
@@ -362,10 +394,10 @@ int bsp::find_leaf(const Vector& camera_position) const
 	{
 		const bsp_node& node = _nodes[index];
 		const bsp_plane& plane = _planes[node.plane];
-		Vector normal = createVector(plane.normal.x, plane.normal.y, plane.normal.z);
+		Vector normal = createVector(plane.normal.x, plane.normal.y, plane.normal.z, 0);
 
 		// Distance from point to a plane
-		const double distance =	inner_prod(normal, camera_position) - plane.distance;
+		const float distance = inner_prod(normal, camera_position) - plane.distance;
 
 		if (distance >= 0) 
 		{

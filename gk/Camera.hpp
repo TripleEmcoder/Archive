@@ -3,22 +3,33 @@
 #include "widget.hpp"
 #include "math.hpp"
 
+struct plane
+{
+	Vector normal;
+	float distance;
+};
+
 class Camera : public widget
 {
 private:
-	mutable Vector eye, direction;
-	mutable Matrix4x4 rotation;
+	enum {TOP_PLANE = 0, BOTTOM_PLANE, LEFT_PLANE, RIGHT_PLANE, NEAR_PLANE, FAR_PLANE};
+	mutable Matrix4x4 matrix;
 	float angleX, angleY;
+	float nearDistance, farDistance, ratio, angle;
+	mutable float nearWidth, nearHeigth, farWidth, farHeigth;
+	mutable plane planes[6];
+	void calculatePlanes() const;
 public:
 	Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY);
 	~Camera(void);
 	//void draw();
 	virtual void draw(const state& state) const;
 	virtual void set(const state& state) const;
-	void setEye(const Vector& eye);
 	void rotate(float x, float y);
 	float getAngleX() const;
 	float getAngleY() const;
-	Matrix4x4 getRotationMatrix() const;
+	void setPosition(const Vector& position);
 	Vector getPosition() const;
+	void setCameraInternals(float angle, float ratio, float nearD, float farD);
+	bool isVisible(const int mins[3], const int maxs[3]) const;
 };

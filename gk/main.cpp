@@ -25,12 +25,13 @@ void load_map(std::string name)
 
 void setup_widgets()
 {
-	character = new Character(w.newton(), 0.4, 0.9, 0.4, 0, 1.5, 0);
+	character = new Character(w.newton(), 0.4, 0.9, 0.4, -40, 1.5, 20);
 	//character = new Character(w.newton(), 0.4, 0.9, 0.4, 80, 288, 16);
 	//character = new Character(w.newton(), 40, 90, 40, 80, 500, 16);
 	//character = new Character(w.newton(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
 	Vector location = character->getLocation();
 	camera = new Camera(location[0], location[1], location[2], -180.0 * 3.1416 / 180.0, 0);
+	camera->setCameraInternals(50, 1024.0/768.0, 0.1, 50);
 	p.add(&f);
 	p.add(&c);
 	p.add(&s);
@@ -76,12 +77,12 @@ void draw()
 	int time = glutGet(GLUT_ELAPSED_TIME) - timebase;
 	timebase += time;
 
-	NewtonUpdate(w.newton(), time / 1000.0f);
-	//NewtonUpdate(w.newton(), 1.0f);
+	//NewtonUpdate(w.newton(), time / 1000.0f);
+	NewtonUpdate(w.newton(), 1.0f/60.0f);
 	
-	Vector eye = character->getLocation();
-	eye[1] += 0.8f;
-	camera->setEye(eye);
+	Vector position = character->getLocation();
+	position[1] += 0.8f;
+	camera->setPosition(position);
 	camera->set(state);
 
 	w.draw(state);

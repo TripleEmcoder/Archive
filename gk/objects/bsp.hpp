@@ -16,6 +16,7 @@
 #include "matrix.hpp"
 #include "scope.hpp"
 #include "../math.hpp"
+#include "../widgets/widget.hpp"
 
 struct face : public bsp_face
 {
@@ -45,6 +46,7 @@ public:
 
 private:
 	void draw_faces(const std::vector<face>& faces) const;
+	void draw_faces(const std::vector<const face*>& faces) const;
 	void draw_face(const face& face) const;
 	void compile_faces();
 	void compile_face(face& face);
@@ -72,8 +74,8 @@ private:
 	std::vector<int> _leaffaces;
 	bsp_visdata _visdata;
 
-	mutable std::set<int> _visible;
-	mutable std::vector<face> _visible_faces;
+	mutable std::vector<bool> _visible;
+	mutable std::vector<const face*> _visible_faces;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);
