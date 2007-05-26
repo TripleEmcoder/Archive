@@ -1,6 +1,7 @@
 #ifndef MD3_COMMON_HPP
 #define MD3_COMMON_HPP
 
+const float MD3_SCALE = 1.0f / 1000.0f;
 const int MD3_MAGIC = 860898377;
 const int MD3_VERSION = 15;
 const int MD3_MAX_NAME = 64;

@@ -7,6 +7,10 @@
 
 #include <boost/bind.hpp>
 
+void convert_normal(md3_xyzn& xyzn)
+{
+}
+
 void md3_surface::read(std::istream &input)
 {
 	int start = input.tellg();
@@ -34,6 +38,8 @@ void md3_surface::read(std::istream &input)
 	std::for_each(xyzns.begin(), xyzns.end(),
 		boost::bind(binary_read<md3_xyzn>, boost::ref(input), _1));
 
+	std::for_each(xyzns.begin(), xyzns.end(), convert_normal);
+
 	sts.resize(header.vertex_count);
 	input.seekg(start + header.st_offset);
 
@@ -50,7 +56,9 @@ void md3_surface::read(std::istream &input)
 }
 
 void md3_surface::draw(int frame) const
-{	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count]);
+{
+	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count].x);
+	glNormalPointer(GL_FLOAT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count].n);
 	glTexCoordPointer(2, GL_FLOAT, sizeof(md3_st), &sts[0]);
 	glDrawElements(GL_TRIANGLES, 3*triangles.size(), GL_UNSIGNED_INT, &triangles[0]);
 }

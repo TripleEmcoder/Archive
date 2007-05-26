@@ -58,7 +58,13 @@ void md3::compile(const object& parent)
 	textures.resize(header.surface_count);
 
 	for (int surface=0; surface<header.surface_count; surface++)
-		textures[surface].reset(new texture(surfaces[surface].shader()));
+	{
+		if (!textures[surface])
+			textures[surface].reset(new texture());
+
+		textures[surface]->name = surfaces[surface].shader();
+		textures[surface]->compile();
+	}			
 
 	for (int frame=0; frame<header.frame_count; frame++)
 	{
@@ -67,11 +73,13 @@ void md3::compile(const object& parent)
 
 		list_scope scope(*lists[frame]);
 
+		glPushMatrix();
+		glScalef(MD3_SCALE, MD3_SCALE, MD3_SCALE);
+
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glEnableClientState(GL_VERTEX_ARRAY);
-
-		//std::for_each(surfaces.begin(), surfaces.end(),
-		//	boost::bind(&md3_surface::draw, _1, index));
+		//glEnableClientState(GL_NORMAL_ARRAY);
+		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
 		for (int surface=0; surface<header.surface_count; surface++)
 		{
@@ -80,6 +88,7 @@ void md3::compile(const object& parent)
 		}
 
 		glPopClientAttrib();
+		glPopMatrix();
 	}
 	previous = glutGet(GLUT_ELAPSED_TIME);
 }

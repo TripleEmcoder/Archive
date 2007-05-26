@@ -95,236 +95,275 @@
       </size>
     </player>
     <groups>
-      <count>3</count>
+      <count>2</count>
       <item>
-        <name>room</name>
+        <name>xml</name>
         <visible>0</visible>
         <transformations>
           <count>1</count>
           <item>
             <name>translation</name>
             <description>
-              <x>-1</x>
-              <y>-10</y>
-              <z>1</z>
+              <x>-40</x>
+              <y>0</y>
+              <z>20</z>
             </description>
           </item>
         </transformations>
         <bindings>
-          <count>5</count>
-          <item>
-            <first>debug</first>
-            <second>marble</second>
-          </item>
-          <item>
-            <first>teapot</first>
-            <second>brick</second>
-          </item>
-          <item>
-            <first>ground</first>
-            <second>marble</second>
-          </item>
-          <item>
-            <first>ceiling</first>
-            <second>marble</second>
-          </item>
-          <item>
-            <first>wall</first>
-            <second>brick</second>
-          </item>
+          <count>0</count>
         </bindings>
         <builtins>
-          <count>1</count>
-          <item>
-            <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>5</x>
-                  <y>1</y>
-                  <z>-2.5</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <name>teapot</name>
-          </item>
+          <count>0</count>
         </builtins>
         <grounds>
+          <count>0</count>
+        </grounds>
+        <ceilings>
+          <count>0</count>
+        </ceilings>
+        <walls>
+          <count>0</count>
+        </walls>
+        <bsps>
+          <count>0</count>
+        </bsps>
+        <md3s>
+          <count>0</count>
+        </md3s>
+        <groups>
           <count>2</count>
           <item>
-            <transformations>
-              <count>0</count>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <width>10</width>
-            <depth>5</depth>
-          </item>
-          <item>
+            <name>room</name>
+            <visible>1</visible>
             <transformations>
               <count>1</count>
               <item>
                 <name>translation</name>
                 <description>
-                  <x>0</x>
-                  <y>2.5</y>
-                  <z>0</z>
+                  <x>-1</x>
+                  <y>-10</y>
+                  <z>1</z>
                 </description>
               </item>
             </transformations>
             <bindings>
-              <count>0</count>
+              <count>5</count>
+              <item>
+                <first>debug</first>
+                <second>marble</second>
+              </item>
+              <item>
+                <first>teapot</first>
+                <second>brick</second>
+              </item>
+              <item>
+                <first>ground</first>
+                <second>marble</second>
+              </item>
+              <item>
+                <first>ceiling</first>
+                <second>marble</second>
+              </item>
+              <item>
+                <first>wall</first>
+                <second>brick</second>
+              </item>
             </bindings>
-            <width>10</width>
-            <depth>5</depth>
-          </item>
-        </grounds>
-        <ceilings>
-          <count>0</count>
-        </ceilings>
-        <walls>
-          <count>3</count>
-          <item>
-            <transformations>
-              <count>0</count>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <length>10</length>
-            <height>2.5</height>
-          </item>
-          <item>
-            <transformations>
+            <builtins>
               <count>1</count>
               <item>
-                <name>translation</name>
-                <description>
-                  <x>0</x>
-                  <y>0</y>
-                  <z>-5</z>
-                </description>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>5</x>
+                      <y>1</y>
+                      <z>-2.5</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>teapot</name>
               </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <length>10</length>
-            <height>2.5</height>
-          </item>
-          <item>
-            <transformations>
+            </builtins>
+            <grounds>
               <count>2</count>
               <item>
-                <name>rotation</name>
-                <description>
-                  <x>0</x>
-                  <y>90</y>
-                  <z>0</z>
-                </description>
+                <transformations>
+                  <count>0</count>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <width>10</width>
+                <depth>5</depth>
               </item>
               <item>
-                <name>translation</name>
-                <description>
-                  <x>0</x>
-                  <y>0</y>
-                  <z>10</z>
-                </description>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>0</x>
+                      <y>2.5</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <width>10</width>
+                <depth>5</depth>
               </item>
+            </grounds>
+            <ceilings>
+              <count>0</count>
+            </ceilings>
+            <walls>
+              <count>3</count>
+              <item>
+                <transformations>
+                  <count>0</count>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <length>10</length>
+                <height>2.5</height>
+              </item>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>0</x>
+                      <y>0</y>
+                      <z>-5</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <length>10</length>
+                <height>2.5</height>
+              </item>
+              <item>
+                <transformations>
+                  <count>2</count>
+                  <item>
+                    <name>rotation</name>
+                    <description>
+                      <x>0</x>
+                      <y>90</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>0</x>
+                      <y>0</y>
+                      <z>10</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <length>5</length>
+                <height>2.5</height>
+              </item>
+            </walls>
+            <bsps>
+              <count>0</count>
+            </bsps>
+            <md3s>
+              <count>0</count>
+            </md3s>
+            <groups>
+              <count>0</count>
+            </groups>
+          </item>
+          <item>
+            <name>thing</name>
+            <visible>1</visible>
+            <transformations>
+              <count>0</count>
             </transformations>
             <bindings>
               <count>0</count>
             </bindings>
-            <length>5</length>
-            <height>2.5</height>
-          </item>
-        </walls>
-        <bsps>
-          <count>0</count>
-        </bsps>
-        <md3s>
-          <count>0</count>
-        </md3s>
-        <groups>
-          <count>0</count>
-        </groups>
-      </item>
-      <item>
-        <name>thing</name>
-        <visible>0</visible>
-        <transformations>
-          <count>0</count>
-        </transformations>
-        <bindings>
-          <count>0</count>
-        </bindings>
-        <builtins>
-          <count>1</count>
-          <item>
-            <transformations>
+            <builtins>
               <count>1</count>
               <item>
-                <name>translation</name>
-                <description>
-                  <x>3</x>
-                  <y>1</y>
-                  <z>0</z>
-                </description>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>3</x>
+                      <y>1</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>teapot</name>
               </item>
-            </transformations>
-            <bindings>
+            </builtins>
+            <grounds>
               <count>0</count>
-            </bindings>
-            <name>teapot</name>
-          </item>
-        </builtins>
-        <grounds>
-          <count>0</count>
-        </grounds>
-        <ceilings>
-          <count>0</count>
-        </ceilings>
-        <walls>
-          <count>0</count>
-        </walls>
-        <bsps>
-          <count>0</count>
-        </bsps>
-        <md3s>
-          <count>1</count>
-          <item>
-            <transformations>
-              <count>2</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>2</x>
-                  <y>-6</y>
-                  <z>0</z>
-                </description>
-              </item>
-              <item>
-                <name>scale</name>
-                <description>
-                  <x>0.001</x>
-                  <y>0.001</y>
-                  <z>0.001</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
+            </grounds>
+            <ceilings>
               <count>0</count>
-            </bindings>
-            <name>models/powerups/health/large_cross.md3</name>
+            </ceilings>
+            <walls>
+              <count>0</count>
+            </walls>
+            <bsps>
+              <count>0</count>
+            </bsps>
+            <md3s>
+              <count>1</count>
+              <item>
+                <transformations>
+                  <count>2</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>2</x>
+                      <y>-6</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                  <item>
+                    <name>rotation</name>
+                    <description>
+                      <x>90</x>
+                      <y>0</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>models/weapons2/shotgun/shotgun.md3</name>
+              </item>
+            </md3s>
+            <groups>
+              <count>0</count>
+            </groups>
           </item>
-        </md3s>
-        <groups>
-          <count>0</count>
         </groups>
       </item>
       <item>
@@ -369,7 +408,32 @@
           </item>
         </bsps>
         <md3s>
-          <count>0</count>
+          <count>1</count>
+          <item>
+            <transformations>
+              <count>2</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>-38</x>
+                  <y>1</y>
+                  <z>20</z>
+                </description>
+              </item>
+              <item>
+                <name>rotation</name>
+                <description>
+                  <x>90</x>
+                  <y>0</y>
+                  <z>0</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <name>models/weapons2/shotgun/shotgun.md3</name>
+          </item>
         </md3s>
         <groups>
           <count>0</count>
