@@ -17,6 +17,7 @@
 #include "scope.hpp"
 #include "../math.hpp"
 #include "../widgets/widget.hpp"
+#include "../set_vector.hpp"
 
 struct face : public bsp_face
 {
@@ -45,9 +46,10 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	void draw_faces(const std::vector<face>& faces) const;
-	void draw_faces(const std::vector<const face*>& faces) const;
-	void draw_face(const face& face) const;
+	//void draw_faces(const std::vector<face>& faces) const;
+	//void draw_faces(const std::vector<const face*>& faces) const;
+	template <typename T> void draw_faces(const T& faces) const;
+	void draw_face(const face* face) const;
 	void compile_faces();
 	void compile_face(face& face);
 	void create_beziers(face& face);
@@ -74,8 +76,9 @@ private:
 	std::vector<int> _leaffaces;
 	bsp_visdata _visdata;
 
-	mutable std::vector<bool> _visible;
-	mutable std::vector<const face*> _visible_faces;
+	//mutable std::vector<bool> _visible;
+	//mutable std::vector<const face*> _visible_faces;
+	mutable set_vector<face> _visible_faces;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

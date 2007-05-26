@@ -242,6 +242,8 @@ void bsp::compile(const object& parent)
 
 	compile_faces();
 
+	_visible_faces.reset(_faces);
+
 	//_list.reset(new list_id());
 	//list_scope ls(*_list);
 	//state state;
@@ -305,29 +307,47 @@ void bsp::compile_faces()
 	glPopClientAttrib();
 }
 
-void bsp::draw_face(const face& face) const
+void bsp::draw_face(const face* face) const
 {
-	glCallList(*face.list);
+	glCallList(*face->list);
 }
 
-void bsp::draw_faces(const std::vector<face>& faces) const
-{
-	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
+//void bsp::draw_faces(const std::vector<face>& faces) const
+//{
+//	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
+//
+//	glEnable(GL_TEXTURE_2D);
+//	glFrontFace(GL_CW);
+//	glCullFace(GL_BACK);
+//	glEnable(GL_CULL_FACE);
+//
+//	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+//	//for (int i = 0; i < (int)faces.size(); i+=1)
+//	//	draw_face(faces[i]);
+//
+//	glPopAttrib();
+//	assert(glGetError() == GL_NO_ERROR);
+//}
+//
+//void bsp::draw_faces(const std::vector<const face*>& faces) const
+//{
+//	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
+//
+//	glEnable(GL_TEXTURE_2D);
+//	glFrontFace(GL_CW);
+//	glCullFace(GL_BACK);
+//	glEnable(GL_CULL_FACE);
+//
+//	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+//	for (int i = 0; i < (int)faces.size(); i+=1)
+//		draw_face(*(faces[i]));
+//
+//	glPopAttrib();
+//	assert(glGetError() == GL_NO_ERROR);
+//}
 
-	glEnable(GL_TEXTURE_2D);
-	glFrontFace(GL_CW);
-	glCullFace(GL_BACK);
-	glEnable(GL_CULL_FACE);
 
-	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-	//for (int i = 0; i < (int)faces.size(); i+=1)
-	//	draw_face(faces[i]);
-
-	glPopAttrib();
-	assert(glGetError() == GL_NO_ERROR);
-}
-
-void bsp::draw_faces(const std::vector<const face*>& faces) const
+template <typename T> void bsp::draw_faces(const T& faces) const
 {
 	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
 
@@ -337,8 +357,10 @@ void bsp::draw_faces(const std::vector<const face*>& faces) const
 	glEnable(GL_CULL_FACE);
 
 	//for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
-	for (int i = 0; i < (int)faces.size(); i+=1)
-		draw_face(*(faces[i]));
+	//for (int i = 0; i < (int)faces.size(); i+=1)
+	//	draw_face(*(faces[i]));
+	for (T::const_iterator i = faces.begin(); i != faces.end(); ++i)
+		draw_face(*i);
 
 	glPopAttrib();
 	assert(glGetError() == GL_NO_ERROR);
@@ -361,7 +383,7 @@ void bsp::draw(const state& state) const
 
 void bsp::find_visible_faces(const state& state) const
 {
-	_visible.assign(_faces.size(), false);
+	//_visible.assign(_faces.size(), false);
 	_visible_faces.clear();
 
 	int camera_cluster = _leafs[find_leaf(state.camera->getPosition())].cluster;
@@ -376,11 +398,13 @@ void bsp::find_visible_faces(const state& state) const
 			for (int j = 0; j < leaf.leaffaces_count; ++j) 
 			{
 				const int f = _leaffaces[leaf.start_leafface_index + j];
-				if (!_visible[f]) 
-				{
-					_visible[f] = true;
-					_visible_faces.push_back(&_faces[f]);
-				}
+				_visible_faces.push_back(f);
+				//if (!_visible[f])
+				//{
+				//	_visible[f] = true;
+				//	_visible_faces.push_back(&(_faces[f]));
+				//}
+
 			}
 		}
 	}

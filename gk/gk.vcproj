@@ -204,6 +204,10 @@
 				RelativePath=".\movement.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\set_vector.cpp"
+				>
+			</File>
 			<Filter
 				Name="objects"
 				>
@@ -484,6 +488,10 @@
 			</File>
 			<File
 				RelativePath=".\movement.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\set_vector.hpp"
 				>
 			</File>
 			<Filter
