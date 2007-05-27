@@ -1,5 +1,6 @@
 #include "bsp.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
+#include "newton.hpp"
 #include "world.hpp"
 #include "state.hpp"
 #include "../Camera.hpp"
@@ -264,7 +265,7 @@ void bsp::compile(const object& parent)
 
 void bsp::compile_face(face& face)
 {
-	face.list.reset(new list_id());
+	face.list.reset(new list_wrapper());
 	list_scope ls(*face.list);
 
 	glActiveTexture(GL_TEXTURE0);
@@ -316,7 +317,7 @@ void bsp::compile_faces()
 
 void bsp::draw_face(const face* face) const
 {
-	glCallList(*face->list);
+	face->list->call();
 }
 
 template <typename T> void bsp::draw_faces(const T& faces) const

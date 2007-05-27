@@ -14,10 +14,13 @@
 #include "material.hpp"
 #include "character.hpp"
 #include "group.hpp"
-#include "engine.hpp"
+#include "newton.hpp"
 
 class world : public object
 {
+private:
+	world_id _newton;
+
 public:
 	std::map<std::string, material> materials;
 	character player;
@@ -36,11 +39,8 @@ public:
 	void compile();
 	void draw(const state& state) const;
 
-	virtual const NewtonWorld* newton() const;
+	virtual const world_id& newton() const;
 	virtual const material& bound_material(std::string name) const;
-
-private:
-	boost::shared_ptr<NewtonWorld> _newton;
 };
 
 BOOST_CLASS_IMPLEMENTATION(world, boost::serialization::object_serializable);

@@ -6,9 +6,9 @@
 #include <boost/tuple/tuple.hpp>
 
 #include "string.hpp"
-#include "id.hpp"
 
 class state;
+class texture_wrapper;
 
 class texture
 {
@@ -35,7 +35,7 @@ public:
 	boost::tuple<float, float> ratio(float width, float height) const;
 
 private:
-	boost::shared_ptr<texture_id> id;
+	boost::shared_ptr<texture_wrapper> wrapper;
 };
 
 BOOST_CLASS_IMPLEMENTATION(texture, boost::serialization::object_serializable);

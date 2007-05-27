@@ -1,4 +1,5 @@
 #include "bezier.hpp"
+#include "opengl.hpp"
 
 bsp_vertex operator*(const bsp_vertex& v, const float x)
 {

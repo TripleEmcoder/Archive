@@ -2,9 +2,8 @@
 #include "world.hpp"
 #include "matrix.hpp"
 #include "material.hpp"
-#include "scope.hpp"
 #include "state.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 void box::compile(const object& parent)
 {
@@ -33,9 +32,9 @@ void box::compile(const object& parent)
 	NewtonBodySetCollision(newton(), collision);
 	NewtonReleaseCollision(root().newton(), collision);
 */
-	_list.reset(new list_id());
+	list.reset(new list_wrapper());
 
-	list_scope scope(*_list);
+	list_scope scope(*list);
 	state state;
 	object::draw(state);
 	draw_faces(state);
@@ -43,7 +42,7 @@ void box::compile(const object& parent)
 
 void box::draw(const state& state) const
 {
-	glCallList(*_list);
+	list->call();
 }
 
 /*
@@ -61,12 +60,17 @@ const matrix& box::composition() const
 void box::draw_faces(const state& state) const
 {
 	matrix_scope scope(composition());
+	
+	glPushAttrib(GL_CURRENT_BIT);
+
 	draw_left_face(state);
 	draw_right_face(state);
 	draw_bottom_face(state);
 	draw_top_face(state);
 	draw_front_face(state);
 	draw_back_face(state);
+
+	glPopAttrib();
 }
 
 void box::draw_left_face(const state& state) const

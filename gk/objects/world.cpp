@@ -5,7 +5,8 @@
 #include "world.hpp"
 #include "transformation.hpp"
 #include "state.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
+#include "newton.hpp"
 
 #include <algorithm>
 
@@ -56,22 +57,19 @@ void compile_second(std::map<std::string, material>& m, const std::pair<std::str
 
 void world::compile()
 {
-	_newton.reset(NewtonCreate(NULL, NULL), NewtonDestroy);
-	NewtonWorld* nWorld = _newton.get();
-
 	float minPoint[] = {-1000, -1000, -1000};
 	float maxPoint[] = {1000, 1000, 1000};
-	NewtonSetWorldSize(nWorld, minPoint, maxPoint);
+	NewtonSetWorldSize(_newton, minPoint, maxPoint);
 
 	// get the default material ID
-	int defaultID = NewtonMaterialGetDefaultGroupID (nWorld);
+	int defaultID = NewtonMaterialGetDefaultGroupID (_newton);
 
 	// set default material properties
-	NewtonMaterialSetDefaultSoftness(nWorld, defaultID, defaultID, 0.05f);
-	NewtonMaterialSetDefaultElasticity(nWorld, defaultID, defaultID, 0.0f);
-	NewtonMaterialSetDefaultCollidable(nWorld, defaultID, defaultID, 1);
-	//NewtonMaterialSetDefaultFriction(nWorld, defaultID, defaultID, 0.0f, 0.0f);
-	NewtonMaterialSetCollisionCallback(nWorld, defaultID, defaultID, NULL, GenericContactBegin, GenericContactProcess, NULL); 
+	NewtonMaterialSetDefaultSoftness(_newton, defaultID, defaultID, 0.05f);
+	NewtonMaterialSetDefaultElasticity(_newton, defaultID, defaultID, 0.0f);
+	NewtonMaterialSetDefaultCollidable(_newton, defaultID, defaultID, 1);
+	//NewtonMaterialSetDefaultFriction(_newton, defaultID, defaultID, 0.0f, 0.0f);
+	NewtonMaterialSetCollisionCallback(_newton, defaultID, defaultID, NULL, GenericContactBegin, GenericContactProcess, NULL); 
 
 	std::for_each(materials.begin(), materials.end(), bind(compile_second, var(materials), _1));
 
@@ -89,9 +87,9 @@ void world::draw(const state& state) const
 	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1, ref(state)));
 }
 
-const NewtonWorld* world::newton() const
+const world_id& world::newton() const
 {
-	return _newton.get();
+	return _newton;
 }
 
 const material& world::bound_material(std::string name) const

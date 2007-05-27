@@ -6,7 +6,7 @@
 #include "object.hpp"
 #include "vertex.hpp"
 
-class list_id;
+class list_wrapper;
 
 //klasa reprezentujaca prostopadloscian
 class box : public object
@@ -27,7 +27,7 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	boost::shared_ptr<list_id> _list;
+	boost::shared_ptr<list_wrapper> list;
 
 	void draw_faces(const state& state) const;
 	void draw_left_face(const state& state) const;

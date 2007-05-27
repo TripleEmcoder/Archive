@@ -3,6 +3,8 @@
 
 #include <vector>
 
+#include <boost/shared_ptr.hpp>
+
 #include "md3_common.hpp"
 #include "md3_shader.hpp"
 
@@ -79,22 +81,26 @@ struct md3_triangle
 	int c;
 };
 
-class texture;
+class texture_wrapper;
 
 class md3_surface
 {
 public:
 	void read(std::istream& input);
-	void draw(int frame) const;
+	
+	int frame_count() const;
 
-	std::string shader() const;
+	void draw_frame(int frame) const;
 
 private:
 	md3_surface_header header;
+	
 	std::vector<md3_shader> shaders;
 	std::vector<md3_xyzn> xyzns;
 	std::vector<md3_st> sts;
 	std::vector<md3_triangle> triangles;
+
+	boost::shared_ptr<texture_wrapper> texture;
 };
 
 #endif //OBJECTS_MD3_SURFACE_HPP

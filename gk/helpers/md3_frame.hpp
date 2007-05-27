@@ -27,8 +27,6 @@ struct md3_frame_header
 	char name[16];
 };
 
-class istream;
-
 class md3_frame
 {
 public:

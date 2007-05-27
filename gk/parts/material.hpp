@@ -36,4 +36,11 @@ public:
 
 BOOST_CLASS_IMPLEMENTATION(material, boost::serialization::object_serializable);
 
+class material_scope
+{
+public:
+	material_scope(const material& material);
+	~material_scope();
+};
+
 #endif //HELPERS_MATERIAL_HPP

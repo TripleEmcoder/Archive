@@ -1,7 +1,8 @@
 #include "compass.hpp"
 #include "state.hpp"
 #include "../Camera.hpp"
-#include "engine.hpp"
+#include "matrix.hpp"
+#include "opengl.hpp"
 
 #include <cmath>
 
@@ -15,11 +16,16 @@ void compass::draw(const state& state) const
 {
 	glPushMatrix();
 	glTranslatef(120, 150, 0);
-	glRotatef(degrees(state.camera->getAngleX()), 0, 0, 1);
+	glRotatef(radians_to_degrees(state.camera->getAngleX()), 0, 0, 1);
 
 	glBegin(GL_LINE_LOOP);
+	
 	for (int degrees=0; degrees<360; degrees++)
-		glVertex2f(cos(radians(degrees))*radius, sin(radians(degrees))*radius);
+	{
+		float radians = degrees_to_radians(degrees);
+		glVertex2f(cos(radians)*radius, sin(radians)*radius);
+	}
+
 	glEnd();
 
 	const float overflow = 0.4;

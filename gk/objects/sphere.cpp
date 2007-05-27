@@ -1,8 +1,5 @@
 #include "sphere.hpp"
-#include "transformation.hpp"
-#include "material.hpp"
-#include "scope.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 void sphere::compile(const object& parent)
 {

@@ -201,7 +201,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\helpers\md3_file.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\movement.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\helpers\newton.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\helpers\opengl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\objects\weapon.cpp"
 				>
 			</File>
 			<Filter
@@ -248,10 +264,6 @@
 							XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
 						/>
 					</FileConfiguration>
-				</File>
-				<File
-					RelativePath=".\objects\elevator.cpp"
-					>
 				</File>
 				<File
 					RelativePath=".\objects\ground.cpp"
@@ -304,14 +316,6 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\helpers\engine.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\helpers\id.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\helpers\matrix.cpp"
 					>
 				</File>
@@ -328,10 +332,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\helpers\scope.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\helpers\state.cpp"
 					>
 				</File>
@@ -339,10 +339,6 @@
 			<Filter
 				Name="parts"
 				>
-				<File
-					RelativePath=".\parts\body.cpp"
-					>
-				</File>
 				<File
 					RelativePath=".\parts\material.cpp"
 					>
@@ -483,11 +479,27 @@
 				>
 			</File>
 			<File
+				RelativePath=".\helpers\md3_file.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\movement.hpp"
 				>
 			</File>
 			<File
+				RelativePath=".\helpers\newton.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\helpers\opengl.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\set_vector.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\objects\weapon.hpp"
 				>
 			</File>
 			<Filter
@@ -519,10 +531,6 @@
 				</File>
 				<File
 					RelativePath=".\objects\character.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\elevator.hpp"
 					>
 				</File>
 				<File
@@ -558,14 +566,6 @@
 				Name="helpers"
 				>
 				<File
-					RelativePath=".\helpers\engine.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\helpers\id.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\helpers\matrix.hpp"
 					>
 				</File>
@@ -583,10 +583,6 @@
 				</File>
 				<File
 					RelativePath=".\helpers\md3_surface.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\helpers\scope.hpp"
 					>
 				</File>
 				<File
@@ -617,10 +613,6 @@
 			<Filter
 				Name="parts"
 				>
-				<File
-					RelativePath=".\parts\body.hpp"
-					>
-				</File>
 				<File
 					RelativePath=".\parts\material.hpp"
 					>
@@ -682,6 +674,10 @@
 			</File>
 			<File
 				RelativePath=".\resources\marble.jpg"
+				>
+			</File>
+			<File
+				RelativePath=".\resources\stone.jpg"
 				>
 			</File>
 		</Filter>

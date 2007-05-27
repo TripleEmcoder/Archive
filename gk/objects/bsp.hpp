@@ -14,7 +14,8 @@
 #include "bsp_struct.hpp"
 #include "bezier.hpp"
 #include "matrix.hpp"
-#include "scope.hpp"
+#include "opengl.hpp"
+#include "newton.hpp"
 #include "../math.hpp"
 #include "../widgets/widget.hpp"
 #include "../set_vector.hpp"
@@ -23,7 +24,7 @@ struct face : public bsp_face
 {
 	int bezier_id;
 	int bezier_count;
-	boost::shared_ptr<list_id> list;
+	boost::shared_ptr<list_wrapper> list;
 	face() : bsp_face(), bezier_id(-1), bezier_count(0) { };
 	face(const bsp_face& f) : bsp_face(f), bezier_id(-1), bezier_count(0) { };
 };

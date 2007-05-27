@@ -1,16 +1,16 @@
-#ifndef OBJECTS_MD3_HPP
-#define OBJECTS_MD3_HPP
+#ifndef OBJECTS_WEAPON_HPP
+#define OBJECTS_WEAPON_HPP
 
 #include <boost/shared_ptr.hpp>
 #include <boost/serialization/utility.hpp>
 
 #include "string.hpp"
-#include "vector.hpp"
 #include "object.hpp"
 
-class md3_file;
+class md3;
+class body_wrapper;
 
-class md3 : public object
+class weapon : public object
 {
 public:
 	std::string name;
@@ -27,11 +27,10 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	boost::shared_ptr<md3_file> file;
-	mutable float frame;
-	mutable int time;
+	boost::shared_ptr<md3> model;
+	boost::shared_ptr<body_wrapper> body;
 };
 
-BOOST_CLASS_IMPLEMENTATION(md3, boost::serialization::object_serializable);
+BOOST_CLASS_IMPLEMENTATION(weapon, boost::serialization::object_serializable);
 
-#endif //OBJECTS_MD3_HPP 
+#endif //OBJECTS_WEAPON_HPP 

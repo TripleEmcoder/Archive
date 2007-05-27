@@ -54,7 +54,7 @@ public:
 	virtual const material& bound_material(std::string name) const;
 
 protected:
-	virtual matrix& composition();
+	virtual void composition(const matrix& matrix);
 
 private:
 	const object* _parent;

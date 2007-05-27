@@ -1,7 +1,6 @@
 #include "builtin.hpp"
-#include "scope.hpp"
 #include "material.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 void builtin::compile(const object& parent)
 {

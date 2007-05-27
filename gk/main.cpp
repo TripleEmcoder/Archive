@@ -2,7 +2,7 @@
 #include "display.hpp"
 #include "movement.hpp"
 #include "state.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <iostream>
 #include <fstream>

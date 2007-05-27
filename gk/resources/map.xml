@@ -131,6 +131,9 @@
         <md3s>
           <count>0</count>
         </md3s>
+        <weapons>
+          <count>0</count>
+        </weapons>
         <groups>
           <count>2</count>
           <item>
@@ -287,6 +290,9 @@
             <md3s>
               <count>0</count>
             </md3s>
+            <weapons>
+              <count>0</count>
+            </weapons>
             <groups>
               <count>0</count>
             </groups>
@@ -333,33 +339,11 @@
               <count>0</count>
             </bsps>
             <md3s>
-              <count>1</count>
-              <item>
-                <transformations>
-                  <count>2</count>
-                  <item>
-                    <name>translation</name>
-                    <description>
-                      <x>2</x>
-                      <y>-6</y>
-                      <z>0</z>
-                    </description>
-                  </item>
-                  <item>
-                    <name>rotation</name>
-                    <description>
-                      <x>90</x>
-                      <y>0</y>
-                      <z>0</z>
-                    </description>
-                  </item>
-                </transformations>
-                <bindings>
-                  <count>0</count>
-                </bindings>
-                <name>models/weapons2/shotgun/shotgun.md3</name>
-              </item>
+              <count>0</count>
             </md3s>
+            <weapons>
+              <count>0</count>
+            </weapons>
             <groups>
               <count>0</count>
             </groups>
@@ -408,33 +392,28 @@
           </item>
         </bsps>
         <md3s>
+          <count>0</count>
+        </md3s>
+        <weapons>
           <count>1</count>
           <item>
             <transformations>
-              <count>2</count>
+              <count>1</count>
               <item>
                 <name>translation</name>
                 <description>
                   <x>-38</x>
-                  <y>1</y>
+                  <y>2</y>
                   <z>20</z>
-                </description>
-              </item>
-              <item>
-                <name>rotation</name>
-                <description>
-                  <x>90</x>
-                  <y>0</y>
-                  <z>0</z>
                 </description>
               </item>
             </transformations>
             <bindings>
               <count>0</count>
             </bindings>
-            <name>models/weapons2/shotgun/shotgun.md3</name>
+            <name>shotgun</name>
           </item>
-        </md3s>
+        </weapons>
         <groups>
           <count>0</count>
         </groups>

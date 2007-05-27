@@ -1,6 +1,5 @@
 #include "md3_surface.hpp"
-#include "texture.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <iostream>
 #include <algorithm>
@@ -53,17 +52,21 @@ void md3_surface::read(std::istream &input)
 		boost::bind(binary_read<md3_triangle>, boost::ref(input), _1));
 
 	input.seekg(start + header.end_offset);
+
+	texture.reset(new texture_wrapper(shaders[0].name()));
 }
 
-void md3_surface::draw(int frame) const
+int md3_surface::frame_count() const
 {
+	return header.frame_count;
+}
+
+void md3_surface::draw_frame(int frame) const
+{
+	texture_scope scope(*texture);
+
 	glVertexPointer(3, GL_SHORT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count].x);
 	glNormalPointer(GL_FLOAT, sizeof(md3_xyzn), &xyzns[frame*header.vertex_count].n);
 	glTexCoordPointer(2, GL_FLOAT, sizeof(md3_st), &sts[0]);
 	glDrawElements(GL_TRIANGLES, 3*triangles.size(), GL_UNSIGNED_INT, &triangles[0]);
-}
-
-std::string md3_surface::shader() const
-{
-	return shaders[0].name();
 }

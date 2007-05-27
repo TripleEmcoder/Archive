@@ -1,6 +1,16 @@
 #include "matrix.hpp"
 #include "vertex.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
+
+float degrees_to_radians(float degrees)
+{
+	return degrees * 3.1416f / 180.0f;
+}
+
+float radians_to_degrees(float radians)
+{
+	return radians / 3.1416f * 180.0f;
+}
 
 using boost::numeric::ublas::identity_matrix;
 using boost::numeric::ublas::prod;
@@ -12,9 +22,19 @@ matrix::matrix()
 {
 }
 
+float* matrix::row_major_data()
+{
+	return row_major.data().begin();
+}
+
 const float* matrix::row_major_data() const
 {
 	return row_major.data().begin();
+}
+
+float* matrix::column_major_data()
+{
+	return column_major.data().begin();
 }
 
 const float* matrix::column_major_data() const
@@ -37,22 +57,22 @@ void matrix::translate(const vertex& description)
 void matrix::rotate(const vertex& description)
 {
 	temporary_type pitch(identity_matrix<float>(4));
-	pitch(1,1) = cos(radians(description.x));
-	pitch(1,2) = -sin(radians(description.x));
-	pitch(2,1) = sin(radians(description.x));
-	pitch(2,2) = cos(radians(description.x));
+	pitch(1,1) = cos(degrees_to_radians(description.x));
+	pitch(1,2) = -sin(degrees_to_radians(description.x));
+	pitch(2,1) = sin(degrees_to_radians(description.x));
+	pitch(2,2) = cos(degrees_to_radians(description.x));
 
 	temporary_type yaw(identity_matrix<float>(4));
-	yaw(0,0) = cos(radians(description.y));
-	yaw(0,2) = -sin(radians(description.y));
-	yaw(2,0) = sin(radians(description.y));
-	yaw(2,2) = cos(radians(description.y));
+	yaw(0,0) = cos(degrees_to_radians(description.y));
+	yaw(0,2) = -sin(degrees_to_radians(description.y));
+	yaw(2,0) = sin(degrees_to_radians(description.y));
+	yaw(2,2) = cos(degrees_to_radians(description.y));
 
 	temporary_type roll(identity_matrix<float>(4));
-	roll(0,0) = cos(radians(description.z));
-	roll(0,1) = -sin(radians(description.z));
-	roll(1,0) = sin(radians(description.z));
-	roll(1,1) = cos(radians(description.z));
+	roll(0,0) = cos(degrees_to_radians(description.z));
+	roll(0,1) = -sin(degrees_to_radians(description.z));
+	roll(1,0) = sin(degrees_to_radians(description.z));
+	roll(1,1) = cos(degrees_to_radians(description.z));
 
 	temporary_type temporary = identity_matrix<float>(4);
 	temporary = prod(temporary, roll);

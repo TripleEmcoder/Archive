@@ -1,6 +1,6 @@
 #include "movement.hpp"
 #include "game.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 const float MOUSE_SENSIVITY = 0.5f;
 bool keys[255];

@@ -1,9 +1,8 @@
 #include "object.hpp"
 #include "matrix.hpp"
-#include "scope.hpp"
 #include "material.hpp"
 #include "transformation.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <boost/bind.hpp>
 
@@ -48,9 +47,9 @@ void object::compile(const object& parent)
 
 void object::draw(const state& state) const
 {
-#ifdef F_DEBUG
-	matrix_scope mxs(*_composition);
-	material_scope mls(bound_material("debug"));
+#ifdef _DEBUG
+	//matrix_scope mxs(*_composition);
+	//material_scope mls(bound_material("debug"));
 	glutSolidSphere(0.1, 20, 20);
 #endif
 }
@@ -70,9 +69,9 @@ const matrix& object::composition() const
 	return *_composition;
 }
 
-matrix& object::composition()
+void object::composition(const matrix& matrix)
 {
-	return *_composition;
+	*_composition = matrix;
 }
 
 const material& object::bound_material(std::string name) const
