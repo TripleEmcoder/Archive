@@ -125,6 +125,8 @@ texture convert_texture(const bsp_texture& t)
 		cerr << "Texture not found: " << t.name << endl;
 		return texture();
 	}*/
+	if (string(t.name) == string("textures/gothic_door/km_arena1columna2R"))
+		std::cerr << "DUPA" << std::endl;
 	return texture(t.name);
 }
 
@@ -190,7 +192,10 @@ void bsp::create_collisions() const
 	NewtonCollision* tree = NewtonCreateTreeCollision(nWorld, NULL);
 	NewtonTreeCollisionBeginBuild(tree);
 
-	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::add_face, boost::ref(*this), _1, tree));
+	int start = _models[0].start_face_index;
+	int end = _models[0].start_face_index + _models[0].face_count;
+
+	for_each(_faces.begin() + start, _faces.begin() + end, boost::bind(&bsp::add_face, boost::ref(*this), _1, tree));
 
 	NewtonTreeCollisionEndBuild(tree, 0);
 	NewtonBody* body = NewtonCreateBody(nWorld, tree);
@@ -212,7 +217,7 @@ void bsp::compile(const object& parent)
 	std::vector<bsp_texture> bsp_textures;
 	std::vector<bsp_lightmap> bsp_lightmaps;
 	std::vector<bsp_face> bsp_faces;
-	
+		
 	object::compile(parent);
 
 	is.open(name.c_str(), ios::binary);
@@ -229,6 +234,7 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Nodes], _nodes);
 	read_lump(is, lumps[Leafs], _leafs);
 	read_lump(is, lumps[Leaffaces], _leaffaces);
+	read_lump(is, lumps[Models], _models);
 	read_visdata(is, lumps[Visdata], _visdata);
 
 	is.close();
@@ -237,6 +243,8 @@ void bsp::compile(const object& parent)
 	for_each(_planes.begin(), _planes.end(), &convert_plane);
 	for_each(_nodes.begin(), _nodes.end(), &convert_mins_maxs<bsp_node>);
 	for_each(_leafs.begin(), _leafs.end(), &convert_mins_maxs<bsp_leaf>);
+	for_each(_models.begin(), _models.end(), &convert_mins_maxs<bsp_model>);
+
 	
 	transform(bsp_textures.begin(), bsp_textures.end(), back_inserter(_textures), &convert_texture);
 	transform(bsp_lightmaps.begin(), bsp_lightmaps.end(), back_inserter(_lightmaps), &convert_lightmap);

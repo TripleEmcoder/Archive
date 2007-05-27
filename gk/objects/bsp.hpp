@@ -73,6 +73,7 @@ private:
 	std::vector<bsp_node> _nodes;
 	std::vector<bsp_leaf> _leafs;
 	std::vector<int> _leaffaces;
+	std::vector<bsp_model> _models;
 	bsp_visdata _visdata;
 
 	mutable set_vector<face> _visible_faces;

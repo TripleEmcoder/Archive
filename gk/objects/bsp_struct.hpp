@@ -84,14 +84,14 @@ struct bsp_node
 
 struct bsp_leaf
 {
-	int cluster; 	//Visdata cluster index. 
-	int area; 	//Areaportal area. 
+	int cluster; 				//Visdata cluster index. 
+	int area; 					//Areaportal area. 
 	bsp_vector3i mins;
 	bsp_vector3i maxs;
 	int start_leafface_index; 	//First leafface for leaf. 
-	int leaffaces_count;	//Number of leaffaces for leaf. 
+	int leaffaces_count;		//Number of leaffaces for leaf. 
 	int start_leafbrush_index; 	//First leafbrush for leaf. 
-	int leafbrushes_count; 	//Number of leafbrushes for leaf.
+	int leafbrushes_count;		//Number of leafbrushes for leaf.
 };
 
 struct bsp_visdata
@@ -99,4 +99,14 @@ struct bsp_visdata
 	int vecs_count;
 	int vecs_size;
 	unsigned char* vecs;
+};
+
+struct bsp_model
+{
+	bsp_vector3i mins;
+	bsp_vector3i maxs;
+	int start_face_index; 		//First face for model. 
+	int face_count; 			//Number of faces for model. 
+	int start_brush_index;		//First brush for model. 
+	int brush_count; 			//Number of brushes for model.
 };
