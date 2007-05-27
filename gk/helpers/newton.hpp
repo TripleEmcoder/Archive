@@ -38,9 +38,10 @@ class body_wrapper
 public:
 	body_wrapper(const world_id& world);
 	
-	void transformation_matrix(const matrix& value);
-	boost::signal<void(const matrix& matrix)> transformation_matrix_changed;
+	void transformation(const matrix& value);
+	boost::signal<void(const matrix& matrix)> transformation_changed;
 
+	void mass(float mass, const vertex& inertia);
 	void omega(const vertex& value);
 
 private:

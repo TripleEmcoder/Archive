@@ -201,23 +201,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\helpers\md3_file.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\movement.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\helpers\newton.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\helpers\opengl.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\objects\weapon.cpp"
 				>
 			</File>
 			<Filter
@@ -290,6 +274,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\weapon.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\world.cpp"
 					>
 					<FileConfiguration
@@ -320,6 +308,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\helpers\md3_file.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\helpers\md3_frame.cpp"
 					>
 				</File>
@@ -329,6 +321,14 @@
 				</File>
 				<File
 					RelativePath=".\helpers\md3_surface.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\newton.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\opengl.cpp"
 					>
 				</File>
 				<File
@@ -479,27 +479,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\helpers\md3_file.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\movement.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\helpers\newton.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\helpers\opengl.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\set_vector.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\objects\weapon.hpp"
 				>
 			</File>
 			<Filter
@@ -558,6 +542,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\weapon.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\world.hpp"
 					>
 				</File>
@@ -574,6 +562,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\helpers\md3_file.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\helpers\md3_frame.hpp"
 					>
 				</File>
@@ -583,6 +575,14 @@
 				</File>
 				<File
 					RelativePath=".\helpers\md3_surface.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\newton.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\helpers\opengl.hpp"
 					>
 				</File>
 				<File

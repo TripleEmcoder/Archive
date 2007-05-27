@@ -375,15 +375,7 @@
           <count>1</count>
           <item>
             <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>0</x>
-                  <y>0</y>
-                  <z>0</z>
-                </description>
-              </item>
+              <count>0</count>
             </transformations>
             <bindings>
               <count>0</count>
@@ -403,7 +395,7 @@
                 <name>translation</name>
                 <description>
                   <x>-38</x>
-                  <y>2</y>
+                  <y>1</y>
                   <z>20</z>
                 </description>
               </item>

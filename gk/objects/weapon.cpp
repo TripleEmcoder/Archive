@@ -18,12 +18,13 @@ void weapon::compile(const object& parent)
 	model->compile(*this);
 
 	body.reset(new body_wrapper(root().newton()));
-	body->transformation_matrix(composition());
+	body->transformation(composition());
 	
-	body->transformation_matrix_changed.connect(
+	body->transformation_changed.connect(
 		boost::bind(&weapon::composition, this, _1));
 
-	body->omega(vertex(1, 1, 1));
+	body->mass(5.0f, vertex(0, 0, 0));
+	body->omega(vertex(0, WEAPON_OMEGA, 0));
 }
 
 void weapon::draw(const state& state) const

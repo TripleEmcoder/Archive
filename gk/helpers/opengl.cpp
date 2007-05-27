@@ -59,7 +59,7 @@ void test_extension(boost::filesystem::path& previous, const std::string& extens
 
 texture_wrapper::texture_wrapper(std::string name)
 {
-		static std::vector<std::string> extensions
+	static std::vector<std::string> extensions
 		= boost::assign::list_of(".jpg")(".tga");
 
 	boost::filesystem::path path(name);
@@ -71,13 +71,22 @@ texture_wrapper::texture_wrapper(std::string name)
 	std::cerr << "Loading texture \"" << path.string() << "\"..." << std::endl;
 #endif
 
-	corona::Image* image = corona::OpenImage(path.string().c_str(), corona::PF_R8G8B8);
+	corona::Image* image = corona::OpenImage(path.string().c_str(), corona::PF_R8G8B8A8);
 
 	if (image == NULL)
 	{
 		std::cerr << "Failed to load image \"" << name << "\"." << std::endl;
 		return;
 	}
+
+	int width = image->getWidth();
+	int height = image->getHeight();
+	void* pixels = image->getPixels();
+
+#ifdef _DEBUG
+	std::cerr << "Width: " << width << std::endl;
+	std::cerr << "Height: " << height << std::endl;
+#endif
 
 	glBindTexture(GL_TEXTURE_2D, id);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
@@ -89,12 +98,8 @@ texture_wrapper::texture_wrapper(std::string name)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-	int width = image->getWidth();
-	int height = image->getHeight();
-	void* pixels = image->getPixels();
-	
-	//glTexImage2D(GL_TEXTURE_2D, 0, 3, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, pixels);
-	gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, height, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+	//glTexImage2D(GL_TEXTURE_2D, 0, 4, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
+	gluBuild2DMipmaps(GL_TEXTURE_2D, 4, width, height, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 
 	delete image;
