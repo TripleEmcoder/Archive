@@ -49,15 +49,19 @@ void md3_file::read(std::istream& input)
 		glScalef(MD3_SCALE, MD3_SCALE, MD3_SCALE);
 		glRotatef(-90, 1, 0, 0);
 
+		glPushAttrib(GL_ENABLE_BIT);
+		glEnable(GL_TEXTURE_2D);
+
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glEnableClientState(GL_VERTEX_ARRAY);
-		//glEnableClientState(GL_NORMAL_ARRAY);
+		glEnableClientState(GL_NORMAL_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
 		for (int surface=0; surface<header.surface_count; surface++)
 			surfaces[surface].draw_frame(frame);
 
 		glPopClientAttrib();
+		glPopAttrib();
 		glPopMatrix();
 	}
 }

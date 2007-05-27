@@ -330,12 +330,32 @@ void bsp::draw_face(const face* face) const
 
 template <typename T> void bsp::draw_faces(const T& faces) const
 {
-	glPushAttrib(GL_ENABLE_BIT |GL_POLYGON_BIT | GL_TEXTURE_BIT);
+	glPushAttrib(GL_ENABLE_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT);
+
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	glFrontFace(GL_CW);
 
 	glEnable(GL_TEXTURE_2D);
-	glFrontFace(GL_CW);
-	glCullFace(GL_BACK);
-	glEnable(GL_CULL_FACE);
+
+	glActiveTexture(GL_TEXTURE0);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE_EXT); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_COMBINE_RGB_EXT, GL_MODULATE); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_SOURCE0_RGB_EXT, GL_TEXTURE); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND0_RGB_EXT, GL_SRC_COLOR); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_RGB_SCALE_EXT, 2.0f);
+
+	glActiveTexture(GL_TEXTURE1);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE_EXT); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_COMBINE_RGB_EXT, GL_MODULATE); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_SOURCE1_RGB_EXT, GL_PREVIOUS_EXT); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND0_RGB_EXT, GL_SRC_COLOR); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND1_RGB_EXT, GL_SRC_COLOR); 
+	glTexEnvf(GL_TEXTURE_ENV, GL_RGB_SCALE_EXT, 2.0f);
+
+	glEnable(GL_COLOR_MATERIAL);
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
 

@@ -41,12 +41,12 @@ void setup_widgets()
 
 void setup_lights()
 {
-	GLfloat global[]    = {  0.8f,  0.8f,  0.8f,  1.0f };
+	GLfloat global[]    = {  0.2f,  0.2f,  0.2f,  1.0f };
 	GLfloat position[]  = {  0.0f,  0.0f,  2.0f,  1.0f };
-	GLfloat ambient[]   = {  0.0f,  0.0f,  0.0f,  1.0f };
+	GLfloat ambient[]   = {  0.8f,  0.8f,  0.8f,  1.0f };
 	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
 	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
-	GLfloat direction[] = {  0.0f,  0.0f, -1.0f        };
+	GLfloat direction[] = {  0.0f, -0.1f, -1.0f        };
 
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);
 	
@@ -56,11 +56,11 @@ void setup_lights()
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
 	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 20);
 
 	glEnable(GL_LIGHT0);
 
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 }
 
 void draw()
@@ -85,6 +85,7 @@ void draw()
 	camera->setPosition(position);
 	camera->set(state);
 
+	glEnable(GL_DEPTH_TEST);
 	w.draw(state);
 	p.draw(state);
 
@@ -142,13 +143,6 @@ int main(int argc, char* argv[])
 		std::cerr << glewGetErrorString(error) << "." << std::endl;
 		return 3;
 	}
-
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_TEXTURE_2D);
-	glEnable(GL_NORMALIZE);
-	
-	//glEnable(GL_BLEND);
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	
 	load_map("map.xml");
 	
