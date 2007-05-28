@@ -115,7 +115,7 @@ boost::shared_ptr<texture_id> convert_lightmap(bsp_lightmap& l)
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
 
-	float scale = 3.0f;
+	float scale = 20.0f;
 	for (int i = 0; i < 128; ++i)
 		for (int j = 0; j < 128; ++j)
 		{
@@ -128,7 +128,7 @@ boost::shared_ptr<texture_id> convert_lightmap(bsp_lightmap& l)
 			}
 			if (m > 255.0f)
 				for (int k = 0; k < 3; ++k)
-					color[k] /= m;
+					color[k] *= 255.0f / m;
 			for (int k = 0; k < 3; ++k)
 				l.pixels[i][j][k] = color[k];
 		}
