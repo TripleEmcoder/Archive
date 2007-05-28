@@ -10,7 +10,7 @@
 #include "transformation.hpp"
 
 class state;
-class world;
+class level;
 class matrix;
 class material;
 
@@ -45,7 +45,7 @@ public:
 	virtual const object& parent() const;
 
 	//pobranie korzenia drzewa obiektow
-	virtual const world& root() const;
+	virtual const level& root() const;
 
 	//pobranie kompletnej macierzy transformacji
 	virtual const matrix& composition() const;
@@ -58,7 +58,7 @@ protected:
 
 private:
 	const object* _parent;
-	const world* _root;
+	const level* _root;
 	boost::shared_ptr<matrix> _composition;
 };
 

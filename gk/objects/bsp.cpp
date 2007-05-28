@@ -1,7 +1,7 @@
 #include "bsp.hpp"
+#include "level.hpp"
 #include "opengl.hpp"
 #include "newton.hpp"
-#include "world.hpp"
 #include "state.hpp"
 #include "../Camera.hpp"
 
@@ -188,7 +188,7 @@ void bsp::add_face(const face& face, const NewtonCollision* tree) const
 
 void bsp::create_collisions() const
 {
-	const NewtonWorld* nWorld = root().newton();
+	const NewtonWorld* nWorld = root().world().id();
 	NewtonCollision* tree = NewtonCreateTreeCollision(nWorld, NULL);
 	NewtonTreeCollisionBeginBuild(tree);
 
@@ -198,8 +198,8 @@ void bsp::create_collisions() const
 	for_each(_faces.begin() + start, _faces.begin() + end, boost::bind(&bsp::add_face, boost::ref(*this), _1, tree));
 
 	NewtonTreeCollisionEndBuild(tree, 0);
-	NewtonBody* body = NewtonCreateBody(nWorld, tree);
-	NewtonBodySetMatrix(body, composition().row_major_data());
+	NewtonBodySetCollision(body->id(), tree);
+	NewtonBodySetMatrix(body->id(), composition().row_major_data());
 	//Vector p0, p1;
 	//Matrix4x4 m;
 	//NewtonBodyGetMatrix (body, m.data()); 
@@ -211,6 +211,9 @@ void bsp::create_collisions() const
 
 void bsp::compile(const object& parent)
 {
+	object::compile(parent);
+	body.reset(new body_wrapper(root().world()));
+
 	ifstream is;
 	bsp_header header;
 	bsp_lump lumps[17];
@@ -218,8 +221,6 @@ void bsp::compile(const object& parent)
 	std::vector<bsp_lightmap> bsp_lightmaps;
 	std::vector<bsp_face> bsp_faces;
 		
-	object::compile(parent);
-
 	is.open(name.c_str(), ios::binary);
 
 	is.read((char*) &header, sizeof(header));

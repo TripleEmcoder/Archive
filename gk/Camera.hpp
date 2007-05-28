@@ -9,6 +9,8 @@ struct plane
 	float distance;
 };
 
+#include "vertex.hpp"
+
 class Camera : public widget
 {
 private:
@@ -24,7 +26,7 @@ public:
 	~Camera(void);
 	//void draw();
 	virtual void draw(const state& state) const;
-	virtual void set(const state& state) const;
+	virtual void set(const vertex& offset) const;
 	void rotate(float x, float y);
 	float getAngleX() const;
 	float getAngleY() const;

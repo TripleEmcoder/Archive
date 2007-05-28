@@ -1,6 +1,6 @@
 #include "weapon.hpp"
 #include "md3.hpp"
-#include "world.hpp"
+#include "level.hpp"
 #include "newton.hpp"
 
 #include <boost/bind.hpp>
@@ -17,7 +17,7 @@ void weapon::compile(const object& parent)
 	model->name = (boost::format(WEAPON_PATH) % name).str();
 	model->compile(*this);
 
-	body.reset(new body_wrapper(root().newton()));
+	body.reset(new body_wrapper(root().world()));
 	body->transformation(composition());
 	
 	body->transformation_changed.connect(

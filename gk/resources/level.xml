@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!DOCTYPE boost_serialization>
 <boost_serialization signature="serialization::archive" version="3">
-  <world>
+  <level>
     <materials>
       <count>2</count>
       <item>
@@ -387,7 +387,7 @@
           <count>0</count>
         </md3s>
         <weapons>
-          <count>1</count>
+          <count>2</count>
           <item>
             <transformations>
               <count>1</count>
@@ -405,11 +405,28 @@
             </bindings>
             <name>shotgun</name>
           </item>
+          <item>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>-36</x>
+                  <y>1</y>
+                  <z>20</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <name>railgun</name>
+          </item>
         </weapons>
         <groups>
           <count>0</count>
         </groups>
       </item>
     </groups>
-  </world>
+  </level>
 </boost_serialization>

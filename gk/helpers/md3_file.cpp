@@ -45,12 +45,13 @@ void md3_file::read(std::istream& input)
 		lists[frame].reset(new list_wrapper());
 		list_scope scope(*lists[frame]);
 
-		glPushMatrix();
-		glScalef(MD3_SCALE, MD3_SCALE, MD3_SCALE);
-		glRotatef(-90, 1, 0, 0);
-
 		glPushAttrib(GL_ENABLE_BIT);
 		glEnable(GL_TEXTURE_2D);
+		//glEnable(GL_NORMALIZE);
+
+		glPushMatrix();
+		//glScalef(MD3_SCALE, MD3_SCALE, MD3_SCALE);
+		glRotatef(-90, 1, 0, 0);
 
 		glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 		glEnableClientState(GL_VERTEX_ARRAY);
@@ -61,8 +62,8 @@ void md3_file::read(std::istream& input)
 			surfaces[surface].draw_frame(frame);
 
 		glPopClientAttrib();
-		glPopAttrib();
 		glPopMatrix();
+		glPopAttrib();
 	}
 }
 

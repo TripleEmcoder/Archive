@@ -3,13 +3,6 @@
 
 #include "md3_common.hpp"
 
-struct md3_vector
-{
-	float x;
-	float y;
-	float z;
-};
-
 /*
 VEC3  MIN_BOUNDS   First corner of the bounding box.
 VEC3  MAX_BOUNDS   Second corner of the bounding box.

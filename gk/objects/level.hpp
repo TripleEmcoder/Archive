@@ -16,10 +16,10 @@
 #include "group.hpp"
 #include "newton.hpp"
 
-class world : public object
+class level : public object
 {
 private:
-	world_id _newton;
+	world_wrapper _world;
 
 public:
 	std::map<std::string, material> materials;
@@ -39,13 +39,13 @@ public:
 	void compile();
 	void draw(const state& state) const;
 
-	virtual const world_id& newton() const;
+	virtual const world_wrapper& world() const;
 	virtual const material& bound_material(std::string name) const;
 };
 
-BOOST_CLASS_IMPLEMENTATION(world, boost::serialization::object_serializable);
+BOOST_CLASS_IMPLEMENTATION(level, boost::serialization::object_serializable);
 
-std::istream& operator>> (std::istream& is, world& world);
-std::ostream& operator<< (std::ostream& os, const world& world);
+std::istream& operator>> (std::istream& is, level& value);
+std::ostream& operator<< (std::ostream& os, const level& value);
 
 #endif //OBJECTS_WORLD_HPP

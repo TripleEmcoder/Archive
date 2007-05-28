@@ -33,7 +33,7 @@ private:
 void object::compile(const object& parent)
 {
 	_parent = &parent;
-	_root = _parent->_root != NULL ? _parent->_root : (world*)_parent;
+	_root = _parent->_root != NULL ? _parent->_root : (level*)_parent;
 
 	_composition.reset(new matrix());
 	_composition->compose(*_parent->_composition);
@@ -59,7 +59,7 @@ const object& object::parent() const
 	return *_parent;
 }
 
-const world& object::root() const
+const level& object::root() const
 {
 	return *_root;
 }

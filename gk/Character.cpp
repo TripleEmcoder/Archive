@@ -1,13 +1,23 @@
 #include "Character.hpp"
+#include "matrix.hpp"
+#include "vertex.hpp"
 
 #include <iostream>
 #include <cmath>
 
-using namespace boost::numeric::ublas;
+#include <boost/bind.hpp>
+
+//using boost::numeric::ublas;
 	
-Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
-	:nWorld(nw)
+Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
+	:nWorld(nw.id()), body(nw)
 {
+	body.mass(80.0f, vertex(80.0f, 80.0f, 80.0f));
+
+	body.transformation_changed.connect(boost::bind(&Character::setTransform, this, _1));
+	body.simulation_starting.connect(boost::bind(&Character::applyForceAndTorque, this));
+	body.contact_started.connect(boost::bind(&Character::processCollision, this));
+
 	normal[0] = normal[2] = 0;
 	normal[1] = 1;
 	
@@ -21,24 +31,18 @@ Character::Character(const NewtonWorld* nw, float sizeX, float sizeY, float size
 	location(3,2) = locationZ;
 
 	NewtonCollision* collision = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
-	body = NewtonCreateBody(nWorld, collision);
+	NewtonBodySetCollision(body.id(), collision);
 	NewtonReleaseCollision(nWorld, collision);
 	
-	NewtonBodySetUserData(body, this);
 
-	NewtonBodySetDestructorCallback(body, destructor);
-	NewtonBodySetTransformCallback(body, setTransform);
-	NewtonBodySetForceAndTorqueCallback(body, applyForceAndTorque);
 
-	NewtonBodySetMassMatrix(body, 80.0f, 80.0f, 80.0f, 80.0f);
-
-	NewtonBodySetMatrix(body, location.data());
+	NewtonBodySetMatrix(body.id(), location.data());
 	
-  	upVector = NewtonConstraintCreateUpVector(nWorld, createVector(0, 1, 0).data(), body); 
+  	upVector = NewtonConstraintCreateUpVector(nWorld, createVector(0, 1, 0).data(), body.id()); 
 
-	NewtonBodySetAutoFreeze(body, 0);
+	NewtonBodySetAutoFreeze(body.id(), 0);
 
-	NewtonWorldUnfreezeBody(nWorld, body);
+	NewtonWorldUnfreezeBody(nWorld, body.id());
 
 	jumpInd = false;
 	jumping = false;
@@ -49,33 +53,16 @@ Character::~Character(void)
 {
 }
 
-void Character::applyForceAndTorque(const NewtonBody* body)
+void Character::setTransform(const matrix& value)
 {
-	Character* player;
-
-	player = (Character*)NewtonBodyGetUserData(body);
-
-	player->applyForceAndTorque();
-}
-
-void Character::setTransform(const NewtonBody* body, const float* matrix)
-{
-	Character* player;
-
-	player = (Character*)NewtonBodyGetUserData(body);
+	const float* m = value.row_major_data();
 
 	Matrix4x4 mat;
 	for (int i = 0; i < 4; ++i)
 		for (int j = 0; j < 4; ++j)
-			mat(i,j) = matrix[i*4 + j];
+			mat(i,j) = m[i*4 + j];
 
-	player->setLocation(mat);
-}
-
-void Character::destructor(const NewtonBody* body)
-{
-	Character* player = (Character*)NewtonBodyGetUserData(body);
-	delete player;
+	setLocation(mat);
 }
 
 void Character::setLocation(const Matrix4x4& matrix)
@@ -104,11 +91,8 @@ Vector Character::getDirection()
 	return matrix_row<Matrix4x4>(location, 0);
 }
 
-void Character::processCollision(const NewtonMaterial* material)
+void Character::processCollision()
 {
-	NewtonMaterialSetContactFrictionState(material, 0, 0);
-	NewtonMaterialSetContactFrictionState(material, 0, 1);
-
 	if (count)
 	{
 		count--;
@@ -130,7 +114,7 @@ void Character::applyForceAndTorque()
 
 	float timestep = NewtonGetTimeStep(nWorld);
 	
-	NewtonBodyGetMassMatrix (body, &mass, &Ixx, &Iyy, &Izz);
+	NewtonBodyGetMassMatrix(body.id(), &mass, &Ixx, &Iyy, &Izz);
 
 	Vector desiredVel;
 		
@@ -146,7 +130,7 @@ void Character::applyForceAndTorque()
 		desiredVel = movement * 0.0f;
 	}
 
-	NewtonBodyGetVelocity(body, velocity.data());
+	NewtonBodyGetVelocity(body.id(), velocity.data());
 	
 	if (velocity[1] < 0 || jumping)
 		velocity[1] = 0;
@@ -164,12 +148,12 @@ void Character::applyForceAndTorque()
 		count = 4;
 	}
 
-	NewtonBodySetForce(body, force.data());
+	NewtonBodySetForce(body.id(), force.data());
 }
 
 void Character::draw(const state& state) const
 {
-	NewtonBodyGetVelocity(body, velocity.data());
+	NewtonBodyGetVelocity(body.id(), velocity.data());
 	velocity[3] = 0;
 	write(350, 35, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);
 	if (jumping)

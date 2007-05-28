@@ -63,6 +63,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="2"
+				GenerateManifest="false"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="1"
@@ -139,6 +140,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="glew32.lib glut32.lib newton.lib corona.lib"
 				LinkIncremental="1"
+				GenerateManifest="false"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				OptimizeReferences="2"
@@ -258,6 +260,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\level.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\md3.cpp"
 					>
 				</File>
@@ -276,28 +282,6 @@
 				<File
 					RelativePath=".\objects\weapon.cpp"
 					>
-				</File>
-				<File
-					RelativePath=".\objects\world.cpp"
-					>
-					<FileConfiguration
-						Name="Debug|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							ObjectFile="$(IntDir)\$(InputName)1.obj"
-							XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
-						/>
-					</FileConfiguration>
-					<FileConfiguration
-						Name="Release|Win32"
-						>
-						<Tool
-							Name="VCCLCompilerTool"
-							ObjectFile="$(IntDir)\$(InputName)1.obj"
-							XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
-						/>
-					</FileConfiguration>
 				</File>
 			</Filter>
 			<Filter
@@ -526,6 +510,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\objects\level.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\objects\md3.hpp"
 					>
 				</File>
@@ -543,10 +531,6 @@
 				</File>
 				<File
 					RelativePath=".\objects\weapon.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\world.hpp"
 					>
 				</File>
 			</Filter>
@@ -665,11 +649,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\resources\map.bsp"
-				>
-			</File>
-			<File
-				RelativePath=".\resources\map.xml"
+				RelativePath=".\resources\level.xml"
 				>
 			</File>
 			<File

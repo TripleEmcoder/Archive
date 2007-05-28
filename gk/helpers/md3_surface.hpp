@@ -100,6 +100,9 @@ private:
 	std::vector<md3_st> sts;
 	std::vector<md3_triangle> triangles;
 
+	std::vector<md3_vector> vertices;
+	std::vector<md3_vector> normals;
+
 	boost::shared_ptr<texture_wrapper> texture;
 };
 

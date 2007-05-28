@@ -30,6 +30,8 @@ struct face : public bsp_face
 };
 
 struct NewtonCollison;
+class body_wrapper;
+
 class bsp : public object
 {
 public:
@@ -77,6 +79,8 @@ private:
 	bsp_visdata _visdata;
 
 	mutable set_vector<face> _visible_faces;
+	
+	boost::shared_ptr<body_wrapper> body;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

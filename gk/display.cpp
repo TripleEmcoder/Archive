@@ -1,5 +1,5 @@
 #include "display.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <boost/format.hpp>
 
@@ -51,7 +51,8 @@ void reshape_window(int width, int height)
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, width/height, 0.1, 500);
+	gluPerspective(50, width/height, 0.1, 50);
+	
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }

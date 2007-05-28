@@ -1,5 +1,5 @@
 #include "box.hpp"
-#include "world.hpp"
+#include "level.hpp"
 #include "matrix.hpp"
 #include "material.hpp"
 #include "state.hpp"
@@ -8,29 +8,29 @@
 void box::compile(const object& parent)
 {
 	object::compile(parent);
-
+/*
 	matrix offset;
 	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
 
-	NewtonCollision* collision = NewtonCreateBox(root().newton(),
+	NewtonCollision* collision = NewtonCreateBox(root().world(),
 		size.x, size.y, size.z, offset.row_major_data());
 
-	NewtonBody *body = NewtonCreateBody(root().newton(), collision);
-	NewtonReleaseCollision(root().newton(), collision);
+	NewtonBody *body = NewtonCreateBody(root().world(), collision);
+	NewtonReleaseCollision(root().world(), collision);
 	
 	NewtonBodySetMatrix(body, composition().row_major_data());
-
+*/
 /*
 	body::compile();
 
 	matrix offset;
 	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
 
-	NewtonCollision* collision = NewtonCreateBox(root().newton(),
+	NewtonCollision* collision = NewtonCreateBox(root().world(),
 		size.x, size.y, size.z, offset.row_major_data());
 
-	NewtonBodySetCollision(newton(), collision);
-	NewtonReleaseCollision(root().newton(), collision);
+	NewtonBodySetCollision(world(), collision);
+	NewtonReleaseCollision(root().world(), collision);
 */
 	list.reset(new list_wrapper());
 

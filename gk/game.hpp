@@ -1,7 +1,7 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
-#include "world.hpp"
+#include "level.hpp"
 #include "objects/character.hpp"
 #include "projector.hpp"
 #include "fps_meter.hpp"
@@ -14,7 +14,7 @@
 extern Camera* camera;
 extern Character* character;
 
-extern world w;
+extern level w;
 extern projector p;
 extern fps_meter f;
 extern crosshair c;
