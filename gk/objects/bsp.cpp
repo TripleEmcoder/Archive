@@ -212,7 +212,7 @@ void bsp::create_collisions() const
 void bsp::compile(const object& parent)
 {
 	object::compile(parent);
-	body.reset(new body_wrapper(root().world()));
+	body.reset(new body_wrapper(root().world(), name));
 
 	ifstream is;
 	bsp_header header;

@@ -57,7 +57,7 @@ class matrix;
 class body_wrapper
 {
 public:
-	body_wrapper(const world_wrapper& world);
+	body_wrapper(const world_wrapper& world, std::string tag);
 
 	const body_id& id() const;
 	
@@ -75,9 +75,14 @@ public:
 
 private:
 	body_id body;
+	std::string tag;
 
 	static void transformation_changed_callback(const NewtonBody* body, const float* matrix);
 	static void simulation_starting_callback(const NewtonBody* body);
+
+	void contact_started_debug(const body_wrapper& party) const;
+	void contact_running_debug(const body_wrapper& party) const;
+	void contact_stopped_debug(const body_wrapper& party) const;
 };
 
 #endif //HELPERS_world_HPP

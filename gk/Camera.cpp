@@ -30,12 +30,12 @@ void Camera::rotate(float x, float y)
 	setPosition(position);
 }
 
-void Camera::set(const vertex& offset) const
+void Camera::set() const
 {
 	const Vector& eye = matrix_row<Matrix4x4>(matrix, 3);
 	const Vector& front = matrix_row<Matrix4x4>(matrix, 0);
 	Vector center = eye + front;		
-	gluLookAt(eye[0]+offset.x, eye[1]+offset.y, eye[2]+offset.z, center[0], center[1], center[2], 0, 1, 0);
+	gluLookAt(eye[0], eye[1], eye[2], center[0], center[1], center[2], 0, 1, 0);
 	calculatePlanes();
 }
 

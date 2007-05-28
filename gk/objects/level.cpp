@@ -10,13 +10,7 @@
 
 #include <algorithm>
 
-#include <boost/lambda/lambda.hpp>
-#include <boost/lambda/bind.hpp>
-
-using boost::ref;
-using boost::lambda::bind;
-using boost::lambda::var;
-using boost::lambda::_1;
+#include <boost/bind.hpp>
 
 std::istream& operator>> (std::istream& is, level& value)
 {
@@ -44,12 +38,14 @@ void level::compile()
 {
 	_world.size(vertex(-1000, -1000, -1000), vertex(1000, 1000, 1000));
 
-	std::for_each(materials.begin(), materials.end(), bind(compile_second, var(materials), _1));
+	std::for_each(materials.begin(), materials.end(),
+		boost::bind(compile_second, boost::ref(materials), _1));
 
 	object::compile(*this);
 	player.compile(*this);
 	
-	std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
+	std::for_each(groups.begin(), groups.end(),
+		boost::bind(&object::compile, _1, boost::ref(*this)));
 }
 
 void level::draw(const state& state) const
@@ -57,7 +53,8 @@ void level::draw(const state& state) const
 	object::draw(state);
 	player.draw(state);
 
-	std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1, ref(state)));
+	std::for_each(groups.begin(), groups.end(),
+		boost::bind(&object::draw, _1, boost::ref(state)));
 }
 
 const world_wrapper& level::world() const

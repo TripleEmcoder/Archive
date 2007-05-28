@@ -10,13 +10,13 @@
 //using boost::numeric::ublas;
 	
 Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
-	:nWorld(nw.id()), body(nw)
+	:nWorld(nw.id()), body(nw, "character")
 {
 	body.mass(80.0f, vertex(80.0f, 80.0f, 80.0f));
 
 	body.transformation_changed.connect(boost::bind(&Character::setTransform, this, _1));
 	body.simulation_starting.connect(boost::bind(&Character::applyForceAndTorque, this));
-	body.contact_started.connect(boost::bind(&Character::processCollision, this));
+	body.contact_running.connect(boost::bind(&Character::processCollision, this));
 
 	normal[0] = normal[2] = 0;
 	normal[1] = 1;
@@ -33,8 +33,6 @@ Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float si
 	NewtonCollision* collision = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
 	NewtonBodySetCollision(body.id(), collision);
 	NewtonReleaseCollision(nWorld, collision);
-	
-
 
 	NewtonBodySetMatrix(body.id(), location.data());
 	

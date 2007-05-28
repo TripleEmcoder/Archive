@@ -17,7 +17,7 @@ void weapon::compile(const object& parent)
 	model->name = (boost::format(WEAPON_PATH) % name).str();
 	model->compile(*this);
 
-	body.reset(new body_wrapper(root().world()));
+	body.reset(new body_wrapper(root().world(), name));
 	body->transformation(composition());
 	
 	body->transformation_changed.connect(

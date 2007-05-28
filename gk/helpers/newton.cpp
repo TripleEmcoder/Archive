@@ -2,6 +2,9 @@
 #include "matrix.hpp"
 #include "vertex.hpp"
 
+#include <boost/bind.hpp>
+#include <boost/format.hpp>
+
 world_id::world_id()
 {
 	world = NewtonCreate(NULL, NULL);
@@ -84,14 +87,14 @@ world_wrapper::world_wrapper()
 :
 	body0(NULL), body1(NULL)
 {
-	int material = NewtonMaterialGetDefaultGroupID (world);
+	int group = NewtonMaterialGetDefaultGroupID(world);
 
-	NewtonMaterialSetDefaultSoftness(world, material, material, 0.05f);
-	NewtonMaterialSetDefaultElasticity(world, material, material, 0.0f);
-	NewtonMaterialSetDefaultCollidable(world, material, material, 1);
-	//NewtonMaterialSetDefaultFriction(world, material, material, 0.0f, 0.0f);
+	NewtonMaterialSetDefaultSoftness(world, group, group, 0.05f);
+	NewtonMaterialSetDefaultElasticity(world, group, group, 0.0f);
+	NewtonMaterialSetDefaultCollidable(world, group, group, 1);
+	//NewtonMaterialSetDefaultFriction(world, group, group, 0.0f, 0.0f);
 	
-	NewtonMaterialSetCollisionCallback(world, material, material, this,
+	NewtonMaterialSetCollisionCallback(world, group, group, this,
 		contact_started_callback, contact_running_callback, contact_stopped_callback);
 }
 
@@ -119,13 +122,19 @@ void body_wrapper::simulation_starting_callback(const NewtonBody* body)
 	wrapper->simulation_starting();
 }
 
-body_wrapper::body_wrapper(const world_wrapper& world)
+body_wrapper::body_wrapper(const world_wrapper& world, std::string tag)
 :
-	body(world.id())
+	body(world.id()), tag(tag)
 {
 	NewtonBodySetUserData(body, this);
 	NewtonBodySetTransformCallback(body, transformation_changed_callback);
 	NewtonBodySetForceAndTorqueCallback(body, simulation_starting_callback);
+
+#ifdef _DEBUG
+	contact_started.connect(boost::bind(&body_wrapper::contact_started_debug, this, _1));
+	contact_running.connect(boost::bind(&body_wrapper::contact_running_debug, this, _1));
+	contact_stopped.connect(boost::bind(&body_wrapper::contact_stopped_debug, this, _1));
+#endif
 }
 
 const body_id& body_wrapper::id() const
@@ -146,4 +155,19 @@ void body_wrapper::mass(float mass, const vertex& inertia)
 void body_wrapper::omega(const vertex& value)
 {
 	NewtonBodySetOmega(body, &value.x);
+}
+
+void body_wrapper::contact_started_debug(const body_wrapper& party) const
+{
+	std::cerr << (boost::format("contact_started(%1%, %2%)") % tag % party.tag).str() << std::endl;
+}
+
+void body_wrapper::contact_running_debug(const body_wrapper& party) const
+{
+	std::cerr << (boost::format("contact_running(%1%, %2%)") % tag % party.tag).str() << std::endl;
+}
+
+void body_wrapper::contact_stopped_debug(const body_wrapper& party) const
+{
+	std::cerr << (boost::format("contact_stopped(%1%, %2%)") % tag % party.tag).str() << std::endl;
 }

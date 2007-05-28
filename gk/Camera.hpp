@@ -26,7 +26,7 @@ public:
 	~Camera(void);
 	//void draw();
 	virtual void draw(const state& state) const;
-	virtual void set(const vertex& offset) const;
+	virtual void set() const;
 	void rotate(float x, float y);
 	float getAngleX() const;
 	float getAngleY() const;

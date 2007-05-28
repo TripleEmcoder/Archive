@@ -80,13 +80,15 @@ const int shadowMapSize=512;
 //Textures
 GLuint shadowMapTexture;
 
-void draw_everything()
+void draw_scene(const vertex& offset)
 {
-	process_active_keys();
-	process_physics();
-
 	Vector position = character->getLocation();
 	position[1] += 0.8f;
+
+	position[0] += offset.x;
+	position[1] += offset.y;
+	position[2] += offset.z;
+
 	camera->setPosition(position);
 
 	state state;
@@ -94,7 +96,14 @@ void draw_everything()
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	camera->set(vertex(0, 0, 0));
+	camera->set();
+	w.draw(state);
+}
+
+void draw_everything()
+{
+	process_active_keys();
+	process_physics();
 
 	//First pass - from light's point of view
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -104,10 +113,7 @@ void draw_everything()
 	glLoadIdentity();
 	gluPerspective(45.0f, 1.0f, 2.0f, 8.0f);
 
-	glMatrixMode(GL_MODELVIEW);
-	glPushMatrix();
-	glLoadIdentity();
-	camera->set(vertex(0, 2, 0));
+	//draw_scene(vertex(0, 2, 0));
 
 	glPushAttrib(GL_VIEWPORT_BIT);
 	glViewport(0, 0, shadowMapSize, shadowMapSize);
@@ -119,7 +125,7 @@ void draw_everything()
 	//glShadeModel(GL_FLAT);
 	//glColorMask(0, 0, 0, 0);
 
-	//w.draw(state);
+	
 
 	//Read the depth buffer into the shadow map texture
 	glBindTexture(GL_TEXTURE_2D, shadowMapTexture);
@@ -130,9 +136,8 @@ void draw_everything()
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
 
-	glMatrixMode(GL_MODELVIEW);
-	glPopMatrix();
-w.draw(state);
+	draw_scene(vertex(0, 0, 0));
+	
 	//2nd pass - Draw from camera's point of view
 /*
 	glClear(GL_DEPTH_BUFFER_BIT);
@@ -209,9 +214,12 @@ w.draw(state);
 	glDisable(GL_LIGHTING);
 	glDisable(GL_ALPHA_TEST);
 */
+	state state;
+	state.camera = camera;
 	p.draw(state);
 	glutSwapBuffers();
 }
+
 
 void setup_callbacks()
 {
@@ -281,6 +289,7 @@ int main(int argc, char* argv[])
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+
 
 	glutMainLoop();
 	return 0;
