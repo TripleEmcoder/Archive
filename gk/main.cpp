@@ -19,8 +19,6 @@ void load_level(std::string name)
 
 	std::cerr << "Compiling..." << std::endl;
 	w.compile();
-
-	std::cerr << "Done." << std::endl;
 }
 
 void setup_widgets()
@@ -178,6 +176,16 @@ int main(int argc, char* argv[])
 
 	glEnable(GL_DEPTH_TEST);
 
+	shader_wrapper v(GL_VERTEX_SHADER, "vertex.c");
+	shader_wrapper f(GL_FRAGMENT_SHADER, "fragment.c");
+
+	program_wrapper p;
+	p.attach(v);
+	p.attach(f);
+	p.link();
+	//p.use();
+
+	std::cerr << "Running..." << std::endl;
 	glutMainLoop();
 	return 0;
 }

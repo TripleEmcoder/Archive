@@ -98,7 +98,7 @@
       <count>2</count>
       <item>
         <name>xml</name>
-        <visible>0</visible>
+        <visible>1</visible>
         <transformations>
           <count>1</count>
           <item>
@@ -135,10 +135,10 @@
           <count>0</count>
         </weapons>
         <groups>
-          <count>2</count>
+          <count>3</count>
           <item>
             <name>room</name>
-            <visible>1</visible>
+            <visible>0</visible>
             <transformations>
               <count>1</count>
               <item>
@@ -298,8 +298,8 @@
             </groups>
           </item>
           <item>
-            <name>thing</name>
-            <visible>1</visible>
+            <name>tests</name>
+            <visible>0</visible>
             <transformations>
               <count>0</count>
             </transformations>
@@ -316,7 +316,7 @@
                     <description>
                       <x>3</x>
                       <y>1</y>
-                      <z>0</z>
+                      <z>-2</z>
                     </description>
                   </item>
                 </transformations>
@@ -325,6 +325,92 @@
                 </bindings>
                 <name>teapot</name>
               </item>
+            </builtins>
+            <grounds>
+              <count>0</count>
+            </grounds>
+            <ceilings>
+              <count>0</count>
+            </ceilings>
+            <walls>
+              <count>1</count>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>4</x>
+                      <y>1</y>
+                      <z>-3</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <length>3</length>
+                <height>1.5</height>
+              </item>
+            </walls>
+            <bsps>
+              <count>0</count>
+            </bsps>
+            <md3s>
+              <count>0</count>
+            </md3s>
+            <weapons>
+              <count>2</count>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>2</x>
+                      <y>1</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>shotgun</name>
+              </item>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>4</x>
+                      <y>1</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>railgun</name>
+              </item>
+            </weapons>
+            <groups>
+              <count>0</count>
+            </groups>
+          </item>
+          <item>
+            <name>weapons</name>
+            <visible>1</visible>
+            <transformations>
+              <count>0</count>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <builtins>
+              <count>0</count>
             </builtins>
             <grounds>
               <count>0</count>
@@ -342,7 +428,41 @@
               <count>0</count>
             </md3s>
             <weapons>
-              <count>0</count>
+              <count>2</count>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>2</x>
+                      <y>1</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>shotgun</name>
+              </item>
+              <item>
+                <transformations>
+                  <count>1</count>
+                  <item>
+                    <name>translation</name>
+                    <description>
+                      <x>4</x>
+                      <y>1</y>
+                      <z>0</z>
+                    </description>
+                  </item>
+                </transformations>
+                <bindings>
+                  <count>0</count>
+                </bindings>
+                <name>railgun</name>
+              </item>
             </weapons>
             <groups>
               <count>0</count>
@@ -360,24 +480,7 @@
           <count>0</count>
         </bindings>
         <builtins>
-          <count>1</count>
-          <item>
-            <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>-36</x>
-                  <y>1</y>
-                  <z>18</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <name>teapot</name>
-          </item>
+          <count>0</count>
         </builtins>
         <grounds>
           <count>0</count>
@@ -386,25 +489,7 @@
           <count>0</count>
         </ceilings>
         <walls>
-          <count>1</count>
-          <item>
-            <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>-34</x>
-                  <y>1</y>
-                  <z>-17</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <length>3</length>
-            <height>1.5</height>
-          </item>
+          <count>0</count>
         </walls>
         <bsps>
           <count>1</count>
@@ -422,41 +507,7 @@
           <count>0</count>
         </md3s>
         <weapons>
-          <count>2</count>
-          <item>
-            <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>-38</x>
-                  <y>1</y>
-                  <z>20</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <name>shotgun</name>
-          </item>
-          <item>
-            <transformations>
-              <count>1</count>
-              <item>
-                <name>translation</name>
-                <description>
-                  <x>-36</x>
-                  <y>1</y>
-                  <z>20</z>
-                </description>
-              </item>
-            </transformations>
-            <bindings>
-              <count>0</count>
-            </bindings>
-            <name>railgun</name>
-          </item>
+          <count>0</count>
         </weapons>
         <groups>
           <count>0</count>

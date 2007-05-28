@@ -2,7 +2,9 @@
 #include "matrix.hpp"
 
 #include <iostream>
+#include <fstream>
 
+#include <boost/algorithm/string.hpp>
 #include <boost/assign.hpp>
 #include <boost/bind.hpp>
 #include <boost/filesystem/convenience.hpp>
@@ -42,6 +44,40 @@ list_id::~list_id()
 list_id::operator unsigned int() const
 {
 	return list;
+}
+
+shader_id::shader_id(unsigned int type)
+{
+	shader = glCreateShader(type);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+shader_id::~shader_id()
+{
+	glDeleteShader(shader);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+shader_id::operator unsigned int() const
+{
+	return shader;
+}
+
+program_id::program_id()
+{
+	program = glCreateProgram();
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+program_id::~program_id()
+{
+	glDeleteProgram(program);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+program_id::operator unsigned int() const
+{
+	return program;
 }
 
 void test_extension(boost::filesystem::path& previous, const std::string& extension)
@@ -123,6 +159,91 @@ void list_wrapper::call() const
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 }
 
+void write_log(std::string text)
+{
+	boost::trim(text);
+
+	if (text.size() > 0)
+		std::cerr << text << std::endl;
+}
+
+shader_wrapper::shader_wrapper(unsigned int type, std::string name)
+:
+	id(type)
+{
+#ifdef _DEBUG
+	std::cerr << "Loading shader \"" << name << "\"..." << std::endl;
+#endif
+
+	std::ifstream file(name.c_str());
+
+	if (file.fail())
+	{
+		std::cerr << "Failed to load shader \"" << name << "\"." << std::endl;
+		return;
+	}
+
+	std::string code;
+	std::getline(file, code, '\0');
+
+	const char* hack = code.c_str();
+
+	glShaderSource(id, 1, &hack, NULL);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+
+	glCompileShader(id);
+
+	int total = 0;
+	int written = 0;
+	char* log = NULL;
+
+	glGetShaderiv(id, GL_INFO_LOG_LENGTH, &total);
+	
+	if (total > 0)
+	{
+		log = new char[total];
+		glGetShaderInfoLog(id, total, &written, log);
+		write_log(log);		
+		delete[] log;
+	}
+}
+
+void program_wrapper::attach(const shader_wrapper& shader)
+{
+	glAttachShader(id, shader.id);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+void program_wrapper::detach(const shader_wrapper& shader)
+{
+	glDetachShader(id, shader.id);
+	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+void program_wrapper::link()
+{
+	glLinkProgram(id);
+
+	int total = 0;
+	int written = 0;
+	char* log = NULL;
+
+	glGetProgramiv(id, GL_INFO_LOG_LENGTH, &total);
+	
+	if (total > 0)
+	{
+		log = new char[total];
+		glGetProgramInfoLog(id, total, &written, log);
+		write_log(log);
+		delete[] log;
+	}
+}
+
+void program_wrapper::use() const
+{
+	glUseProgram(id);
+}
+
 texture_scope::texture_scope(const texture_wrapper& texture)
 {
 	glPushAttrib(GL_TEXTURE_BIT);
@@ -136,7 +257,7 @@ texture_scope::~texture_scope()
 	_ASSERTE(glGetError() == GL_NO_ERROR);
 };
 
-list_scope::list_scope(const list_wrapper& list)
+list_scope::list_scope(list_wrapper& list)
 {
 	list.begin();
 }
@@ -145,6 +266,16 @@ list_scope::~list_scope()
 {
 	glEndList();
 	_ASSERTE(glGetError() == GL_NO_ERROR);
+}
+
+program_scope::program_scope(const program_wrapper& program)
+{
+	program.use();
+}
+
+program_scope::~program_scope()
+{
+	glUseProgram(0);
 }
 
 matrix_scope::matrix_scope(const matrix& matrix)

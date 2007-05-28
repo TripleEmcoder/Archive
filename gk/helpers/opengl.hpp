@@ -34,6 +34,28 @@ private:
 	unsigned int list;
 };
 
+class shader_id : private boost::noncopyable
+{
+public:
+	shader_id(unsigned int type);
+	~shader_id();
+	operator unsigned int() const;
+
+private:
+	unsigned int shader;
+};
+
+class program_id : private boost::noncopyable
+{
+public:
+	program_id();
+	~program_id();
+	operator unsigned int() const;
+
+private:
+	unsigned int program;
+};
+
 //operacje na pojedynczej teksturze
 class texture_wrapper
 {
@@ -51,9 +73,32 @@ class list_wrapper
 public:
 	void begin() const;
 	void call() const;
+	//void end();
 
 private:
 	list_id id;
+};
+
+class shader_wrapper
+{
+public:
+	shader_wrapper(unsigned int type, std::string name);
+
+private:
+	friend class program_wrapper;
+	shader_id id;
+};
+
+class program_wrapper
+{
+public:
+	void attach(const shader_wrapper& shader);
+	void detach(const shader_wrapper& shader);
+	void link();
+	void use() const;
+
+private:
+	program_id id;
 };
 
 //obsluga obszaru obiazywania tekstury
@@ -68,8 +113,15 @@ public:
 class list_scope
 {
 public:
-	list_scope(const list_wrapper& list);
+	list_scope(list_wrapper& list);
 	~list_scope();
+};
+
+class program_scope
+{
+public:
+	program_scope(const program_wrapper& program);
+	~program_scope();
 };
 
 class matrix;
