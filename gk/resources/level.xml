@@ -299,7 +299,7 @@
           </item>
           <item>
             <name>tests</name>
-            <visible>0</visible>
+            <visible>1</visible>
             <transformations>
               <count>0</count>
             </transformations>

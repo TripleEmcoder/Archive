@@ -54,7 +54,8 @@ void setup_lights()
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
 	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 40);
+	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 20);
 
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 
