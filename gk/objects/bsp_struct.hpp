@@ -64,7 +64,7 @@ struct bsp_texture
 
 struct bsp_lightmap
 {
-	char pixels[128][128][3];
+	unsigned char pixels[128][128][3];
 };
 
 struct bsp_plane

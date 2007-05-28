@@ -83,6 +83,8 @@ void convert_vertex(bsp_vertex& vertex)
 {
 	swizzle(vertex.position);
 	swizzle(vertex.normal);
+	vertex.lightmap_coordinate.x = 1 - vertex.lightmap_coordinate.x;
+	vertex.lightmap_coordinate.y = 1 - vertex.lightmap_coordinate.y;
 	scale(vertex.position, bsp_scale);
 }
 
@@ -105,41 +107,37 @@ template <typename T> void convert_mins_maxs(T& t)
 
 texture convert_texture(const bsp_texture& t)
 {
-	/*ifstream file;
-	string name = string(t.name) + ".jpg";
-	file.open(name.c_str());
-	if (!file.is_open())
-	{
-		name = string(t.name) + ".tga";
-		file.open(name.c_str());
-	}
-	if (file.is_open())
-	{
-		file.close();
-		texture result(name);
-		result.compile();
-		return result;
-	}
-	else
-	{
-		cerr << "Texture not found: " << t.name << endl;
-		return texture();
-	}*/
-	if (string(t.name) == string("textures/gothic_door/km_arena1columna2R"))
-		std::cerr << "DUPA" << std::endl;
 	return texture(t.name);
 }
 
-boost::shared_ptr<texture_id> convert_lightmap(const bsp_lightmap& l)
+boost::shared_ptr<texture_id> convert_lightmap(bsp_lightmap& l)
 {
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
-	//glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	//glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+
+	float scale = 3.0f;
+	for (int i = 0; i < 128; ++i)
+		for (int j = 0; j < 128; ++j)
+		{
+			float color[3];
+			float m = 0;
+			for (int k = 0; k < 3; ++k)
+			{
+				color[k] = l.pixels[i][j][k] * scale;
+				m = max(m, color[k]);
+			}
+			if (m > 255.0f)
+				for (int k = 0; k < 3; ++k)
+					color[k] /= m;
+			for (int k = 0; k < 3; ++k)
+				l.pixels[i][j][k] = color[k];
+		}
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
 	glTexImage2D(GL_TEXTURE_2D, 0, 3, 128, 128, 0, GL_RGB, GL_UNSIGNED_BYTE, l.pixels);
 	return id;
 }
@@ -283,6 +281,8 @@ void bsp::compile_face(face& face)
 	if (face.lightmap_index != -1)
 	{
 		glActiveTexture(GL_TEXTURE1);
+		//_textures.back().draw();
+
 		glBindTexture(GL_TEXTURE_2D, *_lightmaps[face.lightmap_index]);
 	}
 
@@ -319,6 +319,8 @@ void bsp::compile_faces()
 	glEnableClientState(GL_NORMAL_ARRAY);
 	glEnableClientState(GL_COLOR_ARRAY);
 
+	//_textures.push_back(texture("magic_lightmap"));
+
 	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::compile_face, boost::ref(*this), _1));
 
 	glPopClientAttrib();
@@ -337,24 +339,17 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 	glCullFace(GL_BACK);
 	glFrontFace(GL_CW);
 
-	glEnable(GL_TEXTURE_2D);
-
 	glActiveTexture(GL_TEXTURE0);
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE_EXT); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_COMBINE_RGB_EXT, GL_MODULATE); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_SOURCE0_RGB_EXT, GL_TEXTURE); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND0_RGB_EXT, GL_SRC_COLOR); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_RGB_SCALE_EXT, 2.0f);
+	glEnable(GL_TEXTURE_2D);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
 	glActiveTexture(GL_TEXTURE1);
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE_EXT); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_COMBINE_RGB_EXT, GL_MODULATE); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_SOURCE1_RGB_EXT, GL_PREVIOUS_EXT); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND0_RGB_EXT, GL_SRC_COLOR); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_OPERAND1_RGB_EXT, GL_SRC_COLOR); 
-	glTexEnvf(GL_TEXTURE_ENV, GL_RGB_SCALE_EXT, 2.0f);
-
-	glEnable(GL_COLOR_MATERIAL);
+	glEnable(GL_TEXTURE_2D);
+	//glDisable(GL_TEXTURE_2D);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+	
+	glActiveTexture(GL_TEXTURE0);
+	//glEnable(GL_COLOR_MATERIAL);
 	//glEnable(GL_BLEND);
 	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
