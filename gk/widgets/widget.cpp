@@ -1,5 +1,5 @@
 #include "widget.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <cstdio>
 #include <cstring>

@@ -25,7 +25,8 @@ void texture::compile()
 
 void texture::draw() const
 {
-	wrapper->bind();
+	if (wrapper)
+		wrapper->bind();
 }
 
 boost::tuple<float, float> texture::ratio(float _width, float _height) const

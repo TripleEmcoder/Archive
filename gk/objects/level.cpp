@@ -3,8 +3,6 @@
 #include <boost/serialization/nvp.hpp>
 
 #include "level.hpp"
-#include "transformation.hpp"
-#include "state.hpp"
 #include "opengl.hpp"
 #include "newton.hpp"
 
@@ -36,7 +34,9 @@ void compile_second(std::map<std::string, material>& m, const std::pair<std::str
 
 void level::compile()
 {
-	_world.size(vertex(-1000, -1000, -1000), vertex(1000, 1000, 1000));
+	_world.reset(new world_wrapper());
+
+	_world->size(vertex(-1000, -1000, -1000), vertex(1000, 1000, 1000));
 
 	std::for_each(materials.begin(), materials.end(),
 		boost::bind(compile_second, boost::ref(materials), _1));
@@ -59,7 +59,7 @@ void level::draw(const state& state) const
 
 const world_wrapper& level::world() const
 {
-	return _world;
+	return *_world;
 }
 
 const material& level::bound_material(std::string name) const

@@ -3,22 +3,25 @@
 
 #include <set>
 
+#include "vertex.hpp"
+
 class widget;
 class state;
 
 class projector
 {
 public:
+	projector(const vertex& color);
+
 	void add(const widget* item);
 	void remove(const widget* item);
 
 	void draw(const state& state) const;
 
 private:
-	std::set<const widget*> _widgets;
+	vertex color;
 
-	void setup_orthographic_projection() const;
-	void setup_perspective_projection() const;
+	std::set<const widget*> _widgets;
 };
 
 #endif //WIDGETS_PROJECTOR_HPP

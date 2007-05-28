@@ -14,12 +14,13 @@
 #include "material.hpp"
 #include "character.hpp"
 #include "group.hpp"
-#include "newton.hpp"
+
+class world_wrapper;
 
 class level : public object
 {
 private:
-	world_wrapper _world;
+	boost::shared_ptr<world_wrapper> _world;
 
 public:
 	std::map<std::string, material> materials;

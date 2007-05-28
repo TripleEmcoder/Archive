@@ -7,6 +7,7 @@
 #include "vertex.hpp"
 
 class list_wrapper;
+class body_wrapper;
 
 //klasa reprezentujaca prostopadloscian
 class box : public object
@@ -27,15 +28,16 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	boost::shared_ptr<list_wrapper> list;
+	boost::shared_ptr<list_wrapper> _list;
+	boost::shared_ptr<body_wrapper> _body;
 
-	void draw_faces(const state& state) const;
-	void draw_left_face(const state& state) const;
-	void draw_right_face(const state& state) const;
-	void draw_bottom_face(const state& state) const;
-	void draw_top_face(const state& state) const;
-	void draw_front_face(const state& state) const;
-	void draw_back_face(const state& state) const;
+	void draw_faces() const;
+	void draw_left_face() const;
+	void draw_right_face() const;
+	void draw_bottom_face() const;
+	void draw_top_face() const;
+	void draw_front_face() const;
+	void draw_back_face() const;
 };
 
 BOOST_CLASS_IMPLEMENTATION(box, boost::serialization::object_serializable);

@@ -1,11 +1,15 @@
 #include "md3.hpp"
+#include "level.hpp"
 #include "md3_file.hpp"
 #include "md3_frame.hpp"
 #include "md3_surface.hpp"
 #include "opengl.hpp"
+#include "newton.hpp"
 
 #include <fstream>
 #include <iostream>
+
+#include <boost/bind.hpp>
 
 void md3::compile(const object& parent)
 {
@@ -23,7 +27,13 @@ void md3::compile(const object& parent)
 		return;
 	}
 
-	file.reset(new md3_file(input));
+	_file.reset(new md3_file(input));
+
+	_body.reset(new body_wrapper(root().world(), name));
+	_body->transformation(composition());
+	
+	_body->transformation_changed.connect(
+		boost::bind(&md3::composition, this, _1));
 
 	time = glutGet(GLUT_ELAPSED_TIME);
 	frame = 0;
@@ -35,11 +45,16 @@ void md3::draw(const state& state) const
 	frame += elapsed * MD3_FPS / 1000;
 	time = glutGet(GLUT_ELAPSED_TIME);
 
-	if (frame >= file->frame_count())
+	if (frame >= _file->frame_count())
 		 frame = 0;
 
 	object::draw(state);
 	
-	//matrix_scope scope(composition());
-	file->draw_frame(frame);		
+	matrix_scope scope(composition());
+	_file->draw_frame(frame);		
+}
+
+body_wrapper& md3::body() const
+{
+	return *_body;
 }

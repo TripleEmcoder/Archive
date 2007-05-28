@@ -360,7 +360,24 @@
           <count>0</count>
         </bindings>
         <builtins>
-          <count>0</count>
+          <count>1</count>
+          <item>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>-36</x>
+                  <y>1</y>
+                  <z>18</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <name>teapot</name>
+          </item>
         </builtins>
         <grounds>
           <count>0</count>
@@ -369,7 +386,25 @@
           <count>0</count>
         </ceilings>
         <walls>
-          <count>0</count>
+          <count>1</count>
+          <item>
+            <transformations>
+              <count>1</count>
+              <item>
+                <name>translation</name>
+                <description>
+                  <x>-34</x>
+                  <y>1</y>
+                  <z>-17</z>
+                </description>
+              </item>
+            </transformations>
+            <bindings>
+              <count>0</count>
+            </bindings>
+            <length>3</length>
+            <height>1.5</height>
+          </item>
         </walls>
         <bsps>
           <count>1</count>

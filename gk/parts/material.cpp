@@ -2,7 +2,8 @@
 #include "opengl.hpp"
 
 material::material()
-: ambient(1, 0, 0), shininess(0)
+:
+	ambient(0.4, 0, 0), diffuse(0.6, 0, 0), shininess(0)
 {
 }
 
@@ -15,12 +16,12 @@ void material::draw() const
 {
 	texture.draw();
 
-	glMaterialfv(GL_FRONT, GL_AMBIENT, &ambient.vector()[0]);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, &diffuse.vector()[0]);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, &specular.vector()[0]);
-	glMaterialfv(GL_FRONT, GL_EMISSION, &emission.vector()[0]);
+	//glMaterialfv(GL_FRONT, GL_AMBIENT, &ambient.vector()[0]);
+	//glMaterialfv(GL_FRONT, GL_DIFFUSE, &diffuse.vector()[0]);
+	//glMaterialfv(GL_FRONT, GL_SPECULAR, &specular.vector()[0]);
+	//glMaterialfv(GL_FRONT, GL_EMISSION, &emission.vector()[0]);
 
-	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
+	//glMaterialf(GL_FRONT, GL_SHININESS, shininess);
 }
 
 material_scope::material_scope(const material& material)

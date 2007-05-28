@@ -48,7 +48,7 @@ void object::compile(const object& parent)
 void object::draw(const state& state) const
 {
 #ifdef _DEBUG
-	//matrix_scope mxs(*_composition);
+	matrix_scope mxs(*_composition);
 	//material_scope mls(bound_material("debug"));
 	glutSolidSphere(0.1, 20, 20);
 #endif

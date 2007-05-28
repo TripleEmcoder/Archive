@@ -1,5 +1,5 @@
 #include "fps_meter.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 fps_meter::fps_meter()
 :

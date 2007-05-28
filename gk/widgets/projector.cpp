@@ -1,6 +1,6 @@
 #include "projector.hpp"
 #include "widget.hpp"
-#include "engine.hpp"
+#include "opengl.hpp"
 
 #include <algorithm>
 
@@ -8,6 +8,12 @@
 
 using boost::ref;
 using boost::bind;
+
+projector::projector(const vertex& color)
+:
+	color(color)
+{
+}
 
 void projector::add(const widget* item)
 {
@@ -20,23 +26,9 @@ void projector::remove(const widget* item)
 
 void projector::draw(const state& state) const
 {
-	setup_orthographic_projection();
-
-	std::for_each(_widgets.begin(), _widgets.end(), bind(&widget::draw, _1, ref(state)));
-	
-	setup_perspective_projection();
-}
-
-
-void projector::setup_orthographic_projection() const 
-{
 	int width = glutGet(GLUT_WINDOW_WIDTH);
 	int height = glutGet(GLUT_WINDOW_HEIGHT);
 	
-	glMatrixMode(GL_TEXTURE);
-	glPushMatrix();
-	glLoadIdentity();
-
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
 	glLoadIdentity();
@@ -44,24 +36,18 @@ void projector::setup_orthographic_projection() const
 	glMatrixMode(GL_PROJECTION);
 	glPushMatrix();
 	glLoadIdentity();
-
 	gluOrtho2D(0, width, 0, height);
-	//glScalef(1, -1, 1);
-	//glTranslatef(0, -height, 0);
 
 	glPushAttrib(GL_ENABLE_BIT | GL_CURRENT_BIT);
 
-	glDisable(GL_LIGHTING);
-	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_DEPTH_TEST);
-	glDisable(GL_BLEND);
-}
+	glDisable(GL_TEXTURE_2D);
+	glDisable(GL_LIGHTING);
 
-void projector::setup_perspective_projection() const 
-{
-	glMatrixMode(GL_TEXTURE);
-	glPopMatrix();
+	glColor3f(color.x, color.y, color.z);
 
+	std::for_each(_widgets.begin(), _widgets.end(), bind(&widget::draw, _1, ref(state)));
+	
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
 

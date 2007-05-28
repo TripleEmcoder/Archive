@@ -2,17 +2,15 @@
 #define WIDGETS_CROSSHAIR_HPP
 
 #include "widget.hpp"
-#include "vertex.hpp"
 
 class crosshair : public widget
 {
 public:
-	crosshair(vertex color, float size);
+	crosshair(float size);
 
 	virtual void draw(const state& state) const;
 
 private:
-	vertex color;
 	float size;
 };
 

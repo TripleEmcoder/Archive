@@ -9,6 +9,7 @@
 #include "object.hpp"
 
 class md3_file;
+class body_wrapper;
 
 class md3 : public object
 {
@@ -26,8 +27,12 @@ public:
 	virtual void compile(const object& parent);
 	virtual void draw(const state& state) const;
 
+	body_wrapper& body() const;
+
 private:
-	boost::shared_ptr<md3_file> file;
+	boost::shared_ptr<md3_file> _file;
+	boost::shared_ptr<body_wrapper> _body;
+
 	mutable float frame;
 	mutable int time;
 };

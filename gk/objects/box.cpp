@@ -2,78 +2,59 @@
 #include "level.hpp"
 #include "matrix.hpp"
 #include "material.hpp"
-#include "state.hpp"
 #include "opengl.hpp"
+#include "newton.hpp"
+
+#include <boost/bind.hpp>
 
 void box::compile(const object& parent)
 {
 	object::compile(parent);
-/*
-	matrix offset;
-	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
 
-	NewtonCollision* collision = NewtonCreateBox(root().world(),
-		size.x, size.y, size.z, offset.row_major_data());
+	_body.reset(new body_wrapper(root().world(), "box"));
+	_body->transformation(composition());
 
-	NewtonBody *body = NewtonCreateBody(root().world(), collision);
-	NewtonReleaseCollision(root().world(), collision);
-	
-	NewtonBodySetMatrix(body, composition().row_major_data());
-*/
-/*
-	body::compile();
+	_body->transformation_changed.connect(
+		boost::bind(&box::composition, this, _1));
 
 	matrix offset;
 	offset.translate(vertex(size.x/2, size.y/2, size.z/2));
 
-	NewtonCollision* collision = NewtonCreateBox(root().world(),
+	NewtonCollision* collision = NewtonCreateBox(root().world().id(),
 		size.x, size.y, size.z, offset.row_major_data());
 
-	NewtonBodySetCollision(world(), collision);
-	NewtonReleaseCollision(root().world(), collision);
-*/
-	list.reset(new list_wrapper());
+	NewtonBodySetCollision(_body->id(), collision);
+	NewtonReleaseCollision(root().world().id(), collision);
 
-	list_scope scope(*list);
-	state state;
-	object::draw(state);
-	draw_faces(state);
+	_list.reset(new list_wrapper());
+
+	list_scope scope(*_list);
+	draw_faces();
 }
 
 void box::draw(const state& state) const
 {
-	list->call();
+	object::draw(state);
+	_list->call();
 }
 
-/*
-const world& box::root() const
-{
-	return object::root();
-}
-
-const matrix& box::composition() const
-{
-	return object::composition();
-}
-*/
-
-void box::draw_faces(const state& state) const
+void box::draw_faces() const
 {
 	matrix_scope scope(composition());
 	
 	glPushAttrib(GL_CURRENT_BIT);
 
-	draw_left_face(state);
-	draw_right_face(state);
-	draw_bottom_face(state);
-	draw_top_face(state);
-	draw_front_face(state);
-	draw_back_face(state);
+	draw_left_face();
+	draw_right_face();
+	draw_bottom_face();
+	draw_top_face();
+	draw_front_face();
+	draw_back_face();
 
 	glPopAttrib();
 }
 
-void box::draw_left_face(const state& state) const
+void box::draw_left_face() const
 {
 	float s, t;
 
@@ -90,7 +71,7 @@ void box::draw_left_face(const state& state) const
 	glEnd();
 }
 
-void box::draw_right_face(const state& state) const
+void box::draw_right_face() const
 {
 	float s, t;
 
@@ -107,7 +88,7 @@ void box::draw_right_face(const state& state) const
 	glEnd();
 }
 
-void box::draw_bottom_face(const state& state) const
+void box::draw_bottom_face() const
 {
 	float s, t;
 
@@ -124,7 +105,7 @@ void box::draw_bottom_face(const state& state) const
 	glEnd();
 }
 
-void box::draw_top_face(const state& state) const
+void box::draw_top_face() const
 {
 	float s, t;
 
@@ -141,7 +122,7 @@ void box::draw_top_face(const state& state) const
 	glEnd();
 }
 
-void box::draw_front_face(const state& state) const
+void box::draw_front_face() const
 {	
 	float s, t;
 
@@ -169,7 +150,7 @@ void box::draw_front_face(const state& state) const
 	//glEnd();
 }
 
-void box::draw_back_face(const state& state) const
+void box::draw_back_face() const
 {
 	float s, t;
 

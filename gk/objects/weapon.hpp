@@ -27,8 +27,7 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	boost::shared_ptr<md3> model;
-	boost::shared_ptr<body_wrapper> body;
+	boost::shared_ptr<md3> _model;
 };
 
 BOOST_CLASS_IMPLEMENTATION(weapon, boost::serialization::object_serializable);
