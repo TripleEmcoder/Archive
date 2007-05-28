@@ -143,10 +143,12 @@ void bezier::draw() const
 
     glClientActiveTexture(GL_TEXTURE0);
     glTexCoordPointer(2, GL_FLOAT, stride, &vertex[0].texture_coordinate);
-
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	
     glClientActiveTexture(GL_TEXTURE1);
     glTexCoordPointer(2, GL_FLOAT, stride, &vertex[0].lightmap_coordinate);
-
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	
     //glMultiDrawElements(GL_TRIANGLE_STRIP, (GLsizei*)&trianglesPerRow[0], GL_UNSIGNED_INT, (const void **)(&rowIndexes[0]), level);
 	for (int i = 0; i < level; ++i)
 		glDrawElements(GL_TRIANGLE_STRIP, trianglesPerRow[i], GL_UNSIGNED_INT, rowIndexes[i]);
