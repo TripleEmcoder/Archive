@@ -83,8 +83,8 @@ void convert_vertex(bsp_vertex& vertex)
 {
 	swizzle(vertex.position);
 	swizzle(vertex.normal);
-	vertex.lightmap_coordinate.x = 1 - vertex.lightmap_coordinate.x;
-	vertex.lightmap_coordinate.y = 1 - vertex.lightmap_coordinate.y;
+	//vertex.lightmap_coordinate.x = 1 - vertex.lightmap_coordinate.x;
+	//vertex.lightmap_coordinate.y = 1 - vertex.lightmap_coordinate.y;
 	scale(vertex.position, bsp_scale);
 }
 
@@ -115,7 +115,7 @@ boost::shared_ptr<texture_id> convert_lightmap(bsp_lightmap& l)
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
 
-	float scale = 20.0f;
+	float scale = 2.0f;
 	for (int i = 0; i < 128; ++i)
 		for (int j = 0; j < 128; ++j)
 		{
@@ -275,12 +275,15 @@ void bsp::compile_face(face& face)
 	face.list.reset(new list_wrapper());
 	list_scope ls(*face.list);
 
-	glActiveTexture(GL_TEXTURE0);
+	if (face.lightmap_index < 0)
+		return;
+
+	glActiveTexture(GL_TEXTURE1);
 	_textures[face.texture_index].draw();
 
 	if (face.lightmap_index != -1)
 	{
-		glActiveTexture(GL_TEXTURE1);
+		glActiveTexture(GL_TEXTURE0);
 		//_textures.back().draw();
 
 		glBindTexture(GL_TEXTURE_2D, *_lightmaps[face.lightmap_index]);
@@ -295,10 +298,10 @@ void bsp::compile_face(face& face)
 		glNormalPointer(GL_FLOAT, stride, &_vertices[offset].normal);
 		glColorPointer(4, GL_UNSIGNED_BYTE, stride, &_vertices[offset].color);
 
-		glClientActiveTexture(GL_TEXTURE0);
+		glClientActiveTexture(GL_TEXTURE1);
 		glTexCoordPointer(2, GL_FLOAT, stride, &_vertices[offset].texture_coordinate);
 
-		glClientActiveTexture(GL_TEXTURE1);
+		glClientActiveTexture(GL_TEXTURE0);
 		glTexCoordPointer(2, GL_FLOAT, stride, &_vertices[offset].lightmap_coordinate);
 
 		glDrawElements(GL_TRIANGLES, face.mesh_vertex_count, GL_UNSIGNED_INT, &_meshverts[face.start_mesh_vertex_index]);
@@ -341,12 +344,12 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 
 	glActiveTexture(GL_TEXTURE0);
 	glEnable(GL_TEXTURE_2D);
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
 
 	glActiveTexture(GL_TEXTURE1);
-	glEnable(GL_TEXTURE_2D);
-	//glDisable(GL_TEXTURE_2D);
-	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+	//glEnable(GL_TEXTURE_2D);
+	glDisable(GL_TEXTURE_2D);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_ADD);
 	
 	glActiveTexture(GL_TEXTURE0);
 	//glEnable(GL_COLOR_MATERIAL);
