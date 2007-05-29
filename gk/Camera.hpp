@@ -22,7 +22,7 @@ private:
 	mutable plane planes[6];
 	void calculatePlanes() const;
 public:
-	Camera(float eyeX, float eyeY, float eyeZ, float angleX, float angleY);
+	Camera(float angleX, float angleY);
 	~Camera(void);
 	//void draw();
 	virtual void draw(const state& state) const;

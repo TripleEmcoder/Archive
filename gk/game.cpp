@@ -1,20 +1,17 @@
 #include "game.hpp"
 
-#include "Camera.hpp"
-#include "Character.hpp"
-#include "level.hpp"
-#include "projector.hpp"
-#include "compass.hpp"
-#include "crosshair.hpp"
-#include "fps_meter.hpp"
-#include "state.hpp"
-
 #include <iostream>
 #include <fstream>
 
 #include <boost/format.hpp>
 
 game::game(std::string name)
+:
+	camera(0, 0),
+	projector(vertex(0, 1, 1)),
+	crosshair(8),
+	compass(50),
+	state(camera)
 {
 	load_level(name);
 	setup_widgets();
@@ -31,8 +28,6 @@ game::~game()
 
 void game::load_level(std::string name)
 {
-	level.reset(new ::level());
-
 	std::cerr << "Loading level \"" << name << "\"..." << std::endl;
 	std::ifstream input(name.c_str());
 
@@ -40,26 +35,20 @@ void game::load_level(std::string name)
 		throw std::exception((boost::format(
 			"Failed to load level \"%1%\".") % name).str().c_str());
 
-	input >> *level;
-	level->compile();
+	input >> level;
+	level.compile();
 }
 
 void game::setup_widgets()
 {
-	character.reset(new Character(level->world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
+	character.reset(new Character(level.world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
 	Vector location = character->getLocation();
-	camera.reset(new Camera(location[0], location[1], location[2], 0, 0));
+	projector.add(character.get());
 
-	projector.reset(new ::projector(vertex(0, 1, 1)));
-	fps_meter.reset(new ::fps_meter());
-	crosshair.reset(new ::crosshair(8));
-	compass.reset(new ::compass(50));
-
-	projector->add(fps_meter.get());
-	projector->add(crosshair.get());
-	projector->add(compass.get());
-	projector->add(character.get());
-	projector->add(camera.get());
+	projector.add(&camera);
+	projector.add(&fps_meter);
+	projector.add(&crosshair);
+	projector.add(&compass);
 }
 
 void game::setup_lights()
@@ -107,12 +96,12 @@ void game::process_physics()
 	static int time = glutGet(GLUT_ELAPSED_TIME);
 	int elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
 
-	NewtonUpdate(level->world().id(), elapsed / 1000.0f);
+	NewtonUpdate(level.world().id(), elapsed / 1000.0f);
 	
 	time = glutGet(GLUT_ELAPSED_TIME);
 }
 
-void game::draw_level(const vertex& offset, float x, float y) const
+void game::draw_level(const vertex& offset, float x, float y)
 {
 	Vector position = character->getLocation();
 	position[1] += 0.8f;
@@ -121,30 +110,24 @@ void game::draw_level(const vertex& offset, float x, float y) const
 	position[1] += offset.y;
 	position[2] += offset.z;
 
-	camera->setPosition(position);
+	camera.setPosition(position);
 
 	x = degrees_to_radians(x);
 	y = degrees_to_radians(y);
 
-	camera->rotate(x, y);
-
-	state state;
-	state.camera = camera.get();
+	camera.rotate(x, y);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	camera->set();
-	level->draw(state);
+	camera.set();
+	level.draw(state);
 
-	camera->rotate(-x, -y);
+	camera.rotate(-x, -y);
 }
 
-void game::draw_projector() const
+void game::draw_projector()
 {
-	state state;
-	state.camera = camera.get();
-
-	projector->draw(state);
+	projector.draw(state);
 }
 
 void game::process_monostable_keys(const std::vector<bool>& keys)
@@ -168,7 +151,7 @@ void game::process_monostable_keys(const std::vector<bool>& keys)
 	vec[1] = 0;
 	vec[3] = 0;
 
-	vec = rotate(vec, 0, camera->getAngleX(), 0);
+	vec = rotate(vec, 0, camera.getAngleX(), 0);
 
 	character->move(vec);
 }
@@ -190,6 +173,14 @@ void game::process_bistable_keys(const std::vector<bool>& keys)
 	case false:
 		glDisable(GL_LIGHTING); break;
 	}
+
+	switch (keys['m'])
+	{
+	case true:
+		state.settings[LIGHTING_MODE] = LIGHTING_MODE_LIGHTMAP;
+	case false:
+		state.settings[LIGHTING_MODE] = LIGHTING_MODE_VERTEX;
+	}
 }
 
 const float MOUSE_SENSIVITY = 0.5f;
@@ -208,7 +199,7 @@ void game::process_mouse_motion(int x, int y)
 	{
 		int w = glutGet(GLUT_WINDOW_WIDTH);
 		int h = glutGet(GLUT_WINDOW_HEIGHT);
-		camera->rotate(MOUSE_SENSIVITY * -(x - w/2) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - h/2) * 3.1416 / 180.0f);
+		camera.rotate(MOUSE_SENSIVITY * -(x - w/2) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - h/2) * 3.1416 / 180.0f);
 		jump = true;
 		glutWarpPointer(w/2, h/2);
 	}
@@ -229,5 +220,5 @@ void game::update_viewport(int width, int height)
 	glLoadIdentity();
 	gluPerspective(50, width/height, 0.1, 50);
 
-	camera->setCameraInternals(50, width/height, 0.1, 50);
+	camera.setCameraInternals(50, width/height, 0.1, 50);
 }

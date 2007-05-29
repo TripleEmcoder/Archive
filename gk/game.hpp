@@ -6,15 +6,16 @@
 
 #include <boost/shared_ptr.hpp>
 
-class display_wrapper;
 class vertex;
-class Camera;
-class Character;
-class level;
-class projector;
-class fps_meter;
-class crosshair;
-class compass;
+
+#include "Character.hpp"
+#include "level.hpp"
+#include "Camera.hpp"
+#include "projector.hpp"
+#include "compass.hpp"
+#include "crosshair.hpp"
+#include "fps_meter.hpp"
+#include "state.hpp"
 
 class game
 {
@@ -32,17 +33,18 @@ public:
 
 	void update_viewport(int width, int height);
 
-	void draw_level(const vertex& offset, float x, float y) const;
-	void draw_projector() const;
+	void draw_level(const vertex& offset, float x, float y);
+	void draw_projector();
 
 private:
-	boost::shared_ptr<level> level;
-	boost::shared_ptr<Camera> camera;
+	level level;
 	boost::shared_ptr<Character> character;
-	boost::shared_ptr<projector> projector;
-	boost::shared_ptr<fps_meter> fps_meter;
-	boost::shared_ptr<crosshair> crosshair;
-	boost::shared_ptr<compass> compass;
+	Camera camera;
+	projector projector;
+	fps_meter fps_meter;
+	crosshair crosshair;
+	compass compass;
+	state state;
 
 	void load_level(std::string name);
 	void setup_widgets();

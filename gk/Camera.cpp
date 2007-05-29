@@ -4,12 +4,12 @@
 
 const float ANG2RAD = 3.1416f / 180.0f;
 
-Camera::Camera(float eyeX, float eyeY, float eyeZ, float x, float y)
+Camera::Camera(float x, float y)
 {
 	angleX = angleY = 0;
-	matrix(3,0) = eyeX;
-	matrix(3,1) = eyeY;
-	matrix(3,2) = eyeZ;
+	matrix(3,0) = 0;
+	matrix(3,1) = 0;
+	matrix(3,2) = 0;
 	rotate(x, y);
 }
 
