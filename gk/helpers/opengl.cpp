@@ -247,6 +247,9 @@ void program_wrapper::use() const
 
 display_wrapper::~display_wrapper()
 {
+#ifdef _DEBUG
+	std::cerr << "Shutting down display." << std::endl;
+#endif
 }
 
 window_wrapper::window_wrapper(std::string title, int x, int y, int width, int height)

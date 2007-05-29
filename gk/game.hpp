@@ -1,26 +1,51 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
-#include "level.hpp"
-#include "objects/character.hpp"
-#include "projector.hpp"
-#include "fps_meter.hpp"
-#include "crosshair.hpp"
-#include "compass.hpp"
+#include <string>
+#include <vector>
 
-#include "Camera.hpp"
-#include "Character.hpp"
+#include <boost/shared_ptr.hpp>
 
-extern Camera* camera;
-extern Character* character;
+class display_wrapper;
+class vertex;
+class Camera;
+class Character;
+class level;
+class projector;
+class fps_meter;
+class crosshair;
+class compass;
 
-extern level w;
-extern projector p;
-extern fps_meter f;
-extern crosshair c;
-extern compass s;
+class game
+{
+public:
+	game(std::string name);
+	~game();
 
-void setup_game();
-void cleanup_game();
+	void process_mouse_event(int button, int state, int x, int y);
+	void process_mouse_motion(int x, int y);
+
+	void process_monostable_keys(const std::vector<bool>& keys);
+	void process_bistable_keys(const std::vector<bool>& keys);
+
+	void process_physics();
+
+	void draw_level(const vertex& offset, float x, float y) const;
+	void draw_projector() const;
+
+private:
+	boost::shared_ptr<level> level;
+	boost::shared_ptr<Camera> camera;
+	boost::shared_ptr<Character> character;
+	boost::shared_ptr<projector> projector;
+	boost::shared_ptr<fps_meter> fps_meter;
+	boost::shared_ptr<crosshair> crosshair;
+	boost::shared_ptr<compass> compass;
+
+	void load_level(std::string name);
+	void setup_widgets();
+	void setup_lights();
+	void setup_shaders();
+};
 
 #endif //GAME_HPP

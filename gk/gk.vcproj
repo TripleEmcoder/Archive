@@ -195,10 +195,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\input.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\main.cpp"
 				>
 			</File>
@@ -448,10 +444,6 @@
 			</File>
 			<File
 				RelativePath=".\game.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\input.hpp"
 				>
 			</File>
 			<File

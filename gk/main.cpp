@@ -1,132 +1,55 @@
-#include "game.hpp"
-#include "input.hpp"
-#include "state.hpp"
-#include "opengl.hpp"
-
 #include <iostream>
-#include <fstream>
 
+#include <boost/format.hpp>
 #include <boost/lexical_cast.hpp>
 
-void load_level(std::string name)
+#include "game.hpp"
+#include "vertex.hpp"
+#include "opengl.hpp"
+
+boost::shared_ptr<display_wrapper> display;
+
+boost::shared_ptr<game> instance;
+
+std::vector<bool> monostables(255);
+std::vector<bool> bistables(255);
+
+void process_key_down(unsigned char key, int x, int y) 
 {
-	std::cerr << "Opening..." << std::endl;
-	std::ifstream ifs(name.c_str());
-
-	std::cerr << "Reading..." << std::endl;
-	ifs >> w;
-
-	std::cerr << "Compiling..." << std::endl;
-	w.compile();
-}
-
-void setup_widgets()
-{
-	character = new Character(w.world(), 0.4, 0.9, 0.4, -40, 1.5, 20);
-	//character = new Character(w.world(), 0.4, 0.9, 0.4, 80, 288, 16);
-	//character = new Character(w.world(), 40, 90, 40, 80, 500, 16);
-	//character = new Character(w.world(), w.player.size.x, w.player.size.y, w.player.size.z, w.player.translation.x, w.player.translation.y, w.player.translation.z);
-	Vector location = character->getLocation();
-	camera = new Camera(location[0], location[1], location[2], 0, 0);
-	camera->setCameraInternals(50, 1024.0/768.0, 0.1, 50);
-	p.add(&f);
-	p.add(&c);
-	p.add(&s);
-	p.add(character);
-	p.add(camera);
-}
-
-void setup_lights()
-{
-	//GLfloat global[]    = {  0.5f,  0.5f,  0.5f,  1.0f };
-	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  0.0f };
-	GLfloat ambient[]   = {  0.8f,  0.8f,  0.8f,  1.0f };
-	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
-	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
-
-	GLfloat position[]  = {  0.0f,  3.0f,  0.0f,  1.0f };
-	GLfloat direction[] = {  0.0f,  -1.0f, 0.0f        };
-
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);	
-
-	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-
-	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
-	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 5);
-
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
-
-	glEnable(GL_LIGHT0);
-
-	glEnable(GL_LIGHTING);
-}
-
-void setup_shaders()
-{
-	static shader_wrapper v(GL_VERTEX_SHADER, "vertex.c");
-	static shader_wrapper f(GL_FRAGMENT_SHADER, "fragment.c");
-
-	static program_wrapper p;
-	p.attach(v);
-	p.attach(f);
-	p.link();
-//	p.use();
-}
-
-void draw_scene(const vertex& offset, float x, float y)
-{
-	Vector position = character->getLocation();
-	position[1] += 0.8f;
-
-	position[0] += offset.x;
-	position[1] += offset.y;
-	position[2] += offset.z;
-
-	camera->setPosition(position);
-
-	x = degrees_to_radians(x);
-	y = degrees_to_radians(y);
-
-	camera->rotate(x, y);
-
-	state state;
-	state.camera = camera;
-
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	camera->set();
-	w.draw(state);
-
-	camera->rotate(-x, -y);
-}
-
-void process_physics()
-{
-	static int time = glutGet(GLUT_ELAPSED_TIME);
-	int elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
-
-	NewtonUpdate(w.world().id(), elapsed / 1000.0f);
+	if (key == 27)
+		throw exit_exception();
 	
-	time = glutGet(GLUT_ELAPSED_TIME);
+	monostables[key] = true;
+	bistables[key] = !bistables[key];
+}
+
+void process_key_up(unsigned char key, int x, int y) 
+{
+	monostables[key] = false;	
+}
+
+void process_mouse_event(int button, int state, int x, int y)
+{
+	instance->process_mouse_event(button, state, x, y);
+}
+
+void process_mouse_motion(int x, int y) 
+{
+	instance->process_mouse_motion(x, y);
 }
 
 void draw_everything()
 {
-	process_monostables();
-	process_bistables();
-	process_physics();
+	instance->process_monostable_keys(monostables);
+	instance->process_bistable_keys(bistables);
+
+	instance->process_physics();
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	draw_scene(vertex(0, 0, 0), 0, 0);
+	instance->draw_level(vertex(0, 0, 0), 0, 0);
+	instance->draw_projector();
 
-	state state;
-	state.camera = camera;
-
-	p.draw(state);
 	glutSwapBuffers();
 }
 
@@ -179,8 +102,6 @@ int main(int argc, char* argv[])
 
 	try
 	{
-		boost::shared_ptr<display_wrapper> display;
-
 		if (strcmp(argv[1], "window") == 0)
 			display.reset(new window_wrapper("gk", 0, 0, width, height));
 		
@@ -188,36 +109,35 @@ int main(int argc, char* argv[])
 			display.reset(new fullscreen_wrapper(width, height, 16, 0));
 
 		else
-		{
-			std::cerr << "Incorrect display type." << std::endl;
-			return 2;
-		}
+			throw std::exception("Incorrect display type.");
 
 		GLenum error = glewInit();
 
 		if (error != GLEW_OK)
 		{
-			std::cerr << glewGetErrorString(error) << "." << std::endl;
-			return 3;
+			std::string message = (boost::format("%1%.") % glewGetErrorString(error)).str();
+			throw std::exception(message.c_str());
 		}
 		
-		load_level("level.xml");
-		
-		setup_widgets();
-		setup_lights();
-		setup_callbacks();
-		setup_shaders();
+		glEnable(GL_DEPTH_TEST);	
 
-		glEnable(GL_DEPTH_TEST);		
+		instance.reset(new game("level.xml"));
+
+		setup_callbacks();
 
 		std::cerr << "Running..." << std::endl;
 		glutMainLoop();
-
-		return 0;
 	}
 	catch (std::exception& exception)
 	{
+		std::cerr << "Fatal error:" << std::endl;
 		std::cerr << exception.what() << std::endl;
-		return 4;
+		return 2;
 	}
+	catch (exit_exception& exception)
+	{
+		std::cerr << "User requested shutdown." << std::endl;
+	}
+
+	return 0;
 }

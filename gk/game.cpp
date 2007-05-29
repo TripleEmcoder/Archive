@@ -1,20 +1,220 @@
 #include "game.hpp"
+
+#include "Camera.hpp"
+#include "Character.hpp"
+#include "level.hpp"
+#include "projector.hpp"
+#include "compass.hpp"
+#include "crosshair.hpp"
+#include "fps_meter.hpp"
 #include "state.hpp"
 
-state* state;
-Camera* camera;
-Character* character;
+#include <iostream>
+#include <fstream>
 
-level w;
-projector p(vertex(0.0f, 1.0f, 1.0f));
-fps_meter f;
-crosshair c(8.0f);
-compass s(50);
+#include <boost/format.hpp>
 
-void setup_game()
+game::game(std::string name)
 {
+	load_level(name);
+	setup_widgets();
+	setup_lights();
+	setup_shaders();
 }
 
-void cleanup_game()
+game::~game()
 {
+#ifdef _DEBUG
+	std::cerr << "Shutting down game." << std::endl;
+#endif
+}
+
+void game::load_level(std::string name)
+{
+	level.reset(new ::level());
+
+	std::cerr << "Loading level \"" << name << "\"..." << std::endl;
+	std::ifstream input(name.c_str());
+
+	if (input.fail())
+		throw std::exception((boost::format(
+			"Failed to load level \"%1%\".") % name).str().c_str());
+
+	input >> *level;
+	level->compile();
+}
+
+void game::setup_widgets()
+{
+	character.reset(new Character(level->world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
+	Vector location = character->getLocation();
+	camera.reset(new Camera(location[0], location[1], location[2], 0, 0));
+	camera->setCameraInternals(50, 1024.0/768.0, 0.1, 50);
+
+	projector.reset(new ::projector(vertex(0, 1, 1)));
+	fps_meter.reset(new ::fps_meter());
+	crosshair.reset(new ::crosshair(8));
+	compass.reset(new ::compass(50));
+
+	projector->add(fps_meter.get());
+	projector->add(crosshair.get());
+	projector->add(compass.get());
+	projector->add(character.get());
+	projector->add(camera.get());
+}
+
+void game::setup_lights()
+{
+	//GLfloat global[]    = {  0.5f,  0.5f,  0.5f,  1.0f };
+	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  0.0f };
+	GLfloat ambient[]   = {  0.8f,  0.8f,  0.8f,  1.0f };
+	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
+	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
+
+	GLfloat position[]  = {  0.0f,  3.0f,  0.0f,  1.0f };
+	GLfloat direction[] = {  0.0f,  -1.0f, 0.0f        };
+
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);	
+
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
+
+	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 5);
+
+	glLightfv(GL_LIGHT0, GL_POSITION, position);
+
+	glEnable(GL_LIGHT0);
+
+	glEnable(GL_LIGHTING);
+}
+
+void game::setup_shaders()
+{
+	//static shader_wrapper v(GL_VERTEX_SHADER, "vertex.c");
+	//static shader_wrapper f(GL_FRAGMENT_SHADER, "fragment.c");
+
+	//static program_wrapper p;
+	//p.attach(v);
+	//p.attach(f);
+	//p.link();
+//	p.use();
+}
+
+void game::process_physics()
+{
+	static int time = glutGet(GLUT_ELAPSED_TIME);
+	int elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
+
+	NewtonUpdate(level->world().id(), elapsed / 1000.0f);
+	
+	time = glutGet(GLUT_ELAPSED_TIME);
+}
+
+void game::draw_level(const vertex& offset, float x, float y) const
+{
+	Vector position = character->getLocation();
+	position[1] += 0.8f;
+
+	position[0] += offset.x;
+	position[1] += offset.y;
+	position[2] += offset.z;
+
+	camera->setPosition(position);
+
+	x = degrees_to_radians(x);
+	y = degrees_to_radians(y);
+
+	camera->rotate(x, y);
+
+	state state;
+	state.camera = camera.get();
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	camera->set();
+	level->draw(state);
+
+	camera->rotate(-x, -y);
+}
+
+void game::draw_projector() const
+{
+	state state;
+	state.camera = camera.get();
+
+	projector->draw(state);
+}
+
+void game::process_monostable_keys(const std::vector<bool>& keys)
+{
+	Vector vec;
+
+	if (keys['w'])
+		vec[0] = 1.0f;
+	else if (keys[(int)'s'])
+		vec[0] = -1.0f;
+	else
+		vec[0] = 0.0f;
+
+	if (keys[(int)'a'])
+		vec[2] = -1.0f;
+	else if (keys[(int)'d'])
+		vec[2] = 1.0f;
+	else
+		vec[2] = 0.0f;
+	
+	vec[1] = 0;
+	vec[3] = 0;
+
+	vec = rotate(vec, 0, camera->getAngleX(), 0);
+
+	character->move(vec);
+}
+
+void game::process_bistable_keys(const std::vector<bool>& keys)
+{
+	switch (keys['p'])
+	{
+	case true:
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); break;
+	case false:
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); break;
+	}
+
+	switch (keys['l'])
+	{
+	case true:
+		glEnable(GL_LIGHTING); break;
+	case false:
+		glDisable(GL_LIGHTING); break;
+	}
+}
+
+const float MOUSE_SENSIVITY = 0.5f;
+
+void game::process_mouse_event(int button, int state, int x, int y)
+{
+	if (button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
+		character->jump();
+}
+
+void game::process_mouse_motion(int x, int y) 
+{
+	static bool jump = true;
+
+	if (!jump)
+	{
+		int w = glutGet(GLUT_WINDOW_WIDTH);
+		int h = glutGet(GLUT_WINDOW_HEIGHT);
+		camera->rotate(MOUSE_SENSIVITY * -(x - w/2) * 3.1416 / 180.0f, MOUSE_SENSIVITY * (y - h/2) * 3.1416 / 180.0f);
+		jump = true;
+		glutWarpPointer(w/2, h/2);
+	}
+	else
+	{
+		jump = false;
+	}
 }

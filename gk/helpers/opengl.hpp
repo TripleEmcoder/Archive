@@ -124,6 +124,10 @@ public:
 	virtual ~fullscreen_wrapper();
 };
 
+class exit_exception
+{
+};
+
 //obsluga obszaru obiazywania tekstury
 class texture_scope
 {
