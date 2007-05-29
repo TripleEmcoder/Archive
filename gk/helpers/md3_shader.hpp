@@ -1,5 +1,5 @@
-#ifndef OBJECTS_MD3_SHADER_HPP
-#define OBJECTS_MD3_SHADER_HPP
+#ifndef HELPERS_MD3_SHADER_HPP
+#define HELPERS_MD3_SHADER_HPP
 
 #include "md3_common.hpp"
 
@@ -25,4 +25,4 @@ public:
 	md3_shader_header header;
 };
 
-#endif //OBJECTS_MD3_SHADER_HPP
+#endif //HELPERS_MD3_SHADER_HPP

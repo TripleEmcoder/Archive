@@ -1,4 +1,7 @@
-#pragma once
+#ifndef HELPERS_BSP_COMMON_HPP
+#define HELPERS_BSP_COMMON_HPP
+
+const float BSP_SCALE = 1.0f / 50.0f;
 
 struct bsp_vector3i
 {
@@ -110,3 +113,5 @@ struct bsp_model
 	int start_brush_index;		//First brush for model. 
 	int brush_count; 			//Number of brushes for model.
 };
+
+#endif //HELPERS_BSP_COMMON_HPP

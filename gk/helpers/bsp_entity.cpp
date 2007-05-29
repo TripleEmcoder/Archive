@@ -1,4 +1,5 @@
 #include "bsp_entity.hpp"
+#include "opengl.hpp"
 
 #include <iostream>
 #include <map>
@@ -14,16 +15,17 @@ using namespace boost::spirit;
 
 std::vector<std::string> bsp_entity::split(std::string entities)
 {
-	
 	std::vector<std::string> result;
 
-	rule<> set_rule
-		= conf
+	rule<> item_rule =
+		*space_p >> confix_p("{", +anychar_p, "}") >> *space_p;
 
-	parse(entities.c_str(), set_rule);
+	rule<> list_rule =
+		*item_rule[push_back_a(result)];
+
+	parse(entities.c_str(), list_rule);
+
 	return result;
-	
-	//std::cerr << entities << std::endl;
 }
 
 /*
@@ -37,6 +39,11 @@ std::vector<std::string> bsp_entity::split(std::string entities)
 
 bsp_entity::bsp_entity(std::string entity)
 {
+#ifdef _DEBUG
+	std::cerr << "Loading entity:" << std::endl;
+	std::cerr << entity << std::endl;
+#endif
+
 	std::map<std::string, std::string> values;
 
 	std::string key, value;
@@ -48,24 +55,47 @@ bsp_entity::bsp_entity(std::string entity)
 		>>
 		confix_p("\"", (+anychar_p)[assign_a(value)], "\"");
 
-	rule<> row_rule =
+	rule<> item_rule =
 		*space_p >> pair_rule >> *space_p;
 
-	rule<> table_rule =
-		confix_p("{", *row_rule[insert_at_a(values, key, value)], "}");
+	rule<> list_rule =
+		*item_rule[insert_at_a(values, key, value)];
 
-	 parse(entity.c_str(), table_rule);
+	parse(entity.c_str(), confix_p("{", list_rule, "}"));
 
-	 typedef std::pair<const std::string, std::string> pair;
+	typedef std::pair<const std::string, std::string> pair;
 
-	 std::for_each(values.begin(), values.end(),
-		 std::cerr 
-			<< bind(&pair::first, _1) 
-			<< constant("=")
-			<< bind(&pair::second, _1)
-			<< constant("\n"));
+#ifdef _DEBUG
+	std::cerr << "Parse results:" << std::endl;
+
+	std::for_each(values.begin(), values.end(),
+		std::cerr 
+		<< bind(&pair::first, _1) 
+		<< constant("=")
+		<< bind(&pair::second, _1)
+		<< constant("\n"));
+#endif
+
+	rule<> origin_rule =
+		real_p[assign_a(origin.x)] >> space_p
+		>>
+		real_p[assign_a(origin.y)] >> space_p
+		>>
+		real_p[assign_a(origin.z)] >> space_p;
+
+	parse(values["origin"].c_str(), origin_rule);
+
+	origin.x *= BSP_SCALE;
+	origin.y *= BSP_SCALE;
+	origin.z *= BSP_SCALE;
+
+	parse(values["angle"].c_str(), real_p[assign_a(angle)]);
 }
 
 void bsp_entity::draw() const
 {
+	glPushMatrix();
+	glTranslatef(origin.x, origin.y, origin.z);
+	glutSolidSphere(0.2, 20, 20);
+	glPopMatrix();
 }

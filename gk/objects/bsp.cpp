@@ -40,8 +40,6 @@ enum face_type
 	billboard
 };
 
-const float bsp_scale = 1.0f / 50.0f;
-
 template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::vector<T>& vec)
 {
 	is.seekg(lump.offset);
@@ -94,13 +92,13 @@ void convert_vertex(bsp_vertex& vertex)
 {
 	swizzle(vertex.position);
 	swizzle(vertex.normal);
-	scale(vertex.position, bsp_scale);
+	scale(vertex.position, BSP_SCALE);
 }
 
 void convert_plane(bsp_plane& plane)
 {
 	swizzle(plane.normal);
-	plane.distance *= bsp_scale;
+	plane.distance *= BSP_SCALE;
 }
 
 template <typename T> void convert_mins_maxs(T& t)
@@ -108,8 +106,8 @@ template <typename T> void convert_mins_maxs(T& t)
 	swizzle(t.mins);
 	swizzle(t.maxs);
 	swap(t.mins.z, t.maxs.z);
-	scale(t.mins, bsp_scale);
-	scale(t.maxs, bsp_scale);
+	scale(t.mins, BSP_SCALE);
+	scale(t.maxs, BSP_SCALE);
 	add(t.mins, -1);
 	add(t.maxs, +1);
 }
@@ -243,7 +241,7 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Leafs], _leafs);
 	read_lump(is, lumps[Leaffaces], _leaffaces);
 	read_lump(is, lumps[Models], _models);
-	//read_lump(is, lumps[Entities], _entities);
+	read_lump(is, lumps[Entities], _entities);
 	read_visdata(is, lumps[Visdata], _visdata);
 
 	is.close();

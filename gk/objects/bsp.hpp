@@ -11,7 +11,7 @@
 #include "object.hpp"
 #include "material.hpp"
 #include "texture.hpp"
-#include "bsp_struct.hpp"
+#include "bsp_common.hpp"
 #include "bezier.hpp"
 #include "matrix.hpp"
 #include "opengl.hpp"

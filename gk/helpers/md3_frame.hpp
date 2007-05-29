@@ -1,5 +1,5 @@
-#ifndef OBJECTS_MD3_FRAME_HPP
-#define OBJECTS_MD3_FRAME_HPP
+#ifndef HELPERS_MD3_FRAME_HPP
+#define HELPERS_MD3_FRAME_HPP
 
 #include "md3_common.hpp"
 
@@ -29,4 +29,4 @@ private:
 	md3_frame_header header;
 };
 
-#endif //OBJECTS_MD3_FRAME_HPP
+#endif //HELPERS_MD3_FRAME_HPP

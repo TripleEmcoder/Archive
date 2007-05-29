@@ -474,10 +474,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\objects\bsp_struct.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\objects\builtin.hpp"
 					>
 				</File>
@@ -525,6 +521,10 @@
 			<Filter
 				Name="helpers"
 				>
+				<File
+					RelativePath=".\helpers\bsp_common.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\helpers\bsp_entity.hpp"
 					>

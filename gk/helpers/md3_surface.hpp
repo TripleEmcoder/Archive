@@ -1,5 +1,5 @@
-#ifndef OBJECTS_MD3_SURFACE_HPP
-#define OBJECTS_MD3_SURFACE_HPP
+#ifndef HELPERS_MD3_SURFACE_HPP
+#define HELPERS_MD3_SURFACE_HPP
 
 #include <vector>
 
@@ -106,4 +106,4 @@ private:
 	boost::shared_ptr<texture_wrapper> texture;
 };
 
-#endif //OBJECTS_MD3_SURFACE_HPP
+#endif //HELPERS_MD3_SURFACE_HPP

@@ -1,5 +1,5 @@
-#ifndef MD3_COMMON_HPP
-#define MD3_COMMON_HPP
+#ifndef HELPERS_MD3_COMMON_HPP
+#define HELPERS_MD3_COMMON_HPP
 
 const float MD3_SCALE = 1.0f / 1000.0f;
 const float MD3_FPS = 2.0f;
@@ -24,4 +24,4 @@ struct md3_vector
 	float z;
 };
 
-#endif //MD3_COMMON_HPP
+#endif //HELPERS_MD3_COMMON_HPP

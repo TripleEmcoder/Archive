@@ -1,5 +1,5 @@
-#ifndef OBJECTS_MD3_FILE_HPP
-#define OBJECTS_MD3_FILE_HPP
+#ifndef HELPERS_MD3_FILE_HPP
+#define HELPERS_MD3_FILE_HPP
 
 #include <vector>
 
@@ -66,4 +66,4 @@ private:
 	std::vector<boost::shared_ptr<list_wrapper> > lists;
 };
 
-#endif //OBJECTS_MD3_FILE_HPP
+#endif //HELPERS_MD3_FILE_HPP

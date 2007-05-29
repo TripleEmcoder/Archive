@@ -1,8 +1,10 @@
-#ifndef OBJECTS_BSP_ENTITY_HPP
-#define OBJECTS_BSP_ENTITY_HPP
+#ifndef HELPERS_BSP_ENTITY_HPP
+#define HELPERS_BSP_ENTITY_HPP
 
 #include <string>
 #include <vector>
+
+#include "bsp_common.hpp"
 
 class bsp_entity
 {
@@ -11,6 +13,10 @@ public:
 
 	bsp_entity(std::string description);
 	void draw() const;
+
+private:
+	bsp_vector3f origin;
+	float angle;
 };
 
-#endif
+#endif //HELPERS_BSP_ENTITY_HPP

@@ -1,6 +1,6 @@
 #pragma once
 #include "newton.hpp"
-#include "bsp_struct.hpp"
+#include "bsp_common.hpp"
 #include <vector>
 
 class bezier 
