@@ -18,10 +18,10 @@ std::vector<std::string> bsp_entity::split(std::string entities)
 	std::vector<std::string> result;
 
 	rule<> item_rule =
-		*space_p >> confix_p("{", +anychar_p, "}") >> *space_p;
+		confix_p("{", +anychar_p, "}");
 
 	rule<> list_rule =
-		*item_rule[push_back_a(result)];
+		*(*space_p >> item_rule[push_back_a(result)] >> *space_p);
 
 	parse(entities.c_str(), list_rule);
 
@@ -48,18 +48,15 @@ bsp_entity::bsp_entity(std::string entity)
 
 	std::string key, value;
 
-	rule<> pair_rule = 
+	rule<> item_rule = 
 		confix_p("\"", (+anychar_p)[assign_a(key)], "\"") 
 		>> 
 		*space_p
 		>>
 		confix_p("\"", (+anychar_p)[assign_a(value)], "\"");
 
-	rule<> item_rule =
-		*space_p >> pair_rule >> *space_p;
-
 	rule<> list_rule =
-		*item_rule[insert_at_a(values, key, value)];
+		*(*space_p >> item_rule[insert_at_a(values, key, value)] >> *space_p);
 
 	parse(entity.c_str(), confix_p("{", list_rule, "}"));
 
