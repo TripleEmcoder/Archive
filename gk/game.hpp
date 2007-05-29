@@ -30,6 +30,8 @@ public:
 
 	void process_physics();
 
+	void update_viewport(int width, int height);
+
 	void draw_level(const vertex& offset, float x, float y) const;
 	void draw_projector() const;
 

@@ -14,7 +14,7 @@ boost::shared_ptr<game> instance;
 std::vector<bool> monostables(255);
 std::vector<bool> bistables(255);
 
-void process_key_down(unsigned char key, int x, int y) 
+void keyboard_down_callback(unsigned char key, int x, int y) 
 {
 	if (key == 27)
 		throw exit_exception();
@@ -23,22 +23,27 @@ void process_key_down(unsigned char key, int x, int y)
 	bistables[key] = !bistables[key];
 }
 
-void process_key_up(unsigned char key, int x, int y) 
+void keyboard_up_callback(unsigned char key, int x, int y) 
 {
 	monostables[key] = false;	
 }
 
-void process_mouse_event(int button, int state, int x, int y)
+void mouse_event_callback(int button, int state, int x, int y)
 {
 	instance->process_mouse_event(button, state, x, y);
 }
 
-void process_mouse_motion(int x, int y) 
+void mouse_motion_callback(int x, int y) 
 {
 	instance->process_mouse_motion(x, y);
 }
 
-void draw_everything()
+void reshape_callback(int width, int height)
+{
+	instance->update_viewport(width, height);
+}
+
+void display_callback()
 {
 	instance->process_monostable_keys(monostables);
 	instance->process_bistable_keys(bistables);
@@ -53,33 +58,18 @@ void draw_everything()
 	glutSwapBuffers();
 }
 
-void reshape_window(int width, int height)
-{
-	if (width == 0 || height == 0)
-		return;
-
-	glutWarpPointer(width/2, height/2);
-
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(50, width/height, 0.1, 50);
-	
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-}
-
 void setup_callbacks()
 {
-	glutReshapeFunc(reshape_window);
-	glutDisplayFunc(draw_everything);
-	glutIdleFunc(draw_everything);
+	glutReshapeFunc(reshape_callback);
+	glutDisplayFunc(display_callback);
+	glutIdleFunc(display_callback);
 
-	glutKeyboardFunc(process_key_down);
-	glutKeyboardUpFunc(process_key_up);
+	glutKeyboardFunc(keyboard_down_callback);
+	glutKeyboardUpFunc(keyboard_up_callback);
 	glutIgnoreKeyRepeat(1);
 
-	glutMouseFunc(process_mouse_event);
-	glutPassiveMotionFunc(process_mouse_motion);
+	glutMouseFunc(mouse_event_callback);
+	glutPassiveMotionFunc(mouse_motion_callback);
 	glutSetCursor(GLUT_CURSOR_NONE);
 }
 

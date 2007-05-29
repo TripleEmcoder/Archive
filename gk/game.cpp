@@ -49,7 +49,6 @@ void game::setup_widgets()
 	character.reset(new Character(level->world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
 	Vector location = character->getLocation();
 	camera.reset(new Camera(location[0], location[1], location[2], 0, 0));
-	camera->setCameraInternals(50, 1024.0/768.0, 0.1, 50);
 
 	projector.reset(new ::projector(vertex(0, 1, 1)));
 	fps_meter.reset(new ::fps_meter());
@@ -217,4 +216,18 @@ void game::process_mouse_motion(int x, int y)
 	{
 		jump = false;
 	}
+}
+
+void game::update_viewport(int width, int height)
+{
+	if (width == 0 || height == 0)
+		return;
+
+	glutWarpPointer(width/2, height/2);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(50, width/height, 0.1, 50);
+
+	camera->setCameraInternals(50, width/height, 0.1, 50);
 }
