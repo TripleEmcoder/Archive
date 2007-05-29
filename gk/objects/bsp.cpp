@@ -50,6 +50,17 @@ template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::ve
 	is.read((char*) &vec[0], n*sizeof(T));
 }
 
+template <> void read_lump<bsp_entity>(ifstream& is, const bsp_lump& lump, std::vector<bsp_entity>& entities)
+{
+	char* buffer = new char[lump.length];
+	is.seekg(lump.offset);
+	is.read((char*) buffer, lump.length);
+	vector<std::string> vec(bsp_entity::split(buffer));
+	//transform(vec.begin(), vec.end(), back_inserter(entities), boost::bind(&bsp_entity::bsp_entity, _1));
+	for (vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
+		entities.push_back(bsp_entity(*i));
+}
+
 void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 {
 	is.seekg(lump.offset);
@@ -58,15 +69,6 @@ void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 	visdata.vecs = new unsigned char[visdata.vecs_count * visdata.vecs_size];
 	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
 }
-
-void read_entities(ifstream& is, const bsp_lump& lump, boost::shared_ptr<bsp_entity>& entity)
-{
-	char* buffer = new char[lump.length];
-	is.seekg(lump.offset);
-	is.read((char*) buffer, lump.length);
-	entity.reset(new bsp_entity(string(buffer)));
-}
-
 
 template <typename T> void swizzle(T& vertex)
 {
@@ -241,8 +243,8 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Leafs], _leafs);
 	read_lump(is, lumps[Leaffaces], _leaffaces);
 	read_lump(is, lumps[Models], _models);
+	//read_lump(is, lumps[Entities], _entities);
 	read_visdata(is, lumps[Visdata], _visdata);
-	read_entities(is, lumps[Entities], entity);
 
 	is.close();
 
@@ -283,15 +285,6 @@ void bsp::compile_face(face& face)
 	face.list.reset(new list_wrapper());
 	list_scope ls(*face.list);
 
-	glActiveTexture(GL_TEXTURE0);
-	_textures[face.texture_index].draw();
-
-	if (face.lightmap_index != -1)
-	{
-		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, *_lightmaps[face.lightmap_index]);
-	}
-
 	if (face.face_type == polygon || face.face_type == mesh)
 	{
 		const int offset = face.start_vertex_index;
@@ -331,12 +324,35 @@ void bsp::compile_faces()
 	glPopClientAttrib();
 }
 
-void bsp::draw_face(const face* face) const
+void bsp::draw_face(const face* face, const state& state) const
 {
+	if (state.settings[LIGHTING_MODE] == LIGHTING_MODE_LIGHTMAP && face->lightmap_index >= 0)
+	{
+		glActiveTexture(GL_TEXTURE0);
+		glEnable(GL_TEXTURE_2D);
+		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+		_textures[face->texture_index].draw();
+
+		glActiveTexture(GL_TEXTURE1);
+		glEnable(GL_TEXTURE_2D);
+		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		glBindTexture(GL_TEXTURE_2D, *_lightmaps[face->lightmap_index]);
+	}
+	else 
+	{
+		glActiveTexture(GL_TEXTURE0);
+		glEnable(GL_TEXTURE_2D);
+		glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+		_textures[face->texture_index].draw();
+
+		glActiveTexture(GL_TEXTURE1);
+		glDisable(GL_TEXTURE_2D);
+	}
+
 	face->list->call();
 }
 
-template <typename T> void bsp::draw_faces(const T& faces) const
+template <typename T> void bsp::draw_faces(const T& faces, const state& state) const
 {
 	glPushAttrib(GL_ENABLE_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT | GL_LIGHTING_BIT);
 
@@ -344,19 +360,10 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 	glCullFace(GL_BACK);
 	glFrontFace(GL_CW);
 
-	glActiveTexture(GL_TEXTURE0);
-	glEnable(GL_TEXTURE_2D);
-	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-
-	glActiveTexture(GL_TEXTURE1);
-	glEnable(GL_TEXTURE_2D);
-	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 
-
-	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
+	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1, boost::ref(state)));
 
 	glPopAttrib();
 	assert(glGetError() == GL_NO_ERROR);
@@ -369,7 +376,7 @@ void bsp::draw(const state& state) const
 	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
-	draw_faces(_visible_faces);
+	draw_faces(_visible_faces, state);
 	if (_visible_faces.size() != old)
 	{
 		std::cerr << _visible_faces.size() << "/" << _faces.size() << endl;

@@ -13,7 +13,7 @@ public:
 	state(const Camera& camera);
 
 	const Camera& camera;
-	std::map<int, int> settings;
+	mutable std::map<int, int> settings;
 };
 
 const int LIGHTING_MODE = 0;

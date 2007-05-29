@@ -177,9 +177,9 @@ void game::process_bistable_keys(const std::vector<bool>& keys)
 	switch (keys['m'])
 	{
 	case true:
-		state.settings[LIGHTING_MODE] = LIGHTING_MODE_LIGHTMAP;
+		state.settings[LIGHTING_MODE] = LIGHTING_MODE_VERTEX; break;
 	case false:
-		state.settings[LIGHTING_MODE] = LIGHTING_MODE_VERTEX;
+		state.settings[LIGHTING_MODE] = LIGHTING_MODE_LIGHTMAP; break;
 	}
 }
 

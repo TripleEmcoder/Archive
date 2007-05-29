@@ -50,8 +50,8 @@ public:
 	virtual void draw(const state& state) const;
 
 private:
-	template <typename T> void draw_faces(const T& faces) const;
-	void draw_face(const face* face) const;
+	template <typename T> void draw_faces(const T& faces, const state& state) const;
+	void draw_face(const face* face, const state& state) const;
 	void compile_faces();
 	void compile_face(face& face);
 	void create_beziers(face& face);
@@ -77,12 +77,12 @@ private:
 	std::vector<bsp_leaf> _leafs;
 	std::vector<int> _leaffaces;
 	std::vector<bsp_model> _models;
+	std::vector<bsp_entity> _entities;
 	bsp_visdata _visdata;
 
 	mutable set_vector<face> _visible_faces;
 	
 	boost::shared_ptr<body_wrapper> body;
-	boost::shared_ptr<bsp_entity> entity;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);

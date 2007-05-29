@@ -12,9 +12,9 @@
 using namespace boost::lambda;
 using namespace boost::spirit;
 
-static std::vector<std::string> split(std::string entities)
+std::vector<std::string> bsp_entity::split(std::string entities)
 {
-	/*
+	
 	std::vector<std::string> result;
 
 	rule<> set_rule
@@ -22,8 +22,8 @@ static std::vector<std::string> split(std::string entities)
 
 	parse(entities.c_str(), set_rule);
 	return result;
-	*/
-	std::cerr << entities << std::endl;
+	
+	//std::cerr << entities << std::endl;
 }
 
 /*
