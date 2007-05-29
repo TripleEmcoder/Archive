@@ -381,14 +381,14 @@ void bsp::find_visible_faces(const state& state) const
 {
 	_visible_faces.clear();
 
-	int camera_cluster = _leafs[find_leaf(state.camera->getPosition())].cluster;
+	int camera_cluster = _leafs[find_leaf(state.camera.getPosition())].cluster;
 
 	for (int i = 0; i < (int)_leafs.size(); ++i)
 	{
 		const bsp_leaf& leaf = _leafs[i];
 		const int mins[] = {leaf.mins.x, leaf.mins.y, leaf.mins.z};
 		const int maxs[] = {leaf.maxs.x, leaf.maxs.y, leaf.maxs.z};
-		if (is_cluster_visible(camera_cluster, leaf.cluster) && state.camera->isVisible(mins, maxs))
+		if (is_cluster_visible(camera_cluster, leaf.cluster) && state.camera.isVisible(mins, maxs))
 		{
 			for (int j = 0; j < leaf.leaffaces_count; ++j) 
 			{
