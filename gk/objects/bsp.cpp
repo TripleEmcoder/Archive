@@ -8,8 +8,8 @@
 #include <iostream>
 #include <fstream>
 #include <boost/bind.hpp>
-
-using namespace std;
+#include <boost/numeric/conversion/converter.hpp>
+#include <boost/numeric/conversion/converter_policies.hpp>
 
 enum lump_id
 {
@@ -40,7 +40,7 @@ enum face_type
 	billboard
 };
 
-template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::vector<T>& vec)
+template <typename T> void read_lump(std::ifstream& is, const bsp_lump& lump, std::vector<T>& vec)
 {
 	is.seekg(lump.offset);
 	int n = lump.length / sizeof(T);
@@ -48,44 +48,24 @@ template <typename T> void read_lump(ifstream& is, const bsp_lump& lump, std::ve
 	is.read((char*) &vec[0], n*sizeof(T));
 }
 
-template <> void read_lump<bsp_entity>(ifstream& is, const bsp_lump& lump, std::vector<bsp_entity>& entities)
+template <> void read_lump<bsp_entity>(std::ifstream& is, const bsp_lump& lump, std::vector<bsp_entity>& entities)
 {
 	char* buffer = new char[lump.length];
 	is.seekg(lump.offset);
 	is.read((char*) buffer, lump.length);
-	vector<std::string> vec(bsp_entity::split(buffer));
+	std::vector<std::string> vec(bsp_entity::split(buffer));
 	//transform(vec.begin(), vec.end(), back_inserter(entities), boost::bind(&bsp_entity::bsp_entity, _1));
-	for (vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
+	for (std::vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
 		entities.push_back(bsp_entity(*i));
 }
 
-void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
+void read_visdata(std::ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 {
 	is.seekg(lump.offset);
 	is.read((char*) &visdata.vecs_count, sizeof(visdata.vecs_count));
 	is.read((char*) &visdata.vecs_size, sizeof(visdata.vecs_size));
 	visdata.vecs = new unsigned char[visdata.vecs_count * visdata.vecs_size];
 	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
-}
-
-template <typename T> void swizzle(T& vertex)
-{
-	swap(vertex.y, vertex.z);
-	vertex.z = -vertex.z;
-}
-
-template <typename T> void scale(T& vertex, float scale)
-{
-	vertex.x *= scale;
-	vertex.y *= scale;
-	vertex.z *= scale;
-}
-
-template <typename T> void add(T& vertex, float x)
-{
-	vertex.x += x;
-	vertex.y += x;
-	vertex.z += x;
 }
 
 void convert_vertex(bsp_vertex& vertex)
@@ -105,11 +85,19 @@ template <typename T> void convert_mins_maxs(T& t)
 {
 	swizzle(t.mins);
 	swizzle(t.maxs);
-	swap(t.mins.z, t.maxs.z);
-	scale(t.mins, BSP_SCALE);
-	scale(t.maxs, BSP_SCALE);
-	add(t.mins, -1);
-	add(t.maxs, +1);
+	std::swap(t.mins.z, t.maxs.z);
+
+	using namespace boost::numeric;
+	typedef converter<int, float, conversion_traits<int, float>, def_overflow_handler, Ceil<float> > round_ceil; 
+	typedef converter<int, float, conversion_traits<int, float>, def_overflow_handler, Floor<float> > round_floor; 
+	
+	t.mins.x = round_floor::convert(t.mins.x * BSP_SCALE);
+	t.mins.y = round_floor::convert(t.mins.y * BSP_SCALE);
+	t.mins.z = round_floor::convert(t.mins.z * BSP_SCALE);
+	
+	t.maxs.x = round_ceil::convert(t.maxs.x * BSP_SCALE);
+	t.maxs.y = round_ceil::convert(t.maxs.y * BSP_SCALE);
+	t.maxs.z = round_ceil::convert(t.maxs.z * BSP_SCALE);
 }
 
 texture convert_texture(const bsp_texture& t)
@@ -219,14 +207,14 @@ void bsp::compile(const object& parent)
 	object::compile(parent);
 	body.reset(new body_wrapper(root().world(), name));
 
-	ifstream is;
+	std::ifstream is;
 	bsp_header header;
 	bsp_lump lumps[17];
 	std::vector<bsp_texture> bsp_textures;
 	std::vector<bsp_lightmap> bsp_lightmaps;
 	std::vector<bsp_face> bsp_faces;
 		
-	is.open(name.c_str(), ios::binary);
+	is.open(name.c_str(), std::ios::binary);
 
 	is.read((char*) &header, sizeof(header));
 	is.read((char*) lumps, sizeof(lumps));
@@ -377,7 +365,7 @@ void bsp::draw(const state& state) const
 	draw_faces(_visible_faces, state);
 	if (_visible_faces.size() != old)
 	{
-		std::cerr << _visible_faces.size() << "/" << _faces.size() << endl;
+		std::cerr << _visible_faces.size() << "/" << _faces.size() << std::endl;
 		old = _visible_faces.size();
 	}
 }

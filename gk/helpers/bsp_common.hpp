@@ -114,4 +114,17 @@ struct bsp_model
 	int brush_count; 			//Number of brushes for model.
 };
 
+template <typename T> void swizzle(T& v)
+{
+	std::swap(v.y, v.z);
+	v.z *= -1;
+}
+
+template <typename T> void scale(T& v, float scale)
+{
+	v.x *= scale;
+	v.y *= scale;
+	v.z *= scale;
+}
+
 #endif //HELPERS_BSP_COMMON_HPP
