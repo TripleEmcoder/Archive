@@ -59,6 +59,15 @@ void read_visdata(ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
 }
 
+void read_entities(ifstream& is, const bsp_lump& lump, boost::shared_ptr<bsp_entity>& entity)
+{
+	char* buffer = new char[lump.length];
+	is.seekg(lump.offset);
+	is.read((char*) buffer, lump.length);
+	entity.reset(new bsp_entity(string(buffer)));
+}
+
+
 template <typename T> void swizzle(T& vertex)
 {
 	swap(vertex.y, vertex.z);
@@ -233,6 +242,7 @@ void bsp::compile(const object& parent)
 	read_lump(is, lumps[Leaffaces], _leaffaces);
 	read_lump(is, lumps[Models], _models);
 	read_visdata(is, lumps[Visdata], _visdata);
+	read_entities(is, lumps[Entities], entity);
 
 	is.close();
 
@@ -273,17 +283,12 @@ void bsp::compile_face(face& face)
 	face.list.reset(new list_wrapper());
 	list_scope ls(*face.list);
 
-	//if (face.lightmap_index < 0)
-	//	return;
-
 	glActiveTexture(GL_TEXTURE0);
 	_textures[face.texture_index].draw();
 
 	if (face.lightmap_index != -1)
 	{
 		glActiveTexture(GL_TEXTURE1);
-		//_textures.back().draw();
-
 		glBindTexture(GL_TEXTURE_2D, *_lightmaps[face.lightmap_index]);
 	}
 
@@ -318,11 +323,8 @@ void bsp::compile_faces()
 	glPushClientAttrib(GL_CLIENT_VERTEX_ARRAY_BIT);
 	
 	glEnableClientState(GL_VERTEX_ARRAY);
-	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	glEnableClientState(GL_NORMAL_ARRAY);
 	glEnableClientState(GL_COLOR_ARRAY);
-
-	//_textures.push_back(texture("magic_lightmap"));
 
 	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::compile_face, boost::ref(*this), _1));
 
@@ -353,8 +355,6 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 
-	//glEnable(GL_BLEND);
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	for_each(faces.begin(), faces.end(), boost::bind(&bsp::draw_face, boost::ref(*this), _1));
 

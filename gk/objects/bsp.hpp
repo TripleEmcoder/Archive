@@ -19,6 +19,7 @@
 #include "../math.hpp"
 #include "../widgets/widget.hpp"
 #include "../set_vector.hpp"
+#include "../helpers/bsp_entity.hpp"
 
 struct face : public bsp_face
 {
@@ -81,6 +82,7 @@ private:
 	mutable set_vector<face> _visible_faces;
 	
 	boost::shared_ptr<body_wrapper> body;
+	boost::shared_ptr<bsp_entity> entity;
 };
 
 BOOST_CLASS_IMPLEMENTATION(bsp, boost::serialization::object_serializable);
