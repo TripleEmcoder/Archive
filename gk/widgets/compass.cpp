@@ -16,7 +16,7 @@ void compass::draw(const state& state) const
 {
 	glPushMatrix();
 	glTranslatef(120, 150, 0);
-	glRotatef(radians_to_degrees(state.camera->getAngleX()), 0, 0, 1);
+	glRotatef(radians_to_degrees(state.camera.getAngleX()), 0, 0, 1);
 
 	glBegin(GL_LINE_LOOP);
 	
