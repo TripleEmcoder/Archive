@@ -1,6 +1,5 @@
 #include "game.hpp"
-#include "display.hpp"
-#include "movement.hpp"
+#include "input.hpp"
 #include "state.hpp"
 #include "opengl.hpp"
 
@@ -37,15 +36,16 @@ void setup_widgets()
 	p.add(camera);
 }
 
-GLfloat position[]  = {  0.0f,  2.0f,  0.0f,  1.0f };
-GLfloat direction[] = {  0.0f, -1.0f, -1.0f        };
-
 void setup_lights()
 {
-	GLfloat global[]    = {  0.5f,  0.5f,  0.5f,  1.0f };
+	//GLfloat global[]    = {  0.5f,  0.5f,  0.5f,  1.0f };
+	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  0.0f };
 	GLfloat ambient[]   = {  0.8f,  0.8f,  0.8f,  1.0f };
 	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
 	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
+
+	GLfloat position[]  = {  0.0f,  3.0f,  0.0f,  1.0f };
+	GLfloat direction[] = {  0.0f,  -1.0f, 0.0f        };
 
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);	
 
@@ -54,24 +54,26 @@ void setup_lights()
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
 	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 40);
-	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 20);
+	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 5);
 
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 
-	//glEnable(GL_LIGHT0);
+	glEnable(GL_LIGHT0);
 
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 }
 
-void process_physics()
+void setup_shaders()
 {
-	static int time = glutGet(GLUT_ELAPSED_TIME);
-	int elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
+	static shader_wrapper v(GL_VERTEX_SHADER, "vertex.c");
+	static shader_wrapper f(GL_FRAGMENT_SHADER, "fragment.c");
 
-	NewtonUpdate(w.world().id(), elapsed / 1000.0f);
-	
-	time = glutGet(GLUT_ELAPSED_TIME);
+	static program_wrapper p;
+	p.attach(v);
+	p.attach(f);
+	p.link();
+//	p.use();
 }
 
 void draw_scene(const vertex& offset, float x, float y)
@@ -101,9 +103,20 @@ void draw_scene(const vertex& offset, float x, float y)
 	camera->rotate(-x, -y);
 }
 
+void process_physics()
+{
+	static int time = glutGet(GLUT_ELAPSED_TIME);
+	int elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
+
+	NewtonUpdate(w.world().id(), elapsed / 1000.0f);
+	
+	time = glutGet(GLUT_ELAPSED_TIME);
+}
+
 void draw_everything()
 {
-	process_active_keys();
+	process_monostables();
+	process_bistables();
 	process_physics();
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -115,6 +128,21 @@ void draw_everything()
 
 	p.draw(state);
 	glutSwapBuffers();
+}
+
+void reshape_window(int width, int height)
+{
+	if (width == 0 || height == 0)
+		return;
+
+	glutWarpPointer(width/2, height/2);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(50, width/height, 0.1, 50);
+	
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 }
 
 void setup_callbacks()
@@ -149,44 +177,47 @@ int main(int argc, char* argv[])
 	int width = boost::lexical_cast<int>(argv[2]);
 	int height = boost::lexical_cast<int>(argv[3]);
 
-	if (strcmp(argv[1], "window") == 0)
-		setup_window("gk", 0, 0, width, height);
-	
-	else if (strcmp(argv[1], "fullscreen") == 0)
-		setup_fullscreen(width, height, 16, 0);
-
-	else
+	try
 	{
-		std::cerr << "Incorrect display type." << std::endl;
-		return 2;
+		boost::shared_ptr<display_wrapper> display;
+
+		if (strcmp(argv[1], "window") == 0)
+			display.reset(new window_wrapper("gk", 0, 0, width, height));
+		
+		else if (strcmp(argv[1], "fullscreen") == 0)
+			display.reset(new fullscreen_wrapper(width, height, 16, 0));
+
+		else
+		{
+			std::cerr << "Incorrect display type." << std::endl;
+			return 2;
+		}
+
+		GLenum error = glewInit();
+
+		if (error != GLEW_OK)
+		{
+			std::cerr << glewGetErrorString(error) << "." << std::endl;
+			return 3;
+		}
+		
+		load_level("level.xml");
+		
+		setup_widgets();
+		setup_lights();
+		setup_callbacks();
+		setup_shaders();
+
+		glEnable(GL_DEPTH_TEST);		
+
+		std::cerr << "Running..." << std::endl;
+		glutMainLoop();
+
+		return 0;
 	}
-
-	GLenum error = glewInit();
-
-	if (error != GLEW_OK)
+	catch (std::exception& exception)
 	{
-		std::cerr << glewGetErrorString(error) << "." << std::endl;
-		return 3;
+		std::cerr << exception.what() << std::endl;
+		return 4;
 	}
-	
-	load_level("level.xml");
-	
-	setup_widgets();
-	setup_lights();
-	setup_callbacks();
-
-	glEnable(GL_DEPTH_TEST);
-
-	shader_wrapper v(GL_VERTEX_SHADER, "vertex.c");
-	shader_wrapper f(GL_FRAGMENT_SHADER, "fragment.c");
-
-	program_wrapper p;
-	p.attach(v);
-	p.attach(f);
-	p.link();
-	//p.use();
-
-	std::cerr << "Running..." << std::endl;
-	glutMainLoop();
-	return 0;
 }

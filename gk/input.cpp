@@ -1,24 +1,26 @@
-#include "movement.hpp"
+#include "input.hpp"
 #include "game.hpp"
 #include "opengl.hpp"
 
 const float MOUSE_SENSIVITY = 0.5f;
-bool keys[255];
 
-void process_active_keys()
+bool monostables[255];
+bool bistables[255];
+
+void process_monostables()
 {
 	Vector vec;
-	
-	if (keys[(int)'w'])
+
+	if (monostables['w'])
 		vec[0] = 1.0f;
-	else if (keys[(int)'s'])
+	else if (monostables[(int)'s'])
 		vec[0] = -1.0f;
 	else
 		vec[0] = 0.0f;
 
-	if (keys[(int)'a'])
+	if (monostables[(int)'a'])
 		vec[2] = -1.0f;
-	else if (keys[(int)'d'])
+	else if (monostables[(int)'d'])
 		vec[2] = 1.0f;
 	else
 		vec[2] = 0.0f;
@@ -31,24 +33,37 @@ void process_active_keys()
 	character->move(vec);
 }
 
+void process_bistables()
+{
+	switch (bistables['p'])
+	{
+	case true:
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); break;
+	case false:
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); break;
+	}
+
+	switch (bistables['l'])
+	{
+	case true:
+		glEnable(GL_LIGHTING); break;
+	case false:
+		glDisable(GL_LIGHTING); break;
+	}
+}
 
 void process_key_down(unsigned char key, int x, int y) 
 {
 	if (key == 27)
 		exit(0);
 	
-	keys[key] = true;
+	monostables[key] = true;
+	bistables[key] = !bistables[key];
 }
 
 void process_key_up(unsigned char key, int x, int y) 
 {
-	keys[key] = false;
-
-	if (key == 'l')
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
-	if (key == 'f')
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	monostables[key] = false;	
 }
 
 void process_mouse_event(int button, int state, int x, int y)

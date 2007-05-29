@@ -336,7 +336,7 @@ void bsp::draw_face(const face* face) const
 
 template <typename T> void bsp::draw_faces(const T& faces) const
 {
-	glPushAttrib(GL_ENABLE_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT);
+	glPushAttrib(GL_ENABLE_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT | GL_LIGHTING_BIT);
 
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
@@ -348,13 +348,11 @@ template <typename T> void bsp::draw_faces(const T& faces) const
 
 	glActiveTexture(GL_TEXTURE1);
 	glEnable(GL_TEXTURE_2D);
-	//glDisable(GL_TEXTURE_2D);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 
+	glEnable(GL_COLOR_MATERIAL);
+	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 
-	
-	glActiveTexture(GL_TEXTURE0);
-	//glEnable(GL_COLOR_MATERIAL);
 	//glEnable(GL_BLEND);
 	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 

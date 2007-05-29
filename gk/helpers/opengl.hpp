@@ -101,6 +101,29 @@ private:
 	program_id id;
 };
 
+class display_wrapper
+{
+public:
+	virtual ~display_wrapper();
+};
+
+class window_wrapper : public display_wrapper
+{
+public:
+	window_wrapper(std::string title, int x, int y, int width, int height);
+	virtual ~window_wrapper();
+
+private:
+	int window;
+};
+
+class fullscreen_wrapper : public display_wrapper
+{
+public:
+	fullscreen_wrapper(int width, int height, int depth, int frequency);
+	virtual ~fullscreen_wrapper();
+};
+
 //obsluga obszaru obiazywania tekstury
 class texture_scope
 {

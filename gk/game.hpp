@@ -20,4 +20,7 @@ extern fps_meter f;
 extern crosshair c;
 extern compass s;
 
+void setup_game();
+void cleanup_game();
+
 #endif //GAME_HPP

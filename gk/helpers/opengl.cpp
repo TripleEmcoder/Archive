@@ -8,6 +8,7 @@
 #include <boost/assign.hpp>
 #include <boost/bind.hpp>
 #include <boost/filesystem/convenience.hpp>
+#include <boost/format.hpp>
 
 #include <crtdbg.h>
 #include <corona.h>
@@ -242,6 +243,45 @@ void program_wrapper::link()
 void program_wrapper::use() const
 {
 	glUseProgram(id);
+}
+
+display_wrapper::~display_wrapper()
+{
+}
+
+window_wrapper::window_wrapper(std::string title, int x, int y, int width, int height)
+{
+	glutInitWindowSize(width, height);
+	glutInitWindowPosition(x, y);
+	
+	window = glutCreateWindow(title.c_str());
+	
+	if (window == 0)
+		throw std::exception((boost::format(
+			"Failed to initialize window \"%1%\".") % title).str().c_str());
+}
+
+window_wrapper::~window_wrapper()
+{
+	glutDestroyWindow(window);
+}
+
+fullscreen_wrapper::fullscreen_wrapper(int width, int height, int depth, int frequency)
+{
+	std::string mode = (boost::format("%1%x%2%:%3%") % width % height % depth).str();
+	
+	glutGameModeString(mode.c_str());
+
+	if (!glutGameModeGet(GLUT_GAME_MODE_POSSIBLE))
+		throw std::exception((boost::format(
+			"Failed to initialize mode \"%1%\".") % mode).str().c_str());
+	
+	glutEnterGameMode();
+}
+
+fullscreen_wrapper::~fullscreen_wrapper()
+{
+	glutLeaveGameMode();
 }
 
 texture_scope::texture_scope(const texture_wrapper& texture)

@@ -191,19 +191,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\display.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\game.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\main.cpp"
+				RelativePath=".\input.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\movement.cpp"
+				RelativePath=".\main.cpp"
 				>
 			</File>
 			<Filter
@@ -451,19 +447,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\display.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\game.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\math.hpp"
+				RelativePath=".\input.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\movement.hpp"
+				RelativePath=".\math.hpp"
 				>
 			</File>
 			<File
