@@ -218,7 +218,7 @@ void game::update_viewport(int width, int height)
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, width/height, 0.1, 50);
+	gluPerspective(50, 1.0*width/height, 0.1, 50);
 
-	camera.setCameraInternals(50, width/height, 0.1, 50);
+	camera.setCameraInternals(50, 1.0*width/height, 0.1, 50);
 }
