@@ -4,12 +4,15 @@
 #include "newton.hpp"
 #include "state.hpp"
 #include "../Camera.hpp"
+#include "../game.hpp"
 
 #include <iostream>
 #include <fstream>
 #include <boost/bind.hpp>
 #include <boost/numeric/conversion/converter.hpp>
 #include <boost/numeric/conversion/converter_policies.hpp>
+#include <boost/random.hpp>
+#include <ctime> 
 
 enum lump_id
 {
@@ -55,8 +58,6 @@ template <> void read_lump<bsp_entity*>(std::ifstream& is, const bsp_lump& lump,
 	is.read((char*) buffer, lump.length);
 	std::vector<std::string> vec(bsp_entity::split(buffer));
 	transform(vec.begin(), vec.end(), back_inserter(entities), boost::bind(&bsp_entity::read, _1));
-	//for (std::vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
-	//	entities.push_back(bsp_entity(*i));
 }
 
 void read_visdata(std::ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
@@ -156,11 +157,24 @@ void bsp::create_beziers(face& face)
 		}
 }
 
-void bsp::create_entity_models(bsp_entity* entity)
+template <typename T> bool add_entity(bsp_entity* entity, std::vector<T*>& vec)
 {
-	bsp_model_entity* model = dynamic_cast<bsp_model_entity*>(entity);
+	T* model = dynamic_cast<T*>(entity);
 	if (model)
-		_model_entities.push_back(model);
+	{
+		vec.push_back(model);
+		return true;
+	}
+	else
+		return false;
+}
+
+void bsp::create_entities(bsp_entity* entity)
+{
+	if (add_entity(entity, _model_entities))
+		return;
+	if (add_entity(entity, _respawn_entities))
+		return;
 }
 
 void bsp::add_face(const face& face, const NewtonCollision* tree) const
@@ -200,12 +214,6 @@ void bsp::create_collisions() const
 	NewtonTreeCollisionEndBuild(tree, 0);
 	NewtonBodySetCollision(body->id(), tree);
 	NewtonBodySetMatrix(body->id(), composition().row_major_data());
-	//Vector p0, p1;
-	//Matrix4x4 m;
-	//NewtonBodyGetMatrix (body, m.data()); 
-	//NewtonCollisionCalculateAABB(tree, m.data(), p0.data(), p1.data()); 
-	//NewtonSetWorldSize(nWorld, p0.data(), p1.data());
-
 	NewtonReleaseCollision(nWorld, tree);
 }
 
@@ -253,7 +261,7 @@ void bsp::compile(const object& parent)
 
 	copy(bsp_faces.begin(), bsp_faces.end(), back_inserter(_faces));
 
-	for_each(_entities.begin(), _entities.end(), boost::bind(&bsp::create_entity_models, boost::ref(*this), _1));
+	for_each(_entities.begin(), _entities.end(), boost::bind(&bsp::create_entities, boost::ref(*this), _1));
 	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::create_beziers, boost::ref(*this), _1));
 	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 5));
 		
@@ -263,15 +271,16 @@ void bsp::compile(const object& parent)
 
 	_visible_faces.reset(&_faces);
 
-	//_list.reset(new list_id());
-	//list_scope ls(*_list);
-	//state state;
-	//object::draw(state);
+	boost::mt19937 gen(static_cast<unsigned int>(std::time(0))); 
+	boost::uniform_int<> dist(0, (int)_respawn_entities.size()-1);
 
-	//{
-	//	matrix_scope ms(composition());
-	//	draw_faces(_faces);
-	//}
+	boost::variate_generator<boost::mt19937&, boost::uniform_int<> > random(gen, dist);  
+	int x = random();
+
+	bsp_vector3f pos = _respawn_entities[x]->origin();
+	float angle = _respawn_entities[x]->angle();
+	game::set_respawn_point(vertex(pos.x, pos.y, pos.z));
+	game::set_respawn_angle(angle);
 }
 
 void bsp::compile_face(face& face)
@@ -356,6 +365,9 @@ template <typename T> void bsp::draw_faces(const T& faces, const state& state) c
 	glCullFace(GL_BACK);
 	glFrontFace(GL_CW);
 
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
 
@@ -368,18 +380,10 @@ template <typename T> void bsp::draw_faces(const T& faces, const state& state) c
 void bsp::draw(const state& state) const
 {
 	find_visible_faces(state);
-	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
 	draw_faces(_visible_faces, state);
 	for_each(_model_entities.begin(), _model_entities.end(), boost::bind(&bsp_model_entity::draw, _1));
-	
-	//static size_t old;
-	//if (_visible_faces.size() != old)
-	//{
-	//	std::cerr << _visible_faces.size() << "/" << _faces.size() << std::endl;
-	//	old = _visible_faces.size();
-	//}
 }
 
 void bsp::find_visible_faces(const state& state) const

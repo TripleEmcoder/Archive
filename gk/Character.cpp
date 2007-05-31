@@ -1,6 +1,5 @@
 #include "Character.hpp"
 #include "matrix.hpp"
-#include "vertex.hpp"
 
 #include <iostream>
 #include <cmath>
@@ -9,7 +8,7 @@
 
 //using boost::numeric::ublas;
 	
-Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ)
+Character::Character(const world_wrapper& nw, vertex s, vertex position)
 	:nWorld(nw.id()), body(nw, "character")
 {
 	body.mass(80.0f, vertex(80.0f, 80.0f, 80.0f));
@@ -18,16 +17,14 @@ Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float si
 	body.simulation_starting.connect(boost::bind(&Character::applyForceAndTorque, this));
 	body.contact_running.connect(boost::bind(&Character::processCollision, this));
 
-	size[0] = sizeX;
-	size[1] = sizeY;
-	size[2] = sizeZ;
+	size = s;
 
 	location = identity_matrix<float>(4);
-	location(3,0) = locationX;
-	location(3,1) = locationY;
-	location(3,2) = locationZ;
+	location(3,0) = position.x;
+	location(3,1) = position.y;
+	location(3,2) = position.z;
 
-	NewtonCollision* collision = NewtonCreateSphere(nWorld, size[0], size[1], size[2], NULL);
+	NewtonCollision* collision = NewtonCreateSphere(nWorld, size.x, size.y, size.z, NULL);
 	NewtonBodySetCollision(body.id(), collision);
 	NewtonReleaseCollision(nWorld, collision);
 

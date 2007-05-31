@@ -4,6 +4,7 @@
 #include "math.hpp"
 #include "widget.hpp"
 #include "newton.hpp"
+#include "vertex.hpp"
 
 class Character : public widget
 {
@@ -12,7 +13,8 @@ private:
 	static const int FEET_COLLISION = 2;
 	
 	Matrix4x4 location;
-	mutable Vector size, movement;
+	mutable Vector movement;
+	vertex size;
 	int count;
 	bool jumpInd, jumping;
 	body_wrapper body;
@@ -21,7 +23,7 @@ private:
 	void applyForceAndTorque();
 	void setTransform(const matrix& matrix);
 public:
-	Character(const world_wrapper& nw, float sizeX, float sizeY, float sizeZ, float locationX, float locationY, float locationZ);
+	Character(const world_wrapper& nw, vertex size, vertex position);
 	Vector getLocation();
 	Vector getDirection();
 	virtual void draw(const state& state) const;

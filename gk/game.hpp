@@ -6,8 +6,6 @@
 
 #include <boost/shared_ptr.hpp>
 
-class vertex;
-
 #include "Character.hpp"
 #include "level.hpp"
 #include "Camera.hpp"
@@ -16,10 +14,15 @@ class vertex;
 #include "crosshair.hpp"
 #include "fps_meter.hpp"
 #include "state.hpp"
+#include "vertex.hpp"
+
 
 class game
 {
 public:
+	static void set_respawn_point(const vertex& position);
+	static void set_respawn_angle(float angle);
+
 	game(std::string name);
 	~game();
 
@@ -36,7 +39,11 @@ public:
 	void draw_level(const vertex& offset, float x, float y);
 	void draw_projector();
 
+
 private:
+	static vertex respawn_point;
+	static float respawn_angle;
+
 	level level;
 	boost::shared_ptr<Character> character;
 	Camera camera;
@@ -45,8 +52,9 @@ private:
 	crosshair crosshair;
 	compass compass;
 	state state;
-
+	
 	void load_level(std::string name);
+	void setup_character();
 	void setup_widgets();
 	void setup_lights();
 	void setup_shaders();

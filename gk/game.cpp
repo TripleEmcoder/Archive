@@ -5,6 +5,9 @@
 
 #include <boost/format.hpp>
 
+vertex game::respawn_point;
+float game::respawn_angle;
+
 game::game(std::string name)
 :
 	camera(0, 0),
@@ -14,6 +17,7 @@ game::game(std::string name)
 	state(camera)
 {
 	load_level(name);
+	setup_character();
 	setup_widgets();
 	setup_lights();
 	setup_shaders();
@@ -39,15 +43,18 @@ void game::load_level(std::string name)
 	level.compile();
 }
 
+void game::setup_character()
+{
+	character.reset(new Character(level.world(), vertex(0.4, 0.9, 0.4), respawn_point));
+	camera.rotate(respawn_angle * 3.1416 / 180.0f, 0);
+}
+
 void game::setup_widgets()
 {
-	character.reset(new Character(level.world(), 0.4, 0.9, 0.4, -40*1.5f, 1.5*1.5f, 20*1.5f));
-	Vector location = character->getLocation();
-	//projector.add(character.get());
-
-	//projector.add(&camera);
+	projector.add(character.get());
+	projector.add(&camera);
 	projector.add(&fps_meter);
-	//projector.add(&crosshair);
+	projector.add(&crosshair);
 	projector.add(&compass);
 }
 
@@ -219,4 +226,14 @@ void game::update_viewport(int width, int height)
 	gluPerspective(50, 1.0*width/height, 0.1, 50);
 
 	camera.setCameraInternals(50, 1.0*width/height, 0.1, 50);
+}
+
+void game::set_respawn_point(const vertex &position)
+{
+	respawn_point = position;
+}
+
+void game::set_respawn_angle(float angle)
+{
+	respawn_angle = angle;
 }
