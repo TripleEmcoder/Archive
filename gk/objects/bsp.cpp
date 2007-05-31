@@ -369,7 +369,7 @@ void bsp::draw(const state& state) const
 	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
-	//draw_faces(_visible_faces, state);
+	draw_faces(_visible_faces, state);
 	for_each(_model_entities.begin(), _model_entities.end(), boost::bind(&bsp_model_entity::draw, _1));
 	
 	//static size_t old;

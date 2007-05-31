@@ -54,7 +54,7 @@ void game::setup_widgets()
 void game::setup_lights()
 {
 	//GLfloat global[]    = {  0.5f,  0.5f,  0.5f,  1.0f };
-	GLfloat global[]    = {  0.0f,  0.0f,  0.0f,  0.0f };
+	GLfloat global[]    = {  1.0f,  1.0f,  1.0f,  0.0f };
 	GLfloat ambient[]   = {  0.8f,  0.8f,  0.8f,  1.0f };
 	GLfloat diffuse[]   = {  0.4f,  0.4f,  0.4f,  1.0f };
 	GLfloat specular[]  = {  0.4f,  0.4f,  0.4f,  1.0f };
@@ -64,17 +64,17 @@ void game::setup_lights()
 
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, global);	
 
-	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
+	//glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
+	//glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+	//glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 
-	glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
-	glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
-	glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 5);
+	//glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, direction);
+	//glLightf (GL_LIGHT0, GL_SPOT_CUTOFF, 30);
+	//glLightf (GL_LIGHT0, GL_SPOT_EXPONENT, 5);
 
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
+	//glLightfv(GL_LIGHT0, GL_POSITION, position);
 
-	glEnable(GL_LIGHT0);
+	//glEnable(GL_LIGHT0);
 
 	glEnable(GL_LIGHTING);
 }
@@ -88,7 +88,7 @@ void game::setup_shaders()
 	//p.attach(v);
 	//p.attach(f);
 	//p.link();
-//	p.use();
+	//p.use();
 }
 
 void game::process_physics()
@@ -169,9 +169,9 @@ void game::process_bistable_keys(const std::vector<bool>& keys)
 	switch (keys['l'])
 	{
 	case true:
-		glEnable(GL_LIGHTING); break;
-	case false:
 		glDisable(GL_LIGHTING); break;
+	case false:
+		glEnable(GL_LIGHTING); break;
 	}
 
 	switch (keys['m'])

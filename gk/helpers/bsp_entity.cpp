@@ -106,6 +106,7 @@ void bsp_visible_entity::draw() const
 {
 	glPushMatrix();
 	glTranslatef(origin.x, origin.y, origin.z);
+	glRotated(angle, 0, 1, 0);
 	draw_implementation();
 	glPopMatrix();
 }
@@ -115,14 +116,14 @@ bsp_model_entity::bsp_model_entity(std::map<std::string,std::string> properties)
 	bsp_visible_entity(properties)
 {
 #ifdef _DEBUG
-	std::cerr << "Loading model " << properties["model"] << "..." << std::endl;
+	std::cerr << "Loading model \"" << properties["model"] << "\"..." << std::endl;
 #endif
 
 	std::ifstream input(properties["model"].c_str(), std::ios::binary);
 	
 	if (!input.is_open())
 	{
-		std::cerr << "Failed to load model " << properties["model"] << "." << std::endl;
+		std::cerr << "Failed to load model \"" << properties["model"] << "\"." << std::endl;
 		return;
 	}
 	
