@@ -13,7 +13,6 @@
 #include "wall.hpp"
 #include "bsp.hpp"
 #include "md3.hpp"
-#include "weapon.hpp"
 
 class group : public object
 {
@@ -27,7 +26,6 @@ public:
 	std::vector<wall> walls;
 	std::vector<bsp> bsps;
 	std::vector<md3> md3s;
-	std::vector<weapon> weapons;
 
 	std::vector<group> groups;
 
@@ -45,7 +43,6 @@ public:
 		archive & BOOST_SERIALIZATION_NVP(walls);
 		archive & BOOST_SERIALIZATION_NVP(bsps);
 		archive & BOOST_SERIALIZATION_NVP(md3s);
-		archive & BOOST_SERIALIZATION_NVP(weapons);
 
 		archive & BOOST_SERIALIZATION_NVP(groups);
 	}

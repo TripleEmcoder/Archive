@@ -40,10 +40,10 @@ std::vector<std::string> bsp_entity::split(std::string entities)
 
 bsp_entity* bsp_entity::read(std::string entity)
 {
-#ifdef _DEBUG
-	std::cerr << "Loading entity:" << std::endl;
-	std::cerr << entity << std::endl;
-#endif
+//#ifdef _DEBUG
+//	std::cerr << "Loading entity:" << std::endl;
+//	std::cerr << entity << std::endl;
+//#endif
 
 	std::map<std::string, std::string> properties;
 
@@ -63,16 +63,16 @@ bsp_entity* bsp_entity::read(std::string entity)
 
 	typedef std::pair<const std::string, std::string> pair;
 
-#ifdef _DEBUG
-	std::cerr << "Parse results:" << std::endl;
-
-	std::for_each(properties.begin(), properties.end(),
-		std::cerr 
-		<< bind(&pair::first, _1) 
-		<< constant("=")
-		<< bind(&pair::second, _1)
-		<< constant("\n"));
-#endif
+//#ifdef _DEBUG
+//	std::cerr << "Parse results:" << std::endl;
+//
+//	std::for_each(properties.begin(), properties.end(),
+//		std::cerr 
+//		<< bind(&pair::first, _1) 
+//		<< constant("=")
+//		<< bind(&pair::second, _1)
+//		<< constant("\n"));
+//#endif
 
 	if (properties["classname"] == "misc_model")
 		return new bsp_model_entity(properties);
@@ -114,16 +114,15 @@ bsp_model_entity::bsp_model_entity(std::map<std::string,std::string> properties)
 :
 	bsp_visible_entity(properties)
 {
-
 #ifdef _DEBUG
-	std::cerr << "Loading model " << properties["model_name"] << "..." << std::endl;
+	std::cerr << "Loading model " << properties["model"] << "..." << std::endl;
 #endif
 
-	std::ifstream input(properties["model_name"].c_str(), std::ios::binary);
+	std::ifstream input(properties["model"].c_str(), std::ios::binary);
 	
 	if (!input.is_open())
 	{
-		std::cerr << "Failed to load model " << properties["model_name"] << "." << std::endl;
+		std::cerr << "Failed to load model " << properties["model"] << "." << std::endl;
 		return;
 	}
 	

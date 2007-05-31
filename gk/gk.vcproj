@@ -271,10 +271,6 @@
 					RelativePath=".\objects\wall.cpp"
 					>
 				</File>
-				<File
-					RelativePath=".\objects\weapon.cpp"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="helpers"
@@ -511,10 +507,6 @@
 				</File>
 				<File
 					RelativePath=".\objects\wall.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\objects\weapon.hpp"
 					>
 				</File>
 			</Filter>

@@ -20,7 +20,6 @@ void group::compile(const object& parent)
 		std::for_each(walls.begin(), walls.end(), bind(&object::compile, _1, ref(*this)));
 		std::for_each(bsps.begin(), bsps.end(), bind(&object::compile, _1, ref(*this)));
 		std::for_each(md3s.begin(), md3s.end(), bind(&object::compile, _1, ref(*this)));
-		std::for_each(weapons.begin(), weapons.end(), bind(&object::compile, _1, ref(*this)));
 		std::for_each(groups.begin(), groups.end(), bind(&object::compile, _1, ref(*this)));
 	}
 }
@@ -37,7 +36,6 @@ void group::draw(const state& state) const
 		std::for_each(walls.begin(), walls.end(), bind(&object::draw, _1, ref(state)));
 		std::for_each(bsps.begin(), bsps.end(), bind(&object::draw, _1, ref(state)));
 		std::for_each(md3s.begin(), md3s.end(), bind(&object::draw, _1, ref(state)));
-		std::for_each(weapons.begin(), weapons.end(), bind(&object::draw, _1, ref(state)));
 		std::for_each(groups.begin(), groups.end(), bind(&object::draw, _1, ref(state)));
 	}
 }

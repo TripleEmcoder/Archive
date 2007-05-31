@@ -131,9 +131,6 @@
         <md3s>
           <count>0</count>
         </md3s>
-        <weapons>
-          <count>0</count>
-        </weapons>
         <groups>
           <count>3</count>
           <item>
@@ -290,9 +287,6 @@
             <md3s>
               <count>0</count>
             </md3s>
-            <weapons>
-              <count>0</count>
-            </weapons>
             <groups>
               <count>0</count>
             </groups>
@@ -359,9 +353,6 @@
             <md3s>
               <count>0</count>
             </md3s>
-            <weapons>
-              <count>0</count>
-            </weapons>
             <groups>
               <count>0</count>
             </groups>
@@ -391,9 +382,6 @@
               <count>0</count>
             </bsps>
             <md3s>
-              <count>0</count>
-            </md3s>
-            <weapons>
               <count>2</count>
               <item>
                 <transformations>
@@ -429,7 +417,7 @@
                 </bindings>
                 <name>railgun</name>
               </item>
-            </weapons>
+            </md3s>
             <groups>
               <count>0</count>
             </groups>
@@ -472,9 +460,6 @@
         <md3s>
           <count>0</count>
         </md3s>
-        <weapons>
-          <count>0</count>
-        </weapons>
         <groups>
           <count>0</count>
         </groups>
