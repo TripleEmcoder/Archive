@@ -69,11 +69,28 @@ void read_visdata(std::ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
 	is.read((char*) visdata.vecs, visdata.vecs_count * visdata.vecs_size);
 }
 
+void overbrighten(unsigned char* color, float scale)
+{
+	float temp[3];
+	float m = 0;
+	for (int k = 0; k < 3; ++k)
+	{
+		temp[k] = color[k] * scale;
+		m = max(m, temp[k]);
+	}
+	if (m > 255.0f)
+		for (int k = 0; k < 3; ++k)
+			temp[k] *= 255.0f / m;
+	for (int k = 0; k < 3; ++k)
+		color[k] = temp[k];
+}
+
 void convert_vertex(bsp_vertex& vertex)
 {
 	swizzle(vertex.position);
 	swizzle(vertex.normal);
 	scale(vertex.position, BSP_SCALE);
+	overbrighten(vertex.color, 2.0f);
 }
 
 void convert_plane(bsp_plane& plane)
@@ -111,23 +128,9 @@ boost::shared_ptr<texture_id> convert_lightmap(bsp_lightmap& l)
 	boost::shared_ptr<texture_id> id(new texture_id());
 	glBindTexture(GL_TEXTURE_2D, *id);
 
-	float scale = 2.0f;
 	for (int i = 0; i < 128; ++i)
 		for (int j = 0; j < 128; ++j)
-		{
-			float color[3];
-			float m = 0;
-			for (int k = 0; k < 3; ++k)
-			{
-				color[k] = l.pixels[i][j][k] * scale;
-				m = max(m, color[k]);
-			}
-			if (m > 255.0f)
-				for (int k = 0; k < 3; ++k)
-					color[k] *= 255.0f / m;
-			for (int k = 0; k < 3; ++k)
-				l.pixels[i][j][k] = color[k];
-		}
+			overbrighten(l.pixels[i][j], 3.0f);
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -358,8 +361,6 @@ void bsp::draw_face(const face* face, const state& state) const
 template <typename T> void bsp::draw_faces(const T& faces, const state& state) const
 {
 	glPushAttrib(GL_CURRENT_BIT | GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT);
-
-	glColor3f(0, 0, 0);
 
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);

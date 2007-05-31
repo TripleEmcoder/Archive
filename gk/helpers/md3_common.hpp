@@ -1,7 +1,7 @@
 #ifndef HELPERS_MD3_COMMON_HPP
 #define HELPERS_MD3_COMMON_HPP
 
-const float MD3_SCALE = 1.0f / 3000.0f;
+const float MD3_SCALE = 1.0f / 1800.0f;
 const float MD3_FPS = 2.0f;
 const float MD3_PI = 3.14159265f;
 
