@@ -21,7 +21,29 @@ protected:
 	bsp_entity(std::map<std::string, std::string> properties);
 };
 
-class bsp_visible_entity : public bsp_entity
+class bsp_map_entity : public bsp_entity
+{
+public:
+	bsp_map_entity(std::map<std::string, std::string> properties);
+
+	bsp_vector3f origin() const;
+
+private:
+	bsp_vector3f _origin;
+};
+
+class bsp_respawn_entity : public bsp_map_entity
+{
+public:
+	bsp_respawn_entity(std::map<std::string, std::string> properties);
+
+	float angle() const;
+
+private:
+	float _angle;
+};
+
+class bsp_visible_entity : public bsp_map_entity
 {
 public:
 	bsp_visible_entity(std::map<std::string, std::string> properties);
@@ -29,9 +51,6 @@ public:
 
 protected:
 	virtual void draw_implementation() const = 0;
-
-private:
-	bsp_vector3f origin;
 };
 
 class md3_file;

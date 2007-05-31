@@ -79,6 +79,9 @@ bsp_entity* bsp_entity::read(std::string entity)
 	if (properties["classname"] == "misc_model")
 		return new bsp_misc_entity(properties);
 
+	else if (properties["classname"] == "info_player_deathmatch")
+		return new bsp_respawn_entity(properties);
+
 	else if (properties["classname"].find("weapon") == 0)
 		return new bsp_weapon_entity(properties);
 }
@@ -91,27 +94,38 @@ bsp_entity::~bsp_entity()
 {
 }
 
-bsp_visible_entity::bsp_visible_entity(std::map<std::string, std::string> properties)
+bsp_map_entity::bsp_map_entity(std::map<std::string, std::string> properties)
 :
 	bsp_entity(properties)
 {
 	rule<> origin_rule =
-		real_p[assign_a(origin.x)] >> space_p
+		real_p[assign_a(_origin.x)] >> space_p
 		>>
-		real_p[assign_a(origin.y)] >> space_p
+		real_p[assign_a(_origin.y)] >> space_p
 		>>
-		real_p[assign_a(origin.z)] >> space_p;
+		real_p[assign_a(_origin.z)] >> space_p;
 
 	parse(properties["origin"].c_str(), origin_rule);
 
-	swizzle(origin);
-	scale(origin, BSP_SCALE);
+	swizzle(_origin);
+	scale(_origin, BSP_SCALE);
+}
+
+bsp_vector3f bsp_map_entity::origin() const
+{
+	return _origin;
+}
+
+bsp_visible_entity::bsp_visible_entity(std::map<std::string, std::string> properties)
+:
+	bsp_map_entity(properties)
+{
 }
 
 void bsp_visible_entity::draw() const
 {
 	glPushMatrix();
-	glTranslatef(origin.x, origin.y, origin.z);
+	glTranslatef(origin().x, origin().y, origin().z);
 	draw_implementation();
 	glPopMatrix();
 }
@@ -183,4 +197,17 @@ void bsp_weapon_entity::draw_implementation() const
 	glRotatef(360*elapsed/1000/4, 0, 1, 0);
 
 	bsp_model_entity::draw_implementation();
+}
+
+
+bsp_respawn_entity::bsp_respawn_entity(std::map<std::string, std::string> properties)
+:
+	bsp_map_entity(properties)
+{
+	parse(properties["angle"].c_str(), real_p[assign_a(_angle)]);
+}
+
+float bsp_respawn_entity::angle() const
+{
+	return _angle;
 }
