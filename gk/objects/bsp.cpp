@@ -348,7 +348,9 @@ void bsp::draw_face(const face* face, const state& state) const
 
 template <typename T> void bsp::draw_faces(const T& faces, const state& state) const
 {
-	glPushAttrib(GL_ENABLE_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT | GL_LIGHTING_BIT);
+	glPushAttrib(GL_CURRENT_BIT | GL_ENABLE_BIT | GL_LIGHTING_BIT | GL_POLYGON_BIT | GL_TEXTURE_BIT);
+
+	glColor3f(0, 0, 0);
 
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);

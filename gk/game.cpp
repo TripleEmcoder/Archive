@@ -75,8 +75,6 @@ void game::setup_lights()
 	//glLightfv(GL_LIGHT0, GL_POSITION, position);
 
 	//glEnable(GL_LIGHT0);
-
-	glEnable(GL_LIGHTING);
 }
 
 void game::setup_shaders()
@@ -169,9 +167,9 @@ void game::process_bistable_keys(const std::vector<bool>& keys)
 	switch (keys['l'])
 	{
 	case true:
-		glDisable(GL_LIGHTING); break;
-	case false:
 		glEnable(GL_LIGHTING); break;
+	case false:
+		glDisable(GL_LIGHTING); break;
 	}
 
 	switch (keys['m'])
