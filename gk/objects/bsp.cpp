@@ -48,15 +48,15 @@ template <typename T> void read_lump(std::ifstream& is, const bsp_lump& lump, st
 	is.read((char*) &vec[0], n*sizeof(T));
 }
 
-template <> void read_lump<bsp_entity>(std::ifstream& is, const bsp_lump& lump, std::vector<bsp_entity>& entities)
+template <> void read_lump<bsp_entity*>(std::ifstream& is, const bsp_lump& lump, std::vector<bsp_entity*>& entities)
 {
 	char* buffer = new char[lump.length];
 	is.seekg(lump.offset);
 	is.read((char*) buffer, lump.length);
 	std::vector<std::string> vec(bsp_entity::split(buffer));
-	//transform(vec.begin(), vec.end(), back_inserter(entities), boost::bind(&bsp_entity::bsp_entity, _1));
-	for (std::vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
-		entities.push_back(bsp_entity(*i));
+	transform(vec.begin(), vec.end(), back_inserter(entities), boost::bind(&bsp_entity::read, _1));
+	//for (std::vector<std::string>::const_iterator i = vec.begin(); i != vec.end(); ++i)
+	//	entities.push_back(bsp_entity(*i));
 }
 
 void read_visdata(std::ifstream& is, const bsp_lump& lump, bsp_visdata& visdata)
@@ -156,6 +156,13 @@ void bsp::create_beziers(face& face)
 		}
 }
 
+void bsp::create_entity_models(bsp_entity* entity)
+{
+	bsp_model_entity* model = dynamic_cast<bsp_model_entity*>(entity);
+	if (model)
+		_model_entities.push_back(model);
+}
+
 void bsp::add_face(const face& face, const NewtonCollision* tree) const
 {
 	if (face.face_type == polygon || face.face_type == mesh)
@@ -246,9 +253,10 @@ void bsp::compile(const object& parent)
 
 	copy(bsp_faces.begin(), bsp_faces.end(), back_inserter(_faces));
 
+	for_each(_entities.begin(), _entities.end(), boost::bind(&bsp::create_entity_models, boost::ref(*this), _1));
 	for_each(_faces.begin(), _faces.end(), boost::bind(&bsp::create_beziers, boost::ref(*this), _1));
 	for_each(_beziers.begin(), _beziers.end(), boost::bind(&bezier::tessellate, _1, 5));
-
+		
 	create_collisions();
 
 	compile_faces();
@@ -357,17 +365,19 @@ template <typename T> void bsp::draw_faces(const T& faces, const state& state) c
 
 void bsp::draw(const state& state) const
 {
-	static size_t old;
 	find_visible_faces(state);
 	//glCallList(*_list);
 	object::draw(state);
 	matrix_scope ms(composition());
-	draw_faces(_visible_faces, state);
-	if (_visible_faces.size() != old)
-	{
-		std::cerr << _visible_faces.size() << "/" << _faces.size() << std::endl;
-		old = _visible_faces.size();
-	}
+	//draw_faces(_visible_faces, state);
+	for_each(_model_entities.begin(), _model_entities.end(), boost::bind(&bsp_model_entity::draw, _1));
+	
+	//static size_t old;
+	//if (_visible_faces.size() != old)
+	//{
+	//	std::cerr << _visible_faces.size() << "/" << _faces.size() << std::endl;
+	//	old = _visible_faces.size();
+	//}
 }
 
 void bsp::find_visible_faces(const state& state) const

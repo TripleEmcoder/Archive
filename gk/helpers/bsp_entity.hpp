@@ -14,6 +14,7 @@ class bsp_entity
 public:
 	static std::vector<std::string> split(std::string entities);
 	static bsp_entity* read(std::string entity);
+	virtual ~bsp_entity(void) { };
 
 protected:
 	bsp_entity(std::map<std::string, std::string> properties);
@@ -24,6 +25,7 @@ class bsp_visible_entity : public bsp_entity
 public:
 	bsp_visible_entity(std::map<std::string, std::string> properties);
 	void draw() const;
+	virtual ~bsp_visible_entity(void) { };
 
 protected:
 	virtual void draw_implementation() const = 0;
@@ -39,6 +41,7 @@ class bsp_model_entity : public bsp_visible_entity
 {
 public:
 	bsp_model_entity(std::map<std::string, std::string> properties);
+	virtual ~bsp_model_entity(void) { };
 	
 protected:
 	virtual void draw_implementation() const;

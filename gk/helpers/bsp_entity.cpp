@@ -78,6 +78,11 @@ bsp_entity* bsp_entity::read(std::string entity)
 		return new bsp_model_entity(properties);
 }
 
+bsp_entity::bsp_entity(std::map<std::string, std::string> properties)
+{
+
+}
+
 bsp_visible_entity::bsp_visible_entity(std::map<std::string, std::string> properties)
 :
 	bsp_entity(properties)

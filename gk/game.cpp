@@ -43,11 +43,11 @@ void game::setup_widgets()
 {
 	character.reset(new Character(level.world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
 	Vector location = character->getLocation();
-	projector.add(character.get());
+	//projector.add(character.get());
 
-	projector.add(&camera);
+	//projector.add(&camera);
 	projector.add(&fps_meter);
-	projector.add(&crosshair);
+	//projector.add(&crosshair);
 	projector.add(&compass);
 }
 

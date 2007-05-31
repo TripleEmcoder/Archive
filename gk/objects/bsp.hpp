@@ -19,7 +19,8 @@
 #include "../math.hpp"
 #include "../widgets/widget.hpp"
 #include "../set_vector.hpp"
-#include "../helpers/bsp_entity.hpp"
+//#include "../helpers/bsp_entity.hpp"
+#include "bsp_entity.hpp"
 
 struct face : public bsp_face
 {
@@ -55,6 +56,7 @@ private:
 	void compile_faces();
 	void compile_face(face& face);
 	void create_beziers(face& face);
+	void create_entity_models(bsp_entity* entity);
 	void create_collisions() const;
 	void add_face(const face& face, const NewtonCollision* tree) const;
 
@@ -77,7 +79,8 @@ private:
 	std::vector<bsp_leaf> _leafs;
 	std::vector<int> _leaffaces;
 	std::vector<bsp_model> _models;
-	std::vector<bsp_entity> _entities;
+	std::vector<bsp_entity*> _entities;
+	std::vector<bsp_model_entity*> _model_entities;
 	bsp_visdata _visdata;
 
 	mutable set_vector<face> _visible_faces;
