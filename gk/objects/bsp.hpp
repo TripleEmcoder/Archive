@@ -19,7 +19,6 @@
 #include "../math.hpp"
 #include "../widgets/widget.hpp"
 #include "../set_vector.hpp"
-//#include "../helpers/bsp_entity.hpp"
 #include "bsp_entity.hpp"
 
 struct face : public bsp_face

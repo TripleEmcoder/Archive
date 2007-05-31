@@ -18,9 +18,6 @@ Character::Character(const world_wrapper& nw, float sizeX, float sizeY, float si
 	body.simulation_starting.connect(boost::bind(&Character::applyForceAndTorque, this));
 	body.contact_running.connect(boost::bind(&Character::processCollision, this));
 
-	normal[0] = normal[2] = 0;
-	normal[1] = 1;
-	
 	size[0] = sizeX;
 	size[1] = sizeY;
 	size[2] = sizeZ;
@@ -56,16 +53,12 @@ void Character::setTransform(const matrix& value)
 	const float* m = value.row_major_data();
 
 	Matrix4x4 mat;
+
 	for (int i = 0; i < 4; ++i)
 		for (int j = 0; j < 4; ++j)
 			mat(i,j) = m[i*4 + j];
 
-	setLocation(mat);
-}
-
-void Character::setLocation(const Matrix4x4& matrix)
-{
-	location = matrix;
+	location = mat;
 }
 
 void Character::move(const Vector& v)
@@ -92,15 +85,9 @@ Vector Character::getDirection()
 void Character::processCollision()
 {
 	if (count)
-	{
 		count--;
-		normal[0] = normal[2] = 0.0f;
-		normal[1] = 1.0f;
-	}
 	else
-	{
 		jumping = false;
-	}
 }
 
 void Character::applyForceAndTorque()
@@ -119,15 +106,15 @@ void Character::applyForceAndTorque()
 	if (norm_2(movement) > 0.0001f)
 	{
 		movement /= norm_2(movement);
-		//desiredVel = cross_prod(normal, cross_prod(movement, normal));
 		desiredVel = movement;
-		desiredVel *= 6.0f;
+		desiredVel *= 8.0f;
 	}
 	else
 	{
 		desiredVel = movement * 0.0f;
 	}
 
+	Vector velocity;
 	NewtonBodyGetVelocity(body.id(), velocity.data());
 	
 	if (velocity[1] < 0 || jumping)
@@ -140,7 +127,7 @@ void Character::applyForceAndTorque()
 
 	if (jumpInd)
 	{
-		force[1] += mass * (5.0f - velocity[1]) / timestep;
+		force[1] += mass * (4.5f - velocity[1]) / timestep;
 		jumpInd = false;
 		jumping = true;
 		count = 4;
@@ -151,6 +138,7 @@ void Character::applyForceAndTorque()
 
 void Character::draw(const state& state) const
 {
+	Vector velocity;
 	NewtonBodyGetVelocity(body.id(), velocity.data());
 	velocity[3] = 0;
 	write(350, 35, "VELOCITY (%3.1f, %3.1f, %3.1f)", velocity[0], velocity[1], velocity[2]);

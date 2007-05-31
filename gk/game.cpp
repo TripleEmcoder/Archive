@@ -41,7 +41,7 @@ void game::load_level(std::string name)
 
 void game::setup_widgets()
 {
-	character.reset(new Character(level.world(), 0.4, 0.9, 0.4, -40, 1.5, 20));
+	character.reset(new Character(level.world(), 0.4, 0.9, 0.4, -40*1.5f, 1.5*1.5f, 20*1.5f));
 	Vector location = character->getLocation();
 	//projector.add(character.get());
 

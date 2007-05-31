@@ -1,7 +1,7 @@
 #ifndef HELPERS_BSP_COMMON_HPP
 #define HELPERS_BSP_COMMON_HPP
 
-const float BSP_SCALE = 1.0f / 50.0f;
+const float BSP_SCALE = 1.0f / 33.33f;
 
 struct bsp_vector3i
 {
