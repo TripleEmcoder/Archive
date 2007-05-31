@@ -5,6 +5,8 @@
 #include <iostream>
 #include <fstream>
 
+#include <boost/algorithm/string.hpp>
+
 #include <boost/lambda/lambda.hpp>
 #include <boost/lambda/bind.hpp>
 
@@ -75,12 +77,18 @@ bsp_entity* bsp_entity::read(std::string entity)
 //#endif
 
 	if (properties["classname"] == "misc_model")
-		return new bsp_model_entity(properties);
+		return new bsp_misc_entity(properties);
+
+	else if (properties["classname"].find("weapon") == 0)
+		return new bsp_weapon_entity(properties);
 }
 
 bsp_entity::bsp_entity(std::map<std::string, std::string> properties)
 {
+}
 
+bsp_entity::~bsp_entity()
+{
 }
 
 bsp_visible_entity::bsp_visible_entity(std::map<std::string, std::string> properties)
@@ -98,15 +106,12 @@ bsp_visible_entity::bsp_visible_entity(std::map<std::string, std::string> proper
 
 	swizzle(origin);
 	scale(origin, BSP_SCALE);
-
-	parse(properties["angle"].c_str(), real_p[assign_a(angle)]);
 }
 
 void bsp_visible_entity::draw() const
 {
 	glPushMatrix();
 	glTranslatef(origin.x, origin.y, origin.z);
-	glRotated(angle, 0, 1, 0);
 	draw_implementation();
 	glPopMatrix();
 }
@@ -115,15 +120,19 @@ bsp_model_entity::bsp_model_entity(std::map<std::string,std::string> properties)
 :
 	bsp_visible_entity(properties)
 {
+}
+
+void bsp_model_entity::load(std::string name)
+{
 #ifdef _DEBUG
-	std::cerr << "Loading model \"" << properties["model"] << "\"..." << std::endl;
+	std::cerr << "Loading model \"" << name << "\"..." << std::endl;
 #endif
 
-	std::ifstream input(properties["model"].c_str(), std::ios::binary);
+	std::ifstream input(name.c_str(), std::ios::binary);
 	
 	if (!input.is_open())
 	{
-		std::cerr << "Failed to load model \"" << properties["model"] << "\"." << std::endl;
+		std::cerr << "Failed to load model \"" << name << "\"." << std::endl;
 		return;
 	}
 	
@@ -134,4 +143,44 @@ void bsp_model_entity::draw_implementation() const
 {
 	if (file)
 		file->draw_frame(0);
+}
+
+bsp_misc_entity::bsp_misc_entity(std::map<std::string, std::string> properties)
+:
+	bsp_model_entity(properties)
+{
+	parse(properties["angle"].c_str(), real_p[assign_a(angle)]);
+	load(properties["model"]);
+}
+
+void bsp_misc_entity::draw_implementation() const
+{
+	glRotated(angle, 0, 1, 0);
+	bsp_model_entity::draw_implementation();
+}
+
+bsp_weapon_entity::bsp_weapon_entity(std::map<std::string,std::string> properties)
+:
+	bsp_model_entity(properties)
+{
+	std::string name = boost::algorithm::replace_first_copy(
+		properties["classname"], "weapon_", "");
+
+	if (name == "rocketlauncher")
+		name = "rocketl";
+
+	if (name == "plasmagun")
+		name = "plasma";
+
+	load("models/weapons2/" + name + "/" + name + ".md3");
+}
+
+void bsp_weapon_entity::draw_implementation() const
+{
+	static int time = glutGet(GLUT_ELAPSED_TIME);
+
+	float elapsed = glutGet(GLUT_ELAPSED_TIME) - time;
+	glRotatef(360*elapsed/1000/4, 0, 1, 0);
+
+	bsp_model_entity::draw_implementation();
 }
