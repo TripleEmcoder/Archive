@@ -113,7 +113,8 @@ texture_wrapper::texture_wrapper(std::string name)
 	if (image == NULL)
 	{
 		std::cerr << "Failed to load image \"" << name << "\"." << std::endl;
-		return;
+		//return;
+		image = corona::OpenImage("black.jpg", corona::PF_R8G8B8A8);
 	}
 
 	int width = image->getWidth();

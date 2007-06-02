@@ -76,14 +76,16 @@ bsp_entity* bsp_entity::read(std::string entity)
 //		<< constant("\n"));
 //#endif
 
-	if (properties["classname"] == "misc_model")
-		return new bsp_misc_entity(properties);
+	//if (properties["classname"] == "misc_model")
+	//	return new bsp_misc_entity(properties);
 
-	else if (properties["classname"] == "info_player_deathmatch")
+	if (properties["classname"] == "info_player_deathmatch")
 		return new bsp_respawn_entity(properties);
 
-	else if (properties["classname"].find("weapon") == 0)
+	if (properties["classname"].find("weapon") == 0)
 		return new bsp_weapon_entity(properties);
+
+	return NULL;
 }
 
 bsp_entity::bsp_entity(std::map<std::string, std::string> properties)
