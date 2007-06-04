@@ -51,11 +51,12 @@ void game::setup_character()
 
 void game::setup_widgets()
 {
-	projector.add(character.get());
-	projector.add(&camera);
-	projector.add(&fps_meter);
+	//projector.add(character.get());
+	//projector.add(&camera);
 	projector.add(&crosshair);
 	projector.add(&compass);
+	projector.add(&fps_meter);
+	projector.add(&about);
 }
 
 void game::setup_lights()

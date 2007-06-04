@@ -10,9 +10,10 @@
 #include "level.hpp"
 #include "Camera.hpp"
 #include "projector.hpp"
-#include "compass.hpp"
 #include "crosshair.hpp"
+#include "compass.hpp"
 #include "fps_meter.hpp"
+#include "about.hpp"
 #include "state.hpp"
 #include "vertex.hpp"
 
@@ -48,9 +49,10 @@ private:
 	boost::shared_ptr<Character> character;
 	Camera camera;
 	projector projector;
-	fps_meter fps_meter;
 	crosshair crosshair;
 	compass compass;
+	fps_meter fps_meter;
+	about about;
 	state state;
 	
 	void load_level(std::string name);

@@ -408,6 +408,10 @@
 				Name="widgets"
 				>
 				<File
+					RelativePath=".\widgets\about.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\widgets\compass.cpp"
 					>
 				</File>
@@ -601,6 +605,10 @@
 			<Filter
 				Name="widgets"
 				>
+				<File
+					RelativePath=".\widgets\about.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\widgets\compass.hpp"
 					>

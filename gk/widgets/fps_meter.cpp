@@ -20,5 +20,5 @@ void fps_meter::draw(const state& state) const
 		count = 0;
 	}
 
-	write(30, 35, "FPS: %6.2f", rate);
+	write(75, 30, "FPS: %6.2f", rate);
 }
