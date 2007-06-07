@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
+using Quad.Frontend;
+
 namespace Quad
 {
     static class Program
@@ -14,7 +16,7 @@ namespace Quad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

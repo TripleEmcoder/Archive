@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Quad.Backend.Board">
+    <Position X="1.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Board.cs</FileName>
+      <HashCode>AADAAAAIAAAAAAAACABAAEBAAAAAQAAAAAAAAAAAIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Quad.Backend.Move">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Move.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAIEAAAAAAAAAAAAAAAEAAAABAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="source" />
+      <Field Name="destination" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Quad.Backend.Transition">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Transition.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Moves" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Quad.Backend.Point">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Point.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEQABAAAACQAAAAgAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Quad.Backend.Player">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Player.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>
