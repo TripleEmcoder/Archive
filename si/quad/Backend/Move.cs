@@ -6,22 +6,22 @@ namespace Quad.Backend
 {
     public class Move
     {
-        private Point source;
-        private Point destination;
+        private Place source;
+        private Place destination;
 
-        public Move(Point source, Point destination)
+        public Move(Place source, Place destination)
         {
             this.source = source;
             this.destination = destination;
         }
 
-        public Point Source
+        public Place Source
         {
             get { return source; }
             set { source = value; }
         }
 
-        public Point Destination
+        public Place Destination
         {
             get { return destination; }
             set { destination = value; }

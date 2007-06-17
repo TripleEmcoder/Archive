@@ -53,9 +53,19 @@ namespace Quad.Frontend
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            board.PerformMove(player, (Move)listBox1.SelectedItem);
+            Move move = (Move)listBox1.SelectedItem;
+            Transition transition = board.PerformMove(player, move);
+            listBox2.Items.Add(player.ToString() + ": " + transition.ToString());
             button2_Click(null, EventArgs.Empty);
             boardControl1.Update(board);
+            listBox1_SelectedIndexChanged(null, EventArgs.Empty);
+            label4.Text = board.GetValue(Player.White).ToString();
+            label5.Text = board.GetValue(Player.Black).ToString();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            boardControl1.Highlight = (Move)listBox1.SelectedItem;
         }
     }
 }

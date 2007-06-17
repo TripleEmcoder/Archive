@@ -16,29 +16,29 @@ namespace Quad.Backend
             return (row+1).ToString();
         }
 
-        public static List<Point> GetAllPoints(int dimension)
+        public static List<Place> GetAllPlaces(int dimension)
         {
-            List<Point> points = new List<Point>();
+            List<Place> places = new List<Place>();
 
             for (int column = 0; column < dimension; column++)
                 for (int row = 0; row < dimension; row++)
-                    points.Add(new Point(column, row));
+                    places.Add(new Place(column, row));
 
-            return points;
+            return places;
         }
 
-        public static bool IsPointValid(Point point, int dimension)
+        public static bool IsPlaceValid(Place place, int dimension)
         {
-            if (point.Column < 0)
+            if (place.Column < 0)
                 return false;
 
-            if (point.Row < 0)
+            if (place.Row < 0)
                 return false;
 
-            if (point.Column >= dimension)
+            if (place.Column >= dimension)
                 return false;
 
-            if (point.Row >= dimension)
+            if (place.Row >= dimension)
                 return false;
 
             return true;

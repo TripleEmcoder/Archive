@@ -17,5 +17,13 @@ namespace Quad.Backend
         {
             get { return moves; }
         }
+
+        public override string ToString()
+        {
+            if (moves.Count == 0)
+                return "";
+
+            return moves[0].ToString();
+        }
     }
 }

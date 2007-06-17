@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Quad.Backend
 {
-    public class Point
+    public class Place
     {
         private int column;
         private int row;
 
-        public Point(int column, int row)
+        public Place(int column, int row)
         {
             this.column = column;
             this.row = row;
@@ -27,6 +27,16 @@ namespace Quad.Backend
             set { row = value; }
         }
 
+        public override bool Equals(object other)
+        {
+            Place place = other as Place;
+
+            if (place == null)
+                return base.Equals(other);
+
+            return row == place.Row && column == place.Column;
+        }
+
         public override string ToString()
         {
             return String.Format("{0}{1}",
@@ -34,11 +44,11 @@ namespace Quad.Backend
                 Helper.RowToString(row));
         }
 
-        public static Point operator +(Point point1, Point point2)
+        public static Place operator +(Place place1, Place place2)
         {
-            return new Point(
-                point1.Column + point2.Column,
-                point1.Row + point2.Row
+            return new Place(
+                place1.Column + place2.Column,
+                place1.Row + place2.Row
             );
         }
     }

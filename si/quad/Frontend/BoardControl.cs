@@ -12,17 +12,18 @@ namespace Quad.Frontend
 {
     public partial class BoardControl : UserControl
     {
+        private int dimension;
+        private Move highlight;
+
         public BoardControl()
         {
             InitializeComponent();
         }
 
-        private int dimension;
-
         public int Dimension
         {
             get { return dimension; }
-            set 
+            set
             {
                 dataGridView1.ColumnCount = value;
                 for (int column = dimension; column < value; column++)
@@ -42,24 +43,59 @@ namespace Quad.Frontend
             }
         }
 
+        private DataGridViewCell GetCell(Place place)
+        {
+            return dataGridView1.Rows[place.Row].Cells[place.Column];
+        }
+
         public void Update(Board board)
         {
-            for (int column = 0; column < dimension; column++)
-                for (int row = 0; row < dimension; row++)
-                    switch (board[column, row])
-                    {
-                        case Player.None:
-                            dataGridView1.Rows[row].Cells[column].Value = "";
-                            break;
+            foreach (Place place in Helper.GetAllPlaces(dimension))
+            {
+                DataGridViewCell cell = GetCell(place);
 
-                        case Player.White:
-                            dataGridView1.Rows[row].Cells[column].Value = "O";
-                            break;
+                switch (board.GetPlayer(place))
+                {
+                    case Player.None:
+                        cell.Value = " ";
+                        break;
 
-                        case Player.Black:
-                            dataGridView1.Rows[row].Cells[column].Value = "X";
-                            break;
-                    }
+                    case Player.White:
+                        cell.Value = "W";
+                        break;
+
+                    case Player.Black:
+                        cell.Value = "B";
+                        break;
+                }
+            }
+        }
+
+        public Move Highlight
+        {
+            get { return highlight; }
+            set
+            {
+                if (highlight != null)
+                {
+                    if (highlight.Source != null)
+                        GetCell(highlight.Source).Style.BackColor = Color.White;
+
+                    if (highlight.Destination != null)
+                        GetCell(highlight.Destination).Style.BackColor = Color.White;
+                }
+
+                highlight = value;
+
+                if (highlight != null)
+                {
+                    if (highlight.Source != null)
+                        GetCell(highlight.Source).Style.BackColor = Color.LightPink;
+
+                    if (highlight.Destination != null)
+                        GetCell(highlight.Destination).Style.BackColor = Color.LightGreen;
+                }
+            }
         }
     }
 }

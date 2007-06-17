@@ -5,7 +5,7 @@
     <Position X="1.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Board.cs</FileName>
-      <HashCode>AADAAAAIAAAAAAAACABAAEBAAAAAQAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AADAACAIAAAAABCAAAFAAEBAAAAAQAAAAAAAAAAAIAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Quad.Backend.Move">
@@ -29,11 +29,11 @@
       <Property Name="Moves" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Quad.Backend.Point">
+  <Class Name="Quad.Backend.Place">
     <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <FileName>Backend\Point.cs</FileName>
-      <HashCode>AAAAAAAAAAAAAAAEQABAAAACQAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backend\Place.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEwABAAAACQAAAAgAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Enum Name="Quad.Backend.Player">
@@ -41,6 +41,13 @@
     <TypeIdentifier>
       <FileName>Backend\Player.cs</FileName>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Quad.Backend.Direction">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\Direction.cs</FileName>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
     </TypeIdentifier>
   </Enum>
 </ClassDiagram>
