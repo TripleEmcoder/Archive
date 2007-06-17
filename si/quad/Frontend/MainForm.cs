@@ -19,66 +19,63 @@ namespace Quad.Frontend
 
         private Board board;
         private Player player;
+        private Algorithm algorithm;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void newButton_Click(object sender, EventArgs e)
         {
             board = new Board(4, 4);
             player = Player.White;
+            algorithm = new NegMaxAlgorithm();
 
-            button2_Click(null, EventArgs.Empty);
-            boardControl1.Update(board);
-            listBox2.Items.Clear();
+            UpdateMoves();
+
+            transistionListBox.Items.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void UpdateMoves()
         {
-
-            switch (player)
-            {
-                case Player.White:
-                    player = Player.Black;
-                    break;
-
-                case Player.Black:
-                    player = Player.White;
-                    break;
-            }
-
+            player = Helper.SwapPlayer(player);
             label1.Text = player.ToString();
 
-            listBox1.Items.Clear();
+            moveListBox.Items.Clear();
 
             foreach (Move move in board.GetPossibleMoves(player))
-                listBox1.Items.Add(move);
+                moveListBox.Items.Add(move);
+
+            UpdateControls();
         }
 
-        private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void UpdateControls()
         {
-            Move move = (Move)listBox1.SelectedItem;
+            boardControl.Update(board);
+            moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
+            backButton.Enabled = transistionListBox.Items.Count > 0;
+            label4.Text = board.GetValue(Player.White).ToString();
+            label5.Text = board.GetValue(Player.Black).ToString();
+            label6.Text = algorithm.Run(player, board, 2).ToString();
+        }
+
+        private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Move move = (Move)moveListBox.SelectedItem;
             Transition transition = board.PerformMove(move);
-            listBox2.Items.Add(transition);
-            button2_Click(null, EventArgs.Empty);
-            boardControl1.Update(board);
-            listBox1_SelectedIndexChanged(null, EventArgs.Empty);
-            label4.Text = board.GetValue(Player.White).ToString();
-            label5.Text = board.GetValue(Player.Black).ToString();
+
+            transistionListBox.Items.Add(transition);
+
+            UpdateMoves();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void moveListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            boardControl1.Highlight = (Move)listBox1.SelectedItem;
+            boardControl.Highlight = (Move)moveListBox.SelectedItem;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
-            Transition transition = (Transition)listBox2.Items[listBox2.Items.Count - 1];
-            listBox2.Items.Remove(transition);
+            Transition transition = (Transition)transistionListBox.Items[transistionListBox.Items.Count - 1];
+            transistionListBox.Items.Remove(transition);
             board.ReverseTransition(transition);
-            button2_Click(null, EventArgs.Empty);
-            boardControl1.Update(board);
-            listBox1_SelectedIndexChanged(null, EventArgs.Empty);
-            label4.Text = board.GetValue(Player.White).ToString();
-            label5.Text = board.GetValue(Player.Black).ToString();
+            UpdateControls();
         }
     }
 }

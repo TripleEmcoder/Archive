@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Quad.Backend
 {
-    public class Algorithm
+    public abstract class Algorithm
     {
+        public abstract Result Run(Player player, Board board, int depth);
     }
 }

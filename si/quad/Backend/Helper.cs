@@ -43,5 +43,22 @@ namespace Quad.Backend
 
             return true;
         }
+
+        public static Player SwapPlayer(Player player)
+        {
+            switch (player)
+            {
+                case Player.White:
+                    return Player.Black;
+                    break;
+
+                case Player.Black:
+                    return Player.White;
+                    break;
+
+                default:
+                    throw new ArgumentException();
+            }
+        }
     }
 }

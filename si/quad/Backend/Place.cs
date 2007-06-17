@@ -18,13 +18,11 @@ namespace Quad.Backend
         public int Column
         {
             get { return column; }
-            set { column = value; }
         }
 
         public int Row
         {
             get { return row; }
-            set { row = value; }
         }
 
         public override bool Equals(object other)
