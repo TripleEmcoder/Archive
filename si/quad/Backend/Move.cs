@@ -6,13 +6,21 @@ namespace Quad.Backend
 {
     public class Move
     {
+        private Player player;
         private Place source;
         private Place destination;
 
-        public Move(Place source, Place destination)
+        public Move(Player player, Place source, Place destination)
         {
+            this.player = player;
             this.source = source;
             this.destination = destination;
+        }
+
+        public Player Player
+        {
+            get { return player; }
+            set { player = value; }
         }
 
         public Place Source
@@ -29,7 +37,8 @@ namespace Quad.Backend
 
         public override string ToString()
         {
-            return String.Format("{0} -> {1}",
+            return String.Format("{0}: {1} -> {2}",
+                player,
                 source,
                 destination);
         }

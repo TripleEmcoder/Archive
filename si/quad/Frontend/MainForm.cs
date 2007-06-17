@@ -27,6 +27,7 @@ namespace Quad.Frontend
 
             button2_Click(null, EventArgs.Empty);
             boardControl1.Update(board);
+            listBox2.Items.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,8 +55,8 @@ namespace Quad.Frontend
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Move move = (Move)listBox1.SelectedItem;
-            Transition transition = board.PerformMove(player, move);
-            listBox2.Items.Add(player.ToString() + ": " + transition.ToString());
+            Transition transition = board.PerformMove(move);
+            listBox2.Items.Add(transition);
             button2_Click(null, EventArgs.Empty);
             boardControl1.Update(board);
             listBox1_SelectedIndexChanged(null, EventArgs.Empty);
@@ -66,6 +67,18 @@ namespace Quad.Frontend
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             boardControl1.Highlight = (Move)listBox1.SelectedItem;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Transition transition = (Transition)listBox2.Items[listBox2.Items.Count - 1];
+            listBox2.Items.Remove(transition);
+            board.ReverseTransition(transition);
+            button2_Click(null, EventArgs.Empty);
+            boardControl1.Update(board);
+            listBox1_SelectedIndexChanged(null, EventArgs.Empty);
+            label4.Text = board.GetValue(Player.White).ToString();
+            label5.Text = board.GetValue(Player.Black).ToString();
         }
     }
 }

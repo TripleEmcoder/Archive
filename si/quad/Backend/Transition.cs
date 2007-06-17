@@ -23,7 +23,10 @@ namespace Quad.Backend
             if (moves.Count == 0)
                 return "";
 
-            return moves[0].ToString();
+            return String.Format("{0} ({1})",
+                moves[0],
+                moves.Count
+            );
         }
     }
 }
