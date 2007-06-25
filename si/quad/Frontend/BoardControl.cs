@@ -97,5 +97,13 @@ namespace Quad.Frontend
                 }
             }
         }
+        
+        public event EventHandler<PlaceEventArgs> PlaceClick;
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (PlaceClick != null)
+                PlaceClick(this, new PlaceEventArgs(new Place(e.ColumnIndex + 1, e.RowIndex + 1)));
+        }
     }
 }

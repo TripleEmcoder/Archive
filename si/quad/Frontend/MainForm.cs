@@ -19,12 +19,15 @@ namespace Quad.Frontend
 
         private Board board;
         private Player player;
+        private Evaluator evaluator;
         private Algorithm algorithm;
+        
 
         private void newButton_Click(object sender, EventArgs e)
         {
             board = new Board(4, 4);
             player = Player.White;
+            evaluator = new LineEvaluator();
             algorithm = new NegMaxAlgorithm();
 
             UpdateMoves();
@@ -50,9 +53,9 @@ namespace Quad.Frontend
             boardControl.Update(board);
             moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
             backButton.Enabled = transistionListBox.Items.Count > 0;
-            label4.Text = board.GetValue(Player.White).ToString();
-            label5.Text = board.GetValue(Player.Black).ToString();
-            label6.Text = algorithm.Run(player, board, 2).ToString();
+            label4.Text = evaluator.Run(board, Player.White).ToString();
+            label5.Text = evaluator.Run(board, Player.Black).ToString();
+            label6.Text = algorithm.Run(evaluator, board, player, 2).ToString();
         }
 
         private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -76,6 +79,10 @@ namespace Quad.Frontend
             transistionListBox.Items.Remove(transition);
             board.ReverseTransition(transition);
             UpdateControls();
+        }
+
+        private void boardControl_PlaceClick(object sender, PlaceEventArgs e)
+        {
         }
     }
 }

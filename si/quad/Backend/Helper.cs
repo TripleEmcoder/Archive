@@ -5,7 +5,23 @@ using System.Text;
 namespace Quad.Backend
 {
     public static class Helper
-    {  
+    {
+        private static Dictionary<Direction, Place> vectors;
+
+        static Helper()
+        {
+            vectors = new Dictionary<Direction, Place>();
+            vectors[Direction.North] = new Place(0, 1);
+            vectors[Direction.South] = new Place(0, -1);
+            vectors[Direction.East] = new Place(1, 0);
+            vectors[Direction.West] = new Place(-1, 0);
+        }
+
+        public static Dictionary<Direction, Place> Vectors
+        {
+            get { return vectors; }
+        }
+
         public static string ColumnToString(int column)
         {
             return ((char)('A' + column)).ToString();
@@ -50,11 +66,9 @@ namespace Quad.Backend
             {
                 case Player.White:
                     return Player.Black;
-                    break;
 
                 case Player.Black:
                     return Player.White;
-                    break;
 
                 default:
                     throw new ArgumentException();

@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="Backend\Algorithm.cs" />
     <Compile Include="Backend\Board.cs" />
+    <Compile Include="Backend\Evaluator.cs" />
+    <Compile Include="Backend\LineEvaluator.cs" />
     <Compile Include="Backend\NegMaxAlgorithm.cs" />
     <Compile Include="Backend\Player.cs" />
     <Compile Include="Backend\Helper.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Frontend\BoardControl.Designer.cs">
       <DependentUpon>BoardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\PlaceEventArgs.cs" />
     <Compile Include="Frontend\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

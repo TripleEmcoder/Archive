@@ -6,6 +6,6 @@ namespace Quad.Backend
 {
     public abstract class Algorithm
     {
-        public abstract Result Run(Player player, Board board, int depth);
+        public abstract Result Run(Evaluator evaluator, Board board, Player player, int depth);
     }
 }
