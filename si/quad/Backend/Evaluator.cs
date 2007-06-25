@@ -6,6 +6,11 @@ namespace Quad.Backend
 {
     public abstract class Evaluator
     {
+        public abstract string Name
+        {
+            get;
+        }
+
         public abstract int Run(Board board, Player player);
     }
 }

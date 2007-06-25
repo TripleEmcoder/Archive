@@ -2,52 +2,60 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Font Name="Tahoma" Size="8.25" />
   <Class Name="Quad.Backend.Board">
-    <Position X="1.25" Y="2.25" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Board.cs</FileName>
-      <HashCode>AADAACAIAAAAABCAAAFAAEBAAAAAQAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AADAACAIAAAAABAAAAFACEBAAAAAQAAAAAAAAAAAIAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Quad.Backend.Move">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Move.cs</FileName>
-      <HashCode>AAAAAAAAAgAAAAIEAAAAAAAAAAAAAAAEAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAIEAAAAAAAAAAAAAAAFAAAABQAAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="source" />
-      <Field Name="destination" />
+      <Property Name="Destination" />
+      <Property Name="Source" />
+      <Property Name="Player" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Quad.Backend.Transition">
-    <Position X="4" Y="2.75" Width="1.5" />
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Transition.cs</FileName>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAQAAAAEAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Moves" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Quad.Backend.Place">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Place.cs</FileName>
       <HashCode>AAAAAAAAAAAAAAAEwABAAAACQAAAAgAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Enum Name="Quad.Backend.Player">
-    <Position X="1.25" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Player.cs</FileName>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAA=</HashCode>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Quad.Backend.Direction">
-    <Position X="7.25" Y="3.5" Width="1.5" />
+    <Position X="2.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <FileName>Backend\Direction.cs</FileName>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Quad.Backend.PlayerType">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Backend\PlayerType.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAQAAAA=</HashCode>
     </TypeIdentifier>
   </Enum>
 </ClassDiagram>

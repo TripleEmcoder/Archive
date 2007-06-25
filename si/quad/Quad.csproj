@@ -42,17 +42,37 @@
     <Compile Include="Backend\LineEvaluator.cs" />
     <Compile Include="Backend\NegMaxAlgorithm.cs" />
     <Compile Include="Backend\Player.cs" />
-    <Compile Include="Backend\Helper.cs" />
+    <Compile Include="Backend\BackendHelper.cs" />
     <Compile Include="Backend\Move.cs" />
     <Compile Include="Backend\Place.cs" />
     <Compile Include="Backend\Direction.cs" />
+    <Compile Include="Backend\PlayerType.cs" />
     <Compile Include="Backend\Result.cs" />
+    <Compile Include="Frontend\AlgorithmSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\AlgorithmSelectionControl.Designer.cs">
+      <DependentUpon>AlgorithmSelectionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\BoardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Frontend\BoardControl.Designer.cs">
       <DependentUpon>BoardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\EvaluatorSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\EvaluatorSelectionControl.Designer.cs">
+      <DependentUpon>EvaluatorSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\FrontendHelper.cs" />
     <Compile Include="Frontend\PlaceEventArgs.cs" />
     <Compile Include="Frontend\MainForm.cs">
       <SubType>Form</SubType>
@@ -60,15 +80,47 @@
     <Compile Include="Frontend\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\PlayerConfigurationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\PlayerConfigurationControl.Designer.cs">
+      <DependentUpon>PlayerConfigurationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\PlayerTypeSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frontend\PlayerTypeSelectionControl.Designer.cs">
+      <DependentUpon>PlayerTypeSelectionControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frontend\AlgorithmSelectionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AlgorithmSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\BoardControl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BoardControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\ConfigurationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\EvaluatorSelectionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EvaluatorSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frontend\MainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\PlayerConfigurationControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlayerConfigurationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\PlayerTypeSelectionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlayerTypeSelectionControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

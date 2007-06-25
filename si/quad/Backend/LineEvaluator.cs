@@ -6,21 +6,26 @@ namespace Quad.Backend
 {
     public class LineEvaluator : Evaluator
     {
+        public override string Name
+        {
+            get { return "Line"; }
+        }
+
         public override int Run(Board board, Player player)
         {
             int result = 0;
 
-            foreach (Place place1 in Helper.GetAllPlaces(board.Dimension))
+            foreach (Place place1 in BackendHelper.GetAllPlaces(board.Dimension))
             {
                 if (player == board.GetPlayer(place1))
                 {
-                    foreach (Place vector in Helper.Vectors.Values)
+                    foreach (Place vector in BackendHelper.Vectors.Values)
                     {
                         Place place2 = place1 + vector;
 
                         result++;
 
-                        while (Helper.IsPlaceValid(place2, board.Dimension)
+                        while (BackendHelper.IsPlaceValid(place2, board.Dimension)
                             && board.GetPlayer(place2) == player)
                         {
                             result++;

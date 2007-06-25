@@ -38,8 +38,8 @@ namespace Quad.Backend
         public override string ToString()
         {
             return String.Format("{0}{1}",
-                Helper.ColumnToString(column),
-                Helper.RowToString(row));
+                BackendHelper.ColumnToString(column),
+                BackendHelper.RowToString(row));
         }
 
         public static Place operator +(Place place1, Place place2)

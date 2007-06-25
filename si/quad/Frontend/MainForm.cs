@@ -48,7 +48,7 @@ namespace Quad.Frontend
 
         private void UpdateMoves()
         {
-            player = Helper.SwapPlayer(player);
+            player = BackendHelper.SwapPlayer(player);
             label1.Text = player.ToString();
 
             moveListBox.Items.Clear();
@@ -68,7 +68,10 @@ namespace Quad.Frontend
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            RestartGame();
+            ConfigurationForm configuration = new ConfigurationForm();
+            
+            if (configuration.ShowDialog() == DialogResult.OK)
+                RestartGame();
         }
 
         private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)

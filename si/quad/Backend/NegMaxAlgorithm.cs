@@ -6,6 +6,11 @@ namespace Quad.Backend
 {
     public class NegMaxAlgorithm : Algorithm
     {
+        public override string Name
+        {
+            get { return "NegMax"; }
+        }
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
             if (depth == 0)
@@ -17,7 +22,7 @@ namespace Quad.Backend
             {
                 Transition transition = board.PerformMove(move);
 
-                Result candidate = Run(evaluator, board, Helper.SwapPlayer(player), depth - 1);
+                Result candidate = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1);
 
                 if (-candidate.Value > winner.Value)
                     winner = new Result(move, -candidate.Value);
