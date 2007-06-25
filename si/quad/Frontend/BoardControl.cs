@@ -71,6 +71,12 @@ namespace Quad.Frontend
             }
         }
 
+        private void SetBackColor(DataGridViewCell cell, Color color)
+        {
+            cell.Style.BackColor = color;
+            cell.Style.SelectionBackColor = color;
+        }
+
         public Move Highlight
         {
             get { return highlight; }
@@ -79,10 +85,10 @@ namespace Quad.Frontend
                 if (highlight != null)
                 {
                     if (highlight.Source != null)
-                        GetCell(highlight.Source).Style.BackColor = Color.White;
+                        SetBackColor(GetCell(highlight.Source), Color.White);
 
                     if (highlight.Destination != null)
-                        GetCell(highlight.Destination).Style.BackColor = Color.White;
+                        SetBackColor(GetCell(highlight.Destination), Color.White);
                 }
 
                 highlight = value;
@@ -90,10 +96,10 @@ namespace Quad.Frontend
                 if (highlight != null)
                 {
                     if (highlight.Source != null)
-                        GetCell(highlight.Source).Style.BackColor = Color.LightPink;
+                        SetBackColor(GetCell(highlight.Source), Color.LightPink);
 
                     if (highlight.Destination != null)
-                        GetCell(highlight.Destination).Style.BackColor = Color.LightGreen;
+                        SetBackColor(GetCell(highlight.Destination), Color.LightGreen);
                 }
             }
         }
@@ -103,7 +109,7 @@ namespace Quad.Frontend
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (PlaceClick != null)
-                PlaceClick(this, new PlaceEventArgs(new Place(e.ColumnIndex + 1, e.RowIndex + 1)));
+                PlaceClick(this, new PlaceEventArgs(new Place(e.ColumnIndex, e.RowIndex)));
         }
     }
 }

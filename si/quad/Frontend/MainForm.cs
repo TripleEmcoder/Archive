@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 
 using Quad.Backend;
+using System.Threading;
+using System.Diagnostics;
 
 namespace Quad.Frontend
 {
@@ -21,9 +23,8 @@ namespace Quad.Frontend
         private Player player;
         private Evaluator evaluator;
         private Algorithm algorithm;
-        
 
-        private void newButton_Click(object sender, EventArgs e)
+        private void RestartGame()
         {
             board = new Board(4, 4);
             player = Player.White;
@@ -33,6 +34,16 @@ namespace Quad.Frontend
             UpdateMoves();
 
             transistionListBox.Items.Clear();
+        }
+
+        private void UpdateControls()
+        {
+            boardControl.Update(board);
+            moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
+            backButton.Enabled = transistionListBox.Items.Count > 0;
+            label4.Text = evaluator.Run(board, Player.White).ToString();
+            label5.Text = evaluator.Run(board, Player.Black).ToString();
+            label6.Text = algorithm.Run(evaluator, board, player, 2).ToString();
         }
 
         private void UpdateMoves()
@@ -48,24 +59,21 @@ namespace Quad.Frontend
             UpdateControls();
         }
 
-        private void UpdateControls()
+        private void PerformMove(Move move)
         {
-            boardControl.Update(board);
-            moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
-            backButton.Enabled = transistionListBox.Items.Count > 0;
-            label4.Text = evaluator.Run(board, Player.White).ToString();
-            label5.Text = evaluator.Run(board, Player.Black).ToString();
-            label6.Text = algorithm.Run(evaluator, board, player, 2).ToString();
+            transistionListBox.Items.Add(board.PerformMove(move));
+
+            UpdateMoves();
+        }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            RestartGame();
         }
 
         private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Move move = (Move)moveListBox.SelectedItem;
-            Transition transition = board.PerformMove(move);
-
-            transistionListBox.Items.Add(transition);
-
-            UpdateMoves();
+            PerformMove((Move)moveListBox.SelectedItem);
         }
 
         private void moveListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,11 +86,39 @@ namespace Quad.Frontend
             Transition transition = (Transition)transistionListBox.Items[transistionListBox.Items.Count - 1];
             transistionListBox.Items.Remove(transition);
             board.ReverseTransition(transition);
-            UpdateControls();
+
+            UpdateMoves();
         }
 
         private void boardControl_PlaceClick(object sender, PlaceEventArgs e)
         {
+            foreach (object item in moveListBox.Items)
+            {
+                Move move = (Move)item;
+
+                if (boardControl.Highlight == null && move.Source == null && move.Destination.Equals(e.Place))
+                {
+                    Debug.WriteLine(String.Format("{0} is a possible drop.", e.Place));
+                    boardControl.Highlight = move;
+                    PerformMove(move);
+                    break;
+                }
+
+                if (boardControl.Highlight == null && move.Source != null && move.Source.Equals(e.Place))
+                {
+                    Debug.WriteLine(String.Format("{0} starts a possible move.", e.Place));
+                    boardControl.Highlight = new Move(player, e.Place, null);
+                    break;
+                }
+
+                if (boardControl.Highlight != null && move.Destination != null && move.Destination.Equals(e.Place))
+                {
+                    Debug.WriteLine(String.Format("{0} ends a possible move.", e.Place));
+                    boardControl.Highlight = null;
+                    PerformMove(move);
+                    break;
+                }
+            }
         }
     }
 }
