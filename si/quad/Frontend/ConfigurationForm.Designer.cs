@@ -81,7 +81,7 @@ namespace Quad.Frontend
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(40, 20);
             this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "4";
+            this.textBox2.Text = "12";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
@@ -99,7 +99,7 @@ namespace Quad.Frontend
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(34, 20);
             this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "4";
+            this.textBox1.Text = "8";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1

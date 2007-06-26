@@ -48,16 +48,13 @@ namespace Quad.Frontend
             boardControl.Enabled = human;
             moveListBox.Enabled = human;
             transistionListBox.Enabled = human;
-
             backButton.Enabled = human && transistionListBox.Items.Count > 0;
         }
 
         private void UpdateMoves()
         {
             player = BackendHelper.SwapPlayer(player);
-            label1.Text = player.ToString();
-
-            moveListBox.Items.Clear();
+            label1.Text = BackendHelper.PlayerToString(player);
 
             foreach (Move move in board.GetPossibleMoves(player))
                 moveListBox.Items.Add(move);
@@ -68,8 +65,24 @@ namespace Quad.Frontend
         private void PerformMove(Move move)
         {
             transistionListBox.Items.Add(board.PerformMove(move));
+            moveListBox.Items.Clear();
 
-            UpdateMoves();
+            if (board.Winner == player)
+            {
+                boardControl.Enabled = false;
+                moveListBox.Enabled = false;
+                transistionListBox.Enabled = false;
+                backButton.Enabled = false;
+                timer1.Enabled = false;
+
+                UpdateControls();
+
+                MessageBox.Show("Wygra³ " + BackendHelper.PlayerToString(player));
+            }
+            else
+            {
+                UpdateMoves();
+            }
         }
 
         private void newButton_Click(object sender, EventArgs e)
