@@ -73,11 +73,11 @@ namespace Quad.Frontend
             this.groupBox1.Size = new System.Drawing.Size(376, 50);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Plansza";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 19);
+            this.textBox2.Location = new System.Drawing.Point(143, 19);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(40, 20);
             this.textBox2.TabIndex = 10;
@@ -89,13 +89,13 @@ namespace Quad.Frontend
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(101, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.label2.Text = "Pionki";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 19);
+            this.textBox1.Location = new System.Drawing.Point(57, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(34, 20);
             this.textBox1.TabIndex = 8;
@@ -107,9 +107,9 @@ namespace Quad.Frontend
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.label1.Text = "Rozmiar";
             // 
             // playerConfigurationControl2
             // 
@@ -140,7 +140,7 @@ namespace Quad.Frontend
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "ConfigurationForm";
-            this.Text = "ConfigurationForm";
+            this.Text = "Ustawienia";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

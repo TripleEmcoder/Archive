@@ -132,6 +132,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Backend\Backend.cd" />
     <None Include="Properties\Settings.settings">
@@ -144,6 +145,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Backend\Transition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Black.bmp" />
+    <EmbeddedResource Include="White.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="None.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

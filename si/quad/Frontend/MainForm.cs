@@ -31,10 +31,11 @@ namespace Quad.Frontend
             board = new Board(configuration.Dimension, configuration.Count);
             player = Player.White;
 
+            boardControl.Dimension = configuration.Dimension;
+
             UpdateMoves();
 
             transistionListBox.Items.Clear();
-            boardControl.Dimension = configuration.Dimension;
         }
 
         private void UpdateControls()
@@ -87,12 +88,18 @@ namespace Quad.Frontend
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            bool enabled = timer1.Enabled;
             timer1.Enabled = false;
 
             if (configuration.ShowDialog() == DialogResult.OK)
+            {
                 RestartGame();
-
-            timer1.Enabled = true;
+                timer1.Enabled = true;
+            }
+            else
+            {
+                timer1.Enabled = enabled;
+            }
         }
 
         private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -158,6 +165,11 @@ namespace Quad.Frontend
         private void exitButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            newButton_Click(newButton, EventArgs.Empty);
         }
     }
 }

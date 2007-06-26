@@ -13,7 +13,7 @@ namespace Quad.Backend
 
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
-            return Run(evaluator, board, player, depth, new Result(null, int.MinValue), new Result(null, int.MaxValue));
+            return Run(evaluator, board, player, depth, new Result(null, int.MinValue + 10), new Result(null, int.MaxValue - 10));
         }
 
         public Result Run(Evaluator evaluator, Board board, Player player, int depth, Result alpha, Result beta)
