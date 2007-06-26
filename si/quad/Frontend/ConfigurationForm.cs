@@ -14,5 +14,25 @@ namespace Quad.Frontend
         {
             InitializeComponent();
         }
+
+        public int Dimension
+        {
+            get { return int.Parse(textBox1.Text); }
+        }
+
+        public int Count
+        {
+            get { return int.Parse(textBox2.Text); }
+        }
+
+        public PlayerConfigurationControl White
+        {
+            get { return playerConfigurationControl1; }
+        }
+
+        public PlayerConfigurationControl Black
+        {
+            get { return playerConfigurationControl2; }
+        }
     }
 }

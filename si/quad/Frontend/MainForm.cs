@@ -14,22 +14,22 @@ namespace Quad.Frontend
 {
     public partial class MainForm : Form
     {
+        private ConfigurationForm configuration;
+
         public MainForm()
         {
             InitializeComponent();
+        
+            configuration = new ConfigurationForm();
         }
 
         private Board board;
         private Player player;
-        private Evaluator evaluator;
-        private Algorithm algorithm;
 
         private void RestartGame()
         {
-            board = new Board(4, 4);
+            board = new Board(configuration.Dimension, configuration.Count);
             player = Player.White;
-            evaluator = new LineEvaluator();
-            algorithm = new NegMaxAlgorithm();
 
             UpdateMoves();
 
@@ -41,9 +41,6 @@ namespace Quad.Frontend
             boardControl.Update(board);
             moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
             backButton.Enabled = transistionListBox.Items.Count > 0;
-            label4.Text = evaluator.Run(board, Player.White).ToString();
-            label5.Text = evaluator.Run(board, Player.Black).ToString();
-            label6.Text = algorithm.Run(evaluator, board, player, 3).ToString();
         }
 
         private void UpdateMoves()
@@ -68,8 +65,6 @@ namespace Quad.Frontend
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            ConfigurationForm configuration = new ConfigurationForm();
-            
             if (configuration.ShowDialog() == DialogResult.OK)
                 RestartGame();
         }
@@ -123,6 +118,22 @@ namespace Quad.Frontend
                     PerformMove(move);
                     break;
                 }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            switch (player)
+            {
+                case Player.White:
+                    if (configuration.White.PlayerType == PlayerType.Computer)
+                        PerformMove(configuration.White.Algorithm.Run(configuration.White.Evaluator, board, player, 3).Move);
+                    break;
+
+                case Player.Black:
+                    if (configuration.Black.PlayerType == PlayerType.Computer)
+                        PerformMove(configuration.Black.Algorithm.Run(configuration.Black.Evaluator, board, player, 3).Move);
+                    break;
             }
         }
     }
