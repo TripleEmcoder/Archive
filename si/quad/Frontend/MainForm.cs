@@ -43,7 +43,7 @@ namespace Quad.Frontend
             backButton.Enabled = transistionListBox.Items.Count > 0;
             label4.Text = evaluator.Run(board, Player.White).ToString();
             label5.Text = evaluator.Run(board, Player.Black).ToString();
-            label6.Text = algorithm.Run(evaluator, board, player, 2).ToString();
+            label6.Text = algorithm.Run(evaluator, board, player, 3).ToString();
         }
 
         private void UpdateMoves()
@@ -107,14 +107,16 @@ namespace Quad.Frontend
                     break;
                 }
 
-                if (boardControl.Highlight == null && move.Source != null && move.Source.Equals(e.Place))
+                //if (boardControl.Highlight == null && move.Source != null && move.Source.Equals(e.Place))
+                if (move.Source != null && move.Source.Equals(e.Place))
                 {
                     Debug.WriteLine(String.Format("{0} starts a possible move.", e.Place));
                     boardControl.Highlight = new Move(player, e.Place, null);
                     break;
                 }
 
-                if (boardControl.Highlight != null && move.Destination != null && move.Destination.Equals(e.Place))
+                if (boardControl.Highlight != null && boardControl.Highlight.Source.Equals(move.Source) 
+                    && move.Destination != null && move.Destination.Equals(e.Place))
                 {
                     Debug.WriteLine(String.Format("{0} ends a possible move.", e.Place));
                     boardControl.Highlight = null;

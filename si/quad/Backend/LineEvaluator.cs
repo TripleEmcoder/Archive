@@ -17,20 +17,32 @@ namespace Quad.Backend
 
             foreach (Place place1 in BackendHelper.GetAllPlaces(board.Dimension))
             {
+                int k;
+                Player currentPlayer;
                 if (player == board.GetPlayer(place1))
                 {
-                    foreach (Place vector in BackendHelper.Vectors.Values)
+                    currentPlayer = player;
+                    k = 1;
+                }
+                else if (BackendHelper.SwapPlayer(player) == board.GetPlayer(place1))
+                {
+                    currentPlayer = BackendHelper.SwapPlayer(player);
+                    k = -1;
+                }
+                else
+                    continue;
+
+                foreach (Place vector in BackendHelper.Vectors.Values)
+                {
+                    Place place2 = place1 + vector;
+
+                    result += k;
+
+                    while (BackendHelper.IsPlaceValid(place2, board.Dimension)
+                        && board.GetPlayer(place2) == currentPlayer)
                     {
-                        Place place2 = place1 + vector;
-
-                        result++;
-
-                        while (BackendHelper.IsPlaceValid(place2, board.Dimension)
-                            && board.GetPlayer(place2) == player)
-                        {
-                            result++;
-                            place2 = place2 + vector;
-                        }
+                        result += k;
+                        place2 = place2 + vector;
                     }
                 }
             }
