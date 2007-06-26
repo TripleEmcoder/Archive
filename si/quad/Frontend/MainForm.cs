@@ -40,7 +40,15 @@ namespace Quad.Frontend
         {
             boardControl.Update(board);
             moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
-            backButton.Enabled = transistionListBox.Items.Count > 0;
+
+            PlayerConfigurationControl current = configuration.GetPlayer(player);
+            bool human = current.PlayerType == PlayerType.Human;
+
+            boardControl.Enabled = human;
+            moveListBox.Enabled = human;
+            transistionListBox.Enabled = human;
+
+            backButton.Enabled = human && transistionListBox.Items.Count > 0;
         }
 
         private void UpdateMoves()
@@ -65,8 +73,12 @@ namespace Quad.Frontend
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
+
             if (configuration.ShowDialog() == DialogResult.OK)
                 RestartGame();
+
+            timer1.Enabled = true;
         }
 
         private void moveListBox_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -123,18 +135,15 @@ namespace Quad.Frontend
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch (player)
-            {
-                case Player.White:
-                    if (configuration.White.PlayerType == PlayerType.Computer)
-                        PerformMove(configuration.White.Algorithm.Run(configuration.White.Evaluator, board, player, 3).Move);
-                    break;
+            PlayerConfigurationControl current = configuration.GetPlayer(player);
 
-                case Player.Black:
-                    if (configuration.Black.PlayerType == PlayerType.Computer)
-                        PerformMove(configuration.Black.Algorithm.Run(configuration.Black.Evaluator, board, player, 3).Move);
-                    break;
-            }
+            if (current.PlayerType == PlayerType.Computer)
+                PerformMove(current.Algorithm.Run(current.Evaluator, board, player, 3).Move);
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using Quad.Backend;
+
 namespace Quad.Frontend
 {
     public partial class ConfigurationForm : Form
@@ -25,14 +27,19 @@ namespace Quad.Frontend
             get { return int.Parse(textBox2.Text); }
         }
 
-        public PlayerConfigurationControl White
+        public PlayerConfigurationControl GetPlayer(Player player)
         {
-            get { return playerConfigurationControl1; }
-        }
+            switch (player)
+            {
+                case Player.White:
+                    return playerConfigurationControl1;
 
-        public PlayerConfigurationControl Black
-        {
-            get { return playerConfigurationControl2; }
+                case Player.Black:
+                    return playerConfigurationControl2;
+
+                default:
+                    return null;
+            }
         }
-    }
+   }
 }
