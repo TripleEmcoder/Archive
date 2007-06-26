@@ -19,14 +19,10 @@ namespace Quad.Backend
 
             int result = 0;
 
-            foreach (Place place in BackendHelper.GetAllPlaces(board.Dimension))
+            for (int i = 0; i < board.Dimension; ++i)
             {
-               result += bonus[MatchLine(board, player, place, new Place(0, 1))];
-               result += bonus[MatchLine(board, player, place, new Place(1, 0))];
-               
-               result -= bonus[MatchLine(board, enemy, place, new Place(0, 1))];
-               result -= bonus[MatchLine(board, enemy, place, new Place(1, 0))];
-
+                result += MatchLine(board, player, new Place(i, 0), new Place(0, 1));
+                result += MatchLine(board, player, new Place(0, i), new Place(1, 0));
             }
 
             for (int i = 0; i < 4; ++i)
@@ -43,21 +39,44 @@ namespace Quad.Backend
 
         private int MatchLine(Board board, Player player, Place place, Place vector)
         {
-            if (!BackendHelper.IsPlaceValid(place + 3 * vector, board.Dimension))
-                return 4;
-            
+            Dictionary<Player, int> places = new Dictionary<Player, int>();
+            places[Player.None] = 0;
+            places[Player.White] = 0;
+            places[Player.Black] = 0;
+
             Player enemy = BackendHelper.SwapPlayer(player);
+            Place place1 = place;
 
-            int result = 4;
+            int result = 0;
+            int count = 0;
 
-            for (int i = 0; i < 4; ++i)
+            //while (BackendHelper.IsPlaceValid(place1, board.Dimension))
+            for (int i = 0; i < board.Dimension; ++i)
             {
-                Player current = board.GetPlayer(place + i * vector);
+                places[board.GetPlayer(place1)]++;
+                count++;
 
-                if (current == enemy)
-                    return 4;
-                else if (current == player)
-                    result--;
+                if (count > 4)
+                {
+                    places[board.GetPlayer(place1 + (-4 * vector))]--;
+                    count--;
+                }
+
+                if (count == 4)
+                {
+                    int k;
+
+                    if (places[enemy] == 0)
+                        k = 1;
+                    else if (places[player] == 0)
+                        k = -1;
+                    else
+                        k = 0;
+
+                    result += k * bonus[places[Player.None]];
+                }
+
+                place1 += vector;
             }
 
             return result;

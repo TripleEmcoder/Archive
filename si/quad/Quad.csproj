@@ -36,6 +36,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\AlfaBetaAlgorithm.cs" />
     <Compile Include="Backend\Algorithm.cs" />
     <Compile Include="Backend\Board.cs" />
     <Compile Include="Backend\Evaluator.cs" />

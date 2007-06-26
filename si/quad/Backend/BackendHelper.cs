@@ -20,6 +20,7 @@ namespace Quad.Backend
 
             algorithms = new List<Algorithm>();
             algorithms.Add(new NegMaxAlgorithm());
+            algorithms.Add(new AlfaBetaAlgorithm());
 
             evaluators = new List<Evaluator>();
             evaluators.Add(new LineEvaluator());
