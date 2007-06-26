@@ -34,6 +34,7 @@ namespace Quad.Frontend
             UpdateMoves();
 
             transistionListBox.Items.Clear();
+            boardControl.Dimension = configuration.Dimension;
         }
 
         private void UpdateControls()
