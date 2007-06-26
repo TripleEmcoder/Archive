@@ -49,5 +49,13 @@ namespace Quad.Backend
                 place1.Row + place2.Row
             );
         }
+
+        public static Place operator *(int k, Place place)
+        {
+            return new Place(
+                k * place.Column,
+                k * place.Row
+            );
+        }
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="Backend\Direction.cs" />
     <Compile Include="Backend\PlayerType.cs" />
     <Compile Include="Backend\Result.cs" />
+    <Compile Include="Backend\TestEvaluator.cs" />
     <Compile Include="Frontend\AlgorithmSelectionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

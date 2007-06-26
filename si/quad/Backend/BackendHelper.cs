@@ -23,6 +23,7 @@ namespace Quad.Backend
 
             evaluators = new List<Evaluator>();
             evaluators.Add(new LineEvaluator());
+            evaluators.Add(new TestEvaluator());
         }
 
         public static Dictionary<Direction, Place> Vectors
