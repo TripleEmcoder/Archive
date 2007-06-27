@@ -24,7 +24,7 @@ namespace Quad.Backend
             else
                 bound = EvaluationBound.Accurate;
 
-            table[board] = new Transposition(move, bound, depth);
+            table[board.Clone()] = new Transposition(move, bound, depth);
         }
 
         public Transposition Lookup(Board board)

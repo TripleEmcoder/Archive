@@ -10,6 +10,11 @@ namespace Quad.Backend
         
         private TranspositionTable transTable;
 
+        public AlfaBetaFSTTAlgorithm()
+        {
+            transTable = new TranspositionTable();
+        }
+
         public override string Name
         {
             get { return "AlfaBetaFSTT"; }
@@ -17,7 +22,6 @@ namespace Quad.Backend
 
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
-            transTable = new TranspositionTable();
             for (int i = 1; i < depth; ++i)
                 Run(evaluator, board, player, i, -inf, inf);
             return Run(evaluator, board, player, depth, -inf, inf);
