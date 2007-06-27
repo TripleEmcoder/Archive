@@ -20,6 +20,8 @@ namespace Quad.Backend
 
         public Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
         {
+            hits++;
+
             if (depth == 0 || board.Winner != Player.None)
                 return new Result(null, evaluator.Run(board, player));
 

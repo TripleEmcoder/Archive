@@ -46,26 +46,31 @@
 
 \maketitle
 
-2. Opis gry
-krótka historia (o ile znana!)
-dok³adny opis zasad ( je¿eli s¹ jakieœ warianty wskazaæ którego dotyczy implementacja); je¿eli by³y jakieœ w¹tpliwe zasady, opisaæ dok³adnie jakie za³o¿enia poczyniono!
-rozmiar i budowa planszy, rodzaje pionów/figur oraz ich kolory, przynale¿noœæ pionów/figur, wszystkie typy ruchów, cel gry, dzia³ania zabronione, dzia³ania przymusowe (np. przymus bicia),
-fazy gry (np. faza rozstawiania pionów i faza przesuwania/bicia) a dopuszczalne ruchy
-przyk³adowa plansza
-3. Implementacja
-3.1 Reprezentacja stanu gry
+\section{Opis gry}
+Gra ,,Quad'' jest gr¹ dwuosobow¹ rozgrywan¹ na planszy o rozmiarach 8x8. Ka¿dy z graczy dysponuje 12-25 pionkami swojego koloru - liczbê tê ustala siê przed rozpoczêciem rozgrywki. Celem gry jest u³o¿enie 4 swoich pionków w linii prostej (poziomo lub pionowo). Aby tego dokonaæ gracze naprzemian wykonuj¹ jeden z ruchów:
+\begin{enumerate}
+\item ustawienie nowego pionka na planszy (jeœli gracz jeszcze nimi dysponuje),
+\item przestawienie w³asnego pionka na s¹siednie, wolne pole (jeœli wszystkie pionki zosta³y ju¿ ustawione).
+\end{enumerate}
+Poprzez przestawienie pionka mo¿na zbiæ pionek przeciwnika. Dzieje siê tak wtedy, gdy w wyniku tego przestawienia pionek przeciwnika zostanie otoczony przynajmniej dwoma pionkami gracza. Je¿eli w wyniku zbijania przeciwnik straci wszystkie pionki, gracz równie¿ wygrywa.
+
+Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pionków. Pionki dwóch graczy s¹ odpowiednio bia³e lub czarne.
+
+\section{Implementacja}
+\subsection{Reprezentacja stanu gry}
 struktury danych reprezentuj¹ce stan w pamiêci komputera (reprezentacja wewnêtrzna)
 sposób reprezentacji pionów graczy (obecnych na planszy, zbitych, promocji pionów/figur, pustych pól itp.)
 ewentualne konwersje reprezentacji (np. dla potrzeb interfejsu graficznego)
 przyk³ad planszy i jej reprezentacja w pamiêci
-3.2 Generacja ruchów dopuszczalnych
+
+\subsection{Generowanie ruchów dopuszczalnych}
 realizacja ruchów dopuszczalnych zgodnie z zasadami gry dla przyjêtej reprezentacji stanu
 sposób implementacji poszczególnych typy ruchów (przesuniêcia, bicia, promocje, zast¹pienia, przechwyty itp.)
 kolejnoœæ generowania wszystkich nastêpników danego stanu
 niedeterminizm mechanizmu generacji nastêpników (dodatkowa iteracja "mieszaj¹ca" ruchy)
 przyk³ady ruchów i ich realizacja programowa
-3.3 Metody przeszukiwania przestrzeni stanów gry - algorytmy graj¹ce
 
+\subsection{Metody przeszukiwania przestrzeni stanów gry - algorytmy graj¹ce}
 Opis zastosowanych technik przeszukiwania z uwzglêdnieniem parametrów charakterystycznych dla danej metody.
 Metody porz¹dkowania nastêpników z pamiêci¹
 iteracyjne pog³ebianie: czy sortowanie nastepników tylko w korzeniu, czy w ka¿dym wêŸle grafu? jak i gdzie pamiêtane s¹ nastêpniki? czy jest (i jakie?) dodatkowe kryterium zatrzymania pog³êbiania poza max. g³êbokoœci¹ np.czas obliczeñ?
@@ -81,14 +86,15 @@ algorytm C*, MTD(f): jak ustalana jest wartoœæ pocz¹tkowa f ?  czy u¿yto tablicy
 Metody sterowania g³êbokoœci¹ przeszukiwania
 algorytm NullMoveSearch: jaka jest wartoœæ parametru R? jakie jest kryterium zatrzymania pog³êbieñ pog³êbieñ (tj. zagnie¿d¿onych "pustych ruchów")?
 poszukiwanie stanów stabilnych: jakie ruchy s¹ pog³êbiane, o ile pog³êbiamy, jak i gdzie ustawione jest ograniczenie na górn¹ liczbê wielokrotnych naprzemiennych pog³êbieñ? czy w ogóle takie ograniczenie istnieje?
-3.4 Funkcja oceny heurystycznej stanu gry
+
+\subsection{Funkcja oceny heurystycznej stanu gry}
 jaki typ funkcji: zliczeniowa (bilans ró¿nicowy, ilorazowy), po³o¿eniowa (preferencja pewnych pól), odleg³oœciowa (jakie miary odleg³oœci i od/do czego je wyznaczamy), oparta na s¹siedztwie/otoczeniu, probabilistyczna, inna?
 jaki przedzia³ wartoœci zwraca funkcja
 jakie s¹ wartoœci skrajne (dla sukcesu, pora¿ki)
 jak zosta³y wyznaczone wartoœci wag (o ile s¹ stosowane) poszczególnych sk³adowych funkcji
 wady i zalety (jakie taktyczno-startegiczne cele gry uwzglêdnia a jakie ewentualnie nie s¹ brane pod uwagê)
 przyk³ad stanu gry i ewaluacja wartoœci funkcji heurystycznej tego stanu z uwzglêdnieniem wartoœci poœrednich (wszystkich sk³adowych oceny ³¹cznej)
-4. Testy wydajnoœci i porównania algorytmów
+\section{Testy wydajnoœci i porównania algorytmów}
 Punktem odniesienia dla wszystkich stosowanych metod ma byæ "czysty" algorytm alfa-beta
 Pomiary maj¹ dotyczyæ œredniej liczby odwiedzonych wierzcho³ków w grafie gry a NIE CZASÓW przeszukiwania
 Porównania nale¿y przeprowadziæ dla co najmniej trzech ró¿nych stanów pocz¹tkowych (m.in. ró¿nych od stanu wynikaj¹cego z zasad rozpoczynania gry)
@@ -97,7 +103,8 @@ Testy nale¿y przeprowadziæ dla g³êbokoœci grafu wynosz¹cej co najmniej 5 niezale
 Je¿eli metoda charakteryzuje siê dodatkowymi parametrami (poza g³êbokoœci¹ przeszukiwania) nale¿y podaæ dla jakich wartoœci zosta³y przeprowadzone porównania
 Wyniki porównañ powinny byæ przedstawione ZARÓWNO w postaci wykresów, jak i tabel
 Ka¿da krzywa na wykresie powinna mieæ inny typ znacznika punktów pomiarowych tak, aby by³y czytelna na wydruku czarno-bia³ym niezale¿nie od faktycznie przypisanego jej koloru
-5. Wnioski, uwagi i podsumowanie
+
+\section{Wnioski, uwagi i podsumowanie}
 Jaki jest szacunkowy rozmiar przestrzeni stanów zaimplementowanej gry? Jak zmienia siê rozmiar grafu w miarê postêpów gry? Roœnie, maleje, czy pozostaje raczej stabilny?
 Która z zastosowanych metoda okaza³a siê najlepsza z punktu widzenia ograniczenia obszaru przeszukiwanej przestrzeni?
 Czy ³atwo wygraæ cz³owiekowi (twórcy programu) z komputerem?

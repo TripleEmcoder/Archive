@@ -175,7 +175,11 @@ namespace Quad.Frontend
             PlayerConfigurationControl current = configuration.GetPlayer(player);
 
             if (current.PlayerType == PlayerType.Computer)
+            {
+                current.Algorithm.Hits = 0;
                 PerformMove(current.Algorithm.Run(current.Evaluator, board, player, 2).Move);
+                Debug.WriteLine(current.Algorithm.Hits);
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)

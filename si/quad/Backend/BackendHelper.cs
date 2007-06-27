@@ -24,7 +24,6 @@ namespace Quad.Backend
             algorithms.Add(new AlfaBetaFSAlgorithm());
             algorithms.Add(new AlfaBetaFSTTAlgorithm());
 
-
             evaluators = new List<Evaluator>();
             evaluators.Add(new LineEvaluator());
             evaluators.Add(new TestEvaluator());

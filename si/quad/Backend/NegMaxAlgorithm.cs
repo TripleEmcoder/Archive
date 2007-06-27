@@ -13,6 +13,8 @@ namespace Quad.Backend
 
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
+            hits++;
+
             if (depth == 0 || board.Winner != Player.None)
                 return new Result(null, evaluator.Run(board, player));
 
