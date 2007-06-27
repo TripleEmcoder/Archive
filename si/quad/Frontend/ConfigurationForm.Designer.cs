@@ -139,6 +139,9 @@ namespace Quad.Frontend
             this.Controls.Add(this.playerConfigurationControl1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConfigurationForm";
             this.Text = "Ustawienia";
             this.groupBox1.ResumeLayout(false);

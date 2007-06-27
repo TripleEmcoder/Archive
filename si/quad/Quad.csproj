@@ -61,6 +61,12 @@
     <Compile Include="Frontend\AlgorithmSelectionControl.Designer.cs">
       <DependentUpon>AlgorithmSelectionControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\AuthorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\AuthorsForm.Designer.cs">
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\BoardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="Frontend\PlayerTypeSelectionControl.Designer.cs">
       <DependentUpon>PlayerTypeSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\RulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frontend\RulesForm.Designer.cs">
+      <DependentUpon>RulesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +168,14 @@
     <EmbeddedResource Include="White.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frontend\AuthorsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frontend\RulesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RulesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="None.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

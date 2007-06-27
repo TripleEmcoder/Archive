@@ -15,12 +15,14 @@ namespace Quad.Frontend
     public partial class MainForm : Form
     {
         private ConfigurationForm configuration;
+        private RulesForm rules;
 
         public MainForm()
         {
             InitializeComponent();
         
             configuration = new ConfigurationForm();
+            rules = new RulesForm();
         }
 
         private Board board;
@@ -57,6 +59,8 @@ namespace Quad.Frontend
             player = BackendHelper.SwapPlayer(player);
             label1.Text = BackendHelper.PlayerToString(player);
 
+            moveListBox.Items.Clear();
+
             foreach (Move move in board.GetPossibleMoves(player))
                 moveListBox.Items.Add(move);
 
@@ -66,10 +70,11 @@ namespace Quad.Frontend
         private void PerformMove(Move move)
         {
             transistionListBox.Items.Add(board.PerformMove(move));
-            moveListBox.Items.Clear();
-
+            
             if (board.Winner == player)
             {
+                moveListBox.Items.Clear();
+
                 boardControl.Enabled = false;
                 moveListBox.Enabled = false;
                 transistionListBox.Enabled = false;
@@ -114,9 +119,20 @@ namespace Quad.Frontend
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Transition transition = (Transition)transistionListBox.Items[transistionListBox.Items.Count - 1];
-            transistionListBox.Items.Remove(transition);
-            board.ReverseTransition(transition);
+            if (transistionListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Proszê wybraæ ostatni poprawny ruch!");
+                return;
+            }
+
+            for (int index = transistionListBox.Items.Count -1; index > transistionListBox.SelectedIndex; index--)
+            {
+                Transition transition = (Transition)transistionListBox.Items[index];
+                board.ReverseTransition(transition);
+                transistionListBox.Items.RemoveAt(index);
+            }
+
+            player = ((Transition)transistionListBox.SelectedItem).Moves[0].Player;
 
             UpdateMoves();
         }
@@ -170,6 +186,18 @@ namespace Quad.Frontend
         private void MainForm_Shown(object sender, EventArgs e)
         {
             newButton_Click(newButton, EventArgs.Empty);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rules.Show();
+            rules.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (AuthorsForm authors = new AuthorsForm())
+                authors.ShowDialog();
         }
     }
 }
