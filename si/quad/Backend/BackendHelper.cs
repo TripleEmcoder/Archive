@@ -19,8 +19,11 @@ namespace Quad.Backend
             vectors[Direction.West] = new Place(-1, 0);
 
             algorithms = new List<Algorithm>();
-            algorithms.Add(new NegMaxAlgorithm());
-            algorithms.Add(new AlfaBetaAlgorithm());
+            //algorithms.Add(new NegMaxAlgorithm());
+            //algorithms.Add(new AlfaBetaAlgorithm());
+            algorithms.Add(new AlfaBetaFSAlgorithm());
+            algorithms.Add(new AlfaBetaFSTTAlgorithm());
+
 
             evaluators = new List<Evaluator>();
             evaluators.Add(new LineEvaluator());

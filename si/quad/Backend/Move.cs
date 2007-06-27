@@ -42,5 +42,17 @@ namespace Quad.Backend
                 source,
                 destination);
         }
+
+        public override bool Equals(object other)
+        {
+            Move move = other as Move;
+
+            if (move == null)
+                return base.Equals(other);
+
+            return player == move.Player 
+                && ((source == null && move.Source == null) || (source != null && source.Equals(move.Source)))
+                && ((destination == null && move.Destination == null) || (destination != null && destination.Equals(move.Destination)));
+        }
     }
 }
