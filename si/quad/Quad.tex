@@ -58,17 +58,21 @@ Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pion
 
 \section{Implementacja}
 \subsection{Reprezentacja stanu gry}
-struktury danych reprezentuj¹ce stan w pamiêci komputera (reprezentacja wewnêtrzna)
-sposób reprezentacji pionów graczy (obecnych na planszy, zbitych, promocji pionów/figur, pustych pól itp.)
-ewentualne konwersje reprezentacji (np. dla potrzeb interfejsu graficznego)
-przyk³ad planszy i jej reprezentacja w pamiêci
+Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiarach, przechowuj¹ca obiekty typu wyliczeniowego: brak pionka, pionek bia³y, pionek czarny. Podczas rysowania planszy na ekranie obiekty te zamienianê s¹ na odpowiednie obrazki.
+
+??? przyk³ad planszy i jej reprezentacja w pamiêci ???
 
 \subsection{Generowanie ruchów dopuszczalnych}
-realizacja ruchów dopuszczalnych zgodnie z zasadami gry dla przyjêtej reprezentacji stanu
-sposób implementacji poszczególnych typy ruchów (przesuniêcia, bicia, promocje, zast¹pienia, przechwyty itp.)
-kolejnoœæ generowania wszystkich nastêpników danego stanu
-niedeterminizm mechanizmu generacji nastêpników (dodatkowa iteracja "mieszaj¹ca" ruchy)
-przyk³ady ruchów i ich realizacja programowa
+Ruchy w grze reprezentowane s¹ zawsze przez trójkê: kolor gracza, pole Ÿród³owe, pole docelowe. Pozwala to reprezentowaæ zarówno ruchy polegaj¹ce przestawieniu pionka jak i ustawieniu pionka (pole Ÿród³owe równe null) i zbiciu pionka (pole docelowe równe null). Dla ka¿dego wykonywanego ruchy tworzony jest nowy obiekt, zawieraj¹cy kolekcjê: wykonywany ruch, konsekwencje ruchu. Konsekwencje ruchu pojawiaj¹ siê w momencie, gdy mamy do czynienia ze zbijaniem pionków.
+
+Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka¿dego z nich mo¿liwych ruchów z jego udzia³em w nastêpuj¹cy sposób:
+\begin{enumerate}
+\item jeœli dane pole jest puste i graczowi aktualnie wykonuj¹cemu ruch pozosta³y pionki do ustawienia to mo¿liwy ruch polega na ustawieniu w tym miejscu pionka,
+\item jeœli dane pole jest zajête przez pionek gracza aktualnie wykonuj¹cego ruch i nie ma on wiêcej pionków do ustawienia, mo¿liwe ruchy polegaj¹ na przestawieniu pionka z tego pola na s¹siednie, wolne pole (przy czym kolejnoœæ poszukiwañ jest zawsze nastêpuj¹ca: pó³noc, po³udnie, wschód, zachód).
+\end{enumerate}
+
+??? niedeterminizm mechanizmu generacji nastêpników (dodatkowa iteracja "mieszaj¹ca" ruchy)
+przyk³ady ruchów i ich realizacja programowa ???
 
 \subsection{Metody przeszukiwania przestrzeni stanów gry - algorytmy graj¹ce}
 Opis zastosowanych technik przeszukiwania z uwzglêdnieniem parametrów charakterystycznych dla danej metody.
