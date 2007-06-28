@@ -20,13 +20,11 @@ namespace Quad.Backend
         public Player Player
         {
             get { return player; }
-            set { player = value; }
         }
 
         public Place Source
         {
             get { return source; }
-            set { source = value; }
         }
 
         public Place Destination

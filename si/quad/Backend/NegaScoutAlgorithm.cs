@@ -34,45 +34,44 @@ namespace Quad.Backend
             if (depth == 0 || board.Winner != Player.None)
                 return new Result(null, evaluator.Run(board, player));
 
-            //int prevalpha = alpha;
+            int prevalpha = alpha;
 
-            //Transposition transposition = transTable.Lookup(board);
+            Transposition transposition = transTable.Lookup(board);
 
-            //if (transposition != null && transposition.Depth >= depth)
-            //{
-            //    switch (transposition.Bound)
-            //    {
-            //        case EvaluationBound.Lower:
-            //            alpha = Math.Max(alpha, transposition.BestMove.Value);
-            //            break;
-            //        case EvaluationBound.Upper:
-            //            beta = Math.Min(beta, transposition.BestMove.Value);
-            //            break;
-            //        case EvaluationBound.Accurate:
-            //            alpha = beta = transposition.BestMove.Value;
-            //            break;
-            //    }
+            if (transposition != null && transposition.Depth >= depth)
+            {
+                switch (transposition.Bound)
+                {
+                    case EvaluationBound.Lower:
+                        alpha = Math.Max(alpha, transposition.BestMove.Value);
+                        break;
+                    case EvaluationBound.Upper:
+                        beta = Math.Min(beta, transposition.BestMove.Value);
+                        break;
+                    case EvaluationBound.Accurate:
+                        alpha = beta = transposition.BestMove.Value;
+                        break;
+                }
 
-            //    if (alpha >= beta)
-            //        return transposition.BestMove;
-            //}
+                if (alpha >= beta)
+                    return transposition.BestMove;
+            }
 
             List<Move> possibleMoves = board.GetPossibleMovesSorted(player);
 
-            //if (transposition != null)
-            //{
-            //    int index = possibleMoves.IndexOf(transposition.BestMove.Move);
-            //    if (index == -1)
-            //        throw new Exception(String.Format("Move \"{0}\" not found.", transposition.BestMove.Move));
-            //    possibleMoves[index] = possibleMoves[0];
-            //    possibleMoves[0] = transposition.BestMove.Move;
-            //}
+            if (transposition != null)
+            {
+                int index = possibleMoves.IndexOf(transposition.BestMove.Move);
+                if (index == -1)
+                    throw new Exception(String.Format("Move \"{0}\" not found.", transposition.BestMove.Move));
+                possibleMoves[index] = possibleMoves[0];
+                possibleMoves[0] = transposition.BestMove.Move;
+            }
 
             Transition transition = board.PerformMove(possibleMoves[0]);
             
             Result best = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -beta, -alpha);
-            best.Move = possibleMoves[0];
-            best.Value = -best.Value;
+            best = new Result(possibleMoves[0], -best.Value);
             
             board.ReverseTransition(transition);
 
@@ -86,8 +85,7 @@ namespace Quad.Backend
                     transition = board.PerformMove(move);
 
                     Result candidate = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -alpha - 1, -alpha);
-                    candidate.Move = move;
-                    candidate.Value = -candidate.Value;
+                    candidate = new Result(move, -candidate.Value);
 
                     board.ReverseTransition(transition);
                     
@@ -102,8 +100,7 @@ namespace Quad.Backend
                         transition = board.PerformMove(move);
 
                         best = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -beta, -candidate.Value);
-                        best.Move = move;
-                        best.Value = -best.Value;
+                        best = new Result(move, -best.Value);
 
                         board.ReverseTransition(transition);
                     }
@@ -114,7 +111,7 @@ namespace Quad.Backend
                 }
             }
 
-//            transTable.Save(board, best, prevalpha, beta, depth);
+            transTable.Save(board, best, prevalpha, beta, depth);
 
             return best;
         }
