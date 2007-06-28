@@ -18,6 +18,9 @@ namespace Quad.Backend
 
         public void Save(Board board, Result result, int alpha, int beta, int depth)
         {
+            if (result == null || result.Move == null)
+                throw new ArgumentNullException();
+
             EvaluationBound bound;
             if (result.Value <= alpha)
                 bound = EvaluationBound.Upper;
