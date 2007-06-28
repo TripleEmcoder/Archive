@@ -60,8 +60,6 @@ Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pion
 \subsection{Reprezentacja stanu gry}
 Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiarach, przechowuj¹ca obiekty typu wyliczeniowego: brak pionka, pionek bia³y, pionek czarny. Podczas rysowania planszy na ekranie obiekty te zamienianê s¹ na odpowiednie obrazki.
 
-??? przyk³ad planszy i jej reprezentacja w pamiêci ???
-
 \subsection{Generowanie ruchów dopuszczalnych}
 Ruchy w grze reprezentowane s¹ zawsze przez trójkê: kolor gracza, pole Ÿród³owe, pole docelowe. Pozwala to reprezentowaæ zarówno ruchy polegaj¹ce przestawieniu pionka jak i ustawieniu pionka (pole Ÿród³owe równe null) i zbiciu pionka (pole docelowe równe null). Dla ka¿dego wykonywanego ruchy tworzony jest nowy obiekt, zawieraj¹cy kolekcjê: wykonywany ruch, konsekwencje ruchu. Konsekwencje ruchu pojawiaj¹ siê w momencie, gdy mamy do czynienia ze zbijaniem pionków.
 
@@ -71,8 +69,7 @@ Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka
 \item jeœli dane pole jest zajête przez pionek gracza aktualnie wykonuj¹cego ruch i nie ma on wiêcej pionków do ustawienia, mo¿liwe ruchy polegaj¹ na przestawieniu pionka z tego pola na s¹siednie, wolne pole (przy czym kolejnoœæ poszukiwañ jest zawsze nastêpuj¹ca: pó³noc, po³udnie, wschód, zachód).
 \end{enumerate}
 
-??? niedeterminizm mechanizmu generacji nastêpników (dodatkowa iteracja "mieszaj¹ca" ruchy)
-przyk³ady ruchów i ich realizacja programowa ???
+Lista nastêpników jest mieszana, aby zmniejszyæ przewidywalnoœæ ruchów komputera. Nastêpnie lista jest porz¹dkowana w taki sposób, aby na jej pocz¹tku znalaz³y siê (i by³y przegl¹dane w pierwszej kolejnoœci) ruchy rozgrywaj¹ce siê w centrum planszy. Prowadzi to do zwiêkszenia wydajnoœci programu, jako ¿e ruchy te s¹ najczêœciej o wiele lepsze od pozosta³ych, a co za tym idzie pozwalaj¹ na czêstsze odciêcia.
 
 \subsection{Algorytny przeszukiwania przestrzeni}
 W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:

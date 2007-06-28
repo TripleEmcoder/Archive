@@ -213,8 +213,7 @@ namespace Quad.Frontend
             PlayerConfigurationControl current = configuration.GetPlayer(player);
 
             Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
-            Debug.WriteLine(result);
-            Debug.WriteLine(current.Algorithm.Hits);
+            Debug.WriteLine(String.Format("{0},{1},{2}", current.Algorithm, player, current.Algorithm.Hits));
 
             e.Result = result;
         }
