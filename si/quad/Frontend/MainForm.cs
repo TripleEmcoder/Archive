@@ -58,6 +58,7 @@ namespace Quad.Frontend
         {
             player = BackendHelper.SwapPlayer(player);
             label1.Text = BackendHelper.PlayerToString(player);
+            label6.Text = board.Befores[player].ToString();
 
             moveListBox.Items.Clear();
 
