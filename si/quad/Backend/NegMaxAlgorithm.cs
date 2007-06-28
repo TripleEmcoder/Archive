@@ -20,7 +20,7 @@ namespace Quad.Backend
 
             Result winner = new Result(null, int.MinValue);
 
-            foreach (Move move in board.GetPossibleMoves(player))
+            foreach (Move move in board.GetPossibleMovesSorted(player))
             {
                 Transition transition = board.PerformMove(move);
 

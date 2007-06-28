@@ -15,10 +15,14 @@ namespace Quad.Frontend
     {
         private int dimension;
         private Move highlight;
+        private Algorithm alg;
+        private Evaluator eval;
 
         public BoardControl()
         {
             InitializeComponent();
+            alg = new AlfaBetaFSTTAlgorithm();
+            eval = new TestEvaluator(); 
         }
 
         public int Dimension
@@ -85,12 +89,11 @@ namespace Quad.Frontend
             {
                 Transition transition = board.PerformMove(move);
                 
-                Result candidate = new AlfaBetaFSAlgorithm().Run(
-                    new TestEvaluator(), board, BackendHelper.SwapPlayer(player), 0);
+                Result candidate = alg.Run(eval, board, BackendHelper.SwapPlayer(player), 2);
                 
                 DataGridViewCell cell = GetCell(move.Destination);
 
-                cell.Value = candidate.Value;
+                cell.Value = -candidate.Value;
                 cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Regular);
 
                 board.ReverseTransition(transition);

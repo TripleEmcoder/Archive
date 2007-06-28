@@ -31,6 +31,12 @@ namespace Quad.Backend
             {
                 Transition transition = board.PerformMove(move);
 
+                if (depth == 3 && move.Destination.ToString() == "B4")
+                {
+                    ;
+                }
+
+
                 Result candidate = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -beta, -alpha);
 
                 board.ReverseTransition(transition);

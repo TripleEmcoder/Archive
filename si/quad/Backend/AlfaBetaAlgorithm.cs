@@ -25,7 +25,7 @@ namespace Quad.Backend
             if (depth == 0 || board.Winner != Player.None)
                 return new Result(null, evaluator.Run(board, player));
 
-            foreach (Move move in board.GetPossibleMoves(player))
+            foreach (Move move in board.GetPossibleMovesSorted(player))
             {
                 Transition transition = board.PerformMove(move);
 

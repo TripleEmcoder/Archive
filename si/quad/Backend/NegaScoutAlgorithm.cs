@@ -6,8 +6,8 @@ namespace Quad.Backend
 {
     public class NegaScoutAlgorithm : Algorithm
     {
-        private static int inf = 10000;
-
+        private static int inf = int.MaxValue - 10;
+        
         private TranspositionTable transTable;
 
         public NegaScoutAlgorithm()
@@ -22,8 +22,8 @@ namespace Quad.Backend
 
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
-            //for (int i = 1; i < depth; ++i)
-            //    Run(evaluator, board, player, i, -inf, inf);
+            for (int i = 1; i < depth; ++i)
+                Run(evaluator, board, player, i, -inf, inf);
             return Run(evaluator, board, player, depth, -inf, inf);
         }
 
