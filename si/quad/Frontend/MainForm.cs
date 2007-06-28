@@ -212,6 +212,9 @@ namespace Quad.Frontend
         {
             PlayerConfigurationControl current = configuration.GetPlayer(player);
 
+            //int bonusDepth = Math.Max(current.Depth - (board.Befores[Player.White] + board.Befores[Player.Black]), 0);
+            
+            //Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth + bonusDepth);
             Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
             Debug.WriteLine(String.Format("{0},{1},{2}", current.Algorithm, player, current.Algorithm.Hits));
 

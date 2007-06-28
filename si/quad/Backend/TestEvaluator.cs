@@ -6,9 +6,9 @@ namespace Quad.Backend
 {
     public class TestEvaluator : Evaluator
     {
-        private static int inf = 1000;
-        private static int[] lineBonus = { 100, 50, 10, 0, 0 };
-        private static int[] distanceBonus = { 1, 1, 0, 0 }; 
+        private static int inf = 10000;
+        private static int[] lineBonus = { 1000, 500, 200, 20, 0 };
+        private static int[] distanceBonus = { 1, 1, 0, 0 };
 
         public override string Name
         {
@@ -52,7 +52,8 @@ namespace Quad.Backend
             Player enemy = BackendHelper.SwapPlayer(player);
             Place place1 = place;
 
-            int result = 0;
+            double resultOffensive = 0;
+            double resultDefensive = 0;
             int count = 0;
 
             //while (BackendHelper.IsPlaceValid(place1, board.Dimension))
@@ -69,26 +70,30 @@ namespace Quad.Backend
 
                 if (count == 4)
                 {
-                    int k;
-
                     if (places[enemy] == 0)
                     {
-                        k = 1;
+                        resultOffensive += lineBonus[places[Player.None]];
                     }
                     else if (places[player] == 0)
                     {
-                        k = -1;
+                        resultDefensive += lineBonus[places[Player.None]];
                     }
-                    else
-                        k = 0;
-
-                    result += k * lineBonus[places[Player.None]];
                 }
 
                 place1 += vector;
             }
 
-            return result;
+            switch (player)
+            {
+                case Player.Black:
+                    resultOffensive *= 1.1;
+                    break;
+                case Player.White:
+                    resultDefensive *= 0.9;
+                    break;
+            }
+
+            return (int)Math.Round(resultOffensive - resultDefensive);
         }
     }
 

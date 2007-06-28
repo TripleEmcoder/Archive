@@ -58,7 +58,7 @@ Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pion
 
 \section{Opis implementacji}
 \subsection{Reprezentacja stanu gry}
-Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiarach, przechowuj¹ca obiekty typu wyliczeniowego: brak pionka, pionek bia³y, pionek czarny. Podczas rysowania planszy na ekranie obiekty te zamienianê s¹ na odpowiednie obrazki.
+Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiarach, przechowuj¹ca obiekty typu wyliczeniowego: brak pionka, pionek bia³y, pionek czarny. Podczas rysowania planszy na ekranie obiekty te zamieniane s¹ na odpowiednie obrazki.
 
 \subsection{Generowanie ruchów dopuszczalnych}
 Ruchy w grze reprezentowane s¹ zawsze przez trójkê: kolor gracza, pole Ÿród³owe, pole docelowe. Pozwala to reprezentowaæ zarówno ruchy polegaj¹ce przestawieniu pionka jak i ustawieniu pionka (pole Ÿród³owe równe null) i zbiciu pionka (pole docelowe równe null). Dla ka¿dego wykonywanego ruchy tworzony jest nowy obiekt, zawieraj¹cy kolekcjê: wykonywany ruch, konsekwencje ruchu. Konsekwencje ruchu pojawiaj¹ siê w momencie, gdy mamy do czynienia ze zbijaniem pionków.
@@ -74,28 +74,33 @@ Lista nastêpników jest mieszana, aby zmniejszyæ przewidywalnoœæ ruchów komputera
 \subsection{Algorytny przeszukiwania przestrzeni}
 W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 \begin{enumerate}
-\item \emph{NegMax} -- najprosztszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawnych,
-\item \emph{AlfaBeta} -- wykorzystuj¹cy odciêcia podczas alfa i beta podczas przeszukiwania przestrzeni stanów,
-\item \emph{AlfaBeta}, wariant \emph{FailSoft} -- ???,
-\item \emph{AlfaBeta}, wariant \emph{FailSoft} + \emph{TranspositionTable} -- wykorzustuj¹cy dodatkowo tablicê przejœæ do pamiêtania stanów ju¿ odwiedzonych i odpowiadaj¹cych im najlepszych ruchów. Kluczem w tablicy jest tekstowa reprezentacja planszy -- ci¹g znaków odpowiadaj¹cych kolorom pionków (lub brakowi pionka), odpowiada mu zestaw danych: najlepszy ruch, wartoœæ oceny dla tego ruchu, rodzaj ograniczenia i g³êbokoœæ przeszukiwania. Tablica wykorzystuje standardow¹ kolekcjê System.Collections.Hashtable.
+\item \emph{NegMax} -- najprosztszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawczych,
 
-??? tablica przejœæ (transpozycji): jakie dane przechowywane s¹ w rekordzie tablicy przejœæ, czy pamiêtany jest bestmove? czy tablica odczytywana/zapisywana jest z/do pliku dyskowego na pocz¹tku/koñcu gry? jak i kiedy aktualizowana jest tablica, gdy wyst¹pi bicie (wiêkszoœæ wpisów jest ju¿ wtedy z regu³y nieaktualna!)
-haszowanie: jaki klucz, jak jest generowany (z jakich danych ze stanu), jaki rozmiar tablicy haszowej, problem konfliktów? jak zosta³ rozwi¹zany- przez nadpisywanie czy listê konfliktow¹?
-tablica historii ruchów: rozmiar tablicy, regu³a modyfikacji zapamiêtanej wartoœci/oceny ruchu, bezkontekstowa definicja ruchu czy kontekstowa? dla kontekstowej, jak zdefiniowany jest kontekst (czy jako np. s¹siedztwo)? ???
+\item \emph{AlfaBeta} -- wykorzystuj¹cy odciêcia alfa i beta podczas przeszukiwania przestrzeni stanów,
 
-\item \emph{NegaScout} -- algorytm sterowania zakresem alfa i beta, wykorzystuj¹cy porz¹dkowanie nastêpników w oparciu o informacje z tablicy przejœæ. Najpierw przeszukiwany jest nastêpnik odpowiadaj¹cy najlepszemu znanemu ruchowi, a nastêpnie kolejne -- ze zredukowanym zakresem alfa i beta.
+\item \emph{AlfaBeta}, wariant \emph{FailSoft} -- wariant algorytmu AlfaBeta, który mo¿e zwracaæ rozwi¹zanie spoza przedzia³u $(alfa, beta)$, wykorzystywany do obliczania górnych i dolnych ograniczeñ oceny najlepszego ruchu,
 
-??? algorytm NegaScout(PVS): jak wybierany jest potencjalnie najlepszy potomek w ka¿dym wêŸle grafu? który mechanizm porz¹dkowania nastêpników spoœród opisanych wy¿ej zosta³ u¿yty? a mo¿e zastosowano inn¹ metodê selekcji ruchów? ???
+\item \emph{AlfaBeta}, wariant \emph{FailSoft} + \emph{TranspositionTable} -- algorytm sterowania kolejnoœci¹ nastêpników, wykorzystuj¹cy dodatkowo tablicê przejœæ do pamiêtania stanów ju¿ odwiedzonych i odpowiadaj¹cych im najlepszych ruchów. Kluczem w tablicy jest tekstowa reprezentacja planszy -- ci¹g znaków odpowiadaj¹cych kolorom pionków (lub brakowi pionka) wraz z nazw¹ gracza aktualnie wykonuj¹cego ruch, odpowiada mu zestaw danych: najlepszy ruch, wartoœæ oceny dla tego ruchu, rodzaj ograniczenia (górne, dolne lub dok³adne) i g³êbokoœæ przeszukiwania. Tablica wykorzystuje standardow¹ kolekcjê System.Collections.Hashtable oraz standardow¹ funkcjê haszuj¹c¹ klasy string. Dziêki zastosowaniu iteracyjnego pog³êbiania i tablicy przejœæ najlepszy ruch jest sprawdzany jako pierwszy w ka¿dym wierzcho³ku. 
+
+\item \emph{NegaScout} -- algorytm sterowania zakresem alfa i beta, wykorzystuj¹cy porz¹dkowanie nastêpników w oparciu o informacje z tablicy przejœæ. Najpierw przeszukiwany jest nastêpnik odpowiadaj¹cy najlepszemu znanemu ruchowi, a nastêpnie kolejne -- ze zredukowanym zakresem alfa i beta. Algorytm wykorzystuje tak¹ sam¹ tablicê przejœæ jak algorytm AlfaBeta.
 
 \end{enumerate}
 
 \subsection{Funkcja oceny heurystycznej stanu gry}
+Funkcja oceny jest oparta na s¹siedztwie pionków i wynika wprost celu gry jakim jest u³o¿enie linii 4 pionków. Funkcja premiuje pionki na planszy, które potencjalnie mog¹ s³u¿yæ do u³o¿enia linii, wysokoœæ premii zale¿y od iloœci pionków brakuj¹cych do u³o¿enia wygrywaj¹cej kombinacji. 
+
+Dodatkowo funkcja uwzglêdnia gracza aktualnie wykonuj¹cego ruch. Specyfika gry wymaga, aby gracz rozpoczynaj¹cy gra³ bardziej ofensywnie (próbowa³ u³o¿yæ liniê), a gracz graj¹cy jako drugi powinien graæ bardziej defensywnie (uniemo¿liwiaæ przeciwnikowi u³o¿enie linii). Zatem gracz rozpoczynaj¹cy 
+
+Funkcja zwraca wartoœci z przedzia³u $[-10000,10000]$. Wysokoœci premii zosta³y wyznaczone eksperymentalnie. 
+
 jaki typ funkcji: zliczeniowa (bilans ró¿nicowy, ilorazowy), po³o¿eniowa (preferencja pewnych pól), odleg³oœciowa (jakie miary odleg³oœci i od/do czego je wyznaczamy), oparta na s¹siedztwie/otoczeniu, probabilistyczna, inna?
 jaki przedzia³ wartoœci zwraca funkcja
 jakie s¹ wartoœci skrajne (dla sukcesu, pora¿ki)
 jak zosta³y wyznaczone wartoœci wag (o ile s¹ stosowane) poszczególnych sk³adowych funkcji
 wady i zalety (jakie taktyczno-startegiczne cele gry uwzglêdnia a jakie ewentualnie nie s¹ brane pod uwagê)
 przyk³ad stanu gry i ewaluacja wartoœci funkcji heurystycznej tego stanu z uwzglêdnieniem wartoœci poœrednich (wszystkich sk³adowych oceny ³¹cznej)
+
+
 \section{Testy wydajnoœci i porównania algorytmów}
 Punktem odniesienia dla wszystkich stosowanych metod ma byæ "czysty" algorytm alfa-beta
 Pomiary maj¹ dotyczyæ œredniej liczby odwiedzonych wierzcho³ków w grafie gry a NIE CZASÓW przeszukiwania
