@@ -7,8 +7,8 @@ namespace Quad.Backend
     public static class BackendHelper
     {
         private static Dictionary<Direction, Place> vectors;
-        private static List<Evaluator> evaluators;
-        private static List<Algorithm> algorithms;
+        public static List<Evaluator> evaluators;
+        public static List<Algorithm> algorithms;
 
         static BackendHelper()
         {
@@ -27,7 +27,8 @@ namespace Quad.Backend
 
             evaluators = new List<Evaluator>();
             evaluators.Add(new TestEvaluator());
-            evaluators.Add(new LineEvaluator());
+            //evaluators.Add(new LineEvaluator());
+            evaluators.Add(new TestEvaluatorDef());
         }
 
         public static Dictionary<Direction, Place> Vectors

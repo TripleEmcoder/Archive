@@ -54,6 +54,7 @@
     <Compile Include="Backend\PlayerType.cs" />
     <Compile Include="Backend\Result.cs" />
     <Compile Include="Backend\TestEvaluator.cs" />
+    <Compile Include="Backend\TestEvaluatorDef.cs" />
     <Compile Include="Backend\Transposition.cs" />
     <Compile Include="Backend\TranspositionTable.cs" />
     <Compile Include="Frontend\AlgorithmSelectionControl.cs">

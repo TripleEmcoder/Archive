@@ -22,7 +22,7 @@ namespace Quad.Frontend
         {
             InitializeComponent();
             alg = new AlfaBetaFSTTAlgorithm();
-            eval = new TestEvaluator(); 
+            eval = new TestEvaluatorDef(); 
         }
 
         public int Dimension
@@ -85,19 +85,19 @@ namespace Quad.Frontend
                 //GetCell(place).Value = FrontendHelper.Images[board.GetPlayer(place)];
             }
 
-            foreach (Move move in board.GetPossibleMovesSorted(player))
-            {
-                Transition transition = board.PerformMove(move);
-                
-                Result candidate = alg.Run(eval, board, BackendHelper.SwapPlayer(player), 2);
-                
-                DataGridViewCell cell = GetCell(move.Destination);
+            //foreach (Move move in board.GetPossibleMovesSorted(player))
+            //{
+            //    Transition transition = board.PerformMove(move);
 
-                cell.Value = -candidate.Value;
-                cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Regular);
+            //    Result candidate = alg.Run(eval, board, BackendHelper.SwapPlayer(player), 2);
 
-                board.ReverseTransition(transition);
-            }
+            //    DataGridViewCell cell = GetCell(move.Destination);
+
+            //    cell.Value = -candidate.Value;
+            //    cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Regular);
+
+            //    board.ReverseTransition(transition);
+            //}
         }
 
         private void SetBackColor(DataGridViewCell cell, Color color)
