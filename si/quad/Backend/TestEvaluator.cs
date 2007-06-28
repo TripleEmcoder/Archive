@@ -6,7 +6,8 @@ namespace Quad.Backend
 {
     public class TestEvaluator : Evaluator
     {
-        private static int[] bonus = { 100, 10, 1, 0, 0 };
+        private static int[] lineBonus = { 100, 50, 10, 0, 0 };
+        private static int[] distanceBonus = { 1, 1, 0, 0 }; 
 
         public override string Name
         {
@@ -25,15 +26,11 @@ namespace Quad.Backend
                 result += MatchLine(board, player, new Place(0, i), new Place(1, 0));
             }
 
-            for (int i = 0; i < 4; ++i)
-            {
-                Player current = board.GetPlayer(new Place(board.Dimension / 2 - i % 2, board.Dimension / 2 - i / 2));
-                if (current == player)
-                    result++;
-                else if (current == enemy)
-                    result--;
-            }
-            
+            if (board.GetPlayer(new Place(3, 3)) == player)
+                result++;
+            else if (board.GetPlayer(new Place(3, 3)) == enemy)
+                result--;
+
             return result;
         }
 
@@ -73,7 +70,7 @@ namespace Quad.Backend
                     else
                         k = 0;
 
-                    result += k * bonus[places[Player.None]];
+                    result += k * lineBonus[places[Player.None]];
                 }
 
                 place1 += vector;

@@ -145,7 +145,7 @@ namespace Quad.Frontend
 
                 if (boardControl.Highlight == null && move.Source == null && move.Destination.Equals(e.Place))
                 {
-                    Debug.WriteLine(String.Format("{0} is a possible drop.", e.Place));
+                    //Debug.WriteLine(String.Format("{0} is a possible drop.", e.Place));
                     boardControl.Highlight = move;
                     PerformMove(move);
                     break;
@@ -154,7 +154,7 @@ namespace Quad.Frontend
                 //if (boardControl.Highlight == null && move.Source != null && move.Source.Equals(e.Place))
                 if (move.Source != null && move.Source.Equals(e.Place))
                 {
-                    Debug.WriteLine(String.Format("{0} starts a possible move.", e.Place));
+                    //Debug.WriteLine(String.Format("{0} starts a possible move.", e.Place));
                     boardControl.Highlight = new Move(player, e.Place, null);
                     break;
                 }
@@ -162,7 +162,7 @@ namespace Quad.Frontend
                 if (boardControl.Highlight != null && boardControl.Highlight.Source.Equals(move.Source) 
                     && move.Destination != null && move.Destination.Equals(e.Place))
                 {
-                    Debug.WriteLine(String.Format("{0} ends a possible move.", e.Place));
+                    //Debug.WriteLine(String.Format("{0} ends a possible move.", e.Place));
                     boardControl.Highlight = null;
                     PerformMove(move);
                     break;
@@ -177,7 +177,9 @@ namespace Quad.Frontend
             if (current.PlayerType == PlayerType.Computer)
             {
                 current.Algorithm.Hits = 0;
-                PerformMove(current.Algorithm.Run(current.Evaluator, board, player, 2).Move);
+                Result result = current.Algorithm.Run(current.Evaluator, board, player, 4);
+                PerformMove(result.Move);
+                Debug.WriteLine(result);
                 Debug.WriteLine(current.Algorithm.Hits);
             }
         }

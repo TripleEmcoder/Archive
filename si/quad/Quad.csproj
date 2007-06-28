@@ -44,6 +44,7 @@
     <Compile Include="Backend\EvaluationBound.cs" />
     <Compile Include="Backend\Evaluator.cs" />
     <Compile Include="Backend\LineEvaluator.cs" />
+    <Compile Include="Backend\NegaScoutAlgorithm.cs" />
     <Compile Include="Backend\NegMaxAlgorithm.cs" />
     <Compile Include="Backend\Player.cs" />
     <Compile Include="Backend\BackendHelper.cs" />

@@ -57,7 +57,7 @@ namespace Quad.Backend
                     return transposition.BestMove;
             }
 
-            List<Move> possibleMoves = board.GetPossibleMoves(player);
+            List<Move> possibleMoves = board.GetPossibleMovesSorted(player);
 
             if (transposition != null)
             {

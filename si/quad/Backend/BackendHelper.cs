@@ -21,8 +21,9 @@ namespace Quad.Backend
             algorithms = new List<Algorithm>();
             //algorithms.Add(new NegMaxAlgorithm());
             //algorithms.Add(new AlfaBetaAlgorithm());
-            algorithms.Add(new AlfaBetaFSAlgorithm());
+            //algorithms.Add(new AlfaBetaFSAlgorithm());
             algorithms.Add(new AlfaBetaFSTTAlgorithm());
+            algorithms.Add(new NegaScoutAlgorithm());
 
             evaluators = new List<Evaluator>();
             evaluators.Add(new LineEvaluator());
@@ -61,6 +62,59 @@ namespace Quad.Backend
             for (int column = 0; column < dimension; column++)
                 for (int row = 0; row < dimension; row++)
                     places.Add(new Place(column, row));
+
+            return places;
+        }
+
+        public static int DistanceToCenter(Place place, int dimension)
+        {
+            float center = (float)(dimension - 1) / 2.0f;
+            return (int)Math.Floor(Math.Max(Math.Abs(place.Column - center), Math.Abs(place.Row - center)));
+        }
+
+        public class PlaceCenterComparer: IComparer<Place>
+        {
+            int dimension;
+
+            public PlaceCenterComparer(int dimension)
+            {
+                this.dimension = dimension;
+            }
+
+            #region IComparer<Place> Members
+
+            public int Compare(Place x, Place y)
+            {
+                return DistanceToCenter(x, dimension) - DistanceToCenter(y, dimension);
+            }
+
+            #endregion
+        }
+
+        public class MoveDestinationCenterComparer: IComparer<Move>
+        {
+            PlaceCenterComparer comp;
+            
+            public MoveDestinationCenterComparer(int dimension)
+            {
+                this.comp = new PlaceCenterComparer(dimension);
+            }
+
+            #region IComparer<Move> Members
+
+            public int Compare(Move x, Move y)
+            {
+                return comp.Compare(x.Destination, y.Destination);
+            }
+
+            #endregion
+        }
+        
+        public static List<Place> GetAllPlacesSorted(int dimension)
+        {
+            List<Place> places = GetAllPlaces(dimension);
+
+            places.Sort(new PlaceCenterComparer(dimension));
 
             return places;
         }

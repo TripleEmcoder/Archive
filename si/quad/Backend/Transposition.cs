@@ -12,6 +12,8 @@ namespace Quad.Backend
         
         public Transposition(Result bestMove, EvaluationBound bound, int depth)
         {
+            if (bestMove == null)
+                throw new ArgumentNullException();
             this.bestMove = bestMove; 
             this.bound = bound;
             this.depth = depth;
