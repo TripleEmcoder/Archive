@@ -69,9 +69,9 @@ namespace Quad.Frontend
 
                 switch (board.GetPlayer(place))
                 {
-                    //case Player.None:
-                    //    cell.Value = " ";
-                    //    break;
+                    case Player.None:
+                        cell.Value = " ";
+                        break;
 
                     case Player.White:
                         cell.Value = "W";

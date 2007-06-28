@@ -39,7 +39,7 @@
 
 \begin{titlepage}
 \title{Sztuczna inteligencja \\ Implementacja gry ,,Quad''}
-\author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
+\author{Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
 \end{titlepage}
 
 \begin{document}
@@ -56,7 +56,7 @@ Poprzez przestawienie pionka mo¿na zbiæ pionek przeciwnika. Dzieje siê tak wtedy
 
 Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pionków. Pionki dwóch graczy s¹ odpowiednio bia³e lub czarne.
 
-\section{Implementacja}
+\section{Opis implementacji}
 \subsection{Reprezentacja stanu gry}
 Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiarach, przechowuj¹ca obiekty typu wyliczeniowego: brak pionka, pionek bia³y, pionek czarny. Podczas rysowania planszy na ekranie obiekty te zamienianê s¹ na odpowiednie obrazki.
 
@@ -74,22 +74,23 @@ Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka
 ??? niedeterminizm mechanizmu generacji nastêpników (dodatkowa iteracja "mieszaj¹ca" ruchy)
 przyk³ady ruchów i ich realizacja programowa ???
 
-\subsection{Metody przeszukiwania przestrzeni stanów gry - algorytmy graj¹ce}
-Opis zastosowanych technik przeszukiwania z uwzglêdnieniem parametrów charakterystycznych dla danej metody.
-Metody porz¹dkowania nastêpników z pamiêci¹
-iteracyjne pog³ebianie: czy sortowanie nastepników tylko w korzeniu, czy w ka¿dym wêŸle grafu? jak i gdzie pamiêtane s¹ nastêpniki? czy jest (i jakie?) dodatkowe kryterium zatrzymania pog³êbiania poza max. g³êbokoœci¹ np.czas obliczeñ?
-tablica przejœæ (transpozycji): jakie dane przechowywane s¹ w rekordzie tablicy przejœæ, czy pamiêtany jest bestmove? czy tablica odczytywana/zapisywana jest z/do pliku dyskowego na pocz¹tku/koñcu gry? jak i kiedy aktualizowana jest tablica, gdy wyst¹pi bicie (wiêkszoœæ wpisów jest ju¿ wtedy z regu³y nieaktualna!)
+\subsection{Algorytny przeszukiwania przestrzeni}
+W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
+\begin{enumerate}
+\item \emph{NegMax} -- najprosztszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawnych,
+\item \emph{AlfaBeta} -- wykorzystuj¹cy odciêcia podczas alfa i beta podczas przeszukiwania przestrzeni stanów,
+\item \emph{AlfaBeta}, wariant \emph{FailSoft} -- ???,
+\item \emph{AlfaBeta}, wariant \emph{FailSoft} + \emph{TranspositionTable} -- wykorzustuj¹cy dodatkowo tablicê przejœæ do pamiêtania stanów ju¿ odwiedzonych i odpowiadaj¹cych im najlepszych ruchów. Kluczem w tablicy jest tekstowa reprezentacja planszy -- ci¹g znaków odpowiadaj¹cych kolorom pionków (lub brakowi pionka), odpowiada mu zestaw danych: najlepszy ruch, wartoœæ oceny dla tego ruchu, rodzaj ograniczenia i g³êbokoœæ przeszukiwania. Tablica wykorzystuje standardow¹ kolekcjê System.Collections.Hashtable.
+
+??? tablica przejœæ (transpozycji): jakie dane przechowywane s¹ w rekordzie tablicy przejœæ, czy pamiêtany jest bestmove? czy tablica odczytywana/zapisywana jest z/do pliku dyskowego na pocz¹tku/koñcu gry? jak i kiedy aktualizowana jest tablica, gdy wyst¹pi bicie (wiêkszoœæ wpisów jest ju¿ wtedy z regu³y nieaktualna!)
 haszowanie: jaki klucz, jak jest generowany (z jakich danych ze stanu), jaki rozmiar tablicy haszowej, problem konfliktów? jak zosta³ rozwi¹zany- przez nadpisywanie czy listê konfliktow¹?
-tablica historii ruchów: rozmiar tablicy, regu³a modyfikacji zapamiêtanej wartoœci/oceny ruchu, bezkontekstowa definicja ruchu czy kontekstowa? dla kontekstowej, jak zdefiniowany jest kontekst (czy jako np. s¹siedztwo)?
-heurystyka "ruchów-zabójców": rozmiar tablicy (dla jakiej max. g³êbokoœci przeszukiwania)? czy pamiêtany jest jeden ruch na danym poziomie g³êbokoœci, czy mo¿e lista ruchów? dla listy ruchów na jednym poziomie: jak s¹ porz¹dkowane ruchy?
-mechanizm ETC: pytania analogiczne jak przy tablicy transpozycji
-Metody manipulowania zakresem alfa-beta
-algorytm AspirationSearch: jak okreœlana jest wartoœæ pocz¹tkowa 'guess' i odchylenia 'delta'? czy zastosowano iteracyjne pog³êbianie, czy nie? po³¹czono je z porz¹dkowaniem nastêpników w korzeniu grafu, czy nie?
-algorytm NegaScout(PVS): jak wybierany jest potencjalnie najlepszy potomek w ka¿dym wêŸle grafu? który mechanizm porz¹dkowania nastêpników spoœród opisanych wy¿ej zosta³ u¿yty? a mo¿e zastosowano inn¹ metodê selekcji ruchów? 
-algorytm C*, MTD(f): jak ustalana jest wartoœæ pocz¹tkowa f ?  czy u¿yto tablicy transpozycji (opisanej wczeœniej)?
-Metody sterowania g³êbokoœci¹ przeszukiwania
-algorytm NullMoveSearch: jaka jest wartoœæ parametru R? jakie jest kryterium zatrzymania pog³êbieñ pog³êbieñ (tj. zagnie¿d¿onych "pustych ruchów")?
-poszukiwanie stanów stabilnych: jakie ruchy s¹ pog³êbiane, o ile pog³êbiamy, jak i gdzie ustawione jest ograniczenie na górn¹ liczbê wielokrotnych naprzemiennych pog³êbieñ? czy w ogóle takie ograniczenie istnieje?
+tablica historii ruchów: rozmiar tablicy, regu³a modyfikacji zapamiêtanej wartoœci/oceny ruchu, bezkontekstowa definicja ruchu czy kontekstowa? dla kontekstowej, jak zdefiniowany jest kontekst (czy jako np. s¹siedztwo)? ???
+
+\item \emph{NegaScout} -- algorytm sterowania zakresem alfa i beta, wykorzystuj¹cy porz¹dkowanie nastêpników w oparciu o informacje z tablicy przejœæ. Najpierw przeszukiwany jest nastêpnik odpowiadaj¹cy najlepszemu znanemu ruchowi, a nastêpnie kolejne -- ze zredukowanym zakresem alfa i beta.
+
+??? algorytm NegaScout(PVS): jak wybierany jest potencjalnie najlepszy potomek w ka¿dym wêŸle grafu? który mechanizm porz¹dkowania nastêpników spoœród opisanych wy¿ej zosta³ u¿yty? a mo¿e zastosowano inn¹ metodê selekcji ruchów? ???
+
+\end{enumerate}
 
 \subsection{Funkcja oceny heurystycznej stanu gry}
 jaki typ funkcji: zliczeniowa (bilans ró¿nicowy, ilorazowy), po³o¿eniowa (preferencja pewnych pól), odleg³oœciowa (jakie miary odleg³oœci i od/do czego je wyznaczamy), oparta na s¹siedztwie/otoczeniu, probabilistyczna, inna?
