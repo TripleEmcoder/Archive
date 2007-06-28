@@ -36,7 +36,7 @@ namespace Quad.Backend
 
             int prevalpha = alpha;
 
-            Transposition transposition = transTable.Lookup(board);
+            Transposition transposition = transTable.Lookup(board, player);
 
             if (transposition != null && transposition.Depth >= depth)
             {

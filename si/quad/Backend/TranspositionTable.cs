@@ -9,35 +9,35 @@ namespace Quad.Backend
     {
         //private Dictionary<int, Transposition> table;
         private Hashtable table;
-        
+
         public TranspositionTable()
         {
             //this.table = new Dictionary<int, Transposition>();
             this.table = new Hashtable();
         }
 
-        public void Save(Board board, Result move, int alpha, int beta, int depth)
+        public void Save(Board board, Result result, int alpha, int beta, int depth)
         {
             EvaluationBound bound;
-            if (move.Value <= alpha)
+            if (result.Value <= alpha)
                 bound = EvaluationBound.Upper;
-            else if (move.Value >= beta)
+            else if (result.Value >= beta)
                 bound = EvaluationBound.Lower;
             else
                 bound = EvaluationBound.Accurate;
 
             //table[board.GetHashCode()] = new Transposition(move, bound, depth);
-            table[board.ToString()] = new Transposition(move, bound, depth);
+            table[board.ToString() + result.Move.Player]= new Transposition(result, bound, depth);
         }
 
-        public Transposition Lookup(Board board)
+        public Transposition Lookup(Board board, Player player)
         {
             //int key = board.GetHashCode();
             //if (table.ContainsKey(key))
             //    return (Transposition)table[key];
             //else
             //    return null;
-            return (Transposition)table[board.ToString()];
+            return (Transposition)table[board.ToString() + player];
         }
     }
 }

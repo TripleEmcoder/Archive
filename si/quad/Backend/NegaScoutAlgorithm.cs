@@ -36,7 +36,7 @@ namespace Quad.Backend
 
             int prevalpha = alpha;
 
-            Transposition transposition = transTable.Lookup(board);
+            Transposition transposition = transTable.Lookup(board, player);
 
             if (transposition != null && transposition.Depth >= depth)
             {
@@ -104,7 +104,7 @@ namespace Quad.Backend
 
                         board.ReverseTransition(transition);
                     }
-                    else if (candidate.Value >= best.Value)
+                    else if (candidate.Value > best.Value)
                     {
                         best = candidate;
                     }
