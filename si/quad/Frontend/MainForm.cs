@@ -20,7 +20,7 @@ namespace Quad.Frontend
         public MainForm()
         {
             InitializeComponent();
-        
+
             configuration = new ConfigurationForm();
             rules = new RulesForm();
         }
@@ -71,7 +71,7 @@ namespace Quad.Frontend
         private void PerformMove(Move move)
         {
             transistionListBox.Items.Add(board.PerformMove(move));
-            
+
             if (board.Winner == player)
             {
                 moveListBox.Items.Clear();
@@ -96,6 +96,7 @@ namespace Quad.Frontend
         {
             bool enabled = timer1.Enabled;
             timer1.Enabled = false;
+            backgroundWorker1.CancelAsync();
 
             if (configuration.ShowDialog() == DialogResult.OK)
             {
@@ -126,7 +127,7 @@ namespace Quad.Frontend
                 return;
             }
 
-            for (int index = transistionListBox.Items.Count -1; index > transistionListBox.SelectedIndex; index--)
+            for (int index = transistionListBox.Items.Count - 1; index > transistionListBox.SelectedIndex; index--)
             {
                 Transition transition = (Transition)transistionListBox.Items[index];
                 board.ReverseTransition(transition);
@@ -160,7 +161,7 @@ namespace Quad.Frontend
                     break;
                 }
 
-                if (boardControl.Highlight != null && boardControl.Highlight.Source.Equals(move.Source) 
+                if (boardControl.Highlight != null && boardControl.Highlight.Source.Equals(move.Source)
                     && move.Destination != null && move.Destination.Equals(e.Place))
                 {
                     //Debug.WriteLine(String.Format("{0} ends a possible move.", e.Place));
@@ -168,20 +169,6 @@ namespace Quad.Frontend
                     PerformMove(move);
                     break;
                 }
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            PlayerConfigurationControl current = configuration.GetPlayer(player);
-
-            if (current.PlayerType == PlayerType.Computer)
-            {
-                current.Algorithm.Hits = 0;
-                Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
-                PerformMove(result.Move);
-                Debug.WriteLine(result);
-                Debug.WriteLine(current.Algorithm.Hits);
             }
         }
 
@@ -205,6 +192,32 @@ namespace Quad.Frontend
         {
             using (AuthorsForm authors = new AuthorsForm())
                 authors.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            PlayerConfigurationControl current = configuration.GetPlayer(player);
+            
+            if (current.PlayerType == PlayerType.Computer && !backgroundWorker1.IsBusy)
+                backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            PlayerConfigurationControl current = configuration.GetPlayer(player);
+
+            current.Algorithm.Hits = 0;
+            Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
+            Debug.WriteLine(result);
+            Debug.WriteLine(current.Algorithm.Hits);
+
+            e.Result = result;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!e.Cancelled)
+                PerformMove(((Result)e.Result).Move);
         }
     }
 }
