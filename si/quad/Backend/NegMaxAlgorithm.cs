@@ -11,7 +11,17 @@ namespace Quad.Backend
             get { return "NegMax"; }
         }
 
+        private int start;
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
+        {
+            hits = 0;
+            start = depth;
+
+            return RunInternal(evaluator, board, player, depth);
+        }
+
+        private Result RunInternal(Evaluator evaluator, Board board, Player player, int depth)
         {
             hits++;
 
@@ -20,16 +30,24 @@ namespace Quad.Backend
 
             Result winner = new Result(null, int.MinValue);
 
-            foreach (Move move in board.GetPossibleMovesSorted(player))
+            List<Move> moves = board.GetPossibleMovesSorted(player);
+
+            if (depth == start)
+                total = moves.Count;
+
+            foreach (Move move in moves)
             {
                 Transition transition = board.PerformMove(move);
 
-                Result candidate = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1);
+                Result candidate = RunInternal(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1);
 
                 if (-candidate.Value > winner.Value)
                     winner = new Result(move, -candidate.Value);
 
                 board.ReverseTransition(transition);
+
+                if (depth == start)
+                    done++;
             }
 
             return winner;

@@ -7,11 +7,22 @@ namespace Quad.Backend
     public abstract class Algorithm
     {
         protected int hits;
+        protected int total;
+        protected int done;
 
         public int Hits
         {
             get { return hits; }
-            set { hits = value; }
+        }
+
+        public int Total
+        {
+            get { return total; }
+        }
+
+        public int Done
+        {
+            get { return done; }
         }
 
         public abstract string Name

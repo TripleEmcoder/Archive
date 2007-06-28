@@ -13,12 +13,17 @@ namespace Quad.Backend
             get { return "AlfaBetaFS"; }
         }
 
+        private int start;
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
+            hits = 0;
+            start = depth;
+
             return Run(evaluator, board, player, depth, -inf, inf);
         }
 
-        public Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
+        private Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
         {
             hits++;
 
@@ -27,16 +32,14 @@ namespace Quad.Backend
 
             Result best = new Result(null, -inf);
 
-            foreach (Move move in board.GetPossibleMovesSorted(player))
+            List<Move> moves = board.GetPossibleMovesSorted(player);
+
+            if (depth == start)
+                total = moves.Count;
+
+            foreach (Move move in moves)
             {
                 Transition transition = board.PerformMove(move);
-
-                if (depth == 3 && move.Destination.ToString() == "B4")
-                {
-                    ;
-                }
-
-
                 Result candidate = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -beta, -alpha);
 
                 board.ReverseTransition(transition);
@@ -49,6 +52,9 @@ namespace Quad.Backend
 
                 if (best.Value > alpha)
                     alpha = best.Value;
+
+                if (depth == start)
+                    done++;
             }
 
             return best;

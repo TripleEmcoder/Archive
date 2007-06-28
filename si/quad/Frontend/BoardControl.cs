@@ -15,14 +15,10 @@ namespace Quad.Frontend
     {
         private int dimension;
         private Move highlight;
-        private Algorithm alg;
-        private Evaluator eval;
 
         public BoardControl()
         {
             InitializeComponent();
-            alg = new AlfaBetaFSTTAlgorithm();
-            eval = new TestEvaluatorDef(); 
         }
 
         public int Dimension
@@ -35,8 +31,8 @@ namespace Quad.Frontend
                 dataGridView1.ColumnCount = 0;
                 for (int column = 0; column < value; column++)
                 {
-                    //dataGridView1.Columns.Add(new DataGridViewImageColumn());
-                    dataGridView1.Columns.Add(new DataGridViewTextBoxColumn());
+                    dataGridView1.Columns.Add(new DataGridViewImageColumn());
+                    //dataGridView1.Columns.Add(new DataGridViewTextBoxColumn());
                     dataGridView1.Columns[column].HeaderCell.Value = BackendHelper.ColumnToString(column);
                     dataGridView1.Columns[column].Width = 40;
                 }
@@ -65,31 +61,32 @@ namespace Quad.Frontend
             foreach (Place place in BackendHelper.GetAllPlaces(dimension))
             {
                 DataGridViewCell cell = GetCell(place);
-                cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
+                //cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
 
-                switch (board.GetPlayer(place))
-                {
-                    case Player.None:
-                        cell.Value = " ";
-                        break;
+                //switch (board.GetPlayer(place))
+                //{
+                //    case Player.None:
+                //        cell.Value = " ";
+                //        break;
 
-                    case Player.White:
-                        cell.Value = "W";
-                        break;
+                //    case Player.White:
+                //        cell.Value = "W";
+                //        break;
 
-                    case Player.Black:
-                        cell.Value = "B";
-                        break;
-                }
+                //    case Player.Black:
+                //        cell.Value = "B";
+                //        break;
+                //}
 
-                //GetCell(place).Value = FrontendHelper.Images[board.GetPlayer(place)];
+                GetCell(place).Value = FrontendHelper.Images[board.GetPlayer(place)];
             }
 
             //foreach (Move move in board.GetPossibleMovesSorted(player))
             //{
             //    Transition transition = board.PerformMove(move);
 
-            //    Result candidate = alg.Run(eval, board, BackendHelper.SwapPlayer(player), 2);
+            //    Result candidate = BackendHelper.Algorithms[0].Run(
+            //        BackendHelper.Evaluators[0], board, BackendHelper.SwapPlayer(player), 2);
 
             //    DataGridViewCell cell = GetCell(move.Destination);
 

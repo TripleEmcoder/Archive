@@ -7,7 +7,7 @@ namespace Quad.Backend
     public class NegaScoutAlgorithm : Algorithm
     {
         private static int inf = int.MaxValue - 10;
-        
+
         private TranspositionTable transTable;
 
         public NegaScoutAlgorithm()
@@ -20,14 +20,20 @@ namespace Quad.Backend
             get { return "NegaScout"; }
         }
 
+        private int start;
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
+            hits = 0;
+            start = depth;
+
             for (int i = 1; i < depth; ++i)
                 Run(evaluator, board, player, i, -inf, inf);
+
             return Run(evaluator, board, player, depth, -inf, inf);
         }
 
-        public Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
+        private Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
         {
             hits++;
 
@@ -59,6 +65,9 @@ namespace Quad.Backend
 
             List<Move> possibleMoves = board.GetPossibleMovesSorted(player);
 
+            if (depth == start)
+                total = possibleMoves.Count;
+
             if (transposition != null)
             {
                 int index = possibleMoves.IndexOf(transposition.BestMove.Move);
@@ -69,11 +78,14 @@ namespace Quad.Backend
             }
 
             Transition transition = board.PerformMove(possibleMoves[0]);
-            
+
             Result best = Run(evaluator, board, BackendHelper.SwapPlayer(player), depth - 1, -beta, -alpha);
             best = new Result(possibleMoves[0], -best.Value);
-            
+
             board.ReverseTransition(transition);
+
+            if (depth == start)
+                done = 1;
 
             if (best.Value < beta)
             {
@@ -88,7 +100,7 @@ namespace Quad.Backend
                     candidate = new Result(move, -candidate.Value);
 
                     board.ReverseTransition(transition);
-                    
+
                     if (candidate.Value >= beta)
                     {
                         best = candidate;
@@ -108,6 +120,9 @@ namespace Quad.Backend
                     {
                         best = candidate;
                     }
+
+                    if (depth == start)
+                        done++;
                 }
             }
 

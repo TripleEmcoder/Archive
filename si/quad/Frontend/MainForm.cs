@@ -200,13 +200,18 @@ namespace Quad.Frontend
             
             if (current.PlayerType == PlayerType.Computer && !backgroundWorker1.IsBusy)
                 backgroundWorker1.RunWorkerAsync();
+
+            if (current.Algorithm.Done <= current.Algorithm.Total)
+            {
+                progressBar1.Maximum = current.Algorithm.Total;
+                progressBar1.Value = current.Algorithm.Done;
+            }
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             PlayerConfigurationControl current = configuration.GetPlayer(player);
 
-            current.Algorithm.Hits = 0;
             Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
             Debug.WriteLine(result);
             Debug.WriteLine(current.Algorithm.Hits);
@@ -218,6 +223,14 @@ namespace Quad.Frontend
         {
             if (!e.Cancelled)
                 PerformMove(((Result)e.Result).Move);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Result candidate = BackendHelper.Algorithms[0].Run(
+                BackendHelper.Evaluators[0], board, player, 2);
+
+            MessageBox.Show(candidate.Move.ToString());
         }
     }
 }

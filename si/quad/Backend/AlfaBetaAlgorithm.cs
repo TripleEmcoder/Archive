@@ -13,19 +13,29 @@ namespace Quad.Backend
             get { return "AlfaBeta"; }
         }
 
+        private int start;
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
+            hits = 0;
+            start = depth;
+
             return Run(evaluator, board, player, depth, new Result(null, -inf), new Result(null, inf));
         }
 
-        public Result Run(Evaluator evaluator, Board board, Player player, int depth, Result alpha, Result beta)
+        private Result Run(Evaluator evaluator, Board board, Player player, int depth, Result alpha, Result beta)
         {
             hits++;
 
             if (depth == 0 || board.Winner != Player.None)
                 return new Result(null, evaluator.Run(board, player));
 
-            foreach (Move move in board.GetPossibleMovesSorted(player))
+            List<Move> moves = board.GetPossibleMovesSorted(player);
+
+            if (depth == start)
+                total = moves.Count;
+
+            foreach (Move move in moves)
             {
                 Transition transition = board.PerformMove(move);
 
@@ -39,6 +49,9 @@ namespace Quad.Backend
 
                 if (alpha.Value >= beta.Value)
                     return beta;
+
+                if (depth == start)
+                    done++;
             }
 
             return alpha;

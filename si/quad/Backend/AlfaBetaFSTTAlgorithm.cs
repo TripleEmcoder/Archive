@@ -20,14 +20,20 @@ namespace Quad.Backend
             get { return "AlfaBetaFSTT"; }
         }
 
+        private int start;
+
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
+            hits = 0;
+            start = depth;
+
             for (int i = 1; i < depth; ++i)
                 Run(evaluator, board, player, i, -inf, inf);
+
             return Run(evaluator, board, player, depth, -inf, inf);
         }
 
-        public Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
+        private Result Run(Evaluator evaluator, Board board, Player player, int depth, int alpha, int beta)
         {
             hits++;
 
@@ -59,6 +65,9 @@ namespace Quad.Backend
 
             List<Move> possibleMoves = board.GetPossibleMovesSorted(player);
 
+            if (depth == start)
+                total = possibleMoves.Count;
+
             if (transposition != null)
             {
                 int index = possibleMoves.IndexOf(transposition.BestMove.Move);
@@ -86,6 +95,9 @@ namespace Quad.Backend
 
                 if (best.Value > alpha)
                     alpha = best.Value;
+
+                if (depth == start)
+                    done++;
             }
 
             transTable.Save(board, best, prevalpha, beta, depth);
