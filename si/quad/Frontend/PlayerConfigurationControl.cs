@@ -39,10 +39,18 @@ namespace Quad.Frontend
             get { return algorithmSelectionControl1.Algorithm; }
         }
 
+        public int Depth
+        {
+            get { return int.Parse(textBox1.Text); }
+            set { textBox1.Text = value.ToString(); }
+        }
+	
+
         private void playerTypeSelectionControl1_PlayerTypeChanged(object sender, EventArgs e)
         {
             evaluatorSelectionControl1.Enabled = PlayerType == PlayerType.Computer;
             algorithmSelectionControl1.Enabled = PlayerType == PlayerType.Computer;
+            groupBox1.Enabled = PlayerType == PlayerType.Computer;
         }
     }
 }

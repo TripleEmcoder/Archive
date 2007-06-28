@@ -39,7 +39,7 @@ namespace Quad.Frontend
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(120, 70);
+            this.groupBox1.Size = new System.Drawing.Size(120, 75);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Oceny";
@@ -49,7 +49,7 @@ namespace Quad.Frontend
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(114, 51);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(114, 56);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // EvaluatorSelectionControl
@@ -58,7 +58,7 @@ namespace Quad.Frontend
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "EvaluatorSelectionControl";
-            this.Size = new System.Drawing.Size(120, 70);
+            this.Size = new System.Drawing.Size(120, 75);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

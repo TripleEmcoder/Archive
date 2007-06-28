@@ -177,7 +177,7 @@ namespace Quad.Frontend
             if (current.PlayerType == PlayerType.Computer)
             {
                 current.Algorithm.Hits = 0;
-                Result result = current.Algorithm.Run(current.Evaluator, board, player, 4);
+                Result result = current.Algorithm.Run(current.Evaluator, board, player, current.Depth);
                 PerformMove(result.Move);
                 Debug.WriteLine(result);
                 Debug.WriteLine(current.Algorithm.Hits);

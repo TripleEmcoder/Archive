@@ -44,7 +44,7 @@ namespace Quad.Frontend
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(12, 271);
+            this.button1.Location = new System.Drawing.Point(12, 458);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Quad.Frontend
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(93, 271);
+            this.button2.Location = new System.Drawing.Point(93, 458);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -113,11 +113,11 @@ namespace Quad.Frontend
             // 
             // playerConfigurationControl2
             // 
-            this.playerConfigurationControl2.Location = new System.Drawing.Point(12, 168);
+            this.playerConfigurationControl2.Location = new System.Drawing.Point(12, 263);
             this.playerConfigurationControl2.Name = "playerConfigurationControl2";
             this.playerConfigurationControl2.Player = Quad.Backend.Player.Black;
             this.playerConfigurationControl2.PlayerType = Quad.Backend.PlayerType.Computer;
-            this.playerConfigurationControl2.Size = new System.Drawing.Size(376, 94);
+            this.playerConfigurationControl2.Size = new System.Drawing.Size(376, 189);
             this.playerConfigurationControl2.TabIndex = 3;
             // 
             // playerConfigurationControl1
@@ -126,14 +126,14 @@ namespace Quad.Frontend
             this.playerConfigurationControl1.Name = "playerConfigurationControl1";
             this.playerConfigurationControl1.Player = Quad.Backend.Player.White;
             this.playerConfigurationControl1.PlayerType = Quad.Backend.PlayerType.Human;
-            this.playerConfigurationControl1.Size = new System.Drawing.Size(376, 94);
+            this.playerConfigurationControl1.Size = new System.Drawing.Size(376, 189);
             this.playerConfigurationControl1.TabIndex = 2;
             // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 306);
+            this.ClientSize = new System.Drawing.Size(400, 493);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.playerConfigurationControl2);
             this.Controls.Add(this.playerConfigurationControl1);

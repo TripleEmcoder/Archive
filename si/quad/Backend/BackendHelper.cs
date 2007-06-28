@@ -19,15 +19,15 @@ namespace Quad.Backend
             vectors[Direction.West] = new Place(-1, 0);
 
             algorithms = new List<Algorithm>();
-            //algorithms.Add(new NegMaxAlgorithm());
-            //algorithms.Add(new AlfaBetaAlgorithm());
-            //algorithms.Add(new AlfaBetaFSAlgorithm());
+            algorithms.Add(new NegMaxAlgorithm());
+            algorithms.Add(new AlfaBetaAlgorithm());
+            algorithms.Add(new AlfaBetaFSAlgorithm());
             algorithms.Add(new AlfaBetaFSTTAlgorithm());
             algorithms.Add(new NegaScoutAlgorithm());
 
             evaluators = new List<Evaluator>();
-            evaluators.Add(new LineEvaluator());
             evaluators.Add(new TestEvaluator());
+            evaluators.Add(new LineEvaluator());
         }
 
         public static Dictionary<Direction, Place> Vectors
