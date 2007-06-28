@@ -42,7 +42,7 @@ namespace Quad.Frontend
 
         private void UpdateControls()
         {
-            boardControl.Update(board);
+            boardControl.Update(board, player);
             moveListBox_SelectedIndexChanged(null, EventArgs.Empty);
 
             PlayerConfigurationControl current = configuration.GetPlayer(player);

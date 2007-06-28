@@ -31,13 +31,15 @@ namespace Quad.Frontend
                 dataGridView1.ColumnCount = 0;
                 for (int column = 0; column < value; column++)
                 {
-                    dataGridView1.Columns.Add(new DataGridViewImageColumn());
+                    //dataGridView1.Columns.Add(new DataGridViewImageColumn());
+                    dataGridView1.Columns.Add(new DataGridViewTextBoxColumn());
                     dataGridView1.Columns[column].HeaderCell.Value = BackendHelper.ColumnToString(column);
                     dataGridView1.Columns[column].Width = 40;
                 }
 
                 //dataGridView1.RowCount = value;
                 //for (int row = dimension; row < value; row++)
+                dataGridView1.RowCount = 0;
                 for (int row = 0; row < value; row++)
                 {
                     dataGridView1.Rows.Add(new DataGridViewRow());
@@ -54,28 +56,44 @@ namespace Quad.Frontend
             return dataGridView1.Rows[place.Row].Cells[place.Column];
         }
 
-        public void Update(Board board)
+        public void Update(Board board, Player player)
         {
             foreach (Place place in BackendHelper.GetAllPlaces(dimension))
             {
-                //DataGridViewCell cell = GetCell(place);
+                DataGridViewCell cell = GetCell(place);
+                cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Bold);
 
-                //switch (board.GetPlayer(place))
-                //{
-                //    case Player.None:
-                //        cell.Value = " ";
-                //        break;
+                switch (board.GetPlayer(place))
+                {
+                    //case Player.None:
+                    //    cell.Value = " ";
+                    //    break;
 
-                //    case Player.White:
-                //        cell.Value = "W";
-                //        break;
+                    case Player.White:
+                        cell.Value = "W";
+                        break;
 
-                //    case Player.Black:
-                //        cell.Value = "B";
-                //        break;
-                //}
+                    case Player.Black:
+                        cell.Value = "B";
+                        break;
+                }
 
-                GetCell(place).Value = FrontendHelper.Images[board.GetPlayer(place)];
+                //GetCell(place).Value = FrontendHelper.Images[board.GetPlayer(place)];
+            }
+
+            foreach (Move move in board.GetPossibleMovesSorted(player))
+            {
+                Transition transition = board.PerformMove(move);
+                
+                Result candidate = new AlfaBetaFSAlgorithm().Run(
+                    new TestEvaluator(), board, BackendHelper.SwapPlayer(player), 0);
+                
+                DataGridViewCell cell = GetCell(move.Destination);
+
+                cell.Value = candidate.Value;
+                cell.Style.Font = new Font(dataGridView1.DefaultCellStyle.Font, FontStyle.Regular);
+
+                board.ReverseTransition(transition);
             }
         }
 
