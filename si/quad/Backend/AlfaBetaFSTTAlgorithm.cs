@@ -25,6 +25,7 @@ namespace Quad.Backend
         public override Result Run(Evaluator evaluator, Board board, Player player, int depth)
         {
             hits = 0;
+            done = 0;
             start = depth;
 
             for (int i = 1; i < depth; ++i)

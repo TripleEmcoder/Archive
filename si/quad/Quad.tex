@@ -87,11 +87,11 @@ W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 \end{enumerate}
 
 \subsection{Funkcja oceny heurystycznej stanu}
-Funkcja oceny jest oparta na s¹siedztwie pionków i wynika wprost celu gry jakim jest u³o¿enie linii 4 pionków. Funkcja premiuje pionki na planszy, które potencjalnie mog¹ s³u¿yæ do u³o¿enia linii, wysokoœæ premii zale¿y od iloœci pionków brakuj¹cych do u³o¿enia wygrywaj¹cej kombinacji. 
+Funkcja oceny jest oparta na s¹siedztwie pionków i wynika wprost celu gry jakim jest u³o¿enie linii 4 pionków. Funkcja premiuje pionki na planszy, które potencjalnie mog¹ s³u¿yæ do u³o¿enia linii, wysokoœæ premii zale¿y od iloœci pionków brakuj¹cych do u³o¿enia wygrywaj¹cej kombinacji. Takie podejœcie w sposób naturalny preferuje zajmowanie pól w pobli¿u œrodka planszy, poniewa¿ daj¹ wiêksze szanse na u³o¿enie czwórki.
 
-Dodatkowo funkcja uwzglêdnia gracza aktualnie wykonuj¹cego ruch. Specyfika gry wymaga, aby gracz rozpoczynaj¹cy gra³ bardziej ofensywnie (próbowa³ u³o¿yæ liniê), a gracz graj¹cy jako drugi powinien graæ bardziej defensywnie (uniemo¿liwiaæ przeciwnikowi u³o¿enie linii). Zatem gracz rozpoczynaj¹cy 
+Dodatkowo funkcja uwzglêdnia gracza aktualnie wykonuj¹cego ruch. Specyfika gry wymaga, aby gracz rozpoczynaj¹cy (gracz czarny) gra³ bardziej ofensywnie (próbowa³ u³o¿yæ liniê), a gracz graj¹cy jako drugi (gracz bia³y) powinien graæ bardziej defensywnie (uniemo¿liwiaæ przeciwnikowi u³o¿enie linii). Zatem gracz gracz czarny za uk³ad potencjalnie stwarzaj¹cy mo¿liwoœæ u³o¿enia linii otrzymuje wiêksz¹ premiê ni¿ gracz bia³y. Podobnie gracz bia³y otrzymuje wiêksze premie za utrudnianie gry przeciwnikowi.
 
-Funkcja zwraca wartoœci z przedzia³u $[-10000,10000]$. Wysokoœci premii zosta³y wyznaczone eksperymentalnie. 
+Funkcja zwraca wartoœci z przedzia³u $[-10000,10000]$. Wysokoœci premii zosta³y wyznaczone poprzez porównywanie wyników gier pomiêdzy graczami wykorzystuj¹cymi funkcje oceny o ró¿nych wagach. Funkcja ma liniow¹ z³o¿onoœæ obliczeniow¹ wzglêdem iloœci pól na planszy.
 
 jaki typ funkcji: zliczeniowa (bilans ró¿nicowy, ilorazowy), po³o¿eniowa (preferencja pewnych pól), odleg³oœciowa (jakie miary odleg³oœci i od/do czego je wyznaczamy), oparta na s¹siedztwie/otoczeniu, probabilistyczna, inna?
 jaki przedzia³ wartoœci zwraca funkcja
