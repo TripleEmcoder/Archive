@@ -274,12 +274,12 @@ Tura & AlfaBetaFSTT & NegaScout \\
 \end{table}
 
 \section{Wnioski, uwagi i podsumowanie}
-Jaki jest szacunkowy rozmiar przestrzeni stanów zaimplementowanej gry? Jak zmienia siê rozmiar grafu w miarê postêpów gry? Roœnie, maleje, czy pozostaje raczej stabilny?
-Która z zastosowanych metoda okaza³a siê najlepsza z punktu widzenia ograniczenia obszaru przeszukiwanej przestrzeni?
-Czy ³atwo wygraæ cz³owiekowi (twórcy programu) z komputerem?
-Czy wyst¹pi³ problem cykli w grafie gry i jak go rozwi¹zano? Czy og³aszany jest wtedy werdykt remisowy po pewnej sta³ej liczbie powtórzonych stanów?
-Czy funkcja oceny okaza³a siê wystarczaj¹ca? Czy s¹ szanse na jest dalsz¹ poprawê? Je¿eli tak, to gdzie mo¿na by³oby wprowadziæ ulepszenia?
-Czy by³y jakieœ trudne do wykrycia b³êdy implementacyjne?
-Inne uwagi
+Szacunkowy rozmiar przestrzeni stanów wynosi $3^64$. Rozmiar grafu wynosi oko³o $64^{g³êbokoœæ}$ i nieznacznie maleje wraz z rozwojem rozgrywki. Znacz¹cy spadek rozmiaru grafu obserwuje siê dopiero na kilka ruchów przed zakoñczeniem rozgrywki, po zakoñczeniu fazy ustawiania pionków. 
+
+W³aœnie ze wzglêdu na bardzo du¿y pocz¹tkowy rozmiar grafu niemo¿liwe by³o w rozs¹dnym czasie uzyskanie g³êbokoœci przeszukiwania wiêkszej ni¿ 4, pomimo zastosowania doœæ wyszukanych algorytmów. Najlepsze efekty, zgodnie z przewidywaniami, da³ algorytm \emph{NegaScout} w po³¹czeniu z tablic¹ przejœæ. 
+
+Du¿¹ trudnoœci¹ okaza³o siê stworzenie dobrej funkcji oceny. Dobre efekty da³o zró¿nicowanie oceny w zale¿noœci od gracza wykonuj¹cego ruch. Mo¿liwe by³oby dalsze jej dopracowanie np. poprzez zastosowanie algorytmu genetycznego do wyznaczenia najlepszych wag.
+
+Koñcowy efekt jest doœæ dobry, cz³owiekowi trudno wygraæ z komputerem. W pojedynku innym programem (\emph{Zillions of Games}) nasz program z ³atwoœci¹ wygrywa je¿eli zaczyna pojedynek, je¿eli gra jako drugi czasem wygrywa, czasem przegrywa.
 
 \end{document}
