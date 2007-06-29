@@ -71,7 +71,7 @@ Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka
 
 Lista nastêpników jest mieszana, aby zmniejszyæ przewidywalnoœæ ruchów komputera. Nastêpnie lista jest porz¹dkowana w taki sposób, aby na jej pocz¹tku znalaz³y siê (i by³y przegl¹dane w pierwszej kolejnoœci) ruchy rozgrywaj¹ce siê w centrum planszy. Prowadzi to do zwiêkszenia wydajnoœci programu, jako ¿e ruchy te s¹ najczêœciej o wiele lepsze od pozosta³ych, a co za tym idzie pozwalaj¹ na czêstsze odciêcia.
 
-\subsection{Algorytny przeszukiwania przestrzeni}
+\subsection{Algorytny przeszukiwania przestrzeni stanów}
 W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 \begin{enumerate}
 \item \emph{NegMax} -- najprosztszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawczych,
@@ -82,11 +82,11 @@ W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 
 \item \emph{AlfaBeta}, wariant \emph{FailSoft} + \emph{TranspositionTable} -- algorytm sterowania kolejnoœci¹ nastêpników, wykorzystuj¹cy dodatkowo tablicê przejœæ do pamiêtania stanów ju¿ odwiedzonych i odpowiadaj¹cych im najlepszych ruchów. Kluczem w tablicy jest tekstowa reprezentacja planszy -- ci¹g znaków odpowiadaj¹cych kolorom pionków (lub brakowi pionka) wraz z nazw¹ gracza aktualnie wykonuj¹cego ruch, odpowiada mu zestaw danych: najlepszy ruch, wartoœæ oceny dla tego ruchu, rodzaj ograniczenia (górne, dolne lub dok³adne) i g³êbokoœæ przeszukiwania. Tablica wykorzystuje standardow¹ kolekcjê System.Collections.Hashtable oraz standardow¹ funkcjê haszuj¹c¹ klasy string. Dziêki zastosowaniu iteracyjnego pog³êbiania i tablicy przejœæ najlepszy ruch jest sprawdzany jako pierwszy w ka¿dym wierzcho³ku. 
 
-\item \emph{NegaScout} -- algorytm sterowania zakresem alfa i beta, wykorzystuj¹cy porz¹dkowanie nastêpników w oparciu o informacje z tablicy przejœæ. Najpierw przeszukiwany jest nastêpnik odpowiadaj¹cy najlepszemu znanemu ruchowi, a nastêpnie kolejne -- ze zredukowanym zakresem alfa i beta. Algorytm wykorzystuje tak¹ sam¹ tablicê przejœæ jak algorytm AlfaBeta.
+\item \emph{NegaScout} -- algorytm sterowania zakresem alfa i beta, wykorzystuj¹cy porz¹dkowanie nastêpników w oparciu o informacje z tablicy przejœæ. Najpierw przeszukiwany jest nastêpnik odpowiadaj¹cy najlepszemu znanemu ruchowi, a nastêpnie kolejne -- ze zredukowanym zakresem alfa i beta. Algorytm wykorzystuje tak¹ sam¹ tablicê przejœæ jak algorytm \emph{AlfaBeta}.
 
 \end{enumerate}
 
-\subsection{Funkcja oceny heurystycznej stanu gry}
+\subsection{Funkcja oceny heurystycznej stanu}
 Funkcja oceny jest oparta na s¹siedztwie pionków i wynika wprost celu gry jakim jest u³o¿enie linii 4 pionków. Funkcja premiuje pionki na planszy, które potencjalnie mog¹ s³u¿yæ do u³o¿enia linii, wysokoœæ premii zale¿y od iloœci pionków brakuj¹cych do u³o¿enia wygrywaj¹cej kombinacji. 
 
 Dodatkowo funkcja uwzglêdnia gracza aktualnie wykonuj¹cego ruch. Specyfika gry wymaga, aby gracz rozpoczynaj¹cy gra³ bardziej ofensywnie (próbowa³ u³o¿yæ liniê), a gracz graj¹cy jako drugi powinien graæ bardziej defensywnie (uniemo¿liwiaæ przeciwnikowi u³o¿enie linii). Zatem gracz rozpoczynaj¹cy 
@@ -101,15 +101,104 @@ wady i zalety (jakie taktyczno-startegiczne cele gry uwzglêdnia a jakie ewentual
 przyk³ad stanu gry i ewaluacja wartoœci funkcji heurystycznej tego stanu z uwzglêdnieniem wartoœci poœrednich (wszystkich sk³adowych oceny ³¹cznej)
 
 
-\section{Testy wydajnoœci i porównania algorytmów}
-Punktem odniesienia dla wszystkich stosowanych metod ma byæ "czysty" algorytm alfa-beta
-Pomiary maj¹ dotyczyæ œredniej liczby odwiedzonych wierzcho³ków w grafie gry a NIE CZASÓW przeszukiwania
-Porównania nale¿y przeprowadziæ dla co najmniej trzech ró¿nych stanów pocz¹tkowych (m.in. ró¿nych od stanu wynikaj¹cego z zasad rozpoczynania gry)
-Porównania powinny byæ prowadzone dla kilku ró¿nych g³êbokoœci przeszukiwania
-Testy nale¿y przeprowadziæ dla g³êbokoœci grafu wynosz¹cej co najmniej 5 niezale¿nie od tego czy wymaga to czasów obliczeñ rzêdu minuty, godziny, a mo¿e nawet doby - od czego w koñcu s¹ komputery ;-)
-Je¿eli metoda charakteryzuje siê dodatkowymi parametrami (poza g³êbokoœci¹ przeszukiwania) nale¿y podaæ dla jakich wartoœci zosta³y przeprowadzone porównania
-Wyniki porównañ powinny byæ przedstawione ZARÓWNO w postaci wykresów, jak i tabel
-Ka¿da krzywa na wykresie powinna mieæ inny typ znacznika punktów pomiarowych tak, aby by³y czytelna na wydruku czarno-bia³ym niezale¿nie od faktycznie przypisanego jej koloru
+\section{Porównanie wydajnoœci algorytmów}
+W celu zbadania wydajnoœci algorytmów przeprowadzono seriê testów z wykorzystaniem rozgrywek, w których obaj gracze byli sterowani komputerowo. W pary przeciwników po³¹czono algorytmy: \emph{AlfaBeta} i \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} oraz \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} i \emph{NegaScout}. Wyniki pomiarów przedstawiaj¹ nastêpuj¹ce tabele i wykresy.
+
+AB-ABFSTT 3 - T
+1	4257	4514
+2	7899	5960
+3	4148	4279
+4	4190	4433
+5	4959	5008
+6	4706	4264
+7	8769	5268
+8	8779	2923
+9	4368	3871
+10	6183	4144
+11	8866	6600
+12	15399	2922
+13	6182	4761
+14	9086	3505
+15	5612	3223
+16	4073	2742
+17	4806	4069
+18	3230	2651
+19	5128	3456
+20	4662	3827
+21	7670	3433
+22	6900	5136
+23	3170	2869
+24	1385	1339
+25	278	321
+26	449	156
+27	264	294
+
+AB-ABFSTT 4 - T
+
+ABFSTT-NS 3 - T
+1	4514	4515
+2	5960	4753
+3	4279	4224
+4	4433	4547
+5	5008	4160
+6	4264	4442
+7	5268	4660
+8	2923	2932
+9	3871	3734
+10	4144	3832
+11	6600	5977
+12	2922	2921
+13	4761	4182
+14	3505	3430
+15	3223	3039
+16	2742	2743
+17	4069	3018
+18	2651	2571
+19	3456	2694
+20	3827	3082
+21	3433	3134
+22	5136	3526
+23	2869	2621
+24	1339	1192
+25	321	333
+26	156	156
+27	294	294
+
+ABFSTT-NS 4 - T
+1	17476	16269
+2	27658	26104
+3	23911	19810
+4	22427	22921
+5	24851	24172
+6	21856	21827
+7	16787	17109
+8	12066	11465
+9	13704	11459
+10	26289	26800
+11	5165	6579
+12	22934	24688
+13	11216	10466
+14	8683	6172
+15	22243	21156
+16	16626	17584
+17	7985	6735
+18	18835	17039
+19	45674	36308
+20	9301	8372
+21	8129	7733
+22	1768	1827
+23	15978	15263
+24	5849	5304
+25	2197	2010
+26	1080	1050
+27	2046	1765
+28	4154	4119
+29	2210	1962
+30	3995	3117
+31	16881	11731
+32	2150	2152
+33	555	594
+34	1244	1149
 
 \section{Wnioski, uwagi i podsumowanie}
 Jaki jest szacunkowy rozmiar przestrzeni stanów zaimplementowanej gry? Jak zmienia siê rozmiar grafu w miarê postêpów gry? Roœnie, maleje, czy pozostaje raczej stabilny?

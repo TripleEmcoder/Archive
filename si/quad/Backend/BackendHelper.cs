@@ -6,12 +6,15 @@ namespace Quad.Backend
 {
     public static class BackendHelper
     {
+        private static Dictionary<int, List<Place>> places;
         private static Dictionary<Direction, Place> vectors;
         public static List<Evaluator> evaluators;
         public static List<Algorithm> algorithms;
 
         static BackendHelper()
         {
+            places = new Dictionary<int, List<Place>>();
+
             vectors = new Dictionary<Direction, Place>();
             vectors[Direction.North] = new Place(0, 1);
             vectors[Direction.South] = new Place(0, -1);
@@ -58,13 +61,18 @@ namespace Quad.Backend
 
         public static List<Place> GetAllPlaces(int dimension)
         {
-            List<Place> places = new List<Place>();
+            if (!places.ContainsKey(dimension))
+            {
+                List<Place> result = new List<Place>();
 
-            for (int column = 0; column < dimension; column++)
-                for (int row = 0; row < dimension; row++)
-                    places.Add(new Place(column, row));
+                for (int column = 0; column < dimension; column++)
+                    for (int row = 0; row < dimension; row++)
+                        result.Add(new Place(column, row));
 
-            return places;
+                places[dimension] = result;
+            }
+
+            return places[dimension];
         }
 
         public static int DistanceToCenter(Place place, int dimension)
