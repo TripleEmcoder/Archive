@@ -78,7 +78,7 @@ W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 
 \item \emph{AlfaBeta} -- wykorzystuj¹cy odciêcia alfa i beta podczas przeszukiwania przestrzeni stanów,
 
-\item \emph{AlfaBeta}, wariant \emph{FailSoft} -- wariant algorytmu AlfaBeta, który mo¿e zwracaæ rozwi¹zanie spoza przedzia³u $(alfa, beta)$, wykorzystywany do obliczania górnych i dolnych ograniczeñ oceny najlepszego ruchu,
+\item \emph{AlfaBeta}, wariant \emph{FailSoft} -- wariant algorytmu AlfaBeta, który mo¿e zwracaæ rozwi¹zanie spoza przedzia³u (alfa, beta), wykorzystywany do obliczania górnych i dolnych ograniczeñ oceny najlepszego ruchu,
 
 \item \emph{AlfaBeta}, wariant \emph{FailSoft} + \emph{TranspositionTable} -- algorytm sterowania kolejnoœci¹ nastêpników, wykorzystuj¹cy dodatkowo tablicê przejœæ do pamiêtania stanów ju¿ odwiedzonych i odpowiadaj¹cych im najlepszych ruchów. Kluczem w tablicy jest tekstowa reprezentacja planszy -- ci¹g znaków odpowiadaj¹cych kolorom pionków (lub brakowi pionka) wraz z nazw¹ gracza aktualnie wykonuj¹cego ruch, odpowiada mu zestaw danych: najlepszy ruch, wartoœæ oceny dla tego ruchu, rodzaj ograniczenia (górne, dolne lub dok³adne) i g³êbokoœæ przeszukiwania. Tablica wykorzystuje standardow¹ kolekcjê System.Collections.Hashtable oraz standardow¹ funkcjê haszuj¹c¹ klasy string. Dziêki zastosowaniu iteracyjnego pog³êbiania i tablicy przejœæ najlepszy ruch jest sprawdzany jako pierwszy w ka¿dym wierzcho³ku. 
 
@@ -122,12 +122,12 @@ Zgodnie z przewidywaniami wprowadzenie wariantu \emph{FailSafe} + \emph{Transpos
 \caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 4}
 \end{figure}
 
-Zgodnie z oczekiwaniami algorytm \emph{NegaScout} daje niewielki, ale stabilny zysk na iloœci przegl¹danych wierzcho³ków w stosunku do algorytmu \emph{AlfaBeta}. Œrednio wynosi on ok. 10%.
+Zgodnie z oczekiwaniami algorytm \emph{NegaScout} daje niewielki, ale stabilny zysk na iloœci przegl¹danych wierzcho³ków w stosunku do algorytmu \emph{AlfaBeta}. Œrednio wynosi on ok. 10\%.
 
 \section{Wnioski, uwagi i podsumowanie}
-Szacunkowy rozmiar przestrzeni stanów wynosi $3^64$. Rozmiar grafu wynosi oko³o $64^{g³êbokoœæ}$ i nieznacznie maleje wraz z rozwojem rozgrywki. Znacz¹cy spadek rozmiaru grafu obserwuje siê dopiero na kilka ruchów przed zakoñczeniem rozgrywki, po zakoñczeniu fazy ustawiania pionków. 
+Szacunkowy rozmiar przestrzeni stanów wynosi $3^{64}$. Rozmiar grafu wynosi oko³o $64^{\textrm{g³êbokoœæ}}$ i nieznacznie maleje wraz z rozwojem rozgrywki. Znacz¹cy spadek rozmiaru grafu obserwuje siê dopiero na kilka ruchów przed zakoñczeniem rozgrywki, po zakoñczeniu fazy ustawiania pionków. 
 
-W³aœnie ze wzglêdu na bardzo du¿y pocz¹tkowy rozmiar grafu niemo¿liwe by³o w rozs¹dnym czasie uzyskanie g³êbokoœci przeszukiwania wiêkszej ni¿ 4, pomimo zastosowania doœæ wyszukanych algorytmów. Najlepsze efekty, zgodnie z przewidywaniami, da³ algorytm \emph{NegaScout} w po³¹czeniu z tablic¹ przejœæ. 
+W³aœnie ze wzglêdu na bardzo du¿y pocz¹tkowy rozmiar grafu niemo¿liwe by³o w rozs¹dnym czasie uzyskanie g³êbokoœci przeszukiwania wiêkszej ni¿ 4, pomimo zastosowania doœæ wyszukanych algorytmów. Najlepsze efekty, zgodnie z przewidywaniami, da³ algorytm \mbox{\emph{NegaScout}} w po³¹czeniu z tablic¹ przejœæ. 
 
 Du¿¹ trudnoœci¹ okaza³o siê stworzenie dobrej funkcji oceny. Dobre efekty da³o zró¿nicowanie oceny w zale¿noœci od gracza wykonuj¹cego ruch. Mo¿liwe by³oby dalsze jej dopracowanie np. poprzez zastosowanie algorytmu genetycznego do wyznaczenia najlepszych wag.
 
