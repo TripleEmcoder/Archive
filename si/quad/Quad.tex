@@ -71,10 +71,10 @@ Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka
 
 Lista nastêpników jest mieszana, aby zmniejszyæ przewidywalnoœæ ruchów komputera. Nastêpnie lista jest porz¹dkowana w taki sposób, aby na jej pocz¹tku znalaz³y siê (i by³y przegl¹dane w pierwszej kolejnoœci) ruchy rozgrywaj¹ce siê w centrum planszy. Prowadzi to do zwiêkszenia wydajnoœci programu, jako ¿e ruchy te s¹ najczêœciej o wiele lepsze od pozosta³ych, a co za tym idzie pozwalaj¹ na czêstsze odciêcia.
 
-\subsection{Algorytny przeszukiwania przestrzeni stanów}
+\subsection{Algorytmy przeszukiwania przestrzeni stanów}
 W programie zaimplementowano kilka algorytmów graj¹cych i ich wariantów:
 \begin{enumerate}
-\item \emph{NegMax} -- najprosztszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawczych,
+\item \emph{NegMax} -- najprostszy algorytm minimaksowy, zaimplementowany w celach testowych i porównawczych,
 
 \item \emph{AlfaBeta} -- wykorzystuj¹cy odciêcia alfa i beta podczas przeszukiwania przestrzeni stanów,
 
@@ -108,7 +108,7 @@ W celu zbadania wydajnoœci algorytmów przeprowadzono seriê testów z wykorzystani
 \caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 4}
 \end{figure}
 
-Zgodnie z przewidywaniami wprowadzenie wariantu \emph{FailSafe} + \emph{TranspositionTable} daje wyraŸne zmiejszenie iloœci przegl¹danych wierzcho³ków, a co za tym idzie poprawienie wydajnoœci. Jak pokazuj¹ dane z pomiarów, zdarzaj¹ siê przypadki, w których wariant ten wypada nieco gorzej -- wynika to z wykonywania przez niego iteracyjnego pog³êbiania, które mo¿e niezniacznie zwiêkszaæ liczbê przegl¹danych wierzcho³ków. Jest to jednak rzadkie zjawisko.
+Zgodnie z przewidywaniami wprowadzenie wariantu \emph{FailSafe} + \emph{TranspositionTable} daje wyraŸne zmniejszenie iloœci przegl¹danych wierzcho³ków, a co za tym idzie poprawienie wydajnoœci. Jak pokazuj¹ dane z pomiarów, zdarzaj¹ siê przypadki, w których wariant ten wypada nieco gorzej -- wynika to z wykonywania przez niego iteracyjnego pog³êbiania, które mo¿e nieznacznie zwiêkszaæ liczbê przegl¹danych wierzcho³ków. Jest to jednak rzadkie zjawisko.
 
 \begin{figure}[p]
 \centering
