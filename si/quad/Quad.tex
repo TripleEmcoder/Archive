@@ -48,10 +48,10 @@
 
 \section{Opis gry}
 Gra ,,Quad'' jest gr¹ dwuosobow¹ rozgrywan¹ na planszy o rozmiarach 8x8. Ka¿dy z graczy dysponuje 12-25 pionkami swojego koloru - liczbê tê ustala siê przed rozpoczêciem rozgrywki. Celem gry jest u³o¿enie 4 swoich pionków w linii prostej (poziomo lub pionowo). Aby tego dokonaæ gracze naprzemian wykonuj¹ jeden z ruchów:
-\begin{enumerate}
+\begin{itemize}
 \item ustawienie nowego pionka na planszy (jeœli gracz jeszcze nimi dysponuje),
 \item przestawienie w³asnego pionka na s¹siednie, wolne pole (jeœli wszystkie pionki zosta³y ju¿ ustawione).
-\end{enumerate}
+\end{itemize}
 Poprzez przestawienie pionka mo¿na zbiæ pionek przeciwnika. Dzieje siê tak wtedy, gdy w wyniku tego przestawienia pionek przeciwnika zostanie otoczony przynajmniej dwoma pionkami gracza. Je¿eli w wyniku zbijania przeciwnik straci wszystkie pionki, gracz równie¿ wygrywa.
 
 Implementacja gry umo¿liwia w pe³ni dowolny wybór rozmiaru planszy i iloœci pionków. Pionki dwóch graczy s¹ odpowiednio bia³e lub czarne.
@@ -64,10 +64,10 @@ Plansza gry reprezentowana jest jako dwuwymiarowa tablica o odpowiednich rozmiar
 Ruchy w grze reprezentowane s¹ zawsze przez trójkê: kolor gracza, pole Ÿród³owe, pole docelowe. Pozwala to reprezentowaæ zarówno ruchy polegaj¹ce przestawieniu pionka jak i ustawieniu pionka (pole Ÿród³owe równe null) i zbiciu pionka (pole docelowe równe null). Dla ka¿dego wykonywanego ruchy tworzony jest nowy obiekt, zawieraj¹cy kolekcjê: wykonywany ruch, konsekwencje ruchu. Konsekwencje ruchu pojawiaj¹ siê w momencie, gdy mamy do czynienia ze zbijaniem pionków.
 
 Generowanie nastêpników polega na przejrzeniu wszystkich pól i okreœleniu dla ka¿dego z nich mo¿liwych ruchów z jego udzia³em w nastêpuj¹cy sposób:
-\begin{enumerate}
+\begin{itemize}
 \item jeœli dane pole jest puste i graczowi aktualnie wykonuj¹cemu ruch pozosta³y pionki do ustawienia to mo¿liwy ruch polega na ustawieniu w tym miejscu pionka,
 \item jeœli dane pole jest zajête przez pionek gracza aktualnie wykonuj¹cego ruch i nie ma on wiêcej pionków do ustawienia, mo¿liwe ruchy polegaj¹ na przestawieniu pionka z tego pola na s¹siednie, wolne pole (przy czym kolejnoœæ poszukiwañ jest zawsze nastêpuj¹ca: pó³noc, po³udnie, wschód, zachód).
-\end{enumerate}
+\end{itemize}
 
 Lista nastêpników jest mieszana, aby zmniejszyæ przewidywalnoœæ ruchów komputera. Nastêpnie lista jest porz¹dkowana w taki sposób, aby na jej pocz¹tku znalaz³y siê (i by³y przegl¹dane w pierwszej kolejnoœci) ruchy rozgrywaj¹ce siê w centrum planszy. Prowadzi to do zwiêkszenia wydajnoœci programu, jako ¿e ruchy te s¹ najczêœciej o wiele lepsze od pozosta³ych, a co za tym idzie pozwalaj¹ na czêstsze odciêcia.
 
@@ -100,105 +100,174 @@ jak zosta³y wyznaczone wartoœci wag (o ile s¹ stosowane) poszczególnych sk³adowy
 wady i zalety (jakie taktyczno-startegiczne cele gry uwzglêdnia a jakie ewentualnie nie s¹ brane pod uwagê)
 przyk³ad stanu gry i ewaluacja wartoœci funkcji heurystycznej tego stanu z uwzglêdnieniem wartoœci poœrednich (wszystkich sk³adowych oceny ³¹cznej)
 
-
 \section{Porównanie wydajnoœci algorytmów}
 W celu zbadania wydajnoœci algorytmów przeprowadzono seriê testów z wykorzystaniem rozgrywek, w których obaj gracze byli sterowani komputerowo. W pary przeciwników po³¹czono algorytmy: \emph{AlfaBeta} i \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} oraz \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} i \emph{NegaScout}. Wyniki pomiarów przedstawiaj¹ nastêpuj¹ce tabele i wykresy.
 
-AB-ABFSTT 3 - T
-1	4257	4514
-2	7899	5960
-3	4148	4279
-4	4190	4433
-5	4959	5008
-6	4706	4264
-7	8769	5268
-8	8779	2923
-9	4368	3871
-10	6183	4144
-11	8866	6600
-12	15399	2922
-13	6182	4761
-14	9086	3505
-15	5612	3223
-16	4073	2742
-17	4806	4069
-18	3230	2651
-19	5128	3456
-20	4662	3827
-21	7670	3433
-22	6900	5136
-23	3170	2869
-24	1385	1339
-25	278	321
-26	449	156
-27	264	294
+\begin{table}
+\centering
+\begin{tabular}{|r|r|r|}
+\hline
+Tura & AlfaBeta & AlfaBetaFSTT \\
+\hline
+1 & 4257 & 4514 \\
+2 & 7899 & 5960 \\
+3 & 4148 & 4279 \\
+4 & 4190 & 4433 \\
+5 & 4959 & 5008 \\
+6 & 4706 & 4264 \\
+7 & 8769 & 5268 \\
+8 & 8779 & 2923 \\
+9 & 4368 & 3871 \\
+10 & 6183 & 4144 \\
+11 & 8866 & 6600 \\
+12 & 15399 & 2922 \\
+13 & 6182 & 4761 \\
+14 & 9086 & 3505 \\
+15 & 5612 & 3223 \\
+16 & 4073 & 2742 \\
+17 & 4806 & 4069 \\
+18 & 3230 & 2651 \\
+19 & 5128 & 3456 \\
+20 & 4662 & 3827 \\
+21 & 7670 & 3433 \\
+22 & 6900 & 5136 \\
+23 & 3170 & 2869 \\
+24 & 1385 & 1339 \\
+25 & 278 & 321 \\
+26 & 449 & 156 \\
+27 & 264 & 294 \\
+\hline
+\end{tabular}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 3}
+\end{table}
 
-AB-ABFSTT 4 - T
+\begin{table}
+\centering
+\begin{tabular}{|r|r|r|}
+\hline
+Tura & AlfaBeta & AlfaBetaFSTT \\
+\hline
+1 & 16029 & 17476 \\
+2 & 28350 & 27658 \\
+3 & 38474 & 23911 \\
+4 & 21683 & 22427 \\
+5 & 37584 & 24851 \\
+6 & 21010 & 21856 \\
+7 & 26432 & 16787 \\
+8 & 14012 & 12066 \\
+9 & 16889 & 13704 \\
+10 & 29551 & 26289 \\
+11 & 34877 & 5165 \\
+12 & 18651 & 22934 \\
+13 & 27310 & 11216 \\
+14 & 90092 & 8683 \\
+15 & 27901 & 22243 \\
+16 & 30744 & 16626 \\
+17 & 12971 & 7985 \\
+18 & 22825 & 18835 \\
+19 & 10268 & 45674 \\
+20 & 12662 & 9301 \\
+21 & 50244 & 8129 \\
+22 & 67998 & 1768 \\
+23 & 20019 & 15978 \\
+24 & 11178 & 5849 \\
+25 & 7610 & 2197 \\
+26 & 1634 & 1080 \\
+27 & 3191 & 2046 \\
+28 & 6836 & 4154 \\
+29 & 7120 & 2210 \\
+30 & 14323 & 3995 \\
+31 & 23838 & 16881 \\
+32 & 9298 & 1593 \\
+33 & 11120 & 555 \\
+34 & 6577 & 1163 \\
+\hline
+\end{tabular}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 4}
+\end{table}
 
-ABFSTT-NS 3 - T
-1	4514	4515
-2	5960	4753
-3	4279	4224
-4	4433	4547
-5	5008	4160
-6	4264	4442
-7	5268	4660
-8	2923	2932
-9	3871	3734
-10	4144	3832
-11	6600	5977
-12	2922	2921
-13	4761	4182
-14	3505	3430
-15	3223	3039
-16	2742	2743
-17	4069	3018
-18	2651	2571
-19	3456	2694
-20	3827	3082
-21	3433	3134
-22	5136	3526
-23	2869	2621
-24	1339	1192
-25	321	333
-26	156	156
-27	294	294
+\begin{table}
+\centering
+\begin{tabular}{|r|r|r|}
+\hline
+Tura & AlfaBetaFSTT & NegaScout \\
+\hline
+1 & 4514 & 4515 \\
+2 & 5960 & 4753 \\
+3 & 4279 & 4224 \\
+4 & 4433 & 4547 \\
+5 & 5008 & 4160 \\
+6 & 4264 & 4442 \\
+7 & 5268 & 4660 \\
+8 & 2923 & 2932 \\
+9 & 3871 & 3734 \\
+10 & 4144 & 3832 \\
+11 & 6600 & 5977 \\
+12 & 2922 & 2921 \\
+13 & 4761 & 4182 \\
+14 & 3505 & 3430 \\
+15 & 3223 & 3039 \\
+16 & 2742 & 2743 \\
+17 & 4069 & 3018 \\
+18 & 2651 & 2571 \\
+19 & 3456 & 2694 \\
+20 & 3827 & 3082 \\
+21 & 3433 & 3134 \\
+22 & 5136 & 3526 \\
+23 & 2869 & 2621 \\
+24 & 1339 & 1192 \\
+25 & 321 & 333 \\
+26 & 156 & 156 \\
+27 & 294 & 294 \\
+\hline
+\end{tabular}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 3}
+\end{table}
 
-ABFSTT-NS 4 - T
-1	17476	16269
-2	27658	26104
-3	23911	19810
-4	22427	22921
-5	24851	24172
-6	21856	21827
-7	16787	17109
-8	12066	11465
-9	13704	11459
-10	26289	26800
-11	5165	6579
-12	22934	24688
-13	11216	10466
-14	8683	6172
-15	22243	21156
-16	16626	17584
-17	7985	6735
-18	18835	17039
-19	45674	36308
-20	9301	8372
-21	8129	7733
-22	1768	1827
-23	15978	15263
-24	5849	5304
-25	2197	2010
-26	1080	1050
-27	2046	1765
-28	4154	4119
-29	2210	1962
-30	3995	3117
-31	16881	11731
-32	2150	2152
-33	555	594
-34	1244	1149
+\begin{table}
+\centering
+\begin{tabular}{|r|r|r|}
+\hline
+Tura & AlfaBetaFSTT & NegaScout \\
+\hline
+1 & 17476 & 16269 \\
+2 & 27658 & 26104 \\
+3 & 23911 & 19810 \\
+4 & 22427 & 22921 \\
+5 & 24851 & 24172 \\
+6 & 21856 & 21827 \\
+7 & 16787 & 17109 \\
+8 & 12066 & 11465 \\
+9 & 13704 & 11459 \\
+10 & 26289 & 26800 \\
+11 & 5165 & 6579 \\
+12 & 22934 & 24688 \\
+13 & 11216 & 10466 \\
+14 & 8683 & 6172 \\
+15 & 22243 & 21156 \\
+16 & 16626 & 17584 \\
+17 & 7985 & 6735 \\
+18 & 18835 & 17039 \\
+19 & 45674 & 36308 \\
+20 & 9301 & 8372 \\
+21 & 8129 & 7733 \\
+22 & 1768 & 1827 \\
+23 & 15978 & 15263 \\
+24 & 5849 & 5304 \\
+25 & 2197 & 2010 \\
+26 & 1080 & 1050 \\
+27 & 2046 & 1765 \\
+28 & 4154 & 4119 \\
+29 & 2210 & 1962 \\
+30 & 3995 & 3117 \\
+31 & 16881 & 11731 \\
+32 & 2150 & 2152 \\
+33 & 555 & 594 \\
+34 & 1244 & 1149 \\
+\hline
+\end{tabular}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 3}
+\end{table}
 
 \section{Wnioski, uwagi i podsumowanie}
 Jaki jest szacunkowy rozmiar przestrzeni stanów zaimplementowanej gry? Jak zmienia siê rozmiar grafu w miarê postêpów gry? Roœnie, maleje, czy pozostaje raczej stabilny?
