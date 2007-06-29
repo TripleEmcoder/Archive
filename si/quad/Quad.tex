@@ -93,17 +93,47 @@ Dodatkowo funkcja uwzglêdnia gracza aktualnie wykonuj¹cego ruch. Specyfika gry w
 
 Funkcja zwraca wartoœci z przedzia³u $[-10000,10000]$. Wysokoœci premii zosta³y wyznaczone poprzez porównywanie wyników gier pomiêdzy graczami wykorzystuj¹cymi funkcje oceny o ró¿nych wagach. Funkcja ma liniow¹ z³o¿onoœæ obliczeniow¹ wzglêdem iloœci pól na planszy.
 
-jaki typ funkcji: zliczeniowa (bilans ró¿nicowy, ilorazowy), po³o¿eniowa (preferencja pewnych pól), odleg³oœciowa (jakie miary odleg³oœci i od/do czego je wyznaczamy), oparta na s¹siedztwie/otoczeniu, probabilistyczna, inna?
-jaki przedzia³ wartoœci zwraca funkcja
-jakie s¹ wartoœci skrajne (dla sukcesu, pora¿ki)
-jak zosta³y wyznaczone wartoœci wag (o ile s¹ stosowane) poszczególnych sk³adowych funkcji
-wady i zalety (jakie taktyczno-startegiczne cele gry uwzglêdnia a jakie ewentualnie nie s¹ brane pod uwagê)
-przyk³ad stanu gry i ewaluacja wartoœci funkcji heurystycznej tego stanu z uwzglêdnieniem wartoœci poœrednich (wszystkich sk³adowych oceny ³¹cznej)
-
 \section{Porównanie wydajnoœci algorytmów}
-W celu zbadania wydajnoœci algorytmów przeprowadzono seriê testów z wykorzystaniem rozgrywek, w których obaj gracze byli sterowani komputerowo. W pary przeciwników po³¹czono algorytmy: \emph{AlfaBeta} i \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} oraz \emph{AlfaBeta} wariant {FailSafe} + \emph{TranspositionTable} i \emph{NegaScout}. Wyniki pomiarów przedstawiaj¹ nastêpuj¹ce tabele i wykresy.
+W celu zbadania wydajnoœci algorytmów przeprowadzono seriê testów z wykorzystaniem rozgrywek, w których obaj gracze byli sterowani komputerowo. W pary przeciwników po³¹czono algorytmy: \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} oraz \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout}. Wyniki pomiarów przedstawiaj¹ tabele i wykresy 1-4.
 
-\begin{table}
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=15mm 30mm 20mm 20mm, clip, width=0.9\textwidth]{ab-abfstt-3.pdf}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=15mm 30mm 20mm 20mm, clip, width=0.9\textwidth]{ab-abfstt-4.pdf}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 4}
+\end{figure}
+
+Zgodnie z przewidywaniami wprowadzenie wariantu \emph{FailSafe} + \emph{TranspositionTable} daje wyraŸne zmiejszenie iloœci przegl¹danych wierzcho³ków, a co za tym idzie poprawienie wydajnoœci. Jak pokazuj¹ dane z pomiarów, zdarzaj¹ siê przypadki, w których wariant ten wypada nieco gorzej -- wynika to z wykonywania przez niego iteracyjnego pog³êbiania, które mo¿e niezniacznie zwiêkszaæ liczbê przegl¹danych wierzcho³ków. Jest to jednak rzadkie zjawisko.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=15mm 30mm 20mm 20mm, clip, width=0.9\textwidth]{abfstt-ns-3.pdf}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=15mm 30mm 20mm 20mm, clip, width=0.9\textwidth]{abfstt-ns-4.pdf}
+\caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 4}
+\end{figure}
+
+Zgodnie z oczekiwaniami algorytm \emph{NegaScout} daje niewielki, ale stabilny zysk na iloœci przegl¹danych wierzcho³ków w stosunku do algorytmu \emph{AlfaBeta}. Œrednio wynosi on ok. 10%.
+
+\section{Wnioski, uwagi i podsumowanie}
+Szacunkowy rozmiar przestrzeni stanów wynosi $3^64$. Rozmiar grafu wynosi oko³o $64^{g³êbokoœæ}$ i nieznacznie maleje wraz z rozwojem rozgrywki. Znacz¹cy spadek rozmiaru grafu obserwuje siê dopiero na kilka ruchów przed zakoñczeniem rozgrywki, po zakoñczeniu fazy ustawiania pionków. 
+
+W³aœnie ze wzglêdu na bardzo du¿y pocz¹tkowy rozmiar grafu niemo¿liwe by³o w rozs¹dnym czasie uzyskanie g³êbokoœci przeszukiwania wiêkszej ni¿ 4, pomimo zastosowania doœæ wyszukanych algorytmów. Najlepsze efekty, zgodnie z przewidywaniami, da³ algorytm \emph{NegaScout} w po³¹czeniu z tablic¹ przejœæ. 
+
+Du¿¹ trudnoœci¹ okaza³o siê stworzenie dobrej funkcji oceny. Dobre efekty da³o zró¿nicowanie oceny w zale¿noœci od gracza wykonuj¹cego ruch. Mo¿liwe by³oby dalsze jej dopracowanie np. poprzez zastosowanie algorytmu genetycznego do wyznaczenia najlepszych wag.
+
+Koñcowy efekt jest doœæ dobry, cz³owiekowi trudno wygraæ z komputerem. W pojedynku innym programem (\emph{Zillions of Games}) nasz program z ³atwoœci¹ wygrywa je¿eli zaczyna pojedynek, je¿eli gra jako drugi czasem wygrywa, czasem przegrywa.
+
+\begin{table}[h!]
 \centering
 \begin{minipage}[t]{0.4\textwidth}
 \begin{tabular}{|r|r|r|}
@@ -183,14 +213,11 @@ Tura & AlfaBeta & AlfaBetaFSTT \\
 \hline
 \end{tabular}
 \end{minipage}
-
 \caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} i \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} przy g³êbokoœci 3 i 4}
 \end{table}
 
-
-\begin{table}
+\begin{table}[h!]
 \centering
-
 \begin{minipage}[t]{0.4\textwidth}
 \begin{tabular}{|r|r|r|}
 \hline
@@ -269,17 +296,7 @@ Tura & AlfaBetaFSTT & NegaScout \\
 \hline
 \end{tabular}
 \end{minipage}
-
 \caption{Liczba przeszukiwanych wierzcho³ków w kolejnych turach gry algorytmów \emph{AlfaBeta} wariant \emph{FailSafe} + \emph{TranspositionTable} i \emph{NegaScout} przy g³êbokoœci 3 i 4}
 \end{table}
-
-\section{Wnioski, uwagi i podsumowanie}
-Szacunkowy rozmiar przestrzeni stanów wynosi $3^64$. Rozmiar grafu wynosi oko³o $64^{g³êbokoœæ}$ i nieznacznie maleje wraz z rozwojem rozgrywki. Znacz¹cy spadek rozmiaru grafu obserwuje siê dopiero na kilka ruchów przed zakoñczeniem rozgrywki, po zakoñczeniu fazy ustawiania pionków. 
-
-W³aœnie ze wzglêdu na bardzo du¿y pocz¹tkowy rozmiar grafu niemo¿liwe by³o w rozs¹dnym czasie uzyskanie g³êbokoœci przeszukiwania wiêkszej ni¿ 4, pomimo zastosowania doœæ wyszukanych algorytmów. Najlepsze efekty, zgodnie z przewidywaniami, da³ algorytm \emph{NegaScout} w po³¹czeniu z tablic¹ przejœæ. 
-
-Du¿¹ trudnoœci¹ okaza³o siê stworzenie dobrej funkcji oceny. Dobre efekty da³o zró¿nicowanie oceny w zale¿noœci od gracza wykonuj¹cego ruch. Mo¿liwe by³oby dalsze jej dopracowanie np. poprzez zastosowanie algorytmu genetycznego do wyznaczenia najlepszych wag.
-
-Koñcowy efekt jest doœæ dobry, cz³owiekowi trudno wygraæ z komputerem. W pojedynku innym programem (\emph{Zillions of Games}) nasz program z ³atwoœci¹ wygrywa je¿eli zaczyna pojedynek, je¿eli gra jako drugi czasem wygrywa, czasem przegrywa.
 
 \end{document}
