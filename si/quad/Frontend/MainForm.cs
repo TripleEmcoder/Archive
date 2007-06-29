@@ -51,6 +51,7 @@ namespace Quad.Frontend
             boardControl.Enabled = human;
             moveListBox.Enabled = human;
             transistionListBox.Enabled = human;
+            hintButton.Enabled = human && moveListBox.Items.Count > 0;
             backButton.Enabled = human && transistionListBox.Items.Count > 0;
         }
 
@@ -227,7 +228,7 @@ namespace Quad.Frontend
                 PerformMove(((Result)e.Result).Move);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void hintButton_Click(object sender, EventArgs e)
         {
             Result candidate = BackendHelper.Algorithms[0].Run(
                 BackendHelper.Evaluators[0], board, player, 2);
