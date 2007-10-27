@@ -17,8 +17,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)$(ProjectName)\bin\$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)$(ProjectName)\obj\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -59,9 +59,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libgadu.lib ws2_32.lib"
+				AdditionalDependencies="ws2_32.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(OutDir)"
+				AddModuleNamesToAssembly=""
 				GenerateDebugInformation="true"
 				AssemblyDebug="1"
 				TargetMachine="1"
@@ -179,6 +180,14 @@
 		<AssemblyReference
 			RelativePath="System.XML.dll"
 			AssemblyName="System.Xml, Version=2.0.0.0, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
+		/>
+		<ProjectReference
+			ReferencedProjectIdentifier="{D535DB3A-338F-4F93-8CBC-24FA6EF47ACE}"
+			RelativePathToProject=".\libgadu\libgadu.vcproj"
+		/>
+		<AssemblyReference
+			RelativePath="..\libgadu\bin\debug\libgadu.NW.dll"
+			AssemblyName="libgadu.NW, Version=0.0.0.0, processorArchitecture=IA64"
 		/>
 	</References>
 	<Files>
