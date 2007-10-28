@@ -10,9 +10,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            using (GGSession s = new GGSession())
+            using (GGSession s = new GGSession(9444333, "alamakota"))
             {
-                s.send("test");
+                s.send(1817471, new Random().Next().ToString() + " ¹æê³ñóœ¿Ÿ");
             }            
         }
     }

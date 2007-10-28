@@ -11,9 +11,9 @@ namespace InstantMessaging
 			private:
 				gg_session* session;
 			public:
-				GGSession();
+				GGSession(int login, System::String^ password);
 				~GGSession();
-				void send(System::String^ text);
+				void send(int login, System::String^ text);
 			};
 		}
 	}
