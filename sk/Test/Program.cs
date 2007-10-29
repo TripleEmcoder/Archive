@@ -14,7 +14,6 @@ namespace Test
         static ManualResetEvent close;
         static bool closing;
         static Socket listener;
-        static List<StreamLineConnection> connections;
 
         static void Main(string[] args)
         {
@@ -28,7 +27,9 @@ namespace Test
                 {
                     listener.Bind(new IPEndPoint(IPAddress.Any, 119));
                     listener.Listen(0);//(int)listener.GetSocketOption(SocketOptionLevel.Tcp, SocketOptionName.MaxConnections));
-
+                    
+                    Console.WriteLine("Listening for connections on {0}.", listener.LocalEndPoint);
+                    
                     listener.BeginAccept(new AsyncCallback(OnClientConnected), null);
                     close.WaitOne();
                 }
@@ -50,7 +51,6 @@ namespace Test
             if (!closing)
             {
                 Socket connection = listener.EndAccept(result);
-                Console.WriteLine("Client connected from {0}.", connection.RemoteEndPoint);
 
                 Thread thread = new Thread(new ParameterizedThreadStart(ProcessConnection));
                 thread.Start(connection);
@@ -61,13 +61,16 @@ namespace Test
 
         static void ProcessConnection(object parameter)
         {
-            Socket connection = (Socket)parameter;
-
-            using (NetworkStream stream = new NetworkStream(connection))
-            using (StreamLineConnection _connection = new StreamLineConnection(stream))
+            using (Socket connection = (Socket)parameter)
             {
-                NntpSession session = new NntpSession(_connection);
-                _connection.Process();
+                Console.WriteLine("Serving connection from {0}.", connection.RemoteEndPoint);
+
+                using (NetworkStream stream = new NetworkStream(connection))
+                using (StreamLineConnection wrapper = new StreamLineConnection(stream))
+                using (NntpSession session = new NntpSession(wrapper))
+                    wrapper.Process();
+
+                Console.WriteLine("Connection closed.");
             }
         }
     }

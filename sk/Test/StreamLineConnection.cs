@@ -29,6 +29,10 @@ namespace Test
             while (true)
             {
                 string line = reader.ReadLine();
+
+                if (line == null)
+                    return;
+
                 Console.WriteLine("<< " + line);
                 LineReceived(this, new LineEventArgs(line));
             }

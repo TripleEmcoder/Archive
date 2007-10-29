@@ -33,8 +33,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILineCommand.cs" />
     <Compile Include="LineEventArgs.cs" />
     <Compile Include="ILineConnection.cs" />
+    <Compile Include="NntpCommandFactory.cs" />
+    <Compile Include="NntpCommandNameAttribute.cs" />
+    <Compile Include="NntpListCommand.cs" />
+    <Compile Include="NntpModeCommand.cs" />
     <Compile Include="NntpSession.cs" />
     <Compile Include="StreamLineConnection.cs" />
     <Compile Include="Program.cs" />
