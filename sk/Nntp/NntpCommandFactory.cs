@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Test
 {
-    static class NntpCommandFactory
+    internal static class NntpCommandFactory
     {
         static private char[] separators;
         static private Dictionary<string, ConstructorInfo> constructors;
@@ -38,7 +38,7 @@ namespace Test
             string[] parts = line.Split(separators, 2);
 
             string name = parts[0].ToUpper();
-            string parameters = parts.Length == 2 ? parts[1].TrimStart(separators) : null;
+            string parameters = parts.Length == 2 ? parts[1].TrimStart(separators) : "";
 
             if (!constructors.ContainsKey(name))
                 throw new NotSupportedException("Unknown command");

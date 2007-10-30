@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Test
 {
-    interface ILineConnection : IDisposable
+    public interface ILineConnection : IDisposable
     {
         void SendLine(string format, params object[] values);
         void Close();

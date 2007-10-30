@@ -4,13 +4,12 @@ using System.Text;
 
 namespace Test
 {
-    interface INntpArticle : IDisposable
+    public interface INntpArticle : IDisposable
     {
-        int Number { get; }
+        string ID { get;}
         string Subject { get; }
         string From { get;}
         string Date { get;}
-        string MessageID { get;}
         string References { get;}
         int Bytes { get;}
         int Lines { get;}

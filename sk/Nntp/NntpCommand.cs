@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Test
 {
-    abstract class NntpCommand
+    public abstract class NntpCommand
     {
         private string name;
 

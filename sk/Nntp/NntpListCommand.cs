@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("LIST")]
-    class NntpListCommand : NntpCommand
+    public class NntpListCommand : NntpCommand
     {
         public NntpListCommand(string name, string parameters)
             : base(name)

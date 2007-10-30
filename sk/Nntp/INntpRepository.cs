@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using System.Collections.ObjectModel;
+
 namespace Test
 {
-    interface INntpRepository
+    public interface INntpRepository
     {
         INntpArticle GetArticle(string id);
         INntpGroup GetGroup(string name);
-        INntpGroup[] GetGroups();
+        ReadOnlyCollection<INntpGroup> GetGroups();
     }
 }

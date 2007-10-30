@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("QUIT")]
-    class NntpQuitCommand : NntpCommand
+    public class NntpQuitCommand : NntpCommand
     {
         public NntpQuitCommand(string name, string parameters)
             : base(name)

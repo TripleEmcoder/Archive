@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("POST")]
-    class NntpPostCommand : NntpCommand
+    public class NntpPostCommand : NntpCommand
     {
         public NntpPostCommand(string name, string parameters)
             : base(name)

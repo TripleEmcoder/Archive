@@ -6,7 +6,7 @@ namespace Test
 {
     [NntpCommandName("OVER")]
     [NntpCommandName("XOVER")]
-    class NntpOverCommand : NntpCommand
+    public class NntpOverCommand : NntpCommand
     {
         private int low;
         private int high;
@@ -34,10 +34,10 @@ namespace Test
             INntpGroup group = session.Get<INntpGroup>();
             session.Connection.SendLine("224 Overview information follows (multi-line)");
 
-            foreach (INntpArticle article in group.GetArticles(low, high))
+            foreach (KeyValuePair<int, INntpArticle> pair in group.GetArticles(low, high))
                 session.Connection.SendLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",
-                        article.Number, article.Subject, article.From, article.Date,
-                        article.MessageID, article.References, article.Bytes, article.Lines);
+                        pair.Key, pair.Value.Subject, pair.Value.From, pair.Value.Date,
+                        pair.Value.ID, pair.Value.References, pair.Value.Bytes, pair.Value.Lines);
 
             session.Connection.SendLine(".");
         }

@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using System.Collections.ObjectModel;
+
 namespace Test
 {
-    interface INntpGroup : IDisposable
+    public interface INntpGroup : IDisposable
     {
         string Name { get; }
         int Count { get; }
@@ -12,6 +14,6 @@ namespace Test
         int High { get; }
 
         INntpArticle GetArticle(int number);
-        INntpArticle[] GetArticles(int low, int high);
+        ReadOnlyCollection<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high);
     }
 }

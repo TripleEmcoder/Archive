@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Test
 {
-    class NntpSession : IDisposable
+    public class NntpSession : IDisposable
     {
         private ILineConnection connection;
         private INntpRepository repository;
         private Dictionary<Type, IDisposable> context;
         private NntpCommand command;
 
-        public NntpSession(ILineConnection connection)
+        public NntpSession(ILineConnection connection, INntpRepository repository)
         {
             this.connection = connection;
+            this.repository = repository;
 
             connection.LineReceived += OnLineReceived;
             connection.SendLine("200 Service available, posting allowed");
 
-            repository = new NntpRepository();
             context = new Dictionary<Type, IDisposable>();
         }
 
@@ -43,6 +43,9 @@ namespace Test
 
         internal T Get<T>()
         {
+            if (!context.ContainsKey(typeof(T)))
+                return default(T);
+
             return (T)context[typeof(T)];
         }
 
@@ -74,6 +77,10 @@ namespace Test
             catch (ArgumentException exception)
             {
                 connection.SendLine("501 " + exception.Message);
+            }
+            catch (Exception exception)
+            {
+                connection.SendLine("403 " + exception.Message);
             }
         }
     }

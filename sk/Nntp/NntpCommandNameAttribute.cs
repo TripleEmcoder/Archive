@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-    class NntpCommandNameAttribute : Attribute
+    internal class NntpCommandNameAttribute : Attribute
     {
         private string name;
 

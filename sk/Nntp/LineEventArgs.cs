@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Test
 {
-    class LineEventArgs : EventArgs
+    public class LineEventArgs : EventArgs
     {
         private string line;
 

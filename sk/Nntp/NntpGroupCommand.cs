@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("GROUP")]
-    class NntpGroupCommand : NntpCommand
+    public class NntpGroupCommand : NntpCommand
     {
         private string _group;
 

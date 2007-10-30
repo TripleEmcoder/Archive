@@ -61,14 +61,23 @@ namespace Test
 
         static void ProcessConnection(object parameter)
         {
-            using (Socket connection = (Socket)parameter)
+            using (Socket socket = (Socket)parameter)
             {
-                Console.WriteLine("Serving connection from {0}.", connection.RemoteEndPoint);
+                Console.WriteLine("Serving connection from {0}.", socket.RemoteEndPoint);
 
-                using (NetworkStream stream = new NetworkStream(connection))
-                using (StreamLineConnection wrapper = new StreamLineConnection(stream))
-                using (NntpSession session = new NntpSession(wrapper))
-                    wrapper.Process();
+                using (NetworkStream stream = new NetworkStream(socket))
+                using (StreamLineConnection connection = new StreamLineConnection(stream))
+                {
+                    List<INntpArticle> articles = new List<INntpArticle>();
+                    articles.Add(new MemoryArticle("test1"));
+
+                    List<INntpGroup> groups = new List<INntpGroup>();
+                    groups.Add(new MemoryGroup("test", articles.AsReadOnly()));
+
+                    INntpRepository repository = new MemoryRepository(articles.AsReadOnly(), groups.AsReadOnly());
+                    using (NntpSession session = new NntpSession(connection, repository))
+                        connection.Process();
+                }
 
                 Console.WriteLine("Connection closed.");
             }

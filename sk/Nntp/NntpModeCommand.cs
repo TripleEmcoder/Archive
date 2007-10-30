@@ -5,7 +5,7 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("MODE")]
-    class NntpModeCommand : NntpCommand
+    public class NntpModeCommand : NntpCommand
     {
         public NntpModeCommand(string name, string parameters)
             :base(name)
