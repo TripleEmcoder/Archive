@@ -33,13 +33,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILineCommand.cs" />
+    <Compile Include="NntpPostCommand.cs" />
+    <Compile Include="NntpQuitCommand.cs" />
+    <Compile Include="NntpArticleCommand.cs" />
+    <Compile Include="INntpArticle.cs" />
+    <Compile Include="NntpArticle.cs" />
+    <Compile Include="NntpOverCommand.cs" />
+    <Compile Include="INntpGroup.cs" />
+    <Compile Include="INntpRepository.cs" />
+    <Compile Include="NntpCommand.cs" />
+    <Compile Include="NntpGroup.cs" />
+    <Compile Include="NntpGroupCommand.cs" />
     <Compile Include="LineEventArgs.cs" />
     <Compile Include="ILineConnection.cs" />
     <Compile Include="NntpCommandFactory.cs" />
     <Compile Include="NntpCommandNameAttribute.cs" />
     <Compile Include="NntpListCommand.cs" />
     <Compile Include="NntpModeCommand.cs" />
+    <Compile Include="NntpRepository.cs" />
     <Compile Include="NntpSession.cs" />
     <Compile Include="StreamLineConnection.cs" />
     <Compile Include="Program.cs" />

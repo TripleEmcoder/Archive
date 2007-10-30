@@ -27,24 +27,24 @@ namespace Test
                     constructors[attribute.Name] = type.GetConstructor(
                         new Type[] { typeof(string), typeof(string) });
 
-                    Debug.WriteLine(string.Format("Using {0} for {1} command.",
+                    Debug.WriteLine(string.Format("Registering {0} for {1} command.",
                         type.Name, attribute.Name));
                 }
             }
         }
 
-        public static ILineCommand Create(string line)
+        public static NntpCommand Create(string line)
         {
             string[] parts = line.Split(separators, 2);
 
-            string command = parts[0].ToUpper();
-            string parameters = parts[1].TrimStart(separators);
+            string name = parts[0].ToUpper();
+            string parameters = parts.Length == 2 ? parts[1].TrimStart(separators) : null;
 
-            if (!constructors.ContainsKey(command))
-                throw new NotSupportedException();
+            if (!constructors.ContainsKey(name))
+                throw new NotSupportedException("Unknown command");
 
-            return (ILineCommand)constructors[command].Invoke(
-                new object[] { command, parameters });
+            return (NntpCommand)constructors[name].Invoke(
+                new object[] { name, parameters });
         }
     }
 }

@@ -11,11 +11,13 @@ namespace Test
     {
         private StreamReader reader;
         private StreamWriter writer;
+        bool closing;
 
         public StreamLineConnection(Stream stream)
         {
             reader = new StreamReader(stream);
             writer = new StreamWriter(stream);
+            closing = false;
         }
 
         public void Dispose()
@@ -26,7 +28,7 @@ namespace Test
 
         public void Process()
         {
-            while (true)
+            while (!closing)
             {
                 string line = reader.ReadLine();
 
@@ -43,6 +45,16 @@ namespace Test
             Console.WriteLine(">> " + line);
             writer.WriteLine(line);
             writer.Flush();
+        }
+
+        public void SendLine(string format, params object[] values)
+        {
+            SendLine(string.Format(format, values));
+        }
+
+        public void Close()
+        {
+            closing = true;
         }
 
         public event EventHandler<LineEventArgs> LineReceived;

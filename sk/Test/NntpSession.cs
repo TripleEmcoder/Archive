@@ -6,10 +6,10 @@ namespace Test
 {
     class NntpSession : IDisposable
     {
-        static char[] separators = new char[] { ' ', '\t' };
-
         private ILineConnection connection;
-        private ILineCommand command;
+        private INntpRepository repository;
+        private Dictionary<Type, IDisposable> context;
+        private NntpCommand command;
 
         public NntpSession(ILineConnection connection)
         {
@@ -17,10 +17,33 @@ namespace Test
 
             connection.LineReceived += OnLineReceived;
             connection.SendLine("200 Service available, posting allowed");
+
+            repository = new NntpRepository();
+            context = new Dictionary<Type, IDisposable>();
         }
 
         public void Dispose()
         {
+        }
+
+        internal ILineConnection Connection
+        {
+            get { return connection; }
+        }
+
+        internal INntpRepository Repository
+        {
+            get { return repository; }
+        }
+
+        internal void Save<T>(T value) where T : IDisposable
+        {
+            context[typeof(T)] = value;
+        }
+
+        internal T Get<T>()
+        {
+            return (T)context[typeof(T)];
         }
 
         void OnLineReceived(object sender, LineEventArgs e)
@@ -39,19 +62,18 @@ namespace Test
                     command.Parse(e.Line);
                 }
 
+                command.Execute(this);
+
                 if (command.IsComplete)
-                {
-                    command.Execute(connection);
                     command = null;
-                }
             }
             catch (NotSupportedException exception)
             {
-                connection.SendLine("500 Unknown command");
+                connection.SendLine("500 " + exception.Message);
             }
             catch (ArgumentException exception)
             {
-                connection.SendLine("501 Syntax error");
+                connection.SendLine("501 " + exception.Message);
             }
         }
     }

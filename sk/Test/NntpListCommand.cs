@@ -5,27 +5,22 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("LIST")]
-    class NntpListCommand : ILineCommand
+    class NntpListCommand : NntpCommand
     {
-        public NntpListCommand(string command, string parameters)
+        public NntpListCommand(string name, string parameters)
+            : base(name)
         {
         }
 
-        public bool IsComplete
+        public override void Execute(NntpSession session)
         {
-            get { return true; }
-        }
+            session.Connection.SendLine("215 List of newsgroups follows");
 
-        public void Parse(string line)
-        {
-            throw new NotSupportedException();
-        }
+            foreach (INntpGroup group in session.Repository.GetGroups())
+                session.Connection.SendLine("{0} {1} {2} {3}",
+                    group.Name, group.High, group.Low, "y");
 
-        public void Execute(ILineConnection connection)
-        {
-            connection.SendLine("215 list of newsgroups follows");
-            connection.SendLine("projekty.sk.test");
-            connection.SendLine(".");
+            session.Connection.SendLine(".");
         }
     }
 }

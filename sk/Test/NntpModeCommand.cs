@@ -5,25 +5,16 @@ using System.Text;
 namespace Test
 {
     [NntpCommandName("MODE")]
-    class NntpModeCommand : ILineCommand
+    class NntpModeCommand : NntpCommand
     {
-        public NntpModeCommand(string command, string parameters)
+        public NntpModeCommand(string name, string parameters)
+            :base(name)
         {
         }
 
-        public bool IsComplete
+        public override void Execute(NntpSession session)
         {
-            get { return true; }
-        }
-
-        public void Parse(string line)
-        {
-            throw new NotSupportedException();
-        }
-
-        public void Execute(ILineConnection connection)
-        {
-            connection.SendLine("200 Reader mode, posting permitted");
+            session.Connection.SendLine("200 Reader mode, posting permitted");
         }
     }
 }

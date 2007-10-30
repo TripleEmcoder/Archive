@@ -6,7 +6,8 @@ namespace Test
 {
     interface ILineConnection : IDisposable
     {
-        void SendLine(string data);
+        void SendLine(string format, params object[] values);
+        void Close();
         event EventHandler<LineEventArgs> LineReceived;
     }
 }
