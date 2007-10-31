@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+namespace Nntp
 {
     [NntpCommandName("QUIT")]
     public class NntpQuitCommand : NntpCommand

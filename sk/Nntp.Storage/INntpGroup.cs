@@ -4,7 +4,7 @@ using System.Text;
 
 using System.Collections.ObjectModel;
 
-namespace Test
+namespace Nntp.Storage
 {
     public interface INntpGroup : IDisposable
     {
@@ -14,6 +14,6 @@ namespace Test
         int High { get; }
 
         INntpArticle GetArticle(int number);
-        ReadOnlyCollection<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high);
+        IEnumerable<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high);
     }
 }

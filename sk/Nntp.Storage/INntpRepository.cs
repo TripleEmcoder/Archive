@@ -4,12 +4,12 @@ using System.Text;
 
 using System.Collections.ObjectModel;
 
-namespace Test
+namespace Nntp.Storage
 {
-    public interface INntpRepository
+    public interface INntpRepository : IDisposable
     {
         INntpArticle GetArticle(string id);
         INntpGroup GetGroup(string name);
-        ReadOnlyCollection<INntpGroup> GetGroups();
+        IEnumerable<INntpGroup> GetGroups();
     }
 }

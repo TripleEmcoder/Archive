@@ -5,8 +5,9 @@ using System.Text;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace Test
+namespace Nntp
 {
+    //HEAD, STAT, HELP, CAPABILITIES
     internal static class NntpCommandFactory
     {
         static private char[] separators;

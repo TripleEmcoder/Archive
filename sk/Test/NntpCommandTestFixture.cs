@@ -5,6 +5,10 @@ using System.Text;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 
+using Nntp;
+using Nntp.Storage;
+using Nntp.Storage.Memory;
+
 namespace Test
 {
     [TestFixture]

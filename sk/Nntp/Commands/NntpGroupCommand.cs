@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+using Nntp.Storage;
+
+namespace Nntp
 {
     [NntpCommandName("GROUP")]
     public class NntpGroupCommand : NntpCommand

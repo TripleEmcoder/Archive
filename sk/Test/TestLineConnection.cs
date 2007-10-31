@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Nntp;
+
 namespace Test
 {
     public class TestLineConnection : ILineConnection

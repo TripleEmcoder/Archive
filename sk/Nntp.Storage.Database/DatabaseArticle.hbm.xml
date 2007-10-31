@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <import class="Nntp.Storage.Database.DatabaseArticle, Nntp.Storage.Database" rename="Articles" />
+  <class name="Nntp.Storage.Database.DatabaseArticle, Nntp.Storage.Database" table="`Articles`">
+    <id name="ID" column="`ID`" access="field.lowercase">
+      <generator class="native" />
+    </id>
+    <property name="MessageID" column="`MessageID`" access="field.camelcase" />
+    <property name="Subject" column="`Subject`" access="field.camelcase" />
+    <set name="Groups" table="`Postings`" access="field.camelcase">
+      <key column="`ArticleID`" />
+      <many-to-many class="Nntp.Storage.Database.DatabaseGroup, Nntp.Storage.Database" column="`ArticleID`" />
+    </set>
+  </class>
+</hibernate-mapping>

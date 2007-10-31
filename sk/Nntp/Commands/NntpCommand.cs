@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+namespace Nntp
 {
     public abstract class NntpCommand
     {
@@ -24,12 +24,12 @@ namespace Test
             return name;
         }
 
-        public bool IsComplete
+        public virtual bool IsComplete
         {
             get { return true; }
         }
 
-        public void Parse(string line)
+        public virtual void Parse(string line)
         {
             throw new NotSupportedException();
         }

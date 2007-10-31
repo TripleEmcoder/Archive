@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+using Nntp.Storage;
+
+namespace Nntp
 {
     [NntpCommandName("ARTICLE")]
     public class NntpArticleCommand : NntpCommand
@@ -83,12 +85,12 @@ namespace Test
                      break;
              }             
 
-            session.Connection.SendLine("220 0 {0}", article.ID);
+            session.Connection.SendLine("220 0 {0}", article.MessageID);
 
             session.Connection.SendLine("From: {0}", article.From);
             session.Connection.SendLine("Subject: {0}", article.Subject);
             session.Connection.SendLine("Date: {0}", article.Date);
-            session.Connection.SendLine("Message-ID: {0}", article.ID);
+            session.Connection.SendLine("Message-ID: {0}", article.MessageID);
             session.Connection.SendLine("");
 
             session.Connection.SendLine(article.Body);

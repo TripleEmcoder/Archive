@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+using Nntp.Storage;
+
+namespace Nntp
 {
     [NntpCommandName("OVER")]
     [NntpCommandName("XOVER")]
@@ -32,12 +34,16 @@ namespace Test
         public override void Execute(NntpSession session)
         {
             INntpGroup group = session.Get<INntpGroup>();
-            session.Connection.SendLine("224 Overview information follows (multi-line)");
+            
+            List<KeyValuePair<int, INntpArticle>> pairs =
+                new List<KeyValuePair<int, INntpArticle>>(group.GetArticles(low, high));
 
-            foreach (KeyValuePair<int, INntpArticle> pair in group.GetArticles(low, high))
+            session.Connection.SendLine("224 Overview information follows");
+
+            foreach (KeyValuePair<int, INntpArticle> pair in pairs)
                 session.Connection.SendLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",
                         pair.Key, pair.Value.Subject, pair.Value.From, pair.Value.Date,
-                        pair.Value.ID, pair.Value.References, pair.Value.Bytes, pair.Value.Lines);
+                        pair.Value.MessageID, pair.Value.References, pair.Value.Bytes, pair.Value.Lines);
 
             session.Connection.SendLine(".");
         }

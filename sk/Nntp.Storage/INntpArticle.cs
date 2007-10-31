@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+namespace Nntp.Storage
 {
     public interface INntpArticle : IDisposable
     {
-        string ID { get;}
+        string MessageID { get;}
         string Subject { get; }
         string From { get;}
         string Date { get;}

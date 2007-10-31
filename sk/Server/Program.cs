@@ -7,6 +7,11 @@ using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 
+using Nntp;
+using Nntp.Storage;
+using Nntp.Storage.Database;
+using Nntp.Storage.Memory;
+
 namespace Test
 {
     class Program
@@ -68,13 +73,14 @@ namespace Test
                 using (NetworkStream stream = new NetworkStream(socket))
                 using (StreamLineConnection connection = new StreamLineConnection(stream))
                 {
-                    List<INntpArticle> articles = new List<INntpArticle>();
-                    articles.Add(new MemoryArticle("test1"));
+                    //List<INntpArticle> articles = new List<INntpArticle>();
+                    //articles.Add(new MemoryArticle("test1"));
 
-                    List<INntpGroup> groups = new List<INntpGroup>();
-                    groups.Add(new MemoryGroup("test", articles.AsReadOnly()));
+                    //List<INntpGroup> groups = new List<INntpGroup>();
+                    //groups.Add(new MemoryGroup("test", articles.AsReadOnly()));
 
-                    INntpRepository repository = new MemoryRepository(articles.AsReadOnly(), groups.AsReadOnly());
+                    //INntpRepository repository = new MemoryRepository(articles.AsReadOnly(), groups.AsReadOnly());
+                    using (INntpRepository repository = new DatabaseRepository())
                     using (NntpSession session = new NntpSession(connection, repository))
                         connection.Process();
                 }

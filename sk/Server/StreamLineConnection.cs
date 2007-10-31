@@ -5,6 +5,8 @@ using System.Text;
 using System.Net.Sockets;
 using System.IO;
 
+using Nntp;
+
 namespace Test
 {
     class StreamLineConnection : ILineConnection

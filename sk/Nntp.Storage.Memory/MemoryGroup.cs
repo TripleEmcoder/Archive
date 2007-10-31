@@ -4,7 +4,7 @@ using System.Text;
 
 using System.Collections.ObjectModel;
 
-namespace Test
+namespace Nntp.Storage.Memory
 {
     public class MemoryGroup : INntpGroup
     {
@@ -18,6 +18,11 @@ namespace Test
 
             foreach (INntpArticle article in articles)
                 this.articles[articles.IndexOf(article)+1] = article;
+        }
+
+        public void Dispose()
+        {
+            throw new Exception("The method or operation is not implemented.");
         }
 
         public string Name
@@ -64,20 +69,11 @@ namespace Test
             return articles[number];
         }
 
-        public ReadOnlyCollection<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high)
+        public IEnumerable<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high)
         {
-            List<KeyValuePair<int, INntpArticle>> result = new List<KeyValuePair<int, INntpArticle>>();
-
             foreach (KeyValuePair<int, INntpArticle> pair in articles)
                 if (low <= pair.Key && pair.Key <= high)
-                    result.Add(pair);
-
-            return result.AsReadOnly();
-        }
-
-        public void Dispose()
-        {
-            throw new Exception("The method or operation is not implemented.");
+                    yield return pair;
         }
     }
 }

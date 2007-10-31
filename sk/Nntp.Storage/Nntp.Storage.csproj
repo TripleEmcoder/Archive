@@ -4,11 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0F3CEDFB-004C-44F4-8262-45D5B4E7212A}</ProjectGuid>
+    <ProjectGuid>{DF0637B3-D23B-423A-9F03-2E0C2674D42A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nntp</RootNamespace>
-    <AssemblyName>Nntp</AssemblyName>
+    <RootNamespace>Nntp.Storage</RootNamespace>
+    <AssemblyName>Nntp.Storage</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,26 +33,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\NntpArticleCommand.cs" />
-    <Compile Include="Commands\NntpCommand.cs" />
-    <Compile Include="Commands\NntpGroupCommand.cs" />
-    <Compile Include="Commands\NntpListCommand.cs" />
-    <Compile Include="Commands\NntpModeCommand.cs" />
-    <Compile Include="Commands\NntpOverCommand.cs" />
-    <Compile Include="Commands\NntpPostCommand.cs" />
-    <Compile Include="Commands\NntpQuitCommand.cs" />
-    <Compile Include="ILineConnection.cs" />
-    <Compile Include="LineEventArgs.cs" />
-    <Compile Include="NntpCommandFactory.cs" />
-    <Compile Include="NntpCommandNameAttribute.cs" />
-    <Compile Include="NntpSession.cs" />
+    <Compile Include="INntpArticle.cs" />
+    <Compile Include="INntpGroup.cs" />
+    <Compile Include="INntpRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Nntp.Storage\Nntp.Storage.csproj">
-      <Project>{DF0637B3-D23B-423A-9F03-2E0C2674D42A}</Project>
-      <Name>Nntp.Storage</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

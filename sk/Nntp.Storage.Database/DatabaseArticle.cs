@@ -2,15 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nntp.Storage.Memory
+namespace Nntp.Storage.Database
 {
-    public class MemoryArticle : INntpArticle
+    public class DatabaseArticle : DatabaseEntity, INntpArticle
     {
-        private string id;
+        private int id;
+        private string messageID;
+        private string subject;
+        private ICollection<DatabaseGroup> groups;
 
-        public MemoryArticle(string id)
+        public DatabaseArticle()
         {
-            this.id = id;    
         }
 
         public void Dispose()
@@ -18,29 +20,34 @@ namespace Nntp.Storage.Memory
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public string MessageID
+        internal virtual int ID
         {
             get { return id; }
+        }
+
+        public string MessageID
+        {
+            get { return messageID; }
         }
 
         public string Subject
         {
-            get { return id; }
+            get { return subject; }
         }
 
         public string From
         {
-            get { return id; }
+            get { return messageID; }
         }
 
         public string Date
         {
-            get { return id; }
+            get { return messageID; }
         }
 
         public string References
         {
-            get { return id; }
+            get { return messageID; }
         }
 
         public int Bytes
@@ -55,7 +62,7 @@ namespace Nntp.Storage.Memory
 
         public string Body
         {
-            get { return id; }
+            get { return messageID; }
         }
     }
 }

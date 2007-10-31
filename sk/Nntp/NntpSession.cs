@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+using Nntp.Storage;
+
+namespace Nntp
 {
     public class NntpSession : IDisposable
     {
@@ -51,13 +53,13 @@ namespace Test
 
         void OnLineReceived(object sender, LineEventArgs e)
         {
-            if (e.Line == "")
-                return;
-
             try
             {
                 if (command == null)
                 {
+                    if (e.Line == "")
+                        return;
+
                     command = NntpCommandFactory.Create(e.Line);
                 }
                 else

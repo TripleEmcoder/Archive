@@ -47,6 +47,10 @@
       <Project>{22057CD2-05A0-4235-B0F9-530CC06B3BE7}</Project>
       <Name>Nntp.Storage.Memory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Nntp.Storage\Nntp.Storage.csproj">
+      <Project>{DF0637B3-D23B-423A-9F03-2E0C2674D42A}</Project>
+      <Name>Nntp.Storage</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Nntp\Nntp.csproj">
       <Project>{0F3CEDFB-004C-44F4-8262-45D5B4E7212A}</Project>
       <Name>Nntp</Name>

@@ -4,7 +4,7 @@ using System.Text;
 
 using System.Collections.ObjectModel;
 
-namespace Test
+namespace Nntp.Storage.Memory
 {
     public class MemoryRepository : INntpRepository
     {
@@ -16,12 +16,16 @@ namespace Test
             this.articles = new Dictionary<string, INntpArticle>();
 
             foreach (INntpArticle article in articles)
-                this.articles[article.ID] = article;
+                this.articles[article.MessageID] = article;
 
             this.groups = new Dictionary<string, INntpGroup>();
 
             foreach (INntpGroup group in groups)
                 this.groups[group.Name] = group;
+        }
+
+        public void Dispose()
+        {
         }
 
         public INntpArticle GetArticle(string id)
@@ -40,9 +44,9 @@ namespace Test
             return groups[name];
         }
 
-        public ReadOnlyCollection<INntpGroup> GetGroups()
+        public IEnumerable<INntpGroup> GetGroups()
         {
-            return new List<INntpGroup>(groups.Values).AsReadOnly();
+            return groups.Values;
         }
     }
 }

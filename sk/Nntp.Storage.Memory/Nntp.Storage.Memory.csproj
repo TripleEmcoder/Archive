@@ -39,9 +39,9 @@
     <Compile Include="MemoryArticle.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nntp\Nntp.csproj">
-      <Project>{0F3CEDFB-004C-44F4-8262-45D5B4E7212A}</Project>
-      <Name>Nntp</Name>
+    <ProjectReference Include="..\Nntp.Storage\Nntp.Storage.csproj">
+      <Project>{DF0637B3-D23B-423A-9F03-2E0C2674D42A}</Project>
+      <Name>Nntp.Storage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
