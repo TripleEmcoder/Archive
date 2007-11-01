@@ -7,6 +7,8 @@ using Nntp.Storage;
 namespace Nntp
 {
     [NntpCommandName("POST")]
+    [NntpCapabilityName("VERSION 2")]
+    [NntpCapabilityName("POST")]
     public class NntpPostCommand : NntpCommand
     {
         private enum RequestState

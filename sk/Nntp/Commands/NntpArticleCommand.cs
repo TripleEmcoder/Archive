@@ -7,9 +7,14 @@ using Nntp.Storage;
 namespace Nntp
 {
     [NntpCommandName("ARTICLE")]
+    [NntpCommandName("HEAD")]
+    [NntpCommandName("BODY")]
+    [NntpCommandName("STAT")]
+    [NntpCapabilityName("VERSION 2")]
+    [NntpCapabilityName("READER")]
     public class NntpArticleCommand : NntpCommand
     {
-        private enum RequestType { ByMessageId, ByNumber, ByCurrentArticleNumber };
+        private enum RequestType { ByMessageId, ByArticleNumber, ByCurrentArticleNumber };
 
         private RequestType type;
         private int number;
@@ -29,7 +34,7 @@ namespace Nntp
             }
             else
             {
-                type = RequestType.ByNumber;
+                type = RequestType.ByArticleNumber;
                 number = int.Parse(parameters);
             }
         }
@@ -38,15 +43,15 @@ namespace Nntp
         {
             using (INntpConnection connection = session.Repository.CreateTransaction())
             {
-                INntpArticle article = null;
+                KeyValuePair<int, INntpArticle> pair = new KeyValuePair<int, INntpArticle>(0, null);
                 INntpGroup group = null;
 
                 switch (type)
                 {
                     case RequestType.ByMessageId:
-                        article = session.Repository.GetArticle(id);
+                        pair = new KeyValuePair<int, INntpArticle>(0, session.Repository.GetArticle(id));
 
-                        if (article == null)
+                        if (pair.Value == null)
                         {
                             session.Connection.SendLine("430 No article with that message-id");
                             return;
@@ -54,7 +59,7 @@ namespace Nntp
 
                         break;
 
-                    case RequestType.ByNumber:
+                    case RequestType.ByArticleNumber:
                         if (!session.Context.ContainsKey(typeof(INntpGroup)))
                         {
                             session.Connection.SendLine("412 No newsgroup selected");
@@ -62,9 +67,9 @@ namespace Nntp
                         }
 
                         group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
-                        article = group.GetArticle(number);
+                        pair = new KeyValuePair<int, INntpArticle>(number, group.GetArticle(number));
 
-                        if (article == null)
+                        if (pair.Value == null)
                         {
                             session.Connection.SendLine("423 No article with that number");
                             return;
@@ -81,24 +86,48 @@ namespace Nntp
                         }
 
                         group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
+                        int _number = (int)session.Context[typeof(INntpArticle)];
+                        pair = new KeyValuePair<int, INntpArticle>(number, group.GetArticle(_number));
 
-                         //report error when not selected
-                        article = group.GetArticle((int)session.Context[typeof(INntpArticle)]);
+                        if (pair.Value == null)
+                        {
+                            session.Connection.SendLine("420 Current article number is invalid");
+                            return;
+                        }
+
                         break;
                 }
 
-                session.Connection.SendLine("220 0 {0}", article.MessageID);
+                if (name == "ARTICLE")
+                    session.Connection.SendLine("220 {0} {1}", pair.Key, pair.Value.MessageID);
 
-                session.Connection.SendLine("{0}: <{1}>", NntpHeaderName.MessageID, article.MessageID);
-                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Subject, article.Subject);
-                session.Connection.SendLine("{0}: {1}", NntpHeaderName.From, article.From);
-                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Date, article.Date);
-                session.Connection.SendLine("{0}: {1}", NntpHeaderName.References, article.References);
-                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Newsgroups, article.Newsgroups);
-                session.Connection.SendLine("");
+                if (name == "HEAD")
+                    session.Connection.SendLine("221 {0} {1}", pair.Key, pair.Value.MessageID);
 
-                session.Connection.SendLine(article.Body);
-                session.Connection.SendLine(".");
+                if (name == "BODY")
+                    session.Connection.SendLine("222 {0} {1}", pair.Key, pair.Value.MessageID);
+
+                if (name == "STAT")
+                    session.Connection.SendLine("223 {0} {1}", pair.Key, pair.Value.MessageID);
+
+                if (name == "ARTICLE" || name == "HEAD")
+                {
+                    session.Connection.SendLine("{0}: <{1}>", NntpHeaderName.MessageID, pair.Value.MessageID);
+                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Subject, pair.Value.Subject);
+                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.From, pair.Value.From);
+                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Date, pair.Value.Date);
+                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.References, pair.Value.References);
+                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Newsgroups, pair.Value.Newsgroups);
+                }
+
+                if (name == "ARTICLE")
+                    session.Connection.SendLine("");
+
+                if (name == "ARTICLE" || name == "BODY")
+                    session.Connection.SendLine(pair.Value.Body);
+
+                if (name != "STAT")
+                    session.Connection.SendLine(".");
             }
         }
     }

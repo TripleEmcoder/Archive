@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using System.Collections.ObjectModel;
-
 namespace Nntp.Storage.Memory
 {
     public class MemoryGroup : INntpGroup
@@ -11,13 +9,15 @@ namespace Nntp.Storage.Memory
         private string name;
         private Dictionary<int, INntpArticle> articles;
 
-        public MemoryGroup(string name, ReadOnlyCollection<INntpArticle> articles)
+        public MemoryGroup(string name, IEnumerable<INntpArticle> articles)
         {
             this.name = name;
             this.articles = new Dictionary<int, INntpArticle>();
 
-            foreach (INntpArticle article in articles)
-                this.articles[articles.IndexOf(article) + 1] = article;
+            List<INntpArticle> _articles = new List<INntpArticle>(articles);
+
+            foreach (INntpArticle article in _articles)
+                this.articles[_articles.IndexOf(article) + 1] = article;
         }
 
         public void Dispose()

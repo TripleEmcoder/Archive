@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using System.Collections.ObjectModel;
-
 namespace Nntp.Storage.Memory
 {
     public class MemoryRepository : INntpRepository
@@ -11,7 +9,7 @@ namespace Nntp.Storage.Memory
         protected Dictionary<string, INntpArticle> articles;
         protected Dictionary<string, INntpGroup> groups;
 
-        public MemoryRepository(ReadOnlyCollection<INntpArticle> articles, ReadOnlyCollection<INntpGroup> groups)
+        public MemoryRepository(IEnumerable<INntpArticle> articles, IEnumerable<INntpGroup> groups)
         {
             this.articles = new Dictionary<string, INntpArticle>();
 

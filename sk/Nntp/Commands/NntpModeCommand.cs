@@ -5,6 +5,7 @@ using System.Text;
 namespace Nntp
 {
     [NntpCommandName("MODE")]
+    [NntpCapabilityName("VERSION 2")]
     public class NntpModeCommand : NntpCommand
     {
         public NntpModeCommand(string name, string parameters)

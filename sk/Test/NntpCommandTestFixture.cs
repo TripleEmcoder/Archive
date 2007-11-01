@@ -18,19 +18,21 @@ namespace Test
         protected MemoryRepository repository;
         protected NntpSession session;
 
+        protected const string existant = "test1";
+        protected const string nonexistant = "test2";
+
         [SetUp]
         public void SetUp()
         {
             connection = new TestLineConnection();
 
             List<INntpArticle> articles = new List<INntpArticle>();
-            articles.Add(new MemoryArticle("test1"));
+            articles.Add(new MemoryArticle(existant));
 
             List<INntpGroup> groups = new List<INntpGroup>();
-            groups.Add(new MemoryGroup("test", articles.AsReadOnly()));
+            groups.Add(new MemoryGroup(existant, articles));
 
-            repository = new MemoryRepository(articles.AsReadOnly(), groups.AsReadOnly());
-
+            repository = new MemoryRepository(articles, groups);
             session = new NntpSession(connection, repository);
         }
 

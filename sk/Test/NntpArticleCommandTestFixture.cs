@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 
 using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
 
 namespace Test
 {
@@ -16,14 +15,14 @@ namespace Test
         public void TestByMessageId()
         {
             connection.LineSent += AssertResponseCode(220);
-            connection.ReceiveLine("ARTICLE <test1>");
+            connection.ReceiveLine("ARTICLE <{0}>", existant);
         }
 
         [Test]
-        public void TestByMessageIdThatDoesntExist()
+        public void TestByNonexistantMessageID()
         {
             connection.LineSent += AssertResponseCode(430);
-            connection.ReceiveLine("ARTICLE <test2>");
+            connection.ReceiveLine("ARTICLE <{0}>", nonexistant);
         }
 
         #endregion
@@ -33,16 +32,16 @@ namespace Test
         [Test]
         public void TestByArticleNumber()
         {
-            connection.ReceiveLine("GROUP test");
+            connection.ReceiveLine("GROUP {0}", existant);
 
             connection.LineSent += AssertResponseCode(220);
             connection.ReceiveLine("ARTICLE 1");
         }
 
         [Test]
-        public void TestByArticleNumberThatDoesntExist()
+        public void TestByNonexistantArticleNumber()
         {
-            connection.ReceiveLine("GROUP test");
+            connection.ReceiveLine("GROUP {0}", existant);
 
             connection.LineSent += AssertResponseCode(423);
             connection.ReceiveLine("ARTICLE 2");
@@ -63,7 +62,7 @@ namespace Test
         [Test]
         public void TestByCurrentArticleNumber()
         {
-            connection.ReceiveLine("GROUP test");
+            connection.ReceiveLine("GROUP {0}", existant);
 
             connection.LineSent += AssertResponseCode(220);
             connection.ReceiveLine("ARTICLE");

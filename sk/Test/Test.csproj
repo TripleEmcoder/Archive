@@ -35,6 +35,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NntpPostCommandTestFixture.cs" />
+    <Compile Include="NntpModeCommandTestFixture.cs" />
+    <Compile Include="NntpListCommandTestFixture.cs" />
+    <Compile Include="NntpOverCommandTestFixture.cs" />
+    <Compile Include="NntpGroupCommandTestFixture.cs" />
     <Compile Include="NntpArticleCommandTestFixture.cs" />
     <Compile Include="NntpCommandTestFixture.cs" />
     <Compile Include="NntpQuitCommandTestFixture.cs" />

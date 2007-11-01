@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace Nntp
 {
-    //HEAD, STAT, HELP, CAPABILITIES
+    //HELP, CAPABILITIES
     internal static class NntpCommandFactory
     {
         static private char[] separators;
@@ -25,6 +25,9 @@ namespace Nntp
                 foreach (NntpCommandNameAttribute attribute
                     in type.GetCustomAttributes(typeof(NntpCommandNameAttribute), false))
                 {
+                    if (constructors.ContainsKey(attribute.Name))
+                        throw new Exception();
+
                     constructors[attribute.Name] = type.GetConstructor(
                         new Type[] { typeof(string), typeof(string) });
 

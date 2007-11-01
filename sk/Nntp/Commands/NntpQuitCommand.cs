@@ -5,6 +5,7 @@ using System.Text;
 namespace Nntp
 {
     [NntpCommandName("QUIT")]
+    [NntpCapabilityName("VERSION 2")]
     public class NntpQuitCommand : NntpCommand
     {
         public NntpQuitCommand(string name, string parameters)

@@ -7,6 +7,8 @@ using Nntp.Storage;
 namespace Nntp
 {
     [NntpCommandName("LIST")]
+    [NntpCapabilityName("VERSION 2")]
+    [NntpCapabilityName("LIST")]
     public class NntpListCommand : NntpCommand
     {
         public NntpListCommand(string name, string parameters)

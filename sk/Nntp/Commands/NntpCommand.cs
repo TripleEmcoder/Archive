@@ -6,17 +6,11 @@ namespace Nntp
 {
     public abstract class NntpCommand
     {
-        private string name;
+        protected string name;
 
         public NntpCommand(string name)
         {
             this.name = name;
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
         }
 	
         public override string ToString()

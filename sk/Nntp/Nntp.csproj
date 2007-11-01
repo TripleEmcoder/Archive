@@ -33,6 +33,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\NntpDateCommand.cs" />
+    <Compile Include="Commands\NntpCapabilitiesCommand.cs" />
+    <Compile Include="Commands\NntpHelpCommand.cs" />
     <Compile Include="Commands\NntpArticleCommand.cs" />
     <Compile Include="Commands\NntpCommand.cs" />
     <Compile Include="Commands\NntpGroupCommand.cs" />
@@ -41,6 +44,7 @@
     <Compile Include="Commands\NntpOverCommand.cs" />
     <Compile Include="Commands\NntpPostCommand.cs" />
     <Compile Include="Commands\NntpQuitCommand.cs" />
+    <Compile Include="NntpCapabilityNameAttribute.cs" />
     <Compile Include="ILineConnection.cs" />
     <Compile Include="LineEventArgs.cs" />
     <Compile Include="NntpCommandFactory.cs" />
