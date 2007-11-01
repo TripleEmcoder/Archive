@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using Nntp.Storage;
+
 namespace Nntp
 {
     [NntpCommandName("POST")]
@@ -89,7 +91,10 @@ namespace Nntp
 
                 case RequestState.RequestFinished:
                     session.Connection.SendLine("240 Article received OK");
-                    //store
+
+                    using (INntpTransaction transacion = session.Repository.CreateTransaction())
+                        ;//store
+
                     break;
             }
         }

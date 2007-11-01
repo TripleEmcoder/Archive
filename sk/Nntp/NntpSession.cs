@@ -10,7 +10,7 @@ namespace Nntp
     {
         private ILineConnection connection;
         private INntpRepository repository;
-        private Dictionary<Type, IDisposable> context;
+        private Dictionary<Type, object> context;
         private NntpCommand command;
 
         public NntpSession(ILineConnection connection, INntpRepository repository)
@@ -21,7 +21,7 @@ namespace Nntp
             connection.LineReceived += OnLineReceived;
             connection.SendLine("200 Service available, posting allowed");
 
-            context = new Dictionary<Type, IDisposable>();
+            context = new Dictionary<Type, object>();
         }
 
         public void Dispose()
@@ -38,17 +38,9 @@ namespace Nntp
             get { return repository; }
         }
 
-        internal void Save<T>(T value) where T : IDisposable
+        internal Dictionary<Type, object> Context
         {
-            context[typeof(T)] = value;
-        }
-
-        internal T Get<T>()
-        {
-            if (!context.ContainsKey(typeof(T)))
-                return default(T);
-
-            return (T)context[typeof(T)];
+            get { return context; }
         }
 
         void OnLineReceived(object sender, LineEventArgs e)

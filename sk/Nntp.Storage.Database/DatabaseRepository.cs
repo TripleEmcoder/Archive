@@ -22,35 +22,39 @@ namespace Nntp.Storage.Database
             factory = configuration.BuildSessionFactory();
         }
 
-        private ISession session;
+        private DatabaseTransaction transaction;
 
         public DatabaseRepository()
         {
-            session = factory.OpenSession();
         }
 
         public void Dispose()
         {
-            session.Dispose();
+        }
+
+        public INntpTransaction CreateTransaction()
+        {
+            transaction = new DatabaseTransaction(factory);
+            return transaction;
         }
 
         public INntpArticle GetArticle(string id)
         {
-            ICriteria criteria = session.CreateCriteria(typeof(INntpArticle));
+            ICriteria criteria = transaction.Session.CreateCriteria(typeof(INntpArticle));
             criteria.Add(Expression.Eq("MessageID", id));
             return criteria.UniqueResult<INntpArticle>();
         }
 
         public INntpGroup GetGroup(string name)
         {
-            ICriteria criteria = session.CreateCriteria(typeof(INntpGroup));
+            ICriteria criteria = transaction.Session.CreateCriteria(typeof(INntpGroup));
             criteria.Add(Expression.Eq("Name", name));
             return criteria.UniqueResult<INntpGroup>();
         }
 
         public IEnumerable<INntpGroup> GetGroups()
         {
-            return session.CreateQuery("from Groups").List<INntpGroup>();
+            return transaction.Session.CreateQuery("from Groups").List<INntpGroup>();
         }
     }
 }

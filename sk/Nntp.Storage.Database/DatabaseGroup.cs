@@ -16,7 +16,7 @@ namespace Nntp.Storage.Database
         private int count;
         private int low;
         private int high;
-        private ICollection<INntpArticle> articles;
+        private ICollection<DatabaseArticle> articles;
 
         public DatabaseGroup()
         {

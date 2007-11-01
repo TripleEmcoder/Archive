@@ -5,11 +5,17 @@
     <id name="ID" column="`ID`" access="field.lowercase">
       <generator class="native" />
     </id>
+    <many-to-one name="Parent" column="`ParentID`" access="field.camelcase" />
     <property name="MessageID" column="`MessageID`" access="field.camelcase" />
     <property name="Subject" column="`Subject`" access="field.camelcase" />
+    <property name="From" column="`From`" access="field.camelcase" />
+    <property name="Date" column="`Date`" access="field.camelcase" />
+    <property name="Bytes" column="`Bytes`" access="field.camelcase" />
+    <property name="Lines" column="`Lines`" access="field.camelcase" />
+    <property name="Body" column="`Body`" access="field.camelcase" />
     <set name="Groups" table="`Postings`" access="field.camelcase">
       <key column="`ArticleID`" />
-      <many-to-many class="Nntp.Storage.Database.DatabaseGroup, Nntp.Storage.Database" column="`ArticleID`" />
+      <many-to-many class="Nntp.Storage.Database.DatabaseGroup, Nntp.Storage.Database" column="`GroupID`" />
     </set>
   </class>
 </hibernate-mapping>

@@ -16,16 +16,19 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            List<INntpGroup> groups =
-                new List<INntpGroup>(session.Repository.GetGroups());
+            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            {
+                List<INntpGroup> groups =
+                    new List<INntpGroup>(session.Repository.GetGroups());
 
-            session.Connection.SendLine("215 List of newsgroups follows");
+                session.Connection.SendLine("215 List of newsgroups follows");
 
-            foreach (INntpGroup group in groups)
-                session.Connection.SendLine("{0} {1} {2} {3}",
-                    group.Name, group.High, group.Low, "y");
+                foreach (INntpGroup group in groups)
+                    session.Connection.SendLine("{0} {1} {2} {3}",
+                        group.Name, group.High, group.Low, "y");
 
-            session.Connection.SendLine(".");
+                session.Connection.SendLine(".");
+            }
         }
     }
 }

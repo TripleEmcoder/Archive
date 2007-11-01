@@ -7,8 +7,15 @@ namespace Nntp.Storage.Database
     public class DatabaseArticle : DatabaseEntity, INntpArticle
     {
         private int id;
+        private DatabaseArticle parent;
         private string messageID;
         private string subject;
+        private string from;
+        private DateTime date;
+        private int bytes;
+        private int lines;
+        private string body;
+
         private ICollection<DatabaseGroup> groups;
 
         public DatabaseArticle()
@@ -37,32 +44,32 @@ namespace Nntp.Storage.Database
 
         public string From
         {
-            get { return messageID; }
+            get { return from; }
         }
 
         public string Date
         {
-            get { return messageID; }
+            get { return date.ToString(); }
         }
 
         public string References
         {
-            get { return messageID; }
+            get { return parent.MessageID; }
         }
 
         public int Bytes
         {
-            get { return 0; }
+            get { return bytes; }
         }
 
         public int Lines
         {
-            get { return 0; }
+            get { return lines; }
         }
 
         public string Body
         {
-            get { return messageID; }
+            get { return body; }
         }
     }
 }

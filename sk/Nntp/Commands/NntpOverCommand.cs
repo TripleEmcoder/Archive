@@ -33,19 +33,29 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            INntpGroup group = session.Get<INntpGroup>();
-            
-            List<KeyValuePair<int, INntpArticle>> pairs =
-                new List<KeyValuePair<int, INntpArticle>>(group.GetArticles(low, high));
+            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            {
+                if (!session.Context.ContainsKey(typeof(INntpGroup)))
+                {
+                    session.Connection.SendLine("412 No newsgroup selected");
+                    return;
+                }
 
-            session.Connection.SendLine("224 Overview information follows");
+                INntpGroup group = session.Repository.GetGroup(
+                    (string)session.Context[typeof(INntpGroup)]);
 
-            foreach (KeyValuePair<int, INntpArticle> pair in pairs)
-                session.Connection.SendLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",
-                        pair.Key, pair.Value.Subject, pair.Value.From, pair.Value.Date,
-                        pair.Value.MessageID, pair.Value.References, pair.Value.Bytes, pair.Value.Lines);
+                List<KeyValuePair<int, INntpArticle>> pairs =
+                    new List<KeyValuePair<int, INntpArticle>>(group.GetArticles(low, high));
 
-            session.Connection.SendLine(".");
+                session.Connection.SendLine("224 Overview information follows");
+
+                foreach (KeyValuePair<int, INntpArticle> pair in pairs)
+                    session.Connection.SendLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",
+                            pair.Key, pair.Value.Subject, pair.Value.From, pair.Value.Date,
+                            pair.Value.MessageID, pair.Value.References, pair.Value.Bytes, pair.Value.Lines);
+
+                session.Connection.SendLine(".");
+            }
         }
     }
 }

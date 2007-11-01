@@ -16,7 +16,7 @@ namespace Nntp
         private string id;
 
         public NntpArticleCommand(string name, string parameters)
-            :base(name)
+            : base(name)
         {
             if (parameters == "")
             {
@@ -36,65 +36,69 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            INntpArticle article = null;
-            INntpGroup group = null;
+            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            {
+                INntpArticle article = null;
+                INntpGroup group = null;
 
-             switch (type)
-             {
-                 case RequestType.ByMessageId:
-                     article = session.Repository.GetArticle(id);
+                switch (type)
+                {
+                    case RequestType.ByMessageId:
+                        article = session.Repository.GetArticle(id);
 
-                     if (article == null)
-                     {
-                         session.Connection.SendLine("430 No article with that message-id");
-                         return;
-                     }
+                        if (article == null)
+                        {
+                            session.Connection.SendLine("430 No article with that message-id");
+                            return;
+                        }
 
-                     break;
+                        break;
 
-                 case RequestType.ByNumber:
-                     group = session.Get<INntpGroup>();
+                    case RequestType.ByNumber:
+                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
+                        {
+                            session.Connection.SendLine("412 No newsgroup selected");
+                            return;
+                        }
 
-                     if (group == null)
-                     {
-                         session.Connection.SendLine("412 No newsgroup selected");
-                         return;
-                     }
+                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
+                        article = group.GetArticle(number);
 
-                     article = group.GetArticle(number);
+                        if (article == null)
+                        {
+                            session.Connection.SendLine("423 No article with that number");
+                            return;
+                        }
 
-                     if (article == null)
-                     {
-                         session.Connection.SendLine("423 No article with that number");
-                         return;
-                     }
+                        session.Context[typeof(INntpArticle)] = number;
+                        break;
 
-                     session.Save(article);
-                     break;
+                    case RequestType.ByCurrentArticleNumber:
+                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
+                        {
+                            session.Connection.SendLine("412 No newsgroup selected");
+                            return;
+                        }
 
-                 case RequestType.ByCurrentArticleNumber:
-                     group = session.Get<INntpGroup>();
+                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
 
-                     if (group == null)
-                     {
-                         session.Connection.SendLine("412 No newsgroup selected");
-                         return;
-                     }
+                         //report error when not selected
+                        article = group.GetArticle((int)session.Context[typeof(INntpArticle)]);
+                        break;
+                }
 
-                     article = session.Get<INntpArticle>(); //report error when not selected
-                     break;
-             }             
+                session.Connection.SendLine("220 0 {0}", article.MessageID);
 
-            session.Connection.SendLine("220 0 {0}", article.MessageID);
+                session.Connection.SendLine("From: {0}", article.From);
+                session.Connection.SendLine("Subject: {0}", article.Subject);
+                session.Connection.SendLine("Date: {0}", article.Date);
+                session.Connection.SendLine("Message-ID: {0}", article.MessageID);
+                session.Connection.SendLine("References: {0}", article.References);
+                session.Connection.SendLine("");
 
-            session.Connection.SendLine("From: {0}", article.From);
-            session.Connection.SendLine("Subject: {0}", article.Subject);
-            session.Connection.SendLine("Date: {0}", article.Date);
-            session.Connection.SendLine("Message-ID: {0}", article.MessageID);
-            session.Connection.SendLine("");
-
-            session.Connection.SendLine(article.Body);
-            session.Connection.SendLine(".");
+                session.Connection.SendLine(article.Body);
+                session.Connection.SendLine(".");
+            }
         }
     }
 }

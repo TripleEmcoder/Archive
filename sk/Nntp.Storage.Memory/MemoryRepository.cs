@@ -28,6 +28,11 @@ namespace Nntp.Storage.Memory
         {
         }
 
+        public INntpTransaction CreateTransaction()
+        {
+            return new MemoryTransaction();
+        }
+
         public INntpArticle GetArticle(string id)
         {
             if (!articles.ContainsKey(id))

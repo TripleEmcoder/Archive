@@ -19,11 +19,14 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            INntpGroup group = session.Repository.GetGroup(_group);
-            session.Save(group);
+            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            {
+                INntpGroup group = session.Repository.GetGroup(_group);
+                session.Context[typeof(INntpGroup)] = _group;
 
-            session.Connection.SendLine("211 {0} {1} {2} {3}",
-                group.Count, group.Low, group.High, group.Name);
+                session.Connection.SendLine("211 {0} {1} {2} {3}",
+                    group.Count, group.Low, group.High, group.Name);
+            }
         }
     }
 }

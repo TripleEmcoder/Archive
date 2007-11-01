@@ -10,9 +10,10 @@ namespace Nntp.Storage
         string Subject { get; }
         string From { get;}
         string Date { get;}
-        string References { get;}
+        string References { get; }
         int Bytes { get;}
         int Lines { get;}
+        //string Newsgroups { get; }
         string Body { get; }
     }
 }
