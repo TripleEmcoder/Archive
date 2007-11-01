@@ -6,11 +6,11 @@ using NHibernate;
 
 namespace Nntp.Storage.Database
 {
-    public class DatabaseTransaction : INntpTransaction
+    public class DatabaseConnection : INntpConnection
     {
         private ISession session;
 
-        public DatabaseTransaction(ISessionFactory factory)
+        public DatabaseConnection(ISessionFactory factory)
         {
             session = factory.OpenSession();
         }
@@ -24,6 +24,5 @@ namespace Nntp.Storage.Database
         {
             get { return session; }
         }
-
     }
 }

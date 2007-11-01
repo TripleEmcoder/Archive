@@ -85,16 +85,26 @@ namespace Nntp
             switch (state)
             {
                 case RequestState.StartingRequest:
-                    session.Connection.SendLine("340 Send article to be posted");
                     state = RequestState.ReceivingHeaders;
+                    session.Connection.SendLine("340 Send article to be posted");
                     break;
 
                 case RequestState.RequestFinished:
+                    using (INntpConnection connection = session.Repository.CreateTransaction())
+                    {
+                        INntpArticle article = session.Repository.CreateArticle();
+
+                        article.Subject = headers[NntpHeaderName.Subject];
+                        article.From = headers[NntpHeaderName.From];
+                        article.Date = headers[NntpHeaderName.Date];
+                        article.Newsgroups = headers[NntpHeaderName.Newsgroups];
+
+                        article.Body = body.ToString();
+
+                        session.Repository.PostArticle(article);
+                    }
+
                     session.Connection.SendLine("240 Article received OK");
-
-                    using (INntpTransaction transacion = session.Repository.CreateTransaction())
-                        ;//store
-
                     break;
             }
         }

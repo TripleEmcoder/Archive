@@ -11,24 +11,24 @@ namespace Nntp.Storage.Database
     {
         protected ISession session;
 
-        public void OnLoad(ISession session, object id)
+        public virtual void OnLoad(ISession session, object id)
         {
             this.session = session;
         }
 
-        public LifecycleVeto OnSave(ISession session)
-        {
-            this.session = session;
-            return LifecycleVeto.NoVeto;
-        }
-
-        public LifecycleVeto OnUpdate(ISession session)
+        public virtual LifecycleVeto OnSave(ISession session)
         {
             this.session = session;
             return LifecycleVeto.NoVeto;
         }
 
-        public LifecycleVeto OnDelete(ISession session)
+        public virtual LifecycleVeto OnUpdate(ISession session)
+        {
+            this.session = session;
+            return LifecycleVeto.NoVeto;
+        }
+
+        public virtual LifecycleVeto OnDelete(ISession session)
         {
             this.session = session;
             return LifecycleVeto.NoVeto;

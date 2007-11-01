@@ -34,9 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="INntpArticle.cs" />
+    <Compile Include="INntpConnection.cs" />
     <Compile Include="INntpGroup.cs" />
     <Compile Include="INntpRepository.cs" />
-    <Compile Include="INntpTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

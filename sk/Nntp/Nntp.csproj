@@ -45,6 +45,7 @@
     <Compile Include="LineEventArgs.cs" />
     <Compile Include="NntpCommandFactory.cs" />
     <Compile Include="NntpCommandNameAttribute.cs" />
+    <Compile Include="NntpHeaderName.cs" />
     <Compile Include="NntpSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

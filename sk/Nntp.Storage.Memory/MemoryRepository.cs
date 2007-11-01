@@ -28,9 +28,9 @@ namespace Nntp.Storage.Memory
         {
         }
 
-        public INntpTransaction CreateTransaction()
+        public INntpConnection CreateTransaction()
         {
-            return new MemoryTransaction();
+            return new MemoryConnection();
         }
 
         public INntpArticle GetArticle(string id)
@@ -52,6 +52,16 @@ namespace Nntp.Storage.Memory
         public IEnumerable<INntpGroup> GetGroups()
         {
             return groups.Values;
+        }
+
+        public INntpArticle CreateArticle()
+        {
+            return new MemoryArticle(new Random().Next().ToString());
+        }
+
+        public void PostArticle(INntpArticle article)
+        {
+            throw new Exception("The method or operation is not implemented.");
         }
     }
 }

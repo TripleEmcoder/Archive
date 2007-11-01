@@ -7,13 +7,13 @@ namespace Nntp.Storage
     public interface INntpArticle : IDisposable
     {
         string MessageID { get;}
-        string Subject { get; }
-        string From { get;}
-        string Date { get;}
-        string References { get; }
-        int Bytes { get;}
-        int Lines { get;}
-        //string Newsgroups { get; }
-        string Body { get; }
+        string Subject { get; set; }
+        string From { get; set; }
+        string Date { get; set; }
+        string References { get; set; }
+        int Bytes { get; }
+        int Lines { get; }
+        string Newsgroups { get; set;}
+        string Body { get; set; }
     }
 }

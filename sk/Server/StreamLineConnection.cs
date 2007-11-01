@@ -30,15 +30,23 @@ namespace Test
 
         public void Process()
         {
-            while (!closing)
+            try
             {
-                string line = reader.ReadLine();
+                while (!closing)
+                {
+                    string line = reader.ReadLine();
 
-                if (line == null)
-                    return;
+                    if (line == null)
+                        return;
 
-                Console.WriteLine("<< " + line);
-                LineReceived(this, new LineEventArgs(line));
+                    Console.WriteLine("<< " + line);
+                    LineReceived(this, new LineEventArgs(line));
+                }
+            }
+            catch (IOException exception)
+            {
+                Console.WriteLine("!! " + exception.Message);
+                return;
             }
         }
 

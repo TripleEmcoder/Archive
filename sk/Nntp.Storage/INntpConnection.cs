@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nntp.Storage
 {
-    public interface INntpTransaction : IDisposable
+    public interface INntpConnection : IDisposable
     {
     }
 }

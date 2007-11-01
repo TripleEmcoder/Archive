@@ -16,7 +16,7 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateTransaction())
             {
                 List<INntpGroup> groups =
                     new List<INntpGroup>(session.Repository.GetGroups());

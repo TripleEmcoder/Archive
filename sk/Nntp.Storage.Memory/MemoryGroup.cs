@@ -17,7 +17,7 @@ namespace Nntp.Storage.Memory
             this.articles = new Dictionary<int, INntpArticle>();
 
             foreach (INntpArticle article in articles)
-                this.articles[articles.IndexOf(article)+1] = article;
+                this.articles[articles.IndexOf(article) + 1] = article;
         }
 
         public void Dispose()

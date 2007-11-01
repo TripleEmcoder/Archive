@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Nntp.Storage.Memory
 {
-    public class MemoryTransaction : INntpTransaction
+    public class MemoryConnection : INntpConnection
     {
-        public MemoryTransaction()
+        public MemoryConnection()
         {
         }
 

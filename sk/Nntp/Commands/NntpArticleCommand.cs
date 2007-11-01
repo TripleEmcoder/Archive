@@ -36,7 +36,7 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateTransaction())
             {
                 INntpArticle article = null;
                 INntpGroup group = null;
@@ -89,11 +89,12 @@ namespace Nntp
 
                 session.Connection.SendLine("220 0 {0}", article.MessageID);
 
-                session.Connection.SendLine("From: {0}", article.From);
-                session.Connection.SendLine("Subject: {0}", article.Subject);
-                session.Connection.SendLine("Date: {0}", article.Date);
-                session.Connection.SendLine("Message-ID: {0}", article.MessageID);
-                session.Connection.SendLine("References: {0}", article.References);
+                session.Connection.SendLine("{0}: <{1}>", NntpHeaderName.MessageID, article.MessageID);
+                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Subject, article.Subject);
+                session.Connection.SendLine("{0}: {1}", NntpHeaderName.From, article.From);
+                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Date, article.Date);
+                session.Connection.SendLine("{0}: {1}", NntpHeaderName.References, article.References);
+                session.Connection.SendLine("{0}: {1}", NntpHeaderName.Newsgroups, article.Newsgroups);
                 session.Connection.SendLine("");
 
                 session.Connection.SendLine(article.Body);

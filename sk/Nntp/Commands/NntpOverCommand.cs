@@ -33,7 +33,7 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            using (INntpTransaction transacion = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateTransaction())
             {
                 if (!session.Context.ContainsKey(typeof(INntpGroup)))
                 {

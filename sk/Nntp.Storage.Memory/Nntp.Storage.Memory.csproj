@@ -33,9 +33,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemoryConnection.cs" />
     <Compile Include="MemoryGroup.cs" />
     <Compile Include="MemoryRepository.cs" />
-    <Compile Include="MemoryTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MemoryArticle.cs" />
   </ItemGroup>

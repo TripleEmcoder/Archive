@@ -26,21 +26,25 @@ namespace Nntp.Storage.Memory
         public string Subject
         {
             get { return id; }
+            set { }
         }
 
         public string From
         {
             get { return id; }
+            set { }
         }
 
         public string Date
         {
             get { return id; }
+            set { }
         }
 
         public string References
         {
             get { return id; }
+            set { }
         }
 
         public int Bytes
@@ -53,9 +57,16 @@ namespace Nntp.Storage.Memory
             get { return 0; }
         }
 
+        public string Newsgroups
+        {
+            get { return ""; }
+            set { }
+        }
+
         public string Body
         {
             get { return id; }
+            set { }
         }
     }
 }

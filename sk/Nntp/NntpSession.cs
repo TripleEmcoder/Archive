@@ -67,14 +67,17 @@ namespace Nntp
             catch (NotSupportedException exception)
             {
                 connection.SendLine("500 " + exception.Message);
+                command = null;
             }
             catch (ArgumentException exception)
             {
                 connection.SendLine("501 " + exception.Message);
+                command = null;
             }
             catch (Exception exception)
             {
                 connection.SendLine("403 " + exception.Message);
+                command = null;
             }
         }
     }

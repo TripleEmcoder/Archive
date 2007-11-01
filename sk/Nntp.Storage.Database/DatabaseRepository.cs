@@ -22,7 +22,8 @@ namespace Nntp.Storage.Database
             factory = configuration.BuildSessionFactory();
         }
 
-        private DatabaseTransaction transaction;
+        private DatabaseConnection connection;
+        private ITransaction transaction;
 
         public DatabaseRepository()
         {
@@ -32,29 +33,43 @@ namespace Nntp.Storage.Database
         {
         }
 
-        public INntpTransaction CreateTransaction()
+        public INntpConnection CreateTransaction()
         {
-            transaction = new DatabaseTransaction(factory);
-            return transaction;
+            connection = new DatabaseConnection(factory);
+            return connection;
         }
 
         public INntpArticle GetArticle(string id)
         {
-            ICriteria criteria = transaction.Session.CreateCriteria(typeof(INntpArticle));
+            ICriteria criteria = connection.Session.CreateCriteria(typeof(INntpArticle));
             criteria.Add(Expression.Eq("MessageID", id));
             return criteria.UniqueResult<INntpArticle>();
         }
 
         public INntpGroup GetGroup(string name)
         {
-            ICriteria criteria = transaction.Session.CreateCriteria(typeof(INntpGroup));
+            ICriteria criteria = connection.Session.CreateCriteria(typeof(INntpGroup));
             criteria.Add(Expression.Eq("Name", name));
             return criteria.UniqueResult<INntpGroup>();
         }
 
         public IEnumerable<INntpGroup> GetGroups()
         {
-            return transaction.Session.CreateQuery("from Groups").List<INntpGroup>();
+            return connection.Session.CreateQuery("from Groups").List<INntpGroup>();
+        }
+
+        public INntpArticle CreateArticle()
+        {
+            transaction = connection.Session.BeginTransaction();
+            DatabaseArticle article = new DatabaseArticle();
+            connection.Session.Save(article);
+            return article;
+        }
+
+        public void PostArticle(INntpArticle article)
+        {
+            connection.Session.Save(article);
+            transaction.Commit();
         }
     }
 }

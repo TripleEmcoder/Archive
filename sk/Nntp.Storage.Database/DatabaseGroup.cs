@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using System.Collections.ObjectModel;
+using Iesi.Collections.Generic;
 
 using NHibernate;
 using NHibernate.Expression;
@@ -16,10 +16,12 @@ namespace Nntp.Storage.Database
         private int count;
         private int low;
         private int high;
+
         private ICollection<DatabaseArticle> articles;
 
         public DatabaseGroup()
         {
+            articles = new HashedSet<DatabaseArticle>();
         }
 
         public void Dispose()
@@ -51,6 +53,11 @@ namespace Nntp.Storage.Database
         public int High
         {
             get { return high; }
+        }
+
+        internal virtual ICollection<DatabaseArticle> Articles
+        {
+            get { return articles; }
         }
 
         public INntpArticle GetArticle(int number)
