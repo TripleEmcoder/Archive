@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
   <import class="Nntp.Storage.Database.DatabaseArticle, Nntp.Storage.Database" rename="Articles" />
-  <class name="Nntp.Storage.Database.DatabaseArticle, Nntp.Storage.Database" table="`Articles`">
+  <class name="Nntp.Storage.Database.DatabaseArticle, Nntp.Storage.Database" table="`Articles`" lazy="false">
     <id name="ID" column="`ID`" access="field.lowercase">
       <generator class="native" />
     </id>

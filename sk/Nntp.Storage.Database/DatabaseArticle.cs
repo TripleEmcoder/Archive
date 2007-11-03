@@ -78,10 +78,6 @@ namespace Nntp.Storage.Database
             {
                 if (parent != null)
                 {
-                    int id = parent.ID;
-                    session.Evict(parent);
-                    parent = session.Get<DatabaseArticle>(id);
-                    
                     string result = parent.messageID;
 
                     if (((INntpArticle)parent).References != "")
