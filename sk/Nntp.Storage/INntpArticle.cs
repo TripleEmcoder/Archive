@@ -14,6 +14,7 @@ namespace Nntp.Storage
         int Bytes { get; }
         int Lines { get; }
         string Newsgroups { get; set;}
+        IDictionary<string, string> Headers { get; }
         string Body { get; set; }
     }
 }

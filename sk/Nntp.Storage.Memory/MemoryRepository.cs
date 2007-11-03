@@ -26,12 +26,12 @@ namespace Nntp.Storage.Memory
         {
         }
 
-        public INntpConnection CreateTransaction()
+        INntpConnection INntpRepository.CreateTransaction()
         {
             return new MemoryConnection();
         }
 
-        public INntpArticle GetArticle(string id)
+        INntpArticle INntpRepository.GetArticle(string id)
         {
             if (!articles.ContainsKey(id))
                 return null;
@@ -39,7 +39,7 @@ namespace Nntp.Storage.Memory
             return articles[id];
         }
 
-        public INntpGroup GetGroup(string name)
+        INntpGroup INntpRepository.GetGroup(string name)
         {
             if (!groups.ContainsKey(name))
                 return null;
@@ -47,17 +47,17 @@ namespace Nntp.Storage.Memory
             return groups[name];
         }
 
-        public IEnumerable<INntpGroup> GetGroups()
+        IEnumerable<INntpGroup> INntpRepository.GetGroups()
         {
             return groups.Values;
         }
 
-        public INntpArticle CreateArticle()
+        INntpArticle INntpRepository.CreateArticle()
         {
             return new MemoryArticle(new Random().Next().ToString());
         }
 
-        public void PostArticle(INntpArticle article)
+        void INntpRepository.PostArticle(INntpArticle article)
         {
             throw new Exception("The method or operation is not implemented.");
         }

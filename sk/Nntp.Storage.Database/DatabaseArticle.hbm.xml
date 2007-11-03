@@ -12,10 +12,18 @@
     <property name="Date" column="`Date`" access="field.camelcase" />
     <property name="Bytes" column="`Bytes`" access="field.camelcase" />
     <property name="Lines" column="`Lines`" access="field.camelcase" />
-    <property name="Body" column="`Body`" access="field.camelcase" />
-    <set name="Groups" table="`Postings`" access="field.camelcase">
+    <set name="Groups" table="`Postings`" access="field.camelcase" cascade="all">
       <key column="`ArticleID`" />
       <many-to-many class="Nntp.Storage.Database.DatabaseGroup, Nntp.Storage.Database" column="`GroupID`" />
+    </set>
+    <map name="Headers" table="`ArticleHeaders`" access="field.camelcase" cascade="all">
+      <key column="`ArticleID`"/>
+      <index column="`Name`" type="String" />
+      <element column="`Value`" type="String" />
+    </map>
+    <set name="Bodies" table="`ArticleBodies`" access="field.camelcase" cascade="all">
+      <key column="`ArticleID`" />
+      <element column="`Value`" type="String" />
     </set>
   </class>
 </hibernate-mapping>

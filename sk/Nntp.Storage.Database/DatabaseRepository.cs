@@ -33,32 +33,33 @@ namespace Nntp.Storage.Database
         {
         }
 
-        public INntpConnection CreateTransaction()
+        INntpConnection INntpRepository.CreateTransaction()
         {
             connection = new DatabaseConnection(factory);
             return connection;
         }
 
-        public INntpArticle GetArticle(string id)
+        INntpArticle INntpRepository.GetArticle(string id)
         {
             ICriteria criteria = connection.Session.CreateCriteria(typeof(INntpArticle));
             criteria.Add(Expression.Eq("MessageID", id));
             return criteria.UniqueResult<INntpArticle>();
         }
 
-        public INntpGroup GetGroup(string name)
+        INntpGroup INntpRepository.GetGroup(string name)
         {
             ICriteria criteria = connection.Session.CreateCriteria(typeof(INntpGroup));
             criteria.Add(Expression.Eq("Name", name));
             return criteria.UniqueResult<INntpGroup>();
         }
 
-        public IEnumerable<INntpGroup> GetGroups()
+        IEnumerable<INntpGroup> INntpRepository.GetGroups()
         {
-            return connection.Session.CreateQuery("from Groups").List<INntpGroup>();
+            ICriteria criteria = connection.Session.CreateCriteria(typeof(INntpGroup));
+            return criteria.List<INntpGroup>();
         }
 
-        public INntpArticle CreateArticle()
+        INntpArticle INntpRepository.CreateArticle()
         {
             transaction = connection.Session.BeginTransaction();
             DatabaseArticle article = new DatabaseArticle();
@@ -66,7 +67,7 @@ namespace Nntp.Storage.Database
             return article;
         }
 
-        public void PostArticle(INntpArticle article)
+        void INntpRepository.PostArticle(INntpArticle article)
         {
             connection.Session.Save(article);
             transaction.Commit();

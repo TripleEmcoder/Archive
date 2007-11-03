@@ -118,6 +118,9 @@ namespace Nntp
                     session.Connection.SendLine("{0}: {1}", NntpHeaderName.Date, pair.Value.Date);
                     session.Connection.SendLine("{0}: {1}", NntpHeaderName.References, pair.Value.References);
                     session.Connection.SendLine("{0}: {1}", NntpHeaderName.Newsgroups, pair.Value.Newsgroups);
+
+                    foreach (KeyValuePair<string, string> header in pair.Value.Headers)
+                        session.Connection.SendLine("{0}: {1}", header.Key, header.Value);
                 }
 
                 if (name == "ARTICLE")

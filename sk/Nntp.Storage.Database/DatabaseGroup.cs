@@ -34,41 +34,42 @@ namespace Nntp.Storage.Database
             get { return id; }
         }
 
-        public virtual string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Count
-        {
-            get { return count; }
-        }
-
-        public int Low
-        {
-            get { return low; }
-        }
-
-        public int High
-        {
-            get { return high; }
-        }
-
         internal virtual ICollection<DatabaseArticle> Articles
         {
             get { return articles; }
         }
 
-        public INntpArticle GetArticle(int number)
+        string INntpGroup.Name
         {
-            foreach (KeyValuePair<int, INntpArticle> pair in GetArticles(number, number))
-                return pair.Value;
-
-            return null;
+            get { return name; }
         }
 
-        public IEnumerable<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high)
+        int INntpGroup.Count
+        {
+            get { return count; }
+        }
+
+        int INntpGroup.Low
+        {
+            get { return low; }
+        }
+
+        int INntpGroup.High
+        {
+            get { return high; }
+        }
+
+        INntpArticle INntpGroup.GetArticle(int number)
+        {
+            IQuery query = session.CreateFilter(articles,
+                "WHERE this.ID = :id");
+
+            query.SetInt32("id", number);
+            
+            return query.UniqueResult<INntpArticle>();
+        }
+
+        IEnumerable<KeyValuePair<int, INntpArticle>> INntpGroup.GetArticles(int low, int high)
         {
             IQuery query = session.CreateFilter(articles,
                 "WHERE :low <= this.ID AND this.ID <= :high");

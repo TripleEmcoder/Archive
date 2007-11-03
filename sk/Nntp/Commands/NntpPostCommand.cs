@@ -54,9 +54,9 @@ namespace Nntp
                         return;
                     }
 
-                    if (line.StartsWith(" "))
+                    if (line.StartsWith(" ") || line.StartsWith("\t"))
                     {
-                        headers[header] += line;
+                        headers[header] += " " + line.Substring(1);
                     }
                     else
                     {
@@ -96,11 +96,8 @@ namespace Nntp
                     {
                         INntpArticle article = session.Repository.CreateArticle();
 
-                        article.Subject = headers[NntpHeaderName.Subject];
-                        article.From = headers[NntpHeaderName.From];
-                        article.Date = headers[NntpHeaderName.Date];
-                        article.Newsgroups = headers[NntpHeaderName.Newsgroups];
-
+                        SetOverviewHeaders(article);
+                        SetOtherHeaders(article);
                         article.Body = body.ToString();
 
                         session.Repository.PostArticle(article);
@@ -109,6 +106,28 @@ namespace Nntp
                     session.Connection.SendLine("240 Article received OK");
                     break;
             }
+        }
+
+        private void SetOverviewHeaders(INntpArticle article)
+        {
+            article.Subject = headers[NntpHeaderName.Subject];
+            article.From = headers[NntpHeaderName.From];
+            article.Date = headers[NntpHeaderName.Date];
+            article.Newsgroups = headers[NntpHeaderName.Newsgroups];
+        }
+
+        private void SetOtherHeaders(INntpArticle article)
+        {
+            Dictionary<string, string> headers
+                = new Dictionary<string, string>(this.headers);
+
+            headers.Remove(NntpHeaderName.Subject);
+            headers.Remove(NntpHeaderName.From);
+            headers.Remove(NntpHeaderName.Date);
+            headers.Remove(NntpHeaderName.Newsgroups);
+
+            foreach (KeyValuePair<string, string> header in headers)
+                article.Headers[header.Key] = header.Value;
         }
     }
 }

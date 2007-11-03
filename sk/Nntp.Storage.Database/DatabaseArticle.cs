@@ -20,13 +20,16 @@ namespace Nntp.Storage.Database
         private DateTime date;
         private int bytes;
         private int lines;
-        private string body;
-
+        
         private ICollection<DatabaseGroup> groups;
+        private IDictionary<string, string> headers;
+        private ICollection<string> bodies;
 
         public DatabaseArticle()
         {
             groups = new HashedSet<DatabaseGroup>();
+            headers = new Dictionary<string, string>();
+            bodies = new HashedSet<string>();
         }
 
         public void Dispose()
@@ -34,48 +37,16 @@ namespace Nntp.Storage.Database
             throw new Exception("The method or operation is not implemented.");
         }
 
+        public override LifecycleVeto OnSave(ISession session)
+        {
+            messageID = Guid.NewGuid().ToString();
+            date = DateTime.Now;
+            return base.OnSave(session);
+        }        
+
         internal virtual int ID
         {
             get { return id; }
-        }
-
-        public string MessageID
-        {
-            get { return messageID; }
-        }
-
-        public string Subject
-        {
-            get { return subject; }
-            set { subject = value; }
-        }
-
-        public string From
-        {
-            get { return from; }
-            set { from = value; }
-        }
-
-        public string Date
-        {
-            get { return date.ToString(); }
-            set { date = DateTime.Parse(value); }
-        }
-
-        public string References
-        {
-            get { return parent == null ? "" : "Xref: " + parent.ID; }
-            set { }
-        }
-
-        public int Bytes
-        {
-            get { return bytes; }
-        }
-
-        public int Lines
-        {
-            get { return lines; }
         }
 
         internal virtual ICollection<DatabaseGroup> Groups
@@ -83,13 +54,53 @@ namespace Nntp.Storage.Database
             get { return groups; }
         }
 
-        public string Newsgroups
+
+        string INntpArticle.MessageID
+        {
+            get { return messageID; }
+        }
+
+        string INntpArticle.Subject
+        {
+            get { return subject; }
+            set { subject = value; }
+        }
+
+        string INntpArticle.From
+        {
+            get { return from; }
+            set { from = value; }
+        }
+
+        string INntpArticle.Date
+        {
+            get { return date.ToString(); }
+            set { date = DateTime.Parse(value); }
+        }
+
+        string INntpArticle.References
+        {
+            get { return parent == null ? "" : "Xref: " + parent.ID; }
+            set { }
+        }
+
+        int INntpArticle.Bytes
+        {
+            get { return bytes; }
+        }
+
+        int INntpArticle.Lines
+        {
+            get { return lines; }
+        }
+
+        string INntpArticle.Newsgroups
         {
             get
             {
                 StringBuilder result = new StringBuilder();
 
-                foreach (DatabaseGroup group in groups)
+                foreach (INntpGroup group in groups)
                     result.AppendFormat("{0},", group.Name);
 
                 result.Length = result.Length - 1;
@@ -111,25 +122,33 @@ namespace Nntp.Storage.Database
             }
         }
 
-        public string Body
+        IDictionary<string, string> INntpArticle.Headers
         {
-            get { return body; }
-            set
-            {
-                body = value;
-                bytes = body.Length;
-                lines = -1;
-
-                for (int index = 0; index != -1; index = body.IndexOf("\0xD\0xA", index))
-                    lines++;
-            }
+            get { return headers; }
         }
 
-        public override LifecycleVeto OnSave(ISession session)
+        string INntpArticle.Body
         {
-            messageID = Guid.NewGuid().ToString();
-            date = DateTime.Now;
-            return base.OnSave(session);
+            get 
+            {
+                foreach (string body in bodies)
+                    return body;
+
+                return "";
+            }
+            set
+            {
+                bodies.Clear();
+                
+                if (value != "")
+                    bodies.Add(value);
+
+                bytes = value.Length;
+                lines = -1;
+
+                for (int index = 0; index != -1; index = value.IndexOf("\0xD\0xA", index))
+                    lines++;
+            }
         }
     }
 }

@@ -25,17 +25,17 @@ namespace Nntp.Storage.Memory
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public string Name
+        string INntpGroup.Name
         {
             get { return name; }
         }
 
-        public int Count
+        int INntpGroup.Count
         {
             get { return articles.Count; }
         }
 
-        public int Low
+        int INntpGroup.Low
         {
             get
             {
@@ -48,7 +48,7 @@ namespace Nntp.Storage.Memory
             }
         }
 
-        public int High
+        int INntpGroup.High
         {
             get
             {
@@ -61,7 +61,7 @@ namespace Nntp.Storage.Memory
             }
         }
 
-        public INntpArticle GetArticle(int number)
+        INntpArticle INntpGroup.GetArticle(int number)
         {
             if (!articles.ContainsKey(number))
                 return null;
@@ -69,7 +69,7 @@ namespace Nntp.Storage.Memory
             return articles[number];
         }
 
-        public IEnumerable<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high)
+        IEnumerable<KeyValuePair<int, INntpArticle>> INntpGroup.GetArticles(int low, int high)
         {
             foreach (KeyValuePair<int, INntpArticle> pair in articles)
                 if (low <= pair.Key && pair.Key <= high)
