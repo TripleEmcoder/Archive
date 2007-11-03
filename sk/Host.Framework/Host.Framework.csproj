@@ -4,11 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E0A2C18-F5D8-4595-8A86-917414A21C42}</ProjectGuid>
+    <ProjectGuid>{321AD263-7A5A-4CB3-8021-3FAEAB3E085A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Server</RootNamespace>
-    <AssemblyName>Server</AssemblyName>
+    <RootNamespace>Host.Framework</RootNamespace>
+    <AssemblyName>Host.Framework</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,13 +38,12 @@
     <Compile Include="StreamLineConnection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Nntp.Storage.Database\Nntp.Storage.Database.csproj">
       <Project>{EFD46A93-50A6-47D2-83BB-08DAAE0CA092}</Project>
       <Name>Nntp.Storage.Database</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Nntp.Storage.Memory\Nntp.Storage.Memory.csproj">
-      <Project>{22057CD2-05A0-4235-B0F9-530CC06B3BE7}</Project>
-      <Name>Nntp.Storage.Memory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Nntp.Storage\Nntp.Storage.csproj">
       <Project>{DF0637B3-D23B-423A-9F03-2E0C2674D42A}</Project>
@@ -54,9 +53,6 @@
       <Project>{0F3CEDFB-004C-44F4-8262-45D5B4E7212A}</Project>
       <Name>Nntp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
