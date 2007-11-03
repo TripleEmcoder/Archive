@@ -32,7 +32,7 @@ namespace Nntp
             }
         }
 
-        public NntpCapabilitiesCommand(string name, string parameters)
+        public NntpCapabilitiesCommand(string name)
             : base(name)
         {
         }

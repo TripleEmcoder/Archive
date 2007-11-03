@@ -24,7 +24,7 @@ namespace Nntp
         private StringBuilder body;
         private string header;
 
-        public NntpPostCommand(string name, string parameters)
+        public NntpPostCommand(string name)
             : base(name)
         {
             state = RequestState.StartingRequest;
@@ -114,6 +114,9 @@ namespace Nntp
             article.From = headers[NntpHeaderName.From];
             article.Date = headers[NntpHeaderName.Date];
             article.Newsgroups = headers[NntpHeaderName.Newsgroups];
+
+            if (headers.ContainsKey(NntpHeaderName.References))
+                article.References = headers[NntpHeaderName.References];
         }
 
         private void SetOtherHeaders(INntpArticle article)
@@ -125,6 +128,7 @@ namespace Nntp
             headers.Remove(NntpHeaderName.From);
             headers.Remove(NntpHeaderName.Date);
             headers.Remove(NntpHeaderName.Newsgroups);
+            headers.Remove(NntpHeaderName.References);
 
             foreach (KeyValuePair<string, string> header in headers)
                 article.Headers[header.Key] = header.Value;

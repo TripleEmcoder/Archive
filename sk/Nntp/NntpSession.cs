@@ -47,22 +47,36 @@ namespace Nntp
         {
             try
             {
+                string line = e.Line;
+
                 if (command == null)
                 {
-                    if (e.Line == "")
+                    if (line == "")
                         return;
 
-                    command = NntpCommandFactory.Create(e.Line);
+                    command = NntpCommandFactory.Create(ref line);
                 }
-                else
+
+                try
                 {
-                    command.Parse(e.Line);
+                    command.Parse(line);
+                }
+                catch (Exception exception)
+                {
+                    throw new ArgumentException("Parse error", exception);
                 }
 
-                command.Execute(this);
+                try
+                {
+                    command.Execute(this);
 
-                if (command.IsComplete)
-                    command = null;
+                    if (command.IsComplete)
+                        command = null;
+                }
+                catch (Exception exception)
+                {
+                    throw new Exception("Internal error", exception);
+                }
             }
             catch (NotSupportedException exception)
             {

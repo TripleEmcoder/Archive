@@ -19,22 +19,26 @@ namespace Nntp
         private int low;
         private int high;
 
-        public NntpOverCommand(string name, string parameters)
+        public NntpOverCommand(string name)
             : base(name)
         {
-            if (parameters == "")
+        }
+
+        public override void Parse(string line)
+        {
+            if (line == "")
             {
                 type = RequestType.ByCurrentArticleNumber;
             }
-            else if (parameters.StartsWith("<") && parameters.EndsWith(">"))
+            else if (line.StartsWith("<") && line.EndsWith(">"))
             {
                 type = RequestType.ByMessageId;
-                id = parameters.Substring(1, parameters.Length - 2);
+                id = line;//.Substring(1, parameters.Length - 2);
             }
             else
             {
                 type = RequestType.ByArticleNumberRange;
-                string[] parts = parameters.Split(new char[] { '-' }, 2);
+                string[] parts = line.Split(new char[] { '-' }, 2);
 
                 low = high = int.Parse(parts[0]);
 

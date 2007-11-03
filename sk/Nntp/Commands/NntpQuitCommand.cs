@@ -8,7 +8,7 @@ namespace Nntp
     [NntpCapabilityName("VERSION 2")]
     public class NntpQuitCommand : NntpCommand
     {
-        public NntpQuitCommand(string name, string parameters)
+        public NntpQuitCommand(string name)
             : base(name)
         {
         }

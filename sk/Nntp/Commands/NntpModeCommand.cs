@@ -8,7 +8,7 @@ namespace Nntp
     [NntpCapabilityName("VERSION 2")]
     public class NntpModeCommand : NntpCommand
     {
-        public NntpModeCommand(string name, string parameters)
+        public NntpModeCommand(string name)
             :base(name)
         {
         }

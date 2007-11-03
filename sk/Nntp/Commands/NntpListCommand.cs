@@ -11,7 +11,7 @@ namespace Nntp
     [NntpCapabilityName("LIST")]
     public class NntpListCommand : NntpCommand
     {
-        public NntpListCommand(string name, string parameters)
+        public NntpListCommand(string name)
             : base(name)
         {
         }

@@ -20,7 +20,7 @@ namespace Nntp.Storage.Database
         private DateTime date;
         private int bytes;
         private int lines;
-        
+
         private ICollection<DatabaseGroup> groups;
         private IDictionary<string, string> headers;
         private ICollection<string> bodies;
@@ -39,21 +39,15 @@ namespace Nntp.Storage.Database
 
         public override LifecycleVeto OnSave(ISession session)
         {
-            messageID = Guid.NewGuid().ToString();
+            messageID = "<" + Guid.NewGuid().ToString() + ">";
             date = DateTime.Now;
             return base.OnSave(session);
-        }        
+        }
 
-        internal virtual int ID
+        public virtual int ID
         {
             get { return id; }
         }
-
-        internal virtual ICollection<DatabaseGroup> Groups
-        {
-            get { return groups; }
-        }
-
 
         string INntpArticle.MessageID
         {
@@ -80,8 +74,42 @@ namespace Nntp.Storage.Database
 
         string INntpArticle.References
         {
-            get { return parent == null ? "" : "Xref: " + parent.ID; }
-            set { }
+            get
+            {
+                if (parent != null)
+                {
+                    int id = parent.ID;
+                    session.Evict(parent);
+                    parent = session.Get<DatabaseArticle>(id);
+                    
+                    string result = parent.messageID;
+
+                    if (((INntpArticle)parent).References != "")
+                        result = ((INntpArticle)parent).References + " " + result;
+
+                    return result;
+                }
+
+                return "";
+            }
+
+            set
+            {
+                if (value == "")
+                {
+                    parent = null;
+                    return;
+                }
+
+                string[] parts = value.Split(' ', '\t');
+
+                ICriteria criteria = session.CreateCriteria(typeof(DatabaseArticle));
+                criteria.Add(Expression.Eq("MessageID", parts[parts.Length - 1]));
+                parent = criteria.UniqueResult<DatabaseArticle>();
+
+                if (parent == null)
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         int INntpArticle.Bytes
@@ -129,7 +157,7 @@ namespace Nntp.Storage.Database
 
         string INntpArticle.Body
         {
-            get 
+            get
             {
                 foreach (string body in bodies)
                     return body;
@@ -139,7 +167,7 @@ namespace Nntp.Storage.Database
             set
             {
                 bodies.Clear();
-                
+
                 if (value != "")
                     bodies.Add(value);
 

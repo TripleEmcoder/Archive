@@ -9,7 +9,7 @@ namespace Nntp
     [NntpCapabilityName("READER")]
     public class NntpDateCommand : NntpCommand
     {
-        public NntpDateCommand(string name, string parameters)
+        public NntpDateCommand(string name)
             :base(name)
         {
         }

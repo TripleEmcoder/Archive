@@ -10,12 +10,10 @@ namespace Nntp
     //HELP, CAPABILITIES
     internal static class NntpCommandFactory
     {
-        static private char[] separators;
         static private Dictionary<string, ConstructorInfo> constructors;
 
         static NntpCommandFactory()
         {
-            separators = new char[] { ' ', '\t' };
             constructors = new Dictionary<string, ConstructorInfo>();
 
             Assembly assembly = Assembly.GetExecutingAssembly();
@@ -28,8 +26,7 @@ namespace Nntp
                     if (constructors.ContainsKey(attribute.Name))
                         throw new Exception();
 
-                    constructors[attribute.Name] = type.GetConstructor(
-                        new Type[] { typeof(string), typeof(string) });
+                    constructors[attribute.Name] = type.GetConstructor(new Type[] { typeof(string) });
 
                     Debug.WriteLine(string.Format("Registering {0} for {1} command.",
                         type.Name, attribute.Name));
@@ -37,18 +34,18 @@ namespace Nntp
             }
         }
 
-        public static NntpCommand Create(string line)
+        public static NntpCommand Create(ref string line)
         {
+            char[] separators = new char[] { ' ', '\t' };
             string[] parts = line.Split(separators, 2);
 
             string name = parts[0].ToUpper();
-            string parameters = parts.Length == 2 ? parts[1].TrimStart(separators) : "";
+            line = parts.Length == 2 ? parts[1].TrimStart(separators) : "";
 
             if (!constructors.ContainsKey(name))
                 throw new NotSupportedException("Unknown command");
 
-            return (NntpCommand)constructors[name].Invoke(
-                new object[] { name, parameters });
+            return (NntpCommand)constructors[name].Invoke(new object[] { name });
         }
     }
 }

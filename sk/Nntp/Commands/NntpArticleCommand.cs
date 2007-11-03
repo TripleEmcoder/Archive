@@ -20,22 +20,26 @@ namespace Nntp
         private int number;
         private string id;
 
-        public NntpArticleCommand(string name, string parameters)
+        public NntpArticleCommand(string name)
             : base(name)
         {
-            if (parameters == "")
+        }
+
+        public override void Parse(string line)
+        {
+            if (line == "")
             {
                 type = RequestType.ByCurrentArticleNumber;
             }
-            else if (parameters.StartsWith("<") && parameters.EndsWith(">"))
+            else if (line.StartsWith("<") && line.EndsWith(">"))
             {
                 type = RequestType.ByMessageId;
-                id = parameters.Substring(1, parameters.Length - 2);
+                id = line.Substring(1, line.Length - 2);
             }
             else
             {
                 type = RequestType.ByArticleNumber;
-                number = int.Parse(parameters);
+                number = int.Parse(line);
             }
         }
 
@@ -112,15 +116,17 @@ namespace Nntp
 
                 if (name == "ARTICLE" || name == "HEAD")
                 {
-                    session.Connection.SendLine("{0}: <{1}>", NntpHeaderName.MessageID, pair.Value.MessageID);
-                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Subject, pair.Value.Subject);
-                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.From, pair.Value.From);
-                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Date, pair.Value.Date);
-                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.References, pair.Value.References);
-                    session.Connection.SendLine("{0}: {1}", NntpHeaderName.Newsgroups, pair.Value.Newsgroups);
+                    SendHeader(session, NntpHeaderName.MessageID, pair.Value.MessageID);
+                    SendHeader(session, NntpHeaderName.Subject, pair.Value.Subject);
+                    SendHeader(session, NntpHeaderName.From, pair.Value.From);
+                    SendHeader(session, NntpHeaderName.Date, pair.Value.Date);
+                    SendHeader(session, NntpHeaderName.Newsgroups, pair.Value.Newsgroups);
+
+                    if (pair.Value.References != "")
+                        SendHeader(session, NntpHeaderName.References, pair.Value.References);
 
                     foreach (KeyValuePair<string, string> header in pair.Value.Headers)
-                        session.Connection.SendLine("{0}: {1}", header.Key, header.Value);
+                        SendHeader(session, header.Key, header.Value);
                 }
 
                 if (name == "ARTICLE")
@@ -132,6 +138,11 @@ namespace Nntp
                 if (name != "STAT")
                     session.Connection.SendLine(".");
             }
+        }
+
+        private static void SendHeader(NntpSession session, string name, string value)
+        {
+            session.Connection.SendLine("{0}: {1}", name, value);
         }
     }
 }

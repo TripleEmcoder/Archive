@@ -8,7 +8,7 @@ namespace Nntp
     [NntpCapabilityName("VERSION 2")]
     public class NntpHelpCommand : NntpCommand
     {
-        public NntpHelpCommand(string name, string parameters)
+        public NntpHelpCommand(string name)
             : base(name)
         {
         }

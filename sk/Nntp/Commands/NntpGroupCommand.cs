@@ -13,10 +13,14 @@ namespace Nntp
     {
         private string _group;
 
-        public NntpGroupCommand(string name, string parameters)
+        public NntpGroupCommand(string name)
             : base(name)
         {
-            _group = parameters;
+        }
+
+        public override void Parse(string line)
+        {
+            _group = line;
         }
 
         public override void Execute(NntpSession session)

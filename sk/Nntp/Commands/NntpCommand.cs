@@ -25,7 +25,6 @@ namespace Nntp
 
         public virtual void Parse(string line)
         {
-            throw new NotSupportedException();
         }
 
         public abstract void Execute(NntpSession session);

@@ -29,14 +29,9 @@ namespace Nntp.Storage.Database
             throw new Exception("The method or operation is not implemented.");
         }
 
-        internal virtual int ID
+        public virtual int ID
         {
             get { return id; }
-        }
-
-        internal virtual ICollection<DatabaseArticle> Articles
-        {
-            get { return articles; }
         }
 
         string INntpGroup.Name
