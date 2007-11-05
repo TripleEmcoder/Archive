@@ -92,15 +92,15 @@ namespace Nntp
                     break;
 
                 case RequestState.RequestFinished:
-                    using (INntpConnection connection = session.Repository.CreateTransaction())
+                    using (INntpConnection connection = session.Repository.CreateConnection())
                     {
-                        INntpArticle article = session.Repository.CreateArticle();
+                        INntpArticle article = connection.CreateArticle();
 
                         SetOverviewHeaders(article);
                         SetOtherHeaders(article);
                         article.Body = body.ToString();
 
-                        session.Repository.PostArticle(article);
+                        connection.PostArticle(article);
                     }
 
                     session.Connection.SendLine("240 Article received OK");

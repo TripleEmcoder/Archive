@@ -31,6 +31,7 @@ namespace Test
 
             connection.LineSent += AssertResponseCode(224);
             connection.ReceiveLine("OVER 1-2");
+            connection.ReceiveLine("OVER 1-");
         }
 
         [Test]

@@ -33,6 +33,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\NntpSiblingCommand.cs" />
+    <Compile Include="Commands\NntpNewgroupsCommand.cs" />
+    <Compile Include="Commands\NntpListgroupCommand.cs" />
     <Compile Include="Commands\NntpDateCommand.cs" />
     <Compile Include="Commands\NntpCapabilitiesCommand.cs" />
     <Compile Include="Commands\NntpHelpCommand.cs" />

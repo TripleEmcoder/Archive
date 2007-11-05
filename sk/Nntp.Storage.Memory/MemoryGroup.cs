@@ -69,6 +69,22 @@ namespace Nntp.Storage.Memory
             return articles[number];
         }
 
+        KeyValuePair<int, INntpArticle> INntpGroup.GetNextArticle(int number)
+        {
+            if (number > 0)
+                return new KeyValuePair<int, INntpArticle>(number - 1, articles[number - 1]);
+
+            return new KeyValuePair<int, INntpArticle>(0, null);
+        }
+
+        KeyValuePair<int, INntpArticle> INntpGroup.GetLastArticle(int number)
+        {
+            if (number < articles.Count - 1)
+                return new KeyValuePair<int, INntpArticle>(number + 1, articles[number + 1]);
+
+            return new KeyValuePair<int, INntpArticle>(0, null);
+        }
+
         IEnumerable<KeyValuePair<int, INntpArticle>> INntpGroup.GetArticles(int low, int high)
         {
             foreach (KeyValuePair<int, INntpArticle> pair in articles)

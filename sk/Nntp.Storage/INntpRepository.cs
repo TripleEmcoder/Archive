@@ -8,11 +8,6 @@ namespace Nntp.Storage
 {
     public interface INntpRepository : IDisposable
     {
-        INntpConnection CreateTransaction();
-        INntpArticle GetArticle(string id);
-        INntpGroup GetGroup(string name);
-        IEnumerable<INntpGroup> GetGroups();
-        INntpArticle CreateArticle();
-        void PostArticle(INntpArticle article);
+        INntpConnection CreateConnection();
     }
 }

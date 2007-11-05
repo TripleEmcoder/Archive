@@ -20,23 +20,20 @@ namespace Nntp
 
         public override void Parse(string line)
         {
+            if (line == "")
+                throw new ArgumentException("No group name specified");
+
             _group = line;
         }
 
         public override void Execute(NntpSession session)
         {
-            using (INntpConnection connection = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateConnection())
             {
-                INntpGroup group = session.Repository.GetGroup(_group);
+                INntpGroup group;
 
-                if (group == null)
-                {
-                    session.Connection.SendLine("411 No such newsgroup");
+                if (!GetGroupByName(connection, session, _group, out group))
                     return;
-                }
-
-                session.Context[typeof(INntpGroup)] = _group;
-                session.Context[typeof(INntpArticle)] = group.Low;
 
                 session.Connection.SendLine("211 {0} {1} {2} {3}",
                     group.Count, group.Low, group.High, group.Name);

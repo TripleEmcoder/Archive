@@ -60,8 +60,32 @@ namespace Nntp.Storage.Database
                 "WHERE this.ID = :id");
 
             query.SetInt32("id", number);
-            
+
             return query.UniqueResult<INntpArticle>();
+        }
+
+        KeyValuePair<int, INntpArticle> INntpGroup.GetNextArticle(int number)
+        {
+            IQuery query = session.CreateFilter(articles,
+                "WHERE this.ID > :id ORDER BY this.ID");
+
+            query.SetInt32("id", number);
+            query.SetMaxResults(1);
+
+            DatabaseArticle article = query.UniqueResult<DatabaseArticle>();
+            return new KeyValuePair<int, INntpArticle>(article == null ? 0 : article.ID, article);
+        }
+
+        KeyValuePair<int, INntpArticle> INntpGroup.GetLastArticle(int number)
+        {
+            IQuery query = session.CreateFilter(articles,
+                "WHERE this.ID < :id ORDER BY this.ID DESC");
+
+            query.SetInt32("id", number);
+            query.SetMaxResults(1);
+
+            DatabaseArticle article = query.UniqueResult<DatabaseArticle>();
+            return new KeyValuePair<int, INntpArticle>(article == null ? 0 : article.ID, article);
         }
 
         IEnumerable<KeyValuePair<int, INntpArticle>> INntpGroup.GetArticles(int low, int high)
@@ -75,6 +99,5 @@ namespace Nntp.Storage.Database
             foreach (DatabaseArticle article in query.List<DatabaseArticle>())
                 yield return new KeyValuePair<int, INntpArticle>(article.ID, article);
         }
-
     }
 }

@@ -38,68 +38,59 @@ namespace Nntp
             else
             {
                 type = RequestType.ByArticleNumberRange;
-                string[] parts = line.Split(new char[] { '-' }, 2);
-
-                low = high = int.Parse(parts[0]);
-
-                if (parts.Length == 2)
-                    high = (parts[0] == "") ? 0 : int.Parse(parts[1]);
+                ParseRange(line, out low, out high);
             }
         }
 
         public override void Execute(NntpSession session)
         {
-            using (INntpConnection connection = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateConnection())
             {
                 List<KeyValuePair<int, INntpArticle>> pairs = new List<KeyValuePair<int, INntpArticle>>();
-                INntpGroup group = null;
 
                 switch (type)
                 {
                     case RequestType.ByMessageId:
-                        pairs.Add(new KeyValuePair<int, INntpArticle>(0, session.Repository.GetArticle(id)));
-
-                        if (pairs[0].Value == null)
                         {
-                            session.Connection.SendLine("430 No article with that message-id");
-                            return;
+                            KeyValuePair<int, INntpArticle> pair;
+
+                            if (!GetArticleByMessageID(connection, session, id, out pair))
+                                return;
+
+                            pairs.Add(pair);
                         }
 
                         break;
 
                     case RequestType.ByArticleNumberRange:
-                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
                         {
-                            session.Connection.SendLine("412 No newsgroup selected");
-                            return;
-                        }
+                            INntpGroup group;
 
-                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
-                        pairs.AddRange(group.GetArticles(low, high));
+                            if (!GetGroupByCurrentName(connection, session, out group))
+                                return;
 
-                        if (pairs.Count == 0)
-                        {
-                            session.Connection.SendLine("423 No articles in that range");
-                            return;
+                            if (high == 0)
+                                high = group.High;
+
+                            pairs.AddRange(group.GetArticles(low, high));
+
+                            if (pairs.Count == 0)
+                            {
+                                session.Connection.SendLine("423 No articles in that range");
+                                return;
+                            }
                         }
 
                         break;
 
                     case RequestType.ByCurrentArticleNumber:
-                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
                         {
-                            session.Connection.SendLine("412 No newsgroup selected");
-                            return;
-                        }
+                            KeyValuePair<int, INntpArticle> pair;
 
-                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
-                        int number = (int)session.Context[typeof(INntpArticle)];
-                        pairs.Add(new KeyValuePair<int, INntpArticle>(number, group.GetArticle(number)));
+                            if (!GetArticleByCurrentNumber(connection, session, out pair))
+                                return;
 
-                        if (pairs[0].Value == null)
-                        {
-                            session.Connection.SendLine("420 Current article number is invalid");
-                            return;
+                            pairs.Add(pair);
                         }
 
                         break;

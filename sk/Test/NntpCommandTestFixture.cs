@@ -27,7 +27,7 @@ namespace Test
             connection = new TestLineConnection();
 
             List<INntpArticle> articles = new List<INntpArticle>();
-            articles.Add(new MemoryArticle(existant));
+            articles.Add(new MemoryArticle("<" + existant + ">"));
 
             List<INntpGroup> groups = new List<INntpGroup>();
             groups.Add(new MemoryGroup(existant, articles));

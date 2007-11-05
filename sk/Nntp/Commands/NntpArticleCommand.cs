@@ -14,7 +14,7 @@ namespace Nntp
     [NntpCapabilityName("READER")]
     public class NntpArticleCommand : NntpCommand
     {
-        private enum RequestType { ByMessageId, ByArticleNumber, ByCurrentArticleNumber };
+        private enum RequestType { ByMessageID, ByArticleNumber, ByCurrentArticleNumber };
 
         private RequestType type;
         private int number;
@@ -33,8 +33,8 @@ namespace Nntp
             }
             else if (line.StartsWith("<") && line.EndsWith(">"))
             {
-                type = RequestType.ByMessageId;
-                id = line.Substring(1, line.Length - 2);
+                type = RequestType.ByMessageID;
+                id = line;//.Substring(1, line.Length - 2);
             }
             else
             {
@@ -45,61 +45,32 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            using (INntpConnection connection = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateConnection())
             {
-                KeyValuePair<int, INntpArticle> pair = new KeyValuePair<int, INntpArticle>(0, null);
-                INntpGroup group = null;
+                KeyValuePair<int, INntpArticle> pair;
 
                 switch (type)
                 {
-                    case RequestType.ByMessageId:
-                        pair = new KeyValuePair<int, INntpArticle>(0, session.Repository.GetArticle(id));
-
-                        if (pair.Value == null)
-                        {
-                            session.Connection.SendLine("430 No article with that message-id");
+                    case RequestType.ByMessageID:
+                        if (!GetArticleByMessageID(connection, session, id, out pair))
                             return;
-                        }
 
                         break;
 
                     case RequestType.ByArticleNumber:
-                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
-                        {
-                            session.Connection.SendLine("412 No newsgroup selected");
+                        if (!GetArticleByNumber(connection, session, number, out pair))
                             return;
-                        }
 
-                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
-                        pair = new KeyValuePair<int, INntpArticle>(number, group.GetArticle(number));
-
-                        if (pair.Value == null)
-                        {
-                            session.Connection.SendLine("423 No article with that number");
-                            return;
-                        }
-
-                        session.Context[typeof(INntpArticle)] = number;
                         break;
 
                     case RequestType.ByCurrentArticleNumber:
-                        if (!session.Context.ContainsKey(typeof(INntpGroup)))
-                        {
-                            session.Connection.SendLine("412 No newsgroup selected");
-                            return;
-                        }
-
-                        group = session.Repository.GetGroup((string)session.Context[typeof(INntpGroup)]);
-                        int _number = (int)session.Context[typeof(INntpArticle)];
-                        pair = new KeyValuePair<int, INntpArticle>(number, group.GetArticle(_number));
-
-                        if (pair.Value == null)
-                        {
-                            session.Connection.SendLine("420 Current article number is invalid");
-                            return;
-                        }
+                        if (!GetArticleByCurrentNumber(connection, session, out pair))
+                            return;                       
 
                         break;
+
+                    default:
+                        throw new InvalidOperationException("Unknown request type");
                 }
 
                 if (name == "ARTICLE")

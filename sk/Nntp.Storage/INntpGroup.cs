@@ -14,6 +14,8 @@ namespace Nntp.Storage
         int High { get; }
 
         INntpArticle GetArticle(int number);
+        KeyValuePair<int, INntpArticle> GetNextArticle(int number);
+        KeyValuePair<int, INntpArticle> GetLastArticle(int number);
         IEnumerable<KeyValuePair<int, INntpArticle>> GetArticles(int low, int high);
     }
 }

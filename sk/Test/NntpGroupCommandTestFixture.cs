@@ -10,6 +10,13 @@ namespace Test
     public class NntpGroupCommandTestFixture : NntpCommandTestFixture
     {
         [Test]
+        public void TestByNoName()
+        {
+            connection.LineSent += AssertResponseCode(501);
+            connection.ReceiveLine("GROUP");
+        }
+
+        [Test]
         public void TestByName()
         {
             connection.LineSent += AssertResponseCode(211);

@@ -18,10 +18,10 @@ namespace Nntp
 
         public override void Execute(NntpSession session)
         {
-            using (INntpConnection connection = session.Repository.CreateTransaction())
+            using (INntpConnection connection = session.Repository.CreateConnection())
             {
                 List<INntpGroup> groups =
-                    new List<INntpGroup>(session.Repository.GetGroups());
+                    new List<INntpGroup>(connection.GetGroups());
 
                 session.Connection.SendLine("215 List of newsgroups follows");
 
