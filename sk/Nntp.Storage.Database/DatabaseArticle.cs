@@ -170,7 +170,7 @@ namespace Nntp.Storage.Database
                 bytes = value.Length;
                 lines = -1;
 
-                for (int index = 0; index != -1; index = value.IndexOf("\0xD\0xA", index))
+                for (int index = 0; index != -1; index = value.IndexOf("\r\n", index + 2))
                     lines++;
             }
         }

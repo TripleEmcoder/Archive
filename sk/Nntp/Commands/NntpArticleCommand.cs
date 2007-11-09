@@ -65,7 +65,7 @@ namespace Nntp
 
                     case RequestType.ByCurrentArticleNumber:
                         if (!GetArticleByCurrentNumber(connection, session, out pair))
-                            return;                       
+                            return;
 
                         break;
 
@@ -104,7 +104,19 @@ namespace Nntp
                     session.Connection.SendLine("");
 
                 if (name == "ARTICLE" || name == "BODY")
-                    session.Connection.SendLine(pair.Value.Body);
+                {
+                    string[] lines = pair.Value.Body.Split('\n');
+
+                    for (int i = 0; i < lines.Length-1; i++)
+                    {
+                        string line = lines[i];
+
+                        if (line.StartsWith("."))
+                            line =  '.' + line;
+
+                        session.Connection.SendLine(line);
+                    }
+                }
 
                 if (name != "STAT")
                     session.Connection.SendLine(".");

@@ -74,7 +74,10 @@ namespace Nntp
                         return;
                     }
 
-                    body.AppendLine(line);
+                    if (line.StartsWith("."))
+                        line = line.Substring(1);
+
+                    body.Append(line + '\n');
                     break;
 
                 case RequestState.RequestFinished:

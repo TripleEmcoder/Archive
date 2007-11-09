@@ -39,7 +39,10 @@ namespace Test
                     if (line == null)
                         return;
 
-                    Console.WriteLine("<< " + line);
+                    //Console.WriteLine("<< " + line);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(line);
+
                     LineReceived(this, new LineEventArgs(line));
                 }
             }
@@ -52,7 +55,11 @@ namespace Test
 
         public void SendLine(string line)
         {
-            Console.WriteLine(">> " + line);
+            //Console.WriteLine(">> " + line);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(line);
+
             writer.WriteLine(line);
             writer.Flush();
         }
