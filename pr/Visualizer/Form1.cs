@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 
 using System.Globalization;
+using System.Drawing.Drawing2D;
 
 namespace Visualizer
 {
@@ -68,7 +69,7 @@ namespace Visualizer
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            float scale = 0.03F;
+            float scale = 800/T;
             int size = 20;
             int margin = 30;
             int title = 50;
@@ -80,28 +81,30 @@ namespace Visualizer
             Graphics graphics = Graphics.FromImage(bitmap);
             graphics.FillRectangle(Brushes.White, 0, 0, width, height);
 
-            int left = margin + title;
+            int x = margin + title;
+
+            DrawGrid(graphics, x, 0, width, height, 30);
 
             for (int i = 0; i < n; i++)
             {
-                int top = margin + i * margin + i * m * size;
+                int y = margin + i * margin + i * m * size;
 
                 Font font = new Font(FontFamily.GenericSansSerif, 20);
-                DrawStringCentered(graphics, font, i.ToString(), margin, top, title, m * size);
+                DrawStringCentered(graphics, font, i.ToString(), margin, y, title, m * size);
 
                 for (int j = 0; j < m; j++)
                 {
-                    int _top = top + j * size;                    
+                    int _y = y + j * size;                    
 
-                    graphics.DrawRectangle(Pens.Black, left, _top, T * scale, size);
+                    graphics.DrawRectangle(Pens.Black, x, _y, T * scale, size);
 
                     if (rk[i, j] - r[i, j] > 0)
                         DrawCommunication(graphics, j.ToString(),
-                            left + r[i, j] * scale, _top, (rk[i, j] - r[i, j]) * scale, size);
+                            x + r[i, j] * scale, _y, (rk[i, j] - r[i, j]) * scale, size);
 
                     if (tk[i, j] - t[i, j] > 0)
                         DrawComputation(graphics, j.ToString(),
-                            left + t[i, j] * scale, _top, (tk[i, j] - t[i, j]) * scale, size);
+                            x + t[i, j] * scale, _y, (tk[i, j] - t[i, j]) * scale, size);
                 }
             }
 
@@ -111,9 +114,13 @@ namespace Visualizer
             pictureBox1.Image = bitmap;
         }
 
-        private void DrawGrid(Graphics graphics)
+        private void DrawGrid(Graphics graphics, float x, float y, float width, float height, float step)
         {
+            Pen pen = new Pen(Color.Black);
+            pen.DashStyle = DashStyle.Dash;
 
+            for (float _x = x; _x < x + width; _x += step)
+                graphics.DrawLine(pen, _x, y, _x, y + height);
         }
 
         private void DrawCommunication(Graphics graphics, string text, float x, int y, float width, float height)
@@ -140,6 +147,13 @@ namespace Visualizer
 
             graphics.DrawString(text, font, Brushes.Black,
                 x + width / 2 - size.Width / 2, y + height / 2 - size.Height / 2);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    ((Bitmap)pictureBox1.Image).Save(saveFileDialog1.FileName);
         }
     }
 }
