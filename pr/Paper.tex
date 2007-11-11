@@ -101,34 +101,33 @@ Dane wejœciowe:
 \item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki k dla procesora j,
 \item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki k dla procesora j.
 \end{description}
- 
 Funkcje pomocnicze:
-\begin{quotation}
+\begin{itemize}
+\item czas przesy³ania danych do procesora j w fazie k
 $$T_c(j,k) = S + C(j) \, \sum_{i = 0}^{2 - \lfloor \frac{j + 1}{3}\rfloor} a(3\,i + j,k) $$
-
+\item czas obliczania danych na procesorze j w fazie k
 $$T_a(j,k) = A(j) \, a(j,k) $$
-\end{quotation}
-
+\end{itemize}
 Funkcja celu:
 \begin{quotation}
 $$\textrm{min:} \; T$$
 \end{quotation}
-
 Ograniczenia:
+\begin{itemize}
+\item kolejna paczka nie mo¿e byæ wys³ana przed zakoñczeniem wysy³ania poprzedniej
 $$r(j, k) + T_c(j,k) \leq r(j, k - 1) \qquad j = 1 \ldots 7, \; k = 1 \ldots m-1$$
-
+\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem odbierania
 $$r(j, k) + T_c(j,k) \leq r(j + 3, k) \qquad j = 1 \ldots 4, \; k = 0 \ldots m-1$$
-
+\item pierwsze paczki dla procesorów 1..3 s¹ dostêpne w chwili $t = 0$
 $$r(j, m-1) = 0 \qquad j = 1 \ldots 3$$
-
+\item nie mo¿na liczyæ przed zakoñczeniem transmisji
 $$r(j, k) + T_c(j,k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
-
+\item kolejne paczki musz¹ byæ liczone sekwencyjnie
 $$t(j, k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
-
+\item obliczanie ostatniej paczki musi zakoñczyæ siê przed koñcem przetwarzania
 $$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
-
+\item suma wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
-
-
+\end{itemize}
 
 \end{document}
