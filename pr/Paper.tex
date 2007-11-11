@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper,titlepage,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[cp1250]{inputenc}
+\usepackage[english,polish]{babel}
+\usepackage[T1]{polski}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{slashbox}
+\usepackage{sistyle}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+
+\hypersetup
+{
+	bookmarksnumbered=true,
+	colorlinks=true,
+	linkcolor=blue,
+	bookmarksopen=true,
+	bookmarksopenlevel=2,
+	pdfstartview={FitH}
+}
+
+\SIdecimalsign{,}
+
+\setlength{\textheight}{24cm}
+\setlength{\textwidth}{16cm}
+\setlength{\footskip}{10mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headsep}{5mm}
+\setlength{\headheight}{15.0pt}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE,RO]{\textsf{\thepage}}
+\fancyhead[RE,LO]{\textsf{tytu³}}
+\fancyhead[CE,CO]{\ }
+\fancyfoot[LE,RO]{\ }
+\fancyfoot[RE,LO]{\ }
+\fancyfoot[CE,CO]{\ }
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{titlepage}
+\title{Przetwarzanie równoleg³e \\ tytu³}
+\author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
+\end{titlepage}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Sformu³owanie problemu}
+Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæi jednoczesnego wykonywania obliczeñ i przesy³ania danych przez ka¿dy z jego procesorów. Dodatkowo zak³ada siê, ¿e w chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w jednym naro¿niku wspomnianego szeœcianu.
+
+Analizowany system wraz z przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i \ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony przez 0. Dalsza numeracja wynika z odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z rysunku \ref{fig:cube} w kolejnoœci zgodnej z ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 15mm 0 15mm, clip]{cube}
+\caption{Schemat analizowanego systemu przetwarzania}
+\label{fig:cube}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 0 0 0, clip]{flat}
+\caption{Schemat analizowanego systemu przetwarzania c.d.}
+\label{fig:flat}
+\end{figure}
+
+\section{Model w œrodowisku Parastation}
+Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation w sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a niewykorzystywane ³¹cza nei zosta³y uwzglêdnione na rysunku.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[trim=0 0 0 0, clip]{parastation}
+\caption{Model systemu w œrodowisku Parastation}
+\label{fig:parastation}
+\end{figure}
+
+\section{Analiza problemu}
+Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹ symbolizuj¹c¹ kierunek przekazywania danych.
+
+\end{document}
