@@ -104,7 +104,12 @@ Dane wejœciowe:
 Funkcje pomocnicze:
 \begin{itemize}
 \item czas przesy³ania danych do procesora j w fazie k
-$$T_c(j,k) = S + C(j) \, \sum_{i = 0}^{2 - \lfloor \frac{j + 1}{3}\rfloor} a(3\,i + j,k) $$
+\begin{displaymath}
+T_c(j,k) = \left\{ \begin{array}{ll}
+0 & \textrm{dla $j=0$}\\
+S + C(j) \, \sum_{i = 0}^{2 - \lfloor (j + 1)/3\rfloor} a(3\,i + j,k) & \textrm{dla $j>0$}
+\end{array} \right.
+\end{displaymath}
 \item czas obliczania danych na procesorze j w fazie k
 $$T_a(j,k) = A(j) \, a(j,k) $$
 \end{itemize}
@@ -129,5 +134,52 @@ $$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
 \end{itemize}
+
+\section{Rozwi¹zanie przyk³adowego problemu}
+
+Dane:
+S = 11;
+A[0] = A[2] = A[3] = A[5] = 16;
+A[1] = A[4] = A[6] = A[7] = 20;
+C[1] = C[6] = 2.2;
+C[2] = C[3] = C[4] = C[5] = C[7] = 4.4;
+V = 10000;
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres1}
+\caption{Wykres Gantta dla liczby paczek $m=1$}
+\label{fig:wykres1}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres3}
+\caption{Wykres Gantta dla liczby paczek $m=3$}
+\label{fig:wykres3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres5}
+\caption{Wykres Gantta dla liczby paczek $m=5$}
+\label{fig:wykres5}
+\end{figure}
+
+Wykres czasu przetwarzania w zale¿noœci od liczby faz:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres}
+\caption{Wykres czasu przetwarzania}
+\label{fig:wykres}
+\end{figure}
+
+Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ w procesorach wynosi:
+
+$$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
+
+gdzie $A_1$ i $A_2$ to szybkoœci procesorów.
+
+Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Na wykresie \ref{fig:wykres} widaæ, ¿e wraz ze wzrostem iloœci faz czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
 
 \end{document}
