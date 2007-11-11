@@ -90,6 +90,18 @@ Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation 
 \section{Analiza problemu}
 Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹ symbolizuj¹c¹ kierunek przekazywania danych.
 
+Dane wejœciowe:
+\begin{description}
+\item[$A(j)$] -- szybkoœæ procesora j, 
+\item[$C(j)$] -- szybkoœæ ³¹cza bezpoœrednio dochodz¹cego do procesora j,
+\item[$S$] -- czas rozruchu,
+\item[$V$] -- rozmiar danych,
+\item[$k$] -- liczba faz komunikacji,
+\item[$a(j,k)$] -- wielkoœæ paczki o numerze k przeznaczonej dla procesora j,
+\item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki k dla procesora j,
+\item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki k dla procesora j.
+\end{description}
+ 
 Funkcje pomocnicze:
 \begin{quotation}
 $$T_c(j,k) = S + C(j) \, \sum_{i = 0}^{2 - \lfloor \frac{j + 1}{3}\rfloor} a(3\,i + j,k) $$
