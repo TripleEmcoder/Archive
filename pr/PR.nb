@@ -41,9 +41,9 @@ Wolfram Research.
 
 (*NotebookFileLineBreakTest
 NotebookFileLineBreakTest*)
-(*NotebookOptionsPosition[     12348,        259]*)
-(*NotebookOutlinePosition[     12993,        281]*)
-(*  CellTagsIndexPosition[     12949,        277]*)
+(*NotebookOptionsPosition[     12403,        259]*)
+(*NotebookOutlinePosition[     13048,        281]*)
+(*  CellTagsIndexPosition[     13004,        277]*)
 (*WindowFrame->Normal*)
 
 
@@ -201,8 +201,8 @@ poprzedniej*) \[IndentingNewLine]\n
               Table[WRK[j, k], {j, 0, 7}, {k, 0, 
                   m - 1}]], \[IndentingNewLine]ExpandAll[
               Table[WTK[j, k], {j, 0, 7}, {k, 0, 
-                  m - 
-                    1}]]\[IndentingNewLine]]];\)\[IndentingNewLine]\
+                  m - 1}]], \[IndentingNewLine]{StringForm["\<m == ``\>", 
+                m]}\[IndentingNewLine]]];\)\[IndentingNewLine]\
 \[IndentingNewLine]
     Length[ModelDebug]\[IndentingNewLine]\[IndentingNewLine]
     text\  = \ 
@@ -212,7 +212,7 @@ poprzedniej*) \[IndentingNewLine]\n
 "\<;\n\>", \ "\<}\>" -> "\<;\>"}]\)\)\)], "Input"],
 
 Cell[BoxData[
-    \(83\)], "Output"],
+    \(84\)], "Output"],
 
 Cell[BoxData[
     \("min: T;\nr_1_1 = 0;\nr_2_1 = 0;\nr_3_1 = 0;\n11 + 2.2 a_1_1 + 2.2 \
@@ -254,7 +254,7 @@ a_2_0 + t_2_0 = tk_2_0;\n16 a_2_1 + t_2_1 = tk_2_1;\n16 a_3_0 + t_3_0 = \
 tk_3_0;\n16 a_3_1 + t_3_1 = tk_3_1;\n20 a_4_0 + t_4_0 = tk_4_0;\n20 a_4_1 + \
 t_4_1 = tk_4_1;\n16 a_5_0 + t_5_0 = tk_5_0;\n16 a_5_1 + t_5_1 = tk_5_1;\n20 \
 a_6_0 + t_6_0 = tk_6_0;\n20 a_6_1 + t_6_1 = tk_6_1;\n20 a_7_0 + t_7_0 = \
-tk_7_0;\n20 a_7_1 + t_7_1 = tk_7_1;"\)], "Output"]
+tk_7_0;\n20 a_7_1 + t_7_1 = tk_7_1;\nm = 2;"\)], "Output"]
 }, Open  ]]
 },
 FrontEndVersion->"5.0 for Microsoft Windows",
@@ -288,9 +288,9 @@ Cell[3367, 91, 1018, 19, 57, "Output"]
 }, Open  ]],
 
 Cell[CellGroupData[{
-Cell[4422, 115, 4761, 96, 1190, "Input"],
-Cell[9186, 213, 36, 1, 29, "Output"],
-Cell[9225, 216, 3107, 40, 1625, "Output"]
+Cell[4422, 115, 4808, 96, 1210, "Input"],
+Cell[9233, 213, 36, 1, 29, "Output"],
+Cell[9272, 216, 3115, 40, 1644, "Output"]
 }, Open  ]]
 }
 ]
