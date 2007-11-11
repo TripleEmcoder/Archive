@@ -40,7 +40,7 @@ namespace Visualizer
                         if (parts.Length < 2)
                             continue;
 
-                        variables[parts[0]] = float.Parse(parts[1], CultureInfo.InvariantCulture);
+                        variables[parts[0]] = float.Parse(parts[1], CultureInfo.CurrentCulture);
                     }
                 }
 
@@ -68,7 +68,7 @@ namespace Visualizer
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            float scale = 0.01F;
+            float scale = 0.03F;
             int size = 15;
             int margin = 30;
 

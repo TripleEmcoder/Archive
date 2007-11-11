@@ -11,6 +11,7 @@
 \usepackage{sistyle}
 \usepackage{amsfonts}
 \usepackage{latexsym}
+%\usepackage{notebook2e, latexsym}
 
 \hypersetup
 {
@@ -58,7 +59,7 @@
 \newpage
 
 \section{Sformu³owanie problemu}
-Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæi jednoczesnego wykonywania obliczeñ i przesy³ania danych przez ka¿dy z jego procesorów. Dodatkowo zak³ada siê, ¿e w chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w jednym naro¿niku wspomnianego szeœcianu.
+Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i przesy³ania danych przez ka¿dy z jego procesorów. Dodatkowo zak³ada siê, ¿e w chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w jednym naro¿niku wspomnianego szeœcianu.
 
 Analizowany system wraz z przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i \ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony przez 0. Dalsza numeracja wynika z odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z rysunku \ref{fig:cube} w kolejnoœci zgodnej z ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu.
 
@@ -77,7 +78,7 @@ Analizowany system wraz z przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹
 \end{figure}
 
 \section{Model w œrodowisku Parastation}
-Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation w sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a niewykorzystywane ³¹cza nei zosta³y uwzglêdnione na rysunku.
+Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation w sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
 
 \begin{figure}[h!]
 \centering
@@ -87,6 +88,35 @@ Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation 
 \end{figure}
 
 \section{Analiza problemu}
-Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹. Symbolizuje ona kierunek przekazywania danych. Wyboru dokonano tak, aby zminimalizowaæ odleg³oœæ procesorów od Ÿród³a danych (uwzglêdniaj¹c ró¿ne szybkoœci ³¹czy pionowych i poziomych) i zapewniæ ka¿demu z nich jak najwczeœniejszy dostêp do danych.
+Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹ symbolizuj¹c¹ kierunek przekazywania danych.
+
+Funkcje pomocnicze:
+\begin{quotation}
+$$T_c(j,k) = S + C(j) \, \sum_{i = 0}^{2 - \lfloor \frac{j + 1}{3}\rfloor} a(3\,i + j,k) $$
+
+$$T_a(j,k) = A(j) \, a(j,k) $$
+\end{quotation}
+
+Funkcja celu:
+\begin{quotation}
+$$\textrm{min:} \; T$$
+\end{quotation}
+
+Ograniczenia:
+$$r(j, k) + T_c(j,k) \leq r(j, k - 1) \qquad j = 1 \ldots 7, \; k = 1 \ldots m-1$$
+
+$$r(j, k) + T_c(j,k) \leq r(j + 3, k) \qquad j = 1 \ldots 4, \; k = 0 \ldots m-1$$
+
+$$r(j, m-1) = 0 \qquad j = 1 \ldots 3$$
+
+$$r(j, k) + T_c(j,k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
+
+$$t(j, k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
+
+$$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
+
+$$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
+
+
 
 \end{document}
