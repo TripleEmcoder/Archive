@@ -41,9 +41,9 @@ Wolfram Research.
 
 (*NotebookFileLineBreakTest
 NotebookFileLineBreakTest*)
-(*NotebookOptionsPosition[      7804,        237]*)
-(*NotebookOutlinePosition[      8449,        259]*)
-(*  CellTagsIndexPosition[      8405,        255]*)
+(*NotebookOptionsPosition[      8554,        253]*)
+(*NotebookOutlinePosition[      9200,        275]*)
+(*  CellTagsIndexPosition[      9156,        271]*)
 (*WindowFrame->Normal*)
 
 
@@ -222,22 +222,38 @@ j\ \[IndentingNewLine]paczki\ s\:0105\ numerowane\ odwrotnie, \
               a[3  i + j, k], {i, 0, 
                 2 - Floor[\((j + 1)\)/3]}];\)\[IndentingNewLine]
     \(To[j_, k_] := A[j] a[j, k];\)\[IndentingNewLine]\[IndentingNewLine]
-    \(W1[j_, k_] := 
-        r[j, k] + Tw[j, k] \[LessEqual] r[j, k - 1];\)\ \[IndentingNewLine]
-    \(W2[j_, k_] := 
-        r[j, k] + Tw[j, k] \[LessEqual] r[j + 3, k];\)\[IndentingNewLine]
-    \(W3[j_, k_] := 
-        r[j + 3, k] + Tw[j + 3, k] \[LessEqual] 
-          r[j, k - 1];\)\[IndentingNewLine]\[IndentingNewLine]
-    \(W4[j_, k_] := 
-        r[j, k] + Tw[j, k] \[LessEqual] t[j, k];\)\[IndentingNewLine]
-    \(W5[j_, k_] := 
-        t[j, k] + To[j, k] \[LessEqual] t[j, k - 1];\)\[IndentingNewLine]
+    W0[j_] := 
+      r[j, m - 1] \[Equal] 
+        0; \  (*paczki\ dla\ procesor\[OAcute]w\ 1.   .3\ s\:0105\ \
+dost\:0119pne\ w\ chwili\ t = 0*) \ \[IndentingNewLine]\[IndentingNewLine]W1[
+        j_, k_] := 
+      r[j, k] + Tw[j, k] \[LessEqual] 
+        r[j, k - 
+            1]; \  (*kolejna\ paczka\ nie\ mo\:017ce\ by\[CAcute]\ wys\
+\[LSlash]ana\ przed\ zako\:0144czeniem\ wysy\[LSlash]ania\ poprzedniej\
+*) \[IndentingNewLine]W2[j_, k_] := 
+      r[j, k] + Tw[j, k] \[LessEqual] 
+        r[j + 3, 
+          k]; \  (*paczka\ nie\ mo\:017ce\ by\[CAcute]\ przes\[LSlash]ana\ do\
+\ kolejnego\ procesora\ przed\ zako\:0144czeniem\ odbierania\
+*) \[IndentingNewLine]\[IndentingNewLine]W3[j_, k_] := 
+      r[j, k] + Tw[j, k] \[LessEqual] 
+        t[j, k];  (*nie\ mo\:017cna\ liczy\[CAcute]\ przed\ zako\:0144\
+\[CAcute]zeniem\ transimsji*) \[IndentingNewLine]W4[j_, k_] := 
+      t[j, k] + To[j, k] \[LessEqual] 
+        t[j, k - 
+            1]; (*nie\ mo\:017cna\ zacz\:0105\[CAcute]\ liczy\[CAcute]\ \
+kolejnej\ paczki\ przed\ zako\:0144\[CAcute]zeniem\ oblicze\:0144\ \
+poprzedniej*) \[IndentingNewLine]\n
+    \(W5[j_] := \ 
+        t[j, 0] + To[j, 0] <= 
+          T;\) (*czas\ zako\:0144czenia\ oblicze\:0144\ ostatniej\ paczki\
+*) \[IndentingNewLine]
     \)\)\)], "Input"]
 },
 FrontEndVersion->"5.0 for Microsoft Windows",
 ScreenRectangle->{{0, 1680}, {0, 967}},
-WindowSize->{783, 740},
+WindowSize->{1049, 740},
 WindowMargins->{{-4, Automatic}, {Automatic, 91}}
 ]
 
@@ -260,10 +276,10 @@ CellTagsIndex->{}
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[1776, 53, 799, 18, 190, "Input"],
+Cell[1776, 53, 799, 18, 170, "Input"],
 Cell[2578, 73, 3748, 130, 137, "Output"]
 }, Open  ]],
-Cell[6341, 206, 1459, 29, 370, "Input"]
+Cell[6341, 206, 2209, 45, 430, "Input"]
 }
 ]
 *)
