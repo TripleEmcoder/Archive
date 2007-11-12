@@ -41,9 +41,9 @@ Wolfram Research.
 
 (*NotebookFileLineBreakTest
 NotebookFileLineBreakTest*)
-(*NotebookOptionsPosition[     23484,        505]*)
-(*NotebookOutlinePosition[     24130,        527]*)
-(*  CellTagsIndexPosition[     24086,        523]*)
+(*NotebookOptionsPosition[     23880,        516]*)
+(*NotebookOutlinePosition[     24526,        538]*)
+(*  CellTagsIndexPosition[     24482,        534]*)
 (*WindowFrame->Normal*)
 
 
@@ -56,6 +56,9 @@ Cell[BoxData[{
     \(\(a[j_, k_] := 
         If[j\  < \ 10, StringForm["\<a_0``_``\>", j, k], 
           StringForm["\<a_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
+    \(\(x[j_, k_] := 
+        If[j\  < \ 10, StringForm["\<x_0``_``\>", j, k], 
+          StringForm["\<x_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
     \(\(r[j_, k_] := 
         If[j\  < \ 10, StringForm["\<r_0``_``\>", j, k], 
           StringForm["\<r_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
@@ -94,7 +97,8 @@ Cell[BoxData[{
           Sum[Sa[Next[n, i], k], {i, 0, 
               NextCount[n] - 1}];\)\), "\[IndentingNewLine]", 
     \(\(Tw[0, _] = 0;\)\), "\[IndentingNewLine]", 
-    \(\(Tw[n_, k_] := S + C[Proc[n]] Sa[n, k];\)\), "\[IndentingNewLine]", 
+    \(\(Tw[n_, k_] := 
+        x[n, k]\ S + C[Proc[n]] Sa[n, k];\)\), "\[IndentingNewLine]", 
     \(\(Ta[j_, k_] := 
         A[j] Sum[
             If[Proc[i] \[Equal] j, a[i, k], 0], {i, 0, 
@@ -118,7 +122,10 @@ Cell[BoxData[{
     \(\(W5[j_] := \ 
         t[j, 0] + Ta[j, 0] \[LessEqual] T;\)\), "\[IndentingNewLine]", 
     \(\(WS := {Sum[Sum[a[n, k], {n, 0, 15}], {k, 0, m - 1}] \[Equal] 
-            V};\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+            V};\)\), "\[IndentingNewLine]", 
+    \(\(WX[n_, k_] := 
+        Sa[n, k] \[LessEqual] 
+          V\ x[n, k];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
     \(\(S = 11;\)\), "\[IndentingNewLine]", 
     \(\(A[
           0] = \(A[
@@ -133,7 +140,7 @@ Cell[BoxData[{
               4] = \(C[5] = \(C[7] = 
                 4.4\)\)\)\);\)\), "\[IndentingNewLine]", 
     \(\(V = 10000;\)\), "\[IndentingNewLine]", 
-    \(\(m = 2;\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(m = 1;\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
     \(\(Model\  = \ 
         Flatten[ExpandAll[
             Join[\[IndentingNewLine]Table[
@@ -145,8 +152,9 @@ Cell[BoxData[{
                 W3[n, k], {n, 0, 15}, {k, 1, 
                   m - 1}], \[IndentingNewLine]Table[
                 W4[j, k], {j, 0, 7}, {k, 1, m - 1}], \[IndentingNewLine]Table[
-                W5[j], {j, 0, 
-                  7}], \[IndentingNewLine]WS\[IndentingNewLine]]]];\)\
+                W5[j], {j, 0, 7}], \[IndentingNewLine]Table[
+                WX[n, k], {n, 0, 15}, {k, 0, 
+                  m - 1}], \[IndentingNewLine]WS\[IndentingNewLine]]]];\)\
 \[IndentingNewLine]\), "\[IndentingNewLine]", 
     \(\(WRK[n_, k_] := 
         r[n, k] + Tw[n, k] == rk[n, k];\)\), "\[IndentingNewLine]", 
@@ -169,8 +177,11 @@ Cell[BoxData[{
     \(\(Table[Ta[j, k], {j, 0, 7}]\  // 
         TableForm;\)\), "\[IndentingNewLine]", 
     \(\(Model\  // TextForm;\)\), "\[IndentingNewLine]", 
-    \(\(Length[Model];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(Length[ModelDebug]\[IndentingNewLine]\), "\[IndentingNewLine]", 
     \(PrintToLPSolve[ModelDebug]\)}], "Input"],
+
+Cell[BoxData[
+    \(174\)], "Output"],
 
 Cell[OutputFormData["\<\
 \"min: T;\\nr_00_1 = 0;\\nr_01_1 = 0;\\nr_02_1 = 0;\\nr_03_1 = 0;\\n11 + 2.2 \
@@ -506,7 +517,7 @@ pc_15 = 7;\
 FrontEndVersion->"5.0 for Microsoft Windows",
 ScreenRectangle->{{0, 1680}, {0, 967}},
 WindowSize->{1102, 740},
-WindowMargins->{{Automatic, 97}, {Automatic, 67}}
+WindowMargins->{{Automatic, 106}, {Automatic, 3}}
 ]
 
 (*******************************************************************
@@ -528,8 +539,9 @@ CellTagsIndex->{}
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[1776, 53, 5710, 119, 1370, "Input"],
-Cell[7489, 174, 15979, 328, 2681, "Output"]
+Cell[1776, 53, 6066, 127, 1430, "Input"],
+Cell[7845, 182, 37, 1, 29, "Output"],
+Cell[7885, 185, 15979, 328, 2667, "Output"]
 }, Open  ]]
 }
 ]
