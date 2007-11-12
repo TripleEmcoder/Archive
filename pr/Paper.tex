@@ -47,7 +47,7 @@
 
 \begin{titlepage}
 \title{Przetwarzanie równoleg³e \\ tytu³}
-\author{ Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
+\author{Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
 \end{titlepage}
 
 \begin{document}
@@ -142,14 +142,33 @@ $$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
 
 \section{Rozwi¹zanie przyk³adowego problemu}
 
-Przedstawiony w poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 5 oraz charakterystykê systemu Parastation opisan¹ poni¿ej. Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}.
+Przedstawiony w poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
 
 $$S = 11$$
-$$A[0] = A[2] = A[3] = A[5] = 16$$
-$$A[1] = A[4] = A[6] = A[7] = 20$$
-$$C[1] = C[6] = 2.2$$
-$$C[2] = C[3] = C[4] = C[5] = C[7] = 4.4$$
+$$A(0) = A(2) = A(3) = A(5) = 16$$
+$$A(1) = A(4) = A(6) = A(7) = 20$$
+$$C(1) = C(6) = 2.2$$
+$$C(2) = C(3) = C(4) = C(5) = C(7) = 4.4$$
 $$V = 10000$$
+
+Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres}
+\caption{Wykres czasu przetwarzania}
+\label{fig:wykres}
+\end{figure}
+
+Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu, ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
+
+$$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
+
+gdzie $A_1$ i $A_2$ to szybkoœci procesorów.
+
+Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
+
+Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i 5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}
 
 \begin{figure}[h!]
 \centering
@@ -172,21 +191,12 @@ $$V = 10000$$
 \label{fig:wykres5}
 \end{figure}
 
-Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres}
-\caption{Wykres czasu przetwarzania}
-\label{fig:wykres}
-\end{figure}
 
-Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu, ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
 
-$$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
 
-gdzie $A_1$ i $A_2$ to szybkoœci procesorów.
 
-Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
+
+
 
 \end{document}

@@ -96,7 +96,8 @@ namespace Visualizer
 
                 for (int j = 0; j < m; j++)
                 {
-                    int _y = y + j * size;
+                    //int _y = y + j * size;
+                    int _y = y + (m - j-1) * size;
 
                     graphics.DrawRectangle(Pens.Black, x, _y, T * scale, size);
 
