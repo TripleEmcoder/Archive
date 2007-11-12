@@ -17,19 +17,27 @@ namespace Visualizer
         public Form1()
         {
             InitializeComponent();
+
+            resetButton.PerformClick();
         }
 
-        int n, m;
         float T;
-        float[,] r, rk, t, tk;
+        
+        int m; //j
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        int n; //i
+        float[,] t, tk;
+        
+        int l; //k
+        float[,] r, rk;         
+
+        private void loadButton_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (inputOpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Dictionary<string, float> variables = new Dictionary<string, float>();
 
-                using (Stream stream = openFileDialog1.OpenFile())
+                using (Stream stream = inputOpenFileDialog.OpenFile())
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     reader.ReadLine();
@@ -45,39 +53,49 @@ namespace Visualizer
                     }
                 }
 
-                string format = "{0}_{1}_{2}";
+                string format = "{0}_{1:D2}_{2}";
 
                 n = 8;
+                l = 16;
+
                 m = (int)variables["m"];
                 T = variables["T"];
 
-                r = new float[n, m];
-                rk = new float[n, m];
                 t = new float[n, m];
                 tk = new float[n, m];
 
                 for (int i = 0; i < n; i++)
                     for (int j = 0; j < m; j++)
                     {
-                        r[i, j] = variables[string.Format(format, "r", i, j)];
-                        rk[i, j] = variables[string.Format(format, "rk", i, j)];
                         t[i, j] = variables[string.Format(format, "t", i, j)];
                         tk[i, j] = variables[string.Format(format, "tk", i, j)];
                     }
+
+                r = new float[l, m];
+                rk = new float[l, m];
+                
+                for (int k = 0; k < l; k++)
+                    for (int j = 0; j < m; j++)
+                    {
+                        r[k, j] = variables[string.Format(format, "r", k, j)];
+                        rk[k, j] = variables[string.Format(format, "rk", k, j)];
+                    }
+                
+                refreshButton.PerformClick();
             }
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void refreshButton_Click(object sender, EventArgs e)
         {
             //float scale = 1000 / T;
-            float scale = 0.03F;
+            float scale = float.Parse(scaleTextBox.Text);
             int size = 20;
             int margin = 40;
             int title = 40;
 
             //int width = (int)(T * scale) + 2 * margin + title;
-            int width = 1010 + 2 * margin + title;
-            int height = n * m * size + (n + 1) * margin;
+            int width = int.Parse(widthTextBox.Text) + 2 * margin + title;
+            int height = l * m * size + (l + 1) * margin;
 
             Bitmap bitmap = new Bitmap(width, height);
             Graphics graphics = Graphics.FromImage(bitmap);
@@ -85,9 +103,9 @@ namespace Visualizer
 
             int x = margin + title;
 
-            DrawGrid(graphics, x, 0, width, height - margin, scale, 1000);
+            DrawGrid(graphics, x, 0, width, height - margin, scale, int.Parse(stepTextBox.Text));
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < l; i++)
             {
                 int y = margin + i * margin + i * m * size;
 
@@ -96,8 +114,7 @@ namespace Visualizer
 
                 for (int j = 0; j < m; j++)
                 {
-                    //int _y = y + j * size;
-                    int _y = y + (m - j-1) * size;
+                    int _y = y + (m-j-1) * size;
 
                     graphics.DrawRectangle(Pens.Black, x, _y, T * scale, size);
 
@@ -105,16 +122,31 @@ namespace Visualizer
                         DrawCommunication(graphics, j.ToString(),
                             x + r[i, j] * scale, _y, (rk[i, j] - r[i, j]) * scale, size);
 
-                    if (tk[i, j] - t[i, j] > 0)
-                        DrawComputation(graphics, j.ToString(),
-                            x + t[i, j] * scale, _y, (tk[i, j] - t[i, j]) * scale, size);
+                    //if (tk[i, j] - t[i, j] > 0)
+                    //    DrawComputation(graphics, j.ToString(),
+                    //        x + t[i, j] * scale, _y, (tk[i, j] - t[i, j]) * scale, size);
                 }
             }
 
-            if (pictureBox1.Image != null)
-                pictureBox1.Image.Dispose();
+            if (ganttPictureBox.Image != null)
+                ganttPictureBox.Image.Dispose();
 
-            pictureBox1.Image = bitmap;
+            ganttPictureBox.Image = bitmap;
+        }
+
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            scaleTextBox.Text = (0.03F).ToString();
+            widthTextBox.Text = (1010).ToString();
+            stepTextBox.Text = (1000).ToString();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (ganttPictureBox.Image != null)
+                if (outputSaveFileDialog.ShowDialog() == DialogResult.OK)
+                    ((Bitmap)ganttPictureBox.Image).Save(outputSaveFileDialog.FileName);
         }
 
         private void DrawGrid(Graphics graphics, float x, float y, float width, float height, float scale, float step)
@@ -160,13 +192,6 @@ namespace Visualizer
 
             graphics.DrawString(text, font, Brushes.Black,
                 x + width / 2 - size.Width / 2, y + height / 2 - size.Height / 2);
-        }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            if (pictureBox1.Image != null)
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                    ((Bitmap)pictureBox1.Image).Save(saveFileDialog1.FileName);
         }
     }
 }
