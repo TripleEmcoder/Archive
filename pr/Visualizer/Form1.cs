@@ -69,12 +69,14 @@ namespace Visualizer
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            float scale = 800/T;
+            //float scale = 1000 / T;
+            float scale = 0.03F;
             int size = 20;
-            int margin = 30;
-            int title = 50;
+            int margin = 40;
+            int title = 40;
 
-            int width = (int)(T * scale) + 2 * margin + title;
+            //int width = (int)(T * scale) + 2 * margin + title;
+            int width = 1010 + 2 * margin + title;
             int height = n * m * size + (n + 1) * margin;
 
             Bitmap bitmap = new Bitmap(width, height);
@@ -83,7 +85,7 @@ namespace Visualizer
 
             int x = margin + title;
 
-            DrawGrid(graphics, x, 0, width, height, 30);
+            DrawGrid(graphics, x, 0, width, height - margin, scale, 1000);
 
             for (int i = 0; i < n; i++)
             {
@@ -94,7 +96,7 @@ namespace Visualizer
 
                 for (int j = 0; j < m; j++)
                 {
-                    int _y = y + j * size;                    
+                    int _y = y + j * size;
 
                     graphics.DrawRectangle(Pens.Black, x, _y, T * scale, size);
 
@@ -114,32 +116,36 @@ namespace Visualizer
             pictureBox1.Image = bitmap;
         }
 
-        private void DrawGrid(Graphics graphics, float x, float y, float width, float height, float step)
+        private void DrawGrid(Graphics graphics, float x, float y, float width, float height, float scale, float step)
         {
-            Pen pen = new Pen(Color.Black);
+            int axis = 30;
+
+            Pen pen = new Pen(Color.Gray);
             pen.DashStyle = DashStyle.Dash;
+
             Font font = new Font(FontFamily.GenericSansSerif, 12);
 
-            int k = 0;
-            for (float _x = x; _x < x + width; _x += step)
+            for (float _x = x, i = 0; _x < x + width; _x += step * scale, i++)
             {
-                graphics.DrawLine(pen, _x, y, _x, y + height);
-                if (k++ % 2 == 0)
-                    DrawStringCentered(graphics, font, ((int)((_x - x) / 800 * T)).ToString(), _x - step, (int)y, 2 * step, 20);
+                graphics.DrawLine(pen, _x, y + axis, _x, y + height);
+
+                if (i % 2 == 0)
+                    DrawStringCentered(graphics, font, Math.Round((_x - x) / scale).ToString(),
+                        _x - step * scale, y, 2 * step * scale, axis);
             }
         }
 
-        private void DrawCommunication(Graphics graphics, string text, float x, int y, float width, float height)
+        private void DrawCommunication(Graphics graphics, string text, float x, float y, float width, float height)
         {
             DrawBlock(graphics, Brushes.Red, text, x, y, width, height);
         }
 
-        private void DrawComputation(Graphics graphics, string text, float x, int y, float width, float height)
+        private void DrawComputation(Graphics graphics, string text, float x, float y, float width, float height)
         {
             DrawBlock(graphics, Brushes.Green, text, x, y, width, height);
         }
 
-        private void DrawBlock(Graphics graphics, Brush brush, string text, float x, int y, float width, float height)
+        private void DrawBlock(Graphics graphics, Brush brush, string text, float x, float y, float width, float height)
         {
             graphics.FillRectangle(brush, x, y, width, height);
             graphics.DrawRectangle(Pens.Black, x, y, width, height);
@@ -147,7 +153,7 @@ namespace Visualizer
             DrawStringCentered(graphics, Font, text, x, y, width, height);
         }
 
-        private static void DrawStringCentered(Graphics graphics, Font font, string text, float x, int y, float width, float height)
+        private static void DrawStringCentered(Graphics graphics, Font font, string text, float x, float y, float width, float height)
         {
             SizeF size = graphics.MeasureString(text, font);
 
