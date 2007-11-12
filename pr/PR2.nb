@@ -1,0 +1,281 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     10741,        242]*)
+(*NotebookOutlinePosition[     11388,        264]*)
+(*  CellTagsIndexPosition[     11344,        260]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+    \(\(ClearAttributes[C, Protected];\)\), "\[IndentingNewLine]", 
+    \(\(a[j_, k_] := 
+        If[j\  < \ 10, StringForm["\<a_0``_``\>", j, k], 
+          StringForm["\<a_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
+    \(\(r[j_, k_] := 
+        If[j\  < \ 10, StringForm["\<r_0``_``\>", j, k], 
+          StringForm["\<r_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
+    \(\(t[j_, k_] := 
+        If[j\  < \ 10, StringForm["\<t_0``_``\>", j, k], 
+          StringForm["\<t_``_``\>", j, k]];\)\), "\[IndentingNewLine]", 
+    \(\(PrintToLPSolve[x_] := 
+        TextForm[
+          StringReplace["\<min: T;\n\>"\  <> \ 
+              ToString[
+                Model], {"\<{\>" -> "\<\>", "\<==\>" -> "\<=\>", "\<, \>" -> \
+"\<;\n\>", \ "\<}\>" -> "\<;\>"}]\ ];\)\[IndentingNewLine]\), "\
+\[IndentingNewLine]", 
+    \(\(NextTab\  = \ {{}, {4, 5}, {6, 7}, {8, 
+            9}, {10}, {11}, {12}, {13}, {14}, {15}, {}, {}, {}, {}, {}, \
+{}};\)\), "\[IndentingNewLine]", 
+    \(\(PrevTab\  = \ {0, 0, 0, \ 0, \ 1, \ 1, \ 2, \ 2, \ 3, \ 3, \ 4, 5, 6, 
+          7, 8, 9};\)\), "\[IndentingNewLine]", 
+    \(\(ProcTab\  = \ {0, 1, 2, \ 3, \ 4, \ 4, \ 5, \ 5, \ 6, \ 6, \ 7, 7, 7, 
+          7, 7, 7};\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(Next[n_, \ i_] := 
+        NextTab[\([n + 1, \ i + 1]\)];\)\), "\[IndentingNewLine]", 
+    \(\(NextCount[n_] := 
+        Length[NextTab[\([n + 1]\)]];\)\), "\[IndentingNewLine]", 
+    \(\(Prev[n_] := PrevTab[\([n + 1]\)];\)\), "\[IndentingNewLine]", 
+    \(\(Proc[n_] := 
+        ProcTab[\([n + 1]\)];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(Sa[n_, k_] := 
+        a[n, k] + \ 
+          Sum[Sa[Next[n, i], k], {i, 0, 
+              NextCount[n] - 1}];\)\), "\[IndentingNewLine]", 
+    \(\(Tw[n_, k_] := S + C[Proc[n]] Sa[n, k];\)\), "\[IndentingNewLine]", 
+    \(\(Ta[j_, k_] := 
+        A[j] Sum[
+            If[Proc[i] \[Equal] j, a[i, k], 0], {i, 0, 
+              15}];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(Table[Tw[i, 0], {i, 0, 15}]\  // 
+        TableForm;\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(W0[n_, k_] := 
+        r[n, m - 1]\  \[Equal] \ 0;\)\), "\[IndentingNewLine]", 
+    \(\(W1[n_, k_] := 
+        r[Prev[n], k]\  + \ Tw[Prev[n], k]\  \[LessEqual] \ 
+          r[n, k];\)\), "\[IndentingNewLine]", 
+    \(\(W2[n_, k_] := 
+        r[n, k] + Tw[n, k] \[LessEqual] 
+          t[Proc[n], k];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(W3[n_, k_] := 
+        r[n, k] + Tw[n, \ k]\  \[LessEqual] \ 
+          r[n, \ k - 1];\)\), "\[IndentingNewLine]", 
+    \(\(W4[j_, k_] := 
+        t[j, k] + Ta[j, k] \[LessEqual] 
+          t[j, k - 1];\)\), "\[IndentingNewLine]", 
+    \(\(W5[j_] := \ 
+        t[j, 0] + Ta[j, 0] \[LessEqual] T;\)\), "\[IndentingNewLine]", 
+    \(\(WS := {Sum[Sum[a[n, k], {n, 0, 15}], {k, 0, m - 1}] \[Equal] 
+            V};\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(S = 11;\)\), "\[IndentingNewLine]", 
+    \(\(A[
+          0] = \(A[
+            2] = \(A[3] = \(A[5] = 16\)\)\);\)\), "\[IndentingNewLine]", 
+    \(\(A[
+          1] = \(A[
+            4] = \(A[6] = \(A[7] = 20\)\)\);\)\), "\[IndentingNewLine]", 
+    \(\(C[1] = \(C[6] = 2.2\);\)\), "\[IndentingNewLine]", 
+    \(\(C[
+          2] = \(C[
+            3] = \(C[
+              4] = \(C[5] = \(C[7] = 
+                4.4\)\)\)\);\)\), "\[IndentingNewLine]", 
+    \(\(V = 10000;\)\), "\[IndentingNewLine]", 
+    \(\(m = 1;\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(Model\  = \ 
+        Flatten[ExpandAll[
+            Join[\[IndentingNewLine]Table[
+                W0[n, k], {n, 0, 3}], \[IndentingNewLine]Table[
+                W1[n, k], {n, 4, 15}, {k, 0, 
+                  m - 1}], \[IndentingNewLine]Table[
+                W2[n, k], {n, 1, 15}, {k, 0, 
+                  m - 1}], \[IndentingNewLine]Table[
+                W3[n, k], {n, 1, 15}, {k, 1, 
+                  m - 1}], \[IndentingNewLine]Table[
+                W4[j, k], {j, 0, 7}, {k, 1, m - 1}], \[IndentingNewLine]Table[
+                W5[j], {j, 0, 
+                  7}], \[IndentingNewLine]WS\[IndentingNewLine]]]];\)\
+\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(Table[Ta[j, k], {j, 0, 7}]\  // 
+        TableForm;\)\), "\[IndentingNewLine]", 
+    \(\(Model\  // TextForm;\)\), "\[IndentingNewLine]", 
+    \(Length[Model]\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(PrintToLPSolve[Model]\)}], "Input"],
+
+Cell[BoxData[
+    \(40\)], "Output"],
+
+Cell[OutputFormData["\<\
+\"min: T;\\nr_00_0 = 0;\\nr_01_0 = 0;\\nr_02_0 = 0;\\nr_03_0 = 0;\\n11 + 2.2 \
+a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 a_05_0 + r_01_0 \\
+<= r_04_0;\\n11 + 2.2 a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 \
+a_05_0 + r_01_0 <= r_05_0;\\n11 + 4.4 a_12_0 + 4.4 a_13_0 + 4.4 \\
+a_02_0 + 4.4 a_06_0 + 4.4 a_07_0 + r_02_0 <= r_06_0;\\n11 + 4.4 a_12_0 + 4.4 \
+a_13_0 + 4.4 a_02_0 + 4.4 a_06_0 + 4.4 a_07_0 + r_02_0 <= \\
+r_07_0;\\n11 + 4.4 a_14_0 + 4.4 a_15_0 + 4.4 a_03_0 + 4.4 a_08_0 + 4.4 a_09_0 \
++ r_03_0 <= r_08_0;\\n11 + 4.4 a_14_0 + 4.4 a_15_0 + 4.4 a_03_0 \\
++ 4.4 a_08_0 + 4.4 a_09_0 + r_03_0 <= r_09_0;\\n11 + 4.4 a_10_0 + 4.4 a_04_0 \
++ r_04_0 <= r_10_0;\\n11 + 4.4 a_11_0 + 4.4 a_05_0 + r_05_0 <= \\
+r_11_0;\\n11 + 4.4 a_12_0 + 4.4 a_06_0 + r_06_0 <= r_12_0;\\n11 + 4.4 a_13_0 \
++ 4.4 a_07_0 + r_07_0 <= r_13_0;\\n11 + 2.2 a_14_0 + 2.2 a_08_0 + \\
+r_08_0 <= r_14_0;\\n11 + 2.2 a_15_0 + 2.2 a_09_0 + r_09_0 <= r_15_0;\\n11 + \
+2.2 a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 a_05_0 + \\
+r_01_0 <= t_01_0;\\n11 + 4.4 a_12_0 + 4.4 a_13_0 + 4.4 a_02_0 + 4.4 a_06_0 + \
+4.4 a_07_0 + r_02_0 <= t_02_0;\\n11 + 4.4 a_14_0 + 4.4 a_15_0 + \\
+4.4 a_03_0 + 4.4 a_08_0 + 4.4 a_09_0 + r_03_0 <= t_03_0;\\n11 + 4.4 a_10_0 + \
+4.4 a_04_0 + r_04_0 <= t_04_0;\\n11 + 4.4 a_11_0 + 4.4 a_05_0 + \\
+r_05_0 <= t_04_0;\\n11 + 4.4 a_12_0 + 4.4 a_06_0 + r_06_0 <= t_05_0;\\n11 + \
+4.4 a_13_0 + 4.4 a_07_0 + r_07_0 <= t_05_0;\\n11 + 2.2 a_14_0 + 2.2 \\
+a_08_0 + r_08_0 <= t_06_0;\\n11 + 2.2 a_15_0 + 2.2 a_09_0 + r_09_0 <= t_06_0;\
+\\n11 + 4.4 a_10_0 + r_10_0 <= t_07_0;\\n11 + 4.4 a_11_0 + r_11_0 \\
+<= t_07_0;\\n11 + 4.4 a_12_0 + r_12_0 <= t_07_0;\\n11 + 4.4 a_13_0 + r_13_0 \
+<= t_07_0;\\n11 + 4.4 a_14_0 + r_14_0 <= t_07_0;\\n11 + 4.4 a_15_0 + \\
+r_15_0 <= t_07_0;\\n16 a_00_0 + t_00_0 <= T;\\n20 a_01_0 + t_01_0 <= T;\\n16 \
+a_02_0 + t_02_0 <= T;\\n16 a_03_0 + t_03_0 <= T;\\n20 a_04_0 + 20 \\
+a_05_0 + t_04_0 <= T;\\n16 a_06_0 + 16 a_07_0 + t_05_0 <= T;\\n20 a_08_0 + 20 \
+a_09_0 + t_06_0 <= T;\\n20 a_10_0 + 20 a_11_0 + 20 a_12_0 + 20 \\
+a_13_0 + 20 a_14_0 + 20 a_15_0 + t_07_0 <= T;\\na_10_0 + a_11_0 + a_12_0 + \
+a_13_0 + a_14_0 + a_15_0 + a_00_0 + a_01_0 + a_02_0 + a_03_0 + \\
+a_04_0 + a_05_0 + a_06_0 + a_07_0 + a_08_0 + a_09_0 = 10000;\"\
+\>", "\<\
+min: T;
+r_00_0 = 0;
+r_01_0 = 0;
+r_02_0 = 0;
+r_03_0 = 0;
+11 + 2.2 a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 a_05_0 + r_01_0 \
+<= r_04_0;
+11 + 2.2 a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 a_05_0 + r_01_0 \
+<= r_05_0;
+11 + 4.4 a_12_0 + 4.4 a_13_0 + 4.4 a_02_0 + 4.4 a_06_0 + 4.4 a_07_0 + r_02_0 \
+<= r_06_0;
+11 + 4.4 a_12_0 + 4.4 a_13_0 + 4.4 a_02_0 + 4.4 a_06_0 + 4.4 a_07_0 + r_02_0 \
+<= r_07_0;
+11 + 4.4 a_14_0 + 4.4 a_15_0 + 4.4 a_03_0 + 4.4 a_08_0 + 4.4 a_09_0 + r_03_0 \
+<= r_08_0;
+11 + 4.4 a_14_0 + 4.4 a_15_0 + 4.4 a_03_0 + 4.4 a_08_0 + 4.4 a_09_0 + r_03_0 \
+<= r_09_0;
+11 + 4.4 a_10_0 + 4.4 a_04_0 + r_04_0 <= r_10_0;
+11 + 4.4 a_11_0 + 4.4 a_05_0 + r_05_0 <= r_11_0;
+11 + 4.4 a_12_0 + 4.4 a_06_0 + r_06_0 <= r_12_0;
+11 + 4.4 a_13_0 + 4.4 a_07_0 + r_07_0 <= r_13_0;
+11 + 2.2 a_14_0 + 2.2 a_08_0 + r_08_0 <= r_14_0;
+11 + 2.2 a_15_0 + 2.2 a_09_0 + r_09_0 <= r_15_0;
+11 + 2.2 a_10_0 + 2.2 a_11_0 + 2.2 a_01_0 + 2.2 a_04_0 + 2.2 a_05_0 + r_01_0 \
+<= t_01_0;
+11 + 4.4 a_12_0 + 4.4 a_13_0 + 4.4 a_02_0 + 4.4 a_06_0 + 4.4 a_07_0 + r_02_0 \
+<= t_02_0;
+11 + 4.4 a_14_0 + 4.4 a_15_0 + 4.4 a_03_0 + 4.4 a_08_0 + 4.4 a_09_0 + r_03_0 \
+<= t_03_0;
+11 + 4.4 a_10_0 + 4.4 a_04_0 + r_04_0 <= t_04_0;
+11 + 4.4 a_11_0 + 4.4 a_05_0 + r_05_0 <= t_04_0;
+11 + 4.4 a_12_0 + 4.4 a_06_0 + r_06_0 <= t_05_0;
+11 + 4.4 a_13_0 + 4.4 a_07_0 + r_07_0 <= t_05_0;
+11 + 2.2 a_14_0 + 2.2 a_08_0 + r_08_0 <= t_06_0;
+11 + 2.2 a_15_0 + 2.2 a_09_0 + r_09_0 <= t_06_0;
+11 + 4.4 a_10_0 + r_10_0 <= t_07_0;
+11 + 4.4 a_11_0 + r_11_0 <= t_07_0;
+11 + 4.4 a_12_0 + r_12_0 <= t_07_0;
+11 + 4.4 a_13_0 + r_13_0 <= t_07_0;
+11 + 4.4 a_14_0 + r_14_0 <= t_07_0;
+11 + 4.4 a_15_0 + r_15_0 <= t_07_0;
+16 a_00_0 + t_00_0 <= T;
+20 a_01_0 + t_01_0 <= T;
+16 a_02_0 + t_02_0 <= T;
+16 a_03_0 + t_03_0 <= T;
+20 a_04_0 + 20 a_05_0 + t_04_0 <= T;
+16 a_06_0 + 16 a_07_0 + t_05_0 <= T;
+20 a_08_0 + 20 a_09_0 + t_06_0 <= T;
+20 a_10_0 + 20 a_11_0 + 20 a_12_0 + 20 a_13_0 + 20 a_14_0 + 20 a_15_0 + \
+t_07_0 <= T;
+a_10_0 + a_11_0 + a_12_0 + a_13_0 + a_14_0 + a_15_0 + a_00_0 + a_01_0 + \
+a_02_0 + a_03_0 + a_04_0 + a_05_0 + a_06_0 + a_07_0 + a_08_0 + a_09_0
+   = 10000;\
+\>"], "Output",
+  LineSpacing->{1, 0}]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1680}, {0, 967}},
+WindowSize->{1102, 740},
+WindowMargins->{{Automatic, 167}, {Automatic, 92}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 4450, 94, 1070, "Input"],
+Cell[6229, 149, 36, 1, 29, "Output"],
+Cell[6268, 152, 4457, 87, 656, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
