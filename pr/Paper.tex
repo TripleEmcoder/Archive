@@ -37,7 +37,7 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[LE,RO]{\textsf{\thepage}}
-\fancyhead[RE,LO]{\textsf{tytu³}}
+\fancyhead[RE,LO]{\textsf{Szeregowanie zadañ jednorodnych}}
 \fancyhead[CE,CO]{\ }
 \fancyfoot[LE,RO]{\ }
 \fancyfoot[RE,LO]{\ }
@@ -46,7 +46,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 \begin{titlepage}
-\title{Przetwarzanie równoleg³e \\ tytu³}
+\title{Przetwarzanie równoleg³e \\ Szeregowanie zadañ jednorodnych}
 \author{Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
 \end{titlepage}
 
@@ -57,9 +57,9 @@
 \newpage
 
 \section{Sformu³owanie problemu}
-Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i przesy³ania danych przez ka¿dy z jego procesorów. Dodatkowo zak³ada siê, ¿e w chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w jednym naro¿niku wspomnianego szeœcianu.
+Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i~przesy³ania danych przez ka¿dy z~jego procesorów. Dodatkowo zak³ada siê, ¿e w~chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w~jednym naro¿niku wspomnianego szeœcianu.
 
-Analizowany system wraz z przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i \ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony przez 0. Dalsza numeracja wynika z odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z rysunku \ref{fig:cube} w kolejnoœci zgodnej z ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu.
+Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i~\ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony przez 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:cube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu.
 
 \begin{figure}[h!]
 \centering
@@ -75,30 +75,30 @@ Analizowany system wraz z przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹
 \label{fig:flat}
 \end{figure}
 
-\section{Model w œrodowisku Parastation}
-Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation w sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
+\section{Model w~œrodowisku Parastation}
+Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation w~sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a~niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[trim=0 0 0 0, clip]{parastation}
-\caption{Model systemu w œrodowisku Parastation}
+\caption{Model systemu w~œrodowisku Parastation}
 \label{fig:parastation}
 \end{figure}
 
 \section{Analiza problemu}
-Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹, która symbolizuje kierunek przekazywania danych. Procesory na œcie¿kach wyznaczonych strza³kami s¹ odpowiedzialne (oprócz obliczeñ) za poœredniczenie w przesy³aniu danych do kolejnych wêz³ów.
+Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹, która symbolizuje kierunek przekazywania danych. Procesory na œcie¿kach wyznaczonych strza³kami s¹ odpowiedzialne (oprócz obliczeñ) za poœredniczenie w~przesy³aniu danych do kolejnych wêz³ów.
 
-G³ównym celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych pomiêdzy procesorami i wynikaj¹cego z niego procesu obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w ich trakcie, d¹¿¹c do jak najwczeœniejszego (a wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
+G³ównym celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych pomiêdzy procesorami i~wynikaj¹cego z~niego procesu obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
 
-Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w sposób opisany w kolejnych podpunktach.
+Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Dane wejœciowe}
 \begin{description}
-\item[$A(j)$] -- szybkoœæ procesora $j$, 
-\item[$C(j)$] -- szybkoœæ ³¹cza bezpoœrednio dochodz¹cego do procesora $j$,
+\item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$, 
+\item[$C(j)$] -- czas przetwarzania jednostki danych do procesora $j$,
 \item[$S$] -- czas rozruchu ³¹cza,
 \item[$V$] -- ca³kowity rozmiar danych,
-\item[$k$] -- liczba faz komunikacji,
+\item[$m$] -- liczba faz komunikacji,
 \item[$a(j,k)$] -- wielkoœæ paczki o numerze $k$ przeznaczonej dla procesora $j$,
 \item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki $k$ dla procesora $j$,
 \item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki $k$ dla procesora $j$.
@@ -106,14 +106,14 @@ Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego probl
 
 \subsection{Funkcje pomocnicze}
 \begin{itemize}
-\item czas przesy³ania danych do procesora $j$ w fazie $k$
+\item czas przesy³ania danych do procesora $j$ w~fazie $k$
 \begin{displaymath}
 T_c(j,k) = \left\{ \begin{array}{ll}
 0 & \textrm{dla $j=0$}\\
 S + C(j) \, \sum_{i = 0}^{2 - \lfloor (j + 1)/3\rfloor} a(3\,i + j,k) & \textrm{dla $j>0$}
 \end{array} \right.
 \end{displaymath}
-\item czas obliczania danych na procesorze $j$ w fazie $k$
+\item czas obliczania danych na procesorze $j$ w~fazie $k$
 $$T_a(j,k) = A(j) \, a(j,k)$$
 \end{itemize}
 
@@ -128,7 +128,7 @@ $$\textrm{min:} \; T$$
 $$r(j, k) + T_c(j,k) \leq r(j, k - 1) \qquad j = 1 \ldots 7, \; k = 1 \ldots m-1$$
 \item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem jej odbierania
 $$r(j, k) + T_c(j,k) \leq r(j + 3, k) \qquad j = 1 \ldots 4, \; k = 0 \ldots m-1$$
-\item pierwsze paczki dla procesorów 1..3 s¹ dostêpne w chwili $t = 0$
+\item pierwsze paczki dla procesorów 1..3 s¹ dostêpne w~chwili $t = 0$
 $$r(j, m-1) = 0 \qquad j = 1 \ldots 3$$
 \item nie mo¿na rozpocz¹æ obliczenia paczki przed zakoñczeniem jej odbierania
 $$r(j, k) + T_c(j,k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
@@ -142,7 +142,7 @@ $$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
 
 \section{Rozwi¹zanie przyk³adowego problemu}
 
-Przedstawiony w poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
+Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
 
 $$S = 11$$
 $$A(0) = A(2) = A(3) = A(5) = 16$$
@@ -151,7 +151,7 @@ $$C(1) = C(6) = 2.2$$
 $$C(2) = C(3) = C(4) = C(5) = C(7) = 4.4$$
 $$V = 10000$$
 
-Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
+Na podstawie danych uzyskanych w~wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
 
 \begin{figure}[h!]
 \centering
@@ -160,15 +160,15 @@ Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu prze
 \label{fig:wykres}
 \end{figure}
 
-Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu, ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
+Minimalny czas przetwarzania w~systemie Parastation, przy za³o¿eniu, ¿e w~chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
 
 $$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
 
-gdzie $A_1$ i $A_2$ to szybkoœci procesorów.
+gdzie $A_1$ i~$A_2$ to szybkoœci procesorów.
 
 Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
 
-Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i 5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}
+Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}
 
 \begin{figure}[h!]
 \centering
@@ -190,13 +190,5 @@ Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i 5 przedstawiaj¹
 \caption{Wykres Gantta dla liczby paczek $m=5$}
 \label{fig:wykres5}
 \end{figure}
-
-
-
-
-
-
-
-
 
 \end{document}
