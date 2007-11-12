@@ -54,8 +54,6 @@
 
 \maketitle
 
-\tableofcontents
-
 \newpage
 
 \section{Sformu³owanie problemu}
@@ -88,62 +86,70 @@ Opisany wy¿ej system przetwarzania zosta³ zamodelowany w œrodowisku Parastation 
 \end{figure}
 
 \section{Analiza problemu}
-Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹ symbolizuj¹c¹ kierunek przekazywania danych.
+Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹, która symbolizuje kierunek przekazywania danych. Procesory na œcie¿kach wyznaczonych strza³kami s¹ odpowiedzialne (oprócz obliczeñ) za poœredniczenie w przesy³aniu danych do kolejnych wêz³ów.
 
-Dane wejœciowe:
+G³ównym celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych pomiêdzy procesorami i wynikaj¹cego z niego procesu obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w ich trakcie, d¹¿¹c do jak najwczeœniejszego (a wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
+
+Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w sposób opisany w kolejnych podpunktach.
+
+\subsection{Dane wejœciowe}
 \begin{description}
-\item[$A(j)$] -- szybkoœæ procesora j, 
-\item[$C(j)$] -- szybkoœæ ³¹cza bezpoœrednio dochodz¹cego do procesora j,
-\item[$S$] -- czas rozruchu,
-\item[$V$] -- rozmiar danych,
+\item[$A(j)$] -- szybkoœæ procesora $j$, 
+\item[$C(j)$] -- szybkoœæ ³¹cza bezpoœrednio dochodz¹cego do procesora $j$,
+\item[$S$] -- czas rozruchu ³¹cza,
+\item[$V$] -- ca³kowity rozmiar danych,
 \item[$k$] -- liczba faz komunikacji,
-\item[$a(j,k)$] -- wielkoœæ paczki o numerze k przeznaczonej dla procesora j,
-\item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki k dla procesora j,
-\item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki k dla procesora j.
+\item[$a(j,k)$] -- wielkoœæ paczki o numerze $k$ przeznaczonej dla procesora $j$,
+\item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki $k$ dla procesora $j$,
+\item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki $k$ dla procesora $j$.
 \end{description}
-Funkcje pomocnicze:
+
+\subsection{Funkcje pomocnicze}
 \begin{itemize}
-\item czas przesy³ania danych do procesora j w fazie k
+\item czas przesy³ania danych do procesora $j$ w fazie $k$
 \begin{displaymath}
 T_c(j,k) = \left\{ \begin{array}{ll}
 0 & \textrm{dla $j=0$}\\
 S + C(j) \, \sum_{i = 0}^{2 - \lfloor (j + 1)/3\rfloor} a(3\,i + j,k) & \textrm{dla $j>0$}
 \end{array} \right.
 \end{displaymath}
-\item czas obliczania danych na procesorze j w fazie k
-$$T_a(j,k) = A(j) \, a(j,k) $$
+\item czas obliczania danych na procesorze $j$ w fazie $k$
+$$T_a(j,k) = A(j) \, a(j,k)$$
 \end{itemize}
-Funkcja celu:
+
+\subsection{Funkcja celu}
 \begin{quotation}
 $$\textrm{min:} \; T$$
 \end{quotation}
-Ograniczenia:
+
+\subsection{Ograniczenia}
 \begin{itemize}
 \item kolejna paczka nie mo¿e byæ wys³ana przed zakoñczeniem wysy³ania poprzedniej
 $$r(j, k) + T_c(j,k) \leq r(j, k - 1) \qquad j = 1 \ldots 7, \; k = 1 \ldots m-1$$
-\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem odbierania
+\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem jej odbierania
 $$r(j, k) + T_c(j,k) \leq r(j + 3, k) \qquad j = 1 \ldots 4, \; k = 0 \ldots m-1$$
 \item pierwsze paczki dla procesorów 1..3 s¹ dostêpne w chwili $t = 0$
 $$r(j, m-1) = 0 \qquad j = 1 \ldots 3$$
-\item nie mo¿na liczyæ przed zakoñczeniem transmisji
+\item nie mo¿na rozpocz¹æ obliczenia paczki przed zakoñczeniem jej odbierania
 $$r(j, k) + T_c(j,k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
 \item kolejne paczki musz¹ byæ liczone sekwencyjnie
 $$t(j, k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 \item obliczanie ostatniej paczki musi zakoñczyæ siê przed koñcem przetwarzania
 $$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
-\item suma wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
+\item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
 \end{itemize}
 
 \section{Rozwi¹zanie przyk³adowego problemu}
 
-Dane:
-S = 11;
-A[0] = A[2] = A[3] = A[5] = 16;
-A[1] = A[4] = A[6] = A[7] = 20;
-C[1] = C[6] = 2.2;
-C[2] = C[3] = C[4] = C[5] = C[7] = 4.4;
-V = 10000;
+Przedstawiony w poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 5 oraz charakterystykê systemu Parastation opisan¹ poni¿ej. Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}.
+
+$$S = 11$$
+$$A[0] = A[2] = A[3] = A[5] = 16$$
+$$A[1] = A[4] = A[6] = A[7] = 20$$
+$$C[1] = C[6] = 2.2$$
+$$C[2] = C[3] = C[4] = C[5] = C[7] = 4.4$$
+$$V = 10000$$
 
 \begin{figure}[h!]
 \centering
@@ -166,7 +172,8 @@ V = 10000;
 \label{fig:wykres5}
 \end{figure}
 
-Wykres czasu przetwarzania w zale¿noœci od liczby faz:
+Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres}
@@ -174,12 +181,12 @@ Wykres czasu przetwarzania w zale¿noœci od liczby faz:
 \label{fig:wykres}
 \end{figure}
 
-Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ w procesorach wynosi:
+Minimalny czas przetwarzania w systemie Parastation, przy za³o¿eniu, ¿e w chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
 
 $$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
 
 gdzie $A_1$ i $A_2$ to szybkoœci procesorów.
 
-Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Na wykresie \ref{fig:wykres} widaæ, ¿e wraz ze wzrostem iloœci faz czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
+Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
 
 \end{document}
