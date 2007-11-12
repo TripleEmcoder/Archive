@@ -118,9 +118,15 @@ namespace Visualizer
         {
             Pen pen = new Pen(Color.Black);
             pen.DashStyle = DashStyle.Dash;
+            Font font = new Font(FontFamily.GenericSansSerif, 12);
 
+            int k = 0;
             for (float _x = x; _x < x + width; _x += step)
+            {
                 graphics.DrawLine(pen, _x, y, _x, y + height);
+                if (k++ % 2 == 0)
+                    DrawStringCentered(graphics, font, ((int)((_x - x) / 800 * T)).ToString(), _x - step, (int)y, 2 * step, 20);
+            }
         }
 
         private void DrawCommunication(Graphics graphics, string text, float x, int y, float width, float height)
