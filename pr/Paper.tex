@@ -93,15 +93,17 @@ G³ównym celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla roz
 Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Dane wejœciowe}
+%W sumie to nie s¹ dane wejœciowe, bo czêœciowo wyjœciowe
 \begin{description}
 \item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$, 
-\item[$C(j)$] -- czas przetwarzania jednostki danych do procesora $j$,
+\item[$C(j)$] -- czas przesy³ania jednostki danych do procesora $j$,
 \item[$S$] -- czas rozruchu ³¹cza,
 \item[$V$] -- ca³kowity rozmiar danych,
 \item[$m$] -- liczba faz komunikacji,
-\item[$a(j,k)$] -- wielkoœæ paczki o numerze $k$ przeznaczonej dla procesora $j$,
-\item[$r(j,k)$] -- moment gotowoœci do wys³ania paczki $k$ dla procesora $j$,
-\item[$t(j,k)$] -- moment gotowoœci do obliczeñ paczki $k$ dla procesora $j$.
+\item[$a(n,k)$] -- wielkoœæ paczki o numerze $n$ w fazie $k$
+\item[$r(n,k)$] -- moment gotowoœci do wys³ania paczki o numerze $n$ w fazie $k$,
+\item[$x(n,k)$] -- zmienna binarna okreœlaj¹ca czy paczka o numerze $n$ jest wysy³ana w fazie $k$,
+\item[$t(j,k)$] -- moment gotowoœci do obliczeñ procesora $j$ w fazie $k$,
 \end{description}
 
 \subsection{Funkcje pomocnicze}
