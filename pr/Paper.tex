@@ -86,66 +86,86 @@ Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation 
 \end{figure}
 
 \section{Analiza problemu}
-Spoœród wielu mo¿liwych dróg dostarczenia danych do poszczególnych procesorów wybrane zosta³y te oznaczone na rysunku \ref{fig:parastation} strza³k¹, która symbolizuje kierunek przekazywania danych. Procesory na œcie¿kach wyznaczonych strza³kami s¹ odpowiedzialne (oprócz obliczeñ) za poœredniczenie w~przesy³aniu danych do kolejnych wêz³ów.
-
-G³ównym celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych pomiêdzy procesorami i~wynikaj¹cego z~niego procesu obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
+Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych i wykonywania obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
 
 Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
+\subsection{Idea rozwi¹zania}
+Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto 16 paczek ($i = 0 \ldots 15$) danych, odpowiadaj¹cych ró¿nym œcie¿kom, którymi mog¹ one docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek.
+Dodatkowo ka¿da paczka jest przesy³ana w kilku fazach ($k = m-1 \ldots 0$).
+
 \subsection{Dane wejœciowe}
-%W sumie to nie s¹ dane wejœciowe, bo czêœciowo wyjœciowe
 \begin{description}
-\item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$, 
-\item[$C(j)$] -- czas przesy³ania jednostki danych do procesora $j$,
-\item[$S$] -- czas rozruchu ³¹cza,
-\item[$V$] -- ca³kowity rozmiar danych,
-\item[$m$] -- liczba faz komunikacji,
-\item[$a(n,k)$] -- wielkoœæ paczki o numerze $n$ w fazie $k$
-\item[$r(n,k)$] -- moment gotowoœci do wys³ania paczki o numerze $n$ w fazie $k$,
-\item[$x(n,k)$] -- zmienna binarna okreœlaj¹ca czy paczka o numerze $n$ jest wysy³ana w fazie $k$,
-\item[$t(j,k)$] -- moment gotowoœci do obliczeñ procesora $j$ w fazie $k$,
+\item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$
+\item[$C(i)$] -- czas przesy³ania jednostki danych w paczce $i$
+\item[$S$] -- czas rozruchu ³¹cza
+\item[$V$] -- ca³kowity rozmiar danych
+\item[$m$] -- liczba faz komunikacji
+\end{description}
+
+\subsection{Zmienne decyzyjne}
+\begin{description}
+\item[$a(i,k)$] -- wielkoœæ paczki $i$ w fazie $k$
+\item[$r(i,k)$] -- moment gotowoœci do wys³ania paczki $i$ w fazie $k$
+\item[$x(i,k)$] -- zmienna binarna okreœlaj¹ca czy paczka $i$ jest wysy³ana w fazie $k$
+\item[$t(j,k)$] -- moment gotowoœci do obliczeñ procesora $j$ w fazie $k$
 \end{description}
 
 \subsection{Funkcje pomocnicze}
+\begin{description}
+\item[$proc(i)$] -- numer procesora docelowego dla paczki $i$
+\item[$prev(i)$] -- zbiór paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$
+\item[$next(i)$] -- zbiór paczek
+\end{description}
+Funkcja $prev(i)$ okreœla numer paczki $p$, której czêœci¹ jest paczka $i$ oraz -- w przypadku ³¹czy, którymi przesy³ane s¹ 2 paczki -- numer paczki przesy³anej wczeœniej.
+
+Wartoœci obu funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania.
+
+%!! popraw
 \begin{itemize}
-\item czas przesy³ania danych do procesora $j$ w~fazie $k$
+\item SA
+$$ S_a(i,k) = a(i,k) + \sum_{p \in next(i)} S_a(p,k)$$
+\item TC
 \begin{displaymath}
-T_c(j,k) = \left\{ \begin{array}{ll}
-0 & \textrm{dla $j=0$}\\
-S + C(j) \, \sum_{i = 0}^{2 - \lfloor (j + 1)/3\rfloor} a(3\,i + j,k) & \textrm{dla $j>0$}
+T_c(i,k) = \left\{ \begin{array}{ll}
+0 & \textrm{dla $i=0$}\\
+x(i,k) \; S + C(i) \; S_a   & \textrm{dla $i>0$}
 \end{array} \right.
 \end{displaymath}
-\item czas obliczania danych na procesorze $j$ w~fazie $k$
+\item TA
 $$T_a(j,k) = A(j) \, a(j,k)$$
 \end{itemize}
 
 \subsection{Funkcja celu}
 \begin{quotation}
-$$\textrm{min:} \; T$$
+$$\textrm{min:} \; t$$
 \end{quotation}
 
 \subsection{Ograniczenia}
 \begin{itemize}
-\item kolejna paczka nie mo¿e byæ wys³ana przed zakoñczeniem wysy³ania poprzedniej
-$$r(j, k) + T_c(j,k) \leq r(j, k - 1) \qquad j = 1 \ldots 7, \; k = 1 \ldots m-1$$
-\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem jej odbierania
-$$r(j, k) + T_c(j,k) \leq r(j + 3, k) \qquad j = 1 \ldots 4, \; k = 0 \ldots m-1$$
-\item pierwsze paczki dla procesorów 1..3 s¹ dostêpne w~chwili $t = 0$
-$$r(j, m-1) = 0 \qquad j = 1 \ldots 3$$
+\item paczki dla procesorów 1..3 w fazie m-1 s¹ dostêpne w~chwili $t = 0$
+$$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
+\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem przesy³ania paczek o numerach okreœlonych przez funkcjê $prev(i)$
+$$ \forall p \in prev(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \item nie mo¿na rozpocz¹æ obliczenia paczki przed zakoñczeniem jej odbierania
-$$r(j, k) + T_c(j,k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
-\item kolejne paczki musz¹ byæ liczone sekwencyjnie
+$$ x(i, k) r(i, k) + T_w(i, k) \leq t(proc(i), k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
+\item kolejne fazy przesy³ania paczek musz¹ przebiegaæ sekwencyjnie
+$$r(i, k) + T_w(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
+\item kolejne fazy przetwarzania paczek musz¹ przebiegaæ sekwencyjnie
 $$t(j, k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 \item obliczanie ostatniej paczki musi zakoñczyæ siê przed koñcem przetwarzania
 $$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
-$$ \sum_{j = 0}^{7} \sum_{k = 0}^{m-1} a(j,k) = V$$
+$$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = v$$
+\item
+$$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
 
 \section{Rozwi¹zanie przyk³adowego problemu}
 
 Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
 
+%!!!!
 $$S = 11$$
 $$A(0) = A(2) = A(3) = A(5) = 16$$
 $$A(1) = A(4) = A(6) = A(7) = 20$$
