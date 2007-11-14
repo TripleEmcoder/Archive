@@ -92,7 +92,7 @@ Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego probl
 
 \subsection{Idea rozwi¹zania}
 Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem paczek". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 paczkami danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. Ograniczenia zosta³y skonstruowane tak, aby paczki dla ka¿dej z warstw zawiera³y w sobie równie¿ dane dla warst kolejnych, jeœli takie istniej¹.
-W celu sprawnienia procesu obliczeñ, ka¿da paczka przesy³ana jest w $m$ czêœciach/fazach ($k = m-1 \ldots 0$). Po skompletowaniu wszystkich czêœci paczek dla danej fazy, nastêpuje przeliczenie dostêpnych danych. Proces powtarza siê $m$ razy, do chwili przeliczenia wszystkich danych.
+W celu usprawnienia procesu obliczeñ, ka¿da paczka przesy³ana jest w $m$ czêœciach/fazach ($k = m-1 \ldots 0$). Po skompletowaniu wszystkich czêœci paczek dla danej fazy nastêpuje przeliczenie otrzymanych danych. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
 
 \subsection{Parametry systemu Parastation}
 \begin{description}
@@ -100,40 +100,39 @@ W celu sprawnienia procesu obliczeñ, ka¿da paczka przesy³ana jest w $m$ czêœciac
 \item[$C(i)$] -- czas przesy³ania jednostki danych w paczce $i$ (czas ten wynika z prêdkoœci ³¹cza, którym przesy³ana jest dana paczka)
 \item[$S$] -- czas rozruchu ³¹cza
 \item[$V$] -- ca³kowity rozmiar danych do przetworzenia
-\item[$m$] -- liczba faz komunikacji
+\item[$m$] -- liczba faz komunikacji (czêœci, na które dzielone s¹ paczki)
 \end{description}
 
 \subsection{Funkcje opisuj¹ce system paczek}
 \begin{description}
-\item[$packets(j)$] -- zbiór paczek przeznaczonych dla procesora $j$
-\item[$prev(i)$] -- zbiór paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$
-\item[$next(i)$] -- zbiór paczek
+\item[$packets(j)$] -- zbiór numerów paczek przeznaczonych dla procesora $j$
+\item[$prev(i)$] -- zbiór numerów paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$ (okreœla numer paczki $p$, której czêœci¹ jest paczka $i$ oraz -- w przypadku ³¹czy, którymi przesy³ane s¹ 2 paczki -- numer paczki przesy³anej wczeœniej, co eliminuje ryzyko zaplanowania 2 jednoczesnych transmisji tym samym ³¹czem).
+\item[$next(i)$] -- zbiór numerów paczek, które zawarte s¹ w paczce $i$
 \end{description}
-Funkcja $prev(i)$ okreœla numer paczki $p$, której czêœci¹ jest paczka $i$ oraz -- w przypadku ³¹czy, którymi przesy³ane s¹ 2 paczki -- numer paczki przesy³anej wczeœniej.
 
-Wartoœci wymienionych funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania.
+Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania.
 
 \subsection{Zmienne decyzyjne}
 \begin{description}
-\item[$a(i,k)$] -- wielkoœæ paczki $i$ w fazie $k$
-\item[$r(i,k)$] -- moment gotowoœci do wys³ania paczki $i$ w fazie $k$
-\item[$x(i,k)$] -- zmienna binarna okreœlaj¹ca czy paczka $i$ jest wysy³ana w fazie $k$
-\item[$t(j,k)$] -- moment gotowoœci do obliczeñ procesora $j$ w fazie $k$
+\item[$a(i,k)$] -- iloœæ danych z czêœci paczki $i$ przes³anej w fazie $k$ liczona na jej procesorze docelowym (por. $S_a$)
+\item[$r(i,k)$] -- moment gotowoœci do wys³ania czêœci paczki $i$ w fazie $k$
+\item[$x(i,k)$] -- zmienna binarna okreœlaj¹ca czy czêœæ paczki $i$ jest wysy³ana w fazie $k$
+\item[$t(j,k)$] -- moment gotowoœci do rozpoczêcia obliczeñ przez procesor $j$ w fazie $k$ (moment skompletowania danych dla tej fazy)
 \end{description}
 
 \subsection{Funkcje pomocnicze}
 
 \begin{itemize}
-\item wielkoœæ paczki $i$ wraz z paczkami przesy³anymi dalej
+\item rozmiar czêœci paczki $i$ przesy³anej w fazie $k$, czyli suma iloœci danych liczonych w tej fazie na procesorze docelowym dla tej paczki i procesorach, które otrzymuj¹ dane z niej pochodz¹ce
 $$ S_a(i,k) = a(i,k) + \sum_{p \in next(i)} S_a(p,k)$$
-\item czas przesy³ania paczki $i$ (wlicza te¿ czas przesy³ania paczek przesy³anych dalej)
+\item czas przesy³ania czêœci paczki $i$ w fazie $k$
 \begin{displaymath}
 T_c(i,k) = \left\{ \begin{array}{ll}
 0 & \textrm{dla $i=0$}\\
 x(i,k) \; S + C(i) \; S_a(i,k)   & \textrm{dla $i>0$}
 \end{array} \right.
 \end{displaymath}
-\item czas obliczeñ dla procesora $j$
+\item czas wykonywania obliczeñ przez procesor $j$ w fazie $k$
 $$T_a(j,k) = A(j) \, \sum_{p \in packets(j)} a(p,k)$$
 \end{itemize}
 
@@ -146,9 +145,9 @@ $$\textrm{min:} \; t$$
 \begin{itemize}
 \item czêœci paczek przesy³ane w fazie $m-1$ do procesorów $1 \ldots 3$ s¹ dostêpne w~chwili $t = 0$
 $$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
-\item czêœæ paczki w danej fazie nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem przesy³ania czêœci paczek o numerach okreœlonych przez funkcjê $prev(i)$
+\item czêœæ paczki $i$ przesy³ana w fazie $k$ nie mo¿e byæ wys³ana przed zakoñczeniem odbierania czêœci paczek o numerach okreœlonych przez funkcjê $prev(i)$ przesy³anych w tej fazie
 $$ \forall p \in prev(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
-\item procesor musi skompletowaæ wszystkie paczki przed rozpoczêciem obliczeñ (dziêki zmiennej binarnej tylko te o niezerowej d³ugoœci)
+\item procesor musi skompletowaæ czêœci z fazy $k$ wszystkich paczek dla niego przeznaczonych przed rozpoczêciem obliczeñ w tej fazie (dziêki zmiennej binarnej uwzglêdniane s¹ tylko czêœci o niezerowej d³ugoœci)
 $$ \forall p \in packets(j) \quad x(p,k) r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
 \item kolejne fazy przesy³ania paczek musz¹ przebiegaæ sekwencyjnie
 $$r(i,k) + T_w(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
