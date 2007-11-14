@@ -105,7 +105,7 @@ W celu sprawnienia procesu obliczeñ, ka¿da paczka przesy³ana jest w $m$ czêœciac
 
 \subsection{Funkcje opisuj¹ce system paczek}
 \begin{description}
-\item[$proc(i)$] -- numer procesora docelowego dla paczki $i$
+\item[$packets(j)$] -- zbiór paczek przeznaczonych dla procesora $j$
 \item[$prev(i)$] -- zbiór paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$
 \item[$next(i)$] -- zbiór paczek
 \end{description}
@@ -123,19 +123,18 @@ Wartoœci wymienionych funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego sys
 
 \subsection{Funkcje pomocnicze}
 
-%!! popraw
 \begin{itemize}
-\item SA
+\item wielkoœæ paczki $i$ wraz z paczkami przesy³anymi dalej
 $$ S_a(i,k) = a(i,k) + \sum_{p \in next(i)} S_a(p,k)$$
-\item TC
+\item czas przesy³ania paczki $i$ (wlicza te¿ czas przesy³ania paczek przesy³anych dalej)
 \begin{displaymath}
 T_c(i,k) = \left\{ \begin{array}{ll}
 0 & \textrm{dla $i=0$}\\
-x(i,k) \; S + C(i) \; S_a   & \textrm{dla $i>0$}
+x(i,k) \; S + C(i) \; S_a(i,k)   & \textrm{dla $i>0$}
 \end{array} \right.
 \end{displaymath}
-\item TA
-$$T_a(j,k) = A(j) \, a(j,k)$$
+\item czas obliczeñ dla procesora $j$
+$$T_a(j,k) = A(j) \, \sum_{p \in packets(j)} a(p,k)$$
 \end{itemize}
 
 \subsection{Funkcja celu}
@@ -149,8 +148,8 @@ $$\textrm{min:} \; t$$
 $$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
 \item czêœæ paczki w danej fazie nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem przesy³ania czêœci paczek o numerach okreœlonych przez funkcjê $prev(i)$
 $$ \forall p \in prev(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
-\item nie mo¿na rozpocz¹æ obliczenia czêœci paczki przed zakoñczeniem jej odbierania
-$$ x(i,k) r(i, k) + T_w(i, k) \leq t(proc(i), k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
+\item procesor musi skompletowaæ wszystkie paczki przed rozpoczêciem obliczeñ (dziêki zmiennej binarnej tylko te o niezerowej d³ugoœci)
+$$ \forall p \in packets(j) \quad x(p,k) r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
 \item kolejne fazy przesy³ania paczek musz¹ przebiegaæ sekwencyjnie
 $$r(i,k) + T_w(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
 \item kolejne fazy przetwarzania paczek musz¹ przebiegaæ sekwencyjnie
@@ -158,7 +157,7 @@ $$t(j,k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 \item obliczanie ostatniej paczki musi zakoñczyæ siê przed koñcem przetwarzania
 $$t(j,0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
-$$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = v$$
+$$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = V$$
 \item
 $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
