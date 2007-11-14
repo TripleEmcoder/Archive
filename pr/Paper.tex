@@ -157,7 +157,7 @@ $$t(j,k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 $$t(j,0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = V$$
-\item
+\item zapewnia, ¿e je¿eli paczka ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca jej zmienna binarna ma wartoœæ 1
 $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
 
@@ -165,12 +165,11 @@ $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 
 Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
 
-%!!!!
 $$S = 11$$
-$$A(0) = A(2) = A(3) = A(5) = 16$$
-$$A(1) = A(4) = A(6) = A(7) = 20$$
-$$C(1) = C(6) = 2.2$$
-$$C(2) = C(3) = C(4) = C(5) = C(7) = 4.4$$
+$$A(0) = A(2) = A(3) = A(5) = 20$$
+$$A(1) = A(4) = A(6) = A(7) = 16$$
+$$C(1) = C(6) = C(13) = C(14) = C(9) = 2.2$$
+$$C(2) = C(3) = C(4) = C(5) = C(7) = C(8) = C(10) = C(11) = C(12) = C(15) = 4.4$$
 $$V = 10000$$
 
 Na podstawie danych uzyskanych w~wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
