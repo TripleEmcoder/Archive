@@ -68,7 +68,7 @@ Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹
 \label{fig:cube}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[p]
 \centering
 \includegraphics[trim=0 0 0 0, clip]{flat}
 \caption{Schemat analizowanego systemu przetwarzania c.d.}
@@ -78,7 +78,7 @@ Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹
 \section{Model w~œrodowisku Parastation}
 Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation w~sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a~niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
 
-\begin{figure}[h!]
+\begin{figure}[p]
 \centering
 \includegraphics[trim=0 0 0 0, clip]{parastation}
 \caption{Model systemu w~œrodowisku Parastation}
@@ -157,7 +157,7 @@ $$t(j,k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 $$t(j,0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = V$$
-\item zapewnia, ¿e je¿eli paczka ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca jej zmienna binarna ma wartoœæ 1
+\item zapewnia, ¿e je¿eli czêœæ paczki $i$ w fazie $k$ paczka ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca jej zmienna binarna ma wartoœæ 1
 $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
 
