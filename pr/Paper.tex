@@ -57,9 +57,9 @@
 \newpage
 
 \section{Sformu³owanie problemu}
-Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i~przesy³ania danych przez ka¿dy z~jego procesorów. Dodatkowo zak³ada siê, ¿e w~chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w~jednym naro¿niku wspomnianego szeœcianu.
+Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i~przesy³ania danych przez ka¿dy z~jego procesorów. Dodatkowo zak³ada siê, ¿e w~chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w~jednym z~naro¿ników wspomnianego szeœcianu.
 
-Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i~\ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony przez 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:cube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu.
+Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i~\ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony numerem 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:cube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu. Inny widok omawianego systemu przedstawia rysunek \ref{fig:flat}.
 
 \begin{figure}[h!]
 \centering
@@ -86,22 +86,32 @@ Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation 
 \end{figure}
 
 \section{Analiza problemu}
-Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych i wykonywania obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz wielkoœci paczek przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
+Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych i wykonywania obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz iloœci danych przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
 
-Odpowiedzi na postawione wy¿ej pytania udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
+Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Idea rozwi¹zania}
-Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto 16 paczek ($i = 0 \ldots 15$) danych, odpowiadaj¹cych ró¿nym œcie¿kom, którymi mog¹ one docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek.
-Dodatkowo ka¿da paczka jest przesy³ana w kilku fazach ($k = m-1 \ldots 0$).
+Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem paczek". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 paczkami danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. Ograniczenia zosta³y skonstruowane tak, aby paczki dla ka¿dej z warstw zawiera³y w sobie równie¿ dane dla warst kolejnych, jeœli takie istniej¹.
+W celu sprawnienia procesu obliczeñ, ka¿da paczka przesy³ana jest w $m$ czêœciach/fazach ($k = m-1 \ldots 0$). Po skompletowaniu wszystkich czêœci paczek dla danej fazy, nastêpuje przeliczenie dostêpnych danych. Proces powtarza siê $m$ razy, do chwili przeliczenia wszystkich danych.
 
-\subsection{Dane wejœciowe}
+\subsection{Parametry systemu Parastation}
 \begin{description}
 \item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$
-\item[$C(i)$] -- czas przesy³ania jednostki danych w paczce $i$
+\item[$C(i)$] -- czas przesy³ania jednostki danych w paczce $i$ (czas ten wynika z prêdkoœci ³¹cza, którym przesy³ana jest dana paczka)
 \item[$S$] -- czas rozruchu ³¹cza
-\item[$V$] -- ca³kowity rozmiar danych
+\item[$V$] -- ca³kowity rozmiar danych do przetworzenia
 \item[$m$] -- liczba faz komunikacji
 \end{description}
+
+\subsection{Funkcje opisuj¹ce system paczek}
+\begin{description}
+\item[$proc(i)$] -- numer procesora docelowego dla paczki $i$
+\item[$prev(i)$] -- zbiór paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$
+\item[$next(i)$] -- zbiór paczek
+\end{description}
+Funkcja $prev(i)$ okreœla numer paczki $p$, której czêœci¹ jest paczka $i$ oraz -- w przypadku ³¹czy, którymi przesy³ane s¹ 2 paczki -- numer paczki przesy³anej wczeœniej.
+
+Wartoœci wymienionych funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania.
 
 \subsection{Zmienne decyzyjne}
 \begin{description}
@@ -112,14 +122,6 @@ Dodatkowo ka¿da paczka jest przesy³ana w kilku fazach ($k = m-1 \ldots 0$).
 \end{description}
 
 \subsection{Funkcje pomocnicze}
-\begin{description}
-\item[$proc(i)$] -- numer procesora docelowego dla paczki $i$
-\item[$prev(i)$] -- zbiór paczek, których przesy³anie musi siê zakoñczyæ przed wys³aniem paczki $i$
-\item[$next(i)$] -- zbiór paczek
-\end{description}
-Funkcja $prev(i)$ okreœla numer paczki $p$, której czêœci¹ jest paczka $i$ oraz -- w przypadku ³¹czy, którymi przesy³ane s¹ 2 paczki -- numer paczki przesy³anej wczeœniej.
-
-Wartoœci obu funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania.
 
 %!! popraw
 \begin{itemize}
@@ -143,18 +145,18 @@ $$\textrm{min:} \; t$$
 
 \subsection{Ograniczenia}
 \begin{itemize}
-\item paczki dla procesorów 1..3 w fazie m-1 s¹ dostêpne w~chwili $t = 0$
+\item czêœci paczek przesy³ane w fazie $m-1$ do procesorów $1 \ldots 3$ s¹ dostêpne w~chwili $t = 0$
 $$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
-\item paczka nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem przesy³ania paczek o numerach okreœlonych przez funkcjê $prev(i)$
+\item czêœæ paczki w danej fazie nie mo¿e byæ przes³ana do kolejnego procesora przed zakoñczeniem przesy³ania czêœci paczek o numerach okreœlonych przez funkcjê $prev(i)$
 $$ \forall p \in prev(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
-\item nie mo¿na rozpocz¹æ obliczenia paczki przed zakoñczeniem jej odbierania
-$$ x(i, k) r(i, k) + T_w(i, k) \leq t(proc(i), k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
+\item nie mo¿na rozpocz¹æ obliczenia czêœci paczki przed zakoñczeniem jej odbierania
+$$ x(i,k) r(i, k) + T_w(i, k) \leq t(proc(i), k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \item kolejne fazy przesy³ania paczek musz¹ przebiegaæ sekwencyjnie
-$$r(i, k) + T_w(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
+$$r(i,k) + T_w(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
 \item kolejne fazy przetwarzania paczek musz¹ przebiegaæ sekwencyjnie
-$$t(j, k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
+$$t(j,k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 \item obliczanie ostatniej paczki musi zakoñczyæ siê przed koñcem przetwarzania
-$$t(j, 0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
+$$t(j,0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = v$$
 \item
@@ -190,7 +192,7 @@ gdzie $A_1$ i~$A_2$ to szybkoœci procesorów.
 
 Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
 
-Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}
+Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}. Poszczególne paczki zosta³y pogrupowane wed³ug numerów procesorów, dla których s¹ przeznaczone, a obok wykresów przedstawiaj¹cych ich transmisjê umieszczono informacjê o œcie¿ce, któr¹ pod¹¿a³y dane w nich zawarte. Liczby na samym wykresie informuj¹ o numerze fazy, w której dana czêœæ zosta³a przes³ana.
 
 \begin{figure}[h!]
 \centering
