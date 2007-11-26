@@ -11,4 +11,5 @@ public:
 	virtual void Close(void);
 	void Process();
 	//void SendLine(System::String^, 
+	virtual void SendLine(System::String^ format, ...cli::array<System::Object^,1>^ values);
 };
