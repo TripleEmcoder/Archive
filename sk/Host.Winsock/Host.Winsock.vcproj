@@ -58,7 +58,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(NoInherit)"
+				AdditionalDependencies="wsock32.lib $(NOINHERIT)"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				AssemblyDebug="1"
@@ -132,7 +132,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(NoInherit)"
+				AdditionalDependencies="wsock32.lib $(NOINHERIT)"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
@@ -188,6 +188,14 @@
 			ReferencedProjectIdentifier="{EFD46A93-50A6-47D2-83BB-08DAAE0CA092}"
 			RelativePathToProject=".\Nntp.Storage.Database\Nntp.Storage.Database.csproj"
 		/>
+		<AssemblyReference
+			RelativePath="System.Management.dll"
+			AssemblyName="System.Management, Version=2.0.0.0, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+		/>
+		<AssemblyReference
+			RelativePath="System.Configuration.Install.dll"
+			AssemblyName="System.Configuration.Install, Version=2.0.0.0, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
+		/>
 	</References>
 	<Files>
 		<Filter
@@ -223,6 +231,10 @@
 					/>
 				</FileConfiguration>
 			</File>
+			<File
+				RelativePath=".\WinsockConnection.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -231,6 +243,10 @@
 			>
 			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WinsockConnection.h"
 				>
 			</File>
 		</Filter>
