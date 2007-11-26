@@ -13,31 +13,9 @@ void ReportError(int errorCode, const char *whichFunc) {
 
 DWORD WINAPI EchoHandler(void* sd_) 
 {
-    SOCKET socket = (SOCKET)sd_;
-	WinsockConnection conn(socket);
+    WinsockConnection conn((SOCKET)sd_);
 	conn.Process();
 	return 0;
-	
-    /*int nRetval = 0;
-    SOCKET socket = (SOCKET)sd_;
-		
-	if (!EchoIncomingPackets(sd)) {
-        cerr << endl << WSAGetLastErrorMessage(
-                "Echo incoming packets failed") << endl;
-        nRetval = 3;
-    }
-
-    cout << "Shutting connection down..." << flush;
-    if (ShutdownConnection(sd)) {
-        cout << "Connection is down." << endl;
-    }
-    else {
-        cerr << endl << WSAGetLastErrorMessage(
-                "Connection shutdown failed") << endl;
-        nRetval = 3;
-    }
-	
-	return nRetval;*/
 }
 
 void AcceptConnections(SOCKET ListeningSocket)
@@ -46,10 +24,9 @@ void AcceptConnections(SOCKET ListeningSocket)
     int nAddrSize = sizeof(sinRemote);
 
     while (1) {
-        SOCKET sd = accept(ListeningSocket, (sockaddr*)&sinRemote,
-                &nAddrSize);
+        SOCKET sd = accept(ListeningSocket, (sockaddr*)&sinRemote, &nAddrSize);
         if (sd != INVALID_SOCKET) {
-			printf("Accepted connection from %s:%d.",inet_ntoa(sinRemote.sin_addr),ntohs(sinRemote.sin_port));
+			printf("Accepted connection from %s:%d.", inet_ntoa(sinRemote.sin_addr), ntohs(sinRemote.sin_port));
             
             DWORD nThreadID;
             CreateThread(0, 0, EchoHandler, (void*)sd, 0, &nThreadID);
@@ -63,23 +40,14 @@ void AcceptConnections(SOCKET ListeningSocket)
 
 int main(array<System::String^>^ args)
 {
-	//Console::WriteLine(L"Hello World");
-	WORD sockVersion;
-	WSADATA wsaData;
 	int nret;
 
-	sockVersion = MAKEWORD(1, 1);			// We'd like Winsock version 1.1
-
-	// We begin by initializing Winsock
+	WORD sockVersion = MAKEWORD(1, 1);			
+	WSADATA wsaData;
+	
 	WSAStartup(sockVersion, &wsaData);
 
-
-	// Next, create the listening socket
-	SOCKET listeningSocket;
-
-	listeningSocket = socket(AF_INET,		// Go over TCP/IP
-			         SOCK_STREAM,   	// This is a stream-oriented socket
-				 IPPROTO_TCP);		// Use TCP rather than UDP
+	SOCKET listeningSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
 	if (listeningSocket == INVALID_SOCKET) {
 		nret = WSAGetLastError();		// Get a more detailed error
@@ -89,16 +57,11 @@ int main(array<System::String^>^ args)
 		return NETWORK_ERROR;			// Return an error value
 	}
 
-
 	// Use a SOCKADDR_IN struct to fill in address information
 	SOCKADDR_IN serverInfo;
-
 	serverInfo.sin_family = AF_INET;
-	serverInfo.sin_addr.s_addr = INADDR_ANY;	// Since this socket is listening for connections,
-							// any local address will do
-	serverInfo.sin_port = htons(8888);		// Convert integer 8888 to network-byte order
-							// and insert into the port field
-
+	serverInfo.sin_addr.s_addr = INADDR_ANY;
+	serverInfo.sin_port = htons(119);
 
 	// Bind the socket to our local server address
 	nret = bind(listeningSocket, (LPSOCKADDR)&serverInfo, sizeof(struct sockaddr));
@@ -114,7 +77,6 @@ int main(array<System::String^>^ args)
 
 	// Make the socket listen
 	nret = listen(listeningSocket, 10);		// Up to 10 connections may wait at any
-							// one time to be accept()'ed
 
 	if (nret == SOCKET_ERROR) {
 		nret = WSAGetLastError();
@@ -124,14 +86,6 @@ int main(array<System::String^>^ args)
 		return NETWORK_ERROR;
 	}
 
-
-	// Wait for a client
-	//SOCKET theClient;
-
-	//theClient = accept(listeningSocket,
-	//		   NULL,			// Address of a sockaddr structure (see explanation below)
-	//		   NULL);			// Address of a variable containing size of sockaddr struct
-
 	printf("Listening...\n");
 	while (1)
 	{
@@ -139,17 +93,6 @@ int main(array<System::String^>^ args)
 		printf("Connection accepted\n");
 	}
 
-	//if (theClient == INVALID_SOCKET) {
-	//	nret = WSAGetLastError();
-	//	ReportError(nret, "accept()");
-
-	//	WSACleanup();
-	//	return NETWORK_ERROR;
-	//}
-
-
-	// Send and receive from the client, and finally,
-	///closesocket(theClient);
 	closesocket(listeningSocket);
 
 
