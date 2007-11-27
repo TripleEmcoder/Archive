@@ -235,6 +235,10 @@
 				RelativePath=".\WinsockConnection.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\Winsocket.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -247,6 +251,10 @@
 			</File>
 			<File
 				RelativePath=".\WinsockConnection.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Winsocket.h"
 				>
 			</File>
 		</Filter>
