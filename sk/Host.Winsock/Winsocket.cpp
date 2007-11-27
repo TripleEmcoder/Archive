@@ -24,12 +24,11 @@ void Winsocket::close()
 	
 void Winsocket::bind(const char* address, int port)
 {
-	SOCKADDR_IN serverInfo;
-	serverInfo.sin_family = AF_INET;
-	serverInfo.sin_addr.s_addr = inet_addr(address);
-	serverInfo.sin_port = htons(port);
+	server_info.sin_family = AF_INET;
+	server_info.sin_addr.s_addr = inet_addr(address);
+	server_info.sin_port = htons(port);
 
-	if (::bind(socket, (LPSOCKADDR)&serverInfo, sizeof(struct sockaddr)) == SOCKET_ERROR) 
+	if (::bind(socket, (LPSOCKADDR)&server_info, sizeof(struct sockaddr)) == SOCKET_ERROR) 
 	{
 		throw SocketException(WSAGetLastError(), "bind()");
 	}
@@ -42,18 +41,18 @@ void Winsocket::listen(socket_handler handler)
 		throw SocketException(WSAGetLastError(), "listen()");
 	}
 
-	sockaddr_in sinRemote;
-    int nAddrSize = sizeof(sinRemote);
+	SOCKADDR_IN remote_info;
+    int info_size = sizeof(remote_info);
 
 	this->handler = handler;
 
-	printf("Listening...\n");
+	printf("Listening for connections on %s:%d.\n", inet_ntoa(server_info.sin_addr), ntohs(server_info.sin_port));
     while (1) 
 	{
-        SOCKET sd = accept(socket, (sockaddr*)&sinRemote, &nAddrSize);
+        SOCKET sd = accept(socket, (sockaddr*)&remote_info, &info_size);
         if (sd != INVALID_SOCKET) 
 		{
-			printf("Accepted connection from %s:%d.\n", inet_ntoa(sinRemote.sin_addr), ntohs(sinRemote.sin_port));
+			printf("Serving connection from %s:%d.\n", inet_ntoa(remote_info.sin_addr), ntohs(remote_info.sin_port));
 
             DWORD nThreadID;
 			CreateThread(0, 0, (LPTHREAD_START_ROUTINE)handler, (void*)sd, 0, &nThreadID);

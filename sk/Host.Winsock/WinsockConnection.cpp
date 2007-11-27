@@ -2,6 +2,7 @@
 #include "WinsockConnection.h"
 
 using namespace System;
+using namespace System::Text;
 
 WinsockConnection::WinsockConnection(SOCKET socket)
 {
@@ -26,39 +27,49 @@ void WinsockConnection::SendLine(String^ format, ...cli::array<Object^,1>^ value
 	Console::ForegroundColor = ConsoleColor::Green;
 	Console::WriteLine(output);
 
-	pin_ptr<unsigned char> _output = &Text::Encoding::UTF8->GetBytes(output)[0];
-	send(socket, (const char*)_output->, output->Length, 0);
+	pin_ptr<unsigned char> _output = &Encoding::UTF8->GetBytes(output)[0];
+	send(socket, (const char*)_output, output->Length, 0);
 }
 void WinsockConnection::Process()
 {
-	char buffer[255];
+	array<String^>^ separators = {"\r\n"};
+	
+	char _buffer[255];
+	StringBuilder input;
 	
 	while (!closing)
 	{
-		int total = 0;
-		int rec = 0;
-		do
-		{
-			rec = recv(socket, buffer + total, sizeof(buffer) - total, 0);
-			total += rec;
-		} while (rec > 0 && buffer[total-1] != '\n' && buffer[total-1] != '\r');
-		
-		while (buffer[total-1] == '\n' || buffer[total-1] == '\r')
-			total--;
-		buffer[total] = 0;
-		
-		String^ line = gcnew String((char*)buffer);
-
+		int rec = recv(socket, _buffer, sizeof(_buffer), 0);
 		if (rec == 0)
 			break;
 
-		Console::ForegroundColor = ConsoleColor::Red;
-		Console::WriteLine(line);
+		_buffer[rec] = 0;
+		String^ buffer = gcnew String((char*)_buffer);
 
-		LineReceived(this, gcnew Nntp::LineEventArgs(line));
+		input.Append(buffer);
+
+		if (buffer->Contains("\n"))
+		{
+			String^ s = input.ToString();
+			array<String^>^ lines = s->Split(separators, StringSplitOptions::None);
+			for (int i = 0; i < lines->Length-1; ++i)
+			{
+				String^ line = lines[i];
+				input.Remove(0, line->Length+2);
+
+				if (line->Length > 0)
+				{
+					Console::ForegroundColor = ConsoleColor::Red;
+					Console::WriteLine(line);
+					LineReceived(this, gcnew Nntp::LineEventArgs(line));
+				}
+			}
+			
+		}
+		
     }
 
-	Console::WriteLine("Connection  closed.");
-
 	closesocket(socket);
+	Console::ForegroundColor = ConsoleColor::Gray;
+	Console::WriteLine("Connection closed.");
 }

@@ -13,6 +13,7 @@ class Winsocket
 {
 	typedef DWORD (WINAPI *socket_handler) (SOCKET); 
 private:
+	SOCKADDR_IN server_info;
 	SOCKET socket;
 	socket_handler handler;
 public:
@@ -21,4 +22,5 @@ public:
 	void bind(const char* address, int port);
 	void listen(socket_handler handler);
 	void close();
+
 };

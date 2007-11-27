@@ -4,19 +4,25 @@
 #include "Winsocket.h"
 #include "WinsockConnection.h"
 
-DWORD WINAPI winsock_connection_handler(SOCKET s)
+using namespace System;
+using namespace Nntp;
+using namespace Nntp::Storage;
+using namespace Nntp::Storage::Database;
+
+DWORD WINAPI ProcessConnection(SOCKET s)
 {
-	WinsockConnection connection(s);
-	connection.Process();
+	WinsockConnection^ connection = gcnew WinsockConnection(s);
+	INntpRepository^ repository = gcnew DatabaseRepository();
+	NntpSession^ session = gcnew NntpSession(connection, repository);
+	connection->Process();
 	return 0;
 }
 
 int main(array<System::String^>^ args)
 {
-	WORD sockVersion = MAKEWORD(1, 1);			
 	WSADATA wsaData;
 	
-	WSAStartup(sockVersion, &wsaData);
+	WSAStartup(MAKEWORD(1, 1), &wsaData);
 
 	Winsocket ls;
 
@@ -24,7 +30,7 @@ int main(array<System::String^>^ args)
 	{
 		ls.init(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 		ls.bind("127.0.0.1", 119);
-		ls.listen(winsock_connection_handler);
+		ls.listen(ProcessConnection);
 	}
 	catch (SocketException& exc)
 	{
