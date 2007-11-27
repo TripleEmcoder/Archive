@@ -27,7 +27,7 @@ void WinsockConnection::SendLine(String^ format, ...cli::array<Object^,1>^ value
 	Console::WriteLine(output);
 
 	pin_ptr<unsigned char> _output = &Text::Encoding::UTF8->GetBytes(output)[0];
-	send(socket, (const char*) _output, sizeof((const char*) _output), 0);
+	send(socket, (const char*)_output->, output->Length, 0);
 }
 void WinsockConnection::Process()
 {
@@ -35,8 +35,18 @@ void WinsockConnection::Process()
 	
 	while (!closing)
 	{
-		int rec = recv(socket, buffer, sizeof(buffer), 0);
-		buffer[rec] = 0;
+		int total = 0;
+		int rec = 0;
+		do
+		{
+			rec = recv(socket, buffer + total, sizeof(buffer) - total, 0);
+			total += rec;
+		} while (rec > 0 && buffer[total-1] != '\n' && buffer[total-1] != '\r');
+		
+		while (buffer[total-1] == '\n' || buffer[total-1] == '\r')
+			total--;
+		buffer[total] = 0;
+		
 		String^ line = gcnew String((char*)buffer);
 
 		if (rec == 0)
@@ -47,6 +57,8 @@ void WinsockConnection::Process()
 
 		LineReceived(this, gcnew Nntp::LineEventArgs(line));
     }
+
+	Console::WriteLine("Connection  closed.");
 
 	closesocket(socket);
 }
