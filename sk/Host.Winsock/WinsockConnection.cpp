@@ -63,10 +63,8 @@ void WinsockConnection::Process()
 					Console::WriteLine(line);
 					LineReceived(this, gcnew Nntp::LineEventArgs(line));
 				}
-			}
-			
-		}
-		
+			}			
+		}	
     }
 
 	closesocket(socket);
