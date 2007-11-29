@@ -15,6 +15,9 @@ DWORD WINAPI ProcessConnection(SOCKET s)
 	INntpRepository^ repository = gcnew DatabaseRepository();
 	NntpSession^ session = gcnew NntpSession(connection, repository);
 	connection->Process();
+	delete session;
+	delete repository;
+	delete connection;
 	return 0;
 }
 
@@ -29,7 +32,7 @@ int main(array<System::String^>^ args)
 	try
 	{
 		ls.init(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-		ls.bind("127.0.0.1", 119);
+		ls.bind("0.0.0.0", 119);
 		ls.listen(ProcessConnection);
 	}
 	catch (SocketException& exc)

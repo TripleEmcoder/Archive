@@ -43,7 +43,7 @@ namespace Nntp
             line = parts.Length == 2 ? parts[1].TrimStart(separators) : "";
 
             if (!constructors.ContainsKey(name))
-                throw new NotSupportedException("Unknown command", new IndexOutOfRangeException());
+                throw new NotSupportedException("Unknown command", new KeyNotFoundException());
 
             return (NntpCommand)constructors[name].Invoke(new object[] { name });
         }
