@@ -27,6 +27,8 @@ void WinsockConnection::SendLine(String^ format, ...cli::array<Object^,1>^ value
 	Console::ForegroundColor = ConsoleColor::Green;
 	Console::WriteLine(output);
 
+	output += "\r\n";
+
 	pin_ptr<unsigned char> _output = &Encoding::UTF8->GetBytes(output)[0];
 	send(socket, (const char*)_output, output->Length, 0);
 }
