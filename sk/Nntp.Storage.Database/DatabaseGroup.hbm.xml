@@ -6,6 +6,7 @@
       <generator class="native" />
     </id>
     <property name="Name" column="`Name`" access="field.camelcase" />
+    <property name="Description" column="`Description`" access="field.camelcase" />
     <property name="Count" column="`Count`" access="field.camelcase" />
     <property name="Low" column="`Low`" access="field.camelcase" />
     <property name="High" column="`High`" access="field.camelcase" />

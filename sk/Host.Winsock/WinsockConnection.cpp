@@ -59,12 +59,12 @@ void WinsockConnection::Process()
 				String^ line = lines[i];
 				input.Remove(0, line->Length+2);
 
-				if (line->Length > 0)
-				{
+				//if (line->Length > 0)
+				//{
 					Console::ForegroundColor = ConsoleColor::Red;
 					Console::WriteLine(line);
 					LineReceived(this, gcnew Nntp::LineEventArgs(line));
-				}
+				//}
 			}			
 		}	
     }

@@ -13,6 +13,7 @@ namespace Nntp.Storage.Database
     {
         private int id;
         private string name;
+        private string description;
         private int count;
         private int low;
         private int high;
@@ -37,6 +38,11 @@ namespace Nntp.Storage.Database
         string INntpGroup.Name
         {
             get { return name; }
+        }
+
+        string INntpGroup.Description
+        {
+            get { return description; }
         }
 
         int INntpGroup.Count

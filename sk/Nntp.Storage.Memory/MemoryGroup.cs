@@ -7,6 +7,7 @@ namespace Nntp.Storage.Memory
     public class MemoryGroup : INntpGroup
     {
         private string name;
+        private string description;
         private Dictionary<int, INntpArticle> articles;
 
         public MemoryGroup(string name, IEnumerable<INntpArticle> articles)
@@ -28,6 +29,11 @@ namespace Nntp.Storage.Memory
         string INntpGroup.Name
         {
             get { return name; }
+        }
+
+        string INntpGroup.Description
+        {
+            get { return description; }
         }
 
         int INntpGroup.Count

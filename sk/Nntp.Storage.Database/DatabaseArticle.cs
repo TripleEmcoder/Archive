@@ -40,7 +40,10 @@ namespace Nntp.Storage.Database
         public override LifecycleVeto OnSave(ISession session)
         {
             messageID = "<" + Guid.NewGuid().ToString() + "@dotnet>";
-            date = DateTime.Now;
+
+            if (date == default(DateTime))
+                date = DateTime.Now;
+
             return base.OnSave(session);
         }
 

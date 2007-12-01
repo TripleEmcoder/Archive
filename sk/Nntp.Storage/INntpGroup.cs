@@ -9,6 +9,7 @@ namespace Nntp.Storage
     public interface INntpGroup : IDisposable
     {
         string Name { get; }
+        string Description { get; }
         int Count { get; }
         int Low { get; }
         int High { get; }

@@ -7,7 +7,6 @@ using System.Reflection;
 
 namespace Nntp
 {
-    //HELP, CAPABILITIES
     internal static class NntpCommandFactory
     {
         static private Dictionary<string, ConstructorInfo> constructors;

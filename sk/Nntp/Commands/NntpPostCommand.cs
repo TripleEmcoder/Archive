@@ -115,7 +115,10 @@ namespace Nntp
         {
             article.Subject = headers[NntpHeaderName.Subject];
             article.From = headers[NntpHeaderName.From];
-            article.Date = headers[NntpHeaderName.Date];
+
+            if (headers.ContainsKey(NntpHeaderName.Date))
+                article.Date = headers[NntpHeaderName.Date];
+
             article.Newsgroups = headers[NntpHeaderName.Newsgroups];
 
             if (headers.ContainsKey(NntpHeaderName.References))
