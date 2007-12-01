@@ -107,7 +107,7 @@ namespace Nntp
                 {
                     string[] lines = pair.Value.Body.Split('\n');
 
-                    for (int i = 0; i < lines.Length-1; i++)
+                    for (int i = 0; i < lines.Length; i++)
                     {
                         string line = lines[i];
 

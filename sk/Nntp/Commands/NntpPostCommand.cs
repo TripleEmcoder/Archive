@@ -56,13 +56,13 @@ namespace Nntp
 
                     if (line.StartsWith(" ") || line.StartsWith("\t"))
                     {
-                        headers[header] += " " + line.Substring(1);
+                        headers[header] += " " + line.Substring(1).Replace('\t', ' ');
                     }
                     else
                     {
                         string[] parts = line.Split(new char[] { ':' }, 2);
                         header = parts[0];
-                        headers[header] = parts[1].Substring(1);
+                        headers[header] = parts[1].Substring(1).Replace('\t', ' ');
                     }
 
                     break;
@@ -70,6 +70,7 @@ namespace Nntp
                 case RequestState.ReceivingBody:
                     if (line == ".")
                     {
+                        body.Remove(body.Length-1, 1);
                         state = RequestState.RequestFinished;
                         return;
                     }
@@ -77,7 +78,7 @@ namespace Nntp
                     if (line.StartsWith("."))
                         line = line.Substring(1);
 
-                    body.Append(line + '\n');
+                    body.Append(line + "\n");
                     break;
 
                 case RequestState.RequestFinished:

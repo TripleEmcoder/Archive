@@ -71,7 +71,7 @@ namespace Nntp.Storage.Database
 
         string INntpArticle.Date
         {
-            get { return date.ToString(); }
+            get { return date.ToUniversalTime().ToString("r"); }
             set { date = DateTime.Parse(value); }
         }
 
@@ -171,10 +171,11 @@ namespace Nntp.Storage.Database
                     bodies.Add(value);
 
                 bytes = value.Length;
-                lines = -1;
+                lines = 0;
 
-                for (int index = 0; index != -1; index = value.IndexOf("\r\n", index + 2))
-                    lines++;
+                if (value.Length > 0)
+                    for (int index = 0; index != -1; index = value.IndexOf('\n', index + 1))
+                        lines++;
             }
         }
     }
