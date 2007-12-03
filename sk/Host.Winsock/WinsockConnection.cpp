@@ -25,12 +25,13 @@ void WinsockConnection::SendLine(String^ format, ...cli::array<Object^,1>^ value
 	String^ output = String::Format(format, values);
 
 	Console::ForegroundColor = ConsoleColor::Green;
-	Console::WriteLine(output);
+	Console::WriteLine(output + "|");
 
-	output += "\r\n";
+	//output += "\r\n";
 
 	pin_ptr<unsigned char> _output = &Encoding::UTF8->GetBytes(output)[0];
 	send(socket, (const char*)_output, output->Length, 0);
+	send(socket, "\r\n", 2, 0);
 }
 void WinsockConnection::Process()
 {
@@ -45,8 +46,12 @@ void WinsockConnection::Process()
 		if (rec == 0)
 			break;
 
-		_buffer[rec] = 0;
-		String^ buffer = gcnew String((char*)_buffer);
+		//_buffer[rec] = 0;
+		cli::array<unsigned char>^ __buffer = gcnew cli::array<unsigned char>(rec);
+		for (int i = 0; i < rec; ++i)
+			__buffer[i] = _buffer[i];
+		String^ buffer = Encoding::UTF8->GetString(__buffer);
+		//String^ buffer = gcnew String((char*)_buffer);
 
 		input.Append(buffer);
 
