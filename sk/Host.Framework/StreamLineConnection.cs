@@ -39,8 +39,7 @@ namespace Test
                     if (line == null)
                         return;
 
-                    //Console.WriteLine("<< " + line);
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(line);
 
                     LineReceived(this, new LineEventArgs(line));
@@ -48,15 +47,16 @@ namespace Test
             }
             catch (IOException exception)
             {
-                Console.WriteLine("!! " + exception.Message);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(exception.Message);
                 return;
             }
+
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         public void SendLine(string line)
         {
-            //Console.WriteLine(">> " + line);
-
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(line);
 

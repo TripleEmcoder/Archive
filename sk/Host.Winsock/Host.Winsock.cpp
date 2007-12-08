@@ -14,10 +14,15 @@ DWORD WINAPI ProcessConnection(SOCKET s)
 	WinsockConnection^ connection = gcnew WinsockConnection(s);
 	INntpRepository^ repository = gcnew DatabaseRepository();
 	NntpSession^ session = gcnew NntpSession(connection, repository);
+	
 	connection->Process();
+	
 	delete session;
 	delete repository;
 	delete connection;
+	
+	Console::WriteLine("Connection closed.");
+
 	return 0;
 }
 

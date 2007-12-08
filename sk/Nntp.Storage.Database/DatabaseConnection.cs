@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using System.Diagnostics;
+
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Expression;
@@ -14,10 +16,18 @@ namespace Nntp.Storage.Database
 
         static DatabaseConnection()
         {
-            Configuration configuration = new Configuration();
-            configuration.Configure();
+            try
+            {
+                Configuration configuration = new Configuration();
+                configuration.Configure();
 
-            factory = configuration.BuildSessionFactory();
+                factory = configuration.BuildSessionFactory();
+            }
+            catch (Exception exception)
+            {
+                Trace.WriteLine(exception.Message);
+                throw;
+            }
         }
 
         private ITransaction transaction;
