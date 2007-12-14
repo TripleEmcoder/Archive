@@ -22,8 +22,8 @@ void test_link(Channel* in, Channel* out)
 	for (i = 0; i < count; ++i) 
 	{
 		int* data = (int*) malloc(size * sizeof(int));
-		ChanIn(in, data, size);
-		ChanOut(out, data, size);
+		ChanIn(in, data, size * sizeof(int));
+		ChanOut(out, data, size * sizeof(int));
 		free(data);
 		size += step;
 	}

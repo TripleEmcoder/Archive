@@ -27,8 +27,8 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 		
 		start = ProcTime();
 	
-		ChanOut(out, data, size);
-		ChanIn(in, data, size);
+		ChanOut(out, data, size * sizeof(int));
+		ChanIn(in, data, size * sizeof(int));
 		
 		end = ProcTime();
 
@@ -64,7 +64,7 @@ void test_proc(Channel* out, Channel* in, int count, int size, int step)
 	{
 		int* data = (int*) malloc(size * sizeof(int));
 		
-		ChanOut(out, data, size);
+		ChanOut(out, data, size * sizeof(int));
 		
 		sizes[i] = size;
 		times[i] = ChanInInt(in);
@@ -107,13 +107,13 @@ int main(int argc, char** argv)
 	test_link(KANAL4WY, KANAL5WE, count, size, step);
 	printf("Test finished.\n");
 
-	printf("Testing fast proc...\n");
+	/*printf("Testing fast proc...\n");
 	test_proc(KANAL4WY, KANAL5WE, count, size, step);
 	printf("Test finished.\n");
 
 	printf("Testing slow proc...\n");
 	test_proc(KANAL2WY, KANAL3WE, count, size, step);
-	printf("Test finished.\n");
+	printf("Test finished.\n");*/
 
 	exit_terminate (0);
 	return 0;
