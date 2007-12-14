@@ -8,18 +8,21 @@ namespace Configurator
 {
     class Header
     {
+        private float V;
+
         private int m; //j - fazy
 
         private int n; //i - procesory
 
         private int l; //k - paczki
-        private float[,] Sa;
+        private float[,] a, Sa;
 
         private int[] pv, pc;
 
         public void Load(TextReader reader)
         {
-            Dictionary<string, float> variables = new Dictionary<string, float>();
+            SortedDictionary<string, float> variables
+                = new SortedDictionary<string, float>();
 
             reader.ReadLine();
 
@@ -34,13 +37,14 @@ namespace Configurator
             }
 
             string sf = "{0}_{1:D1}";
-            string df = "{0}_{1:D1}_{2:D1}";
+            string df = "{0}_{1:D2}_{2:D1}";
 
             n = 8;
             l = 16;
 
             m = (int)variables["m"];
 
+            a = new float[l, m];
             Sa = new float[l, m];
             pv = new int[l];
             pc = new int[l];
@@ -48,33 +52,83 @@ namespace Configurator
             for (int k = 0; k < l; k++)
             {
                 for (int j = 0; j < m; j++)
-                    Sa[k, j] = variables[string.Format(df, "Sa", k, j)];
+                {
+                    a[k, j] = variables[string.Format(df, "a", k, j)];
+                    //Sa[k, j] = variables[string.Format(df, "Sa", k, j)];
+                }
 
                 pc[k] = (int)variables[string.Format(sf, "pc", k)];
                 pv[k] = (int)variables[string.Format(sf, "pv", k)];
             }
+
+            for (int k = 0; k < l; k++)
+                for (int j = 0; j < m; j++)
+                    V += (float)Math.Round(a[k, j]);
+
+            for (int k = 1; k < l; k++)
+                for (int _k = k; _k != 0; _k = pv[_k])
+                    for (int j = 0; j < m; j++)
+                        Sa[_k, j] += (float)Math.Round(a[k, j]);
         }
 
         public void Save(TextWriter writer, string name)
         {
-            float[, , ,] sizes = new float[n, n, m, 3];
+            float[, , ,] sizes = new float[n, n, m, 4];
             int[] indices = new int[l];
 
             for (int k = 1; k < l; k++)
-                for (int j = 0; j < m; j++)
-                    sizes[pc[pv[k]], pc[k], j, 0] = Sa[k, j];
-
-            for (int k = 4; k < l; k++)
             {
-                indices[pv[k]]++;
-
                 for (int j = 0; j < m; j++)
-                    sizes[pc[pv[pv[k]]], pc[pv[k]], j, indices[pv[k]]] = Sa[k, j];
+                    sizes[pc[pv[k]], pc[k], j, indices[k]] = Sa[k, j];
+
+                indices[k]++;
+            }
+
+            for (int k = 1; k < l; k++)
+                if (pv[k] != 0)
+                {
+                    for (int j = 0; j < m; j++)
+                        sizes[pc[pv[pv[k]]], pc[pv[k]], j, indices[pv[k]]] = Sa[k, j];
+
+                    indices[pv[k]]++;
+                }
+
+            for (int k = 1; k < l; k++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    float local = sizes[pc[pv[k]], pc[k], j, 0];
+
+                    for (int _k = 1; _k < indices[k]; _k++)
+                        local -= sizes[pc[pv[k]], pc[k], j, _k];
+
+                    sizes[pc[pv[k]], pc[k], j, indices[k]] = local;
+                }
+
+                indices[k]++;
+            }
+
+            for (int k = 1; k < l; k++)
+                if (pv[k] == 0)
+                {
+                    for (int j = 0; j < m; j++)
+                        sizes[0, 0, j, indices[0]] = Sa[k, j];
+
+                    indices[0]++;
+                }
+
+            for (int j = 0; j < m; j++)
+            {
+                float local = V;
+
+                for (int _k = 1; _k < indices[0]; _k++)
+                    local -= sizes[0, 0, j, _k];
+
+                sizes[0, 0, j, indices[0]] = local;
             }
 
             writer.WriteLine(string.Format("float {0}**** = ", name));
             Write(writer, sizes, 0, new int[] { 0, 0, 0, 0 });
-
         }
 
         private void Write(TextWriter writer, Array array, int dimension, int[] indices)
