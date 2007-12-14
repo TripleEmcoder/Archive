@@ -12,12 +12,12 @@ namespace Visualizer
     {
         private float T;
 
-        private int m; //j
+        private int m; //j - fazy
 
-        private int n; //i
+        private int n; //i - procesory
         private float[,] t, tk;
 
-        private int l; //k
+        private int l; //k - paczki
         private float[,] r, rk;
 
         private int[] pv, pc;

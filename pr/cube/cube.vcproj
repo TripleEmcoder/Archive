@@ -204,6 +204,10 @@
 				RelativePath=".\config.h"
 				>
 			</File>
+			<File
+				RelativePath=".\sizes.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"
