@@ -58,10 +58,19 @@ namespace Configurator
         public void Save(TextWriter writer, string name)
         {
             float[, , ,] sizes = new float[n, n, m, 3];
+            int[] indices = new int[l];
 
             for (int k = 1; k < l; k++)
                 for (int j = 0; j < m; j++)
                     sizes[pc[pv[k]], pc[k], j, 0] = Sa[k, j];
+
+            for (int k = 4; k < l; k++)
+            {
+                indices[pv[k]]++;
+
+                for (int j = 0; j < m; j++)
+                    sizes[pc[pv[pv[k]]], pc[pv[k]], j, indices[pv[k]]] = Sa[k, j];
+            }
 
             writer.WriteLine(string.Format("float {0}**** = ", name));
             Write(writer, sizes, 0, new int[] { 0, 0, 0, 0 });
@@ -72,7 +81,7 @@ namespace Configurator
         {
             if (dimension == array.Rank)
             {
-                writer.Write(array.GetValue(indices));
+                writer.Write(Math.Round((float)array.GetValue(indices)));
                 return;
             }
 
