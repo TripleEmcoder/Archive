@@ -11,7 +11,7 @@
 
 int init_channels(Channel** out)
 {
-	int i, param_count = 1;
+	int i, param_count = 3;
 	int count = *((int*) get_param(++param_count));
 
 	out = malloc(count * sizeof(Channel*));
@@ -36,7 +36,7 @@ int main()
 {
 	Channel** out = NULL;
 
-	int proc = *((int*) get_param(1));
+	int proc = *((int*) get_param(3));
 	int out_count = init_channels(out);
 	int phase = phase_count;
 
@@ -49,7 +49,7 @@ int main()
 		{
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
-			info.size = sizes[proc][proc][phase][i+2];
+			info.size = sizes[proc][proc][phase][i];
 			ChanOut(out[i], &info, sizeof(struct packet_info));
 			shift += info.size;
 		}

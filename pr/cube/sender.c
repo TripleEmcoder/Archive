@@ -45,7 +45,7 @@ int main()
 	int phase = phase_count;
 	struct packet_info* info = malloc(in_count * sizeof(struct packet_info));
 
-	int** data = init_memory(from, to, phase_count, in_count);
+	int** data = init_memory(from, to, phase_count, 0);
 	
 	while (phase--)
 	{

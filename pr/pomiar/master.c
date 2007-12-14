@@ -8,6 +8,7 @@
 #include <channel.h>
 #include <misc.h>
 #include <stdlib.h>
+#include <string.h>
 
 void test_link(Channel* out, Channel* in, int count, int size, int step)
 {
@@ -18,6 +19,7 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 	ChanOutInt(out, count);
 	ChanOutInt(out, size);
 	ChanOutInt(out, step);
+	ChanInInt(in);
 	
 	for (i = 0; i < count; ++i)   
 	{
@@ -50,7 +52,7 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 
 }
 
-void test_proc(Channel* out, Channel* in, int count, int size, int step)
+void test_proc(Channel* out, Channel* in, int count, int size, int step, int order)
 {
 	int i;
 	int* sizes = (int*) malloc(count * sizeof(int));
@@ -59,10 +61,12 @@ void test_proc(Channel* out, Channel* in, int count, int size, int step)
 	ChanOutInt(out, count);
 	ChanOutInt(out, size);
 	ChanOutInt(out, step);
+	ChanOutInt(out, order);
 	
 	for (i = 0; i < count; ++i)   
 	{
 		int* data = (int*) malloc(size * sizeof(int));
+		memset(data, 2, size);
 		
 		ChanOut(out, data, size * sizeof(int));
 		
@@ -93,6 +97,7 @@ int main(int argc, char** argv)
 	int count = atoi(argv[1]);
 	int size = atoi(argv[2]);
 	int step = atoi(argv[3]);
+	int order = atoi(argv[4]);
 
 	KANAL2WY   = (Channel *)  get_param (3);
 	KANAL3WE   = (Channel *)  get_param (4);
@@ -108,11 +113,11 @@ int main(int argc, char** argv)
 	printf("Test finished.\n");
 
 	/*printf("Testing fast proc...\n");
-	test_proc(KANAL4WY, KANAL5WE, count, size, step);
+	test_proc(KANAL4WY, KANAL5WE, count, size, step, order);
 	printf("Test finished.\n");
 
 	printf("Testing slow proc...\n");
-	test_proc(KANAL2WY, KANAL3WE, count, size, step);
+	test_proc(KANAL2WY, KANAL3WE, count, size, step, order);
 	printf("Test finished.\n");*/
 
 	exit_terminate (0);
