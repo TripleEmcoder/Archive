@@ -41,9 +41,9 @@ Wolfram Research.
 
 (*NotebookFileLineBreakTest
 NotebookFileLineBreakTest*)
-(*NotebookOptionsPosition[     44472,        891]*)
-(*NotebookOutlinePosition[     45119,        913]*)
-(*  CellTagsIndexPosition[     45075,        909]*)
+(*NotebookOptionsPosition[     45002,        901]*)
+(*NotebookOutlinePosition[     45649,        923]*)
+(*  CellTagsIndexPosition[     45605,        919]*)
 (*WindowFrame->Normal*)
 
 
@@ -159,8 +159,9 @@ Cell[BoxData[{
                         11] = \(C[12] = \(C[15] = 
                           4.4\)\)\)\)\)\)\)\)\);\)\), "\[IndentingNewLine]", 
     \(\(V = 10000;\)\), "\[IndentingNewLine]", 
-    \(\(m = 3;\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
-    \(\(Model\  = \ 
+    \(\(\(m = 3;\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
+    \(\(\(Model\  = \ 
         Flatten[ExpandAll[
             Join[\[IndentingNewLine]Table[
                 W0[n, k], {n, 0, 3}], \[IndentingNewLine]Table[
@@ -173,13 +174,14 @@ Cell[BoxData[{
                 W4[j, k], {j, 0, 7}, {k, 1, m - 1}], \[IndentingNewLine]Table[
                 W5[j], {j, 0, 7}], \[IndentingNewLine]Table[
                 WX[n, k], {n, 0, 15}, {k, 0, 
-                  m - 1}], \[IndentingNewLine]WS\[IndentingNewLine]]]];\)\
-\[IndentingNewLine]\), "\[IndentingNewLine]", 
+                  m - 1}], \[IndentingNewLine]WS\[IndentingNewLine]]]];\)\(\
+\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
     \(\(WRK[n_, k_] := 
         r[n, k] + Tw[n, k] == rk[n, k];\)\), "\[IndentingNewLine]", 
-    \(\(WTK[j_, k_] := 
-        t[j, k] + Ta[j, k] == 
-          tk[j, k];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
+    \(\(\(WTK[j_, k_] := 
+        t[j, k] + Ta[j, k] == tk[j, k];\)\(\[IndentingNewLine]\)
+    \)\), "\[IndentingNewLine]", 
     \(\(ModelDebug\  = \ 
         Flatten[ExpandAll[
             Join[\[IndentingNewLine]Model, \[IndentingNewLine]Table[
@@ -187,7 +189,8 @@ Cell[BoxData[{
                   m - 1}], \[IndentingNewLine]Table[
                 WTK[j, k], {j, 0, 7}, {k, 0, 
                   m - 1}], \[IndentingNewLine]Table[
-                StringForm["\<Sa_``_`` == ``\>", n, k, Sa[n, k]], {n, 0, 
+                If[n < 10, StringForm["\<Sa_0``_`` == ``\>", n, k, Sa[n, k]], 
+                  StringForm["\<Sa_``_`` == ``\>", n, k, Sa[n, k]]], {n, 0, 
                   15}, {k, 0, 
                   m - 1}], \[IndentingNewLine]{StringForm["\<m == ``\>", 
                   m]}, \[IndentingNewLine]Table[
@@ -202,6 +205,13 @@ Cell[BoxData[{
     \(\(Length[Model];\)\[IndentingNewLine]\), "\[IndentingNewLine]", 
     \(PrintToLPSolve[ModelDebug]\), "\[IndentingNewLine]", 
     \(\)}], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(General::"spell"\), \(\(:\)\(\ \)\), "\<\"Possible spelling \
+error: new symbol name \\\"\\!\\(Model\\)\\\" is similar to existing symbols \
+\\!\\({Mode, model}\\). \\!\\(\\*ButtonBox[\\\"More\[Ellipsis]\\\", \
+ButtonStyle->\\\"RefGuideLinkText\\\", ButtonFrame->None, \
+ButtonData:>\\\"General::spell\\\"]\\)\"\>"}]], "Message"],
 
 Cell[OutputFormData["\<\
 \"min: T;\\nr_00_2 = 0;\\nr_01_2 = 0;\\nr_02_2 = 0;\\nr_03_2 = 0;\\n2.2 \
@@ -435,22 +445,22 @@ tk_06_0;\\n20 a_05_1 + 20 a_09_1 + t_06_1 = tk_06_1;\\n20 a_05_2 + 20 a_09_2 \
 a_13_0 + 20 a_14_0 + 20 a_15_0 + t_07_0 = tk_07_0;\\n20 a_10_1 + 20 a_11_1 + \
 20 a_12_1 + 20 a_13_1 + 20 a_14_1 + 20 a_15_1 + t_07_1 = \\
 tk_07_1;\\n20 a_10_2 + 20 a_11_2 + 20 a_12_2 + 20 a_13_2 + 20 a_14_2 + 20 \
-a_15_2 + t_07_2 = tk_07_2;\\nSa_0_0 = a_00_0;\\nSa_0_1 = \\
-a_00_1;\\nSa_0_2 = a_00_2;\\nSa_1_0 = a_10_0 + a_11_0 + a_01_0 + a_04_0 + \
-a_05_0;\\nSa_1_1 = a_10_1 + a_11_1 + a_01_1 + a_04_1 + \\
-a_05_1;\\nSa_1_2 = a_10_2 + a_11_2 + a_01_2 + a_04_2 + a_05_2;\\nSa_2_0 = \
-a_12_0 + a_13_0 + a_02_0 + a_06_0 + a_07_0;\\nSa_2_1 = a_12_1 + \\
-a_13_1 + a_02_1 + a_06_1 + a_07_1;\\nSa_2_2 = a_12_2 + a_13_2 + a_02_2 + \
-a_06_2 + a_07_2;\\nSa_3_0 = a_14_0 + a_15_0 + a_03_0 + a_08_0 + \\
-a_09_0;\\nSa_3_1 = a_14_1 + a_15_1 + a_03_1 + a_08_1 + a_09_1;\\nSa_3_2 = \
-a_14_2 + a_15_2 + a_03_2 + a_08_2 + a_09_2;\\nSa_4_0 = a_10_0 + \\
-a_04_0;\\nSa_4_1 = a_10_1 + a_04_1;\\nSa_4_2 = a_10_2 + a_04_2;\\nSa_5_0 = \
-a_11_0 + a_05_0;\\nSa_5_1 = a_11_1 + a_05_1;\\nSa_5_2 = a_11_2 + \\
-a_05_2;\\nSa_6_0 = a_12_0 + a_06_0;\\nSa_6_1 = a_12_1 + a_06_1;\\nSa_6_2 = \
-a_12_2 + a_06_2;\\nSa_7_0 = a_13_0 + a_07_0;\\nSa_7_1 = a_13_1 + \\
-a_07_1;\\nSa_7_2 = a_13_2 + a_07_2;\\nSa_8_0 = a_14_0 + a_08_0;\\nSa_8_1 = \
-a_14_1 + a_08_1;\\nSa_8_2 = a_14_2 + a_08_2;\\nSa_9_0 = a_15_0 + \\
-a_09_0;\\nSa_9_1 = a_15_1 + a_09_1;\\nSa_9_2 = a_15_2 + a_09_2;\\nSa_10_0 = \
+a_15_2 + t_07_2 = tk_07_2;\\nSa_00_0 = a_00_0;\\nSa_00_1 = \\
+a_00_1;\\nSa_00_2 = a_00_2;\\nSa_01_0 = a_10_0 + a_11_0 + a_01_0 + a_04_0 + \
+a_05_0;\\nSa_01_1 = a_10_1 + a_11_1 + a_01_1 + a_04_1 + \\
+a_05_1;\\nSa_01_2 = a_10_2 + a_11_2 + a_01_2 + a_04_2 + a_05_2;\\nSa_02_0 = \
+a_12_0 + a_13_0 + a_02_0 + a_06_0 + a_07_0;\\nSa_02_1 = a_12_1 + \\
+a_13_1 + a_02_1 + a_06_1 + a_07_1;\\nSa_02_2 = a_12_2 + a_13_2 + a_02_2 + \
+a_06_2 + a_07_2;\\nSa_03_0 = a_14_0 + a_15_0 + a_03_0 + a_08_0 + \\
+a_09_0;\\nSa_03_1 = a_14_1 + a_15_1 + a_03_1 + a_08_1 + a_09_1;\\nSa_03_2 = \
+a_14_2 + a_15_2 + a_03_2 + a_08_2 + a_09_2;\\nSa_04_0 = a_10_0 + \\
+a_04_0;\\nSa_04_1 = a_10_1 + a_04_1;\\nSa_04_2 = a_10_2 + a_04_2;\\nSa_05_0 = \
+a_11_0 + a_05_0;\\nSa_05_1 = a_11_1 + a_05_1;\\nSa_05_2 = a_11_2 + \\
+a_05_2;\\nSa_06_0 = a_12_0 + a_06_0;\\nSa_06_1 = a_12_1 + a_06_1;\\nSa_06_2 = \
+a_12_2 + a_06_2;\\nSa_07_0 = a_13_0 + a_07_0;\\nSa_07_1 = a_13_1 + \\
+a_07_1;\\nSa_07_2 = a_13_2 + a_07_2;\\nSa_08_0 = a_14_0 + a_08_0;\\nSa_08_1 = \
+a_14_1 + a_08_1;\\nSa_08_2 = a_14_2 + a_08_2;\\nSa_09_0 = a_15_0 + \\
+a_09_0;\\nSa_09_1 = a_15_1 + a_09_1;\\nSa_09_2 = a_15_2 + a_09_2;\\nSa_10_0 = \
 a_10_0;\\nSa_10_1 = a_10_1;\\nSa_10_2 = a_10_2;\\nSa_11_0 = \\
 a_11_0;\\nSa_11_1 = a_11_1;\\nSa_11_2 = a_11_2;\\nSa_12_0 = a_12_0;\\nSa_12_1 \
 = a_12_1;\\nSa_12_2 = a_12_2;\\nSa_13_0 = a_13_0;\\nSa_13_1 = \\
@@ -798,36 +808,36 @@ t_07_0 = tk_07_0;
 t_07_1 = tk_07_1;
 20 a_10_2 + 20 a_11_2 + 20 a_12_2 + 20 a_13_2 + 20 a_14_2 + 20 a_15_2 + \
 t_07_2 = tk_07_2;
-Sa_0_0 = a_00_0;
-Sa_0_1 = a_00_1;
-Sa_0_2 = a_00_2;
-Sa_1_0 = a_10_0 + a_11_0 + a_01_0 + a_04_0 + a_05_0;
-Sa_1_1 = a_10_1 + a_11_1 + a_01_1 + a_04_1 + a_05_1;
-Sa_1_2 = a_10_2 + a_11_2 + a_01_2 + a_04_2 + a_05_2;
-Sa_2_0 = a_12_0 + a_13_0 + a_02_0 + a_06_0 + a_07_0;
-Sa_2_1 = a_12_1 + a_13_1 + a_02_1 + a_06_1 + a_07_1;
-Sa_2_2 = a_12_2 + a_13_2 + a_02_2 + a_06_2 + a_07_2;
-Sa_3_0 = a_14_0 + a_15_0 + a_03_0 + a_08_0 + a_09_0;
-Sa_3_1 = a_14_1 + a_15_1 + a_03_1 + a_08_1 + a_09_1;
-Sa_3_2 = a_14_2 + a_15_2 + a_03_2 + a_08_2 + a_09_2;
-Sa_4_0 = a_10_0 + a_04_0;
-Sa_4_1 = a_10_1 + a_04_1;
-Sa_4_2 = a_10_2 + a_04_2;
-Sa_5_0 = a_11_0 + a_05_0;
-Sa_5_1 = a_11_1 + a_05_1;
-Sa_5_2 = a_11_2 + a_05_2;
-Sa_6_0 = a_12_0 + a_06_0;
-Sa_6_1 = a_12_1 + a_06_1;
-Sa_6_2 = a_12_2 + a_06_2;
-Sa_7_0 = a_13_0 + a_07_0;
-Sa_7_1 = a_13_1 + a_07_1;
-Sa_7_2 = a_13_2 + a_07_2;
-Sa_8_0 = a_14_0 + a_08_0;
-Sa_8_1 = a_14_1 + a_08_1;
-Sa_8_2 = a_14_2 + a_08_2;
-Sa_9_0 = a_15_0 + a_09_0;
-Sa_9_1 = a_15_1 + a_09_1;
-Sa_9_2 = a_15_2 + a_09_2;
+Sa_00_0 = a_00_0;
+Sa_00_1 = a_00_1;
+Sa_00_2 = a_00_2;
+Sa_01_0 = a_10_0 + a_11_0 + a_01_0 + a_04_0 + a_05_0;
+Sa_01_1 = a_10_1 + a_11_1 + a_01_1 + a_04_1 + a_05_1;
+Sa_01_2 = a_10_2 + a_11_2 + a_01_2 + a_04_2 + a_05_2;
+Sa_02_0 = a_12_0 + a_13_0 + a_02_0 + a_06_0 + a_07_0;
+Sa_02_1 = a_12_1 + a_13_1 + a_02_1 + a_06_1 + a_07_1;
+Sa_02_2 = a_12_2 + a_13_2 + a_02_2 + a_06_2 + a_07_2;
+Sa_03_0 = a_14_0 + a_15_0 + a_03_0 + a_08_0 + a_09_0;
+Sa_03_1 = a_14_1 + a_15_1 + a_03_1 + a_08_1 + a_09_1;
+Sa_03_2 = a_14_2 + a_15_2 + a_03_2 + a_08_2 + a_09_2;
+Sa_04_0 = a_10_0 + a_04_0;
+Sa_04_1 = a_10_1 + a_04_1;
+Sa_04_2 = a_10_2 + a_04_2;
+Sa_05_0 = a_11_0 + a_05_0;
+Sa_05_1 = a_11_1 + a_05_1;
+Sa_05_2 = a_11_2 + a_05_2;
+Sa_06_0 = a_12_0 + a_06_0;
+Sa_06_1 = a_12_1 + a_06_1;
+Sa_06_2 = a_12_2 + a_06_2;
+Sa_07_0 = a_13_0 + a_07_0;
+Sa_07_1 = a_13_1 + a_07_1;
+Sa_07_2 = a_13_2 + a_07_2;
+Sa_08_0 = a_14_0 + a_08_0;
+Sa_08_1 = a_14_1 + a_08_1;
+Sa_08_2 = a_14_2 + a_08_2;
+Sa_09_0 = a_15_0 + a_09_0;
+Sa_09_1 = a_15_1 + a_09_1;
+Sa_09_2 = a_15_2 + a_09_2;
 Sa_10_0 = a_10_0;
 Sa_10_1 = a_10_1;
 Sa_10_2 = a_10_2;
@@ -914,8 +924,9 @@ CellTagsIndex->{}
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[1776, 53, 6933, 150, 1490, "Input"],
-Cell[8712, 205, 35744, 683, 5456, "Output"]
+Cell[1776, 53, 7043, 153, 1490, "Input"],
+Cell[8822, 208, 357, 5, 22, "Message"],
+Cell[9182, 215, 35804, 683, 5456, "Output"]
 }, Open  ]]
 }
 ]
