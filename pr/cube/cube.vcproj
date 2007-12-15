@@ -194,6 +194,10 @@
 				RelativePath=".\sender.c"
 				>
 			</File>
+			<File
+				RelativePath=".\sizes.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"

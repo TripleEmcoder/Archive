@@ -127,8 +127,12 @@ namespace Configurator
                 sizes[0, 0, j, indices[0]] = local;
             }
 
-            writer.WriteLine(string.Format("float {0}**** = ", name));
+            writer.WriteLine(string.Format(
+                "int {0}[{1}][{2}][{3}][{4}] = ", name, n, n, m, 4));
+
             Write(writer, sizes, 0, new int[] { 0, 0, 0, 0 });
+
+            writer.WriteLine(";");
         }
 
         private void Write(TextWriter writer, Array array, int dimension, int[] indices)
