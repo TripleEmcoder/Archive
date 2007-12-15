@@ -91,7 +91,7 @@ Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego
 Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Idea rozwi¹zania}
-Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
+Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.\\*
 
 Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które bêd¹ wykorzystywane w dalszym ci¹gu sprawozdania:
 \begin{description}
@@ -100,7 +100,7 @@ Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które b
 \item[paczka $(i,k)$] -- fragment pakietu zawieraj¹cy dane do przetworzenia  lokalnego w fazie $k$ na procesorze docelowym kana³u $i$ 
 \end{description}
 
-Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta przedstawiony na rysunku \ref{fig:example}.
+Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego procesora przedstawiony na rysunku \ref{fig:example}.
 
 \begin{figure}[h]
 \centering
@@ -118,7 +118,59 @@ Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta przedstawiony na r
 \item[$after(i)$] -- zbiór numerów kana³ów, które zale¿¹ od kana³u $i$, tzn. takich, którymi nie mo¿na wys³aæ w danej fazie pakietów, dopóki nie zostanie zakoñczona transmisja kana³em $i$
 \end{description}
 
-Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania. Przedstawiaj¹ je tabele ???.
+Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania. Przedstawiaj¹ je tabele \ref{tab:channels}, \ref{tab:before} i \ref{tab:after}.
+
+\begin{table}[p]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+\hline
+$j$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
+\hline
+$channels(j)$ & ${}$ & ${1}$ & ${2}$ & ${3}$ & ${4,6}$ & ${7,8}$ & ${5,9}$ & ${10,11,12,13,14,15}$ \\
+\hline
+\end{tabular}
+\caption{channels}
+\label{tab:channels}
+\end{table}
+PrevTab = {{0}, {0}, {0}, {0}, {1}, {1}, {2}, {2}, {3}, {3}, {4}, \
+{5}, {6, 10}, {7}, {8, 13}, {9, 11}};
+\begin{table}[p]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+$i$ &  $0$ &  $1$ &  $2$ &  $3$
+    &  $4$ &  $5$ &  $6$ &  $7$
+    &  $8$ &  $9$ & $10$ & $11$
+    & $12$ & $13$ & $14$ & $15$ \\
+\hline
+$before(i)$ &    ${0}$ &  ${0}$ &    ${0}$ &    ${0}$ 
+            &    ${1}$ &  ${1}$ &    ${2}$ &    ${2}$
+            &    ${3}$ &  ${3}$ &    ${4}$ &    ${5}$
+            & ${6,10}$ &  ${7}$ & ${8,13}$ & ${9,11}$ \\
+\hline
+\end{tabular}
+\caption{before}
+\label{tab:before}
+\end{table}
+
+\begin{table}[p]
+\centering
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+$i$ &  $0$ &  $1$ &  $2$ &  $3$
+    &  $4$ &  $5$ &  $6$ &  $7$
+    &  $8$ &  $9$ & $10$ & $11$
+    & $12$ & $13$ & $14$ & $15$ \\
+\hline
+$after(i)$ &    ${}$ & ${4,5}$ & ${6,7}$ & ${8,9}$ 
+           &  ${10}$ &  ${11}$ &  ${12}$ &  ${13}$
+           &  ${14}$ &  ${15}$ &    ${}$ &    ${}$
+           &    ${}$ &    ${}$ &    ${}$ &    ${}$ \\
+\hline
+\end{tabular}
+\caption{after}
+\label{tab:after}
+\end{table}
 
 \subsection{Parametry systemu Parastation}
 \begin{description}
@@ -141,7 +193,7 @@ Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿ane
 
 \begin{itemize}
 \item rozmiar pakietu $(i,k)$
-$$ S_a(i,k) = a(i,k) + \sum_{p \in next(i)} S_a(p,k)$$
+$$ S_a(i,k) = a(i,k) + \sum_{p \in after(i)} S_a(p,k)$$
 \item czas przesy³ania pakietu $(i,k)$
 \begin{displaymath}
 T_c(i,k) = \left\{ \begin{array}{ll}
@@ -163,9 +215,9 @@ $$\textrm{min:} \; t$$
 \item pakiety $(i:i = 1 \ldots 3,m-1)$ s¹ dostêpne w~chwili $t = 0$
 $$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
 \item pakiet $(i,k)$ mo¿na wys³aæ dopiero po odebraniu wszystkich danych wchodz¹cych w jego sk³ad
-$$ \forall p \in prev(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
+$$ \forall p \in before(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \item obliczenia na procesorze $j$ mo¿na rozpocz¹c w fazie $k$ dopiero po otrzymaniu pakietów ze wszystkich dochodz¹cych do niego kana³ów
-$$ \forall p \in packets(j) \quad x(p,k) r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
+$$ \forall p \in channels(j) \quad x(p,k) r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
 \item kolejne fazy przesy³ania pakietów musz¹ przebiegaæ sekwencyjnie
 $$r(i,k) + T_c(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
 \item kolejne fazy przetwarzania paczek musz¹ przebiegaæ sekwencyjnie
