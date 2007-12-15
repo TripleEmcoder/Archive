@@ -3,10 +3,12 @@
  *                 TRANSPUTER STUDIO                   *
  * --------------------------------------------------- */
 
-#include <process1.h>
+#include <stdio.h>
+#include <process.h>
 #include <channel.h>
 #include <misc.h>
-#include <memory.h>
+#include <stdlib.h>
+#include <string.h>
 #include "config.h"
 
 int init_channels(Channel** in, Channel* out)
@@ -14,7 +16,7 @@ int init_channels(Channel** in, Channel* out)
 	int i, param_count = 2;
 	int count = *((int*) get_param(++param_count));
 
-	in = malloc(count * sizeof(Channel*));
+	in = (Channel**) malloc(count * sizeof(Channel*));
 	for (i = 0; i < count; ++i)
 		in[i] = (Channel *) get_param(++param_count);
 
@@ -26,10 +28,10 @@ int init_channels(Channel** in, Channel* out)
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i;
-	int** data = malloc(phases * sizeof(int*));
+	int** data = (int**) malloc(phases * sizeof(int*));
 	for (i = 0; i < phases; ++i)
 	{
-		data[i] = malloc(sizes[from][to][i][channel] * sizeof(int));
+		data[i] = (int*) malloc(sizes[from][to][i][channel] * sizeof(int));
 	}
 	return data;
 }
@@ -43,7 +45,7 @@ int main()
 	int to   = *((int*) get_param(2));
 	int in_count = init_channels(in, out);
 	int phase = phase_count;
-	struct packet_info* info = malloc(in_count * sizeof(struct packet_info));
+	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 
 	int** data = init_memory(from, to, phase_count, 0);
 	
@@ -53,8 +55,9 @@ int main()
 
 		for (i = 0; i < in_count; ++i)
 		{
-			int active = ProcAltList(in);
-			ChanIn(in[active], &info[active], sizeof(struct packet_info));
+			/*int active = ProcAltList(in);
+			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
+			ChanIn(in[i], &info[i], sizeof(struct packet_info));
 		}
 
 		for (i = 0; i < in_count; ++i)

@@ -5,4 +5,4 @@ struct packet_info {
 	int size;
 };
 
-int phase_count = 1;
+int phase_count = 3;

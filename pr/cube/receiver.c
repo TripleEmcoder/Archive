@@ -3,10 +3,11 @@
  *                 TRANSPUTER STUDIO                   *
  * --------------------------------------------------- */
 
-#include <process1.h>
+#include <stdio.h>
+#include <process.h>
 #include <channel.h>
 #include <misc.h>
-#include <memory.h>
+#include <stdlib.h>
 #include "config.h"
 
 int init_channels(Channel* in, Channel** out)
@@ -16,7 +17,7 @@ int init_channels(Channel* in, Channel** out)
 
 	in = (Channel*) get_param(++param_count);
 	
-	out = malloc(count * sizeof(Channel*));
+	out = (Channel**) malloc(count * sizeof(Channel*));
 	for (i = 0; i < count; ++i)
 		out[i] = (Channel *) get_param(++param_count);
 	return count;
@@ -25,10 +26,10 @@ int init_channels(Channel* in, Channel** out)
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i;
-	int** data = malloc(phases * sizeof(int*));
+	int** data = (int**) malloc(phases * sizeof(int*));
 	for (i = 0; i < phases; ++i)
 	{
-		data[i] = malloc(sizes[from][to][i][channel] * sizeof(int));
+		data[i] = (int*) malloc(sizes[from][to][i][channel] * sizeof(int));
 	}
 	return data;
 }

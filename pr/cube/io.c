@@ -4,6 +4,7 @@
  * --------------------------------------------------- */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <process.h>
 #include <channel.h>
 #include <misc.h>
@@ -14,7 +15,7 @@ int init_channels(Channel** out)
 	int i, param_count = 3;
 	int count = *((int*) get_param(++param_count));
 
-	out = malloc(count * sizeof(Channel*));
+	out = (Channel**) malloc(count * sizeof(Channel*));
 	for (i = 0; i < count; ++i)
 		out[i] = (Channel *) get_param(++param_count);
 
@@ -24,10 +25,10 @@ int init_channels(Channel** out)
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i;
-	int** data = malloc(phases * sizeof(int*));
+	int** data = (int**) malloc(phases * sizeof(int*));
 	for (i = 0; i < phases; ++i)
 	{
-		data[i] = malloc(sizes[from][to][i][channel] * sizeof(int));
+		data[i] = (int*) malloc(sizes[from][to][i][channel] * sizeof(int));
 	}
 	return data;
 }
@@ -39,12 +40,16 @@ int main()
 	int proc = *((int*) get_param(3));
 	int out_count = init_channels(out);
 	int phase = phase_count;
+	int** data;
 
-	int** data = init_memory(proc, proc, phase_count, 0);
+	printf("Initializing memory...\n");
+	data = init_memory(proc, proc, phase_count, 0);
 	
+	printf("Processing...\n");
 	while (phase--)
 	{
 		int i, shift = 0;
+		printf("Phase %d...\n", phase);
 		for (i = 0; i < out_count; ++i)
 		{
 			struct packet_info info;
@@ -53,10 +58,12 @@ int main()
 			ChanOut(out[i], &info, sizeof(struct packet_info));
 			shift += info.size;
 		}
+		printf("Phase %d finished.\n", phase);
 	}
 
 	free(out);
 
+	printf("Terminating...\n");
 	exit_terminate(0);
 
 	return 0;

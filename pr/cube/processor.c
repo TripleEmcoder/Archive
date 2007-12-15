@@ -3,10 +3,11 @@
  *                 TRANSPUTER STUDIO                   *
  * --------------------------------------------------- */
 
-#include <process1.h>
+#include <stdio.h>
+#include <process.h>
 #include <channel.h>
 #include <misc.h>
-#include <memory.h>
+#include <stdlib.h>
 #include "config.h"
 
 int init_channels(Channel** in)
@@ -14,7 +15,7 @@ int init_channels(Channel** in)
 	int i, param_count = 1;
 	int count = *((int*) get_param(++param_count));
 
-	in = malloc(count * sizeof(Channel*));
+	in = (Channel**) malloc(count * sizeof(Channel*));
 	for (i = 0; i < count; ++i)
 		in[i] = (Channel *) get_param(++param_count);
 
@@ -33,7 +34,7 @@ int main()
 	int proc = *((int*) get_param(1));
 	int in_count = init_channels(in);
 	int phase = phase_count;
-	struct packet_info* info = malloc(in_count * sizeof(struct packet_info));
+	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 	
 	while (phase--)
 	{
@@ -41,8 +42,9 @@ int main()
 		
 		for (i = 0; i < in_count; ++i)
 		{
-			int active = ProcAltList(in);
-			ChanIn(in[active], &info[active], sizeof(struct packet_info));
+			/*int active = ProcAltList(in);
+			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
+			ChanIn(in[i], &info[i], sizeof(struct packet_info));
 		}
 
 		for (i = 0; i < in_count; ++i)
