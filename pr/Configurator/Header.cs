@@ -118,14 +118,7 @@ namespace Configurator
                 }
 
             for (int j = 0; j < m; j++)
-            {
-                float local = V;
-
-                for (int c = 0; c < indices[0]; c++)
-                    local -= sizes[0, 0, j, c];
-
-                sizes[0, 0, j, indices[0]] = local;
-            }
+                sizes[0, 0, j, indices[0]] = a[0, j];
 
             writer.WriteLine(string.Format(
                 "int {0}[{1}][{2}][{3}][{4}] = ", name, n, n, m, 4));
