@@ -10,22 +10,6 @@
 #include <stdlib.h>
 #include "config.h"
 
-int init_channels(Channel** in)
-{
-	int i, param_count = 1, count;
-
-	printf("Initializing channels...\n");
-	
-	count = *((int*) get_param(++param_count));
-
-	in = (Channel**) malloc(count * sizeof(Channel*));
-	for (i = 0; i < count; ++i)
-		in[i] = (Channel *) get_param(++param_count);
-
-	printf("%d channels initialized.\n", count);
-	return count;
-}
-
 void process(int x)
 {
 	return;	
@@ -33,10 +17,9 @@ void process(int x)
 
 int main()
 {
-	Channel** in = NULL;
-
 	int proc = *((int*) get_param(1));
-	int in_count = init_channels(in);
+	int in_count = *((int*) get_param(2));
+	Channel** in = init_channels(in_count, 2);
 	int phase = phase_count;
 	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 	
@@ -50,7 +33,7 @@ int main()
 		{
 			/*int active = ProcAltList(in);
 			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
-			printf("Receiving to %p...\n", &(info[i]));
+			printf("Receiving to channel %p...\n", in[i]);
 			ChanIn(in[i], &(info[i]), sizeof(struct packet_info));
 			printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);
 		}

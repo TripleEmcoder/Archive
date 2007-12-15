@@ -10,24 +10,6 @@
 #include <stdlib.h>
 #include "config.h"
 
-int init_channels(Channel* in, Channel** out)
-{
-	int i, param_count = 2, count;
-
-	printf("Initializing channels...\n");
-	
-	count = *((int*) get_param(++param_count));
-
-	in = (Channel*) get_param(++param_count);
-	
-	out = (Channel**) malloc(count * sizeof(Channel*));
-	for (i = 0; i < count; ++i)
-		out[i] = (Channel *) get_param(++param_count);
-	
-	printf("%d channels initialized.\n", count);
-	return count;
-}
-
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i;
@@ -48,12 +30,11 @@ int** init_memory(int from, int to, int phases, int channel)
 
 int main()
 {
-	Channel* in = NULL;
-	Channel** out = NULL;
-
 	int from = *((int*) get_param(1));
 	int to   = *((int*) get_param(2));
-	int out_count = init_channels(in, out);
+	int out_count = *((int*) get_param(3));
+	Channel* in = (Channel*) get_param(4);
+	Channel** out = init_channels(out_count, 4);
 	int phase = phase_count;
 
 	int** data = init_memory(from, to, phase_count, 0);

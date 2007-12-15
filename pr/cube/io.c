@@ -10,22 +10,6 @@
 #include <misc.h>
 #include "config.h"
 
-int init_channels(Channel** out)
-{
-	int i, param_count = 3, count;
-
-	printf("Initializing channels...\n");
-	
-	count = *((int*) get_param(++param_count));
-
-	out = (Channel**) malloc(count * sizeof(Channel*));
-	for (i = 0; i < count; ++i)
-		out[i] = (Channel *) get_param(++param_count);
-
-	printf("%d channels initialized.\n", count);
-	return count;
-}
-
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i, j;
@@ -49,13 +33,12 @@ int** init_memory(int from, int to, int phases, int channel)
 
 int main()
 {
-	Channel** out = NULL;
-
 	int proc = *((int*) get_param(3));
-	int out_count = init_channels(out);
+	int out_count = *((int*) get_param(4));
+	Channel** out = init_channels(out_count, 4);
 	int phase = phase_count;
 	int** data = init_memory(proc, proc, phase_count, out_count);
-	
+
 	printf("Processing...\n");
 	while (phase--)
 	{
@@ -66,7 +49,7 @@ int main()
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
 			info.size = sizes[proc][proc][phase][i];
-			printf("Sending info: (%p, %d)\n", info.ptr, info.size);
+			printf("Sending info: (%p, %d)\n", info.ptr, info.size, out[i]);
 			ChanOut(out[i], &info, sizeof(struct packet_info));
 			printf("Sent.\n");
 			shift += info.size;

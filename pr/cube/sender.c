@@ -11,24 +11,6 @@
 #include <string.h>
 #include "config.h"
 
-int init_channels(Channel** in, Channel* out)
-{
-	int i, param_count = 2, count;
-
-	printf("Initializing channels...\n");
-	
-	count = *((int*) get_param(++param_count));
-
-	in = (Channel**) malloc(count * sizeof(Channel*));
-	for (i = 0; i < count; ++i)
-		in[i] = (Channel *) get_param(++param_count);
-
-	out = (Channel*) get_param(++param_count);
-	
-	printf("%d channels initialized.\n", count);
-	return count;
-}
-
 int** init_memory(int from, int to, int phases, int channel)
 {
 	int i;
@@ -48,13 +30,13 @@ int** init_memory(int from, int to, int phases, int channel)
 
 int main()
 {
-	Channel** in = NULL;
-	Channel* out = NULL;
-
 	int from = *((int*) get_param(1));
 	int to   = *((int*) get_param(2));
-	int in_count = init_channels(in, out);
+	int in_count = *((int*) get_param(3));
+	Channel** in = init_channels(in_count, 3);
+	Channel* out = (Channel*) get_param(4 + in_count);
 	int phase = phase_count;
+
 	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 
 	int** data = init_memory(from, to, phase_count, 0);
@@ -69,7 +51,7 @@ int main()
 		{
 			/*int active = ProcAltList(in);
 			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
-			printf("Receiving to %p...\n", &(info[i]));
+			printf("Receiving to channel %p...\n", in[i]);
 			ChanIn(in[i], &(info[i]), sizeof(struct packet_info));
 			printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);
 		}
