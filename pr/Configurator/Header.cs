@@ -99,8 +99,8 @@ namespace Configurator
                 {
                     float local = sizes[pc[pv[k]], pc[k], j, 0];
 
-                    for (int _k = 1; _k < indices[k]; _k++)
-                        local -= sizes[pc[pv[k]], pc[k], j, _k];
+                    for (int c = 1; c < indices[k]; c++)
+                        local -= sizes[pc[pv[k]], pc[k], j, c];
 
                     sizes[pc[pv[k]], pc[k], j, indices[k]] = local;
                 }
@@ -121,8 +121,8 @@ namespace Configurator
             {
                 float local = V;
 
-                for (int _k = 1; _k < indices[0]; _k++)
-                    local -= sizes[0, 0, j, _k];
+                for (int c = 0; c < indices[0]; c++)
+                    local -= sizes[0, 0, j, c];
 
                 sizes[0, 0, j, indices[0]] = local;
             }

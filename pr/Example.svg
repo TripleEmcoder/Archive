@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="200"
+   width="1180"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   version="1.0"
+   sodipodi:docbase="E:\Marcin\Documents\Nauka\Politechnika\Przedmioty\S5\PR\Projekt"
+   sodipodi:docname="Example.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="E:\Marcin\Documents\Nauka\Politechnika\Przedmioty\S5\PR\Projekt\Example.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:cx="858.78968"
+     inkscape:cy="142.94218"
+     inkscape:zoom="1.4"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="1180px"
+     height="200px"
+     inkscape:window-width="1024"
+     inkscape:window-height="721"
+     inkscape:window-x="0"
+     inkscape:window-y="18"
+     showgrid="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Warstwa 1"
+     id="layer1">
+    <image
+       y="57.5"
+       x="0"
+       id="image2238"
+       height="85"
+       width="1180"
+       sodipodi:absref="E:\Marcin\Documents\Nauka\Politechnika\Przedmioty\S5\PR\Projekt\ExampleGantt.png"
+       xlink:href="ExampleGantt.png" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.98637325;stroke-opacity:1"
+       id="rect5266"
+       width="299.01367"
+       height="99.013626"
+       x="870.49316"
+       y="50.493187" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="908.38867"
+       y="69.197571"
+       id="text2221"><tspan
+         sodipodi:role="line"
+         id="tspan2223"
+         x="908.38867"
+         y="69.197571">Pakiety w kanale 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20;font-style:normal;font-weight:normal;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;text-anchor:start;text-align:start"
+       x="908.38867"
+       y="105.8125"
+       id="text2225"><tspan
+         sodipodi:role="line"
+         id="tspan2227"
+         x="908.38867"
+         y="105.8125"
+         style="font-size:20;fill:#808080;text-anchor:start;text-align:start">Pakiety w kanale 6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20;font-style:normal;font-weight:normal;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;text-anchor:start;text-align:start"
+       x="17.172592"
+       y="33.324829"
+       id="text2229"><tspan
+         sodipodi:role="line"
+         id="tspan2231"
+         x="17.172592"
+         y="33.324829">Procesor 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="32.897022"
+       y="176.76648"
+       id="text2233"><tspan
+         sodipodi:role="line"
+         id="tspan2235"
+         x="32.897022"
+         y="176.76648">Ścieżka 0-2-4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="161.42723"
+       y="22.718229"
+       id="text2237"><tspan
+         sodipodi:role="line"
+         id="tspan2239"
+         x="161.42723"
+         y="22.718229">Transmisja pakietu (4,1)  </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20;font-style:normal;font-weight:normal;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans;text-anchor:start;text-align:start"
+       x="908.93652"
+       y="143.14429"
+       id="text2249"><tspan
+         sodipodi:role="line"
+         x="908.93652"
+         y="143.14429"
+         id="tspan5278">Obliczenia procesora 4</tspan></text>
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 48.517447,66.478551 L 45.684808,73.839372 L 42.888728,66.727158 L 44.764968,66.644288 L 44.824963,42.893498 L 46.701203,42.810629 L 46.641208,66.56142 L 48.517447,66.478551 z "
+       id="path5255"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="-5.4470157"
+       inkscape:transform-center-y="4.2467417" />
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 91.23624,128.70788 L 94.002537,121.32187 L 96.862494,128.40864 L 94.987076,128.50838 L 95.140774,152.25875 L 93.265356,152.3585 L 93.111657,128.60813 L 91.23624,128.70788 z "
+       id="path5257"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="5.5594818"
+       inkscape:transform-center-y="-4.1931533" />
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 274.59399,54.52431 L 271.70736,61.864124 L 268.9636,54.731561 L 270.8404,54.662484 L 271.07487,30.912774 L 272.95167,30.843687 L 272.7172,54.593397 L 274.59399,54.52431 z "
+       id="path5259"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="-5.3548582"
+       inkscape:transform-center-y="4.2902402" />
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 878.01299,79.030579 L 870.16688,79.833122 L 875.24567,74.122813 L 876.1681,75.75874 L 897.37834,65.07092 L 898.30079,66.706844 L 877.09055,77.394665 L 878.01299,79.030579 z "
+       id="path5270"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-y="6.3977297"
+       inkscape:transform-center-x="1.1026418" />
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 876.08437,101.85 L 868.7186,99.03028 L 875.82589,96.221731 L 875.91206,98.097825 L 899.66291,98.116175 L 899.74907,99.992269 L 875.99822,99.973919 L 876.08437,101.85 z "
+       id="path5272"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="4.2363268"
+       inkscape:transform-center-y="5.4689637" />
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 878.01299,121.27858 L 870.16688,120.47604 L 875.24567,126.18635 L 876.1681,124.55042 L 897.37834,135.23824 L 898.30079,133.60232 L 877.09055,122.9145 L 878.01299,121.27858 z "
+       id="path5276"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-y="-6.3977297"
+       inkscape:transform-center-x="1.1026418" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;text-align:start;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="559.30981"
+       y="191.22726"
+       id="text5328"><tspan
+         sodipodi:role="line"
+         id="tspan5330"
+         x="559.30981"
+         y="191.22726">Obliczanie paczki (6,0)</tspan></text>
+    <path
+       style="fill:#808080;fill-rule:evenodd;stroke:#808080;stroke-width:0.33375594px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 657.81785,147.50669 L 660.70448,140.16688 L 663.44824,147.29944 L 661.57144,147.36852 L 661.33697,171.11823 L 659.46017,171.18731 L 659.69464,147.4376 L 657.81785,147.50669 z "
+       id="path5332"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:transform-center-x="5.3548582"
+       inkscape:transform-center-y="-4.2902402" />
+  </g>
+</svg>

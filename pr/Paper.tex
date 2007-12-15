@@ -93,7 +93,7 @@ Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego probl
 \subsection{Idea rozwi¹zania}
 Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
 
-Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce pojêcia, które bêd¹ wykorzystywane w dalszym ci¹gu sprawozdania:
+Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które bêd¹ wykorzystywane w dalszym ci¹gu sprawozdania:
 \begin{description}
 \item[kana³ $i$] -- œcie¿ka, któr¹ dane docieraj¹ do procesora $j$ docelowego dla tego kana³u; kana³em wysy³ane s¹ pakiety $(i,k: k = m-1 \ldots 0)$
 \item[pakiet $(i,k)$] -- pojedyñcza transmisja danych pomiêdzy procesorami, s¹ to dane przesy³ane do procesora docelowego dla kana³u $i$ w fazie $k$; pakiet zawiera paczkê $(i,k)$ oraz paczki $(p: p \in after(i), k)$
@@ -104,10 +104,12 @@ Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta przedstawiony na r
 
 \begin{figure}[h]
 \centering
-\includegraphics[trim=0 0 0 0, clip]{flat}
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{example}
 \caption{Fragment diagramu Gantta obrazuj¹cy wykorzystywane w sprawozdaniu pojêcia}
 \label{fig:example}
 \end{figure}
+
+\newpage
 
 \subsection{Funkcje opisuj¹ce system kana³ów}
 \begin{description}
