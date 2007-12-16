@@ -18,8 +18,8 @@ Channel** init_channels(int count, int param_count)
 	for (i = 0; i < count; ++i)
 	{
 		result[i] = (Channel *) get_param(++param_count);
-		if (result[i] == NULL)
-			printf("Channel at %d not initialized!!!\n", param_count);
+		/*if (result[i] == NULL)
+			printf("Channel at %d not initialized!!!\n", param_count);*/
 	}
 	return result;
 }

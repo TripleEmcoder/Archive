@@ -6,6 +6,7 @@
 #include <process.h>
 #include <channel.h>
 #include <misc.h>
+#include <stdlib.h>
 #include "config.h"
 
 int main()

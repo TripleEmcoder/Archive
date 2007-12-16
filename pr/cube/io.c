@@ -63,6 +63,7 @@ int main()
 	free(out);
 
 	count = ChanInInt(debug_in);
+	printf("Received %d\n", count);
 	times = (struct time_info*) malloc(count * sizeof(struct time_info));
 	ChanIn(debug_in, times, count * sizeof(struct time_info));
 

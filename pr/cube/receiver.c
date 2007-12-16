@@ -15,16 +15,16 @@ int** init_memory(int from, int to, int phases, int channel)
 	int i;
 	int** data;
 
-	printf("Initializing memory...\n");
+	/*printf("Initializing memory...\n");*/
 	
 	data = (int**) malloc(phases * sizeof(int*));
 	for (i = 0; i < phases; ++i)
 	{
 		data[i] = (int*) malloc(sizes[from][to][i][channel] * sizeof(int));
-		printf("Allocated %d at %p for phase %d.", sizes[from][to][i][channel], data[i], i);
+		/*printf("Allocated %d at %p for phase %d.", sizes[from][to][i][channel], data[i], i);*/
 	}
 	
-	printf("Memory initialization finished.\n");
+	/*printf("Memory initialization finished.\n");*/
 	return data;
 }
 
@@ -46,17 +46,17 @@ int main()
 	int phase = phase_count;
 	
 
-	printf("Processing...\n");
+	/*printf("Processing...\n");*/
 	while (phase--)
 	{
 		int i, start, end;
-		printf("Phase %d...\n", phase);
+		/*printf("Phase %d...\n", phase);*/
 
 		start = ProcTime();
 		ChanIn(in, data[phase], sizes[from][to][phase][0] * sizeof(int));
 		end = ProcTime();
 
-		printf("Received data, size: %d, addr: %p.\n", sizes[from][to][phase][0], data[phase]);
+		/*printf("Received data, size: %d, addr: %p.\n", sizes[from][to][phase][0], data[phase]);*/
 
 		local_times[phase] = ProcTimeMinus(end, start);
 		
@@ -66,12 +66,12 @@ int main()
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
 			info.size = sizes[from][to][phase][i+1];
-			printf("Sending info: (%p, %d)\n", info.ptr, info.size);
+			/*printf("Sending info: (%p, %d)\n", info.ptr, info.size);*/
 			ChanOut(out[i], &info, sizeof(struct packet_info));
-			printf("Sent.\n");
+			/*printf("Sent.\n");*/
 			shift += info.size;
 		}
-		printf("Phase %d finished.\n", phase);
+		/*printf("Phase %d finished.\n", phase);*/
 	}
 
 	shift = 0;

@@ -26,18 +26,18 @@ int main()
 	struct time_info* times = (struct time_info*) malloc(phase_count * sizeof(struct time_info));
 	int k;
 	
-	printf("Processing...\n");
+	/*printf("Processing...\n");*/
 	while (phase--)
 	{
 		int i, j, start, end;
-		printf("Phase %d...\n", phase);
+		/*printf("Phase %d...\n", phase);*/
 				
 		for (i = 0; i < in_count; ++i)
 		{
 			/*int active = ProcAltList(in);
 			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
 			ChanIn(in[i], &(info[i]), sizeof(struct packet_info));
-			printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);
+			/*printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);*/
 		}
 
 		start = ProcTime();
@@ -50,7 +50,7 @@ int main()
 		
 		times[phase] = get_time_info(proc, proc, phase, ProcTimeMinus(end, start));
 
-		printf("Phase %d finished.\n", phase);
+		/*printf("Phase %d finished.\n", phase);*/
 	}
 
 	for (k = 0; k < in_count; ++k)
