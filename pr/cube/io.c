@@ -36,8 +36,11 @@ int main()
 	int proc = *((int*) get_param(3));
 	int out_count = *((int*) get_param(4));
 	Channel** out = init_channels(out_count, 4);
+	Channel* debug_in = (Channel*) get_param(5 + out_count);
 	int phase = phase_count;
 	int** data = init_memory(proc, proc, phase_count, out_count);
+	struct time_info* times;
+	int count, k;
 
 	printf("Processing...\n");
 	while (phase--)
@@ -58,6 +61,16 @@ int main()
 	}
 
 	free(out);
+
+	count = ChanInInt(debug_in);
+	times = (struct time_info*) malloc(count * sizeof(struct time_info));
+	ChanIn(debug_in, times, count * sizeof(struct time_info));
+
+	printf("Times:\n");
+	for (k = 0; k < count; ++k)
+	{
+		printf("%d %d %d %d\n", times[k].from, times[k].to, times[k].phase, times[k].time);
+	}
 
 	printf("Terminating...\n");
 	exit_terminate(0);

@@ -5,6 +5,10 @@ struct packet_info {
 	int size;
 };
 
+struct time_info {
+	int from, to, phase, time;
+};
+
 int phase_count = 3;
 
 Channel** init_channels(int count, int param_count)
@@ -18,4 +22,14 @@ Channel** init_channels(int count, int param_count)
 			printf("Channel at %d not initialized!!!\n", param_count);
 	}
 	return result;
+}
+
+struct time_info get_time_info(int from, int to, int phase, int time)
+{
+	struct time_info info;
+	info.from = from;
+	info.to = to;
+	info.phase = phase;
+	info.time = time;
+	return info;
 }
