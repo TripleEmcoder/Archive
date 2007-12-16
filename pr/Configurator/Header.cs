@@ -79,7 +79,7 @@ namespace Configurator
             for (int k = 1; k < l; k++)
             {
                 for (int j = 0; j < m; j++)
-                    sizes[pc[pv[k]], pc[k], j, indices[k]] = Sa[k, j];
+                    sizes[pc[pv[k]], pc[k], j, indices[k]] += Sa[k, j];
 
                 indices[k]++;
             }
@@ -88,7 +88,7 @@ namespace Configurator
                 if (pv[k] != 0)
                 {
                     for (int j = 0; j < m; j++)
-                        sizes[pc[pv[pv[k]]], pc[pv[k]], j, indices[pv[k]]] = Sa[k, j];
+                        sizes[pc[pv[pv[k]]], pc[pv[k]], j, indices[pv[k]]] += Sa[k, j];
 
                     indices[pv[k]]++;
                 }
