@@ -45,14 +45,6 @@ int main()
 		int i, shift = 0;
 		printf("Phase %d...\n", phase);
 
-		printf("Check sizes: %d = ", sizes[from][to][phase][0]);
-		for (i = 0; i < out_count-1; ++i)
-		{
-			printf("%d + ", sizes[from][to][phase][i+1]);
-		}
-		printf("%d\n", sizes[from][to][phase][out_count]);
-
-
 		ChanIn(in, data[phase], sizes[from][to][phase][0] * sizeof(int));
 		printf("Received data, size: %d, addr: %p.\n", sizes[from][to][phase][0], data[phase]);
 		
