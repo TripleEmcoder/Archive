@@ -33,7 +33,6 @@ int main()
 		{
 			/*int active = ProcAltList(in);
 			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
-			printf("Receiving to channel %p...\n", in[i]);
 			ChanIn(in[i], &(info[i]), sizeof(struct packet_info));
 			printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);
 		}

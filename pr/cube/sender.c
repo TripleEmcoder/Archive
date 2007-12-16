@@ -13,7 +13,7 @@
 
 int** init_memory(int from, int to, int phases, int channel)
 {
-	int i;
+	int i, j;
 	int** data;
 
 	printf("Initializing memory...\n");
@@ -46,12 +46,11 @@ int main()
 	{
 		int i, shift = 0;
 		printf("Phase %d...\n", phase);
-		
+
 		for (i = 0; i < in_count; ++i)
 		{
 			/*int active = ProcAltList(in);
 			ChanIn(in[active], &info[active], sizeof(struct packet_info));*/
-			printf("Receiving to channel %p...\n", in[i]);
 			ChanIn(in[i], &(info[i]), sizeof(struct packet_info));
 			printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);
 		}
@@ -62,6 +61,7 @@ int main()
 			shift += info[i].size;
 		}
 
+		printf("Sending %d...\n", shift);
 		ChanOut(out, data[phase], shift * sizeof(int));
 		printf("Phase %d finished.\n", phase);
 	}
