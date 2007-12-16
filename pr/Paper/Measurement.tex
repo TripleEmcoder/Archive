@@ -1,8 +1,6 @@
-\section{Rozwi¹zanie rzeczywistego problemu}
+\section{Pomiar parametrów systemu Parastation}
 
-\subsection{Pomiar parametrów}
-
-\subsubsection{Zarys procedury pomiarowej}
+\subsection{Zarys procedury pomiarowej}
 
 Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{figMeasurementProcessors} i \ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów, na których siê wykonuj¹. S¹ to M (master) oraz S\_S (slave-slow) i S\_F (slave-fast).
 
@@ -28,7 +26,7 @@ Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 \label{fig:MeasurementProcesses}
 \end{figure}
 
-\subsubsection{Pomiar prêdkoœci ³¹czy}
+\subsection{Pomiar prêdkoœci ³¹czy}
 
 Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
 \begin{enumerate}
@@ -43,7 +41,7 @@ Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
 
 Kroki 3-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
 
-\subsubsection{Pomiar prêdkoœci procesorów}
+\subsection{Pomiar prêdkoœci procesorów}
 
 Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
 \begin{enumerate}
@@ -58,7 +56,7 @@ Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
 
 Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
 
-\subsubsection{Analiza wyników pomiarów}
+\subsection{Analiza wyników pomiarów}
 
 Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=500$ przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
 \begin{itemize}
@@ -87,7 +85,3 @@ Wyniki pomiarów prêdkoœci procesorów dla parametrów $count=20$, $size=250$, $ste
 \end{figure}
 
 \subsection{Wyniki symulacji}
-
-\subsection{Struktura rozwi¹zania}
-
-\subsection{Wyniki rzeczywiste}
