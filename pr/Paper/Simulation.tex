@@ -1,0 +1,48 @@
+\section{Rozwi¹zanie przyk³adowego problemu}
+
+Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
+
+$$S = 11$$
+$$A(0) = A(2) = A(3) = A(5) = 20$$
+$$A(1) = A(4) = A(6) = A(7) = 16$$
+$$C(1) = C(6) = C(13) = C(14) = C(9) = 2.2$$
+$$C(2) = C(3) = C(4) = C(5) = C(7) = C(8) = C(10) = C(11) = C(12) = C(15) = 4.4$$
+$$V = 10000$$
+
+Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:simulation}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=20mm 30mm 20mm 30mm, clip]{simulation}
+\caption{Wykres czasu przetwarzania}
+\label{fig:simulation}
+\end{figure}
+
+Czas przetwarzania w~systemie Parastation z procesorami o prêdkoœciach $A_1$ i~$A_2$, przy za³o¿eniu, ¿e w~chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
+
+$$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
+
+Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
+
+Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:simulation1} do \ref{fig:simulation5}. Poszczególne paczki zosta³y pogrupowane wed³ug numerów procesorów, dla których s¹ przeznaczone, a obok wykresów przedstawiaj¹cych ich transmisjê umieszczono informacjê o œcie¿ce, któr¹ pod¹¿a³y dane w nich zawarte. Liczby na samym wykresie informuj¹ o numerze fazy, w której dana czêœæ zosta³a przes³ana.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{simulation1}
+\caption{Wykres Gantta dla liczby paczek $m=1$}
+\label{fig:simulation1}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{simulation3}
+\caption{Wykres Gantta dla liczby paczek $m=3$}
+\label{fig:simulation3}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{simulation5}
+\caption{Wykres Gantta dla liczby paczek $m=5$}
+\label{fig:simulation5}
+\end{figure}

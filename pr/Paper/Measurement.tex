@@ -1,0 +1,67 @@
+\section{Rozwi¹zanie rzeczywistego problemu}
+
+\subsection{Pomiar parametrów}
+
+\subsubsection{Zarys procedury pomiarowej}
+
+Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:mprs} i \ref{fig:mpss}. Oznaczenia procesów przyjêto takie same jak procesorów, na których siê wykonuj¹. S¹ to M (master) oraz S\_S (slave-slow) i S\_F (slave-fast).
+
+Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
+\begin{description}
+\item[$count$] -- liczba punktów pomiarowych
+\item[$size$] -- rozmiar danych dla pierwszego punktu pomiarowego
+\item[$step$] -- krok zwiêkszania rozmiaru danych w kolejnych punktach pomiarowych
+\item[$order$] -- rz¹d wielkoœci wielomianu obliczanego dla otrzymywanych danych
+\end{description}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm, trim=0 0 0 0, clip]{measurementprocessors}
+\caption{Procesory wykorzystywane podczas wykonywania pomiarów}
+\label{fig:mprs}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=7cm, trim=0 0 0 0, clip]{measurementprocesses}
+\caption{Procesy wykorzystywane podczas wykonywania pomiarów}
+\label{fig:mpss}
+\end{figure}
+
+\subsubsection{Pomiar prêdkoœci ³¹czy}
+
+Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
+\begin{enumerate}
+\item Przes³anie parametrów z M do S.
+\item Inicjalizacja ³¹cza w kierunku od S do M.
+\item Rozpoczêcie pomiaru czasu w M.
+\item Przes³anie danych z M do S.
+\item Przes³anie kopii danych z S do M.
+\item Zakoñczenie pomiaru czasu w M.
+\item Odes³anie wyników pomiarów z M do hosta.
+\end{enumerate}
+
+Kroki 3-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
+
+\subsubsection{Pomiar prêdkoœci procesorów}
+
+Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
+\begin{enumerate}
+\item Przes³anie parametrów z M do S.
+\item Przes³anie danych z M do S.
+\item Rozpoczêcie pomiaru czasu w S.
+\item Wykonanie obliczeñ w S.
+\item Zakoñczenie pomiaru czasu w S.
+\item Przes³anie wyniku pomiaru z S do M.
+\item Odes³anie wyników pomiarów z M do hosta.
+\end{enumerate}
+
+Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
+
+\subsubsection{Analiza wyników pomiarów}
+
+\subsection{Wyniki symulacji}
+
+\subsection{Struktura rozwi¹zania}
+
+\subsection{Wyniki rzeczywiste}

@@ -1,90 +1,3 @@
-\documentclass[12pt,a4paper,titlepage,twoside]{article}
-\usepackage[T1]{fontenc}
-\usepackage[cp1250]{inputenc}
-\usepackage[english,polish]{babel}
-\usepackage[T1]{polski}
-\usepackage{times}
-\usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{slashbox}
-\usepackage{sistyle}
-\usepackage{amsfonts}
-\usepackage{latexsym}
-%\usepackage{notebook2e, latexsym}
-
-\hypersetup
-{
-	bookmarksnumbered=true,
-	colorlinks=true,
-	linkcolor=blue,
-	bookmarksopen=true,
-	bookmarksopenlevel=2,
-	pdfstartview={FitH}
-}
-
-\SIdecimalsign{,}
-
-\setlength{\textheight}{24cm}
-\setlength{\textwidth}{16cm}
-\setlength{\footskip}{10mm}
-\setlength{\oddsidemargin}{0mm}
-\setlength{\evensidemargin}{0mm}
-\setlength{\topmargin}{0mm}
-\setlength{\headsep}{5mm}
-\setlength{\headheight}{15.0pt}
-
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[LE,RO]{\textsf{\thepage}}
-\fancyhead[RE,LO]{\textsf{Szeregowanie zadañ jednorodnych}}
-\fancyhead[CE,CO]{\ }
-\fancyfoot[LE,RO]{\ }
-\fancyfoot[RE,LO]{\ }
-\fancyfoot[CE,CO]{\ }
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-
-\begin{titlepage}
-\title{Przetwarzanie równoleg³e \\ Szeregowanie zadañ jednorodnych}
-\author{Bartosz Kukawka (75911) \\ Marcin Miko³ajczak (75922) \\ Grupa I3A}
-\end{titlepage}
-
-\begin{document}
-
-\maketitle
-
-\newpage
-
-\section{Sformu³owanie problemu}
-Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i~przesy³ania danych przez ka¿dy z~jego procesorów. Dodatkowo zak³ada siê, ¿e w~chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w~jednym z~naro¿ników wspomnianego szeœcianu.
-
-Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i~\ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony numerem 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:cube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu. Inny widok omawianego systemu przedstawia rysunek \ref{fig:flat}.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[trim=0 15mm 0 15mm, clip]{cube}
-\caption{Schemat analizowanego systemu przetwarzania}
-\label{fig:cube}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[trim=0 0 0 0, clip]{flat}
-\caption{Schemat analizowanego systemu przetwarzania c.d.}
-\label{fig:flat}
-\end{figure}
-
-\section{Model w~œrodowisku Parastation}
-Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation w~sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a~niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
-
-\begin{figure}[p]
-\centering
-\includegraphics[trim=0 0 0 0, clip]{parastation}
-\caption{Model systemu w~œrodowisku Parastation}
-\label{fig:parastation}
-\end{figure}
-
 \section{Analiza problemu}
 Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych i wykonywania obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz iloœci danych przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
 
@@ -122,7 +35,7 @@ Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿ane
 
 \begin{table}[p]
 \centering
-\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|}
 \hline
 $j$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
 \hline
@@ -132,11 +45,10 @@ $channels(j)$ & ${}$ & ${1}$ & ${2}$ & ${3}$ & ${4,6}$ & ${7,8}$ & ${5,9}$ & ${1
 \caption{channels}
 \label{tab:channels}
 \end{table}
-PrevTab = {{0}, {0}, {0}, {0}, {1}, {1}, {2}, {2}, {3}, {3}, {4}, \
-{5}, {6, 10}, {7}, {8, 13}, {9, 11}};
+
 \begin{table}[p]
 \centering
-\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 $i$ &  $0$ &  $1$ &  $2$ &  $3$
     &  $4$ &  $5$ &  $6$ &  $7$
@@ -155,7 +67,7 @@ $before(i)$ &    ${0}$ &  ${0}$ &    ${0}$ &    ${0}$
 
 \begin{table}[p]
 \centering
-\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 $i$ &  $0$ &  $1$ &  $2$ &  $3$
     &  $4$ &  $5$ &  $6$ &  $7$
@@ -215,9 +127,9 @@ $$\textrm{min:} \; t$$
 \item pakiety $(i:i = 1 \ldots 3,m-1)$ s¹ dostêpne w~chwili $t = 0$
 $$r(i, m-1) = 0 \qquad i = 1 \ldots 3$$
 \item pakiet $(i,k)$ mo¿na wys³aæ dopiero po odebraniu wszystkich danych wchodz¹cych w jego sk³ad
-$$ \forall p \in before(i) \quad x(p,k)\, r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
+$$ \forall p \in before(i) \quad r(p,k) + T_c(p,k) \leq r(i,k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \item obliczenia na procesorze $j$ mo¿na rozpocz¹c w fazie $k$ dopiero po otrzymaniu pakietów ze wszystkich dochodz¹cych do niego kana³ów
-$$ \forall p \in channels(j) \quad x(p,k) r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
+$$ \forall p \in channels(j) \quad r(p, k) + T_c(p, k) \leq t(j, k) \qquad j = 0 \ldots 7, \; k = 0 \ldots m-1$$
 \item kolejne fazy przesy³ania pakietów musz¹ przebiegaæ sekwencyjnie
 $$r(i,k) + T_c(i,k) \leq r(i, k - 1) \qquad i = 0 \ldots 15, \; k = 1 \ldots m-1$$
 \item kolejne fazy przetwarzania paczek musz¹ przebiegaæ sekwencyjnie
@@ -229,56 +141,3 @@ $$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = V$$
 \item zapewnia, ¿e je¿eli pakiet $(i,k)$ ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca mu zmienna binarna ma wartoœæ 1
 $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
-
-\section{Rozwi¹zanie przyk³adowego problemu}
-
-Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
-
-$$S = 11$$
-$$A(0) = A(2) = A(3) = A(5) = 20$$
-$$A(1) = A(4) = A(6) = A(7) = 16$$
-$$C(1) = C(6) = C(13) = C(14) = C(9) = 2.2$$
-$$C(2) = C(3) = C(4) = C(5) = C(7) = C(8) = C(10) = C(11) = C(12) = C(15) = 4.4$$
-$$V = 10000$$
-
-Na podstawie danych uzyskanych w~wyniku obliczeñ wykreœlono zale¿noœæ czasu przetwarzania od iloœci faz komunikacji. Przedstawia j¹ wykres na rysunku \ref{fig:wykres}.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres}
-\caption{Wykres czasu przetwarzania}
-\label{fig:wykres}
-\end{figure}
-
-Minimalny czas przetwarzania w~systemie Parastation, przy za³o¿eniu, ¿e w~chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
-
-$$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
-
-gdzie $A_1$ i~$A_2$ to szybkoœci procesorów.
-
-Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
-
-Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:wykres1} do \ref{fig:wykres5}. Poszczególne paczki zosta³y pogrupowane wed³ug numerów procesorów, dla których s¹ przeznaczone, a obok wykresów przedstawiaj¹cych ich transmisjê umieszczono informacjê o œcie¿ce, któr¹ pod¹¿a³y dane w nich zawarte. Liczby na samym wykresie informuj¹ o numerze fazy, w której dana czêœæ zosta³a przes³ana.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres1}
-\caption{Wykres Gantta dla liczby paczek $m=1$}
-\label{fig:wykres1}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres3}
-\caption{Wykres Gantta dla liczby paczek $m=3$}
-\label{fig:wykres3}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{wykres5}
-\caption{Wykres Gantta dla liczby paczek $m=5$}
-\label{fig:wykres5}
-\end{figure}
-
-\end{document}
