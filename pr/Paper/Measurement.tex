@@ -16,14 +16,14 @@ Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=10cm, trim=0 0 0 0, clip]{MeasurementProcessors}
+\includegraphics[width=8cm, trim=0 0 0 0, clip]{MeasurementProcessors}
 \caption{Procesory wykorzystywane podczas wykonywania pomiarów}
 \label{fig:MeasurementProcessors}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=7cm, trim=0 0 0 0, clip]{MeasurementProcesses}
+\includegraphics[width=5cm, trim=0 0 0 0, clip]{MeasurementProcesses}
 \caption{Procesy wykorzystywane podczas wykonywania pomiarów}
 \label{fig:MeasurementProcesses}
 \end{figure}
@@ -60,17 +60,30 @@ Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych 
 
 \subsubsection{Analiza wyników pomiarów}
 
-Wyniki pomiarów prêdkoœci ³¹cz przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
+Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=500$ przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
 \begin{itemize}
 \item dla ³¹czy wolnych -- $S_S=?$, $C_S=?$
 \item dla ³¹czy szybkich -- $S_F=?$, $C_F=?$
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[p]
 \centering
 \includegraphics[width=\textwidth, trim=20mm 20mm 20mm 20mm, clip]{MeasurementLinkResults}
-\caption{Procesy wykorzystywane podczas wykonywania pomiarów}
+\caption{Wyniki pomiarów prêdkoœci ³¹czy}
 \label{fig:MeasurementLinkResults}
+\end{figure}
+
+Wyniki pomiarów prêdkoœci procesorów dla parametrów $count=20$, $size=250$, $step=50$ przedstawia wykres \ref{fig:MeasurementProcessorResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy obliczania jednostki danych:
+\begin{itemize}
+\item dla procesorów wolnych -- $A_S=?$
+\item dla ³¹czy szybkich -- $A_F=?$
+\end{itemize}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth, trim=20mm 20mm 20mm 20mm, clip]{MeasurementProcessorResults}
+\caption{Wyniki pomiarów prêdkoœci procesorów}
+\label{fig:MeasurementProcessorResults}
 \end{figure}
 
 \subsection{Wyniki symulacji}

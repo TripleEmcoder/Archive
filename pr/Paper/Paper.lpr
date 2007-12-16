@@ -112,7 +112,7 @@ WrapLine=yes
 
 [Files\4]
 ActiveFilters=
-Bookmark#0=76
+Bookmark#0=91
 Bookmark#1=66
 Bookmark#2=0
 Bookmark#3=0
@@ -122,15 +122,15 @@ Bookmark#6=0
 Bookmark#7=0
 Bookmark#8=0
 Bookmark#9=0
-CaretPos.X=180
-CaretPos.Y=62
+CaretPos.X=24
+CaretPos.Y=25
 CharSet=def
 FileName=Measurement.tex
 FoldedLines=
 IsMainFile=no
 Opened=yes
 ScrollPos.X=0
-ScrollPos.Y=63
+ScrollPos.Y=18
 SearchListCount=0
 ShowSyntax=yes
 SpellChecking=yes
