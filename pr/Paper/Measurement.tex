@@ -4,7 +4,7 @@
 
 \subsubsection{Zarys procedury pomiarowej}
 
-Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:mprs} i \ref{fig:mpss}. Oznaczenia procesów przyjêto takie same jak procesorów, na których siê wykonuj¹. S¹ to M (master) oraz S\_S (slave-slow) i S\_F (slave-fast).
+Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{figMeasurementProcessors} i \ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów, na których siê wykonuj¹. S¹ to M (master) oraz S\_S (slave-slow) i S\_F (slave-fast).
 
 Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 \begin{description}
@@ -16,16 +16,16 @@ Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=10cm, trim=0 0 0 0, clip]{measurementprocessors}
+\includegraphics[width=10cm, trim=0 0 0 0, clip]{MeasurementProcessors}
 \caption{Procesory wykorzystywane podczas wykonywania pomiarów}
-\label{fig:mprs}
+\label{fig:MeasurementProcessors}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=7cm, trim=0 0 0 0, clip]{measurementprocesses}
+\includegraphics[width=7cm, trim=0 0 0 0, clip]{MeasurementProcesses}
 \caption{Procesy wykorzystywane podczas wykonywania pomiarów}
-\label{fig:mpss}
+\label{fig:MeasurementProcesses}
 \end{figure}
 
 \subsubsection{Pomiar prêdkoœci ³¹czy}
@@ -59,6 +59,19 @@ Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
 Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
 
 \subsubsection{Analiza wyników pomiarów}
+
+Wyniki pomiarów prêdkoœci ³¹cz przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
+\begin{itemize}
+\item dla ³¹czy wolnych -- $S_S=?$, $C_S=?$
+\item dla ³¹czy szybkich -- $S_F=?$, $C_F=?$
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth, trim=20mm 20mm 20mm 20mm, clip]{MeasurementLinkResults}
+\caption{Procesy wykorzystywane podczas wykonywania pomiarów}
+\label{fig:MeasurementLinkResults}
+\end{figure}
 
 \subsection{Wyniki symulacji}
 
