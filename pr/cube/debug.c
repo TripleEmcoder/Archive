@@ -15,7 +15,7 @@ int main()
 	Channel** debug_in = init_channels(in_count, 1);
 	Channel* debug_out = (Channel*) get_param(2 + in_count);
 	int k, shift;
-	int* count = (int*) malloc(phase_count * sizeof(int));
+	int* count = (int*) malloc(in_count * sizeof(int));
 	struct time_info* times;
 
 	shift = 0;
