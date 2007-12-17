@@ -88,7 +88,7 @@ $after(i)$ &    ${}$ & ${4,5}$ & ${6,7}$ & ${8,9}$
 \begin{description}
 \item[$A(j)$] -- czas przetwarzania jednostki danych przez procesor $j$
 \item[$C(i)$] -- czas przesy³ania jednostki danych w pakietach kana³u $i$
-\item[$S$] -- czas rozruchu ³¹cza
+\item[$S(i)$] -- czas rozruchu ³¹cza dla przesy³ania pakietów kana³u $i$
 \item[$V$] -- ca³kowity rozmiar danych do przetworzenia
 \item[$m$] -- liczba faz komunikacji
 \end{description}
@@ -110,7 +110,7 @@ $$ S_a(i,k) = a(i,k) + \sum_{p \in after(i)} S_a(p,k)$$
 \begin{displaymath}
 T_c(i,k) = \left\{ \begin{array}{ll}
 0 & \textrm{dla $i=0$}\\
-x(i,k) \; S + C(i) \; S_a(i,k)   & \textrm{dla $i>0$}
+x(i,k) \; S(i) + C(i) \; S_a(i,k)   & \textrm{dla $i>0$}
 \end{array} \right.
 \end{displaymath}
 \item czas wykonywania obliczeñ przez procesor $j$ w fazie $k$

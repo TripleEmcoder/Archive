@@ -45,9 +45,13 @@ namespace Visualizer
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            scaleTextBox.Text = (0.03F).ToString();
-            widthTextBox.Text = (34000).ToString();
-            stepTextBox.Text = (1000).ToString();
+            //scaleTextBox.Text = (0.03F).ToString();
+            //widthTextBox.Text = (34000).ToString();
+            //stepTextBox.Text = (1000).ToString();
+
+            scaleTextBox.Text = (0.0001F).ToString();
+            widthTextBox.Text = (6000000).ToString();
+            stepTextBox.Text = (500000).ToString();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
