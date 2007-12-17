@@ -40,11 +40,23 @@ int main()
 	int** data = init_memory(proc, proc, phase_count, out_count);
 	struct time_info* times;
 	int count, k, phase, i;
+	int base_time;
 
 	ChanOutInt(out[out_count-1], 1);
 
 	for (i = 0; i < out_count-1; ++i)
 		ChanOutInt(out[i], 1);
+
+	base_time = ProcTime();
+
+#ifdef SYNC
+
+	ChanOutInt(out[out_count-1], base_time);
+
+	for (i = 0; i < out_count-1; ++i)
+		ChanOutInt(out[i], base_time);
+
+#endif
 
 	for(k = 1; k < phase_count; ++k)
 	{

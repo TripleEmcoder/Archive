@@ -44,11 +44,21 @@ int main()
 
 	int** data = init_memory(from, to, phase_count, 0);
 	struct time_info* times;
+	int base_time;
 
 	for (i = 0; i < in_count; ++i)
 		ChanInInt(in[i]);
 
 	ChanOutInt(out, 1);
+
+#ifdef SYNC
+
+	for (i = 0; i < in_count; ++i)
+		base_time = ChanInInt(in[i]);
+
+	ChanOutInt(out, base_time);
+
+#endif
 	
 	/*printf("Processing...\n");*/
 	while (phase--)

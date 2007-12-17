@@ -42,13 +42,25 @@ int main()
 	struct time_info* times;
 	int* count = (int*) malloc(out_count * sizeof(int));
 	int* local_times = (int*) malloc(2 * phase_count * sizeof(int));
-	int shift, k, i;
-	int phase = phase_count;
+	int shift, k, i, phase;
+	int base_time, base_time2 = 0;
 
 	ChanInInt(in);
 
 	for (i = 0; i < out_count; ++i)
-		ChanOutInt(out[i], 1);	
+		ChanOutInt(out[i], 1);
+
+#ifdef SYNC
+
+	base_time = ChanInInt(in);
+	base_time2 = ProcTime() - base_time;
+
+	for (i = 0; i < out_count; ++i)
+		ChanOutInt(out[i], base_time);	
+
+#endif
+
+	phase = phase_count;
 
 	/*printf("Processing...\n");*/
 	while (phase--)
@@ -56,9 +68,9 @@ int main()
 		int start, end;
 		/*printf("Phase %d...\n", phase);*/
 
-		start = ProcTime();
+		start = ProcTime() - base_time2;
 		ChanIn(in, data[phase], sizes[from][to][phase][0] * sizeof(int));
-		end = ProcTime();
+		end = ProcTime() - base_time2;
 
 		/*printf("Received data, size: %d, addr: %p.\n", sizes[from][to][phase][0], data[phase]);*/
 

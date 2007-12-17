@@ -32,9 +32,19 @@ int main()
 	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 	struct time_info* times = (struct time_info*) malloc(phase_count * sizeof(struct time_info));
 	int k, i;
-	
+	int base_time, base_time2 = 0;
+
 	for (i = 0; i < in_count; ++i)
 		ChanInInt(in[i]);
+
+#ifdef SYNC
+
+	for (i = 0; i < in_count; ++i)
+		base_time = ChanInInt(in[i]);
+
+	base_time2 = ProcTime() - base_time;
+
+#endif
 
 	/*printf("Processing...\n");*/
 	while (phase--)
@@ -50,13 +60,13 @@ int main()
 			/*printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);*/
 		}
 
-		start = ProcTime()*64;
+		start = ProcTime()*64 - base_time2;
 		for (i = 0; i < in_count; ++i)
 		{
 			for (j = 0; j < info[i].size; ++j)
 				process(*(info[i].ptr + j));
 		}
-		end = ProcTime()*64;
+		end = ProcTime()*64 - base_time2;
 		
 		times[phase] = get_time_info(proc, proc, phase, start, end);
 

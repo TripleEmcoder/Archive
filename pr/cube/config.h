@@ -34,3 +34,5 @@ struct time_info get_time_info(int from, int to, int phase, int start, int end)
 	info.end = end;
 	return info;
 }
+
+#define SYNC
