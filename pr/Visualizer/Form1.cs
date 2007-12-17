@@ -49,9 +49,9 @@ namespace Visualizer
             //widthTextBox.Text = (34000).ToString();
             //stepTextBox.Text = (1000).ToString();
 
-            scaleTextBox.Text = (0.0001F).ToString();
-            widthTextBox.Text = (6000000).ToString();
-            stepTextBox.Text = (500000).ToString();
+            scaleTextBox.Text = (0.004F).ToString();
+            widthTextBox.Text = (200000).ToString();
+            stepTextBox.Text = (10000).ToString();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
