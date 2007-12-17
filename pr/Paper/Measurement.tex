@@ -2,14 +2,13 @@
 
 \subsection{Zarys procedury pomiarowej}
 
-Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:MeasurementProcessors} i \ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów, na których siê wykonuj¹. S¹ to M (master) oraz S\_S (slave-slow) i S\_F (slave-fast).
+Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:MeasurementProcessors} i \ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów na których siê wykonuj¹. S¹ to M (master) oraz S\_1 (slave 1) i S\_2 (slave 2).
 
 Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 \begin{description}
-\item[$count$] -- liczba punktów pomiarowych
-\item[$size$] -- rozmiar danych dla pierwszego punktu pomiarowego
-\item[$step$] -- krok zwiêkszania rozmiaru danych w kolejnych punktach pomiarowych
-\item[$order$] -- rz¹d wielkoœci wielomianu obliczanego dla otrzymywanych danych
+\item[$count$] -- liczba punktów pomiarowych,
+\item[$size$] -- rozmiar danych dla pierwszego punktu pomiarowego,
+\item[$step$] -- krok zwiêkszania rozmiaru danych w kolejnych punktach pomiarowych.
 \end{description}
 
 \begin{figure}[h!]
@@ -60,8 +59,8 @@ Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych 
 
 Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=500$ przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
 \begin{itemize}
-\item dla ³¹czy wolnych -- $S_S=15$, $C_S=4.3$
-\item dla ³¹czy szybkich -- $S_F=11$, $C_F=2.3$
+\item dla ³¹czy wolnych -- $S_S=15$, $C_S=4.3$,
+\item dla ³¹czy szybkich -- $S_F=11$, $C_F=2.3$.
 \end{itemize}
 
 \begin{figure}[p]
@@ -73,8 +72,8 @@ Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=50
 
 Wyniki pomiarów prêdkoœci procesorów dla parametrów $count=20$, $size=250$, $step=50$ przedstawia wykres \ref{fig:MeasurementProcessorResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy obliczania jednostki danych:
 \begin{itemize}
-\item dla procesorów wolnych -- $A_S=68.5$
-\item dla procesorów szybkich -- $A_F=57.5$
+\item dla procesorów wolnych -- $A_S=68.5$,
+\item dla procesorów szybkich -- $A_F=57.5$.
 \end{itemize}
 
 \begin{figure}[p]

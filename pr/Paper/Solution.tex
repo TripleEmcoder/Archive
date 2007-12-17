@@ -2,37 +2,40 @@
 
 \subsection{Struktura rozwi¹zania}
 
-W rozwi¹zaniu problemy wykorzystano procesory przedstawione na rysunku \ref{fig:ProblemParastation}. Odpowiedni schemat wykonany w programie \emph{TransputerStudio} przedstawia rysunek \ref{fig:SolutionProcessors}.
+W rozwi¹zaniu problemu wykorzystano procesory przedstawione wczeœniej na rysunku \ref{fig:ProblemParastation}. Odpowiedni schemat wykonany w programie \emph{TransputerStudio} przedstawia rysunek \ref{fig:SolutionProcessors}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=8cm, trim=0 0 0 0, clip]{SolutionProcessors}
-\caption{Procesory wykorzystywane podczas wykonywania pomiarów}
+\caption{Procesory wykorzystywane podczas wykonywania obliczeñ}
 \label{fig:SolutionProcessors}
 \end{figure}
 
-Ka¿demu z procesorów przypisano proces licz¹cy (L) oraz odpowiedni¹ iloœæ procesów odbieraj¹cych (O) i wysy³aj¹cych (W). W przypadku procesora 0 wystêpuje równie¿ proces wejœcia/wyjœcia wymieniaj¹cy dane z hostem oraz proces DEBUG, poœrednicz¹cy przy zbieraniu danych o czasie obliczeñ. Jego zastosowanie by³o konieczne ze wzglêdu na niewystarczaj¹c¹ liczbê ³¹czy w procesie wejœcia/wyjœcia. Schemat po³¹czeñ procesów wykonany w programie \emph{TransputerStudio} przedstawia rysunek \ref{fig:SolutionProcessesGrouped}. Procesy zosta³y pogrupowane wed³ug numeru procesora, na którym siê wykonuj¹ -- zgodnie z rysunkiem \ref{fig:ProblemFlat}.
+Ka¿demu z procesorów przypisano proces licz¹cy (L) oraz odpowiedni¹ liczbê procesów odbieraj¹cych (O) i wysy³aj¹cych (W). W przypadku procesora 0 wystêpuje równie¿ proces wejœcia/wyjœcia wymieniaj¹cy dane z hostem oraz proces DEBUG, poœrednicz¹cy przy zbieraniu danych o czasie obliczeñ. Jego zastosowanie by³o konieczne ze wzglêdu na niewystarczaj¹c¹ liczbê ³¹czy w procesie wejœcia/wyjœcia. Schemat po³¹czeñ procesów wykonany w programie \emph{TransputerStudio} przedstawia rysunek \ref{fig:SolutionProcessesGrouped}. Procesy zosta³y pogrupowane wed³ug numeru procesora, na którym siê wykonuj¹, w sposób zgodny z rysunkiem \ref{fig:ProblemFlat}.
 
-Oznaczenia liczbowe w nazwach procesów informuj¹ o parze procesorów, pomiêdzy którymi zachodzi komunikacja -- dla procesów komunikacyjnych -- oraz o procesorze, na którym wykonywane s¹ obliczenia -- dla procesów licz¹cych.
+Oznaczenia liczbowe w nazwach procesów informuj¹ o parze procesorów, pomiêdzy którymi zachodzi komunikacja za ich poœrednictwem -- dla procesów odbieraj¹cych i wysy³aj¹cych -- oraz o procesorze, na którym wykonywane s¹ obliczenia -- dla procesów licz¹cych.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth, trim=0 0 0 0, clip]{SolutionProcessesGrouped}
-\caption{Procesy wykorzystywane podczas wykonywania pomiarów}
-\label{fig:SolutionProcesses}
+\caption{Procesy wykorzystywane podczas wykonywania obliczeñ}
+\label{fig:SolutionProcessesGrouped}
 \end{figure}
 
-Dla ka¿dego z przedstawionych typów procesów wystêpuje tylko jeden ogólny kod programu. Ró¿ne zachowanie procesów uzyskuje siê poprzez przekazanie programom parametrów konfiguracyjnych, okreœlajaj¹cych: numer procesora Ÿród³owego, numer procesora docelowego oraz iloœæ Ÿróde³/celów komunikacji.
+Dla ka¿dego z przedstawionych typów procesów wystêpuje jeden ogólny kod programu. Ró¿ne zachowanie procesów uzyskuje siê poprzez przekazanie programom parametrów konfiguracyjnych, które okreœlaj¹: numer procesora Ÿród³owego, numer procesora docelowego oraz liczbê Ÿróde³/celów komunikacji.
 
-Przy pomocy wymienionych wy¿ej parametrów mo¿liwe jest zainicjowanie odpowiednich ³¹czy komunikacyjnych oraz pobranie rozmiarów pakietów ze specjalnej tablicy $sizes$, generowanej na podstawie rozwi¹zania opisanego wczeœniej problemu programowania liniowego.
+Przy pomocy wymienionych wy¿ej parametrów mo¿liwe jest zainicjowanie odpowiednich ³¹czy komunikacyjnych oraz pobranie rozmiarów pakietów ze specjalnej tablicy $sizes$, która generowana jest na podstawie rozwi¹zania opisanego wczeœniej problemu programowania liniowego.
 
 \subsection{Pomiar czasu dzia³ania}
 
-Do porównania z wynikami symulacji wybrano wariant z liczb¹ faz komunikacji $m=3$. Na podstawie zebranych danych sporz¹dzono diagram Gantta przedstawiony na rysunku.
+Do porównania z wynikami symulacji wybrano wariant z liczb¹ faz komunikacji $m=3$. Jest to ostatnia liczba faz, dla której podczas symulacji mo¿na zaobserwowaæ znacz¹c¹ poprawê czasu dzia³ania. Nale¿y jednak zaznaczyæ, ¿e omawiane rozwi¹zanie w ¿aden sposób nie ogranicza liczby faz.
+Na podstawie zebranych danych sporz¹dzono diagram Gantta przedstawiony na rysunku \ref{fig:SolutionGantt3}.
 
 \begin{figure}[h!]
 \centering
-%\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{SolutionGantt3}
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{SolutionGantt3}
 \caption{Diagram Gantta dla rozwi¹zania rzeczywiste z liczb¹ faz $m=3$}
 \label{fig:SolutionGantt3}
 \end{figure}
+
+Porównuj¹c rysunek z \ref{fig:SolutionGantt3} z rysunkiem \ref{fig:SimulationGantt3} mo¿na zaobserwowaæ jedynie drobne rozbie¿noœci pomiêdzy rzeczywistoœci¹ a symulacj¹, co autorzy niniejszego sprawozdania uwa¿aj¹ -- uwzglêdniwszy z³o¿onoœæ analizowanego problemu -- za spore osi¹gniêcie. Widoczne rozbie¿noœci wynikaj¹ z nieuniknionej niedoskona³oœci ka¿dego modelu matematycznego, który w tym przypadku pomija pewne kwestie techniczne, takie jak niezerowy czas synchronizacji procesów w obrêbie procesora czy te¿ czas potrzebny na kopiowanie buforów z danymi.

@@ -4,16 +4,16 @@ Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego
 Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Idea rozwi¹zania}
-Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
+Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu dla danej fazy pakietów ze wszystkich docieraj¹cych do procesora kana³ów nastêpuje równoleg³e przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
 
 Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które bêd¹ wykorzystywane w dalszym ci¹gu sprawozdania:
 \begin{description}
-\item[kana³ $i$] -- œcie¿ka, któr¹ dane docieraj¹ do procesora $j$ docelowego dla tego kana³u; kana³em wysy³ane s¹ pakiety $(i,k: k = m-1 \ldots 0)$
-\item[pakiet $(i,k)$] -- pojedyñcza transmisja danych pomiêdzy procesorami, s¹ to dane przesy³ane do procesora docelowego dla kana³u $i$ w fazie $k$; pakiet zawiera paczkê $(i,k)$ oraz paczki $(p: p \in after(i), k)$
-\item[paczka $(i,k)$] -- fragment pakietu zawieraj¹cy dane do przetworzenia  lokalnego w fazie $k$ na procesorze docelowym kana³u $i$ 
+\item[kana³ $i$] -- œcie¿ka, któr¹ dane docieraj¹ do procesora $j$ docelowego dla tego kana³u; kana³em wysy³ane s¹ pakiety $(i,k: k = m-1 \ldots 0)$;
+\item[pakiet $(i,k)$] -- pojedyñcza transmisja danych pomiêdzy procesorami, s¹ to dane przesy³ane do procesora docelowego dla kana³u $i$ w fazie $k$; pakiet zawiera paczkê $(i,k)$ oraz paczki $(p: p \in after(i), k)$;
+\item[paczka $(i,k)$] -- fragment pakietu zawieraj¹cy dane do przetworzenia  lokalnego w fazie $k$ na procesorze docelowym kana³u $i$.
 \end{description}
 
-Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego procesora przedstawiony na rysunku \ref{fig:ModellExample}.
+Opisane wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego procesora przedstawiony na rysunku \ref{fig:ModellExample}.
 
 \begin{figure}[h]
 \centering
@@ -42,7 +42,7 @@ $j$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ \\
 $channels(j)$ & ${}$ & ${1}$ & ${2}$ & ${3}$ & ${4,6}$ & ${7,8}$ & ${5,9}$ & ${10,11,12,13,14,15}$ \\
 \hline
 \end{tabular}
-\caption{channels}
+\caption{Wartoœci funkcji $channels$}
 \label{tab:channels}
 \end{table}
 
@@ -61,7 +61,7 @@ $before(i)$ &    ${0}$ &  ${0}$ &    ${0}$ &    ${0}$
             & ${6,10}$ &  ${7}$ & ${8,13}$ & ${9,11}$ \\
 \hline
 \end{tabular}
-\caption{before}
+\caption{Wartoœci funkcji $before$}
 \label{tab:before}
 \end{table}
 
@@ -80,7 +80,7 @@ $after(i)$ &    ${}$ & ${4,5}$ & ${6,7}$ & ${8,9}$
            &    ${}$ &    ${}$ &    ${}$ &    ${}$ \\
 \hline
 \end{tabular}
-\caption{after}
+\caption{Wartoœci funkcji $after$}
 \label{tab:after}
 \end{table}
 
@@ -97,7 +97,7 @@ $after(i)$ &    ${}$ & ${4,5}$ & ${6,7}$ & ${8,9}$
 \begin{description}
 \item[$a(i,k)$] -- iloœæ danych w paczce $(i,k)$
 \item[$r(i,k)$] -- moment gotowoœci do wys³ania pakietu $(i,k)$
-\item[$x(i,k)$] -- zmienna binarna okreœlaj¹ca pakiet $(i,k)$ jest wysy³any
+\item[$x(i,k)$] -- zmienna binarna okreœlaj¹ca czy pakiet $(i,k)$ jest wysy³any
 \item[$t(j,k)$] -- moment gotowoœci do rozpoczêcia obliczeñ przez procesor $j$ w fazie $k$
 \end{description}
 
@@ -138,6 +138,6 @@ $$t(j,k) + T_a(j,k) \leq t(j, k-1) \qquad j = 0 \ldots 7, \; k = 1 \ldots m-1$$
 $$t(j,0) + T_a(j,0) \leq T \qquad j = 0 \ldots 7$$
 \item suma wielkoœci wszystkich paczek musi byæ równa rozmiarowi danych wejœciowych
 $$ \sum_{i = 0}^{15} \sum_{k = 0}^{m-1} a(i,k) = V$$
-\item zapewnia, ¿e je¿eli pakiet $(i,k)$ ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca mu zmienna binarna ma wartoœæ 1
+\item je¿eli pakiet $(i,k)$ ma niezerow¹ d³ugoœæ, to odpowiadaj¹ca mu zmienna binarna musi mieæ wartoœæ 1
 $$ S_a(i, k) \leq V \, x(i, k) \qquad i = 0 \ldots 15, \; k = 0 \ldots m-1$$
 \end{itemize}
