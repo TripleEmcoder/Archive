@@ -2,13 +2,13 @@
 
 \subsection{Zarys procedury pomiarowej}
 
-Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i ³¹czy w systemie Parastation. Wykorzystane w tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:MeasurementProcessors} i \ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów na których siê wykonuj¹. S¹ to M (master) oraz S\_1 (slave 1) i S\_2 (slave 2).
+Przed realizacj¹ koñcowego rozwi¹zania dokonano pomiaru rzeczywistych prêdkoœci procesorów i~³¹czy w~systemie Parastation. Wykorzystane w~tym celu procesory, procesy oraz po³¹czenia przedstawiaj¹ rysunki \ref{fig:MeasurementProcessors} i~\ref{fig:MeasurementProcesses}. Oznaczenia procesów przyjêto takie same jak procesorów na których siê wykonuj¹. S¹ to M (master) oraz S\_1 (slave 1) i~S\_2 (slave 2).
 
-Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
+Pomiary realizowane by³y w~oparciu o~nastêpuj¹ce parametry otrzymywane z~hosta:
 \begin{description}
 \item[$count$] -- liczba punktów pomiarowych,
 \item[$size$] -- rozmiar danych dla pierwszego punktu pomiarowego,
-\item[$step$] -- krok zwiêkszania rozmiaru danych w kolejnych punktach pomiarowych.
+\item[$step$] -- krok zwiêkszania rozmiaru danych w~kolejnych punktach pomiarowych.
 \end{description}
 
 \begin{figure}[h!]
@@ -27,37 +27,37 @@ Pomiary realizowane by³y w oparciu o nastêpuj¹ce parametry otrzymywane z hosta:
 
 \subsection{Pomiar prêdkoœci ³¹czy}
 
-Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
+Procedura pomiar prêdkoœci przebiega³a w~nastêpuj¹cy sposób:
 \begin{enumerate}
-\item Przes³anie parametrów z M do S.
-\item Inicjalizacja ³¹cza w kierunku od S do M.
-\item Rozpoczêcie pomiaru czasu w M.
-\item Przes³anie danych z M do S.
-\item Przes³anie kopii danych z S do M.
-\item Zakoñczenie pomiaru czasu w M.
-\item Odes³anie wyników pomiarów z M do hosta.
+\item Przes³anie parametrów z~M do S.
+\item Inicjalizacja ³¹cza w~kierunku od S do M.
+\item Rozpoczêcie pomiaru czasu w~M.
+\item Przes³anie danych z~M do S.
+\item Przes³anie kopii danych z~S do M.
+\item Zakoñczenie pomiaru czasu w~M.
+\item Odes³anie wyników pomiarów z~M do hosta.
 \end{enumerate}
 
-Kroki 3-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
+Kroki 3-6 by³y powtarzane $count$ razy i~wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z~parametrów $size$ i~$step$.
 
 \subsection{Pomiar prêdkoœci procesorów}
 
-Procedura pomiar prêdkoœci przebiega³a w nastêpuj¹cy sposób:
+Procedura pomiar prêdkoœci przebiega³a w~nastêpuj¹cy sposób:
 \begin{enumerate}
-\item Przes³anie parametrów z M do S.
-\item Przes³anie danych z M do S.
-\item Rozpoczêcie pomiaru czasu w S.
-\item Wykonanie obliczeñ w S.
-\item Zakoñczenie pomiaru czasu w S.
-\item Przes³anie wyniku pomiaru z S do M.
-\item Odes³anie wyników pomiarów z M do hosta.
+\item Przes³anie parametrów z~M do S.
+\item Przes³anie danych z~M do S.
+\item Rozpoczêcie pomiaru czasu w~S.
+\item Wykonanie obliczeñ w~S.
+\item Zakoñczenie pomiaru czasu w~S.
+\item Przes³anie wyniku pomiaru z~S do M.
+\item Odes³anie wyników pomiarów z~M do hosta.
 \end{enumerate}
 
-Kroki 2-6 by³y powtarzane $count$ razy i wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z parametrów $size$ i $step$.
+Kroki 2-6 by³y powtarzane $count$ razy i~wykorzystywa³y kolejne rozmiary danych wynikaj¹ce z~parametrów $size$ i~$step$.
 
 \subsection{Analiza wyników pomiarów}
 
-Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=500$ przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i przesy³ania jednostki danych:
+Wyniki pomiarów prêdkoœci ³¹cz dla parametrów $count=50$, $size=10000$, $step=500$ przedstawia wykres \ref{fig:MeasurementLinkResults}. Na podstawie zebranych danych, przy pomocy regresji liniowej, otrzymano nastêpuj¹ce czasy rozruchu i~przesy³ania jednostki danych:
 \begin{itemize}
 \item dla ³¹czy wolnych -- $S_S=15$, $C_S=4.3$,
 \item dla ³¹czy szybkich -- $S_F=11$, $C_F=2.3$.
