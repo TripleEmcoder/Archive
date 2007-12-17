@@ -37,7 +37,7 @@ namespace Visualizer
                     if (parts.Length < 2)
                         continue;
 
-                    variables[parts[0]] = float.Parse(parts[1]);
+                    variables[parts[0]] = float.Parse(parts[parts.Length-1]);
                 }
             }
 

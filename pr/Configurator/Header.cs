@@ -33,7 +33,7 @@ namespace Configurator
                 if (parts.Length < 2)
                     continue;
 
-                variables[parts[0]] = float.Parse(parts[1]);
+                variables[parts[0]] = float.Parse(parts[parts.Length - 1]);
             }
 
             string sf = "{0}_{1:D1}";
