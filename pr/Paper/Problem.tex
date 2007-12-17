@@ -1,28 +1,28 @@
 \section{Sformu³owanie problemu}
 Przedmiotem niniejszego sprawozdania jest analiza problemu przetwarzania równoleg³ego w oœmioprocesorowym systemie przetwarzania o topologii szeœcianu, który cechuje mo¿liwoœæ jednoczesnego wykonywania obliczeñ i~przesy³ania danych przez ka¿dy z~jego procesorów. Dodatkowo zak³ada siê, ¿e w~chwili zerowej obliczeñ wszystkie dane potrzebne do ich wykonania znajduj¹ siê w~jednym z~naro¿ników wspomnianego szeœcianu.
 
-Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:cube} i~\ref{fig:flat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony numerem 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:cube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu. Inny widok omawianego systemu przedstawia rysunek \ref{fig:flat}.
+Analizowany system wraz z~przyjêtymi oznaczeniami procesorów przedstawiaj¹ pogl¹dowo rysunki \ref{fig:ProblemCube} i~\ref{fig:ProblemFlat}. Procesor, który pocz¹tkowo dysponuje wszystkimi danymi, zosta³ oznaczony numerem 0. Dalsza numeracja wynika z~odleg³oœci od Ÿród³a danych. Poœród procesorów o równej odleg³oœci numeracja zosta³a przydzielona na podstawie rzutu z~rysunku \ref{fig:ProblemCube} w~kolejnoœci zgodnej z~ruchem wskazówek zegara, poczynaj¹c od procesorów na górnej, tylnej krawêdzi szeœcianu. Inny widok omawianego systemu przedstawia rysunek \ref{fig:ProblemFlat}.
 
-\begin{figure}[h!]
+\begin{figure}[h]
 \centering
-\includegraphics[trim=0 15mm 0 15mm, clip]{cube}
+\includegraphics[width=0.8\textwidth,trim=0 15mm 0 15mm, clip]{ProblemCube}
 \caption{Schemat analizowanego systemu przetwarzania}
-\label{fig:cube}
+\label{fig:ProblemCube}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\includegraphics[trim=0 0 0 0, clip]{flat}
+\includegraphics[trim=0 0 0 0, clip]{ProblemFlat}
 \caption{Schemat analizowanego systemu przetwarzania c.d.}
-\label{fig:flat}
+\label{fig:ProblemFlat}
 \end{figure}
 
 \section{Model w~œrodowisku Parastation}
-Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation w~sposób przedstawiony na rysunku \ref{fig:parastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a~niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
+Opisany wy¿ej system przetwarzania zosta³ zamodelowany w~œrodowisku Parastation w~sposób przedstawiony na rysunku \ref{fig:ProblemParastation}. Niewykorzystywane procesory nie otrzyma³y numeracji, a~niewykorzystywane ³¹cza nie zosta³y uwzglêdnione na rysunku.
 
 \begin{figure}[p]
 \centering
-\includegraphics[trim=0 0 0 0, clip]{parastation}
+\includegraphics[trim=0 0 0 0, clip]{ProblemParastation}
 \caption{Model systemu w~œrodowisku Parastation}
-\label{fig:parastation}
+\label{fig:ProblemParastation}
 \end{figure}

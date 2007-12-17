@@ -1,4 +1,4 @@
-\section{Rozwi¹zanie przyk³adowego problemu}
+\section{Symulacja rozwi¹zania}
 
 Przedstawiony w~poprzednich punktach problem programowania liniowego rozwi¹zano przyjmuj¹c iloœci faz komunikacji od 1 do 10 oraz charakterystykê systemu Parastation opisan¹ poni¿ej.
 
@@ -18,13 +18,13 @@ Na podstawie danych uzyskanych w wyniku obliczeñ wykreœlono zale¿noœæ czasu prze
 \label{fig:simulation}
 \end{figure}
 
-Czas przetwarzania w~systemie Parastation z procesorami o prêdkoœciach $A_1$ i~$A_2$, przy za³o¿eniu, ¿e w~chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, wynosi:
+Czas przetwarzania w~systemie Parastation z procesorami o prêdkoœciach $A_1$ i~$A_2$, przy za³o¿eniu, ¿e w~chwili $t=0$ dane znajduj¹ siê ju¿ we wszystkich procesorach, jest opisany równaniem:
 
 $$T_{min} = V \; \frac{1}{\frac{4}{A_1} + \frac{4}{A_2}}$$
 
 Dla przyjêtych danych czas ten wynosi $T_{min} \approx 22222$. Przedstawiony wykres pokazuje, ¿e wraz ze wzrostem iloœci faz komunikacji czas przetwarzania zbli¿a siê asymptotycznie do tej granicy.
 
-Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:simulation1} do \ref{fig:simulation5}. Poszczególne paczki zosta³y pogrupowane wed³ug numerów procesorów, dla których s¹ przeznaczone, a obok wykresów przedstawiaj¹cych ich transmisjê umieszczono informacjê o œcie¿ce, któr¹ pod¹¿a³y dane w nich zawarte. Liczby na samym wykresie informuj¹ o numerze fazy, w której dana czêœæ zosta³a przes³ana.
+Diagramy Gantta odpowiadaj¹ce rozwi¹zaniom dla iloœci faz 1, 3 i~5 przedstawiaj¹ wykresy na rysunkach od \ref{fig:simulation1} do \ref{fig:simulation5}. Poszczególne kana³y zosta³y pogrupowane wed³ug numerów procesorów, do których s¹ prowadz¹, a obok wykresów przedstawiaj¹cych ich transmisjê w nich zachodz¹ce umieszczono informacjê o œcie¿ce, któr¹ pod¹¿a³y dane. Liczby na samym wykresie informuj¹ o numerze fazy, w której dany pakiet zosta³ przes³any.
 
 \begin{figure}[h!]
 \centering

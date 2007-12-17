@@ -1,10 +1,10 @@
-\section{Model matematyczny problemu}
+\section{Model matematyczny rozwi¹zania}
 Celem analizy by³o znalezienie odpowiedzi na pytanie o optymalny dla rozwa¿anego systemu przetwarzania plan przesy³ania danych i wykonywania obliczeñ. Plan ten powinien uwzglêdniaæ podzia³ transmisji na odpowiedni¹ iloœæ faz oraz iloœci danych przesy³anych w~ich trakcie, d¹¿¹c do jak najwczeœniejszego (a~wiêc jednoczesnego) zakoñczenia obliczeñ na wszystkich procesorach.
 
 Odpowiedzi na postawione wy¿ej pytanie udzieli³o rozwi¹zanie odpowiedniego problemu programowania liniowego, który zosta³ sformu³owany w~sposób opisany w~kolejnych podpunktach.
 
 \subsection{Idea rozwi¹zania}
-Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.\\*
+Ze wzglêdu na mo¿liwoœæ otrzymywania danych z wielu Ÿróde³, jako podstawê w sformu³owaniu odpowiedniego problemu programowania liniowego przyjêto podejœcie nazwane przez autorów niniejszego sprawozdania "systemem kana³ów". W równaniach opisanych w kolejnych podpunktach pos³u¿ono siê 16 kana³ami przesy³ania danych ($i = 0 \ldots 15$), odpowiadaj¹cymi ró¿nym œcie¿kom, którymi dane mog¹ docieraæ do procesorów ($j = 0 \ldots 7$). Dla procesorów warstwy 1 (procesory 1, 2, 3) jest tylko 1 taka œcie¿ka, dla warstwy 2 (procesory 4, 5, 6) - 2 œcie¿ki, a dla warstwy 3 (procesor 7) - 6 œcie¿ek. W celu usprawnienia procesu obliczeñ, dane przesy³ane s¹ ka¿dym kana³em w $m$ pakietach, odpowiadaj¹cym $m$ fazom obliczeñ ($k = m-1 \ldots 0$). Po skompletowaniu pakietów ze wszystkich docieraj¹cych do procesora kana³ów dla danej fazy nastêpuje równoleg³ê przeliczenie czêœci otrzymanych danych oraz przes³anie reszty do kolejnych procesorów, jeœli takie istniej¹. Proces powtarza siê $m$ razy, do chwili zakoñczenia przetwarzania wszystkich danych.
 
 Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które bêd¹ wykorzystywane w dalszym ci¹gu sprawozdania:
 \begin{description}
@@ -13,13 +13,13 @@ Podsumowuj¹c powy¿szy opis, mo¿na wyró¿niæ nastêpuj¹ce kluczowe pojêcia, które b
 \item[paczka $(i,k)$] -- fragment pakietu zawieraj¹cy dane do przetworzenia  lokalnego w fazie $k$ na procesorze docelowym kana³u $i$ 
 \end{description}
 
-Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego procesora przedstawiony na rysunku \ref{fig:example}.
+Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego procesora przedstawiony na rysunku \ref{fig:ModellExample}.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{example}
+\includegraphics[width=\textwidth, trim=0 0 0 0, clip]{ModellExample}
 \caption{Fragment diagramu Gantta obrazuj¹cy wykorzystywane w sprawozdaniu pojêcia}
-\label{fig:example}
+\label{fig:ModellExample}
 \end{figure}
 
 \newpage
@@ -33,7 +33,7 @@ Przedstawione wy¿ej pojêcia obrazuje fragment diagramu Gantta dla wybranego proc
 
 Wartoœci wymienionych wy¿ej funkcji wynikaj¹ bezpoœrednio ze struktury rozwa¿anego systemu przetwarzania. Przedstawiaj¹ je tabele \ref{tab:channels}, \ref{tab:before} i \ref{tab:after}.
 
-\begin{table}[p]
+\begin{table}[h]
 \centering
 \begin{tabular}{|r|c|c|c|c|c|c|c|c|}
 \hline
@@ -46,7 +46,7 @@ $channels(j)$ & ${}$ & ${1}$ & ${2}$ & ${3}$ & ${4,6}$ & ${7,8}$ & ${5,9}$ & ${1
 \label{tab:channels}
 \end{table}
 
-\begin{table}[p]
+\begin{table}[h]
 \centering
 \begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -65,7 +65,7 @@ $before(i)$ &    ${0}$ &  ${0}$ &    ${0}$ &    ${0}$
 \label{tab:before}
 \end{table}
 
-\begin{table}[p]
+\begin{table}[h]
 \centering
 \begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
