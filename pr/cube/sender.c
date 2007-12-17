@@ -44,7 +44,8 @@ int main()
 
 	int** data = init_memory(from, to, phase_count, 0);
 	struct time_info* times;
-	int base_time;
+	int* local_times = (int*) malloc(2 * phase_count * sizeof(int));
+	int base_time, base_time2 = 0;
 
 	for (i = 0; i < in_count; ++i)
 		ChanInInt(in[i]);
@@ -56,14 +57,16 @@ int main()
 	for (i = 0; i < in_count; ++i)
 		base_time = ChanInInt(in[i]);
 
-	ChanOutInt(out, base_time);
+	base_time2 = ProcTime() - base_time;
 
+	ChanOutInt(out, base_time);
+	
 #endif
 	
 	/*printf("Processing...\n");*/
 	while (phase--)
 	{
-		int shift = 0;
+		int shift = 0, start, end;
 		/*printf("Phase %d...\n", phase);*/
 
 		for (i = 0; i < in_count; ++i)
@@ -81,20 +84,33 @@ int main()
 		}
 
 		/*printf("Sending %d...\n", shift);*/
+		start = ProcTime() - base_time2;
 		ChanOut(out, data[phase], shift * sizeof(int));
+		end = ProcTime() - base_time2;
 		/*printf("Phase %d finished.\n", phase);*/
+
+		local_times[2 * phase] = start;
+		local_times[2 * phase + 1] = end;
 	}
 
 	count = ChanInInt(debug_in);
-	times = (struct time_info*) malloc(count * sizeof(struct time_info));
+
+	times = (struct time_info*) malloc((count + phase_count) * sizeof(struct time_info));
+
 	ChanIn(debug_in, times, count * sizeof(struct time_info));
+
+	for (k = 0; k < phase_count; ++k)
+	{
+		times[count + k] = get_time_info(from, to, k, local_times[2*k], local_times[2*k+1]);
+	}
 
 	for (k = 0; k < in_count; ++k)
 	{
-		ChanOutInt(debug_out[k], count);
-		ChanOut(debug_out[k], times, count * sizeof(struct time_info));
+		ChanOutInt(debug_out[k], count + phase_count);
+		ChanOut(debug_out[k], times, (count + phase_count) * sizeof(struct time_info));
 	}
 
+	free(local_times);
 	free(times);
 	free(debug_out);
 	free(in);
