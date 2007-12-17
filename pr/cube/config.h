@@ -6,7 +6,7 @@ struct packet_info {
 };
 
 struct time_info {
-	int from, to, phase, time;
+	int from, to, phase, start, end;
 };
 
 int phase_count = 3;
@@ -24,12 +24,13 @@ Channel** init_channels(int count, int param_count)
 	return result;
 }
 
-struct time_info get_time_info(int from, int to, int phase, int time)
+struct time_info get_time_info(int from, int to, int phase, int start, int end)
 {
 	struct time_info info;
 	info.from = from;
 	info.to = to;
 	info.phase = phase;
-	info.time = time;
+	info.start = start;
+	info.end = end;
 	return info;
 }

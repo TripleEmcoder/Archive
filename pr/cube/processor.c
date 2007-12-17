@@ -55,7 +55,7 @@ int main()
 		}
 		end = ProcTime();
 		
-		times[phase] = get_time_info(proc, proc, phase, ProcTimeMinus(end, start));
+		times[phase] = get_time_info(proc, proc, phase, start, end);
 
 		/*printf("Phase %d finished.\n", phase);*/
 	}

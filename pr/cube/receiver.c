@@ -41,7 +41,7 @@ int main()
 	int** data = init_memory(from, to, phase_count, 0);
 	struct time_info* times;
 	int* count = (int*) malloc(out_count * sizeof(int));
-	int* local_times = (int*) malloc(phase_count * sizeof(int));
+	int* local_times = (int*) malloc(2 * phase_count * sizeof(int));
 	int shift, k;
 	int phase = phase_count;
 	
@@ -58,7 +58,8 @@ int main()
 
 		/*printf("Received data, size: %d, addr: %p.\n", sizes[from][to][phase][0], data[phase]);*/
 
-		local_times[phase] = ProcTimeMinus(end, start);
+		local_times[2 * phase] = start;
+		local_times[2 * phase + 1] = end;
 		
 		shift = 0;
 		for (i = 0; i < out_count; ++i)
@@ -85,7 +86,7 @@ int main()
 
 	for (k = 0; k < phase_count; ++k)
 	{
-		times[shift + k] = get_time_info(from, to, k, local_times[k]);
+		times[shift + k] = get_time_info(from, to, k, local_times[2*k], local_times[2*k+1]);
 	}
 
 	shift = 0;

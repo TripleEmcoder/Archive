@@ -91,7 +91,7 @@ int main()
 	printf("Times:\n");
 	for (k = 0; k < count; ++k)
 	{
-		printf("%d %d %d %d\n", times[k].from, times[k].to, times[k].phase, times[k].time);
+		printf("%d %d %d %d %d\n", times[k].from, times[k].to, times[k].phase, times[k].start, times[k].end);
 	}
 
 	printf("Terminating...\n");
