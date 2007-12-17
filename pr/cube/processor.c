@@ -42,7 +42,7 @@ int main()
 	for (i = 0; i < in_count; ++i)
 		base_time = ChanInInt(in[i]);
 
-	base_time2 = ProcTime() - base_time;
+	base_time2 = ProcTime()*64 - base_time;
 
 #endif
 
