@@ -43,7 +43,6 @@ namespace Converter
             l = 16;
 
             m = (int)variables["m"];
-            T = variables["T"];
 
             t = new float[n, m];
             tk = new float[n, m];
@@ -86,6 +85,14 @@ namespace Converter
                             rk[k, j] = st;
                         }
             }
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < m; j++)
+                    T = Math.Max(T, tk[i, j]);
+
+            for (int k = 0; k < l; k++)
+                for (int j = 0; j < m; j++)
+                    T = Math.Max(T, rk[k, j]);
         }
 
         public void Save(TextWriter writer)
@@ -93,7 +100,7 @@ namespace Converter
             writer.WriteLine("Variables;result");
             writer.WriteLine("m;" + m);
             writer.WriteLine("T;" + T);
-            
+
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < m; j++)
                 {
@@ -105,8 +112,8 @@ namespace Converter
             {
                 for (int j = 0; j < m; j++)
                 {
-                    writer.WriteLine(string.Format(df, "r", k, j) +";" + r[k,j]);
-                    writer.WriteLine(string.Format(df, "rk", k, j) +";" + rk[k,j]);
+                    writer.WriteLine(string.Format(df, "r", k, j) + ";" + r[k, j]);
+                    writer.WriteLine(string.Format(df, "rk", k, j) + ";" + rk[k, j]);
                 }
 
                 writer.WriteLine(string.Format(sf, "pc", k) + ";" + pc[k]);

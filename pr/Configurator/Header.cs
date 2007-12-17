@@ -63,6 +63,10 @@ namespace Configurator
 
             for (int k = 0; k < l; k++)
                 for (int j = 0; j < m; j++)
+                    a[k, j] = 1;
+
+            for (int k = 0; k < l; k++)
+                for (int j = 0; j < m; j++)
                     V += (float)Math.Round(a[k, j]);
 
             for (int k = 1; k < l; k++)

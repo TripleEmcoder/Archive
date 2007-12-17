@@ -15,7 +15,7 @@ int** init_memory(int from, int to, int phases, int channel)
 	int i, j;
 	int** data;
 
-	printf("Initializing memory...\n");
+	/*printf("Initializing memory...\n");*/
 	
 	data = (int**) malloc(phases * sizeof(int*));
 	for (i = 0; i < phases; ++i)
@@ -24,10 +24,10 @@ int** init_memory(int from, int to, int phases, int channel)
 		for (j = 0; j < channel; ++j)
 			size += sizes[from][to][i][j];
 		data[i] = (int*) malloc(size * sizeof(int));
-		printf("Allocated %d at %p for phase %d.", size, data[i], i);
+		/*printf("Allocated %d at %p for phase %d.\n", size, data[i], i);*/
 	}
 	
-	printf("Memory initialization finished.\n");
+	/*printf("Memory initialization finished.\n");*/
 	return data;
 }
 
@@ -47,7 +47,7 @@ int main()
 		sizes[proc][proc][k][out_count-1] = 0;
 	}
 	
-	printf("Local processing...\n");
+	/*printf("Local processing...\n");*/
 	phase = phase_count;
 	while (phase--)
 	{
@@ -56,29 +56,29 @@ int main()
 		info.ptr = data[phase];
 		info.size = sizes[proc][proc][phase][out_count-1];
 			
-		printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[out_count-1]);
+		/*printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[out_count-1]);*/
 		ChanOut(out[out_count-1], &info, sizeof(struct packet_info));
-		printf("%d: Sent.\n", ProcTime());
+		/*printf("%d: Sent.\n", ProcTime());*/
 		
 	}
 	
-	printf("Sending...\n");
+	/*printf("Sending...\n");*/
 	phase = phase_count;
 	while (phase--)
 	{
 		int i, shift = 0;
-		printf("Phase %d...\n", phase);
+		/*printf("Phase %d...\n", phase);*/
 		for (i = 0; i < out_count-1; ++i)
 		{
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
 			info.size = sizes[proc][proc][phase][i];
-			printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[i]);
+			/*printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[i]);*/
 			ChanOut(out[i], &info, sizeof(struct packet_info));
-			printf("%d: Sent.\n", ProcTime());
+			/*printf("%d: Sent.\n", ProcTime());*/
 			shift += info.size;
 		}
-		printf("Phase %d finished.\n", phase);
+		/*printf("Phase %d finished.\n", phase);*/
 	}
 
 	free(out);
