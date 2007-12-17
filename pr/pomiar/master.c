@@ -15,17 +15,22 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 	int i;
 	int* sizes = (int*) malloc(count * sizeof(int));
 	int* times = (int*) malloc(count * sizeof(int));
+	int* data;
 	
 	ChanOutInt(out, count);
 	ChanOutInt(out, size);
 	ChanOutInt(out, step);
+
 	ChanInInt(in);
+	ChanInInt(in);
+	ChanInInt(in);
+
+	data = (int*) malloc((size + count * step) * sizeof(int));
 	
 	for (i = 0; i < count; ++i)   
 	{
 		int start;
 		int end;
-		int* data = (int*) malloc(size * sizeof(int));
 		
 		start = ProcTime();
 	
@@ -36,9 +41,7 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 
 		sizes[i] = size;
 		times[i] = ProcTimeMinus(end, start);
-		
-		free(data);
-		
+				
 		size += step;
 	}
 	
@@ -47,12 +50,13 @@ void test_link(Channel* out, Channel* in, int count, int size, int step)
 		printf("%d,%d\n", sizes[i], times[i]);
 	}
 
+	free(data);
 	free(times);
 	free(sizes);
 
 }
 
-void test_proc(Channel* out, Channel* in, int count, int size, int step, int order)
+void test_proc(Channel* out, Channel* in, int count, int size, int step)
 {
 	int i;
 	int* sizes = (int*) malloc(count * sizeof(int));
@@ -61,7 +65,6 @@ void test_proc(Channel* out, Channel* in, int count, int size, int step, int ord
 	ChanOutInt(out, count);
 	ChanOutInt(out, size);
 	ChanOutInt(out, step);
-	ChanOutInt(out, order);
 	
 	for (i = 0; i < count; ++i)   
 	{
@@ -97,28 +100,27 @@ int main(int argc, char** argv)
 	int count = atoi(argv[1]);
 	int size = atoi(argv[2]);
 	int step = atoi(argv[3]);
-	int order = atoi(argv[4]);
 
 	KANAL2WY   = (Channel *)  get_param (3);
 	KANAL3WE   = (Channel *)  get_param (4);
 	KANAL4WY   = (Channel *)  get_param (5);
 	KANAL5WE   = (Channel *)  get_param (6);
 
-	printf("Testing fast link...\n");
+	/*printf("Testing fast link...\n");
 	test_link(KANAL2WY, KANAL3WE, count, size, step);
 	printf("Test finished.\n");
 
 	printf("Testing slow link...\n");
 	test_link(KANAL4WY, KANAL5WE, count, size, step);
-	printf("Test finished.\n");
+	printf("Test finished.\n");*/
 
-	/*printf("Testing fast proc...\n");
-	test_proc(KANAL4WY, KANAL5WE, count, size, step, order);
+	printf("Testing fast proc...\n");
+	test_proc(KANAL4WY, KANAL5WE, count, size, step);
 	printf("Test finished.\n");
 
 	printf("Testing slow proc...\n");
-	test_proc(KANAL2WY, KANAL3WE, count, size, step, order);
-	printf("Test finished.\n");*/
+	test_proc(KANAL2WY, KANAL3WE, count, size, step);
+	printf("Test finished.\n");
 
 	exit_terminate (0);
 	return 0;
