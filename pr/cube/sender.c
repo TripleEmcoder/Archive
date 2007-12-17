@@ -38,17 +38,22 @@ int main()
 	Channel* debug_in = (Channel*) get_param(5 + in_count);
 	Channel** debug_out = init_channels(in_count, 5 + in_count);
 	int phase = phase_count;
-	int count, k;
+	int count, k, i;
 
 	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 
 	int** data = init_memory(from, to, phase_count, 0);
 	struct time_info* times;
+
+	for (i = 0; i < in_count; ++i)
+		ChanInInt(in[i]);
+
+	ChanOutInt(out, 1);
 	
 	/*printf("Processing...\n");*/
 	while (phase--)
 	{
-		int i, shift = 0;
+		int shift = 0;
 		/*printf("Phase %d...\n", phase);*/
 
 		for (i = 0; i < in_count; ++i)

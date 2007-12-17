@@ -42,14 +42,18 @@ int main()
 	struct time_info* times;
 	int* count = (int*) malloc(out_count * sizeof(int));
 	int* local_times = (int*) malloc(2 * phase_count * sizeof(int));
-	int shift, k;
+	int shift, k, i;
 	int phase = phase_count;
-	
+
+	ChanInInt(in);
+
+	for (i = 0; i < out_count; ++i)
+		ChanOutInt(out[i], 1);	
 
 	/*printf("Processing...\n");*/
 	while (phase--)
 	{
-		int i, start, end;
+		int start, end;
 		/*printf("Phase %d...\n", phase);*/
 
 		start = ProcTime();

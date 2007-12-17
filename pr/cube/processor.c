@@ -31,12 +31,15 @@ int main()
 	int phase = phase_count;
 	struct packet_info* info = (struct packet_info*) malloc(in_count * sizeof(struct packet_info));
 	struct time_info* times = (struct time_info*) malloc(phase_count * sizeof(struct time_info));
-	int k;
+	int k, i;
 	
+	for (i = 0; i < in_count; ++i)
+		ChanInInt(in[i]);
+
 	/*printf("Processing...\n");*/
 	while (phase--)
 	{
-		int i, j, start, end;
+		int j, start, end;
 		/*printf("Phase %d...\n", phase);*/
 				
 		for (i = 0; i < in_count; ++i)

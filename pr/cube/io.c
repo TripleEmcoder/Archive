@@ -39,14 +39,19 @@ int main()
 	Channel* debug_in = (Channel*) get_param(5 + out_count);
 	int** data = init_memory(proc, proc, phase_count, out_count);
 	struct time_info* times;
-	int count, k, phase;
+	int count, k, phase, i;
+
+	ChanOutInt(out[out_count-1], 1);
+
+	for (i = 0; i < out_count-1; ++i)
+		ChanOutInt(out[i], 1);
 
 	for(k = 1; k < phase_count; ++k)
 	{
 		sizes[proc][proc][0][out_count-1] += sizes[proc][proc][k][out_count-1];
 		sizes[proc][proc][k][out_count-1] = 0;
 	}
-	
+
 	/*printf("Local processing...\n");*/
 	phase = phase_count;
 	while (phase--)
@@ -66,7 +71,7 @@ int main()
 	phase = phase_count;
 	while (phase--)
 	{
-		int i, shift = 0;
+		int shift = 0;
 		/*printf("Phase %d...\n", phase);*/
 		for (i = 0; i < out_count-1; ++i)
 		{
