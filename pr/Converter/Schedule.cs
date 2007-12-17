@@ -86,6 +86,32 @@ namespace Converter
                         }
             }
 
+            float o = float.MaxValue;
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < m; j++)
+                    if (t[i, j] > 0)
+                        o = Math.Min(o, t[i, j]);
+
+            for (int k = 0; k < l; k++)
+                for (int j = 0; j < m; j++)
+                    if (r[k, j] > 0)
+                        o = Math.Min(o, r[k, j]);
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < m; j++)
+                {
+                    t[i, j] -= o;
+                    tk[i, j] -= o;
+                }
+
+            for (int k = 0; k < l; k++)
+                for (int j = 0; j < m; j++)
+                {
+                    r[k, j] -= o;
+                    rk[k, j] -= o;
+                }
+
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < m; j++)
                     T = Math.Max(T, tk[i, j]);
