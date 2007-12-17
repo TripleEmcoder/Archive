@@ -81,8 +81,11 @@ namespace Converter
                 else for (int k = 0; k < l; k++)
                         if (pc[pv[k]] == si && pc[k] == ti)
                         {
-                            r[k, j] = s;
-                            rk[k, j] = st;
+                            if (r[k, j] == 0 || r[k, j] < s)
+                                r[k, j] = s;
+
+                            if (rk[k, j] == 0 || rk[k, j] > st)
+                                rk[k, j] = st;
                         }
             }
 
