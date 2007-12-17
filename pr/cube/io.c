@@ -37,17 +37,38 @@ int main()
 	int out_count = *((int*) get_param(4));
 	Channel** out = init_channels(out_count, 4);
 	Channel* debug_in = (Channel*) get_param(5 + out_count);
-	int phase = phase_count;
 	int** data = init_memory(proc, proc, phase_count, out_count);
 	struct time_info* times;
-	int count, k;
+	int count, k, phase;
 
-	printf("Processing...\n");
+	for(k = 1; k < phase_count; ++k)
+	{
+		sizes[proc][proc][0][out_count-1] += sizes[proc][proc][k][out_count-1];
+		sizes[proc][proc][k][out_count-1] = 0;
+	}
+	
+	printf("Local processing...\n");
+	phase = phase_count;
+	while (phase--)
+	{
+		struct packet_info info;
+
+		info.ptr = data[phase];
+		info.size = sizes[proc][proc][phase][out_count-1];
+			
+		printf("Sending info: (%p, %d)\n", info.ptr, info.size, out[out_count-1]);
+		ChanOut(out[out_count-1], &info, sizeof(struct packet_info));
+		printf("Sent.\n");
+		
+	}
+	
+	printf("Sending...\n");
+	phase = phase_count;
 	while (phase--)
 	{
 		int i, shift = 0;
 		printf("Phase %d...\n", phase);
-		for (i = 0; i < out_count; ++i)
+		for (i = 0; i < out_count-1; ++i)
 		{
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
