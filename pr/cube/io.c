@@ -56,9 +56,9 @@ int main()
 		info.ptr = data[phase];
 		info.size = sizes[proc][proc][phase][out_count-1];
 			
-		printf("Sending info: (%p, %d)\n", info.ptr, info.size, out[out_count-1]);
+		printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[out_count-1]);
 		ChanOut(out[out_count-1], &info, sizeof(struct packet_info));
-		printf("Sent.\n");
+		printf("%d: Sent.\n", ProcTime());
 		
 	}
 	
@@ -73,9 +73,9 @@ int main()
 			struct packet_info info;
 			info.ptr = data[phase] + shift;
 			info.size = sizes[proc][proc][phase][i];
-			printf("Sending info: (%p, %d)\n", info.ptr, info.size, out[i]);
+			printf("%d: Sending info: (%p, %d)\n", ProcTime(), info.ptr, info.size, out[i]);
 			ChanOut(out[i], &info, sizeof(struct packet_info));
-			printf("Sent.\n");
+			printf("%d: Sent.\n", ProcTime());
 			shift += info.size;
 		}
 		printf("Phase %d finished.\n", phase);

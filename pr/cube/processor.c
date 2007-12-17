@@ -47,13 +47,13 @@ int main()
 			/*printf("Received info: (%p, %d)\n", info[i].ptr, info[i].size);*/
 		}
 
-		start = ProcTime();
+		start = ProcTime()*64;
 		for (i = 0; i < in_count; ++i)
 		{
 			for (j = 0; j < info[i].size; ++j)
 				process(*(info[i].ptr + j));
 		}
-		end = ProcTime();
+		end = ProcTime()*64;
 		
 		times[phase] = get_time_info(proc, proc, phase, start, end);
 
