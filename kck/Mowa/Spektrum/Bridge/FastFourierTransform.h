@@ -14,8 +14,8 @@ namespace Bridge
 
 	private:
 		int size;
-		fftw_complex *_input;
-		fftw_complex *_output;
+		double* _input;
+		fftw_complex* _output;
 		fftw_plan plan;
 	};
 }

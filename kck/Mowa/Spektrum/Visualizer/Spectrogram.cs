@@ -22,7 +22,7 @@ namespace Visualizer
             prefft = values;
 
             int size = 512;
-            int step = 500;
+            int step = 512;
             int count = (values.Length - size) / step;
 
             postfft = new Complex[count][];
@@ -42,15 +42,18 @@ namespace Visualizer
             Bitmap bitmap = new Bitmap(width, height);
 
             for (int x = 0; x < width; x++)
-                for (int i = 0; i < size; i++)
+                for (int y = 0; y < height; y++)
                 {
-                    Complex c = postfft[(int)(1.0 * x / width * count)][i];
+                    int _x = (int)(1.0 * x / width * count);
+                    int _y = (int)(1.0 * y / height * size);
+                    
+                    Complex c = postfft[_x][_y];
 
-                    if (double.IsNaN(c.Real) || double.IsNaN(c.Imaginary))
+                    if (double.IsNaN(c.Real) || double.IsNaN(c.Imaginary)
+                        || Math.Abs(c.Real) > 1000 || Math.Abs(c.Imaginary) > 1000)
                         continue;
 
-                    int a = (int)c.Modulus * 255;
-                    int y = (int)c.Argument * height;
+                    int a = (int)(c.Modulus / 100 * 255);
 
                     bitmap.SetPixel(x, y, Color.FromArgb(a, a, a));
                 }

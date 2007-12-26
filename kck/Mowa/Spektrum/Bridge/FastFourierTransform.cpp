@@ -9,9 +9,11 @@ FastFourierTransform::FastFourierTransform(int size)
 {
 	this->size = size;
 
-	_input = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * size);
+	_input = (double*) fftw_malloc(sizeof(double) * size);
 	_output = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * size);
-	plan = fftw_plan_dft_1d(size, _input, _output, FFTW_FORWARD, FFTW_MEASURE);
+
+	plan = fftw_plan_dft_r2c_1d(size, _input, _output, 
+		FFTW_DESTROY_INPUT | FFTW_MEASURE);
 }
 
 FastFourierTransform::~FastFourierTransform()
@@ -27,7 +29,7 @@ array<Types::Complex>^ FastFourierTransform::Calculate (array<double>^ input)
 		throw gcnew ArgumentOutOfRangeException();
 
 	for (int i=0; i<size; i++)
-		_input[i][0] = input[i];
+		_input[i] = input[i];
 
 	fftw_execute(plan);
 
@@ -36,7 +38,7 @@ array<Types::Complex>^ FastFourierTransform::Calculate (array<double>^ input)
 	for (int i=0; i<size; i++)
 	{
 		output[i].Real = _output[i][0];
-		output[i].Imaginary = _output[i][0];
+		output[i].Imaginary = _output[i][1];
 	}
 
 	return output;
