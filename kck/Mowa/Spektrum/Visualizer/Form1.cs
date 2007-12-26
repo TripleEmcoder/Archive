@@ -20,6 +20,7 @@ namespace Visualizer
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                Text = openFileDialog1.FileName;
                 using (SoundFile file = new SoundFile(openFileDialog1.FileName))
                 {
                     foreach (Control control in flowLayoutPanel1.Controls)
