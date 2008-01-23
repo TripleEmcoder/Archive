@@ -44,7 +44,7 @@ namespace Types
 
         public override string ToString()
         {
-            return string.Format("{0} + {1}i", real, imaginary);
+            return string.Format("{0} + {1}*i", real, imaginary);
         }
     }
 

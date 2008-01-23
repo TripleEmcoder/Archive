@@ -4,6 +4,7 @@ using namespace Bridge;
 using namespace Types;
 
 using namespace System;
+using namespace System::Diagnostics;
 
 FastFourierTransform::FastFourierTransform(int size)
 {

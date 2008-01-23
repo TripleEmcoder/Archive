@@ -48,3 +48,12 @@ array<double>^ SoundFile::ReadDouble(int size)
 
 	return buffer;
 }
+
+array<char>^ SoundFile::ReadRaw(int size)
+{
+	array<char>^ buffer = gcnew array<char>(size);
+	pin_ptr<char> _buffer = &buffer[0];
+	sf_read_raw(handle, _buffer, size);
+
+	return buffer;
+}

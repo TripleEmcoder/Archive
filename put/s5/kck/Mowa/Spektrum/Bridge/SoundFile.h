@@ -26,6 +26,7 @@ namespace Bridge
 		};
 
 		array<double>^ ReadDouble(int size);
+		array<char>^ ReadRaw(int size);
 
 	private:
 		SF_INFO* info;
