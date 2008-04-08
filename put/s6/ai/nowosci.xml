@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="nowosci.xslt"?>
+
+<dystrybutorzy xmlns="urn:inf75922-s6-ai"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="urn:inf75922-s6-ai nowosci.xsd">
+  
+  <dystrybutor nazwa="Gutek Film">
+    <nowosci>
+      <film>
+        <tytul>Once</tytul>
+        <tytul_oryginalny>Once</tytul_oryginalny>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <gatunek>komedio-dramat</gatunek>
+        <premiera>2008-03-28</premiera>
+        <rezyser>John Carney</rezyser>
+        <obsada>
+          <rola>
+            <nazwa>Muzyk</nazwa>
+            <aktor>Glen Hansard</aktor>
+          </rola>
+          <rola>
+            <nazwa>Dziewczyna</nazwa>
+            <aktor>Marketa Irglova</aktor>
+          </rola>
+        </obsada>
+      </film>
+      <film>
+        <tytul>Bounce</tytul>
+        <tytul_oryginalny>Bounce</tytul_oryginalny>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <gatunek>komedio-dramat</gatunek>
+        <premiera>2008-03-28</premiera>
+        <rezyser>John Carney</rezyser>
+        <obsada>
+          <rola>
+            <nazwa>Muzyk</nazwa>
+            <aktor>Glen Hansard</aktor>
+          </rola>
+          <rola>
+            <nazwa>Dziewczyna</nazwa>
+            <aktor>Marketa Irglova</aktor>
+          </rola>
+        </obsada>
+      </film>
+    </nowosci>
+  </dystrybutor>
+  
+  <dystrybutor nazwa="Ziutek Film">
+    <nowosci>
+      <film>
+        <tytul>Once</tytul>
+        <tytul_oryginalny>Once</tytul_oryginalny>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <gatunek>komedio-dramat</gatunek>
+        <premiera>2008-03-28</premiera>
+        <rezyser>John Carney</rezyser>
+      </film>
+    </nowosci>
+  </dystrybutor>
+  
+  <dystrybutor nazwa="Lutek Film">
+    <nowosci>
+      <film>
+        <tytul>Once</tytul>
+        <tytul_oryginalny>Once</tytul_oryginalny>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <gatunek>komedio-dramat</gatunek>
+        <premiera>2008-03-28</premiera>
+        <rezyser>John Carney</rezyser>
+        <obsada>
+          <rola>
+            <nazwa>Muzyk</nazwa>
+            <aktor>Glen Hansard</aktor>
+          </rola>
+          <rola>
+            <nazwa>Dziewczyna</nazwa>
+            <aktor>Marketa Irglova</aktor>
+          </rola>
+        </obsada>
+      </film>
+    </nowosci>
+  </dystrybutor>
+</dystrybutorzy>

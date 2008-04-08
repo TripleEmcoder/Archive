@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="urn:inf75922-s6-ai"   
+           targetNamespace="urn:inf75922-s6-ai"
+           elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="dystrybutorzy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="dystrybutor" type="dystrybutor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="dystrybutor">
+    <xs:sequence>
+      <xs:element name="nowosci" type="nowosci" />
+    </xs:sequence>
+    <xs:attribute name="nazwa" type="xs:string" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="nowosci">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="film" type="film" />
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="film">
+    <xs:sequence>
+      <xs:element name="tytul" type="xs:string" />
+      <xs:element name="tytul_oryginalny" type="xs:string" />
+      <xs:element name="opis" type="xs:string" />
+      <xs:element name="gatunek" type="xs:string" />
+      <xs:element name="premiera" type="xs:date" />
+      <xs:element name="rezyser" type="xs:string" />
+      <xs:element minOccurs="0" name="obsada" type="obsada" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="obsada">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="rola" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rola">
+    <xs:sequence>
+      <xs:element name="nazwa" type="xs:string" />
+      <xs:element name="aktor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
