@@ -1,0 +1,3 @@
+<?
+$_SESSION['basket'] = $basket;
+?>

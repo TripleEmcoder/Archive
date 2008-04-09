@@ -4,3 +4,7 @@
 <title><?=$title?></title>
 </head>
 <body>
+<a href='lista.php'>Lista</a>
+<a href='koszyk.php'>Koszyk</a>
+<a href='problem.php'>Problem</a>
+<a href='nowosci.xml'>Nowości</a>

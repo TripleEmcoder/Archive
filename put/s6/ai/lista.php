@@ -10,7 +10,7 @@ $title = '';
 
 require_once('naglowek.php');
 ?>
-<form action='lista.php'>
+<form action=''>
 	<div id='szukaczka'>
 		<input type='text' name='keyword' />
 		<input type='submit' />
@@ -41,4 +41,5 @@ print("</table>");
 </div>
 <?
 require_once('stopka.php');
+require_once('epilog.php');
 ?>
