@@ -6,17 +6,14 @@ $query_select_film_details_by_keyword =
 	. ' WHERE film_id = :id';
 
 $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
-?>
-<html>
-<head>
-<title></title>
-</head>
-</body>
-<?
+$title = '';
+
+require_once('naglowek.php');
+
 $query = $database->prepare($query_select_film_details_by_keyword);
 $query->execute(array(':id' => $id));
 $film = $query->fetchObject();
 var_dump($film);
+
+require_once('stopka.php');
 ?>
-</body>
-</html>

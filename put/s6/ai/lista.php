@@ -6,16 +6,17 @@ $query_select_film_basics_by_keyword =
 	. ' WHERE title LIKE CONCAT(\'%\', :keyword, \'%\')';
 
 $keyword = filter_var($_GET['keyword'], FILTER_SANITIZE_STRING);
+$title = '';
+
+require_once('naglowek.php');
 ?>
-<html>
-<head>
-<title></title>
-</head>
-</body>
-<form>
-<input type='text' name='keyword' />
-<input type='submit' />
+<form action='lista.php'>
+	<div id='szukaczka'>
+		<input type='text' name='keyword' />
+		<input type='submit' />
+	</div>
 </form>
+<div id='wyniki'>
 <?
 $query = $database->prepare($query_select_film_basics_by_keyword);
 $query->execute(array(':keyword' => $keyword));
@@ -37,5 +38,7 @@ while ($film = $query->fetchObject())
 
 print("</table>");
 ?>
-</body>
-</html>
+</div>
+<?
+require_once('stopka.php');
+?>
