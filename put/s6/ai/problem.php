@@ -12,10 +12,10 @@ $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 $reason = filter_var($_POST['reason'], FILTER_VALIDATE_INT);
 $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
 
+$title = 'Problem';
+
 require_once('naglowek.php');
-?>
-<h1>Zgłoszenie problemu</h1>
-<?
+
 if ($submit && $email && $reason && $description)
 {
 ?>
@@ -28,7 +28,7 @@ if ($submit && $email && $reason && $description)
 else
 {
 ?>
-<script>
+<script type='text/javascript'>
 function setErrorDisplay(element, display)
 {
 	document.getElementById(element.id +'_error').style.display = display ? 'block' : 'none';
@@ -73,29 +73,29 @@ function updateLimit(element)
 <form action='' method='post' onsubmit='return validateProblem(this)'>
 
 <h2>E-mail</h2>
-<input id='email' name='email' type='text' value='<?=$_POST['email']?>' />
+<p><input id='email' name='email' type='text' onblur='validateEmail(this)' value='<?=$_POST['email']?>' /></p>
 <div id='email_error' class='error' style='display: <?=$submit && !$email ? 'block' : 'none'?>'>Niepoprawny adres e-mail.</div>
 
 <h2>Powód</h2>
-<select id='reason' name='reason'>
+<p><select id='reason' name='reason' onblur='validateReason(this)'>
 <?
 foreach ($reasons as $key => $name)
 {
-	$selected = $key == $_POST['reason'] ? ' selected=\'true\'' : '';
+	$selected = $key == $_POST['reason'] ? ' selected=\'selected\'' : '';
 	print("<option value='$key'$selected>$name</option>\n");
 }
 ?>
-</select>
+</select></p>
 <div id='reason_error' class='error' style='display: <?=$submit && !$reason ? 'block' : 'none'?>'>Nie wybrano powódu.</div>
 
 <h2>Opis</h2>
-<textarea id='description' name='description' onkeyup='updateLimit(this)'><?=$_POST['description']?></textarea>
+<p><textarea id='description' name='description' onblur='validateDescription(this)' onkeyup='updateLimit(this)' rows='10' cols='30'><?=$_POST['description']?></textarea></p>
 <div id='description_error' class='error' style='display: <?=$submit && !$description ? 'block' : 'none'?>'>Nie opisano problemu.</div>
-<div id='description_hint' class='hint'>Pozostało <span id='description_limit'></span> znaków.<div>
+<div id='description_hint' class='hint'>Pozostało <span id='description_limit'></span> znaków.</div>
 
-<input type='submit' name='submit' value='Wyślij' />
+<p><input type='submit' name='submit' value='Wyślij' /></p>
 </form>
-<script>
+<script type='text/javascript'>
 updateLimit(document.getElementById('description'));
 </script>
 <?

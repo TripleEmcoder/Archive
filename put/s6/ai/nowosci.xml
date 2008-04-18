@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="nowosci.xslt"?>
 
 <dystrybutorzy xmlns="urn:inf75922-s6-ai"
@@ -10,7 +10,7 @@
       <film>
         <tytul>Once</tytul>
         <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
         <gatunek>komedio-dramat</gatunek>
         <premiera>2008-03-28</premiera>
         <rezyser>John Carney</rezyser>
@@ -28,7 +28,7 @@
       <film>
         <tytul>Bounce</tytul>
         <tytul_oryginalny>Bounce</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
         <gatunek>komedio-dramat</gatunek>
         <premiera>2008-03-28</premiera>
         <rezyser>John Carney</rezyser>
@@ -51,7 +51,7 @@
       <film>
         <tytul>Once</tytul>
         <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
         <gatunek>komedio-dramat</gatunek>
         <premiera>2008-03-28</premiera>
         <rezyser>John Carney</rezyser>
@@ -64,7 +64,7 @@
       <film>
         <tytul>Once</tytul>
         <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody…</opis>
+        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
         <gatunek>komedio-dramat</gatunek>
         <premiera>2008-03-28</premiera>
         <rezyser>John Carney</rezyser>
