@@ -34,7 +34,6 @@ namespace Utility
         public FileSiteMapNode(FileSystemSiteMapProvider provider, FileInfo info, string format)
             : base(provider, info, format)
         {
-
         }
     }
 
