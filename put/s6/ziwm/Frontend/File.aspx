@@ -10,14 +10,14 @@
     ID="HeadContent"
     runat="server"
     ContentPlaceHolderID="HeadContentPlaceHolder">
-
+   <script
+        type="text/javascript">
+var ziwmPath='localhost:54259';
+    </script>
+    
     <script
         type="text/javascript"
         src="Map.js"></script>
-
-    <script
-        type="text/javascript">      
-    </script>
 
 </asp:Content>
 <asp:Content
@@ -36,8 +36,11 @@
 
     <script
         type="text/javascript">
- var map = new VEMap('myMap');
- map.LoadMap(); 
-    </script>
+window.onload = function()
+{
+    var map = new VEMap('myMap');
+    map.LoadMap(); 
+}
+     </script>
 
 </asp:Content>
