@@ -99,7 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Map.js" />
+    <Content Include="File.aspx.js" />
+    <Content Include="VirtualEarth.js" />
+    <Content Include="VirtualEarthtIntelliSense.js" />
+    <Content Include="Web.config.js" />
     <Content Include="Web.master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

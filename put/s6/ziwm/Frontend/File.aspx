@@ -10,14 +10,18 @@
     ID="HeadContent"
     runat="server"
     ContentPlaceHolderID="HeadContentPlaceHolder">
-   <script
-        type="text/javascript">
-var ziwmPath='localhost:54259';
-    </script>
-    
+
     <script
         type="text/javascript"
-        src="Map.js"></script>
+        src="Web.config.js"></script>
+
+    <script
+        type="text/javascript"
+        src="VirtualEarth.js"></script>
+
+    <script
+        type="text/javascript"
+        src="File.aspx.js"></script>
 
 </asp:Content>
 <asp:Content
@@ -28,19 +32,11 @@ var ziwmPath='localhost:54259';
         ID="SiteMapPath"
         runat="server" />
     <div
-        id='myMap'
+        id='map'
         style="position: relative;
-        width: 400px;
-        height: 400px;">
+        width: 600px;
+        height: 600px;">
     </div>
-
-    <script
-        type="text/javascript">
-window.onload = function()
-{
-    var map = new VEMap('myMap');
-    map.LoadMap(); 
-}
-     </script>
-
+    <input type="button" id="drawPolylineButton" />
+    <input type="button" id="drawPolygonButton" />
 </asp:Content>
