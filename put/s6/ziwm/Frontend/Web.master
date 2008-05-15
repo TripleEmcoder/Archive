@@ -22,9 +22,37 @@ xmlns="http://www.w3.org/1999/xhtml">
     <form
     id="form1"
     runat="server">
-    <asp:ContentPlaceHolder
-        ID="MainContentPlaceHolder"
-        runat="server" />
+    <asp:SiteMapDataSource
+        ID="SiteMapDataSource1"
+        runat="server"
+        ShowStartingNode="False" />
+    <table
+        width="100%"
+        border="1">
+        <tr>
+            <td
+                width="30%">
+                <asp:TreeView
+                    
+                    ID="TreeView1"
+                    
+                    runat="server"
+                    
+                    DataSourceID="SiteMapDataSource1"
+                    
+                    ExpandDepth="0"
+                    
+                    MaxDataBindDepth="0">
+                </asp:TreeView>
+            </td>
+            <td
+                width="70%">
+                <asp:ContentPlaceHolder
+                    ID="MainContentPlaceHolder"
+                    runat="server" />
+            </td>
+        </tr>
+    </table>
     </form>
 </body>
 </html>

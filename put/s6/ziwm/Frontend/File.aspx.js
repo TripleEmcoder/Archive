@@ -70,6 +70,7 @@ function CreatePernamentShape(drawMode, points)
 function PageLoad()
 {
     var map = new VEMap("map");
+
     var drawPolylineButton = document.getElementById("drawPolylineButton");
     var drawPolygonButton = document.getElementById("drawPolygonButton");
     
@@ -77,7 +78,6 @@ function PageLoad()
     var points = [];
     var shape = null;
     
-    map.HideDashboard();
     map.AttachEvent("onclick", function(e)
     {
         if (drawMode != DrawModes.None)
@@ -130,7 +130,9 @@ function PageLoad()
     drawPolygonButton.innerHTML = drawPolygonButton.inactiveHTML;
     drawPolygonButton.onclick = function() { ToggleShapeDrawing(drawPolygonButton); };
     
+    //map.HideDashboard();
     map.LoadMap();
+    map.SetZoomLevel(1);
 }
 
 window.onload = PageLoad;

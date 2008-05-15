@@ -96,10 +96,10 @@ namespace Utility
 
         public override SiteMapNode GetParentNode(SiteMapNode node)
         {
-            string parentPath = Path.GetDirectoryName(node.Key);
-
-            if (parentPath == null)
+            if (node.Key == rootPath)
                 return null;
+
+            string parentPath = Path.GetDirectoryName(node.Key);
 
             return new DirectorySiteMapNode(this, parentPath, directoryUrlFormat);
         }
