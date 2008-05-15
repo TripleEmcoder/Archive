@@ -15,8 +15,8 @@ namespace Frontend
                 return;
             }
 
-            string quadKey = "0";
-            string imagePath = "F:\\Downloads\\Public\\VLI\\heic0602a.ptiff";
+            string quadKey = "0"; //z context.Request.Url
+            string imagePath = "F:\\Downloads\\Public\\VLI\\heic0602a.ptiff"; //z context.Request.UrlReferrer
 
             using (TiffFile file = new TiffFile(imagePath))
             {

@@ -35,7 +35,7 @@ int TiffImage::Height::get()
 	return height;
 }
 
-Bitmap^ TiffImage::GetTile(int index)
+Bitmap^ TiffImage::GetTile(int number)
 {
 	const PixelFormat format = PixelFormat::Format24bppRgb;
 	
@@ -49,7 +49,7 @@ Bitmap^ TiffImage::GetTile(int index)
 
 	Bitmap^ bitmap = gcnew Bitmap(width, height, format);
 	BitmapData^ data = bitmap->LockBits(rectangle, ImageLockMode::WriteOnly, format);
-	TIFFReadEncodedTile(handle, index, (void*)data->Scan0, size);
+	TIFFReadEncodedTile(handle, number, (void*)data->Scan0, size);
 	bitmap->UnlockBits(data);
 
 	return bitmap;
