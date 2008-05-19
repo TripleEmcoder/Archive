@@ -1,66 +1,116 @@
-﻿using System.Web;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
+using System.Web;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Utility
 {
-    public class FileSystemSiteMapNode : SiteMapNode
+    public class FileSystemSiteMapNodeFactory
     {
-        public FileSystemSiteMapNode(FileSystemSiteMapProvider provider, FileSystemInfo info, string format)
-            : base(provider, info.FullName, string.Format(format, info.FullName), info.Name)
+        private readonly FileSystemSiteMapProvider provider;
+        private readonly string format;
+
+        public FileSystemSiteMapNodeFactory(FileSystemSiteMapProvider provider, string format)
         {
-        }
-    }
-    public class DirectorySiteMapNode : FileSystemSiteMapNode
-    {
-        public DirectorySiteMapNode(FileSystemSiteMapProvider provider, string path, string format)
-            : this(provider, new DirectoryInfo(path), format)
-        {
+            this.provider = provider;
+            this.format = format;
         }
 
-        public DirectorySiteMapNode(FileSystemSiteMapProvider provider, DirectoryInfo info, string format)
-            : base(provider, info, format)
+        private string VirtualizePath(string path)
         {
-        }
-    }
-
-    public class FileSiteMapNode : FileSystemSiteMapNode
-    {
-        public FileSiteMapNode(FileSystemSiteMapProvider provider, string path, string format)
-            : this(provider, new FileInfo(path), format)
-        {
+            Debug.Assert(path.StartsWith(provider.RootPath));
+            return Regex.Replace(path, "^" + Regex.Escape(provider.RootPath), provider.RootName);
         }
 
-        public FileSiteMapNode(FileSystemSiteMapProvider provider, FileInfo info, string format)
-            : base(provider, info, format)
+        private string UnvirtualizePath(string path)
         {
+            Debug.Assert(path.StartsWith(provider.RootName));
+            return Regex.Replace(path, "^" + Regex.Escape(provider.RootName), provider.RootPath);
+        }
+
+        private string EncodePath(string path)
+        {
+            return HttpUtility.UrlEncode(path.Replace(Path.DirectorySeparatorChar, '/'));
+        }
+
+        private string DecodePath(string path)
+        {
+            return HttpUtility.UrlDecode(path).Replace('/', Path.DirectorySeparatorChar);
+        }
+
+        public bool TryCreateNodeFromUrl(string url, ref SiteMapNode node)
+        {
+            Regex regex = new Regex(format.Replace("?", @"\?").Replace("{0}", "(.+)"));
+            Match match = regex.Match(url);
+
+            if (match.Groups.Count == 2)
+            {
+                string encodedPath = match.Groups[1].Value;
+                string virtualPath = DecodePath(encodedPath);
+                string path = UnvirtualizePath(virtualPath);
+
+                if (path.StartsWith(provider.RootName))
+                {
+                    node = new SiteMapNode(provider,
+                        path, string.Format(format, encodedPath), Path.GetFileName(virtualPath));
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public SiteMapNode CreateNodeFromPath(string path)
+        {
+            Debug.Assert(Directory.Exists(path) || File.Exists(path));
+            
+            string virtualPath = VirtualizePath(path);
+            string encodedPath = EncodePath(virtualPath);
+            
+            return new SiteMapNode(provider,
+                path, string.Format(format, encodedPath), Path.GetFileName(virtualPath));
         }
     }
 
     public class FileSystemSiteMapProvider : SiteMapProvider
     {
         private string rootPath;
-        private string fileUrlFormat;
-        private string directoryUrlFormat;
+        private string rootName;
+        private FileSystemSiteMapNodeFactory directoryFactory;
+        private FileSystemSiteMapNodeFactory fileFactory;
+
+        public string RootPath
+        {
+            get { return rootPath; }
+        }
+
+        public string RootName
+        {
+            get { return rootName; }
+        }
 
         public override void Initialize(string name, NameValueCollection attributes)
         {
             base.Initialize(name, attributes);
             rootPath = attributes["rootPath"];
-            fileUrlFormat = "/File.aspx?Path={0}";
-            directoryUrlFormat = "/Directory.aspx?Path={0}";
+            rootName = attributes["rootName"];
+
+            directoryFactory = new FileSystemSiteMapNodeFactory(this, "/Directory.aspx?Path={0}");
+            fileFactory = new FileSystemSiteMapNodeFactory(this, "/File.aspx?Path={0}");
         }
 
-        public override SiteMapNode FindSiteMapNode(string rawUrl)
+        public override SiteMapNode FindSiteMapNode(string url)
         {
-            string[] parts = (rawUrl + '?').Split('?');
-            NameValueCollection parameters = HttpUtility.ParseQueryString(parts[1]);
+            SiteMapNode node = null;
 
-            if (parts[0] == directoryUrlFormat.Split('?')[0])
-                return new DirectorySiteMapNode(this, parameters[0], directoryUrlFormat);
-            
-            if (parts[0] == fileUrlFormat.Split('?')[0])
-                return new FileSiteMapNode(this, parameters[0], fileUrlFormat);
+            if (directoryFactory.TryCreateNodeFromUrl(url, ref node))
+                return node;
+
+            if (fileFactory.TryCreateNodeFromUrl(url, ref node))
+                return node;
 
             return null;
         }
@@ -69,15 +119,13 @@ namespace Utility
         {
             SiteMapNodeCollection nodes = new SiteMapNodeCollection();
 
-            if (node is DirectorySiteMapNode)
+            if (Directory.Exists(node.Key))
             {
-                DirectoryInfo parent = new DirectoryInfo(node.Key);
+                foreach (string path in Directory.GetDirectories(node.Key))
+                    nodes.Add(directoryFactory.CreateNodeFromPath(path));
 
-                foreach (DirectoryInfo child in parent.GetDirectories())
-                    nodes.Add(new DirectorySiteMapNode(this, child, directoryUrlFormat));
-
-                foreach (FileInfo child in parent.GetFiles())
-                    nodes.Add(new FileSiteMapNode(this, child, fileUrlFormat));
+                foreach (string path in Directory.GetFiles(node.Key))
+                    nodes.Add(fileFactory.CreateNodeFromPath(path));
             }
 
             return nodes;
@@ -86,27 +134,22 @@ namespace Utility
         public override SiteMapNode FindSiteMapNodeFromKey(string key)
         {
             if (Directory.Exists(key))
-                return new DirectorySiteMapNode(this, key, directoryUrlFormat);
+                return directoryFactory.CreateNodeFromPath(key);
 
             if (File.Exists(key))
-                return new FileSiteMapNode(this, key, fileUrlFormat);
+                return fileFactory.CreateNodeFromPath(key);
 
             return null;
         }
 
         public override SiteMapNode GetParentNode(SiteMapNode node)
         {
-            if (node.Key == rootPath)
-                return null;
-
-            string parentPath = Path.GetDirectoryName(node.Key);
-
-            return new DirectorySiteMapNode(this, parentPath, directoryUrlFormat);
+            return directoryFactory.CreateNodeFromPath(Path.GetDirectoryName(node.Key));
         }
 
         protected override SiteMapNode GetRootNodeCore()
         {
-            return new DirectorySiteMapNode(this, rootPath, directoryUrlFormat);
+            return directoryFactory.CreateNodeFromPath(rootPath);
         }
     }
 }

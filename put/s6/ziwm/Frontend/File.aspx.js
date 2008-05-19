@@ -83,6 +83,7 @@ function PageLoad()
         if (drawMode != DrawModes.None)
         {
             var position = map.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
+            
             points.push(position);
             
             if (shape != null)
