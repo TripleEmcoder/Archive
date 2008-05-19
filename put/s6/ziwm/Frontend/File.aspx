@@ -35,7 +35,7 @@
         id='map'
         style="position: relative;
         width: 600px;
-        height: 600px;">
+        height: 600px; top: 0px; left: 0px;">
     </div>
     <input type="button" id="drawPolylineButton" />
     <input type="button" id="drawPolygonButton" />

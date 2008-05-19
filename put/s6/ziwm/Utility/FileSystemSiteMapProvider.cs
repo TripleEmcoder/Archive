@@ -30,12 +30,12 @@ namespace Utility
             return Regex.Replace(path, "^" + Regex.Escape(provider.RootName), provider.RootPath);
         }
 
-        private string EncodePath(string path)
+        private static string EncodePath(string path)
         {
             return HttpUtility.UrlEncode(path.Replace(Path.DirectorySeparatorChar, '/'));
         }
 
-        private string DecodePath(string path)
+        private static string DecodePath(string path)
         {
             return HttpUtility.UrlDecode(path).Replace('/', Path.DirectorySeparatorChar);
         }
@@ -49,10 +49,11 @@ namespace Utility
             {
                 string encodedPath = match.Groups[1].Value;
                 string virtualPath = DecodePath(encodedPath);
-                string path = UnvirtualizePath(virtualPath);
 
-                if (path.StartsWith(provider.RootName))
+                if (virtualPath.StartsWith(provider.RootName))
                 {
+                    string path = UnvirtualizePath(virtualPath);
+
                     node = new SiteMapNode(provider,
                         path, string.Format(format, encodedPath), Path.GetFileName(virtualPath));
 
@@ -66,10 +67,10 @@ namespace Utility
         public SiteMapNode CreateNodeFromPath(string path)
         {
             Debug.Assert(Directory.Exists(path) || File.Exists(path));
-            
+
             string virtualPath = VirtualizePath(path);
             string encodedPath = EncodePath(virtualPath);
-            
+
             return new SiteMapNode(provider,
                 path, string.Format(format, encodedPath), Path.GetFileName(virtualPath));
         }
@@ -144,6 +145,9 @@ namespace Utility
 
         public override SiteMapNode GetParentNode(SiteMapNode node)
         {
+            if (node.Key == rootPath)
+                return null;
+
             return directoryFactory.CreateNodeFromPath(Path.GetDirectoryName(node.Key));
         }
 

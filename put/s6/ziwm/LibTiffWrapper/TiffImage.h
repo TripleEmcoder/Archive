@@ -1,12 +1,11 @@
 #pragma once
 
-namespace LibTiffWrapper {
-
+namespace LibTiffWrapper
+{
 	public ref class TiffImage
 	{
 	internal:
 		TiffImage(::TIFF* handle, int index);
-		~TiffImage();
 
 	public:
 		property int Width
@@ -19,7 +18,18 @@ namespace LibTiffWrapper {
 			int get();
 		}
 
-		System::Drawing::Bitmap^ GetTile(int index);
+		property int TileWidth
+		{
+			int get();
+		}
+
+		property int TileHeight
+		{
+			int get();
+		}
+
+		System::Drawing::Bitmap^ GetTile(int number);
+		System::Drawing::Bitmap^ GetTile(int x, int y);
 
 	private:
 		::TIFF* handle;

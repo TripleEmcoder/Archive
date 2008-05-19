@@ -210,6 +210,10 @@
 				RelativePath=".\TiffImage.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\TiffImageCollection.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -226,6 +230,10 @@
 			</File>
 			<File
 				RelativePath=".\TiffImage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TiffImageCollection.h"
 				>
 			</File>
 		</Filter>

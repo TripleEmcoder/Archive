@@ -2,15 +2,21 @@
 
 namespace LibTiffWrapper
 {
-	ref class TiffImage;
+	ref class TiffImageCollection;
 
 	public ref class TiffFile
 	{
 	public:
 		TiffFile(System::String^ path);
 		~TiffFile();
-		array<TiffImage^>^ GetImages();
+
+		property TiffImageCollection^ Images
+		{
+			TiffImageCollection^ get();
+		}
+
 	private:
 		::TIFF* handle;
+		TiffImageCollection^ images;
 	};
 }
