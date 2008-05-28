@@ -3,8 +3,8 @@
     MasterPageFile="~/Web.master"
     AutoEventWireup="true"
     CodeBehind="Default.aspx.cs"
-    Inherits="Frontend.Default"
-    Title="Untitled Page" %>
+    Inherits="Frontend.DefaultPage"
+    Title="Default" %>
 
 <asp:Content
     ID="MainContent"

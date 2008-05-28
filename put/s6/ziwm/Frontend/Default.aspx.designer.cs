@@ -11,7 +11,7 @@
 namespace Frontend {
     
     
-    public partial class Default {
+    public partial class DefaultPage {
         
         /// <summary>
         /// SiteMapPath control.

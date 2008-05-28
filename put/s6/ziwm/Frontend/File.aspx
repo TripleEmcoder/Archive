@@ -3,40 +3,49 @@
     MasterPageFile="~/Web.master"
     AutoEventWireup="true"
     CodeBehind="File.aspx.cs"
-    Inherits="Frontend.File"
+    Inherits="Frontend.FilePage"
     Title="Untitled Page" %>
-
 <asp:Content
     ID="HeadContent"
     runat="server"
     ContentPlaceHolderID="HeadContentPlaceHolder">
-
     <script
         type="text/javascript"
         src="Web.config.js"></script>
-
-    <script
+<%--    <script
         type="text/javascript"
-        src="VirtualEarth.js"></script>
-
+        src="VirtualEarth.js"></script>--%>
     <script
         type="text/javascript"
         src="File.aspx.js"></script>
-
 </asp:Content>
 <asp:Content
     ID="MainContent"
     ContentPlaceHolderID="MainContentPlaceHolder"
     runat="server">
-    <asp:SiteMapPath
-        ID="SiteMapPath"
-        runat="server" />
+    <asp:ScriptManager
+        ID="ScriptManager1"
+        runat="server"
+        ScriptMode="Auto">
+        <Services>
+            <asp:ServiceReference
+                Path="~/File.asmx" InlineScript="True" />
+        </Services>
+    </asp:ScriptManager>
+    <script type="text/javascript">
+    Frontend.FileWebService.AddOrUpdateAnnotation(new Frontend.Annotation(), function(result){alert(result); Frontend.FileWebService.GetAnnotations(function(result){alert(result)}, function(result){alert(result)});}, function(result){alert(result)});
+
+    </script>
     <div
-        id='map'
-        style="position: relative;
-        width: 600px;
-        height: 600px; top: 0px; left: 0px;">
+        id="toolbar">
+        <button
+            id="drawPolylineButton"
+            type="button">?</button>
+        <button
+            id="drawPolygonButton"
+            type="button">?</button>
     </div>
-    <input type="button" id="drawPolylineButton" />
-    <input type="button" id="drawPolygonButton" />
+    <div
+        id="map">
+    </div>
 </asp:Content>

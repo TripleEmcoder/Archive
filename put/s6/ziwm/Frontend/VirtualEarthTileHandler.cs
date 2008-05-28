@@ -1,15 +1,25 @@
-﻿using System.Drawing.Imaging;
+﻿using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Drawing;
-using LibTiffWrapper;
 using System.Web.UI.WebControls;
-using System.Diagnostics;
+using LibTiffWrapper;
 
 namespace Frontend
 {
     public class VirtualEarthTileHandler : IHttpHandler
     {
+        static VirtualEarthTileHandler()
+        {
+            string path = string.Format("{0};{1}",
+                Environment.GetEnvironmentVariable("PATH"),
+                AppDomain.CurrentDomain.RelativeSearchPath);
+
+            Environment.SetEnvironmentVariable("PATH", path, EnvironmentVariableTarget.Process);
+        }
+
         public void ProcessRequest(HttpContext context)
         {
             if (context.Request.UrlReferrer == null)
@@ -24,7 +34,15 @@ namespace Frontend
 
             using (TiffFile file = new TiffFile(filePath))
             {
-                TiffImage image = file.Images[file.Images.Count - key.Length - 2];
+                int index = file.Images.Count - key.Length - 2;
+
+                if (index < 0)
+                {
+                    context.Response.StatusCode = 404;
+                    return;
+                }
+
+                TiffImage image = file.Images[index];
 
                 Debug.Assert(image.TileWidth == 256);
                 Debug.Assert(image.TileHeight == 256);

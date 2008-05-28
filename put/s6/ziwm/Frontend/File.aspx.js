@@ -1,18 +1,5 @@
 ﻿/// <reference path="VirtualEarthtIntelliSense.js" />
-
-// NOTE:    The above reference is used only at design time.
-//          It provides a skeleton of the VE API to enable 
-//          intellisense.  Notice that the Default.aspx 
-//          page DOES NOT reference VeJavaScriptIntellisenseHelper.js.
-//          At run time, we use the real VE API.
-
-// KNOWN ISSUE: Due to the nature of JavaScript, there is no way
-//              to know the type of a page level variable inside
-//              a given function in the page when the variable
-//              was instatiated in another function.  The side
-//              effect of this is that you will not get 
-//              intellisense for a page leverl map variable 
-//              outside of the function in which it was instantiated.
+/// <reference path="~/File.asmx/js" />
 
 var DrawModes = { None:0, DrawPolyline:1, DrawPolygon:2 };
 
@@ -29,7 +16,7 @@ function CreateTemporaryShape(drawMode, points)
                 shapeType = VEShapeType.Polyline;
         }
     }
-    
+
     var shape = new VEShape(shapeType, points);
     shape.SetLineColor(new VEColor(255, 0, 0, 1));
     
@@ -42,7 +29,7 @@ function CreateTemporaryShape(drawMode, points)
 function CreatePernamentShape(drawMode, points)
 {
     var shapeType = VEShapeType.Pushpin;
-    
+
     if (points.length > 1)
     {
         switch(drawMode)
@@ -110,7 +97,7 @@ function PageLoad()
                 
             if (points.length > button.minPointCount)
                 map.AddShape(CreatePernamentShape(drawMode, points));
-                
+
             drawMode = DrawModes.None;
             points = [];                
             shape = null;

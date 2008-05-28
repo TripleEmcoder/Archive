@@ -11,7 +11,7 @@
 namespace Frontend {
     
     
-    public partial class DirectoryPage {
+    public partial class IndexPage {
         
         /// <summary>
         /// SiteMapDataSource control.

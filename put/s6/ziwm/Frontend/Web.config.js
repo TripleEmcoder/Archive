@@ -1,1 +1,1 @@
-﻿var VirtualEarthTilePath='localhost:54259/VirtualEarthTiles';
+﻿var VirtualEarthTilePath='localhost/Marcin/Projects/PUT/ZIWM/VirtualEarthTiles';

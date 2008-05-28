@@ -2,9 +2,14 @@
     Language="C#"
     MasterPageFile="~/Web.master"
     AutoEventWireup="true"
-    CodeBehind="Directory.aspx.cs"
-    Inherits="Frontend.DirectoryPage"
-    Title="Untitled Page" %>
+    CodeBehind="Index.aspx.cs"
+    Inherits="Frontend.IndexPage"
+    Title="Index" %>
+<asp:Content
+    ID="HeadContent"
+    ContentPlaceHolderID="HeadContentPlaceHolder"
+    runat="server">
+</asp:Content>
 <asp:Content
     ID="MainContent"
     ContentPlaceHolderID="MainContentPlaceHolder"

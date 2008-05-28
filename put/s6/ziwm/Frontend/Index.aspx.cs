@@ -2,7 +2,7 @@
 
 namespace Frontend
 {
-    public partial class FilePage : Page
+    public partial class IndexPage  : Page
     {
     }
 }

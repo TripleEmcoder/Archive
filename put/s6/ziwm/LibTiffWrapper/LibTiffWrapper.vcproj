@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="LibTiffWrapper"
 	ProjectGUID="{B8493C85-6CCD-4698-A469-5834679B12D4}"
 	RootNamespace="LibTiffWrapper"
@@ -18,8 +18,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(ProjectDir)obj\$(ConfigurationName)"
+			IntermediateDirectory="$(ProjectDir)obj\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -60,6 +60,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="$(NoInherit);libtiff.lib"
+				OutputFile="$(ProjectDir)bin\$(ConfigurationName)\$(ProjectName).dll"
 				LinkIncremental="2"
 				DelayLoadDLLs="libtiff.dll"
 				GenerateDebugInformation="true"
@@ -90,8 +91,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(ProjectDir)obj\$(ConfigurationName)"
+			IntermediateDirectory="$(ProjectDir)obj\$(ConfigurationName)"
 			ConfigurationType="2"
 			CharacterSet="1"
 			ManagedExtensions="1"
@@ -132,6 +133,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="$(NoInherit);libtiff.lib"
+				OutputFile="$(ProjectDir)bin\$(ConfigurationName)\$(ProjectName).dll"
 				LinkIncremental="1"
 				DelayLoadDLLs="libtiff.dll"
 				GenerateDebugInformation="true"
