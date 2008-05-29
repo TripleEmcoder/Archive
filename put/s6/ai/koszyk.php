@@ -7,25 +7,6 @@ require_once('naglowek.php');
 ?>
 <div id='wyniki'>
 <?
-if (is_array($_POST['removes']))
-{
-	//ponizsza linijka jest 100% recepta na segfault
-	//$removes = filter_var_array(array_keys($_POST['removes']), FILTER_VALIDATE_INT);
-	
-	$removes = array_keys($_POST['removes']);
-	$removes = filter_var_array($removes, FILTER_VALIDATE_INT);
-
- 	foreach ($removes as $remove)
-	{
-		$remove = array_search($remove, $basket);
-
-		if ($remove !== false && isset($basket[$remove]))
-			unset($basket[$remove]);
-	}
-	
-	$basket = array_values($basket);
-}
-
 if (count($basket) == 0)
 {
 ?>
@@ -41,7 +22,7 @@ else
 
 	$query->execute($parameters);
 ?>
-<form action='' method='post'>
+<form action='usun.php' method='post'>
 <table>
 	<tr>
 		<th>Tytuł</th>
@@ -53,7 +34,7 @@ else
 		print("<tr>\n");
 		print("<td><a href='szczegoly.php?id=$film->film_id'>$film->title</a></td>\n");
 		print("<td>$film->release_year</td>\n");
-		print("<td><input type='submit' name='removes[$film->film_id]' value='Usuń z koszyka' />\n");
+		print("<td><input type='submit' name='removes[$film->film_id]' value='Usuń z koszyka'>\n");
 
 		if ($film->reservations > 0 )
 				print("<td class='error'>Film jest już zarezerwowany.</td>\n");
@@ -63,8 +44,8 @@ else
 ?>
 </table>
 </form>
-<form action='rezerwuj2.php' method='post'>
-<p><input type='submit' name='reserve' value='Rezerwuj koszyk' /></p>
+<form action='rezerwuj.php' method='post'>
+<p><input type='submit' name='reserve' value='Rezerwuj koszyk'></p>
 </form>
 <?
 }

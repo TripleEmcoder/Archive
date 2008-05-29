@@ -60,7 +60,7 @@ function prepare_query($name)
 function get_film_count_by_keyword($keyword)
 {
 	$query = prepare_query('query_select_film_count_by_keyword');
-	$query->execute(array(':keyword' => $keyword));
+	$query->execute(array(':keyword' => mysql_escape_like_string($keyword)));
 	$result = $query->fetchColumn(0);
 	$query->closeCursor();
 	
@@ -112,6 +112,12 @@ function set_reservation_by_film_id($id)
 		':browser' => $_SERVER['HTTP_USER_AGENT']
 	));
 }
+
+function mysql_escape_like_string($text)
+{
+	return str_replace(array('\\', '%', '_'), array('\\\\', '\\%', '\\_'), $text);
+}
+
 
 session_start();
 

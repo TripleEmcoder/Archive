@@ -2,18 +2,31 @@
 require_once('prolog.php');
 
 $submit = isset($_POST['reserve']);
-$id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
-function is_reservation_allowed($id)
+if ($submit)
 {
-	return get_reservation_count_by_film_id($id) == 0
-		&& get_reservation_count_by_user() + count($basket) < 3;
+	try
+	{
+		$database->beginTransaction();
+	
+		foreach ($basket as $id)
+		{
+			//if (get_reservation_count_by_film_id($id) > 0)
+			//	throw new Exception();
+				
+			set_reservation_by_film_id($id);
+		}
+	
+		$database->commit();
+		$basket = array();
+	}
+	catch(Exception $exception)
+	{
+		$database->rollback();
+	}
 }
-
-if ($submit && $id && is_reservation_allowed($id))
-		$basket[] = $id;
 
 require_once('epilog.php');
 
-header("Location: szczegoly.php?id=$id");
+header("Location: koszyk.php");
 ?>

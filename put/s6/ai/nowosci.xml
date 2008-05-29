@@ -5,77 +5,83 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="urn:inf75922-s6-ai nowosci.xsd">
   
-  <dystrybutor nazwa="Gutek Film">
+  <dystrybutor nazwa="UIP">
     <nowosci>
       <film>
-        <tytul>Once</tytul>
-        <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
-        <gatunek>komedio-dramat</gatunek>
-        <premiera>2008-03-28</premiera>
-        <rezyser>John Carney</rezyser>
+        <tytul>Indiana Jones i Królestwo Kryształowej Czaszki</tytul>
+        <tytul_oryginalny>Indiana Jones and the Kingdom of the Crystal Skull</tytul_oryginalny>
+        <opis>Najnowsza seria przygód z jego udziałem rozpoczyna się na pustynnym południowym-wschodzie w 1957 roku – w samym apogeum Zimnej Wojny.  Indiana i jego towarzysz Mac właśnie wymknęli się z rąk sowieckich agentów i wracają do domu. Wkrótce potem Indiana Jones dowiaduje się od dziekana swojej macierzystej uczelni – Marshall College – i bliskiego przyjaciela, że jego ostatnie wyczyny nie spodobały się przedstawicielom rządu, którzy naciskają na władze uniwersytetu, aby te usunęły profesora Jonesa z uczelni. Wyjeżdżając z miasta, Indiana spotyka zbuntowanego młodego człowieka Mutta (Shia LaBeouf), który mimo tego, że żywi do profesora sporą urazę, ma też propozycję, która może spodobać się żądnemu przygód archeologowi: jeśli pomoże on Muttowi w pewnej osobistej sprawie, chłopak naprowadzi go na ślad Kryształowej Czaszki z Aktor, legendarnego przedmiotu fascynacji, przesądów i lęków.</opis>
+        <gatunek>Przygodowy</gatunek>
+        <premiera>2008-05-22</premiera>
+        <rezyser>Steven Spielberg</rezyser>
         <obsada>
           <rola>
-            <nazwa>Muzyk</nazwa>
-            <aktor>Glen Hansard</aktor>
+            <nazwa>Indiana Jones</nazwa>
+            <aktor>Harrison Ford</aktor>
           </rola>
           <rola>
-            <nazwa>Dziewczyna</nazwa>
-            <aktor>Marketa Irglova</aktor>
-          </rola>
-        </obsada>
-      </film>
-      <film>
-        <tytul>Bounce</tytul>
-        <tytul_oryginalny>Bounce</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
-        <gatunek>komedio-dramat</gatunek>
-        <premiera>2008-03-28</premiera>
-        <rezyser>John Carney</rezyser>
-        <obsada>
-          <rola>
-            <nazwa>Muzyk</nazwa>
-            <aktor>Glen Hansard</aktor>
+            <nazwa>Mutt Williams</nazwa>
+            <aktor>Shia LaBeouf</aktor>
           </rola>
           <rola>
-            <nazwa>Dziewczyna</nazwa>
-            <aktor>Marketa Irglova</aktor>
+            <nazwa>Agentka Irina Spalko</nazwa>
+            <aktor>Cate Blanchett</aktor>
+          </rola>
+          <rola>
+            <nazwa>Profesor Oxley</nazwa>
+            <aktor>John Hurt</aktor>
+          </rola>
+          <rola>
+            <nazwa>Dziekan Stanforth</nazwa>
+            <aktor>Jim Broadbent</aktor>
+          </rola>
+          <rola>
+            <nazwa>Mac</nazwa>
+            <aktor>Ray Winstone</aktor>
           </rola>
         </obsada>
       </film>
     </nowosci>
   </dystrybutor>
   
-  <dystrybutor nazwa="Ziutek Film">
+  <dystrybutor nazwa="Vision">
     <nowosci>
       <film>
-        <tytul>Once</tytul>
-        <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
-        <gatunek>komedio-dramat</gatunek>
-        <premiera>2008-03-28</premiera>
-        <rezyser>John Carney</rezyser>
+        <tytul>Nawiedzona narzeczona</tytul>
+        <tytul_oryginalny>Over Her Dead Body</tytul_oryginalny>
+        <opis>Piękna Kate jest niezwykle wymagającą kobietą, która kontroluje wszystko i wszystkich wokół. Czepia się najdrobniejszych szczegółów. Wspólnie z narzeczonym zaplanowali ślub. Henry, który jest weterynarzem, przy pracy ze zwierzętami nauczył się cierpliwości i tylko on jest w stanie uspokoić Kate podczas szału przedślubnych przygotowań. Wygląda na to, że są dla siebie stworzeni.</opis>
+        <gatunek>Komedia/Fantasy/Romans</gatunek>
+        <premiera>2008-05-16</premiera>
+        <rezyser>Jeff Lowell</rezyser>
       </film>
     </nowosci>
   </dystrybutor>
   
-  <dystrybutor nazwa="Lutek Film">
+  <dystrybutor nazwa="CinePix">
     <nowosci>
       <film>
-        <tytul>Once</tytul>
-        <tytul_oryginalny>Once</tytul_oryginalny>
-        <opis>Prosta, klasyczna historia o dwójce zakochanych artystów. Skromny film, pełen naturalnego uroku, irlandzkiego klimatu, muzyki i wietrznej pogody...</opis>
-        <gatunek>komedio-dramat</gatunek>
-        <premiera>2008-03-28</premiera>
-        <rezyser>John Carney</rezyser>
+        <tytul>Shutter - Widmo</tytul>
+        <tytul_oryginalny>Shutter</tytul_oryginalny>
+        <opis>Thriller psychologiczny, amerykańska wersja jednego z najsłynniejszych azjatyckich filmów grozy ostatnich lat. Mieszkająca w Tokio para młodych Amerykanów odkrywa, że na zdjęciach, które robi, pojawiają się niesamowite postaci przypominające duchy... W rolach głównych: Joshua Jackson ("Ulice strachu", "Szkoła uwodzenia") i Rachael Taylor ("Transformers"). Reżyseria: Masayuki Ochiai ("Infekcja").</opis>
+        <gatunek>Horror/Thriller</gatunek>
+        <premiera>2008-05-16</premiera>
+        <rezyser>Masayuki Ochiai</rezyser>
+      </film>
+      <film>
+        <tytul>Co się zdarzyło w Las Vegas</tytul>
+        <tytul_oryginalny>What Happens in Vegas...</tytul_oryginalny>
+        <opis>Akcja filmu rozgrywa się w światowej stolicy hazardu - Las Vegas. Pewna para po bardzo udanym wieczorze, następnego dnia odkrywa, iż weszła w stan małżeński. To o tyle kłopotliwa sytuacja, iż jedno z nich z pomocą drugiego wygrało sporo pieniędzy. Teraz bohaterowie starają się "sprawiedliwie" podzielić majątek w stosunku: wszystko dla jednego, nic dla drugiego.</opis>
+        <gatunek>Komedia</gatunek>
+        <premiera>2008-05-09</premiera>
+        <rezyser>Tom Vaughan</rezyser>
         <obsada>
           <rola>
-            <nazwa>Muzyk</nazwa>
-            <aktor>Glen Hansard</aktor>
+            <nazwa>Joy McNally</nazwa>
+            <aktor>Cameron Diaz</aktor>
           </rola>
           <rola>
-            <nazwa>Dziewczyna</nazwa>
-            <aktor>Marketa Irglova</aktor>
+            <nazwa>Jack Fuller</nazwa>
+            <aktor>Ashton Kutcher</aktor>
           </rola>
         </obsada>
       </film>

@@ -58,7 +58,7 @@ function validateDescription(element)
 
 function validateProblem(form)
 {
-  var email = validateEmail(form.elements['email']);
+	var email = validateEmail(form.elements['email']);
 	var reason = validateReason(form.elements['reason']);
 	var description = validateDescription(form.elements['description']);
 	
@@ -67,13 +67,14 @@ function validateProblem(form)
 
 function updateLimit(element)
 {
+	element.value = element.value.substring(0, 50);
 	document.getElementById(element.id + '_limit').innerHTML = 50 - element.value.length;
 }
 </script>
 <form action='' method='post' onsubmit='return validateProblem(this)'>
 
 <h2>E-mail</h2>
-<p><input id='email' name='email' type='text' onblur='validateEmail(this)' value='<?=$_POST['email']?>' /></p>
+<p><input id='email' name='email' type='text' onblur='validateEmail(this)' value='<?=$_POST['email']?>'></p>
 <div id='email_error' class='error' style='display: <?=$submit && !$email ? 'block' : 'none'?>'>Niepoprawny adres e-mail.</div>
 
 <h2>Powód</h2>
@@ -89,11 +90,11 @@ foreach ($reasons as $key => $name)
 <div id='reason_error' class='error' style='display: <?=$submit && !$reason ? 'block' : 'none'?>'>Nie wybrano powódu.</div>
 
 <h2>Opis</h2>
-<p><textarea id='description' name='description' onblur='validateDescription(this)' onkeyup='updateLimit(this)' rows='10' cols='30'><?=$_POST['description']?></textarea></p>
+<p><textarea id='description' name='description' onblur='validateDescription(this)' onkeypress='updateLimit(this)' onkeyup='updateLimit(this)' rows='10' cols='30'><?=$_POST['description']?></textarea></p>
 <div id='description_error' class='error' style='display: <?=$submit && !$description ? 'block' : 'none'?>'>Nie opisano problemu.</div>
-<div id='description_hint' class='hint'>Pozostało <span id='description_limit'></span> znaków.</div>
+<div id='description_hint' class='hint'>Pozostało <span id='description_limit'></span>&nbsp;znaków.</div>
 
-<p><input type='submit' name='submit' value='Wyślij' /></p>
+<p><input type='submit' name='submit' value='Wyślij'></p>
 </form>
 <script type='text/javascript'>
 updateLimit(document.getElementById('description'));

@@ -10,8 +10,8 @@ require_once('naglowek.php');
 <h2>Nazwa</h2>
 <form action=''>
 <p>
-	<input type='text' name='keyword' />
-	<input type='submit' value='Szukaj' />
+	<input type='text' name='keyword'>
+	<input type='submit' value='Szukaj'>
 </p>
 </form>
 <?
@@ -32,7 +32,7 @@ if ($submit)
 </tr>
 <?
 		$query = prepare_query('query_select_film_basics_by_keyword');
-		$query->execute(array(':keyword' => $keyword));
+		$query->execute(array(':keyword' => mysql_escape_like_string($keyword)));
 		
 		while ($film = $query->fetchObject())
 		{

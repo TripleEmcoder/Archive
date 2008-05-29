@@ -28,7 +28,7 @@ td, th
 th
 {
 	text-align: center;
-	background: plum;
+	background-color: plum;
 	font-weight: bold;
 }
 
@@ -53,15 +53,15 @@ h2
 
 #naglowek
 {
-	background: plum;
+	background-color: plum;
 }
 
 #tresc
 {
-	background: lavender;
+	background-color: lavender;
 }
 
 #stopka
 {
-	background: plum;
+	background-color: plum;
 }

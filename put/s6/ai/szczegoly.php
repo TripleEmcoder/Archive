@@ -67,7 +67,7 @@ else if (get_reservation_count_by_user() + count($basket) == 3)
 else 
 {
 ?>
-<form action='rezerwuj.php?id=<?=$id?>' method='post'>
+<form action='dodaj.php?id=<?=$id?>' method='post'>
 <input type='submit' name='reserve' value='Dodaj do koszyka' />
 </form>
 <?
