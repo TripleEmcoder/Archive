@@ -19,14 +19,16 @@ if ($submit)
 	
 		$database->commit();
 		$basket = array();
+		$result = 'sukces.php';
 	}
 	catch(Exception $exception)
 	{
 		$database->rollback();
+		$result = 'koszyk.php';
 	}
 }
 
 require_once('epilog.php');
 
-header("Location: koszyk.php");
+header("Location: $result");
 ?>

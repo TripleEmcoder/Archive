@@ -36,7 +36,7 @@ function setErrorDisplay(element, display)
 
 function validateEmail(element)
 {
-	var regex = /^[a-zA-Z0-9\.\_\-\+]+@([a-zA-Z0-9\_\-]+\.)+[a-zA-Z]+$/;
+	var regex = /^[a-zA-Z0-9\.\_\-\+]+@([a-zA-Z0-9\_\-]+\.)+[a-zA-Z]{2,}$/;
 	var valid = regex.test(element.value);
 	setErrorDisplay(element, !valid);
 	return valid;
