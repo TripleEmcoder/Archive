@@ -1,126 +1,140 @@
-﻿/// <reference path="VirtualEarthtIntelliSense.js" />
+﻿/// <reference name="MicrosoftAjax.js"/>
+/// <reference path="VirtualEarthtIntelliSense.js" />
 
-var DrawModes = { None:0, DrawPolyline:1, DrawPolygon:2 };
-
-function CreateTemporaryShape(drawMode, points)
+function setup()
 {
-    var shapeType = VEShapeType.Pushpin;
+    var polylineToggleButton = $find(polylineToggleButtonId);
+    polylineToggleButton.add_start(function() { alert("start"); });
+    polylineToggleButton.add_stop(function() { alert("stop"); });
     
-    if (points.length > 1)
-    {
-        switch(drawMode)
-        {
-            case DrawModes.DrawPolyline:
-            case DrawModes.DrawPolygon:
-                shapeType = VEShapeType.Polyline;
-        }
-    }
-
-    var shape = new VEShape(shapeType, points);
-    shape.SetLineColor(new VEColor(255, 0, 0, 1));
-    
-    if (shapeType != VEShapeType.Pushpin)
-        shape.HideIcon();
-
-    return shape;
+    var polygonToggleButton = $find(polygonToggleButtonId);
+    polygonToggleButton.add_start(function() { alert("start"); });
+    polygonToggleButton.add_stop(function() { alert("stop"); });
 }
 
-function CreatePernamentShape(drawMode, points)
-{
-    var shapeType = VEShapeType.Pushpin;
+Sys.Application.add_load(setup);
 
-    if (points.length > 1)
-    {
-        switch(drawMode)
-        {
-            case DrawModes.DrawPolyline:
-                shapeType = VEShapeType.Polyline;
-                break;
-                
-            case DrawModes.DrawPolygon:
-                shapeType = VEShapeType.Polygon;
-                break;
-        }
-    }
+//var DrawModes = { None:0, DrawPolyline:1, DrawPolygon:2 };
 
-    var shape = new VEShape(shapeType, points);
-    shape.SetLineColor(new VEColor(0, 255, 0, 1));
-    shape.SetFillColor(new VEColor(0, 255, 0, 0.3));
-    
-    if (shapeType != VEShapeType.Pushpin)
-        shape.HideIcon();
-        
-    return shape;
-}
+//function CreateTemporaryShape(drawMode, points)
+//{
+//    var shapeType = VEShapeType.Pushpin;
+//    
+//    if (points.length > 1)
+//    {
+//        switch(drawMode)
+//        {
+//            case DrawModes.DrawPolyline:
+//            case DrawModes.DrawPolygon:
+//                shapeType = VEShapeType.Polyline;
+//        }
+//    }
 
-function PageLoad()
-{
-    var 
-    var map = new VEMap("map");
+//    var shape = new VEShape(shapeType, points);
+//    shape.SetLineColor(new VEColor(255, 0, 0, 1));
+//    
+//    if (shapeType != VEShapeType.Pushpin)
+//        shape.HideIcon();
 
-    var drawPolylineButton = document.getElementById("drawPolylineButton");
-    var drawPolygonButton = document.getElementById("drawPolygonButton");
-    
-    var drawMode = DrawModes.None;
-    var points = [];
-    var shape = null;
-    
-    map.AttachEvent("onclick", function(e)
-    {
-        if (drawMode != DrawModes.None)
-        {
-            var position = map.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
-            
-            points.push(position);
-            
-            if (shape != null)
-                map.DeleteShape(shape);
+//    return shape;
+//}
 
-            shape = CreateTemporaryShape(drawMode, points);
-            map.AddShape(shape);
-        }
-    });
-   
-   var ToggleShapeDrawing = function(button)
-    {
-        if (drawMode == DrawModes.None)
-        {
-            button.innerHTML = button.activeHTML;
-            drawMode = button.drawMode;
-        }
-        else
-        {
-            button.innerHTML = button.inactiveHTML;;
-            
-            if (shape != null)
-                map.DeleteShape(shape);
-                
-            if (points.length > button.minPointCount)
-                map.AddShape(CreatePernamentShape(drawMode, points));
+//function CreatePernamentShape(drawMode, points)
+//{
+//    var shapeType = VEShapeType.Pushpin;
 
-            drawMode = DrawModes.None;
-            points = [];                
-            shape = null;
-        }
-    }
-       
-    drawPolylineButton.drawMode = DrawModes.DrawPolyline;
-    drawPolylineButton.minPointCount = 2;
-    drawPolylineButton.inactiveHTML =  "Draw Polyline";
-    drawPolylineButton.activeHTML = "End Polyline Drawing";
-    drawPolylineButton.innerHTML = drawPolylineButton.inactiveHTML;
-    drawPolylineButton.onclick = function() { ToggleShapeDrawing(drawPolylineButton); };
-    
-    drawPolygonButton.drawMode = DrawModes.DrawPolygon;
-    drawPolygonButton.minPointCount = 2;
-    drawPolygonButton.inactiveHTML =  "Draw Polygon";
-    drawPolygonButton.activeHTML = "End Polygon Drawing";
-    drawPolygonButton.innerHTML = drawPolygonButton.inactiveHTML;
-    drawPolygonButton.onclick = function() { ToggleShapeDrawing(drawPolygonButton); };
-    
-    //map.HideDashboard();
-    map.LoadMap();
-    map.SetZoomLevel(1);
-}
+//    if (points.length > 1)
+//    {
+//        switch(drawMode)
+//        {
+//            case DrawModes.DrawPolyline:
+//                shapeType = VEShapeType.Polyline;
+//                break;
+//                
+//            case DrawModes.DrawPolygon:
+//                shapeType = VEShapeType.Polygon;
+//                break;
+//        }
+//    }
 
-window.onload = PageLoad;
+//    var shape = new VEShape(shapeType, points);
+//    shape.SetLineColor(new VEColor(0, 255, 0, 1));
+//    shape.SetFillColor(new VEColor(0, 255, 0, 0.3));
+//    
+//    if (shapeType != VEShapeType.Pushpin)
+//        shape.HideIcon();
+//        
+//    return shape;
+//}
+
+//function PageLoad()
+//{
+//    var 
+//    var map = new VEMap("map");
+
+//    var drawPolylineButton = document.getElementById("drawPolylineButton");
+//    var drawPolygonButton = document.getElementById("drawPolygonButton");
+//    
+//    var drawMode = DrawModes.None;
+//    var points = [];
+//    var shape = null;
+//    
+//    map.AttachEvent("onclick", function(e)
+//    {
+//        if (drawMode != DrawModes.None)
+//        {
+//            var position = map.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
+//            
+//            points.push(position);
+//            
+//            if (shape != null)
+//                map.DeleteShape(shape);
+
+//            shape = CreateTemporaryShape(drawMode, points);
+//            map.AddShape(shape);
+//        }
+//    });
+//   
+//   var ToggleShapeDrawing = function(button)
+//    {
+//        if (drawMode == DrawModes.None)
+//        {
+//            button.innerHTML = button.activeHTML;
+//            drawMode = button.drawMode;
+//        }
+//        else
+//        {
+//            button.innerHTML = button.inactiveHTML;;
+//            
+//            if (shape != null)
+//                map.DeleteShape(shape);
+//                
+//            if (points.length > button.minPointCount)
+//                map.AddShape(CreatePernamentShape(drawMode, points));
+
+//            drawMode = DrawModes.None;
+//            points = [];                
+//            shape = null;
+//        }
+//    }
+//       
+//    drawPolylineButton.drawMode = DrawModes.DrawPolyline;
+//    drawPolylineButton.minPointCount = 2;
+//    drawPolylineButton.inactiveHTML =  "Draw Polyline";
+//    drawPolylineButton.activeHTML = "End Polyline Drawing";
+//    drawPolylineButton.innerHTML = drawPolylineButton.inactiveHTML;
+//    drawPolylineButton.onclick = function() { ToggleShapeDrawing(drawPolylineButton); };
+//    
+//    drawPolygonButton.drawMode = DrawModes.DrawPolygon;
+//    drawPolygonButton.minPointCount = 2;
+//    drawPolygonButton.inactiveHTML =  "Draw Polygon";
+//    drawPolygonButton.activeHTML = "End Polygon Drawing";
+//    drawPolygonButton.innerHTML = drawPolygonButton.inactiveHTML;
+//    drawPolygonButton.onclick = function() { ToggleShapeDrawing(drawPolygonButton); };
+//    
+//    //map.HideDashboard();
+//    map.LoadMap();
+//    map.SetZoomLevel(1);
+//}
+
+//window.onload = PageLoad;

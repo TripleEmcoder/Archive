@@ -23,31 +23,40 @@ namespace Frontend {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// DrawPolylineButton control.
+        /// PolylineButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton DrawPolylineButton;
+        protected global::System.Web.UI.HtmlControls.HtmlButton PolylineButton;
         
         /// <summary>
-        /// DrawPolygonButton control.
+        /// PolylineToggleButtonExtenderControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton DrawPolygonButton;
+        protected global::Utility.ToggleButtonExtenderControl PolylineToggleButtonExtenderControl;
         
         /// <summary>
-        /// DrawPolylineButtonExtenderControl control.
+        /// PolygonButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Utility.ToggleButtonExtenderControl DrawPolylineButtonExtenderControl;
+        protected global::System.Web.UI.HtmlControls.HtmlButton PolygonButton;
+        
+        /// <summary>
+        /// PolygonToggleButtonExtenderControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Utility.ToggleButtonExtenderControl PolygonToggleButtonExtenderControl;
         
         /// <summary>
         /// ImagePanel control.

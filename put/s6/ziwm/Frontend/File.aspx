@@ -13,9 +13,6 @@
     ID="HeadContent"
     runat="server"
     ContentPlaceHolderID="HeadContentPlaceHolder">
-    <script
-        type="text/javascript"
-        src="Web.config.js"></script>
 </asp:Content>
 <asp:Content
     ID="MainContent"
@@ -25,34 +22,52 @@
         ID="ScriptManager1"
         runat="server"
         ScriptMode="Auto">
+        <Scripts>
+            <asp:ScriptReference
+                Path="~/Web.config.js" />
+            <asp:ScriptReference
+                Path="~/File.aspx.js" />
+        </Scripts>
         <Services>
             <asp:ServiceReference
-                Path="~/File.asmx" InlineScript="True" />
+                Path="~/File.asmx"
+                InlineScript="True" />
         </Services>
     </asp:ScriptManager>
     <div
         id="toolbar">
         <button
-            ID="DrawPolylineButton"
+            id="PolylineButton"
             runat="server">
         </button>
+        <ziwm:ToggleButtonExtenderControl
+            ID="PolylineToggleButtonExtenderControl"
+            runat="server"
+            StartText="Start Drawing Polyline"
+            StopText="Stop Drawing Polyline"
+            TargetControlID="PolylineButton" />
         <button
-            ID="DrawPolygonButton"
+            id="PolygonButton"
             runat="server">
         </button>
-        <button id="drawPolylineButton"></button>
-        <ziwm:ToggleButtonExtenderControl ID="DrawPolylineButtonExtenderControl" 
-            runat="server" StartText="start" StopText="stop" TargetControlID="DrawPolylineButton" />
+        <ziwm:ToggleButtonExtenderControl
+            ID="PolygonToggleButtonExtenderControl"
+            runat="server"
+            StartText="Start Drawing Polygon"
+            StopText="Stop Drawing Polygon"
+            TargetControlID="PolygonButton" />
     </div>
-    <asp:Panel ID="ImagePanel" runat="server">
+    <asp:Panel
+        ID="ImagePanel"
+        runat="server">
     </asp:Panel>
-    <ziwm:VirtualEarthExtenderControl runat="server" TargetControlID="ImagePanel" ID="ImageVirtualEarthExtenderControl" />
-    <script type="text/javascript">   
-    function pageLoad() 
-    {      
-       var drawPolylineButton = $find("<%= DrawPolylineButton.ClientID %>");
-       drawPolylineButton.add_start(function(){alert("start");});
-       drawPolylineButton.add_stop(function(){alert("stop");});
-    }   
-</script> 
+    <ziwm:VirtualEarthExtenderControl
+        runat="server"
+        TargetControlID="ImagePanel"
+        ID="ImageVirtualEarthExtenderControl" />
+    <script
+        type="text/javascript">
+            var polylineToggleButtonId = "<%= PolylineButton.ClientID %>"; 
+            var polygonToggleButtonId = "<%= PolygonButton.ClientID %>"; 
+    </script>
 </asp:Content>
