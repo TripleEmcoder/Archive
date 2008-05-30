@@ -7,6 +7,9 @@ Utility.VirtualEarthClientControl = function(element)
 {
     Utility.VirtualEarthClientControl.initializeBase(this, [element]);
     this._instance = null;
+    this._initialLongitude = 0.0;   
+    this._initialLatitude = 0.0;   
+    this._initialZoomLevel = 1; 
 }
 
 Utility.VirtualEarthClientControl.prototype = 

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Configuration;
 using System.Linq;
+using System.Security.Permissions;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -17,6 +19,7 @@ using System.Xml.Linq;
 namespace Utility
 {
     [TargetControlType(typeof(Panel))]
+    [Designer(typeof(VirtualEarthExtenderControlDesigner))]
     public class VirtualEarthExtenderControl : ExtenderControl
     {
         private T GetViewStateValue<T>(string name, T value)

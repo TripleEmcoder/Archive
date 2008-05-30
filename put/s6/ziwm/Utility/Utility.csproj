@@ -36,6 +36,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -54,10 +55,14 @@
     <Compile Include="FileSystemSiteMapProvider.cs" />
     <Compile Include="ISiteMapNodeDescriptionProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToggleButtonExtenderControl.cs" />
+    <Compile Include="ToggleButtonExtenderControlDesigner.cs" />
     <Compile Include="VirtualEarthExtenderControl.cs" />
+    <Compile Include="VirtualEarthExtenderControlDesigner.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="VirtualEarthApi.js" />
+    <EmbeddedResource Include="ToggleButtonClientControl.js" />
     <Content Include="VirtualEarthApiIntelliSense.js" />
     <EmbeddedResource Include="VirtualEarthClientControl.js" />
   </ItemGroup>

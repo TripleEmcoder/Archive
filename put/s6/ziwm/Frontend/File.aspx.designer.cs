@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using VirtualEarthExtenderControl=Utility.VirtualEarthExtenderControl;
-
 namespace Frontend {
     
     
@@ -23,6 +21,33 @@ namespace Frontend {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// DrawPolylineButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton DrawPolylineButton;
+        
+        /// <summary>
+        /// DrawPolygonButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton DrawPolygonButton;
+        
+        /// <summary>
+        /// DrawPolylineButtonExtenderControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Utility.ToggleButtonExtenderControl DrawPolylineButtonExtenderControl;
         
         /// <summary>
         /// ImagePanel control.
@@ -40,6 +65,6 @@ namespace Frontend {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
+        protected global::Utility.VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
     }
 }
