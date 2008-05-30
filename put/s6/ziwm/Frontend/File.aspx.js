@@ -1,5 +1,4 @@
 ﻿/// <reference path="VirtualEarthtIntelliSense.js" />
-/// <reference path="~/File.asmx/js" />
 
 var DrawModes = { None:0, DrawPolyline:1, DrawPolygon:2 };
 
@@ -22,7 +21,7 @@ function CreateTemporaryShape(drawMode, points)
     
     if (shapeType != VEShapeType.Pushpin)
         shape.HideIcon();
-        
+
     return shape;
 }
 
@@ -56,6 +55,7 @@ function CreatePernamentShape(drawMode, points)
 
 function PageLoad()
 {
+    var 
     var map = new VEMap("map");
 
     var drawPolylineButton = document.getElementById("drawPolylineButton");
