@@ -1,19 +1,19 @@
 ﻿/// <reference name="MicrosoftAjax.js"/>
 /// <reference path="VirtualEarthApiIntelliSense.js" />
 
-Type.registerNamespace("Frontend");
+Type.registerNamespace("Utility");
 
-Frontend.VirtualEarthClientControl = function(element)
+Utility.VirtualEarthClientControl = function(element)
 {
-    Frontend.VirtualEarthClientControl.initializeBase(this, [element]);
+    Utility.VirtualEarthClientControl.initializeBase(this, [element]);
     this._instance = null;
 }
 
-Frontend.VirtualEarthClientControl.prototype = 
+Utility.VirtualEarthClientControl.prototype = 
 {
     initialize: function()
     {
-        Frontend.VirtualEarthClientControl.callBaseMethod(this, 'initialize');
+        Utility.VirtualEarthClientControl.callBaseMethod(this, 'initialize');
         
         this._instance = new VEMap(this.get_element().id);
         this._instance.onLoadMap = Function.createDelegate(this, onLoadComplete);   
@@ -30,7 +30,7 @@ Frontend.VirtualEarthClientControl.prototype =
     
     dispose: function()
     {
-        Frontend.VirtualEarthClientControl.callBaseMethod(this, 'dispose');
+        Utility.VirtualEarthClientControl.callBaseMethod(this, 'dispose');
     },
     
     get_initialLatitude : function()
@@ -73,6 +73,6 @@ Frontend.VirtualEarthClientControl.prototype =
     },    
 }
 
-Frontend.VirtualEarthClientControl.registerClass('Frontend.VirtualEarthClientControl', Sys.UI.Control);
+Utility.VirtualEarthClientControl.registerClass('Utility.VirtualEarthClientControl', Sys.UI.Control);
 
 if (typeof(Sys) !== 'undefined') Sys.Application.notifyScriptLoaded();

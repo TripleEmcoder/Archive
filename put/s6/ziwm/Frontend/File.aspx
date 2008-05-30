@@ -7,8 +7,8 @@
     Title="Untitled Page" %>
 <%@ Register
     TagPrefix="ziwm"
-    Namespace="Frontend"
-    Assembly="Frontend" %>
+    Namespace="Utility"
+    Assembly="Utility" %>
 <asp:Content
     ID="HeadContent"
     runat="server"

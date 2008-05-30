@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using VirtualEarthExtenderControl=Utility.VirtualEarthExtenderControl;
+
 namespace Frontend {
     
     
@@ -38,6 +40,6 @@ namespace Frontend {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Frontend.VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
+        protected VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
     }
 }

@@ -37,6 +37,9 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -51,6 +54,12 @@
     <Compile Include="FileSystemSiteMapProvider.cs" />
     <Compile Include="ISiteMapNodeDescriptionProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VirtualEarthExtenderControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VirtualEarthApi.js" />
+    <Content Include="VirtualEarthApiIntelliSense.js" />
+    <EmbeddedResource Include="VirtualEarthClientControl.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

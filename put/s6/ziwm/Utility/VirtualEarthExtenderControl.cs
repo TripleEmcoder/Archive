@@ -11,7 +11,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-namespace Frontend
+[assembly: WebResource("Utility.VirtualEarthApi.js", "application/x-javascript")]
+[assembly: WebResource("Utility.VirtualEarthClientControl.js", "application/x-javascript")]
+
+namespace Utility
 {
     [TargetControlType(typeof(Panel))]
     public class VirtualEarthExtenderControl : ExtenderControl
@@ -42,7 +45,7 @@ namespace Frontend
         protected override IEnumerable<ScriptDescriptor> GetScriptDescriptors(Control targetControl)
         {
             ScriptControlDescriptor descriptor = new
-                 ScriptControlDescriptor("Frontend.VirtualEarthClientControl", targetControl.ClientID);
+                ScriptControlDescriptor("Utility.VirtualEarthClientControl", targetControl.ClientID);
 
             descriptor.AddProperty("initialLatitude", InitialLatitude);
             descriptor.AddProperty("initialLongitude", InitialLongitude);
@@ -53,8 +56,8 @@ namespace Frontend
 
         protected override IEnumerable<ScriptReference> GetScriptReferences()
         {
-            yield return new ScriptReference(Page.ResolveClientUrl("~/VirtualEarthApi.js"));
-            yield return new ScriptReference(Page.ResolveClientUrl("~/VirtualEarthClientControl.js"));
+            yield return new ScriptReference("Utility.VirtualEarthApi.js", "Utility");
+            yield return new ScriptReference("Utility.VirtualEarthClientControl.js", "Utility");
         }
     }
 }
