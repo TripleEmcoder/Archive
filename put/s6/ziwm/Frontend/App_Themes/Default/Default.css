@@ -23,15 +23,3 @@ div#menu
 	float: left;
 }
 
-div#map
-{
-	position: relative;
-}
-
-div#toolbar
-{
-	position: relative;
-	top: 0px;
-	left: 0px;
-}
-

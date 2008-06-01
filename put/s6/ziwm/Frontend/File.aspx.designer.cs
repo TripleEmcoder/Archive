@@ -23,6 +23,15 @@ namespace Frontend {
         protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
+        /// PushpinToggleButtonExtenderControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Utility.ToggleButtonExtenderControl PushpinToggleButtonExtenderControl;
+        
+        /// <summary>
         /// PolylineToggleButtonExtenderControl control.
         /// </summary>
         /// <remarks>
@@ -50,22 +59,31 @@ namespace Frontend {
         protected global::Utility.VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
         
         /// <summary>
-        /// AnnotationTableExtenderControl control.
+        /// AnnotationListExtenderControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Frontend.AnnotationTableExtenderControl AnnotationTableExtenderControl;
+        protected global::Frontend.AnnotationListExtenderControl AnnotationListExtenderControl;
         
         /// <summary>
-        /// Toolbar control.
+        /// ToolbarPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Toolbar;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ToolbarPanel;
+        
+        /// <summary>
+        /// PushpinButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton PushpinButton;
         
         /// <summary>
         /// PolylineButton control.
@@ -86,22 +104,22 @@ namespace Frontend {
         protected global::System.Web.UI.HtmlControls.HtmlButton PolygonButton;
         
         /// <summary>
-        /// Image control.
+        /// ImagePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Image;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImagePanel;
         
         /// <summary>
-        /// AnnotationTable control.
+        /// AnnotationList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable AnnotationTable;
+        protected global::System.Web.UI.HtmlControls.HtmlTable AnnotationList;
         
         /// <summary>
         /// AnnotationEditor control.
@@ -110,33 +128,51 @@ namespace Frontend {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AnnotationEditor;
+        protected global::System.Web.UI.HtmlControls.HtmlTable AnnotationEditor;
         
         /// <summary>
-        /// AnnotationEditorTitleInput control.
+        /// AnnotationTitleInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText AnnotationEditorTitleInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText AnnotationTitleInput;
         
         /// <summary>
-        /// AnnotationEditorSaveButton control.
+        /// AnnotationDescriptionInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationEditorSaveButton;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea AnnotationDescriptionInput;
         
         /// <summary>
-        /// AnnotationEditorCancelButton control.
+        /// AnnotationSaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationEditorCancelButton;
+        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationSaveButton;
+        
+        /// <summary>
+        /// AnnotationCancelButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationCancelButton;
+        
+        /// <summary>
+        /// AnnotationDeleteButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationDeleteButton;
     }
 }

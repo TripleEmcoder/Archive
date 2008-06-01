@@ -11,6 +11,9 @@ Utility.VirtualEarthClientControl = function(element)
     this._initialLatitude = 0;   
     this._initialZoomLevel = 0;
     this._onClickDelegate = null;
+    this._drawingShapeType = null;
+    this._drawingPoints = [];
+    this._drawingShape = null;
 }
 
 Utility.VirtualEarthClientControl.prototype = 
@@ -23,6 +26,7 @@ Utility.VirtualEarthClientControl.prototype =
         
         this._instance = new VEMap(this.get_element().id);
         this._instance.LoadMap();
+        //this._instance
         
         this._instance.SetCenter(new VELatLong(this._initialLatitude, this._initialLongitude));
         this._instance.SetZoomLevel(this._initialZoomLevel);
@@ -78,41 +82,79 @@ Utility.VirtualEarthClientControl.prototype =
     
     startDrawing: function(shapeType)
     {
-        
+        this._drawingShapeType = shapeType;
     },
     
-    CreateTemporaryShape: function( points)
+    stopDrawing: function()
+    {
+        var shape = this._createPernamentDrawingShape();
+        
+        this._drawingShapeType = null;
+        this._drawingPoints = [];
+        this._drawingShape = null;
+
+        return shape;
+    },
+    
+    _createPernamentDrawingShape: function()
     {
         var shapeType = VEShapeType.Pushpin;
         
-        if (points.length > 1)
+        if (this._drawingPoints.length > 1)
+            shapeType = this._drawingShapeType;
+            
+        var shape = new VEShape(shapeType, this._drawingPoints);
+        shape.SetLineColor(new VEColor(0, 255, 0, 1));
+        shape.SetFillColor(new VEColor(0, 255, 0, 0.1));
+
+        if (shapeType != VEShapeType.Pushpin)
+            shape.HideIcon();
+        
+        this._replaceDrawingShape(shape);
+        return shape;
+    },
+    
+    _createTemporaryDrawingShape: function()
+    {
+        var shapeType = VEShapeType.Pushpin;
+        
+        if (this._drawingPoints.length > 1)
         {
-            switch(drawMode)
+            switch(this._drawingShapeType)
             {
-                case DrawModes.DrawPolyline:
-                case DrawModes.DrawPolygon:
+                case VEShapeType.Polyline:
+                case VEShapeType.Polygon:
                     shapeType = VEShapeType.Polyline;
             }
         }
 
-        var shape = new VEShape(shapeType, points);
+        var shape = new VEShape(shapeType, this._drawingPoints);
         shape.SetLineColor(new VEColor(255, 0, 0, 1));
         
         if (shapeType != VEShapeType.Pushpin)
             shape.HideIcon();
 
+        this._replaceDrawingShape(shape);
         return shape;
+    },
+    
+    _replaceDrawingShape: function(shape)
+    {
+        if (this._drawingShape != null)
+            this._instance.DeleteShape(this._drawingShape);
+            
+        this._instance.AddShape(shape);
+        this._drawingShape = shape;
     },
     
     _onClick: function(e)
     {
-    var points=[];
-        var position = this._instance.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
-        alert(position);
-        points.push(position);
-
-        var shape = this.CreateTemporaryShape(points);
-        this._instance.AddShape(shape);
+        if (this._drawingShapeType != null)
+        {
+            var position = this._instance.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
+            this._drawingPoints.push(position);
+            this._createTemporaryDrawingShape();
+         }
     },
 }
 

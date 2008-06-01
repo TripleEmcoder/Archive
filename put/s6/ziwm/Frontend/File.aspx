@@ -39,6 +39,12 @@
         </Services>
     </asp:ScriptManager>
     <Utility:ToggleButtonExtenderControl
+        ID="PushpinToggleButtonExtenderControl"
+        runat="server"
+        TargetControlID="PushpinButton"
+        StartText="Start Drawing Pushpin"
+        StopText="Stop Drawing Pushpin" />
+    <Utility:ToggleButtonExtenderControl
         ID="PolylineToggleButtonExtenderControl"
         runat="server"
         TargetControlID="PolylineButton"
@@ -52,15 +58,19 @@
         StopText="Stop Drawing Polygon" />
     <Utility:VirtualEarthExtenderControl
         runat="server"
-        TargetControlID="Image"
+        TargetControlID="ImagePanel"
         ID="ImageVirtualEarthExtenderControl" />
-    <Frontend:AnnotationTableExtenderControl
-        ID="AnnotationTableExtenderControl"
+    <Frontend:AnnotationListExtenderControl
+        ID="AnnotationListExtenderControl"
         runat="server"
-        TargetControlID="AnnotationTable" />
+        TargetControlID="AnnotationList" />
     <div
-        id="Toolbar"
+        id="ToolbarPanel"
         runat="server">
+        <button
+            id="PushpinButton"
+            runat="server">
+        </button>
         <button
             id="PolylineButton"
             runat="server">
@@ -71,38 +81,72 @@
         </button>
     </div>
     <div
-        id="Image"
-        runat="server">
+        id="ImagePanel"
+        runat="server"
+        style="position: relative">
     </div>
     <table
-        id="AnnotationTable"
+        id="AnnotationList"
         runat="server">
     </table>
-    <div
+    <table
         id="AnnotationEditor"
         runat="server">
-        <input
-            id="AnnotationEditorTitleInput"
-            runat="server" />
-        <button
-            id="AnnotationEditorSaveButton"
-            runat="server">
-            Save
-        </button>
-        <button
-            id="AnnotationEditorCancelButton"
-            runat="server">
-            Cancel
-        </button>
-    </div>
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input
+                    id="AnnotationTitleInput"
+                    runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>
+                <textarea
+                    id="AnnotationDescriptionInput"
+                    runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button
+                    id="AnnotationSaveButton"
+                    runat="server">
+                    Save
+                </button>
+                <button
+                    id="AnnotationCancelButton"
+                    runat="server">
+                    Cancel
+                </button>
+                &nbsp;&nbsp;
+                <button
+                    id="AnnotationDeleteButton"
+                    runat="server">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
     <script
         type="text/javascript">
+            var imagePanelId = "<%= ImagePanel.ClientID %>"; 
+            var pushpinToggleButtonId = "<%= PushpinButton.ClientID %>"; 
             var polylineToggleButtonId = "<%= PolylineButton.ClientID %>"; 
             var polygonToggleButtonId = "<%= PolygonButton.ClientID %>";
-            var annotationTableId = "<%= AnnotationTable.ClientID %>";
+            var annotationListId = "<%= AnnotationList.ClientID %>";
             var annotationEditorId = "<%= AnnotationEditor.ClientID %>";
-            var annotationEditorTitleInputId = "<%= AnnotationEditorTitleInput.ClientID %>";
-            var annotationEditorSaveButtonId = "<%= AnnotationEditorSaveButton.ClientID %>";
-            var annotationEditorCancelButtonId = "<%= AnnotationEditorCancelButton.ClientID %>";
+            var annotationTitleInputId = "<%= AnnotationTitleInput.ClientID %>";
+            var annotationDescriptionInputId = "<%= AnnotationDescriptionInput.ClientID %>";
+            var annotationSaveButtonId = "<%= AnnotationSaveButton.ClientID %>";
+            var annotationCancelButtonId = "<%= AnnotationCancelButton.ClientID %>";
+            var annotationDeleteButtonId = "<%= AnnotationDeleteButton.ClientID %>";
     </script>
 </asp:Content>

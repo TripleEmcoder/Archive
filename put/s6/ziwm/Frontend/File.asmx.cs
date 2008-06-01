@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -17,9 +18,11 @@ namespace Frontend
     public class Annotation
     {
         public Guid Guid = Guid.Empty;
+        public DateTime Added = DateTime.MinValue;
         public String Title = String.Empty;
         public String Description = String.Empty;
-        public List<Point> Points = new List<Point>();
+        public String ShapeType = String.Empty;
+        public Point[] Points = new Point[0];
     }
 
     public class Point
@@ -42,7 +45,10 @@ namespace Frontend
             try
             {
                 if (annotation.Guid == Guid.Empty)
+                {
                     annotation.Guid = Guid.NewGuid();
+                    annotation.Added = DateTime.Now;
+                }
 
                 using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
                 {
@@ -65,6 +71,30 @@ namespace Frontend
         }
 
         [WebMethod]
+        public bool DeleteAnnotation(Guid guid)
+        {
+            try
+            {
+                using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
+                {
+                    Documentation documentation = ReadOrCreate(stream);
+
+                    documentation.Annotations.RemoveAll(
+                        annotation => annotation.Guid == guid);
+
+                    Write(stream, documentation);
+                }
+
+                return true;
+            }
+            catch (Exception exception)
+            {
+                Trace.TraceError(exception.Message);
+                return false;
+            }
+        }
+
+        [WebMethod]
         public Annotation[] GetAnnotations()
         {
             try
@@ -72,7 +102,7 @@ namespace Frontend
                 using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
                 {
                     Documentation documentation = ReadOrCreate(stream);
-                    return documentation.Annotations.ToArray();
+                    return documentation.Annotations.OrderByDescending(annotation => annotation.Added).ToArray();
                 }
             }
             catch (Exception exception)
@@ -101,6 +131,7 @@ namespace Frontend
         {
             stream.Position = 0;
             serializer.Serialize(stream, documentation);
+            stream.SetLength(stream.Position);
         }
 
         private static FileStream Open(string path)

@@ -63,8 +63,8 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnnotationTableExtenderControl.cs" />
-    <Compile Include="AnnotationTableExtenderControlDesigner.cs" />
+    <Compile Include="AnnotationListExtenderControl.cs" />
+    <Compile Include="AnnotationListExtenderControlDesigner.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,7 +135,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AnnotationTableClientControl.js" />
+    <EmbeddedResource Include="AnnotationListClientControl.js" />
     <Content Include="App_Themes\Default\Default.css" />
     <Content Include="App_Themes\Default\Default.skin" />
   </ItemGroup>
