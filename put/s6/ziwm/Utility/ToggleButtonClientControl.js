@@ -19,7 +19,6 @@ Utility.ToggleButtonClientControl = function(element)
     this._startText = "";
     this._stopText = "";
     this._state = Utility.ToggleButtonState.Unknown;
-    this._onClickDelegate = null;
 }
 
 Utility.ToggleButtonClientControl.prototype = 
@@ -31,8 +30,12 @@ Utility.ToggleButtonClientControl.prototype =
         //chyba to jest hack; chodzi o to, żeby anulować submit
         this.get_element().setAttribute("onclick", "return false");
         
-        this._onClickDelegate = Function.createDelegate(this, this._onClick);
-        $addHandler(this.get_element(), 'click', this._onClickDelegate);
+        var handlers = 
+        {
+            click: this._onClick,
+        };
+        
+        $addHandlers(this.get_element(), handlers, this);
 
         this._state = Utility.ToggleButtonState.Stopped;
         this._update();
@@ -40,8 +43,7 @@ Utility.ToggleButtonClientControl.prototype =
     
     dispose: function()
     {
-        $removeHandler(this.get_element(), 'click', this._onClickDelegate);
-        delete this._onClickDelegate;
+        $clearHandlers(this.get_element());
         Utility.ToggleButtonClientControl.callBaseMethod(this, 'dispose');
     },
     

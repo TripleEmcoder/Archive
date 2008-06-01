@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Configuration;
-using System.Linq;
-using System.Security.Permissions;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Xml.Linq;
 
 [assembly: WebResource("Utility.VirtualEarthApi.js", "application/x-javascript")]
 [assembly: WebResource("Utility.VirtualEarthClientControl.js", "application/x-javascript")]
 
 namespace Utility
 {
-    [TargetControlType(typeof(Panel))]
+    [TargetControlType(typeof(HtmlGenericControl))]
     [Designer(typeof(VirtualEarthExtenderControlDesigner))]
     public class VirtualEarthExtenderControl : ExtenderControl
     {

@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Web.Script.Services;
 using System.Web.Services;
-using System.Xml;
 using System.Xml.Serialization;
 
 namespace Frontend
@@ -18,6 +17,7 @@ namespace Frontend
     public class Annotation
     {
         public Guid Guid = Guid.Empty;
+        public String Title = String.Empty;
         public String Description = String.Empty;
         public List<Point> Points = new List<Point>();
     }

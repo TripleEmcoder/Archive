@@ -6,7 +6,11 @@
     Inherits="Frontend.FilePage"
     Title="Untitled Page" %>
 <%@ Register
-    TagPrefix="ziwm"
+    Assembly="Frontend"
+    Namespace="Frontend"
+    TagPrefix="Frontend" %>
+<%@ Register
+    TagPrefix="Utility"
     Namespace="Utility"
     Assembly="Utility" %>
 <asp:Content
@@ -19,7 +23,7 @@
     ContentPlaceHolderID="MainContentPlaceHolder"
     runat="server">
     <asp:ScriptManager
-        ID="ScriptManager1"
+        ID="ScriptManager"
         runat="server"
         ScriptMode="Auto">
         <Scripts>
@@ -34,40 +38,71 @@
                 InlineScript="True" />
         </Services>
     </asp:ScriptManager>
+    <Utility:ToggleButtonExtenderControl
+        ID="PolylineToggleButtonExtenderControl"
+        runat="server"
+        TargetControlID="PolylineButton"
+        StartText="Start Drawing Polyline"
+        StopText="Stop Drawing Polyline" />
+    <Utility:ToggleButtonExtenderControl
+        ID="PolygonToggleButtonExtenderControl"
+        runat="server"
+        TargetControlID="PolygonButton"
+        StartText="Start Drawing Polygon"
+        StopText="Stop Drawing Polygon" />
+    <Utility:VirtualEarthExtenderControl
+        runat="server"
+        TargetControlID="Image"
+        ID="ImageVirtualEarthExtenderControl" />
+    <Frontend:AnnotationTableExtenderControl
+        ID="AnnotationTableExtenderControl"
+        runat="server"
+        TargetControlID="AnnotationTable" />
     <div
-        id="toolbar">
+        id="Toolbar"
+        runat="server">
         <button
             id="PolylineButton"
             runat="server">
         </button>
-        <ziwm:ToggleButtonExtenderControl
-            ID="PolylineToggleButtonExtenderControl"
-            runat="server"
-            StartText="Start Drawing Polyline"
-            StopText="Stop Drawing Polyline"
-            TargetControlID="PolylineButton" />
         <button
             id="PolygonButton"
             runat="server">
         </button>
-        <ziwm:ToggleButtonExtenderControl
-            ID="PolygonToggleButtonExtenderControl"
-            runat="server"
-            StartText="Start Drawing Polygon"
-            StopText="Stop Drawing Polygon"
-            TargetControlID="PolygonButton" />
     </div>
-    <asp:Panel
-        ID="ImagePanel"
+    <div
+        id="Image"
         runat="server">
-    </asp:Panel>
-    <ziwm:VirtualEarthExtenderControl
-        runat="server"
-        TargetControlID="ImagePanel"
-        ID="ImageVirtualEarthExtenderControl" />
+    </div>
+    <table
+        id="AnnotationTable"
+        runat="server">
+    </table>
+    <div
+        id="AnnotationEditor"
+        runat="server">
+        <input
+            id="AnnotationEditorTitleInput"
+            runat="server" />
+        <button
+            id="AnnotationEditorSaveButton"
+            runat="server">
+            Save
+        </button>
+        <button
+            id="AnnotationEditorCancelButton"
+            runat="server">
+            Cancel
+        </button>
+    </div>
     <script
         type="text/javascript">
             var polylineToggleButtonId = "<%= PolylineButton.ClientID %>"; 
-            var polygonToggleButtonId = "<%= PolygonButton.ClientID %>"; 
+            var polygonToggleButtonId = "<%= PolygonButton.ClientID %>";
+            var annotationTableId = "<%= AnnotationTable.ClientID %>";
+            var annotationEditorId = "<%= AnnotationEditor.ClientID %>";
+            var annotationEditorTitleInputId = "<%= AnnotationEditorTitleInput.ClientID %>";
+            var annotationEditorSaveButtonId = "<%= AnnotationEditorSaveButton.ClientID %>";
+            var annotationEditorCancelButtonId = "<%= AnnotationEditorCancelButton.ClientID %>";
     </script>
 </asp:Content>

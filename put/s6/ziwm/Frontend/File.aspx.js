@@ -1,18 +1,79 @@
 ﻿/// <reference name="MicrosoftAjax.js"/>
 /// <reference path="VirtualEarthtIntelliSense.js" />
 
-function setup()
+function loadTable()
 {
-    var polylineToggleButton = $find(polylineToggleButtonId);
-    polylineToggleButton.add_start(function() { alert("start"); });
-    polylineToggleButton.add_stop(function() { alert("stop"); });
+    var annotationTable = $get(annotationTableId);
+    var annotationEditor = $get(annotationEditorId); 
+
+    annotationTable.style.display = 'block';
+    annotationEditor.style.display = 'none';
     
-    var polygonToggleButton = $find(polygonToggleButtonId);
-    polygonToggleButton.add_start(function() { alert("start"); });
-    polygonToggleButton.add_stop(function() { alert("stop"); });
+    Frontend.FileWebService.GetAnnotations(
+        function(result) { $find(annotationTableId).set_annotations(result); });
 }
 
-Sys.Application.add_load(setup);
+function loadEditor(annotation)
+{
+    var annotationTable = $get(annotationTableId);
+    var annotationEditor = $get(annotationEditorId);
+    var annotationEditorTitleInput = $get(annotationEditorTitleInputId);
+    var annotationEditorSaveButton = $get(annotationEditorSaveButtonId);
+    var annotationEditorCancelButton = $get(annotationEditorCancelButtonId);
+    
+    annotationTable.style.display = 'none';
+    annotationEditor.style.display = 'block';
+    annotationEditorTitleInput.value = annotation.Guid;
+   
+    annotationEditorCancelButton.onclick = function()
+    {    
+        loadTable();
+        
+        return false;
+    };
+    
+    annotationEditorSaveButton.onclick = function()
+    {
+        annotation.Title = annotationEditorTitleInput.value;
+        
+        Frontend.FileWebService.AddOrUpdateAnnotation(annotation,
+            function(result) { annotation.Guid = result; alert("Saved."); });
+    
+        loadTable();
+        
+        return false;
+    };
+}
+
+function annotationTable_Select(sender, e)
+{
+    loadEditor(e.get_annotation());
+}
+
+function load()
+{
+    var polylineToggleButton = $find(polylineToggleButtonId);
+    polylineToggleButton.add_start(function(sender, e) { alert("start"); });
+    polylineToggleButton.add_stop(function(sender, e) { alert("stop"); });
+    
+    var polygonToggleButton = $find(polygonToggleButtonId);
+    polygonToggleButton.add_start(function(sender, e) { alert("start"); });
+    polygonToggleButton.add_stop(function(sender, e) { alert("stop"); });
+   
+    var annotationTable = $find(annotationTableId);
+    annotationTable.add_select(annotationTable_Select);  
+    
+    loadTable();
+}
+
+function unload()
+{
+    var annotationTable = $find(annotationTableId);
+    annotationTable.remove_select(annotationTable_Select);
+}
+
+Sys.Application.add_load(load);
+Sys.Application.add_unload(unload);
 
 //var DrawModes = { None:0, DrawPolyline:1, DrawPolygon:2 };
 

@@ -14,22 +14,13 @@ namespace Frontend {
     public partial class FilePage {
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// ScriptManager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
-        /// PolylineButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton PolylineButton;
+        protected global::System.Web.UI.ScriptManager ScriptManager;
         
         /// <summary>
         /// PolylineToggleButtonExtenderControl control.
@@ -41,15 +32,6 @@ namespace Frontend {
         protected global::Utility.ToggleButtonExtenderControl PolylineToggleButtonExtenderControl;
         
         /// <summary>
-        /// PolygonButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton PolygonButton;
-        
-        /// <summary>
         /// PolygonToggleButtonExtenderControl control.
         /// </summary>
         /// <remarks>
@@ -59,15 +41,6 @@ namespace Frontend {
         protected global::Utility.ToggleButtonExtenderControl PolygonToggleButtonExtenderControl;
         
         /// <summary>
-        /// ImagePanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel ImagePanel;
-        
-        /// <summary>
         /// ImageVirtualEarthExtenderControl control.
         /// </summary>
         /// <remarks>
@@ -75,5 +48,95 @@ namespace Frontend {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Utility.VirtualEarthExtenderControl ImageVirtualEarthExtenderControl;
+        
+        /// <summary>
+        /// AnnotationTableExtenderControl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Frontend.AnnotationTableExtenderControl AnnotationTableExtenderControl;
+        
+        /// <summary>
+        /// Toolbar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Toolbar;
+        
+        /// <summary>
+        /// PolylineButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton PolylineButton;
+        
+        /// <summary>
+        /// PolygonButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton PolygonButton;
+        
+        /// <summary>
+        /// Image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Image;
+        
+        /// <summary>
+        /// AnnotationTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable AnnotationTable;
+        
+        /// <summary>
+        /// AnnotationEditor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AnnotationEditor;
+        
+        /// <summary>
+        /// AnnotationEditorTitleInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText AnnotationEditorTitleInput;
+        
+        /// <summary>
+        /// AnnotationEditorSaveButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationEditorSaveButton;
+        
+        /// <summary>
+        /// AnnotationEditorCancelButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationEditorCancelButton;
     }
 }

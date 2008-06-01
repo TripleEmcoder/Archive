@@ -1,8 +1,8 @@
 ﻿using System.Web.UI.Design;
 
-namespace Utility
+namespace Frontend
 {
-    public class VirtualEarthExtenderControlDesigner : ControlDesigner
+    public class AnnotationTableExtenderControlDesigner : ControlDesigner
     {
         public override string GetDesignTimeHtml()
         {
