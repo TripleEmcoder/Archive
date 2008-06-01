@@ -65,6 +65,8 @@ namespace Frontend
                 context.Response.ContentType = "image/jpeg";
                 context.Response.BufferOutput = true;
 
+                context.Response.CacheControl = "No-Cache";
+
                 using (Bitmap bitmap = image.GetTile(x * 256, y * 256))
                 {
                     DrawTileInfo(bitmap, key);

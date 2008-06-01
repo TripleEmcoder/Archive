@@ -3,6 +3,23 @@
 
 Type.registerNamespace("Utility");
 
+Utility.VirtualEarthShapeClickEventArgs = function(shape)     
+{     
+    Utility.VirtualEarthShapeClickEventArgs.initializeBase(this);     
+    this._shape = shape;
+}     
+  
+Utility.VirtualEarthShapeClickEventArgs.prototype =     
+{     
+  get_shape: function()     
+  {        
+    return this._shape;
+  },     
+}     
+  
+Utility.VirtualEarthShapeClickEventArgs.registerClass('Utility.VirtualEarthShapeClickEventArgs', Sys.EventArgs);     
+
+
 Utility.VirtualEarthClientControl = function(element)
 {
     Utility.VirtualEarthClientControl.initializeBase(this, [element]);
@@ -80,6 +97,16 @@ Utility.VirtualEarthClientControl.prototype =
         this._initialZoomLevel = value;   
     },
     
+    add_shapeClick: function(handler)
+    {
+        this.get_events().addHandler('shapeClick', handler);
+    },
+    
+    remove_shapeClick: function(handler)
+    {
+        this.get_events().removeHandler('shapeClick', handler);
+    },
+    
     startDrawing: function(shapeType)
     {
         this._drawingShapeType = shapeType;
@@ -154,7 +181,17 @@ Utility.VirtualEarthClientControl.prototype =
             var position = this._instance.PixelToLatLong(new VEPixel(e.mapX, e.mapY));
             this._drawingPoints.push(position);
             this._createTemporaryDrawingShape();
-         }
+        }
+        else if (e.elementID != null)
+        {
+            var handler = this.get_events().getHandler('shapeClick')
+
+            if (handler)
+            {
+                var shape = this._instance.GetShapeByID(e.elementID);
+                handler(this, new Utility.VirtualEarthShapeClickEventArgs(shape));
+            }
+        }
     },
 }
 

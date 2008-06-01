@@ -106,12 +106,19 @@ function saveShape(annotation, shape)
 
 function loadShape(annotation)
 {
+    var shapeDescriptionFormat = "<b>{0}</b><br />{1}";
+
     annotation.Points = convertToLatLong(annotation.Points);    
     var shape = new VEShape(annotation.ShapeType, annotation.Points);
     
-    shape.SetDescription(annotation.Title);
+    shape.SetDescription(String.format(
+        annotation.Title,
+        annotation.Description.substring(1, 150)));
+    
     setInactiveShapeFormat(shape);    
+    
     annotation._shape = shape;
+    shape._annotation = annotation;
     
     return shape;
 }
@@ -138,18 +145,18 @@ function setActiveShapeFormat(shape)
     shape.SetFillColor(new VEColor(255, 0, 0, 0.1));
 }
 
-function annotationList_Select(sender, e)
+function annotationList_select(sender, e)
 {
     loadEditor(e.get_annotation());
 }
 
-function drawingToggleButton_Start(sender, e)
+function drawingToggleButton_start(sender, e)
 {
     var imagePanel = $find(imagePanelId);
     imagePanel.startDrawing(sender.shapeType);
 }
 
-function drawingToggleButton_Stop(sender, e)
+function drawingToggleButton_stop(sender, e)
 {
     var imagePanel = $find(imagePanelId);
     var shape = imagePanel.stopDrawing();
@@ -160,26 +167,35 @@ function drawingToggleButton_Stop(sender, e)
     saveAnnotation(annotation);
 }
 
+function imagePanel_shapeClick(sender, e)
+{
+    loadEditor(e.get_shape()._annotation);
+}
+
 function load()
 {
+    var imagePanel = $find(imagePanelId);
     var pushpinToggleButton = $find(pushpinToggleButtonId);
     var polylineToggleButton = $find(polylineToggleButtonId);
     var polygonToggleButton = $find(polygonToggleButtonId);
     var annotationList = $find(annotationListId);
     
     pushpinToggleButton.shapeType = VEShapeType.Pushpin;
-    pushpinToggleButton.add_start(drawingToggleButton_Start);
-    pushpinToggleButton.add_stop(drawingToggleButton_Stop);
+    pushpinToggleButton.add_start(drawingToggleButton_start);
+    pushpinToggleButton.add_stop(drawingToggleButton_stop);
     
     polylineToggleButton.shapeType = VEShapeType.Polyline;
-    polylineToggleButton.add_start(drawingToggleButton_Start);
-    polylineToggleButton.add_stop(drawingToggleButton_Stop);
+    polylineToggleButton.add_start(drawingToggleButton_start);
+    polylineToggleButton.add_stop(drawingToggleButton_stop);
     
     polygonToggleButton.shapeType = VEShapeType.Polygon;
-    polygonToggleButton.add_start(drawingToggleButton_Start);
-    polygonToggleButton.add_stop(drawingToggleButton_Stop);
+    polygonToggleButton.add_start(drawingToggleButton_start);
+    polygonToggleButton.add_stop(drawingToggleButton_stop);
    
-    annotationList.add_select(annotationList_Select);  
+    annotationList.add_select(annotationList_select);  
+    
+    imagePanel.add_shapeClick(imagePanel_shapeClick);
+    
     loadAnnotations();
 }
 
