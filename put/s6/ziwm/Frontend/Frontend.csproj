@@ -90,6 +90,7 @@
     <Compile Include="File.aspx.designer.cs">
       <DependentUpon>File.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FileContext.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

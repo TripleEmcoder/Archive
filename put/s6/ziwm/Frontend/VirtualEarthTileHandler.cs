@@ -28,9 +28,8 @@ namespace Frontend
                 return;
             }
 
-            string filePath, key;
-            DecodeRefererPath(context.Request.UrlReferrer.PathAndQuery, out filePath);
-            DecodePath(context.Request.Url.PathAndQuery, out key);
+            string filePath = FileContext.Current.Path;
+            string key = FileContext.Current.Key;
 
             using (TiffFile file = new TiffFile(filePath))
             {
@@ -84,17 +83,7 @@ namespace Frontend
             }
         }
 
-        private static void DecodeRefererPath(string query, out string path)
-        {
-            path = new SiteMapDataSource().Provider.FindSiteMapNode(query).Key;
-        }
-
-        private static void DecodePath(string query, out string key)
-        {
-            Regex regex = new Regex(@"/(\w)(\d+)\.png", RegexOptions.Compiled);
-            Match match = regex.Match(query);
-            key = match.Groups[2].Value;
-        }
+       
 
         public bool IsReusable
         {

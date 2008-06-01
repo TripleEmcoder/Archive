@@ -6,7 +6,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Web.Script.Services;
 using System.Web.Services;
+using System.Web.UI.WebControls;
 using System.Xml.Serialization;
+using System.Web;
 
 namespace Frontend
 {
@@ -50,7 +52,7 @@ namespace Frontend
                     annotation.Added = DateTime.Now;
                 }
 
-                using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
+                using (FileStream stream = Open(FileContext.Current.Path))
                 {
                     Documentation documentation = ReadOrCreate(stream);
 
@@ -75,7 +77,7 @@ namespace Frontend
         {
             try
             {
-                using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
+                using (FileStream stream = Open(FileContext.Current.Path))
                 {
                     Documentation documentation = ReadOrCreate(stream);
 
@@ -99,7 +101,7 @@ namespace Frontend
         {
             try
             {
-                using (FileStream stream = Open(@"E:\Marcin\Settings\IIS\test.xml"))
+                using (FileStream stream = Open(FileContext.Current.Path))
                 {
                     Documentation documentation = ReadOrCreate(stream);
                     return documentation.Annotations.OrderByDescending(annotation => annotation.Added).ToArray();
@@ -136,7 +138,8 @@ namespace Frontend
 
         private static FileStream Open(string path)
         {
-            return new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+            return new FileStream(Path.ChangeExtension(path, ".xml"),
+                FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
         }
     }
 }
