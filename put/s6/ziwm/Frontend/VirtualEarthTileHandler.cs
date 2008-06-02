@@ -28,50 +28,26 @@ namespace Frontend
                 return;
             }
 
-            string filePath = FileContext.Current.Path;
+            string path = FileContext.Current.Path;
             string key = FileContext.Current.Key;
 
-            using (TiffFile file = new TiffFile(filePath))
+            using (TiffTileProvider provider = new TiffTileProvider(path))
+            using (Bitmap bitmap = provider.GetTile(key, 256))
             {
-                int index = file.Images.Count - key.Length - 2;
-
-                if (index < 0)
+                if (bitmap == null)
                 {
                     context.Response.StatusCode = 404;
                     return;
                 }
 
-                TiffImage image = file.Images[index];
-
-                Debug.Assert(image.TileWidth == 256);
-                Debug.Assert(image.TileHeight == 256);
-
-                int level = 0, x = 0, y = 0;
-                int size = 1 << key.Length;
-                int skip = 1 << key.Length - 1;
-
-                while (level < key.Length)
-                {
-                    if (key[level] == '1' || key[level] == '3')
-                        x += skip;
-
-                    if (key[level] == '2' || key[level] == '3')
-                        y += skip;
-
-                    level += 1;
-                    skip /= 2;
-                }
+                DrawTileInfo(bitmap, key);
 
                 context.Response.ContentType = "image/jpeg";
                 context.Response.BufferOutput = true;
 
                 context.Response.CacheControl = "No-Cache";
 
-                using (Bitmap bitmap = image.GetTile(x * 256, y * 256))
-                {
-                    DrawTileInfo(bitmap, key);
-                    bitmap.Save(context.Response.OutputStream, ImageFormat.Jpeg);
-                }
+                bitmap.Save(context.Response.OutputStream, ImageFormat.Jpeg);
             }
         }
 
@@ -85,7 +61,7 @@ namespace Frontend
             }
         }
 
-       
+
 
         public bool IsReusable
         {
