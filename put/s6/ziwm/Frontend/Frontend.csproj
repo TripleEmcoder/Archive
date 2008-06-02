@@ -91,6 +91,7 @@
       <DependentUpon>File.aspx</DependentUpon>
     </Compile>
     <Compile Include="FileContext.cs" />
+    <Compile Include="FileSystemSiteMapFilter.cs" />
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Specialized;
 using System.IO;
 using System.Web;
+using System;
 
 namespace Utility
 {
@@ -8,8 +9,14 @@ namespace Utility
     {
         private string rootPath;
         private string rootName;
+        private IFileSystemSiteMapFilter filter;
         private FileSystemSiteMapNodeFactory directoryFactory;
         private FileSystemSiteMapNodeFactory fileFactory;
+
+        public FileSystemSiteMapProvider()
+        {
+            filter = new FileSystemSiteMapDefaultFilter();
+        }
 
         public string RootPath
         {
@@ -27,6 +34,9 @@ namespace Utility
             rootPath = attributes["rootPath"];
             rootName = attributes["rootName"];
 
+            if (!string.IsNullOrEmpty(attributes["filter"]))
+                filter = (IFileSystemSiteMapFilter)Activator.CreateInstance(Type.GetType(attributes["filter"]));
+
             string path = HttpContext.Current.Request.ApplicationPath;
             directoryFactory = new FileSystemSiteMapNodeFactory(this, path + "/Directory.aspx?Path={0}");
             fileFactory = new FileSystemSiteMapNodeFactory(this, path + "/File.aspx?Path={0}");
@@ -36,10 +46,10 @@ namespace Utility
         {
             SiteMapNode node = null;
 
-            if (directoryFactory.TryCreateNodeFromUrl(url, ref node))
+            if (directoryFactory.TryCreateNodeFromUrl(url, ref node) && filter.ShowDirectory(node.Key))
                 return node;
 
-            if (fileFactory.TryCreateNodeFromUrl(url, ref node))
+            if (fileFactory.TryCreateNodeFromUrl(url, ref node) && filter.ShowFile(node.Key))
                 return node;
 
             return null;
@@ -52,10 +62,12 @@ namespace Utility
             if (Directory.Exists(node.Key))
             {
                 foreach (string path in Directory.GetDirectories(node.Key))
-                    nodes.Add(directoryFactory.CreateNodeFromPath(path));
+                    if (filter.ShowDirectory(path))
+                        nodes.Add(directoryFactory.CreateNodeFromPath(path));
 
                 foreach (string path in Directory.GetFiles(node.Key))
-                    nodes.Add(fileFactory.CreateNodeFromPath(path));
+                    if (filter.ShowFile(path))
+                        nodes.Add(fileFactory.CreateNodeFromPath(path));
             }
 
             return nodes;
@@ -63,10 +75,10 @@ namespace Utility
 
         public override SiteMapNode FindSiteMapNodeFromKey(string key)
         {
-            if (Directory.Exists(key))
+            if (Directory.Exists(key) && filter.ShowDirectory(key))
                 return directoryFactory.CreateNodeFromPath(key);
 
-            if (File.Exists(key))
+            if (File.Exists(key) && filter.ShowFile(key))
                 return fileFactory.CreateNodeFromPath(key);
 
             return null;

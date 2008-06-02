@@ -51,9 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileSystemSiteMapDefaultFilter.cs" />
     <Compile Include="FileSystemSiteMapNodeFactory.cs" />
     <Compile Include="FileSystemSiteMapProvider.cs" />
-    <Compile Include="ISiteMapNodeDescriptionProvider.cs" />
+    <Compile Include="IFileSystemSiteMapFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToggleButtonExtenderControl.cs" />
     <Compile Include="ToggleButtonExtenderControlDesigner.cs" />

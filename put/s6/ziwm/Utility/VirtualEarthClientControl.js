@@ -19,7 +19,6 @@ Utility.VirtualEarthShapeClickEventArgs.prototype =
   
 Utility.VirtualEarthShapeClickEventArgs.registerClass('Utility.VirtualEarthShapeClickEventArgs', Sys.EventArgs);     
 
-
 Utility.VirtualEarthClientControl = function(element)
 {
     Utility.VirtualEarthClientControl.initializeBase(this, [element]);
