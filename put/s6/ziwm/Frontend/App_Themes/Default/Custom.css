@@ -1,0 +1,45 @@
+﻿button
+{
+	padding: 4px;
+}
+
+button img
+{
+	width: 48px;
+	margin: 4px;
+}
+
+.map
+{
+	width: 1000px;
+	height: 600px;
+	position: relative;
+	border: 1px solid #6A0101;
+	background: #800000;
+}
+
+.table 
+{
+	border-collapse: collapse;
+}
+
+.table th
+{
+	background: #FFA800;
+	color: #9A0000;
+	padding: 4px;
+	border: 1px solid #FC7303;
+}
+
+.table td
+{
+	color: #FFF;
+	padding: 3px 6px;
+	border: 1px solid #FC7303;
+}
+
+table.layout td
+{
+	vertical-align: top;
+	padding: 4px;
+}	

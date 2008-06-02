@@ -19,38 +19,66 @@ xmlns="http://www.w3.org/1999/xhtml">
 </head>
 <body>
     <form
-        id="form1"
+        id="Form1"
         runat="server">
         <asp:SiteMapDataSource
-            ID="SiteMapDataSource1"
+            ID="SiteMapDataSource"
             runat="server"
             ShowStartingNode="False" />
         <div
-            id="page">
-            <div
-                id="header">
-                ?
-            </div>
-            <div
-                id="menu">
-                <asp:TreeView
-                    ID="TreeView1"
+            id="header">
+            <h1>
+                <span>
+                    V</span>ERY
+                <span>
+                    L</span>ARGE
+                <span>
+                    I</span>MAGE
+                <span>
+                    B</span>ROWSER
+            </h1>
+        </div>
+        <div
+            id="menu">
+            <ul>
+                <asp:Repeater
+                    ID="SiteMapRepeater"
                     runat="server"
-                    DataSourceID="SiteMapDataSource1"
-                    ExpandDepth="0"
-                    MaxDataBindDepth="0">
-                </asp:TreeView>
-            </div>
+                    DataSourceID="SiteMapDataSource">
+                    <ItemTemplate>
+                        <li><a
+                            href="<%# Eval("Url") %>">
+                            <em>
+                                <%# ((string)Eval("Title")).Substring(0, 1) %></em><%# ((string)Eval("Title")).Substring(1).ToUpper() %>
+                        </a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+        <div
+            id="body">
             <div
-                id="path">
-                <asp:SiteMapPath
-                    ID="SiteMapPath"
+                id="content">
+                <h1>
+                    Path
+                </h1>
+                <div
+                    id="path">
+                    <asp:SiteMapPath
+                        ID="SiteMapPath"
+                        runat="server" />
+                </div>
+                <h1>
+                    Contents
+                </h1>
+                <asp:ContentPlaceHolder
+                    ID="MainContentPlaceHolder"
                     runat="server" />
             </div>
-            <asp:ContentPlaceHolder
-                ID="MainContentPlaceHolder"
-                runat="server" />
-        </div>
+            <div
+                id="footer">
+            </div>
     </form>
 </body>
 </html>

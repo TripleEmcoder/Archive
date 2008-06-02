@@ -136,13 +136,13 @@ function convertToLatLong(input)
 function setInactiveShapeFormat(shape)
 {
     shape.SetLineColor(new VEColor(0, 255, 0, 1));
-    shape.SetFillColor(new VEColor(0, 255, 0, 0.1));
+    shape.SetFillColor(new VEColor(0, 255, 0, 0.2));
 }
 
 function setActiveShapeFormat(shape)
 {
     shape.SetLineColor(new VEColor(255, 0, 0, 1));
-    shape.SetFillColor(new VEColor(255, 0, 0, 0.1));
+    shape.SetFillColor(new VEColor(255, 0, 0, 0.2));
 }
 
 function annotationList_select(sender, e)
@@ -202,7 +202,7 @@ function load()
 function unload()
 {
     var annotationList = $find(annotationListId);
-    annotationList.remove_select(annotationList_Select);
+    annotationList.remove_select(annotationList_select);
     
     //...
 }

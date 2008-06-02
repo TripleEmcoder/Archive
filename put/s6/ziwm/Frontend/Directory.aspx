@@ -14,17 +14,21 @@
         runat="server"
         ShowStartingNode="False"
         StartFromCurrentNode="True" />
-    <asp:GridView ID="GridView1" 
-        runat="server" 
-        AutoGenerateColumns="False" 
-        DataSourceID="SiteMapDataSource">
+    <asp:GridView
+        ID="GridView1"
+        runat="server"
+        AutoGenerateColumns="False"
+        DataSourceID="SiteMapDataSource"
+        CssClass="table">
         <Columns>
-            <asp:HyperLinkField DataNavigateUrlFields="Url" 
-                DataTextField="Title" 
+            <asp:HyperLinkField
+                DataNavigateUrlFields="Url"
+                DataTextField="Title"
                 HeaderText="Name" />
-            <asp:BoundField DataField="Description" 
-                HeaderText="Description" 
-                ReadOnly="True" 
+            <asp:BoundField
+                DataField="Description"
+                HeaderText="Description"
+                ReadOnly="True"
                 SortExpression="Description" />
         </Columns>
     </asp:GridView>

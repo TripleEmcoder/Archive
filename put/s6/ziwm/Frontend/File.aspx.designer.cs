@@ -104,15 +104,6 @@ namespace Frontend {
         protected global::System.Web.UI.HtmlControls.HtmlButton PolygonButton;
         
         /// <summary>
-        /// ImagePanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImagePanel;
-        
-        /// <summary>
         /// AnnotationList control.
         /// </summary>
         /// <remarks>
@@ -174,5 +165,14 @@ namespace Frontend {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton AnnotationDeleteButton;
+        
+        /// <summary>
+        /// ImagePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImagePanel;
     }
 }

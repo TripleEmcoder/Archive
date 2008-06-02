@@ -22,7 +22,8 @@
     <asp:GridView ID="GridView1" 
         runat="server" 
         AutoGenerateColumns="False" 
-        DataSourceID="SiteMapDataSource">
+        DataSourceID="SiteMapDataSource"
+        CssClass="table">
         <Columns>
             <asp:HyperLinkField DataNavigateUrlFields="Url" 
                 DataTextField="Title" 

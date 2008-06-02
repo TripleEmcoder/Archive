@@ -23,31 +23,31 @@ namespace Frontend {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContentPlaceHolder;
         
         /// <summary>
-        /// form1 control.
+        /// Form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// SiteMapDataSource1 control.
+        /// SiteMapDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource;
         
         /// <summary>
-        /// TreeView1 control.
+        /// SiteMapRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView TreeView1;
+        protected global::System.Web.UI.WebControls.Repeater SiteMapRepeater;
         
         /// <summary>
         /// SiteMapPath control.

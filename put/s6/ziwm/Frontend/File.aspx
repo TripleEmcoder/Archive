@@ -42,20 +42,20 @@
         ID="PushpinToggleButtonExtenderControl"
         runat="server"
         TargetControlID="PushpinButton"
-        StartText="Start Drawing Pushpin"
-        StopText="Stop Drawing Pushpin" />
+        StartText="Start Pushpin"
+        StopText="Stop Pushpin" />
     <Utility:ToggleButtonExtenderControl
         ID="PolylineToggleButtonExtenderControl"
         runat="server"
         TargetControlID="PolylineButton"
-        StartText="Start Drawing Polyline"
-        StopText="Stop Drawing Polyline" />
+        StartText="Start Polyline"
+        StopText="Stop Polyline" />
     <Utility:ToggleButtonExtenderControl
         ID="PolygonToggleButtonExtenderControl"
         runat="server"
         TargetControlID="PolygonButton"
-        StartText="Start Drawing Polygon"
-        StopText="Stop Drawing Polygon" />
+        StartText="Start Polygon"
+        StopText="Stop Polygon" />
     <Utility:VirtualEarthExtenderControl
         runat="server"
         TargetControlID="ImagePanel"
@@ -64,74 +64,104 @@
         ID="AnnotationListExtenderControl"
         runat="server"
         TargetControlID="AnnotationList" />
-    <div
-        id="ToolbarPanel"
-        runat="server">
-        <button
-            id="PushpinButton"
-            runat="server">
-        </button>
-        <button
-            id="PolylineButton"
-            runat="server">
-        </button>
-        <button
-            id="PolygonButton"
-            runat="server">
-        </button>
-    </div>
-    <div
-        id="ImagePanel"
-        runat="server"
-        style="position: relative">
-    </div>
     <table
-        id="AnnotationList"
-        runat="server">
-    </table>
-    <table
-        id="AnnotationEditor"
-        runat="server">
+        class="layout">
         <tr>
-            <td>
-                Title
-            </td>
-            <td>
-                <input
-                    id="AnnotationTitleInput"
-                    runat="server" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Description
-            </td>
-            <td>
-                <textarea
-                    id="AnnotationDescriptionInput"
-                    runat="server" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-            </td>
-            <td>
-                <button
-                    id="AnnotationSaveButton"
+            <td
+                style="width: 350px;">
+                <h2>
+                    Tools
+                </h2>
+                <div
+                    id="ToolbarPanel"
                     runat="server">
-                    Save
-                </button>
-                <button
-                    id="AnnotationCancelButton"
-                    runat="server">
-                    Cancel
-                </button>
-                &nbsp;&nbsp;
-                <button
-                    id="AnnotationDeleteButton"
-                    runat="server">
-                    Delete
-                </button>
+                    <button
+                        id="PushpinButton"
+                        runat="server">
+                    </button>
+                    <button
+                        id="PolylineButton"
+                        runat="server">
+                    </button>
+                    <button
+                        id="PolygonButton"
+                        runat="server">
+                    </button>
+                </div>
+                <h2>
+                    Annotations
+                </h2>
+                <table
+                    id="AnnotationList"
+                    runat="server"
+                    class="table"
+                    style="display: none">
+                </table>
+                <table
+                    id="AnnotationEditor"
+                    runat="server"
+                    style="display: none">
+                    <tr>
+                        <td>
+                            Title
+                        </td>
+                        <td>
+                            <input
+                                id="AnnotationTitleInput"
+                                runat="server"
+                                width="40" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            <textarea
+                                id="AnnotationDescriptionInput"
+                                runat="server"
+                                cols="25"
+                                rows="10" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <button
+                                id="AnnotationSaveButton"
+                                runat="server">
+                                <img
+                                    src="Images/Save.png" /><br />
+                                Save
+                            </button>
+                            <button
+                                id="AnnotationCancelButton"
+                                runat="server">
+                                <img
+                                    src="Images/Cancel.png" /><br />
+                                Cancel
+                            </button>
+                            <button
+                                id="AnnotationDeleteButton"
+                                runat="server">
+                                <img
+                                    src="Images/Delete.png" /><br />
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <h2>
+                    Image
+                </h2>
+                <div
+                    id="ImagePanel"
+                    runat="server"
+                    class="map">
+                </div>
             </td>
         </tr>
     </table>
