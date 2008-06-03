@@ -131,7 +131,6 @@
     <Content Include="File.asmx" />
     <Content Include="File.aspx.js" />
     <Content Include="Index.aspx" />
-    <Content Include="Web.config.js" />
     <Content Include="Web.master" />
   </ItemGroup>
   <ItemGroup>

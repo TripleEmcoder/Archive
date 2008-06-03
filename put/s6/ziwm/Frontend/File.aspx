@@ -17,6 +17,10 @@
     ID="HeadContent"
     runat="server"
     ContentPlaceHolderID="HeadContentPlaceHolder">
+    <script
+        type="text/javascript">
+    var VirtualEarthTilePath="<%= HttpContext.Current.Request.Url.Host + HttpContext.Current.Request.ApplicationPath + "/VirtualEarthTiles" %>";
+    </script>
 </asp:Content>
 <asp:Content
     ID="MainContent"
@@ -27,8 +31,6 @@
         runat="server"
         ScriptMode="Auto">
         <Scripts>
-            <asp:ScriptReference
-                Path="~/Web.config.js" />
             <asp:ScriptReference
                 Path="~/File.aspx.js" />
         </Scripts>
