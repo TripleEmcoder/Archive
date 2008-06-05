@@ -5,6 +5,8 @@ $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
 $film = get_film_details_by_id($id);
 
+if ($film)
+{
 $title = $film->title;
 
 require_once('naglowek.php');
@@ -70,6 +72,15 @@ else
 <form action='dodaj.php?id=<?=$id?>' method='post'>
 <input type='submit' name='reserve' value='Dodaj do koszyka' />
 </form>
+<?
+}
+}
+else
+{
+$title = 'Błąd';
+require_once('naglowek.php');
+?>
+Brak filmu.
 <?
 }
 

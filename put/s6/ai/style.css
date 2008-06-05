@@ -1,6 +1,6 @@
 body
 {
-	width: 600px;
+	width: 795px;
 	margin: 10px auto;
 	border: 1px solid;
 	padding: 10px;
@@ -65,3 +65,25 @@ h2
 {
 	background-color: plum;
 }
+
+td.lewo
+{
+	width: 60%;
+}
+
+td.prawo
+{
+	width: 40%;
+}
+
+span.premiera
+{
+	color: red;
+	font-weight: bold;
+}
+
+ul.obsada li:first-child
+{
+	font-weight: bold;
+}
+

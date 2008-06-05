@@ -44,13 +44,16 @@
 
   <xsl:template match="ai:film">
     <tr>
-      <td>
+      <td class='lewo'>
         <p>
           <xsl:value-of select="ai:opis" />
         </p>
         (<xsl:value-of select="ancestor::ai:dystrybutor/@nazwa"/>)
       </td>
-      <td>
+      <td class='prawo'>
+		<span class='premiera'>
+			<xsl:value-of select='ai:premiera' />
+		</span>
         <h1>
           <xsl:value-of select="ai:tytul" />
           (<xsl:value-of select="ai:tytul_oryginalny" />)
@@ -65,7 +68,7 @@
 
   <xsl:template match="ai:obsada">
     <h3>Obsada:</h3>
-    <ul>
+    <ul class='obsada'>
       <xsl:apply-templates select="ai:rola" />
     </ul>
   </xsl:template>
