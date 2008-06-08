@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Shop">
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="20" maxIdle="10" maxWait="-1" name="PUT-S6-AI" password="PUT-S6-AI" type="javax.sql.DataSource" url="jdbc:sqlserver://localhost\MSSQL2005;databaseName=PUT-S6-AI" username="PUT-S6-AI"/>
+</Context>
+
