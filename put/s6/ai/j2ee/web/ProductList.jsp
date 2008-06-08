@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <html>
     <head>
@@ -18,10 +18,14 @@
         <%@include file="WEB-INF/jspf/Header.jspf" %>
         <div id='content'>
             <h1>Search</h1>
-            <form>
-                <input type="text" name="Name" value="${name}">
-                <input type="submit" value="Search">            
-            </form>
+            
+            <form action="" method="get">
+                <p>
+                    <input type="text" name="Name" value="${name}">
+                    <input type="submit" value="Search">
+                </p>
+            </form>            
+            
             <p>${result.productCount} product(s) found.</p>
             
             <c:if test="${result.productCount > 0}">

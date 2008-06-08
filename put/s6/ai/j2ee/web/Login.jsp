@@ -5,8 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <html>
     <head>
@@ -21,8 +20,8 @@
             <c:if test="${error != null}">
                 <p>${error}</p>
             </c:if>
-            <form method="post">
-                <input type="hidden" name="Redirect" value="${redirect}">
+            <form action="" method="post">
+                
                 <table>
                     <tr>
                         <th>Login</th>
@@ -34,7 +33,10 @@
                     </tr>   
                     <tr>
                         <th></th>
-                        <td> <input type="submit" value="Submit"></td>
+                        <td>
+                            <input type="hidden" name="Redirect" value="${redirect}">
+                            <input type="submit" value="Submit">
+                        </td>
                     </tr>
                 </table>
             </form>
