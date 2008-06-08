@@ -2,32 +2,44 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pl.put.inf75922.s6.ai.shop.beans;
 
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.Collection;
+import pl.put.inf75922.s6.ai.shop.entities.Product;
 
 /**
  *
  * @author Marcin
  */
 public class ProductListBean {
-    
-    private List products;
 
-    public ProductListBean(List products) {
+    private Collection<Product> products;
+
+    public ProductListBean(Collection<Product> products) {
         this.products = products;
     }
-    
-    public List getProducts() {
+
+    public Collection<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(List products) {
+    public void setProducts(Collection<Product> products) {
         this.products = products;
     }
-    
-     public int getProductCount() {
+
+    public int getProductCount() {
         return products.size();
+    }
+
+    public BigDecimal getProductValue() {
+
+        BigDecimal value = new BigDecimal(0);
+
+        for (Product product : products) {
+            value = value.add(product.getPrice());
+        }
+
+        return value;
     }
 }

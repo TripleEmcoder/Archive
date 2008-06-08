@@ -6,7 +6,7 @@
     </filter>
     <filter-mapping>
         <filter-name>SecurityFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/Cart</url-pattern>
     </filter-mapping>
     <listener>
         <description>HttpSessionListener</description>
@@ -25,8 +25,13 @@
         <servlet-class>pl.put.inf75922.s6.ai.shop.servlets.CartServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>pl.put.inf75922.s6.ai.shop.servlets.LoginServlet</servlet-class>
+        <servlet-name>SecurityServlet</servlet-name>
+        <servlet-class>pl.put.inf75922.s6.ai.shop.servlets.SecurityServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.ws.rest.impl.container.servlet.ServletAdaptor</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>ProductListServlet</servlet-name>
@@ -41,12 +46,19 @@
         <url-pattern>/Cart</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
+        <servlet-name>SecurityServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <url-pattern>/resources/*</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>1</session-timeout>
     </session-config>
 </web-app>

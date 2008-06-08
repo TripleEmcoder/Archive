@@ -6,8 +6,6 @@ package pl.put.inf75922.s6.ai.shop.servlets;
 
 import java.io.IOException;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -27,7 +25,7 @@ public class ProductListServlet extends ShopServlet {
      * @param request servlet request
      * @param response servlet response
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(EntityManager manager, HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         try {
@@ -39,10 +37,7 @@ public class ProductListServlet extends ShopServlet {
             
             request.setAttribute("name", name);
 
-            EntityManagerFactory factory = Persistence.createEntityManagerFactory("Shop");
-            EntityManager manager = factory.createEntityManager();
-
-            Query query = manager.createQuery("from Product p where p.name like :pattern");
+            Query query = manager.createNamedQuery("GetProductsByNamePattern");
             query.setParameter("pattern", "%" + escapeLike(name) + "%");
             request.setAttribute("result", new ProductListBean(query.getResultList()));
 

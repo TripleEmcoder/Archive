@@ -1,0 +1,75 @@
+/* 
+    Document   : Style
+    Created on : 2008-06-08, 19:12:09
+    Author     : Marcin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body
+{
+	width: 795px;
+	margin: 10px auto;
+	border: 1px solid;
+	padding: 10px;
+	font-family: Helvetica;
+}
+
+img
+{
+	margin: 0px;
+	border: none;
+}
+
+table
+{
+	border-collapse: collapse;
+	margin: 10px 0;
+}
+
+td, th
+{
+	border: 1px solid black;
+	padding: 5px;
+}
+
+th
+{
+	text-align: center;
+	background-color: plum;
+	font-weight: bold;
+}
+
+h1
+{
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+h2
+{
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+
+#header, #content, #footer
+{
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+}
+
+#header
+{
+	background-color: plum;
+}
+
+#header
+{
+	background-color: lavender;
+}
+
+#header
+{
+	background-color: plum;
+}

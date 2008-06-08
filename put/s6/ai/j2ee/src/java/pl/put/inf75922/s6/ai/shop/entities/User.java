@@ -9,8 +9,11 @@ import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -19,7 +22,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Users")
-@NamedQueries({})
+@NamedQueries({
+    @NamedQuery(name = "GetUserByLoginAndPassword", query = "from User u where u.login = :login and u.password = :password")
+})
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,8 +35,9 @@ public class User implements Serializable {
     private String login;
     @Column(name = "Password", nullable = false)
     private String password;
-    @ManyToMany(mappedBy = "userIdCollection")
-    private Collection<Product> productIdCollection;
+    @JoinTable(name = "Deposits", joinColumns = {@JoinColumn(name = "UserId", referencedColumnName = "Id")}, inverseJoinColumns = {@JoinColumn(name = "ProductId", referencedColumnName = "Id")})
+    @ManyToMany
+    private Collection<Product> products;
 
     public User() {
     }
@@ -70,12 +76,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Collection<Product> getProductIdCollection() {
-        return productIdCollection;
+    public Collection<Product> getProducts() {
+        return products;
     }
 
-    public void setProductIdCollection(Collection<Product> productIdCollection) {
-        this.productIdCollection = productIdCollection;
+    public void setProducts(Collection<Product> products) {
+        this.products = products;
     }
 
     @Override

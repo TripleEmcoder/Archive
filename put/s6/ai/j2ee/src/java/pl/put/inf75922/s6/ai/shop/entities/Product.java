@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -22,7 +23,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Products")
-@NamedQueries({})
+@NamedQueries({
+    @NamedQuery(name = "GetProductsByNamePattern", query = "from Product p where p.name like :pattern")
+})
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,7 +42,7 @@ public class Product implements Serializable {
     private BigDecimal price;
     @JoinTable(name = "Deposits", joinColumns = {@JoinColumn(name = "ProductId", referencedColumnName = "Id")}, inverseJoinColumns = {@JoinColumn(name = "UserId", referencedColumnName = "Id")})
     @ManyToMany
-    private Collection<User> userIdCollection;
+    private Collection<User> users;
 
     public Product() {
     }
@@ -96,12 +99,12 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public Collection<User> getUserIdCollection() {
-        return userIdCollection;
+    public Collection<User> getUsers() {
+        return users;
     }
 
-    public void setUserIdCollection(Collection<User> userIdCollection) {
-        this.userIdCollection = userIdCollection;
+    public void setUsers(Collection<User> users) {
+        this.users = users;
     }
 
     @Override

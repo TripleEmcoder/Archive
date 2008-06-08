@@ -5,8 +5,9 @@
 package pl.put.inf75922.s6.ai.shop;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Enumeration;
-import java.util.List;
+import java.util.HashSet;
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 import pl.put.inf75922.s6.ai.shop.entities.Product;
@@ -25,7 +26,7 @@ public class CartManager {
             String name = (String) names.nextElement();
 
             if (name.endsWith("Cart")) {
-                ArrayList<Integer> productIds = (ArrayList<Integer>) session.getAttribute(name);
+                HashSet productIds = (HashSet) session.getAttribute(name);
 
                 if (productIds.contains(product.getId())) {
                     return name.replace("Cart", "");
@@ -37,36 +38,58 @@ public class CartManager {
     }
     private String name;
     private HttpSession session;
-    private ArrayList<Integer> productIds;
 
     public CartManager(HttpSession session, String name) {
         this.name = name;
         this.session = session;
-        productIds = (ArrayList<Integer>) session.getAttribute(name + "Cart");
-
-        if (productIds == null) {
-            productIds = new ArrayList<Integer>();
-        }
-
     }
 
-    public List<Product> getProducts(EntityManager manager) {
+    public Collection<Product> getProducts(EntityManager manager) {
 
+        HashSet productIds = loadProducts();
         ArrayList<Product> products = new ArrayList<Product>();
 
-        for (Integer productId : productIds) {
-            products.add(manager.find(Product.class, productId));
+        for (Object productId : productIds) {
+            products.add(manager.getReference(Product.class, productId));
         }
+
         return products;
     }
 
+    public void setProducts(Collection<Product> products) {
+        
+        HashSet productIds = new HashSet();
+
+        for (Product product : products) {
+            productIds.add(product.getId());
+        }
+        
+        saveProducts(productIds);
+    }
+
     public void addProduct(Product product) {
+        HashSet productIds = loadProducts();
         productIds.add(product.getId());
-        session.setAttribute(name + "Cart", productIds);
+        saveProducts(productIds);
     }
 
     public void removeProduct(Product product) {
+        HashSet productIds = loadProducts();
         productIds.remove(product.getId());
+        saveProducts(productIds);
+    }
+
+    private HashSet loadProducts() {
+        HashSet productIds = (HashSet) session.getAttribute(name + "Cart");
+
+        if (productIds == null) {
+            productIds = new HashSet();
+        }
+        
+        return productIds;
+    }
+
+    private void saveProducts(HashSet productIds) {
         session.setAttribute(name + "Cart", productIds);
     }
 }
