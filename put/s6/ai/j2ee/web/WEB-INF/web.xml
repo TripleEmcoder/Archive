@@ -49,11 +49,10 @@
         <servlet-name>SecurityServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SecurityServlet</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>ServletAdaptor</servlet-name>
         <url-pattern>/resources/*</url-pattern>
@@ -61,4 +60,8 @@
     <session-config>
         <session-timeout>1</session-timeout>
     </session-config>
+    <error-page>
+        <exception-type>javax.persistence.PersistenceException</exception-type>
+        <location>/Error.jsp</location>
+    </error-page>
 </web-app>
