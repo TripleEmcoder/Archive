@@ -54,12 +54,15 @@ namespace Frontend
             tile = FixTileSize(image, offset, tile);
 
             using (Graphics graphics = Graphics.FromImage(regionImage))
+            {
+                graphics.Clear(Color.FromArgb(233, 231, 212));
                 DrawRows(image, offset, region, tile, graphics);
+            }
 
             return regionImage;
         }
 
-        private void DrawRows(TiffImage image, System.Drawing.Point offset, Rectangle region, Rectangle tile, Graphics graphics)
+        private static void DrawRows(TiffImage image, System.Drawing.Point offset, Rectangle region, Rectangle tile, Graphics graphics)
         {
             while (tile.IntersectsWith(region))
             {
@@ -68,7 +71,7 @@ namespace Frontend
             }
         }
 
-        private void DrawRow(TiffImage image, System.Drawing.Point offset, Rectangle region, Rectangle tile, Graphics graphics)
+        private static void DrawRow(TiffImage image, System.Drawing.Point offset, Rectangle region, Rectangle tile, Graphics graphics)
         {
             while (tile.IntersectsWith(region))
             {
@@ -79,7 +82,10 @@ namespace Frontend
                 using (Bitmap tileImage = image.GetTile(tile.X - offset.X, tile.Y - offset.Y))
                 {
                     graphics.DrawImage(tileImage, destination, source, GraphicsUnit.Pixel);
+                    
+#if DEBUG
                     graphics.DrawRectangle(Pens.Yellow, destination);
+#endif
                 }
 
                 tile = NextTileX(image, offset, tile);
@@ -92,7 +98,7 @@ namespace Frontend
             return FixTileSize(image, offset, tile);
         }
 
-        private Rectangle NextTileY(TiffImage image, System.Drawing.Point offset, Rectangle tile)
+        private static Rectangle NextTileY(TiffImage image, System.Drawing.Point offset, Rectangle tile)
         {
             tile.Offset(0, image.TileHeight);
             return FixTileSize(image, offset, tile);

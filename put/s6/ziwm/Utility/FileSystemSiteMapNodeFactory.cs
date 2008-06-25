@@ -19,23 +19,23 @@ namespace Utility
         private string VirtualizePath(string path)
         {
             Debug.Assert(path.StartsWith(provider.RootPath));
-            return Regex.Replace(path, "^" + Regex.Escape(provider.RootPath), provider.RootName);
+            return Regex.Replace(path, "^" + Regex.Escape(provider.RootPath), provider.RootName + Path.DirectorySeparatorChar).Trim(Path.DirectorySeparatorChar);
         }
 
         private string UnvirtualizePath(string path)
         {
             Debug.Assert(path.StartsWith(provider.RootName));
-            return Regex.Replace(path, "^" + Regex.Escape(provider.RootName), provider.RootPath);
+            return Regex.Replace(path, "^" + Regex.Escape(provider.RootName + Path.DirectorySeparatorChar), provider.RootPath).Trim(Path.DirectorySeparatorChar); ;
         }
 
         private static string EncodePath(string path)
         {
-            return HttpUtility.UrlEncode(path.Replace(Path.DirectorySeparatorChar, '/'));
+            return HttpUtility.UrlEncode(path.Replace(Path.DirectorySeparatorChar, '/')).Replace("%2f", "/");
         }
 
         private static string DecodePath(string path)
         {
-            return HttpUtility.UrlDecode(path).Replace('/', Path.DirectorySeparatorChar);
+            return HttpUtility.UrlDecode(path.Replace("/", "%2f")).Replace('/', Path.DirectorySeparatorChar);
         }
 
         public bool TryCreateNodeFromUrl(string url, ref SiteMapNode node)

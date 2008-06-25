@@ -45,7 +45,9 @@ namespace Frontend
                 context.Response.ContentType = "image/jpeg";
                 context.Response.BufferOutput = true;
 
+#if DEBUG
                 context.Response.CacheControl = "No-Cache";
+#endif
 
                 bitmap.Save(context.Response.OutputStream, ImageFormat.Jpeg);
             }

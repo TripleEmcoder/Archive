@@ -196,6 +196,15 @@ function load()
     
     imagePanel.add_shapeClick(imagePanel_shapeClick);
     
+    //imagePanel._instance.HideDashboard();
+    
+    var nodes = $get(imagePanelId).childNodes;
+    for (var i=1; i<nodes.length; i++)
+        nodes[i].style.visibility='hidden';
+
+    $get('ZoomInButton').onclick = function() { imagePanel._instance.ZoomIn(); return false; };
+    $get('ZoomOutButton').onclick = function() { imagePanel._instance.ZoomOut(); return false; };
+    
     loadAnnotations();
 }
 

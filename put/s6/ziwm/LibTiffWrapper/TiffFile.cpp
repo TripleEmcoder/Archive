@@ -16,7 +16,12 @@ array<unsigned char>^ EncodeText(String^ value)
 TiffFile::TiffFile(String^ path)
 {
 	pin_ptr<unsigned char> _path = &EncodeText(path)[0];
+	
 	handle = ::TIFFOpen((const char*)_path, "r");
+
+	if (handle == NULL)
+		throw gcnew Exception("Cannot open file.");
+
 	images = gcnew TiffImageCollection(handle);
 }
 

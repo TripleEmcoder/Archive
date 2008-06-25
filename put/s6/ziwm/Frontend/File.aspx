@@ -19,7 +19,7 @@
     ContentPlaceHolderID="HeadContentPlaceHolder">
     <script
         type="text/javascript">
-    var VirtualEarthTilePath="<%= HttpContext.Current.Request.Url.Host + HttpContext.Current.Request.ApplicationPath + "/VirtualEarthTiles" %>";
+    var VirtualEarthTilePath="<%= FileContext.Current.TilePath %>";
     </script>
 </asp:Content>
 <asp:Content
@@ -89,7 +89,21 @@
                         id="PolygonButton"
                         runat="server">
                     </button>
+                    <button
+                        id="ZoomInButton">
+                        <img
+                            src="Images/ZoomIn.png" /><br />
+                        Zoom In
+                    </button>
+                    <button
+                        id="ZoomOutButton">
+                        <img
+                            src="Images/ZoomOut.png" /><br />
+                        Zoom Out
+                    </button>
+
                 </div>
+
                 <h2>
                     Annotations
                 </h2>
@@ -163,6 +177,8 @@
                     id="ImagePanel"
                     runat="server"
                     class="map">
+<div id="MapTools">
+</div>		
                 </div>
             </td>
         </tr>

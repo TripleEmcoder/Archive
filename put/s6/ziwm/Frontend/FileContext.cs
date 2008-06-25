@@ -34,7 +34,9 @@ namespace Frontend
 
         public FileContext(HttpContext http)
         {
-            DecodeRefererPath(http.Request.UrlReferrer.PathAndQuery, out path);
+            if (http.Request.UrlReferrer != null)
+                DecodeRefererPath(http.Request.UrlReferrer.PathAndQuery, out path);
+
             DecodePath(http.Request.Url.PathAndQuery, out key);
         }
 
@@ -46,6 +48,16 @@ namespace Frontend
         public string Key
         {
             get { return key; }
+        }
+
+        public string TilePath
+        {
+            get
+            {
+                return HttpContext.Current.Request.Url.Host
+                       + HttpContext.Current.Request.ApplicationPath
+                       + "/VirtualEarthTiles/" + HttpContext.Current.Request.Params["Path"];
+            }
         }
 
         private static void DecodeRefererPath(string query, out string path)

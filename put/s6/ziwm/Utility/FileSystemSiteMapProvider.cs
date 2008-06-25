@@ -31,8 +31,8 @@ namespace Utility
         public override void Initialize(string name, NameValueCollection attributes)
         {
             base.Initialize(name, attributes);
-            rootPath = attributes["rootPath"];
-            rootName = attributes["rootName"];
+            rootPath = attributes["rootPath"].TrimEnd(Path.DirectorySeparatorChar);
+            rootName = attributes["rootName"].TrimEnd(Path.DirectorySeparatorChar);
 
             if (!string.IsNullOrEmpty(attributes["filter"]))
                 filter = (IFileSystemSiteMapFilter)Activator.CreateInstance(Type.GetType(attributes["filter"]));
