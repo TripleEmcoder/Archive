@@ -18,7 +18,20 @@ namespace Frontend.Controllers
 
         public GameController()
         {
-            userNick = Session.SessionID;    
+            userNick = "testUser";
+            
+            Game emptyGame = manager.Create("emptyGame", 2, 3, 3, 3);
+
+            Game joinedGame = manager.Create("joinedGame", 2, 3, 3, 3);
+            joinedGame.Join("testUser");
+
+            Game joinedFullGame = manager.Create("joinedFullGame", 2, 3, 3, 3);
+            joinedFullGame.Join("testUser");
+            joinedFullGame.Join("testUser1");
+
+            Game fullGame = manager.Create("fullGame", 2, 3, 3, 3);
+            fullGame.Join("testUser1");
+            fullGame.Join("testUser2");
         }
 
         private string Transcode(string text)
@@ -35,10 +48,10 @@ namespace Frontend.Controllers
             return builder.ToString();
         }
 
-        public ActionResult CreateGame(string gameTitle)
+        public ActionResult Create(string gameTitle)
         {
             gameTitle = Transcode(gameTitle);
-            manager.CreateGame(gameTitle);
+           // manager.Create(gameTitle);
 
             return Json(new
                             {
@@ -46,34 +59,38 @@ namespace Frontend.Controllers
                             });
         }
 
-        public ActionResult JoinGame(string gameTitle)
+        public ActionResult Join(string gameTitle)
         {
             gameTitle = Transcode(gameTitle);
-            Game game = manager.GetGame(gameTitle);
-            game.JoinGame(userNick);
-
-            return Json(new object
-                            {
-                                game.PlayerCount;
-                            });
+            Game game = manager.Get(gameTitle);
+            game.Join(userNick);
+            return View();
         }
 
-        public ActionResult ExitGame(string id)
+        public ActionResult Exit(string id)
         {
-           
+            return View();
         }
 
        
         public ActionResult MakeMove(string id, int x, int y)
         {
+            return View();
         }
 
         public ActionResult WaitMove(string id)
         {
+            return View();
         }
 
         public ActionResult Index()
         {
+            ViewData["userNick"] = userNick;
+            
+            ViewData["games"] = from game in manager
+                                orderby game.Title
+                                select game;
+
             return View();
         }
 

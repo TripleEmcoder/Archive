@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Logic
 {
-    public class Manager
+    public class Manager : IEnumerable<Game>
     {
         private readonly Dictionary<string, Game> games;
         private int gameId;
@@ -28,23 +29,33 @@ namespace Logic
                 throw new InvalidOperationException("No such game exists.");
         }
 
-        public Game CreateGame(string gameTitle, int maxPlayerCount, int winningFieldCount, int boardWidth, int boardHeight)
+        public Game Create(string gameTitle, int maxPlayerCount, int winningFieldCount, int boardWidth, int boardHeight)
         {
             lock (games)
             {
                 EnsureGameNotExists(gameTitle);
-                games[gameTitle] = new Game(gameId++, maxPlayerCount, winningFieldCount, boardWidth, boardHeight);
+                games[gameTitle] = new Game(gameId++, gameTitle, maxPlayerCount, winningFieldCount, boardWidth, boardHeight);
                 return games[gameTitle];
             }
         }
 
-        public Game GetGame(string gameTitle)
+        public Game Get(string gameTitle)
         {
             lock (games)
             {
                 EnsureGameExists(gameTitle);
                 return games[gameTitle];
             }
+        }
+
+        public IEnumerator<Game> GetEnumerator()
+        {
+            return games.Values.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
