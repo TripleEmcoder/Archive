@@ -13,6 +13,7 @@ namespace Logic
         private readonly int maxPlayerCount;
         private readonly int winningFieldCount;
         private readonly Dictionary<string, Player> players;
+        private readonly List<Move> moves;
         private readonly Player[,] fields;
         private readonly Queue<Player> queue;
 
@@ -25,6 +26,7 @@ namespace Logic
             this.maxPlayerCount = maxPlayerCount;
             this.winningFieldCount = winningFieldCount;
             players = new Dictionary<string, Player>(maxPlayerCount);
+            moves = new List<Move>(boardWidth * boardHeight);
             fields = new Player[boardWidth, boardHeight];
             queue = new Queue<Player>(maxPlayerCount);
 
@@ -36,32 +38,42 @@ namespace Logic
             get { return gameTitle; }
         }
 
+        public int BoardWidth
+        {
+            get { return fields.GetLength(0); }
+        }
+
+        public int BoardHeight
+        {
+            get { return fields.GetLength(1); }
+        }
+
         public bool IsFull
         {
             get { return players.Count == maxPlayerCount; }
         }
 
-        private void EnsureNotJoined(string userNick)
+        private void EnsurePlayerNotJoined(string userNick)
         {
             if (players.ContainsKey(userNick))
                 throw new InvalidOperationException("User already joined the game.");
         }
 
-        private void EnsureJoined(string userNick)
+        private void EnsurePlayerJoined(string userNick)
         {
             if (!players.ContainsKey(userNick))
                 throw new InvalidOperationException("User never joined the game.");
         }
 
-        private void EnsureJoinable(string userNick)
+        private void EnsurePlayerJoinable(string userNick)
         {
-            EnsureNotJoined(userNick);
+            EnsurePlayerNotJoined(userNick);
 
             if (players.Count == maxPlayerCount)
                 throw new InvalidOperationException("Maximum number of players reached.");
         }
 
-        private void EnsureFree(int x, int y)
+        private void EnsureMovePossible(int x, int y)
         {
             if (fields[x, y] != null)
                 throw new InvalidOperationException("Field is not available for move.");
@@ -72,38 +84,56 @@ namespace Logic
             return !players.ContainsKey(userNick);
         }
 
-        public void Join(string userNick)
+        public void JoinPlayer(string userNick)
         {
+            if (string.IsNullOrEmpty(userNick))
+                throw new ArgumentNullException(userNick);
+
             lock (players)
             {
-                EnsureJoinable(userNick);
+                EnsurePlayerJoinable(userNick);
                 players[userNick] = new Player(playerId++);
                 queue.Enqueue(players[userNick]);
             }
         }
 
-        public void Exit(string userNick)
+        public void ExitPlayer(string userNick)
         {
+            if (string.IsNullOrEmpty(userNick))
+                throw new ArgumentNullException(userNick);
+
             lock (players)
             {
-                EnsureJoined(userNick);
+                EnsurePlayerJoined(userNick);
                 players.Remove(userNick);
             }
         }
 
-        public Player Get(string userNick)
+        private Player GetPlayer(string userNick)
         {
+            if (string.IsNullOrEmpty(userNick))
+                throw new ArgumentNullException(userNick);
+
             lock (players)
             {
-                EnsureJoined(userNick);
+                EnsurePlayerJoined(userNick);
                 players[userNick].Touch();
                 return players[userNick];
             }
         }
 
-        public bool Move(string userNick, int x, int y, TimeSpan timeout)
+        public IEnumerable<Move> GetMoves(int firstIndex)
         {
-            Player player = Get(userNick);
+            for (int index = firstIndex; index < moves.Count; index++)
+                yield return moves[index];
+        }
+
+        public bool MakeMove(string userNick, int x, int y, TimeSpan timeout)
+        {
+            if (string.IsNullOrEmpty(userNick))
+                throw new ArgumentNullException(userNick);
+
+            Player player = GetPlayer(userNick);
 
             Monitor.Enter(queue);
 
@@ -113,8 +143,9 @@ namespace Logic
                     if (!Monitor.Wait(queue, timeout))
                         return false;
 
-                EnsureFree(x, y);
+                EnsureMovePossible(x, y);
                 fields[x, y] = player;
+                moves.Add(new Move(userNick, x, y));
 
                 queue.Dequeue();
                 queue.Enqueue(player);
@@ -128,11 +159,14 @@ namespace Logic
             return true;
         }
 
-        public void Wait(string userNick)
+        public void WaitMove(string userNick)
         {
+            if (string.IsNullOrEmpty(userNick))
+                throw new ArgumentNullException(userNick);
+
             lock (players)
             {
-                EnsureJoined(userNick);
+                EnsurePlayerJoined(userNick);
                 players[userNick].Touch();
 
                 lock (fields)

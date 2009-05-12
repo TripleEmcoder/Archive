@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Logic
 {
-    public class Manager : IEnumerable<Game>
+    public class Manager
     {
         private readonly Dictionary<string, Game> games;
         private int gameId;
@@ -29,8 +29,11 @@ namespace Logic
                 throw new InvalidOperationException("No such game exists.");
         }
 
-        public Game Create(string gameTitle, int maxPlayerCount, int winningFieldCount, int boardWidth, int boardHeight)
+        public Game CreateGame(string gameTitle, int maxPlayerCount, int winningFieldCount, int boardWidth, int boardHeight)
         {
+            if (string.IsNullOrEmpty(gameTitle))
+                throw new ArgumentNullException(gameTitle);
+
             lock (games)
             {
                 EnsureGameNotExists(gameTitle);
@@ -39,8 +42,11 @@ namespace Logic
             }
         }
 
-        public Game Get(string gameTitle)
+        public Game GetGame(string gameTitle)
         {
+            if (string.IsNullOrEmpty(gameTitle))
+                throw new ArgumentNullException(gameTitle);
+
             lock (games)
             {
                 EnsureGameExists(gameTitle);
@@ -48,14 +54,9 @@ namespace Logic
             }
         }
 
-        public IEnumerator<Game> GetEnumerator()
+        public IEnumerable<Game> GetGames()
         {
-            return games.Values.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
+            return games.Values;
         }
     }
 }
