@@ -37,7 +37,7 @@ namespace Logic
             lock (games)
             {
                 EnsureGameNotExists(gameTitle);
-                games[gameTitle] = new Game(gameId++, gameTitle, maxPlayerCount, winningFieldCount, boardWidth, boardHeight);
+                games[gameTitle] = new Game(gameTitle, maxPlayerCount, winningFieldCount, boardWidth, boardHeight);
                 return games[gameTitle];
             }
         }

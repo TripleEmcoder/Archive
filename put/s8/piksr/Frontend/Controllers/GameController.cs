@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
-using System.Web;
 using System.Web.Mvc;
 using Logic;
 
@@ -12,38 +9,40 @@ namespace Frontend.Controllers
     [HandleError]
     public class GameController : Controller
     {
-        private static Manager manager;
-        private string userNick;
+        private static readonly Manager manager = new Manager();
+        private static readonly TimeSpan timeout = TimeSpan.FromSeconds(10);
 
-        public GameController()
+        static GameController()
         {
-            userNick = "testUser";
+            Game emptyGame = manager.CreateGame("emptyGame", 2, 3, 3, 3);
 
-            if (manager == null)
+            Game joinedGame = manager.CreateGame("joinedGame", 2, 3, 3, 3);
+            joinedGame.JoinPlayer("testUser");
+
+            Game joinedFullGame = manager.CreateGame("joinedFullGame", 2, 3, 3, 3);
+            joinedFullGame.JoinPlayer("testUser");
+            joinedFullGame.JoinPlayer("testUser1");
+
+            Game fullGame = manager.CreateGame("fullGame", 2, 3, 3, 3);
+            fullGame.JoinPlayer("testUser1");
+            fullGame.JoinPlayer("testUser2");
+            //fullGame.MakeMove("testUser1", 0, 0, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser2", 0, 1, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser1", 0, 2, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser2", 1, 0, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser1", 1, 1, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser2", 1, 2, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser1", 2, 0, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser2", 2, 1, TimeSpan.Zero);
+            //fullGame.MakeMove("testUser1", 2, 2, TimeSpan.Zero);
+        }
+
+        private string UserNick
+        {
+            get
             {
-                manager = new Manager();
-
-                Game emptyGame = manager.CreateGame("emptyGame", 2, 3, 3, 3);
-
-                Game joinedGame = manager.CreateGame("joinedGame", 2, 3, 3, 3);
-                joinedGame.JoinPlayer("testUser");
-
-                Game joinedFullGame = manager.CreateGame("joinedFullGame", 2, 3, 3, 3);
-                joinedFullGame.JoinPlayer("testUser");
-                joinedFullGame.JoinPlayer("testUser1");
-
-                Game fullGame = manager.CreateGame("fullGame", 2, 3, 3, 3);
-                fullGame.JoinPlayer("testUser1");
-                fullGame.JoinPlayer("testUser2");
-                fullGame.MakeMove("testUser1", 0, 0, TimeSpan.Zero);
-                fullGame.MakeMove("testUser2", 0, 1, TimeSpan.Zero);
-                fullGame.MakeMove("testUser1", 0, 2, TimeSpan.Zero);
-                fullGame.MakeMove("testUser2", 1, 0, TimeSpan.Zero);
-                fullGame.MakeMove("testUser1", 1, 1, TimeSpan.Zero);
-                fullGame.MakeMove("testUser2", 1, 2, TimeSpan.Zero);
-                fullGame.MakeMove("testUser1", 2, 0, TimeSpan.Zero);
-                fullGame.MakeMove("testUser2", 2, 1, TimeSpan.Zero);
-                fullGame.MakeMove("testUser1", 2, 2, TimeSpan.Zero);
+                Session["pin"] = "pin";
+                return Session.SessionID;
             }
         }
 
@@ -61,10 +60,10 @@ namespace Frontend.Controllers
             return builder.ToString();
         }
 
-        public ActionResult Create(string gameTitle)
+        public ActionResult Create(string gameTitle, int maxPlayerCount, int boardSize, int winningFieldCount)
         {
             gameTitle = Transcode(gameTitle);
-            manager.CreateGame(gameTitle, 2, 3, 3, 3);
+            manager.CreateGame(gameTitle, maxPlayerCount, winningFieldCount, boardSize, boardSize);
 
             return RedirectToAction("Index");
         }
@@ -73,7 +72,7 @@ namespace Frontend.Controllers
         {
             gameTitle = Transcode(gameTitle);
             Game game = manager.GetGame(gameTitle);
-            game.JoinPlayer(userNick);
+            game.JoinPlayer(UserNick);
 
             return RedirectToAction("Index");
         }
@@ -82,14 +81,14 @@ namespace Frontend.Controllers
         {
             gameTitle = Transcode(gameTitle);
             Game game = manager.GetGame(gameTitle);
-            game.ExitPlayer(userNick);
+            game.ExitPlayer(UserNick);
 
             return RedirectToAction("Index");
         }
 
         public ActionResult Index()
         {
-            ViewData["userNick"] = userNick;
+            ViewData["userNick"] = UserNick;
 
             ViewData["games"] = from game in manager.GetGames()
                                 orderby game.Title
@@ -101,27 +100,48 @@ namespace Frontend.Controllers
         public ActionResult Watch(string gameTitle)
         {
             gameTitle = Transcode(gameTitle);
-            ViewData["userNick"] = userNick;
+            ViewData["userNick"] = UserNick;
             ViewData["game"] = manager.GetGame(gameTitle);
 
             return View();
         }
 
-        public ActionResult MakeMove(string gameTitle, int firstIndex, int x, int y)
+        public ActionResult Play(string gameTitle)
         {
             gameTitle = Transcode(gameTitle);
-            Game game = manager.GetGame(gameTitle);
-            game.MakeMove(userNick, x, y, TimeSpan.FromSeconds(10));
+            ViewData["userNick"] = UserNick;
+            ViewData["game"] = manager.GetGame(gameTitle);
 
-            return Json(new { firstIndex, moves = game.GetMoves(firstIndex) });
+            return View("Watch");
         }
 
-        public ActionResult WaitMove(string gameTitle, int firstIndex)
+        public ActionResult Move(string gameTitle, int firstIndex, int x, int y)
+        {
+            gameTitle = Transcode(gameTitle);
+            Game game = manager.GetGame(gameTitle);
+            game.MakeMove(UserNick, x, y, TimeSpan.FromSeconds(10));
+
+            return Info(game, firstIndex);
+        }
+
+        public ActionResult Wait(string gameTitle, int firstIndex)
         {
             gameTitle = Transcode(gameTitle);
             Game game = manager.GetGame(gameTitle);
 
-            return Json(new { firstIndex, moves = game.GetMoves(firstIndex) });
+            return Info(game, firstIndex);
+        }
+
+        private ActionResult Info(Game game, int firstIndex)
+        {
+            return Json(new
+                            {
+                                firstIndex,
+                                moves = game.WaitMove(UserNick, firstIndex, timeout),
+                                allowMove = game.AllowMove(UserNick),
+                                playerCount = game.PlayerCount,
+                                winner = game.Winner
+                            });
         }
 
         public ActionResult About()

@@ -4,20 +4,27 @@ namespace Logic
 {
     public class Move
     {
-        private readonly string userNick;
+        private readonly DateTime when;
+        private readonly string who;
         private readonly int x;
         private readonly int y;
 
-        public Move(string userNick, int x, int y)
+        public Move(string who, int x, int y)
         {
-            this.userNick = userNick;
+            when = DateTime.Now;
+            this.who = who;
             this.x = x;
             this.y = y;
         }
 
-        public string UserNick
+        public DateTime When
         {
-            get { return userNick; }
+            get { return when; }
+        }
+
+        public string Who
+        {
+            get { return who; }
         }
 
         public int X

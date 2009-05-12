@@ -11,16 +11,15 @@
         Index
     </h2>
     <p>
-        Twój nick:
-        <%= userNick %>
-    </p>
-    <p>
         <% 
             using (Html.BeginForm("Create", "Game"))
             {
         %>
         Nowa gra:
-        <%= Html.TextBox("gameTitle") %>
+        <input type="text" name="gameTitle" size="20" />
+        <input type="text"name="maxPlayerCount" size="2" value="2" />
+        <input type="text"name="boardSize" size="2" value="3" />
+        <input type="text"name="winningFieldCount" size="2" value="3" />
         <input type="submit" value="Dodaj" />
         <%
             }
@@ -29,10 +28,19 @@
     <table>
         <tr>
             <th>
-                Name
+                Nazwa
             </th>
             <th>
-                Actions
+                Rozmiar
+            </th>
+            <th>
+                Gracze
+            </th>
+            <th>
+                Wygrana
+            </th>
+            <th>
+                Akcje
             </th>
         </tr>
         <%
@@ -44,6 +52,16 @@
                 <%= game.Title %>
             </td>
             <td>
+                <%= game.BoardWidth %>
+                x
+                <%= game.BoardHeight %>
+            </td>
+            <td>
+                <%= game.PlayerCount %>
+                /
+                <%= game.MaxPlayerCount %>
+            </td>
+            <td>
                 <ul>
                     <% 
                         if (game.CanJoin(userNick))
@@ -53,7 +71,7 @@
                         <%= Html.ActionLink("Watch", "Watch", new { gameTitle = game.Title })%>
                     </li>
                     <% 
-                        if (!game.IsFull)
+                        if (game.PlayerCount != game.MaxPlayerCount)
                         {
                     %>
                     <li>
