@@ -14,7 +14,9 @@ namespace Frontend.Controllers
 
         static GameController()
         {
-            //Game emptyGame = manager.CreateGame("emptyGame", 2, 3, 3, 3);
+            manager.CreateGame("222", 2, 2, 2, 2);
+            manager.CreateGame("233", 2, 3, 3, 3);
+            manager.CreateGame("355", 3, 5, 5, 5);
 
             //Game joinedGame = manager.CreateGame("joinedGame", 2, 3, 3, 3);
             //joinedGame.JoinPlayer("testUser");
@@ -115,33 +117,21 @@ namespace Frontend.Controllers
             return View("Watch");
         }
 
-        public ActionResult Move(string gameTitle, int firstIndex, int x, int y)
+        public ActionResult Move(string gameTitle, int firstEvent, int x, int y)
         {
             gameTitle = Transcode(gameTitle);
             Game game = manager.GetGame(gameTitle);
-            game.MakeMove(UserNick, x, y, TimeSpan.FromSeconds(10));
+            game.MakeMove(UserNick, x, y, timeout);
 
-            return Info(game, firstIndex);
+            return Json(game.WaitEvent(UserNick, firstEvent, timeout));
         }
 
-        public ActionResult Wait(string gameTitle, int firstIndex)
+        public ActionResult Wait(string gameTitle, int firstEvent)
         {
             gameTitle = Transcode(gameTitle);
             Game game = manager.GetGame(gameTitle);
 
-            return Info(game, firstIndex);
-        }
-
-        private ActionResult Info(Game game, int firstIndex)
-        {
-            return Json(new
-                            {
-                                firstIndex,
-                                moves = game.WaitMove(UserNick, firstIndex, timeout),
-                                allowMove = game.AllowMove(UserNick),
-                                playerCount = game.PlayerCount,
-                                winner = game.Winner
-                            });
+            return Json(game.WaitEvent(UserNick, firstEvent, timeout));
         }
 
         public ActionResult About()

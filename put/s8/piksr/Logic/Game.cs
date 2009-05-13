@@ -17,6 +17,8 @@ namespace Logic
         private readonly object guard;
 
         private string winner;
+        private int eventCount;
+        private int nextEvent;
 
         public Game(string gameTitle, int maxPlayerCount, int winningFieldCount, int boardWidth, int boardHeight)
         {
@@ -60,6 +62,11 @@ namespace Logic
             get { return winner; }
         }
 
+        public int NextEvent
+        {
+            get { return nextEvent; }
+        }
+
         private void EnsurePlayerNotJoined(string userNick)
         {
             if (players.ContainsKey(userNick))
@@ -99,12 +106,20 @@ namespace Logic
             if (string.IsNullOrEmpty(userNick))
                 throw new ArgumentNullException(userNick);
 
-            lock (players)
+            Monitor.Enter(guard);
+
+            try
             {
                 EnsurePlayerJoinable(userNick);
                 players[userNick] = DateTime.Now;
                 queue.Enqueue(userNick);
-                SignalChange();
+            }
+            finally
+            {
+                eventCount++;
+                nextEvent++;
+                Monitor.PulseAll(guard);
+                Monitor.Exit(guard);
             }
         }
 
@@ -113,11 +128,19 @@ namespace Logic
             if (string.IsNullOrEmpty(userNick))
                 throw new ArgumentNullException(userNick);
 
-            lock (players)
+            Monitor.Enter(guard);
+
+            try
             {
                 EnsurePlayerJoined(userNick);
                 players.Remove(userNick);
-                SignalChange();
+            }
+            finally
+            {
+                eventCount++;
+                nextEvent++;
+                Monitor.PulseAll(guard);
+                Monitor.Exit(guard);
             }
         }
 
@@ -132,8 +155,16 @@ namespace Logic
             if (winner != null)
                 return false;
 
-            lock (players)
+            Monitor.Enter(guard);
+
+            try
+            {
                 return players.ContainsKey(userNick) && queue.Peek() == userNick;
+            }
+            finally
+            {
+                Monitor.Exit(guard);
+            }
         }
 
         public bool MakeMove(string userNick, int x, int y, TimeSpan timeout)
@@ -149,14 +180,25 @@ namespace Logic
                     if (!Monitor.Wait(queue, timeout))
                         return false;
 
-                EnsureMovePossible(x, y);
-                fields[x, y] = userNick;
-                moves.Add(new Move(userNick, x, y));
-                queue.Dequeue();
-                queue.Enqueue(userNick);
+                Monitor.Enter(guard);
 
-                CheckWinner(userNick);
-                SignalChange();
+                try
+                {
+                    EnsureMovePossible(x, y);
+                    fields[x, y] = userNick;
+
+                    moves.Add(new Move(userNick, x, y));
+                    nextEvent++;
+                    Monitor.PulseAll(guard);
+
+                    queue.Dequeue();
+                    queue.Enqueue(userNick);
+                    CheckWinner(userNick);
+                }
+                finally
+                {
+                    Monitor.Exit(guard);
+                }
             }
             finally
             {
@@ -166,29 +208,31 @@ namespace Logic
             return true;
         }
 
-        public IEnumerable<Move> WaitMove(string userNick, int firstIndex, TimeSpan timeout)
+        public Event WaitEvent(string userNick, int firstEvent, TimeSpan timeout)
         {
             if (string.IsNullOrEmpty(userNick))
                 throw new ArgumentNullException(userNick);
 
-            if (firstIndex == moves.Count)
-                WaitChange(timeout);
-
-            return moves.Skip(firstIndex).ToArray();
-        }
-
-        private void WaitChange(TimeSpan timeout)
-        {
             Monitor.Enter(guard);
-            Monitor.Wait(guard, timeout);
-            Monitor.Exit(guard);
-        }
 
-        private void SignalChange()
-        {
-            Monitor.Enter(guard);
-            Monitor.PulseAll(guard);
-            Monitor.Exit(guard);
+            try
+            {
+                if (firstEvent == nextEvent)
+                    Monitor.Wait(guard, timeout);
+
+                return new Event
+                           {
+                               PlayerCount = PlayerCount,
+                               Winner = Winner,
+                               RecentMoves = moves.Skip(firstEvent - eventCount).ToArray(),
+                               AllowMove = AllowMove(userNick),
+                               NextEvent = nextEvent
+                           };
+            }
+            finally
+            {
+                Monitor.Exit(guard);
+            }
         }
 
         private void CheckWinner(string userNick)
@@ -219,7 +263,7 @@ namespace Logic
 
                 return true;
             }
-            
+
             return false;
         }
 

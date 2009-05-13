@@ -29,9 +29,9 @@
         var players = new Array();
         
         var playerId = 0;
-        var firstIndex = 0;
+        var nextEvent = <%= game.NextEvent %>;
         var allowMove = <%= game.AllowMove(userNick) ? "true" : "false" %>;
-        var winner = null;
+        var winner = <%= game.Winner != null ? string.Format("\"{0}\"", game.Winner) : "\"\"" %>;
         
         var fields = new Array(); 
         for (var index = 0; index < boardWidth; index++)
@@ -142,12 +142,12 @@
             
             if (data != null)
             {
-                plotMoves(data.moves);
-                firstIndex = data.firstIndex + data.moves.length;
-                allowMove = data.allowMove;
-                $("#playerCount").html(data.playerCount);
-                winner = data.winner;
-                $("#winner").html(data.winner);
+                plotMoves(data.RecentMoves);
+                nextEvent = data.NextEvent;
+                allowMove = data.AllowMove;
+                $("#playerCount").html(data.PlayerCount);
+                winner = data.Winner;
+                $("#winner").html(data.Winner);
             }
             
             $("#board").css({ borderColor: allowMove ? activeColor : inactiveColor});
@@ -156,7 +156,7 @@
         function postMove(x, y) {
             $.post(
                 '<%= Url.Action("Move") %>',
-                { gameTitle: gameTitle, firstIndex: firstIndex, x: x, y: y },
+                { gameTitle: gameTitle, firstEvent: nextEvent, x: x, y: y },
                 function(data) { 
                     updateState(data);
                     if (!allowMove && winner == null)
@@ -168,7 +168,7 @@
         function waitMove() {
             $.post(
                 '<%= Url.Action("Wait") %>',
-                 { gameTitle: gameTitle, firstIndex: firstIndex },
+                 { gameTitle: gameTitle, firstEvent: nextEvent },
                 function(data) { 
                     updateState(data);
                     if (!allowMove && winner == null)
