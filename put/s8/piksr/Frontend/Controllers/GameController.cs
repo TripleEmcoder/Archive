@@ -14,18 +14,18 @@ namespace Frontend.Controllers
 
         static GameController()
         {
-            Game emptyGame = manager.CreateGame("emptyGame", 2, 3, 3, 3);
+            //Game emptyGame = manager.CreateGame("emptyGame", 2, 3, 3, 3);
 
-            Game joinedGame = manager.CreateGame("joinedGame", 2, 3, 3, 3);
-            joinedGame.JoinPlayer("testUser");
+            //Game joinedGame = manager.CreateGame("joinedGame", 2, 3, 3, 3);
+            //joinedGame.JoinPlayer("testUser");
 
-            Game joinedFullGame = manager.CreateGame("joinedFullGame", 2, 3, 3, 3);
-            joinedFullGame.JoinPlayer("testUser");
-            joinedFullGame.JoinPlayer("testUser1");
+            //Game joinedFullGame = manager.CreateGame("joinedFullGame", 2, 3, 3, 3);
+            //joinedFullGame.JoinPlayer("testUser");
+            //joinedFullGame.JoinPlayer("testUser1");
 
-            Game fullGame = manager.CreateGame("fullGame", 2, 3, 3, 3);
-            fullGame.JoinPlayer("testUser1");
-            fullGame.JoinPlayer("testUser2");
+            //Game fullGame = manager.CreateGame("fullGame", 2, 3, 3, 3);
+            //fullGame.JoinPlayer("testUser1");
+            //fullGame.JoinPlayer("testUser2");
             //fullGame.MakeMove("testUser1", 0, 0, TimeSpan.Zero);
             //fullGame.MakeMove("testUser2", 0, 1, TimeSpan.Zero);
             //fullGame.MakeMove("testUser1", 0, 2, TimeSpan.Zero);

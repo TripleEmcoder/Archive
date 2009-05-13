@@ -76,6 +76,8 @@
     <Content Include="Content\Symbols\7.png" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\excanvas.compiled.js" />
+    <Content Include="Scripts\excanvas.js" />
     <Content Include="Views\Game\Watch.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />

@@ -15,11 +15,11 @@
             using (Html.BeginForm("Create", "Game"))
             {
         %>
-        Nowa gra:
-        <input type="text" name="gameTitle" size="20" />
-        <input type="text"name="maxPlayerCount" size="2" value="2" />
-        <input type="text"name="boardSize" size="2" value="3" />
-        <input type="text"name="winningFieldCount" size="2" value="3" />
+        Nowa gra:<br />
+        Nazwa: <input type="text" name="gameTitle" size="20" /><br />
+        Gracze: <input type="text"name="maxPlayerCount" size="2" value="2" /><br />
+        Rozmiar: <input type="text"name="boardSize" size="2" value="3" /><br />
+        Wygrana: <input type="text"name="winningFieldCount" size="2" value="3" /><br />
         <input type="submit" value="Dodaj" />
         <%
             }

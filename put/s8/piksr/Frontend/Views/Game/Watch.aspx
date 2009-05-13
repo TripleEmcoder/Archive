@@ -92,10 +92,17 @@
             for (var x = 0; x < boardWidth - 1 ; x++)
                 context.fillRect(toX(x, 0, 1), 0, lineSize, board.height);
                 
-            board.onclick = function(event) { 
+            $("#board").click(function(event) { 
                 event = getRelativePosition(board, event);
                 makeMove(fromX(event.x), fromY(event.y));
+            });
+            
+            /*
+            board.onclick = function(e) { 
+                e = getRelativePosition(board, e);
+                makeMove(fromX(e.x), fromY(e.y));
             }
+            */
             
             updateState(null);
         }
