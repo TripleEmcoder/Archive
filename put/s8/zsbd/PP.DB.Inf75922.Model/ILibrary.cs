@@ -5,69 +5,63 @@ namespace PP.DB.Inf75922.Model
     public interface ILibrary 
     {
         /// <summary>
-        /// Metoda sprawdza, czy jest w bazie danych egzemplarz książki o podanym
-        /// tytule, który jest nie wypożyczony.
+        /// Sprawdza, czy w biblitece znajduje się niewypożyczony egzemplarz książki o zadanym tytule.
         /// </summary>
-        /// <param name="title">Tytuł książki</param>
-        /// <returns>jeśli jest taki egzemplarz, false, jeśli nie ma</returns>
+        /// <param name="title">tytuł książki</param>
+        /// <returns>true jeśli jest taki egzemplarz, false jeśli nie ma</returns>
         bool IsBookAvailable(string title);
 
         /// <summary>
         /// Wypożycza książkę o zadanym tytule użytkownikowi o zadanym numerze pesel.
         /// </summary>
-        /// <param name="title">Tytuł książki</param>
-        /// <param name="pesel">Pesel użytkownika</param>
+        /// <param name="title">tytuł książki</param>
+        /// <param name="pesel">PESEL użytkownika</param>
         /// <returns>Unikalny identyfikator egzemplarza</returns>
         /// <exception cref="LibraryException">
-        /// LibraryException jeśli nie ma wolnej książki o tym tytule, bądź użytkownik
-        /// o zadanym numerze pesel jest niezarejestrowany.
+        /// jeżeli nie ma niewypożyczonej książki o zadanym tytule, bądź użytkownik o zadanym numerze pesel nie jest zarejestrowany
         /// </exception>
         int RentBook(string title, string pesel);
 
         /// <summary>
         /// Zwraca do biblioteki książkę o zadanym unikalnym identyfikatorze.
         /// </summary>
-        /// <param name="bookId">unikaly identyfikator książki</param>
+        /// <param name="bookId">identyfikator książki</param>
         /// <exception cref="LibraryException">
-        /// jeżeli książka nie została wypożyczona, bądź w ogóle nie istnieje.
+        /// jeżeli książka nie istnieje lub nie została wypożyczona
         /// </exception>
         void ReturnBook(int bookId);
 
         /// <summary>
-        /// Zwraca wektor obiektów typu Integer, przechowujących unikalne 
-        /// identyfikatory wszystkich egzemplarzy książki o zadanym tytule.
+        /// Zwraca wektor unikalnych identyfikatorów wszystkich egzemplarzy książki o zadanym tytule.
         /// </summary>
         /// <param name="title">tytuł książki</param>
-        /// <returns>wektor identyfikatorów</returns>
+        /// <returns>wektor identyfikatorów książek</returns>
         IList<int> Copies(string title);
       
         /// <summary>
-        /// Zwraca PESEL użytkownika, który wypożyczył książkę o zadanym
-        /// unikalnym identyfikatorze.
+        /// Zwraca PESEL użytkownika, który wypożyczył książkę o zadanym unikalnym identyfikatorze.
         /// </summary>
         /// <param name="bookId">identyfikator książki</param>
-        /// <returns>pesel użytkownika</returns>
+        /// <returns>numer PESEL wypożyczającego lub null jeśli książka nie jest wypożyczona</returns>
         string WhoRented(int bookId);
 
         /// <summary>
-        /// Zwraca wektor numerów PESEl wszystkich użytkowników zarejestrowanych
-        /// w bibliotece.
+        /// Zwraca wektor numerów PESEL wszystkich użytkowników zarejestrowanych w bibliotece.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>wektor numerów PESEL użytkowników</returns>
         IList<string> RegisteredUsers();
 	
         /// <summary>
-        /// Zwraca skonkatenowane imię i nazwisko użytkownika biblioteki o 
-        /// zadanym numerze pesel.
+        /// Zwraca skonkatenowane imię i nazwisko użytkownika o zadanym numerze PESEL.
         /// </summary>
-        /// <param name="pesel"></param>
-        /// <returns></returns>
+        /// <param name="pesel">numer PESEL użytkownika</param>
+        /// <returns>skonkatenowane imię i nazwisko lub null jeżeli użytkownik nie jest zarejestrowany</returns>
         string UserInfo(string pesel);
 	
         /// <summary>
         /// Zwraca wektor wszystkich unikalnych tytułów książek w bibliotece.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>wektor tytułów książek</returns>
         IList<string> Titles();
 
         /// <summary>

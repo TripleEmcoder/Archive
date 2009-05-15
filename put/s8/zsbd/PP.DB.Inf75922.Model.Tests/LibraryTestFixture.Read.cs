@@ -9,9 +9,10 @@ namespace PP.DB.Inf75922.Model.Tests
         public void TestRegisteredUsers()
         {
             string[] users = library.RegisteredUsers().ToArray();
-            Assert.AreEqual(2, users.Length);
+            Assert.AreEqual(3, users.Length);
             Assert.Contains("1", users);
             Assert.Contains("2", users);
+            Assert.Contains("3", users);
         }
 
         [Test]
@@ -24,7 +25,7 @@ namespace PP.DB.Inf75922.Model.Tests
         [Test]
         public void TestNonExistingUserInfo()
         {
-            string info = library.UserInfo("3");
+            string info = library.UserInfo("[nieistniejący pesel]");
             Assert.IsNull(info);
         }
 
@@ -43,6 +44,12 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             int[] ids = library.Copies("Ania z zielonej bazy").ToArray();
             Assert.AreEqual(2, ids.Length);
+
+            string title1 = library.BookTitle(ids[0]);
+            Assert.AreEqual("Ania z zielonej bazy", title1);
+            
+            string title2 = library.BookTitle(ids[1]);
+            Assert.AreEqual("Ania z zielonej bazy", title2);
         }
 
         [Test]
@@ -62,7 +69,7 @@ namespace PP.DB.Inf75922.Model.Tests
         [Test]
         public void TestNonExistingBookTitle()
         {
-            string title = library.BookTitle(99);
+            string title = library.BookTitle(0);
             Assert.IsNull(title);
         }
 
@@ -88,14 +95,27 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
-        public void TestRentedBooks()
+        public void TestRentedBooksForUserWithBooks()
         {
             int[] ids = library.RentedBooks("1").ToArray();
             Assert.AreEqual(2, ids.Length);
+
+            string title1 = library.BookTitle(ids[0]);
+            Assert.AreEqual("Ania z zielonej bazy", title1);
+
+            string title2 = library.BookTitle(ids[1]);
+            Assert.AreEqual("Władca pierścienia", title2);
         }
 
         [Test]
-        public void TestWhoRented()
+        public void TestRentedBooksForUserWithoutBooks()
+        {
+            int[] ids = library.RentedBooks("3").ToArray();
+            Assert.AreEqual(0, ids.Length);
+        }
+
+        [Test]
+        public void TestWhoRentedExistingRentedBook()
         {
             int[] ids = library.Copies("Władca pierścienia").ToArray();
             Assert.AreEqual(1, ids.Length);
@@ -105,7 +125,17 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
-        public void TestWhoNotRented()
+        public void TestWhoRentedExistingNotRentedBook()
+        {
+            int[] ids = library.Copies("Ogniem i mieczem").ToArray();
+            Assert.AreEqual(1, ids.Length);
+
+            string pesel = library.WhoRented(ids[0]);
+            Assert.IsNull(pesel);
+        }
+
+        [Test]
+        public void TestWhoRentedNonExistingBook()
         {
             string pesel = library.WhoRented(0);
             Assert.IsNull(pesel);

@@ -4,7 +4,14 @@
 		<id name="Pesel">
 			<column name="pesel" />
 		</id>
+		
 		<property name="Name" column="name" />
 		<property name="Surname" column="surname" />
+
+		<set name="Books" table="rented_books" inverse="true">
+			<key column="users_pesel" />
+			<many-to-many column="rented_book"
+			   class="PP.DB.Inf75922.Model.Book, PP.DB.Inf75922.Model"/>
+		</set>
 	</class>
 </hibernate-mapping>

@@ -64,7 +64,16 @@ namespace PP.DB.Inf75922.Model
 
         public bool IsBookAvailable(string title)
         {
-            throw new NotImplementedException();
+            using (ISession session = factory.OpenSession())
+            {
+                int count = session.CreateCriteria<Book>()
+                    .Add(Restrictions.Eq("Title", title))
+                    .Add(Restrictions.IsEmpty("Users"))
+                    .SetProjection(Projections.RowCount())
+                    .UniqueResult<int>();
+
+                return count > 0;
+            } 
         }
 
         public IList<int> RentedBooks(string pesel)

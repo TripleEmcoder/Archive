@@ -5,6 +5,13 @@
 			<column name="book_id" />
 			<generator class="increment" />
 		</id>
+		
 		<property name="Title" column="title" />
+
+		<set name="Users" table="rented_books">
+			<key column="rented_book" />
+			<many-to-many column="users_pesel"
+			   class="PP.DB.Inf75922.Model.User, PP.DB.Inf75922.Model"/>
+		</set>
 	</class>
 </hibernate-mapping>

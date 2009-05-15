@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace PP.DB.Inf75922.Model
 {
@@ -49,7 +51,18 @@ namespace PP.DB.Inf75922.Model
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                throw new NotImplementedException();
+                Book book = session.CreateCriteria<Book>()
+                    .Add(Restrictions.Eq("Title", title))
+                    .Add(Restrictions.IsEmpty("Users"))
+                    .SetMaxResults(1)
+                    .UniqueResult<Book>();
+
+                User user = session.Get<User>(pesel);
+
+                book.Users.Add(user);
+                transaction.Commit();
+
+                return book.Id;
             } 
         }
 
@@ -58,7 +71,14 @@ namespace PP.DB.Inf75922.Model
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                throw new NotImplementedException();
+                Book book = session.Get<Book>(bookId);
+
+                if (book == null)
+                    throw new LibraryException("No book with given id");
+
+                Debug.Assert(book.Users.Count == 1);
+                book.Users.Clear();
+                transaction.Commit();
             } 
         }
     }
