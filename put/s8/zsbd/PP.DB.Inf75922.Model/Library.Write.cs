@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using NHibernate;
 using NHibernate.Criterion;
 
@@ -30,7 +29,16 @@ namespace PP.DB.Inf75922.Model
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
-                throw new NotImplementedException();
+                User user = session.Get<User>(pesel);
+
+                if (user == null)
+                    throw new LibraryException("User with given PESEL does not exist");
+
+                if (user.Books.Count > 0)
+                    throw new LibraryException("User with given PESEL has rented books");
+
+                session.Delete(user);
+                transaction.Commit();
             }
         }
 
@@ -74,7 +82,10 @@ namespace PP.DB.Inf75922.Model
                 Book book = session.Get<Book>(bookId);
 
                 if (book == null)
-                    throw new LibraryException("No book with given id");
+                    throw new LibraryException("No book with given id exists");
+
+                if (book.Users.Count == 0)
+                    throw new LibraryException("The book with given id is not rented");
 
                 Debug.Assert(book.Users.Count == 1);
                 book.Users.Clear();

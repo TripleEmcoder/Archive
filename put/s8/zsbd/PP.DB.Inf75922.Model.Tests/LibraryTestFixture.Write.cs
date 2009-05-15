@@ -9,7 +9,7 @@ namespace PP.DB.Inf75922.Model.Tests
         public void TestRegisterUserWithNonExistingPesel()
         {
             library.RegisterUser("Jan", "Kowalski", "0");
-            
+
             string info = library.UserInfo("0");
             Assert.AreEqual("Jan Kowalski", info);
         }
@@ -18,12 +18,11 @@ namespace PP.DB.Inf75922.Model.Tests
         public void TestRegisterUserWithExistingPesel()
         {
             library.RegisterUser("Jan", "Kowalski", "0");
-            
+
             string info = library.UserInfo("0");
             Assert.AreEqual("Jan Kowalski", info);
 
-            Assert.Throws(typeof (LibraryException), 
-                () => library.RegisterUser("Jan", "Kowalski", "0"));
+            Assert.Throws(typeof(LibraryException), () => library.RegisterUser("Jan", "Kowalski", "0"));
         }
 
         [Test]
@@ -31,9 +30,9 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             string beforeInfo = library.UserInfo("3");
             Assert.AreEqual("Dawid Morzyński", beforeInfo);
-            
+
             library.UnRegisterUser("3");
-            
+
             string afterInfo = library.UserInfo("3");
             Assert.IsNull(afterInfo);
         }
@@ -43,7 +42,8 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             string beforeInfo = library.UserInfo("1");
             Assert.AreEqual("Kamil Serwus", beforeInfo);
-            library.UnRegisterUser("1");
+
+            Assert.Throws(typeof(LibraryException), () => library.UnRegisterUser("1"));
         }
 
         [Test]
@@ -51,19 +51,20 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             string beforeInfo = library.UserInfo("0");
             Assert.AreEqual(null, beforeInfo);
-            library.UnRegisterUser("0");
+
+            Assert.Throws(typeof(LibraryException), () => library.UnRegisterUser("0"));
         }
 
         [Test]
         public void TestAddNewBook()
         {
             string title = "Pan Taduesz";
-            
+
             int beforeCount = library.Copies(title).Count;
             Assert.AreEqual(0, beforeCount);
-            
+
             library.AddBook(title);
-            
+
             int afterCount = library.Copies(title).Count;
             Assert.AreEqual(1, afterCount);
         }
@@ -72,12 +73,12 @@ namespace PP.DB.Inf75922.Model.Tests
         public void TestAddExistingBook()
         {
             string title = "Ania z zielonej bazy";
-            
+
             int beforeCount = library.Copies(title).Count;
             Assert.Greater(beforeCount, 0);
 
             library.AddBook(title);
-            
+
             int afterCount = library.Copies(title).Count;
             Assert.AreEqual(beforeCount + 1, afterCount);
         }
@@ -121,7 +122,7 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             library.RentBook("[nieistniejący tytuł]", "[nieistniejący pesel]");
         }
-        
+
         [Test]
         public void TestReturnExistingRentedBook()
         {
@@ -129,7 +130,7 @@ namespace PP.DB.Inf75922.Model.Tests
             Assert.AreEqual(1, ids.Length);
 
             string beforePesel = library.WhoRented(ids[0]);
-            Assert.AreEqual("2", beforePesel);
+            Assert.AreEqual("1", beforePesel);
 
             library.ReturnBook(ids[0]);
 
@@ -146,14 +147,13 @@ namespace PP.DB.Inf75922.Model.Tests
             string pesel = library.WhoRented(ids[0]);
             Assert.IsNull(pesel);
 
-            library.ReturnBook(ids[0]);
+            Assert.Throws(typeof(LibraryException), () => library.ReturnBook(ids[0]));
         }
 
         [Test]
         public void TestReturnNonExistingBook()
         {
-            Assert.Throws(typeof(LibraryException),
-                () => library.ReturnBook(0));
+            Assert.Throws(typeof(LibraryException), () => library.ReturnBook(0));
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Criterion;
 
@@ -78,12 +77,26 @@ namespace PP.DB.Inf75922.Model
 
         public IList<int> RentedBooks(string pesel)
         {
-            throw new NotImplementedException();
+            using (ISession session = factory.OpenSession())
+            {
+                return session.CreateCriteria<Book>()
+                    .CreateCriteria("Users")
+                    .Add(Restrictions.Eq("Pesel", pesel))
+                    .SetProjection(Projections.Property("Id"))
+                    .List<int>();
+            } 
         }
 
         public string WhoRented(int bookId)
         {
-            throw new NotImplementedException();
+            using (ISession session = factory.OpenSession())
+            {
+                return session.CreateCriteria<User>()
+                    .CreateCriteria("Books")
+                    .Add(Restrictions.Eq("Id", bookId))
+                    .SetProjection(Projections.Property("Pesel"))
+                    .UniqueResult<string>();
+            }
         }
     }
 }

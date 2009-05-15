@@ -47,7 +47,7 @@ namespace PP.DB.Inf75922.Model.Tests
 
             string title1 = library.BookTitle(ids[0]);
             Assert.AreEqual("Ania z zielonej bazy", title1);
-            
+
             string title2 = library.BookTitle(ids[1]);
             Assert.AreEqual("Ania z zielonej bazy", title2);
         }
@@ -57,7 +57,7 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             int[] ids = library.Copies("[nieistniejący tytuł]").ToArray();
             Assert.AreEqual(0, ids.Length);
-        }    
+        }
 
         [Test]
         public void TestExistingBookTitle()
