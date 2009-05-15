@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP.DB.Inf75922.Model", "PP.DB.Inf75922.Model\PP.DB.Inf75922.Model.csproj", "{70802B6C-B7C7-4375-A164-8D5A345D4888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP.DB.Inf75922.Model.Tests", "PP.DB.Inf75922.Model.Tests\PP.DB.Inf75922.Model.Tests.csproj", "{26E2774E-3957-415E-9FFE-337F663A705E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP.DB.Inf75922.Runner", "PP.DB.Inf75922.Runner\PP.DB.Inf75922.Runner.csproj", "{99C56253-1F15-4577-B536-5F9400F8F383}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70802B6C-B7C7-4375-A164-8D5A345D4888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70802B6C-B7C7-4375-A164-8D5A345D4888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70802B6C-B7C7-4375-A164-8D5A345D4888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70802B6C-B7C7-4375-A164-8D5A345D4888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E2774E-3957-415E-9FFE-337F663A705E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E2774E-3957-415E-9FFE-337F663A705E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E2774E-3957-415E-9FFE-337F663A705E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E2774E-3957-415E-9FFE-337F663A705E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C56253-1F15-4577-B536-5F9400F8F383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C56253-1F15-4577-B536-5F9400F8F383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C56253-1F15-4577-B536-5F9400F8F383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C56253-1F15-4577-B536-5F9400F8F383}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
