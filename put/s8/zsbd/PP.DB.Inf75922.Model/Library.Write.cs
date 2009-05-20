@@ -91,7 +91,7 @@ namespace PP.DB.Inf75922.Model
                     throw new LibraryException("Book with given id does not exist");
 
                 if (book.Users.Count == 0)
-                    throw new LibraryException("The book with given id is not rented");
+                    throw new LibraryException("Book with given id is not rented");
 
                 Debug.Assert(book.Users.Count == 1);
                 book.Users.Clear();
