@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using NUnit.Framework;
 
 namespace PP.DB.Inf75922.Model.Tests
@@ -30,6 +31,12 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
+        public void TestUserInfoWithNullPesel()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.UserInfo(null));
+        }
+
+        [Test]
         public void TestTitles()
         {
             string[] titles = library.Titles().ToArray();
@@ -57,6 +64,12 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             int[] ids = library.Copies("[nieistniejący tytuł]").ToArray();
             Assert.AreEqual(0, ids.Length);
+        }
+
+        [Test]
+        public void TestCopiesWithNullTitle()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.Copies(null));
         }
 
         [Test]
@@ -95,6 +108,12 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
+        public void TestIsBookAvailableWithNullTitle()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.IsBookAvailable(null));
+        }
+
+        [Test]
         public void TestRentedBooksForUserWithBooks()
         {
             int[] ids = library.RentedBooks("1").ToArray();
@@ -112,6 +131,12 @@ namespace PP.DB.Inf75922.Model.Tests
         {
             int[] ids = library.RentedBooks("3").ToArray();
             Assert.AreEqual(0, ids.Length);
+        }
+
+        [Test]
+        public void TestRentedBooksWithNullTitle()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RentedBooks(null));
         }
 
         [Test]

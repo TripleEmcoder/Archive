@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using NHibernate;
 using NHibernate.Criterion;
 
@@ -8,6 +9,15 @@ namespace PP.DB.Inf75922.Model
     {
         public void RegisterUser(string name, string surname, string pesel)
         {
+            if (pesel == null)
+                throw new ArgumentNullException("pesel");
+
+            if (name == null)
+                throw new ArgumentNullException("name");
+
+            if (surname == null)
+                throw new ArgumentNullException("surname");
+
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
@@ -44,6 +54,9 @@ namespace PP.DB.Inf75922.Model
 
         public void AddBook(string title)
         {
+            if (title == null)
+                throw new ArgumentNullException("title");
+
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
@@ -56,6 +69,12 @@ namespace PP.DB.Inf75922.Model
 
         public int RentBook(string title, string pesel)
         {
+            if (title == null)
+                throw new ArgumentNullException("title");
+
+            if (pesel == null)
+                throw new ArgumentNullException("pesel");
+
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {

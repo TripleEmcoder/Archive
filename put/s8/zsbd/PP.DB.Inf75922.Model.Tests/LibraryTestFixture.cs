@@ -1,5 +1,9 @@
-﻿using NHibernate;
+﻿using System.Collections.Generic;
+using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Criterion;
+using NHibernate.SqlCommand;
+using NHibernate.Transform;
 using NUnit.Framework;
 
 namespace PP.DB.Inf75922.Model.Tests
@@ -82,6 +86,7 @@ namespace PP.DB.Inf75922.Model.Tests
                 wladca.Users.Add(kamil);
                 ania2.Users.Add(marcin);
 
+                VerifyOverRenting(session);
                 transaction.Commit();
             }
 
@@ -94,11 +99,30 @@ namespace PP.DB.Inf75922.Model.Tests
             using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
+                VerifyOverRenting(session);
+
                 session.Delete("FROM User");
                 session.Delete("FROM Book");
 
                 transaction.Commit();
             }
+        }
+
+        private void VerifyOverRenting(ISession session)
+        {
+            //IList<BookCount> counts = session.CreateQuery(
+            //    "select new BookCount(book.Id, count(elements(book.Users))) from Book book").List<BookCount>();
+
+            IList<BookCount> counts = session.CreateCriteria<Book>()
+                .SetProjection(Projections.ProjectionList()
+                        .Add(Projections.GroupProperty("Id"), "Id")
+                        .Add(Projections.RowCount(), "Count"))
+                .CreateCriteria("Users")
+                .SetResultTransformer(Transformers.AliasToBean(typeof(BookCount)))
+                .List<BookCount>();
+
+            foreach (BookCount count in counts)
+                Assert.AreEqual(1, count.Count);
         }
 
         [Test]

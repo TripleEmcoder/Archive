@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NHibernate;
 using NHibernate.Criterion;
 
@@ -18,6 +19,9 @@ namespace PP.DB.Inf75922.Model
 
         public string UserInfo(string pesel)
         {
+            if (pesel == null)
+                throw new ArgumentNullException("pesel");
+
             using (ISession session = factory.OpenSession())
             {
                 User user = session.Get<User>(pesel);
@@ -41,6 +45,9 @@ namespace PP.DB.Inf75922.Model
 
         public IList<int> Copies(string title)
         {
+            if (title == null)
+                throw new ArgumentNullException("title");
+
             using (ISession session = factory.OpenSession())
             {
                 return session.CreateCriteria<Book>()
@@ -63,6 +70,9 @@ namespace PP.DB.Inf75922.Model
 
         public bool IsBookAvailable(string title)
         {
+            if (title == null)
+                throw new ArgumentNullException("title");
+
             using (ISession session = factory.OpenSession())
             {
                 int count = session.CreateCriteria<Book>()
@@ -77,6 +87,9 @@ namespace PP.DB.Inf75922.Model
 
         public IList<int> RentedBooks(string pesel)
         {
+            if (pesel == null)
+                throw new ArgumentNullException("pesel");
+
             using (ISession session = factory.OpenSession())
             {
                 return session.CreateCriteria<Book>()

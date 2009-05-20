@@ -1,4 +1,9 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using NHibernate;
+using NHibernate.Criterion;
+using NHibernate.Transform;
 using NUnit.Framework;
 
 namespace PP.DB.Inf75922.Model.Tests
@@ -23,6 +28,24 @@ namespace PP.DB.Inf75922.Model.Tests
             Assert.AreEqual("Jan Kowalski", info);
 
             Assert.Throws(typeof(LibraryException), () => library.RegisterUser("Jan", "Kowalski", "0"));
+        }
+
+        [Test]
+        public void TestRegisterUserWithNullPesel()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RegisterUser("Jan", "Kowalski", null));
+        }
+
+        [Test]
+        public void TestRegisterUserWithNullName()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RegisterUser(null, "Kowalski", "0"));
+        }
+
+        [Test]
+        public void TestRegisterUserWithNullSurname()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RegisterUser("Jan", null, "0"));
         }
 
         [Test]
@@ -56,6 +79,12 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
+        public void TestUnRegisterUserWithNullPesel()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.UnRegisterUser(null));
+        }
+
+        [Test]
         public void TestAddNewBook()
         {
             string title = "Pan Taduesz";
@@ -81,6 +110,12 @@ namespace PP.DB.Inf75922.Model.Tests
 
             int afterCount = library.Copies(title).Count;
             Assert.AreEqual(beforeCount + 1, afterCount);
+        }
+
+        [Test]
+        public void TestAddBookWithNullTitle()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.AddBook(null));
         }
 
         [Test]
@@ -121,6 +156,18 @@ namespace PP.DB.Inf75922.Model.Tests
         public void TestRentNonExistingBookToNonExistingUser()
         {
             Assert.Throws(typeof(LibraryException), () => library.RentBook("[nieistniejący tytuł]", "[nieistniejący pesel]"));
+        }
+
+        [Test]
+        public void TestRentBookWithNullTitle()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RentBook(null, "[dowolny pesel]"));
+        }
+
+        [Test]
+        public void TestRentBookWithNullPesel()
+        {
+            Assert.Throws(typeof(ArgumentNullException), () => library.RentBook("[dowolny tytuł]", null));
         }
 
         [Test]

@@ -1,110 +1,135 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PP.DB.Inf75922.Model
 {
     public interface ILibrary 
     {
         /// <summary>
-        /// Sprawdza, czy w biblitece znajduje się niewypożyczony egzemplarz książki o zadanym tytule.
+        /// Sprawdza, czy w bibliotece znajduje się niewypożyczony egzemplarz książki o podanym tytule.
         /// </summary>
         /// <param name="title">tytuł książki</param>
-        /// <returns>true jeśli jest taki egzemplarz, false jeśli nie ma</returns>
+        /// <returns>true jeżeli istnieje niewypożyczony egzemplarz, false w przeciwnym wypadku</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł książki ma wartość null
+        /// </exception>
         bool IsBookAvailable(string title);
 
         /// <summary>
-        /// Wypożycza książkę o zadanym tytule użytkownikowi o zadanym numerze pesel.
+        /// Wypożycza książkę o podanym tytule użytkownikowi o podanym numerze PESEL.
         /// </summary>
-        /// <param name="title">tytuł książki</param>
-        /// <param name="pesel">PESEL użytkownika</param>
-        /// <returns>Unikalny identyfikator egzemplarza</returns>
+        /// <param name="title">tytuł wypożyczanej książki</param>
+        /// <param name="pesel">numer PESEL wypożyczającego użytkownika</param>
+        /// <returns>identyfikator wypożyczonego egzemplarza książki</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł wypożyczanej książki lub podany numer PESEL wypożyczającego użytkownika ma wartość null
+        /// </exception>
         /// <exception cref="LibraryException">
-        /// jeżeli nie ma niewypożyczonej książki o zadanym tytule, bądź użytkownik o zadanym numerze pesel nie jest zarejestrowany
+        /// jeżeli nie ma niewypożyczonego egzemplarza książki o podanym tytule lub użytkownik o podanym numerze PESEL nie jest zarejestrowany
         /// </exception>
         int RentBook(string title, string pesel);
 
         /// <summary>
-        /// Zwraca do biblioteki książkę o zadanym unikalnym identyfikatorze.
+        /// Zwraca do biblioteki egzemplarz książki o podanym identyfikatorze.
         /// </summary>
-        /// <param name="bookId">identyfikator książki</param>
+        /// <param name="bookId">identyfikator zwracanego egzemplarza książki</param>
         /// <exception cref="LibraryException">
-        /// jeżeli książka nie istnieje lub nie została wypożyczona
+        /// jeżeli egzemplarz książki o podanym identyfikatorze nie istnieje lub nie jest wypożyczony
         /// </exception>
         void ReturnBook(int bookId);
 
         /// <summary>
-        /// Zwraca wektor unikalnych identyfikatorów wszystkich egzemplarzy książki o zadanym tytule.
+        /// Zwraca listę identyfikatorów wszystkich egzemplarzy książki o podanym tytule.
         /// </summary>
         /// <param name="title">tytuł książki</param>
-        /// <returns>wektor identyfikatorów książek</returns>
+        /// <returns>lista identyfikatorów istniejących egzemplarzy książki
+        /// (w szczególnym przypadku pusta, jeżeli książki nie ma w ogóle w bibliotece)</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł książki ma wartość null
+        /// </exception>
         IList<int> Copies(string title);
       
         /// <summary>
-        /// Zwraca PESEL użytkownika, który wypożyczył książkę o zadanym unikalnym identyfikatorze.
+        /// Zwraca numer PESEL użytkownika, który wypożyczył egzemplarz książki o podanym identyfikatorze.
         /// </summary>
-        /// <param name="bookId">identyfikator książki</param>
-        /// <returns>numer PESEL wypożyczającego lub null jeśli książka nie jest wypożyczona</returns>
+        /// <param name="bookId">identyfikator egzemplarza książki</param>
+        /// <returns>numer PESEL wypożyczającego użytkownika lub wartość null jeżeli egzemplarz książki nie jest wypożyczony lub nie istnieje</returns>
         string WhoRented(int bookId);
 
         /// <summary>
-        /// Zwraca wektor numerów PESEL wszystkich użytkowników zarejestrowanych w bibliotece.
+        /// Zwraca listę numerów PESEL wszystkich użytkowników zarejestrowanych w bibliotece.
         /// </summary>
-        /// <returns>wektor numerów PESEL użytkowników</returns>
+        /// <returns>lista numerów PESEL zarejestrowanych użytkowników</returns>
         IList<string> RegisteredUsers();
 	
         /// <summary>
-        /// Zwraca skonkatenowane imię i nazwisko użytkownika o zadanym numerze PESEL.
+        /// Zwraca skonkatenowane imię i nazwisko użytkownika o podanym numerze PESEL.
         /// </summary>
         /// <param name="pesel">numer PESEL użytkownika</param>
-        /// <returns>skonkatenowane imię i nazwisko lub null jeżeli użytkownik nie jest zarejestrowany</returns>
+        /// <returns>skonkatenowane imię i nazwisko zarejestrowanego użytkownika lub wartość null jeżeli użytkownik nie jest zarejestrowany</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany numer PESEL użytkownika ma wartość null
+        /// </exception>
         string UserInfo(string pesel);
 	
         /// <summary>
-        /// Zwraca wektor wszystkich unikalnych tytułów książek w bibliotece.
+        /// Zwraca listę wszystkich unikalnych tytułów książek w bibliotece.
         /// </summary>
-        /// <returns>wektor tytułów książek</returns>
+        /// <returns>lista unikalnych tytułów książek w bibliotece</returns>
         IList<string> Titles();
 
         /// <summary>
-        /// Rejestruje użytkownika w bibliotece.
+        /// Rejestruje użytkownika o podanych personaliach w bibliotece.
         /// </summary>
-        /// <param name="name">imie</param>
-        /// <param name="surname">nazwisko</param>
-        /// <param name="pesel">pesel użytkownika</param>
+        /// <param name="name">imię rejestrowanego użytkownika</param>
+        /// <param name="surname">nazwisko rejestrowanego użytkownika</param>
+        /// <param name="pesel">numer PESEL rejestrowanego użytkownika</param>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podane imię, nazwisko lub numer PESEL rejestrowanego użytkownika ma wartość null
+        /// </exception>
         /// <exception cref="LibraryException">
-        /// Jeżeli PESEL nie jest unikalny
+        /// jeżeli numer PESEL rejestrowanego użytkownika pokrywa się z numerem PESEL istniejącego użytkownika
         /// </exception>
         void RegisterUser(string name, string surname, string pesel);
 
         /// <summary>
-        /// Wyrejestrowuje użytkownika z biblioteki. Jest to możliwe jedynie w sytuacji, gdy
-        /// użytkownik zwrocił wszystkie wypożyczone książki.
+        /// Wyrejestrowuje użytkownika o podanym numerze PESEL z biblioteki.
         /// </summary>
-        /// <param name="pesel"></param>
+        /// <param name="pesel">numer PESEL wyrejestrowywanego użytkownika</param>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany numer PESEL wyrejestrowywanego użytkownika ma wartość null
+        /// </exception>
         /// <exception cref="LibraryException">
-        /// Jeżeli użytkownik posiadał ksiązki
+        /// jeżeli użytkownik o podanym numerze PESEL nie istnieje lub posiada wypożyczone książki
         /// </exception>
         void UnRegisterUser(string pesel);
 
         /// <summary>
-        /// Dodaje książkę o zadanym tytule do bazy danych. Metoda powinna
-        /// sama wygenerować unikalny identyfikator dla tej książki. 
+        /// Dodaje do biblioteki egzemplarz książki o podanym tytule.
         /// </summary>
-        /// <param name="title">tytuł książki.</param>
+        /// <param name="title">tytuł książki dla dodawanego egzemplarza</param>
+        /// <returns>identyfikator dodanego egzemplarza książki</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł książki ma wartość null
+        /// </exception>
         void AddBook(string title);
 
         /// <summary>
-        /// Zwraca tytuł książki o zadanym unikalnym identyfikatorze.
+        /// Zwraca tytuł egzemplarza książki o podanym identyfikatorze.
         /// </summary>
-        /// <param name="bookId"></param>
-        /// <returns></returns>
+        /// <param name="bookId">identyfikator egzemplarza książki</param>
+        /// <returns>tytuł egzemplarza książki o podanego identyfikatorze lub null jeżeli egzemplarz nie istnieje</returns>
         string BookTitle(int bookId);
 	
         /// <summary>
-        /// Zwraca wektor unikalnych identyfikatorów wszystkich książek wypożyczonych przez użytkownika o
-        /// zadanym identyfikatorze pesel.
+        /// Zwraca listę identyfikatorów egzemplarzy książek wypożyczonych przez użytkownika podanym numerze PESEL.
         /// </summary>
-        /// <param name="pesel"></param>
-        /// <returns></returns>
+        /// <param name="pesel">numer PESEL użytkownika</param>
+        /// <returns>lista identyfikatorów egzemplarzy książek wypożyczonych przez użytkownika podanym numerze PESEL
+        /// (w szczególnym przypadku pusta, jeżeli użytkownik nie jest zarejestrowany)</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli numer PESEL użytkownika ma wartość null
+        /// </exception>
         IList<int> RentedBooks(string pesel);
     }
 }
