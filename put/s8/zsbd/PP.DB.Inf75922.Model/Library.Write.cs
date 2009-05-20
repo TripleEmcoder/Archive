@@ -65,7 +65,13 @@ namespace PP.DB.Inf75922.Model
                     .SetMaxResults(1)
                     .UniqueResult<Book>();
 
+                if (book == null)
+                    throw new LibraryException("Book with given title is not available");
+
                 User user = session.Get<User>(pesel);
+
+                if (user == null)
+                    throw new LibraryException("User with given PESEL does not exist");
 
                 book.Users.Add(user);
                 transaction.Commit();
@@ -82,7 +88,7 @@ namespace PP.DB.Inf75922.Model
                 Book book = session.Get<Book>(bookId);
 
                 if (book == null)
-                    throw new LibraryException("No book with given id exists");
+                    throw new LibraryException("Book with given id does not exist");
 
                 if (book.Users.Count == 0)
                     throw new LibraryException("The book with given id is not rented");

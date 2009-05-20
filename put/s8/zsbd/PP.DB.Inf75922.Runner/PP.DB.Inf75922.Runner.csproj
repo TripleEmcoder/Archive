@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit-console-runner, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\nunit-console-runner.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -49,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PP.DB.Inf75922.Model.Tests\PP.DB.Inf75922.Model.Tests.csproj">
+      <Project>{26E2774E-3957-415E-9FFE-337F663A705E}</Project>
+      <Name>PP.DB.Inf75922.Model.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PP.DB.Inf75922.Model\PP.DB.Inf75922.Model.csproj">
       <Project>{70802B6C-B7C7-4375-A164-8D5A345D4888}</Project>
       <Name>PP.DB.Inf75922.Model</Name>

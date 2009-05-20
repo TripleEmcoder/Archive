@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "PP.DB.Inf75922.Database"
+   MSDTVersion = "80"
+   Begin Folder = "Change Scripts"
+   End
+   Begin Folder = "Create Scripts"
+      Script = "Oracle.sql"
+      Script = "SqlServer.sql"
+   End
+   Begin DBRefFolder = "Database References"
+   End
+   Begin Folder = "Queries"
+   End
+End

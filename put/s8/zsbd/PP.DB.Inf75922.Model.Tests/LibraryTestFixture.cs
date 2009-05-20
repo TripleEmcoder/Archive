@@ -19,6 +19,13 @@ namespace PP.DB.Inf75922.Model.Tests
             factory = configuration.BuildSessionFactory();
 
             using (ISession session = factory.OpenSession())
+            {
+                session.CreateSQLQuery("DELETE FROM rented_books").ExecuteUpdate();
+                session.CreateSQLQuery("DELETE FROM books").ExecuteUpdate();
+                session.CreateSQLQuery("DELETE FROM users").ExecuteUpdate();
+            }
+
+            using (ISession session = factory.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var kamil = new User
@@ -92,6 +99,11 @@ namespace PP.DB.Inf75922.Model.Tests
 
                 transaction.Commit();
             }
+        }
+
+        [Test]
+        public void TestMapping()
+        {
         }
     }
 }

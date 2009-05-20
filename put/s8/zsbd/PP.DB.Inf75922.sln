@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP.DB.Inf75922.Model.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PP.DB.Inf75922.Runner", "PP.DB.Inf75922.Runner\PP.DB.Inf75922.Runner.csproj", "{99C56253-1F15-4577-B536-5F9400F8F383}"
 EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "PP.DB.Inf75922.Database", "PP.DB.Inf75922.Database\PP.DB.Inf75922.Database.dbp", "{233CA8F2-67B6-4E9A-BB64-D116A0A28EFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

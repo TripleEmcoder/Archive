@@ -84,7 +84,7 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
-        public void TestRentExistingAvailableBookToExistingUser(string title, string pesel)
+        public void TestRentExistingAvailableBookToExistingUser()
         {
             int rentedId = library.RentBook("Ogniem i mieczem", "1");
             string rentedTitle = library.BookTitle(rentedId);
@@ -94,33 +94,33 @@ namespace PP.DB.Inf75922.Model.Tests
         }
 
         [Test]
-        public void TestRentExistingAvailableBookToNonExistingUser(string title, string pesel)
+        public void TestRentExistingAvailableBookToNonExistingUser()
         {
-            library.RentBook("Ogniem i mieczem", "[nieistniejący pesel]");
+            Assert.Throws(typeof(LibraryException), () => library.RentBook("Ogniem i mieczem", "[nieistniejący pesel]"));
         }
 
         [Test]
-        public void TestRentExistingNotAvailableBookToExistingUser(string title, string pesel)
+        public void TestRentExistingNotAvailableBookToExistingUser()
         {
-            library.RentBook("Ania z zielonej bazy", "1");
+            Assert.Throws(typeof(LibraryException), () => library.RentBook("Ania z zielonej bazy", "1"));
         }
 
         [Test]
-        public void TestRentExistingNotAvailableBookToNonExistingUser(string title, string pesel)
+        public void TestRentExistingNotAvailableBookToNonExistingUser()
         {
-            library.RentBook("Ania z zielonej bazy", "[nieistniejący pesel]");
+            Assert.Throws(typeof(LibraryException), () => library.RentBook("Ania z zielonej bazy", "[nieistniejący pesel]"));
         }
 
         [Test]
-        public void TestRentNonExistingBookToExistingUser(string title, string pesel)
+        public void TestRentNonExistingBookToExistingUser()
         {
-            library.RentBook("[nieistniejący tytuł]", "1");
+            Assert.Throws(typeof(LibraryException), () => library.RentBook("[nieistniejący tytuł]", "1"));
         }
 
         [Test]
-        public void TestRentNonExistingBookToNonExistingUser(string title, string pesel)
+        public void TestRentNonExistingBookToNonExistingUser()
         {
-            library.RentBook("[nieistniejący tytuł]", "[nieistniejący pesel]");
+            Assert.Throws(typeof(LibraryException), () => library.RentBook("[nieistniejący tytuł]", "[nieistniejący pesel]"));
         }
 
         [Test]
