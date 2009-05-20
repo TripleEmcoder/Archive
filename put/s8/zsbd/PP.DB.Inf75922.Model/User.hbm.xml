@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="PP.DB.Inf75922.Model.User, PP.DB.Inf75922.Model" table="users">
-		<id name="Pesel">
-			<column name="pesel" />
-		</id>
+		<id name="Pesel" column="pesel" />
 		
-		<property name="Name" column="name" />
-		<property name="Surname" column="surname" />
+		<property name="Name" column="name" not-null="true" />
+		<property name="Surname" column="surname" not-null="true" />
 
 		<set name="Books" table="rented_books" inverse="true">
 			<key column="users_pesel" />

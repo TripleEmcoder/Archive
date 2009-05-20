@@ -7,6 +7,18 @@ namespace PP.DB.Inf75922.Model
 {
     public partial class Library
     {
+        /// <summary>
+        /// Rejestruje użytkownika o podanych personaliach w bibliotece.
+        /// </summary>
+        /// <param name="name">imię rejestrowanego użytkownika</param>
+        /// <param name="surname">nazwisko rejestrowanego użytkownika</param>
+        /// <param name="pesel">numer PESEL rejestrowanego użytkownika</param>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podane imię, nazwisko lub numer PESEL rejestrowanego użytkownika ma wartość null
+        /// </exception>
+        /// <exception cref="LibraryException">
+        /// jeżeli numer PESEL rejestrowanego użytkownika pokrywa się z numerem PESEL istniejącego użytkownika
+        /// </exception>
         public void RegisterUser(string name, string surname, string pesel)
         {
             if (pesel == null)
@@ -34,6 +46,16 @@ namespace PP.DB.Inf75922.Model
             }
         }
 
+        /// <summary>
+        /// Wyrejestrowuje użytkownika o podanym numerze PESEL z biblioteki.
+        /// </summary>
+        /// <param name="pesel">numer PESEL wyrejestrowywanego użytkownika</param>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany numer PESEL wyrejestrowywanego użytkownika ma wartość null
+        /// </exception>
+        /// <exception cref="LibraryException">
+        /// jeżeli użytkownik o podanym numerze PESEL nie istnieje lub posiada wypożyczone książki
+        /// </exception>
         public void UnRegisterUser(string pesel)
         {
             using (ISession session = factory.OpenSession())
@@ -52,6 +74,14 @@ namespace PP.DB.Inf75922.Model
             }
         }
 
+        /// <summary>
+        /// Dodaje do biblioteki egzemplarz książki o podanym tytule.
+        /// </summary>
+        /// <param name="title">tytuł książki dla dodawanego egzemplarza</param>
+        /// <returns>identyfikator dodanego egzemplarza książki</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł książki ma wartość null
+        /// </exception>
         public void AddBook(string title)
         {
             if (title == null)
@@ -67,6 +97,18 @@ namespace PP.DB.Inf75922.Model
             }
         }
 
+        /// <summary>
+        /// Wypożycza książkę o podanym tytule użytkownikowi o podanym numerze PESEL.
+        /// </summary>
+        /// <param name="title">tytuł wypożyczanej książki</param>
+        /// <param name="pesel">numer PESEL wypożyczającego użytkownika</param>
+        /// <returns>identyfikator wypożyczonego egzemplarza książki</returns>
+        /// <exception cref="ArgumentNullException">
+        /// jeżeli podany tytuł wypożyczanej książki lub podany numer PESEL wypożyczającego użytkownika ma wartość null
+        /// </exception>
+        /// <exception cref="LibraryException">
+        /// jeżeli nie ma niewypożyczonego egzemplarza książki o podanym tytule lub użytkownik o podanym numerze PESEL nie jest zarejestrowany
+        /// </exception>
         public int RentBook(string title, string pesel)
         {
             if (title == null)
@@ -99,6 +141,13 @@ namespace PP.DB.Inf75922.Model
             } 
         }
 
+        /// <summary>
+        /// Zwraca do biblioteki egzemplarz książki o podanym identyfikatorze.
+        /// </summary>
+        /// <param name="bookId">identyfikator zwracanego egzemplarza książki</param>
+        /// <exception cref="LibraryException">
+        /// jeżeli egzemplarz książki o podanym identyfikatorze nie istnieje lub nie jest wypożyczony
+        /// </exception>
         public void ReturnBook(int bookId)
         {
             using (ISession session = factory.OpenSession())
