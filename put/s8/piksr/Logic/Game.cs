@@ -113,12 +113,13 @@ namespace Logic
                 EnsurePlayerJoinable(userNick);
                 players[userNick] = DateTime.Now;
                 queue.Enqueue(userNick);
-            }
-            finally
-            {
+                
                 eventCount++;
                 nextEvent++;
                 Monitor.PulseAll(guard);
+            }
+            finally
+            {
                 Monitor.Exit(guard);
             }
         }
@@ -134,12 +135,13 @@ namespace Logic
             {
                 EnsurePlayerJoined(userNick);
                 players.Remove(userNick);
-            }
-            finally
-            {
+                
                 eventCount++;
                 nextEvent++;
                 Monitor.PulseAll(guard);
+            }
+            finally
+            {
                 Monitor.Exit(guard);
             }
         }

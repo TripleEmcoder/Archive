@@ -29,7 +29,7 @@
         var players = new Array();
         
         var playerId = 0;
-        var nextEvent = <%= game.NextEvent %>;
+        var nextEvent = 0;
         var allowMove = <%= game.AllowMove(userNick) ? "true" : "false" %>;
         var winner = <%= game.Winner != null ? string.Format("\"{0}\"", game.Winner) : "\"\"" %>;
         
