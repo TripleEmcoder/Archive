@@ -1,5 +1,5 @@
 <?php
-// $Id: i18ncck.module,v 1.1.2.1 2009/08/23 14:40:05 neochief Exp $
+// $Id: i18ncck.module,v 1.1.2.2 2009/11/03 17:53:24 jareyero Exp $
 
 /**
  * @file
@@ -13,11 +13,9 @@ function i18ncck_locale($op = 'groups', $group = NULL) {
   switch ($op) {
     case 'groups':
       return array('cck' => t('CCK'));
-
-    case 'refresh':
-      if ($group == 'cck') {
-        return i18ncck_locale_refresh();
-      }
+    case 'info':
+      $info['cck']['refresh callback'] = 'i18ncck_locale_refresh';
+      return $info;
   }
 }
 
@@ -68,6 +66,7 @@ function i18ncck_locale_refresh() {
       }
     }
   }
+  return TRUE; // Meaning it completed with no issues
 }
 
 /**

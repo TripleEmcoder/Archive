@@ -6,9 +6,9 @@ dependencies[] = translation
 package = Multilanguage
 core = 6.x
 
-; Information added by drupal.org packaging script on 2009-08-30
+; Information added by drupal.org packaging script on 2009-12-02
 version = "6.x-1.x-dev"
 core = "6.x"
 project = "i18n"
-datestamp = "1251591188"
+datestamp = "1259712434"
 

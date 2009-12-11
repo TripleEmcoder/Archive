@@ -4,9 +4,9 @@ description = Use Hierarchical Select for Content Taxonomy exposed filters in Vi
 dependencies = hierarchical_select content_taxonomy_views
 package = Form Elements
 
-; Information added by drupal.org packaging script on 2009-10-02
+; Information added by drupal.org packaging script on 2009-11-22
 version = "6.x-3.x-dev"
 core = "6.x"
 project = "hierarchical_select"
-datestamp = "1254442250"
+datestamp = "1258848538"
 

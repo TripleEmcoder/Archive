@@ -1,5 +1,5 @@
 <?php
-// $Id: theme.inc,v 1.8 2009/09/21 14:24:12 wimleers Exp $
+// $Id: theme.inc,v 1.10 2009/10/30 18:50:37 wimleers Exp $
 
 /**
  * @file
@@ -24,11 +24,19 @@ function theme_hierarchical_select($element) {
   $output = '';
 
   // Update $element['#attributes']['class'].
+  if (!isset($element['#attributes']['class'])) {
+    $element['#attributes']['class'] = '';
+  }
   $hsid = $element['hsid']['#value'];
   $level_labels_style = variable_get('hierarchical_select_level_labels_style', 'none');
   $classes = array(
    'hierarchical-select-wrapper',
    "hierarchical-select-level-labels-style-$level_labels_style",
+   // Classes that make it possible to override the styling of specific
+   // instances of Hierarchical Select, based on either the ID of the form
+   // element or the config that it uses.
+   'hierarchical-select-wrapper-for-name-' . $element['#id'],
+   (isset($element['#config']['config_id'])) ? 'hierarchical-select-wrapper-for-config-' . $element['#config']['config_id'] : NULL,
   );
   $element['#attributes']['class'] .= ' '. implode(' ', $classes);
   $element['#attributes']['id'] = "hierarchical-select-$hsid-wrapper";
@@ -41,7 +49,7 @@ function theme_hierarchical_select($element) {
       '#description' => $element['#description'],
       '#id' => $element['#id'],
       '#required' => $element['#required'],
-      '#error' => $element['#error'],
+      '#error' => isset($element['#error']) ? $element['#error'] : '',
     ),
     '<div '. drupal_attributes($element['#attributes']) .'>'. $element['#children'] .'</div>'
   );

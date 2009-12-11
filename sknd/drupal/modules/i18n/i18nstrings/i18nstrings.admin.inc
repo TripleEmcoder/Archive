@@ -1,12 +1,14 @@
 <?php
-// $Id: i18nstrings.admin.inc,v 1.1.2.6 2009/01/03 19:07:52 jareyero Exp $
+// $Id: i18nstrings.admin.inc,v 1.1.2.8 2009/11/27 20:33:02 jareyero Exp $
+
+// Load locale library
+include_once './includes/locale.inc';
 
 /**
  * @file
  * Admin page callbacks for the i18nstrings module.
  */
 function i18nstrings_admin_refresh_page() {
-  include_once './includes/locale.inc';
   $output = '';
   $output .= drupal_get_form('i18nstrings_admin_refresh');
   return $output;
@@ -16,13 +18,19 @@ function i18nstrings_admin_refresh_page() {
  * Form callback. Refresh textgroups.
  */
 function i18nstrings_admin_refresh() {
-  // Select textgroup/s.
+  // Select textgroup/s. Just the ones that have a 'refresh callback'
   $groups = module_invoke_all('locale', 'groups');
   unset($groups['default']);
+  foreach (array_keys($groups) as $key) {
+    if (!i18nstrings_group_info($key, 'refresh callback')) {
+      unset($groups[$key]);
+    }
+  }
   $form['groups'] = array(
     '#type' => 'checkboxes',
     '#title' => t('Select text groups'),
     '#options' => $groups,
+    '#description' => t('If a text group is no showing up here it means this feature is not implemented for it.'),
   );
   $form['refresh'] = array(
     '#type' => 'submit',
@@ -52,10 +60,15 @@ function i18nstrings_admin_refresh_submit($form, &$form_state) {
   $op = isset($form_state['values']['op']) ? $form_state['values']['op'] : '';
   $groups = array_filter($form_state['values']['groups']);
   $languages = array_filter($form_state['values']['languages']);
-
+  $group_names = module_invoke_all('locale', 'groups');
   if ($op == t('Refresh strings') && $groups) {
     foreach ($groups as $group) {
-      i18nstrings_refresh_group($group, TRUE);
+      if (i18nstrings_refresh_group($group, TRUE)) {
+        drupal_set_message(t("Successfully refreshed strings for %group", array('%group' => $group_names[$group])));
+      }
+      else {
+        drupal_set_message(t("Cannot refresh strings for %group.", array('%group' => $group_names[$group])), 'warning');
+      }
     }
   }
   elseif ($op == t('Update translations') && $groups && $languages) {

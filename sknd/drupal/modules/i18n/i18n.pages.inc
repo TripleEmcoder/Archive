@@ -1,5 +1,5 @@
 <?php
-// $Id: i18n.pages.inc,v 1.1.2.4 2009/08/29 19:24:01 hass Exp $
+// $Id: i18n.pages.inc,v 1.1.2.5 2009/09/21 23:11:33 jareyero Exp $
 
 /**
  * @file
@@ -248,7 +248,7 @@ function _i18n_node_references($string, $match = 'contains', $params = array(), 
   $references = array();
   while ($node = db_fetch_object($result)) {
     $references[$node->nid] = array(
-      'title' => check_plain($node->title),
+      'title' => $node->title,
       'rendered' => check_plain($node->title),
     );
   }

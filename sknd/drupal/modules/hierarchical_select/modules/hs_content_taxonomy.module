@@ -1,5 +1,5 @@
 <?php
-// $Id: hs_content_taxonomy.module,v 1.34 2009/10/01 16:25:13 wimleers Exp $
+// $Id: hs_content_taxonomy.module,v 1.37 2009/11/21 15:24:20 wimleers Exp $
 
 /**
  * @file
@@ -24,7 +24,7 @@
 function hs_content_taxonomy_menu() {
   $items['admin/content/node-type/%/fields/%/hs_config'] = array(
     'title'            => t('HS config'),
-    'access arguments' => array('administer site configuration'),
+    'access arguments' => array('administer content types'),
     'page callback'    => 'drupal_get_form',
     'page arguments'   => array('hs_content_taxonomy_config_form', 3, 5),
     'type'             => MENU_NORMAL_ITEM,
@@ -38,7 +38,7 @@ function hs_content_taxonomy_menu() {
  */
 function hs_content_taxonomy_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['type']) && $form['type']['#value'] .'_node_form' == $form_id) {
-    if (sizeof($form['#field_info']) > 0) {
+    if (isset($form['#field_info']) && count($form['#field_info']) > 0) {
       foreach ($form['#field_info'] as $field_name => &$field_info) {
         if ($field_info['widget']['type'] == 'content_taxonomy_hs') {
           $form['#submit'][] = 'hs_content_taxonomy_form_submit';
@@ -164,7 +164,7 @@ function hs_content_taxonomy_widget(&$form, &$form_state, $field, $items, $delta
   $form[$field_name]['#tree'] = TRUE;
   $form[$field_name]['#weight'] = $field['widget']['weight'];
   $form[$field_name]['tids'] = array(
-    '#title' => $field['widget']['label'],
+    '#title' => t($field['widget']['label']),
     '#type' => 'hierarchical_select',
     '#weight' => $field['widget']['weight'],
     '#config' => array(

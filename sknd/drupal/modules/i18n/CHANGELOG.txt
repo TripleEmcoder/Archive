@@ -1,7 +1,31 @@
-// $Id: CHANGELOG.txt,v 1.15.4.67 2009/08/29 21:08:24 hass Exp $
+// $Id: CHANGELOG.txt,v 1.15.4.77 2009/12/01 16:05:29 jareyero Exp $
 
-6.x-1.1 to .......
-------------------
+6.x-1.2 to
+-------------------
+- Fixed: Multiple issues with file synchronization, new files, other modules, #363065
+- Usability: Added proper validation to vocabulary form, by andrewlevine #577066
+- Fixed: Translated primary and secondary links appear even if they are disabled, by yrocq #631388
+- Reworked i18nstrings API using proper namespaces, kept tt() for compatibility
+- Added: New plugin for views translation, by nedjo, joostvdl, #360024
+
+6.x-1.1 to 6.x-1.2
+------------------ 
+- Fixed: location fields not showing up for synchronization options, #426294
+- Fixed: pgsql compatibility in upgrade scripts, by jandd, #383728
+- Fixed: Translate all custom block titles (not only custom blocks), by brucepearson, #541048
+- Added: Primary and secondary links' menus translation using preprocess, by neochief, #514108
+- Changed: hook_locale(), new 'info' op, obsoleted 'refresh'
+- Fixed: Some text groups losing strings when refreshed, #442428
+- Fixed: Checkboxes fields are not translating in profile view pages, by neochief, #520692
+- Added: Translate tags vocablary name on node form, by dboulet, #494576
+- Fixed i18n Filter in Views results in SQL Error, by markus_petrux, #522162
+- Added tag support for taxonomy synchronization, #605600
+- Fixed buggy taxonomy synchronization, #365606, #365606, #379306
+- Cleaning some module dependencies and old code.
+- Fixed: Select translations autocomplete wrong filtering by hass, #557980
+- Added: Translated taxonomy tokens by Hugo Wetterberg, googletorp, #344794
+- Fixed: Global variable corruption by etzel, #580280
+- New i18ncck module by neochief
 - Got started with some unit tests and base test clase.
 - Added support for image synchronization, #329825
 - Added filefield/imagefield synchronization, by dasjo, #278426

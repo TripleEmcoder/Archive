@@ -1,5 +1,5 @@
 <?php
-// $Id: i18ntaxonomy.module,v 1.5.2.34 2009/08/29 21:08:24 hass Exp $
+// $Id: i18ntaxonomy.module,v 1.5.2.40 2009/11/24 16:28:10 jareyero Exp $
 
 /**
  * @file
@@ -126,11 +126,9 @@ function i18ntaxonomy_locale($op = 'groups', $group = NULL) {
   switch ($op) {
     case 'groups':
       return array('taxonomy' => t('Taxonomy'));
-
-    case 'refresh':
-      if ($group == 'taxonomy') {
-        return i18ntaxonomy_locale_refresh();
-      }
+    case 'info':
+      $info['taxonomy']['refresh callback'] = 'i18ntaxonomy_locale_refresh';
+      return $info;
   }
 }
 
@@ -139,11 +137,13 @@ function i18ntaxonomy_locale($op = 'groups', $group = NULL) {
  */
 function i18ntaxonomy_locale_refresh() {
   foreach (taxonomy_get_vocabularies() as $vid => $vocabulary) {
-    if (i18ntaxonomy_vocabulary($vid) == I18N_TAXONOMY_LOCALIZE) {
+    if (empty($vocabulary->language)) {
       tt("taxonomy:vocabulary:$vid:name", $vocabulary->name, NULL, TRUE);
       if ($vocabulary->help) {
         tt("taxonomy:vocabulary:$vid:help", $vocabulary->help, NULL, TRUE);
       }
+    }   
+    if (i18ntaxonomy_vocabulary($vid) == I18N_TAXONOMY_LOCALIZE) {
       foreach (taxonomy_get_tree($vid, 0) as $term) {
         tt("taxonomy:term:$term->tid:name", $term->name, NULL, TRUE);
         if ($term->description) {
@@ -152,6 +152,7 @@ function i18ntaxonomy_locale_refresh() {
       }
     }
   }
+  return TRUE; // Meaning it completed with no issues
 }
 
 /**
@@ -258,14 +259,14 @@ function i18ntaxonomy_taxonomy($op, $type, $edit = NULL) {
       if (isset($edit['i18nmode'])) {
         i18ntaxonomy_vocabulary($vid, $edit['i18nmode']);
 
-        $language = isset($edit['language']) ? $edit['language'] : '';
-        db_query("UPDATE {vocabulary} SET language='%s' WHERE vid = %d", $language, $edit['vid']);
-        if ($language && $op == 'update') {
-          db_query("UPDATE {term_data} SET language='%s' WHERE vid = %d", $edit['language'], $edit['vid']);
+        $edit_lang = isset($edit['language']) ? $edit['language'] : '';
+        db_query("UPDATE {vocabulary} SET language='%s' WHERE vid = %d", $edit_lang, $edit['vid']);
+        if ($edit_lang && $op == 'update') {
+          db_query("UPDATE {term_data} SET language='%s' WHERE vid = %d", $edit_lang, $edit['vid']);
           drupal_set_message(t('Reset language for all terms.'));
         }
         // Always add vocabulary translation if !$language.
-        if (!$language) {
+        if (!$edit_lang) {
           tt("taxonomy:vocabulary:$vid:name", $edit['name'], NULL, TRUE);
         }
       }
@@ -347,6 +348,8 @@ function i18ntaxonomy_form_alter(&$form, $form_state, $form_id) {
         $vocabulary = NULL;
         $mode =  I18N_TAXONOMY_NONE;
       }
+      drupal_add_js(drupal_get_path('module', 'i18ntaxonomy') . '/i18ntaxonomy.js');
+      drupal_add_js(array('i18ntaxonomy_vocabulary_form' => array('I18N_TAXONOMY_LANGUAGE' => I18N_TAXONOMY_LANGUAGE)), 'setting');
       $form['i18n'] = array(
         '#type' => 'fieldset',
         '#title' => t('Multilingual options'),
@@ -368,6 +371,7 @@ function i18ntaxonomy_form_alter(&$form, $form_state, $form_id) {
         '#description' => t('Language for this vocabulary. If set, it will apply to all terms in this vocabulary.'),
         '#disabled' => ($vocabulary && $mode != I18N_TAXONOMY_LANGUAGE),
       );
+      $form['#validate'][] = 'i18ntaxonomy_form_vocabulary_validate';
       break;
 
     case 'taxonomy_form_term': // Taxonomy term
@@ -433,6 +437,17 @@ function i18ntaxonomy_form_alter(&$form, $form_state, $form_id) {
   }
 }
 
+function i18ntaxonomy_form_vocabulary_validate($form, &$form_state) {
+  $language = !empty($form_state['values']['language']) ? $form_state['values']['language'] : '';
+  $mode = $form_state['values']['i18nmode'];
+  if ($mode != I18N_TAXONOMY_LANGUAGE && $language) {
+    form_set_error('language', t('Setting a vocabulary language only makes sense in the "Set language to vocabulary" translation mode. Either change to this mode or do not select a language.'));
+  }
+  elseif ($mode == I18N_TAXONOMY_LANGUAGE && !$language ) {
+    form_set_error('language', t('If selecting "Set language to vocabulary" you need to set a language to this vocabulary. Either change the translation mode or select a language.'));
+  }
+}
+
 /**
  * Localize a taxonomy_form_all() kind of control
  *
@@ -482,6 +497,7 @@ function i18ntaxonomy_node_form(&$form) {
       // Special treatment for tags, add some help texts
       foreach (element_children($form['taxonomy']['tags']) as $vid) {
         if (i18ntaxonomy_vocabulary($vid) == I18N_TAXONOMY_LOCALIZE) {
+          $form['taxonomy']['tags'][$vid]['#title'] = check_plain(tt("taxonomy:vocabulary:$vid:name", $form['taxonomy']['tags'][$vid]['#title']));
           $form['taxonomy']['tags'][$vid]['#description'] .= ' '. t('This is a localizable vocabulary, so only terms in %language are allowed here.', array('%language' => language_default('name')));
         }
       }
@@ -632,7 +648,6 @@ function i18ntaxonomy_nodeapi(&$node, $op, $teaser, $page) {
       if (array_key_exists('taxonomy', $node)) {
         $node->taxonomy = i18ntaxonomy_localize_terms($node->taxonomy);
       }
-
       if ($node->type == 'forum' && ($vid = variable_get('forum_nav_vocabulary', '')) && i18ntaxonomy_vocabulary($vid)) {
         if ($page && taxonomy_node_get_terms_by_vocabulary($node, $vid) && $tree = taxonomy_get_tree($vid)) {
           // Get the forum terms from the (cached) tree
@@ -671,23 +686,78 @@ function i18ntaxonomy_nodeapi(&$node, $op, $teaser, $page) {
 }
 
 /**
+ * Find all terms associated with the given node, ordered by vocabulary and term weight.
+ * 
+ * Same as taxonomy_node_get_terms() but without static caching.
+ */
+function i18ntaxonomy_node_get_terms($node, $key = 'tid') {
+  $result = db_query(db_rewrite_sql('SELECT t.* FROM {term_node} r INNER JOIN {term_data} t ON r.tid = t.tid INNER JOIN {vocabulary} v ON t.vid = v.vid WHERE r.vid = %d ORDER BY v.weight, t.weight, t.name', 't', 'tid'), $node->vid);
+  $terms = array();
+  while ($term = db_fetch_object($result)) {
+    $terms[$term->$key] = $term;
+  }
+  return $terms;
+}
+
+/**
  * Translate an array of taxonomy terms.
  *
  * Translates all terms with language, just passing over terms without it.
+ * Filter out terms with a different language
+ * 
+ * @param $taxonomy
+ *   Array of term objects or tids or multiple arrays or terms indexed by vid
+ * @param $langcode
+ *   Language code of target language
+ * @param $fullterms
+ *   Whether to return full $term objects, returns tids otherwise
+ * @return
+ *   Array with translated terms: tid -> $term
+ *   Array with vid and term array
  */
-function i18ntaxonomy_translate_terms($taxonomy, $langcode) {
+function i18ntaxonomy_translate_terms($taxonomy, $langcode, $fullterms = TRUE) {
   $translation = array();
-  if (is_array($taxonomy)) {
-    foreach ($taxonomy as $index => $term) {
-      if ($term->language && $term->language != $langcode) {
+  if (is_array($taxonomy) && $taxonomy) {  
+    foreach ($taxonomy as $index => $tdata) {
+      if (is_array($tdata)) {
+        // Case 1: Index is vid, $tdata is an array of terms
+        $mode = i18ntaxonomy_vocabulary($index);
+        // We translate just some vocabularies: translatable, fixed language
+        // Fixed language ones may have terms translated, though the UI doesn't support it
+        if ($mode == I18N_TAXONOMY_LANGUAGE || $mode == I18N_TAXONOMY_TRANSLATE) {
+          $translation[$index] = i18ntaxonomy_translate_terms($tdata, $langcode, $filter, $fullterms);
+        }
+        elseif ($fullterms) {
+          $translation[$index] = array_map('_i18ntaxonomy_filter_terms', $tdata);        
+        }
+        else {
+          $translation[$index] = array_map('_i18ntaxonomy_filter_tids', $tdata);
+        }
+        continue;
+      }
+      elseif (is_object($tdata)) {
+        // Case 2: This is a term object
+        $term = $tdata;
+      }
+      elseif (is_numeric($tdata) && ($tid = (int)$tdata)) {
+        // Case 3: This is a term tid, load the full term
+        $term = taxonomy_get_term($tid);    
+      }
+      // Translate the term if we got it
+      if (empty($term)) {
+        // Couldn't identify term, pass through whatever it is
+        $translation[$index] = $tdata;
+      }
+      elseif ($term->language && $term->language != $langcode) {
         $translated_terms = i18ntaxonomy_term_get_translations(array('tid' => $term->tid));
-        if ($translated_terms && $newterm = $translated_terms[$langcode]) {
-          $translation[$newterm->tid] = $newterm;
+        if ($translated_terms && !empty($translated_terms[$langcode])) {
+          $newterm = $translated_terms[$langcode];
+          $translation[$newterm->tid] = $fullterms ? $newterm : $newterm->tid;
         }
       }
       else {
         // Term has no language. Should be ok.
-        $translation[$index] = $term;
+        $translation[$index] = $fullterms ? $term : $term->tid;
       }
     }
   }
@@ -802,6 +872,31 @@ function i18ntaxonomy_get_tree($vid, $lang, $parent = 0, $depth = -1, $max_depth
     $result = db_query(db_rewrite_sql("SELECT t.tid, t.*, parent FROM {term_data} t INNER JOIN {term_hierarchy} h ON t.tid = h.tid WHERE t.vid = %d AND t.language = '%s' ORDER BY weight, name", 't', 'tid'), $vid, $lang);
     while ($term = db_fetch_object($result)) {
       $children[$vid][$lang][$term->parent][] = $term->tid;
+      $parents[$vid][$lang][$term->tid][] = $term->parent;
+      $terms[$vid][$term->tid] = $term;
+    }
+  }
+
+  $max_depth = (is_null($max_depth)) ? count($children[$vid][$lang]) : $max_depth;
+  $tree = array();
+  if (!empty($children[$vid][$lang][$parent])) {
+    foreach ($children[$vid][$lang][$parent] as $child) {
+      if ($max_depth > $depth) {
+        $term = drupal_clone($terms[$vid][$child]);
+        $term->depth = $depth;
+        // The "parent" attribute is not useful, as it would show one parent only.
+        unset($term->parent);
+        $term->parents = $parents[$vid][$lang][$child];
+        $tree[] = $term;
+
+        if (!empty($children[$vid][$lang][$child])) {
+          $tree = array_merge($tree, i18ntaxonomy_get_tree($vid, $lang, $child, $depth, $max_depth));
+        }
+      }
+    }
+  }
+
+  return $tree;
 }
 
 /**
@@ -873,37 +968,11 @@ function i18ntaxonomy_token_values($type, $object = NULL, $options = array()) {
  * Implementation of hook_token_list().
  */
 function i18ntaxonomy_token_list($type = 'all') {
-
   if ($type == 'node' || $type == 'all') {
     $tokens['i18ntaxonomy']['i18n-term-raw'] = t("Unescaped term name translated using i18n");
     $tokens['i18ntaxonomy']['i18n-term'] = t("Escaped term name translated using i18n");
     return $tokens;
   }
-      $parents[$vid][$lang][$term->tid][] = $term->parent;
-      $terms[$vid][$term->tid] = $term;
-    }
-  }
-
-  $max_depth = (is_null($max_depth)) ? count($children[$vid][$lang]) : $max_depth;
-  $tree = array();
-  if (!empty($children[$vid][$lang][$parent])) {
-    foreach ($children[$vid][$lang][$parent] as $child) {
-      if ($max_depth > $depth) {
-        $term = drupal_clone($terms[$vid][$child]);
-        $term->depth = $depth;
-        // The "parent" attribute is not useful, as it would show one parent only.
-        unset($term->parent);
-        $term->parents = $parents[$vid][$lang][$child];
-        $tree[] = $term;
-
-        if (!empty($children[$vid][$lang][$child])) {
-          $tree = array_merge($tree, i18ntaxonomy_get_tree($vid, $lang, $child, $depth, $max_depth));
-        }
-      }
-    }
-  }
-
-  return $tree;
 }
 
 /**
@@ -944,5 +1013,29 @@ function i18ntaxonomy_preprocess_forums(&$variables) {
     $breadcrumb[] = l(t('Home'), NULL);
     $breadcrumb[] = l(tt("taxonomy:vocabulary:$vid:name", $vocabulary->name), 'forum');
     drupal_set_breadcrumb($breadcrumb);
+  }
+}
+
+/**
+ * Recursive array filtering, convert all terms to 'tid'.
+ */
+function _i18ntaxonomy_filter_tids($tid) {
+  if (is_array($tid)) {
+    return array_map('_i18n_taxonomy_filter_tids', $tid);
+  }
+  else {
+    return is_object($tid) ? $tid->tid : (int)$tid;
+  }
+}
+
+/**
+ * Recursive array filtering, convert all terms to 'term object'
+ */
+function _i18ntaxonomy_filter_terms($term) {
+  if (is_array($term)) {
+    return array_map('_i18n_taxonomy_filter_terms', $term);
+  }
+  else {
+    return is_object($term) ? $term : taxonomy_get_term($term);
   }
 }

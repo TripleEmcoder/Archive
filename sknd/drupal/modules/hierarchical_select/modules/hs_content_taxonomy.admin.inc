@@ -1,5 +1,5 @@
 <?php
-// $Id: hs_content_taxonomy.admin.inc,v 1.2 2009/10/01 16:25:13 wimleers Exp $
+// $Id: hs_content_taxonomy.admin.inc,v 1.4 2009/10/30 23:59:33 wimleers Exp $
 
 /**
  * Form definition; configuration form for Hierarchical Select as the widget
@@ -21,7 +21,7 @@ function hs_content_taxonomy_config_form($form_state, $content_type_name, $field
 
   // Extract the necessary context from the $field array.
   $vid = $field['vid'];
-  $tid = $field['tid'];
+  $tid = (isset($field['tid'])) ? $field['tid'] : NULL;
   $depth = (empty($field['depth'])) ? 0 : $field['depth'];
 
   // Add the Hierarchical Select config form.
@@ -61,7 +61,7 @@ function hs_content_taxonomy_config_form($form_state, $content_type_name, $field
   $form['hierarchical_select_config'] = hierarchical_select_common_config_form($module, $params, $config_id, $defaults, $strings, $max_hierarchy_depth, $preview_is_required);
 
   $form['link'] = array(
-    '#value' => l('Back to the field configuration', 'admin/content/node-type/'. $content_type['type'] .'/fields/'. $field_name),
+    '#value' => l('Back to the field configuration', 'admin/content/node-type/'. str_replace('_', '-', $content_type['type']) .'/fields/'. $field_name),
     '#prefix' => '<div class="cck-hierarchical-select-back-link">',
     '#suffix' => '</div>',
     '#weight' => -5,
