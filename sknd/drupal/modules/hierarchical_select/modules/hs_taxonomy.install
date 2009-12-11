@@ -13,9 +13,8 @@
 function hs_taxonomy_install() {
   $ret = array();
 
-  // Update the module weight to 2 so hs_taxonomy runs after the forum module.
-  // See http://drupal.org/node/475784.
-  $ret[] = update_sql("UPDATE {system} SET weight = 2 WHERE name = 'hs_taxonomy'");
+  // Update the module weight to -1 so it runs before other taxonomy related modules
+  $ret[] = update_sql("UPDATE {system} SET weight = -1 WHERE name = 'hs_taxonomy'");
 
   return $ret;
 }
@@ -57,6 +56,14 @@ function hs_taxonomy_update_1() {
   $ret = array();
 
   $ret[] = update_sql("UPDATE {system} SET weight = 2 WHERE name = 'hs_taxonomy'");
+
+  return $ret;
+}
+
+function hs_taxonomy_update_2() {
+  $ret = array();
+
+  $ret[] = update_sql("UPDATE {system} SET weight = -1 WHERE name = 'hs_taxonomy'");
 
   return $ret;
 }

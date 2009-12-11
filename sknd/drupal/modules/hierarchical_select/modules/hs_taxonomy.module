@@ -202,7 +202,7 @@ function hs_taxonomy_form($vid, $value = 0, $help = NULL) {
     $title = check_plain($vocabulary->name);
     $description = ($help) ? $help : $vocabulary->help;
   }
-
+  if ($description) $description =  filter_xss_admin($description) ;
   $form_item = array(
     '#type'          => 'hierarchical_select',
     '#config'        => array(
