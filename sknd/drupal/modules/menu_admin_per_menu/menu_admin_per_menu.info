@@ -1,0 +1,10 @@
+; $Id: menu_admin_per_menu.info,v 1.1 2009/03/01 22:57:31 anrikun Exp $
+name = Menu Admin per Menu
+description = Allows to give roles per menu admin permissions without giving them full administrer menu permission.
+core = 6.x
+; Information added by drupal.org packaging script on 2009-04-06
+version = "6.x-1.2"
+core = "6.x"
+project = "menu_admin_per_menu"
+datestamp = "1239046540"
+

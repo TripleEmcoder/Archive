@@ -1,0 +1,45 @@
+# LANGUAGE translation of Drupal (httpauth.module)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# No version information was available in the source files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2006-11-14 23:36+0100\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: httpauth.module:11
+msgid "Allows users to authenticate using HTTP."
+msgstr ""
+
+#: httpauth.module:59
+msgid "Enable HTTP authentication."
+msgstr ""
+
+#: httpauth.module:62
+msgid "<p><strong>Note:</strong> To enable support for clients that do not handle cookies well (like newsreaders), you should disable the PHP <code>session.use_only_cookies</code> setting.</strong></p>"
+msgstr ""
+
+#: httpauth.module:65
+msgid "Only allow a session id to be propagated using URL parameters if  HTTP authentication was used."
+msgstr ""
+
+#: httpauth.module:68
+msgid "Promote HTTP authentication on pages"
+msgstr ""
+
+#: httpauth.module:68
+msgid "On which pages to promote HTTP authentication, if an anonymous user stumbles upon an access denied page. Enter one page per line as a Drupal path. The * character is a wildcard."
+msgstr ""
+
+#: httpauth.module:0
+msgid "httpauth"
+msgstr ""
+

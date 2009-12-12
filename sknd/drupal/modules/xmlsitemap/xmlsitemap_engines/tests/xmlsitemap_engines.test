@@ -1,0 +1,49 @@
+<?php
+// $Id: xmlsitemap_engines.test,v 1.1.2.4 2009/07/03 21:24:26 davereid Exp $
+
+/**
+ * @file
+ * Unit tests for the xmlsitemap_engines module.
+ */
+class XMLSitemapEnginesFunctionalTest extends XMLSitemapTestHelper {
+  protected $admin_user;
+
+  public static function getInfo() {
+    return array(
+      'name' => 'XML sitemap engines interface tests',
+      'description' => 'Functional tests for the XML sitemap engines module.',
+      'group' => 'XML sitemap',
+    );
+  }
+
+  function setUp() {
+    parent::setUp('xmlsitemap', 'xmlsitemap_engines', 'xmlsitemap_engines_test');
+    $this->admin_user = $this->drupalCreateUser(array('access content', 'administer xmlsitemap'));
+    $this->drupalLogin($this->admin_user);
+  }
+
+  function testPing() {
+    $edit = array('xmlsitemap_engines_engines[simpletest]' => TRUE);
+    $this->drupalPost('admin/settings/xmlsitemap/engines', $edit, t('Save configuration'));
+    $this->assertText(t('The configuration options have been saved.'));
+
+    drupal_cron_run();
+    $this->assertWatchdogMessage(array('type' => 'xmlsitemap', 'message' => 'Submitted the sitemap to %url and received response @code.'));
+    $this->assertWatchdogMessage(array('type' => 'xmlsitemap', 'message' => 'Recieved ping for @sitemap.'));
+  }
+
+  function testCustomURL() {
+    $edit = array('xmlsitemap_engines_custom_urls' => 'an-invalid-url');
+    $this->drupalPost('admin/settings/xmlsitemap/engines', $edit, t('Save configuration'));
+    $this->assertText(t('Invalid custom URL an-invalid-url.'));
+    $this->assertNoText(t('The configuration options have been saved.'));
+
+    $edit = array('xmlsitemap_engines_custom_urls' => url('ping', array('absolute' => TRUE)));
+    $this->drupalPost('admin/settings/xmlsitemap/engines', $edit, t('Save configuration'));
+    $this->assertText(t('The configuration options have been saved.'));
+
+    drupal_cron_run();
+    $this->assertWatchdogMessage(array('type' => 'xmlsitemap', 'message' => 'Submitted the sitemap to %url and received response @code.'));
+    $this->assertWatchdogMessage(array('type' => 'xmlsitemap', 'message' => 'No sitemap parameter provided.'));
+  }
+}

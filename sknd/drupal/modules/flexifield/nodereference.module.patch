@@ -1,0 +1,17 @@
+Index: nodereference.module
+===================================================================
+RCS file: /cvs/drupal/contributions/modules/cck/modules/nodereference/nodereference.module,v
+retrieving revision 1.138.2.15
+diff -u -r1.138.2.15 nodereference.module
+--- nodereference.module	10 Jul 2008 00:41:30 -0000	1.138.2.15
++++ nodereference.module	3 Aug 2008 02:36:02 -0000
+@@ -497,7 +497,7 @@
+   $value = $form_state['values'];
+   foreach ($element['#parents'] as $parent) {
+     $value = $value[$parent];
+-    if ($parent == $field_key) {
++    if ($parent === $field_key) {
+       $element['#parents'] = $new_parents;
+       form_set_value($element, $value, $form_state);
+       break;
+

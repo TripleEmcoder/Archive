@@ -1,0 +1,13 @@
+; $Id: node_access.info,v 1.1 2009/03/25 17:23:41 emptyvoid Exp $
+name = "Node Access"
+description = "Provides flexible node access control."
+core = 6.x
+package = Access control
+
+version = "6.x-0.1-dev"
+; Information added by drupal.org packaging script on 2009-03-25
+version = "6.x-1.0"
+core = "6.x"
+project = "node_access"
+datestamp = "1238003471"
+

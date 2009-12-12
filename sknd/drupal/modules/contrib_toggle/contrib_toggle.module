@@ -1,0 +1,64 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * When enabled, this module disables all other non-core modules,
+ * to speed the core upgrade process. Enabling this module will automatically
+ * de-select all other non-core modules. Clicking "Save configuration" again
+ * will actually disable the modules.
+ */
+function contrib_toggle_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id=='system_modules') {
+    // Disable Contrib Toggle if Theme developer module installed, as there is a fatal conflict.
+    if (module_exists('devel_themer')) {
+        drupal_set_message('The functions of Contrib Toggle have been temporarily disabled as it fatally conflicts with Theme developer module.', 'warning');
+    } else {
+      drupal_add_js(drupal_get_path('module', 'contrib_toggle') .'/contrib_toggle.js');
+      drupal_add_css(drupal_get_path('module', 'contrib_toggle') .'/contrib_toggle.alerts.css');
+      foreach ($form['disabled_modules']['#value'] as $name => $disabled) {
+        // Drupal assumes Core-required modules cannot be switched off.
+        // This code ensures they are not, even though they can now be unchecked.
+        switch($name) {
+          case 'block':  break;
+          case 'filter': break;
+          case 'node':   break;
+          case 'system': break;
+          case 'user':   break;
+        // In all other cases, allow modules to be deactivated, even if the control was
+        // disabled when the form was created. Disabled fields would not be returned by
+        // the form, so the variable disabled_modules normally serves to ensure these
+        // modules remain activated, since modules are only listed as disabled when they
+        // have active dependencies. This code overrides that behaviour by telling
+        // Drupal that all modules were enabled when the form was created.
+          default:
+            unset($form['disabled_modules']['#value'][$name]);
+        }
+      }
+
+      // Add button to disable contrib modules and submit form.
+      $markup = '<input type="button" value="Disable Contrib" onclick="Drupal.contribToggleSwitch()" style="margin-right: 10px" />';
+      $form['buttons']['disable_contrib_modules'] = array(
+        '#type' => 'markup',
+        '#value' => $markup,
+        '#weight' => -1,
+      );
+    }
+  }
+}
+
+/**
+ * Display help and module information
+ * @param path which path of the site we're displaying help
+ * @param arg array that holds the current path as would be returned from arg() function
+ * @return help text for the path
+ */
+function contrib_toggle_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case "admin/help#contrib_toggle":
+      $output = '<p>'. t("When upgrading between Drupal core versions (e.g. 6.9 to 6.10) it is recommended that all non-core modules (&quot;contrib modules&quot;) are deactivated first. When you have modules with multiple dependencies, this is a needlessly time-consuming and fiddly process. The Contrib Toggle module provides a simple button on the module configuration page (/admin/build/modules) to mark all contrib modules for deactivation, reducing this process a simple two-click exercise. Click the &quot;Disable Contrib&quot; button, then click &quot;Save Configuration&quot; to actually disable the modules. Contrib toggle automatically disables itself in this process.<br />&nbsp;<br />Contrib Toggle also provides a easier mechanism for activating and deactivating modules with dependencies, incorporating the functionality of ") .'<a href="http://drupal.org/project/qamodules">Quick Admin Modules</a>. ' . t("When this module is active, all modules on the module admin page can be activated and deactivated. Activating a module will also activate any other modules it depends on. Deactivating a module will also deactivate any modules that depend on it. (Core-required modules are excluded.)<br />&nbsp;<br /><strong>Warning:</strong> Disabling all contrib modules may disable key functionality of your site or undermine security provisions beyond those built into Drupal core that you have added using contributed modules. Disabling all contrib modules should therefore only be done when your site is in maintenance mode or if you are sure you know what you are doing.") .'</p>';
+      break;
+  }
+  return $output;
+} // function contrib_toggle_help

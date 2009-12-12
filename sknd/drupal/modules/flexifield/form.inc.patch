@@ -1,0 +1,17 @@
+Index: form.inc
+===================================================================
+RCS file: /cvs/drupal/drupal/includes/form.inc,v
+retrieving revision 1.265.2.7
+diff -u -r1.265.2.7 form.inc
+--- form.inc	25 Jun 2008 09:58:09 -0000	1.265.2.7
++++ form.inc	7 Aug 2008 17:48:16 -0000
+@@ -942,7 +942,7 @@
+  * can be processed and rendered. Also, execute any #process handlers
+  * attached to a specific element.
+  */
+-function _form_builder_handle_input_element($form_id, &$form, &$form_state, $complete_form) {
++function _form_builder_handle_input_element($form_id, &$form, &$form_state, &$complete_form) {
+   if (!isset($form['#name'])) {
+     $name = array_shift($form['#parents']);
+     $form['#name'] = $name;
+

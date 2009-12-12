@@ -1,0 +1,12 @@
+; $Id: node_export_file.info,v 1.1.2.3 2009/06/21 23:47:14 danielb Exp $
+name = Node Export Files
+description = "Export helper module for handling files (CCK FileField, Upload, and Image)."
+dependencies[] = node_export
+version = VERSION
+core = 6.x
+; Information added by drupal.org packaging script on 2009-07-20
+version = "6.x-2.14"
+core = "6.x"
+project = "node_export"
+datestamp = "1248049868"
+

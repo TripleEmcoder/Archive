@@ -1,0 +1,13 @@
+; $Id: taxonomy_delegate.info,v 1.1.4.2 2008/02/26 02:28:08 nancyw Exp $ 
+name = "Taxonomy Delegate"
+description = "Allows delegating vocabulary maintenance."
+dependencies[] = taxonomy
+core = 6.x
+
+
+; Information added by drupal.org packaging script on 2009-02-11
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "taxonomy_delegate"
+datestamp = "1234311424"
+

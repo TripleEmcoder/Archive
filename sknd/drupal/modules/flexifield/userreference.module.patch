@@ -1,0 +1,17 @@
+Index: userreference.module
+===================================================================
+RCS file: /cvs/drupal/contributions/modules/cck/modules/userreference/userreference.module,v
+retrieving revision 1.106.2.7
+diff -u -r1.106.2.7 userreference.module
+--- userreference.module	7 Jul 2008 13:15:31 -0000	1.106.2.7
++++ userreference.module	3 Aug 2008 05:53:18 -0000
+@@ -411,7 +411,7 @@
+   $value = $form_state['values'];
+   foreach ($element['#parents'] as $parent) {
+     $value = $value[$parent];
+-    if ($parent == $field_key) {
++    if ($parent === $field_key) {
+       $element['#parents'] = $new_parents;
+       form_set_value($element, $value, $form_state);
+       break;
+

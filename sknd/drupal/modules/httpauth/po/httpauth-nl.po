@@ -1,0 +1,62 @@
+# translation of httpauth.po to Dutch
+# LANGUAGE translation of Drupal (httpauth.module)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# No version information was available in the source files.
+#
+# Dennis Stevense <dennis(at)naquah(dot)net>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: httpauth\n"
+"POT-Creation-Date: 2006-11-14 23:36+0100\n"
+"PO-Revision-Date: 2006-11-14 23:42+0100\n"
+"Last-Translator: Dennis Stevense <dennis(at)naquah(dot)net>\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: httpauth.module:11
+msgid "Allows users to authenticate using HTTP."
+msgstr "Laat gebruikers aanmelden met HTTP."
+
+#: httpauth.module:59
+msgid "Enable HTTP authentication."
+msgstr "HTTP-aanmelden inschakelen."
+
+#: httpauth.module:62
+msgid ""
+"<p><strong>Note:</strong> To enable support for clients that do not handle "
+"cookies well (like newsreaders), you should disable the PHP <code>session."
+"use_only_cookies</code> setting.</strong></p>"
+msgstr ""
+"<p><strong>Let op:</strong> Om ondersteuning te bieden voor clients die geen "
+"cookies ondersteunen (zoals nieuwslezers), kunt u de PHP-instelling "
+"<code>session.use_only_cookies</code> uitzetten.</p>"
+
+#: httpauth.module:65
+msgid ""
+"Only allow a session id to be propagated using URL parameters if  HTTP "
+"authentication was used."
+msgstr ""
+"Accepteer een session-id alleen uit URL-parameters als HTTP-aanmelding "
+"gebruikt is."
+
+#: httpauth.module:68
+msgid "Promote HTTP authentication on pages"
+msgstr "HTTP-aanmelding adverteren op pagina's"
+
+#: httpauth.module:68
+msgid ""
+"On which pages to promote HTTP authentication, if an anonymous user stumbles "
+"upon an access denied page. Enter one page per line as a Drupal path. The * "
+"character is a wildcard."
+msgstr ""
+"Op welke pagina's HTTP-authentication moeten worden geadverteert, als een "
+"anonieme gebruiker op een toegang-geweigerd-pagina terecht komt. Vul een "
+"pagina per regel in als een Drupal pad. Het * teken is een joker."
+
+#: httpauth.module:0
+msgid "httpauth"
+msgstr "httpauth"

@@ -1,0 +1,158 @@
+<?php
+// $Id: w3c_validator.module,v 1.1.2.2 2009/10/05 10:33:38 pl2 Exp $
+
+/**
+ * @file
+ * W3C Validator proxy.
+ *
+ * TODO: Refactor some output using theme functions.
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function w3c_validator_menu() {
+  $items = array();
+
+  $items['admin/settings/w3c_validator'] = array(
+    'title' => 'W3C Validator',
+    'description' => 'Settings for the W3C validator API.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('w3c_validator_admin_settings'),
+    'access arguments' => array('administer w3c_validator'),
+    'file' => 'w3c_validator.pages.inc',
+  );
+
+  $items['validator'] = array(
+    'title' => 'Validate URI',
+    'description' => 'Validate URI using the W3C Validator API',
+    'page callback' => 'w3c_validator_validate_uri_page',
+    'access arguments' => array('use w3c_validator'),
+    'file' => 'w3c_validator.pages.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function w3c_validator_perm() {
+  return array('administer w3c_validator', 'use w3c_validator');
+}
+
+/**
+ * Static storage for the result.
+ *
+ * @param string $uri
+ * @param string $result
+ * @return void
+ */
+function _w3c_validator_set_validation_result($result = NULL) {
+  static $stored_result;
+
+  if ($result) {
+    $stored_result = $result;
+  }
+
+  return $stored_result;
+}
+
+/**
+ * Get stored result.
+ *
+ * @return void
+ */
+function _w3c_validator_get_validation_result() {
+  return _w3c_validator_set_validation_result();
+}
+
+/**
+ * Validate a URI using the configured validator endpoint.
+ *
+ * @param string $uri
+ * @return void
+ */
+function _w3c_validator_validate_uri($uri) {
+  if (empty($uri)) {
+    return FALSE;
+  }
+
+  $endpoint = variable_get('w3c_validator_api_endpoint_uri', '');
+  if (empty($endpoint)) {
+    return FALSE;
+  }
+
+  // Build url
+  $check_url = $endpoint .'?uri='. urlencode($uri) .'&output=soap12';
+
+  // Get and parse response
+  $xml = file_get_contents($check_url);
+  $dom = new DOMDocument();
+  $dom->loadXML($xml);
+
+  // Validity
+  $validity = $dom->getElementsByTagName("validity");
+  foreach ($validity as $key => $value) {
+    $validity_value = $value->nodeValue;
+  }
+
+  // Errors
+  $errors = $dom->getElementsByTagName("error");
+  $error_array = array();
+  foreach ($errors as $key => $value) {
+    $line = $value->getElementsByTagName('line')->item(0)->nodeValue;
+    $col = $value->getElementsByTagName('col')->item(0)->nodeValue;
+    $message = $value->getElementsByTagName('message')->item(0)->nodeValue;
+
+    $error_array[] = array(
+      'line' => $line,
+      'col' => $col,
+      'message' => $message,
+      );
+  }
+
+  // Warnings
+  $warnings = $dom->getElementsByTagName("warning");
+  $warning_array = array();
+  foreach ($warnings as $key => $value) {
+    $line = $value->getElementsByTagName('line')->item(0)->nodeValue;
+    $col = $value->getElementsByTagName('col')->item(0)->nodeValue;
+    $message = $value->getElementsByTagName('message')->item(0)->nodeValue;
+
+    $warning_array[] = array(
+      'line' => $line,
+      'col' => $col,
+      'message' => $message,
+      );
+  }
+
+  // Doctype
+  $doctype = $dom->getElementsByTagName('doctype')->item(0)->nodeValue;
+
+  $result = array(
+    'uri' => $uri,
+    'doctype' => $doctype,
+    'validity' => $validity_value,
+    'errors' => $error_array,
+    'warnings' => $warning_array,
+    );
+
+  return $result;
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function w3c_validator_help($path, $arg) {
+  switch ($path) {
+    case 'admin/settings/w3c_validator':
+      $output = '';
+      $output .= t('This module uses the official W3c Validator scripts. You must install the official w3c validator on your own server and provide the url here or you could use the official w3c validator.') . '<br />';
+      $output .= t('For instructions on how to install an instance of the w3c validator scripts you have instructions at <a href="http://validator.w3.org/docs/install.html">http://validator.w3.org/docs/install.html</a>.') .'<br />';
+      $output .= t('Debian based distributions comes with a package called w3c_markup_validator which provides a ready to use install of the validator.'). '<br />';
+      $output .= t('Using the official w3v validator endpoint url for high volume of validations could be considered abuse of service.');
+      return $output;
+      break;
+  }
+}

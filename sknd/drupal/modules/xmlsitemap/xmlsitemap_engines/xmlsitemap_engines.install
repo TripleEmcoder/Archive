@@ -1,0 +1,52 @@
+<?php
+// $Id: xmlsitemap_engines.install,v 1.3.2.6.2.9 2009/06/02 17:10:51 davereid Exp $
+
+/**
+ * @file
+ * Install and uninstall schema and functions for the xmlsitemap_engines module.
+ */
+
+function xmlsitemap_engines_install() {
+  // Set this module's weight to 1 so xmlsitemap_engines_cron() runs after
+  // the sitemap has been generated in xmlsitemap_cron().
+  db_query("UPDATE {system} SET weight = 2 WHERE type = 'module' AND name = 'xmlsitemap_engines'");
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function xmlsitemap_engines_uninstall() {
+  // Remove variables.
+  drupal_load('module', 'xmlsitemap_engines');
+  $variables = array_keys(xmlsitemap_engines_variables());
+  foreach ($variables as $variable) {
+    variable_del($variable);
+  }
+}
+
+function xmlsitemap_engines_update_1() {
+  variable_set('xmlsitemap_engines_submit', array_filter(variable_get('xmlsitemap_engines_submit', array())));
+  return array();
+}
+
+function xmlsitemap_engines_update_2() {
+  variable_set('xmlsitemap_engines_engines', variable_get('xmlsitemap_engines_submit', array()));
+  variable_del('xmlsitemap_engines_submit');
+  return array();
+}
+
+function xmlsitemap_engines_update_3() {
+  $ret = array();
+  $ret[] = update_sql("UPDATE {system} SET weight = 2 WHERE type = 'module' AND name = 'xmlsitemap_engines'");
+  return $ret;
+}
+
+function xmlsitemap_engines_update_4() {
+  $engines = variable_get('xmlsitemap_engines_engines', array());
+  $index = array_search('windows_live', $engines);
+  if ($index !== FALSE) {
+    $engines[$index] = 'bing';
+  }
+  variable_set('xmlsitemap_engines_engines', $engines);
+  return array();
+}

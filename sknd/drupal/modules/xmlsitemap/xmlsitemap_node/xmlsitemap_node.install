@@ -1,0 +1,81 @@
+<?php
+// $Id: xmlsitemap_node.install,v 1.9.2.11.2.31 2009/08/21 03:38:03 davereid Exp $
+
+/**
+ * @file
+ * Install and uninstall schema and functions for the xmlsitemap_node module.
+ */
+
+/**
+ * Implementation of hook_requirements().
+ */
+function xmlsitemap_node_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  if (function_exists('user_access') && !user_access('access content', drupal_anonymous_user())) {
+    $requirements['xmlsitemap_node_anonymous_permission'] = array(
+      'title' => $t('XML sitemap node'),
+      'value' => $t('Anonymous access to content'),
+      'description' => $t('In order to list content in the XML sitemap, the anonymous user role must have the <a href="@perm-link">%permission</a> permission.', array('@perm-link' => url('admin/user/permissions/' . DRUPAL_ANONYMOUS_RID, array('fragment' => 'module-node')), '%permission' => 'access content')),
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function xmlsitemap_node_uninstall() {
+  // Remove variables.
+  drupal_load('module', 'xmlsitemap_node');
+  $variables = array_keys(xmlsitemap_node_variables());
+  foreach ($variables as $variable) {
+    variable_del($variable);
+  }
+}
+
+// @todo Remove these update functions before alpha.
+function xmlsitemap_node_update_1() {
+  $ret = array();
+  $field = array(
+    'description' => "The {node_type}.type of this link's node.",
+    'type' => 'varchar',
+    'length' => 32,
+  );
+  db_add_field($ret, 'xmlsitemap', 'node_type', $field);
+  db_add_index($ret, 'xmlsitemap', 'node_type', array('node_type'));
+  $ret[] = update_sql("UPDATE {xmlsitemap} SET node_type = (SELECT type FROM {node} WHERE nid = {xmlsitemap}.id) WHERE type = 'node'");
+  return $ret;
+}
+
+function xmlsitemap_node_update_2() {
+  $ret = array();
+  $node_types = array_keys(node_get_types('names'));
+  foreach ($node_types as $node_type) {
+    if (variable_get('xmlsitemap_node_priority_' . $node_type, 'default') === 'default') {
+      variable_set('xmlsitemap_node_priority_' . $node_type, 0.5);
+    }
+  }
+  return $ret;
+}
+
+function xmlsitemap_node_update_3() {
+  $ret = array();
+  $ret[] = update_sql("UPDATE {system} SET weight = 0 WHERE type = 'module' AND name = 'xmlsitemap_node'");
+  return $ret;
+}
+
+function xmlsitemap_node_update_4() {
+  $ret = array();
+  if (db_column_exists('xmlsitemap', 'language')) {
+    $ret[] = update_sql("UPDATE {xmlsitemap} SET language = (SELECT {node}.language FROM {node} WHERE {node}.nid = {xmlsitemap}.id AND {node}.language <> '') WHERE {xmlsitemap}.type = 'node'");
+  }
+  else {
+    // Set the abort flag so this update runs again when the {xmlsitemap}.language field exists.
+    $ret['#abort'] = array('success' => FALSE, 'query' => 'The {xmlsitemap}.language field does not yet exist. Please re-run the update script.');
+  }
+  return $ret;
+}

@@ -1,0 +1,38 @@
+/* $Id: taxonomy_delegate.css,v 1.1.2.1 2008/11/07 00:21:09 nancyw Exp $ */
+/**
+* @file
+*   Style sheet for the Taxonomy Delegate module.
+*/
+
+.taxonomy-delegate-mycategories {
+  margin-top: 1em;
+}
+
+.taxonomy-delegate-vocabulary-name {
+  font-size: 110%;
+}
+
+.taxonomy-delegate-list {
+}
+
+.taxonomy-delegate-add {
+}
+
+.taxonomy-delegate-checkboxes .form-item label {
+  /* font-size: 125%;
+  color: blue; */
+}
+
+.taxonomy-delegate-checkboxes label.option {
+  /* width: 20%; */
+  margin-right: 2em;
+  float: left;
+  /* font-size: 125%;
+  font-weight: bold;
+  color: green; */
+}
+
+.taxonomy-delegate-checkboxes .description {
+  clear: both;
+  margin-top: 3.5em;
+}

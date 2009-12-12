@@ -1,0 +1,212 @@
+<?php
+// $Id: httpauth.module,v 1.19 2008/10/23 07:54:38 naquah Exp $
+// Copyright (c) 2006-2008 Dennis Stevense, see LICENSE.txt for more information.
+
+/**
+ * Implementation of hook_help().
+ */
+function httpauth_help($page, $arg) {
+  switch ($page) {
+    case 'admin/help#httpauth':
+      return "<p>". t('Allows users to authenticate using HTTP.') ."</p>\n";
+  }
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function httpauth_perm() {
+  return array('administer http authentication');
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function httpauth_menu() {
+  $items = array();
+
+  $items['httpauth'] = array(
+    'page callback' => 'httpauth_callback',
+    'access callback' => 'variable_get',
+    'access arguments' => array('httpauth_status', FALSE),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/settings/httpauth'] = array(
+    'title' => 'HTTP authentication',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('httpauth_settings'),
+    'access arguments' => array('administer http authentication'),
+  );
+
+  return $items;
+}
+
+/**
+ * Callback for httpauth. Usually called by drupal_access_denied() through the site_403 variable.
+ */
+function httpauth_callback() {
+  global $user;
+  
+  // Is this an anonymous user?
+  if (!$user->uid) {
+    // Get the current path from $_REQUEST['destination'], drupal_access_denied() put it there.
+    $path = drupal_get_path_alias($_REQUEST['destination']);
+    
+    // This pattern was taken from block_list().
+    $pattern = '/^('. preg_replace(array('/(\r\n?|\n)/', '/\\\\\*/', '/(^|\|)\\\\<front\\\\>($|\|)/'), array('|', '.*', '\1'. preg_quote(variable_get('site_frontpage', 'node'), '/') .'\2'), preg_quote(variable_get('httpauth_pages', ''), '/')) .')$/';
+    
+    // Do we need to promote HTTP authentication on this path?
+    if (preg_match($pattern, $path)) {
+      httpauth_unauthorized();
+    }
+  }
+  
+  // Do what drupal_access_denied() would've done if we wouldn't've been called.
+  menu_set_active_item('');
+}
+
+/**
+ * Callback for the settings page.
+ */
+function httpauth_settings() {
+  $form['httpauth_status'] = array('#type' => 'checkbox', '#title' => t('Enable HTTP authentication.'), '#default_value' => variable_get('httpauth_status', FALSE), '#description' => t('<strong>Note:</strong> when you enable HTTP authentication, !the-setting will be modified. When you disable it again, the setting will be restored.', array('!the-setting' => l(t('the 403 (access denied) page setting'), 'admin/settings/error-reporting'))));
+  
+  $form['httpauth_pages'] = array('#type' => 'textarea', '#title' => t('Promote HTTP authentication on pages'), '#default_value' => variable_get('httpauth_pages', ''), '#description' => t('On which pages to promote HTTP authentication, if an anonymous user stumbles upon an access denied page. Enter one page per line as a Drupal path. The * character is a wildcard.'));
+  
+  $form = system_settings_form($form);
+  $form['#submit'][] = 'httpauth_settings_form_submit';
+  
+  return $form;
+}
+
+/**
+ * Invoked when this modules's settings are changed.
+ */
+function httpauth_settings_form_submit($form, &$form_state) {
+  httpauth_set_site_403();
+}
+
+/**
+ * Sets the site_403 variable to the appropriate path.
+ *
+ * @param $disable
+ *   If TRUE, the site_403 variable will be restored regardless of the HTTP
+ *   authentication status.
+ */
+function httpauth_set_site_403($disable = FALSE) {
+  $site_403 = variable_get('site_403', '');
+  
+  if (!$disable && variable_get('httpauth_status', FALSE)) {
+    if ($site_403 != 'httpauth') {
+      // Save original path.
+      variable_set('httpauth_site_403', $site_403);
+      // Set the path to 'httpauth' to intercept access denied pages.
+      variable_set('site_403', 'httpauth');
+    }
+  }
+  else if ($site_403 == 'httpauth') {
+    // Restore the original path.
+    $original = variable_get('httpauth_site_403', '');
+    variable_set('site_403', $original);
+  }
+}
+
+/**
+ * Implementation of hook_boot().
+ */
+function httpauth_boot() {
+  // Return if HTTP authentication is disabled.
+  if (!variable_get('httpauth_status', FALSE)) {
+    return;
+  }
+
+  // Load credentials.
+  if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])) {
+    $name = $_SERVER['PHP_AUTH_USER'];
+    $pass = $_SERVER['PHP_AUTH_PW'];
+  }
+  else if (isset($_GET['HTTP_AUTHORIZATION'])) {
+    list($name, $pass) = httpauth_parse($_GET['HTTP_AUTHORIZATION']);
+  }
+
+  if (isset($name) && isset($pass)) {
+    global $user;
+
+    // Abort if the user with the provided credentials is already logged in.
+    if ($user->uid && strcasecmp($user->name, $name) == 0) {
+      return;
+    }
+
+    require_once('includes/form.inc');
+    drupal_load('module', 'user');
+    if (user_is_blocked($name) || drupal_is_denied('user', $name)) {
+      httpauth_unauthorized();
+      exit;
+    }
+    user_authenticate(array('name' => $name, 'pass' => $pass));
+
+    // Was authentication successful?
+    if ($user->uid) {
+      // If caching is enabled, 'fork' the current request.
+      if (variable_get('cache', CACHE_DISABLED) != CACHE_DISABLED) {
+        // Continue invocation of hook_boot() for modules coming after httpauth.
+        $invoke_hook = FALSE;
+        foreach (module_list(TRUE, TRUE) as $module) {
+          if ($invoke_hook) {
+            drupal_load('module', $module);
+            module_invoke($module, $hook);
+          }
+          else if ($module == 'httpauth') {
+            $invoke_hook = TRUE;
+          }
+        }
+        // Call drupal_page_header(), just like _drupal_bootstrap() would.
+        drupal_page_header();
+        // Fork the request, bootstrapping will continue in next phase.
+        include('./index.php');
+        // Don't continue the original request.
+        exit();
+      }
+    }
+    else {
+      // We need common.inc for t(), and theme.inc for theme() (called indirectly by t()).
+      require_once('includes/common.inc');
+      require_once('includes/theme.inc');
+
+      watchdog('user', 'Login attempt using HTTP authentication failed for %user.', array('%user' => $name));
+
+      httpauth_unauthorized();
+      exit();
+    }
+  }
+  // Force authentication when requested to do so.
+  else if (isset($_GET['authenticate'])) {    
+    httpauth_unauthorized();
+    exit();
+  }
+}
+
+/**
+ * Set 401 Unauthorized status and WWW-Authenticate header.
+ */
+function httpauth_unauthorized() {
+  require_once('includes/common.inc');
+  require_once('includes/unicode.inc');
+
+  $site_name = trim(variable_get('site_name', 'drupal'));
+  $realm = mime_header_encode($site_name);
+
+  drupal_set_header("HTTP/1.0 401 Unauthorized");
+  drupal_set_header("WWW-Authenticate: Basic realm=\"$realm\"");
+}
+
+/**
+ * Parse an HTTP authorization header.
+ */
+function httpauth_parse($header) {
+  list($type, $credentials) = split(' ', $header);
+  if ($type == 'Basic') {
+    return explode(':', base64_decode($credentials));
+  }
+}

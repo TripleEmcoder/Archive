@@ -1,0 +1,19 @@
+; $Id: phpbb2drupal.info,v 1.6.2.1 2008/07/27 17:05:18 nbz Exp $
+name = phpBB2Drupal
+description = "Migrate your phpBB data into a Drupal forum."
+core = 6.x
+dependencies[] = comment
+dependencies[] = forum
+dependencies[] = node
+dependencies[] = poll
+dependencies[] = profile
+dependencies[] = taxonomy
+dependencies[] = user
+dependencies[] = bbcode
+package = phpBB to Drupal
+; Information added by drupal.org packaging script on 2008-12-13
+version = "6.x-1.4"
+core = "6.x"
+project = "phpbb2drupal"
+datestamp = "1229133920"
+
