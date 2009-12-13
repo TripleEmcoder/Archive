@@ -21,7 +21,7 @@ namespace Cognitis.Forms
             var fieldWrapper = new FieldWrapper(browser, Field);
             var groupWrapper = new GroupWrapper(browser, Group);
 
-            return fieldWrapper.GetDiv(0).Ancestor("fieldset").Equals(groupWrapper.GetFieldset());
+            return fieldWrapper.GetFieldset().Equals(groupWrapper.GetFieldset());
         }
 
         public override string ToString()

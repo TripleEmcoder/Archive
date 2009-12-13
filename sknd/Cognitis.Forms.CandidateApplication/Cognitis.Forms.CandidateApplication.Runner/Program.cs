@@ -21,7 +21,6 @@ namespace Cognitis.Forms.CandidateApplication.Runner
                 {
                     foreach (IValidationAction action in form.BuildValidationActions(null))
                     {
-                        Console.ResetColor();
                         Console.Write(action);
                         Console.Write("\t");
 
@@ -33,12 +32,14 @@ namespace Cognitis.Forms.CandidateApplication.Runner
                             results[action] = false;
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.WriteLine("SKIP");
+                            Console.ResetColor();
                         }
                         else
                         {
                             results[action] = action.Run(browser);
                             Console.ForegroundColor = results[action] ? ConsoleColor.Green : ConsoleColor.Red;
                             Console.WriteLine(results[action] ? "SUCCESS" : "FAILURE");
+                            Console.ResetColor();
                         }
                     }
                 }

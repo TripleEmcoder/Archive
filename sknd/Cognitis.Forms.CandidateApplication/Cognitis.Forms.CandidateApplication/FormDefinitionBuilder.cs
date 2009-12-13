@@ -138,7 +138,7 @@ namespace Cognitis.Forms.CandidateApplication
                     ),
                 new FieldDefinition(
                     "field_candidate_ref_chnnl_other[{0}][value]",
-                    "Inne źródło informacj:",
+                    "Inne źródło informacji:",
                     "Czy znasz kogoś będącego członkiem SKND? Podaj jego imię i nazwisko (możesz wpisać więcej niż 1 osobę)"
                     ),
                 new FieldDefinition(

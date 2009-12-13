@@ -41,7 +41,8 @@ namespace Cognitis.Forms
                 {
                     if (fieldCondition == null)
                         fieldCondition = action;
-
+                    
+                    if (action != condition)
                     yield return action;
                 }
 

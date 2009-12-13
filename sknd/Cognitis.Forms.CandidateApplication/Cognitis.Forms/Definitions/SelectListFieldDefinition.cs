@@ -45,7 +45,8 @@ namespace Cognitis.Forms
                     if (valueCondition == null)
                         valueCondition = action;
 
-                    yield return action;
+                    if (action != fieldCondition)
+                        yield return action;
                 }
 
                 valueCondition = new VerifySelectOptionPresenceAction(valueCondition, value);

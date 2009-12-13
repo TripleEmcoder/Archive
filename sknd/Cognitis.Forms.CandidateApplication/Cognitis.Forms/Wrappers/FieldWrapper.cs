@@ -59,5 +59,10 @@ namespace Cognitis.Forms
 
             return label.Text;
         }
+
+        public Element GetFieldset()
+        {
+            return GetDiv(0).Ancestor("fieldset");
+        }
     }
 }
