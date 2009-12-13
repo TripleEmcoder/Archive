@@ -38,7 +38,7 @@ namespace Cognitis.Forms.CandidateApplication.Runner
                         {
                             results[action] = action.Run(browser);
                             Console.ForegroundColor = results[action] ? ConsoleColor.Green : ConsoleColor.Red;
-                            Console.WriteLine(results[action].ToString().ToUpper());
+                            Console.WriteLine(results[action] ? "SUCCESS" : "FAILURE");
                         }
                     }
                 }

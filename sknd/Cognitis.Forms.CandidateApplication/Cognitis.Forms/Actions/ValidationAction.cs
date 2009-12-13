@@ -19,5 +19,16 @@ namespace Cognitis.Forms
         {
             return false;
         }
+
+        protected string ToString(object value)
+        {
+            var values = value.GetType().GetProperties().Select(
+                property => string.Format("{0} = \"{1}\"", property.Name, property.GetValue(value, null)));
+
+            return string.Format(
+                "{0}({1})",
+                GetType().Name,
+                string.Join(", ", values.ToArray()));
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cognitis.Forms
 {
-    class GroupValidationAction : ValidationAction
+    public class GroupValidationAction : ValidationAction
     {
         public IGroupDefinition Group { get; private set; }
 

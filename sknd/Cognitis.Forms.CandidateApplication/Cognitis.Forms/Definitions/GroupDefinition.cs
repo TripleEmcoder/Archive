@@ -10,20 +10,20 @@ namespace Cognitis.Forms
     {
         public string Name { get; private set; }
         public string Title { get; private set; }
+        public string Description { get; private set; }
         public IEnumerable<IFieldDefinition> Fields { get; private set; }
 
-        public GroupDefinition(string name, string title, IEnumerable<IFieldDefinition> fields)
+        public GroupDefinition(string name, string title, string description, IEnumerable<IFieldDefinition> fields)
         {
             Name = name;
             Title = title;
+            Description = description;
             Fields = fields;
         }
 
-        public GroupDefinition(string name, string title, params IFieldDefinition[] fields)
+        public GroupDefinition(string name, string title, string description, params IFieldDefinition[] fields)
+            : this(name, title, description, (IEnumerable<IFieldDefinition>)fields)
         {
-            Name = name;
-            Title = title;
-            Fields = fields;
         }
 
         public IEnumerable<IValidationAction> BuildValidationActions(IValidationAction condition)
@@ -47,14 +47,16 @@ namespace Cognitis.Forms
 
                 fieldCondition = new VerifyFieldParentAction(fieldCondition, field, this);
                 yield return fieldCondition;
-                //yield return new VerifyFieldOrderAction(fieldCondition, field, previousField);
+                yield return new VerifyFieldOrderAction(fieldCondition, field, previousField);
+                
                 previousField = field;
+                fieldCondition = condition;
             }
 
             Debug.Assert((previousField == null) == (fieldCondition == null));
 
-            //if (previousField != null)
-            //    yield return new VerifyFieldOrderAction(fieldCondition, null, previousField);
+            if (previousField != null)
+                yield return new VerifyFieldOrderAction(fieldCondition, null, previousField);
         }
     }
 }

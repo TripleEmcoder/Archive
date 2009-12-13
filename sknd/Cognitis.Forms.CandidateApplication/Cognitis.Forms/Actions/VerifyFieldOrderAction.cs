@@ -5,9 +5,10 @@ using System.Text;
 
 namespace Cognitis.Forms
 {
-    class VerifyFieldOrderAction
+    public class VerifyFieldOrderAction : FieldValidationAction
     {
-        public VerifyFieldOrderAction(IFieldDefinition fieldFormer, IFieldDefinition fieldLatter)
+        public VerifyFieldOrderAction(IValidationAction condition, IFieldDefinition field, IFieldDefinition previousField) 
+            : base(condition, field)
         {
         }
     }

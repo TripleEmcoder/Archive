@@ -5,6 +5,10 @@ namespace Cognitis.Forms
 {
     public class FieldDefinition : IFieldDefinition
     {
+        public string Name { get; private set; }
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+
         public FieldDefinition(string name, string title, string description)
         {
             Name = name;
@@ -12,11 +16,7 @@ namespace Cognitis.Forms
             Description = description;
         }
 
-        public string Name { get; private set; }
-        public string Title { get; private set; }
-        public string Description { get; private set; }
-
-        public IEnumerable<IValidationAction> BuildValidationActions(IValidationAction condition)
+        public virtual IEnumerable<IValidationAction> BuildValidationActions(IValidationAction condition)
         {
             condition = new VerifyFieldPresenceAction(condition, this);
             yield return condition;

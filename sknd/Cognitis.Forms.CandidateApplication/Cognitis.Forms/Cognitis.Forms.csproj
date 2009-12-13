@@ -78,6 +78,10 @@
     <Compile Include="Actions\VerifyFieldTitleAction.cs" />
     <Compile Include="Actions\VerifyGroupPresenceAction.cs" />
     <Compile Include="Actions\VerifyGroupTitleAction.cs" />
+    <Compile Include="Actions\VerifySelectListPresenceAction.cs" />
+    <Compile Include="Actions\VerifySelectOptionOrderAction.cs" />
+    <Compile Include="Actions\VerifySelectOptionParentAction.cs" />
+    <Compile Include="Actions\VerifySelectOptionTitleAction.cs" />
     <Compile Include="Definitions\FieldDefinition.cs" />
     <Compile Include="Definitions\FormDefinition.cs" />
     <Compile Include="Definitions\GroupDefinition.cs" />
@@ -89,9 +93,20 @@
     <Compile Include="Definitions\IInput.cs" />
     <Compile Include="Definitions\IInvalidInput.cs" />
     <Compile Include="Actions\IValidationAction.cs" />
+    <Compile Include="Definitions\ISelectListFieldDefinition.cs" />
+    <Compile Include="Definitions\IValueDefinition.cs" />
+    <Compile Include="Definitions\IValueFieldDefinition.cs" />
+    <Compile Include="Definitions\SelectListFieldDefinition.cs" />
+    <Compile Include="Definitions\ValueDefinition.cs" />
+    <Compile Include="Definitions\ValueFieldDefinition.cs" />
+    <Compile Include="Actions\ValueValidationAction.cs" />
+    <Compile Include="Actions\VerifySelectOptionPresenceAction.cs" />
     <Compile Include="IValidationProvider.cs" />
     <Compile Include="Definitions\IValidInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wrappers\FieldWrapper.cs" />
+    <Compile Include="Wrappers\GroupWrapper.cs" />
+    <Compile Include="Wrappers\SelectListFieldWrapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

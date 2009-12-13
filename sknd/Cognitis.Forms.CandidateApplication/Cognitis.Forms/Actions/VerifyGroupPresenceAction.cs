@@ -6,7 +6,7 @@ using WatiN.Core;
 
 namespace Cognitis.Forms
 {
-    class VerifyGroupPresenceAction : GroupValidationAction
+    public class VerifyGroupPresenceAction : GroupValidationAction
     {
         public VerifyGroupPresenceAction(IValidationAction condition, IGroupDefinition group) 
             : base(condition, group)
@@ -15,7 +15,12 @@ namespace Cognitis.Forms
 
         public override bool Run(Browser browser)
         {
-            return browser.Element(Find.ByClass(Group.Name.Replace("_", "-"))).Exists;
+            return new GroupWrapper(browser, Group).GetFieldset().Exists;
+        }
+
+        public override string ToString()
+        {
+            return ToString(new { Group.Name });
         }
     }
 }

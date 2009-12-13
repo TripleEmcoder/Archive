@@ -17,9 +17,8 @@ namespace Cognitis.Forms
         }
 
         public FormDefinition(Uri uri, params IElementDefinition[] elements)
+            : this(uri, (IEnumerable<IElementDefinition>)elements)
         {
-            Uri = uri;
-            Elements = elements;
         }
 
         public IEnumerable<IValidationAction> BuildValidationActions(IValidationAction condition)

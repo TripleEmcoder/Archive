@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Cognitis.Forms
 {
-    public interface IGroupDefinition : IElementDefinition
+    public interface IValueDefinition : IValidationProvider
     {
-        IEnumerable<IFieldDefinition> Fields { get; }
+        string Name { get; }
+        string Title { get; }
     }
 }

@@ -7,5 +7,8 @@ namespace Cognitis.Forms
 {
     public interface IElementDefinition : IValidationProvider
     {
+        string Name { get; }
+        string Title { get; }
+        string Description { get; }
     }
 }
