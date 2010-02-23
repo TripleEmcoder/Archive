@@ -328,7 +328,7 @@ function admin_menu_adjust_items(&$menu_links, &$sort) {
   // data dynamically in the _alter hook.
   $links[] = array(
     'title' => 'icon_users',
-    'path' => 'user',
+    'path' => 'icon_users',
     'weight' => -90,
     'parent_path' => '<root>',
     'options' => array('extra class' => 'admin-menu-action admin-menu-icon admin-menu-users', 'html' => TRUE),
