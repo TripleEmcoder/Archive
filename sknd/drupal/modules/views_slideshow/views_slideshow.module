@@ -1,0 +1,44 @@
+<?php
+// $Id: views_slideshow.module,v 1.11.2.2.2.4 2009/10/15 08:47:01 redndahead Exp $
+
+/**
+ *  @file
+ *  Provides Slideshow style options for Views.
+ */
+
+/**
+ *  Implement hook_theme().
+ */
+function views_slideshow_theme($existing, $type, $theme, $path) {
+  return array(
+    'views_slideshow_main_section' => array(
+      'arguments' => array('id' => NULL, 'hidden_elements' => NULL, 'plugin' => NULL),
+      'file' => 'views_slideshow.theme.inc',
+    ),
+  );
+}
+
+/**
+ *  Implements hook_views_api().
+ */
+function views_slideshow_views_api() {
+  return array(
+    'api' => 2.0,
+  );
+}
+
+/**
+ * Implementation of hook_help().
+ */
+function views_slideshow_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#views_slideshow':
+      if (module_exists('advanced_help')) {
+        $output = '<p>'. t('<a href="@help">Click here to view the documentation for Views Slideshow</a>.',  array('@help' => base_path() . 'admin/advanced_help/views_slideshow')) .'</p>';
+      }
+      else {
+        $output = '<p>'. t('Views Slideshow help can be found by installing and enabling the <a href="@advanced_help">Advanced Help module</a>.',  array('@advanced_help' => 'http://drupal.org/project/advanced_help')) .'</p>';
+      }
+      return $output;
+  }
+}
