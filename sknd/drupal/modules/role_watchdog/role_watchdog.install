@@ -1,0 +1,76 @@
+<?php
+// $Id: role_watchdog.install,v 1.1.2.1 2009/04/03 08:06:51 gestaltware Exp $
+
+/**
+ * @file
+ * Install file for Role Watchdog.
+ */
+
+/**
+ * Implementation of hook_schema().
+ */
+function role_watchdog_schema() {
+  $schema['role_watchdog'] = array(
+    'description' => t('This table is log of all role changes.'),
+    'fields' => array(
+      'aid' => array(
+        'description' => t('The uid of account.'),
+        'type' => 'int',
+        'unsigned' => 1,
+        'not null' => TRUE,
+      ),
+      'rid' => array(
+        'description' => t('The role.'),
+        'type' => 'int',
+        'unsigned' => 1,
+        'not null' => TRUE,
+      ),
+      'action' => array(
+        'description' => t('The action (add or remove) performed.'),
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'description' => t('The uid performing action.'),
+        'type' => 'int',
+        'unsigned' => 1,
+        'not null' => TRUE,
+      ),
+      'stamp' => array(
+        'description' => t('The time action was performed.'),
+        'type' => 'int',
+        'unsigned' => 1,
+        'not null' => TRUE,
+      ),
+    ),
+    'indexes' => array(
+      'aid' => array('aid'),
+    ),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function role_watchdog_install() {
+  $t = get_t();
+  drupal_install_schema('role_watchdog');
+
+  drupal_set_message($t('Role Watchdog table installed. !config', array(
+    '!config' => l('Configure Role Watchdog', 'admin/user/roles/role_watchdog')
+  )));
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function role_watchdog_uninstall() {
+  drupal_uninstall_schema('role_watchdog');
+  db_query("DELETE FROM {variable} WHERE name LIKE 'role_watchdog_%'");
+  cache_clear_all('variables', 'cache');
+
+  drupal_set_message(t('Role Watchdog table and variables removed.'));
+}

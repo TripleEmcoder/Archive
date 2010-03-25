@@ -1,0 +1,13 @@
+// $Id: CHANGELOG.txt,v 1.4 2009/01/22 04:40:37 boombatower Exp $
+
+Profile permission 6.x-1.2, xxxx-xx-xx (development version)
+
+Profile permission 6.x-1.1, 2009-01-21
+--------------------------------------
+- Changes:
+   * #360586: support restriction on field access permission.
+   * Add test description.
+
+Profile permission 6.x-1.0, 2008-12-04
+--------------------------------------
+- This is the first fully featured release.

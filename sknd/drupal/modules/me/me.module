@@ -188,32 +188,31 @@ function me_handler($parts, $callback) {
   array_shift($args);
   array_shift($args);
 
+  // We need to get a correct path no matter what so we can reset $_GET['q'];
+  $redirect = FALSE;
+  // Get the menu path arguments.
+  $menu_parts = explode('/', $_GET['q'], MENU_MAX_PARTS);
+
+  // Loop over each part. If it's a %me wildcard, then
+  // check the corresponding menu part for the me alias,
+  // if so, replace it out with the user id so we can redirect correctly.
+  // If no changes are required, then call the required function.
+  while (list($key, $val) = each($parts)) {
+    if (0 === strpos($val, '%me') && _me_is_alias($menu_parts[$key])) {
+      $redirect = TRUE;
+      $menu_parts[$key] = $GLOBALS['user']->uid;
+    }
+  }
+  $path = implode('/', $menu_parts);
+
   // If we want the uid shown in the address bar, we need to do a redirect.
-  if (me_variable_get('me_redirect') || _me_user_disabled() || !_me_handle_path($_GET['q'])) {
-    $redirect = FALSE;
-    // Get the menu path arguments.
-    $menu_parts = explode('/', $_GET['q'], MENU_MAX_PARTS);
-
-    // Loop over each part. If it's a %me wildcard, then
-    // check the corresponding menu part for the me alias,
-    // if so, replace it out with the user id so we can redirect correctly.
-    // If no changes are required, then call the required function.
-    while (list($key, $val) = each($parts)) {
-      if (0 === strpos($val, '%me') && _me_is_alias($menu_parts[$key])) {
-        $redirect = TRUE;
-        $menu_parts[$key] = $GLOBALS['user']->uid;
-      }
+  if ((me_variable_get('me_redirect') || _me_user_disabled() || !_me_handle_path($_GET['q'])) && $redirect) {
+    // Save on an extra redirect by also checking the anonymous redirect here.
+    $redirect_path = me_variable_get('me_redirect_anonymous');
+    if ($GLOBALS['user']->uid == 0 && !empty($redirect_path)) {
+      $path = $redirect_path;
     }
-
-    if ($redirect) {
-      $path = implode('/', $menu_parts);
-      // Save on an extra redirect by also checking the anonymous redirect here.
-      $redirect_path = me_variable_get('me_redirect_anonymous');
-      if ($GLOBALS['user']->uid == 0 && !empty($redirect_path)) {
-        $path = $redirect_path;
-      }
-      drupal_goto($path);
-    }
+    drupal_goto($path);
   }
 
   // Before going any further, set the current menu router item to include
@@ -226,6 +225,7 @@ function me_handler($parts, $callback) {
       $router_item['load_functions'][$index] = 'user_load';
     }
   }
+  $_GET['q'] = $path;
   menu_set_item($_GET['q'], $router_item);
 
   return call_user_func_array($callback, $args);

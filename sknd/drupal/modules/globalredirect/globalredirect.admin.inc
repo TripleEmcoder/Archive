@@ -1,5 +1,5 @@
 <?php
-// $Id: globalredirect.admin.inc,v 1.1.2.5 2008/12/22 10:42:06 njt1982 Exp $
+// $Id: globalredirect.admin.inc,v 1.1.2.8 2010/03/03 16:56:21 davereid Exp $
 
 /**
  * @file
@@ -10,8 +10,6 @@
  *  Function to generate the form setting array
  */
 function globalredirect_settings() {
-  $form = array();
-
   $form['globalredirect_deslash'] = array(
     '#type' => 'radios',
     '#title' => t('Deslash'),
@@ -22,7 +20,6 @@ function globalredirect_settings() {
     ),
     '#default_value' => variable_get('globalredirect_deslash', GLOBALREDIRECT_DESLASH_ENABLED),
   );
-
 
   $form['globalredirect_nonclean2clean'] = array(
     '#type' => 'radios',
@@ -38,7 +35,7 @@ function globalredirect_settings() {
   $form['globalredirect_trailingzero'] = array(
     '#type' => 'radios',
     '#title' => t('Remove Trailing Zero Argument'),
-    '#description' => t('If enabled, any instance of "/0" will be trimmed from the right of the URL. This stops duplicate pages such as "taxonomy/term/1" and "taxonomy/term/1/0" where 0 is the default depth. There is an option of limiting this feature to taxonomy term pages ONLY or allowing it to effect any page. <strong>By default this feature is disabled to avoid any unexpected behaviour</strong>'),
+    '#description' => t('If enabled, any instance of "/0" will be trimmed from the right of the URL. This stops duplicate pages such as "taxonomy/term/1" and "taxonomy/term/1/0" where 0 is the default depth. There is an option of limiting this feature to taxonomy term pages ONLY or allowing it to effect any page. <strong>By default this feature is disabled to avoid any unexpected behavior</strong>'),
     '#options' => array(
       GLOBALREDIRECT_FEATURE_DISABLED => t('Disabled'),
       GLOBALREDIRECT_TRAILINGZERO_TAXTERM => t('Enabled for taxonomy term pages only'),
@@ -50,7 +47,7 @@ function globalredirect_settings() {
   $form['globalredirect_menu_check'] = array(
     '#type' => 'radios',
     '#title' => t('Menu Access Checking'),
-    '#description' => t('If enabled, the module will check the user has access to the page before redirecting. This helps to stop redirection on protected pages and avoids giving away <em>secret</em> URL\'s. <strong>By default this feature is disabled to avoid any unexpected behaviour</strong>'),
+    '#description' => t('If enabled, the module will check the user has access to the page before redirecting. This helps to stop redirection on protected pages and avoids giving away <em>secret</em> URL\'s. <strong>By default this feature is disabled to avoid any unexpected behavior</strong>'),
     '#options' => array(
       GLOBALREDIRECT_FEATURE_DISABLED => t('Disabled'),
       GLOBALREDIRECT_MENU_CHECK_ENABLED => t('Enabled'),
@@ -61,7 +58,7 @@ function globalredirect_settings() {
   $form['globalredirect_case_sensitive_urls'] = array(
     '#type' => 'radios',
     '#title' => t('Case Sensitive URL Checking'),
-    '#description' => t('If enabled, the module will compae the current URL to the alias stored in the system. If there are any differences in case then the user will be redirected to the correct URL.'),
+    '#description' => t('If enabled, the module will compare the current URL to the alias stored in the system. If there are any differences in case then the user will be redirected to the correct URL.'),
     '#options' => array(
       GLOBALREDIRECT_FEATURE_DISABLED => t('Disabled'),
       GLOBALREDIRECT_CASE_SENSITIVE_URLS_ENABLED => t('Enabled'),
@@ -71,4 +68,3 @@ function globalredirect_settings() {
 
   return system_settings_form($form);
 }
-

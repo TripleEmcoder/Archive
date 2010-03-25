@@ -1,0 +1,6 @@
+Permission Report 6.x-1.0
+=========================
+Initial release of 6.x version.  Enhancements from 5.x version:
+
+Appropriately accounts for anonymous and authenticated user roles.
+Only accounts for users that are active.

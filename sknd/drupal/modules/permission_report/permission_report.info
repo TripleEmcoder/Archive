@@ -1,0 +1,11 @@
+; $Id: permission_report.info,v 1.1.2.1 2009/12/11 03:34:27 nvahalik Exp $
+
+name = Permission report
+description = Calculates and displays the a permission report for a user and shows which roles grant what permission for a given user.  Also provides ability to list users in a role, and dig down into complicated role and permission problems.
+core = 6.x
+; Information added by drupal.org packaging script on 2009-12-11
+version = "6.x-1.0"
+core = "6.x"
+project = "permission_report"
+datestamp = "1260502854"
+

@@ -1,0 +1,298 @@
+<?php
+// $Id: permission_report.module,v 1.1.2.1 2009/12/11 03:34:27 nvahalik Exp $
+
+/**
+ * Drupal module to calculate the resultant set of permissions for a user.
+ *
+ * @author Nicholas Vahalik
+ * @package permission_report
+ **/
+
+function permission_report_menu() {
+  $items = array();
+  
+  $items['admin/user/permissions/report'] = array(
+    'title' => 'Report',
+    'page callback' => 'permission_report_permission_list',
+    'access arguments' => array('view permission report'),
+  );
+  $items['admin/user/permissions/report/perms'] = array(
+    'title' => 'Permissions',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'page callback' => 'permission_report_permission_list',
+    'access arguments' => array('view permission report'),
+  );
+  $items['admin/user/permissions/report/perms/%'] = array(
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'page callback' => 'permission_report_user_having_perm',
+    'page arguments' => array(5),
+    'access arguments' => array('view permission report'),
+  );
+
+  $items['admin/user/permissions/report/roles'] = array(
+    'title' => 'Roles',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'permission_report_role_list',
+    'access arguments' => array('view permission report'),
+  );
+  $items['admin/user/permissions/report/roles/%'] = array(
+    'title' => 'Roles',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'permission_report_users_having_role',
+    'page arguments' => array(5),
+    'access arguments' => array('view permission report'),
+  );
+
+  $items['user/%user/permission_report'] = array(
+    'title' => 'Permission Report',
+    'access arguments' => array('view permission report'),
+    'page callback' => 'permission_report_user_report',
+    'page arguments' => array(1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+  );
+  
+  return $items;
+}
+
+function permission_report_user($op, &$edit, &$account, $category = NULL) {
+  if ($op == 'view') {
+    if (user_access('view permission report')) {
+      $account->content['permission_report'] = array(
+        '#type' => 'user_profile_category',
+        '#title' => t('Permissions'),
+        'link' => array(
+          '#type' => 'user_profile_item',
+          '#value' => l(t('View permission report report for !s.', array('!s' => $account->name)), "user/$account->uid/permission_report"),
+        ),
+      );
+    }
+  }
+}
+
+function permission_report_user_report($user) {
+  drupal_add_css(drupal_get_path('module', 'user') .'/user.css', 'module');
+
+  if ($user->uid == 1) {
+     return t('There is no need for a report.  User ID #1 always has all permissions.  See the !api_link for more information.', array('!api_link' => l('Drupal API\'s hook_access', 'http://api.drupal.org/api/function/user_access/6')));
+  }
+
+  // Render role/permission overview:
+  $options = array();
+  $row = array();
+  $can_admin_access = user_access('administer permissions');
+
+  foreach (module_list(FALSE, FALSE, TRUE) as $module) {
+    if ($permissions = module_invoke($module, 'perm')) {
+      $rows[] = array(array('data' => t('@module module', array('@module' => $module)), 'class' => 'module', 'id' => 'module-'. $module, 'colspan' => 3));
+      asort($permissions);
+      foreach ($permissions as $perm) {
+        $display_roles = array();
+
+        $roles = _permission_report_roles_having_perm($perm, $user);
+        foreach ($roles as $rid => $name)
+          $display_roles[] = $can_admin_access ? l($name, "admin/user/permissions/$rid") : t($name);
+        $rows[] = array(
+          array('data' => l($perm, "admin/user/permissions/report/perms/$perm")),
+          array('data' => user_access($perm, $user) ? 'Yes' : 'No'),
+          array('data' => implode(', ', $display_roles)),
+       );
+      }
+    }
+  }
+
+   return theme('table', array('Permission', 'Access', 'Roles'), $rows, array('id' => 'permissions'));
+}
+
+/**
+ * Return an array of users keyed by IDs that have access to a specific permission.
+ *
+ * @return void
+ * @author Nicholas Vahalik
+ **/
+function _permission_report_users_having_perm($permission) {
+  $users = array();
+
+  $roles = _permission_report_roles_having_perm($permission);
+
+  if (array_key_exists(DRUPAL_ANONYMOUS_RID, $roles)) {
+    $users[0] = 'anonymous';
+  }
+
+  if (array_key_exists(DRUPAL_AUTHENTICATED_RID, $roles)) {
+    # Then just get all the users
+    $user_query = db_query('SELECT uid, name FROM {users} u WHERE uid <> 0 AND status = 1');
+  }
+  elseif (count($roles) > 0) {
+    $user_query = db_query('SELECT uid, name FROM {users} u INNER JOIN {users_roles} ur USING (uid) WHERE ur.rid IN (' . implode(', ', array_keys($roles)) . ') AND u.status = 1');
+  }
+
+  while ($user = db_fetch_object($user_query)) {
+    $users[$user->uid] = $user->name;
+  }
+
+  return $users;
+}
+
+function _permission_is_anonymous($permission) {
+  static $anonymous_permissions = NULL;
+
+  if (is_null($anonymous_permissions)) {
+    $db_permissions = db_result(db_query('SELECT perm FROM {permission} WHERE rid = %d', DRUPAL_ANONYMOUS_RID));
+    $anonymous_permissions = explode(', ', $db_permissions);
+  }
+  
+  return in_array($permission, $anonymous_permissions);
+}
+
+function _permission_report_roles_having_perm($permission, $user = NULL) {
+  $roles = array();
+
+  if ($user) {
+    $result = db_query('SELECT r.rid, r.name, p.perm FROM {role} r LEFT JOIN {permission} p ON r.rid = p.rid LEFT JOIN {users_roles} ur ON (r.rid = ur.rid) WHERE ur.uid = %d OR r.rid = %d OR r.rid = %d', $user->uid, DRUPAL_AUTHENTICATED_RID, DRUPAL_ANONYMOUS_RID);
+  }
+  else {
+    $result = db_query('SELECT r.rid, r.name, perm from {permission} INNER JOIN {role} r USING (rid)');
+  }
+
+  while ($role = db_fetch_object($result)) {
+    if (in_array($permission, explode(', ', $role->perm))) {
+      $roles[$role->rid] = $role->name;
+    }
+  }
+
+  return $roles;
+}
+
+/**
+ * Return a list of users in a given rule.
+ *
+ * @return void
+ * @author Nicholas Vahalik
+ **/
+function permission_report_users_having_role($rid) {
+  
+  if ($rid == DRUPAL_AUTHENTICATED_RID || $rid == DRUPAL_ANONYMOUS_RID) {
+    if ($rid == DRUPAL_ANONYMOUS_RID) {
+      $rows[] = array('anonymous', '');
+    }
+    $users_having_role = db_query('SELECT u.name, u.uid FROM {users} u WHERE u.status = 1 AND u.uid <> 0');
+  }
+  else {
+    $users_having_role = db_query('SELECT u.name, u.uid FROM {users} u INNER JOIN {users_roles} ur USING(uid) WHERE ur.rid = %d AND u.status = 1', $rid);
+  }
+  
+  $role_name = db_result(db_query('SELECT name FROM {role} WHERE rid = %d', $rid));
+  $view_users = user_access('access user profiles');
+  drupal_set_title(t('Users in %role role', array('%role' => $role_name)));
+
+  while ($user = db_fetch_object($users_having_role)) {
+    $rows[] = array(
+      array('data' => $view_users ? l($user->name, "user/$user->uid") : $user->name),
+      array('data' => l('Permission report', "user/$user->uid/permission_report")),
+    );
+  }
+
+  return theme('table', $users_header, $rows);
+}
+
+/**
+ * List of roles with the number of users in each role.
+ *
+ * @return void
+ * @author Nicholas Vahalik
+ **/
+function permission_report_role_list() {
+  $user_in_roles = db_query('SELECT r.name, r.rid, COUNT(ur.uid) as user_count FROM {role} r INNER JOIN {users_roles} ur USING (rid) LEFT JOIN {users} u USING(uid) WHERE u.status = 1 GROUP BY r.rid ORDER BY r.name');
+  $can_admin_access = user_access('administer permissions');
+  drupal_set_title(t('Roles'));
+
+  /**
+   * We are going to manually add these roles here since drupal handles these manually
+   * and they don't get assigned in {users_roles}.
+   */
+
+  $rows[] = array(
+    $can_admin_access ? l('anonymous user', 'admin/user/permissions/' . DRUPAL_ANONYMOUS_RID) : t('anonymous user'),
+    l('all anonymous users', 'admin/user/permissions/report/roles/' . DRUPAL_ANONYMOUS_RID)
+  );
+
+  $rows[] = array(
+    $can_admin_access ? l('authenticated user', 'admin/user/permissions/' . DRUPAL_AUTHENTICATED_RID) : t('authenticated user'),
+    l('all authenticated users', 'admin/user/permissions/report/roles/' . DRUPAL_AUTHENTICATED_RID)
+  );
+
+  while ($role_info = db_fetch_object($user_in_roles)) {
+    $rows[] = array(
+      $can_admin_access ? l($role_info->name, "admin/user/permissions/$role_info->rid") : t($role_info->name),
+      l(format_plural($role_info->user_count, '1 user', '@count users'), "admin/user/permissions/report/roles/$role_info->rid")
+    );
+  }
+
+  $roles_header = array(
+    array('data' => 'Role', 'colspan' => 2)
+  );
+
+  return theme('table', $roles_header, $rows);
+}
+
+function permission_report_user_having_perm($permission) {
+  $view_users = user_access('access user profiles');
+  $can_admin_access = user_access('administer permissions');
+  drupal_set_title(t('Assignments for %foo', array('%foo' => $permission)));
+
+  foreach (_permission_report_users_having_perm($permission) as $uid => $name) {
+    $users_rows[] = array(
+       array('data' => l($name, 'user/'. $uid)),
+       array('data' => l('Permission report', 'user/'. $uid . '/permission_report')),
+    );
+  }
+
+  $users_header = array(
+    array('data' => 'User', 'colspan' => 2),
+  );
+
+  foreach (_permission_report_roles_having_perm($permission) as $rid => $name) {
+    $roles_rows[] = array(
+      array('data' => $can_admin_access ? l($name, "admin/user/permissions/$rid") : t($name)),
+      array('data' => l('Permission report', "admin/user/permissions/report/roles/$rid")),
+    );
+  }
+
+  $roles_header = array(
+    array('data' => 'Role', 'colspan' => 2),
+  );
+
+  $output .= '<h2 class="title"><a name="permission-report-users">Users</a></h2>';
+  $output .= theme('table', $users_header, $users_rows);
+  $output .= '<h2 class="title"><a name="permission-report-roles">Roles</a></h2>';
+  $output .= theme('table', $roles_header, $roles_rows);
+
+  return $output;
+}
+
+function permission_report_permission_list() {
+  drupal_add_css(drupal_get_path('module', 'user') .'/user.css', 'module');
+  $can_admin_access = user_access('administer permissions');
+
+  foreach (module_list(FALSE, FALSE, TRUE) as $module) {
+    if ($permissions = module_invoke($module, 'perm')) {
+      $rows[] = array(array('data' => t('@module module', array('@module' => $module)), 'class' => 'module', 'id' => 'module-'. $module, 'colspan' => 3));
+      asort($permissions);
+      foreach ($permissions as $perm) {
+        $roles = _permission_report_roles_having_perm($perm, $user);
+        $anonymous = _permission_is_anonymous($perm);
+        $rows[] = array(
+          array('data' => $perm),
+          array('data' => l(format_plural(count(_permission_report_users_having_perm($perm)) - ($anonymous ? 1 : 0), '1 user', '@count users'), "admin/user/permissions/report/perms/$perm")),
+          array('data' => $anonymous ? t('+ anonymous') : '')
+        );
+      }
+    }
+  }
+  return theme('table', array('Permission', array('data' => '', 'colspan' => 2)), $rows, array('id' => 'permissions'));
+}
+
+function permission_report_perm() {
+  return array('view permission report');
+}
