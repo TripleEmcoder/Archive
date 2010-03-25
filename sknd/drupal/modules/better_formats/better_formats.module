@@ -636,3 +636,5 @@ function theme_better_formats_filter_tips_more_info() {
   }
   return '<p>' . l($text, 'filter/tips') . '</p>';
 }
+urn '<p>' . l($text, 'filter/tips') . '</p>';
+}
