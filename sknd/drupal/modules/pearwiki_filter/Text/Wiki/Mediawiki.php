@@ -11,7 +11,7 @@
  * @author     Bertrand Gugger <bertrand@toggg.com>
  * @author     Paul M. Jones <pmjones@php.net>
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id: Mediawiki.php,v 1.8 2006/02/25 09:59:34 toggg Exp $
+ * @version    CVS: $Id: Mediawiki.php 284672 2009-07-24 00:11:28Z rodrigosprimo $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -35,12 +35,13 @@ class Text_Wiki_Mediawiki extends Text_Wiki {
     var $rules = array(
         'Prefilter',
         'Delimiter',
-//        'Code',
+        'Code',
+        'Comment',
+        'Preformatted',
 //        'Plugin',
 //        'Function',
 //        'Html',
         'Raw',
-//        'Preformatted',
 //        'Include',
 //        'Embed',
 //        'Page',
@@ -49,32 +50,33 @@ class Text_Wiki_Mediawiki extends Text_Wiki {
         'Toc',
 //        'Titlebar',
         'Horiz',
+        'Redirect',
         'Break',
 //        'Blockquote',
-        'List',
-        'Deflist',
-        'Table',
 //        'Box',
+        'Wikilink',
 //        'Image', // done by Wikilink but still possible to disable/configure
+//        'Interwiki', // done by Wikilink but still possible to disable/configure
+        'Table',
 //        'Phplookup',
 //        'Center',
+        'List',
+        'Deflist',
+//        'Strong',  ** will be only fake inserted by Emphasis if needed for render
+        'Emphasis', // must run before Newline (see Text_Wiki_Parse_Emphasis::parse())
         'Newline',
         'Paragraph',
         'Url',
 //        'Freelink',
 //        'Colortext',
-        'Wikilink',
-//        'Strong',  ** will be only fake inserted by Emphasis if needed for render
 //        'Bold',
-        'Emphasis',
 //        'Italic',
 //        'Underline',
-//        'Tt',
-//        'Superscript',
-//        'Subscript',
+        'Tt',
+        'Superscript',
+        'Subscript',
 //        'Specialchar',
 //        'Revise',
-//        'Interwiki', // done by Wikilink but still possible to disable/configure
         'Tighten'
     );
 

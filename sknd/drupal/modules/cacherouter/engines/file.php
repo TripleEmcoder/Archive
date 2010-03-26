@@ -99,7 +99,7 @@ class fileCache extends Cache {
           flock($fp, LOCK_UN);
         }
         fclose($fp);
-        @chmod(0664, $file); // Necessary for non-webserver users.
+        @chmod(0666, $file); // Necessary for non-webserver users.
       }
       else {
         // t() may not be loaded
@@ -237,7 +237,7 @@ class fileCache extends Cache {
             }
           }
           else {
-            @chmod($dir, 0775); // Necessary for non-webserver users.
+            @chmod($dir, 0777); // Necessary for non-webserver users.
           }
         }
       }

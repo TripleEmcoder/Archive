@@ -1,7 +1,6 @@
 <?php
 // vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4:
 /**
-* 
 * Mediawiki: Parse for definition lists.
 * 
 * @category Text
@@ -10,12 +9,11 @@
 * @author Paul M. Jones <pmjones@php.net>
 * @author Moritz Venn <ritzmo@php.net>
 * @license LGPL
-* @version $Id: Deflist.php,v 1.1 2006/03/29 18:41:43 ritzmo Exp $
+* @version $Id: Deflist.php 284482 2009-07-21 10:02:26Z rodrigosprimo $
 * 
 */
 
 /**
-* 
 * Parses for definition lists.
 *
 * This class implements a Text_Wiki_Parse to find source text marked as a
@@ -33,29 +31,20 @@
 * @author Moritz Venn <ritzmo@php.net>
 * 
 */
-
 class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
     
-    
     /**
-    * 
     * The regular expression used to parse the source text and find
     * matches conforming to this rule.  Used by the parse() method.
     * 
     * @access public
-    * 
     * @var string
-    * 
     * @see parse()
-    * 
     */
-
     var $regex = '/\n((?:\;|\:)+.*?\n(?!(?:\;|\:)+))/s';
  
    /**
-    *
     * Generates a replacement for the matched text.  Token options are:
-    *
     * 'type' =>
     *     'list_start'    : the start of a definition list
     *     'list_end'      : the end of a definition list
@@ -64,51 +53,76 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
     *     'narr_start'    : the start of definition narrative
     *     'narr_end'      : the end of definition narrative
     *     'unknown'       : unknown type of definition portion
-    *
     * 'level' => the indent level (0 for the first level, 1 for the
     * second, etc)
-    *
     * 'count' => the list item number at this level. not needed for
     * xhtml, but very useful for PDF and RTF.
     *
     * @access public
-    *
     * @param array &$matches The array of matches from parse().
-    *
     * @return A series of text and delimited tokens marking the different
     * list text and list elements.
-    *
     */ 
     function process(&$matches)
     {
         // the replacement text we will return
         $return = '';
-        
+
         // the list of post-processing matches
         $list = array();
-        
+
         // a stack of list-start and list-end types; we keep this
         // so that we know what kind of list we're working with
         // (bullet or number) and what indent level we're at.
         $stack = array();
-        
+
         // the item count is the number of list items for any
         // given list-type on the stack
         $itemcount = array();
-        
+
         // have we processed the very first list item?
         $pastFirst = false;
-        
+
         // populate $list with this set of matches. $matches[1] is the
         // text matched as a list set by parse().
         preg_match_all(
-            '/^((;|:)+)(.*?)$/ms',
+            '/^((;|:)+)\s?(.*?)$/ms',
             $matches[1],
             $list,
             PREG_SET_ORDER
         );
 
-	// loop through each list-item element.
+        // look for same-line definitions and split them
+        // foreach() cannot be used because we are modifying the array directly
+        for ($i = 0; $i < count($list); $i++) {
+            $val = $list[$i];
+
+            // only check definition term lines
+            if ($val[2] != ';') {
+                continue;
+            }
+
+            // spot inline definitions
+            $p = strpos($val[3], ' : ');
+            if ($p === false) {
+                continue;
+            }
+
+            $term = substr($val[3], 0, $p);
+            $narr = substr($val[3], $p + 3);
+
+            $prefix = substr($val[1], 0, -1); // everthing but the last char
+
+            $pair = array(
+                array($prefix . ';' . $term, $prefix . ';', ';', $term),
+                array($prefix . ':' . $narr, $prefix . ':', ':', $narr),
+            );
+
+            array_splice($list, $i, 1, $pair);
+            $i++; // skip the newly-added definition
+        }
+
+        // loop through each list-item element.
         foreach ($list as $key => $val) {
             // $val[0] is the full matched list-item line
             // $val[1] is the type (* or #)
@@ -140,17 +154,18 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
                 // stack...
                 array_push($stack, $type);
 
-		// The new list has to be opened in an item (use current type)
-		if ($level > 1) {
-		$return .= $this->wiki->addToken(
-		    $this->rule,
-		    array(
-		        'type' => $type . '_start',
-		        'level' => $level - 1
-                    )
-                );
-		}
-		// ...and add a list-start token to the return.
+                // The new list has to be opened in an item (use current type)
+                if ($level > 1) {
+                    $return .= $this->wiki->addToken(
+                        $this->rule,
+                        array(
+                            'type' => $type . '_start',
+                            'level' => $level - 1
+                        )
+                   );
+                }
+
+                // ...and add a list-start token to the return.
                 $return .= $this->wiki->addToken(
                     $this->rule, 
                     array(
@@ -160,9 +175,9 @@ class Text_Wiki_Parse_Deflist extends Text_Wiki_Parse {
                 );
             }
 
-	    // remove a level from the list?
-	    while (count($stack) > $level) {
-echo ".";
+            // remove a level from the list?
+            while (count($stack) > $level) {
+                echo ".";
                 // so we don't keep counting the stack, we set up a temp
                 // var for the count.  -1 becuase we're going to pop the
                 // stack in the next command.  $tmp will then equal the
@@ -183,12 +198,12 @@ echo ".";
 
                 array_pop($stack);
 
-		// reset to the current (previous) list type so that
+                // reset to the current (previous) list type so that
                 // the new list item matches the proper list type.
-		$type = $stack[$tmp - 1];
+                $type = $stack[$tmp - 1];
 
-		// Close the previously opened List item
-		$return .= $this->wiki->addToken(
+                // Close the previously opened List item
+                $return .= $this->wiki->addToken(
                     $this->rule,
                     array (
                         'type' => $type . '_end',
@@ -246,30 +261,30 @@ echo ".";
         
         // the last list-item may have been indented.  go through the
         // list-type stack and create end-list tokens until the stack
-	// is empty.
-	$level = count($stack);
-	while ($level > 0) {
-	    array_pop($stack);
-            $return .= $this->wiki->addToken(
-                $this->rule, 
-                array (
-                    'type' => 'list_end',
-                    'level' => $level - 1
-                )
-            );
+        // is empty.
+        $level = count($stack);
+        while ($level > 0) {
+            array_pop($stack);
+                $return .= $this->wiki->addToken(
+                    $this->rule, 
+                    array (
+                        'type' => 'list_end',
+                        'level' => $level - 1
+                    )
+                );
 
             // if we are higher than level 1 we need to close fake items
             if ($level > 1) {
-		$return .= $this->wiki->addToken(
-                $this->rule,
-                array (
-                    'type' => $stack[$level - 2] . '_end',
-                    'level' => $level - 2
-                )
+                $return .= $this->wiki->addToken(
+                    $this->rule,
+                    array (
+                        'type' => $stack[$level - 2] . '_end',
+                        'level' => $level - 2
+                    )
                 );
-	    }
-	    $level = count($stack);
-	}
+            }
+            $level = count($stack);
+        }
         
         // we're done!  send back the replacement text.
         return "\n" . $return . "\n\n";

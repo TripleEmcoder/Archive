@@ -15,7 +15,7 @@
  * @author     Bertrand Gugger <bertrand@toggg.com>
  * @copyright  2005 bertrand Gugger
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id: Table.php,v 1.7 2005/12/06 15:54:56 ritzmo Exp $
+ * @version    CVS: $Id: Table.php 239625 2007-07-12 19:52:50Z ritzmo $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -52,7 +52,7 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
      * @see process()
      * @see processRows()
      */
-    var $regexRows = '#(?:^(\||!)-|\G)(.*?)^(.*?)(?=^(?:\|-|!-|\z))#msi';
+    var $regexRows = '#(?:^([|!])-|\G)(.*?)^(.+?)(?=^[|!]-|\z)#msi';
 
     /**
      * The regular expression used in third stage to find rows's cells
@@ -64,7 +64,7 @@ class Text_Wiki_Parse_Table extends Text_Wiki_Parse {
      * @see processCells()
      */
     var $regexCells =
-    '#((?:^\||^!|\|\||!!|\G))(?:([^|\n]*?) \|(?!\|))?(.+?)(?=^\||^!|\|\||!!|\z)#msi';
+    '#((?:^\||^!|\|\||!!|\G))(?:([^|\n]*?)\|(?!\|))?(?:\n*)(.+?)(?:\n*)(?=^\||^!|\|\||!!|\z)#msi';
 
     /**
      * The current table nesting depth, starts by zero

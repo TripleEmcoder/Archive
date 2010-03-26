@@ -18,7 +18,7 @@
  * @author     Paul M. Jones <pmjones@php.net>
  * @copyright  2005 bertrand Gugger
  * @license    http://www.gnu.org/copyleft/lesser.html  LGPL License 2.1
- * @version    CVS: $Id: Wikilink.php,v 1.7 2006/02/25 13:34:50 toggg Exp $
+ * @version    CVS: $Id: Wikilink.php 278841 2009-04-16 15:10:51Z ritzmo $
  * @link       http://pear.php.net/package/Text_Wiki
  */
 
@@ -149,7 +149,7 @@ class Text_Wiki_Parse_Wikilink extends Text_Wiki_Parse {
      * @return string token to be used as replacement 
      */
     function process(&$matches)
-    {//var_dump($matches[0]);
+    {
         // Starting colon ?
         $colon = !empty($matches[1]);
         $auto = $interlang = $interwiki = $image = $site = '';
@@ -223,7 +223,7 @@ class Text_Wiki_Parse_Wikilink extends Text_Wiki_Parse {
         // set the options
         $options = array(
             'page'   => $matches[3],
-            'anchor' => (empty($matches[4]) ? '' : $matches[4]),
+            'anchor' => (empty($matches[4]) ? '' : '#'.$matches[4]),
             'text'   => $text
         );
 
@@ -236,7 +236,9 @@ class Text_Wiki_Parse_Wikilink extends Text_Wiki_Parse {
      * - 'src' => the name of the image file
      * - 'attr' => an array of attributes for the image:
      * | - 'alt' => the optional alternate image text
-     * | - 'align => 'left', 'center' or 'right'
+     * | - 'align' => 'left', 'center' or 'right'
+     * | - 'width' => 'NNNpx'
+     * | - 'height' => 'NNNpx'
      *
      * @access public
      * @param array &$matches The array of matches from parse().
@@ -245,22 +247,30 @@ class Text_Wiki_Parse_Wikilink extends Text_Wiki_Parse {
     function image($name, $text, $interlang, $colon)
     {
         $attr = array('alt' => '');
-        // scan text for supplementary attibutes
-        if (strpos($text, '|') !== false) {
-            $splits = explode('|', $text);
-            $sep = '';
-            foreach ($splits as $split) {
-                switch (strtolower($split)) {
-                    case 'left': case 'center': case 'right':
-                        $attr['align'] = strtolower($split);
-                        break;
-                    default:
+        $splits = explode('|', $text);
+        $sep = '';
+        foreach ($splits as $split) {
+            switch (strtolower($split)) {
+                case 'left': case 'center': case 'right':
+                    $attr['align'] = strtolower($split);
+                    break;
+                default:
+                    // this regex is imho not restrictive enough but should
+                    // keep false positives to a minimum
+                    if (preg_match('/\dpx\s*$/i', $split)) {
+                        $split = preg_replace("/\s/", "", $split);
+                        $split = preg_replace("/px$/i", "", $split);
+                        list($width,$height) = explode("x", $split);
+                        $attr['width'] = $width;
+                        if ($height) {
+                            $attr['height'] = $height;
+                        }
+                    }
+					else {
                         $attr['alt'] .= $sep . $split;
                         $sep = '|';
-                }
+                    }
             }
-        } else {
-            $attr['alt'] = $text;
         }
         $options = array(
             'src' => ($interlang ? $interlang . ':' : '') . $name,

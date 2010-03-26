@@ -1,0 +1,38 @@
+// $Id: CHANGELOG.txt,v 1.6 2008/01/24 01:57:10 cwgordon7 Exp $
+
+Flexifilter 6.x-1.1-RC1, 2008-01-23
+-----------------------------------
+- Hook_flexifilters added for defining default flexifilters.
+- Flexifilter install API function added.
+- Flexifilter Import/Export features added.
+- Hook_menu implementation improvements.
+- Default "Mediawiki format" added as an example default
+  filter in flexifilter.flexifilters.inc.
+
+Flexifilter 6.x-1.0, 2008-01-12
+------------------------------
+- Bug fix: Including flexifilters as components caused an
+  infinite loop.
+
+Flexifilter 6.x-1.0-RC1, 2008-01-11
+-----------------------------------
+- Advanced append component added.
+- Advanced prepend component added.
+- Added basic number theory to pattern replacement
+- Reorganization of components "groups" attributes.
+- Simple prepend bugfix: didn't work.
+- Text longer than/shorter than condition added.
+- Pattern replacer reorganized to make more sense.
+- Substring component added.
+- Php code execution component added for flexiblitiy.
+- Php code execution condition also added for flexiblity.
+
+Flexifilter 6.x-1.0-Beta2, 2008-01-08
+-------------------------------------
+- Added basic chunk theory and a simple chunk-grabber.
+- Added pattern-based text replacement.
+- Added text append and text prepend.
+
+Flexifilter 6.x-1.0-Beta1, 2008-01-07
+-------------------------------------
+- Initial release as done by Corsix as a part of GHOP.
