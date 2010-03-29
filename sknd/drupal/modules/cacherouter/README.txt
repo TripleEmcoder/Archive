@@ -1,6 +1,6 @@
 ===============================================================================
 CacheRouter
-$Id: README.txt,v 1.1.2.1 2009/09/05 13:24:50 slantview Exp $
+$Id: README.txt,v 1.1.2.2 2010/01/28 20:49:28 andypost Exp $
 ===============================================================================
 
 -------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $conf['cache_inc'] = './sites/all/modules/contrib/cacherouter/cacherouter.inc';
 $conf['cacherouter'] = array(
   'default' => array(
     'engine' => 'db',
-    'server' => array(),
+    'servers' => array(),
     'shared' => TRUE,
     'prefix' => '',
     'path' => 'sites/default/files/filecache',
@@ -50,8 +50,8 @@ be added in addition, but you must have a default if you skip any bins.
 For engine, the current available options are: apc, db, file, memcache and 
 xcache.
 
-server is only used in memcache and should be an array of host:port 
-combinations. (e.g. 'server' => array('localhost:11211', 'localhost:11212'))
+servers is only used in memcache and should be an array of host:port 
+combinations. (e.g. 'servers' => array('localhost:11211', 'localhost:11212'))
 
 shared is only used on memcache as well. This allows memcache to be used with a
 single process and still handle flushing correctly.
