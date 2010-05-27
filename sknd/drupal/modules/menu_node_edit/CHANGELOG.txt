@@ -1,0 +1,40 @@
+// $Id: CHANGELOG.txt,v 1.11 2009/10/28 18:33:15 agentken Exp $
+
+CHANGELOG for Menu Node Edit
+
+28-OCT-2009
+-- #534330 by roboneale. Adds token support.
+-- #552418 by BenKewell. Makes MNE extend node access instead of replace it.
+-- Creates the 6.x.1.8 release.
+
+15-OCT-2009
+-- #605916 fixes bad links to node/add.
+-- Creates the 6.x.1.7 release.
+
+15-JUL-2009
+-- #517732 by roboneale with patch by ebrand. Allows menu items to be set as hidden.
+-- Creates the 6.x.1.6 release.
+
+09-JUL-2009
+-- #512594 by roboneale. Fixes parent handling error. Creates 6.x.1.5 release.
+
+01-JUL-2009
+-- #507456. Corrects top-level section error on node editing. Creates 6.x.1.4 release.
+
+18-JUN-2009
+-- #495746. Corrects improper depth handling.
+-- Creates 6.x.1.3 release.
+
+17-JUN-2009
+-- #494414 patch by heyrocker. Fixes form error on user creation.
+-- Creates 6.x.1.2 release.
+
+27-MAY-2009
+  -- #469234 by bae22. Corrects logic error in menu creation for some users.
+  -- Creates the 6.x.1.1 release.
+
+22-MAY-2009
+  -- #469998 by bae22. We must fully declare menu items in our menu_node_edit_menu_alter() in order to avoid conflicts.
+
+08-MAY-2009
+  -- Initial commit. 6.x.1.0 release.

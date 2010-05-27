@@ -1,0 +1,929 @@
+<?php
+
+// $Id: menu_node_edit.module,v 1.11 2009/10/28 18:33:15 agentken Exp $
+
+/**
+ * @file Allows node editing access based on menu relationships.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function menu_node_edit_menu() {
+  $items = array();
+
+  $items['admin/content/menu_node_edit'] = array(
+    'title' => 'Menu node edit',
+    'description' => "Configure settings for menu-based editorial access.",
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('menu_node_edit_settings_form'),
+    'access arguments' => array('administer menu node edit'),
+    'file' => 'menu_node_edit.admin.inc',
+  );
+
+  $items['user/%user/sections'] = array(
+    'title' => check_plain(menu_node_edit_variable('tab_title')),
+    'description' => "Display all section pages editable by this user.",
+    'page callback' => 'menu_node_edit_page',
+    'page arguments' => array(1),
+    'access callback' => 'menu_node_edit_user_page_access',
+    'access arguments' => array(1),
+    'file' => 'menu_node_edit.page.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  $items['user/%user/sections/%'] = array(
+    'title' => check_plain(menu_node_edit_variable('tab_title')),
+    'description' => "Display specific section pages editable by this user.",
+    'page callback' => 'menu_node_edit_page',
+    'page arguments' => array(1, 3),
+    'access callback' => 'menu_node_edit_user_page_access',
+    'access arguments' => array(1),
+    'file' => 'menu_node_edit.page.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_perm().
+ */
+function menu_node_edit_perm() {
+  $perms = array('administer menu node edit', 'assign menu node edit', 'view my sections', 'publish to my sections', 'set menu visibility');
+  $types = node_get_types('names');
+  foreach ($types as $type => $name) {
+    $perms[] = 'edit all '. $type .' content in assigned sections';
+  }
+  return $perms;
+}
+
+/**
+ * Implments hook_theme().
+ */
+function menu_node_edit_theme() {
+  return array(
+    'menu_node_edit_menu_overview_form' => array(
+      'file' => 'menu_node_edit.theme.inc',
+      'arguments' => array('form' => NULL),
+    ),
+  );
+
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function menu_node_edit_menu_alter(&$items) {
+  // We need to account for all parts of this item, in case
+  // other modules interfere. See http://drupal.org/node/469998.
+  // We only alter the access parts, however.
+  $items['node/%node/edit'] = array(
+    'title' => 'Edit',
+    'page callback' => 'node_page_edit',
+    'page arguments' => array(1),
+    'access callback' => 'menu_node_edit_check', // Our callback.
+    'access arguments' => array(1), // Our arguments.
+    'weight' => 1,
+    'file' => 'node.pages.inc',
+    'file path' => drupal_get_path('module', 'node'), // We need this!
+    'type' => MENU_LOCAL_TASK,
+  );
+}
+
+/**
+ * Access callback for user account tab.
+ *
+ * @param $account
+ *   The user account being checked.
+ * @return
+ *   Boolean TRUE or FALSE.
+ */
+function menu_node_edit_user_page_access($account) {
+  global $user;
+  $access = FALSE;
+  // Let a user access her own page. An admin can access all pages.
+  if (($user->uid == $account->uid && user_access('view my sections')) || user_access('administer menu node edit')) {
+    $access = TRUE;
+  }
+  // Display if admin or user, the tab is active, and this user has some sections assigned.
+  if ($access && menu_node_edit_variable('tab') && !empty($account->menu_node_edit)) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Check node editing access based on menu relationships.
+ *
+ * This function checks for editing access to a specific node.
+ * Note that we check node_access() in cases where the node
+ * is not within a menu section. We also allow the special
+ * permission 'edit all TYPE content in assigned sections' to
+ * overrule other node_access rules.
+ *
+ * @param $node
+ *   The node object being requested.
+ * @param $account
+ *   The user account being checked.
+ * @return
+ *   Boolean TRUE or FALSE.
+ */
+function menu_node_edit_check($node, $account = NULL) {
+  $items = menu_node_edit_check_rules($node, $account);
+  // If an array is not returned, we have no stake here, so return normal access control.
+  if (!is_array($items)) {
+    return $items;
+  }
+  // If node_access() returned true, we will not get this far.
+  // The 'edit all X content in assigned sections' is an extension of normal
+  // node editing privileges. Without it, no need to run more checks.
+  if (!user_access('edit all '. $node->type .' content in assigned sections', $account)) {
+    return FALSE;
+  }
+  // Otherwise, check the user's privileges from this module.
+  return menu_node_edit_check_user($items, $account);
+}
+
+/**
+ * Determine if this node is a menu item that is subject to our rules.
+ *
+ * @param $node
+ *   The node being checked.
+ * @param $account
+ *   The user account being checked (optional).
+ * @return
+ *   The necessary menu item information, or TRUE if node access declares
+ *   access, or FALSE if we have no stake in this node.
+ */
+function menu_node_edit_check_rules($node, $account = NULL) {
+  $items = menu_node_get_links($node->nid);
+  $sections = menu_node_edit_get_sections();
+  // In the following cases, this module makes no assertions
+  // and we fall back to node_access() rules.
+  if (empty($items) || empty($sections)) {
+    $items = FALSE;
+  }
+  // Let node_access() trump our rules.
+  if (node_access('update', $node, $account)) {
+    return TRUE;
+  }
+  // Return FALSE or an array of items.
+  return $items;
+}
+
+/**
+ * Load the sections defined by the module.
+ *
+ * @param $mlid
+ *   An optional menu link id to pass, which will limit the return data
+ *   to verify the requested menu link id.
+ * @return
+ *   An array of section-enabled mlids, where key and value are both the mlid.
+ */
+function menu_node_edit_get_sections($mlid = NULL) {
+  static $sections;
+  if (!isset($sections)) {
+    $sections = array();
+    $result = db_query("SELECT mlid FROM {menu_node_edit}");
+    while ($data = db_fetch_object($result)) {
+      $sections[$data->mlid] = $data->mlid;
+    }
+  }
+  if (!empty($mlid)) {
+    return isset($sections[$mlid]) ? $sections[$mlid] : array();
+  }
+  return $sections;
+}
+
+/**
+ * Check to see if a user can access a menu item.
+ *
+ * This check succeeds if the user has access to the
+ * most granular 'section' assigned by the module settings.
+ *
+ * @param $items
+ *   The menu item(s) being viewed. This is passed as an array.
+ * @param $account
+ *   The user account being checked (optional).
+ * @return
+ *   Boolean TRUE/FALSE for access.
+ */
+function menu_node_edit_check_user($items, $account = NULL) {
+  global $user;
+  if (empty($account)) {
+    $account = $user;
+  }
+  // Load the users's permissions.
+  $account->menu_node_edit = menu_node_edit_load_access($account);
+  // If none, then deny access.
+  if (empty($account->menu_node_edit)) {
+    return FALSE;
+  }
+  // Loop through the matching items.
+  foreach ($items as $item) {
+    // Now, check for access to this menu item.
+    // If we match on the mlid iteself, this is simple.
+    if (in_array($item->mlid, $account->menu_node_edit)) {
+      return TRUE;
+    }
+    // OK, now check the parent, also easy.
+    if (in_array($item->plid, $account->menu_node_edit)) {
+      return TRUE;
+    }
+    // Not found yet? OK, check the parent tree.
+    for ($i = 1; $i <= 9; $i++) {
+      $id = "p$i";
+      if (in_array($item->$id, $account->menu_node_edit)) {
+        return TRUE;
+      }
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * Load the account rules onto the $user object.
+ *
+ * @param $account
+ *   The user account being checked.
+ * @return
+ *   An array of valid section mlids.
+ */
+function menu_node_edit_load_access($account) {
+  static $items = array();
+  if (isset($items[$account->uid])) {
+    return $items[$account->uid];
+  }
+  $items[$account->uid] = array();
+  $result = db_query("SELECT mlid FROM {menu_node_edit_user} WHERE uid = %d", $account->uid);
+  while ($data = db_fetch_object($result)) {
+    $items[$account->uid][] = $data->mlid;
+  }
+  return $items[$account->uid];
+}
+
+/**
+ * Implements an internal variable hook.
+ *
+ * @param $name
+ *   The name of the variable, without module prefix.
+ * @param $all
+ *   A boolean flag indicating whether to return one variable or all variables
+ *   set by the module.
+ * @return
+ *   The variable value (using variable_get()), or an array of all variable definitions.
+ */
+function menu_node_edit_variable($name, $all = FALSE) {
+  $variables = array(
+    'tab' => 1,
+    'node_types' => _menu_node_edit_node_types(),
+    'tab_title' => t('My sections'),
+    'collapsed' => FALSE,
+    'per_page' => 25,
+  );
+  if ($all) {
+    return $variables;
+  }
+  return variable_get('menu_node_edit_'. $name, $variables[$name]);
+}
+
+/**
+ * Small helper function to get node types for default settings.
+ *
+ * @return
+ *   All node types as they would be saved by a checkbox form.
+ */
+function _menu_node_edit_node_types() {
+  $types = node_get_types();
+  $options = array();
+  foreach ($types as $key => $obj) {
+    $options[$key] = $obj->type;
+  }
+  return $options;
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Add our element to node forms.
+ */
+function menu_node_edit_form_alter(&$form, $form_state, $form_id) {
+  if (isset($form['#node']) && $form['#node']->type .'_node_form' == $form_id) {
+    menu_node_edit_node_form_alter($form, $form_state);
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * React to the deletion of entire menus.
+ */
+function menu_node_edit_form_menu_delete_menu_confirm_alter(&$form, $form_state) {
+  $form['menu_name'] = array('#type' => 'value', '#value' => $form['#menu']['menu_name']);
+  // Our submit handler must run before menu items are deleted.
+  $form['#submit'][-10] = 'menu_node_edit_delete_menu_form_submit';
+  ksort($form['#submit']);
+}
+
+/**
+ * Custom form handler to react to custom menu deletion.
+ */
+function menu_node_edit_delete_menu_form_submit($form, &$form_state) {
+  $menu_name= $form_state['values']['menu_name'];
+  // The menu_node API handles all node items, so we just deal with non-node sections.
+  $result = db_query("SELECT mlid FROM {menu_links} WHERE menu_name = '%s' AND router_path <> 'node/%'", $menu_name);
+  while ($record = db_fetch_object($result)) {
+    db_query("DELETE FROM {menu_node_edit} WHERE mlid = %d", $record->mlid);
+    db_query("DELETE FROM {menu_node_edit_user} WHERE mlid = %d", $record->mlid);
+  }
+  cache_clear_all('menu-access-options', 'cache');
+}
+
+/**
+ * Form alter for menu item deletion.
+ */
+function menu_node_edit_form_menu_item_delete_form_alter(&$form, $form_state) {
+  $form['mlid'] = array('#type' => 'value', '#value' => $form['#item']['mlid']);
+  $form['#submit'][] = 'menu_node_edit_delete_form_submit';
+}
+
+/**
+ * Form alter for menu item editing.
+ */
+function menu_node_edit_form_menu_edit_item_alter(&$form, $form_state) {
+  $mlid = $form['menu']['mlid']['#value'];
+  $result = db_result(db_query("SELECT mlid FROM {menu_node_edit} WHERE mlid = %d", $mlid));
+  $form['menu']['menu_node_edit'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Menu node edit section'),
+    '#default_value' => !empty($result),
+    '#description' => t('If selected, this menu item and its children will be defined as an editing section for your site.'),
+  );
+  $form['#submit'][] = 'menu_node_edit_edit_form_submit';
+}
+
+/**
+ * Submit handler for menu_node_edit alterations.
+ */
+function menu_node_edit_edit_form_submit($form, &$form_state) {
+  $access = $form_state['values']['menu']['menu_node_edit'];
+  $mlid =  $form_state['values']['menu']['mlid'];
+  db_query("DELETE FROM {menu_node_edit} WHERE mlid = %d", $mlid);
+  if ($access == 1) {
+    db_query("INSERT INTO {menu_node_edit} (mlid) VALUES (%d)", $mlid);
+  }
+  cache_clear_all('menu-access-options', 'cache');
+}
+
+/**
+ * Submit handler for menu_node_edit deletions.
+ * We cannot rely on menu_node here, since not all sections are nodes.
+ */
+function menu_node_edit_delete_form_submit($form, &$form_state) {
+  $mlid =  $form_state['values']['mlid'];
+  db_query("DELETE FROM {menu_node_edit} WHERE mlid = %d", $mlid);
+  db_query("DELETE FROM {menu_node_edit_user} WHERE mlid = %d", $mlid);
+  cache_clear_all('menu-access-options', 'cache');
+}
+
+/**
+ * Form alter for menu overview.
+ */
+function menu_node_edit_form_menu_overview_form_alter(&$form, $form_state) {
+  $form['#theme'] = 'menu_node_edit_menu_overview_form';
+  $form['menu_node_edit_note'] = array(
+    '#value' => '<p><em>'. t('<a href="!url">Menu node edit</a> can be set for an item and its children by selecting the "Section" checkbox.', array('!url' => url('admin/content/menu_node_edit'))) .'</em></p>',
+    '#weight' => -10,
+  );
+  $result = array();
+  $query = db_query("SELECT mlid FROM {menu_node_edit}");
+  while ($data = db_fetch_object($query)) {
+    $result[$data->mlid] = TRUE;
+  }
+  foreach ($form as $key => $value) {
+    if (substr($key, 0, 4) == 'mlid') {
+      $mlid = substr($key, 5);
+      $form[$key]['menu_node_edit'] = array(
+        '#type' => 'checkbox',
+        '#default_value' => isset($result[$mlid]),
+      );
+    }
+  }
+  $form['#submit'][] = 'menu_node_edit_overview_form_submit';
+}
+
+/**
+ * Custom submit handler for menu overview form.
+ */
+function menu_node_edit_overview_form_submit($form, &$form_state) {
+  $sections = menu_node_edit_get_sections();
+  $remove = array();
+  $add = array();
+  // Check the menu elements of the form for changes.
+  foreach ($form_state['values'] as $key => $value) {
+    if (is_array($value) && isset($value['mlid'])) {
+      if ($value['menu_node_edit']) {
+        $add[$value['mlid']] = $value['mlid'];
+      }
+      // If access was removed, set the delete array for users.
+      else if (!$value['menu_node_edit'] && in_array($value['mlid'], $sections)) {
+        $remove[] = $value['mlid'];
+      }
+    }
+  }
+  // Run the inserts?
+  $diff = array_diff($add, $sections);
+  if (!empty($diff)) {
+    // Insert the new records.
+    foreach ($diff as $mlid) {
+      db_query("INSERT INTO {menu_node_edit} (mlid) VALUES (%d)", $mlid);
+    }
+    drupal_set_message(t('Site sections added.'));
+  }
+  // Now delete the old ones, if neccessary.
+  if (!empty($remove)) {
+    foreach ($remove as $mlid) {
+      db_query("DELETE FROM {menu_node_edit} WHERE mlid = %d", $mlid);
+      db_query("DELETE FROM {menu_node_edit_user} WHERE mlid = %d", $mlid);
+    }
+    drupal_set_message(t('Site sections removed.'));
+  }
+  cache_clear_all('menu-access-options', 'cache');
+}
+
+/**
+ * Form alter for node forms.
+ */
+function menu_node_edit_node_form_alter(&$form, $form_state) {
+  global $user;
+  // Let the administrator change the menu visibility.
+  if (user_access('administer menu')) {
+    $form['menu']['hidden'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Hidden'),
+      '#default_value' => $form['menu']['hidden']['#value'],
+      '#weight' => 5,
+      '#description' => t('Hidden items will not be listed in site navigation, but they still appear as section content.'),
+    );
+  }
+  // If the user can administer menus, then we do nothing else.
+  // Likewise, if the user cannot publish to sections, then return.
+  if (user_access('administer menu') || !user_access('publish to my sections')) {
+    return;
+  }
+  // Check to see if we care about this node type.
+  $type = $form['#node']->type;
+  $allowed = menu_node_edit_variable('node_types');
+  if (empty($allowed[$type])) {
+    return;
+  }
+  // Check the user permissions.
+  $account = $user;
+  $account->menu_node_edit = menu_node_edit_load_access($account);
+  // If this value is empty, we cannot do anything.
+  if (empty($account->menu_node_edit)) {
+    return;
+  }
+  $items = array();
+  $check = array();
+  foreach ($account->menu_node_edit as $mlid) {
+    $item = db_fetch_object(db_query("SELECT mlid, menu_name, depth FROM {menu_links} WHERE mlid = %d", $mlid));
+    $result = db_query("SELECT mlid, menu_name FROM {menu_links} WHERE %s= %d", "p$item->depth", $item->mlid);
+    while ($data = db_fetch_object($result)) {
+      $items[$data->menu_name][] = $data->mlid;
+      $check[] = $data->mlid;
+    }
+  }
+  if (empty($items)) {
+    return;
+  }
+  // If the item is assigned to a different menu, do nothing.
+  $default = 0;
+  if (!empty($form['#node']->menu['mlid'])) {
+    $default = $form['#node']->menu['mlid'];
+  }
+  if (!empty($default) && !in_array($default, $check)) {
+    return;
+  }
+  // Allow values passed via $_GET.
+  if (empty($default) && isset($_GET['section']) && in_array($_GET['section'], $check)) {
+    $default = $_GET['section'];
+  }
+  $names = menu_get_menus();
+  foreach ($items as $menu => $filter) {
+    $options[$names[$menu]] = menu_node_tree(menu_tree_all_data($menu), NULL, $filter);
+  }
+  // Prepare the options for the form.
+  ksort($options);  
+  // Set the proper help text.
+  $collapsed = FALSE;
+  if (empty($form['menu']['mlid']['#value'])) {
+    // On node creation, editors with limited permissions may choose not to create a menu item.
+    $options = array_merge(array(0 => t('Do not assign to a section')), $options);
+    $description = t('This content has not been assigned to a section. Select the parent item for this new content.');
+  }
+  else if ($default == $form['menu']['mlid']['#value']) {
+    // However, once created, only an administrator can remove a menu item.
+    $description = t('This content has been assigned to a section. You may change the selection below to move it to a new section.');
+    $collapsed = TRUE;
+  }
+  $form['menu_node_edit'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Section'),
+    '#description' => $description,
+    '#collapsible' => TRUE,
+    '#collapsed' => $collapsed,
+    '#weight' => module_exists('content') ? content_extra_field_weight($form['type']['#value'], 'menu_node_edit') : -1,
+  );
+  $form['menu_node_edit']['mlid'] = array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => $default,
+  );
+  if (user_access('set menu visibility')) {
+    $form['menu_node_edit']['hidden'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Hidden'),
+      '#default_value' => $form['menu']['hidden']['#value'],
+      '#description' => t('Hidden items will not be listed in site navigation, but they still appear as section content.'),
+    );
+  }
+  $form['#submit'][] = 'menu_node_edit_node_form_submit';
+}
+
+/**
+ * Submit handler for menu_node_edit node forms.
+ */
+function menu_node_edit_node_form_submit($form, &$form_state) {
+  // Check if we tried to set a new parent or remove the item.
+  if (empty($form_state['values']['mlid'])) {
+    return;
+  }
+  
+  // The current menu item is stored in the menu element.
+  if (!empty($form_state['values']['menu']['mlid'])) {
+    $current = db_fetch_array(db_query("SELECT * FROM {menu_links} WHERE mlid = %d", $form_state['values']['menu']['mlid']));
+  }
+
+  // The new item is stored as mlid.
+  $mlid = $form_state['values']['mlid'];
+  // Check for a change in the visibility.
+  if (isset($form_state['values']['hidden'])) {
+    $hidden = (int) $form_state['values']['hidden'];
+  }
+  // If no change, then do nothing except alter visibility.
+  if ($current['mlid'] == $mlid) {
+    if (isset($hidden)) {
+      $form_state['values']['menu']['hidden'] = $hidden;
+    }
+    return;
+  }
+
+  // If we set or change a menu item using limited permissions, then prepare the new menu item for saving.
+  $item = db_fetch_array(db_query("SELECT * FROM {menu_links} WHERE mlid = %d", $mlid));
+
+  $menu = array();
+  $menu['mlid'] = !empty($current['mlid']) ? $current['mlid'] : 0;
+  $menu['plid'] = $item['mlid'];
+  $menu['customized'] = 1;
+  $menu['menu_name'] = $item['menu_name'];
+  $menu['parent'] = $item['mlid'] .':'. $item['menu_name'];
+  $menu['hidden'] = $hidden;
+  // Do not allow editors to change a custom title.
+  $menu['link_title'] = (isset($current['link_title']) && $current['link_title'] != $form['#node']->title) ? $current['link_title'] : $form_state['values']['title'];
+
+  $form_state['values']['menu'] = $menu;
+}
+
+/**
+ * Implements hook_user().
+ */
+function menu_node_edit_user($op, &$edit, &$account, $category = NULL) {
+  switch ($op) {
+    case 'register':
+    case 'form':
+      $form = menu_node_edit_user_form($account);
+      if (!empty($form)) {
+        return $form;
+      }
+      break;
+    case 'load':
+      $account->menu_node_edit = menu_node_edit_load_access($account);
+      break;
+    case 'insert':
+    case 'update':
+      // Only some users can see our form, so we flag it.
+      if (!isset($edit['menu_node_edit_active'])) {
+        break;
+      }
+      db_query("DELETE FROM {menu_node_edit_user} WHERE uid = %d", $account->uid);
+      $data = menu_node_edit_filter_sections($edit['menu_node_edit']);
+      if (!empty($data)) {
+        foreach ($data as $key => $value) {
+          db_query("INSERT INTO {menu_node_edit_user} (uid, mlid) VALUES (%d, %d)", $account->uid, $value);
+        }
+      }
+      $edit['menu_node_edit'] = NULL;
+      $edit['menu_node_edit_active'] = NULL;
+      break;
+  }
+}
+
+/**
+ * Generate the user form.
+ *
+ * @param $account
+ *   The user account being edited or created.
+ * @return
+ *   Form elements to add to the user edit form.
+ */
+function menu_node_edit_user_form($account) {
+  $form = array();
+  $options = menu_node_edit_get_options();
+  if (!user_access('assign menu node edit') || empty($options)) {
+    return $form;
+  }
+  $defaults = menu_node_edit_load_access($account);
+  $form['menu_node_edit'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Section editing'),
+    '#collapsible' => TRUE,
+    '#collapsed' => menu_node_edit_variable('collapsed'),
+    '#description' => t('Select the site sections in which this user may edit content.'),
+    '#tree' => TRUE,
+  );
+  foreach ($options as $menu => $array) {
+    $name = check_plain(db_result(db_query("SELECT title FROM {menu_custom} WHERE menu_name = '%s'", $menu)));
+    $form['menu_node_edit'][$menu] = array(
+      '#type' => 'fieldset',
+      '#title' => $name,
+      '#collapsible' => TRUE,
+      '#description' => t('Select the !menu sections in which this user may edit content.', array('!menu' => $name)),
+      '#tree' => TRUE,
+    );
+    foreach ($array as $title => $item) {
+      $form['menu_node_edit'][$menu][$title]['mlid'] = array(
+        '#type' => 'checkboxes',
+        '#title' => check_plain($title),
+        '#options' => $item,
+        '#default_value' => $defaults,
+      );
+    }
+  }
+  $form['menu_node_edit_active'] = array('#type' => 'value', '#value' => TRUE);
+  return $form;
+}
+
+/**
+ * Get the node types that this user can edit.
+ *
+ * @param $account
+ *   The user account being checked (optional).
+ * @return
+ *   An array of node types.
+ */
+function menu_node_edit_user_node_types($account = NULL) {
+  $allowed = array();
+  $types = node_get_types();
+  foreach ($types as $type => $value) {
+    if (user_access('administer nodes', $account) || user_access('edit all '. $type .' content in assigned sections', $account) || user_access('edit any '. $type .' content', $account)) {
+      $allowed[] = $type;
+    }
+  }
+  // Blogs are a goofy case.
+  if (array_key_exists('blog', $types) && !in_array('blog', $allowed) && user_access('edit any blog entry', $account)) {
+    $allowed[] = 'blog';
+  }
+  return $allowed;
+}
+
+/**
+ * Given a menu_node_edit user submission, process our data.
+ *
+ * @param $item
+ *   The menu_node_edit form values.
+ * @return
+ *   An array of selected sections.
+ */
+function menu_node_edit_filter_sections($item) {
+  $sections = array();
+  // The data we want is nested very deep in the form.
+  foreach ($item as $key => $value) {
+    foreach ($value as $title => $element) {
+      foreach ($element as $parent => $array) {
+        foreach ($array as $mlid => $check) {
+          if ($mlid == $check) {
+            $sections[] = $mlid;
+          }
+        }
+      }
+    }
+  }
+  return $sections;
+}
+
+/**
+ * Load the section options for forms.
+ *
+ * @return
+ *   An array of possible sub-items taken from a section.
+ */
+function menu_node_edit_get_options() {
+  static $options;
+  if (!isset($options)) {
+    // We might as well cache this.
+    $cid = 'menu-access-options';
+    $data = cache_get($cid);
+    if (!empty($data->data)) {
+      $options = $data->data;
+      return $options;
+    }
+    $menus = menu_node_edit_menu_options(TRUE);
+    $sections = menu_node_edit_get_sections();
+    foreach ($menus as $key => $value) {
+      $tree = menu_tree_all_data($key);
+      $options[$key] = menu_node_tree($tree, NULL, $sections);
+    }
+    cache_set($cid, $options);
+  }
+  return $options;
+}
+
+/**
+ * Return a key-value list of available menus.
+ *
+ * @param $active
+ *   If set, return only options that have sections defined for them.
+ * @return
+ *   A list of menus.
+ */
+function menu_node_edit_menu_options($active = FALSE) {
+  static $options;
+  $key = (int) $active;
+  if (isset($options[$key])) {
+    return $options[$key];
+  }
+  $options = array();
+  $menus = menu_get_names();
+  foreach ($menus as $menu) {
+    $name = db_result(db_query("SELECT title FROM {menu_custom} WHERE menu_name = '%s'", $menu));
+    if (!empty($name)) {
+      $options[$key][$menu] = $name;
+    }
+    if ($active) {
+      $count = db_result(db_query("SELECT COUNT(m.mlid) FROM {menu_links} m INNER JOIN {menu_node_edit} ma ON ma.mlid = m.mlid WHERE m.menu_name = '%s'", $menu));
+      if (empty($count)) {
+        unset($options[$key][$menu]);
+      }
+    }
+  }
+  return $options[$key];
+}
+
+/**
+ * Implements hook_menu_node_insert().
+ */
+function menu_node_edit_menu_node_insert($item, $node) {
+  menu_node_edit_check_duplicates($item, $node);
+}
+
+/**
+ * Implements hook_menu_node_update().
+ */
+function menu_node_edit_menu_node_update($item, $node) {
+  menu_node_edit_check_duplicates($item, $node);
+}
+
+/**
+ * Implements hook_menu_node_delete().
+ */
+function menu_node_edit_menu_node_delete($item, $node) {
+  db_query("DELETE FROM {menu_node_edit} WHERE mlid = %d", $item->mlid);
+  db_query("DELETE FROM {menu_node_edit_user} WHERE mlid = %d", $item->mlid);
+  cache_clear_all('menu-access-options', 'cache');
+}
+
+/**
+ * Given a new node-based menu item, see if it already exists. 
+ * If it does, log a warning to the admin.
+ *
+ * @param $item
+ *   The menu link object being acted upon.
+ * @param $node
+ *   The node object being acted upon.
+ * @return
+ *   No return. This is a friendly warning to help prevent mistakes.
+ */
+function menu_node_edit_check_duplicates($item, $node) {
+  $count = db_result(db_query("SELECT COUNT(nid) FROM {menu_node} WHERE nid = %d", $node->nid));
+  if ($count > 1) {
+    if (user_access('administer menu node edit')) {
+      drupal_set_message(t('Multiple menu items now link to Node %nid -- %title. This may cause unwanted access for some editors.', array('%title' => $node->title, '%nid' => $node->nid)), 'warning');
+    }
+    watchdog('menu_node_edit', t('Multiple menu items now link to Node %nid -- %title. This may cause unwanted access for some editors.'), array('%title' => $node->title, '%nid' => $node->nid), WATCHDOG_WARNING);
+  }
+}
+
+/**
+ * Create fake second-level tabs.
+ *
+ * We could do this in hook_menu(), which is safer, but
+ * the sheer number of possible menu options makes it questionable.
+ *
+ * Potentially, we could generate X menu items for Y users.
+ * So fake tabs seems more optimal here.
+ */
+function menu_node_edit_preprocess_page(&$vars) {
+  $menu = menu_get_item();
+  if ($menu['page_callback'] != 'menu_node_edit_page') {
+    return;
+  }
+  $account = $menu['map'][1];
+  $pages = menu_node_edit_get_pages($account);
+  // We cannot store sub-tabs for every possible user/section combination, so
+  // instead we add fake tabs.
+  if (count($pages) < 2) {
+    return;
+  }
+  // Now, make the fake second-level tabs.
+  $tabs = array();
+  foreach ($pages as $mlid => $title) {
+    $tabs[] = l($title, 'user/'. $account->uid .'/sections/'. $mlid);
+  }
+  $vars['tabs'] .= '</ul></div><div id ="menu-access"><ul class="tabs secondary">';
+  foreach ($tabs as $tab) {
+    $vars['tabs'] .= '<li>'. $tab . '</li>';
+  }
+  $vars['tabs'] .= '</ul><div class="clear"></div>';
+}
+
+/**
+ * Implements hook_content_extra_fields()
+ *
+ * CCK hook to allow sorting of the domain settings field.
+ */
+function menu_node_edit_content_extra_fields($type_name = NULL) {
+  if (!empty($type_name)) {
+    return array(
+      'menu_node_edit' => array(
+        'label' => t('Menu node edit'),
+        'description' => t('Assign posts to a menu access section.'),
+        'weight' => -1,
+      ),
+    );
+  }
+}
+
+/**
+ * Implement hook_token_list().
+ *
+ * Provides tokens for the path alias of a menu parent.
+ */
+function menu_node_edit_token_list($type = 'all') {
+  if (!menu_node_edit_tokens() || ($type != 'all' && $type != 'node')) {
+    return;
+  }
+  $tokens = array();
+  $tokens['node']['menu-parent-path-alias'] = t('Path alias of parent menu item.');
+  $tokens['node']['menu-parent-path-alias-path'] = t('Path alias of parent menu item. Safe for use in URLs.');
+  return $tokens;
+}
+
+/**
+ * Implement hook_token_values().
+ *
+ * Provides tokens for the path alias of a menu parent.
+ */
+function menu_node_edit_token_values($type, $object = NULL, $options = array()) {
+  if (!menu_node_edit_tokens() || $type != 'node') {
+    return;
+  }
+  // Set a default value.
+  $value = t('content');
+  if (!empty($object->nid)) {
+    $path = "node/$object->nid";
+    $plid = db_result(db_query("SELECT ml.plid FROM {menu_links} ml INNER JOIN {menu_custom} mc ON ml.menu_name = mc.menu_name WHERE ml.link_path = '%s'", $path));
+  }
+  if (!empty($plid)) {
+    $result = db_result(db_query("SELECT u.dst FROM {url_alias} u INNER JOIN {menu_links} ml ON ml.link_path = u.src WHERE ml.mlid = %d", $plid));
+  }
+  if (!empty($result)) {
+    $value = $result;
+  }
+
+  $tokens = array();
+  $tokens['menu-parent-path-alias'] = check_plain($value);
+  $tokens['menu-parent-path-alias-path'] = $value;
+  return $tokens;
+}
+
+/**
+ * Helper function to determine token support.
+ */
+function menu_node_edit_tokens() {
+  if (module_exists('path')) {
+    return TRUE;
+  }
+  return FALSE;
+}

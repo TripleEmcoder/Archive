@@ -1,0 +1,17 @@
+// CSS Styling for fake tabs.
+
+#menu-access {
+  clear: both;
+}
+
+#menu-access div.clear {
+  clear: both;
+}
+
+#menu-access-create {
+  clear: none;
+  float: right;
+  margin: 0 0 2em 4em;
+  padding: 0 2em 0 2em;
+  width: 30%;
+}

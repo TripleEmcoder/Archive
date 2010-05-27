@@ -1,0 +1,12 @@
+;  $Id: menu_node_edit.info,v 1.1 2009/05/08 14:01:36 agentken Exp $
+name = Menu Node Edit
+description = Allows node editing access based on menu relationships.
+dependencies[] = menu_node
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-10-28
+version = "6.x-1.8"
+core = "6.x"
+project = "menu_node_edit"
+datestamp = "1256755263"
+

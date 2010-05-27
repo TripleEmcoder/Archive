@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Install file for Menu Node Edit.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function menu_node_edit_schema() {
+  $schema = array();
+  $schema['menu_node_edit'] = array(
+    'fields' => array(
+      'mlid' => array('type' => 'int', 'not null' => TRUE)),
+    'primary key' => array('mlid'),
+  );
+  $schema['menu_node_edit_user'] = array(
+    'fields' => array(
+      'uid' => array('type' => 'int', 'not null' => TRUE),
+      'mlid' => array('type' => 'int', 'not null' => TRUE)),
+    'primary key' => array('uid', 'mlid'),
+  );
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function menu_node_edit_install() {
+  drupal_install_schema('menu_node_edit');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function menu_node_edit_uninstall() {
+  drupal_uninstall_schema('menu_node_edit');
+  $variables = menu_node_edit_variable(NULL, TRUE);
+  foreach ($variables as $name => $value) {
+    variable_del('menu_node_edit_'. $name);
+  }
+}
