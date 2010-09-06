@@ -1,0 +1,7 @@
+#!/bin/sh
+DIR=`dirname $0`
+
+for F in `ls $DIR/sql/*.sql`; do
+    echo `basename $F`;
+    mysql -h $1 -u $2 --password=$3 $4 < $F;
+done
