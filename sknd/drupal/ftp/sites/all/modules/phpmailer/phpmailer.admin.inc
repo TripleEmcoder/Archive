@@ -1,5 +1,5 @@
 <?php
-// $Id: phpmailer.admin.inc,v 1.8 2009/06/10 13:01:36 smk Exp $
+// $Id: phpmailer.admin.inc,v 1.15.2.4 2010/01/17 18:04:49 smk Exp $
 
 /**
  * @file
@@ -7,28 +7,26 @@
  */
 
 /**
- * Form builder for both the Mime Mail hook and our own menu callback.
+ * Form builder for both the Mime Mail settings and our own settings page.
+ *
+ * @ingroup forms
+ * @see phpmailer_settings_form_validate()
+ * @see phpmailer_settings_form_submit()
  */
 function phpmailer_settings_form() {
-  // Override the 'smtp_library' variable.
-  $smtp_library = variable_get('smtp_library', '');
-  if (variable_get('smtp_on', 0)) {
-    if (!strpos($smtp_library, 'phpmailer')) {
-      variable_set('smtp_library', drupal_get_filename('module', 'phpmailer'));
-    }
-  }
-  else {
-    if (strpos($smtp_library, 'phpmailer')) {
-      variable_del('smtp_library');
-    }
+  if (module_exists('mimemail') && $_GET['q'] == 'admin/settings/phpmailer') {
+    // Redirect to Mime Mail settings page instead.
+    drupal_goto('admin/settings/mimemail');
   }
 
-  if (!variable_get('mimemail_alter', 0)) {
+  // Only enable the 'send all e-mails' option if Mime Mail is not configured
+  // the same (mimemail_alter is the counterpart to smtp_on).
+  if (!module_exists('mimemail') || !variable_get('mimemail_alter', 0)) {
     $form['smtp_on'] = array(
       '#type' => 'checkbox',
       '#title' => t('Use PHPMailer to send e-mails'),
       '#default_value' => variable_get('smtp_on', 0),
-      '#description' => t('When enabled, PHPMailer will be used for e-mail transport.'),
+      '#description' => t('When enabled, PHPMailer will be used to deliver all site e-mails.'),
     );
   }
   else {
@@ -49,7 +47,7 @@ function phpmailer_settings_form() {
     '#type' => 'textfield',
     '#title' => t('Backup SMTP server'),
     '#default_value' => variable_get('smtp_hostbackup', ''),
-    '#description' => t('Optional host name or IP address of a backup server, if the primary server fails.  You can override the default port by appending it to the host name separated with a colon.  Example: !hostname', array('!hostname' => '<code>localhost:465</code>')),
+    '#description' => t('Optional host name or IP address of a backup server, if the primary server fails.  You may override the default port below by appending it to the host name separated by a colon.  Example: !hostname', array('!hostname' => '<code>localhost:465</code>')),
   );
   $form['server']['smtp_port'] = array(
     '#type' => 'textfield',
@@ -65,7 +63,7 @@ function phpmailer_settings_form() {
     '#title' => t('Use secure protocol'),
     '#default_value' => variable_get('smtp_protocol', ''),
     '#options' => array('' => t('No'), 'ssl' => t('SSL'), 'tls' => t('TLS')),
-    '#description' => t('Whether to use an encrypted connection to communicate with the SMTP server.  Google Mail requires %SSL.', array('%SSL' => 'SSL')),
+    '#description' => t('Whether to use an encrypted connection to communicate with the SMTP server.  Google Mail requires SSL.'),
   );
   if (!function_exists('openssl_open')) {
     $form['server']['smtp_protocol']['#default_value'] = '';
@@ -87,11 +85,27 @@ function phpmailer_settings_form() {
     '#default_value' => variable_get('smtp_username', ''),
     '#description' => t('For Google Mail, enter your username including "@gmail.com".'),
   );
-  $form['auth']['smtp_password'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Password'),
-    '#default_value' => variable_get('smtp_password', ''),
-  );
+  if (!variable_get('smtp_hide_password', 0)) {
+    $form['auth']['smtp_password'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Password'),
+      '#default_value' => variable_get('smtp_password', ''),
+    );
+    $form['auth']['smtp_hide_password'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Hide password'),
+      '#default_value' => 0,
+      '#description' => t("Check this option to permanently hide the plaintext password from peeking eyes. You may still change the password afterwards, but it won't be displayed anymore."),
+    );
+  }
+  else {
+    $have_password = (variable_get('smtp_password', '') != '');
+    $form['auth']['smtp_password'] = array(
+      '#type' => 'password',
+      '#title' => $have_password ? t('Change password') : t('Password'),
+      '#description' => $have_password ? t('Leave empty if you do not intend to change the current password.') : '',
+    );
+  }
 
   $form['advanced'] = array(
     '#type' => 'fieldset',
@@ -99,17 +113,23 @@ function phpmailer_settings_form() {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  $form['advanced']['smtp_keepalive'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Keep connection alive'),
-    '#default_value' => variable_get('smtp_keepalive', 0),
-    '#description' => t('Whether to reuse an existing connection during a request.  Improves performance when sending a lot of e-mails at once.'),
-  );
   $form['advanced']['smtp_fromname'] = array(
     '#type' => 'textfield',
     '#title' => t('"From" name'),
     '#default_value' => variable_get('smtp_fromname', ''),
     '#description' => t('Enter a name that should appear as the sender for all messages.  If left blank the site name will be used instead: %sitename.', array('%sitename' => variable_get('site_name', 'Drupal'))),
+  );
+  $form['advanced']['smtp_always_replyto'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Always set "Reply-To" address'),
+    '#default_value' => variable_get('smtp_always_replyto', 0),
+    '#description' => t('Enables setting the "Reply-To" address to the original sender of the message, if unset.  This is required when using Google Mail, which would otherwise overwrite the original sender.'),
+  );
+  $form['advanced']['smtp_keepalive'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Keep connection alive'),
+    '#default_value' => variable_get('smtp_keepalive', 0),
+    '#description' => t('Whether to reuse an existing connection during a request.  Improves performance when sending a lot of e-mails at once.'),
   );
   $form['advanced']['smtp_debug'] = array(
     '#type' => 'select',
@@ -119,12 +139,12 @@ function phpmailer_settings_form() {
     '#description' => t("Debug the communication with the SMTP server.  You normally shouldn't enable this unless you're trying to debug e-mail sending problems."),
   );
 
-  // If an address was given, send a test email message.
-  $test_address = variable_get('smtp_test_address', '');
-  if ($test_address != '') {
-    drupal_set_message(t('A test e-mail has been sent to %email.  You may want to <a href="!watchdog">check the logs</a> for any error messages.', array('%email' => $test_address, '!watchdog' => url('admin/reports/dblog'))));
+  // Send a test email message if an address has been entered.
+  if ($test_address = variable_get('phpmailer_test', '')) {
+    // Delete first to avoid unintended resending in case of an error.
+    variable_del('phpmailer_test');
     drupal_mail('phpmailer', 'test', $test_address, NULL);
-    variable_del('smtp_test_address');
+    drupal_set_message(t('A test e-mail has been sent to %email. <a href="@watchdog-url">Check the logs</a> for any error messages.', array('%email' => $test_address, '@watchdog-url' => url('admin/reports/dblog'))));
   }
 
   $form['test'] = array(
@@ -133,13 +153,13 @@ function phpmailer_settings_form() {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  $form['test']['smtp_test_address'] = array(
+  $form['test']['phpmailer_test'] = array(
     '#type' => 'textfield',
     '#title' => t('Recipient'),
     '#default_value' => '',
     '#description' => t('Type in an address to have a test e-mail sent there.'),
   );
-  if (!strpos(variable_get('smtp_library', ''), 'phpmailer') && module_exists('mimemail') && variable_get('mimemail_alter', 0)) {
+  if (module_exists('mimemail')) {
     $form['test']['preview'] = array(
       '#type' => 'item',
       '#title' => t('Preview'),
@@ -147,10 +167,63 @@ function phpmailer_settings_form() {
     );
   }
 
-  if (!module_exists('mimemail')) {
-    return system_settings_form($form);
+  if (module_exists('mimemail')) {
+    return $form;
   }
-  return $form;
+
+  $form['#submit'] = array('phpmailer_settings_form_submit');
+
+  return system_settings_form($form);
+}
+
+/**
+ * Form validation function.
+ *
+ * @see phpmailer_settings_form()
+ */
+function phpmailer_settings_form_validate($form, &$form_state) {
+  if ($form_state['values']['smtp_on']) {
+    if (intval($form_state['values']['smtp_port']) == 0) {
+      form_set_error('smtp_port', t('You must enter a valid SMTP port number.'));
+    }
+  }
+}
+
+/**
+ * Form submit function.
+ *
+ * @see phpmailer_settings_form()
+ */
+function phpmailer_settings_form_submit($form, &$form_state) {
+  // Enable/disable mail sending subsystem.
+  if ($form_state['values']['smtp_on']) {
+    if (!phpmailer_enabled()) {
+      variable_set('smtp_library', drupal_get_filename('module', 'phpmailer'));
+      drupal_set_message(t('PHPMailer will be used to deliver all site e-mails.'));
+      watchdog('phpmailer', 'PHPMailer has been enabled.');
+    }
+  }
+  else if (phpmailer_enabled()) {
+    variable_del('smtp_library');
+    drupal_set_message(t('PHPMailer has been disabled.'));
+    watchdog('phpmailer', 'PHPMailer has been disabled.');
+  }
+
+  // Log configuration changes.
+  $settings = array('host', 'port', 'protocol', 'username');
+  // Ignore empty passwords if hide password is active.
+  if (variable_get('smtp_hide_password', 0) && $form_state['values']['smtp_password'] == '') {
+    unset($form_state['values']['smtp_password']);
+  }
+  else {
+    $settings[] = 'password';
+  }
+  foreach ($settings as $setting) {
+    if ($form_state['values']['smtp_'. $setting] != variable_get('smtp_'. $setting, '')) {
+      watchdog('phpmailer', 'SMTP configuration changed.');
+      break;
+    }
+  }
 }
 
 /**
@@ -159,5 +232,46 @@ function phpmailer_settings_form() {
 function phpmailer_mail($key, &$message, $params) {
   $message['subject'] = t('PHPMailer test e-mail');
   $message['body'][] = t('Your site is properly configured to send e-mails using the PHPMailer library.');
+}
+
+/**
+ * Menu callback; Render a HTML mail preview in the browser.
+ */
+function phpmailer_preview() {
+  global $user;
+
+  // Suppress devel output in preview.
+  $GLOBALS['devel_shutdown'] = TRUE;
+
+  $mailkey = 'phpmailer_preview';
+  // Use example address to prevent usage of configurable mail format setting.
+  $recipient = 'test@example.com';
+  // @see user_register_submit()
+  $language = user_preferred_language($user);
+  $variables = user_mail_tokens($user, $language);
+  $variables['!password'] = 'test';
+  $subject = _user_mail_text('register_no_approval_required_subject', $language, $variables);
+  $body = _user_mail_text('register_no_approval_required_body', $language, $variables);
+  $sender = NULL;
+  $headers = array();
+
+  // Convert non-html messages.
+  // @see drupal_mail_wrapper()
+  $format = variable_get('mimemail_format', FILTER_FORMAT_DEFAULT);
+  $body = check_markup($body, $format, FALSE);
+  // @see mimemail()
+  foreach (module_implements('mail_alter') as $module) {
+    $function = $module .'_mail_alter';
+    $function($mailkey, $recipient, $subject, $body, $sender, $headers);
+  }
+  // @see mimemail_prepare()
+  $body = theme('mimemail_message', $body, $mailkey);
+  foreach (module_implements('mail_post_process') as $module) {
+    $function = $module .'_mail_post_process';
+    $function($body, $mailkey);
+  }
+
+  print $body;
+  exit;
 }
 

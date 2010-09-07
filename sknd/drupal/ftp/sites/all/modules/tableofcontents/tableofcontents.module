@@ -1,5 +1,5 @@
 <?php
-// $Id: tableofcontents.module,v 1.2.4.2.2.2.2.13.2.9 2010/02/08 10:17:02 alexiswilke Exp $
+// $Id: tableofcontents.module,v 1.2.4.2.2.2.2.13.2.17 2010/05/24 19:26:54 alexiswilke Exp $
 
 /**
  * @file
@@ -23,6 +23,9 @@
  *   +added several divs to make ToC themable via CSS
  *   +provided basic CSS
  */
+
+define('TABLEOFCONTENTS_REMOVE_PATTERN', '/(?:<p(?:\s[^>]*)?>)?\[toc(?:\s[^]]*?)?\](?:<\/p\s*>)?/');
+define('TABLEOFCONTENTS_ALLOWED_TAGS', '<em> <i> <strong> <b> <u> <del> <ins> <sub> <sup> <cite> <strike> <s> <tt> <span> <font> <abbr> <acronym> <dfn> <q> <bdo> <big> <small>');
 
 /**
  * Implementation of hook_init()
@@ -54,21 +57,29 @@ function tableofcontents_help($section) {
 function tableofcontents_filter_tips($delta, $format, $long = FALSE) {
   $override = variable_get('tableofcontents_allow_override_' . $format, TRUE);
 
-  if ($long) {
-    if ($override) {
-      return t('Every instance of "[toc ...]" in the input text will be replaced with a collapsible mediawiki-style table of contents. Accepts options for title, list style, minimum heading level, and maximum heading level, and attachments as follows: [toc list: ol; title: Table of Contents; minlevel: 2; maxlevel: 3; attachments: yes;]. All arguments are optional.');
-    }
-    else {
-      return t('Every instance of "[toc ...]" in the input text will be replaced with a collapsible mediawiki-style table of contents.');
-    }
-  }
-  else {
-    if ($override) {
-      return t('Use [toc list: ol; title: Table of Contents; minlevel: 2; maxlevel: 3; attachments: yes;] to insert a mediawiki style collapsible table of contents. All the arguments are optional.');
-    }
-    else {
-      return t('Use [toc ...] to insert a mediawiki style collapsible table of contents.');
-    }
+  $op = ($delta * 4) | ($long ? 2 : 0) | ($override ? 1 : 0);
+
+  switch ($op) { // ($delta, $long, $override)
+  case 0: // (0, 0, 0)
+    return t('Use [toc ...] to insert a mediawiki style collapsible table of contents.');
+
+  case 1: // (0, 0, 1)
+    return t('Use [toc list: ol; title: Table of Contents; minlevel: 2; maxlevel: 3; attachments: yes;] to insert a mediawiki style collapsible table of contents. All the arguments are optional.');
+
+  case 2: // (0, 1, 0)
+    return t('Every instance of "[toc ...]" in the input text will be replaced with a collapsible mediawiki-style table of contents.');
+
+  case 3: // (0, 1, 1)
+    return t('Every instance of "[toc ...]" in the input text will be replaced with a collapsible mediawiki-style table of contents. Accepts options for title, list style, minimum heading level, and maximum heading level, and attachments as follows: [toc list: ol; title: Table of Contents; minlevel: 2; maxlevel: 3; attachments: yes;]. All arguments are optional.');
+
+  case 4: // (1, 0, 0)
+  case 5: // (1, 0, 1)
+    return t('Add an identifier to all the anchors without one.');
+
+  case 6: // (1, 1, 0)
+  case 7: // (1, 1, 1)
+    return t('Add an identifier to all the anchors without one. In most cases, this filter is not necessary with the table of contents block. However, once in a while, the automatic detection may fail. In those cases, add this filter to your pages so as to make sure to get all the anchors defined as necessary for the table of contents links to work.');
+
   }
 }
 
@@ -76,17 +87,27 @@ function tableofcontents_filter_tips($delta, $format, $long = FALSE) {
  * Implementation of hook_filter().
  */
 function tableofcontents_filter($op, $delta = 0, $format = -1, $text = '') {
-  global $tableofcontents_block_processing;
+  global $_tableofcontents_block_processing;
 
   if ($op == 'list') {
     return array(
-      0 => t('Table of contents')
+      0 => t('Table of contents'),
+      1 => t('Assign an ID to each anchors'),
     );
   }
 
   switch ($op) {
   case 'description':
-    return t('Inserts a table of contents in place of [toc ...] tags.');
+    switch ($delta) {
+    default:
+      return t('Inserts a table of contents in place of [toc ...] tags.');
+
+    case 1:
+      return t('Add an ID to all the anchors on the page. May be necessary in case the table of contents block is used.');
+
+    }
+    /*NOTREACHED*/
+    break;
 
   case 'no cache': // allow caching
     return FALSE;
@@ -96,13 +117,16 @@ function tableofcontents_filter($op, $delta = 0, $format = -1, $text = '') {
     return _tableofcontents_settings($format);
 
   case 'prepare':
-    module_load_include('pages.inc', 'tableofcontents');
-    return _tableofcontents_prepare($delta, $format, $text);
+    if ($delta != 1) {
+      module_load_include('pages.inc', 'tableofcontents');
+      return _tableofcontents_prepare($delta, $format, $text);
+    }
+    return $text;
 
   case 'process':
     // NOTE: we cannot test for a [toc:...] and skip if none
     //       because the user could have the auto-toc turned on.
-    if (!$tableofcontents_block_processing) {
+    if (!$_tableofcontents_block_processing) {
       module_load_include('pages.inc', 'tableofcontents');
       return _tableofcontents_process($delta, $format, $text);
     }
@@ -115,6 +139,10 @@ function tableofcontents_filter($op, $delta = 0, $format = -1, $text = '') {
  * Save the extra data the TOC adds to nodes.
  */
 function _tableofcontents_save($node) {
+  // new nodes will not have our parameter set, make sure we have a default
+  if (!isset($node->tableofcontents_toc_automatic)) {
+    $node->tableofcontents_toc_automatic = 0;
+  }
   $sql = "UPDATE {tableofcontents_node_toc} SET toc_automatic = %d WHERE nid = %d";
   db_query($sql, $node->tableofcontents_toc_automatic, $node->nid);
   if (db_affected_rows() == 0) {
@@ -132,6 +160,9 @@ function _tableofcontents_load(&$node) {
   if ($toc = db_fetch_object($result)) {
     $node->tableofcontents_toc_automatic = $toc->toc_automatic;
   }
+  else {
+    $node->tableofcontents_toc_automatic = 0;
+  }
 }
 
 /**
@@ -143,6 +174,8 @@ function _tableofcontents_load(&$node) {
  * pretty minimal. It also only happens if the node has file attachments.
  */
 function tableofcontents_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  global $user, $theme_key, $_tableofcontents_block_processing;
+
   switch ($op) {
   case 'prepare':
     if (isset($node->files)) {
@@ -168,6 +201,55 @@ function tableofcontents_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     _tableofcontents_load($node);
     break;
 
+  case 'view':
+    // $a3 represents the $teaser flag
+    // $a4 represents the $page flag
+    if (!$_tableofcontents_block_processing) {
+      $processed = FALSE;
+      if (variable_get('tableofcontents_nodetype_toc_vtoc_' . $node->type, FALSE)) {
+        // ugly test to make sure we don't double the TOC (i.e. if automatic is turned
+        // on we would apply the TOC twice when [toc] was used and the filter includes
+        // the TOC!)
+        if (strpos($node->content['body']['#value'], 'class="toc"') === FALSE) {
+          $node->content['body']['#value'] = str_replace('[vtoc', '[toc', $node->content['body']['#value']);
+          if (!$a4 || ($a3 && variable_get('tableofcontents_nodetype_toc_remove_from_teaser_' . $node->type, TRUE))) {
+            // remove from teaser or "non-page"
+            $node->content['body']['#value'] = preg_replace(TABLEOFCONTENTS_REMOVE_PATTERN, '', $node->content['body']['#value']);
+          }
+          else {
+            // TODO: if $a3 is true, then we should process the body and save the resulting table in the teaser
+            //       (in other words, make sure we get the complete table of content instead of only the teaser part!)
+            module_load_include('pages.inc', 'tableofcontents');
+            $text = _tableofcontents_process(0, $node->format, $node->content['body']['#value']);
+            if ($node->content['body']['#value'] != $text) {
+              // if tableofcontents_hide_table_<format> is TRUE, then this is wrong...
+              if (!variable_get('tableofcontents_hide_table_' . $node->format, FALSE)) {
+                $processed = TRUE;
+              }
+              $node->content['body']['#value'] = $text;
+            }
+          }
+        }
+      }
+      if (!$processed) {
+        // is the table of contents block visible?
+        $rids = array_keys($user->roles);
+        $sql = "SELECT b.bid FROM {blocks} b"
+          . " LEFT JOIN {blocks_roles} r ON b.module = r.module AND b.delta = r.delta"
+          . " WHERE b.delta = '0' AND b.module = 'tableofcontents_block' AND b.theme = '%s'"
+            . " AND b.status = 1 AND (r.rid IN (". db_placeholders($rids) .") OR r.rid IS NULL)";
+        $sql = db_rewrite_sql($sql, 'b', 'bid');
+        $result = db_query($sql, array_merge(array($theme_key), $rids));
+        if (db_fetch_array($result)) {
+          // there is a table of contents block, but the node was node parsed...
+          // do that now
+          module_load_include('pages.inc', 'tableofcontents');
+          $node->content['body']['#value'] = _tableofcontents_process(1, $node->format, $node->content['body']['#value']);
+        }
+      }
+    }
+    break;
+
   }
 }
 
@@ -177,11 +259,11 @@ function tableofcontents_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
  */
 function tableofcontents_form_alter(&$form, $form_state, $form_id) {
   if (!$form_state['submitted']) {
-    if (substr($form_id, -10) == '_node_form') {
+    if (substr($form_id, -10) == '_node_form' && isset($form['nid'])) {
       module_load_include('admin.inc', 'tableofcontents');
       _tableofcontents_node_form_alter($form);
     }
-    else if ($form_id == 'node_type_form' && isset($form['identity']['type'])) {
+    elseif ($form_id == 'node_type_form' && isset($form['identity']['type'])) {
       module_load_include('admin.inc', 'tableofcontents');
       _tableofcontents_nodetype_form_alter($form);
     }
@@ -210,3 +292,5 @@ function tableofcontents_theme() {
     ),
   );
 }
+
+// vim: ts=2 sw=2 et syntax=php

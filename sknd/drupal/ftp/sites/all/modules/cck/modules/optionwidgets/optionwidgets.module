@@ -1,5 +1,5 @@
 <?php
-// $Id: optionwidgets.module,v 1.69.2.26 2009/08/17 12:26:43 markuspetrux Exp $
+// $Id: optionwidgets.module,v 1.69.2.27 2009/09/11 09:00:56 markuspetrux Exp $
 
 /**
  * @file
@@ -291,6 +291,7 @@ function optionwidgets_onoff_process($element, $edit, &$form_state, $form) {
     '#type' => 'checkbox',
     '#title' => isset($options[$on_value]) ? $options[$on_value] : '',
     '#description' => $element['#description'],
+    '#required' => isset($element['#required']) ? $element['#required'] : $field['required'],
     '#default_value' => isset($element['#value'][$field_key][0]) ? $element['#value'][$field_key][0] == $on_value : FALSE,
     '#return_value' => $on_value,
   );

@@ -1,5 +1,5 @@
 <?php
-// $Id: comment_subject.module,v 1.7.2.1 2008/11/06 08:53:10 ahoeben Exp $
+// $Id: comment_subject.module,v 1.7.2.2 2009/11/19 07:41:13 sinasalek Exp $
 
 /**
  * Implementation of hook_form_alter().
@@ -32,13 +32,10 @@ function comment_subject_form_alter(&$form, &$form_state, $form_id) {
     // comment subjects can not be longer than 64 characters
     $subject = truncate_utf8($subject, 64, TRUE, TRUE);
 
-    if (variable_get('comment_subject_field', 1) == 1) {
-      $form['subject']['#default_value'] = $subject;
-    } else {
-      // comment subject disabled in comment settings
-      $form['subject'] = array('#type' => 'hidden', '#default_value' => $subject);
-    }
+    // nevermind whether #type should or shouldn't be hidden
+    // just update the #default_value
+    // which is compatible with comment_update_6002 and preserves backward compatibility
+    if (!isset($form['subject'])) $form['subject']['#type'] = 'hidden';
+    $form['subject']['#default_value'] = $subject;
   }
 }
-
-?>

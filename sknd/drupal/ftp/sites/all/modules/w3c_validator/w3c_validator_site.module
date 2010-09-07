@@ -1,5 +1,5 @@
 <?php
-// $Id: w3c_validator_site.module,v 1.1.2.2 2009/10/05 10:33:38 pl2 Exp $
+// $Id: w3c_validator_site.module,v 1.1.2.3 2009/12/22 10:00:56 pl2 Exp $
 
 /**
  * @file
@@ -131,21 +131,15 @@ function w3c_validator_site_get_validation_batch($result_set) {
     );
 
   if ($result_set->config['validate_elements']['node']) {
-    $node_types = array();
-    foreach ($result_set->config['content_types'] as $name => $enabled) {
-      if ($enabled) {
-        $node_types[] = $name;
-      }
-    }
-    if (!empty($node_types)) {
-      $node_ops = w3c_validator_site_validate_nodes($result_set->rsid, $node_types);
+    if ($node_ops = w3c_validator_site_validate_nodes($result_set)) {
       $batch['operations'] = array_merge($batch['operations'], $node_ops);
     }
   }
 
   if ($result_set->config['validate_elements']['view']) {
-    $view_ops = w3c_validator_site_validate_views($result_set->rsid);
-    $batch['operations'] = array_merge($batch['operations'], $view_ops);
+    if ($view_ops = w3c_validator_site_validate_views($result_set->rsid)) {
+      $batch['operations'] = array_merge($batch['operations'], $view_ops);
+    }
   }
 
   return $batch;
@@ -173,17 +167,33 @@ function _w3c_validator_site_batch_finish($success, $results, $operations) {
  * @param string $node_types
  * @return void
  */
-function w3c_validator_site_validate_nodes($rsid, $node_types) {
+function w3c_validator_site_validate_nodes($result_set) {
+  $node_types = array();
+  foreach ($result_set->config['content_types'] as $name => $enabled) {
+    if ($enabled) {
+      $node_types[] = $name;
+    }
+  }
+
+  if (empty($node_types)) {
+    return FALSE;
+  }
+
   $node_type_ph = db_placeholders($node_types, 'varchar');
   $sql = "SELECT nid
     FROM {node} n
-    WHERE n.type IN ($node_type_ph) AND n.status = 1";
+    WHERE n.type IN ($node_type_ph)";
+
+  if (!$result_set->config['unpublished']) {
+    $sql .= ' AND n.status = 1';
+  }
+
   $result = db_query($sql, $node_types);
 
   $ops = array();
 
   while ($node = db_fetch_object($result)) {
-    $ops[] = array('w3c_validator_site_validate_path', array($rsid, 'node/'. $node->nid));
+    $ops[] = array('w3c_validator_site_validate_path', array($result_set->rsid, 'node/'. $node->nid));
   }
 
   return $ops;
@@ -196,15 +206,17 @@ function w3c_validator_site_validate_nodes($rsid, $node_types) {
  * @return void
  */
 function w3c_validator_site_validate_path($rsid, $path, &$context) {
-  global $base_url, $language;
+  global $base_url;
 
-  //$path = drupal_get_path_alias($path);
-  $path = url($path, array('language' => $language));
+  $path = drupal_get_path_alias($path);
 
-  //$url = $base_url .'/'. $path;
-  $url = $base_url . $path;
+  $url = $base_url .'/'. $path;
 
   $results = _w3c_validator_validate_uri($url);
+
+  if ($results['response']->code != 200) {
+    return;
+  }
 
   $result_url = new stdClass;
   $result_url->url =  $url;

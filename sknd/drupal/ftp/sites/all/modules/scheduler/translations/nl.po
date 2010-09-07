@@ -1,4 +1,4 @@
-# $Id: nl.po,v 1.1.2.1 2009/06/13 06:43:59 ericschaefer Exp $
+# $Id: nl.po,v 1.1.2.2 2009/08/26 17:40:43 ericschaefer Exp $
 #
 # Dutch translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
@@ -42,10 +42,6 @@ msgstr "Depubliceer op"
 #: scheduler.views.inc:32
 msgid "Date/time on which the article will be automatically unpublished"
 msgstr "Datum en tijd waarop het artikel automatisch zal worden gedepubliceerd"
-
-#: scheduler.module:11
-msgid "A module to schedule when nodes are (un)published."
-msgstr "Een module om te plannen waneer nodes worden ge(de)publiceerd."
 
 #: scheduler.module:28
 msgid "Light weight cron handler"

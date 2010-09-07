@@ -1,5 +1,5 @@
 <?php
-// $Id: menu_admin_per_menu.module,v 1.2 2009/04/05 21:02:19 anrikun Exp $
+// $Id: menu_admin_per_menu.module,v 1.5 2010/06/26 13:46:54 anrikun Exp $
 
 /**
  * @file menu_admin_per_menu.module
@@ -97,7 +97,7 @@ function menu_admin_per_menu_form_alter(&$form, $form_state, $form_id) {
       return;
     }
     $form['menu']['#access'] = FALSE;
-    
+
     $perm_menus = array();
     $menus = menu_get_menus();
     foreach ($menus as $name => $title) {
@@ -106,18 +106,25 @@ function menu_admin_per_menu_form_alter(&$form, $form_state, $form_id) {
       }
     }
     if ((count($perm_menus) > 0) && is_array($form['menu']['parent']['#options'])) {
-      $default_value = $form['menu']['parent']["#default_value"];
+      $has_mlid = !empty($form['menu']['mlid']['#value']);
+      $default_value = $form['menu']['parent']['#default_value'];
       $option_keys = array_keys($form['menu']['parent']['#options']);
       foreach ($option_keys as $option_key) {
         list($menu, $item) = explode(':', $option_key);
         if (!in_array($menu, $perm_menus)) {
           unset($form['menu']['parent']['#options'][$option_key]);
-          if ($option_key == $default_value) {
+          if ($has_mlid && ($option_key == $default_value)) {
             return;
           }
         }
       }
-      $form['menu']['#access'] = (count($form['menu']['parent']['#options']) > 0);
+      $option_keys = array_keys($form['menu']['parent']['#options']);
+      if (count($option_keys) > 0) {
+        $form['menu']['#access'] = TRUE;
+        if (!$has_mlid && !in_array($default_value, $option_keys)) {
+          $form['menu']['parent']['#default_value'] = $option_keys[0];
+        }
+      }
     }
   }
 }

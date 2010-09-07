@@ -1,4 +1,4 @@
-// $Id: CHANGELOG.txt,v 1.42 2010/01/06 00:42:59 sun Exp $
+// $Id: CHANGELOG.txt,v 1.43 2010/03/06 02:35:51 sun Exp $
 
 Inline x.x-x.x, xxxx-xx-xx
 --------------------------
@@ -6,6 +6,7 @@ Inline x.x-x.x, xxxx-xx-xx
 
 Inline 6.x-2.x, xxxx-xx-xx
 --------------------------
+by sun: Added first starting point for tests.
 #558242 by sun: Fixed stale docs in README.txt.
 by sun: Fixed Wysiwyg integration for Node breaks Image Assist.
 #172613 by sun: Added new context property to $macro objects.

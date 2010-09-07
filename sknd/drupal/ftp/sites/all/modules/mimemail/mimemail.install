@@ -1,4 +1,13 @@
-<?php /* $Id: mimemail.install,v 1.1 2008/08/03 07:16:07 jerdavis Exp $ */
+<?php /* $Id: mimemail.install,v 1.2 2010/07/01 17:44:31 sgabe Exp $ */
+
+/**
+ * Implementation of hook_disable().
+ */
+function mimemail_disable() {
+  if (strpos(variable_get('smtp_library', ''), 'mimemail') !== FALSE) {
+    variable_del('smtp_library');
+  }
+}
 
 /**
  * Implementation of hook_uninstall()
@@ -16,4 +25,3 @@ function mimemail_uninstall() {
     variable_del($variable);
   }
 }
-

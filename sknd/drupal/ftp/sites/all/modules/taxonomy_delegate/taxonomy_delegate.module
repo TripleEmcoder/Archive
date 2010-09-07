@@ -1,5 +1,5 @@
 <?php
-// $Id: taxonomy_delegate.module,v 1.1.4.18 2009/02/10 22:56:45 nancyw Exp $ 
+// $Id: taxonomy_delegate.module,v 1.1.4.12 2008/07/09 23:15:35 nancyw Exp $ 
 
 /**
  * @file
@@ -9,7 +9,7 @@
 /**
  * Implementation of hook_help().
  */
-function taxonomy_delegate_help($path, $args = NULL) {
+function taxonomy_delegate_help($path, $args = null) {
   switch ($path) {
     case 'admin/help#taxonomy_delegate':
       $output = '<p>'. t('The taxonomy_delegate module allows the administrator to delegate the maintenance of selected vocabularies without the need to grant "access taxonomy" permission. Delegation is done on the <a href="!link">Category Delegate</a> tab of the Categories administration page.', array('!link' => 'admin/content/taxonomy/delegate')) .'</p>';
@@ -19,7 +19,7 @@ function taxonomy_delegate_help($path, $args = NULL) {
       break;
       
     case 'admin/content/taxonomy/delegate':
-      $output = '<p>'. t('This is an overview of the current delegation of authority to administer categories. Setting of the delegation is done on the vocabulary edit page. Click here to go to the <a href="!url">settings page</a>.', array('!url' => url('admin/settings/taxonomy_delegate'))) .'</p>';
+      $output = '<p>'. t('This is an overview of the current delegation of authority to administer categories. Setting of the delegation is done on the vocabulary edit page.') .'</p>';
 
       return $output;
   }
@@ -41,13 +41,16 @@ function taxonomy_delegate_menu() {
     'type' => MENU_LOCAL_TASK,
     );
 
-  // User admin callback.
-  $items['category_admin'] = array(
-    'title' => '@name',
-    'title arguments' => array('@name' => variable_get('taxonomy_delegate_menu', t('Administer My Categories'))),
-    'page callback' => 'taxonomy_delegate_mycategories',
-    'access callback' => '_taxonomy_delegate_access',
-    );
+    // User admin callback.
+  $any = count(_taxonomy_delegate_my_vocabularies());
+  if ($any) {
+    $items['category_admin'] = array(
+      'title' => '@name',
+      'title arguments' => array('@name' => variable_get('taxonomy_delegate_menu', t('Administer My Categories'))),
+      'page callback' => 'taxonomy_delegate_mycategories',
+      'access arguments' => array('access content'),
+      );
+  }
 
   // Admin settings.
   $items['admin/settings/taxonomy_delegate'] = array(
@@ -63,31 +66,11 @@ function taxonomy_delegate_menu() {
 }
 
 /**
- * Menu access checking function.
- */
-function _taxonomy_delegate_access() {
-  return count(_taxonomy_delegate_my_vocabularies()) > 0;
-}
-
-/**
  *  Implementation of hook_init.
  *  Make sure the taxonomy admin functions are loaded for the user.
  */
 function taxonomy_delegate_init() {
   include_once(drupal_get_path('module', 'taxonomy') .'/taxonomy.admin.inc');
-  drupal_add_css(drupal_get_path('module', 'taxonomy_delegate') .'/taxonomy_delegate.css');
-}
-
-/**
- * Implementation of hook_taxonomy.
- * Remove vocabulary when it is deleted.
- */
-function taxonomy_delegate_taxonomy($op, $type, $array = NULL) {
-  // We don't care about terms or any op except delete.
-  if ($type == 'term' || $op != 'delete') {
-    return;
-  }
-  db_query("DELETE FROM {taxonomy_delegate} WHERE vid=%d", $array['vid']);
 }
 
 /**
@@ -98,7 +81,7 @@ function taxonomy_delegate_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'taxonomy_form_vocabulary':
       $vid = $form['vid']['#value'];
-      $roles = _taxonomy_delegate_get_roles(FALSE);
+      $roles = _taxonomy_delegate_get_roles(false);
       // Remove anonymous role.
       unset($roles[DRUPAL_ANONYMOUS_RID]);
       $defaults = _taxonomy_delegate_get_delegates($vid);
@@ -113,8 +96,8 @@ function taxonomy_delegate_form_alter(&$form, &$form_state, $form_id) {
         '#type' => 'fieldset',
         '#title' => t('Delegation'),
         '#description' => t('Use this section to delegate authority to maintain this vocabulary to a specific role.'),
-        '#collapsible' => TRUE,
-        '#collapsed' => FALSE,
+        '#collapsible' => true,
+        '#collapsed' => false,
         '#weight' => 0,
         );
 
@@ -122,7 +105,7 @@ function taxonomy_delegate_form_alter(&$form, &$form_state, $form_id) {
         '#type' => 'checkboxes',
         '#title' => t('Choose the role(s) that may administer this vocabulary'),
         '#options' => $roles,
-        '#multiple' => TRUE,
+        '#multiple' => true,
         '#default_value' => $defaults,
         '#prefix' => '<div class="taxonomy-delegate-checkboxes">',
         '#suffix' => '</div>',
@@ -145,9 +128,7 @@ function taxonomy_delegate_form_alter(&$form, &$form_state, $form_id) {
         if (count($hides) == 4) {
           unset($form['advanced']);
         }
-        if (!user_access('allow delete term')) {
-          unset($form['delete']);
-        }
+
   } // End switch form_id.
 }
 
@@ -183,7 +164,7 @@ function taxonomy_delegate_vocabulary_submit($form, &$form_state) {
 /**
  *  User's page.
  */
-function taxonomy_delegate_admin($op=NULL, $vid=NULL) {
+function taxonomy_delegate_admin($op=null, $vid=null) {
   $destination = drupal_get_destination();
   $output = '';
   $roles = _taxonomy_delegate_get_roles();
@@ -206,18 +187,18 @@ function taxonomy_delegate_admin($op=NULL, $vid=NULL) {
       $role_names = 'None';
       }
       $rows[] = array(
-        array('data' => $vocabulary->name, 'header' => TRUE),
+        array('data' => $vocabulary->name, 'header' => true),
         $role_names,
         l(t('edit'), 'admin/content/taxonomy/edit/vocabulary/'. $vocabulary->vid, array('query' => $destination)),
       );
     }
   
     $header = array(t('Vocabulary'), t('Roles'), t('Op'));
-    if (empty($rows)) {
-      $output .= 'No vocabularies were found.';
+    if (!empty($rows)) {
+      $output .= theme('table', $header, $rows, array('cellpadding' => '5', 'cellspacing' => '5'));
     }
     else {
-      $output .= theme('table', $header, $rows, array('cellpadding' => '5', 'cellspacing' => '5'));
+      $output .= 'No vocabularies were found.';
     }
     return $output;
   }
@@ -249,17 +230,18 @@ function taxonomy_delegate_edit_form($vid) {
 
   $form['vocab'] = array(
     '#type' => 'fieldset',
-    '#title' => $vocab->name,
-    '#description' => $vocab->description,
-    '#collapsible' => TRUE,
-    '#collapsed' => FALSE,
+    '#title' => '<big>'. $vocab->name ." (vid $vid)</big>",
+    '#description' => '<h2>'. $vocab->description .'</h2>',
+    '#collapsible' => true,
+    '#collapsed' => false,
+    '#prefix' => '<br/>',
     );
 
   $form['vocab']['roles'] = array(
     '#type' => 'select',
     '#title' => t('Choose the role(s) that may administer this vocabulary'),
     '#options' => $roles,
-    '#multiple' => TRUE,
+    '#multiple' => true,
     '#default_value' => $defaults,
     '#description' => t('You may choose more than one by using the CTRL key.'),
     );
@@ -309,9 +291,9 @@ function taxonomy_delegate_edit_form_submit($form, &$form_state) {
 /**
  *
  */
-function taxonomy_delegate_mycategories($op=NULL, $vid=NULL) {
+function taxonomy_delegate_mycategories($op=null, $vid=null) {
   global $user;
-  $output = NULL;
+  $output = '<br/>';
 
   // Make sure we should be here to help prevent cheaters typing in the path to avoid legitimate security.
   if ($op == 'list') { // Do list stuff.
@@ -354,10 +336,9 @@ function taxonomy_delegate_mycategories($op=NULL, $vid=NULL) {
   $vocabs = _taxonomy_delegate_my_vocabularies();
   
   foreach ($vocabs as $vid => $name) {
-    $rows[] = array(
-      array('data' => $name, 'class' => 'taxonomy-delegate-vocabulary-name'),
-      array('data' => l(t('List terms'), 'category_admin/list/'. $vid), 'class' => 'taxonomy-delegate-list'),
-      array('data' => l(t('Add terms'), 'category_admin/add/'. $vid), 'class' => 'taxonomy-delegate-add'), 
+    $rows[] = array('<big>'. $name .'</big>',
+      '&nbsp;&nbsp;'. l(t('List terms'), 'category_admin/list/'. $vid),
+      '&nbsp;&nbsp;'. l(t('Add terms'), 'category_admin/add/'. $vid), 
       );
   }
   $header = array(
@@ -369,7 +350,7 @@ function taxonomy_delegate_mycategories($op=NULL, $vid=NULL) {
     'cellspacing' => '10',
   );
   $output .= theme('table', $header, $rows, $attributes);
-  return '<div class="taxonomy-delegate-mycategories">'. $output .'</div>';
+  return $output;
 }
 
 /**
@@ -384,8 +365,8 @@ function taxonomy_delegate_overview_terms($vid) {
     return drupal_not_found();
   }
 
-  drupal_set_title(t('Terms for @vocab', array('@vocab' => $vocabulary->name)));
-  $output = NULL;
+  drupal_set_title(t('Terms for ') . check_plain($vocabulary->name));
+  $output = '<br/>';
 
   if ($vocabulary->tags) {
     $output .= '<p>'. t('This is a freetagging vocabulary.') .'</p>';
@@ -394,9 +375,9 @@ function taxonomy_delegate_overview_terms($vid) {
 
     while ($term = db_fetch_object($results)) {
       $rows[] = array(
-        ($use_image ? taxonomy_image_display($term->tid) : NULL),
+        ($use_image ? taxonomy_image_display($term->tid) : null),
         l($term->name, 'taxonomy/term/'. $term->tid),
-        check_plain($term->description),
+        $term->description,
         l(t('edit'), 'category_admin/edit/'. $term->tid, array('query' => $destination)),
       );
     }
@@ -408,12 +389,12 @@ function taxonomy_delegate_overview_terms($vid) {
         $taxo_image = taxonomy_image_display($term->tid);
       }
       else {
-        $taxo_image = NULL;
+        $taxo_image = null;
       }
       $rows[] = array(
         $taxo_image,
         str_repeat('--', $term->depth) .' '. l($term->name, "taxonomy/term/$term->tid"),
-        check_plain($term->description),
+        $term->description,
         l(t('edit'), 'category_admin/edit/'. $term->tid, array('query' => $destination)),
         );
     }
@@ -423,7 +404,7 @@ function taxonomy_delegate_overview_terms($vid) {
     $rows[] = array(array('data' => t('No terms available.'), 'colspan' => '5'));
   }
   $header = array(
-    ($use_image ? t('Image') : NULL),
+    ($use_image ? t('Image') : null),
     t('Name'), t('Description'), t('Operations'),
     );
 
@@ -456,7 +437,7 @@ function _taxonomy_delegate_my_vocabularies() {
 /**
  *  Get a keyed array of the roles and their names.
  */
-function _taxonomy_delegate_get_roles($add_none = FALSE) {
+function _taxonomy_delegate_get_roles($add_none = false) {
   $result = db_query('SELECT rid, name FROM {role}');
   $roles = array();
   if ($add_none) {

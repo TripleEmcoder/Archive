@@ -1,5 +1,5 @@
 <?php
-// $Id: tableofcontents.pages.inc,v 1.1.2.22 2010/03/01 07:44:50 alexiswilke Exp $
+// $Id: tableofcontents.pages.inc,v 1.1.2.37 2010/05/26 10:32:15 alexiswilke Exp $
 
 /**
  * @file
@@ -43,8 +43,8 @@ function _tableofcontents_replace_comments($matches) {
  * @return The header with an identifier.
  */
 function _tableofcontents_replace_headers($matches) {
-  global $toc;
-  global $toc_translations;
+  global $_tableofcontents_toc;
+  static $toc_translations, $duplicates_error;
 
   $h = new TOC_Header;
   $h->level = $matches[2];
@@ -52,31 +52,31 @@ function _tableofcontents_replace_headers($matches) {
   $h->title = $matches[4];
 
   // increase this level and reset all the sub-levels
-  ++$toc->counters[$h->level];
+  ++$_tableofcontents_toc->counters[$h->level];
   for ($l = $h->level + 1; $l <= 6; ++$l) {
-    $toc->counters[$l] = 0;
+    $_tableofcontents_toc->counters[$l] = 0;
   }
-  if ($toc->level_from > $h->level) {
-    $toc->level_from = $h->level;
+  if ($_tableofcontents_toc->level_from > $h->level) {
+    $_tableofcontents_toc->level_from = $h->level;
   }
-  $toc->level_to = $h->level;
+  $_tableofcontents_toc->level_to = $h->level;
 
   // determine the min./max. on the spot
-  if ($toc->header_min) {
-    if ($toc->header_min > $h->level) {
-      $toc->header_min = $h->level;
+  if ($_tableofcontents_toc->header_min) {
+    if ($_tableofcontents_toc->header_min > $h->level) {
+      $_tableofcontents_toc->header_min = $h->level;
     }
   }
   else {
-    $toc->header_min = $h->level;
+    $_tableofcontents_toc->header_min = $h->level;
   }
-  if ($toc->header_max) {
-    if ($toc->header_max < $h->level) {
-      $toc->header_max = $h->level;
+  if ($_tableofcontents_toc->header_max) {
+    if ($_tableofcontents_toc->header_max < $h->level) {
+      $_tableofcontents_toc->header_max = $h->level;
     }
   }
   else {
-    $toc->header_max = $h->level;
+    $_tableofcontents_toc->header_max = $h->level;
   }
 
   // check for existing id and use that if found
@@ -85,70 +85,146 @@ function _tableofcontents_replace_headers($matches) {
     // id[2] is with '
     // id[3] is without any quotes
     $h->identifier = $id[1] ? $id[1] : ($id[2] ? $id[2] : $id[3]);
-  }
-  else {
-    // no existing identifier, create one using the header title
-    //
-    // HTML 4.01
-    // ID and NAME tokens must begin with a letter ([A-Za-z]) and
-    // may be followed by any number of letters, digits ([0-9]),
-    // hyphens ("-"), underscores ("_"), colons (":"), and periods (".").
-    //
-    // 1. convert &nbsp; and other spaces into underscores
-    // 2. convert &mdash; to '--'
-    // 3. convert &amp; to 'and'
-    // 4. remove any other entities
-    // 5. remove any incompatible character
-    // 6. remove digits at the start of the name (we could also add a letter?)
-    //
-    // sanitize accents by luron & deviantintegral (e.g. é=>e)
-    // thanks to pathauto module for i18n-ascii.txt file
-    if (!$toc_translations) {
-      $path = drupal_get_path('module', 'tableofcontents');
-      $toc_translations = parse_ini_file($path . '/i18n-ascii.txt');
-    }
-    $title = strtr($h->title, $toc_translations);
 
-    $id = preg_replace(
-      array(
-        '/&nbsp;|\s/',
-        '/\'/',
-        '/&mdash;/',
-        '/&amp;/',
-        '/&[a-z]+;/',
-        '/[^-A-Za-z0-9._:]/',
-        '/^[0-9]+/',
-      ),
-      array(
-        '_',     // &nbsp; and spaces
-        '-',     // apostrophe, so it makes things slightly more readable
-        '--',    // &mdash;
-        'and',   // &amp;
-        '',      // any other entity
-        '',      // any character that is invalid as an ID name
-        '',      // any digits at the start of the name
-      ),
-      $title
-    );
-    // ensure unicity
-    foreach ($toc->headers as $header) {
-      if ($header->identifier == $id) {
-        $id .= '-' . $toc->header_id++;
+    // check for unicity
+    foreach ($_tableofcontents_toc->headers as $header) {
+      if ($header->identifier == $h->identifier) {
+        if (!isset($duplicates_error)) {
+          $duplicates_error = TRUE;
+          drupal_set_message(t('Two or more anchor identifiers match each others. One of them will be modified. This error happens when some anchor identifiers are generated automatically and others are predefined. Or both are predefined and the operator made a mistake (maybe a copy &amp; paste?)'), 'warning');
+        }
+        // make it unique anyway
+        $h->identifier .= $_tableofcontents_toc->id_separator . $_tableofcontents_toc->header_id++;
+        $h->attributes = preg_replace('/\sid=(?:"([^"]*?)"|\'([^\']*?)\'|([^\s"\'>]))/i',
+          ' id="' . $h->identifier . '"', $h->attributes);
         break;
       }
     }
-    if (!$id) {
-      // no identifier (i.e. title is composed exclusively of digits, entities, etc.)
-      $id = 'header-' . $toc->header_id++;
-    }
-    $h->identifier = $id;
+  }
+  else {
+    switch ($_tableofcontents_toc->id_generator) {
+    case 'random':
+      // generate a random ID and then ensure unicity
+      do {
+        $id = user_password(8); // system function to generate a password from letters/digits
+        $found = FALSE;
+        foreach ($_tableofcontents_toc->headers as $header) {
+          if ($header->identifier == $id) {
+            $found = TRUE;
+            break;
+          }
+        }
+      } while($found);
+      break;
 
-    // create a new header including the generated identifier
-    $h->attributes .= ' id="' . $id . '"';
+    case 'increment':
+      $id = $_tableofcontents_toc->identifier_introducer . $_tableofcontents_toc->id_separator . $_tableofcontents_toc->header_id++;
+      break;
+
+    case 'sections':
+      $id = $_tableofcontents_toc->identifier_introducer;
+      for ($idx = $_tableofcontents_toc->level_from; $idx <= $_tableofcontents_toc->level_to; ++$idx) {
+        $id .= $_tableofcontents_toc->id_separator . $_tableofcontents_toc->counters[$idx];
+      }
+      break;
+
+    case 'custom':
+      // the callee has to edit the $h->identifier and $h->attributes fields
+      module_invoke_all('anchor_identifier', $_tableofcontents_toc, $h);
+      $id = '';
+      break;
+
+    default: // case 'title'
+      // no existing identifier, create one using the header title
+      //
+      // HTML 4.01
+      //
+      // http://www.w3.org/TR/html4/types.html#h-6.2
+      //
+      // ID and NAME tokens must begin with a letter ([A-Za-z]) and
+      // may be followed by any number of letters, digits ([0-9]),
+      // hyphens ("-"), underscores ("_"), colons (":"), and periods (".").
+      //
+      // 1. convert &nbsp; and other spaces into underscores
+      // 2. convert &mdash; to '--'
+      // 3. convert &amp; to 'and'
+      // 4. remove any other entities
+      // 5. remove any incompatible character
+      // 6. remove digits at the start of the name (we could also add a letter?)
+      //
+      // sanitize accents by luron & deviantintegral (e.g. é=>e)
+      // thanks to pathauto module for i18n-ascii.txt file
+      if (!isset($toc_translations)) {
+        $path = drupal_get_path('module', 'tableofcontents');
+        $toc_translations = parse_ini_file($path . '/i18n-ascii.txt');
+      }
+      $title = strtr(strip_tags($h->title, $_tableofcontents_toc->allowed_tags), $toc_translations);
+
+      $allowed_chars = '';
+      if (empty($_tableofcontents_toc->id_stripping['dashes'])) {
+        $allowed_chars = '-';
+      }
+      $allowed_chars .= 'A-Za-z';
+      if (empty($_tableofcontents_toc->id_stripping['digits'])) {
+        $allowed_chars .= '0-9';
+      }
+      if (empty($_tableofcontents_toc->id_stripping['periods'])) {
+        $allowed_chars .= '.';
+      }
+      if (empty($_tableofcontents_toc->id_stripping['underscores'])) {
+        $allowed_chars .= '_';
+      }
+      if (empty($_tableofcontents_toc->id_stripping['colons'])) {
+        $allowed_chars .= ':';
+      }
+      $id = preg_replace(
+        array(
+          '/&nbsp;|\s/',
+          '/\'/',
+          '/&mdash;/',
+          '/&amp;/',
+          '/&[a-z]+;/',
+          '/[^' . $allowed_chars . ']/',
+          '/^[-0-9._:]+/',
+          '/__+/',
+        ),
+        array(
+          '_',     // &nbsp; and spaces
+          '-',     // apostrophe, so it makes things slightly more readable
+          '--',    // &mdash;
+          'and',   // &amp;
+          '',      // any other entity
+          '',      // any character that is invalid as an ID name
+          '',      // any digits at the start of the name
+          '_',     // reduce multiple underscores to just one
+        ),
+        strip_tags($title)
+      );
+      if (!$id) {
+        // no identifier (i.e. title is composed exclusively of digits, entities, etc.)
+        $id = $_tableofcontents_toc->identifier_introducer . $_tableofcontents_toc->id_separator . $_tableofcontents_toc->header_id++;
+      }
+      break;
+
+    }
+    if ($id != '') {
+      // ensure unicity
+      foreach ($_tableofcontents_toc->headers as $header) {
+        if ($header->identifier == $id) {
+          $id .= $_tableofcontents_toc->id_separator . $_tableofcontents_toc->header_id++;
+          break;
+        }
+      }
+
+      $h->identifier = $id;
+
+      // create a new header including the generated identifier
+      $h->attributes .= ' id="' . $id . '"';
+    }
   }
 
-  $h->number = theme('tableofcontents_number', $toc);
-  if ($toc->number_headers) {
+  $h->number = theme('tableofcontents_number', $_tableofcontents_toc);
+  if ($_tableofcontents_toc->number_headers) {
     $number = $h->number;
   }
   else {
@@ -158,24 +234,24 @@ function _tableofcontents_replace_headers($matches) {
   $result = $matches[1] . '<h' . $h->level . $h->attributes . '>' . $number . $h->title . '</h' . $h->level . '>';
 
   // save that header
-  $toc->headers[] = $h;
+  $_tableofcontents_toc->headers[] = $h;
 
   // Add a back to top before the header?
-  if ($toc->back_to_top) {
-    switch ($toc->back_to_top_location) {
+  if ($_tableofcontents_toc->back_to_top) {
+    switch ($_tableofcontents_toc->back_to_top_location) {
     case 'header':
-      $result .= '<div class="toc-back-to-top"><a href="#' . $toc->back_to_top_anchor . '">' . $toc->back_to_top . '</a></div>';
+      $result .= '<div class="toc-back-to-top"><a href="#' . $_tableofcontents_toc->back_to_top_anchor . '">' . $_tableofcontents_toc->back_to_top . '</a></div>';
       break;
 
     default: //case 'bottom':
-      if (!$toc->first_header) {
-        $result = '<div class="toc-back-to-top"><a href="#' . $toc->back_to_top_anchor . '">' . $toc->back_to_top . '</a></div>' . $result;
+      if (!$_tableofcontents_toc->first_header) {
+        $result = '<div class="toc-back-to-top"><a href="#' . $_tableofcontents_toc->back_to_top_anchor . '">' . $_tableofcontents_toc->back_to_top . '</a></div>' . $result;
       }
       break;
 
     }
   }
-  $toc->first_header = FALSE;
+  $_tableofcontents_toc->first_header = FALSE;
 
   return $result;
 }
@@ -199,6 +275,11 @@ function _tableofcontents_headers(&$toc, $format, $text) {
   $toc->header_id = 1;
   $toc->header_min = 0;
   $toc->header_max = 0;
+  $toc->allowed_tags = variable_get('tableofcontents_allowed_tags_' . $format, TABLEOFCONTENTS_ALLOWED_TAGS);
+  $toc->id_stripping = variable_get('tableofcontents_id_stripping_' . $format, array());
+  $toc->identifier_introducer = variable_get('tableofcontents_identifier_introducer_' . $format, 'header');
+  $toc->id_separator = variable_get('tableofcontents_id_separator_' . $format, '-');
+  $toc->id_generator = variable_get('tableofcontents_id_generator_' . $format, 'title');
   $toc->back_to_top = check_plain(variable_get('tableofcontents_back_to_top_' . $format, ''));
   $toc->back_to_top_location = check_plain(variable_get('tableofcontents_back_to_top_location_' . $format, 'bottom'));
   $toc->back_to_top_anchor = check_plain(variable_get('tableofcontents_back_to_top_anchor_' . $format, 'toc'));
@@ -240,7 +321,7 @@ function _tableofcontents_headers(&$toc, $format, $text) {
  * @param[in] $opt An array with the option name and value.
  */
 function _tableofcontents_parse_option($opt) {
-  global $toc;
+  global $_tableofcontents_toc;
 
   $opt[1] = trim($opt[1]);
   $opt[2] = trim($opt[2]);
@@ -250,12 +331,12 @@ function _tableofcontents_parse_option($opt) {
     switch (drupal_strtolower($opt[2])) {
     case '0':
     case 'false':
-      $toc->hidden = FALSE;
+      $_tableofcontents_toc->hidden = FALSE;
       break;
 
     case '1':
     case 'true':
-      $toc->hidden = TRUE;
+      $_tableofcontents_toc->hidden = TRUE;
       break;
 
     default:
@@ -266,23 +347,27 @@ function _tableofcontents_parse_option($opt) {
     }
     break;
 
+  case 'id':
+    $_tableofcontents_toc->id = $opt[2];
+    break;
+
   case 'title':
-    $toc->$opt[1] = $opt[2];
+    $_tableofcontents_toc->$opt[1] = $opt[2];
     break;
 
   case 'list':
     switch (drupal_strtolower($opt[2])) {
     case 'ul':
     case 'ol':
-      $toc->list = drupal_strtolower($opt[2]);
+      $_tableofcontents_toc->list = drupal_strtolower($opt[2]);
       break;
 
     case 'ordered':
-      $toc->list = 'ol';
+      $_tableofcontents_toc->list = 'ol';
       break;
 
     case 'unordered':
-      $toc->list = 'ul';
+      $_tableofcontents_toc->list = 'ul';
       break;
 
     default:
@@ -299,19 +384,19 @@ function _tableofcontents_parse_option($opt) {
       drupal_set_message(t("Table of contents error: !opt is not a valid level. Expected a number from 1 to 6",
         array('!opt' => $opt[2])), 'error');
     }
-    $toc->$opt[1] = $opt[2];
+    $_tableofcontents_toc->$opt[1] = $opt[2];
     break;
 
   case 'attachments':
     switch (drupal_strtolower($opt[2])) {
     case '0':
     case 'false':
-      $toc->attachments = FALSE;
+      $_tableofcontents_toc->attachments = FALSE;
       break;
 
     case '1':
     case 'true':
-      $toc->attachments = TRUE;
+      $_tableofcontents_toc->attachments = TRUE;
       break;
 
     default:
@@ -326,12 +411,12 @@ function _tableofcontents_parse_option($opt) {
     switch (drupal_strtolower($opt[2])) {
     case '0':
     case 'false':
-      $toc->hideshow = FALSE;
+      $_tableofcontents_toc->hideshow = FALSE;
       break;
 
     case '1':
     case 'true':
-      $toc->hideshow = TRUE;
+      $_tableofcontents_toc->hideshow = TRUE;
       break;
 
     default:
@@ -346,12 +431,12 @@ function _tableofcontents_parse_option($opt) {
     switch (drupal_strtolower($opt[2])) {
     case '0':
     case 'false':
-      $toc->collapsed = FALSE;
+      $_tableofcontents_toc->collapsed = FALSE;
       break;
 
     case '1':
     case 'true':
-      $toc->collapsed = TRUE;
+      $_tableofcontents_toc->collapsed = TRUE;
       break;
 
     default:
@@ -381,6 +466,15 @@ function _tableofcontents_parse_option($opt) {
  * @param[in] $options A string of options
  */
 function _tableofcontents_get_options(&$toc, $options) {
+  static $id_counter = 0;
+
+  // A default identifier for this table of contents
+  $toc->id = 'toc';
+  if ($id_counter) {
+    $toc->id .= $id_counter;
+  }
+  ++$id_counter;
+
   // Any options?
   if (!$options) {
     return;
@@ -432,38 +526,39 @@ function _tableofcontents_get_options(&$toc, $options) {
  * @return The replacement for that [toc ...] tag
  */
 function _tableofcontents_replace_toc_tags($matches) {
-  global $toc;
+  global $_tableofcontents_toc;
 
   // we do not want options in this [toc ...] tag to affect the following [toc ...] tags
-  $save_toc = $toc;
+  $save_toc = drupal_clone($_tableofcontents_toc);
 
   // we always want to check the options because hidden:1 is always accepted!
-  _tableofcontents_get_options($toc, $matches[1]);
-  if ($toc->hidden) {
-    $toc = $save_toc;
+  $options = isset($matches[1]) ? $matches[1] : '';
+  _tableofcontents_get_options($_tableofcontents_toc, $options);
+  if ($_tableofcontents_toc->hidden) {
+    $_tableofcontents_toc = $save_toc;
 
     // replace that table of contents with nothing (i.e. hiding it!)
     return '';
   }
 
   // Is user allowed to override options?
-  if ($toc->allow_override) {
+  if (!$_tableofcontents_toc->allow_override) {
     // Nope, then restore!
-    $toc = $save_toc;
+    $_tableofcontents_toc = $save_toc;
   }
 
-  // If attachments are enabled, prepare the $toc->files variable
-  if ($toc->attachments && arg(0) == 'node' && is_numeric(arg(1))) {
+  // If attachments are enabled, prepare the $_tableofcontents_toc->files variable
+  if ($_tableofcontents_toc->attachments && arg(0) == 'node' && is_numeric(arg(1))) {
     $node = node_load(arg(1));
-    $toc->files = $node->files;
+    $_tableofcontents_toc->files = $node->files;
   }
 
-  $result = theme('tableofcontents_toc', $toc);
+  $result = theme('tableofcontents_toc', $_tableofcontents_toc);
 
-  $toc = $save_toc;
+  $_tableofcontents_toc = $save_toc;
 
   if ($result) {
-    $toc->has_toc = TRUE;
+    $_tableofcontents_toc->has_toc = TRUE;
   }
 
   return $result;
@@ -503,7 +598,7 @@ function _tableofcontents_comments(&$toc, $format) {
       $query .= ' ORDER BY c.thread DESC';
     }
   }
-  else if ($order == COMMENT_ORDER_OLDEST_FIRST) {
+  elseif ($order == COMMENT_ORDER_OLDEST_FIRST) {
     if ($mode == COMMENT_MODE_FLAT_COLLAPSED || $mode == COMMENT_MODE_FLAT_EXPANDED) {
       $query .= ' ORDER BY c.cid';
     }
@@ -579,57 +674,80 @@ function _tableofcontents_comments(&$toc, $format) {
  * It checks all the current flags such as whether the table should
  * be automatically added if no [toc] tag is found.
  *
+ * @param[in] $delta The filter number (0- full toc, 1- only anchors)
  * @param[in] $text The text to work on.
  * @param[in] $format The format used to do the conversion.
  *
  * @return The $text with the [toc ...] replaced.
  */
-function _tableofcontents_replace_toc($format, $text) {
+function _tableofcontents_replace_toc($delta, $format, $text) {
   // we just don't have a way to pass that around our callbacks
   // (PHP is lacking on that one) but it is still a lot faster
   // that way.
-  global $toc;
-  global $tableofcontents_block_toc;
-  static $remove_toc_pattern = '/(?:<p(?:\s[^>]*)?>)?\[toc(?:\s[^]]*?)?\](?:<\/p\s*>)?/';
+  global $_tableofcontents_toc;
+  global $_tableofcontents_block_toc;
+
+  // this is a special case... do what it takes at once
+  if ($delta == 1) {
+    $text = preg_replace(TABLEOFCONTENTS_REMOVE_PATTERN, '', $text);
+    // note: $_tableofcontents_toc->automatic is only used in this very function and
+    //       thus we do not need to define it for _tableofcontents_headers().
+    $_tableofcontents_toc = new TOC;
+    return _tableofcontents_headers($_tableofcontents_toc, $format, $text);
+  }
 
   // if the user just asked to hide that, hide it and go away
   if (variable_get('tableofcontents_hide_table_' . $format, FALSE)) {
-    return preg_replace($remove_toc_pattern, '', $text);
+    return preg_replace(TABLEOFCONTENTS_REMOVE_PATTERN, '', $text);
   }
 
   // keep a copy of the original just in case we bail out as is
   $org_text = $text;
 
-  $toc = new TOC;
+  $_tableofcontents_toc = new TOC;
+  $_tableofcontents_toc->id = 'toc';
 
   // first make sure we want a table of contents
   if (strpos($text, "[toc") === FALSE) {
-    $toc->automatic = variable_get('tableofcontents_automatic_' . $format, 0);
-    switch ($toc->automatic) {
+    // no [toc], but a [vtoc], we're good
+    if (strpos($text, "[vtoc") !== FALSE) {
+      return $org_text;
+    }
+    $_tableofcontents_toc->automatic = variable_get('tableofcontents_automatic_' . $format, 0);
+    switch ($_tableofcontents_toc->automatic) {
     case 1:
     case 2:
+      // Avoid the table of contents anywhere else than in regular nodes
+      // (which is somewhat equivalent to saying don't add in the teasers)
+      if (variable_get('tableofcontents_remove_teaser_' . $format, TRUE)) {
+        if (arg(0) != 'node' || !is_numeric(arg(1)) || arg(2)) {
+          return $org_text;
+        }
+      }
       break;
 
     default:
-      // if not defined as automatic in the filter, check the node
-      if (arg(0) == 'node' && is_numeric(arg(1))) {
+      // if not defined as automatic in the filter, check the node and its type
+      if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
         $node = node_load(arg(1));
-        if ($node->tableofcontents_toc_automatic) {
-          $toc->automatic = $node->tableofcontents_toc_automatic;
-        }
-        else {
-          $toc->automatic = variable_get('tableofcontents_nodetype_toc_automatic_' . $node->type, 0);
-          if ($toc->automatic == 99) {
-            $toc->automatic = 0;
+        if ($node) {
+          if ($node->tableofcontents_toc_automatic) {
+            $_tableofcontents_toc->automatic = $node->tableofcontents_toc_automatic;
+          }
+          else {
+            $_tableofcontents_toc->automatic = variable_get('tableofcontents_nodetype_toc_automatic_' . $node->type, 0);
+            if ($_tableofcontents_toc->automatic == 99) {
+              $_tableofcontents_toc->automatic = 0;
+            }
           }
         }
       }
       break;
 
     }
-    switch ($toc->automatic) {
+    switch ($_tableofcontents_toc->automatic) {
     default: // case 0
-      // if ($tableofcontents_block_toc) -- cannot happen
+      // if ($_tableofcontents_block_toc) -- cannot happen
       return $org_text;
 
     case 1: // prepend
@@ -643,73 +761,84 @@ function _tableofcontents_replace_toc($format, $text) {
     }
   }
   else {
-    $toc->automatic = 0;
+    $_tableofcontents_toc->automatic = 0;
+  }
+
+  // print module running and creating a print version?
+  if (arg(0) == 'print' && is_numeric(arg(1)) && module_exists('print')) {
+    // Note: not to sure when the build_mode is set, but here it is still undefined
+    //       just to make sure, we return only if not defined to something else than
+    //       'print'; if undefined, we assume that it is 'print'
+    $node = node_load(arg(1));
+    if (!isset($node->build_mode) || $node->build_mode == 'print') {
+      return $org_text;
+    }
   }
 
   // Add an identifier in the existing headers and return info
   // about the tree
-  $text = _tableofcontents_headers($toc, $format, $text);
+  $text = _tableofcontents_headers($_tableofcontents_toc, $format, $text);
 
   // Include comments?
   if (variable_get('tableofcontents_comments_' . $format, FALSE)
       && module_exists('comment')
       && user_access('access comments')) {
-    _tableofcontents_comments($toc, $format);
+    _tableofcontents_comments($_tableofcontents_toc, $format);
   }
 
   // Any headers? if not do nothing...
-  $max = count($toc->headers);
+  $max = count($_tableofcontents_toc->headers);
   if ($max == 0) {
     // not even 1 header!!!
-    if ($tableofcontents_block_toc) {
+    if ($_tableofcontents_block_toc) {
       return '';
     }
-    return preg_replace($remove_toc_pattern, '', $org_text);
+    return preg_replace(TABLEOFCONTENTS_REMOVE_PATTERN, '', $org_text);
   }
 
   // If automatic verify the limit, if not reached, bail out
-  if ($toc->automatic) {
+  if ($_tableofcontents_toc->automatic) {
     $min_limit = variable_get('tableofcontents_min_limit_' . $format, 5);
     if ($max < $min_limit) {
       // Limit not reached!
-      if ($tableofcontents_block_toc) {
+      if ($_tableofcontents_block_toc) {
         return '';
       }
-      return preg_replace($remove_toc_pattern, '', $org_text);
+      return preg_replace(TABLEOFCONTENTS_REMOVE_PATTERN, '', $org_text);
     }
   }
 
   // get the default flags, these apply for each call to the
   // _tableofcontents_replace_toc_tags() function.
-  // (i.e. that function should not be able to change $toc)
-  $toc->hidden         = FALSE;
-  $toc->title          = variable_get('tableofcontents_title_'          . $format, 'Table of contents');
-  $toc->list           = variable_get('tableofcontents_list_type_'      . $format, 'ol');
-  $toc->minlevel       = variable_get('tableofcontents_minlevel_'       . $format, 2);
-  $toc->maxlevel       = variable_get('tableofcontents_maxlevel_'       . $format, 3);
-  $toc->attachments    = variable_get('tableofcontents_attachments_'    . $format, FALSE);
-  $toc->hideshow       = variable_get('tableofcontents_hide_show_'      . $format, TRUE);
-  $toc->collapsed      = variable_get('tableofcontents_collapsed_'      . $format, FALSE);
-  $toc->allow_override = variable_get('tableofcontents_allow_override_' . $format, TRUE);
-  $toc->has_toc        = FALSE;
+  // (i.e. that function should not be able to change $_tableofcontents_toc)
+  $_tableofcontents_toc->hidden         = FALSE;
+  $_tableofcontents_toc->title          = variable_get('tableofcontents_title_'          . $format, 'Table of contents');
+  $_tableofcontents_toc->list           = variable_get('tableofcontents_list_type_'      . $format, 'ol');
+  $_tableofcontents_toc->minlevel       = variable_get('tableofcontents_minlevel_'       . $format, 2);
+  $_tableofcontents_toc->maxlevel       = variable_get('tableofcontents_maxlevel_'       . $format, 3);
+  $_tableofcontents_toc->attachments    = variable_get('tableofcontents_attachments_'    . $format, FALSE);
+  $_tableofcontents_toc->hideshow       = variable_get('tableofcontents_hide_show_'      . $format, TRUE);
+  $_tableofcontents_toc->collapsed      = variable_get('tableofcontents_collapsed_'      . $format, FALSE);
+  $_tableofcontents_toc->allow_override = variable_get('tableofcontents_allow_override_' . $format, TRUE);
+  $_tableofcontents_toc->has_toc        = FALSE;
 
-  if ($toc->minlevel < $toc->header_min) { // avoid empty indentations
-    $toc->minlevel = $toc->header_min;
-    if ($toc->minlevel > $toc->maxlevel) {
-      $toc->maxlevel = $toc->minlevel;
+  if ($_tableofcontents_toc->minlevel < $_tableofcontents_toc->header_min) { // avoid empty indentations
+    $_tableofcontents_toc->minlevel = $_tableofcontents_toc->header_min;
+    if ($_tableofcontents_toc->minlevel > $_tableofcontents_toc->maxlevel) {
+      $_tableofcontents_toc->maxlevel = $_tableofcontents_toc->minlevel;
     }
   }
-  if ($toc->maxlevel > $toc->header_max) { // this is much less important
-    if ($toc->minlevel > $toc->header_max) {
-      $toc->maxlevel = $toc->minlevel;
+  if ($_tableofcontents_toc->maxlevel > $_tableofcontents_toc->header_max) { // this is much less important
+    if ($_tableofcontents_toc->minlevel > $_tableofcontents_toc->header_max) {
+      $_tableofcontents_toc->maxlevel = $_tableofcontents_toc->minlevel;
     }
     else {
-      $toc->maxlevel = $toc->header_max;
+      $_tableofcontents_toc->maxlevel = $_tableofcontents_toc->header_max;
     }
   }
 
-  if ($tableofcontents_block_toc) {
-    $text = $tableofcontents_block_toc;
+  if ($_tableofcontents_block_toc) {
+    $text = $_tableofcontents_block_toc;
   }
 
   $result = preg_replace_callback(
@@ -718,14 +847,14 @@ function _tableofcontents_replace_toc($format, $text) {
     $text
   );
 
-  if ($toc->has_toc) {
+  if ($_tableofcontents_toc->has_toc) {
     // Add a back to top at the very end too
-    if (!$toc->first_header && $toc->back_to_top && $toc->back_to_top_location == 'bottom') {
-      $result .= '<div class="toc-back-to-top"><a href="#' . $toc->back_to_top_anchor . '">' . $toc->back_to_top . '</a></div>';
+    if (!$_tableofcontents_toc->first_header && $_tableofcontents_toc->back_to_top && $_tableofcontents_toc->back_to_top_location == 'bottom') {
+      $result .= '<div class="toc-back-to-top"><a href="#' . $_tableofcontents_toc->back_to_top_anchor . '">' . $_tableofcontents_toc->back_to_top . '</a></div>';
     }
 
     // If we have back to top and scroll on, advice script
-    if ($toc->back_to_top && $toc->scroll_back_to_top) {
+    if ($_tableofcontents_toc->back_to_top && $_tableofcontents_toc->scroll_back_to_top) {
       $result .= '<script type="text/javascript">toc_scroll_back_to_top = 1;</script>';
     }
   }
@@ -768,7 +897,7 @@ function _tableofcontents_prepare($delta, $format, $text) {
  * @param[in] $text The text to filter
  */
 function _tableofcontents_process($delta, $format, $text) {
-  return _tableofcontents_replace_toc($format, $text);
+  return _tableofcontents_replace_toc($delta, $format, $text);
 }
 
 /**
@@ -784,8 +913,10 @@ function _tableofcontents_process($delta, $format, $text) {
 function theme_tableofcontents_toc($toc) {
   // TODO: at this time, the hideshow works with all TOCs at once
   if ($toc->hideshow) {
+    // We add the link with JavaScript so if someone does not have JavaScript, they do
+    // not see a link that doesn nothing for them.
     //$hs = '<span class="toc-toggle-message"> [<a href="#" class="toc-toggle">' . $label . '</a>]</span>';
-    $hs = '<span class="toc-toggle-message"> </span>';
+    $hs = '<span class="toc-toggle-message">&nbsp;</span>';
     $js = '<script type="text/javascript">toc_collapse=' . ($toc->collapsed ? 1 : 0) . ';</script>';
   }
   else {
@@ -793,11 +924,17 @@ function theme_tableofcontents_toc($toc) {
     $js = '';
   }
   // TODO: we should only define the id="toc" for the first TOC
-  $output = $js . "<div class=\"toc\">\n";
+  if ($toc->id) {
+    $id = ' id="' . check_plain($toc->id) . '"';
+  }
+  else {
+    $id = '';
+  }
+  $output = $js . "<div class=\"toc\"" . $id . ">\n";
   if ($toc->title != '<none>') {
     $output .= "<div class=\"toc-title\">" . t($toc->title) . $hs . "</div>\n";
   }
-  else if ($hs) {
+  elseif ($hs) {
     $output .= $hs;
   }
   $output .= "<div class=\"toc-list\">\n"
@@ -813,20 +950,23 @@ function theme_tableofcontents_toc($toc) {
     if ($cur_level >= $toc->minlevel && $cur_level <= $toc->maxlevel) {
       $has_content = TRUE;
 
-      // Close list items but not before no items have been added.
-      if ($cur_level == $level && $index != 0) {
+      // Be sure to deal with skipping between non-adjacent h levels.
+      if ($cur_level > $level) {
+        do {
+          $output .= "\n<" . $toc->list . ">\n";
+          ++$level;
+        } while ($cur_level > $level);
+      }
+      elseif ($cur_level < $level) {
+        do {
+          $output .= "</li>\n</" . $toc->list . ">\n";
+          --$level;
+        } while ($cur_level < $level);
         $output .= "</li>\n";
       }
-
-      // Be sure to deal with skipping between non-adjacent h levels.
-      for (; $cur_level > $level; ++$level) {
-        $output .= "\n<" . $toc->list . ">\n";
-      }
-      for (; $cur_level < $level; --$level) {
-        $output .= "</li>\n</" . $toc->list . ">\n";
-        if ($cur_level == $level) {
-          $output .= "</li>\n";
-        }
+      elseif ($index != 0) { // we know that $cur_level == $level here
+        // Close list items at the same level (except the very first time)
+        $output .= "</li>\n";
       }
 
       if ($h->number) {
@@ -837,7 +977,7 @@ function theme_tableofcontents_toc($toc) {
       }
       $list_class = 'toc-level-' . ($level - $toc->minlevel + 1);
 
-      $title = preg_replace('%</?a[^>]+>%', '', $h->title);
+      $title = strip_tags($h->title, $toc->allowed_tags);
 
       // insert the li element
       $output .= "\t<li class=\"$list_class\"><a href=\"#" . $h->identifier . "\">" . $number . $title . "</a>";
@@ -854,7 +994,7 @@ function theme_tableofcontents_toc($toc) {
     $has_files = FALSE;
     $files_output .= '<li><a href="#attachments">' . t("Attachments") . "</a>";
     $files_output .= "<" . $toc->list . ">";
-    foreach($toc->files as $file) {
+    foreach ($toc->files as $file) {
       if ($file->list && !$file->remove) {
         $has_files = TRUE;
 
@@ -874,7 +1014,7 @@ function theme_tableofcontents_toc($toc) {
   }
 
   if (!$has_content) {
-    // this happens when all the levels are either too small or too large
+    // this happens when all the header levels are either too small or too large
     // and if there is no attachment either
     return '';
   }
@@ -901,8 +1041,7 @@ function theme_tableofcontents_toc($toc) {
  */
  
 // Convert Arabic numerals into Roman numerals.
-function _tableofcontents_roman($arabic)
-{
+function _tableofcontents_roman($arabic) {
   //static $fractions = Array("", "¿", "¿¿", "¿¿¿", "¿¿¿¿", "¿¿¿¿¿", "S", "S¿", "S¿¿", "S¿¿¿", "S¿¿¿¿", "S¿¿¿¿¿", "I");
   static $ones = Array("", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX");
   static $tens = Array("", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC");

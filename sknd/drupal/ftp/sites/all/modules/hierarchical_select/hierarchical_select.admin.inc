@@ -1,5 +1,5 @@
 <?php
-// $Id: hierarchical_select.admin.inc,v 1.22 2009/07/25 10:27:59 wimleers Exp $
+// $Id: hierarchical_select.admin.inc,v 1.24 2010/07/07 12:04:39 wimleers Exp $
 
 
 /**
@@ -86,7 +86,7 @@ function hierarchical_select_admin_configs() {
 
     $rows[$id] = array(
       $item['hierarchy type'],
-      $item['hierarchy'],
+      check_plain($item['hierarchy']),
       $item['entity type'],
       $item['entity'],
       $item['context type'],
@@ -173,7 +173,7 @@ function hierarchical_select_admin_export(&$form_state, $config_id) {
 /**
  * Form definition; config import form.
  */
-function hierarchical_select_admin_import($config_id) {
+function hierarchical_select_admin_import(&$form_state, $config_id) {
   require_once(drupal_get_path('module', 'hierarchical_select') .'/includes/common.inc');
 
   drupal_add_css(drupal_get_path('module', 'hierarchical_select') .'/hierarchical_select.css');

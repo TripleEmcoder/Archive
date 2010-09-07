@@ -1,4 +1,4 @@
-$Id: CHANGELOG.txt,v 1.8 2009/12/23 02:52:14 rdeboer Exp $
+$Id: CHANGELOG.txt,v 1.10 2010/03/12 01:23:49 rdeboer Exp $
 
 Changelog for Smart Menu and Smart Tabs modules for drupal 6.x
 
@@ -35,3 +35,9 @@ Minor bug in setting default tab selection for pages that have no defaults set (
 6.x-1.2
 =======
 Proper fix (as opposed to workaround) for [#634192] and [#660626]
+
+6.x-1.4
+=======
+Default tab did not always have path alias applied.
+Also changed function names.
+

@@ -1,5 +1,5 @@
 <?php
-// $Id: linkchecker.admin.inc,v 1.1.2.18 2009/07/28 18:20:29 hass Exp $
+// $Id: linkchecker.admin.inc,v 1.1.2.24 2009/11/22 14:09:45 hass Exp $
 
 /**
  * @file
@@ -54,7 +54,7 @@ function linkchecker_admin_settings_form(&$form_state) {
     '#default_value' => variable_get('linkchecker_extract_from_a', 1),
     '#type' => 'checkbox',
     '#title' => t('Extract links in <code>&lt;a&gt;</code> and <code>&lt;area&gt;</code> tags'),
-    '#description' => t('Enable this checkbox if normal hyperlinks should be extracted. The anchor element defines a hyperlink, the named target destination for a hyperlink, or both. The area elememt defines a hot-spot region on an image, and associates it with a hypertext link.'),
+    '#description' => t('Enable this checkbox if normal hyperlinks should be extracted. The anchor element defines a hyperlink, the named target destination for a hyperlink, or both. The area element defines a hot-spot region on an image, and associates it with a hypertext link.'),
   );
   $form['tag']['linkchecker_extract_from_audio'] = array(
     '#default_value' => variable_get('linkchecker_extract_from_audio', 0),
@@ -97,6 +97,20 @@ function linkchecker_admin_settings_form(&$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Extract links in <code>&lt;video&gt;</code> tags'),
     '#description' => t('Enable this checkbox if links in video tags should be extracted. The video element is used in to embed video content.'),
+  );
+
+  // Get all filters available on the system.
+  $filters = filter_list_all();
+  $filter_options = array();
+  foreach ($filters as $filter) {
+    $filter_options[$filter->module . '/' . $filter->delta] = $filter->name;
+  }
+  $form['tag']['linkchecker_filter_blacklist'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Filters disabled for link extraction'),
+    '#default_value' => variable_get('linkchecker_filter_blacklist', explode('|', LINKCHECKER_DEFAULT_FILTER_BLACKLIST)),
+    '#options' => $filter_options,
+    '#description' => t('If a filter has been enabled for an input format it runs first and afterwards the link extraction. This helps the link checker module to find all links normally created by custom filters (e.g. Markdown filter, Bbcode). All filters used as an inline references (e.g. Weblink filter <code>[link: id]</code>) to other content and filters only wasting processing time (e.g. Line break converter) should be disabled. This setting does not have any effect on how content is shown on a page. This feature optimizes the internal link extraction process for link checker and prevents false alarms about broken links in content not having the real data of a link.'),
   );
 
   $form['check'] = array(

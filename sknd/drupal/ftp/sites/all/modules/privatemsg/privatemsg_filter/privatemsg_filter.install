@@ -1,5 +1,5 @@
 <?php
-// $Id: privatemsg_filter.install,v 1.1.2.3 2009/07/11 13:37:31 litwol Exp $
+// $Id: privatemsg_filter.install,v 1.1.2.6 2010/08/09 19:26:52 berdir Exp $
 
 /**
  * @file
@@ -25,8 +25,18 @@ function privatemsg_filter_schema() {
         'length'        => 255,
         'not null'      => TRUE,
       ),
+      'public'    => array(
+        'description'   => 'Defines if a tag is public (visible for all users)',
+        'type'          => 'int',
+        'unsigned'      => TRUE,
+        'size'          => 'tiny',
+        'default'       => 0,
+      ),
     ),
-    'primary key'     => array('tag_id')
+    'primary key' => array('tag_id'),
+    'indexes'     => array(
+      'tag_list'    => array('tag_id', 'tag', 'public'),
+    ),
   );
 
   $schema['pm_tags_index'] = array(
@@ -53,7 +63,7 @@ function privatemsg_filter_schema() {
     ),
     'primary key'     => array('tag_id', 'uid', 'thread_id'),
     'indexes'         => array(
-     'uid'            => array('uid'),
+     'thread_tags'      => array('uid', 'thread_id'),
     ),
   );
 
@@ -67,6 +77,7 @@ function privatemsg_filter_install() {
 function privatemsg_filter_uninstall() {
   variable_del('privatemsg_filter_searchbody');
   variable_del('privatemsg_filter_tagfield_weight');
+  variable_del('privatemsg_filter_default_list');
   drupal_uninstall_schema('privatemsg_filter');
 }
 
@@ -74,5 +85,32 @@ function privatemsg_filter_update_6001() {
   $ret = array();
   $ret[] = update_sql("UPDATE {permission} SET perm = REPLACE(perm, 'use privatemsg_filter', 'filter private messages') WHERE perm LIKE '%use privatemsg_filter%'");
   $ret[] = update_sql("UPDATE {permission} SET perm = REPLACE(perm, 'create privatemsg_filter', 'create private message tags') WHERE perm LIKE '%create privatemsg_filter%'");
+  return $ret;
+}
+
+function privatemsg_filter_update_6002() {
+  $ret = array();
+  db_add_column($ret, 'pm_tags', 'public', 'int', array(
+    'description'   => 'Defines if a tag is public (visible for all users)',
+    'unsigned'      => TRUE,
+    'size'          => 'tiny',
+    'default'       => 0,
+  ));
+  return $ret;
+}
+
+/**
+ * Add additional index on {pm_tags} and {pm_tags_index}.
+ */
+function privatemsg_filter_update_6003() {
+  $ret = array();
+
+  // Delete unecessary indexes.
+  db_drop_index($ret, 'pm_tags_index', 'uid');
+
+  // Add new indexes.
+  db_add_index($ret, 'pm_tags', 'tag_list', array('tag_id', 'tag', 'public'));
+  db_add_index($ret, 'pm_tags_index', 'thread_tags', array('uid', 'thread_id'));
+
   return $ret;
 }

@@ -1,5 +1,5 @@
 <?php
-//$Id: date_elements.inc,v 1.46.2.2.2.64 2009/07/24 18:48:14 karens Exp $
+//$Id: date_elements.inc,v 1.46.2.2.2.68 2010/08/12 21:31:07 karens Exp $
 /**
  * @file
  * Date forms and form themes and validation.
@@ -47,10 +47,6 @@ function _date_field_update($op, &$node, $field, &$items, $teaser, $page) {
     //$node->$field_name = array(); // Not sure about this, CCK should handle it.
     return;
   }
-  $format = $field['type'] == DATE_ISO ? DATE_FORMAT_ISO : DATE_FORMAT_UNIX;
-  $timezone = date_get_timezone($field['tz_handling'], array_key_exists('timezone', $items[0]) ? $items[0]['timezone'] : '');
-  $db_info = content_database_info($field);
-  $columns = array_keys($db_info['columns']);
 
   $values = $items;
   foreach ($values as $delta => $item) {
@@ -256,7 +252,7 @@ function _date_elements() {
  */
 function date_combo_process($element, $edit, &$form_state, $form) {
   if (isset($element['#access']) && empty($element['#access'])) {
-    return;
+    return $element;
   }
 
   $field_name = $element['#field_name'];
@@ -283,7 +279,6 @@ function date_combo_process($element, $edit, &$form_state, $form) {
     '#weight'        => $field['widget']['weight'],
     '#required'      => ($field['required'] && $delta == 0) ? 1 : 0,
     '#default_value' => isset($element['#value'][$from_field]) ? $element['#value'][$from_field] : '',
-    '#field'         => $field,
     '#delta'         => $delta,
     '#date_timezone' => $element['#date_timezone'],
     '#date_format'      => date_limit_format(date_input_format($element, $field), $field['granularity']),
@@ -565,8 +560,7 @@ function date_input_format($element, $field) {
  *  Theme from/to date combination on form.
  */
 function theme_date_combo($element) {
-  $fields = content_fields();
-  $field = $fields[$element['#field_name']];
+  $field = content_fields($element['#field_name'], $element['#type_name']);
   if (!$field['todate']) {
     return $element['#children'];
   }

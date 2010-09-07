@@ -11,9 +11,9 @@ dependencies[] = taxonomy
 dependencies[] = user
 dependencies[] = bbcode
 package = phpBB to Drupal
-; Information added by drupal.org packaging script on 2008-12-13
-version = "6.x-1.4"
+; Information added by drupal.org packaging script on 2009-11-08
+version = "6.x-1.5"
 core = "6.x"
 project = "phpbb2drupal"
-datestamp = "1229133920"
+datestamp = "1257699348"
 

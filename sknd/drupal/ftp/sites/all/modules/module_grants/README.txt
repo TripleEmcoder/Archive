@@ -1,16 +1,16 @@
-$Id: README.txt,v 1.5 2009/12/16 03:40:11 rdeboer Exp $
+$Id: README.txt,v 1.9 2010/05/06 03:30:20 rdeboer Exp $
 
 DESCRIPTION
 ===========
-This module gets around two quirks in the 6.x core Node module. 
+This module gets around two quirks in the 6.x core Node module.
 Currently the Node module:
 - causes access grants to be ignored for unpublished content;
 - ORs together access grants coming from multiple modules; this results
   in content being made accessible by one module when access had already
   been restricted by another, which is undesirable in most cases.
 
-The module ensures that access grants are tested for unpublished content just 
-as they are for published content, so that using the Workflow module (or any 
+The module ensures that access grants are tested for unpublished content just
+as they are for published content, so that using the Workflow module (or any
 other module that uses the node_access table) you can implement workflows that
 deal effectively with content moving from author via moderator to publisher 
 BEFORE it is published (which is where it's needed most, once content is 
@@ -82,17 +82,17 @@ content' reflects the access grants given by modules installed on your system
 to the current user.
 
 You can use Module Grants in combination with TAC or TAC-Lite for fine-grained
-access control based on vocabularies (such as "department") assigned to the 
-various content types. You can then create department-specific roles (eg 
+access control based on vocabularies (such as "department") assigned to the
+various content types. You can then create department-specific roles (eg
 Sports Author, Music Author) and enforce that these roles can only access
 content belonging to their departments, whether it's published or not.
-Create your grants "schemes" on this page: Administer >> User management >> 
+Create your grants "schemes" on this page: Administer >> User management >>
 Access control by taxonmy.
 In addition you may want to install the Workflow module to further segragate
 roles (eg author and moderator) via access control based on states such as
 "in draft", "in review" and "published". See Administer >> Site building >>
 Workflow.
-The module makes sure that access to content is given only when BOTH the 
+The module makes sure that access to content is given only when BOTH the
 TAC (Lite) and the Workflow Access modules grant it (as opposed to one OR
 the other).
 
@@ -103,12 +103,20 @@ See the Revisioning project page at http://drupal.org/project/revisioning
 for three step-by-step tutorials.
 
 Be aware that any permissions given in the "node module" section override the
-access grants given by the Workflow and TAC-Lite modules, so you probably only 
+access grants given by the Workflow and TAC-Lite modules, so you probably only
 want to assign a few creation permissions in the node module and grant 
 view, update and delete via TAC/TAC-Lite and/or Workflow.
 
 Additional configuration options are found at Administer >> Site configuration
 >> Module Grants.
+
+API
+===
+Module Grants features one hook, hook_user_node_access($revision_op, $node),
+which module developers may implement to alter or add to the behaviour of
+Module Grants as it determines whether access to a supplied node or revision
+should be granted using the requested operation.
+See the module_grants.api.php file.
 
 AUTHOR
 ======

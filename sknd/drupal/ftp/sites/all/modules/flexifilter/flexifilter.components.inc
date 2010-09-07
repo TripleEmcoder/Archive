@@ -1,5 +1,5 @@
 <?php
-// $Id: flexifilter.components.inc,v 1.12 2008/01/22 00:48:28 cwgordon7 Exp $
+// $Id: flexifilter.components.inc,v 1.14.2.2 2008/11/22 22:23:18 cwgordon7 Exp $
 
 /**
  * Implementation of hook_flexifilter_components()
@@ -41,10 +41,10 @@ function flexifilter_flexifilter_components() {
 
   // Simple text operations
   $components['flexifilter_text_replace'] = array(
-    'label' => t('Simple Text Replace'),
+    'label' => t('Text Replace'),
     'description' => t('Does a primtive search & replace on the text.'),
     'callback' => 'flexifilter_component_text_simple_replace',
-    'group' => t('Text: Simple'),
+    'group' => t('Text: Basic'),
     'step' => 'either',
   );
   $components['flexifilter_text_regex'] = array(
@@ -62,24 +62,24 @@ function flexifilter_flexifilter_components() {
     'step' => 'either',
   );
   $components['flexifilter_text_append'] = array(
-    'label' => t('Simple Text Append'),
+    'label' => t('Text Append'),
     'description' => t('Appends text to the end.'),
     'callback' => 'flexifilter_component_text_append',
-    'group' => t('Text: Simple'),
+    'group' => t('Text: Basic'),
     'step' => 'either',
   );
   $components['flexifilter_text_prepend'] = array(
-    'label' => t('Simple Text Prepend'),
+    'label' => t('Text Prepend'),
     'description' => t('Prepends text to the beginning.'),
     'callback' => 'flexifilter_component_text_prepend',
-    'group' => t('Text: Simple'),
+    'group' => t('Text: Basic'),
     'step' => 'either',
   );
   $components['flexifilter_text_substr'] = array(
-    'label' => t('Simple Text Slice'),
+    'label' => t('Text Slice'),
     'description' => t('"Slices" a certain number of characters off either end of the text.'),
     'callback' => 'flexifilter_component_text_substr',
-    'group' => t('Text: Simple'),
+    'group' => t('Text: Basic'),
     'step' => 'either',
   );
   $components['flexifilter_advanced_append'] = array(
@@ -111,11 +111,20 @@ function flexifilter_flexifilter_components() {
 
   // Chunks!
   $components['flexifilter_chunk_grab'] = array(
-    'label' => t('Chunk grabber.'),
+    'label' => t('Chunk grabber'),
     'description' => t('Grabs chunks of text for further filtering and then sticks the filtered version back into the text.'),
     'callback' => 'flexifilter_component_chunk_grab',
     'group' => t('Chunks'),
     'contains_components' => TRUE,
+    'step' => 'either',
+  );
+
+  // Sequences
+  $components['flexifilter_basic_sequences'] = array(
+    'label' => t('Basic sequences'),
+    'description' => t('Choose from a variety of sequences to insert.'),
+    'callback' => 'flexifilter_component_sequences',
+    'group' => t('Sequences'),
     'step' => 'either',
   );
 
@@ -505,6 +514,15 @@ function flexifilter_component_chunk_grab($op, $settings, $text) {
 }
 
 /**
+ * Replacement for stripos() for PHP 4.x.
+ */
+if (!function_exists('stripos')) {
+  function stripos($haystack, $needle) {
+    return strpos(strtolower($haystack), strtolower($needle));
+  }
+}
+
+/**
  * Flexifilter component callback.
  * Simple text append.
  */
@@ -640,3 +658,72 @@ function flexifilter_component_advanced_prepend($op, $settings, $text) {
   }
 }
 
+/**
+ * Basic sequence callback.
+ */
+function flexifilter_component_sequences($op, $settings, $text) {
+  switch ($op) {
+    case 'settings':
+      $form = array();
+      $form['text'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Text to replace'),
+        '#description' => t('Enter the text to replace. Leave blank for simple insertion.'),
+        '#default_value' => isset($settings['text']) ? $settings['text'] : '',
+      );
+      $form['sequence'] = array(
+        '#type' => 'radios',
+        '#title' => t('Sequence type'),
+        '#options' => module_invoke_all('flexifilter_sequences'),
+        '#default_value' => 'flexifilter_sequence_numbers',
+      );
+      return $form;
+
+    case 'prepare':
+    case 'process':
+      static $_flexifilter_sequence_count = 0;
+      if (!empty($settings['text'])) {
+        while (flexifilter_sequences_replace_once($settings['text'], call_user_func($settings['sequence'], $_flexifilter_sequence_count), $text)) {
+          $_flexifilter_sequence_count++;
+        }
+        return $text;
+      }
+      return call_user_func($settings['sequence'], $_flexifilter_sequence_count);
+  }
+}
+
+
+function flexifilter_sequences_replace_once($search, $replace, &$subject) {
+  if (($pos = strpos($subject, $search)) !== FALSE) {
+    $subject = substr($subject, 0, $pos) . $replace . substr($subject, $pos + strlen($search));
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Implementation of hook_flexifilter_sequences.
+ */
+function flexifilter_flexifilter_sequences() {
+  return array(
+    'flexifilter_sequence_numbers' => t('Simple numbers'),
+    'flexifilter_sequence_letters_uc' => t('Letters, upper case'),
+    'flexifilter_sequence_letters_lc' => t('Letters, lower case'),
+  );
+}
+
+/**
+ * Sequence callback: simple numbers.
+ */
+function flexifilter_sequence_numbers($num) {
+  return $num + 1;
+}
+
+function flexifilter_sequence_letters_uc($num) {
+  return strtoupper(flexifilter_sequence_letters_lc($num));
+}
+
+function flexifilter_sequence_letters_lc($num) {
+  $letters = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+  return $letters[$num % 26];
+}

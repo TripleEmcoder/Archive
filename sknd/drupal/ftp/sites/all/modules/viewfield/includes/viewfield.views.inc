@@ -1,5 +1,5 @@
 <?php
-// $Id: viewfield.views.inc,v 1.1 2009/04/07 18:42:31 darrenoh Exp $
+// $Id: viewfield.views.inc,v 1.2 2010/04/30 19:53:27 sun Exp $
 
 /**
  * @file
@@ -13,8 +13,8 @@
  */
 function viewfield_views_query_alter(&$view, &$query) {
   global $_viewfield_stack;
-  if ((!empty($_viewfield_stack)) && (in_array('node', $query->table_queue))) {
-    $placeholders = array_fill(0, count($_viewfield_stack), '%d');
-    $query->add_where(0, 'node.nid NOT IN ('. implode(',', $placeholders) .')', $_viewfield_stack);
+  if (!empty($_viewfield_stack) && in_array('node', $query->table_queue)) {
+    $placeholders = db_placeholders($_viewfield_stack);
+    $query->add_where(0, "node.nid NOT IN ($placeholders)", $_viewfield_stack);
   }
 }

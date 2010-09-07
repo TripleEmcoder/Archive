@@ -1,5 +1,5 @@
 <?php
-// $Id: realname_theme.inc,v 1.2.4.17 2009/03/13 14:23:01 nancyw Exp $
+// $Id: realname_theme.inc,v 1.2.4.18 2009/10/01 15:25:11 nancyw Exp $
 
 /**
  * @file
@@ -40,7 +40,7 @@ function realname_username($object, $options = array()) {
     'not_ver' => variable_get('realname_notver', TRUE),
 //    'allowed_tags' => array('em', 'i', 'u', 'strong', 'b'),
     );
-  $options = array_merge($defaults, $options);
+  $options = array_merge($defaults, (array)$options);
 
   // If we have a user id but no realname, then make one.
   if ($object->uid && empty($object->realname) && user_access('use realname')) {

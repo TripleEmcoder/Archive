@@ -1,4 +1,4 @@
-<?php /* $Id: mimemail.incoming.inc,v 1.1.2.2 2009/04/14 23:09:00 jerdavis Exp $ */
+<?php /* $Id: mimemail.incoming.inc,v 1.1 2009/02/22 20:55:46 vauxia Exp $ */
 
 /**
  * @file

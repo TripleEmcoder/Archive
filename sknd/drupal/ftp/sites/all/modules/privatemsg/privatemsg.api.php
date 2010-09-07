@@ -1,5 +1,5 @@
 <?php
-// $Id: privatemsg.api.php,v 1.1.2.5 2009/06/08 13:38:41 litwol Exp $
+// $Id: privatemsg.api.php,v 1.1.2.9 2009/11/06 13:06:26 berdir Exp $
 
 /**
  * @file
@@ -63,8 +63,8 @@
  *   // Add a field.
  *   $fragments['select'][] = 'pm.subject';
  *
- *   // Join another table
- *   $fragment['inner_join'][] = 'INNER JOIN {pm_index} pi ON (pi.mid = pm.mid AND pi.uid = %d)';
+ *   // Join another table.
+ *   $fragment['inner_join'][] = 'JOIN {pm_index} pi ON (pi.mid = pm.mid)';
  *   $fragment['query_args']['join'][] $uid;
  *
  *   // And finally add a condition.
@@ -150,43 +150,34 @@ function hook_privatemsg_sql_autocomplete_alter(&$fragments, $search, $names) {
 function hook_privatemsg_sql_list_alter(&$fragment, $account) {
 
 }
-/**
- * Display a list of sent messages.
- *
- * @param $fragments
- *   Query fragments
- * @param $account
- *   User object
- */
-function hook_privatemsg_sql_list_sent_alter(&$fragment, $account) {
-
-}
 
 /**
- * Load a single message.
+ * Query definition to load a message.
  *
  * @param $fragments
- *   Query fragments
+ *   Query fragments array.
  * @param $pmid
- *   message id, pm.mid
- * @param $account
- *   User object
+ *   the id of the message.
+  * @param $account
+ *   User object of account for which to load the message.
  */
-function hook_privatemsg_sql_load_alter(&$fragment, $pmid, $account) {
+function hook_privatemsg_sql_load_alter(&$fragments, $pmid, $account = NULL) {
 
 }
+
 /**
- * Load all message id's of a thread.
+ * Query definition to load messages of one or multiple threads.
  *
  * @param $fragments
- *   Query fragments
- * @param $thread_id
- *   Thread id, pmi.thread_id is the same as the mid of the first
- *   message of that thread
+ *   Query fragments array.
+ * @param $threads
+ *   Array with one or multiple thread id's.
  * @param $account
- *   User object
+ *   User object for which the messages are being loaded.
+ * @param $load_all
+ *   Deleted messages are only loaded if this is set to TRUE.
  */
-function hook_privatemsg_sql_messages_alter(&$fragment, $thread_id, $account) {
+function hook_privatemsg_sql_messages_alter(&$fragments, $threads, $account = NULL, $load_all = FALSE) {
 
 }
 
@@ -285,20 +276,6 @@ function hook_privatemsg_sql_unread_count_alter(&$fragment, $account) {
  */
 function hook_privatemsg_message_load($message) {
   return array('my_key' => 'my_value');
-}
-
-/**
- * Is called when a message is deleted.
- *
- * Note: The message is actually only marked as deleted and only for the current
- * user.
- * @todo There is no "undelete" hook
- *
- * @param $message
- *   Message array
- */
-function hook_privatemsg_message_delete($message) {
-
 }
 
 /**
@@ -450,6 +427,25 @@ function hook_privatemsg_thread_operations() {
     ),
   );
 }
+
+/**
+ * Hook which allows to look up a user object.
+ *
+ * You can try to look up a user object based on the information passed to the
+ * hook. The first hook that successfully looks up a specific string wins.
+ *
+ * Therefore, it is important to only return something if you can actually look
+ * up the string.
+ */
+function hook_privatemsg_name_lookup($string) {
+  if ((int)$string > 0) {
+    // This is a possible uid, try to load a matching user.
+    if ($recipient = user_load(array('uid' => $string))) {
+      return $recipient;
+    }
+  }
+}
+
 /**
  * @}
  */

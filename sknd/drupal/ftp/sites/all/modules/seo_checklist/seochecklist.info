@@ -1,11 +1,12 @@
-; $Id: seochecklist.info,v 1.2 2009/08/07 22:43:10 eclipsegc Exp $
-name = '"SEO" Checklist'
-description = A Search Engine Optimization checklist for Drupal 6.
+; $Id: seochecklist.info,v 1.4 2009/10/29 00:01:19 davereid Exp $
+name = SEO Checklist
+description = A Search Engine Optimization checklist for Drupal.
 core = 6.x
-package = '"SEO" Checklist'
-; Information added by drupal.org packaging script on 2009-08-07
-version = "6.x-2.0"
+recommends[] = vertical_tabs
+
+; Information added by drupal.org packaging script on 2010-05-25
+version = "6.x-3.0"
 core = "6.x"
 project = "seo_checklist"
-datestamp = "1249685460"
+datestamp = "1274793907"
 

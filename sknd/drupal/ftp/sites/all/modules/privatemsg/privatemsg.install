@@ -1,5 +1,5 @@
 <?php
-// $Id: privatemsg.install,v 1.5.2.4.2.11.2.11 2009/07/07 23:31:43 litwol Exp $
+// $Id: privatemsg.install,v 1.5.2.4.2.11.2.18 2010/08/09 19:26:52 berdir Exp $
 
 /**
  * @file
@@ -46,11 +46,10 @@ function privatemsg_schema() {
       ),
 
     ),
-    'indexes'         => array(
-      'mid'               => array('mid'),
-      'thread_id'         => array('thread_id'),
-      'uid'         => array('uid'),
-      'is_new'              => array('mid', 'uid', 'is_new', ),
+    'indexes'      => array(
+      'list'         => array('uid', 'deleted', 'is_new'),
+      'messages'     => array('mid', 'uid'),
+      'participants' => array('thread_id', 'uid', 'deleted')
     ),
   );
 
@@ -81,6 +80,13 @@ function privatemsg_schema() {
         'not null'      => TRUE,
         'size'          => 'big',
       ),
+      'format'        => array(
+        'type'          => 'int',
+        'size'          => 'small',
+        'not null'      => TRUE,
+        'default'       => FILTER_FORMAT_DEFAULT,
+        'description'   => 'The {filter_formats}.format of the message text.',
+      ),
       'timestamp'     => array(
         'description'   => 'Time when the message was sent',
         'type'          => 'int',
@@ -89,11 +95,6 @@ function privatemsg_schema() {
       ),
     ),
     'primary key'     => array('mid'),
-    'indexes'         => array(
-      'author'            => array('author'),
-      'subject'           => array(array('subject', 20)),
-      'timestamp'         => array('timestamp'),
-    ),
   );
 
 
@@ -109,9 +110,11 @@ function privatemsg_uninstall() {
   variable_del('privatemsg_per_page');
   variable_del('privatemsg_display_loginmessage');
   variable_del('privatemsg_display_fields');
+  variable_del('privatemsg_view_default_amount');
+  variable_del('privatemsg_view_max_amount');
+  variable_del('privatemsg_view_use_max_as_default');
   drupal_uninstall_schema('privatemsg');
 }
-
 
 function privatemsg_update_6000() {
   // Give update unlimited time to complete.
@@ -257,7 +260,8 @@ function privatemsg_update_6000() {
   );
   $ret = array();
 
-  // Step 1: Create tables.
+  // Step 1: Preparation
+  // Create the privatemsg tables.
   if (!(db_table_exists('pm_message'))) {
     db_create_table($ret, 'pm_message', $schema['pm_message']);
   }
@@ -267,6 +271,12 @@ function privatemsg_update_6000() {
   if (!(db_table_exists('temp_pm_index'))) {
     db_create_table($ret, 'temp_pm_index', $schema['temp_pm_index']);
   }
+  // Enable the privatemsg module as otherwise the enable box will be unclickable after update.
+  if (!module_exists('privatemsg')) {
+    module_enable('privatemsg');
+  }
+
+  // Install relevant submodules as we need theit tables to drop the data into.
   $modules = array();
   if (!(module_exists('privatemsg_filter'))) {
     $modules[] = 'privatemsg_filter';
@@ -284,13 +294,13 @@ function privatemsg_update_6000() {
   if (db_table_exists('privatemsg_folder')) {
     $data = db_query("SELECT * FROM {privatemsg_folder}");
     while ($result = db_fetch_array($data)) {
-      if (db_result(db_query("SELECT COUNT(*) FROM {pm_tags} WHERE tag = '%s'", $result->name)) == 0) {
-        db_query("INSERT INTO {pm_tags} (tag) VALUES ('%s')", $result->name);
+      if (db_result(db_query("SELECT COUNT(*) FROM {pm_tags} WHERE tag = '%s'", $result['name'])) == 0) {
+        db_query("INSERT INTO {pm_tags} (tag) VALUES ('%s')", $result['name']);
       }
     }
   }
 
-  //Step 2b: Next, copy the user blocking data.
+  // Step 2b: Next, copy the user blocking data.
   if (db_table_exists('privatemsg_block_user')) {
     $data = db_query("SELECT * FROM {privatemsg_block_user}");
     while ($result = db_fetch_array($data)) {
@@ -298,7 +308,7 @@ function privatemsg_update_6000() {
     }
   }
 
-  //Step 2c: Next the data from the archive table - notice all these messages have been deleted both by the author and the recipient.
+  // Step 2c: Next the data from the archive table - notice all these messages have been deleted both by the author and the recipient.
   if (db_table_exists('privatemsg_archive')) {
     $data = db_query("SELECT * FROM {privatemsg_archive}");
     while ($result = db_fetch_array($data)) {
@@ -316,7 +326,7 @@ function privatemsg_update_6000() {
     }
   }
 
-  //Step 2d: Finally, get the data from the privatemsg table.
+  // Step 2d: Finally, get the data from the privatemsg table.
   if (db_table_exists('privatemsg')) {
     $data = db_query("SELECT * FROM {privatemsg}");
     while ($result = db_fetch_array($data)) {
@@ -344,9 +354,9 @@ function privatemsg_update_6000() {
   // Step 3b: Fix and import the tagging data.
   $data = db_query("SELECT thread_id, folder, uid FROM {temp_pm_index} WHERE folder <> %d", 0);
   while ($result = db_fetch_array($data)) {
-    $tag_id = db_result(db_query('SELECT pmt.tag_id FROM {pm_tags} pmt INNER JOIN {privatemsg_folder} pmf ON pmt.tag = pmf.name WHERE pmf.fid = %d', $result->folder));
-    if (db_result(db_query("SELECT COUNT(*) FROM {pm_tags_index} WHERE uid = %d AND (thread_id = %d AND tag_id = %d)", $result->uid, $result->thread_id, $tag_id)) == 0) {
-      db_query("INSERT INTO {pm_tags_index} (uid, tag_id, thread_id) VALUES (%d, %d, %d)", $result->uid, $tag_id, $result->thread_id);
+    $tag_id = db_result(db_query('SELECT pmt.tag_id FROM {pm_tags} pmt INNER JOIN {privatemsg_folder} pmf ON pmt.tag = pmf.name WHERE pmf.fid = %d', $result['folder']));
+    if (db_result(db_query("SELECT COUNT(*) FROM {pm_tags_index} WHERE uid = %d AND (thread_id = %d AND tag_id = %d)", $result['uid'], $result['thread_id'], $tag_id)) == 0) {
+      db_query("INSERT INTO {pm_tags_index} (uid, tag_id, thread_id) VALUES (%d, %d, %d)", $result['uid'], $tag_id, $result['thread_id']);
     }
   }
 
@@ -360,7 +370,9 @@ function privatemsg_update_6000() {
   db_drop_table($ret, 'privatemsg');
   db_drop_table($ret, 'privatemsg_archive');
   db_drop_table($ret, 'privatemsg_folder');
-  db_drop_table($ret, 'privatemsg_block_user');
+  if (db_table_exists('privatemsg_block_user')) {
+    db_drop_table($ret, 'privatemsg_block_user');
+  }
   db_drop_table($ret, 'temp_pm_index');
 
   return $ret;
@@ -404,17 +416,88 @@ function privatemsg_update_6002() {
 }
 
 /**
- * Update function to resolve "forever new" messages
- * as described in http://drupal.org/node/490650
+ * Update function to resolve "forever new" messages.
+ * 
+ * As described in http://drupal.org/node/490650
  */
 function privatemsg_update_6003() {
   $ret = array();
   // Find messages that have aformentioned problem
-  $sql = "SELECT DISTINCT p1.mid, p1.uid FROM {pm_index} p1 INNER JOIN {pm_index} p2 ON p1.thread_id = p2.thread_id AND p1.mid = p2.mid INNER JOIN {pm_message} pm ON p1.uid = pm.author AND p2.uid = pm.author WHERE p1.is_new != p2.is_new";
+  $sql = "SELECT DISTINCT p1.mid, p1.uid FROM {pm_index} p1 INNER JOIN {pm_index} p2 ON p1.thread_id = p2.thread_id AND p1.mid = p2.mid INNER JOIN {pm_message} pm ON p1.uid = pm.author AND p2.uid = pm.author WHERE p1.is_new <> p2.is_new";
   $result = db_query($sql);
-  while($row = db_fetch_object($result)) {
+  while ($row = db_fetch_object($result)) {
       privatemsg_message_change_status($row->mid, PRIVATEMSG_READ, $row );
   }
   $ret[] = array('success' => $result !== FALSE, 'query' => check_plain($sql));
+  return $ret;
+}
+
+/**
+ * Create a format column.
+ *
+ * Copied from system_update_6051
+ */
+function privatemsg_update_6004() {
+  $ret = array();
+  if (!db_column_exists('pm_message', 'format')) {
+    $schema = array(
+      'type' => 'int',
+      'size' => 'small',
+      'not null' => TRUE,
+      'default' => FILTER_FORMAT_DEFAULT,
+      'description' => 'The {filter_formats}.format of the message text.',
+    );
+
+    db_add_field($ret, 'pm_message', 'format', $schema);
+
+    // Set the format of existing signatures to the current default input format.
+    if ($current_default_filter = (int)variable_get('filter_default_format', 1)) {
+      $ret[] = update_sql("UPDATE {pm_message} SET format = ". $current_default_filter);
+    }
+  }
+  return $ret;
+}
+
+/**
+ * Enable delete permission for all users that are allowed to read them.
+ */
+function privatemsg_update_6005() {
+  $ret = array();
+  $ret[] = update_sql("UPDATE {permission} SET perm = REPLACE(perm, 'read privatemsg', 'read privatemsg, delete privatemsg') WHERE perm LIKE '%read privatemsg%'");
+  return $ret;
+}
+
+/**
+ * Set the deleted timestamp of all messages to now.
+ */
+function privatemsg_update_6006() {
+  $ret = array();
+
+  $sql = "UPDATE {pm_index} SET deleted = %d WHERE deleted = 1";
+  $result = db_query($sql, time());
+  $ret[] = array('success' => $result !== FALSE, 'query' => check_plain($sql));
+  return $ret;
+}
+
+/**
+ * Update indexes on {pm_index} and {pm_message}.
+ */
+function privatemsg_update_6007() {
+  $ret = array();
+
+  // Delete unecessary indexes.
+  db_drop_index($ret, 'pm_index', 'mid');
+  db_drop_index($ret, 'pm_index', 'thread_id');
+  db_drop_index($ret, 'pm_index', 'uid');
+
+  db_drop_index($ret, 'pm_message', 'author');
+  db_drop_index($ret, 'pm_message', 'subject');
+  db_drop_index($ret, 'pm_message', 'timestamp');
+
+  // Add new indexes.
+  db_add_index($ret, 'pm_index', 'list', array('uid', 'deleted', 'is_new'));
+  db_add_index($ret, 'pm_index', 'messages', array('mid', 'uid'));
+  db_add_index($ret, 'pm_index', 'participants', array('thread_id', 'uid', 'deleted'));
+
   return $ret;
 }

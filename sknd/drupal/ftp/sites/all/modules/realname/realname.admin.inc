@@ -1,5 +1,5 @@
 <?php
-// $Id: realname.admin.inc,v 1.1.2.4 2009/03/18 13:09:07 nancyw Exp $
+// $Id: realname.admin.inc,v 1.1.2.9 2009/10/08 20:50:31 nancyw Exp $
 
 /**
  * @file
@@ -27,6 +27,27 @@ function realname_admin_general() {
     '#description' => t('If this option is selected, the "Real name" will be used on node displays.'),
     '#default_value' => variable_get('realname_nodeapi', FALSE),
     );
+
+  if (variable_get('realname_profile_module', NULL) == 'content_profile') {
+    $form['realname_use_title'] = array(
+      '#type' => 'checkbox',
+      '#title' => '<strong>'. t('Add node title to available fields') .'</strong>',
+      '#description' => t('This option allows you to include the profile title in the list of available fields.'),
+      '#default_value' => variable_get('realname_use_title', FALSE),
+      );
+  }
+  else {
+    $form['realname_use_title'] = array('#type' => 'value', '#value' => FALSE);    
+  }
+  
+  if ( module_exists('views') ) {  
+    $form['realname_view'] = array(
+      '#type' => 'checkbox',
+      '#title' => '<strong>'. t('Overwrite user fields in view to show realnames') .'</strong>',
+      '#description' => t('This option will overwrite the default user name definition in Views in order to show Realnames without the need to modify Views. Remember to rebuild your Views cache if you change this option.'),
+      '#default_value' => variable_get('realname_view', FALSE),
+      );
+  }  
 
   $form['realname_myacct'] = array(
     '#type' => 'textfield',
@@ -125,6 +146,8 @@ function realname_admin_general_submit($form, &$form_state) {
   variable_set('realname_theme', $form_state['values']['realname_theme']);
   variable_set('realname_max_username', $form_state['values']['realname_max_username']);
   variable_set('realname_notver', $form_state['values']['realname_notver']);
+  variable_set('realname_use_title', $form_state['values']['realname_use_title']);
+  variable_set('realname_view', $form_state['values']['realname_view']);
 
   // Did the admin change the search enable or user disable settings?
   if ($form_state['values']['original_search_enable'] != $form_state['values']['realname_search_enable']
@@ -132,6 +155,7 @@ function realname_admin_general_submit($form, &$form_state) {
     // Yes, so we have to rebuild the menu.
     menu_rebuild();
     drupal_set_message(t('The menu router has been rebuilt.'));
+    watchdog('RealName', 'User module search disabled.');
   }
 
   drupal_set_message(t('Configuration saved.'));
@@ -182,6 +206,9 @@ function realname_admin_bypass_submit($form, &$form_state) {
     }
   }
   variable_set('realname_bypass_forms', $bypass_forms);
+  // Mark form for realname recalculation.
+  variable_set('realname_recalculate', TRUE);
+
   drupal_set_message(t('Information saved for !count forms.', array('!count' => count($bypass_forms))), 'status');
 }
 
@@ -259,6 +286,9 @@ function realname_admin_module_submit($form, &$form_state) {
       }
     }
   }
+  // Mark form for realname recalculation.
+  variable_set('realname_recalculate', TRUE);
+
   // We are done with types, so go pick fields.
   unset($form_state['storage']);
   $form_state['redirect'] = 'admin/user/realname/fields'; // Go get the fields now.
@@ -403,5 +433,85 @@ function realname_admin_fields_submit($form, &$form_state) {
   variable_set('realname_homepage', $form_state['values']['realname_homepage']);
   variable_set('realname_nofollow', $form_state['values']['realname_nofollow']);
 
+  // Mark form for realname recalculation.
+  variable_set('realname_recalculate', TRUE);
+
   drupal_set_message(t('Configuration has been updated.'), 'status');
+}
+
+/**
+ * Real names rebuild (in case of config change) handlers.
+ */
+ 
+/**
+ * Menu callback: confirm rebuilding of realnames.
+ */
+function realname_rebuild_confirm() {
+  return confirm_form(array(), t('Are you sure you want to rebuild the RealNames for all site users?'),
+    'admin/user/realname', t('This action rebuilds RealNames for all users, and may be a lengthy process.
+    This action cannot be undone.'), t('Rebuild realnames'), t('Cancel'));
+}
+
+/**
+ * Handler for rebuild confirmation
+ */
+function realname_rebuild_confirm_submit($form, &$form_state) {
+  $batch = array(
+    'title' => t('Rebuilding realnames'),
+    'operations' => array(
+      array('_realname_rebuild_realnames', array()),
+      ),
+    'file' => drupal_get_path('module', 'realname') . '/realname.admin.inc',
+    'finished' => '_realname_rebuild_batch_finished',
+  );
+  batch_set($batch);
+}
+
+/**
+ * Batchable function used to rebuild realnames
+ */
+function _realname_rebuild_realnames(&$context) {
+  if (empty($context['sandbox'])) {
+    // Initiate multistep processing.
+    $context['sandbox']['progress'] = 0;
+//    $context['sandbox']['current_user'] = 0;
+    // Skip user 0 (anonymous).
+    $context['sandbox']['current_user'] = 1;
+    $context['sandbox']['max'] = db_result(db_query('SELECT COUNT(DISTINCT uid) FROM {users} WHERE uid > 0'));
+    // Let's get rid of all existing data and start fresh.
+    db_query('TRUNCATE {realname}');
+  }
+
+  // Process the next 20 users.
+  $limit = 20;
+  $result = db_query_range("SELECT u.uid, u.name, u.mail FROM {users} u WHERE uid > %d ORDER BY uid ASC", $context['sandbox']['current_user'], 0, $limit);
+  while ($row = db_fetch_object($result)) {
+    $realname->uid = $row->uid;
+    $realname->realname = _realname_make_name($row);
+    // Try to update, if fail - try to insert.
+    if (db_result(db_query('SELECT COUNT(uid) FROM {realname} WHERE uid=%d', $realname->uid))) {
+      drupal_write_record('realname', $realname, 'uid');
+    }
+    else {
+      drupal_write_record('realname', $realname);
+    }
+    $context['sandbox']['progress']++;
+    $context['sandbox']['current_user'] = $row->uid;
+  }
+
+  // Multistep processing : report progress.
+  if ($context['sandbox']['progress'] != ($context['sandbox']['max']) - 1) {
+    $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']['max'];
+  }
+}
+
+function _realname_rebuild_batch_finished($success, $results, $operations) {
+  if ($success) {
+    drupal_set_message(t('The realnames have been rebuilt.'));
+    variable_set('realname_recalculate', FALSE);
+    drupal_goto('admin/user/realname');
+  }
+  else {
+    drupal_set_message(t('The realnames have not been properly rebuilt.'), 'error');
+  }
 }

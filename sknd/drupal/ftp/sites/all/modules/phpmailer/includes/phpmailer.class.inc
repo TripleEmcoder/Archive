@@ -1,5 +1,5 @@
 <?php
-// $Id: phpmailer.class.inc,v 1.8 2009/06/10 13:27:04 smk Exp $
+// $Id: phpmailer.class.inc,v 1.13.2.6 2010/07/07 12:41:52 smk Exp $
 
 /**
  * @file
@@ -14,7 +14,7 @@ module_load_include('php', 'phpmailer', 'phpmailer/class.phpmailer');
  */
 class DrupalPHPMailer extends PHPMailer {
   /**
-   * Stores the Return-Path, which can be different from Sender.
+   * Stores the Return-Path, which may be different from Sender.
    */
   public $ReturnPath = '';
 
@@ -22,6 +22,11 @@ class DrupalPHPMailer extends PHPMailer {
    * Constructor.
    */
   public function __construct() {
+    // Throw exceptions instead of dying (since 5.0.0).
+    if (method_exists(get_parent_class($this), '__construct')) {
+      parent::__construct(TRUE);
+    }
+
     $this->IsSMTP();
     $this->Reset();
 
@@ -45,10 +50,47 @@ class DrupalPHPMailer extends PHPMailer {
   }
 
   /**
+   * Send mail via SMTP.
+   *
+   * Wrapper around PHPMailer::SmtpSend() with exception handling.
+   */
+  public function SmtpSend($header, $body) {
+    if ($this->SMTPDebug) {
+      ob_start();
+    }
+
+    try {
+      $result = parent::SmtpSend($header, $body);
+
+      if (!$this->SMTPKeepAlive) {
+        $this->SmtpClose();
+      }
+    }
+    catch (phpmailerException $exception) {}
+
+    if ($this->SMTPDebug) {
+      if ($debug = ob_get_contents()) {
+        drupal_set_message($debug);
+      }
+      ob_end_clean();
+    }
+
+    // Reinitialize properties.
+    $this->Reset();
+
+    if (isset($exception)) {
+      // Pass exception to caller.
+      throw $exception;
+    }
+    return $result;
+  }
+
+  /**
    * (Re-)initialize properties after sending mail.
    */
   public function Reset() {
     $this->ClearAllRecipients();
+    $this->ClearReplyTos();
     $this->ClearAttachments();
     $this->ClearCustomHeaders();
 
@@ -56,7 +98,6 @@ class DrupalPHPMailer extends PHPMailer {
     $this->CharSet     = variable_get('smtp_charset', 'utf-8');
     $this->ContentType = 'text/plain';
     $this->Encoding    = '8bit';
-    $this->ErrorInfo   = '';
 
     // Set default From name.
     $from_name = variable_get('smtp_fromname', '');
@@ -74,49 +115,47 @@ class DrupalPHPMailer extends PHPMailer {
    * Destructor.
    */
   public function __destruct() {
-    $this->SmtpClose();
+    // Be nice and close the connection when using SMTP keep-alive.
+    if ($this->SMTPKeepAlive) {
+      $this->SmtpClose();
+    }
   }
 
   /**
-   * Sends mail via SMTP.
-   */
-  public function SmtpSend($header, $body) {
-    return parent::SmtpSend($header, $body);
-  }
-
-  /**
-   * Sets the language for all class error messages.
+   * Provide more user-friendly error messages.
    *
-   * To avoid having people to copy the languages/ directory, we provide
-   * the english translations in this overridden method.
-   * Drupal's language codes are different from those used by PHPMailer anyway,
-   * and the messages only ever appear in the watchdog reports.
+   * Note: messages should not end with a dot.
    */
-  public function SetLanguage($lang_type = 'en', $lang_path = 'language/') {
+  public function SetLanguage() {
     $this->language = array(
-      'provide_address' => 'You must provide at least one recipient email address.',
-      'mailer_not_supported' => ' mailer is not supported.',
-      'execute' => 'Could not execute: ',
-      'instantiate' => 'Could not instantiate mail function.',
-      'authenticate' => 'SMTP Error: Could not authenticate.',
-      'from_failed' => 'The following From address failed: ',
-      'recipients_failed' => 'SMTP Error: The following recipients failed: ',
-      'data_not_accepted' => 'SMTP Error: Data not accepted.',
-      'connect_host' => 'SMTP Error: Could not connect to SMTP host.',
-      'file_access' => 'Could not access file: ',
-      'file_open' => 'File Error: Could not open file: ',
-      'encoding' => 'Unknown encoding: ',
-      'signing' => 'Signing Error: ',
-      'smtp_error' => 'SMTP server error: ',
-      'empty_message' => 'Message body empty',
-      'invalid_address' => 'Invalid address',
-      'variable_set' => 'Cannot set or reset variable: '
+      'provide_address'     => t('You must provide at least one recipient e-mail address'),
+      'encoding'            => t('Unknown encoding: '),
+      'file_open'           => t('Could not open file: '),
+      'signing'             => t('Signing error: '),
+      'empty_message'       => t('Message body empty'),
+      'tls'                 => t('SMTP error: STARTTLS not accepted from server'),
+      'authenticate'        => t('SMTP error: could not authenticate'),
+      'smtp_connect_failed' => t('SMTP error: could not connect to SMTP host'),
+      'connect_host'        => t('SMTP error: could not connect to SMTP host'),
+      'from_failed'         => t('The following sender address failed: '), // non-admin
+      'recipients_failed'   => t('The following recipient addresses failed: '), // non-admin
+      'data_not_accepted'   => t('SMTP error: data not accepted'),
+      'smtp_error'          => t('SMTP server error: '),
+
+      // Unused messages.
+      //'execute'           => t('Could not execute: '),
+      //'instantiate'       => t('Could not instantiate mail() function.'),
+
+      // Messages used during email generation.
+      'file_access'         => t('Could not access file: '),
+      'invalid_address'     => t('Invalid address'),
+      'variable_set'        => t('Cannot set or reset variable: '),
     );
     return TRUE;
   }
 
   /**
-   * Assembles message header.
+   * Assemble the message header.
    *
    * PHPMailer always sets Return-Path to Sender, we want more flexibility.
    */
@@ -132,7 +171,7 @@ class DrupalPHPMailer extends PHPMailer {
   }
 
   /**
-   * Returns the proper RFC 822 formatted date.
+   * Public wrapper around PHPMailer::RFCDate().
    */
   public static function RFCDate() {
     $tz = date('Z');

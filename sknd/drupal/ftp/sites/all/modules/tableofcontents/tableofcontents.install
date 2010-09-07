@@ -1,5 +1,5 @@
 <?php
-/* $Id: tableofcontents.install,v 1.1.2.3 2010/02/08 10:17:02 alexiswilke Exp $ */
+// $Id: tableofcontents.install,v 1.1.2.4 2010/05/24 19:26:54 alexiswilke Exp $
 
 /**
  * Implementation of hook_schema()

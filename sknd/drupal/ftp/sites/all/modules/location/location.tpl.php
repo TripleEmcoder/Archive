@@ -9,20 +9,17 @@
 ?></div>
 <?php }?>
 <?php
-  if ($city || $province || $postal_code) {
-    $city_province_postal = array();
-
-    if ($city) {
-      $city_province_postal[] = '<span class="locality">'. $city .'</span>';
-    }
+  if ($city) {
+    echo '<span class="locality">' . $city . '</span>';
     if ($province) {
-      $city_province_postal[] = '<span class="region">'. $province .'</span>';
+      echo ', ';
     }
-    if ($postal_code) {
-      $city_province_postal[] = '<span class="postal-code">'. $postal_code .'</span>';
-    }
-
-    echo implode(', ', $city_province_postal);
+  }
+  if ($province) {
+    echo '<span class="region">' . $province_print . '</span> ';
+  }
+  if ($postal_code) {
+    echo ' <span class="postal-code">' . $postal_code . '</span>';
   }
 ?>
 <?php if ($country_name) { ?>
@@ -51,5 +48,8 @@
     }
   }
 ?>
-</div></div>
-<?php echo $map_link; ?>
+</div>
+<div class="map-link">
+  <?php echo $map_link; ?>
+</div>
+</div>

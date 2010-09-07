@@ -1,8 +1,8 @@
 <?php
-// $Id: xmlsitemap_engines_test.module,v 1.1.2.2 2009/06/02 17:23:07 davereid Exp $
+// $Id: xmlsitemap_engines_test.module,v 1.1.2.6 2010/01/31 19:38:21 davereid Exp $
 
 /**
- * Implementation of hook_menu().
+ * Implements hook_menu().
  */
 function xmlsitemap_engines_test_menu() {
   $items['ping'] = array(
@@ -14,24 +14,30 @@ function xmlsitemap_engines_test_menu() {
 }
 
 /**
- * Implementation of hook_xmlsitemap_engines_alter().
+ * Implements hook_xmlsitemap_engine_info().
  */
-function xmlsitemap_engines_test_xmlsitemap_engines_alter(&$engines) {
+function xmlsitemap_engines_test_xmlsitemap_engine_info() {
   $engines['simpletest'] = array(
     'name' => t('SimpleTest'),
-    'url' => url('ping', array('absolute' => TRUE, 'query' => 'sitemap=[sitemap]')),
+    'url' => 'http://example.com/',
   );
+  return $engines;
+}
+
+/**
+ * Implements hook_xmlsitemap_engine_info_alter().
+ */
+function xmlsitemap_engines_test_xmlsitemap_engine_info_alter(&$engines) {
+  $engines['simpletest']['url'] = url('ping', array('absolute' => TRUE, 'query' => array('sitemap' => ''))) . '[sitemap]';
 }
 
 function xmlsitemap_engines_test_pinged() {
-  if (empty($_GET['sitemap'])) {
-    watchdog('xmlsitemap', 'No sitemap parameter provided.', NULL, WATCHDOG_WARNING);
-    //drupal_set_message(t('No sitemap parameter provided.'), 'error');
-    echo t('No sitemap parameter provided.');
+  if (empty($_GET['sitemap']) || !valid_url($_GET['sitemap'])) {
+    watchdog('xmlsitemap', 'No valid sitemap parameter provided.', array(), WATCHDOG_WARNING);
+    // @todo Remove this? Causes an extra watchdog error to be handled.
+    return drupal_not_found();
   }
   else {
     watchdog('xmlsitemap', 'Recieved ping for @sitemap.', array('@sitemap' => $_GET['sitemap']));
-    //drupal_set_message(t('Recieved sitemap ping for @sitemap.', array('@sitemap' => $_GET['sitemap'])));
-    echo t('Recieved sitemap ping for @sitemap.', array('@sitemap' => $_GET['sitemap']));
   }
 }

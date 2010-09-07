@@ -1,5 +1,5 @@
 <?php
-// $Id: flexifilter.module,v 1.14 2008/01/23 22:43:16 corsix Exp $
+// $Id: flexifilter.module,v 1.16.2.7 2008/11/22 22:13:33 cwgordon7 Exp $
 
 $path = drupal_get_path('module', 'flexifilter');
 include_once ($path .'/flexifilter.components.inc');
@@ -9,52 +9,59 @@ include_once ($path .'/flexifilter.flexifilters.inc');
 define('FLEXIFILTER_PART_TYPE_COMPONENT', 0);
 define('FLEXIFILTER_PART_TYPE_CONDITION', 1);
 define('FLEXIFILTER_PART_TYPE_ROOT', 2);
+
 define('FLEXIFILTER_MAX_FILTERS', 128);
 
 /**
- * Implementation of hook_menu()
+ * Implementation of hook_perm().
+ */
+function flexifilter_perm() {
+  return array('administer flexifilter');
+}
+
+/**
+ * Implementation of hook_menu().
  */
 function flexifilter_menu() {
   $items = array();
   $items['admin/build/flexifilters'] = array(
-    'title' => t('Flexifilters'),
-    'description' => t('Create new flexible input filters without writing any code.'),
+    'title' => 'Flexifilters',
+    'description' => 'Create new flexible input filters without writing any code.',
     'page callback' => 'drupal_get_form',
     'access arguments' => array('administer flexifilter'),
     'page arguments' => array('flexifilter_filter_list_form'),
     'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/list'] = array(
-    'title' => t('List'),
+    'title' => 'List',
     'type' => MENU_DEFAULT_LOCAL_TASK,
-    'access arguments' => array('administer flexifilter'),
   );
   $items['admin/build/flexifilters/add'] = array(
-    'title' => t('Add new flexifilter'),
+    'title' => 'Add new flexifilter',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_edit_form'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 1,
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/import'] = array(
-    'title' => t('Import a flexifilter'),
+    'title' => 'Import a flexifilter',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_input_form'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 2,
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/defaults'] = array(
-    'title' => t('Load a default flexifilter'),
+    'title' => 'Load a default flexifilter',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_default_form'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 3,
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/%flexifilter'] = array(
     'title callback' => 'flexifilter_get_field',
@@ -62,45 +69,53 @@ function flexifilter_menu() {
     'type' => MENU_CALLBACK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_edit_form', 3),
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/%flexifilter/edit'] = array(
     'type' => MENU_DEFAULT_LOCAL_TASK,
-    'title' => t('Edit'),
     'access arguments' => array('administer flexifilter'),
+    'title' => 'Edit',
   );
   $items['admin/build/flexifilters/%flexifilter/export'] = array(
-    'title' => t('Export'),
+    'title' => 'Export',
     'type' => MENU_LOCAL_TASK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_export_form', 3),
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
+  );
+  $items['admin/build/flexifilters/%flexifilter/preview'] = array(
+    'title' => 'Preview',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('flexifilter_filter_preview_form', 3),
+    'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/%flexifilter/delete'] = array(
-    'title' => t('Delete'),
+    'title' => 'Delete',
     'type' => MENU_CALLBACK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_delete_form', 3),
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/%flexifilter/enable'] = array(
-    'title' => t('Enable'),
+    'title' => 'Enable',
     'type' => MENU_CALLBACK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_enable_form', 3),
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   $items['admin/build/flexifilters/%flexifilter/disable'] = array(
-    'title' => t('Disable'),
+    'title' => 'Disable',
     'type' => MENU_CALLBACK,
     'page callback' => 'drupal_get_form',
     'page arguments' => array('flexifilter_filter_disable_form', 3),
-    'file' => 'flexifilter.admin.inc',
     'access arguments' => array('administer flexifilter'),
+    'file' => 'flexifilter.admin.inc',
   );
   return $items;
 }
@@ -112,7 +127,7 @@ function flexifilter_help($path, $arg) {
   switch ($path) {
     case 'admin/help#flexifilter':
       $output = '<p>'. t('Flexifilters are flexible filters that can be used by <a href="@input_formats">Input Formats</a> to filter created content.', array('@input_formats' => url('admin/settings/filters'))) .'</p>';
-      //$output .= '<p>'. t('For more information, see the online handbook entry for <a href="@flexifilter">Flexifilter module</a>.', array('@flexifilter' => 'http://drupal.org/handbook/modules/flexifilter/')) .'</p>';
+      $output .= '<p>'. t('For more information, see the online handbook entry for <a href="@flexifilter">Flexifilter module</a>.', array('@flexifilter' => 'http://drupal.org/node/212410/')) .'</p>';
       return $output;
 
     case 'admin/build/flexifilters':
@@ -225,7 +240,14 @@ function flexifilter_get_condition_list($include_advanced_items = TRUE, $reset =
  * operations that the component doesn't support, it will return $text.
  */
 function flexifilter_invoke_component($component, $op, $settings = array(), $text = '') {
-  return call_user_func_array($component['callback'], array_merge($component['callback_arguments'], array($op, $settings, $text)));
+  $text = call_user_func_array($component['callback'], array_merge($component['callback_arguments'], array($op, $settings, $text)));
+  $_flexifilter_preview = variable_get('flexifilter_preview', FALSE);
+  if ($_flexifilter_preview) {
+    $_flexifilter_preview_text = variable_get('flexifilter_preview_text', array());
+    $_flexifilter_preview_text[] = array('value' => $text, 'type' => 'component', 'step' => $op, 'class' => $component['label'], 'settings' => $settings);
+    variable_set('flexifilter_preview_text', $_flexifilter_preview_text);
+  }
+  return $text;
 }
 
 /**
@@ -263,7 +285,6 @@ function flexifilter_invoke_condition($data, $op, $text = '') {
       return $return_value;
 
     // For prepare and process, force the return value to TRUE or FALSE
-
     case 'prepare':
     case 'process':
       if ($return_value) {
@@ -378,23 +399,49 @@ function flexifilter_filter($op, $delta = 0, $format = -1, $text = '') {
       $filter = flexifilter_get_filter_by_delta($delta);
       return flexifilter_invoke_components($filter['components'], $op, $text);
 
+    case 'no cache':
+      $filter = flexifilter_get_filter_by_delta($delta);
+      return !($filter['cache']);
+
     default:
       return $text;
   }
 }
 
 /**
- * Menu callback; loads a flexifilter object
+ * Implementation of hook_filter_tips.
+ */
+function flexifilter_filter_tips($delta, $format, $long = FALSE) {
+  $flexifilter = flexifilter_get_filter_by_delta($delta);
+  if ($long) {
+    return str_replace('<--break-->', '', $flexifilter['description']);
+  }
+  else {
+    $pos = strpos($flexifilter['description'], '<!--break-->');
+    if ($pos === FALSE) {
+      return substr($flexifilter['description'], 0);
+    }
+	  return substr($flexifilter['description'], 0, $pos);
+  }
+}
+
+/**
+ * Menu callback; loads a flexifilter object.
+ *
+ * @param $fid
+ *   The uniqe flexifilter id of the flexifilter to load.
+ * @return
+ *   The flexifilter upon success; FALSE upon failure.
  */
 function flexifilter_load($fid) {
   if (!is_numeric($fid)) {
     return FALSE;
   }
-  $filters = flexifilter_get_filters();
-  if (!isset($filters[$fid])) {
-    return FALSE;
+  $result = db_query('SELECT * FROM {flexifilters} WHERE fid = %d', $fid);
+  if ($row = db_fetch_object($result)) {
+    return _flexifilter_filter_from_db_row($row, TRUE);
   }
-  return $filters[$fid];
+  return FALSE;
 }
 
 function flexifilter_get_field($flexifilter, $field) {
@@ -445,9 +492,10 @@ function flexifilter_save_filter($filter) {
   $label       = $filter['label'];
   $description = $filter['description'];
   $advanced    = $filter['advanced'];
+  $cache       = isset($filter['cache']) ? $filter['cache'] : 1;
   if ($fid === 'new') {
-    db_query("INSERT INTO {flexifilters} (label, description, enabled, delta, pid_root, advanced) VALUES ('%s', '%s', 0, 0, 0, %d)",
-      $label, $description, $advanced);
+    db_query("INSERT INTO {flexifilters} (label, description, enabled, delta, pid_root, advanced, cache) VALUES ('%s', '%s', 0, 0, 0, %d, %d)",
+      $label, $description, $advanced, $cache);
     $fid           = db_last_insert_id('flexifilters', 'fid');
     $pids_to_reuse = array();
     $pid_root      = _flexifilter_save_filter_components($filter['components'], $fid, $pids_to_reuse);
@@ -464,8 +512,8 @@ function flexifilter_save_filter($filter) {
     if (count($pids_to_reuse) > 0) {
       db_query('DELETE FROM {flexifilters_parts} WHERE pid = '. implode($pids_to_reuse, ' OR pid = '), $fid);
     }
-    db_query("UPDATE {flexifilters} SET label = '%s', description = '%s', pid_root = %d, advanced = %d WHERE fid = %d",
-      $label, $description, $pid_root, $advanced, $fid);
+    db_query("UPDATE {flexifilters} SET label = '%s', description = '%s', pid_root = %d, advanced = %d, cache = %d WHERE fid = %d",
+      $label, $description, $pid_root, $advanced, $cache, $fid);
   }
   $existing_filters = flexifilter_get_filters(FALSE, TRUE);
   if (isset($existing_filters[$fid]['enabled']) && isset($filter['enabled'])) {
@@ -582,6 +630,7 @@ function _flexifilter_filter_from_db_row($row, $include_components) {
     'enabled' => ($row->enabled == 1),
     'advanced' => ($row->advanced == 1),
     'delta' => $row->delta,
+    'cache' => $row->cache,
   );
   $pid_root = $row->pid_root;
 
@@ -700,16 +749,26 @@ function flexifilter_get_number_enabled_filters($reset = FALSE) {
  *
  * @param $module - The name of the module whose flexifilters should be installed.
  * @param $flexifilters - Optional. An array of flexifilters to be installed. If passed in, $module is irrelevant.
+ * @return
+ *   An array of fids of the filters saved.
  */
 function flexifilter_install_flexifilters($module, $flexifilters = NULL) {
   if (is_null($flexifilters)) {
+    // Allow for magic file naming.
+    $file = drupal_get_path('module', $module) ."/$module.flexifilters.inc";
+    if (file_exists($file)) {
+      require_once $file;
+    }
     $flexifilters = module_invoke($module, 'flexifilters');
   }
+  $fids = array();
   foreach ($flexifilters as $flexifilter) {
     $fid = flexifilter_save_filter($flexifilter);
     drupal_set_message(t('The !url flexifilter has been saved.', array('!url' => l($flexifilter['label'], "admin/build/flexifilters/$fid"))));
     watchdog('flexifilter', 'The !url flexifilter has been saved.', array('!url' => l($flexifilter['label'], "admin/build/flexifilters/$fid")));
+    $fids[] = $fid;
   }
+  return $fids;
 }
 
 function flexifilter_get_unused_delta() {
@@ -728,13 +787,4 @@ function flexifilter_get_unused_delta() {
     }
   }
   return FALSE;
-}
-
-/**
- * Implementation of hook_enable.
- */
-function flexifilter_enable() {
-  // We install flexifilter's flexifilters here so the tables, etc., will already have been set up.
-  // Other modules can put this in hook_install.
-  flexifilter_install_flexifilters('flexifilter');
 }

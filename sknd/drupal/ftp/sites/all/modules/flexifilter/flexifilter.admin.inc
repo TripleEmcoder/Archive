@@ -1,5 +1,5 @@
 <?php
-// $Id: flexifilter.admin.inc,v 1.13 2008/01/24 01:57:10 cwgordon7 Exp $
+// $Id: flexifilter.admin.inc,v 1.14.2.3 2008/11/22 22:13:33 cwgordon7 Exp $
 
 /**
  * Generates the form for the admin overview page
@@ -34,7 +34,7 @@ function flexifilter_filter_list_form() {
 function flexifilter_filter_list_form_table($enabled) {
   $show_disable_link = $enabled;
   $show_enable_link  = !$enabled && flexifilter_get_number_enabled_filters() < FLEXIFILTER_MAX_FILTERS;
-  $header            = array(t('Label'), t('Description'), t('Edit'), t('Delete'), t($enabled ? 'Disable' : 'Enable'));
+  $header            = array(t('Label'), t('Description'), t('Edit'), t('Delete'), t('Preview'), t($enabled ? 'Disable' : 'Enable'));
   $rows              = array();
   $filters           = flexifilter_get_filters();
   foreach ($filters as $id => $filter) {
@@ -42,6 +42,7 @@ function flexifilter_filter_list_form_table($enabled) {
       $row   = array($filter['label'], $filter['description']);
       $row[] = l(t('Edit'), 'admin/build/flexifilters/'. $id .'/edit', array(), drupal_get_destination());
       $row[] = l(t('Delete'), 'admin/build/flexifilters/'. $id .'/delete', array(), drupal_get_destination());
+      $row[] = l(t('Preview'), 'admin/build/flexifilters/'. $id .'/preview', array(), drupal_get_destination());  
       if ($show_disable_link) {
         $row[] = l(t('Disable'), 'admin/build/flexifilters/'. $id .'/disable', array(), drupal_get_destination());
       }
@@ -496,6 +497,7 @@ function flexifilter_filter_edit_form($form_state, $flexifilter = 'new') {
     $data['basic']['label'] = $flexifilter === 'new' ? '' : $flexifilter['label'];
     $data['basic']['description'] = $flexifilter === 'new' ? '' : $flexifilter['description'];
     $data['basic']['advanced'] = $flexifilter === 'new' ? 0 : $flexifilter['advanced'];
+    $data['basic']['cache'] = $flexifilter === 'new' ? 1 : $flexifilter['cache'];
     $data['components'] = $flexifilter === 'new' ? array() : flexifilter_filter_edit_components_data($flexifilter['components']);
     if (!isset($data['components']['id_prefix']) || $data['components']['id_prefix'] === 'component_new_') {
       $data['components']['id_prefix'] = 'component_'. $data['fid'] .'_';
@@ -509,6 +511,9 @@ function flexifilter_filter_edit_form($form_state, $flexifilter = 'new') {
     $data = $form_state['post'];
     if (!isset($data['basic']['advanced'])) {
       $data['basic']['advanced'] = 0;
+    }
+    if (!isset($data['basic']['cache'])) {
+      $data['basic']['cache'] = $flexifilter === 'new' ? 1 : $flexifilter['cache'];
     }
   }
   $form = array();
@@ -533,10 +538,11 @@ function flexifilter_filter_edit_form($form_state, $flexifilter = 'new') {
   );
   $form['basic']['description'] = array(
     '#type' => 'textfield',
-    '#title' => t('Description'),
+    '#title' => t('Description/filter tips'),
     '#required' => TRUE,
     '#maxlength' => 255,
-    '#description' => t('A short description of what this flexifilter does.'),
+    '#description' => t('The tips to present to the user under the input format\'s description on the content creation page. The delimiter &lt;!--break--&gt;
+	                     may be added to separate the short description from the long description.'),
     '#default_value' => $data['basic']['description'],
   );
   $form['basic']['advanced'] = array(
@@ -545,6 +551,14 @@ function flexifilter_filter_edit_form($form_state, $flexifilter = 'new') {
     '#default_value' => $data['basic']['advanced'],
     '#description' => t('Advanced options currently only include the processing step option, which allows you to place some components into the filtering preparation step. You should only do so if it is critical that they be performed in the preparation step rather than the processing step.'),
   );
+  if ($data['basic']['advanced']) {
+    $form['basic']['cache'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Enable caching'),
+      '#description' => t('If caching is not enabled, the filter will run each time the content is viewed. It is useful for dynamic filters (e.g. things that change each time) to have this option off, but this can slow down page loads noticably.'),
+      '#default_value' => $data['basic']['cache'],
+    );
+  }
   $form['components'] = flexifilter_filter_edit_form_components($data['components'], $data['components'], $data['basic']['advanced'] == 1);
   $form['components']['id_prefix'] = array('#type' => 'hidden', '#value' => $data['components']['id_prefix']);
   $form['components']['id_next'] = array('#type' => 'hidden', '#value' => $data['components']['id_next']);
@@ -560,7 +574,6 @@ function flexifilter_filter_edit_form($form_state, $flexifilter = 'new') {
     '#type' => 'submit',
     '#value' => $data['fid'] === 'new' ? t('Create and edit') : t('Save and edit'),
   );
-  $form['#redirect'] = FALSE;
   return $form;
 }
 
@@ -692,14 +705,18 @@ function flexifilter_filter_edit_form_submit($form, &$form_state) {
   if ($values['fid'] === 'new') {
     drupal_set_message(t('Flexifilter created.'));
     if ($values['op'] == $values['submit2']) {
-      drupal_goto('admin/build/flexifilters/'. $fid .'/edit');
+      unset($form_state['storage']);
+      unset($form_state['rebuild']);
+      $form_state['redirect'] = 'admin/build/flexifilters/'. $fid .'/edit';
     }
   }
   else {
     drupal_set_message(t('Flexifilter saved.'));
   }
   if ($values['op'] == $values['submit1']) {
-    drupal_goto('admin/build/flexifilters');
+    unset($form_state['storage']);
+    unset($form_state['rebuild']);
+    $form_state['redirect'] = 'admin/build/flexifilters';
   }
 }
 
@@ -847,4 +864,84 @@ function flexifilter_filter_default_form_submit($form, &$form_state) {
   }
   flexifilter_install_flexifilters('flexifilter', $to_be_saved);
   $form_state['redirect'] = 'admin/build/flexifilters';
+}
+
+function flexifilter_filter_preview_form($form_state, $flexifilter) {
+  if (!isset($form_state['storage']['preview'])) {
+    $form['input'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Text to test'),
+      '#default_value' => '',
+    );
+    $form['flexifilter'] = array(
+      '#type' => 'value',
+      '#value' => $flexifilter,
+    );
+    $form['submit'] = array(
+     '#type' => 'submit',
+      '#value' => t('Preview'),
+    );
+  }
+  else {
+    $form['input'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Original text'),
+      '#default_value' => $form_state['storage']['input'],
+    );
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Preview'),
+    );
+    $form['prepare'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Prepare step'),
+      '#collapsible' => TRUE,
+    );
+    $form['process'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Process step'),
+      '#collapsible' => TRUE,
+    );
+    $form['flexifilter'] = array(
+      '#type' => 'value',
+      '#value' => $flexifilter,
+    );
+    $zebra = 'flexifilter-even';
+    drupal_add_css(drupal_get_path('module', 'flexifilter') .'/flexifilter.css');
+    foreach ($form_state['storage']['data'] as $key => $data) {
+      $settings = '';
+      foreach ($data['settings'] as $key => $value) {
+        $settings .= '<strong>'. check_plain($key) .'</strong>: '. check_plain(''. $value) ."<br />";
+      }
+      $uniqid = uniqid();
+      $form[$data['step']][$key . $uniqid]['step'] = array(
+        '#type' => 'markup',
+        '#prefix' => '<div class="'. $zebra .'"><div class="description">',
+        '#value' => t('@type: @class<p>Settings:<br />!settings</p>', array('@type' => ucfirst($data['type']), '@class' => $data['class'], '!settings' => $settings)),
+        '#suffix' => '</div>',
+      );
+      $form[$data['step']][$key . $uniqid]['text'] = array(
+        '#type' => 'markup',
+        '#title' => ucfirst($data['type']) .': '. $data['class'],
+        '#description' => t('Settings:<br />!settings', array('!settings' => $settings)),
+        '#value' => $data['value'] . '</div><strong>'. t('With visible HTML:') .'</strong><div class="flexifilter-plain-text">'. check_plain($data['value']),
+        '#prefix' => '<strong>'. t('As it appears to users:') .'</strong><div class="flexifilter-text">',
+        '#suffix' => '</div></div>',
+      );
+      $zebra = ($zebra == 'flexifilter-even') ? 'flexifilter-odd' : 'flexifilter-even';
+    }
+  }
+  return $form;
+}
+
+function flexifilter_filter_preview_form_submit($form, &$form_state) {
+  variable_set('flexifilter_preview', TRUE);
+  variable_set('flexifilter_preview_text', array());
+  $form_state['storage']['input'] = $form_state['values']['input'];
+  $text = flexifilter_invoke_components($form_state['values']['flexifilter']['components'], 'prepare', $form_state['values']['input']);
+  flexifilter_invoke_components($form_state['values']['flexifilter']['components'], 'process', $text);
+  $form_state['storage']['preview'] = TRUE;
+  $form_state['storage']['data'] = (variable_get('flexifilter_preview_text', array()));
+  variable_del('flexifilter_preview');
+  variable_del('flexifilter_preview_text');
 }

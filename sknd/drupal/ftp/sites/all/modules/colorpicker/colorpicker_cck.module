@@ -53,7 +53,7 @@ function colorpicker_cck_field($op, &$node, $field, &$items, $teaser, $page) {
         foreach ($items as $delta => $item) {
           $error_element = isset($item['_error_element']) ? $item['_error_element'] : '';
 
-          if ($item['value'] !== '#' && !preg_match('/^#(?:(?:[a-f\d]{3}){1,2})$/i', $item['value'])) {
+          if ($item['value'] != '' && !preg_match('/^#(?:(?:[a-f\d]{3}){1,2})$/i', $item['value'])) {
             form_set_error($error_element, "'". check_plain($item['value']) ."'". t(' is not a valid hex color'));
           }
         }
@@ -150,7 +150,7 @@ function colorpicker_cck_elements() {
 function colorpicker_cck_widget(&$form, &$form_state, $field, $items, $delta = 0) {
   $element = array(
     '#type' => $field['widget']['type'],
-    '#default_value' => isset($items[$delta]) ? $items[$delta] : '#FF0000',
+    '#default_value' => isset($items[$delta]) ? $items[$delta] : '',
   );
   return $element;
 }
@@ -168,7 +168,7 @@ function colorpicker_cck_process($element, $edit, $form_state, $form) {
   $field = $form['#field_info'][$field_name];
   $field_key  = $element['#columns'][0];
 
-  $value = isset($element['#value'][$field_key]) ? $element['#value'][$field_key] : '#FF0000';
+  $value = isset($element['#value'][$field_key]) ? $element['#value'][$field_key] : '';
 
   $element[$field_key] = array(
     '#type' => 'colorpicker_textfield',

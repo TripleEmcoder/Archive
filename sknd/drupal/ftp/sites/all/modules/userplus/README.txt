@@ -49,6 +49,13 @@ multiple users' form.  This feature works best with text fields right
 now, so you should expect to see some problems with other field types
 and should feel free to report them in the userplus issue queue.
 
+The 'show required content profile fields' configuration option controls
+whether content profile fields (provided by the Content Profile contrib
+module) appear on the 'add multiple users' form.  This feature works best
+with text fields right now, so you should expect to see some problems with
+other field types and should feel free to report them in the userplus issue
+queue.
+
 TECHNICAL NOTES:
 
 During "add multiple users" user validation bypasses user.module because

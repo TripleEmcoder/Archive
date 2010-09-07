@@ -5,9 +5,9 @@ package = Input filters
 dependencies[] = tableofcontents
 core = 6.x
 
-; Information added by drupal.org packaging script on 2010-03-08
-version = "6.x-3.4"
+; Information added by drupal.org packaging script on 2010-06-01
+version = "6.x-3.6"
 core = "6.x"
 project = "tableofcontents"
-datestamp = "1268036707"
+datestamp = "1275366307"
 

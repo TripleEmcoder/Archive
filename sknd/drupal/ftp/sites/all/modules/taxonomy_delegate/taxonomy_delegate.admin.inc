@@ -1,5 +1,5 @@
 <?php
-// $Id: taxonomy_delegate.admin.inc,v 1.1.2.7 2008/11/07 00:21:09 nancyw Exp $
+// $Id: taxonomy_delegate.admin.inc,v 1.1.2.6 2008/06/20 16:21:24 nancyw Exp $
 
 /**
  * @file
@@ -25,8 +25,8 @@ function taxonomy_delegate_settings_form() {
     '#title' => t('Hide these fields from the administrator-delegate'),
     '#default_value' => variable_get('taxonomy_delegate_hides', array()),
     '#description' => t('The selected fields will be hidden on the term add/edit page. Users with "administer taxonomy" permission will always see them.'),
-    '#prefix' => '<div class="taxonomy-delegate-checkboxes">',
-    '#suffix' => '</div><div class="clear-block"></div>',
+    '#prefix' => '<div class="taxonomy_delegate_checkboxes">',
+    '#suffix' => '</div><div class="clear-block"></div><br/>',
     );
 
   $form['taxonomy_delegate_menu'] = array(

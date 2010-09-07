@@ -1,9 +1,11 @@
 <?php
-// $Id: node_export_file.module,v 1.1.2.2 2009/05/23 06:18:14 danielb Exp $
+// $Id: node_export_file.module,v 1.1.2.6 2010/02/12 17:37:02 jamesandres Exp $
 
 /**
- * @file node_export_file.module
- *  Export helper module for handling CCK FileFields, Uploaded files, and Images.
+ * @file
+ * The Node Export File module.
+ *
+ * Export helper module for handling CCK FileFields, Uploaded files, and Images.
  */
 
 define('EXPORT_FILE_FILES_DIR_SUBSTITUTION', '#FILES_DIRECTORY_PATH#');
@@ -19,13 +21,14 @@ function node_export_file_help($path, $arg) {
 }
 
 /**
- * Implementation of hook_form_alter()
+ * Implementation of hook_form_alter().
  */
 function node_export_file_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'node_export_form') {
-    // TODO: Add extra options to the export form?
-  } else if ($form_id == 'node_export_settings') {
-    drupal_add_js(drupal_get_path('module', 'node_export_file') . '/js/node_export_file_admin.js');
+  // TODO: Add extra options to the export form?
+  }
+  elseif ($form_id == 'node_export_settings') {
+    drupal_add_js(drupal_get_path('module', 'node_export_file') .'/js/node_export_file_admin.js');
 
     $form['node_export_file'] = array(
       '#type' => 'fieldset',
@@ -42,12 +45,18 @@ function node_export_file_form_alter(&$form, $form_state, $form_id) {
       '#description' => t('Which content types should export file attachments and uploads?'),
     );
 
+    $textarea_delivery = $form['basic']['node_export_node_code']['#default_value'];
+    $bulk_delivery = $form['basic']['node_export_bulk_code']['#default_value'];
+
+    $mode_message_display = ($textarea_delivery != 'file' || $bulk_delivery != 'file');
+
     $form['node_export_file']['node_export_file_mode'] = array(
       '#type' => 'radios',
       '#title' => t('File export mode'),
-      '#default_value' => variable_get('node_export_file_mode', 'local'),
-      '#options' => array('local' => t('Local file export'), 'remote' => t('Remote file export, URL')),
-      '#description' => t('Should node exports contain a local path to the file, or a URL?  If you plan to import nodes on a different server or web-host, choose remote.  <em>NOTE: Remote mode only works with a public files directory.</em>'),
+      '#default_value' => variable_get('node_export_file_mode', 'inline'),
+      '#options' => array('inline' => t('Inside export code (base 64 encoded string)'), 'local' => t('Local file export'), 'remote' => t('Remote file export, URL')),
+      '#description' => t('Should file exports be inline inside the export code, a local path to the file or a URL?  "Inside export code" is the easiest option to use, local and remote modes are more useful for power users.  <em>NOTE: Remote mode only works with a public files directory.</em>'),
+      '#prefix' => '<div id="node-export-file-mode-message"><div class="message warning" style="display: ' . ($mode_message_display ? 'block' : 'none') . ';">' . t('Warning, "Inside export code (base 64 encoded string)" mode generates much larger exports.  For this reason it is recommended you set the export code delivery methods to "Text file download" (both <strong>Node export code delivery</strong> and <strong>Bulk node export code delivery</strong>).') . '</div></div>',
     );
 
     $form['node_export_file']['node_export_file_assets_path'] = array(
@@ -70,30 +79,30 @@ function node_export_file_form_alter(&$form, $form_state, $form_id) {
 }
 
 /**
- * Implementation of hook_node_export_node_alter()
+ * Implementation of hook_node_export_node_alter().
  *
  * Handles importing and exporting CCK FileFields
  *
  * @param $module
  *   An extra paramater that allows this hook implementation to do work
  *   for other modules that are very similar to filefield (eg: upload).
- **/
+ */
 function filefield_node_export_node_alter(&$node, $original_node, $method) {
   _node_export_file_node_alter($node, $original_node, $method, '_filefield_field_filter');
 }
 
 /**
  * FileField field filter callback used in _node_export_file_node_alter().
- **/
+ */
 function _filefield_field_filter($attribute, $field) {
-  return (substr($attribute, 0, 6) == 'field_' && is_array($field));
+  return (drupal_substr($attribute, 0, 6) == 'field_' && is_array($field));
 }
 
 /**
- * Implementation of hook_node_export_node_alter()
+ * Implementation of hook_node_export_node_alter().
  *
  * Handles importing and exporting CCK FileFields
- **/
+ */
 function upload_node_export_node_alter(&$node, $original_node, $method) {
   if (isset($original_node->files) && count($original_node->files) > 0) {
     // Re-attach files, node_export module strips them off
@@ -112,20 +121,20 @@ function upload_node_export_node_alter(&$node, $original_node, $method) {
 
 /**
  * Upload module field filter callback used in _node_export_file_node_alter().
- **/
+ */
 function _upload_field_filter($attribute, $field) {
   return ($attribute == 'files' && is_array($field));
 }
 
 /**
- * Implementation of hook_node_export_node_alter()
+ * Implementation of hook_node_export_node_alter().
  *
  * Handles importing and exporting photos uploaded to image nodes.  This
  * is more complicated than for filefields or upload attachments because
  * the image module doesn't attach the file objects for images to the node.
  * To get around this we create a special 'image_export_files' attribute
  * on the node.  This will be stripped off when the node is imported.
- **/
+ */
 function image_node_export_node_alter(&$node, $original_node, $method) {
   // Only act on image nodes
   if ($node->type != 'image') {
@@ -167,18 +176,27 @@ function image_node_export_node_alter(&$node, $original_node, $method) {
 
 /**
  * Upload module field filter callback used in _node_export_file_node_alter().
- **/
+ */
 function _image_field_filter($attribute, $field) {
   return ($attribute == 'image_export_files' && is_array($field));
 }
 
 /**
  * Abstract hook_node_export_node_alter() used by filefield, upload, and image.
- **/
+ */
 function _node_export_file_node_alter(&$node, $original_node, $method, $attribute_filter_callback) {
   $assets_path = variable_get('node_export_file_assets_path', '');
-  $export_mode = variable_get('node_export_file_mode', 'local');
-  $export_var = ($export_mode == 'local') ? 'node_export_file_path' : 'node_export_file_url';
+  $export_mode = variable_get('node_export_file_mode', 'inline');
+
+  switch ($export_mode) {
+    case 'local':
+      $export_var = 'node_export_file_path'; break;
+    case 'remote':
+      $export_var = 'node_export_file_url';  break;
+    default:
+    case 'inline':
+      $export_var = 'node_export_file_data'; break;
+  }
 
   if ($method == 'export') {
     if (_node_export_file_check_assets_path($export_mode, $assets_path) === FALSE) {
@@ -210,21 +228,21 @@ function _node_export_file_node_alter(&$node, $original_node, $method, $attribut
           continue;
         }
 
-        $export_path = _node_export_file_get_export_path($file, $export_mode, $assets_path);
+        $export_data = _node_export_file_get_export_data($file, $export_mode, $assets_path);
 
         if (is_object($field[$i])) {
-          $field[$i]->{$export_var} = $export_path;
+          $field[$i]->{$export_var} = $export_data;
           $field[$i]->fid = NULL;
           _node_export_file_clean_local_file_path($field[$i]->filepath);
         }
-        else if (is_array($field[$i])) {
-          $field[$i][$export_var] = $export_path;
+        elseif (is_array($field[$i])) {
+          $field[$i][$export_var] = $export_data;
           $field[$i]['fid'] = NULL;
           _node_export_file_clean_local_file_path($field[$i]['filepath']);
         }
       }
       // When importing a node ...
-      else if ($method == 'save-edit' || $method == 'prepopulate') {
+      elseif ($method == 'save-edit' || $method == 'prepopulate') {
         $result = _node_export_file_import_file($file);
 
         // The file was saved successfully, update the file field (by reference)
@@ -233,7 +251,7 @@ function _node_export_file_node_alter(&$node, $original_node, $method, $attribut
             $field[$i]->fid = $file->fid;
             $field[$i]->filepath = $file->filepath;
           }
-          else if (is_array($field[$i])) {
+          elseif (is_array($field[$i])) {
             $field[$i]['fid'] = $file->fid;
             $field[$i]['filepath'] = $file->filepath;
           }
@@ -255,7 +273,7 @@ function _node_export_file_node_alter(&$node, $original_node, $method, $attribut
  *   TRUE  if the assets path is ready, and files should be copied there
  *   FALSE if the assets path is not ready, and files should be copied there
  *   NULL  if files shouldn't be copied to the assets path
- **/
+ */
 function _node_export_file_check_assets_path($export_mode, $assets_path) {
   // If files are supposed to be copied to the assets path.
   if ($export_mode == 'local' && $assets_path) {
@@ -282,7 +300,7 @@ function _node_export_file_check_assets_path($export_mode, $assets_path) {
  *
  * @return $files or FALSE
  *   Returns an array of $files objects, or FALSE if there are no files.
- **/
+ */
 function _node_export_file_check_files($original_files) {
   $files = array();
 
@@ -304,30 +322,34 @@ function _node_export_file_check_files($original_files) {
  * @param $file
  *   The file object to handle.
  * @param $export_mode
- *   The mode, 'local' / 'remote'
+ *   The mode, 'inline' / 'local' / 'remote'
  * @param $assets_path
  *   Either empty ('') if files should not be copied to the assets path, or
  *   the path to a writable directory.
- **/
-function _node_export_file_get_export_path($file, $export_mode, $assets_path) {
+ */
+function _node_export_file_get_export_data($file, $export_mode, $assets_path) {
   if ($export_mode == 'local') {
     if ($assets_path) {
-      $export_path = $assets_path . '/' . basename($file->filepath);
-
-      if (!copy($file->filepath, $node_export_file_path)) {
-        drupal_set_message(t("Export file error, could not copy '$file->filepath' to '$node_export_file_path'."), 'error');
+      $export_data = $assets_path .'/'. basename($file->filepath);
+      if (!copy($file->filepath, $export_data)) {
+        drupal_set_message(t("Export file error, could not copy '%filepath' to '%exportpath'.", array('%filepath' => $file->filepath, '%exportpath' => $export_data)), 'error');
         return FALSE;
       }
-    } else {
-      $export_path = $file->filepath;
+    }
+    else {
+      $export_data = $file->filepath;
     }
   }
   // Remote export mode
+  elseif ($export_mode == 'remote') {
+    $export_data = url($file->filepath, array('absolute' => TRUE));
+  }
+  // Default is 'inline' export mode
   else {
-    $export_path = url($file->filepath, array('absolute' => TRUE));
+    $export_data = base64_encode(file_get_contents($file->filepath));
   }
 
-  return $export_path;
+  return $export_data;
 }
 
 /**
@@ -335,15 +357,15 @@ function _node_export_file_get_export_path($file, $export_mode, $assets_path) {
  * this forces clients decoding the node export to use their own
  * files directory path.  This helps get around issues with multi-site
  * installations and non-standard files directory locations.
- **/
+ */
 function _node_export_file_clean_local_file_path(&$path) {
-  $path = preg_replace('/^' . preg_quote(file_directory_path(), '/') . '/', EXPORT_FILE_FILES_DIR_SUBSTITUTION, $path);
+  $path = preg_replace('/^'. preg_quote(file_directory_path(), '/') .'/', EXPORT_FILE_FILES_DIR_SUBSTITUTION, $path);
 }
 
 /**
  * Replaces the EXPORT_FILE_FILES_DIR_SUBSTITUTION with the files directory
  * path, wherever found.
- **/
+ */
 function _node_export_file_unclean_local_file_path(&$path) {
   $path = strtr($path, array(EXPORT_FILE_FILES_DIR_SUBSTITUTION => file_directory_path()));
 }
@@ -356,7 +378,7 @@ function _node_export_file_unclean_local_file_path(&$path) {
  * @return TRUE or FALSE
  *   Depending on success or failure.  On success the $file object will
  *   have a valid $file->fid attribute.
- **/
+ */
 function _node_export_file_import_file(&$file) {
   // Ensure the filepath is set correctly relative to this Drupal site's
   // files directory
@@ -377,9 +399,18 @@ function _node_export_file_import_file(&$file) {
   ) {
     drupal_write_record('files', $file);
   }
+  elseif (isset($file->node_export_file_data)) {
+    $directory = file_create_path(dirname($file->filepath));
+
+    if (file_check_directory($directory, TRUE)) {
+      if (file_put_contents($file->filepath, base64_decode($file->node_export_file_data))) {
+        drupal_write_record('files', $file);
+      }
+    }
+  }
   // The file is in a local location, move it to the
   // destination then finish the save
-  else if (isset($file->node_export_file_path) && is_file($file->node_export_file_path)) {
+  elseif (isset($file->node_export_file_path) && is_file($file->node_export_file_path)) {
     $directory = file_create_path(dirname($file->filepath));
 
     if (file_check_directory($directory, TRUE)) {
@@ -396,17 +427,17 @@ function _node_export_file_import_file(&$file) {
     }
   }
   // The file is in a remote location, attempt to download it
-  else if (isset($file->node_export_file_url)) {
+  elseif (isset($file->node_export_file_url)) {
     // Need time to do the download
     ini_set('max_execution_time', 900);
 
-    $temp_path = md5(mt_rand()) . ".txt";
+    $temp_path = file_directory_temp() . '/' . md5(mt_rand()) .'.txt';
     if (($source = fopen($file->node_export_file_url, 'r')) == FALSE) {
-      drupal_set_message(t("Could not open '!file' for reading.", array('!file' => $file->node_export_file_url)));
+      drupal_set_message(t("Could not open '@file' for reading.", array('@file' => $file->node_export_file_url)));
       return FALSE;
     }
-    else if (($dest = fopen($temp_path, 'w')) == FALSE) {
-      drupal_set_message(t("Could not open '!file' for writing.", array('!file' => $file->filepath)));
+    elseif (($dest = fopen($temp_path, 'w')) == FALSE) {
+      drupal_set_message(t("Could not open '@file' for writing.", array('@file' => $file->filepath)));
       return FALSE;
     }
     else {
@@ -420,14 +451,20 @@ function _node_export_file_import_file(&$file) {
       clearstatcache();
 
       if ($bytes_read != filesize($temp_path)) {
-        drupal_set_message(t("Remote export '!url' could not be fully downloaded, '!file' to temporary location '!temp'.", array('!url' => $file->node_export_file_url, '!file' => $file->filepath, '!temp' => $temp_path)));
+        drupal_set_message(t("Remote export '!url' could not be fully downloaded, '@file' to temporary location '!temp'.", array('!url' => $file->node_export_file_url, '@file' => $file->filepath, '!temp' => $temp_path)));
         return FALSE;
       }
       // File was downloaded successfully!
       else {
-        // TODO: Handle potential errors here.
-        file_copy($temp_path, $file->filepath, FILE_EXISTS_REPLACE);
+        if (!@copy($temp_path, $file->filepath)) {
+          unlink($temp_path);
+          drupal_set_message(t("Could not move temporary file '@temp' to '@file'.", array('@temp' => $temp_path, '@file' => $file->filepath)));
+          return FALSE;
+        }
+
         unlink($temp_path);
+        $file->filesize = filesize($file->filepath);
+        $file->filemime = file_get_mimetype($file->filepath);
       }
     }
 
@@ -444,3 +481,4 @@ function _node_export_file_import_file(&$file) {
 
   return TRUE;
 }
+

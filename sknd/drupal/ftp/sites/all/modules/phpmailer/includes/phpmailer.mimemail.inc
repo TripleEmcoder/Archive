@@ -1,5 +1,5 @@
 <?php
-// $Id: phpmailer.mimemail.inc,v 1.4 2009/05/07 04:33:19 sun Exp $
+// $Id: phpmailer.mimemail.inc,v 1.6.2.4 2010/01/17 18:04:49 smk Exp $
 
 /**
  * @file
@@ -23,66 +23,68 @@ function mimemail_phpmailer_send($message) {
     $mail->LE = variable_get('mimemail_crlf', "\n");
   }
 
-  // Extract and assign e-mail addresses required for SMTP.
-  // Display names are not required. Leave header intact.
+  try {
+    // Extract and assign e-mail addresses required for SMTP.
+    // Display names are usually not required. Leave header intact.
 
-  // Parse 'From' e-mail address.
-  $address = phpmailer_parse_address($message['sender']);
-  $mail->From = $address[0]['mail'];
-
-  if (variable_get('phpmailer_debug_email', '') === '') {
-    // Set recipients.
-    foreach (phpmailer_parse_address($message['address']) as $address) {
-      $mail->AddAddress($address['mail']);
+    // Parse 'From' e-mail address.
+    $from = reset(phpmailer_parse_address($message['sender']));
+    $mail->From = $from['mail'];
+    if ($from['name'] != '') {
+      $mail->FromName = $from['name'];
     }
-    // Extract CCs and BCCs from headers.
-    if (isset($message['headers']['CC'])) {
-      foreach (phpmailer_parse_address($message['headers']['CC']) as $address) {
-        $mail->AddCC($address['mail']);
+
+    if (variable_get('phpmailer_debug_email', '') === '') {
+      // Set recipients.
+      foreach (phpmailer_parse_address($message['address']) as $address) {
+        $mail->AddAddress($address['mail']);
+      }
+      // Extract CCs and BCCs from headers.
+      if (isset($message['headers']['CC'])) {
+        foreach (phpmailer_parse_address($message['headers']['CC']) as $address) {
+          $mail->AddCC($address['mail']);
+        }
+      }
+      if (isset($message['headers']['BCC'])) {
+        foreach (phpmailer_parse_address($message['headers']['BCC']) as $address) {
+          $mail->AddBCC($address['mail']);
+        }
       }
     }
-    if (isset($message['headers']['BCC'])) {
-      foreach (phpmailer_parse_address($message['headers']['BCC']) as $address) {
-        $mail->AddBCC($address['mail']);
-      }
+    else {
+      // Reroute to debug e-mail address.
+      $message['address'] = variable_get('phpmailer_debug_email', '');
+      $mail->AddAddress($message['address']);
     }
-  }
-  else {
-    // Reroute to debug e-mail address.
-    $message['address'] = variable_get('phpmailer_debug_email', '');
-    $mail->AddAddress($message['address']);
-  }
-  unset($message['headers']['CC'], $message['headers']['BCC']);
+    unset($message['headers']['CC'], $message['headers']['BCC']);
 
-  if ($mail->SMTPDebug) {
-    ob_start();
-  }
+    $message['headers']['Date'] = $mail->RFCDate();
 
-  $message['headers']['Date'] = $mail->RFCDate();
-  if ($message['address']) {
-    $message['headers']['To'] = $message['address'];
-  }
-  $message['headers']['Subject'] = $message['subject'];
-  // FIXME SpamAssassin says INVALID_MSGID to PHPMailer's generated Message-ID. 06/04/2009 smk
-//  if (!isset($message['headers']['Message-ID'])) {
-//    $message['headers']['Message-ID'] = sprintf("<%s@%s>", md5(uniqid(time())), $mail->ServerHostname());
-//  }
-  $header = mimemail_rfc_headers($message['headers']) . $mail->LE . $mail->LE;
-
-  if (!($result = $mail->SmtpSend($header, $message['body']))) {
-    watchdog('phpmailer', $mail->ErrorInfo, NULL, WATCHDOG_ERROR);
-  }
-
-  // Reset object properties.
-  $mail->Reset();
-
-  if ($mail->SMTPDebug) {
-    if ($debug = ob_get_contents()) {
-      drupal_set_message($debug);
+    if ($message['address']) {
+      $message['headers']['To'] = $message['address'];
     }
-    ob_end_clean();
-  }
 
-  return $result;
+    // If no Reply-To header has been explicitly set, use the From address to be
+    // able to respond to e-mails sent via Google Mail.
+    if (!isset($message['headers']['Reply-To']) && variable_get('smtp_always_replyto', FALSE)) {
+      $message['headers']['Reply-To'] = $from['mail'];
+    }
+
+    $message['headers']['Subject'] = $message['subject'];
+
+    // FIXME SpamAssassin says INVALID_MSGID to PHPMailer's generated Message-ID. 06/04/2009 smk
+//    if (!isset($message['headers']['Message-ID'])) {
+//      $message['headers']['Message-ID'] = sprintf("<%s@%s>", md5(uniqid(time())), $mail->ServerHostname());
+//    }
+
+    $header = mimemail_rfc_headers($message['headers']) . $mail->LE . $mail->LE;
+
+    return $mail->SmtpSend($header, $message['body']);
+  }
+  catch (phpmailerException $e) {
+    drupal_set_message(t('Sending of at least one e-mail failed. The error returned was:<br />@error.', array('@error' => $e->getMessage())), 'error');
+    watchdog('phpmailer', $e->getMessage(), NULL, WATCHDOG_ERROR);
+    return FALSE;
+  }
 }
 

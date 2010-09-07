@@ -1,4 +1,13 @@
-// $Id: CHANGELOG.txt,v 1.6 2008/01/24 01:57:10 cwgordon7 Exp $
+// $Id: CHANGELOG.txt,v 1.7.2.1 2008/04/17 21:58:06 cwgordon7 Exp $
+
+Flexifilter ?.?-?.?-???, ????-??-??
+-----------------------------------
+- Added ability to preview flexifilters
+- Added sequences support.
+- Changed flexifilter descriptions to hook_filter_tips
+  implementation.
+- Made flexifilter preview awesomified.
+- Added ability to turn on/off filter caching on a per-flexifilter basis.
 
 Flexifilter 6.x-1.1-RC1, 2008-01-23
 -----------------------------------

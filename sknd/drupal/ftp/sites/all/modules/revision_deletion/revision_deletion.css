@@ -1,4 +1,4 @@
-/* $Id: revision_deletion.css,v 1.1.4.3 2009/08/17 23:57:46 nancyw Exp $ */
+/* $Id: revision_deletion.css,v 1.1.4.5 2009/10/09 13:50:08 nancyw Exp $ */
 /**
 * @file
 *   Style sheet for the revision_deletion module.
@@ -14,11 +14,24 @@
 }
 
 .revision-deletion-options .form-item .description,
- #revision-deletion-settings .description ,
- #revision-deletion-list  .description{
+ #revision-deletion-settings .description {
   clear: both; 
   display: block;
   padding: 0.5em 0 0 2em;
+}
+
+#revision-deletion-list  .description, #revision-deletion-list  .info {
+  clear: both; 
+  display: block;
+  margin: 0.5em 2em 1em 2em;
+  font-size: 89%;
+}
+
+#revision-deletion-list  tr.odd td, #revision-deletion-list  tr.even td {
+  padding: 0 0.5em;
+}
+
+#revision-deletion-list  .revision-log {
 }
 
 #revision-deletion-settings .fieldset-wrapper .description {
@@ -48,26 +61,29 @@
 
 #revision-deletion-list table {
   margin-bottom: 1em;
-  line-height: 1em;
 }
 
 #revision-deletion-list th {
   text-align: center;
 }
 
-#revision-deletion-list .revision-current {
-  background-color: #ffffcc; 
-}
-
-#revision-deletion-list .revision-original {
-  /* background-color: #ffddff; /* */
-}
-
-#revision-deletion-list .revision-last {
-  /* background-color: #ddffff; /* */
-}
-
-.revision-log {
+#revision-deletion-list  .revision-log {
   text-indent: 2em;
-  margin-top: -1em;
+}
+
+tr.revision-current {
+  /* background-color: #ffffcc !important; /* Highlight current version. "!important" overrides odd/even. */
+  /* font-size: 115%; /* */
+}
+
+tr.revision-original {
+  /* background-color: #ffcccc !important; /* Highlight original version. */
+}
+
+tr.revision-last {
+  /* background-color: #ccffcc !important; /* Highlight last-for-date version. */
+}
+
+#revision-deletion-list td.selected {
+  /* background-color: #aa2222; /* This highlights selected checkboxes. */
 }

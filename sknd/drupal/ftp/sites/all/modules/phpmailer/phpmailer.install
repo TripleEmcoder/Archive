@@ -1,5 +1,5 @@
 <?php
-// $Id: phpmailer.install,v 1.1 2009/05/07 04:33:19 sun Exp $
+// $Id: phpmailer.install,v 1.3.2.2 2009/11/21 18:49:29 smk Exp $
 
 /**
  * @file
@@ -7,12 +7,42 @@
  */
 
 /**
+ * Implementation of hook_requirements().
+ */
+function phpmailer_requirements($phase) {
+  $requirements = array();
+  // Ensure translations don't break at install time.
+  $t = get_t();
+
+  $path = drupal_get_path('module', 'phpmailer');
+  if (!file_exists('./' . $path . '/phpmailer/class.phpmailer.php') || !file_exists('./' . $path . '/phpmailer/class.smtp.php')) {
+    $requirements['phpmailer'] = array(
+      'title' => $t('PHPMailer library'),
+      'severity' => REQUIREMENT_ERROR,
+      'description' => $t('PHPMailer module requires the <a href="@phpmailer-url">PHPMailer</a> library to properly send mail. Please download the PHPMailer package for PHP5/6, extract the archive and copy its contents to the following location: @phpmailer-path. Make sure the main PHPMailer class is located at @phpmailer-class-path.', array(
+        '@phpmailer-url' => 'http://sourceforge.net/projects/phpmailer/files/phpmailer%20for%20php5_6/',
+        '@phpmailer-path' => $path . '/phpmailer/',
+        '@phpmailer-class-path' => $path . '/phpmailer/class.phpmailer.php',
+      )),
+    );
+  }
+  else if ($phase == 'runtime') {
+    module_load_include('php', 'phpmailer', 'phpmailer/class.phpmailer');
+    $mail = new PHPMailer();
+    $requirements['phpmailer'] = array(
+      'title' => $t('PHPMailer library'),
+      'value' => $mail->Version,
+      'severity' => REQUIREMENT_OK,
+    );
+  }
+
+  return $requirements;
+}
+
+/**
  * Implementation of hook_uninstall().
  */
 function phpmailer_uninstall() {
-  if (strpos(variable_get('smtp_library', ''), 'phpmailer')) {
-    variable_del('smtp_library');
-  }
   variable_del('smtp_on');
   variable_del('smtp_host');
   variable_del('smtp_hostbackup');

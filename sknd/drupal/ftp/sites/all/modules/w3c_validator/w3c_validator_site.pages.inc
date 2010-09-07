@@ -1,5 +1,5 @@
 <?php
-// $Id: w3c_validator_site.pages.inc,v 1.1.2.3 2009/10/05 10:33:38 pl2 Exp $
+// $Id: w3c_validator_site.pages.inc,v 1.1.2.4 2009/12/22 10:00:56 pl2 Exp $
 
 /**
  * @file
@@ -13,7 +13,7 @@
  * @return void
  */
 function w3c_validator_site_content_validator($form_state) {
-  $endpoint = variable_get('w3c_validator_api_endpoint_uri', '');
+  $endpoint = variable_get('w3c_validator_api_endpoint_uri', 'http://validator.w3.org/check');
   if (empty($endpoint)) {
     drupal_set_message(t("W3C validator hasn't been configured yet."), 'warning');
     if (user_access('administer w3c_validator')) {
@@ -54,6 +54,16 @@ function w3c_validator_site_content_validator($form_state) {
     '#default_value' => array(),
   );
 
+  $method = variable_get('w3c_validator_method', 'w3c_markup_validator');
+  $form['unpublished'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Include unpublished nodes'),
+    '#description' => t('Only available when using the Tidy library validation method.'),
+    '#default_value' => FALSE,
+    '#disabled' => $method != 'tidy',
+  );
+
+
   $form['validate'] = array(
     '#type' => 'submit',
     '#value' => t('Validate'),
@@ -88,6 +98,7 @@ function w3c_validator_site_content_validator_submit($form, &$form_state) {
         $config['content_types'][$type] = TRUE;
       }
     }
+    $config['unpublished'] = $form_state['values']['unpublished'];
   }
 
   $result_set = new stdClass();

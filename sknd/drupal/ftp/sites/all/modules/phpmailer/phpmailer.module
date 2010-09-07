@@ -1,10 +1,9 @@
 <?php
-// $Id: phpmailer.module,v 1.4 2009/05/07 04:33:19 sun Exp $
+// $Id: phpmailer.module,v 1.11.2.8 2010/01/17 15:44:18 smk Exp $
 
 /**
  * @file
- * This module integrates PHPMailer with Drupal, both as native drupal_mail()
- * wrapper, and as part of the Mime Mail module.
+ * Integrates the PHPMailer library for SMTP e-mail delivery.
  */
 
 /**
@@ -23,33 +22,56 @@ function phpmailer_menu() {
     'description' => 'Configure PHPMailer settings.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('phpmailer_settings_form'),
-    'access callback' => 'phpmailer_settings_access',
+    'access arguments' => array('administer phpmailer settings'),
     'file' => 'phpmailer.admin.inc',
   );
   $items['phpmailer/preview'] = array(
     'title' => 'Mail preview',
     'page callback' => 'phpmailer_preview',
     'access callback' => 'phpmailer_preview_access',
+    'file' => 'phpmailer.admin.inc',
     'type' => MENU_CALLBACK,
   );
   return $items;
 }
 
 /**
- * Implementation of hook_form_alter().
+ * Implementation of hook_menu_alter().
  */
-function phpmailer_form_alter(&$form, &$form_state, $form_id) {
-  // Hide the mimemail global enabler setting if phpmailer is used to deliver
-  // all e-mails (they can't be both active).
-  if ($form_id == 'mimemail_settings' && strpos(variable_get('smtp_library', ''), 'phpmailer')) {
+function phpmailer_menu_alter(&$items) {
+  // Hide the settings page menu item if Mime Mail is enabled, but still allow
+  // accessing the URL for usability reasons.
+  if (module_exists('mimemail')) {
+    $items['admin/settings/phpmailer']['_visible'] = FALSE;
+  }
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function phpmailer_form_mimemail_admin_settings_alter(&$form, &$form_state) {
+  // Hide the Mime Mail global enabler setting if phpmailer is used to deliver
+  // e-mails (they can't be both active).
+  if (phpmailer_enabled()) {
     $form['mimemail']['mimemail_alter'] = array(
       '#type' => 'value',
       '#value' => 0,
     );
   }
+  // Run our own validation and submit handler before Mime Mail to be able to
+  // detect configuration changes.
+  $form['#validate'] = array_merge(array('phpmailer_settings_form_validate'), (array)$form['#validate']);
+  $form['#submit'] = array_merge(array('phpmailer_settings_form_submit'), (array)$form['#submit']);
 }
 
-if (strpos(variable_get('smtp_library', ''), 'phpmailer') && !function_exists('drupal_mail_wrapper')) {
+/**
+ * Determine if PHPMailer is used to deliver e-mails.
+ */
+function phpmailer_enabled() {
+  return strpos(variable_get('smtp_library', ''), 'phpmailer');
+}
+
+if (phpmailer_enabled() && !function_exists('drupal_mail_wrapper')) {
   /**
    * Implementation of drupal_mail_wrapper().
    */
@@ -85,7 +107,7 @@ function phpmailer_mailengine($op, $message = array()) {
 /**
  * Extract address and optional display name of an e-mail address.
  *
- * @param $address
+ * @param $string
  *   A string containing one or more valid e-mail address(es) separated with
  *   commas.
  *
@@ -94,80 +116,87 @@ function phpmailer_mailengine($op, $message = array()) {
  *
  * @see http://tools.ietf.org/html/rfc5322#section-3.4
  */
-function phpmailer_parse_address($address) {
+function phpmailer_parse_address($string) {
   $parsed = array();
-  $regexp = "/^(.*) <([a-z0-9]+(?:[_\\.-][a-z0-9]+)*@(?:[a-z0-9]+(?:[\.-][a-z0-9]+)*)+\\.[a-z]{2,})>$/i";
 
-  // Split multiple addresses and process each.
-  foreach (explode(',', $address) as $email) {
-    $email = trim($email);
-    if (preg_match($regexp, $email, $matches)) {
-      $parsed[] = array('mail' => $matches[2], 'name' => trim($matches[1], '"'));
+  // The display name may contain commas (3.4). Extract all quoted strings
+  // (3.2.4) to a stack and replace them with a placeholder to prevent
+  // splitting at wrong places.
+  $string = preg_replace('/(".*?(?<!\\\\)")/e', '_phpmailer_stack("$1")', $string);
+
+  // Build a regex that matches a name-addr (3.4).
+  // @see valid_email_address()
+  $user = '[a-zA-Z0-9_\-\.\+\^!#\$%&*+\/\=\?\`\|\{\}~\']+';
+  $domain = '(?:(?:[a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.?)+';
+  $ipv4 = '[0-9]{1,3}(?:\.[0-9]{1,3}){3}';
+  $ipv6 = '[0-9a-fA-F]{1,4}(?:\:[0-9a-fA-F]{1,4}){7}';
+  $address = "$user@(?:$domain|(?:\[(?:$ipv4|$ipv6)\]))";
+  $adr_rx = "/^(?P<name>.*)\s<(?P<address>$address)>$/";
+
+  // Split string into multiple parts and process each.
+  foreach (explode(',', $string) as $email) {
+    // Re-inject stripped placeholders.
+    $email = preg_replace('/\x01/e', '_phpmailer_stack()', trim($email));
+    // Check if it's a name-addr or a plain address (3.4).
+    if (preg_match($adr_rx, $email, $matches)) {
+      $parsed[] = array('mail' => $matches['address'], 'name' => $matches['name']);
     }
     else {
-      $parsed[] = array('mail' => $email, 'name' => '');
+      $parsed[] = array('mail' => trim($email, '<>'), 'name' => '');
     }
   }
   return $parsed;
 }
 
 /**
- * Block access to settings page if Mime Mail module is enabled.
+ * Implements a FIFO stack to store extracted quoted strings.
  */
-function phpmailer_settings_access() {
-  if (!module_exists('mimemail')) {
-    return user_access('administer phpmailer settings');
+function _phpmailer_stack($string = NULL) {
+  static $stack = array();
+
+  if (!isset($string)) {
+    // Unescape quoted characters (3.2.4) to prevent double escaping.
+    return str_replace(array('\"', '\\\\'), array('"', '\\'), array_shift($stack));
   }
-  return FALSE;
+  // Remove surrounding quotes and push on stack.
+  array_push($stack, substr($string, 1, -1));
+  // Return placeholder substitution. 0x01 may never appear outside a quoted
+  // string (3.2.3).
+  return "\x01";
 }
 
 /**
  * Menu access callback; Determine access for HTML mail preview page.
  */
 function phpmailer_preview_access() {
-  if (!strpos(variable_get('smtp_library', ''), 'phpmailer') && module_exists('mimemail') && variable_get('mimemail_alter', 0)) {
+  if (module_exists('mimemail')) {
     return user_access('administer phpmailer settings');
   }
   return FALSE;
 }
 
 /**
- * Menu callback; Render a HTML mail as preview in the browser.
- *
- * @todo Not ported to 6.x yet.
+ * Implementation of hook_enable().
  */
-function phpmailer_preview() {
-  global $user, $base_url;
-
-  if (!module_exists('mimemail')) {
-    drupal_not_found();
-    exit;
+function phpmailer_enable() {
+  if (!phpmailer_enabled() && !(module_exists('mimemail') && variable_get('mimemail_engine', 'mimemail') == 'phpmailer')) {
+    $t = get_t();
+    drupal_set_message($t('PHPMailer has been installed, but is currently disabled. <a href="@settings-url">Configure it now</a>.', array('@settings-url' => url('admin/settings/phpmailer'))));
   }
+}
 
-  $mailkey = 'phpmailer-test';
-  // Use example address to prevent usage of configurable mail format setting.
-  $recipient = 'test@example.com';
-  // @see user_register_submit()
-  $variables = array(
-    '!username' => $user->name,
-    '!site' => variable_get('site_name', 'Drupal'),
-    '!password' => 'test',
-    '!uri' => $base_url,
-    '!uri_brief' => substr($base_url, strlen('http://')),
-    '!mailto' => $user->mail,
-    '!date' => format_date(time()),
-    '!login_uri' => url('user', NULL, NULL, TRUE),
-    '!edit_uri' => url('user/'. $user->uid .'/edit', NULL, NULL, TRUE),
-    '!login_url' => user_pass_reset_url($user),
-  );
-  $subject = _user_mail_text('welcome_subject', $variables);
-  $body = _user_mail_text('welcome_body', $variables);
-  $sender = NULL;
-  $headers = array();
-
-  mimemail_mail_alter($mailkey, $recipient, $subject, $body, $sender, $headers);
-
-  print theme('mimemail_message', $body, $mailkey);
-  exit;
+/**
+ * Implementation of hook_disable().
+ */
+function phpmailer_disable() {
+  if (phpmailer_enabled()) {
+    variable_del('smtp_library');
+    variable_del('smtp_on');
+    drupal_set_message(t('PHPMailer has been disabled.'));
+  }
+  if (module_exists('mimemail') && variable_get('mimemail_engine', 'mimemail') == 'phpmailer') {
+    variable_del('mimemail_engine');
+    drupal_set_message(t('MimeMail e-mail engine has been reset to default.'), 'warning');
+  }
 }
 

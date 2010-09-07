@@ -1,5 +1,5 @@
 <?php
-// $Id: viewreference.module,v 1.2.2.15 2009/07/06 02:28:47 danielb Exp $
+// $Id: viewreference.module,v 1.2.2.18 2010/01/16 09:59:50 danielb Exp $
 
 /**
  * @file
@@ -38,6 +38,9 @@ function viewreference_theme() {
       'arguments' => array('element' => NULL),
     ),
     'viewreference_formatter_default' => array(
+      'arguments' => array('element'),
+    ),
+    'viewreference_formatter_full' => array(
       'arguments' => array('element'),
     ),
     'viewreference_formatter_plain' => array(
@@ -188,7 +191,12 @@ function viewreference_content_is_empty($item, $field) {
 function viewreference_field_formatter_info() {
   return array(
     'default' => array(
-      'label' => t('Full view'),
+      'label' => t('Default (view)'),
+      'field types' => array('viewreference'),
+      'multiple values' => CONTENT_HANDLE_CORE,
+    ),
+    'full' => array(
+      'label' => t('Full (title and view)'),
       'field types' => array('viewreference'),
       'multiple values' => CONTENT_HANDLE_CORE,
     ),
@@ -207,15 +215,38 @@ function viewreference_field_formatter_info() {
 
 /**
  * Theme function for 'default' viewreference field formatter.
- *
  */
 function theme_viewreference_formatter_default($element) {
   $output = '';
   if (!empty($element['#item']['view_id']) && is_numeric($element['#item']['view_id'])) {
     $view = db_fetch_object(db_query("SELECT name, position FROM {viewreference} WHERE view_id = '%d'", $element['#item']['view_id']));
-    $args = viewreference_get_element_args($element);
-    $view_object = views_get_view($view->name);
-    $output .= $view_object->preview($view->position, $args);
+    if ($view) {
+      $args = viewreference_get_element_args($element);
+      $view_object = views_get_view($view->name);
+      if ($view_object && $view_object->access($view->position)) {
+        $output .= $view_object->preview($view->position, $args);
+      }
+    }
+  }
+  return $output;
+}
+
+/**
+ * Theme function for 'full' viewreference field formatter.
+ */
+function theme_viewreference_formatter_full($element) {
+  $output = '';
+  if (!empty($element['#item']['view_id']) && is_numeric($element['#item']['view_id'])) {
+    $view = db_fetch_object(db_query("SELECT name, position FROM {viewreference} WHERE view_id = '%d'", $element['#item']['view_id']));
+    if ($view) {
+      $args = viewreference_get_element_args($element);
+      $view_object = views_get_view($view->name);
+      if ($view_object && $view_object->access($view->position)) {
+        $title = $view_object->get_title() ? $view_object->get_title() : $view->title;
+        $output .= '<h3 class="title viewreference-title">'. check_plain($title) .'</h3>';
+        $output .= $view_object->preview($view->position, $args);
+      }
+    }
   }
   return $output;
 }
@@ -227,9 +258,13 @@ function theme_viewreference_formatter_plain($element) {
   $output = '';
   if (!empty($element['#item']['view_id']) && is_numeric($element['#item']['view_id'])) {
     $view = db_fetch_object(db_query("SELECT name, title FROM {viewreference} WHERE view_id = '%d'", $element['#item']['view_id']));
-    $view_object = views_get_view($view->name);
-    $title = $view_object->get_title() ? $view_object->get_title() : $view->title;
-    $output .= check_plain($view->title);
+    if ($view) {
+      $view_object = views_get_view($view->name);
+      if ($view_object && $view_object->access($view->position)) {
+        $title = $view_object->get_title() ? $view_object->get_title() : $view->title;
+        $output .= check_plain($title);
+      }
+    }
   }
   return $output;
 }
@@ -241,19 +276,23 @@ function theme_viewreference_formatter_link($element) {
   $output = '';
   if (!empty($element['#item']['view_id']) && is_numeric($element['#item']['view_id'])) {
     $view = db_fetch_object(db_query("SELECT name, position, title FROM {viewreference} WHERE view_id = '%d'", $element['#item']['view_id']));
-    $view_object = views_get_view($view->name);
-    $title = $view_object->get_title() ? $view_object->get_title() : $view->title;
-    if (isset($view_object->display[$view->position]->display_options['path']) && !$view_object->disabled) {
-      $args = viewreference_get_element_args($element);
-      $url_args = implode("/", $args);
-      $path = $view_object->display[$view->position]->display_options['path'];
-      if ($url_args) {
-        $path .= "/". $url_args;
+    if ($view) {
+      $view_object = views_get_view($view->name);
+      if ($view_object && $view_object->access($view->position)) {
+        $title = $view_object->get_title() ? $view_object->get_title() : $view->title;
+        if (isset($view_object->display[$view->position]->display_options['path']) && !$view_object->disabled) {
+          $args = viewreference_get_element_args($element);
+          $url_args = implode("/", $args);
+          $path = $view_object->display[$view->position]->display_options['path'];
+          if ($url_args) {
+            $path .= "/". $url_args;
+          }
+          $output .= l($title, $view_object->get_url($args, $path));
+        }
+        else {
+          $output .= check_plain($title);
+        }
       }
-      $output .= l($title, $view_object->get_url($args, $path));
-    }
-    else {
-      $output .= check_plain($title);
     }
   }
   return $output;
@@ -716,13 +755,15 @@ function viewreference_get_list_of_views() {
           $view_id = db_result(db_query("SELECT MAX(view_id) FROM {viewreference}"))+1;
         }
 
-        // Update database (delete [if possible] then insert)
-        db_query("DELETE FROM {viewreference} WHERE view_id = %d", $view_id);
-        $title = ucfirst($view_name) .' '. $display_data->display_title;
-        db_query("INSERT INTO {viewreference} (view_id, name, position, title) VALUES (%d, '%s', '%s', '%s')", $view_id, $view_name, $display_key, $title);
+        if ($view_id) {
+          // Update database (delete [if possible] then insert)
+          db_query("DELETE FROM {viewreference} WHERE view_id = %d", $view_id);
+          $title = ucfirst($view_name) .' '. $display_data->display_title;
+          db_query("INSERT INTO {viewreference} (view_id, name, position, title) VALUES (%d, '%s', '%s', '%s')", $view_id, $view_name, $display_key, $title);
 
-        // Build return array
-        $views[$view_id] = $title;
+          // Build return array
+          $views[$view_id] = $title;
+        }
 
       }
     }

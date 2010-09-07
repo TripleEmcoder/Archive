@@ -1,12 +1,11 @@
 <?php
-/* $Id: image.php,v 1.15.2.3.2.2.2.8.2.1 2009/10/29 00:16:28 tjfulopp Exp $ */
+/* $Id: image.php,v 1.15.2.3.2.2.2.8.2.3 2010/01/19 21:33:27 tjfulopp Exp $ */
 
 #if (strpos(base64_decode($_GET['imgp']), "://") !== false) {
 /* Check for bad URL inputs */
 $urlpath = base64_decode($_GET['imgp']);
-//die($urlpath);
 if (strpos($urlpath, "://") !== false ||
-    //strpos($urlpath, "..") !== false ||
+    strpos($urlpath, "..") !== false ||
     preg_match('/\D/', ($_GET['imgw'] . $_GET['imgh'])) > 0 ||
     ($_GET['imgw'] + $_GET['imgh']) < 10 ||
     ($_GET['imgw'] + $_GET['imgh']) > 20000 ) {
@@ -146,21 +145,21 @@ function resizeimage($imgp, $imgw, $imgh, $imgcrop) {
     #$head = "Content-type: image/gif";
     $img = @imagecreatefromgif($imagepath);
     if (!$img) {
-      brokenimage("Error loading GIF");
+      brokenimage("Error loading GIF",$imgw,$imgh);
     }
   }
   else if ($suffix == ".jpg" or $suffix == "jpeg") {
     #$head = "Content-type: image/jpeg";
     $img = @imagecreatefromjpeg($imagepath);
     if (!$img) {
-      brokenimage("Error loading JPG");
+      brokenimage("Error loading JPG",$imgw,$imgh);
     }
   }
   else if ($suffix == ".png") {
     #$head = "Content-type: image/png";
     $img = @imagecreatefrompng($imagepath);
     if (!$img) {
-      brokenimage("Error loading PNG");
+      brokenimage("Error loading PNG",$imgw,$imgh);
     }
   }
   # Resize the image
@@ -169,7 +168,7 @@ function resizeimage($imgp, $imgw, $imgh, $imgcrop) {
   #$dst_img = imagecreatetruecolor($imgw, $imgh);
   #imagecopyresampled($dst_img, $img, 0, 0, 0, 0, $imgw, $imgh, $src_w, $src_h);
   $dst_img = 0;
-  if ($imgcrop) {
+  if ($imgcrop == 'yes') {
     if ($src_h>$src_w) {
       // portrait
       $dst_img = imagecreatetruecolor($imgh, $imgh);
@@ -204,8 +203,8 @@ function resizeimage($imgp, $imgw, $imgh, $imgcrop) {
   return $result;
 }
 
-function brokenimage($msg) {
-  $im  = imagecreatetruecolor(150, 30);
+function brokenimage($msg,$width = 150,$height = 30) {
+  $im  = imagecreatetruecolor($width, $height);
   $bgc = imagecolorallocate($im, 0, 0, 0);
   $tc  = imagecolorallocate($im, 255, 255, 255);
   imagefilledrectangle($im, 0, 0, 150, 30, $bgc);

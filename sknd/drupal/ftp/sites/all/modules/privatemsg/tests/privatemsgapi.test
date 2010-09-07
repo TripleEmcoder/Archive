@@ -1,5 +1,5 @@
 <?php
-// $Id: privatemsgapi.test,v 1.1.2.1 2009/04/23 22:23:11 litwol Exp $
+// $Id: privatemsgapi.test,v 1.1.2.7 2010/03/25 22:29:31 berdir Exp $
 
 /**
  * @file
@@ -8,7 +8,7 @@
 
 class PrivatemsgAPITestCase extends DrupalWebTestCase {
   /**
-   * Implementation of getInfo().
+   * Implements getInfo().
    */
   function getInfo() {
     return array(
@@ -25,14 +25,14 @@ class PrivatemsgAPITestCase extends DrupalWebTestCase {
   }
 
   /**
-   * Implementation of setUp().
+   * Implements setUp().
    */
   function setUp() {
     parent::setUp('privatemsg');
   }
 
   function testPrivatemsgApiNewThread() {
-    $author     = $this->drupalCreateUser(array('write privatemsg'));
+    $author     = $this->drupalCreateUser(array('write privatemsg', 'read privatemsg'));
     $recipient1  = $this->drupalCreateUser(array('read privatemsg'));
     $recipient2  = $this->drupalCreateUser(array('read privatemsg'));
     $recipient3  = $this->drupalCreateUser(array('read privatemsg'));
@@ -54,7 +54,7 @@ class PrivatemsgAPITestCase extends DrupalWebTestCase {
     $this->assertEqual('Disallowed to send a message without subject', $resultf1['messages']['error'][0], 'API denied to send message without subject');
 
     $resultf2 = privatemsg_new_thread(array(), 'no recipients', 'Body text', array('author' => $author));
-    $this->assertEqual('Disallowed to send a message without atleast one valid recipient', $resultf2['messages']['error'][0], 'API denied to send message without recipients');
+    $this->assertEqual('Disallowed to send a message without at least one valid recipient', $resultf2['messages']['error'][0], 'API denied to send message without recipients');
     $message = $this->getMessageFromSubject('no recipients');
     $this->assertTrue(empty($message), 'Message was not saved in database');
 
@@ -64,6 +64,20 @@ class PrivatemsgAPITestCase extends DrupalWebTestCase {
     $message = $this->getMessageFromSubject('not allowed');
     $this->assertTrue(empty($message), 'Message was not saved in database');
 
+    // Test with an input format that the author is not allowed to use.
+    $resultf4 = privatemsg_new_thread(array($recipient1, $recipient2, $recipient3), 'input filter not allowed', 'Body text', array('author' => $author, 'format' => 2));
+    $errormessage = t('User @user is not allowed to use the specified input format.', array('@user' => $author->name));
+    $this->assertEqual($errormessage, $resultf4['messages']['error'][0], t('User is not allowed to use the specified input format.'));
+    $message = $this->getMessageFromSubject('input filter not allowed');
+    $this->assertTrue(empty($message), 'Message was not saved in database');
+
+    // Send a message through the api to the same user and check if it marked
+    // as new.
+    privatemsg_new_thread(array($author), $subject = $this->randomName(10), $this->randomString(20), array('author' => $author));
+    $this->drupalLogin($author);
+    $this->drupalGet('messages');
+    $this->clickLink($subject);
+    $this->assertText(t('New'), t('Message is marked as new'));
   }
 
   function getMessageFromSubject($subject) {
@@ -91,8 +105,9 @@ class PrivatemsgAPITestCase extends DrupalWebTestCase {
     $resultok = privatemsg_reply($thread_row['mid'], 'Test Body', array('author' => $recipient1));
     $this->assertTrue($resultok['success'], 'Reply could be sent successfully');
 
-    $resultok = privatemsg_reply($thread_row['mid'], '', array('author' => $recipient2));
-    $this->assertTrue($resultok['success'], 'API allowed to send message without body');
+    $resultf1 = privatemsg_reply($thread_row['mid'], '', array('author' => $recipient2));
+    $this->assertFalse($resultf1['success'], 'API denied to send message without body.');
+    $this->assertEqual($resultf1['messages']['error'][0], t('Disallowed to send reply without a message.'), 'Correct error returned when replying with an empty body.');
 
     $resultf2 = privatemsg_reply($thread_row['mid'], 'Test Body', array('author' => $recipient3));
     $errormessage = 'User '. $recipient3->name .' is not allowed to write messages';
@@ -100,4 +115,3 @@ class PrivatemsgAPITestCase extends DrupalWebTestCase {
 
   }
 }
-?>

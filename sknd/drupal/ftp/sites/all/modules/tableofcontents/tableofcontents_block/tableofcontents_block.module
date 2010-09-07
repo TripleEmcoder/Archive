@@ -1,5 +1,5 @@
 <?php
-// $Id: tableofcontents_block.module,v 1.1.2.1 2010/02/08 10:17:02 alexiswilke Exp $
+// $Id: tableofcontents_block.module,v 1.1.2.2 2010/05/24 19:26:54 alexiswilke Exp $
 
 
 /**
@@ -13,8 +13,8 @@
  * contents.
  */
 function _tableofcontents_block_view() {
-  global $tableofcontents_block_processing;
-  global $tableofcontents_block_toc;
+  global $_tableofcontents_block_processing;
+  global $_tableofcontents_block_toc;
 
   // verify access permission
   // then whether we are viewing a node
@@ -25,14 +25,14 @@ function _tableofcontents_block_view() {
   }
   $node = node_load(arg(1));
 
-  $tableofcontents_block_processing = TRUE;
+  $_tableofcontents_block_processing = TRUE;
   $text = node_view($node, FALSE, TRUE, FALSE);
-  unset($tableofcontents_block_processing);
+  unset($_tableofcontents_block_processing);
 
   module_load_include('pages.inc', 'tableofcontents');
-  $tableofcontents_block_toc = '[toc]';
+  $_tableofcontents_block_toc = '[toc]';
   $text = _tableofcontents_process(0, 'block', $text);
-  unset($tableofcontents_block_toc);
+  unset($_tableofcontents_block_toc);
 
   if ($text) {
     $block['content'] = $text;

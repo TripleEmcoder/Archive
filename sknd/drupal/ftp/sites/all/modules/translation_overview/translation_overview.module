@@ -1,5 +1,5 @@
 <?php
-// $Id: translation_overview.module,v 1.14 2009/05/19 17:21:02 drewish Exp $
+// $Id: translation_overview.module,v 1.7.2.1 2009/12/04 15:59:42 drewish Exp $
 
 define('TRANSLATION_OVERVIEW_HIGH', 2);
 define('TRANSLATION_OVERVIEW_NORMAL', 1);
@@ -280,7 +280,7 @@ function translation_overview_translation_link($node, $translation_node = NULL, 
     $properties['has_note'] = !empty($translation_node->field_translator_note[0]['value']);
     if (node_access('update', $translation_node)) {
       $link['path'] = "node/$translation_node->nid/edit";
-      $link['options']['query'] = array('destination' => drupal_get_destination());
+      $link['options']['query'] = drupal_get_destination();
     }
     else {
       $link['path'] = 'node/'. $translation_node->nid;

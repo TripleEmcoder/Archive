@@ -1,10 +1,10 @@
-# $Id: taxonomy_delegate.pot,v 1.1.2.6 2009/02/10 22:56:45 nancyw Exp $
+# $Id: taxonomy_delegate.pot,v 1.1.2.4 2008/06/20 16:21:24 nancyw Exp $
 #
 # LANGUAGE translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
-#  taxonomy_delegate.admin.inc,v 1.1.2.7 2008/11/07 00:21:09 nancyw
-#  taxonomy_delegate.module,v 1.1.4.17 2009/02/10 22:35:50 nancyw
+#  taxonomy_delegate.admin.inc,v 1.1.2.5 2008/06/06 20:08:07 nancyw
+#  taxonomy_delegate.module,v 1.1.4.11 2008/06/06 20:08:07 nancyw
 #  taxonomy_delegate.info,v 1.1.4.2 2008/02/26 02:28:08 nancyw
 #  taxonomy_delegate.install,v 1.1.4.5 2008/06/06 20:08:07 nancyw
 #
@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-02-10 17:55-0500\n"
+"POT-Creation-Date: 2008-06-20 12:18-0400\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Menu text"
 msgstr ""
 
-#: taxonomy_delegate.admin.inc:35;45 taxonomy_delegate.module:47
+#: taxonomy_delegate.admin.inc:35;45 taxonomy_delegate.module:49
 msgid "Administer My Categories"
 msgstr ""
 
@@ -66,86 +66,86 @@ msgid "Note that forum containers and topics are a vocabulary, so you may delega
 msgstr ""
 
 #: taxonomy_delegate.module:22
-msgid "This is an overview of the current delegation of authority to administer categories. Setting of the delegation is done on the vocabulary edit page. Click here to go to the <a href=\"!url\">settings page</a>."
+msgid "This is an overview of the current delegation of authority to administer categories. Setting of the delegation is done on the vocabulary edit page."
 msgstr ""
 
-#: taxonomy_delegate.module:114;37
+#: taxonomy_delegate.module:97;37
 msgid "Delegation"
 msgstr ""
 
-#: taxonomy_delegate.module:115
+#: taxonomy_delegate.module:98
 msgid "Use this section to delegate authority to maintain this vocabulary to a specific role."
 msgstr ""
 
-#: taxonomy_delegate.module:123;260
+#: taxonomy_delegate.module:106;242
 msgid "Choose the role(s) that may administer this vocabulary"
 msgstr ""
 
-#: taxonomy_delegate.module:211;400;417
+#: taxonomy_delegate.module:192;381;398
 msgid "edit"
 msgstr ""
 
-#: taxonomy_delegate.module:215
+#: taxonomy_delegate.module:196
 msgid "Vocabulary"
 msgstr ""
 
-#: taxonomy_delegate.module:215
+#: taxonomy_delegate.module:196
 msgid "Roles"
 msgstr ""
 
-#: taxonomy_delegate.module:215
+#: taxonomy_delegate.module:196
 msgid "Op"
 msgstr ""
 
-#: taxonomy_delegate.module:264
+#: taxonomy_delegate.module:246
 msgid "You may choose more than one by using the CTRL key."
 msgstr ""
 
-#: taxonomy_delegate.module:269
+#: taxonomy_delegate.module:251
 msgid "Update"
 msgstr ""
 
-#: taxonomy_delegate.module:277
+#: taxonomy_delegate.module:259
 msgid "Delete"
 msgstr ""
 
-#: taxonomy_delegate.module:359
+#: taxonomy_delegate.module:340
 msgid "List terms"
 msgstr ""
 
-#: taxonomy_delegate.module:360
+#: taxonomy_delegate.module:341
 msgid "Add terms"
 msgstr ""
 
-#: taxonomy_delegate.module:364
+#: taxonomy_delegate.module:345
 msgid "Category"
 msgstr ""
 
-#: taxonomy_delegate.module:365;427
+#: taxonomy_delegate.module:346;408
 msgid "Operations"
 msgstr ""
 
-#: taxonomy_delegate.module:387
-msgid "Terms for @vocab"
+#: taxonomy_delegate.module:368
+msgid "Terms for "
 msgstr ""
 
-#: taxonomy_delegate.module:391
+#: taxonomy_delegate.module:372
 msgid "This is a freetagging vocabulary."
 msgstr ""
 
-#: taxonomy_delegate.module:423
+#: taxonomy_delegate.module:404
 msgid "No terms available."
 msgstr ""
 
-#: taxonomy_delegate.module:426
+#: taxonomy_delegate.module:407
 msgid "Image"
 msgstr ""
 
-#: taxonomy_delegate.module:427
+#: taxonomy_delegate.module:408
 msgid "Name"
 msgstr ""
 
-#: taxonomy_delegate.module:427
+#: taxonomy_delegate.module:408
 msgid "Description"
 msgstr ""
 
@@ -153,15 +153,15 @@ msgstr ""
 msgid "Current delegation overview"
 msgstr ""
 
-#: taxonomy_delegate.module:46
+#: taxonomy_delegate.module:48
 msgid "@name"
 msgstr ""
 
-#: taxonomy_delegate.module:54 taxonomy_delegate.info:0
+#: taxonomy_delegate.module:57 taxonomy_delegate.info:0
 msgid "Taxonomy Delegate"
 msgstr ""
 
-#: taxonomy_delegate.module:58
+#: taxonomy_delegate.module:61
 msgid "Set up Taxonomy_delegate."
 msgstr ""
 

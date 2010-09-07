@@ -1,4 +1,4 @@
-$Id: API.txt,v 1.58 2009/08/15 10:44:59 wimleers Exp $
+$Id: API.txt,v 1.60 2010/02/28 19:10:18 wimleers Exp $
 
 Terminology
 -----------
@@ -310,6 +310,22 @@ Hierarchical Select implementations: gotcha's
   some magic, and AJAX updates won't work.
 
 
+Hierarchical Select compatibility: gotcha's
+-------------------------------------------
+- "Invalid response from server"
+  This typically means that some functions could not be found when
+  Hierarchical Select does an AHAH callback to the server, which in turn means
+  that some code (some PHP file) has not been included, while it should have
+  been.
+  Hierarchical Select supports the same system to define files that should be
+  included as CTools:
+    $form_state['form_load_files']
+  Hence you should do something like this in your form code:
+    $form_state['form_load_files'] = array(drupal_get_path('module', 'node') . '/pages.inc');
+  Which could look like this in your case:
+    $form_state['form_load_files'] = array(drupal_get_path('module', 'mymodule') . '/something.inc');
+
+
 Why Hierarchical Select can't take advantage of Drupal 6 Form API
 -----------------------------------------------------------------
 There are two main things that make Hierarchical Select's FAPI code very
@@ -323,6 +339,13 @@ improvements.
    wrong, because Views (the exposed filters form) support is a necessity. And
    that particular form doesn't work when $form['#cache'] is set.
 2) add child form items based on the user's input
+
+
+Hierarchical Select API Tutorial
+--------------------------------
+Written by Stephen Barker of Digital Frontiers Media
+(http://drupal.org/user/106070) and reviewed by Wim Leers:
+  http://drupal.org/node/532724
 
 
 Hooks

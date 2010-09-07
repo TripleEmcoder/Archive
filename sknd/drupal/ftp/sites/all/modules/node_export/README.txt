@@ -1,4 +1,4 @@
-$Id: README.txt,v 1.2.2.2.2.2 2009/06/18 00:40:34 danielb Exp $
+$Id: README.txt,v 1.2.2.2.2.5 2010/02/03 07:09:46 danielb Exp $
 
 Node Export README
 
@@ -40,6 +40,12 @@ INSTALLATION
 CONFIGURATION
 -------------
 1. Enable permissions at admin/user/permissions.
+   Security Warning: Users with the permission "use PHP to import nodes"
+   will be able to change nodes as they see fit before an import, as well as 
+   being able to execute PHP scripts on the server.  It is advisable not to
+   give this permission to a typical node author, only the administrator or
+   developer should use this feature.  You may even like to turn this module
+   off when it is no longer required.
 2. Configure module at admin/settings/node_export.
 
 
@@ -49,4 +55,4 @@ USAGE
    a) click the 'Export' tab on a node page or,
    b) use the Content page (admin/content/node) to filter the nodes you wish to
       export and then choose 'Export nodes' under the 'Update options'.
-2. To import nodes go to 'Import' (admin/content/import).
+2. To import nodes go to 'Node Export: Import' (admin/content/import).

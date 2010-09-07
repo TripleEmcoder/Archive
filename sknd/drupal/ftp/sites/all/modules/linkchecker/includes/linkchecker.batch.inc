@@ -1,5 +1,5 @@
 <?php
-// $Id: linkchecker.batch.inc,v 1.1.2.4 2009/07/30 21:10:54 hass Exp $
+// $Id: linkchecker.batch.inc,v 1.1.2.5 2009/09/10 22:10:48 hass Exp $
 
 /**
  * @file
@@ -218,7 +218,7 @@ function _linkchecker_batch_import_single_comment($cid, $missing_links_count) {
   return $batch;
 }
 
-function _linkchecker_batch_single_comment_import_op($nid, &$context) {
+function _linkchecker_batch_single_comment_import_op($cid, &$context) {
   $comment = _linkchecker_comment_load($cid);
   _linkchecker_add_comment_links($comment, TRUE);
 

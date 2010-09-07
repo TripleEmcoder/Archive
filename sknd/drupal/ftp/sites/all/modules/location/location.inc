@@ -1,5 +1,5 @@
 <?php
-// $Id: location.inc,v 1.95.2.3 2009/07/08 20:53:22 bdragon Exp $
+// $Id: location.inc,v 1.95.2.9 2010/07/04 14:10:07 rooby Exp $
 
 /**
  * @defgroup Location Location: An API for working with locations.
@@ -53,12 +53,12 @@ function location_map_link($location = array(), $link_text = 'See map: ') {
     $link_func = 'location_map_link_'. $location['country'] .'_'. $mapper;
     if (function_exists($link_func)) {
       if ($link = $link_func($location)) {
-        $links[] = '<a href="'. $link .'">'. $providers[$mapper]['name'] .'</a>';
+        $links[] = '<a href="'. $link .'"'. (variable_get('location_maplink_external', 0) ? ' '. variable_get('location_maplink_external_method', 'target="_blank"') : '') .'>'. $providers[$mapper]['name'] .'</a>';
       }
     }
   }
   if (count($links)) {
-    return t($link_text) . implode($links, ", ");
+    return '<div class="location map-link">'. t($link_text) . implode($links, ", ") .'</div>';
   }
   else {
     return NULL;
@@ -225,14 +225,7 @@ function _location_convert_distance_to_meters($distance, $distance_unit = 'km') 
     return NULL;
   }
 
-  // Force an integer version of distance, just in case anyone wants to add a caching mechanism
-  // for postal code proximity searches.
-
-  if (is_float($distance)) {
-    $distance = intval(ceil($distance));
-  }
-
-  if ($distance < 1) {
+  if ($distance == 0) {
     return NULL;
   }
 
@@ -241,8 +234,6 @@ function _location_convert_distance_to_meters($distance, $distance_unit = 'km') 
   }
 
   // Convert distance to meters
-  //$distance_float = floatval($distance) * (($distance_unit == 'km') ? 1000.0 : 1609.347);
-  //return round($distance_float, 2);
   $retval = round(floatval($distance) * (($distance_unit == 'km') ? 1000.0 : 1609.347), 2);
   return $retval;
 }
@@ -277,6 +268,49 @@ function location_latlon_rough($location = array()) {
   $latlon_function = 'location_latlon_rough_'. $location['country'];
   if (function_exists($latlon_function)) {
     return $latlon_function($location);
+  }
+  else {
+    return location_latlon_rough_default($location);
+  }
+}
+
+/**
+ * Returns a lat/lon pair of the approximate center of the given postal code in the given country
+ * This function is a default implementation, in case the country support doesn't implement a proper function for this.
+ *
+ * @param $location
+ *   An associative array $location where
+ *     'street'       => the street portion of the location
+ *     'supplemental' => additional street portion of the location
+ *     'province'     => the province, state, or territory
+ *     'country'      => lower-cased two-letter ISO code (REQUIRED)
+ *     'postal_code'  => the international postal code for this location (REQUIRED)
+ *
+ * @return
+ *   An associative array where
+ *      'lat' => approximate latitude of the center of the postal code's area
+ *      'lon' => approximate longitude of the center of the postal code's area
+ *
+ */
+function location_latlon_rough_default($location = array()) {
+  if (!isset($location['country']) || !isset($location['postal_code'])) {
+    return NULL;
+  }
+
+  $result = db_query("SELECT latitude, longitude FROM {zipcodes} WHERE country = '%s' AND zip = '%s'", $location['country'], $location['postal_code']);
+  if ($row = db_fetch_object($result)) {
+    return array('lat' => $row->latitude, 'lon' => $row->longitude);
+  }
+  // if nothing found internally (new zipcode, or incomplete zipcodes table)
+  elseif (($newlatlong = location_latlon_exact($location)) != NULL) {
+    // try a one-time external geocoding
+    if ($newlatlong['lat']) {
+      // and store results in zipcodes table for next lookups being internally handled
+      // (yeah this is missing city/state info a.t.m., but is way better than nothing!)
+      $result = db_query("INSERT INTO {zipcodes} (latitude, longitude, country, zip) values ('%s', '%s', '%s', '%s')",
+        $newlatlong['lat'], $newlatlong['lon'], $location['country'], $location['postal_code']);
+    }
+    return $newlatlong;
   }
   else {
     return NULL;
@@ -473,15 +507,26 @@ function location_standardize_country_code(&$country) {
   }
 }
 
-// @@@ New in 3.x, document.
 /**
- * Load the support file for a country.
+ * Load support for a country.
+ *
+ * This function will load support for a country identified by its two-letter ISO code.
+ *
+ * @param $country
+ *   Two-letter ISO code for country.
+ *
+ * @return
+ *   TRUE if the file was found and loaded, FALSE otherwise.
  */
 function location_load_country($country) {
   location_standardize_country_code($country);
-  if ($country != 'xx') {
-    include_once(drupal_get_path('module', 'location') .'/supported/location.'. $country .'.inc');
+
+  $file = drupal_get_path('module', 'location') . '/supported/location.' . $country . '.inc';
+  if (file_exists($file)) {
+    include_once($file);
+    return TRUE;
   }
+  return FALSE;
 }
 
 // @@@ New in 3.x, document.

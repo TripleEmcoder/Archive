@@ -1,5 +1,5 @@
 <?php
-// $Id: revision_deletion.admin.inc,v 1.1.2.1 2009/08/18 01:10:11 nancyw Exp $
+// $Id: revision_deletion.admin.inc,v 1.1.2.9 2009/09/05 21:46:51 nancyw Exp $
 
 /**
  * @file
@@ -14,11 +14,19 @@ define('REV_DEL_PERM', 'mass delete revisions');
 function revision_deletion_settings() {
   drupal_add_css(drupal_get_path('module', 'revision_deletion') .'/revision_deletion.css');
   $yesno = array(1 => t('Yes'), 0 => t('No'));
+  // Intervals (in seconds).
+  $minute = 60;
+  $hour = 3600;
+  $day = 86400;
+  $week = 604800;
 
   $frequency = array(0 => t('Manual'));
-  $frequency += drupal_map_assoc(array(86400, 604800, 1209600, 2419200, 4838400), 'format_interval');
+  $frequency += drupal_map_assoc(array(1 * $day, 2 * $day, 4 * $day, 1 * $week, 2 * $week, 4 * $week, 8 * $week), 'format_interval');
 
-  $age = drupal_map_assoc(array(900, 1800, 3600, 86400, 604800, 2419200, 4838400, 9676800, 15724800, 31449600), 'format_interval');
+  $current_age = array(0 => t('Always'));
+  $current_age += drupal_map_assoc(array(1 * $hour, 2 * $hour, 4 * $hour, 12 * $hour, 1 * $day, 4 * $day, 1 * $week, 2 * $week, 4 * $week, 8 * $week, 26 * $week), 'format_interval');
+
+  $age = drupal_map_assoc(array(15 * $minute, 30 * $minute, 1 * $hour, 2 * $hour, 1 * $day, 4 * $day, 1 * $week, 2 * $week, 4 * $week, 8 * $week, 16 * $week, 26 * $week, 52 * $week), 'format_interval');
 
   $form['rev_del'] = array(
     '#type' => 'fieldset',
@@ -75,13 +83,24 @@ function revision_deletion_settings() {
     '#suffix' => '</div>',
     );
 
+  // Set age for current revision.
+  $form['rev_del']['revision_delete_list_keep_current'] = array(
+    '#type' => 'radios',
+    '#title' => t('Current Revision Age'),
+    '#default_value' => variable_get('revision_delete_list_keep_current', 1209600),
+    '#options' => $current_age,
+    '#description' => t('Age of current revision before the previous can be deleted. "Always" means the previous revision will be deleted regardless of how old the current one is.'),
+    '#prefix' => '<div class="revision-deletion-options">',
+    '#suffix' => '</div>',
+    );
+
   // Settings for "list revisions".
   $form['list'] = array(
     '#type' => 'fieldset',
-    '#title' => t('List revisions settings'),
+    '#title' => t('List settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
-    '#description' => t('These options are used when the user selects "list revisions" to show all revisions.'),
+    '#description' => t('These options are used on revisions lists.'),
     );
 
   // Take over core list function.
@@ -97,24 +116,22 @@ function revision_deletion_settings() {
     '#suffix' => '</div>',
     );
 
-  // How many revisions to show in list.
-  $form['list']['revision_delete_list_limit'] = array(
+  // Number of revisions per page.
+  $form['list']['revision_delete_limit'] = array(
     '#type' => 'textfield',
+    '#title' => t('Number of Revisions per Page'),
+    '#default_value' => variable_get('revision_delete_limit', 20),
     '#size' => 6,
-    '#title' => t('How many to show in revision list'),
-    '#default_value' => variable_get('revision_delete_list_limit', 25),
-    '#description' => t('This is the number of versions that will show on each page.'),
-    '#prefix' => '<div class="container-inline">',
-    '#suffix' => '</div>',
-    );
+    '#description' => t('This is the number of revisions that should be shown in the lists.'),
+    ); /* */
 
-    // Show conditional labels.
+  // Show conditional labels.
   $form['list']['revision_delete_list_show_conditional'] = array(
     '#type' => 'radios',
-    '#title' => t('Show conditional labels'),
+    '#title' => t('Show additional labels'),
     '#options' => $yesno,
     '#default_value' => variable_get('revision_delete_list_show_conditional', 1),
-    '#description' => t('Should the conditional labels (e.g "current" or "last for date") be shown? CSS classes are also set so those rows can be styled differently.'),
+    '#description' => t('Should the additional labels (e.g "current" or "last for date") be shown? CSS classes are also set so those rows can be styled differently.'),
     '#prefix' => '<div class="container-inline">',
     '#suffix' => '</div>',
     );
@@ -180,13 +197,14 @@ function revision_deletion_settings_submit($form, &$form_state) {
   variable_set('revision_delete_freq', $form_state['values']['revision_delete_freq']);
   variable_set('revision_delete_age', $form_state['values']['revision_delete_age']);
   variable_set('revision_delete_list_takeover', $form_state['values']['revision_delete_list_takeover']);
-  variable_set('revision_delete_list_limit', $form_state['values']['revision_delete_list_limit']);
+  variable_set('revision_delete_limit', $form_state['values']['revision_delete_limit']);
   variable_set('revision_delete_list_show_conditional', $form_state['values']['revision_delete_list_show_conditional']);
   variable_set('revision_delete_list_keep_original', $form_state['values']['revision_delete_list_keep_original']);
   variable_set('revision_delete_list_keep_date_last', $form_state['values']['revision_delete_list_keep_date_last']);
+  variable_set('revision_delete_list_keep_current', $form_state['values']['revision_delete_list_keep_current']);
 
   // If the take over option has changed, rebuild the menu.
-  if ($form_state['values']['takeover_before'] == $form_state['values']['revision_delete_list_takeover']) {
+  if ($form_state['values']['takeover_before'] != $form_state['values']['revision_delete_list_takeover']) {
     menu_rebuild();
   }
 

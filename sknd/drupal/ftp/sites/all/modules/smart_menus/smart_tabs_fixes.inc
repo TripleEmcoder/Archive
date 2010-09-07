@@ -1,5 +1,5 @@
 <?php
-// $Id: smart_tabs_fixes.inc,v 1.5 2009/12/23 02:52:14 rdeboer Exp $
+// $Id: smart_tabs_fixes.inc,v 1.6 2010/03/09 01:55:21 rdeboer Exp $
 
 /**
  * @file
@@ -108,7 +108,7 @@ function smart_tabs_menu_alter(&$items) {
  *   HTML form.
  */
 function _trigger_assign_fixed($type = NULL) {
-  $type = _leaf($_SESSION['active-tabs']['admin/build/trigger']);
+  $type = _smart_tabs_leaf($_SESSION['active-tabs']['admin/build/trigger']);
   // If no type is specified default to node actions, since they're most common.
   if (empty($type)) {
     drupal_goto('admin/build/trigger/node');

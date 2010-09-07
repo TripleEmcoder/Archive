@@ -1,5 +1,5 @@
 <?php
-// $Id: translation_overview.pages.inc,v 1.9 2009/04/16 19:47:28 drewish Exp $
+// $Id: translation_overview.pages.inc,v 1.8.2.2 2009/12/04 15:59:42 drewish Exp $
 
 function translation_overview_node_page($node) {
   drupal_set_title(t('Translations of %title', array('%title' => $node->title)));
@@ -179,6 +179,17 @@ function translation_overview_node_filters() {
     $filters['category'] = array('title' => t('category'), 'options' => $taxonomy);
   }
 
+  //The domain access filter : list domains managed by the Domain Access module
+  if (module_exists('domain')) {
+    $domains = domain_domains();
+    if (count($domains) > 1) {
+      $filters['domain'] = array('title' => t('Domain'), 'options' => array());
+      foreach ($domains as $domain) {
+        $filters['domain']['options'][$domain['domain_id']] = $domain['sitename'];
+      }
+    }
+  }
+
   return $filters;
 }
 
@@ -297,6 +308,13 @@ function translation_overview_build_filter_query() {
           break;
         case 'type':
           $where['type'] = "n.type = '%s'";
+          break;
+        case 'domain':
+          // Perform query only on the selected domain managed by the Domain
+          // Access module.
+          $table = "da$index";
+          $where['domain'] = "$table.gid = '%d'";
+          $join[$table] = "INNER JOIN {domain_access} $table ON n.nid = $table.nid ";
           break;
       }
       $where_args[] = $value;

@@ -1,10 +1,11 @@
-$Id: README.txt,v 1.3.2.5.2.11 2009/06/22 16:37:18 davereid Exp $
+$Id: README.txt,v 1.3.2.5.2.15 2009/12/23 07:34:55 davereid Exp $
 
 CONTENTS OF THIS FILE
 ---------------------
 
  * Introduction
- * Installation
+ * Installing
+ * Uninstalling
  * Frequently Asked Questions (FAQ)
  * Known Issues
  * More Information
@@ -24,10 +25,10 @@ XML Sitemap automatically creates a sitemap that conforms to the sitemaps.org
 specification. This helps search engines keep their search results up to date.
 
 
-INSTALLATION
-------------
+INSTALLING
+----------
 
-See http://drupal.org/getting-started/5/install-contrib for instructions on
+See http://drupal.org/getting-started/install-contrib for instructions on
 how to install or update Drupal modules.
 
 Once XML Sitemap is installed and enabled, you can adjust the settings for your
@@ -35,6 +36,15 @@ site's sitemap at admin/settings/xmlsitemap. Your can view your site's sitemap
 at http://yoursite.com/sitemap.xml.
 
 It is highly recommended that you have clean URLs enabled for this module.
+
+
+UNINSTALLING
+------------
+
+Because Drupal does not uninstall modules in reverse order of their
+dependencies, if you want to uninstall all the XML sitemap modules, be sure to
+disable and uninstall all the sub-modules before the base XML sitemap module.
+To help fix this bug in Drupal core, visit http://drupal.org/node/151452.
 
 
 FREQUENTLY ASKED QUESTIONS (FAQ)
@@ -60,21 +70,18 @@ MORE INFORMATION
 
 - You can view the sitemap.org specification at http://sitemaps.org.
 
-- You can view the module's API documentation at
-  http://project.davereid.net/api/xmlsitemap
-
 
 HOW CAN YOU CONTRIBUTE?
----------------------
+-----------------------
+
+- Report any bugs, feature requests, etc. in the issue tracker.
+  http://drupal.org/project/issues/xmlsitemap
+
+- Help translate this module.
+  http://localize.drupal.org/translate/projects/xmlsitemap
 
 - Write a review for this module at drupalmodules.com.
   http://drupalmodules.com/module/xml-sitemap
 
-- Help translate this module.
-  http://project.davereid.net/translate/projects/xmlsitemap
-
-- Help keep development active by dontating to the rewrite fund.
+- Help keep development active by dontating to the developer.
   http://davereid.chipin.com/
-
-- Report any bugs, feature requests, etc. in the issue tracker.
-  http://drupal.org/project/issues/xmlsitemap

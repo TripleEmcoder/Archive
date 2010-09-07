@@ -1,5 +1,5 @@
 <?php
-// $Id: tableofcontents.admin.inc,v 1.1.2.13 2010/03/01 07:44:50 alexiswilke Exp $
+// $Id: tableofcontents.admin.inc,v 1.1.2.19 2010/05/26 19:44:45 alexiswilke Exp $
 
 /**
  * @file
@@ -26,6 +26,7 @@ function _tableofcontents_settings($format) {
     '#title' => t('Hide the table of contents tags'),
     '#type' => 'checkbox',
     '#default_value' => variable_get('tableofcontents_hide_table_' . $format, FALSE),
+    '#description' => 'When checked, all the table of contents are removed without any additional tests.',
   );
 
   $form['tableofcontents']['tableofcontents_automatic_' . $format] = array(
@@ -70,7 +71,13 @@ function _tableofcontents_settings($format) {
     '#title' => t('Remove Table of Contents tags from teasers'),
     '#type' => 'checkbox',
     '#default_value' => variable_get("tableofcontents_remove_teaser_$format", TRUE),
-    '#description' => t('If this setting is changed, each node may need to be re-edited to reflect the new setting. This will also cause every node with a Table of Contents to have a split teaser. If you have many nodes, the <a href="@retease">Retease module</a> can help to do this automatically, except if you also want to use the automatic table of content feature which requires the addition of [toc hide:1] in your teaser.', array('@retease' => url('http://drupal.org/project/retease'))),
+    '#description' => t('When this setting is changed, each node need to be re-edited to reflect the new setting. Therefore, you should decide at the start what will work for you and not change this flag later. This flag also causes every node with a Table of Contents to have a split teaser (DO NOT CHECK to avoid the auto-teaser addition.) If you have many nodes, the !retease can help to work on teasers automatically. If you also want to use the automatic table of content feature, however, it requires the addition of [toc hide:1] in your teaser, which the !retease does not do. Instead, you may want to consider the [vtoc] option (see your !content_type settings instead.)',
+      array(
+        '!retease' => l(t('Retease module'), 'http://drupal.org/project/retease',
+                        array('attributes' => array('target' => '_blank'))),
+        '!content_type' => l(t('Content types'), 'admin/content/types'),
+      )
+    ),
   );
 
   $form['tableofcontents']['tableofcontents_title_' . $format] = array(
@@ -92,7 +99,7 @@ function _tableofcontents_settings($format) {
     '#default_value' => variable_get('tableofcontents_list_type_' . $format, 'ol'),
   );
 
-  $options = array(
+  $headers = array(
       1 => "H1",
       2 => "H2",
       3 => "H3",
@@ -104,7 +111,7 @@ function _tableofcontents_settings($format) {
     '#title' => t('Minimum heading level'),
     '#type' => 'select',
     '#multiple' => FALSE,
-    '#options' => $options,
+    '#options' => $headers,
     '#default_value' => variable_get('tableofcontents_minlevel_' . $format, 2),
   );
 
@@ -112,8 +119,58 @@ function _tableofcontents_settings($format) {
     '#title' => t('Maximum heading level'),
     '#type' => 'select',
     '#multiple' => FALSE,
-    '#options' => $options,
+    '#options' => $headers,
     '#default_value' => variable_get('tableofcontents_maxlevel_' . $format, 3),
+  );
+
+  $id_options = array(
+    'digits' => 'Strip all digits (0-9)',
+    'dashes' => 'Strip all dash characters (-)',
+    'periods' => 'Strip all period characters (.)',
+    'underscores' => 'Strip all underscore characters (_)',
+    'colons' => 'Strip all colon characters (:)',
+  );
+  $form['tableofcontents']['tableofcontents_id_stripping_' . $format] = array(
+    '#title' => t('Select what is stripped from the anchor identifiers'),
+    '#type' => 'checkboxes',
+    '#options' => $id_options,
+    '#default_value' => variable_get('tableofcontents_id_stripping_' . $format, array()),
+    '#description' => t('By default, identifiers are valid HTML identifiers. All are not valid JavaScript identifiers and can cause other side effects. You may therefore need to constrain those identifiers some more. Identifiers must start with a letter (A-Z and a-z) and can be followed by letters (A-Z and a-z), dashes (-), digits (0-9), periods (.), colons (:), and underscores (_).<br /><span style="color: red;">WARNING:</span> existing identifier are not being changed by this module. In other words, if it looks like this stripping feature does not work, please, edit your page(s) and check whether you already defined identifiers...'),
+  );
+
+  $form['tableofcontents']['tableofcontents_identifier_introducer_' . $format] = array(
+    '#title' => t('Identifier introducer'),
+    '#description' => t('Word prepended to the identifier whenever nothing else is available or when you do not use the header title or random schemes.'),
+    '#type' => 'textfield',
+    '#default_value' => variable_get('tableofcontents_identifier_introducer_' . $format, 'header'),
+  );
+
+  $form['tableofcontents']['tableofcontents_id_separator_' . $format] = array(
+    '#title' => t('Identifier and number separator'),
+    '#description' => t('The separator used whenever an identifier is appeneded at the end of the identifier. Also used as the identifier section separator.'),
+    '#type' => 'textfield',
+    '#default_value' => variable_get('tableofcontents_id_separator_' . $format, '-'),
+  );
+
+  $options = array(
+    'title'     => 'Use header title',
+    'random'    => 'Create a random identifier',
+    'increment' => 'Use the "Identifier introducer" and an incrementing number',
+    'sections'  => 'Use the "Identifier introducer" and the sections',
+    'custom'    => 'Custom: call module_invoke("tableofcontents", $id) -- requires a module or theme that understands this API.',
+  );
+  $form['tableofcontents']['tableofcontents_id_generator_' . $format] = array(
+    '#title' => t('How to generate missing header identifiers'),
+    '#type' => 'radios',
+    '#options' => $options,
+    '#default_value' => variable_get('tableofcontents_id_generator_' . $format, 'title'),
+  );
+
+  $form['tableofcontents']['tableofcontents_allowed_tags_' . $format] = array(
+    '#title' => t('List of tags allowed in table headers'),
+    '#type' => 'textfield',
+    '#default_value' => variable_get('tableofcontents_allowed_tags_' . $format, TABLEOFCONTENTS_ALLOWED_TAGS),
+    '#maxlength' => 2048,
   );
 
   $form['tableofcontents']['tableofcontents_attachments_' . $format] = array(
@@ -132,7 +189,7 @@ function _tableofcontents_settings($format) {
     $form['tableofcontents']['tableofcontents_comments_level_' . $format] = array(
       '#title' => t('Select header level at which comments start'),
       '#type' => 'select',
-      '#options' => $options,
+      '#options' => $headers,
       '#default_value' => variable_get('tableofcontents_comments_level_' . $format, 3),
     );
   }
@@ -275,7 +332,7 @@ function _tableofcontents_hide_in_teaser(&$node) {
     // We've specified the split, but the teaser is shown in full
     // view. So, we now have to convert it so that the table of
     // content is hidden in the teaser.
-    $body = preg_replace('/(.*)<!--break-->/s', '<!--break-->$1', $node->body);
+    $body = '<!--break-->' . str_replace('<!--break-->', '', $node->body);
     if ($body != $node->body) {
       $node->body = $body;
       drupal_set_message(t("The content you saved contains a table of contents. A separate summary (teaser) has been automatically created without the table of contents at the top. If you make any further changes, be sure to check the summary field to see if your changes apply there as well."));
@@ -329,19 +386,42 @@ function _tableofcontents_node_form_alter(&$form) {
  * table of content type on a per type basis.
  */
 function _tableofcontents_nodetype_form_alter(&$form) {
+  $form['tableofcontents'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Table of Contents'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#description' => t('Defines whether a table of content is automatically created on those pages and whether the node_view() function is used along with the filter.'),
+  );
+
   $options = array(
      0 => 'No table of contents',
      1 => 'Add the table at the top',
      2 => 'Add the table at the bottom',
     99 => 'Let user choose on node add/edit',
   );
-  $form['submission']['tableofcontents_toc_automatic'] = array(
+  $form['tableofcontents']['tableofcontents_toc_automatic'] = array(
     '#type' => 'select',
     '#title' => t('Choose where the automatic table of contents is shown'),
     '#options' => $options,
     '#default_value' => variable_get('tableofcontents_nodetype_toc_automatic_' . $form['#node_type']->type, 0),
     '#description' => t('Select whether the table of content should be shown or not on this type of node.'),
   );
+
+  $form['tableofcontents']['tableofcontents_vtoc'] = array(
+    '#title' => t('Transform [vtoc] tags'),
+    '#type' => 'checkbox',
+    '#default_value' => variable_get('tableofcontents_nodetype_toc_vtoc_' . $form['#node_type']->type, FALSE),
+    '#description' => t('Select this option to allow [vtoc] (usually instead of [toc], although if you do not use the filter, both [vtoc] and [toc] will be transformed.) The difference is with the teasers. [vtoc] only works with the Node View hook, not the filters. This means we have the $teaser flag available and know exactly whether the teaser is being generated or not. There are several drawbacks, however: (1) no other filter runs after the table of contents changes, although the data should already be sanetize, there could be a security issue; (2) it does not work with Views and many other modules that will get the body content without running the node_prepare() function; (3) this only works within a node, no other type of data whether it supports a filter or not, will not support a table of content.'),
+  );
+
+  $form['tableofcontents']['tableofcontents_remove_from_teaser'] = array(
+    '#title' => t('Remove table of contents from the teaser'),
+    '#type' => 'checkbox',
+    '#default_value' => variable_get('tableofcontents_nodetype_toc_remove_from_teaser_' . $form['#node_type']->type, TRUE),
+    '#description' => t('This is the main reason to support [vtoc]: a way to remove the table of contents from your teasers without adding a [toc hide=1;] tag in the teaser. However, as specified in the [vtoc] above, there are drawbacks to this method.'),
+  );
+
   $form['#submit'][] = '_tableofcontents_nodetype_form_alter_submit';
 }
 
@@ -350,6 +430,8 @@ function _tableofcontents_nodetype_form_alter(&$form) {
  */
 function _tableofcontents_nodetype_form_alter_submit($form, &$form_state) {
   variable_set('tableofcontents_nodetype_toc_automatic_' . $form['#node_type']->type, $form_state['values']['tableofcontents_toc_automatic']);
+  variable_set('tableofcontents_nodetype_toc_vtoc_' . $form['#node_type']->type, $form_state['values']['tableofcontents_vtoc']);
+  variable_set('tableofcontents_nodetype_toc_remove_from_teaser_' . $form['#node_type']->type, $form_state['values']['tableofcontents_remove_from_teaser']);
 }
 
 // vim: ts=2 sw=2 et syntax=php

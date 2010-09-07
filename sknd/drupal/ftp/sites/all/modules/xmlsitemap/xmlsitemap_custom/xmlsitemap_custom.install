@@ -1,5 +1,5 @@
 <?php
-// $Id: xmlsitemap_custom.install,v 1.1.2.1 2009/06/02 06:52:05 davereid Exp $
+// $Id: xmlsitemap_custom.install,v 1.1.2.3 2010/01/30 21:03:11 davereid Exp $
 
 /**
  * @file
@@ -7,15 +7,9 @@
  */
 
 /**
- * Implementation of hook_uninstall().
+ * Implements hook_uninstall().
  */
 function xmlsitemap_custom_uninstall() {
-  db_query("DELETE FROM {xmlsitemap} WHERE type = 'custom'");
-
-  // Remove variables.
-  drupal_load('module', 'xmlsitemap_custom');
-  //$variables = array_keys(xmlsitemap_custom_variables());
-  //foreach ($variables as $variable) {
-  //  variable_del($variable);
-  //}
+  drupal_load('module', 'xmlsitemap');
+  xmlsitemap_link_delete_multiple(array('type' => 'custom'));
 }

@@ -1,3 +1,5 @@
+$Id: README.txt,v 1.2.4.1 2009/11/19 07:41:13 sinasalek Exp $
+
 Description
 ------------------
   Provides a default comment subject: 'Re: [parent comment/node title]'.
