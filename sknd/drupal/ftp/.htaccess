@@ -105,6 +105,9 @@ DirectoryIndex index.php
   RewriteRule ^$ /pl [R=302,L]
   RewriteRule ^sitemap.xml$ /pl/sitemap.xml [R=302,L]
 
+  RewriteRule ^pl/feedburner.xml$ http://feeds.feedburner.com/cognitis/pl [R=302,L]
+  RewriteRule ^en/feedburner.xml$ http://feeds.feedburner.com/cognitis/en [R=302,L]
+
   # Rewrite URLs of the form 'x' to the form 'index.php?q=x'.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

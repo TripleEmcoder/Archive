@@ -6,9 +6,9 @@ version = VERSION
 core = 6.x
 
 
-; Information added by drupal.org packaging script on 2010-02-15
-version = "6.x-1.x-dev"
+; Information added by drupal.org packaging script on 2009-09-05
+version = "6.x-1.0-rc1"
 core = "6.x"
 project = "cacherouter"
-datestamp = "1266192143"
+datestamp = "1252157422"
 
