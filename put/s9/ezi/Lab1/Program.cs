@@ -105,7 +105,10 @@ namespace Lab1
 
             var t_idf = new double[ts.Count];
             for (int ti = 0; ti < ts.Count; ti++)
-                t_idf[ti] = Math.Log10(1.0 * ds.Count / ds.Count(document => document.HasTerm(ts[ti])));
+            {
+                var count = ds.Count(document => document.HasTerm(ts[ti]));
+                t_idf[ti] = count == 0 ? 0 : Math.Log10(1.0*ds.Count/count);
+            }
 
             var d_tf_idf = new double[ds.Count, ts.Count];
             for (int di = 0; di < ds.Count; di++)
