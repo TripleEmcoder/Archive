@@ -147,6 +147,7 @@ ini_set('session.save_handler',     'user');
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_trans_sid',    0);
 ini_set('url_rewriter.tags',        '');
+set_time_limit(0);
 
 /**
  * Drupal automatically generates a unique session cookie name for each site
@@ -241,6 +242,7 @@ $conf['i18n_variables'] = array(
 
 $conf['cache_inc'] = './sites/all/modules/cacherouter/cacherouter.inc';
 
+/*
 $conf['cacherouter'] = array(
   'default' => array(
     'engine' => 'file',
@@ -255,3 +257,16 @@ $conf['cacherouter'] = array(
     'engine' => 'none',
   ),
 );
+*/
+
+$conf['cacherouter'] = array(
+  'default' => array(
+    'engine' => 'xcache',
+    'servers' => array('localhost:11211'),
+    'shared' => TRUE,
+    'prefix' => 'jakiestudia',
+    'static' => FALSE,
+    'fast_cache' => FALSE,
+  ),
+);
+

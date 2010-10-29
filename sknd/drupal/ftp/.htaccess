@@ -1,4 +1,4 @@
-php_value include_path ".:/usr/lib/php:/home3/skndcp5/php"
+#php_value include_path ".:/usr/lib/php:/home3/skndcp5/php"
 
 #
 # Apache/PHP/Drupal settings:
@@ -83,8 +83,8 @@ DirectoryIndex index.php
   # To redirect all users to access the site WITH the 'www.' prefix,
   # (http://example.com/... will be redirected to http://www.example.com/...)
   # adapt and uncomment the following:
-  RewriteCond %{HTTP_HOST} ^cognitis\.pl$ [NC]
-  RewriteRule ^(.*)$ http://www.cognitis.pl/$1 [L,R=301]
+  #RewriteCond %{HTTP_HOST} ^cognitis\.pl$ [NC]
+  #RewriteRule ^(.*)$ http://www.cognitis.pl/$1 [L,R=301]
   
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
@@ -100,9 +100,9 @@ DirectoryIndex index.php
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
-  RewriteBase /
+  RewriteBase /~memfis/php5/sknd/drupal
 
-  RewriteRule ^$ /pl [R=302,L]
+  #RewriteRule ^$ /pl [R=302,L]
   RewriteRule ^sitemap.xml$ /pl/sitemap.xml [R=302,L]
 
   RewriteRule ^pl/feedburner.xml$ http://feeds.feedburner.com/cognitis/pl [R=302,L]

@@ -1,49 +1,59 @@
-# $Id: fr.po,v 1.1.2.1 2009/12/06 23:37:28 berdir Exp $
-#
-# French translation of Drupal (general)
-# Copyright YEAR NAME <EMAIL@ADDRESS>
-# Generated from files:
-#  privatemsg.api.php,v 1.1.2.9 2009/11/06 13:06:26 berdir
-#  privatemsg.author-pane.inc,v 1.1.2.4 2009/11/06 13:06:26 berdir
-#  privatemsg.theme.inc,v 1.1.2.10 2009/11/10 19:48:17 berdir
-#  privatemsg.module,v 1.70.2.30.2.91.2.103 2009/11/29 22:34:50 berdir
-#  privatemsg.views.inc,v 1.1.2.1 2009/11/09 16:44:09 berdir
-#  privatemsg.info,v 1.1.2.1.2.3.2.4 2009/01/25 23:25:18 litwol
-#
-#, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-12-05 17:54+0100\n"
-"PO-Revision-Date: 2009-12-05 17:54+0100\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: French <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+ew)"
+msgid_plural "Messages (@count new)"
+msgstr[0] "Messages (1 nouveau)"
+msgstr[1] "Messages (@count nouveaux)"
 
-#: privatemsg.api.php:314
-msgid "%name has chosen to not recieve any more messages from you."
-msgstr "%name a choisi de ne plus recevoir de messages privés de votre part."
+#: privatemsg.module:1481
+msgid "New message"
+msgid_plural "New messages"
+msgstr[0] "Nouveau message"
+msgstr[1] "Nouveaux messages"
 
-#: privatemsg.api.php:346
-msgid "My link"
-msgstr "Mes liens"
+#: privatemsg.module:2215
+msgid "Marked 1 thread as unread."
+msgid_plural "Marked @count threads as unread."
+msgstr[0] "1 sujet marqué comme non lu."
+msgstr[1] "@count sujets marqués comme non lus."
 
-#: privatemsg.author-pane.inc:16;16
-msgid "Send private message"
-msgstr "Envoyer un message privé"
+#: privatemsg.module:2218
+msgid "Marked 1 thread as read."
+msgid_plural "Marked @count threads as read."
+msgstr[0] "1 sujet marqué comme lu."
+msgstr[1] "@count sujets marqués comme lus."
 
-#: privatemsg.author-pane.inc:18
-msgid "Send PM"
-msgstr "Envoyer le message privé"
+#: privatemsg.module:2453
+msgid "Deleted 1 thread."
+msgid_plural "Deleted @count threads."
+msgstr[0] "1 sujet supprimé."
+msgstr[1] "@count sujets supprimés."
 
-#: privatemsg.theme.inc:167 privatemsg.module:912
-msgid "Subject"
-msgstr "Sujet"
+#: privatemsg.module:2456
+msgid "Restored 1 thread."
+msgid_plural "Restored @count threads."
+msgstr[0] "1 sujet restauré."
+msgstr[1] "@count sujets restaurés."
 
-#: privatemsg.theme.inc:182 privatemsg.module:485;1467;122;130;195
+#: privatemsg.module:27
+msgid "read privatemsg"
+msgstr "Lire les messages privés"
+
+#: privatemsg.module:28
+msgid "read all private messages"
+msgstr "Lire tous les messages privés"
+
+#: privatemsg.module:29
+msgid "administer privatemsg settings"
+msgstr "Modifier les paramètres des messages privés"
+
+#: privatemsg.module:30
+msgid "write privatemsg"
+msgstr "Ecrire des messages privés"
+
+#: privatemsg.module:31
+msgid "delete privatemsg"
+msgstr "Supprimer des messages privés"
+
+#: privatemsg.moinc:182 privatemsg.module:485;1467;122;130;195
 msgid "Messages"
 msgstr "Messages"
 

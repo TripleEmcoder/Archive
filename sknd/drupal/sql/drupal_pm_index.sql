@@ -1,0 +1,197 @@
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Not dumping tablespaces as no INFORMATION_SCHEMA.FILES table on this server
+--
+DROP TABLE IF EXISTS `drupal_pm_index`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `drupal_pm_index` (
+  `mid` int(10) unsigned NOT NULL,
+  `thread_id` int(10) unsigned NOT NULL,
+  `uid` int(10) unsigned NOT NULL,
+  `is_new` int(10) unsigned NOT NULL default '1',
+  `deleted` int(10) unsigned NOT NULL default '0',
+  KEY `is_new` (`mid`,`uid`,`is_new`),
+  KEY `list` (`uid`,`deleted`,`is_new`),
+  KEY `messages` (`mid`,`uid`),
+  KEY `participants` (`thread_id`,`uid`,`deleted`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `drupal_pm_index` WRITE;
+/*!40000 ALTER TABLE `drupal_pm_index` DISABLE KEYS */;
+INSERT INTO `drupal_pm_index` VALUES (65,65,1,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (65,65,1,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (2,65,1,0,0);
+INSERT INTO `drupal_pm_index` VALUES (2,65,1,0,0);
+INSERT INTO `drupal_pm_index` VALUES (66,66,1,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (66,66,1,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (67,67,153,0,0);
+INSERT INTO `drupal_pm_index` VALUES (67,67,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,67,153,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,67,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (68,68,1,0,0);
+INSERT INTO `drupal_pm_index` VALUES (68,68,150,0,0);
+INSERT INTO `drupal_pm_index` VALUES (69,69,135,0,0);
+INSERT INTO `drupal_pm_index` VALUES (69,69,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (70,70,133,0,0);
+INSERT INTO `drupal_pm_index` VALUES (70,70,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,70,135,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,70,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,70,1,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,70,150,0,0);
+INSERT INTO `drupal_pm_index` VALUES (71,71,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (71,71,153,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,71,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,71,153,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,71,133,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,71,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (72,72,144,0,0);
+INSERT INTO `drupal_pm_index` VALUES (72,72,160,0,0);
+INSERT INTO `drupal_pm_index` VALUES (73,73,151,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (73,73,161,0,0);
+INSERT INTO `drupal_pm_index` VALUES (74,74,161,0,0);
+INSERT INTO `drupal_pm_index` VALUES (74,74,151,0,1283874653);
+INSERT INTO `drupal_pm_index` VALUES (1,74,161,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,74,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (75,75,169,0,0);
+INSERT INTO `drupal_pm_index` VALUES (75,75,135,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,75,169,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,75,135,0,0);
+INSERT INTO `drupal_pm_index` VALUES (76,76,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (76,76,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,76,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,76,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (77,77,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (77,77,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,77,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,77,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (78,78,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (78,78,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,78,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,78,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (79,79,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (79,79,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,79,158,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,79,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (80,80,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (80,80,171,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,80,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,80,171,0,0);
+INSERT INTO `drupal_pm_index` VALUES (81,81,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (81,81,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (82,82,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (82,82,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,82,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,82,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (83,83,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (83,83,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,83,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,83,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (84,84,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (84,84,156,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,84,136,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,84,156,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,84,144,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,84,160,0,0);
+INSERT INTO `drupal_pm_index` VALUES (85,85,160,0,0);
+INSERT INTO `drupal_pm_index` VALUES (85,85,144,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,85,160,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,85,144,0,0);
+INSERT INTO `drupal_pm_index` VALUES (86,86,169,1,0);
+INSERT INTO `drupal_pm_index` VALUES (86,86,184,0,0);
+INSERT INTO `drupal_pm_index` VALUES (87,87,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (87,87,185,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,87,164,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,87,185,0,0);
+INSERT INTO `drupal_pm_index` VALUES (88,88,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (88,88,188,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,88,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,88,188,0,0);
+INSERT INTO `drupal_pm_index` VALUES (89,89,188,0,0);
+INSERT INTO `drupal_pm_index` VALUES (89,89,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,89,188,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,89,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,89,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,89,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (90,90,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (90,90,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,90,181,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,90,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (91,91,194,0,0);
+INSERT INTO `drupal_pm_index` VALUES (91,91,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (92,92,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (92,92,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,92,194,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,92,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (93,93,212,0,0);
+INSERT INTO `drupal_pm_index` VALUES (93,93,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,93,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,93,143,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,93,212,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,93,142,0,0);
+INSERT INTO `drupal_pm_index` VALUES (94,94,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (94,94,197,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,94,139,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,94,197,0,0);
+INSERT INTO `drupal_pm_index` VALUES (95,95,138,0,0);
+INSERT INTO `drupal_pm_index` VALUES (95,95,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (96,96,228,0,0);
+INSERT INTO `drupal_pm_index` VALUES (96,96,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,96,228,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,96,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (97,97,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (97,97,228,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,97,134,0,0);
+INSERT INTO `drupal_pm_index` VALUES (1,97,228,0,0);
+INSERT INTO `drupal_pm_index` VALUES (98,98,145,0,0);
+INSERT INTO `drupal_pm_index` VALUES (98,98,246,0,0);
+INSERT INTO `drupal_pm_index` VALUES (99,98,246,0,0);
+INSERT INTO `drupal_pm_index` VALUES (99,98,145,0,0);
+INSERT INTO `drupal_pm_index` VALUES (100,100,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (100,100,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (101,101,269,0,0);
+INSERT INTO `drupal_pm_index` VALUES (101,101,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (102,101,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (102,101,269,0,0);
+INSERT INTO `drupal_pm_index` VALUES (103,100,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (103,100,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (104,100,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (104,100,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (105,101,269,0,0);
+INSERT INTO `drupal_pm_index` VALUES (105,101,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (106,100,151,0,0);
+INSERT INTO `drupal_pm_index` VALUES (106,100,140,0,0);
+INSERT INTO `drupal_pm_index` VALUES (107,107,276,0,0);
+INSERT INTO `drupal_pm_index` VALUES (107,107,167,0,0);
+INSERT INTO `drupal_pm_index` VALUES (108,108,319,1,0);
+INSERT INTO `drupal_pm_index` VALUES (108,108,322,0,0);
+INSERT INTO `drupal_pm_index` VALUES (109,109,298,0,0);
+INSERT INTO `drupal_pm_index` VALUES (109,109,318,0,0);
+INSERT INTO `drupal_pm_index` VALUES (110,110,318,0,0);
+INSERT INTO `drupal_pm_index` VALUES (110,110,318,0,0);
+INSERT INTO `drupal_pm_index` VALUES (111,111,298,1,0);
+INSERT INTO `drupal_pm_index` VALUES (111,111,318,0,0);
+/*!40000 ALTER TABLE `drupal_pm_index` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+

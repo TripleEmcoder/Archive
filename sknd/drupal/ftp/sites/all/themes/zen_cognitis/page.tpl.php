@@ -162,6 +162,20 @@
       <?php if ($left): ?>
         <div id="sidebar-left" class="region region-left">
           <?php print $left; ?>
+<?php /*
+<OBJECT classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0'
+width="" height="">
+<param name='movie' value="/sites/default/images/banner.swf">
+<param name='quality' value="high">
+<param name='bgcolor' value='#FFFFFF'>
+<param name='loop' value="true">
+<EMBED src="/sites/default/images/banner.swf" quality='high' bgcolor='#FFFFFF' width=""
+height="" loop="true" type='application/x-shockwave-flash'
+pluginspage='http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash'>
+</EMBED>
+</OBJECT>
+*/ ?>
         </div> <!-- /#sidebar-left -->
       <?php endif; ?>
 

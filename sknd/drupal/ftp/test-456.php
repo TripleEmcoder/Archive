@@ -3,9 +3,10 @@ error_reporting(E_ALL);
 include('includes/bootstrap.inc');
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 
-mail('marcin.mikolajczak@hotmail.com', 'hotmail.com', 'Test');
+mail('koordynator-ds-it@sknd.org.pl', 'sknd.org.pl', 'Test');
+mail('koordynator-ds-it@cognitis.pl', 'cognitis.pl', 'Test');
+//mail('marcin.mikolajczak@hotmail.com', 'hotmail.com', 'Test');
 mail('marcin.mikolajczak@sknd.org.pl', 'sknd.org.pl', 'Test');
-mail('marcin.mikolajczak@mail.sknd.org.pl', 'mail.sknd.org.pl', 'Test');
 mail('marcin.mikolajczak@cognitis.pl', 'cognitis.pl', 'Test');
 
 die('Done.');

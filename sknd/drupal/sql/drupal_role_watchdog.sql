@@ -1,0 +1,58 @@
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Not dumping tablespaces as no INFORMATION_SCHEMA.FILES table on this server
+--
+DROP TABLE IF EXISTS `drupal_role_watchdog`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `drupal_role_watchdog` (
+  `aid` int(10) unsigned NOT NULL,
+  `rid` int(10) unsigned NOT NULL,
+  `action` tinyint(4) NOT NULL,
+  `uid` int(10) unsigned NOT NULL,
+  `stamp` int(10) unsigned NOT NULL,
+  KEY `aid` (`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `drupal_role_watchdog` WRITE;
+/*!40000 ALTER TABLE `drupal_role_watchdog` DISABLE KEYS */;
+INSERT INTO `drupal_role_watchdog` VALUES (146,8,1,1,1268867780);
+INSERT INTO `drupal_role_watchdog` VALUES (232,9,1,146,1268868041);
+INSERT INTO `drupal_role_watchdog` VALUES (206,11,1,1,1269168604);
+INSERT INTO `drupal_role_watchdog` VALUES (280,9,0,1,1269254684);
+INSERT INTO `drupal_role_watchdog` VALUES (281,9,0,1,1269254735);
+INSERT INTO `drupal_role_watchdog` VALUES (247,9,0,1,1269254827);
+INSERT INTO `drupal_role_watchdog` VALUES (247,16,0,1,1269254827);
+INSERT INTO `drupal_role_watchdog` VALUES (247,17,0,1,1269254827);
+INSERT INTO `drupal_role_watchdog` VALUES (206,19,1,1,1270846891);
+INSERT INTO `drupal_role_watchdog` VALUES (188,19,1,1,1271004805);
+INSERT INTO `drupal_role_watchdog` VALUES (181,19,1,1,1271665244);
+INSERT INTO `drupal_role_watchdog` VALUES (319,5,0,1,1272017044);
+INSERT INTO `drupal_role_watchdog` VALUES (320,5,0,1,1272017092);
+INSERT INTO `drupal_role_watchdog` VALUES (245,8,1,1,1278877100);
+INSERT INTO `drupal_role_watchdog` VALUES (245,9,1,1,1278877100);
+INSERT INTO `drupal_role_watchdog` VALUES (246,12,1,1,1282300538);
+/*!40000 ALTER TABLE `drupal_role_watchdog` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
