@@ -1,13 +1,13 @@
-<?php // $Id: mimemail.theme.inc,v 1.6 2010/08/12 10:38:02 sgabe Exp $
+<?php // $Id: mimemail.theme.inc,v 1.9 2010/09/12 16:32:47 sgabe Exp $
 
 function mimemail_theme_theme() {
   $path = drupal_get_path('module', 'mimemail') .'/theme';
 
   return array(
     'mimemail_message' => array(
-      'arguments' => array('body' => NULL, 'mailkey' => NULL),
+      'arguments' => array('subject' => NULL, 'body' => NULL, 'mailkey' => NULL),
       'template' => 'mimemail-message',
-      'pattern' => 'mimemail__',
+      'pattern' => 'mimemail_message__',
       'file' => 'mimemail.theme.inc',
       'path' => $path,
     )
@@ -18,6 +18,7 @@ function mimemail_theme_theme() {
  * A preprocess function for theme('mimemail_message').
  *
  * The $variables array initially contains the following arguments:
+ * - $subject: The message subject
  * - $body:  The message body
  * - $mailkey:  The mailkey associated with the message
  *
@@ -55,4 +56,6 @@ function template_preprocess_mimemail_message(&$variables) {
   $css = wordwrap($css, 700);
   $variables['css'] = $css;
 
+   // Process mailkey to be a proper CSS class.
+  $variables['mailkey'] = 'mail-'. str_replace('_', '-', $variables['mailkey']);
 }

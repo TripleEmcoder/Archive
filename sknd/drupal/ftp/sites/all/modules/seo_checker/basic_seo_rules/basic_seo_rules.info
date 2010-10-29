@@ -4,9 +4,9 @@ description = 'Basic rules for the SEO compliance checker module'
 dependencies[] = "seo_checker"
 package = "SEO Compliance Checker"
 core = 6.x
-; Information added by drupal.org packaging script on 2009-11-15
-version = "6.x-1.4"
+; Information added by drupal.org packaging script on 2010-09-25
+version = "6.x-1.5"
 core = "6.x"
 project = "seo_checker"
-datestamp = "1258289172"
+datestamp = "1285425662"
 

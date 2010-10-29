@@ -1,5 +1,5 @@
 <?php
-// $Id: smart_tabs_fixes.inc,v 1.6 2010/03/09 01:55:21 rdeboer Exp $
+// $Id: smart_tabs_fixes.inc,v 1.7 2010/09/21 02:56:59 rdeboer Exp $
 
 /**
  * @file
@@ -24,7 +24,7 @@
  */
 function smart_tabs_theme_registry_alter(&$registry) {
   if (!variable_get('smart_tabs_theme_override', TRUE)) {
-    _st_debug_info(t("Smart tabs is now <strong>not</strong> overriding the 'menu_local_tasks' theme hook. If you want Smart tabs behaviour you must implement either <em>yourtheme</em>_menu_local_tasks() or phptemplate_menu_local_tasks()."));
+    _st_debug_info(t('Smart tabs is now <strong>not</strong> overriding the "menu_local_tasks" theme hook. If you want Smart tabs behaviour you must implement either <em>yourtheme</em>_menu_local_tasks() or phptemplate_menu_local_tasks().'));
   }
   elseif (!in_array('themes/garland', $registry['menu_local_tasks']['theme paths'])) {
     // For any theme other than Garland, override the theme hook for

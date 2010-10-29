@@ -1,5 +1,5 @@
 <?php
-// $Id: tw_api.test,v 1.1.2.3 2009/05/10 16:51:19 mikeryan Exp $
+// $Id: tw_api.test,v 1.1.2.4 2009/09/09 19:19:34 mikeryan Exp $
 /**
  * @file
  * Tests for the Table Wizard API.
@@ -25,7 +25,7 @@ class TwUnitTest extends DrupalWebTestCase {
     // Create and login user
     $tw_user = $this->drupalCreateUser(array('table wizard administration'));
     $this->drupalLogin($tw_user);
-    
+
     // Create test tables
     $ret = array();
     $schema = array(
@@ -92,7 +92,7 @@ class TwUnitTest extends DrupalWebTestCase {
               VALUES(4, 'fourthvalue', 9)");
     db_query("INSERT INTO {tw_simpletest_sample_nopk} (id, textfield, intfield)
               VALUES(5, 'fifthvalue', 53)");
-    
+
     $schema = array(
       'description' => t('Uploaded data file with multi-column PK'),
       'fields' => array(
@@ -130,7 +130,7 @@ class TwUnitTest extends DrupalWebTestCase {
               VALUES(2, 2, 'fourthvalue', 9)");
     db_query("INSERT INTO {tw_simpletest_sample_multpk} (id1, id2, textfield, intfield)
               VALUES(2, 3, 'fifthvalue', 53)");
-    
+
   }
 
   function tearDown() {
@@ -147,10 +147,10 @@ class TwUnitTest extends DrupalWebTestCase {
   function testAddTables() {
     // Test adding a single table with a single-field PK
     tw_add_tables('tw_simpletest_sample');
-    $twtid = db_result(db_query("SELECT twtid FROM {tw_tables} 
+    $twtid = db_result(db_query("SELECT twtid FROM {tw_tables}
                                  WHERE tablename='tw_simpletest_sample' AND dbconnection='default'"));
     $this->assertTrue(isset($twtid) && $twtid > 0, t('Table added to tw_tables'));
-    
+
     $idtwcid = db_result(db_query("SELECT twcid FROM {tw_columns}
                                    WHERE twtid=%d AND colname='id' AND primarykey=1
                                      AND availablefk=1 AND ignorecol=0 AND isempty=0
@@ -159,7 +159,7 @@ class TwUnitTest extends DrupalWebTestCase {
                                      AND minstring IS NULL AND maxstring IS NULL AND comments IS NULL",
                                   $twtid));
     $this->assertTrue(isset($idtwcid) && $idtwcid > 0, 'id field added to tw_columns');
-    
+
     $textfieldtwcid = db_result(db_query("SELECT twcid FROM {tw_columns}
                                    WHERE twtid=%d AND colname='textfield' AND primarykey=0
                                      AND availablefk=0 AND ignorecol=0 AND isempty=0

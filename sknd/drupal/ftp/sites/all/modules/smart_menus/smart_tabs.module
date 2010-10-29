@@ -1,5 +1,5 @@
 <?php
-// $Id: smart_tabs.module,v 1.13 2010/03/12 05:59:03 rdeboer Exp $
+// $Id: smart_tabs.module,v 1.17 2010/09/21 03:58:14 rdeboer Exp $
 
 /**
  * @file
@@ -37,10 +37,29 @@
 require_once drupal_get_path('module', 'smart_menus') .'/smart_tabs.install';
 require_once drupal_get_path('module', 'smart_menus') .'/smart_tabs_fixes.inc';
 
-define('DEFAULT_SMART_TABS_PAGE_EXCLUSIONS',
-  "admin/content/node-type/*/fields*\nnode/*/edit/components*");
-define('DEFAULT_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS',
+define('SMART_TABS_DEFAULT_PAGE_EXCLUSIONS',
+  "admin/content/node-type/*/fields*\nnode/*/edit/components*\nnode/*/webform/components/new\nsearch");
+define('SMART_TABS_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS',
   'admin/content/node-type/*/fields*');
+
+/**
+ * Implementation of hook_help().
+ */
+function smart_tabs_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#smart_menus':
+      $s = t('Adds memory to your tabs so that on subsequent visits to the same page the tab last visited is again pre-selected for you.');
+      break;
+  }
+  return empty($s) ? '' : '<p>'. $s .'</p>';
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function smart_tabs_perm() {
+  return array('administer Smart tabs personal settings');
+}
 
 /**
  * Implementation of hook_menu().
@@ -85,8 +104,8 @@ function _smart_tabs_admin_settings() {
   );
   $form['smart_tabs_pages']['smart_tabs_exclude_pages'] = array(
     '#type' => 'textarea',
-    '#title' => t('Pages to exclude from the collection specfied above'),
-    '#default_value' => variable_get('smart_tabs_exclude_pages', DEFAULT_SMART_TABS_PAGE_EXCLUSIONS),
+    '#title' => t('Pages to exclude from the collection specified above'),
+    '#default_value' => variable_get('smart_tabs_exclude_pages', SMART_TABS_DEFAULT_PAGE_EXCLUSIONS),
     '#description' => t("Enter Drupal menu paths, one per line, for instance: %node. The asterisk '*' is the wildcard character allowing you to specify a groups of nodes, e.g. %node-wildcard. Where they exist use the URL aliases rather than the node numbers. %front is the front page.",
       array('%node' => 'recipes/desserts/chocolate-cake', '%node-wildcard' => 'recipes/desserts/*', '%front' => '<front>'))
   );
@@ -99,7 +118,7 @@ function _smart_tabs_admin_settings() {
   $form['smart_tabs_missing_default']['smart_tabs_autoselect_default_tab_exclusions'] = array(
     '#type' => 'textarea',
     '#title' => t('Pages to exclude'),
-    '#default_value' => variable_get('smart_tabs_autoselect_default_tab_exclusions', DEFAULT_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS),
+    '#default_value' => variable_get('smart_tabs_autoselect_default_tab_exclusions', SMART_TABS_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS),
     '#description' => t('Same notation as above applies.')
   );
 
@@ -157,6 +176,50 @@ function menu_primary_local_tasks_smart_tabs() {
 
 function menu_secondary_local_tasks_smart_tabs() {
   return _smart_tabs_menu_local_tasks(1);
+}
+
+/**
+ * Implementation of hook_user().
+ */
+function smart_tabs_user($op, &$edit, &$account, $category = NULL) {
+  switch ($op) {
+
+    case 'categories':
+      // Get here once when module is first enabled
+      return array(array(
+        'name' => 'smart tabs',
+        'title' => t('Smart tabs'),
+        'access callback' => 'user_access',
+        'access arguments' => array('administer Smart tabs personal settings'),
+        'weight' => 10, // same as Smart menus
+      ));
+
+    case 'form':
+      if ($category == 'smart tabs') {
+        return _smart_tabs_user_profile_form($edit);
+      }
+  }
+}
+/**
+ * Helper function to add Smart tabs personal settings form to the user profile,
+ * i.e. 'My account' page (Edit tab).
+ */
+function _smart_tabs_user_profile_form($edit) {
+  $form = array();
+  $form['smart_tabs'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Smart tabs settings'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+  );
+  $default = isset($edit['profile_smart_tabs_disable']) ? $edit['profile_smart_tabs_disable'] : FALSE;
+  $form['smart_tabs']['profile_smart_tabs_disable'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Disable Smart tabs'),
+    '#default_value' => $default,
+    '#description' => t('Unless disabled here, your tabs will have a memory so that upon return to a page the previously selected tabs are again selected for you.'),
+  );
+  return $form;
 }
 
  /**
@@ -288,12 +351,7 @@ function _smart_tabs_menu_local_tasks($level = 0) {
 
 function _smart_tabs_user_has_smart_tabs_enabled() {
   global $user;
-
-  if (module_exists('profile')) {
-    $sql = "SELECT pv.value FROM {profile_values} pv INNER JOIN {profile_fields} pf ON pv.fid = pf.fid WHERE pf.name = '%s' AND pv.uid = %d";
-    return !(bool)trim(db_result(db_query($sql, PROFILE_SMART_TABS_DISABLE, $user->uid)));
-  }
-  return TRUE;
+  return !($user->profile_smart_tabs_disable);
 }
 
 function _smart_tabs_auto_select_tab($path, $href, $tasks) {
@@ -301,7 +359,7 @@ function _smart_tabs_auto_select_tab($path, $href, $tasks) {
   // have $href==$href_alias like node/123/edit, node/123/revisions etc.
   $href_alias = drupal_get_path_alias($href);
   $include_items = variable_get('smart_tabs_include_pages', '*');
-  $exclude_items = variable_get('smart_tabs_exclude_pages', DEFAULT_SMART_TABS_PAGE_EXCLUSIONS);
+  $exclude_items = variable_get('smart_tabs_exclude_pages', SMART_TABS_DEFAULT_PAGE_EXCLUSIONS);
   $include_item = drupal_match_path($href_alias, $include_items);
   $exclude_item = drupal_match_path($href_alias, $exclude_items);
   $is_included = $include_item && !$exclude_item;
@@ -336,7 +394,7 @@ function _smart_tabs_auto_select_tab($path, $href, $tasks) {
       }
     }
     elseif (!empty($new_active_href)) {
-      _st_debug_info(t("The href %href is invalid.", array('%href' => $new_active_href)));
+      _st_debug_info(t('The href %href is invalid.', array('%href' => $new_active_href)));
     }
     $_SESSION['active-tabs']['last-active-href'] = $href_alias;
   }
@@ -357,7 +415,7 @@ function _smart_tabs_set_default_tab_if_necessary($path, &$children) {
     return;
   }
   _st_debug_info(t('No default tab is set for local task %path.', array('%path' => $path)));
-  $exclude_items = variable_get('smart_tabs_autoselect_default_tab_exclusions', DEFAULT_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS);
+  $exclude_items = variable_get('smart_tabs_autoselect_default_tab_exclusions', SMART_TABS_AUTOSELECT_DEFAULT_TAB_EXCLUSIONS);
   $exclude_item = drupal_match_path($path, $exclude_items);
   if ($exclude_item) {
     _st_debug_info(t('Not pre-selecting tab %accessible_tab, as auto-selection is switched-off for the tabs on page %path.',
@@ -448,7 +506,7 @@ function _smart_tabs_derive_new_active_href($clicked_path, $tasks) {
   // Also don't do this when 'Smart menus for tabbed content' is ticked.
   if (($new_active_href == $_SESSION['active-tabs']['last-active-href'])
     && (strpos($clicked_path, '/%') > 0)
-    && !(module_exists('smart_menus') && _get_user_tabbed_content_expansion())) {
+    && !(module_exists('smart_menus') && _smart_menus_get_user_tabbed_content_expansion())) {
     return '';
   }
   return $new_active_href;
@@ -525,7 +583,7 @@ function _smart_tabs_get_parent_href($tasks, $path) {
 function _st_debug_info($message) {
   global $user;
   if ($user->uid == 1 && variable_get('smart_tabs_debug', FALSE)) {
-    drupal_set_message($message, 'warning', FALSE);
+    drupal_set_message("Smart tabs - $message", 'warning', FALSE);
   }
 }
 

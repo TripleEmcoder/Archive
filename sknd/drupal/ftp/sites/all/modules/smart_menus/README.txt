@@ -1,4 +1,4 @@
-$Id: README.txt,v 1.3 2009/11/10 01:48:40 rdeboer Exp $
+$Id: README.txt,v 1.5 2010/09/21 02:56:59 rdeboer Exp $
 
 SMART MENUS, SMART TABS
 =======================
@@ -15,13 +15,14 @@ they evolve during the session.
 Once you've used these modules for a while you won't notice they're there...
 but you'll miss them when they're gone.
 
-The Smart menus module auto-expands menus  and submenus up to a depth that is
+The Smart menus module auto-expands menus and submenus up to a depth that is
 set by the administrator on the Smart menus configuration page. The default
 maximum auto-expansion depth is 9, equal to Drupal's maximum number of menu
 levels. This setting applies to anonymous users and is also the default for
 the authenticated roles. However, every authenticated user can set their
-personal depth on their My account page. A depth of zero may be entered to
-switch the feature off. 
+personal depth on their My account >> Edit page (if allowed by the administrator
+at Administer >> User management >> Permissions). A depth of zero may be entered
+to switch the feature off. 
 Smart menus can be configured to operate on any or all of Drupal's standard
 menus (navigation, primary-links, secondary-links), as well as on any custom
 menu you may want to define. Configuration is as a normal block, i.e. on the
@@ -55,10 +56,12 @@ INSTALLATION
 As with any other module download and extract the tar-ball in your 
 sites/all/modules folder. Visit the Site building >> Modules page, tick the
 Smart menus and Smart tabs checkboxes ans press Save.
-For Smart menus to work you need to replace your existing content and
+For Smart menus to work you need to replace your existing menu links and
 navigation blocks by their Smart counterparts, see Site building >> Blocks.
 Generally neither of the modules will require any further configuration.
 The available options on the Site configuration pages are self-explanatory.
+Decide whether authenticated roles may administer their personal Smart menus and
+Smart tab settings at User management >> Permissions.
 
 AUTHOR
 ======

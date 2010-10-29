@@ -1,10 +1,10 @@
 <?php
-// $Id: tw.views_default.inc,v 1.1.2.17 2009/06/17 15:19:51 mikeryan Exp $
+// $Id: tw.views_default.inc,v 1.1.2.22 2010/06/29 01:07:28 mikeryan Exp $
 
 /**
  * @file
  * Views default views implementation
- * 
+ *
  */
 
 /**
@@ -15,11 +15,11 @@ function tw_views_default_views() {
 
   // Go through each import table and create default views for them
   // Skip any without a primary key
-  $sql = "SELECT tt.twtid,tt.tablename,tt.dbconnection,COUNT(*) AS cnt
+  $sql = "SELECT tt.twtid,tt.tablename,tt.dbconnection,tt.view_name,COUNT(*) AS cnt
           FROM {tw_tables} tt
           INNER JOIN {tw_columns} tc ON tt.twtid=tc.twtid
-          WHERE tc.primarykey=1
-          GROUP BY tt.twtid,tt.tablename,tt.dbconnection";
+          WHERE tt.provide_view=1 AND tc.primarykey=1
+          GROUP BY tt.twtid,tt.tablename,tt.view_name,tt.dbconnection";
   $tblresult = db_query($sql);
   while ($tblrow = db_fetch_object($tblresult)) {
     // For a default view to be possible, the table must have a single primary key field
@@ -29,21 +29,20 @@ function tw_views_default_views() {
 
     $twtid = $tblrow->twtid;
     $tablename = $tblrow->tablename;
+    $view_name = $tblrow->view_name;
     $dbconnection = $tblrow->dbconnection;
     if ($dbconnection == 'default') {
       $rawtablename = schema_unprefix_table($tablename);
       $cleantablename = $rawtablename;
-    } 
+    }
     else {
-      global $db_url;
-      $url = parse_url($db_url[$dbconnection ]);
-      $truedbname = substr($url['path'], 1);
-      $rawtablename = $tablename;
+      $truedbname = tw_get_dbinfo($dbconnection, 'name');
+      $rawtablename = tw_qualified_tablename($dbconnection, $tablename);
       $cleantablename = $truedbname . '_' . $tablename;
     }
     // Create a basic table view, with exclusion flags, for each import table
     $view = new view;
-    $view->name = $tablename;
+    $view->name = $view_name;
     $view->description = $tablename;
     $view->tag = 'tw';
     $view->view_php = '';
@@ -51,8 +50,8 @@ function tw_views_default_views() {
     $view->is_cacheable = FALSE;
     $view->api_version = 2;
     $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-    $handler = $view->new_display('default', $tablename, 'default');
-    
+    $handler = $view->new_display('default', $view_name, 'default');
+
     // Grab the available columns for this table (skip any marked ignore)
     $pk = NULL;
     $colnames = array();
@@ -67,7 +66,7 @@ function tw_views_default_views() {
         $pk = $colrow->colname;
       }
     }
-    
+
     // Add our columns to the fields
     $fields = array();
     foreach ($colnames as $colname) {
@@ -80,7 +79,7 @@ function tw_views_default_views() {
         'relationship' => 'none',
       );
     }
-    
+
     // Add columns for joined tables
     $sql = "SELECT twc2.colname, twt2.tablename
             FROM {tw_tables} twt1
@@ -92,7 +91,7 @@ function tw_views_default_views() {
     $result = db_query($sql, $twtid);
     while ($row = db_fetch_object($result)) {
       $colname = $row->colname;
-      $colnames[] = $colcolname;
+      $colnames[] = $colname;
       $fields[$colname] = array(
         'id' => $colname,
         'table' => $row->tablename,
@@ -129,8 +128,8 @@ function tw_views_default_views() {
     ));
     $handler->override_option('title', t('Contents of !tablename', array('!tablename' => $rawtablename)));
     $handler->override_option('header', t('This is a view of a raw database table. It may be ' .
-      'sorted in various ways by clicking the column headers. 
-    
+      'sorted in various ways by clicking the column headers.
+
       If you identify a particular field that does not need to be used in views of this table, ' .
       'go to the <a href="!analyze_url">analysis page</a> ' .
       'and check the <em>Ignore</em> box for that field. It will then no longer appear here.',
@@ -164,7 +163,7 @@ function tw_views_default_views() {
       'default' => -1,
     ));
     $handler = $view->new_display('page', 'Page', 'page_1');
-    $handler->override_option('path', "admin/content/tw/view/$tablename");
+    $handler->override_option('path', "admin/content/tw/view/$view_name");
     $handler->override_option('menu', array(
       'type' => 'none',
       'title' => '',

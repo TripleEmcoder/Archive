@@ -1,5 +1,5 @@
 <?php
-// $Id: tw_tablebuild.inc,v 1.1.2.7 2009/06/26 16:15:31 mikeryan Exp $
+// $Id: tw_tablebuild.inc,v 1.1.2.19 2010/07/21 01:43:54 mikeryan Exp $
 
 /**
  * @file
@@ -17,11 +17,13 @@ function _tw_views_handler($sqltype, $type) {
     case 'numeric':
       $filter = "views_handler_{$type}_numeric";
       break;
-    case 'datetime':
-      $filter = "views_handler_{$type}_date";
-      break;
     default:
-      $filter = "views_handler_{$type}_string";
+      if ($type == 'field') {
+        $filter = 'views_handler_field';
+      }
+      else {
+        $filter = "views_handler_{$type}_string";
+      }
       break;
   }
 
@@ -31,12 +33,11 @@ function _tw_views_handler($sqltype, $type) {
 function _tw_generate_views_table_data($twtids = NULL, $export = FALSE) {
   $t = $export ? '_tw_t_wrap' : 't';
   $sql = "SELECT twtid, tablename, dbconnection
-          FROM {tw_tables}
-          WHERE existing_view_data=0";
+          FROM {tw_tables}";
   if (!is_null($twtids)) {
     // If a specific subset of tables are requested, add the appropriate
     // constraining WHERE clause
-    $sql .= ' AND twtid IN (' . db_placeholders($twtids) . ')';
+    $sql .= ' WHERE twtid IN (' . db_placeholders($twtids) . ')';
     $tblresult = db_query($sql, $twtids);
   }
   else {
@@ -57,13 +58,20 @@ function _tw_generate_views_table_data($twtids = NULL, $export = FALSE) {
     // Load the schema so we can get table comments.
     $schema = drupal_get_schema($tablename);
     $dbconnection = $tblrow->dbconnection;
+
+    $qualtablename = tw_qualified_tablename($dbconnection, $tablename);
+
     if ($dbconnection == 'default') {
       $rawtablename = schema_unprefix_table($tablename);
       $disptablename = $tablename;
     }
     else {
-      $rawtablename = $tablename;
-      $disptablename = $dbconnection . '.' . $tablename;
+      $rawtablename = $qualtablename;
+      $disptablename = $qualtablename;
+      // Only do this if qualification support is active
+      if ($qualtablename != $tablename) {
+        $dbconnection = 'default';
+      }
     }
     $twtid = $tblrow->twtid;
     $table = array();
@@ -79,8 +87,10 @@ function _tw_generate_views_table_data($twtids = NULL, $export = FALSE) {
     $pk = array();
     while ($colrow = db_fetch_object($colresult)) {
       $colname = $colrow->colname;
-      if ($schema['fields'][$colname]['description']) {
-        $help = $schema['fields'][$colname]['description'];
+      if (isset($schema['fields'][$colname]['description'])) {
+        $help = $export ?
+          str_replace("'", "\\'", $schema['fields'][$colname]['description']) :
+          $schema['fields'][$colname]['description'];
       }
       else {
         $help = $disptablename . '.' . $colname;
@@ -91,7 +101,7 @@ function _tw_generate_views_table_data($twtids = NULL, $export = FALSE) {
         // TODO: Truncate text at 80 characters.
         // TODO: Better yet, do some jQuery magic to expand to the full text
         'field' => array(
-          'handler' => 'views_handler_field',
+          'handler' => _tw_views_handler($colrow->coltype, 'field'),
           'click sortable' => TRUE,
         ),
         'filter' => array(
@@ -111,17 +121,24 @@ function _tw_generate_views_table_data($twtids = NULL, $export = FALSE) {
     }
     // Any table with a single primary key column can be a base table
     if (count($pk) == 1) {
+      $description =
+        !empty($schema['description']) ?
+          $t($export ?
+              str_replace("'", "\\'", $schema['description']) :
+              $schema['description']) :
+          $help;
       $table['table'] = array(
-        'group' => $t($disptablename),
         'base' => array(
           'field' => $pk[0],
           'title' => $t('Database table @tablename', array('@tablename' => $disptablename)),
-          'help' => (!empty($schema['description'])) ? $t($schema['description']) : $help,
+          'help' => $description,
           'weight' => 10,
-          'database' => $dbconnection,
+          'database' => ($tablename == $qualtablename) ? $dbconnection : NULL,
         ),
       );
     }
+    $table['table']['group'] = $t($disptablename);
+
     $tables[$rawtablename] = $table;
   }
   return $tables;
@@ -131,7 +148,7 @@ function _tw_generate_views_relationship_data($tables, $twtids = NULL, $export =
   $t = $export ? '_tw_t_wrap' : 't';
   $where = is_null($twtids) ? '' : 'WHERE twt1.twtid IN (' . db_placeholders($twtids) . ')';
   // Now that all tables are present, fill in relationships defined by foreign keys
-  $sql = "SELECT twt1.tablename AS tbl1, twc1.colname AS col1, twt2.tablename AS tbl2, 
+  $sql = "SELECT twt1.tablename AS tbl1, twc1.colname AS col1, twt1.dbconnection AS dbcon1, twt2.tablename AS tbl2,
                   twc2.colname AS col2, twt2.twtid AS twtid2, twt2.dbconnection AS dbcon2,
                   twr.automatic
           FROM {tw_relationships} twr
@@ -148,15 +165,13 @@ function _tw_generate_views_relationship_data($tables, $twtids = NULL, $export =
   $i = 0;
   while ($row = db_fetch_array($result)) {
     extract($row);
-    $rawtbl1 = schema_unprefix_table($tbl1);
-    $rawtbl2 = schema_unprefix_table($tbl2);
+    $rawtbl1 = tw_qualified_tablename($dbcon1, schema_unprefix_table($tbl1));
+    $rawtbl2 = tw_qualified_tablename($dbcon2, schema_unprefix_table($tbl2));
     if ($automatic) {
       // Use Views joins (automatically include right-table fields in left-table views)
-      $disptablename = $dbcon2 . '.' . $tbl2;
-      if (!isset($tables[$rawtbl2]['table']['group'])) {
-        $tables[$rawtbl2]['table']['group'] = $disptablename;
-      }
+      $disptablename = $dbcon2 . '_' . $tbl2;
       $tables[$rawtbl2]['table']['join'][$rawtbl1] = array(
+        'table' => $rawtbl2,
         'left_field' => $col1,
         'field' => $col2,
       );
@@ -164,7 +179,6 @@ function _tw_generate_views_relationship_data($tables, $twtids = NULL, $export =
     else {
       // Use Views relationships (right-table must be explicitly added to a view)
       if (!isset($tables[$rawtbl1][$col1]['relationship'])) {
-        $tables[$rawtbl1][$col1]['title'] = $t("@column (joins to @table)", array('@column' => $col1, '@table' => $tbl2));
         $tables[$rawtbl1][$col1]['relationship'] = array(
           'base' => $rawtbl2,
           'base field' => $col2,
@@ -186,5 +200,6 @@ function _tw_generate_views_relationship_data($tables, $twtids = NULL, $export =
       }
     }
   }
+
   return $tables;
 }

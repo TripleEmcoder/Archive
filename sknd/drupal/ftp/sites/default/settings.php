@@ -240,7 +240,7 @@ $conf['i18n_variables'] = array(
   'site_frontpage',
 );
 
-$conf['cache_inc'] = './sites/all/modules/cacherouter/cacherouter.inc';
+//$conf['cache_inc'] = './sites/all/modules/cacherouter/cacherouter.inc';
 
 /*
 $conf['cacherouter'] = array(
@@ -264,7 +264,7 @@ $conf['cacherouter'] = array(
     'engine' => 'xcache',
     'servers' => array('localhost:11211'),
     'shared' => TRUE,
-    'prefix' => 'jakiestudia',
+    'prefix' => 'cognitis',
     'static' => FALSE,
     'fast_cache' => FALSE,
   ),

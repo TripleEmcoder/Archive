@@ -1,31 +1,25 @@
 <?php
-// $Id: smart_menus.install,v 1.5 2009/11/10 01:48:40 rdeboer Exp $
+// $Id: smart_menus.install,v 1.8 2010/09/21 04:52:28 rdeboer Exp $
 
 /**
  * @file
  *  Install and uninstall hooks for Smart menus module.
  */
 
-define('PROFILE_SMART_MENUS_DEPTH_FIELD', 'profile_smart_menus_depth');
-define('PROFILE_SMART_MENUS_DISABLE_TABBED_CONTENT', 'profile_smart_menus_tabbed_content');
-define('PROFILE_SMART_MENUS_ACTIVE_TRAIL', 'profile_smart_menus_active_trail');
-
 /**
  * Implementation of hook_install().
  */
 function smart_menus_install() {
-//menu_cache_clear_all();
-  if (module_exists('profile')) {
-    _create_smart_menus_profile();
-  }
-  drupal_set_message(st('Please configure your content and navigation Smart menus <a href="@blocks_page">here</a>.',
-    array('@blocks_page' => url('admin/build/block')))); }
+  drupal_set_message(st('Please configure your Smart menu blocks <a href="@blocks_page">here</a>.',
+    array('@blocks_page' => url('admin/build/block')))); 
+}
 
 /**
  * Implementation of hook_uninstall().
  */
 function smart_menus_uninstall() {
   menu_cache_clear_all();
+
   variable_del('smart_menus_include_pages');
   variable_del('smart_menus_exclude_pages');
   variable_del('smart_menus_depth');
@@ -33,14 +27,14 @@ function smart_menus_uninstall() {
   variable_del('smart_menus_tabbed_content');
   variable_del('smart_menus_active_trail');
   variable_del('smart_menus_debug');
-  if (module_exists('profile')) {
-    _remove_smart_menus_profile();
-  }
-  drupal_set_message(t('Don\'t forget to <a href="@blocks_page">reconfigure</a> your content and navigation menu blocks.',
-    array('@blocks_page' => url('admin/build/block'))), 'warning');
-}
+  // Alternatively delete all smart_menus_* variables at once
+  //db_query("DELETE FROM {variable} WHERE name LIKE 'smart_menus_%%'");
 
-function _create_smart_menus_profile() {
+  drupal_set_message(t('Smart menus: don\'t forget to <a href="@blocks_page">reconfigure</a> your content and navigation menu blocks.',
+    array('@blocks_page' => url('admin/build/block'))));
+}
+/*
+function _smart_menus_create_profile() {
   db_query("INSERT INTO {profile_fields} (title, name, explanation, category, type, weight, required, register, visibility, autocomplete, options, page) VALUES ('%s', '%s', '%s', '%s', '%s', %d, %d, %d, %d, %d, '%s', '%s')",
     'Smart menus auto-expansion depth', // title
     PROFILE_SMART_MENUS_DEPTH_FIELD, // form field id
@@ -83,8 +77,13 @@ function _create_smart_menus_profile() {
     '',    // options in list selection
     'smart-menus'); // title of page used for browsing
 }
+ */
 
-function _remove_smart_menus_profile() {
+define('PROFILE_SMART_MENUS_DEPTH_FIELD', 'profile_smart_menus_depth');
+define('PROFILE_SMART_MENUS_DISABLE_TABBED_CONTENT', 'profile_smart_menus_tabbed_content');
+define('PROFILE_SMART_MENUS_ACTIVE_TRAIL', 'profile_smart_menus_active_trail');
+
+function _smart_menus_remove_profile() {
   $sql = "SELECT fid FROM {profile_fields} WHERE name IN ('%s', '%s', '%s')";
   $result = db_query($sql, PROFILE_SMART_MENUS_DEPTH_FIELD, PROFILE_SMART_MENUS_DISABLE_TABBED_CONTENT, PROFILE_SMART_MENUS_ACTIVE_TRAIL);
   $fids = array();
@@ -93,4 +92,13 @@ function _remove_smart_menus_profile() {
   }
   db_query('DELETE FROM {profile_fields} WHERE fid IN (%d, %d, %d)', $fids);
   db_query('DELETE FROM {profile_values} WHERE fid IN (%d, %d, %d)', $fids);
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function smart_menus_update_6107() {
+  $ret = array();
+  _smart_menus_remove_profile();
+  return $ret;
 }

@@ -1,5 +1,5 @@
 <?php
-/* $Id: mimemail.inc,v 1.51 2010/08/12 10:35:23 sgabe Exp $ */
+/* $Id: mimemail.inc,v 1.53 2010/09/12 15:57:20 sgabe Exp $ */
 
 /**
  * @file
@@ -120,7 +120,7 @@ function _mimemail_file($url = NULL, $name = '', $type = '', $disposition = 'rel
     $url = _mimemail_url($url, 'TRUE');
 
     // If the $url is absolute, we're done here.
-    if (strpos($url, '://') || preg_match('!mailto:!', $url)) {
+    if (strpos($url, '://') !== FALSE || preg_match('!mailto:!', $url)) {
       return $url;
     }
     // The $url is a relative file path, continue processing.
@@ -344,7 +344,8 @@ function mimemail_html_body($body, $subject, $plaintext = FALSE, $text = NULL, $
 
   foreach ($attachments as $a) {
     $a = (object) $a;
-    if($a->list) {
+    // Check the list parameter if its set or ignore it (Upload module support).
+    if(!isset($a->list) || $a->list) {
       _mimemail_file($a->filepath, $a->filename, $a->filemime, 'attachment');
       $parts = array_merge($parts, _mimemail_file());
     }
@@ -525,7 +526,7 @@ function _mimemail_url($url, $embed_file = NULL) {
   $url = urldecode($url);
 
   // If the URL is absolute or a mailto, return it as-is.
-  if (strpos($url, '://') || preg_match('!mailto:!', $url)) {
+  if (strpos($url, '://') !== FALSE || preg_match('!mailto:!', $url)) {
     $url = str_replace(' ', '%20', $url);
     return $url;
   }

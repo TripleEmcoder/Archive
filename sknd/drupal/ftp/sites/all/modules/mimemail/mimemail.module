@@ -1,4 +1,4 @@
-<?php /* $Id: mimemail.module,v 1.50 2010/08/12 11:06:18 sgabe Exp $ */
+<?php /* $Id: mimemail.module,v 1.54 2010/09/12 16:11:58 sgabe Exp $ */
 
 /**
  * @file
@@ -124,8 +124,8 @@ function mimemail_prepare_message($sender, $recipient, $subject, $body, $plainte
       }
     }
   }
-  $subject = mime_header_encode(trim(drupal_html_to_text($subject)));
-  $body = theme('mimemail_message', $body, $mailkey);
+  $subject = trim(drupal_html_to_text($subject));
+  $body = theme(array('mimemail_message__'. $mailkey, 'mimemail_message'), $subject, $body, $mailkey);
   foreach (module_implements('mail_post_process') as $module) {
     $function = $module .'_mail_post_process';
     $function($body, $mailkey);
@@ -133,6 +133,7 @@ function mimemail_prepare_message($sender, $recipient, $subject, $body, $plainte
 
   $plaintext = $plaintext || variable_get('mimemail_textonly', 0);
   $sender    = mimemail_address($sender);
+  $subject = mime_header_encode($subject);
   $mail      = mimemail_html_body($body, $subject, $plaintext, $text, $attachments);
   $headers   = array_merge($headers, $mail['headers']);
   $message   = array(
@@ -252,7 +253,7 @@ function mimemail_mailengine($op, $message = array()) {
  * @return
  *   Returns the resultss of the call to mimemail().
  */
-if (strpos(variable_get('smtp_library', ''), 'mimemail')
+if (strpos(variable_get('smtp_library', ''), 'mimemail') !== FALSE
   && !function_exists('drupal_mail_wrapper')) {
 
   function drupal_mail_wrapper(&$message) {
@@ -267,7 +268,8 @@ if (strpos(variable_get('smtp_library', ''), 'mimemail')
       $body = $message['body'];
     }
     $headers = isset($message['headers']) ? $message['headers'] : array();
+    $attachments = isset($message['attachments']) ? $message['attachments'] : array();
     $mailkey = isset($message['id']) ? $message['id'] : '';
-    return mimemail($from, $to, $subject, $body, NULL, $headers, NULL, array(), $mailkey);
+    return mimemail($from, $to, $subject, $body, NULL, $headers, NULL, $attachments, $mailkey);
   }
 }

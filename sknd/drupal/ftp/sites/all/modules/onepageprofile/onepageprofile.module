@@ -1,5 +1,5 @@
 <?php
-// $Id: onepageprofile.module,v 1.7.2.12 2010/08/01 18:34:57 aidan Exp $
+// $Id: onepageprofile.module,v 1.7.2.14 2010/09/12 14:44:01 aidan Exp $
 
 
 /**
@@ -77,6 +77,7 @@ function onepageprofile_user($op, &$edit, &$account, $category = NULL) {
             }
 
             $form_state = array('storage' => NULL, 'submitted' => FALSE);
+            $category_form['#id'] = 'profile_form_profile';
             $category_form['#parameters'] = array('profile_form_profile', $edit, $account, $category_name, FALSE);
             drupal_alter('form', $category_form, $form_state, 'profile_form_profile');
 
@@ -200,6 +201,17 @@ function onepageprofile_settings_submit($form, $form_state) {
 function onepageprofile_settings_reset($form, $form_state) {
   variable_del('onepageprofile_weights');
   drupal_set_message(t('Category weights have been reset.'));
+}
+
+
+/**
+ * Implementation of hook_domianignore().
+ *
+ * Prevent the domain module from altering the $form['#action'] of the
+ * profile forms as they are added to the user form. 
+ */
+function onepageprofile_domainignore() {
+  return array('profile_form_profile');
 }
 
 

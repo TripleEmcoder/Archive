@@ -1,5 +1,5 @@
 <?php
-// $Id: tw.views.inc,v 1.1.2.16 2009/06/17 15:19:51 mikeryan Exp $
+// $Id: tw.views.inc,v 1.1.2.17 2010/06/29 01:51:51 mikeryan Exp $
 
 /**
  * @file
@@ -16,5 +16,7 @@ require_once drupal_get_path('module', 'tw') . '/tw_tablebuild.inc';
  */
 function tw_views_data() {
   $tables = _tw_generate_views_table_data();
-  return _tw_generate_views_relationship_data($tables);
+  $tables = _tw_generate_views_relationship_data($tables);
+  drupal_alter('tw_views_data', $tables);
+  return $tables;
 }

@@ -1,5 +1,5 @@
 <?php
-// $Id: tw_import_delimited.module,v 1.1.2.12 2009/05/03 15:13:10 mikeryan Exp $
+// $Id: tw_import_delimited.module,v 1.1.2.17 2010/06/29 01:22:23 mikeryan Exp $
 
 /**
  * @file
@@ -118,14 +118,24 @@ function tw_import_delimited_tw_form_submit_delimited($values) {
           'type' => 'text',
           'size' => 'big',
           'not null' => FALSE,
-          'default' => '',
       );
-      $columns[] = $colname;
+      $columns[] = tw_quote_identifier($colname);
     }
     // TODO: Option to append instead of replace (i.e., skip the TRUNCATE)
     if (db_table_exists($tablename)) {
-      db_query('TRUNCATE TABLE {' . $tablename . '}');
-      $prevexists = TRUE;
+      $sql = "SELECT twtid FROM {tw_tables}
+              WHERE dbconnection='%s' AND tablename='%s'";
+      $twtid = db_result(db_query($sql, 'default', $tablename));
+      if ($twtid) {
+        db_query('TRUNCATE TABLE {' . $tablename . '}');
+        $prevexists = TRUE;
+      }
+      else {
+        drupal_set_message(t('"!tablename" is not a table managed by Table Wizard.
+            For initial import, please choose a table name that is not in use',
+          array('!tablename' => $tablename)));
+        return NULL;
+      }
     }
     else {
       // Note that when using table prefixes, a prefix is prepended to the table name
@@ -180,7 +190,12 @@ function tw_import_delimited_tw_form_submit_delimited($values) {
  * directory if necessary).
  */
 function _tw_delimited_file_name($file) {
-  $dir = str_replace('\\', '/', getcwd()) . '/' . file_directory_path() . '/tw_delimited';
+  $dir = "";
+  if (variable_get('file_downloads', FILE_DOWNLOADS_PUBLIC) == FILE_DOWNLOADS_PUBLIC) {
+    $dir .= str_replace('\\', '/', getcwd()) . '/';
+  }
+  $dir .=  file_directory_path() . '/tw_delimited';
+
   if (file_check_directory($dir, TRUE)) {
     return $dir . '/' . $file;
   }
@@ -229,7 +244,7 @@ function _tw_delimited_get_row($filepath, &$offset = 0) {
   return $result;
 }
 
-function _tw_import_delimited_import_file(&$srcinfo, &$context) {
+function _tw_import_delimited_import_file($srcinfo, &$context) {
   if (!isset($context['sandbox']['total'])) {
     $context['sandbox']['total'] = filesize($srcinfo->filepath);
     $context['sandbox']['done'] = $srcinfo->offset;

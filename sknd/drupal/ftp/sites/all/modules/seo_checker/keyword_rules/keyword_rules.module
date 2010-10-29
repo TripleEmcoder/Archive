@@ -1,5 +1,5 @@
 <?php
-// $Id: keyword_rules.module,v 1.2.2.8 2009/10/18 14:41:48 miruoss Exp $
+// $Id: keyword_rules.module,v 1.2.2.10 2010/09/22 22:04:32 miruoss Exp $
 
 /**
  * @file
@@ -153,7 +153,17 @@ function keyword_rules_headings($form_values) {
 function _keyword_rules_extract_tags($form_values) {
   switch (variable_get('keyword_rules_keywords_driver', 'cck')) {
     case 'nodewords':
-      $keywords = $form_values['nodewords']['keywords'];
+      if (function_exists('_nodewords_tag_value')) {
+        # Using nodewords >= 6.x-1.12, let nodewords module do its magic...
+        $keywords = _nodewords_tag_value(
+          'keywords',
+          isset($form_values['nodewords']['metatags']) ? $form_values['nodewords']['metatags']['keywords'] : array(),
+          array('type' => NODEWORDS_TYPE_NODE, 'id' => $form_values['nid'])
+        );
+        $keywords = $keywords['value'];
+      } else {
+        $keywords = $form_values['nodewords']['keywords']['value'];
+      }
       break;
     default:
       $keywords = $form_values[variable_get('keyword_rules_keywords_field', 'field_seo_keywords')][0]['value'];
@@ -202,7 +212,9 @@ function keyword_rules_settings() {
       'class' => 'keyword_rule_settings_fieldset',
     ),
   );
-
+  if (variable_get('keyword_rules_keywords_driver', 'cck') != 'cck') {
+    $form['keyword_rules_cck']['#attributes']['style'] = 'display:none;';
+  }
   $form['keyword_rules_cck']['keyword_rules_keywords_field'] = array(
     '#type' => 'select',
     '#title' => t('Field defining the keywords'),
@@ -210,5 +222,6 @@ function keyword_rules_settings() {
     '#description' => t('Select the field that defines the keywords to be used for the checks.'),
     '#options' => $fields,
   );
+
   return system_settings_form($form);
 }

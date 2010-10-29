@@ -1,4 +1,4 @@
-$Id: CHANGELOG.txt,v 1.10 2010/03/12 01:23:49 rdeboer Exp $
+$Id: CHANGELOG.txt,v 1.13 2010/09/21 03:58:14 rdeboer Exp $
 
 Changelog for Smart Menu and Smart Tabs modules for drupal 6.x
 
@@ -41,3 +41,15 @@ Proper fix (as opposed to workaround) for [#634192] and [#660626]
 Default tab did not always have path alias applied.
 Also changed function names.
 
+6.x-1.5
+=======
+Functions renamed. Minor edits of code and comments.
+
+6.x-1.6
+=======
+Use hook_user() to administer and store user's personal settings (if allowed by admin, feature request [#720750])
+Added "search" to Smart tabs page exclusions (fix for [#802330]).
+
+6.x-1.7
+=======
+Added "node/*/webform/components/new" to page exclusion list to fix [#660626].

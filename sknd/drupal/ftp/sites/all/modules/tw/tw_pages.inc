@@ -1,5 +1,5 @@
 <?php
-// $Id: tw_pages.inc,v 1.1.2.47 2009/07/16 15:17:19 mikeryan Exp $
+// $Id: tw_pages.inc,v 1.1.2.59 2010/06/29 01:11:07 mikeryan Exp $
 /**
  * @file
  * Table Wizard menu callbacks
@@ -22,11 +22,10 @@ function tw_sources() {
 function tw_sources_form($form_state) {
   $form['description'] = array(
     '#prefix' => '<div>',
-    '#value' => t('Tables managed by the Table Wizard module are listed here, each with the name of the 
-      table used to store the data, and statistics on the amount of data. Click the <b>Analysis</b>
-      link to view and edit information on the fields available in the table. For tables with
-      default views (any table with a single primary key, which is not views-enabled by another
-      module), click on the table name to view the data in the table.'),
+    '#value' => t('Tables managed by the Table Wizard module are listed here, each with the name of the
+      table used to store the data, and statistics on the amount of data. Click the table name
+      to view and edit information on the table, including its fields. For tables with
+      default views, click on the view name to view the data in the table.'),
     '#suffix' => '</div>',
   );
 
@@ -40,7 +39,7 @@ function tw_sources_form($form_state) {
   if ($extconns >= 1) {
     $connheader = array('data' => t('Connection'), 'field' => 'twt.dbconnection', 'sort' => 'asc');
     $nameheader = array('data' => t('Table name'), 'field' => 'twt.tablename');
-  } 
+  }
   else {
     $nameheader = array('data' => t('Table name'), 'field' => 'twt.tablename', 'sort' => 'asc');
   }
@@ -51,33 +50,39 @@ function tw_sources_form($form_state) {
         array('data' => '', 'class' => 'select-all'),
         $connheader,
         $nameheader,
+        array('data' => t('View name'), 'field' => 'twt.view_name'),
         array('data' => t('Row count')),
-        array('data' => t('Table Analysis')),
       ),
     );
-  } 
+  }
   else {
     $form['header'] = array(
       '#type' => 'value',
       '#value' => array(
         array('data' => t(''), 'class' => 'select-all'),
         $nameheader,
+        array('data' => t('View name'), 'field' => 'twt.view_name'),
         array('data' => t('Row count')),
-        array('data' => t('Table Analysis')),
       ),
     );
   }
 
-  $sql = "SELECT twt.twtid, twt.tablename, twt.dbconnection, twt.existing_view_data,
+  $sql = "SELECT twt.twtid, twt.tablename, twt.dbconnection, twt.provide_view, twt.view_name,
             COUNT(twc.twcid) AS pkcnt
           FROM {tw_tables} twt
           LEFT JOIN {tw_columns} twc ON twt.twtid=twc.twtid AND primarykey=1
-          GROUP BY twt.twtid, twt.tablename, twt.dbconnection, twt.existing_view_data";
+          GROUP BY twt.twtid, twt.tablename, twt.dbconnection, twt.provide_view, twt.view_name";
   if ($extconns >= 1) {
-    $tablesort = tablesort_sql(array($connheader, $nameheader));
-  } 
+    // If no header has been clicked, sort by both connection and tablename
+    if (isset($_GET['order'])) {
+      $tablesort = tablesort_sql($form['header']['#value']);
+    }
+    else {
+      $tablesort = " ORDER BY twt.dbconnection ASC, twt.tablename ASC";
+    }
+  }
   else {
-    $tablesort = tablesort_sql(array($nameheader));
+    $tablesort = tablesort_sql($form['header']['#value']);
   }
   $result = db_query($sql . $tablesort);
   $checks = array();
@@ -90,19 +95,18 @@ function tw_sources_form($form_state) {
       db_set_active('default');
       $last_connection = 'default';
     }
-    $form['analyze'][$row->twtid] = array('#value' => 
-      l(t('analyze'), 'admin/content/tw/analyze/' . $row->twtid, array('html' => TRUE)));
     if ($extconns >= 1) {
       $form['dbconnection'][$row->twtid] = array('#value' => $row->dbconnection);
     }
-    // Only link to the default view if it exists (i.e., the table has a single primary key, and
-    // is not views-enabled by another module)
-    if ($row->pkcnt == 1 && $row->existing_view_data == 0) {
-      $form['tablename'][$row->twtid] = array('#value' => 
-        l($row->tablename, 'admin/content/tw/view/' . $row->tablename, array('html' => TRUE)));
+    $form['tablename'][$row->twtid] = array('#value' =>
+      l($row->tablename, 'admin/content/tw/analyze/' . $row->twtid, array('html' => TRUE)));
+    // Only link to the default view if it exists
+    if ($row->provide_view == 1 && $row->view_name) {
+      $form['view_name'][$row->twtid] = array('#value' =>
+        l($row->view_name, 'admin/content/tw/view/' . $row->view_name, array('html' => TRUE)));
     }
     else {
-      $form['tablename'][$row->twtid] = array('#value' => $row->tablename);
+      $form['view_name'][$row->twtid] = array('#value' => '');
     }
     if ($last_connection != $row->dbconnection) {
       db_set_active($row->dbconnection);
@@ -115,7 +119,7 @@ function tw_sources_form($form_state) {
         add an element to $db_prefix setting the prefix for this table to an empty string.',
         array('%tablename' => $row->tablename)));
       $rowcount = t('N/A');
-    } 
+    }
     else {
       $sql = 'SELECT COUNT(*) FROM ' . tw_quote_identifier('{' . $row->tablename . '}');
       $rowcount = db_result(db_query($sql));
@@ -139,7 +143,7 @@ function tw_sources_form($form_state) {
 
   // Keep each type's fields apart
   $form['#tree'] = TRUE;
-  
+
   // Note that fieldset names ('existing', 'delimited', ...) are the source type names
   $sourcefieldsets = module_invoke_all('tw_form');
   $form = array_merge($form, $sourcefieldsets);
@@ -162,8 +166,8 @@ function theme_tw_sources($form) {
         $row[] = drupal_render($form['dbconnection'][$twtid]);
       }
       $row[] = drupal_render($form['tablename'][$twtid]);
+      $row[] = drupal_render($form['view_name'][$twtid]);
       $row[] = drupal_render($form['rowcount'][$twtid]);
-      $row[] = drupal_render($form['analyze'][$twtid]);
       $rows[] = $row;
     }
   }
@@ -210,8 +214,34 @@ function tw_sources_form_submit($form, &$form_state) {
   else {
     // Submit hooks return arrays of tablenames they're bringing in
     $values = $form_state['values'][$type];
+    if (isset($values['skip_full_analysis'])) {
+      $skip_full_analysis = $values['skip_full_analysis'];
+    }
+    else {
+      $skip_full_analysis = FALSE;
+    }
+    if (isset($values['provide_view'])) {
+      $provide_view = $values['provide_view'];
+    }
+    else {
+      $provide_view = 0;
+    }
+    if (isset($values['view_name'])) {
+      $view_name = $values['view_name'];
+    }
+    else {
+      $view_name = '';
+    }
     $tableset = module_invoke_all("tw_form_submit_$type", $values);
-    tw_add_tables_batch($tableset, $values['skip_full_analysis']);
+    if (count($tableset) == 1) {
+      tw_add_tables($tableset, $skip_full_analysis, $provide_view, $view_name);
+    }
+    else {
+      if ($view_name) {
+        drupal_set_message(t('A view name can only be provided when adding a single table.'));
+      }
+      tw_add_tables_batch($tableset, $skip_full_analysis, $provide_view);
+    }
   }
 }
 
@@ -230,7 +260,7 @@ function tw_tw_form() {
       '#value' => t('Add tables to the Table Wizard.'),
       '#suffix' => '</div>',
   );
-  
+
   // Build list of tables we already manage
   $excludes = array();
   $sql = "SELECT * FROM {tw_tables}";
@@ -245,7 +275,7 @@ function tw_tw_form() {
   global $db_url;
   if (!is_array($db_url)) {
     $connlist = array('default' => $db_url);
-  } 
+  }
   else {
     $connlist = $db_url;
   }
@@ -253,7 +283,7 @@ function tw_tw_form() {
   foreach ($connlist as $dbconnection => $url) {
     if ($dbconnection == 'default') {
       $defaulturl = $url;
-    } 
+    }
     db_set_active($dbconnection);
     global $db_type;
     if ($db_type == 'mysql' || $db_type == 'mysqli') {
@@ -289,7 +319,7 @@ function tw_tw_form() {
         $options[$unprefixed] = $unprefixed;
       }
     }
-    
+
     if (!empty($options)) {
       $fieldsets['existing']['lists'][$dbconnection] = array(
           '#type' => 'select',
@@ -303,7 +333,7 @@ function tw_tw_form() {
     }
   }
   db_set_active('default');
-  
+
   $fieldsets['existing']['skip_full_analysis'] = array(
     '#type' => 'checkbox',
     '#title' => t('Skip full analysis'),
@@ -312,6 +342,25 @@ function tw_tw_form() {
       contains. This can take a long time for large tables - check this button to skip
       the value analysis.'),
     '#default_value' => FALSE,
+  );
+
+  $fieldsets['existing']['provide_view'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Provide default view'),
+    '#description' => t('Provide a default view of the table data. Note that the view
+      will only be available if the table has a single-column primary key.'),
+    '#default_value' => TRUE,
+  );
+
+  $fieldsets['existing']['view_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default view name'),
+    '#length' => 32,
+    '#default_value' => '',
+    '#description' => t('If <em>Provide default view</em> is checked and a single table is
+      being added, the name to use for the default view of that table. If left blank and
+      <em>Provide default view</em> is checked, each selected table will have a default
+      view with the same name as the table name.'),
   );
 
   $fieldsets['existing']['existingsubmit'] = array(
@@ -330,7 +379,7 @@ function tw_tw_form_submit_existing($values) {
     foreach ($tablelist as $tablename) {
       $tablename = $dbconnection . '.' . $tablename;
       $tablenames[] = $tablename;
-      drupal_set_message(t('Added table %tablename to the Table Wizard.', 
+      drupal_set_message(t('Added table %tablename to the Table Wizard.',
         array('%tablename' => $tablename)));
     }
   }
@@ -344,13 +393,14 @@ function tw_tw_form_submit_existing($values) {
  * TODO: Flag any available FKs that are not indexed.
  */
 function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
-  $row = db_fetch_object(db_query("SELECT dbconnection, tablename, existing_view_data
+  $row = db_fetch_object(db_query("SELECT *
                                    FROM {tw_tables}
                                    WHERE twtid=%d",
                                   $twtid));
   $tablename = $row->tablename;
   $dbconnection = $row->dbconnection;
-  $existing_view_data = $row->existing_view_data;
+  $provide_view = $row->provide_view;
+  $view_name = $row->view_name;
 
   if (isset($_GET['reanalyze'])) {
     tw_perform_analysis($tablename, $dbconnection);
@@ -359,10 +409,9 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
 
   $form['twtid'] = array('#type' => 'value', '#value' => $twtid);
   $form['tablename'] = array('#type' => 'value', '#value' => $tablename);
-  $form['existing_view_data'] = array('#type' => 'value', '#value' => $existing_view_data);
 
   switch ($flag) {
-    case TW_COLS_ALL: 
+    case TW_COLS_ALL:
       $flaglabel = t('All fields');
       break;
     case TW_COLS_IGNORE:
@@ -372,14 +421,33 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
       $flaglabel = t('Non-ignored fields only');
       break;
   }
-  
+  $form['provide_view'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Provide default view'),
+    '#description' => t('Provide a default view of the table data. Note that the view
+      will only be available if the table has a single-column primary key.'),
+    '#default_value' => $row->provide_view,
+  );
+
+  $form['view_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default view name'),
+    '#length' => 32,
+    '#default_value' => $row->view_name,
+    '#description' => t('If <em>Provide default view</em> is checked and a single table is
+      being added, the name to use for the default view of that table. If left blank and
+      <em>Provide default view</em> is checked, each selected table will have a default
+      view with the same name as the table name.'),
+  );
+
+
   $form['help'] = array(
     '#type' => 'fieldset',
     '#title' => t('Help'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  
+
   $form['help']['help1'] = array(
     '#prefix' => '<div>',
     '#value' => t('Fields in the table are listed below, with some information
@@ -388,7 +456,7 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
       <b>Ignore</b> to omit them from views based on this table.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['help3'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>View table contents</b> goes to the Table View page for this table.
@@ -407,61 +475,61 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
     '#value' => t('<b>Field name</b> - The name of the field in the database table.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['ignore'] = array(
     '#prefix' => '<div>',
-    '#value' => t('<b>Ignore</b> - Checking this box for a field will omit that field from the 
+    '#value' => t('<b>Ignore</b> - Checking this box for a field will omit that field from the
       table view. A primary key field cannot be ignored - it is needed for the view to work.
       Note that, since Table Wizard does not provide a default view for a table whose views
       implementation is provided by another module (such as node), for such tables this
       only affects the filter on this page.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['empty'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>Empty</b> - Indicates whether this field is empty for all rows of the table.'),
     '#suffix' => '</div>',
   );
-    
+
   $form['help']['pk'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>PK</b> - Indicates that this field is the primary key of the table.'),
     '#suffix' => '</div>',
   );
-    
+
   $form['help']['fk'] = array(
     '#prefix' => '<div>',
-    '#value' => t('<b>Available key</b> - Check this box to make the field available for use
+    '#value' => t('<b>Foreign key</b> - Check this box to make the field available for use
       in table relationships.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['type'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>Type</b> - The Drupal schema type of the field.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['strlength'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>Text length</b> - The range of text lengths in this field, if it\'s
       a text field.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['range'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>Range of values</b> - The range of values in the field, from lowest to highest'),
     '#suffix' => '</div>',
   );
-  
+
   $form['help']['comments'] = array(
     '#prefix' => '<div>',
     '#value' => t('<b>Comments</b> - Description of the field.'),
     '#suffix' => '</div>',
   );
-  
+
   $form['title'] = array('#value' => t('Analysis of %table', array('%table' => $tablename)));
   $form['header'] = array(
     '#type' => 'value',
@@ -470,7 +538,7 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
       array('data' => t('Ignore')),
       array('data' => t('Empty')),
       array('data' => t('PK')),
-      array('data' => t('Available key')),
+      array('data' => t('Foreign key')),
       array('data' => t('Type')),
       array('data' => t('Text length')),
       array('data' => t('Range')),
@@ -480,8 +548,8 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
 
   $colcount = 0;
   $emptycount = 0;
-  $result = db_query("SELECT *  
-                      FROM {tw_columns} 
+  $result = db_query("SELECT *
+                      FROM {tw_columns}
                       WHERE twtid=%d
                       ORDER BY weight",
                       $twtid);
@@ -492,6 +560,7 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
   $ignoreenable = array();
   $cols = array();
   $pks = array();
+  $pksenable = array();
   while ($row = db_fetch_object($result)) {
     $colname = $row->colname;
     $colcount++;
@@ -512,34 +581,34 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
         $ignoreenable[] = $colname;
       }
       $form['empty'][$colname] = array('#value' => $row->isempty ? t('Yes') : '');
-      $form['primarykey'][$colname] = array('#value' => $row->primarykey ? t('Yes') : '');
+      $pks[$colname] = '';
       if ($row->primarykey) {
-        $pks[] = $colname;
+        $pksenable[] = $colname;
       }
       $availablefks[$colname] = '';
       if ($row->availablefk) {
         $availablefkenable[] = $colname;
       }
-        
+
       $form['currtype'][$colname] = array('#value' => $row->coltype);
 
       if (tw_column_type($row->coltype) == 'text') {
-        $form['lengths'][$colname] = array('#value' => 
+        $form['lengths'][$colname] = array('#value' =>
           $row->maxlength ? $row->minlength . '-' . $row->maxlength : ''
         );
-        
+
         $form['values'][$colname] = array(
           '#attributes' => array('style' => 'white-space: normal'),
           '#prefix' => '<div style="white-space: normal">',
-          '#value' => 
+          '#value' =>
             $row->maxlength ? substr(check_plain($row->minstring), 0, 40) . '<hr />' .
               substr(check_plain($row->maxstring), 0, 40) : '',
           '#suffix' => '</div>',
         );
-      } 
+      }
       else {
         $form['lengths'][$colname] = array('#value' => '');
-        $form['values'][$colname] = array('#value' => 
+        $form['values'][$colname] = array('#value' =>
           $row->maxvalue ? $row->minvalue . '-' . $row->maxvalue : ''
         );
       }
@@ -552,53 +621,61 @@ function tw_analysis($form_state, $twtid, $flag=TW_COLS_NOIGNORE) {
       );
     }
   }
-  
+
+  $form['primarykey'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $pks,
+    '#default_value' => $pksenable,
+  );
+
   $form['availablefk'] = array(
-    '#type' => 'checkboxes', 
+    '#type' => 'checkboxes',
     '#options' => $availablefks,
     '#default_value' => $availablefkenable,
   );
-  
+
   $form['ignorecol'] = array(
-    '#type' => 'checkboxes', 
+    '#type' => 'checkboxes',
     '#options' => $ignoredcols,
     '#default_value' => $ignoreenable,
   );
-  
+
   $form['cols'] = array(
     '#type' => 'value',
     '#value' => $cols,
   );
 
-  $form['colcounts'] = array('#value' => 
+  $form['colcounts'] = array('#value' =>
     t('%emptycount of %colcount fields have no data for any row.',
       array('%emptycount' => $emptycount, '%colcount' => $colcount)));
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit changes'),
   );
-  
-  if (count($pks) == 0) {
-    drupal_set_message(t('%tablename has no primary key defined. A single-field primary
-      key is necessary to use this table as the base table for a view.', 
-      array('%tablename' => $tablename)));
-  } 
-  elseif (count($pks) > 1) {
-    drupal_set_message(t('%tablename has a multiple-field primary key. A single-field primary
-      key is necessary to use this table as the base table for a view.', 
-      array('%tablename' => $tablename)));
-  } 
-  else {
-    if (strlen($tablename) > 32) {
-      drupal_set_message(t('%tablename is more than 32 characters long. Although the default
-        view for this table works, in versions of Views up through at least 2.5 you cannot
-        create your own views based on this table. See 
-        <a href="@issuelink">http://drupal.org/node/437070</a> for
-        more information.',
-        array('%tablename' => $tablename, '@issuelink' => 'http://drupal.org/node/437070')));
+
+  // Don't check for PK in the NOIGNORE case, it won't be there
+  if ($flag != TW_COLS_IGNORE) {
+    if (count($pksenable) == 0) {
+      drupal_set_message(t('%tablename has no primary key defined. A single-field primary
+        key is necessary to use this table as the base table for a view.',
+        array('%tablename' => $tablename)));
+    }
+    elseif (count($pksenable) > 1) {
+      drupal_set_message(t('%tablename has a multiple-field primary key. A single-field primary
+        key is necessary to use this table as the base table for a view.',
+        array('%tablename' => $tablename)));
     }
   }
-  
+
+  if (strlen($tablename) > 32) {
+    drupal_set_message(t('%tablename is more than 32 characters long. Although the default
+      view for this table works, in versions of Views up through at least 2.5 you cannot
+      create your own views based on this table. See
+      <a href="@issuelink">http://drupal.org/node/437070</a> for
+      more information.',
+      array('%tablename' => $tablename, '@issuelink' => 'http://drupal.org/node/437070')));
+  }
+
   return $form;
 }
 
@@ -609,32 +686,24 @@ function theme_tw_analysis($form) {
   $title = drupal_render($form['title']);
   $twtid = $form['twtid']['#value'];
   $tablename = $form['tablename']['#value'];
-  $existing_view_data = $form['existing_view_data']['#value'];
+  $provide_view = $form['provide_view']['#value'];
+  $view_name = $form['view_name']['#value'];
   drupal_set_title($title);
   $output = '<div class="tw_analyze_links">';
   $output .= '<b>Operations on this table: </b>';
-  $output .= l(t('Reanalyze'), 
-               "admin/content/tw/analyze/$twtid/", 
+  $output .= l(t('Reanalyze'),
+               "admin/content/tw/analyze/$twtid/",
                array('html' => TRUE, 'query' => 'reanalyze=1'));
-  if (!$existing_view_data) {
-    $output .=  ' | ' . l(t('View table contents'), 
-                 "admin/content/tw/view/$tablename/", 
+  if ($provide_view) {
+    $output .=  ' | ' . l(t('View table contents'),
+                 "admin/content/tw/view/$view_name/",
                  array('html' => TRUE));
   }
   $output .= '</div>';
-  $output .= '<div class="tw_analyze_links">';
-  $output .= '<b>Filter: </b>';
-  $output .= l(t('Show all fields'), 
-               "admin/content/tw/analyze/$twtid/". TW_COLS_ALL, 
-               array('html' => TRUE)) .' | ';
-  $output .= l(t('Show only ignored fields'), 
-               "admin/content/tw/analyze/$twtid/". TW_COLS_IGNORE, 
-               array('html' => TRUE)) .' | ';
-  $output .= l(t('Show only fields which are not being ignored'), 
-               "admin/content/tw/analyze/$twtid/". TW_COLS_NOIGNORE, 
-               array('html' => TRUE));
-  $output .= '</div>';
   $output .= '<div>' . drupal_render($form['colcounts']) . '</div>';
+
+  $output .= drupal_render($form['provide_view']);
+  $output .= drupal_render($form['view_name']);
 
   $output .= drupal_render($form['help']);
 
@@ -657,13 +726,13 @@ function theme_tw_analysis($form) {
       $rows[] = $row;
     }
   }
-  
+
   $header = $form['header']['#value'];
   if (!isset($rows)) {
-    $rows[] = array(array('data' => t('There are no fields to display.'), 
+    $rows[] = array(array('data' => t('There are no fields to display.'),
                           'colspan' => count($header)));
   }
-  
+
   $output .= theme('table', $header, $rows);
   $output .= drupal_render($form);
 
@@ -675,16 +744,30 @@ function theme_tw_analysis($form) {
  */
 function tw_analysis_submit($form, &$form_state) {
   $twtid = $form_state['values']['twtid'];
+  $provide_view = $form_state['values']['provide_view'];
+  $view_name = $form_state['values']['view_name'];
   foreach ($form_state['values']['cols'] as $key => $colname) {
     $newignore = $form_state['values']['ignorecol'][$colname] ? 1 : 0;
+    $newprimarykey = $form_state['values']['primarykey'][$colname] ? 1 : 0;
     $newavailablefk = $form_state['values']['availablefk'][$colname] ? 1 : 0;
     $newcomment = $form_state['values'][$colname];
     db_query("UPDATE {tw_columns}
-              SET ignorecol=%d, availablefk=%d, comments='%s'
+              SET ignorecol=%d, primarykey=%d, availablefk=%d, comments='%s'
               WHERE twtid=%d AND colname='%s'",
-             $newignore, $newavailablefk, $newcomment, $twtid, $colname);
+             $newignore, $newprimarykey, $newavailablefk, $newcomment, $twtid, $colname);
   }
+
+  db_query("UPDATE {tw_tables}
+            SET provide_view=%d, view_name='%s'
+            WHERE twtid=%d",
+           $provide_view, $view_name, $twtid);
+
+  // The views cache needs to be flushed to make new tables and default views available.
   views_invalidate_cache();
+
+  // And also rebuild menus, so links to the default view work
+  menu_rebuild();
+
   drupal_set_message(t('Your changes have been saved'));
 }
 
@@ -703,12 +786,12 @@ function tw_relationships_form($form_state) {
     '#prefix' => '<div>',
     '#value' => t('Define relationships between tables, enabling the creation
       of views joining those tables. Each relationship is based on matching a field
-      in an initial (base) table to a field in a related table. To make a field 
-      available for use in relationships, visit the analysis page for the table and 
+      in an initial (base) table to a field in a related table. To make a field
+      available for use in relationships, visit the analysis page for the table and
       check the <b>Available key</b> checkbox for that field.'),
     '#suffix' => '</div>',
   );
-  
+
   // To add the "select all" checkbox to the following tables, we call
   // theme_table_select_header_cell.
   // This will include the tableselect.js file. We don't need the output.
@@ -718,15 +801,15 @@ function tw_relationships_form($form_state) {
     '#type' => 'value',
     '#value' => array(
       array('data' => '', 'class' => 'select-all'),
-      array('data' => t('Base table field')),
-      array('data' => t('Related table field')),
-      array('data' => t('Automation')),
+      array('data' => t('Base table field'), 'field' => 'lefttable', 'sort' => 'asc'),
+      array('data' => t('Related table field'), 'field' => 'righttable', 'sort' => 'asc'),
+      array('data' => t('Relationship type'), 'field' => 'automatic'),
     ),
   );
 
   $sql = "SELECT COUNT(*) FROM {tw_tables} WHERE dbconnection <> 'default'";
   $use_connection = db_result(db_query($sql));
-  
+
   $sql = "SELECT twr.twrid, twtleft.tablename AS lefttable, twcleft.colname AS leftcol,
                  twtright.tablename AS righttable, twcright.colname AS rightcol,
                  twtleft.dbconnection AS leftconn, twtright.dbconnection AS rightconn,
@@ -735,8 +818,8 @@ function tw_relationships_form($form_state) {
           INNER JOIN {tw_columns} twcleft ON twr.leftcol=twcleft.twcid
           INNER JOIN {tw_tables} twtleft ON twcleft.twtid=twtleft.twtid
           INNER JOIN {tw_columns} twcright ON twr.rightcol=twcright.twcid
-          INNER JOIN {tw_tables} twtright ON twcright.twtid=twtright.twtid
-          ORDER BY leftconn, leftcol, rightconn, rightcol";
+          INNER JOIN {tw_tables} twtright ON twcright.twtid=twtright.twtid";
+  $sql .= tablesort_sql($form['header']['#value']);
   $result = db_query($sql);
   $checks = array();
   while ($row = db_fetch_object($result)) {
@@ -752,7 +835,7 @@ function tw_relationships_form($form_state) {
       $rightcol = $row->rightconn . '.' . $rightcol;
     }
     $form['rightcol'][$row->twrid] = array('#value' => $rightcol);
-    $form['automatic'][$row->twrid] = array('#value' => 
+    $form['automatic'][$row->twrid] = array('#value' =>
       $row->automatic ? t('Automatic') : t('Manual'));
   }
 
@@ -764,9 +847,9 @@ function tw_relationships_form($form_state) {
   );
   $form['autochange'] = array(
     '#type' => 'submit',
-    '#value' => t('Change automation for selected relationships'),
+    '#value' => t('Change type of selected relationships'),
   );
-  
+
   $form['addrel'] = array(
     '#type' => 'fieldset',
     '#title' => t('Add a relationship'),
@@ -782,12 +865,12 @@ function tw_relationships_form($form_state) {
   while ($row = db_fetch_array($result)) {
     if ($use_connection) {
       $options[$row['twcid']] = $row['dbconnection'] . '.' . $row['tablename'] .'.'. $row['colname'];
-    } 
+    }
     else {
       $options[$row['twcid']] = $row['tablename'] . '.' . $row['colname'];
     }
   }
-  
+
   if (count($options) > 0) {
     $form['addrel']['newleftcol'] = array(
       '#type' => 'select',
@@ -854,7 +937,7 @@ function theme_tw_relationships($form) {
   $output .= drupal_render($form['autochange']);
   $output .= drupal_render($form['addrel']);
   $output .= drupal_render($form);
-  
+
   return $output;
 }
 
@@ -873,7 +956,7 @@ function tw_relationships_form_submit($form, &$form_state) {
     if ($count) {
       drupal_set_message(format_plural($count, '1 relationship deleted', '@count relationships deleted'));
     }
-  } 
+  }
   else if ($form_state['clicked_button']['#parents'][0] == 'autochange') {
     $count = 0;
     foreach ($form_state['values']['checks'] as $twrid => $value) {
@@ -890,7 +973,7 @@ function tw_relationships_form_submit($form, &$form_state) {
       drupal_set_message(format_plural($count, '1 relationship changed', '@count relationships changed'));
     }
   }
-  else { 
+  else {
     $leftcol = $form_state['values']['newleftcol'];
     $rightcol = $form_state['values']['newrightcol'];
     $automatic = $form_state['values']['automatic'];
@@ -973,7 +1056,7 @@ function _tw_data_export($var, $prefix = '') {
 /**
  * Wraps strings that would normally be immediately translated via t() with the
  * t() call as a string, in a format appropriate for export.
- * 
+ *
  * @param string $string
  * @param array $args
  * @return string

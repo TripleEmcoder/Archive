@@ -1,4 +1,4 @@
-<?php /* $Id: mimemail.admin.inc,v 1.1 2009/02/22 20:55:46 vauxia Exp $ */
+<?php /* $Id: mimemail.admin.inc,v 1.3 2010/09/12 15:57:20 sgabe Exp $ */
 
 /**
  * @file
@@ -16,14 +16,12 @@ function mimemail_admin_settings() {
   // override the smtp_library value if mimemail is chosen to handle all mail
   // this will cause drupal_mail to call mimemail()
   if (variable_get('mimemail_alter', 0)) {
-    if (!strpos(variable_get('smtp_library', ''), 'mimemail')) {
+    if (strpos(variable_get('smtp_library', ''), 'mimemail') === FALSE) {
       variable_set('smtp_library', drupal_get_filename('module', 'mimemail'));
     }
   }
-  else {
-    if (strpos(variable_get('smtp_library', ''), 'mimemail')) {
-      db_query("DELETE FROM {variable} WHERE name = 'smtp_library'");
-    }
+  elseif (strpos(variable_get('smtp_library', ''), 'mimemail') !== FALSE) {
+    variable_del('smtp_library');
   }
 
   $engines = mimemail_get_engines();

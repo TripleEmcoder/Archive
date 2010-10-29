@@ -1,5 +1,5 @@
 <?php
-// $Id: tw.module,v 1.1.2.39 2009/07/16 15:14:29 mikeryan Exp $
+// $Id: tw.module,v 1.1.2.53 2010/03/20 22:03:21 mikeryan Exp $
 
 /**
  * @file
@@ -13,15 +13,16 @@
 /**
  * Add tables to be managed by Table Wizard
  *
- * @param $tablelist The name of a table or an array of table names. If a period is present,
- *                   the form connection.tablename is assumed (where connection is an
- *                   alternate database in $db_url). The tablename must be the logical,
- *                   not physical, name of the table. That is, if you have a table prefix
- *                   of pf_ defined, pass in 'node' instead of 'pf_node'.
- * @param $skip_full_analysis Indicates that data statistics (mins and maxes) should not be 
- *                   collected, saving substantial time for large tables
+ * @param $tablelist
+ *  The name of a table or an array of table names. If a period is present, the form
+ *  connection.tablename is assumed (where connection is an alternate database in $db_url).
+ *  The tablename must be the logical, not physical, name of the table. That is, if you have
+ *  a table prefix of pf_ defined, pass in 'node' instead of 'pf_node'.
+ * @param $skip_full_analysis
+ *  Indicates that data statistics (mins and maxes) should not be collected, saving
+ *  substantial time for large tables
  */
-function tw_add_tables($tablelist, $skip_full_analysis = FALSE) {
+function tw_add_tables($tablelist, $skip_full_analysis = FALSE, $provide_view = TRUE, $view_name = '') {
   if (!is_array($tablelist)) {
     $tablelist = array($tablelist);
   }
@@ -36,49 +37,67 @@ function tw_add_tables($tablelist, $skip_full_analysis = FALSE) {
       $dbconnection = 'default';
     }
 
+    // Don't try to make sense of a view name with multiples
+    if (count($tablelist) > 1) {
+      $view_name = '';
+    }
+    // With one table, default view_name to tablename if not explicit
+    else if ($provide_view && !$view_name) {
+      $view_name = $tablename;
+    }
+
     // See if we're already managing this table
     $sql = "SELECT twtid FROM {tw_tables}
             WHERE dbconnection='%s' AND tablename='%s'";
     $twtid = db_result(db_query($sql, $dbconnection, $tablename));
     if (!$twtid) {
-      // See if the table has an existing views definition
-      $views_data = views_fetch_data($tablename);
-      if ($views_data) {
-        $existing_view_data = TRUE;
+      if ($view_name) {
+        // See if there's an existing view with this name, defined by someone else - we
+        // don't want to overwrite it
+        $views_data = views_fetch_data($view_name);
+        if ($views_data) {
+          $provide_view = FALSE;
+          drupal_set_message(t('Table Wizard cannot define a default view %view_name - a view
+            with that name is already defined.',
+            array('%view_name' => $view_name)));
+        }
       }
       else {
-        $existing_view_data = FALSE;
+        $view_name = $tablename;
       }
       db_query("INSERT INTO {tw_tables}
-                (dbconnection, tablename, existing_view_data)
-                VALUES('%s', '%s', %d)",
-                $dbconnection, $tablename, $existing_view_data);
+                (dbconnection, tablename, provide_view, view_name)
+                VALUES('%s', '%s', %d, '%s')",
+                $dbconnection, $tablename, $provide_view, $view_name);
     }
 
     // Analysis populates the tw_columns table
     tw_perform_analysis($tablename, $dbconnection, $skip_full_analysis);
   }
 
-  // The views cache needs to be flushed to make new tables and default views available. 
+  // The views cache needs to be flushed to make new tables and default views available.
   views_invalidate_cache();
-  
-  // And also the menu cache, so links to the default view work
-  menu_cache_clear_all();
+
+  // And also rebuild menus, so links to the default view work
+  menu_rebuild();
 }
 
 /**
  * Add tables to be managed by Table Wizard, using Batch API to break each table into
  * a separate request.
  *
- * @param $tablelist The name of a table or an array of table names. If a period is present,
- *                   the form connection.tablename is assumed (where connection is an
- *                   alternate database in $db_url). The tablename must be the logical,
- *                   not physical, name of the table. That is, if you have a table prefix
- *                   of pf_ defined, pass in 'node' instead of 'pf_node'.
- * @param $skip_full_analysis Indicates that data statistics (mins and maxes) should not be 
- *                   collected, saving substantial time for large tables
+ * @param $tablelist
+ *  The name of a table or an array of table names. If a period is present, the form
+ *  connection.tablename is assumed (where connection is an alternate database in $db_url).
+ *  The tablename must be the logical, not physical, name of the table. That is, if you
+ *  have a table prefix of pf_ defined, pass in 'node' instead of 'pf_node'.
+ * @param $skip_full_analysis
+ *  Indicates that data statistics (mins and maxes) should not be collected, saving
+ *  substantial time for large tables
+ * @param $provide_view
+ *  TRUE if a default view with the same name as the table itself should be provided
  */
-function tw_add_tables_batch($tablelist, $skip_full_analysis = FALSE) {
+function tw_add_tables_batch($tablelist, $skip_full_analysis = FALSE, $provide_view = TRUE) {
   if (!is_array($tablelist)) {
     $tablelist = array($tablelist);
   }
@@ -90,7 +109,7 @@ function tw_add_tables_batch($tablelist, $skip_full_analysis = FALSE) {
     'error_message' => t('An error occurred. Some or all of the analysis has failed.'),
   );
   foreach ($tablelist as $tablename) {
-    $batch['operations'][] = array('tw_add_tables', array($tablename, $skip_full_analysis));
+    $batch['operations'][] = array('tw_add_tables', array($tablename, $skip_full_analysis, $provide_view, ''));
   }
 
   batch_set($batch);
@@ -138,7 +157,7 @@ function tw_remove_tables($tablelist) {
     }
   }
 
-  // The views cache needs to be flushed to make sure default views are removed 
+  // The views cache needs to be flushed to make sure default views are removed
   views_invalidate_cache();
 }
 
@@ -201,7 +220,7 @@ function tw_add_fk($tablename, $colname) {
 /**
  * Add a relationship between two table columns, making it possible to join them in Views
  *
- * @param $leftcol 
+ * @param $leftcol
  *  The left side of a potential join, expressed either as a column ID from
  *  {tw_columns} or as a string in [connection.]table.column format.
  * @param $rightcol
@@ -278,12 +297,22 @@ function tw_get_column_id($dbconnection, $tablename, $colname) {
 }
 
 /**
+ * Get the default view corresponding to a given table
+ *
+ * @param $tablename
+ */
+function tw_get_view_name($twtid) {
+  $view_name = db_result(db_query("SELECT view_name FROM {tw_tables} WHERE twtid=%d", $twtid));
+  return $view_name;
+}
+
+/**
  * Analyze a table - determine value ranges, empty fields, etc., and
  * populate {tw_columns}
  *
  * @param $tablename
  * @param $dbconnection
- * @param $skip_full_analysis Indicates that data statistics (mins and maxes) should not be 
+ * @param $skip_full_analysis Indicates that data statistics (mins and maxes) should not be
  *                   collected, saving substantial time for large tables
  */
 function tw_perform_analysis($tablename, $dbconnection = 'default', $skip_full_analysis = FALSE) {
@@ -355,10 +384,12 @@ function tw_perform_analysis($tablename, $dbconnection = 'default', $skip_full_a
               $isempty = TRUE;
             }
           }
-          if ($dbconnection != 'default') {
-            db_set_active('default');
-          }
         }
+
+        if ($dbconnection != 'default') {
+          db_set_active('default');
+        }
+
         // See if we've already got this column recorded (i.e., whether we'll need
         // to insert or update)
         $sql = "SELECT * FROM {tw_columns}
@@ -371,27 +402,31 @@ function tw_perform_analysis($tablename, $dbconnection = 'default', $skip_full_a
         }
         $colrecord->weight = $weight++;
         $colrecord->coltype = $coltype;
-        $colrecord->isempty = $isempty;
+        $colrecord->isempty = isset($isempty) ? $isempty : FALSE;
         if (tw_column_type($coltype) == 'text') {
-          $colrecord->minlength = $minlength;
-          $colrecord->maxlength = $maxlength;
+          if (isset($minlength)) {
+            $colrecord->minlength = $minlength;
+          }
+          if (isset($maxlength)) {
+            $colrecord->maxlength = $maxlength;
+          }
           if (!$minvalue) {
             $minvalue = '';
           }
-          $colrecord->minstring = $minvalue;
+          $colrecord->minstring = substr($minvalue, 0, 255);
           if (!$maxvalue) {
             $maxvalue = '';
           }
-          $colrecord->maxstring = $maxvalue;
+          $colrecord->maxstring = substr($maxvalue, 0, 255);
           unset($colrecord->minvalue);
           unset($colrecord->maxvalue);
         }
         else {
-          if (!$minvalue) {
+          if (!isset($minvalue) || !$minvalue) {
             $minvalue = 0;
           }
           $colrecord->minvalue = $minvalue;
-          if (!$maxvalue) {
+          if (!isset($maxvalue) || !$maxvalue) {
             $maxvalue = 0;
           }
           $colrecord->maxvalue = $maxvalue;
@@ -422,7 +457,7 @@ function tw_perform_analysis($tablename, $dbconnection = 'default', $skip_full_a
               WHERE twtid=%d";
       $result = db_query($sql, $twtid);
       while ($row = db_fetch_object($result)) {
-        if (!$schema['fields'][$row->colname]) {
+        if (!isset($schema['fields'][$row->colname])) {
           $sql = "DELETE FROM {tw_columns}
                   WHERE twtid=%d AND colname='%s'";
           db_query($sql, $twtid, $row->colname);
@@ -488,6 +523,104 @@ function tw_quote_identifier($identifier) {
   return $quote . $identifier . $quote;
 }
 
+/**
+ * Get the database properties from its dbconnection key in $db_url,
+ * and cache it.
+ *
+ * @param $dbconnection
+ *   The database key set in the settings.php file ('default').
+ * @param $property
+ *   Optional - The individual property you want returned.
+ * @return
+ *   If property was given, then the property value. Otherwise the whole
+ *   array of properties plus 'name'.
+ */
+function tw_get_dbinfo($dbkey = NULL, $property = NULL) {
+  // Cache the parsed db properties.
+  static $db_url_parsed = array();
+  global $db_url;
+
+  //if no dbkey is given, then return the full array of all the databases.
+  if (!isset($dbkey)) {
+    foreach($db_url as $dbkey => $url) {
+      $db_url_parsed[$dbkey] = tw_get_dbinfo($dbkey);
+    }
+    return $db_url_parsed;
+  }
+
+  if (!isset($db_url_parsed[$dbkey])) {
+      global $db_url;
+      $db_url_parsed[$dbkey] = parse_url($db_url[$dbkey]);
+      $db_url_parsed[$dbkey]['name'] = substr($db_url_parsed[$dbkey]['path'], 1);
+      $db_url_parsed[$dbkey]['path'] = $db_url[$dbkey];
+  }
+  // if a preporty was requested, then return just that property.
+  if (isset($property)) {
+    return $db_url_parsed[$dbkey][$property];
+  }
+  //else just return the whole array.
+  return $db_url_parsed[$dbkey];
+}
+
+/**
+ * Construct a dbengine-specific qualified tablename
+ *
+ * @param $dbconnection
+ *   The database key set in the settings.php file ('default').
+ * @param $tablename
+ *   The name of the table
+ * @return
+ *   The qualified tablename if qualification is supported, just the
+ *   tablename otherwise.
+ */
+function tw_qualified_tablename($dbconnection, $tablename) {
+  global $db_type;
+  // No need to worry about the default connection
+  if ($dbconnection == 'default') {
+    return $tablename;
+  }
+
+  // MySQL is the one supported db known to handle this
+  if ($db_type == 'mysqli' || $db_type == 'mysql') {
+    // And we also need the Views patch at http://drupal.org/node/576694#comment-2277558
+    // to pull this off
+    views_include('query');
+    if (function_exists('views_clean_alias')) {
+      // Check if cross-db joins are possible (match)
+      static $checked_compats = array();
+      if (!isset($checked_compats[$dbconnection])) {
+        $externaldb = tw_get_dbinfo($dbconnection);
+        $internaldb = tw_get_dbinfo('default');
+        if ($externaldb['scheme'] != 'mysql' && $externaldb['scheme'] != 'mysqli') {
+          $checked_compats[$dbconnection] = FALSE;
+        }
+        else {
+          if ($externaldb['user'] == $internaldb['user'] &&
+              $externaldb['pass'] == $internaldb['pass'] &&
+              $externaldb['host'] == $internaldb['host']) {
+            $checked_compats[$dbconnection] = TRUE;
+          }
+          else {
+            $checked_compats[$dbconnection] = FALSE;
+          }
+        }
+      }
+      if ($checked_compats[$dbconnection]) {
+        return tw_get_dbinfo($dbconnection, 'name') . '.' . $tablename;
+      }
+      else {
+        return $tablename;
+      }
+    }
+    else {
+      return $tablename;
+    }
+  }
+  else {
+    return $tablename;
+  }
+}
+
 //////////////////////////////////////////////////////////
 // Drupal core hooks
 //
@@ -506,12 +639,20 @@ function tw_menu() {
     'access arguments' => array(TW_ACCESS),
     'file' => 'tw_pages.inc',
   );
+  $items['admin/content/tw/tables'] = array(
+    'title' => 'Tables',
+    'description' => 'Manage raw data from arbitrary tables: import, analyze, and view it',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => 1,
+  );
   $items['admin/content/tw/relationships'] = array(
     'title' => 'Relationships',
     'description' => 'Manage relationships between managed tables',
     'page callback' => 'tw_relationships',
     'access arguments' => array(TW_ACCESS),
     'file' => 'tw_pages.inc',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
   );
   $items['admin/content/tw/analyze/%'] = array(
     'title' => 'Table analysis',
@@ -520,6 +661,31 @@ function tw_menu() {
     'access arguments' => array(TW_ACCESS),
     'type' => MENU_CALLBACK,
     'file' => 'tw_pages.inc',
+  );
+  $items['admin/content/tw/analyze/%/3'] = array(
+    'title' => 'Non-ignored fields',
+    'access arguments' => array(TW_ACCESS),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'file' => 'tw_pages.inc',
+    'weight' => 1,
+  );
+  $items['admin/content/tw/analyze/%/2'] = array(
+    'title' => 'Ignored fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tw_analysis', 4, 5),
+    'access arguments' => array(TW_ACCESS),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'tw_pages.inc',
+    'weight' => 2,
+  );
+  $items['admin/content/tw/analyze/%/1'] = array(
+    'title' => 'All fields',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tw_analysis', 4, 5),
+    'access arguments' => array(TW_ACCESS),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'tw_pages.inc',
+    'weight' => 3,
   );
   $items['admin/content/tw/export'] = array(
     'title' => 'Views definition for hook_views_data()',

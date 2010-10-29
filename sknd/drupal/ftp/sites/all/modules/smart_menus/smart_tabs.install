@@ -1,5 +1,5 @@
 <?php
-// $Id: smart_tabs.install,v 1.6 2010/03/09 01:55:21 rdeboer Exp $
+// $Id: smart_tabs.install,v 1.8 2010/09/21 04:52:28 rdeboer Exp $
 
 /**
  * @file
@@ -9,12 +9,10 @@ define('PROFILE_SMART_TABS_DISABLE', 'profile_smart_tabs_disable');
 
 /**
  * Implementation of hook_install().
- */
+ *
 function smart_tabs_install() {
-  if (module_exists('profile')) {
-    _smart_tabs_create_profile();
-  }
 }
+ */
 
 /**
  * Implementation of hook_uninstall().
@@ -25,11 +23,8 @@ function smart_tabs_uninstall() {
   variable_del('smart_tabs_exclude_pages');
   variable_del('smart_tabs_autoselect_default_tab_exclusions');
   variable_del('smart_tabs_debug');
-  if (module_exists('profile')) {
-    _smart_tabs_remove_profile();
-  }
 }
-
+/*
 function _smart_tabs_create_profile() {
   db_query("INSERT INTO {profile_fields} (title, name, explanation, category, type, weight, required, register, visibility, autocomplete, options, page) VALUES ('%s', '%s', '%s', '%s', '%s', %d, %d, %d, %d, %d, '%s', '%s')",
     'Disable Smart tabs', // title
@@ -45,9 +40,19 @@ function _smart_tabs_create_profile() {
     '',    // options in list selection
     'Smart tabs'); // title of page used for browsing
 }
+ */
 
 function _smart_tabs_remove_profile() {
   $fid = db_result(db_query("SELECT fid FROM {profile_fields} WHERE name = '%s'", PROFILE_SMART_TABS_DISABLE));
   db_query('DELETE FROM {profile_fields} WHERE fid = %d', $fid);
   db_query('DELETE FROM {profile_values} WHERE fid = %d', $fid);
+}
+
+/**
+ * Implementation of hook_update_N().
+ */
+function smart_tabs_update_6107() {
+  $ret = array();
+  _smart_tabs_remove_profile();
+  return $ret;
 }
