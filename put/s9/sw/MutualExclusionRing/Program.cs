@@ -8,17 +8,20 @@ using System.Net.Sockets;
 
 namespace MutualExclusionRing
 {
-    struct Token
+    class Token
     {
         public int Id;
     }
 
     class Program
     {
+        // 0 0 2 8 5 127.0.0.1 1001 127.0.0.1 1002
+        // 1 0 2 8 5 127.0.0.1 1002 127.0.0.1 1003
+        // 1 0 2 8 5 127.0.0.1 1003 127.0.0.1 1001
         static void Main(string[] args)
         {
-            var program = new Program(int.Parse(args[0]), int.Parse(args[1]), int.Parse(args[2]), int.Parse(args[3]));
-            program.Run(new IPEndPoint(IPAddress.Parse(args[4]), int.Parse(args[5])), new IPEndPoint(IPAddress.Parse(args[6]), int.Parse(args[7])));
+            var program = new Program(int.Parse(args[0]), int.Parse(args[1]), int.Parse(args[2]), int.Parse(args[3]), int.Parse(args[4]));
+            program.Run(new IPEndPoint(IPAddress.Parse(args[5]), int.Parse(args[6])), new IPEndPoint(IPAddress.Parse(args[7]), int.Parse(args[8])));
         }
 
         int processId;
@@ -27,30 +30,29 @@ namespace MutualExclusionRing
         TcpClient previous;
         TcpClient next;
 
+        int linkDelay;
         int lossDivider;
+        int tokenCount;
         int workTime;
         int sleepTime;
 
-        public Program(int processId, int lossDivider, int workTime, int sleepTime)
+        public Program(int processId, int linkDelay, int lossDivider, int workTime, int sleepTime)
         {
             this.processId = processId;
+            this.linkDelay = linkDelay;
             this.lossDivider = lossDivider;
             this.workTime = workTime;
             this.sleepTime = sleepTime;
         }
 
-        #region 
+        #region
 
         public void Run(IPEndPoint thisEndpoint, IPEndPoint nextEndpoint)
         {
             Console.WriteLine("Listening on: {0}.", thisEndpoint);
             var listener = new TcpListener(thisEndpoint);
             listener.Start();
-            listener.BeginAcceptTcpClient(result => 
-                {
-                    previous = listener.EndAcceptTcpClient(result);
-                    Receive();
-                }, null);
+            var result = listener.BeginAcceptTcpClient(null, null);
 
             next = new TcpClient();
 
@@ -60,38 +62,46 @@ namespace MutualExclusionRing
                 {
                     Console.WriteLine("Connecting to: {0}.", nextEndpoint);
                     next.Connect(nextEndpoint);
+                    previous = listener.EndAcceptTcpClient(result);
                     OnRun();
                 }
                 catch (Exception exception)
                 {
                     Console.WriteLine("Connection failed: {0}.", exception.Message);
-                    Sleep("Sleeping before next attempt:", 5);
+                    Sleep("Sleeping before next attempt", 5);
                 }
             }
         }
 
-        void Receive()
+        Token TryReceive()
         {
+            if (!previous.GetStream().DataAvailable)
+                return null;
+
             var data = new byte[4];
-            previous.GetStream().BeginRead(data, 0, data.Length, result2 =>
-                {
-                    OnReceive(new Token { Id = BitConverter.ToInt32(data, 0) });
-                    Receive();
-                }, null);
+            previous.GetStream().Read(data, 0, data.Length);
+            return new Token { Id = BitConverter.ToInt32(data, 0) };
         }
 
-        void Send(Token token)
+        void TrySend(Token token)
         {
-            if (lossDivider != 0 && lastId % lossDivider == 0)
+            if (lossDivider != 0 && tokenCount++ % lossDivider == 0)
+            {
+                Console.WriteLine("Simulating token loss.");
                 return;
+            }
 
+            Sleep("Simulating link delay", linkDelay);
             var data = BitConverter.GetBytes(token.Id);
-            next.GetStream().BeginWrite(data, 0, data.Length, null, null);
+            next.GetStream().Write(data, 0, data.Length);
         }
 
-        private void Sleep(string text, int time)
+        void Sleep(string text, int time)
         {
-            Console.Write(text);
+            if (time > 0)
+                Console.WriteLine(text + ".");
+
+            //Console.Write(text + ":);
             for (int i = time - 1; i >= 0; i--)
             {
                 Thread.Sleep(1000);
@@ -106,13 +116,18 @@ namespace MutualExclusionRing
         {
             OnStart();
             while (true)
+            {
+                var token = TryReceive();
+                if (token != null)
+                    OnReceive(token);
                 OnIdle();
+            }
         }
 
         void OnSend(Token token)
         {
             Console.WriteLine("Sending token: {0}.", token.Id);
-            Send(token);
+            TrySend(token);
         }
 
         void OnReceive(Token token)
@@ -122,6 +137,10 @@ namespace MutualExclusionRing
             {
                 lastId = token.Id;
                 OnWork();
+            }
+            else
+            {
+                Console.WriteLine("Ïgnoring token.");
             }
         }
 
@@ -139,14 +158,14 @@ namespace MutualExclusionRing
             if (lastId != 0)
                 OnSend(new Token { Id = lastId + 1 });
 
-            Sleep("Sleeping before retransmission:", sleepTime);
+            Sleep("Sleeping before retransmission", sleepTime);
         }
 
         void OnWork()
         {
             var old = Console.BackgroundColor;
             Console.BackgroundColor = ConsoleColor.Red;
-            Sleep("In critical section:", workTime);
+            Sleep("In critical section", workTime);
             Console.BackgroundColor = old;
         }
     }
