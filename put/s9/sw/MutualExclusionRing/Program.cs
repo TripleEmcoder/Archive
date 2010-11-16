@@ -35,6 +35,7 @@ namespace MutualExclusionRing
         int tokenCount;
         int workTime;
         int sleepTime;
+        bool executed;
 
         public Program(int processId, int linkDelay, int lossDivider, int workTime, int sleepTime)
         {
@@ -43,6 +44,7 @@ namespace MutualExclusionRing
             this.lossDivider = lossDivider;
             this.workTime = workTime;
             this.sleepTime = sleepTime;
+
         }
 
         #region
@@ -62,8 +64,10 @@ namespace MutualExclusionRing
                 {
                     Console.WriteLine("Connecting to: {0}.", nextEndpoint);
                     next.Connect(nextEndpoint);
+                    next.NoDelay = true;
                     previous = listener.EndAcceptTcpClient(result);
-                    OnRun();
+                    previous.NoDelay = true;
+                    break;
                 }
                 catch (Exception exception)
                 {
@@ -71,10 +75,13 @@ namespace MutualExclusionRing
                     Sleep("Sleeping before next attempt", 5);
                 }
             }
+            OnRun();
         }
 
         Token TryReceive()
         {
+            //Console.WriteLine("Checking input channel.");
+
             if (!previous.GetStream().DataAvailable)
                 return null;
 
@@ -115,13 +122,24 @@ namespace MutualExclusionRing
         void OnRun()
         {
             OnStart();
-            while (true)
-            {
-                var token = TryReceive();
-                if (token != null)
-                    OnReceive(token);
-                OnIdle();
-            }
+            new Thread(() =>
+                {
+                    while (true)
+                    {
+                        var token = TryReceive();
+                        if (token != null)
+                            OnReceive(token);
+                        Thread.Sleep(500);
+                    }
+                }).Start();
+
+            new Thread(() =>
+                {
+                    while (true)
+                    {
+                        OnIdle();
+                    }
+                }).Start();
         }
 
         void OnSend(Token token)
@@ -133,10 +151,20 @@ namespace MutualExclusionRing
         void OnReceive(Token token)
         {
             Console.WriteLine("Received token: {0}.", token.Id);
+
             if (lastId != token.Id)
             {
-                lastId = token.Id;
-                OnWork();
+                lock (this)
+                {
+                    lastId = token.Id;
+                    executed = false;
+                }
+
+                ThreadPool.QueueUserWorkItem(arg =>
+                    {
+                        OnWork();
+                        executed = true;
+                    });
             }
             else
             {
@@ -148,25 +176,37 @@ namespace MutualExclusionRing
         {
             if (processId == 0)
             {
+                lock (this)
+                {
+                    lastId = 1;
+                    executed = false;
+                }
+
                 OnWork();
-                lastId = 1;
+                executed = true;
             }
         }
 
         void OnIdle()
         {
-            if (lastId != 0)
-                OnSend(new Token { Id = lastId + 1 });
-
-            Sleep("Sleeping before retransmission", sleepTime);
+            lock (this)
+            {
+                if (lastId != 0 && executed)
+                {
+                    OnSend(new Token { Id = lastId + 1 });
+                    Sleep("Sleeping before retransmission", sleepTime);
+                }
+            }
         }
 
         void OnWork()
         {
+            Console.WriteLine("Entering critical section.");
             var old = Console.BackgroundColor;
             Console.BackgroundColor = ConsoleColor.Red;
             Sleep("In critical section", workTime);
             Console.BackgroundColor = old;
+            Console.WriteLine("Exiting critical section.");
         }
     }
 }
