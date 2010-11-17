@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -49,19 +51,47 @@ public class LSILab4 {
         Matrix D = svd.getV().transpose();
 
         // set number of largest singular values to be considered
-        int s = 4;
+        int s = 3;
 
         // cut off appropriate columns and rows from K, S, and D
-        K = K.getMatrix(0, K.getRowDimension()-1, 0, s-1);
-        S = S.getMatrix(0, s-1, 0, s-1);
-        D = D.getMatrix(0, s-1, 0, D.getColumnDimension()-1);
+        K = K.getMatrix(0, K.getRowDimension() - 1, 0, s - 1);
+        S = S.getMatrix(0, s - 1, 0, s - 1);
+        D = D.getMatrix(0, s - 1, 0, D.getColumnDimension() - 1);
+        D = D.transpose();
 
         // transform the query vector
         Matrix q_t = Q.transpose();
-        
+
         // compute similaraty of the query and each of the documents, using
         // cosine measure
+        Matrix sim_q = q_t.times(K).times(S.inverse());
 
+        double[][] D_array = D.getArray();
+        double[][] sim_q_array = sim_q.getArray();
+        double[] Sim = new double[D.getRowDimension()];
+        double sim_q_sqrt = 0;
+
+        for (int column = 0; column < sim_q.getColumnDimension(); column++) {
+            sim_q_sqrt += sim_q_array[0][column] * sim_q_array[0][column];
+        }
+        sim_q_sqrt = Math.sqrt(sim_q_sqrt);
+
+        for (int row = 0; row < D.getRowDimension(); row++) {
+            double tmp_mul = 0;
+            double k_mul = 0;
+            for (int column = 0; column < D.getColumnDimension(); column++) {
+                tmp_mul += D_array[row][column] * sim_q_array[0][column];
+                k_mul += D_array[row][column] * D_array[row][column];
+            }
+            Sim[row] = tmp_mul/(sim_q_sqrt*Math.sqrt(k_mul));
+        }
+        
+        // Print the result
+        System.out.println("\n Similarity!");
+        DecimalFormat df = new DecimalFormat("#.##");
+        for (int i = 0; i < Sim.length; i++) {
+            System.out.println("D_"+(i+1) +" = " +df.format(Sim[i]));
+        }
     }
 
     // returns the dimensions of a matrix
