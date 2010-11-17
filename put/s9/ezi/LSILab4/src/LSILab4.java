@@ -10,9 +10,10 @@ import Jama.SingularValueDecomposition;
 
 public class LSILab4 {
     Matrix M;
+
     Matrix Q;
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         LSILab4 lsi = new LSILab4();
         lsi.go();
     }
@@ -21,7 +22,7 @@ public class LSILab4 {
         // init the matrix and the query
         M = readMatrix("data.txt");
         Q = readMatrix("query.txt");
-        
+
         // print
         System.out.println("Matrix:");
         M.print(3, 2);
@@ -39,22 +40,29 @@ public class LSILab4 {
 
     private void svd() {
 
-    //TODO implement your solution
+        // TODO implement your solution
 
         SingularValueDecomposition svd = new SingularValueDecomposition(M);
         // get K, S, and D
+        Matrix K = svd.getU();
+        Matrix S = svd.getS();
+        Matrix D = svd.getV().transpose();
 
         // set number of largest singular values to be considered
         int s = 4;
 
         // cut off appropriate columns and rows from K, S, and D
+        K = K.getMatrix(0, K.getRowDimension()-1, 0, s-1);
+        S = S.getMatrix(0, s-1, 0, s-1);
+        D = D.getMatrix(0, s-1, 0, D.getColumnDimension()-1);
 
         // transform the query vector
+        Matrix q_t = Q.transpose();
         
-        // compute similaraty of the query and each of the documents, using cosine measure
+        // compute similaraty of the query and each of the documents, using
+        // cosine measure
 
     }
-
 
     // returns the dimensions of a matrix
     private String dim(Matrix M) {
