@@ -77,13 +77,13 @@ public class LSILab4 {
         sim_q_sqrt = Math.sqrt(sim_q_sqrt);
 
         for (int row = 0; row < D.getRowDimension(); row++) {
-            double tmp_mul = 0;
-            double k_mul = 0;
+            double d_q_mul = 0;
+            double d_mul = 0;
             for (int column = 0; column < D.getColumnDimension(); column++) {
-                tmp_mul += D_array[row][column] * sim_q_array[0][column];
-                k_mul += D_array[row][column] * D_array[row][column];
+                d_q_mul += D_array[row][column] * sim_q_array[0][column];
+                d_mul += D_array[row][column] * D_array[row][column];
             }
-            Sim[row] = tmp_mul/(sim_q_sqrt*Math.sqrt(k_mul));
+            Sim[row] = d_q_mul/(sim_q_sqrt*Math.sqrt(d_mul));
         }
         
         // Print the result
