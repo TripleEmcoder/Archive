@@ -11,7 +11,8 @@
     <RootNamespace>FactFinder</RootNamespace>
     <AssemblyName>FactFinder</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -40,6 +41,15 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>packages\HTML Agility Pack.1.4\lib\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="QuickGraph">
+      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,7 +63,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SemWeb\SemWeb.csproj">
+      <Project>{98EA8780-0045-41A4-BAA1-575582B92BCC}</Project>
+      <Name>SemWeb</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
