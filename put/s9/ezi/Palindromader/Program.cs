@@ -51,7 +51,7 @@ namespace Palindromader
 
         private static void Traverse(Vertex vertex, int count, ref string result, List<char> buffer)
         {
-            Console.WriteLine("{0} {1} {2}", new string(buffer.ToArray()), vertex.Texts.Count, vertex.AllTexts.Count);
+            //Console.WriteLine("{0} {1} {2}", new string(buffer.ToArray()), vertex.Texts.Count, vertex.AllTexts.Count);
 
             foreach (var succesor in vertex.Succesors)
             {
@@ -62,7 +62,7 @@ namespace Palindromader
                     if (buffer.Count > result.Length)
                     {
                         result = new string(buffer.ToArray());
-                        Console.WriteLine("New result: {0}", result);
+                        //Console.WriteLine("New result: {0}", result);
                     }
 
                     Traverse(succesor.Value, count, ref result, buffer);
@@ -82,7 +82,7 @@ namespace Palindromader
                     break;
 
                 text = text.ToLower();
-                foreach (var token in new[] { "\"", "„", "”", " ", ".", ",", "–", "-", "!", "(", ")" })
+                foreach (var token in new[] { "\"", "„", "”", " ", ".", ",", "–", "-", "!", "(", ")", ";", ":", "?" })
                     text = text.Replace(token, "");
 
                 Console.WriteLine("Processing text: {0}", text);
@@ -94,7 +94,7 @@ namespace Palindromader
 
                 var result = "";
                 Traverse(root, 2, ref result);
-                Console.WriteLine("Longest result: {0}", result);
+                Console.WriteLine("Longest result: {0} ({1})", result, result.SequenceEqual(result.Reverse()));
             }
         }
 
@@ -105,17 +105,14 @@ namespace Palindromader
 3) „Wronę tycz - Iwono, ty rabuj okop spokoju barytonowi, czy tenorowi” 
 4) „I lali masoni wydrom w mordy wino, sami lali!” - 9 - 
 5) „A mason zrobi lożą Żoliborz: nosa ma do tego.” 
-6) „Ma, Ireno! Sama? A po co tu ta kołdra? Gładko na szaro nas zrobi loża: Żoliborz, San oraz Sanok dał gardło 
-katu! To co? Pa? A, masoneria!...” 
+6) „Ma, Ireno! Sama? A po co tu ta kołdra? Gładko na szaro nas zrobi loża: Żoliborz, San oraz Sanok dał gardło katu! To co? Pa? A, masoneria!...” 
 7) „I potwór-kujon gwałty też, o Boże, tytła, w gnoju krów topi.” 
 8) „O, w tse-tse jest estyma dla życia, losu (kopy pokus) – o, laicy! Żal… damy tse-tse jestestwo?” 
 9) „Co? Zakopane pyszne? Ten zsyp? E, na pokaz!” 
 10) „Jak łyso było Gotom i Maurom! U-ha! Sama zaraza – masa humoru, A mimo to goły-bosy łkaj!” 
 11) „Twa ocena: Wady – weto! Łzy! Marazm! Ech, ci cynicy! Ryciny cichcem za ramy złote wydawane, co?!” 
 12) „Hasło słyszane na wiecu: No, Jim, jedz bób; zdejmij onuce, Iwan!” 
-13) „A car: Bojarom Rady róg od imago nacinaj i piel! – a je jeża, i nawraca masona, i suką złowi pensa; ja na to: 
-Do gęby ryż, o bracia moi, włóżmy tym umytym żółwiom, a i car Boży rybę-Godota na jasne piwo łzą kusi (a nosa 
-ma car-Wania, że jej!... – ale i, pijanica, nogami do góry darmo Raj obraca!).”
+13) „A car: Bojarom Rady róg od imago nacinaj i piel! – a je jeża, i nawraca masona, i suką złowi pensa; ja na to: Do gęby ryż, o bracia moi, włóżmy tym umytym żółwiom, a i car Boży rybę-Godota na jasne piwo łzą kusi (a nosa ma car-Wania, że jej!... – ale i, pijanica, nogami do góry darmo Raj obraca!).”
          */
     }
 }
