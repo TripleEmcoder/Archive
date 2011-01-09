@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using HtmlAgilityPack;
+using QuickGraph.Algorithms;
 using QuickGraph.Algorithms.ConnectedComponents;
 using QuickGraph.Algorithms.Search;
 using SemWeb;
@@ -129,6 +130,10 @@ namespace FactFinder
 
     class Program
     {
+        private const string dbo = "http://dbpedia.org/ontology/";
+        private const string foaf = "http://xmlns.com/foaf/0.1/";
+
+        [STAThread]
         static void Main(string[] args)
         {
             /*
@@ -143,71 +148,13 @@ namespace FactFinder
                 Console.WriteLine(triple);
              * */
 
-            var namespaces =
-                new[]
-                    {
-                        new {Prefix = "foaf", Uri = "http://xmlns.com/foaf/0.1/"},
-                        new {Prefix = "dbo", Uri = "http://dbpedia.org/ontology/"},
-                        new {Prefix = "dbp", Uri = "http://dbpedia.org/property/"},
-                        new {Prefix = "skos", Uri = "http://www.w3.org/2004/02/skos/core#"},
-                    };
-
-            var attributes =
-                new[]
-                    {
-                        new {Name = "foaf:page", Variable = "page"},
-                        new {Name = "dbo:thumbnail", Variable = "photo"},
-                        new {Name = "foaf:name", Variable = "name"},
-                        new {Name = "dbo:abstract", Variable = "description"},
-                        new {Name = "dbo:birthDate", Variable = "birthDate"},
-                        new {Name = "dbo:birthPlace", Variable = "birthPlace"},
-                        new {Name = "dbo:deathDate", Variable = "deathYear"},
-                        new {Name = "dbo:deathPlace", Variable = "deathDate "},
-                        new {Name = "dbp:children", Variable = "child "},
-                        new {Name = "dbp:parents", Variable = "parent "},
-                    };
-
             var root = Path.Get("../..");
             var dbpedia = root.Combine("dbpedia.xml");
 
             if (!dbpedia.Exists)
-            {
-                Console.WriteLine("Refreshing DBpedia data...");
-                var query = new StringBuilder();
+                ExecuteQuery(dbpedia);
 
-                foreach (var @namespace in namespaces)
-                    query.AppendLine(string.Format("PREFIX {0}: <{1}>", @namespace.Prefix, @namespace.Uri));
-
-                query.AppendLine("CONSTRUCT {");
-
-                foreach (var attribute in attributes)
-                    query.AppendLine(string.Format("?person {0} ?{1} .", attribute.Name, attribute.Variable));
-
-                query.AppendLine("} WHERE {");
-                query.AppendLine("?person skos:subject <http://dbpedia.org/resource/Category:American_inventors> .");
-
-                foreach (var attribute in attributes)
-                    query.AppendLine(string.Format("OPTIONAL {{ ?person {0} ?{1} . }}", attribute.Name, attribute.Variable));
-
-                query.AppendLine("FILTER (bound(?name) && LANG(?name) = 'en') .");
-                query.AppendLine("FILTER (!bound(?description) || LANG(?description) = 'en') .");
-                query.AppendLine("} ORDER BY ?person");
-
-                Console.WriteLine(query);
-
-                using (var writer = new RdfXmlWriter(dbpedia.FullPath))
-                {
-                    foreach (var @namespace in namespaces)
-                        writer.Namespaces.AddNamespace(@namespace.Uri, @namespace.Prefix);
-
-                    var source = new SparqlHttpSource("http://dbpedia.org/sparql");
-                    source.RunSparqlQuery(query.ToString(), writer);
-                }
-            }
-
-            var store = new MemoryStore();
-            using (var reader = new RdfXmlReader(dbpedia.FullPath))
-                reader.Select(store);
+            var store = LoadResults(dbpedia);
 
             using (var client = new WebClient())
             {
@@ -218,52 +165,172 @@ namespace FactFinder
                 //DownloadResources(store, client, "http://dbpedia.org/ontology/thumbnail", wiki, ".jpg");
             }
 
+
+            var edges = CreateEdges(store).ToArray();
+            var map = new Dictionary<Vertex, int>();
+            edges.ToUndirectedGraph<Vertex, Edge>().ConnectedComponents(map);
+
+            var subgraphs = map
+                .GroupBy(pair => pair.Value)
+                .OrderByDescending(group => group.Count())
+                .Take(10)
+                //.Select(group => group.Select(pair => pair.Key).ToArray())
+                .Select(group => GetGroupEdges(group.Select(pair => pair.Key), edges).ToBidirectionalGraph<Vertex, Edge>())
+                .ToArray();
+            
+
+            foreach (var group in subgraphs)
+            {
+                Console.WriteLine("Count = {0}", group.VertexCount);
+                foreach (var vertex in group.Vertices)
+                    Console.WriteLine("\t{0}", vertex);
+            }
+
+            var viewer = new Viewer();
+            viewer.DataContext = subgraphs;
+            viewer.ShowDialog();
+        }
+
+        private static IEnumerable<Edge> GetGroupEdges(IEnumerable<Vertex> group, IEnumerable<Edge> edges)
+        {
+            return group.SelectMany(vertex => edges.Where(edge => edge.Source == vertex || edge.Target == vertex)).Distinct();
+        }
+
+        private static void ExecuteQuery(Path cache)
+        {
+            var namespaces =
+                new[]
+                    {
+                        new {Prefix = "foaf", Uri = foaf},
+                        new {Prefix = "dbo", Uri = dbo},
+                        new {Prefix = "dbp", Uri = "http://dbpedia.org/property/"},
+                        new {Prefix = "skos", Uri = "http://www.w3.org/2004/02/skos/core#"},
+                        new {Prefix = "xsd", Uri = "http://www.w3.org/2001/XMLSchema#"},
+                    };
+
+            var attributes =
+                new[]
+                    {
+                        new {Name = "foaf:page", Variable = "page"},
+                        new {Name = "dbo:thumbnail", Variable = "photo"},
+                        new {Name = "foaf:name", Variable = "name"},
+                        new {Name = "dbo:abstract", Variable = "description"},
+                        new {Name = "dbo:birthYear", Variable = "birthYear"},
+                        new {Name = "dbo:birthPlace", Variable = "birthPlace"},
+                        new {Name = "dbo:deathYear", Variable = "deathYear"},
+                        new {Name = "dbo:deathPlace", Variable = "deathPlace "},
+                        new {Name = "dbp:children", Variable = "child "},
+                        new {Name = "dbp:parents", Variable = "parent "},
+                    };
+
+            Console.WriteLine("Refreshing DBpedia data...");
+            var query = new StringBuilder();
+
+            foreach (var @namespace in namespaces)
+                query.AppendLine(string.Format("PREFIX {0}: <{1}>", @namespace.Prefix, @namespace.Uri));
+
+            query.AppendLine("CONSTRUCT {");
+
+            foreach (var attribute in attributes)
+                query.AppendLine(string.Format("?person {0} ?{1} .", attribute.Name, attribute.Variable));
+
+            query.AppendLine("} WHERE {");
+            query.AppendLine("?person skos:subject <http://dbpedia.org/resource/Category:American_inventors> .");
+
+            foreach (var attribute in attributes)
+                query.AppendLine(string.Format("OPTIONAL {{ ?person {0} ?{1} . }}", attribute.Name, attribute.Variable));
+
+            query.AppendLine("FILTER (bound(?name) && lang(?name) = 'en') .");
+            query.AppendLine("FILTER (!bound(?description) || lang(?description) = 'en') .");
+            //query.AppendLine("FILTER (!bound(?birthYear) || datatype(?birthYear) = xsd:gYear) .");
+            //query.AppendLine("FILTER (!bound(?deathYear) || datatype(?deathYear) = xsd:gYear) .");
+            query.AppendLine("} ORDER BY ?person");
+            //query.AppendLine("LIMIT 20");
+
+            Console.WriteLine(query);
+
+            using (var writer = new RdfXmlWriter(cache.FullPath))
+            {
+                foreach (var @namespace in namespaces)
+                    writer.Namespaces.AddNamespace(@namespace.Uri, @namespace.Prefix);
+
+                var source = new SparqlHttpSource("http://dbpedia.org/sparql");
+                source.RunSparqlQuery(query.ToString(), writer);
+            }
+        }
+
+        private static MemoryStore LoadResults(Path dbpedia)
+        {
+            var store = new MemoryStore();
+
+            using (var reader = new RdfXmlReader(dbpedia.FullPath))
+                reader.Select(store);
+
+            return store;
+        }
+
+        private static IEnumerable<Edge> CreateEdges(MemoryStore store)
+        {
+            var entityVertices = new Dictionary<Uri, EntityVertex>();
+            var literalVertices = new Dictionary<string, LiteralVertex>();
+
+            Func<Uri, EntityVertex> getEntityVertex =
+                uri =>
+                {
+                    if (!entityVertices.ContainsKey(uri))
+                    {
+                        entityVertices[uri] = new EntityVertex(uri);
+                    }
+
+                    return entityVertices[uri];
+                };
+
+            Func<string, LiteralVertex> getLiteralVertex =
+                literal =>
+                {
+                    if (!literalVertices.ContainsKey(literal))
+                        literalVertices[literal] = new LiteralVertex(literal);
+
+                    return literalVertices[literal];
+                };
+
+            Func<Resource, Vertex> getResourceVertex =
+                resource =>
+                {
+                    if (resource.Uri != null)
+                        return getEntityVertex(new Uri(resource.Uri));
+
+                    if (resource is Literal)
+                    {
+                        var literal = resource as Literal;
+
+                        if (literal.DataType == "http://www.w3.org/2001/XMLSchema#gYear")
+                            //return getLiteralVertex((Math.Truncate(1.0 * DateTime.Parse(literal.Value).Year / 100) * 100).ToString());
+                            //return getLiteralVertex((DateTime.Parse(literal.Value).Year / 10 * 10).ToString());
+                            return getLiteralVertex(DateTime.Parse(literal.Value).Year.ToString());
+                    }
+
+                    throw new NotSupportedException();
+                };
+
             var results =
                 new[]
                     {
-                        store.Select(new Statement(null, "http://dbpedia.org/ontology/birthDate", null)),
-                        //store.Select(new Statement(null, "http://dbpedia.org/ontology/birthPlace", null)),
-                        store.Select(new Statement(null, "http://dbpedia.org/ontology/deathDate", null)),
-                        //store.Select(new Statement(null, "http://dbpedia.org/ontology/deathPlace", null)),
+                        store.Select(new Statement(null, dbo+"birthYear", null)),
+                        //store.Select(new Statement(null, dbo+"birthPlace", null)),
+                        store.Select(new Statement(null, dbo+"deathYear", null)),
+                        //store.Select(new Statement(null, dbo+"deathPlace", null)),
                     };
 
-            var edges = results.SelectMany(result => result.Select(statement => StatementToEdge(statement)));
-            var graph = edges.ToUndirectedGraph<string, Edge<string>>();
-            var map = new Dictionary<string, int>();
-
-            var algo = new ConnectedComponentsAlgorithm<string, Edge<string>>(graph);
-            algo.Compute();
-
-            foreach (var group in algo.Components.GroupBy(pair => pair.Value).OrderByDescending(group => group.Count()).Take(10))
-            {
-                Console.WriteLine("Count = {0}", group.Count());
-                foreach (var vertex in algo.Components.Where(pair => pair.Value == group.Key).Select(pair => pair.Key))
-                    Console.WriteLine("\t{0}", vertex);
-            }
-        }
-
-        private static Edge<string> StatementToEdge(Statement statement)
-        {
-            return new Edge<string>(statement.Subject.Uri, GetResourceData(statement.Object));
-        }
-
-        private static string GetResourceData(Resource resource)
-        {
-            if (resource.Uri != null)
-                return resource.Uri;
-
-            if (resource is Literal)
-            {
-                var literal = resource as Literal;
-
-                //if (literal.DataType == "http://www.w3.org/2001/XMLSchema#gYear")
-                    //return (Math.Truncate(1.0*DateTime.Parse(literal.Value).Year/100)*100).ToString();
-                    //return (DateTime.Parse(literal.Value).Year / 10 * 10).ToString();
-
-                return literal.Value;
-            }
-
-            return null;
+            return results
+                //filter duplicate data from DBpedia
+                .Select(result => result.GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri}).Select(group => group.First()))
+                //merge all query results
+                .SelectMany(result => result)
+                //.OrderBy(statement => statement.Subject.Uri)
+                //.ThenBy(statement => statement.Predicate.Uri)
+                .Select(statement => new Edge(
+                    getEntityVertex(new Uri(statement.Subject.Uri)), getResourceVertex(statement.Object), new Uri(statement.Predicate.Uri)));
         }
 
         private static string GetPersonName(Entity person)

@@ -6,6 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D65A85D8-CEE9-4CDE-B443-5651297FBEF1}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FactFinder</RootNamespace>
@@ -34,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fluent.IO">
       <HintPath>packages\FluentPath.1.0.0\lib\Net4\Fluent.IO.dll</HintPath>
@@ -41,36 +45,60 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>packages\HTML Agility Pack.1.4\lib\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="QuickGraph">
-      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickGraph.Data">
-      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickGraph.Graphviz">
-      <HintPath>packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Graphviz.dll</HintPath>
-    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WPFExtensions, Version=1.0.3437.34043, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GraphSharp\Libraries\WPFExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viewer.xaml.cs">
+      <DependentUpon>Viewer.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GraphSharp\Graph#.Controls\GraphSharp.Controls.csproj">
+      <Project>{90D874F2-486E-477E-93A9-FFA6FC92A2F4}</Project>
+      <Name>GraphSharp.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GraphSharp\Graph#\GraphSharp.csproj">
+      <Project>{9C59C516-FCA0-4FCF-AE11-E20F0F1B1949}</Project>
+      <Name>GraphSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickGraph\QuickGraph\QuickGraph.csproj">
+      <Project>{A9A5C115-0680-44B3-A87E-5ECF4C93814E}</Project>
+      <Name>QuickGraph</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SemWeb\SemWeb.csproj">
       <Project>{98EA8780-0045-41A4-BAA1-575582B92BCC}</Project>
       <Name>SemWeb</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Viewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dbpedia.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
