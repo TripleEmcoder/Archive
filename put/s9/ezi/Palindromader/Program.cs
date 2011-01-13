@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Palindromader
 {
@@ -73,6 +74,9 @@ namespace Palindromader
 
         static void Main(string[] args)
         {
+            var inputStream = Console.OpenStandardInput(1024);
+            Console.SetIn(new StreamReader(inputStream, Console.InputEncoding));
+
             while (true)
             {
                 Console.Write("Enter text: ");
@@ -82,7 +86,7 @@ namespace Palindromader
                     break;
 
                 text = text.ToLower();
-                foreach (var token in new[] { "\"", "„", "”", " ", ".", ",", "–", "-", "!", "(", ")", ";", ":", "?" })
+                foreach (var token in new[] { "\"", "„", "”", " ", ".", ",", "–", "-", "!", "(", ")", ";", ":", "?", "…" })
                     text = text.Replace(token, "");
 
                 Console.WriteLine("Processing text: {0}", text);
