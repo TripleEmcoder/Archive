@@ -46,7 +46,19 @@
                 <DataTrigger Binding="{Binding Tag}" Value="http://dbpedia.org/ontology/birthYear">
                     <Setter Property="Foreground" Value="Green" />
                 </DataTrigger>
+                <DataTrigger Binding="{Binding Tag}" Value="http://dbpedia.org/ontology/birthPlace">
+                    <Setter Property="Foreground" Value="Green" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Tag}" Value="urn:75922/static/birth">
+                    <Setter Property="Foreground" Value="Green" />
+                </DataTrigger>
                 <DataTrigger Binding="{Binding Tag}" Value="http://dbpedia.org/ontology/deathYear">
+                    <Setter Property="Foreground" Value="Red" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Tag}" Value="http://dbpedia.org/ontology/deathPlace">
+                    <Setter Property="Foreground" Value="Red" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Tag}" Value="urn:75922/static/death">
                     <Setter Property="Foreground" Value="Red" />
                 </DataTrigger>
             </Style.Triggers>

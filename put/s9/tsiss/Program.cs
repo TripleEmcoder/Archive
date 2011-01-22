@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -18,44 +19,10 @@ using QuickGraph;
 
 namespace FactFinder
 {
-    public class Triple
-    {
-        private readonly string subject;
-        private readonly string predicate;
-        private readonly string @object;
-
-        public Triple(string subject, string predicate, string @object)
-        {
-            this.subject = subject;
-            this.predicate = predicate;
-            this.@object = @object;
-        }
-
-        public override string ToString()
-        {
-            return string.Format("{0} {1} {2}", subject, predicate, @object);
-        }
-    }
-
-    class Page
-    {
-        private readonly Path path;
-        private readonly string subject;
-        private readonly HtmlNode root;
-
-        public Page(Path path)
-        {
-            this.path = path;
-            subject = path.FileNameWithoutExtension;
-            var document = new HtmlDocument();
-            document.Load(path.FullPath);
-            root = document.DocumentNode;
-        }
-    }
-
     class Program
     {
-        private const string my = "urn:75922/";
+        private const string mys = "urn:75922/static/";
+        private const string myd = "urn:75922/dynamic/";
         private const string dbo = "http://dbpedia.org/ontology/";
         private const string foaf = "http://xmlns.com/foaf/0.1/";
 
@@ -64,12 +31,28 @@ namespace FactFinder
         {
             var root = Path.Get("../..");
             var dbpedia = root.Combine("dbpedia.xml");
+            var dbpedia2 = root.Combine("dbpedia2.xml");
             var cache = root.Combine("Downloads");
 
-            if (!dbpedia.Exists)
-                ExecuteQuery(dbpedia);
+            MemoryStore store;
 
-            var store = LoadResults(dbpedia);
+            //if (!dbpedia2.Exists)
+            if (true)
+            {
+                if (!dbpedia.Exists)
+                    ExecuteQuery(dbpedia);
+
+                store = LoadResults(dbpedia);
+                FilterDuplicates(store);
+                MergePredicates(store, mys + "birth", dbo + "birthPlace", dbo + "birthYear");
+                MergePredicates(store, mys + "death", dbo + "deathPlace", dbo + "deathYear");
+                ParseFiles(store, cache);
+                SaveResults(store, dbpedia2);
+            }
+            else
+            {
+                store = LoadResults(dbpedia2);
+            }
 
             if (!cache.Exists)
                 cache.CreateDirectories();
@@ -80,10 +63,6 @@ namespace FactFinder
             //        foreach (var result in store.Select(new Statement(null, predicate, null)).OrderBy(result => result.Subject.Uri))
             //            DownloadResource(client, result, cache);
             //}
-
-            MergePredicates(store, my + "birth", dbo + "birthPlace", dbo + "birthYear");
-            MergePredicates(store, my + "death", dbo + "deathPlace", dbo + "deathYear");
-            ParseFiles(store, cache);
 
             Console.WriteLine("Creating edges...");
             var edges = CreateEdges(store, cache).ToArray();
@@ -182,15 +161,28 @@ namespace FactFinder
             }
         }
 
-        private static MemoryStore LoadResults(Path dbpedia)
+        private static MemoryStore LoadResults(Path file)
         {
             var store = new MemoryStore();
 
-            using (var reader = new RdfXmlReader(dbpedia.FullPath))
+            using (var reader = new RdfXmlReader(file.FullPath))
                 reader.Select(store);
 
             Console.WriteLine("Loaded {0} statements.", store.StatementCount);
 
+            return store;
+        }
+
+        private static void SaveResults(MemoryStore store, Path file)
+        {
+            using (var writer = new RdfXmlWriter(file.FullPath))
+                writer.Write(store);
+
+            Console.WriteLine("Wrote {0} statements.", store.StatementCount);
+        }
+
+        private static void FilterDuplicates(MemoryStore store)
+        {
             var statements = store
                 .Select(new Statement(null, null, null))
                 .GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri })
@@ -202,8 +194,6 @@ namespace FactFinder
                 store.Add(statement);
 
             Console.WriteLine("Filtered to {0} statements.", store.StatementCount);
-
-            return store;
         }
 
         private static void MergePredicates(MemoryStore store, string merged, string entity, params string[] others)
@@ -249,7 +239,70 @@ namespace FactFinder
 
         private static void ParseFiles(MemoryStore store, Path cache)
         {
-            //throw new NotImplementedException();
+            Console.WriteLine("Searching cross-references...");
+
+            foreach (var statement in store.Select(new Statement(null, foaf + "page", null)).OrderBy(statement => statement.Subject.Uri))
+            {
+                var file = GetResourceCache(statement, cache);
+
+                if (file.Exists)
+                {
+                    Console.WriteLine("\t{0}", GetEntityName(store, new Uri(statement.Subject.Uri)));
+
+                    var document = new HtmlDocument();
+                    document.Load(file.FullPath);
+
+                    foreach (var node in document.DocumentNode.SelectNodes("//div[@id='bodyContent']/p//a[@href]"))
+                    {
+                        var uri = new Uri(new Uri(statement.Object.Uri), node.Attributes["href"].Value);
+                        var tag = GetBeforeWords(node, 4).Concat(new[] { node.InnerText }).Concat(GetAfterWords(node, 4));
+
+                        var predicate = StripNonAscii(string.Join("-", tag));
+                        foreach (var stop in new[] { "&", "#", ";", ":", ",", ".", " ", "(", ")", "[", "]", "\"", "'", "$" })
+                            predicate = predicate.Replace(stop, "");
+
+                        predicate = myd + predicate;
+
+                        var entity = store.SelectSingle(new Statement(null, foaf + "page", new Entity(uri.AbsoluteUri)));
+
+                        if (entity.HasValue)
+                        {
+                            if (entity.Value.Subject != statement.Subject)
+                            {
+                                Console.WriteLine("\t\t[{0}] {1} = {2}", predicate, node.InnerText, uri.AbsoluteUri);
+                                store.Add(new Statement(statement.Subject, new Entity(predicate), entity.Value.Subject));
+                            }
+                        }
+                        else
+                        {
+                            //Console.WriteLine("\t\t[{0}] {1} = {2}", predicate, node.InnerText, uri.AbsoluteUri);
+                            //store.Add(new Statement(statement.Subject, new Entity(predicate), new Entity(uri.AbsoluteUri)));
+                        }
+                    }
+                }
+            }
+        }
+
+        private static string StripNonAscii(string text)
+        {
+            var converter = Encoding.GetEncoding(Encoding.ASCII.EncodingName, new EncoderReplacementFallback(string.Empty), new DecoderExceptionFallback());
+            return Encoding.ASCII.GetString(Encoding.Convert(Encoding.UTF8, converter, Encoding.UTF8.GetBytes(text)));
+        }
+
+        private static string[] GetBeforeWords(HtmlNode node, int count)
+        {
+            if (node.PreviousSibling == null)
+                return new string[0];
+
+            return node.PreviousSibling.InnerText.TrimEnd().Split(' ').Reverse().Take(count).Reverse().ToArray();
+        }
+
+        private static string[] GetAfterWords(HtmlNode node, int count)
+        {
+            if (node.NextSibling == null)
+                return new string[0];
+
+            return node.NextSibling.InnerText.TrimStart().Split(' ').Take(count).ToArray();
         }
 
         private static void DownloadResource(WebClient client, Statement statement, Path path)
@@ -320,7 +373,7 @@ namespace FactFinder
                     throw new NotSupportedException();
                 };
 
-            Func<IEnumerable<SelectResult>, Func<Vertex, Vertex, Uri, Edge>, IEnumerable<Edge>> getEdges =
+            Func<IEnumerable<IEnumerable<Statement>>, Func<Vertex, Vertex, Uri, Edge>, IEnumerable<Edge>> getEdges =
                 (results, ctor) =>
                 {
                     return results
@@ -331,19 +384,23 @@ namespace FactFinder
                         .Select(statement => ctor(getEntityVertex(new Uri(statement.Subject.Uri)), getResourceVertex(statement.Object), new Uri(statement.Predicate.Uri)));
                 };
 
+            var statements = store.Select(new Statement(null, null, null));
+
             var forward = getEdges(new[]
                                        {
                                            //store.Select(new Statement(null, dbo + "deathYear", null)),
-                                           //store.Select(new Statement(null, dbo + "deathPlace", null)),
-                                           store.Select(new Statement(null, my + "death", null)),
+                                           store.Select(new Statement(null, dbo + "deathPlace", null)),
+                                           //statements.Where(statement => statement.Predicate == mys + "death"),
+                                           statements.Where(statement => statement.Predicate.Uri.StartsWith(myd)),
                                        },
                                    (entity, resource, predicate) => new Edge(entity, resource, predicate));
 
             var backward = getEdges(new[]
                                         {
                                             //store.Select(new Statement(null, dbo + "birthYear", null)),
-                                            //store.Select(new Statement(null, dbo + "birthPlace", null)),
-                                            store.Select(new Statement(null, my + "birth", null)),
+                                            store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                            //statements.Where(statement => statement.Predicate == mys + "birth"),
+                                            statements.Where(statement => statement.Predicate.Uri.StartsWith(myd)),
                                         },
                                     (entity, resource, predicate) => new Edge(resource, entity, predicate));
 
