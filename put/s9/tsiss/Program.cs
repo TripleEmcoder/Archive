@@ -51,106 +51,20 @@ namespace FactFinder
             document.Load(path.FullPath);
             root = document.DocumentNode;
         }
-
-        public IEnumerable<Triple> Triples
-        {
-            get
-            {
-                yield return CreateTriple("loadedFrom", path.FullPath);
-                yield return CreateTriple("name", GetFromId("firstHeading"));
-
-                if (HasInfobox)
-                {
-                    foreach (var triple in ProcessWhenWhere(GetFromInfobox("Born"), "born"))
-                        yield return triple;
-
-                    foreach (var triple in ProcessWhenWhere(GetFromInfobox("Died"), "died"))
-                        yield return triple;
-
-                    foreach (var education in GetFromInfobox("Education"))
-                    {
-                        var title = new Regex(@"(from|at) ([\w\s]+)");
-                        var match = title.Match(education);
-
-                        if (match.Success)
-                            yield return CreateTriple("education", match.Groups[2].Value);
-                        else
-                            yield return CreateTriple("education", education);
-                    }
-                }
-            }
-        }
-
-        private IEnumerable<Triple> ProcessWhenWhere(string[] lines, string prefix)
-        {
-            var year = new Regex(@"(\d{4})");
-            var sb = new StringBuilder();
-
-            foreach (var line in lines)
-            {
-                var match = year.Match(line);
-
-                if (match.Success)
-                    yield return CreateTriple(prefix + "When", match.Groups[1].Value);
-                else
-                    sb.Append(line);
-            }
-
-            if (sb.Length > 0)
-                yield return CreateTriple(prefix + "Where", sb.ToString());
-        }
-
-        private Triple CreateTriple(string predicate, string @object)
-        {
-            return new Triple(subject, predicate, @object);
-        }
-
-        private string GetFromId(string name)
-        {
-            return root.SelectSingleNode(string.Format("id('{0}')", name)).InnerText;
-        }
-
-        private bool HasInfobox
-        {
-            get { return root.SelectSingleNode("//table[contains(@class, 'infobox')]") != null; }
-        }
-
-        private string[] GetFromInfobox(string predicate)
-        {
-            var query = string.Format("//table[contains(@class, 'infobox')]//tr[th = '{0}']/td", predicate);
-            var node = root.SelectSingleNode(query);
-
-            if (node == null)
-                return new string[0];
-
-            var indexes = new Regex(@"\[\d+\]");
-            return indexes.Replace(node.InnerText, "").Split('\n');
-        }
     }
 
     class Program
     {
+        private const string my = "urn:75922/";
         private const string dbo = "http://dbpedia.org/ontology/";
         private const string foaf = "http://xmlns.com/foaf/0.1/";
 
         [STAThread]
         static void Main(string[] args)
         {
-            /*
-            var triples = Path
-                .Get("../../wiki")
-                .Files(f => f.Extension == ".html")
-                .Take(20)
-                .Select(f => new Page(f))
-                .SelectMany(p => p.Triples);
-
-            foreach (var triple in triples)
-                Console.WriteLine(triple);
-             * */
-
             var root = Path.Get("../..");
             var dbpedia = root.Combine("dbpedia.xml");
-            var cache = root.Combine("wiki");
+            var cache = root.Combine("Downloads");
 
             if (!dbpedia.Exists)
                 ExecuteQuery(dbpedia);
@@ -166,6 +80,10 @@ namespace FactFinder
             //        foreach (var result in store.Select(new Statement(null, predicate, null)).OrderBy(result => result.Subject.Uri))
             //            DownloadResource(client, result, cache);
             //}
+
+            MergePredicates(store, my + "birth", dbo + "birthPlace", dbo + "birthYear");
+            MergePredicates(store, my + "death", dbo + "deathPlace", dbo + "deathYear");
+            ParseFiles(store, cache);
 
             Console.WriteLine("Creating edges...");
             var edges = CreateEdges(store, cache).ToArray();
@@ -191,43 +109,14 @@ namespace FactFinder
             foreach (var group in subgraphs)
             {
                 Console.WriteLine("Count = {0}", group.VertexCount);
-                foreach (var vertex in group.Vertices)
-                    Console.WriteLine("\t{0}", vertex);
+                //foreach (var vertex in group.Vertices)
+                //    Console.WriteLine("\t{0}", vertex);
             }
 
             Console.WriteLine("Initializing viewer...");
             var viewer = new Viewer();
             viewer.DataContext = subgraphs;
             viewer.ShowDialog();
-        }
-
-        private static void DownloadResource(WebClient client, Statement statement, Path path)
-        {
-            var file = GetResourceCache(statement, path);
-
-            if (!file.Exists)
-            {
-                Console.WriteLine("Downloading {0}...", statement.Object.Uri);
-                try
-                {
-                    client.DownloadFile(statement.Object.Uri, file.FullPath);
-                }
-                catch (Exception exception)
-                {
-                    Console.WriteLine(exception.Message);
-                }
-            }
-        }
-
-        private static Path GetResourceCache(Statement statement, Path cache)
-        {
-            var name = Path.Get(statement.Subject.Uri).FileName.ToLower();
-            var extension = Path.Get(statement.Object.Uri).Extension.ToLower();
-
-            if (extension == "" || extension.StartsWith("._"))
-                extension = ".html";
-
-            return cache.Combine(name + extension);
         }
 
         private static void ExecuteQuery(Path cache)
@@ -302,7 +191,94 @@ namespace FactFinder
 
             Console.WriteLine("Loaded {0} statements.", store.StatementCount);
 
+            var statements = store
+                .Select(new Statement(null, null, null))
+                .GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri })
+                .Select(group => group.First())
+                .ToArray();
+
+            store.Clear();
+            foreach (var statement in statements)
+                store.Add(statement);
+
+            Console.WriteLine("Filtered to {0} statements.", store.StatementCount);
+
             return store;
+        }
+
+        private static void MergePredicates(MemoryStore store, string merged, string entity, params string[] others)
+        {
+            var groups = store
+                .Select(new Statement(null, entity, null))
+                .Select(statement => new
+                                         {
+                                             Main = statement,
+                                             Others = others
+                                         .Select(other => store.SelectSingle(new Statement(statement.Subject, other, null)))
+                                         .Where(other => other.HasValue)
+                                         .Select(other => other.Value)
+                                         .ToArray()
+                                         })
+                .Where(group => group.Others.Length > 0)
+                .ToArray();
+
+            //foreach (var group in groups)
+            //{
+            //    store.Remove(group.Main);
+            //    foreach (var other in group.Others)
+            //        store.Remove(other);
+            //}
+
+            foreach (var group in groups)
+            {
+                var values = group.Others.Select(other => other.Object).Cast<Literal>().Select(GetLiteralValue).ToArray();
+                var uri = string.Join("/", new[] { group.Main.Object.Uri }.Concat(values));
+
+                store.Add(new Statement(group.Main.Subject, merged, new Entity(uri)));
+
+                var name = GetEntityName(store, new Uri(group.Main.Object.Uri));
+
+                if (values.Length > 0)
+                    name = string.Format("{0} ({1})", name, string.Join(", ", values));
+
+                store.Add(new Statement(uri, foaf + "name", new Literal(name)));
+            }
+
+            Console.WriteLine("Merged to {0} statements.", store.StatementCount);
+        }
+
+        private static void ParseFiles(MemoryStore store, Path cache)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private static void DownloadResource(WebClient client, Statement statement, Path path)
+        {
+            var file = GetResourceCache(statement, path);
+
+            if (!file.Exists)
+            {
+                Console.WriteLine("Downloading {0}...", statement.Object.Uri);
+                try
+                {
+                    client.DownloadFile(statement.Object.Uri, file.FullPath);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+        }
+
+        private static Path GetResourceCache(Statement statement, Path cache)
+        {
+            var name = Path.Get(statement.Subject.Uri).FileName.ToLower();
+            var extension = Path.Get(statement.Object.Uri).Extension.ToLower();
+
+            if (extension == "" || extension.StartsWith("._"))
+                extension = ".html";
+
+            return cache.Combine(name + extension);
         }
 
         private static IEnumerable<Edge> CreateEdges(MemoryStore store, Path cache)
@@ -339,14 +315,7 @@ namespace FactFinder
                         return getEntityVertex(new Uri(resource.Uri));
 
                     if (resource is Literal)
-                    {
-                        var literal = resource as Literal;
-
-                        if (literal.DataType == "http://www.w3.org/2001/XMLSchema#gYear")
-                            //return getLiteralVertex((Math.Truncate(1.0 * DateTime.Parse(literal.Value).Year / 100) * 100).ToString());
-                            //return getLiteralVertex((DateTime.Parse(literal.Value).Year / 10 * 10).ToString());
-                            return getLiteralVertex(DateTime.Parse(literal.Value).Year.ToString());
-                    }
+                        return getLiteralVertex(GetLiteralValue(resource as Literal));
 
                     throw new NotSupportedException();
                 };
@@ -355,8 +324,6 @@ namespace FactFinder
                 (results, ctor) =>
                 {
                     return results
-                        //filter duplicate data from DBpedia
-                        .Select(result => result.GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri }).Select(group => group.First()))
                         //merge all query results
                         .SelectMany(result => result)
                         //.OrderBy(statement => statement.Subject.Uri)
@@ -366,19 +333,31 @@ namespace FactFinder
 
             var forward = getEdges(new[]
                                        {
-                                           store.Select(new Statement(null, dbo + "deathYear", null)),
-                                           store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                           //store.Select(new Statement(null, dbo + "deathYear", null)),
+                                           //store.Select(new Statement(null, dbo + "deathPlace", null)),
+                                           store.Select(new Statement(null, my + "death", null)),
                                        },
                                    (entity, resource, predicate) => new Edge(entity, resource, predicate));
 
             var backward = getEdges(new[]
                                         {
-                                            store.Select(new Statement(null, dbo + "birthYear", null)),
-                                            store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                            //store.Select(new Statement(null, dbo + "birthYear", null)),
+                                            //store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                            store.Select(new Statement(null, my + "birth", null)),
                                         },
                                     (entity, resource, predicate) => new Edge(resource, entity, predicate));
 
             return forward.Concat(backward);
+        }
+
+        private static string GetLiteralValue(Literal literal)
+        {
+            if (literal.DataType == "http://www.w3.org/2001/XMLSchema#gYear")
+                //return Math.Truncate(1.0 * DateTime.Parse(literal.Value).Year / 100) * 100).ToString();
+                //return DateTime.Parse(literal.Value).Year / 10 * 10).ToString();
+                return DateTime.Parse(literal.Value).Year.ToString();
+
+            throw new NotSupportedException();
         }
 
         private static Path GetEntityPhoto(MemoryStore store, Uri uri, Path cache)
@@ -390,11 +369,16 @@ namespace FactFinder
 
         private static string GetEntityName(MemoryStore store, Uri uri)
         {
-            return store.Select(new Statement(uri.AbsoluteUri, foaf + "name", null))
+            var name = store.Select(new Statement(uri.AbsoluteUri, foaf + "name", null))
                 .Select(statement => statement.Object)
                 .Cast<Literal>()
                 .Select(literal => literal.Value)
                 .FirstOrDefault();
+
+            if (name == null)
+                name = Path.Get(uri.AbsolutePath).FileName;
+
+            return name;
         }
 
         private static IEnumerable<Edge> GetGroupEdges(IEnumerable<Vertex> group, IEnumerable<Edge> edges)

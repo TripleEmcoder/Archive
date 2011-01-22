@@ -56,7 +56,13 @@
     <DockPanel LastChildFill="True">
         <ComboBox x:Name="groups" 
                   DockPanel.Dock="Top" 
-                  ItemsSource="{Binding}" />
+                  ItemsSource="{Binding}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=VertexCount}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
         <wpfe:ZoomControl>
             <local:GraphLayout Graph="{Binding ElementName=groups, Path=SelectedValue}"
                                LayoutAlgorithmType="LinLog"
