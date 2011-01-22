@@ -150,26 +150,32 @@ namespace FactFinder
 
             var root = Path.Get("../..");
             var dbpedia = root.Combine("dbpedia.xml");
+            var cache = root.Combine("wiki");
 
             if (!dbpedia.Exists)
                 ExecuteQuery(dbpedia);
 
             var store = LoadResults(dbpedia);
 
-            using (var client = new WebClient())
-            {
-                var wiki = root.Combine("wiki");
-                Path.CreateDirectory(wiki.FullPath);
+            if (!cache.Exists)
+                cache.CreateDirectories();
 
-                //DownloadResources(store, client, "http://xmlns.com/foaf/0.1/page", wiki, ".html");
-                //DownloadResources(store, client, "http://dbpedia.org/ontology/thumbnail", wiki, ".jpg");
-            }
+            //using (var client = new WebClient())
+            //{
+            //    foreach (var predicate in new[] { foaf + "page", dbo + "thumbnail" })
+            //        foreach (var result in store.Select(new Statement(null, predicate, null)).OrderBy(result => result.Subject.Uri))
+            //            DownloadResource(client, result, cache);
+            //}
 
+            Console.WriteLine("Creating edges...");
+            var edges = CreateEdges(store, cache).ToArray();
 
-            var edges = CreateEdges(store).ToArray();
+            Console.WriteLine("Computing components...");
             var map = new Dictionary<Vertex, int>();
-            edges.ToUndirectedGraph<Vertex, Edge>().ConnectedComponents(map);
+            //edges.ToUndirectedGraph<Vertex, Edge>().ConnectedComponents(map);
+            edges.ToBidirectionalGraph<Vertex, Edge>().WeaklyConnectedComponents(map);
 
+            Console.WriteLine("Building subgraphs...");
             var subgraphs = map
                 .GroupBy(pair => pair.Value)
                 .OrderByDescending(group => group.Count())
@@ -177,7 +183,10 @@ namespace FactFinder
                 //.Select(group => group.Select(pair => pair.Key).ToArray())
                 .Select(group => GetGroupEdges(group.Select(pair => pair.Key), edges).ToBidirectionalGraph<Vertex, Edge>())
                 .ToArray();
-            
+
+            Console.WriteLine("Cleaning subgraphs...");
+            foreach (var graph in subgraphs)
+                graph.RemoveVertexIf(vertex => vertex is LiteralVertex && graph.OutDegree(vertex) + graph.InDegree(vertex) < 2);
 
             foreach (var group in subgraphs)
             {
@@ -186,14 +195,39 @@ namespace FactFinder
                     Console.WriteLine("\t{0}", vertex);
             }
 
+            Console.WriteLine("Initializing viewer...");
             var viewer = new Viewer();
             viewer.DataContext = subgraphs;
             viewer.ShowDialog();
         }
 
-        private static IEnumerable<Edge> GetGroupEdges(IEnumerable<Vertex> group, IEnumerable<Edge> edges)
+        private static void DownloadResource(WebClient client, Statement statement, Path path)
         {
-            return group.SelectMany(vertex => edges.Where(edge => edge.Source == vertex || edge.Target == vertex)).Distinct();
+            var file = GetResourceCache(statement, path);
+
+            if (!file.Exists)
+            {
+                Console.WriteLine("Downloading {0}...", statement.Object.Uri);
+                try
+                {
+                    client.DownloadFile(statement.Object.Uri, file.FullPath);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+        }
+
+        private static Path GetResourceCache(Statement statement, Path cache)
+        {
+            var name = Path.Get(statement.Subject.Uri).FileName.ToLower();
+            var extension = Path.Get(statement.Object.Uri).Extension.ToLower();
+
+            if (extension == "" || extension.StartsWith("._"))
+                extension = ".html";
+
+            return cache.Combine(name + extension);
         }
 
         private static void ExecuteQuery(Path cache)
@@ -266,10 +300,12 @@ namespace FactFinder
             using (var reader = new RdfXmlReader(dbpedia.FullPath))
                 reader.Select(store);
 
+            Console.WriteLine("Loaded {0} statements.", store.StatementCount);
+
             return store;
         }
 
-        private static IEnumerable<Edge> CreateEdges(MemoryStore store)
+        private static IEnumerable<Edge> CreateEdges(MemoryStore store, Path cache)
         {
             var entityVertices = new Dictionary<Uri, EntityVertex>();
             var literalVertices = new Dictionary<string, LiteralVertex>();
@@ -279,7 +315,9 @@ namespace FactFinder
                 {
                     if (!entityVertices.ContainsKey(uri))
                     {
-                        entityVertices[uri] = new EntityVertex(uri);
+                        var name = GetEntityName(store, uri);
+                        var photo = GetEntityPhoto(store, uri, cache);
+                        entityVertices[uri] = new EntityVertex(uri, name, photo);
                     }
 
                     return entityVertices[uri];
@@ -313,50 +351,55 @@ namespace FactFinder
                     throw new NotSupportedException();
                 };
 
-            var results =
-                new[]
-                    {
-                        store.Select(new Statement(null, dbo+"birthYear", null)),
-                        //store.Select(new Statement(null, dbo+"birthPlace", null)),
-                        store.Select(new Statement(null, dbo+"deathYear", null)),
-                        //store.Select(new Statement(null, dbo+"deathPlace", null)),
-                    };
-
-            return results
-                //filter duplicate data from DBpedia
-                .Select(result => result.GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri}).Select(group => group.First()))
-                //merge all query results
-                .SelectMany(result => result)
-                //.OrderBy(statement => statement.Subject.Uri)
-                //.ThenBy(statement => statement.Predicate.Uri)
-                .Select(statement => new Edge(
-                    getEntityVertex(new Uri(statement.Subject.Uri)), getResourceVertex(statement.Object), new Uri(statement.Predicate.Uri)));
-        }
-
-        private static string GetPersonName(Entity person)
-        {
-            return Path.Get(person.Uri).FileName;
-        }
-
-        private static void DownloadResources(MemoryStore store, WebClient client, string predicate, Path path, string extension)
-        {
-            foreach (var result in store.Select(new Statement(null, predicate, null)).OrderBy(result => result.Subject.Uri))
-            {
-                var page = path.Combine(GetPersonName(result.Subject) + extension);
-
-                if (!page.Exists)
+            Func<IEnumerable<SelectResult>, Func<Vertex, Vertex, Uri, Edge>, IEnumerable<Edge>> getEdges =
+                (results, ctor) =>
                 {
-                    Console.WriteLine("Downloading {0}...", result.Object.Uri);
-                    try
-                    {
-                        client.DownloadFile(result.Object.Uri, page.FullPath);
-                    }
-                    catch (Exception exception)
-                    {
+                    return results
+                        //filter duplicate data from DBpedia
+                        .Select(result => result.GroupBy(statement => new { Subject = statement.Subject.Uri, Predicate = statement.Predicate.Uri }).Select(group => group.First()))
+                        //merge all query results
+                        .SelectMany(result => result)
+                        //.OrderBy(statement => statement.Subject.Uri)
+                        //.ThenBy(statement => statement.Predicate.Uri)
+                        .Select(statement => ctor(getEntityVertex(new Uri(statement.Subject.Uri)), getResourceVertex(statement.Object), new Uri(statement.Predicate.Uri)));
+                };
 
-                    }
-                }
-            }
+            var forward = getEdges(new[]
+                                       {
+                                           store.Select(new Statement(null, dbo + "deathYear", null)),
+                                           store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                       },
+                                   (entity, resource, predicate) => new Edge(entity, resource, predicate));
+
+            var backward = getEdges(new[]
+                                        {
+                                            store.Select(new Statement(null, dbo + "birthYear", null)),
+                                            store.Select(new Statement(null, dbo + "birthPlace", null)),
+                                        },
+                                    (entity, resource, predicate) => new Edge(resource, entity, predicate));
+
+            return forward.Concat(backward);
+        }
+
+        private static Path GetEntityPhoto(MemoryStore store, Uri uri, Path cache)
+        {
+            return store.Select(new Statement(uri.AbsoluteUri, dbo + "thumbnail", null))
+                .Select(statement => GetResourceCache(statement, cache))
+                .FirstOrDefault();
+        }
+
+        private static string GetEntityName(MemoryStore store, Uri uri)
+        {
+            return store.Select(new Statement(uri.AbsoluteUri, foaf + "name", null))
+                .Select(statement => statement.Object)
+                .Cast<Literal>()
+                .Select(literal => literal.Value)
+                .FirstOrDefault();
+        }
+
+        private static IEnumerable<Edge> GetGroupEdges(IEnumerable<Vertex> group, IEnumerable<Edge> edges)
+        {
+            return group.SelectMany(vertex => edges.Where(edge => edge.Source == vertex || edge.Target == vertex)).Distinct();
         }
     }
 }

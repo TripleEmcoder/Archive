@@ -1,4 +1,5 @@
 ﻿using System;
+using Fluent.IO;
 using QuickGraph;
 
 namespace FactFinder
@@ -10,10 +11,14 @@ namespace FactFinder
     public class EntityVertex : Vertex
     {
         public Uri Uri { get; private set; }
+        public string Name { get; private set; }
+        public Path Photo { get; private set; }
 
-        public EntityVertex(Uri uri)
+        public EntityVertex(Uri uri, string name, Path photo)
         {
             Uri = uri;
+            Name = name;
+            Photo = photo;
         }
 
         public override string ToString()
