@@ -1,0 +1,1175 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Charles Stark Draper
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                    Charles Stark Draper
+        Born      October 2, 1901(1901-10-02)
+        Died      July 25, 1987(1987-07-25) (aged 85)
+     Residence    [7]United States
+    Nationality   [8]American
+       Fields     [9]Control theory
+    Institutions  [10]Massachusetts Institute of Technology
+   [11]Alma mater [12]Massachusetts Institute of Technology
+                  [13]Stanford University
+
+   Charles Stark Draper (October 2, 1901 – July 25, 1987) was an American
+   [14]scientist and [15]engineer, often referred to as "the father of
+   [16]inertial navigation." He was the founder and director of the
+   [17]MIT Instrumentation Laboratory, later renamed the [18]Charles Stark
+   Draper Laboratory, which under his direction designed and built the
+   [19]Apollo Guidance Computer for NASA, which made the Apollo moon
+   landings possible.
+
+   Contents
+
+        * [20]1 Life and work
+        * [21]2 References
+        * [22]3 Further reading
+        * [23]4 External links
+
+[[24]edit] Life and work
+
+   Born in [25]Windsor, [26]Missouri, he attended the [27]University of
+   Missouri in 1917, then transferred to [28]Stanford University,
+   [29]California in 1919, from which he earned a [30]B.A. in
+   [31]psychology in 1922. After Stanford, he attended [32]Massachusetts
+   Institute of Technology (MIT), from which he earned an [33]S.B. in
+   electrochemical engineering in 1926, and an [34]S.M. and [35]Sc.D. in
+   [36]physics in 1928 and 1938 respectively.^[37][1]
+
+   He started teaching while at MIT, first as an assistant, then quickly
+   became a full professor in aeronautical engineering in 1939. It was
+   here that he founded the Instrumentation Laboratory in the 1930s, later
+   spun off as [38]The Charles Stark Draper Laboratory, Inc. In 1961,
+   Draper and the Instrumentation Lab were awarded the first contract
+   given out for the [39]Apollo program to send humans to the moon, which
+   had just been announced by President John F. Kennedy. This led to the
+   creation of the [40]Apollo Guidance Computer, a one-cubic-foot computer
+   that controlled the navigation and guidance of the Lunar Excursion
+   Module to the surface of the moon during six successful landings.
+
+   His interest in flight instrumentation also spun from becoming a pilot
+   with an engineering training in the 1930s: although he failed to become
+   an Air Corps pilot^[41][2], he learned to fly by enrolling in a
+   civilian course.
+
+   Draper invented and developed [42]inertial navigation, a technology
+   used in [43]aircraft, space vehicles, and [44]submarines that allows
+   such vehicles to navigate by sensing changes in direction, using
+   [45]gyroscopes, and speed, using accelerometers. A pioneering figure in
+   the aircraft engineering field, he also contributed to the Apollo space
+   program with his knowledge of guidance systems. For his inventions and
+   contributions, Draper was inducted to the [46]National Inventors Hall
+   of Fame in 1981.
+
+   He was awarded the [47]Howard N. Potts Medal in 1960. In 1964, he was
+   awarded the [48]National Medal of Science.^[49][3]
+
+   The [50]Charles Stark Draper Prize is a prominent prize in engineering
+   devoted to the memory of Charles Stark Draper. Charles Stark Draper's
+   relatives were rather prominent in his Missouri birthplace, including
+   his cousin, Governor [51]Lloyd C. Stark.
+
+[[52]edit] References
+
+    1. [53]^ [54][1] Alumni MIT
+    2. [55]^ National Academy of Engineering (1992). Memorial Tributes.
+       National Academies Press. [56]ISBN [57]0309043492.
+    3. [58]^ [59]National Science Foundation - The President's National
+       Medal of Science
+
+[[60]edit] Further reading
+
+     * Inventing accuracy : an historical sociology of nuclear missile
+       guidance by Donald MacKenzie, MIT Press, 1990.
+
+[[61]edit] External links
+
+     * [62]Inventor Profile on the National Inventors Hall of Fame Web
+       Site
+     * [63]Caltech History of Recent Science & Technology - Apollo
+       Guidance Computer - People - Charles Stark (Doc) Draper
+     * [64]The Charles Stark Draper Laboratory
+
+
+   [65]v · [66]d · [67]e[68]Time Persons of the Year
+
+   [69]Mohammed Mosaddeq (1951) · [70]Elizabeth II (1952) · [71]Konrad
+   Adenauer (1953) · [72]John Foster Dulles (1954) · [73]Harlow Curtice
+   (1955) · [74]Hungarian Freedom Fighter (1956) · [75]Nikita Khrushchev
+   (1957) · [76]Charles de Gaulle (1958) · [77]Dwight D. Eisenhower
+   (1959) · [78]U.S. Scientists: [79]George Beadle / Charles Draper /
+   [80]John Enders / [81]Donald A. Glaser / [82]Joshua Lederberg /
+   [83]Willard Libby / [84]Linus Pauling / [85]Edward Purcell / [86]Isidor
+   Rabi / [87]Emilio Segrè / [88]William Shockley / [89]Edward Teller /
+   [90]Charles Townes / [91]James Van Allen / [92]Robert Woodward (1960) ·
+   [93]John F. Kennedy (1961) · [94]Pope John XXIII (1962) · [95]Martin
+   Luther King, Jr. (1963) · [96]Lyndon B. Johnson (1964) · [97]William
+   Westmoreland (1965) · [98]The Generation Twenty-Five and Under (1966) ·
+   [99]Lyndon B. Johnson (1967) · [100]The Apollo 8 Astronauts:
+   [101]William Anders / [102]Frank Borman / [103]Jim Lovell (1968) ·
+   [104]The Middle Americans (1969) · [105]Willy Brandt (1970) ·
+   [106]Richard Nixon (1971) · [107]Henry Kissinger / [108]Richard Nixon
+   (1972) · [109]John Sirica (1973) · [110]King Faisal (1974) ·
+   [111]American Women: [112]Susan Brownmiller / [113]Kathleen Byerly /
+   [114]Alison Cheek / [115]Jill Conway / [116]Betty Ford / [117]Ella
+   Grasso / [118]Carla Hills / [119]Barbara Jordan / [120]Billie Jean King
+   / [121]Carol Sutton / [122]Susie Sharp / [123]Addie L. Wyatt (1975)
+   [124]Complete roster · [125]1927–1950 · [126]1951–1975 ·
+   [127]1976–2000 · [128]2001–present
+
+   [129]v · [130]d · [131]e[132]Richard E. Bellman Control Heritage Award
+   1979–2000
+
+   [133]Hendrik Wade Bode (1979) · [134]Nathaniel B. Nichols (1980) ·
+   Charles Stark Draper (1981) · [135]Irving Lefkowitz (1982) · [136]John
+   V. Breakwell (1983) · [137]Richard E. Bellman (1984) · [138]Harold
+   Chestnut (1985) · [139]John Zaborszky (1986) · [140]John C. Lozier
+   (1987) · [141]Walter R. Evans (1988) · [142]Roger W. Brockett (1989) ·
+   [143]Arthur E. Bryson, Jr. (1990) · [144]John G. Truxal (1991) ·
+   [145]Rutherford Aris (1992) · [146]Eliahu I. Jury (1993) · [147]Jose B.
+   Cruz, Jr. (1994) · [148]Michael Athans (1995) · [149]Elmer G. Gilbert
+   (1996) · [150]Rudolf E. Kalman (1997) · [151]Lotfi A. Zadeh (1998) ·
+   [152]Yu-Chi Ho (1999) · [153]W. Harmon Ray (2000)
+   [154]Complete roster: [155]1979–2000 · [156]2001–present
+
+   [157]v · [158]d · [159]e[160]United States National Medal of Science
+   [161]laureates
+
+    Behavioral and social science
+
+   1960s
+
+        1964: [162]Roger Adams · [163]Othmar H. Ammann · [164]Theodosius
+        Dobzhansky · [165]Neal Elgar Miller
+   1980s
+
+        1986: [166]Herbert A. Simon · 1987: [167]Anne Anastasi · [168]George J.
+        Stigler · 1988: [169]Milton Friedman
+   1990s
+
+        1990: [170]Leonid Hurwicz · [171]Patrick Suppes · 1991: [172]Robert W.
+        Kates · [173]George A. Miller · 1992: [174]Eleanor J. Gibson · 1994:
+        [175]Robert K. Merton · 1995: [176]Roger N. Shepard · 1996: [177]Paul
+        Samuelson · 1997: [178]William K. Estes · 1998: [179]William Julius
+        Wilson · 1999: [180]Robert M. Solow
+   2000s
+
+        2000: [181]Gary Becker · 2001: [182]George Bass · 2003: [183]R. Duncan
+        Luce · 2004: [184]Kenneth Arrow · 2005: [185]Gordon H. Bower · 2008:
+        [186]Michael I. Posner
+    Biological sciences
+
+   1960s
+
+        1963: [187]C. B. van Niel · 1964: [188]Marshall W. Nirenberg · 1965:
+        [189]Francis P. Rous · [190]George G. Simpson · [191]Donald D. Van
+        Slyke · 1966: [192]Edward F. Knipling · [193]Fritz Albert Lipmann ·
+        [194]William C. Rose · [195]Sewall Wright · 1967: [196]Kenneth S.
+        Cole · [197]Harry F. Harlow · [198]Michael Heidelberger · [199]Alfred
+        H. Sturtevant · 1968: [200]Horace Barker · [201]Bernard B. Brodie ·
+        [202]Detlev W. Bronk · [203]Jay Lush · [204]Burrhus Frederic Skinner ·
+        1969: [205]Robert Huebner · [206]Ernst Mayr
+   1970s
+
+        1970: [207]Barbara McClintock · [208]Albert B. Sabin · 1973:
+        [209]Daniel I. Arnon · [210]Earl W. Sutherland, Jr. · 1974:
+        [211]Britton Chance · [212]Erwin Chargaff · [213]James V. Neel ·
+        [214]James Augustine Hannon · 1975: [215]Hallowell Davis · [216]Paul
+        Gyorgy · [217]Sterling Brown Hendricks · [218]Orville lvin Vogel ·
+        1976: [219]Roger C.L. Guillemin · [220]Keith Roberts Porter ·
+        [221]Efraim Racker · [222]E. O. Wilson · 1979: [223]Robert H. Burris ·
+        [224]Elizabeth C. Crosby · [225]Arthur Kornberg · [226]Severo Ochoa ·
+        [227]Earl Reece Stadtman · [228]George Ledyard Stebbins · [229]Paul
+        Alfred Weiss
+   1980s
+
+        1981: [230]Philip Handler · 1982: [231]Seymour Benzer · [232]Glenn W.
+        Burton · [233]Mildred Cohn · 1983: [234]Howard L. Bachrach · [235]Paul
+        Berg · [236]Wendell L. Roelofs · [237]Berta Scharrer · 1986:
+        [238]Stanley Cohen · [239]Donald A. Henderson · [240]Vernon B.
+        Mountcastle · [241]George Emil Palade · [242]Joan A. Steitz · 1987:
+        [243]Michael E. Debakey · [244]Theodor O. Diener · [245]Harry Eagle ·
+        [246]Har Gobind Khorana · [247]Rita Levi-Montalcini · 1988:
+        [248]Michael S. Brown · [249]Stanley Norman Cohen · [250]Joseph L.
+        Goldstein · [251]Maurice R. Hilleman · [252]Eric R. Kandel ·
+        [253]Rosalyn S. Yalow · 1989: [254]Katherine Esau · [255]Viktor
+        Hamburger · [256]Philip Leder · [257]Joshua Lederberg · [258]Roger W.
+        Sperry · [259]Harland G. Wood
+   1990s
+
+        1990: [260]Baruj Benacerraf · [261]Herbert W. Boyer · [262]Daniel E.
+        Koshland, Jr. · [263]Edward B. Lewis · [264]David G. Nathan · [265]E.
+        Donnall Thomas · 1991: [266]Mary Ellen Avery · [267]G. Evelyn
+        Hutchinson · [268]Elvin A. Kabat · [269]Salvador Luria · [270]Paul A.
+        Marks · [271]Folke K Skoog · [272]Paul C. Zamecnik · 1992: [273]Maxine
+        Singer · [274]Howard M. Temin · 1993: [275]Daniel Nathans · [276]Salome
+        G. Waelsch · 1994: [277]Thomas Eisner · [278]Elizabeth F. Neufeld ·
+        1995: [279]Alexander Rich · 1996: [280]Ruth Patrick · 1997: [281]James
+        D. Watson · [282]Robert A. Weinberg · 1998: [283]Bruce Ames ·
+        [284]Janet Rowley · 1999: [285]David Baltimore · [286]Jared Diamond ·
+        [287]Lynn Margulis
+   2000s
+
+        2000: [288]Nancy C. Andreasen · [289]Peter H. Raven · [290]Carl Woese ·
+        2001: [291]Francisco J. Ayala · [292]Mario R. Capecchi · [293]Ann M.
+        Graybiel · [294]Gene E. Likens · [295]Victor A. McKusick · [296]Harold
+        Varmus · 2002: [297]James E. Darnell · [298]Evelyn M. Witkin · 2003:
+        [299]J. Michael Bishop · [300]Solomon H. Snyder · [301]Charles
+        Yanofsky · 2004: [302]Norman E. Borlaug · [303]Phillip A. Sharp ·
+        [304]Thomas E. Starzl · 2005: [305]Anthony Fauci · [306]Torsten N.
+        Wiesel · 2006: [307]Rita R. Colwell · [308]Nina Fedoroff · [309]Lubert
+        Stryer · 2007: [310]Robert J. Lefkowitz · [311]Bert W. O'Malley · 2008:
+        [312]Francis S. Collins · [313]Elaine Fuchs · [314]J. Craig Venter
+    Chemistry
+
+   1980s
+
+        1982: [315]F. Albert Cotton · [316]Gilbert Stork · 1983: [317]Roald
+        Hoffmann · [318]George C. Pimentel · [319]Richard N. Zare · 1986:
+        [320]Harry B. Gray · [321]Yuan Tseh Lee · [322]Carl S. Marvel ·
+        [323]Frank H. Westheimer · 1987: [324]William S. Johnson · [325]Walter
+        H. Stockmayer · [326]Max Tishler · 1988: [327]William O. Baker ·
+        [328]Konrad E. Bloch · [329]Elias J. Corey · 1989: [330]Richard B.
+        Bernstein · [331]Melvin Calvin · [332]Rudoph A. Marcus · [333]Harden M.
+        McConnell
+   1990s
+
+        1990: [334]Elkan Blout · [335]Karl Folkers · [336]John D. Roberts ·
+        1991: [337]Ronald Breslow · [338]Gertrude B. Elion · [339]Dudley R.
+        Herschbach · [340]Glenn T. Seaborg · 1992: [341]Howard E. Simmons,
+        Jr. · 1993: [342]Donald J. Cram · [343]Norman Hackerman · 1994:
+        [344]George S. Hammond · 1995: [345]Thomas Cech · [346]Isabella L.
+        Karle · 1996: [347]Norman Davidson · 1997: [348]Darleane C. Hoffman ·
+        [349]Harold S. Johnston · 1998: [350]John W. Cahn · [351]George M.
+        Whitesides · 1999: [352]Stuart A. Rice · [353]John Ross · [354]Susan
+        Solomon
+   2000s
+
+        2000: [355]John D. Baldeschwieler · [356]Ralph F. Hirschmann · 2001:
+        [357]Ernest R. Davidson · [358]Gabor A. Somorjai · 2002: [359]John I.
+        Brauman · 2004: [360]Stephen J. Lippard · 2006: [361]Marvin H.
+        Caruthers · [362]Peter B. Dervan · 2007: [363]Mostafa A. El-Sayed ·
+        2008: [364]Joanna S. Fowler · [365]JoAnne Stubbe
+    Engineering sciences
+
+   1960s
+
+        1962: [366]Theodore von Karman · 1963: [367]Vannevar Bush · [368]John
+        Robinson Pierce · 1964: [369]Charles S. Draper · 1965: [370]Hugh L.
+        Dryden · [371]Clarence L. Johnson · [372]Warren K. Lewis · 1966:
+        [373]Claude E. Shannon · 1967: [374]Edwin H. Land · [375]Igor I.
+        Sikorsky · 1968: [376]J. Presper Eckert · [377]Nathan M. Newmark ·
+        1969: [378]Jack St. Clair Kilby
+   1970s
+
+        1970: [379]George E. Mueller · 1973: [380]Harold E. Edgerton ·
+        [381]Richard T. Whitcomb · 1974: [382]Rudolf Kompfner · [383]Ralph
+        Brazelton Peck · [384]Abel Wolman · 1975: [385]Manson Benedict ·
+        [386]William Hayward Pickering · [387]Frederick E. Terman ·
+        [388]Wernher von Braun · 1976: [389]Morris Cohen · [390]Peter C.
+        Goldmark · [391]Erwin Wilhelm Müller · 1979: [392]Emmett N. Leith ·
+        [393]Raymond D. Mindlin · [394]Robert N. Noyce · [395]Earl R. Parker ·
+        [396]Simon Ramo
+   1980s
+
+        1982: [397]Edward H. Heinemann · [398]Donald L. Katz · 1983:
+        [399]William R. Hewlett · [400]George M. Low · [401]John G. Trump ·
+        1986: [402]Hans Wolfgang Liepmann · [403]T. Y. Lin · [404]Bernard M.
+        Oliver · 1987: [405]R. Byron Bird · [406]H. Bolton Seed · [407]Ernst
+        Weber · 1988: [408]Daniel C. Drucker · [409]Willis M. Hawkins ·
+        [410]George W. Housner · 1989: [411]Harry George Drickamer ·
+        [412]Herbert E. Grier
+   1990s
+
+        1990: [413]Mildred S. Dresselhaus · [414]Nick Holonyak Jr. · 1991:
+        [415]George Heilmeier · [416]Luna B. Leopold · [417]H. Guyford Stever ·
+        1992: [418]Calvin F. Quate · [419]John Roy Whinnery · 1993: [420]Alfred
+        Y. Cho · 1994: [421]Ray W. Clough · 1995: [422]Hermann A. Haus · 1996:
+        [423]James L. Flanagan · [424]C. Kumar N. Patel · 1998: [425]Eli
+        Ruckenstein · 1999: [426]Kenneth N. Stevens
+   2000s
+
+        2000: [427]Yuan-Cheng B. Fung · 2001: [428]Andreas Acrivos · 2002:
+        [429]Leo Beranek · 2003: [430]John M. Prausnitz · 2004: [431]Edwin N.
+        Lightfoot · 2005: [432]Jan D. Achenbach · [433]Tobin J. Marks · 2006:
+        [434]Robert S. Langer · 2007: [435]David J. Wineland · 2008:
+        [436]Rudolf E. Kalman
+    Mathematical, statistical, and computer sciences
+
+   1960s
+
+        1963: [437]Norbert Wiener · 1964: [438]Solomon Lefschetz · [439]H.
+        Marston Morse · 1965: [440]Oscar Zariski · 1966: [441]John Milnor ·
+        1967: [442]Paul Cohen · 1968: [443]Jerzy Neyman · 1969: [444]William
+        Feller
+   1970s
+
+        1970: [445]Richard Brauer · 1973: [446]John Tukey · 1974: [447]Kurt
+        Gödel · 1975: [448]John W. Backus · [449]Shiing-Shen Chern ·
+        [450]George Dantzig · 1976: [451]Kurt Otto Friedrichs · [452]Hassler
+        Whitney · 1979: [453]Joseph Leo Doob · [454]Donald E. Knuth
+   1980s
+
+        1982: [455]Marshall Harvey Stone · 1983: [456]Herman Goldstine ·
+        [457]Isadore Singer · 1986: [458]Peter Lax · [459]Antoni Zygmund ·
+        1987: [460]Raoul Bott · [461]Michael Freedman · 1988: [462]Ralph E.
+        Gomory · [463]Joseph B. Keller · 1989: [464]Samuel Karlin ·
+        [465]Saunders MacLane · [466]Donald C. Spencer
+   1990s
+
+        1990: [467]George F. Carrier · [468]Stephen Cole Kleene · [469]John
+        McCarthy · 1991: [470]Alberto Calderón · 1992: [471]Allen Newell ·
+        1993: [472]Martin David Kruskal · 1994: [473]John Cocke · 1995:
+        [474]Louis Nirenberg · 1996: [475]Richard Karp · [476]Stephen Smale ·
+        1997: [477]Shing-Tung Yau · 1998: [478]Cathleen Synge Morawetz · 1999:
+        [479]Felix Browder · [480]Ronald R. Coifman
+   2000s
+
+        2000: [481]John Griggs Thompson · [482]Karen K. Uhlenbeck · 2001:
+        [483]Calyampudi R. Rao · [484]Elias M. Stein · 2002: [485]James G.
+        Glimm · 2003: [486]Carl R. de Boor · 2004: [487]Dennis P. Sullivan ·
+        2005: [488]Bradley Efron · 2006: [489]Hyman Bass · 2007: [490]Leonard
+        Kleinrock · [491]Andrew J. Viterbi ·
+    Physical sciences
+
+   1960s
+
+        1963: [492]Luis W. Alvarez · 1964: [493]Julian Schwinger · [494]Harold
+        Clayton Urey · [495]Robert Burns Woodward · 1965: [496]John Bardeen ·
+        [497]Peter Debye · [498]Leon M. Lederman · [499]William Rubey · 1966:
+        [500]Jacob Bjerknes · [501]Subrahmanyan Chandrasekhar · [502]Henry
+        Eyring · [503]John H. Van Vleck · [504]Vladimir K. Zworykin · 1967:
+        [505]Jesse Beams · [506]Francis Birch · [507]Gregory Breit · [508]Louis
+        Hammett · [509]George Kistiakowsky · 1968: [510]Paul Bartlett ·
+        [511]Herbert Friedman · [512]Lars Onsager · [513]Eugene Wigner · 1969:
+        [514]Herbert C. Brown · [515]Wolfgang Panofsky
+   1970s
+
+        1970: [516]Robert H. Dicke · [517]Allan R. Sandage · [518]John C.
+        Slater · [519]John A. Wheeler · [520]Saul Winstein · 1973: [521]Carl
+        Djerassi · [522]Maurice Ewing · [523]Arie Jan Haagen-Smit ·
+        [524]Vladimir Haensel · [525]Frederick Seitz · [526]Robert Rathbun
+        Wilson · 1974: [527]Nicolaas Bloembergen · [528]Paul Flory ·
+        [529]William Alfred Fowler · [530]Linus Carl Pauling · [531]Kenneth
+        Sanborn Pitzer · 1975: [532]Hans A. Bethe · [533]Joseph Hirschfelder ·
+        [534]Lewis Sarett · [535]E. Bright Wilson · [536]Chien-Shiung Wu ·
+        1976: [537]Samuel Goudsmit · [538]Herbert S. Gutowsky · [539]Frederick
+        Rossini · [540]Verner Suomi · [541]Henry Taube · [542]George
+        Uhlenbeck · 1979: [543]Richard P. Feynman · [544]Herman Mark ·
+        [545]Edward M. Purcell · [546]John Sinfelt · [547]Lyman Spitzer ·
+        [548]Victor F. Weisskopf
+   1980s
+
+        1982: [549]Philip W. Anderson · [550]Yoichiro Nambu · [551]Edward
+        Teller · [552]Charles H. Townes · 1983: [553]E. Margaret Burbidge ·
+        [554]Maurice Goldhaber · [555]Helmut Landsberg · [556]Walter Munk ·
+        [557]Frederick Reines · [558]Bruno B. Rossi · [559]J. Robert
+        Schrieffer · 1986: [560]Solomon Buchsbaum · [561]Horace Crane ·
+        [562]Herman Feshbach · [563]Robert Hofstadter · [564]Chen Ning Yang ·
+        1987: [565]Philip Abelson · [566]Walter Elsasser · [567]Paul C.
+        Lauterbur · [568]George Pake · [569]James A. Van Allen · 1988: [570]D.
+        Allan Bromley · [571]Paul Ching-Wu Chu · [572]Walter Kohn · [573]Norman
+        F. Ramsey · [574]Jack Steinberger · 1989: [575]Arnold O. Beckman ·
+        [576]Eugene Parker · [577]Robert Sharp · [578]Henry Stommel
+   1990s
+
+        1990: [579]Allan M. Cormack · [580]Edwin M. McMillan · [581]Robert
+        Pound · [582]Roger Revelle · 1991: [583]Arthur L. Schawlow · [584]Ed
+        Stone · [585]Steven Weinberg · 1992: [586]Eugene M. Shoemaker · 1993:
+        [587]Val Fitch · [588]Vera Rubin · 1994: [589]Albert Overhauser ·
+        [590]Frank Press · 1995: [591]Hans Dehmelt · [592]Peter Goldreich ·
+        1996: [593]Wallace S. Broecker · 1997: [594]Marshall Rosenbluth ·
+        [595]Martin Schwarzschild · [596]George Wetherill · 1998: [597]Don L.
+        Anderson · [598]John N. Bahcall · 1999: [599]James Cronin · [600]Leo
+        Kadanoff
+   2000s
+
+        2000: [601]Willis E. Lamb · [602]Jeremiah P. Ostriker · [603]Gilbert F.
+        White · 2001: [604]Marvin L. Cohen · [605]Raymond Davis Jr. ·
+        [606]Charles Keeling · 2002: [607]Richard Garwin · [608]W. Jason
+        Morgan · [609]Edward Witten · 2003: [610]G. Brent Dalrymple ·
+        [611]Riccardo Giacconi · 2004: [612]Robert N. Clayton · 2005:
+        [613]Ralph A. Alpher · [614]Lonnie Thompson · 2006: [615]Daniel
+        Kleppner · 2007: [616]Fay Ajzenberg-Selove · [617]Charles P. Slichter ·
+        2009: [618]Berni Alder · [619]James E. Gunn
+              [620]Persondata
+   Name              Draper, Charles Stark
+   Alternative names
+   Short description
+   Date of birth     October 2, 1901
+   Place of birth
+   Date of death     July 25, 1987
+   Place of death
+   Retrieved from "[621]http://en.wikipedia.org/wiki/Charles_Stark_Draper"
+   [622]Categories: [623]1901 births | [624]1987 deaths | [625]American
+   aerospace engineers | [626]American engineers | [627]American inventors
+   | [628]Control theorists | [629]Massachusetts Institute of Technology
+   faculty | [630]Massachusetts Institute of Technology alumni |
+   [631]National Inventors Hall of Fame inductees | [632]National Medal of
+   Science laureates | [633]Stanford University alumni | [634]University
+   of Missouri alumni | [635]Richard E. Bellman Control Heritage Award
+   recipients
+
+Personal tools
+
+     * [636]Log in / create account
+
+Namespaces
+
+     * [637]Article
+     * [638]Discussion
+
+Variants
+
+Views
+
+     * [639]Read
+     * [640]Edit
+     * [641]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [642]Main page
+     * [643]Contents
+     * [644]Featured content
+     * [645]Current events
+     * [646]Random article
+     * [647]Donate to Wikipedia
+
+Interaction
+
+     * [648]Help
+     * [649]About Wikipedia
+     * [650]Community portal
+     * [651]Recent changes
+     * [652]Contact Wikipedia
+
+Toolbox
+
+     * [653]What links here
+     * [654]Related changes
+     * [655]Upload file
+     * [656]Special pages
+     * [657]Permanent link
+     * [658]Cite this page
+
+Print/export
+
+     * [659]Create a book
+     * [660]Download as PDF
+     * [661]Printable version
+
+Languages
+
+     * [662]Deutsch
+     * [663]Français
+     * [664]Português
+
+     * This page was last modified on 17 January 2011 at 14:40.
+     * Text is available under the [665]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [666]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [667]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [668]Contact us
+
+     * [669]Privacy policy
+     * [670]About Wikipedia
+     * [671]Disclaimers
+
+     * [672]Powered by MediaWiki
+     * [673]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#p-search
+   7. file://localhost/wiki/United_States
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/Control_theory
+  10. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  11. file://localhost/wiki/Alma_mater
+  12. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  13. file://localhost/wiki/Stanford_University
+  14. file://localhost/wiki/Scientist
+  15. file://localhost/wiki/Engineer
+  16. file://localhost/wiki/Inertial_navigation_system
+  17. file://localhost/wiki/MIT
+  18. file://localhost/wiki/Charles_Stark_Draper_Laboratory
+  19. file://localhost/wiki/Apollo_Guidance_Computer
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#Life_and_work
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#References
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#Further_reading
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#External_links
+  24. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit&section=1
+  25. file://localhost/wiki/Windsor,_Missouri
+  26. file://localhost/wiki/Missouri
+  27. file://localhost/wiki/University_of_Missouri
+  28. file://localhost/wiki/Stanford_University
+  29. file://localhost/wiki/California
+  30. file://localhost/wiki/Bachelor_of_Arts
+  31. file://localhost/wiki/Psychology
+  32. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  33. file://localhost/wiki/Bachelor_of_Science
+  34. file://localhost/wiki/Master_of_Science
+  35. file://localhost/wiki/Doctor_of_Science
+  36. file://localhost/wiki/Physics
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_note-0
+  38. file://localhost/wiki/Charles_Stark_Draper_Laboratory
+  39. file://localhost/wiki/Apollo_program
+  40. file://localhost/wiki/Apollo_Guidance_Computer
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_note-1
+  42. file://localhost/wiki/Inertial_navigation
+  43. file://localhost/wiki/Aircraft
+  44. file://localhost/wiki/Submarine
+  45. file://localhost/wiki/Gyroscope
+  46. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  47. file://localhost/wiki/The_Franklin_Institute_Awards
+  48. file://localhost/wiki/National_Medal_of_Science
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_note-2
+  50. file://localhost/wiki/Charles_Stark_Draper_Prize
+  51. file://localhost/wiki/Lloyd_C._Stark
+  52. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit&section=2
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_ref-0
+  54. http://alum.mit.edu/
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_ref-1
+  56. file://localhost/wiki/International_Standard_Book_Number
+  57. file://localhost/wiki/Special:BookSources/0309043492
+  58. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html#cite_ref-2
+  59. http://www.nsf.gov/od/nms/recip_details.cfm?recip_id=109
+  60. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit&section=3
+  61. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit&section=4
+  62. http://www.invent.org/hall_of_fame/46.html
+  63. http://authors.library.caltech.edu/5456/1/hrst.mit.edu/hrs/apollo/public/people/csdraper.htm
+  64. http://www.draperlab.com/
+  65. file://localhost/wiki/Template:Time_Persons_of_the_Year_1951%E2%80%931975
+  66. file://localhost/wiki/Template_talk:Time_Persons_of_the_Year_1951%E2%80%931975
+  67. http://en.wikipedia.org/w/index.php?title=Template:Time_Persons_of_the_Year_1951%E2%80%931975&action=edit
+  68. file://localhost/wiki/Time_Person_of_the_Year
+  69. file://localhost/wiki/Mohammed_Mosaddeq
+  70. file://localhost/wiki/Elizabeth_II
+  71. file://localhost/wiki/Konrad_Adenauer
+  72. file://localhost/wiki/John_Foster_Dulles
+  73. file://localhost/wiki/Harlow_Curtice
+  74. file://localhost/wiki/Hungarian_Revolution_of_1956
+  75. file://localhost/wiki/Nikita_Khrushchev
+  76. file://localhost/wiki/Charles_de_Gaulle
+  77. file://localhost/wiki/Dwight_D._Eisenhower
+  78. file://localhost/wiki/Scientist
+  79. file://localhost/wiki/George_Wells_Beadle
+  80. file://localhost/wiki/John_Franklin_Enders
+  81. file://localhost/wiki/Donald_A._Glaser
+  82. file://localhost/wiki/Joshua_Lederberg
+  83. file://localhost/wiki/Willard_Libby
+  84. file://localhost/wiki/Linus_Pauling
+  85. file://localhost/wiki/Edward_Mills_Purcell
+  86. file://localhost/wiki/Isidor_Isaac_Rabi
+  87. file://localhost/wiki/Emilio_G._Segr%C3%A8
+  88. file://localhost/wiki/William_Shockley
+  89. file://localhost/wiki/Edward_Teller
+  90. file://localhost/wiki/Charles_Hard_Townes
+  91. file://localhost/wiki/James_Van_Allen
+  92. file://localhost/wiki/Robert_Burns_Woodward
+  93. file://localhost/wiki/John_F._Kennedy
+  94. file://localhost/wiki/Pope_John_XXIII
+  95. file://localhost/wiki/Martin_Luther_King,_Jr.
+  96. file://localhost/wiki/Lyndon_B._Johnson
+  97. file://localhost/wiki/William_Westmoreland
+  98. file://localhost/wiki/Baby_boomer
+  99. file://localhost/wiki/Lyndon_B._Johnson
+ 100. file://localhost/wiki/Apollo_8
+ 101. file://localhost/wiki/William_Anders
+ 102. file://localhost/wiki/Frank_Borman
+ 103. file://localhost/wiki/Jim_Lovell
+ 104. file://localhost/wiki/Middle_America_(United_States)
+ 105. file://localhost/wiki/Willy_Brandt
+ 106. file://localhost/wiki/Richard_Nixon
+ 107. file://localhost/wiki/Henry_Kissinger
+ 108. file://localhost/wiki/Richard_Nixon
+ 109. file://localhost/wiki/John_Sirica
+ 110. file://localhost/wiki/Faisal_of_Saudi_Arabia
+ 111. file://localhost/wiki/History_of_women_in_the_United_States
+ 112. file://localhost/wiki/Susan_Brownmiller
+ 113. file://localhost/wiki/Kathleen_Byerly
+ 114. file://localhost/wiki/Alison_Cheek
+ 115. file://localhost/wiki/Jill_Ker_Conway
+ 116. file://localhost/wiki/Betty_Ford
+ 117. file://localhost/wiki/Ella_T._Grasso
+ 118. file://localhost/wiki/Carla_Anderson_Hills
+ 119. file://localhost/wiki/Barbara_Jordan
+ 120. file://localhost/wiki/Billie_Jean_King
+ 121. file://localhost/wiki/Carol_Sutton
+ 122. file://localhost/wiki/Susie_Sharp
+ 123. file://localhost/wiki/Addie_L._Wyatt
+ 124. file://localhost/wiki/Template:Time_Persons_of_the_Year
+ 125. file://localhost/wiki/Template:Time_Persons_of_the_Year_1927%E2%80%931950
+ 126. file://localhost/wiki/Template:Time_Persons_of_the_Year_1951%E2%80%931975
+ 127. file://localhost/wiki/Template:Time_Persons_of_the_Year_1976%E2%80%932000
+ 128. file://localhost/wiki/Template:Time_Persons_of_the_Year_2001%E2%80%932025
+ 129. file://localhost/wiki/Template:Richard_E._Bellman_Control_Heritage_Award_1979-2000_Laureates
+ 130. file://localhost/wiki/Template_talk:Richard_E._Bellman_Control_Heritage_Award_1979-2000_Laureates
+ 131. http://en.wikipedia.org/w/index.php?title=Template:Richard_E._Bellman_Control_Heritage_Award_1979-2000_Laureates&action=edit
+ 132. file://localhost/wiki/Richard_E._Bellman_Control_Heritage_Award
+ 133. file://localhost/wiki/Hendrik_Wade_Bode
+ 134. file://localhost/wiki/Nathaniel_B._Nichols
+ 135. file://localhost/wiki/Irving_Lefkowitz
+ 136. file://localhost/wiki/John_V._Breakwell
+ 137. file://localhost/wiki/Richard_E._Bellman
+ 138. file://localhost/wiki/Harold_Chestnut
+ 139. file://localhost/wiki/John_Zaborszky
+ 140. file://localhost/wiki/John_C._Lozier
+ 141. file://localhost/wiki/Walter_R._Evans
+ 142. file://localhost/wiki/Roger_W._Brockett
+ 143. file://localhost/wiki/Arthur_E._Bryson
+ 144. file://localhost/wiki/John_G._Truxal
+ 145. file://localhost/wiki/Rutherford_Aris
+ 146. file://localhost/wiki/Eliahu_I._Jury
+ 147. file://localhost/wiki/Jose_B._Cruz,_Jr.
+ 148. file://localhost/wiki/Michael_Athans
+ 149. file://localhost/wiki/Elmer_G._Gilbert
+ 150. file://localhost/wiki/Rudolf_E._Kalman
+ 151. file://localhost/wiki/Lotfi_A._Zadeh
+ 152. file://localhost/wiki/Yu-Chi_Ho
+ 153. file://localhost/wiki/W._Harmon_Ray
+ 154. file://localhost/wiki/Template:Richard_E._Bellman_Control_Heritage_Award
+ 155. file://localhost/wiki/Template:Richard_E._Bellman_Control_Heritage_Award_1979-2000_Laureates
+ 156. file://localhost/wiki/Template:Richard_E._Bellman_Control_Heritage_Award_Laureates_2001-2025
+ 157. file://localhost/wiki/Template:Winners_of_the_National_Medal_of_Science
+ 158. file://localhost/wiki/Template_talk:Winners_of_the_National_Medal_of_Science
+ 159. http://en.wikipedia.org/w/index.php?title=Template:Winners_of_the_National_Medal_of_Science&action=edit
+ 160. file://localhost/wiki/National_Medal_of_Science
+ 161. file://localhost/wiki/Laureate
+ 162. file://localhost/wiki/Roger_Adams
+ 163. file://localhost/wiki/Othmar_H._Ammann
+ 164. file://localhost/wiki/Theodosius_Dobzhansky
+ 165. file://localhost/wiki/Neal_Elgar_Miller
+ 166. file://localhost/wiki/Herbert_A._Simon
+ 167. file://localhost/wiki/Anne_Anastasi
+ 168. file://localhost/wiki/George_Stigler
+ 169. file://localhost/wiki/Milton_Friedman
+ 170. file://localhost/wiki/Leonid_Hurwicz
+ 171. file://localhost/wiki/Patrick_Suppes
+ 172. file://localhost/wiki/Robert_Kates
+ 173. file://localhost/wiki/George_Armitage_Miller
+ 174. file://localhost/wiki/Eleanor_J._Gibson
+ 175. file://localhost/wiki/Robert_K._Merton
+ 176. file://localhost/wiki/Roger_N._Shepard
+ 177. file://localhost/wiki/Paul_Samuelson
+ 178. file://localhost/wiki/William_Kaye_Estes
+ 179. file://localhost/wiki/William_Julius_Wilson
+ 180. file://localhost/wiki/Robert_M._Solow
+ 181. file://localhost/wiki/Gary_Becker
+ 182. file://localhost/wiki/George_Bass_(archaeologist)
+ 183. file://localhost/wiki/R._Duncan_Luce
+ 184. file://localhost/wiki/Kenneth_Arrow
+ 185. file://localhost/wiki/Gordon_H._Bower
+ 186. file://localhost/wiki/Michael_I._Posner
+ 187. file://localhost/wiki/C._B._van_Niel
+ 188. file://localhost/wiki/Marshall_W._Nirenberg
+ 189. file://localhost/wiki/Francis_Peyton_Rous
+ 190. file://localhost/wiki/George_G._Simpson
+ 191. file://localhost/w/index.php?title=Donald_D._Van_Slyke&action=edit&redlink=1
+ 192. file://localhost/wiki/Edward_F._Knipling
+ 193. file://localhost/wiki/Fritz_Albert_Lipmann
+ 194. file://localhost/wiki/William_C._Rose
+ 195. file://localhost/wiki/Sewall_Wright
+ 196. file://localhost/wiki/Kenneth_S._Cole
+ 197. file://localhost/wiki/Harry_Harlow
+ 198. file://localhost/wiki/Michael_Heidelberger
+ 199. file://localhost/wiki/Alfred_Sturtevant
+ 200. file://localhost/wiki/Horace_Barker
+ 201. file://localhost/wiki/Bernard_Brodie_(biochemist)
+ 202. file://localhost/wiki/Detlev_Bronk
+ 203. file://localhost/wiki/Jay_Lush
+ 204. file://localhost/wiki/Burrhus_Frederic_Skinner
+ 205. file://localhost/wiki/Robert_Huebner
+ 206. file://localhost/wiki/Ernst_Mayr
+ 207. file://localhost/wiki/Barbara_McClintock
+ 208. file://localhost/wiki/Albert_Sabin
+ 209. file://localhost/wiki/Daniel_I._Arnon
+ 210. file://localhost/wiki/Earl_W._Sutherland,_Jr.
+ 211. file://localhost/wiki/Britton_Chance
+ 212. file://localhost/wiki/Erwin_Chargaff
+ 213. file://localhost/wiki/James_V._Neel
+ 214. file://localhost/w/index.php?title=James_Augustine_Hannon&action=edit&redlink=1
+ 215. file://localhost/wiki/Hallowell_Davis
+ 216. file://localhost/w/index.php?title=Paul_Gyorgy&action=edit&redlink=1
+ 217. file://localhost/w/index.php?title=Sterling_Brown_Hendricks&action=edit&redlink=1
+ 218. file://localhost/wiki/Orville_Vogel
+ 219. file://localhost/wiki/Roger_C.L._Guillemin
+ 220. file://localhost/wiki/Keith_Roberts_Porter
+ 221. file://localhost/wiki/Efraim_Racker
+ 222. file://localhost/wiki/E._O._Wilson
+ 223. file://localhost/wiki/Robert_H._Burris
+ 224. file://localhost/w/index.php?title=Elizabeth_C._Crosby&action=edit&redlink=1
+ 225. file://localhost/wiki/Arthur_Kornberg
+ 226. file://localhost/wiki/Severo_Ochoa
+ 227. file://localhost/w/index.php?title=Earl_Reece_Stadtman&action=edit&redlink=1
+ 228. file://localhost/wiki/George_Ledyard_Stebbins
+ 229. file://localhost/wiki/Paul_Alfred_Weiss
+ 230. file://localhost/wiki/Philip_Handler
+ 231. file://localhost/wiki/Seymour_Benzer
+ 232. file://localhost/w/index.php?title=Glenn_W._Burton&action=edit&redlink=1
+ 233. file://localhost/wiki/Mildred_Cohn
+ 234. file://localhost/w/index.php?title=Howard_L._Bachrach&action=edit&redlink=1
+ 235. file://localhost/wiki/Paul_Berg
+ 236. file://localhost/wiki/Wendell_L._Roelofs
+ 237. file://localhost/wiki/Berta_Scharrer
+ 238. file://localhost/wiki/Stanley_Cohen_(biochemist)
+ 239. file://localhost/wiki/Donald_Henderson
+ 240. file://localhost/wiki/Vernon_Mountcastle
+ 241. file://localhost/wiki/George_Emil_Palade
+ 242. file://localhost/wiki/Joan_A._Steitz
+ 243. file://localhost/wiki/Michael_E._Debakey
+ 244. file://localhost/wiki/Theodor_O._Diener
+ 245. file://localhost/wiki/Harry_Eagle
+ 246. file://localhost/wiki/Har_Gobind_Khorana
+ 247. file://localhost/wiki/Rita_Levi-Montalcini
+ 248. file://localhost/wiki/Michael_S._Brown
+ 249. file://localhost/wiki/Stanley_Norman_Cohen
+ 250. file://localhost/wiki/Joseph_L._Goldstein
+ 251. file://localhost/wiki/Maurice_Hilleman
+ 252. file://localhost/wiki/Eric_R._Kandel
+ 253. file://localhost/wiki/Rosalyn_S._Yalow
+ 254. file://localhost/wiki/Katherine_Esau
+ 255. file://localhost/wiki/Viktor_Hamburger
+ 256. file://localhost/wiki/Philip_Leder
+ 257. file://localhost/wiki/Joshua_Lederberg
+ 258. file://localhost/wiki/Roger_W._Sperry
+ 259. file://localhost/w/index.php?title=Harland_G._Wood&action=edit&redlink=1
+ 260. file://localhost/wiki/Baruj_Benacerraf
+ 261. file://localhost/wiki/Herbert_W._Boyer
+ 262. file://localhost/wiki/Daniel_E._Koshland,_Jr.
+ 263. file://localhost/wiki/Edward_B._Lewis
+ 264. file://localhost/wiki/David_G._Nathan
+ 265. file://localhost/wiki/E._Donnall_Thomas
+ 266. file://localhost/wiki/Mary_Ellen_Avery
+ 267. file://localhost/wiki/G._Evelyn_Hutchinson
+ 268. file://localhost/wiki/Elvin_A._Kabat
+ 269. file://localhost/wiki/Salvador_Luria
+ 270. file://localhost/w/index.php?title=Paul_A._Marks&action=edit&redlink=1
+ 271. file://localhost/wiki/Folke_K_Skoog
+ 272. file://localhost/wiki/Paul_C._Zamecnik
+ 273. file://localhost/wiki/Maxine_Singer
+ 274. file://localhost/wiki/Howard_M._Temin
+ 275. file://localhost/wiki/Daniel_Nathans
+ 276. file://localhost/wiki/Salome_G._Waelsch
+ 277. file://localhost/wiki/Thomas_Eisner
+ 278. file://localhost/wiki/Elizabeth_F._Neufeld
+ 279. file://localhost/wiki/Alexander_Rich
+ 280. file://localhost/wiki/Ruth_Patrick
+ 281. file://localhost/wiki/James_D._Watson
+ 282. file://localhost/wiki/Robert_A._Weinberg
+ 283. file://localhost/wiki/Bruce_Ames
+ 284. file://localhost/wiki/Janet_Rowley
+ 285. file://localhost/wiki/David_Baltimore
+ 286. file://localhost/wiki/Jared_Diamond
+ 287. file://localhost/wiki/Lynn_Margulis
+ 288. file://localhost/wiki/Nancy_C._Andreasen
+ 289. file://localhost/wiki/Peter_H._Raven
+ 290. file://localhost/wiki/Carl_Woese
+ 291. file://localhost/wiki/Francisco_J._Ayala
+ 292. file://localhost/wiki/Mario_R._Capecchi
+ 293. file://localhost/w/index.php?title=Ann_M._Graybiel&action=edit&redlink=1
+ 294. file://localhost/wiki/Gene_Likens
+ 295. file://localhost/wiki/Victor_A._McKusick
+ 296. file://localhost/wiki/Harold_Varmus
+ 297. file://localhost/wiki/James_E._Darnell
+ 298. file://localhost/wiki/Evelyn_M._Witkin
+ 299. file://localhost/wiki/J._Michael_Bishop
+ 300. file://localhost/wiki/Solomon_H._Snyder
+ 301. file://localhost/wiki/Charles_Yanofsky
+ 302. file://localhost/wiki/Norman_Borlaug
+ 303. file://localhost/wiki/Phillip_A._Sharp
+ 304. file://localhost/wiki/Thomas_Starzl
+ 305. file://localhost/wiki/Anthony_Fauci
+ 306. file://localhost/wiki/Torsten_N._Wiesel
+ 307. file://localhost/wiki/Rita_R._Colwell
+ 308. file://localhost/wiki/Nina_Fedoroff
+ 309. file://localhost/wiki/Lubert_Stryer
+ 310. file://localhost/wiki/Robert_Lefkowitz
+ 311. file://localhost/wiki/Bert_W._O%27Malley
+ 312. file://localhost/wiki/Francis_S._Collins
+ 313. file://localhost/wiki/Elaine_Fuchs
+ 314. file://localhost/wiki/J._Craig_Venter
+ 315. file://localhost/wiki/F._Albert_Cotton
+ 316. file://localhost/wiki/Gilbert_Stork
+ 317. file://localhost/wiki/Roald_Hoffmann
+ 318. file://localhost/wiki/George_C._Pimentel
+ 319. file://localhost/wiki/Richard_N._Zare
+ 320. file://localhost/wiki/Harry_B._Gray
+ 321. file://localhost/wiki/Yuan_Tseh_Lee
+ 322. file://localhost/wiki/Carl_S._Marvel
+ 323. file://localhost/wiki/Frank_H._Westheimer
+ 324. file://localhost/wiki/William_Summer_Johnson
+ 325. file://localhost/wiki/Walter_H._Stockmayer
+ 326. file://localhost/wiki/Max_Tishler
+ 327. file://localhost/wiki/William_O._Baker
+ 328. file://localhost/wiki/Konrad_E._Bloch
+ 329. file://localhost/wiki/Elias_J._Corey
+ 330. file://localhost/wiki/Richard_Barry_Bernstein
+ 331. file://localhost/wiki/Melvin_Calvin
+ 332. file://localhost/wiki/Rudolph_Marcus
+ 333. file://localhost/wiki/Harden_M._McConnell
+ 334. file://localhost/wiki/Elkan_Blout
+ 335. file://localhost/wiki/Karl_Folkers
+ 336. file://localhost/wiki/John_D._Roberts
+ 337. file://localhost/wiki/Ronald_Breslow
+ 338. file://localhost/wiki/Gertrude_B._Elion
+ 339. file://localhost/wiki/Dudley_R._Herschbach
+ 340. file://localhost/wiki/Glenn_T._Seaborg
+ 341. file://localhost/wiki/Howard_Ensign_Simmons,_Jr.
+ 342. file://localhost/wiki/Donald_J._Cram
+ 343. file://localhost/wiki/Norman_Hackerman
+ 344. file://localhost/wiki/George_S._Hammond
+ 345. file://localhost/wiki/Thomas_Cech
+ 346. file://localhost/wiki/Isabella_L._Karle
+ 347. file://localhost/w/index.php?title=Norman_Davidson&action=edit&redlink=1
+ 348. file://localhost/wiki/Darleane_C._Hoffman
+ 349. file://localhost/w/index.php?title=Harold_S._Johnston&action=edit&redlink=1
+ 350. file://localhost/wiki/John_W._Cahn
+ 351. file://localhost/wiki/George_M._Whitesides
+ 352. file://localhost/wiki/Stuart_A._Rice
+ 353. file://localhost/wiki/John_Ross_(chemist)
+ 354. file://localhost/wiki/Susan_Solomon
+ 355. file://localhost/w/index.php?title=John_D._Baldeschwieler&action=edit&redlink=1
+ 356. file://localhost/wiki/Ralph_F._Hirschmann
+ 357. file://localhost/wiki/Ernest_R._Davidson
+ 358. file://localhost/wiki/Gabor_A._Somorjai
+ 359. file://localhost/w/index.php?title=John_I._Brauman&action=edit&redlink=1
+ 360. file://localhost/wiki/Stephen_J._Lippard
+ 361. file://localhost/w/index.php?title=Marvin_H._Caruthers&action=edit&redlink=1
+ 362. file://localhost/wiki/Peter_Dervan
+ 363. file://localhost/wiki/Mostafa_El-Sayed
+ 364. file://localhost/wiki/Joanna_S._Fowler
+ 365. file://localhost/wiki/JoAnne_Stubbe
+ 366. file://localhost/wiki/Theodore_von_Karman
+ 367. file://localhost/wiki/Vannevar_Bush
+ 368. file://localhost/wiki/John_Robinson_Pierce
+ 369. file://localhost/wiki/Charles_S._Draper
+ 370. file://localhost/wiki/Hugh_L._Dryden
+ 371. file://localhost/wiki/Clarence_L._Johnson
+ 372. file://localhost/wiki/Warren_K._Lewis
+ 373. file://localhost/wiki/Claude_E._Shannon
+ 374. file://localhost/wiki/Edwin_H._Land
+ 375. file://localhost/wiki/Igor_I._Sikorsky
+ 376. file://localhost/wiki/J._Presper_Eckert
+ 377. file://localhost/wiki/Nathan_M._Newmark
+ 378. file://localhost/wiki/Jack_St._Clair_Kilby
+ 379. file://localhost/wiki/George_E._Mueller
+ 380. file://localhost/wiki/Harold_E._Edgerton
+ 381. file://localhost/wiki/Richard_T._Whitcomb
+ 382. file://localhost/wiki/Rudolf_Kompfner
+ 383. file://localhost/wiki/Ralph_Brazelton_Peck
+ 384. file://localhost/wiki/Abel_Wolman
+ 385. file://localhost/wiki/Manson_Benedict
+ 386. file://localhost/wiki/William_Hayward_Pickering
+ 387. file://localhost/wiki/Frederick_Terman
+ 388. file://localhost/wiki/Wernher_von_Braun
+ 389. file://localhost/wiki/Morris_Cohen_(scientist)
+ 390. file://localhost/wiki/Peter_C._Goldmark
+ 391. file://localhost/wiki/Erwin_Wilhelm_M%C3%BCller
+ 392. file://localhost/wiki/Emmett_N._Leith
+ 393. file://localhost/wiki/Raymond_D._Mindlin
+ 394. file://localhost/wiki/Robert_N._Noyce
+ 395. file://localhost/w/index.php?title=Earl_R._Parker&action=edit&redlink=1
+ 396. file://localhost/wiki/Simon_Ramo
+ 397. file://localhost/wiki/Edward_H._Heinemann
+ 398. file://localhost/w/index.php?title=Donald_L._Katz&action=edit&redlink=1
+ 399. file://localhost/wiki/William_R._Hewlett
+ 400. file://localhost/wiki/George_Low
+ 401. file://localhost/w/index.php?title=John_G._Trump&action=edit&redlink=1
+ 402. file://localhost/wiki/Hans_Wolfgang_Liepmann
+ 403. file://localhost/wiki/Tung-Yen_Lin
+ 404. file://localhost/wiki/Bernard_M._Oliver
+ 405. file://localhost/wiki/Robert_Byron_Bird
+ 406. file://localhost/wiki/H._Bolton_Seed
+ 407. file://localhost/wiki/Ernst_Weber_(engineer)
+ 408. file://localhost/wiki/Daniel_C._Drucker
+ 409. file://localhost/wiki/Willis_M._Hawkins
+ 410. file://localhost/wiki/George_W._Housner
+ 411. file://localhost/wiki/Harry_George_Drickamer
+ 412. file://localhost/w/index.php?title=Herbert_E._Grier&action=edit&redlink=1
+ 413. file://localhost/wiki/Mildred_S._Dresselhaus
+ 414. file://localhost/wiki/Nick_Holonyak_Jr.
+ 415. file://localhost/wiki/George_Heilmeier
+ 416. file://localhost/wiki/Luna_B._Leopold
+ 417. file://localhost/wiki/H._Guyford_Stever
+ 418. file://localhost/wiki/Calvin_F._Quate
+ 419. file://localhost/wiki/John_Roy_Whinnery
+ 420. file://localhost/wiki/Alfred_Y._Cho
+ 421. file://localhost/wiki/Ray_W._Clough
+ 422. file://localhost/wiki/Hermann_A._Haus
+ 423. file://localhost/wiki/James_L._Flanagan
+ 424. file://localhost/wiki/C._Kumar_N._Patel
+ 425. file://localhost/wiki/Eli_Ruckenstein
+ 426. file://localhost/wiki/Kenneth_N._Stevens
+ 427. file://localhost/wiki/Yuan-Cheng_Fung
+ 428. file://localhost/wiki/Andreas_Acrivos
+ 429. file://localhost/wiki/Leo_Beranek
+ 430. file://localhost/w/index.php?title=John_M._Prausnitz&action=edit&redlink=1
+ 431. file://localhost/wiki/Edwin_N._Lightfoot
+ 432. file://localhost/wiki/Jan_D._Achenbach
+ 433. file://localhost/wiki/Tobin_J._Marks
+ 434. file://localhost/wiki/Robert_S._Langer
+ 435. file://localhost/wiki/David_J._Wineland
+ 436. file://localhost/wiki/Rudolf_E._Kalman
+ 437. file://localhost/wiki/Norbert_Wiener
+ 438. file://localhost/wiki/Solomon_Lefschetz
+ 439. file://localhost/wiki/Marston_Morse
+ 440. file://localhost/wiki/Oscar_Zariski
+ 441. file://localhost/wiki/John_Milnor
+ 442. file://localhost/wiki/Paul_Cohen_(mathematician)
+ 443. file://localhost/wiki/Jerzy_Neyman
+ 444. file://localhost/wiki/William_Feller
+ 445. file://localhost/wiki/Richard_Brauer
+ 446. file://localhost/wiki/John_Tukey
+ 447. file://localhost/wiki/Kurt_G%C3%B6del
+ 448. file://localhost/wiki/John_W._Backus
+ 449. file://localhost/wiki/Shiing-Shen_Chern
+ 450. file://localhost/wiki/George_Dantzig
+ 451. file://localhost/wiki/Kurt_O._Friedrichs
+ 452. file://localhost/wiki/Hassler_Whitney
+ 453. file://localhost/wiki/Joseph_Leo_Doob
+ 454. file://localhost/wiki/Donald_Knuth
+ 455. file://localhost/wiki/Marshall_Harvey_Stone
+ 456. file://localhost/wiki/Herman_Goldstine
+ 457. file://localhost/wiki/Isadore_Singer
+ 458. file://localhost/wiki/Peter_Lax
+ 459. file://localhost/wiki/Antoni_Zygmund
+ 460. file://localhost/wiki/Raoul_Bott
+ 461. file://localhost/wiki/Michael_Freedman
+ 462. file://localhost/wiki/Ralph_E._Gomory
+ 463. file://localhost/wiki/Joseph_B._Keller
+ 464. file://localhost/wiki/Samuel_Karlin
+ 465. file://localhost/wiki/Saunders_MacLane
+ 466. file://localhost/wiki/Donald_C._Spencer
+ 467. file://localhost/wiki/George_F._Carrier
+ 468. file://localhost/wiki/Stephen_Cole_Kleene
+ 469. file://localhost/wiki/John_McCarthy_(computer_scientist)
+ 470. file://localhost/wiki/Alberto_Calder%C3%B3n
+ 471. file://localhost/wiki/Allen_Newell
+ 472. file://localhost/wiki/Martin_David_Kruskal
+ 473. file://localhost/wiki/John_Cocke
+ 474. file://localhost/wiki/Louis_Nirenberg
+ 475. file://localhost/wiki/Richard_Karp
+ 476. file://localhost/wiki/Stephen_Smale
+ 477. file://localhost/wiki/Shing-Tung_Yau
+ 478. file://localhost/wiki/Cathleen_Synge_Morawetz
+ 479. file://localhost/wiki/Felix_Browder
+ 480. file://localhost/wiki/Ronald_Coifman
+ 481. file://localhost/wiki/John_Griggs_Thompson
+ 482. file://localhost/wiki/Karen_K._Uhlenbeck
+ 483. file://localhost/wiki/Calyampudi_Radhakrishna_Rao
+ 484. file://localhost/wiki/Elias_M._Stein
+ 485. file://localhost/wiki/James_Glimm
+ 486. file://localhost/wiki/Carl_R._de_Boor
+ 487. file://localhost/wiki/Dennis_Sullivan
+ 488. file://localhost/wiki/Bradley_Efron
+ 489. file://localhost/wiki/Hyman_Bass
+ 490. file://localhost/wiki/Leonard_Kleinrock
+ 491. file://localhost/wiki/Andrew_Viterbi
+ 492. file://localhost/wiki/Luis_Walter_Alvarez
+ 493. file://localhost/wiki/Julian_Schwinger
+ 494. file://localhost/wiki/Harold_Clayton_Urey
+ 495. file://localhost/wiki/Robert_Burns_Woodward
+ 496. file://localhost/wiki/John_Bardeen
+ 497. file://localhost/wiki/Peter_Debye
+ 498. file://localhost/wiki/Leon_M._Lederman
+ 499. file://localhost/wiki/William_Rubey
+ 500. file://localhost/wiki/Jacob_Bjerknes
+ 501. file://localhost/wiki/Subrahmanyan_Chandrasekhar
+ 502. file://localhost/wiki/Henry_Eyring
+ 503. file://localhost/wiki/John_H._Van_Vleck
+ 504. file://localhost/wiki/Vladimir_K._Zworykin
+ 505. file://localhost/wiki/Jesse_Beams
+ 506. file://localhost/wiki/Francis_Birch_(geophysicist)
+ 507. file://localhost/wiki/Gregory_Breit
+ 508. file://localhost/wiki/Louis_Hammett
+ 509. file://localhost/wiki/George_Kistiakowsky
+ 510. file://localhost/wiki/Paul_Bartlett
+ 511. file://localhost/wiki/Herbert_Friedman
+ 512. file://localhost/wiki/Lars_Onsager
+ 513. file://localhost/wiki/Eugene_Wigner
+ 514. file://localhost/wiki/Herbert_C._Brown
+ 515. file://localhost/wiki/Wolfgang_Panofsky
+ 516. file://localhost/wiki/Robert_H._Dicke
+ 517. file://localhost/wiki/Allan_R._Sandage
+ 518. file://localhost/wiki/John_C._Slater
+ 519. file://localhost/wiki/John_A._Wheeler
+ 520. file://localhost/wiki/Saul_Winstein
+ 521. file://localhost/wiki/Carl_Djerassi
+ 522. file://localhost/wiki/Maurice_Ewing
+ 523. file://localhost/wiki/Arie_Jan_Haagen-Smit
+ 524. file://localhost/wiki/Vladimir_Haensel
+ 525. file://localhost/wiki/Frederick_Seitz
+ 526. file://localhost/wiki/Robert_Rathbun_Wilson
+ 527. file://localhost/wiki/Nicolaas_Bloembergen
+ 528. file://localhost/wiki/Paul_Flory
+ 529. file://localhost/wiki/William_Alfred_Fowler
+ 530. file://localhost/wiki/Linus_Carl_Pauling
+ 531. file://localhost/wiki/Kenneth_Sanborn_Pitzer
+ 532. file://localhost/wiki/Hans_A._Bethe
+ 533. file://localhost/w/index.php?title=Joseph_Hirschfelder&action=edit&redlink=1
+ 534. file://localhost/wiki/Lewis_Sarett
+ 535. file://localhost/wiki/E._Bright_Wilson
+ 536. file://localhost/wiki/Chien-Shiung_Wu
+ 537. file://localhost/wiki/Samuel_Goudsmit
+ 538. file://localhost/wiki/Herbert_S._Gutowsky
+ 539. file://localhost/wiki/Frederick_Rossini
+ 540. file://localhost/wiki/Verner_Suomi
+ 541. file://localhost/wiki/Henry_Taube
+ 542. file://localhost/wiki/George_Uhlenbeck
+ 543. file://localhost/wiki/Richard_P._Feynman
+ 544. file://localhost/wiki/Herman_Mark
+ 545. file://localhost/wiki/Edward_M._Purcell
+ 546. file://localhost/w/index.php?title=John_Sinfelt&action=edit&redlink=1
+ 547. file://localhost/wiki/Lyman_Spitzer
+ 548. file://localhost/wiki/Victor_F._Weisskopf
+ 549. file://localhost/wiki/Philip_Warren_Anderson
+ 550. file://localhost/wiki/Yoichiro_Nambu
+ 551. file://localhost/wiki/Edward_Teller
+ 552. file://localhost/wiki/Charles_H._Townes
+ 553. file://localhost/wiki/E._Margaret_Burbidge
+ 554. file://localhost/wiki/Maurice_Goldhaber
+ 555. file://localhost/wiki/Helmut_Landsberg
+ 556. file://localhost/wiki/Walter_Munk
+ 557. file://localhost/wiki/Frederick_Reines
+ 558. file://localhost/wiki/Bruno_B._Rossi
+ 559. file://localhost/wiki/J._Robert_Schrieffer
+ 560. file://localhost/w/index.php?title=Solomon_Buchsbaum&action=edit&redlink=1
+ 561. file://localhost/w/index.php?title=Horace_Crane&action=edit&redlink=1
+ 562. file://localhost/wiki/Herman_Feshbach
+ 563. file://localhost/wiki/Robert_Hofstadter
+ 564. file://localhost/wiki/Chen_Ning_Yang
+ 565. file://localhost/wiki/Philip_Abelson
+ 566. file://localhost/wiki/Walter_Elsasser
+ 567. file://localhost/wiki/Paul_C._Lauterbur
+ 568. file://localhost/wiki/George_Pake
+ 569. file://localhost/wiki/James_A._Van_Allen
+ 570. file://localhost/wiki/D._Allan_Bromley
+ 571. file://localhost/wiki/Chu_Ching-wu
+ 572. file://localhost/wiki/Walter_Kohn
+ 573. file://localhost/wiki/Norman_F._Ramsey
+ 574. file://localhost/wiki/Jack_Steinberger
+ 575. file://localhost/wiki/Arnold_O._Beckman
+ 576. file://localhost/wiki/Eugene_Parker
+ 577. file://localhost/w/index.php?title=Robert_Sharp&action=edit&redlink=1
+ 578. file://localhost/wiki/Henry_Stommel
+ 579. file://localhost/wiki/Allan_McLeod_Cormack
+ 580. file://localhost/wiki/Edwin_M._McMillan
+ 581. file://localhost/wiki/Robert_Pound
+ 582. file://localhost/wiki/Roger_Revelle
+ 583. file://localhost/wiki/Arthur_L._Schawlow
+ 584. file://localhost/wiki/Ed_Stone
+ 585. file://localhost/wiki/Steven_Weinberg
+ 586. file://localhost/wiki/Eugene_M._Shoemaker
+ 587. file://localhost/wiki/Val_Fitch
+ 588. file://localhost/wiki/Vera_Rubin
+ 589. file://localhost/wiki/Albert_Overhauser
+ 590. file://localhost/wiki/Frank_Press
+ 591. file://localhost/wiki/Hans_Dehmelt
+ 592. file://localhost/wiki/Peter_Goldreich
+ 593. file://localhost/wiki/Wallace_S._Broecker
+ 594. file://localhost/wiki/Marshall_Rosenbluth
+ 595. file://localhost/wiki/Martin_Schwarzschild
+ 596. file://localhost/wiki/George_Wetherill
+ 597. file://localhost/wiki/Don_L._Anderson
+ 598. file://localhost/wiki/John_N._Bahcall
+ 599. file://localhost/wiki/James_Cronin
+ 600. file://localhost/wiki/Leo_Kadanoff
+ 601. file://localhost/wiki/Willis_E._Lamb
+ 602. file://localhost/wiki/Jeremiah_P._Ostriker
+ 603. file://localhost/wiki/Gilbert_F._White
+ 604. file://localhost/wiki/Marvin_L._Cohen
+ 605. file://localhost/wiki/Raymond_Davis_Jr.
+ 606. file://localhost/wiki/Charles_Keeling
+ 607. file://localhost/wiki/Richard_Garwin
+ 608. file://localhost/wiki/W._Jason_Morgan
+ 609. file://localhost/wiki/Edward_Witten
+ 610. file://localhost/wiki/G._Brent_Dalrymple
+ 611. file://localhost/wiki/Riccardo_Giacconi
+ 612. file://localhost/w/index.php?title=Robert_N._Clayton&action=edit&redlink=1
+ 613. file://localhost/wiki/Ralph_A._Alpher
+ 614. file://localhost/wiki/Lonnie_Thompson
+ 615. file://localhost/wiki/Daniel_Kleppner
+ 616. file://localhost/w/index.php?title=Fay_Ajzenberg-Selove&action=edit&redlink=1
+ 617. file://localhost/wiki/Charles_Pence_Slichter
+ 618. file://localhost/wiki/Berni_Alder
+ 619. file://localhost/wiki/James_E._Gunn
+ 620. file://localhost/wiki/Wikipedia:Persondata
+ 621. http://en.wikipedia.org/wiki/Charles_Stark_Draper
+ 622. file://localhost/wiki/Special:Categories
+ 623. file://localhost/wiki/Category:1901_births
+ 624. file://localhost/wiki/Category:1987_deaths
+ 625. file://localhost/wiki/Category:American_aerospace_engineers
+ 626. file://localhost/wiki/Category:American_engineers
+ 627. file://localhost/wiki/Category:American_inventors
+ 628. file://localhost/wiki/Category:Control_theorists
+ 629. file://localhost/wiki/Category:Massachusetts_Institute_of_Technology_faculty
+ 630. file://localhost/wiki/Category:Massachusetts_Institute_of_Technology_alumni
+ 631. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 632. file://localhost/wiki/Category:National_Medal_of_Science_laureates
+ 633. file://localhost/wiki/Category:Stanford_University_alumni
+ 634. file://localhost/wiki/Category:University_of_Missouri_alumni
+ 635. file://localhost/wiki/Category:Richard_E._Bellman_Control_Heritage_Award_recipients
+ 636. file://localhost/w/index.php?title=Special:UserLogin&returnto=Charles_Stark_Draper
+ 637. file://localhost/wiki/Charles_Stark_Draper
+ 638. file://localhost/wiki/Talk:Charles_Stark_Draper
+ 639. file://localhost/wiki/Charles_Stark_Draper
+ 640. file://localhost/w/index.php?title=Charles_Stark_Draper&action=edit
+ 641. file://localhost/w/index.php?title=Charles_Stark_Draper&action=history
+ 642. file://localhost/wiki/Main_Page
+ 643. file://localhost/wiki/Portal:Contents
+ 644. file://localhost/wiki/Portal:Featured_content
+ 645. file://localhost/wiki/Portal:Current_events
+ 646. file://localhost/wiki/Special:Random
+ 647. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 648. file://localhost/wiki/Help:Contents
+ 649. file://localhost/wiki/Wikipedia:About
+ 650. file://localhost/wiki/Wikipedia:Community_portal
+ 651. file://localhost/wiki/Special:RecentChanges
+ 652. file://localhost/wiki/Wikipedia:Contact_us
+ 653. file://localhost/wiki/Special:WhatLinksHere/Charles_Stark_Draper
+ 654. file://localhost/wiki/Special:RecentChangesLinked/Charles_Stark_Draper
+ 655. file://localhost/wiki/Wikipedia:Upload
+ 656. file://localhost/wiki/Special:SpecialPages
+ 657. file://localhost/w/index.php?title=Charles_Stark_Draper&oldid=408398045
+ 658. file://localhost/w/index.php?title=Special:Cite&page=Charles_Stark_Draper&id=408398045
+ 659. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Charles+Stark+Draper
+ 660. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Charles+Stark+Draper&oldid=408398045&writer=rl
+ 661. file://localhost/w/index.php?title=Charles_Stark_Draper&printable=yes
+ 662. http://de.wikipedia.org/wiki/Charles_Stark_Draper
+ 663. http://fr.wikipedia.org/wiki/Charles_Stark_Draper
+ 664. http://pt.wikipedia.org/wiki/Charles_Stark_Draper
+ 665. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 666. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 667. http://www.wikimediafoundation.org/
+ 668. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 669. http://wikimediafoundation.org/wiki/Privacy_policy
+ 670. file://localhost/wiki/Wikipedia:About
+ 671. file://localhost/wiki/Wikipedia:General_disclaimer
+ 672. http://www.mediawiki.org/
+ 673. http://wikimediafoundation.org/
+
+   Hidden links:
+ 674. file://localhost/wiki/File:Charles_Stark_Drape.jpg
+ 675. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html
+ 676. file://localhost/home/memfis/projects/put/tsiss/Downloads/charles_stark_draper.html
+ 677. file://localhost/wiki/Main_Page
+ 678. http://creativecommons.org/licenses/by-sa/3.0/

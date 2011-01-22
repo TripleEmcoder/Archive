@@ -1,0 +1,608 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Frank J. Sprague
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   Frank J. Sprague
+   Frank Julian Sprague (1857-1934) American inventor, Father of Electric
+   Traction
+   Born July 25, 1857(1857-07-25)
+   [7]Milford, Connecticut
+   Died October 25, 1934(1934-10-25) (aged 77)
+   Residence [8]United States
+   Nationality [9]American
+   Fields [10]Electrical engineering
+   [11]Alma mater [12]United States Naval Academy
+   Known for [13]Electric motor
+   Notable awards [14]IEEE Edison Medal
+   [15]Franklin Medal (1921)
+
+   Frank Julian Sprague (July 25, 1857 in [16]Milford, Connecticut -
+   October 25, 1934) was an [17]American [18]naval officer and
+   [19]inventor who contributed to the development of the [20]electric
+   motor, [21]electric railways, and [22]electric elevators. His
+   contributions were especially important in promoting [23]urban
+   development by increasing the size cities could reasonably attain
+   (through better transportation) and by allowing greater concentration
+   of business in commercial sections (through use of electric elevators
+   in [24]skyscrapers). He became known as the "Father of Electric
+   Traction".
+
+   Contents
+
+        * [25]1 Childhood, education
+        * [26]2 U.S. Navy, inventor
+        * [27]3 Joining the emerging electrical industry
+        * [28]4 Richmond: inventing the trolley-pole
+        * [29]5 Electric elevators
+        * [30]6 Multiple unit train controls
+        * [31]7 New York: Grand Central, elevators in skyscrapers
+        * [32]8 Heritage, awards
+        * [33]9 References
+        * [34]10 Further reading
+        * [35]11 External links
+
+[[36]edit] Childhood, education
+
+   Sprague was born in [37]Milford, Connecticut in 1857. He attended
+   [38]Drury High School in [39]North Adams, Massachusetts and excelled in
+   mathematics. In 1874, he won an appointment to the [40]United States
+   Naval Academy in [41]Annapolis, Maryland. There, he graduated seventh
+   (out of thirty-six) in the Class of 1878.
+
+[[42]edit] U.S. Navy, inventor
+
+   He was commissioned as an [43]ensign in the [44]U.S. Navy. During his
+   ensuing naval service, he first served on the [45]USS Richmond, then
+   the [46]USS Minnesota. While his ship was in [47]Newport, Rhode Island,
+   in 1881, Sprague invented the inverted type of [48]dynamo. After he was
+   transferred to the [49]USS Lancaster, flagship of the European
+   Squadron, he installed the first electric call-bell system on a U.S.
+   Navy ship. Sprague took leave to attend the [50]Paris Electrical
+   Exhibition in 1881 and the [51]Crystal Palace Exhibition in
+   [52]Sydenham, England in 1882, where he was on the jury of awards for
+   gas engines, [53]dynamos and lamps.
+
+[[54]edit] Joining the emerging electrical industry
+
+   In 1883, [55]Edward H. Johnson, a business associate of [56]Thomas
+   Edison, persuaded Sprague to resign his naval commission to work for
+   Edison. One of Sprague's significant contributions to the Edison
+   Laboratory at [57]Menlo Park, New Jersey was the introduction of
+   mathematical methods. Prior to his arrival, Edison conducted many
+   costly trial-and-error experiments. Sprague's approach was to calculate
+   using mathematics the optimum parameters and thus save much needless
+   tinkering. He did important work for Edison, including correcting
+   Edison's system of mains and feeders for central station distribution.
+   In 1884, he decided his interests in the exploitation of electricity
+   lay elsewhere, and he left Edison to found the Sprague Electric Railway
+   & Motor Company.
+
+   By 1886, Sprague's company had introduced two important inventions: a
+   constant-speed, non-sparking motor with fixed brushes, and a method to
+   return power to the main supply systems of equipment driven by electric
+   motors. His motor was the first to maintain constant speed under
+   varying load. It was immediately popular, and was endorsed by Edison as
+   the only practical electric motor available. His method of returning
+   power to main supply systems was important in the development of the
+   electric train and the electric elevator.
+
+[[58]edit] Richmond: inventing the trolley-pole
+
+   Postcard of electric trolley-powered streetcars in [59]Richmond,
+   Virginia in 1923, two generations after Frank J. Sprague successfully
+   demonstrated his new system on the hills in 1888. The intersection
+   shown is at 8th & Broad Streets.
+
+   Sprague's inventions included a system on [60]streetcars for collecting
+   electricity from [61]overhead wires. His spring-loaded [62]trolley
+   pole, invented in 1880,^[63][1] used a wheel to travel along the wire.
+   In late 1887 and early 1888, using his trolley system, Sprague
+   installed the first successful large electric street railway system,
+   the [64]Richmond Union Passenger Railway in [65]Richmond, Virginia.
+   Long a transportation obstacle, the hills of Richmond included grades
+   of over 10%, and were an excellent proving ground for acceptance of his
+   new technology in other cities, in contrast to the [66]cable cars which
+   climbed the steepest grades of [67]Nob Hill in [68]San Francisco at the
+   time.
+
+   Within a year, electric power had replaced more costly [69]horsecars in
+   many cities. By 1889 110 electric railways incorporating Sprague's
+   equipment had been begun or planned on several continents. In 1890,
+   Edison, who manufactured most of Sprague's equipment, [70]bought him
+   out, and Sprague turned his attention to electric elevators.
+
+   Sprague's system of electric supply was a great advantage in relation
+   to the first bipolar U-tube overhead lines, in everyday use since 1883
+   on [71]Mödling and Hinterbrühl Tram.
+
+[[72]edit] Electric elevators
+
+   While electrifying the streetcars of Richmond, the increased passenger
+   capacity and speed gave Sprague the notion that similar results could
+   be achieved in vertical transportation: electric elevators. He saw that
+   increasing the capacity of [73]elevator shaft ways would not only save
+   passengers' time, but would also increase the earnings of tall
+   buildings, with height limited by the total floor space taken up in the
+   shaft ways by slow hydraulic-powered elevators.
+
+   In 1892, Sprague founded the Sprague Electric Elevator Company, and
+   with [74]Charles R. Pratt developed the Sprague-Pratt Electric
+   Elevator. The company developed floor control, automatic elevators,
+   acceleration control of car safeties and a number of freight elevators.
+   The Spague-Pratt [75]elevator ran faster and with larger loads than
+   hydraulic or steam elevators, and 584 elevators had been installed
+   worldwide. Sprague then sold his company to the [76]Otis Elevator
+   Company in 1895.
+
+[[77]edit] Multiple unit train controls
+
+   Sprague's experience with elevator control led him to devise a
+   [78]multiple unit system of electric railway operation, which
+   accelerated the development of [79]electric traction. In the multiple
+   unit system, each car of the train carries electric traction motors. By
+   means of relays energized by train-line wires, the [80]engineer (or
+   [81]motorman) commands all of the traction motors in the train to act
+   together. For lighter trains there is no need for [82]locomotives, so
+   every car in the train can generate revenue. Where locomotives are
+   used, one person can control all of them.
+
+   Sprague's first multiple unit order was from the [83]South Side
+   Elevated Railroad (the first of several elevated railways in locally
+   known as the [84]"L") in [85]Chicago, Illinois. This success was
+   quickly followed by substantial multiple-unit contracts in
+   [86]Brooklyn, New York and [87]Boston, Massachusetts.
+
+[[88]edit] New York: Grand Central, elevators in skyscrapers
+
+   From 1896 to 1900 Sprague served on the Commission for Terminal
+   Electrification of the [89]New York Central Railroad, including the
+   [90]Grand Central Terminal in [91]New York City, where he designed a
+   system of automatic train control to ensure compliance with trackside
+   signals. He founded the Sprague Safety Control & Signal Corporation to
+   develop and build this system. Along with [92]William J. Wilgus, he
+   designed the Wilgus-Sprague bottom contact [93]third rail system used
+   by the railroads leading into Grand Central Terminal.^[94][2]
+
+   During [95]World War I, Sprague served on the Naval Consulting Board.
+   Then, in the 1920s, he devised a method for safely running two
+   independent elevators, local and express, in a single shaft, to
+   conserve floor space. He sold this system, along with systems for
+   activating elevator car safety systems when acceleration or speed
+   became too great, to the [96]Westinghouse Company.
+
+[[97]edit] Heritage, awards
+
+   The effect of Sprague's developments in electric traction was to permit
+   an expansion in the size of cities, while his development of the
+   elevator permitted greater concentration in cities' commercial sections
+   and increased the profitability of commercial buildings. Sprague's
+   inventions over 100 years ago made possible modern [98]light rail and
+   [99]rapid transit systems which still function on the same principles
+   today.
+
+   Sprague was awarded the gold medal at the [100]Paris Electrical
+   Exhibition in 1889, the grand prize at the [101]St. Louis Exhibition in
+   1904, the [102]Elliott Cresson Medal in 1904, the [103]Edison Medal of
+   the [104]American Institute of Electrical Engineers, now [105]IEEE, in
+   1910 'For meritorious achievement in electrical science, engineering
+   and arts as exemplified in his contributions thereto', the
+   [106]Franklin Medal in 1921 and the [107]John Fritz Gold Medal
+   (posthumously) in 1935.
+
+   "All through his life and up to his last day, Frank Sprague had a
+   prodigious capacity for work," his son Robert wrote in 1935. "And once
+   having made up his mind on a new invention or a new line of work, he
+   was tireless and always striving for improvement. He had a brilliantly
+   alert mind and was impatient of any half-way compromise. His interest
+   in his work never ceased; only a few hours before the end, he asked to
+   have a newly designed model of his latest invention brought to his
+   bedside."
+
+   Frank and Harriet Sprague had two sons, Robert and Julian. Robert
+   founded the [108]Sprague Electric Company which became a leading
+   manufacturer of capacitors and other electronic components. The company
+   was later bought by Vishay in the 1990s.
+
+   After Sprague died in 1934, his widow Harriet turned over a substantial
+   amount of material from his collection to the [109]New York Public
+   Library, where it remains today accessible to the public via the rare
+   books division. He was buried at [110]Arlington National Cemetery in
+   [111]Arlington, Virginia, and she was interred beside him after her
+   death in 1969.
+
+   In 1959, Harriet Sprague had donated funds for the Sprague Building at
+   the [112]Shore Line Trolley Museum at [113]East Haven, Connecticut, not
+   far from Sprague's boyhood home in Milford. The museum is the oldest
+   operating trolley museum in the United States, and has one of the
+   largest collections of trolley artifacts in the United States.
+
+   In 1999, two of Frank and Harriet's grandsons, John L. Sprague and
+   Peter Sprague, cut the ribbon and started an 1884 Sprague motor at a
+   new exhibit at the Shore Line Trolley Museum. There, a permanent
+   exhibit, "Frank J. Sprague: Inventor, Scientist, Engineer", helps tell
+   the story of the part electricity played in the growth of cities as
+   well as the role of the Father of Electric Traction. Entrepreneur Peter
+   Sprague was Chairman of [114]National Semiconductor from 1965 until
+   1995. John Sprague was President and Chief Executive Officer of Sprague
+   Electric Company from 1981 to 1987.
+
+[[115]edit] References
+
+    1. [116]^ [117]MIT OpenCourseWare | Civil and Environmental
+       Engineering | 1.012 Introduction to Civil Engineering Design,
+       Spring 2002 | Readings | detail
+    2. [118]^ Cudahy, Brian (2003). A Century of Subways: Celebrating 100
+       Years of New York's Underground Railways. New York: Fordham
+       University Press. p. 202. [119]ISBN [120]0823222926.
+
+[[121]edit] Further reading
+
+     * Frederick Dalzell. Engineering Invention: Frank J. Sprague and the
+       U.S. Electrical Industry, 1880-1900. [122]MIT Press, 2009.
+       [123]ISBN 978-0-262-04256-7
+     * William D. Middleton and William D. Middleton III. Frank Julian
+       Sprague: Electrical Inventor and Engineer. Indiana University
+       Press, 2009. [124]ISBN 978-0-253-35383-2
+     * Harold Clarence Passer. Frank Julian Sprague, father of electric
+       traction, 1857-1934. Harvard University Press, 1952.
+     * Harriet Chapman Jones Sprague. Frank J. Sprague and the Edison
+       myth. New York, William-Frederick Press, 1947.
+     * Brittain, J.E. "Frank J. Sprague and the electrification of urban
+       transportation" in [125]Proceedings of the IEEE, Vol. 85 (7), July
+       1997. pp. 1183 – 1184.
+
+[[126]edit] External links
+
+   [127]P vip.svg [128]Biography portal
+     * [129]Arlington National Cemetery
+     * [130]Frank J. Sprague historical information
+     * [131]Another page about Frank J. Sprague
+     * [132]Shore Line Trolley Museum - new permanent exhibit: "Frank J.
+       Sprague: Inventor, Scientist, Engineer"
+     * [133]IEEE Biography of Sprague
+     * [134]Vishay Electronics Company History
+
+
+                [135]v · [136]d · [137]e[138]IEEE Edison Medal
+
+   [139]Elihu Thomson (1909) · Frank J. Sprague (1910) · [140]George
+   Westinghouse (1911) · [141]William Stanley, Jr. (1912) · [142]Charles
+   F. Brush (1913) · [143]Alexander Graham Bell (1914) · [144]Nikola Tesla
+   (1916) · [145]John J. Carty (1917) · [146]Benjamin G. Lamme (1918) ·
+   [147]William Le Roy Emmet (1919) · [148]Mihajlo I. Pupin (1920) ·
+   [149]Cummings C. Chesney (1921) · [150]Robert A. Millikan (1922) ·
+   [151]John W. Lieb (1923) · [152]John W. Howell (1924) · [153]Harris J.
+   Ryan (1925)
+   [154]Complete roster: [155]1909–1925 · [156]1926–1950 ·
+   [157]1951–1975 · [158]1976–2000 · [159]2001–present
+                [160]Persondata
+   Name              Sprague, Frank
+   Alternative names
+   Short description
+   Date of birth     July 25, 1857
+   Place of birth    [161]Milford, Connecticut
+   Date of death     October 25, 1934
+   Place of death
+   Retrieved from "[162]http://en.wikipedia.org/wiki/Frank_J._Sprague"
+   [163]Categories: [164]1857 births | [165]1934 deaths | [166]Thomas
+   Edison | [167]Edison Pioneers | [168]American inventors | [169]American
+   electrical engineers | [170]Pioneers of rail transport | [171]National
+   Inventors Hall of Fame inductees | [172]United States Naval Academy
+   graduates | [173]IEEE Edison Medal recipients | [174]Rail transport
+   designers | [175]People from North Adams, Massachusetts | [176]American
+   people in rail transport | [177]American railroad pioneers
+
+Personal tools
+
+     * [178]Log in / create account
+
+Namespaces
+
+     * [179]Article
+     * [180]Discussion
+
+Variants
+
+Views
+
+     * [181]Read
+     * [182]Edit
+     * [183]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [184]Main page
+     * [185]Contents
+     * [186]Featured content
+     * [187]Current events
+     * [188]Random article
+     * [189]Donate to Wikipedia
+
+Interaction
+
+     * [190]Help
+     * [191]About Wikipedia
+     * [192]Community portal
+     * [193]Recent changes
+     * [194]Contact Wikipedia
+
+Toolbox
+
+     * [195]What links here
+     * [196]Related changes
+     * [197]Upload file
+     * [198]Special pages
+     * [199]Permanent link
+     * [200]Cite this page
+
+Print/export
+
+     * [201]Create a book
+     * [202]Download as PDF
+     * [203]Printable version
+
+Languages
+
+     * [204]Deutsch
+     * [205]Español
+     * [206]Français
+     * [207]Nederlands
+     * [208]日本語
+     * [209]Português
+     * [210]中文
+
+     * This page was last modified on 5 January 2011 at 02:38.
+     * Text is available under the [211]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [212]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [213]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [214]Contact us
+
+     * [215]Privacy policy
+     * [216]About Wikipedia
+     * [217]Disclaimers
+
+     * [218]Powered by MediaWiki
+     * [219]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#p-search
+   7. file://localhost/wiki/Milford,_Connecticut
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/Electrical_engineering
+  11. file://localhost/wiki/Alma_mater
+  12. file://localhost/wiki/United_States_Naval_Academy
+  13. file://localhost/wiki/Electric_motor
+  14. file://localhost/wiki/IEEE_Edison_Medal
+  15. file://localhost/wiki/The_Franklin_Institute_Awards
+  16. file://localhost/wiki/Milford,_Connecticut
+  17. file://localhost/wiki/United_States
+  18. file://localhost/wiki/Navy
+  19. file://localhost/wiki/Inventor
+  20. file://localhost/wiki/Electric_motor
+  21. file://localhost/wiki/Railway_electrification_system
+  22. file://localhost/wiki/Elevator
+  23. file://localhost/wiki/Urbanization
+  24. file://localhost/wiki/Skyscraper
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Childhood.2C_education
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#U.S._Navy.2C_inventor
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Joining_the_emerging_electrical_industry
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Richmond:_inventing_the_trolley-pole
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Electric_elevators
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Multiple_unit_train_controls
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#New_York:_Grand_Central.2C_elevators_in_skyscrapers
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Heritage.2C_awards
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#References
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#Further_reading
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#External_links
+  36. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=1
+  37. file://localhost/wiki/Milford,_Connecticut
+  38. file://localhost/wiki/Drury_High_School
+  39. file://localhost/wiki/North_Adams,_Massachusetts
+  40. file://localhost/wiki/United_States_Naval_Academy
+  41. file://localhost/wiki/Annapolis,_Maryland
+  42. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=2
+  43. file://localhost/wiki/Ensign_(rank)
+  44. file://localhost/wiki/U.S._Navy
+  45. file://localhost/wiki/USS_Richmond_(1860)
+  46. file://localhost/wiki/USS_Minnesota_(1855)
+  47. file://localhost/wiki/Newport,_Rhode_Island
+  48. file://localhost/wiki/Dynamo
+  49. file://localhost/wiki/USS_Lancaster_(1858)
+  50. file://localhost/w/index.php?title=Paris_Electrical_Exhibition&action=edit&redlink=1
+  51. file://localhost/wiki/The_Crystal_Palace
+  52. file://localhost/wiki/Sydenham
+  53. file://localhost/wiki/Dynamo
+  54. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=3
+  55. file://localhost/wiki/Edward_H._Johnson
+  56. file://localhost/wiki/Thomas_Edison
+  57. file://localhost/wiki/Menlo_Park,_New_Jersey
+  58. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=4
+  59. file://localhost/wiki/Richmond,_Virginia
+  60. file://localhost/wiki/Streetcar
+  61. file://localhost/wiki/Overhead_wire
+  62. file://localhost/wiki/Trolley_pole
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#cite_note-0
+  64. file://localhost/wiki/Richmond_Union_Passenger_Railway
+  65. file://localhost/wiki/Richmond,_Virginia
+  66. file://localhost/wiki/Cable_car_(railway)
+  67. file://localhost/wiki/Nob_Hill
+  68. file://localhost/wiki/San_Francisco
+  69. file://localhost/wiki/Horsecar
+  70. file://localhost/wiki/Buyout
+  71. file://localhost/wiki/M%C3%B6dling_and_Hinterbr%C3%BChl_Tram
+  72. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=5
+  73. file://localhost/wiki/Elevator
+  74. file://localhost/w/index.php?title=Charles_R._Pratt&action=edit&redlink=1
+  75. file://localhost/wiki/Elevator
+  76. file://localhost/wiki/Otis_Elevator_Company
+  77. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=6
+  78. file://localhost/wiki/Multiple-unit_train_control
+  79. file://localhost/wiki/Railway_electric_traction
+  80. file://localhost/wiki/Railroad_engineer
+  81. file://localhost/wiki/Motorman
+  82. file://localhost/wiki/Locomotive
+  83. file://localhost/wiki/South_Side_Elevated_Railroad
+  84. file://localhost/wiki/Chicago_%27L%27
+  85. file://localhost/wiki/Chicago,_Illinois
+  86. file://localhost/wiki/Brooklyn,_New_York
+  87. file://localhost/wiki/Boston,_Massachusetts
+  88. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=7
+  89. file://localhost/wiki/New_York_Central_Railroad
+  90. file://localhost/wiki/Grand_Central_Terminal
+  91. file://localhost/wiki/New_York,_New_York
+  92. file://localhost/wiki/William_J._Wilgus
+  93. file://localhost/wiki/Third_rail
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#cite_note-1
+  95. file://localhost/wiki/World_War_I
+  96. file://localhost/wiki/Westinghouse_Electric_Corporation
+  97. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=8
+  98. file://localhost/wiki/Light_rail
+  99. file://localhost/wiki/Rapid_transit
+ 100. file://localhost/w/index.php?title=Paris_Electrical_Exhibition&action=edit&redlink=1
+ 101. file://localhost/w/index.php?title=St._Louis_Exhibition&action=edit&redlink=1
+ 102. file://localhost/wiki/Elliott_Cresson_Medal
+ 103. file://localhost/wiki/Edison_Medal
+ 104. file://localhost/wiki/American_Institute_of_Electrical_Engineers
+ 105. file://localhost/wiki/IEEE
+ 106. file://localhost/wiki/Franklin_Medal
+ 107. file://localhost/w/index.php?title=John_Fritz_Gold_Meda&action=edit&redlink=1
+ 108. file://localhost/w/index.php?title=Sprague_Electric_Company&action=edit&redlink=1
+ 109. file://localhost/wiki/New_York_Public_Library
+ 110. file://localhost/wiki/Arlington_National_Cemetery
+ 111. file://localhost/wiki/Arlington,_Virginia
+ 112. file://localhost/wiki/Shore_Line_Trolley_Museum
+ 113. file://localhost/wiki/East_Haven,_Connecticut
+ 114. file://localhost/wiki/National_Semiconductor
+ 115. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=9
+ 116. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#cite_ref-0
+ 117. http://ocw.mit.edu/OcwWeb/Civil-and-Environmental-Engineering/1-012Spring2002/Readings/detail/green_line_project.htm
+ 118. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html#cite_ref-1
+ 119. file://localhost/wiki/International_Standard_Book_Number
+ 120. file://localhost/wiki/Special:BookSources/0823222926
+ 121. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=10
+ 122. file://localhost/wiki/MIT_Press
+ 123. file://localhost/wiki/Special:BookSources/9780262042567
+ 124. file://localhost/wiki/Special:BookSources/9780253353832
+ 125. file://localhost/wiki/Proceedings_of_the_IEEE
+ 126. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit&section=11
+ 127. file://localhost/wiki/File:P_vip.svg
+ 128. file://localhost/wiki/Portal:Biography
+ 129. http://www.arlingtoncemetery.net/fjsprague.htm
+ 130. http://www.ieee.org/organizations/history_center/milestones_photos/richmond.html
+ 131. http://www.theelevatormuseum.org/e/e-1.htm
+ 132. http://www.bera.org/articles/sprague.html
+ 133. http://www.ieeeghn.org/wiki/index.php/Frank_J._Sprague
+ 134. http://www.vishay.com/company/history/
+ 135. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909-1925
+ 136. file://localhost/w/index.php?title=Template_talk:IEEE_Edison_Medal_Laureates_1909-1925&action=edit&redlink=1
+ 137. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Edison_Medal_Laureates_1909-1925&action=edit
+ 138. file://localhost/wiki/IEEE_Edison_Medal
+ 139. file://localhost/wiki/Elihu_Thomson
+ 140. file://localhost/wiki/George_Westinghouse
+ 141. file://localhost/wiki/William_Stanley,_Jr.
+ 142. file://localhost/wiki/Charles_F._Brush
+ 143. file://localhost/wiki/Alexander_Graham_Bell
+ 144. file://localhost/wiki/Nikola_Tesla
+ 145. file://localhost/wiki/John_J._Carty
+ 146. file://localhost/wiki/Benjamin_G._Lamme
+ 147. file://localhost/wiki/William_Le_Roy_Emmet
+ 148. file://localhost/wiki/Mihajlo_Idvorski_Pupin
+ 149. file://localhost/wiki/Cummings_C._Chesney
+ 150. file://localhost/wiki/Robert_Andrews_Millikan
+ 151. file://localhost/wiki/John_W._Lieb
+ 152. file://localhost/wiki/John_White_Howell
+ 153. file://localhost/wiki/Harris_J._Ryan
+ 154. file://localhost/wiki/Template:IEEE_Edison_Medal
+ 155. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909-1925
+ 156. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926-1950
+ 157. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1951-1975
+ 158. file://localhost/wiki/Template:IEEE_Edison_Medal_1976-2000
+ 159. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_2001-2025
+ 160. file://localhost/wiki/Wikipedia:Persondata
+ 161. file://localhost/wiki/Milford,_Connecticut
+ 162. http://en.wikipedia.org/wiki/Frank_J._Sprague
+ 163. file://localhost/wiki/Special:Categories
+ 164. file://localhost/wiki/Category:1857_births
+ 165. file://localhost/wiki/Category:1934_deaths
+ 166. file://localhost/wiki/Category:Thomas_Edison
+ 167. file://localhost/wiki/Category:Edison_Pioneers
+ 168. file://localhost/wiki/Category:American_inventors
+ 169. file://localhost/wiki/Category:American_electrical_engineers
+ 170. file://localhost/wiki/Category:Pioneers_of_rail_transport
+ 171. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 172. file://localhost/wiki/Category:United_States_Naval_Academy_graduates
+ 173. file://localhost/wiki/Category:IEEE_Edison_Medal_recipients
+ 174. file://localhost/wiki/Category:Rail_transport_designers
+ 175. file://localhost/wiki/Category:People_from_North_Adams,_Massachusetts
+ 176. file://localhost/wiki/Category:American_people_in_rail_transport
+ 177. file://localhost/wiki/Category:American_railroad_pioneers
+ 178. file://localhost/w/index.php?title=Special:UserLogin&returnto=Frank_J._Sprague
+ 179. file://localhost/wiki/Frank_J._Sprague
+ 180. file://localhost/wiki/Talk:Frank_J._Sprague
+ 181. file://localhost/wiki/Frank_J._Sprague
+ 182. file://localhost/w/index.php?title=Frank_J._Sprague&action=edit
+ 183. file://localhost/w/index.php?title=Frank_J._Sprague&action=history
+ 184. file://localhost/wiki/Main_Page
+ 185. file://localhost/wiki/Portal:Contents
+ 186. file://localhost/wiki/Portal:Featured_content
+ 187. file://localhost/wiki/Portal:Current_events
+ 188. file://localhost/wiki/Special:Random
+ 189. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 190. file://localhost/wiki/Help:Contents
+ 191. file://localhost/wiki/Wikipedia:About
+ 192. file://localhost/wiki/Wikipedia:Community_portal
+ 193. file://localhost/wiki/Special:RecentChanges
+ 194. file://localhost/wiki/Wikipedia:Contact_us
+ 195. file://localhost/wiki/Special:WhatLinksHere/Frank_J._Sprague
+ 196. file://localhost/wiki/Special:RecentChangesLinked/Frank_J._Sprague
+ 197. file://localhost/wiki/Wikipedia:Upload
+ 198. file://localhost/wiki/Special:SpecialPages
+ 199. file://localhost/w/index.php?title=Frank_J._Sprague&oldid=406010446
+ 200. file://localhost/w/index.php?title=Special:Cite&page=Frank_J._Sprague&id=406010446
+ 201. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Frank+J.+Sprague
+ 202. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Frank+J.+Sprague&oldid=406010446&writer=rl
+ 203. file://localhost/w/index.php?title=Frank_J._Sprague&printable=yes
+ 204. http://de.wikipedia.org/wiki/Frank_Julian_Sprague
+ 205. http://es.wikipedia.org/wiki/Frank_Julian_Sprague
+ 206. http://fr.wikipedia.org/wiki/Frank_J._Sprague
+ 207. http://nl.wikipedia.org/wiki/Frank_Julian_Sprague
+ 208. http://ja.wikipedia.org/wiki/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%AF%E3%83%BB%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B0
+ 209. http://pt.wikipedia.org/wiki/Frank_Julian_Sprague
+ 210. http://zh.wikipedia.org/wiki/%E6%B3%95%E8%98%AD%E5%85%8B%C2%B7J%C2%B7%E5%8F%B2%E4%BC%AF%E6%A0%BC
+ 211. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 212. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 213. http://www.wikimediafoundation.org/
+ 214. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 215. http://wikimediafoundation.org/wiki/Privacy_policy
+ 216. file://localhost/wiki/Wikipedia:About
+ 217. file://localhost/wiki/Wikipedia:General_disclaimer
+ 218. http://www.mediawiki.org/
+ 219. http://wikimediafoundation.org/
+
+   Hidden links:
+ 220. file://localhost/wiki/File:Frank_j._sprague.jpg
+ 221. file://localhost/wiki/File:Post245.jpg
+ 222. file://localhost/wiki/File:Post245.jpg
+ 223. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html
+ 224. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_j._sprague.html
+ 225. file://localhost/wiki/Main_Page
+ 226. http://creativecommons.org/licenses/by-sa/3.0/

@@ -1,0 +1,1544 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Chester Carlson
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                   Chester Floyd Carlson
+        Born      February 8, 1906(1906-02-08)
+                  [7]Seattle, Washington,
+                  [8]United States
+        Died      September 19, 1968(1968-09-19) (aged 62)
+                  [9]New York City, [10]New York
+                  [11]United States
+     Residence    [12]New York City, New York
+                  [13]Rochester, New York
+    Citizenship    [14]United States
+       Fields     [15]Electrophotography
+                  [16]Xerography
+    Institutions  [17]Bell Labs
+                  [18]Battelle Memorial Institute
+                  [19]Xerox
+   [20]Alma mater [21]California Institute of Technology
+                  [22]New York Law School
+     Known for    invention of [23]Xerography
+
+   Chester Floyd Carlson (February 8, 1906 – September 19, 1968) was an
+   [24]American [25]physicist, [26]inventor, and [27]patent attorney born
+   in [28]Seattle, [29]Washington.
+
+   He is best known for having invented the process of
+   [30]electrophotography, which produced a dry copy rather than a wet
+   copy, as was produced by the [31]mimeograph process. Carlson's process
+   was subsequently renamed to [32]xerography, a term that literally means
+   "dry writing."
+
+   Contents
+
+        * [33]1 Early life
+        * [34]2 Education
+        * [35]3 Early career
+        * [36]4 The invention of electrophotography
+             + [37]4.1 Electrophotography
+             + [38]4.2 Battelle Memorial Institute
+             + [39]4.3 Haloid Company
+        * [40]5 Xerox
+             + [41]5.1 Xerography
+             + [42]5.2 XeroX Model A
+             + [43]5.3 Haloid Xerox
+             + [44]5.4 The Xerox 914
+        * [45]6 Personal life
+        * [46]7 Later life
+        * [47]8 Legacy
+        * [48]9 See also
+        * [49]10 References
+        * [50]11 Further reading
+        * [51]12 External links
+
+[[52]edit] Early life
+
+   “ Work outside of school hours was a necessity at an early age, and
+     with such time as I had I turned toward interests of my own devising,
+     making things, experimenting, and planning for the future. I had read
+     of [53]Thomas Alva Edison and other successful inventors, and the idea
+     of making an invention appealed to me as one of the few available means
+     to accomplish a change in one's economic status, while at the same time
+     bringing to focus my interest in technical things and making it
+     possible to make a contribution to society as well.                    ”
+
+   —Chester Carlson, to A. Dinsdale^[54][1]
+
+   Carlson's father, Olof Adolph Carlson, had little formal education but
+   was described as "brilliant" by a relative. Carlson wrote of his
+   mother, Ellen, that she "was looked up to by her sisters as one of the
+   wisest."^[55][2]
+
+   When Carlson was an infant, his father contracted [56]tuberculosis, and
+   also later suffered from [57]arthritis of the spine (a common,
+   age-related disease). When Olaf moved the family to Mexico for a
+   seven-month period in 1910, in hopes of gaining riches through what
+   Carlson described as "a crazy American land colonization scheme," Ellen
+   contracted malaria.^[58][3] Because of his parents' illnesses, and the
+   resulting poverty, Carlson worked to support his family from an early
+   age; he began working odd jobs for money when he was eight. By the time
+   he was thirteen, he would work for two or three hours before going to
+   school, then go back to work after classes. By the time Carlson was in
+   high school, he was his family's principal provider.^[59][4] His mother
+   died of tuberculosis when he was 17, and his father died when Carlson
+   was 27.
+
+   Carlson began thinking about reproducing print early in his life. At
+   age ten, he created a newspaper called This and That, created by hand
+   and circulated among his friends with a routing list. His favorite
+   plaything was a rubber stamp printing set, and his most coveted
+   possession was a toy typewriter an aunt gave him for Christmas in
+   1916—although he was disappointed that it was not an office
+   typewriter.^[60][5]
+
+   While working for a local printer while in high school, Carlson
+   attempted to typeset and publish a magazine for science-minded students
+   like himself. He quickly became frustrated with traditional duplicating
+   techniques. As he told Dartmouth College professor Joseph J. Ermene in
+   a 1965 interview, "That set me to thinking about easier ways to do
+   that, and I got to thinking about duplicating methods."^[61][6]
+
+[[62]edit] Education
+
+   “ Well, I had a fascination with the [63]graphic arts from childhood.
+     One of the first things I wanted was a [64]typewriter—even when I was
+     in grammar school. Then, when I was in high school I liked
+     [65]chemistry and I got the idea of publishing a little magazine for
+     amateur chemists. I also worked for a printer in my spare time and he
+     sold me an old [66]printing press which he had discarded. I paid for it
+     by working for him. Then I started out to set my own type and print
+     this little paper. I don't think I printed more than two issues, and
+     they weren't much. However, this experience did impress me with the
+     difficulty of getting words into hard copy and this, in turn, started
+     me thinking about duplicating processes. I started a little inventor's
+     notebook and I would jot down ideas from time to time.                 ”
+
+   —Chester Carlson, to A. Dinsdale, when asked about his choice of
+   field^[67][1]
+
+   Because of the work he put in supporting his family, Carlson had to
+   take a postgraduate year at his high school to fill in missed courses.
+   He then entered a cooperative work/study program at [68]Riverside
+   Junior College, working and going to classes in alternating six-week
+   periods. Carlson held three jobs while at Riverside, paying for a cheap
+   one-bedroom apartment for himself and his father. At Riverside, Chester
+   began as a chemistry major, but switched to physics, largely due to a
+   favorite professor.^[69][7]
+
+   After three years at Riverside, Chester transferred to the
+   [70]California Institute of Technology, or Caltech—his ambition since
+   high school. His tuition, $260 a year, exceeded his total earnings, and
+   the workload prevented him from earning much money—though he did mow
+   lawns and do odd jobs on weekends, and work at a cement factory in the
+   summer. By the time he graduated, he was $1,500 in debt.^[71][8] He
+   graduated with good—but not exceptional—grades, earning a B.S. degree
+   in Physics in 1930, near the start of the [72]Great Depression. He
+   wrote letters seeking employment to 82 companies; none offered him a
+   job.^[73][9]
+
+[[74]edit] Early career
+
+   “ The need for a quick, satisfactory copying machine that could be used
+     right in the office seemed very apparent to me—there seemed such a
+     crying need for it—such a desirable thing if it could be obtained. So I
+     set out to think of how one could be made.                               ”
+
+   —Chester Carlson^[75][10]
+
+   As a last resort, he began working for [76]Bell Telephone Laboratories
+   in [77]New York City as a research engineer. Finding the work dull and
+   routine,^[78][11] After a year, Carlson transferred to the [79]patent
+   department as an assistant to one of the company's patent attorneys.
+
+   Carlson wrote over 400 ideas for new inventions in his personal
+   notebooks while working at Bell Labs. He kept coming back to his love
+   of printing, especially since his job in the patent department gave him
+   new determination to find a better way to copy documents. "In the
+   course of my patent work," wrote Carlson, "I frequently had need for
+   copies of patent specifications and drawings, and there was no really
+   convenient way of getting them at that time."^[80][9] At the time, the
+   department primarily made copies by having typists retype the patent
+   application in its entirety, using [81]carbon paper to make multiple
+   copies at once. There were other methods available, such as
+   [82]mimeographs and [83]Photostats, but they were more expensive than
+   carbon paper, and they had other limitations that made them
+   impractical.^[84][12] The existing solutions were 'duplicating'
+   machines—they could make many duplicates, but one had to create a
+   special master copy first, usually at great expense of time or money.
+   Carlson wanted to invent a 'copying' machine, that could take an
+   existing document and copy it onto a new piece of paper without any
+   intermediate steps.
+
+   In 1933, during the [85]Great Depression, Carlson was fired from Bell
+   Labs for participating in a failed "business scheme" outside of the
+   Labs with several other employees.^[86][13] After six weeks of
+   job-hunting, he got a job at the firm Austin & Dix, near [87]Wall
+   Street, but he left the job about a year later as the firm's business
+   was declining. He got a better job at the electronics firm P. R.
+   Mallory Company, founded by [88]Philip Mallory (now known as the
+   [89]Duracell division of [90]Procter & Gamble), where Carlson was
+   promoted to head of the patent department.
+
+[[91]edit] The invention of electrophotography
+
+   Further information: [92]Xerography
+   “ There was a gap of some years, but by 1935 I was more or less
+     settled. I had my job, but I didn't think I was getting ahead very
+     fast. I was just living from hand to mouth, you might say, and I had
+     just got married. It was kind of a hard struggle. So I thought the
+     possibility of making an invention might kill two birds with one stone;
+     it would be a chance to do the world some good and also a chance to do
+     myself some good.                                                      ”
+
+   —Chester Carlson, to A. Dinsdale^[93][1]
+
+   In 1936, Carlson began to study law at night at [94]New York Law
+   School, receiving his [95]LL.B. degree in 1939. He studied at the New
+   York Public Library, copying longhand from law books there because he
+   could not afford to buy them. The pains induced by this laborious
+   copying hardened his resolve to find a way to build a true copying
+   machine. He began supplementing his law studies with trips to the
+   Public Library's science and technology department. It was there that
+   he was inspired by a brief article, written by Hungarian physicist
+   [96]Pál Selényi in an obscure German scientific journal, that showed
+   him a way to obtain his dream machine.^[97][14]
+
+   Carlson's early experiments, conducted in his apartment kitchen, were
+   smoky, smelly, and occasionally explosive. In one set of experiments,
+   he was melting pure crystalline sulfur (a photoconductor) onto a plate
+   of zinc by moving it just so over the flame of his kitchen stove. This
+   often resulted in a sulfur fire, filling the building with the smell of
+   rotten eggs.^[98][15] In another experiment, the chemicals he was
+   working with caught fire, and he and his wife were hard-pressed to
+   extinguish the flames.^[99][16]
+
+   During this period, he developed arthritis of the spine, like his
+   father. He pressed on with his experiments, however, in addition to his
+   law school studies and his regular job.
+
+   Having learned about the value of patents in his early career as a
+   patent clerk and attorney, Carlson patented his developments every step
+   along the way. He filed his first preliminary patent application on
+   October 18, 1937.
+
+   By the fall of 1938, Carlson's wife had convinced him that his
+   experiments needed to be conducted elsewhere. He rented a room on the
+   second floor of a house owned by his mother-in-law at 32-05 37th Street
+   in [100]Astoria, Queens. He hired an assistant, Otto Kornei, an
+   out-of-work Austrian physicist.
+
+   Carlson knew that several major corporations were researching ways of
+   copying paper. The [101]Haloid Company had the [102]Photostat, which it
+   licensed to [103]Eastman Kodak, the photography giant. However, these
+   companies were researching along photographic lines, and their
+   solutions required special chemicals and papers. The Photostat, for
+   instance, was essentially a photograph of the document being copied.
+
+[[104]edit] Electrophotography
+
+   Further information: [105]Electrophotography
+
+   Selényi's article described a way of transmitting and printing
+   facsimilies of printed images using a beam of directed ions directed
+   onto a rotating drum of insulating material. The ions would create an
+   electrostatic charge on the drum. A fine powder could then be dusted
+   upon the drum; the powder would stick to the parts of the drum that had
+   been charged, much as a balloon will stick to a static-charged
+   stocking.
+
+   To this point, Carlson's apartment-kitchen experiments in constructing
+   a copying machine had involved trying to generate an electric current
+   in the original piece of paper using light. Selényi's article convinced
+   Carlson to instead use light to 'remove' the static charge from a
+   uniformly-ionized [106]photoconductor. As no light would reflect from
+   the black marks on the paper, those areas would remain charged on the
+   photoconductor, and would therefore retain the fine powder. He could
+   then transfer the powder to a fresh sheet of paper, resulting in a
+   duplicate of the original.^[107][17] This approach would give his
+   invention an advantage over the Photostat, which could only create a
+   [108]photographic negative of the original.
+   [109]Astoria 10-22-38 (The first xerographic image)
+   The world's first xerographic image^[110][18]
+
+   On October 22, 1938, they had their historic breakthrough. Kornei wrote
+   the words "10.-22.-38 ASTORIA." in [111]India ink on a glass
+   [112]microscope slide. The Austrian prepared a [113]zinc plate with a
+   [114]sulfur coating, darkened the room, rubbed the sulfur surface with
+   a cotton handkerchief to apply an [115]electrostatic charge, then laid
+   the slide on the plate, exposing it to a bright, [116]incandescent
+   light. They removed the slide, sprinkled [117]lycopodium powder to the
+   sulfur surface, softly blew the excess away, and transferred the image
+   to a sheet of [118]wax paper. They heated the paper, softening the wax
+   so the lycopodium would adhere to it, and had the world's first
+   xerographic copy. After repeating the experiment to be sure it worked,
+   Carlson celebrated taking Kornei out for a modest
+   lunch.^[119][19]^[120][20]
+
+   Kornei was not as excited about the results of the experiment as
+   Carlson. Within a year, he left Carlson on cordial terms. His pessimism
+   about electrophotography was so strong that he decided to dissolve his
+   agreement with Carlson that would have given Kornei ten percent of
+   Carlson's future proceeds from the invention and partial rights to the
+   inventions they had worked on together.^[121][21] Years later, when
+   Xerox stock was soaring, Carlson sent Kornei a gift of one hundred
+   shares in the company.^[122][22] Had Kornei held onto that gift, it
+   would have been worth more than $1 million by 1972.^[123][23]
+
+   The road to his success—or that for xerography's success—had been long
+   and filled with failure. From 1939 to 1944, his funding requests were
+   turned down by more than twenty companies.^[124][24] He tried for some
+   time to sell the invention to International Business Machines (IBM),
+   the great vendor of office equipment, but no one at the company saw
+   merit in the concept—it is not clear that anyone at IBM even
+   'understood' the concept.^[125][25] His next-to-last attempt to garner
+   the interest—and funds—he needed to commercialize the physics was a
+   meeting with the Department of the Navy. The Navy had a specific
+   interest in the production of dry copies but they did not "see" what
+   Carlson saw.^[[126]citation needed]
+
+   On October 6, 1942, the Patent Office issued Carlson's patent on
+   electrophotography.^[127][26]
+
+[[128]edit] Battelle Memorial Institute
+
+   When Carlson was close to giving up on getting his invention from a
+   proof-of-concept to a usable product, happenstance provided a solution.
+   In 1944, Russell W. Dayton, a young engineer from the [129]Battelle
+   Memorial Institute in [130]Columbus, Ohio, visited the patent
+   department at Mallory where Carlson worked. Dayton, brought in as an
+   expert witness in a patent appeal case by Mallory, seemed to Carlson to
+   be "the kind of fellow who looked like he was interested in new
+   ideas."^[131][27] Although Battelle had not previously developed ideas
+   generated by others, Dayton was fascinated by Carlson's invention. When
+   Carlson was invited to Columbus to demonstrate his invention, Dayton's
+   statement to the Battelle scientists and engineers present showed that
+   he understood the importance of Carlson's invention: "However crude
+   this may seem, this is the first time any of you have seen a
+   reproduction made without any chemical reaction and a dry process."
+
+   Battelle took a risk on Carlson's invention, which seemed to come out
+   of nowhere:
+
+   Electrophotography had practically no foundation in previous scientific
+   work. Chet put together a rather odd lot of phenomena, each of which
+   was obscure in itself and none of which had previously been related in
+   anyone's thinking. The result was the biggest thing in imaging since
+   the coming of photography itself. Furthermore, he did it entirely
+   without the help of a favorable scientific climate. There are dozens of
+   instances of simultaneous discovery down through scientific history,
+   but no one came anywhere near being simultaneous with Chet. I'm as
+   amazed by his discovery now as I was when I first heard of it.
+
+   —Dr. Harold E. Clark, Battelle Memorial Institute, New Yorker,
+   1967^[132][28]
+
+   By the fall of 1945, Battelle agreed to act as Carlson's agent for his
+   patents, pay for further research, and develop the idea. Battelle tried
+   to interest major printing and photography companies, like Eastman
+   Kodak and Harris-Seybold, to license the idea, but to no avail.
+
+[[133]edit] Haloid Company
+
+   The commercial breakthrough came when John Dessauer, chief of research
+   at the Haloid Company, read an article about Carlson's invention.
+   Haloid, a manufacturer of photographic paper, was looking for a way out
+   of the shadow of its Rochester, New York neighbor, Eastman Kodak.
+   Through previous acquisitions, Haloid was already in the
+   duplicating-machine business; Dessauer thought that electrophotography
+   might allow Haloid to expand into a new field that Kodak did not
+   dominate.^[134][29]
+
+   In December 1946, Battelle, Carlson, and Haloid signed the first
+   agreement to license electrophotography for a commercial product. The
+   $10,000 contract—representing ten percent of Haloid's total earnings
+   from 1945—granted a nonexclusive right to make electophotography-based
+   copying machines intended to make no more than twenty copies of an
+   original. Both sides were tentative; Battelle was concerned by Haloid's
+   relatively small size, and Haloid had concerns about
+   electrophotography's viability.^[135][30]
+
+   During this period, Battelle conducted most of the basic research into
+   electrophotography, while Haloid concentrated on trying to make a
+   commercial product out of the results. In 1948, Haloid's CEO, Joseph
+   Wilson, convinced the U.S. Army Signal Corps to invest $100,000 in the
+   technology, an amount that would double later. The Signal Corps was
+   concerned about nuclear war. The traditional photographic techniques
+   they used for reconnaissance would not function properly when exposed
+   to the radiation from a nuclear attack; the film would fog, much as
+   consumer photographic film can be fogged by an airport X-ray machine.
+   The Signal Corps thought that electrophotography might be developed
+   into a product that would be immune to such radiation. Through the
+   1950s, over half the money Battelle spent developing electrophotography
+   came from government contracts.^[136][31]
+
+   In 1947, Carlson was becoming worried that Battelle was not developing
+   electrophotography quickly enough; his patent would expire in ten
+   years. After meeting with Joe Wilson, Carlson accepted an offer to
+   become a consultant to Haloid. He and his wife Dorris moved to the
+   Rochester area, to be near the company's base of operations.
+
+   After years of trying to interest additional licensees in
+   electrophotography, Battelle agreed to renegotiate with Haloid, making
+   them the exclusive licensee for the invention (except for a few minor
+   uses that Battelle wished to retain for itself).^[137][32]
+
+[[138]edit] Xerox
+
+   Main article: [139]Xerox
+   “ What Bell is to the telephone—or, more aptly, what Eastman is to
+     photography—Haloid could be to xerography.                          ”
+
+   —Chester Carlson, letter to Joseph Wilson, 1953^[140][33]
+
+[[141]edit] Xerography
+
+   By 1948, Haloid realized that they would have to make a public
+   announcement about electrophotography in order to retain their claims
+   to the technology. However, the term electrophotography troubled
+   Haloid; for one thing, its use of the term "photography" invited
+   unwelcome comparisons with traditional duplicating technologies. After
+   considering several options, Haloid chose a term invented by a
+   public-relations employee at Battelle, who had asked a classics
+   professor at Ohio State University for ideas. The professor suggested
+   the term xerography—formed by combining the Greek words xeros ("dry")
+   and graphein ("writing"). Carlson was not fond of the name, but
+   Haloid's Wilson liked it, and so Haloid's board of directors voted to
+   adopt it. The company's patent department wanted to trademark
+   "xerography;" Haloid's head of sales and advertising, John Hartnett,
+   vetoed the idea: "Don't do that. We want people to use the
+   word."^[142][34]
+
+[[143]edit] XeroX Model A
+
+   On October 22, 1948, ten years to the day after that first
+   [144]microscope slide was copied, the Haloid Company made the first
+   public announcement of xerography. In 1949, they shipped the first
+   commercial photocopier: the XeroX Model A Copier, known inside the
+   company as the "Ox Box." The Model A was difficult to use, requiring
+   thirty-nine steps to make a copy, as the process was mostly manual. The
+   product would likely have been a failure, except that it turned out to
+   be a good way to make paper masters for offset printing presses, even
+   with the difficulty of use. Sales of the Model A to the printing
+   departments of companies like [145]Ford Motor Company kept the product
+   alive.^[146][35]
+
+   Before the Model A, in order to make a paper lithographic master for a
+   lithographic press like the Multigraph 1250, one had two choices: Type
+   up a new master using wax-coated carbon paper on a special master
+   sheet, or use a metal plate coated with a modified silver halide
+   photographic emulsion. If retyping the document was not feasible, the
+   photographic method could be used, but it was slow, expensive, and
+   messy. Because the Model A's toner repelled water but attracted
+   oil-based inks, a lithographic master could be made easily by simply
+   making a copy of the document with the Model A onto a blank paper
+   master. It reduced the cost of creating a lithographic master for an
+   existing document from three dollars to less than forty cents. Ford
+   saved so much money by using the Model A that the savings were
+   specifically mentioned in one of Ford's annual reports.^[147][36]
+
+   After the Model A, Haloid released a number of xerographic copiers to
+   the market, but none yet particularly easy to use. Meanwhile,
+   competitors such as Kodak and [148]3M brought out their own copying
+   devices using other technologies. Kodak's Verifax, for instance, could
+   sit on one side of a desk and sold for $100; Haloid's competing
+   machines were more expensive and substantially larger.^[149][37]
+
+[[150]edit] Haloid Xerox
+
+   In 1955, Haloid signed a new agreement with Battelle granting them full
+   title to Carlson's xerography patents, in exchange for fifty thousand
+   shares of Haloid stock.^[151][38] Carlson received forty percent of the
+   cash and stock from that deal, due to his agreement with
+   Battelle.^[152][39] That same year, in order to exploit those patents
+   in Europe, it partnered with the British motion-picture company
+   [153]Rank Organisation in a joint venture called [154]Rank
+   Xerox.^[155][38]
+
+   Haloid needed to grow, and its existing offices in Rochester were old
+   and scattered. In 1955, the company purchased a large parcel of land in
+   the Rochester suburb of Webster, New York; this would eventually become
+   the company's main research-and-development campus.^[156][40]
+
+   Haloid's CEO, Joseph Wilson, had decided Haloid needed a new name as
+   early as 1954. After years of debate within the company, the board
+   approved a name change to "Haloid Xerox" in 1958, reflecting the fact
+   that xerography was now the company's main line of business.^[157][41]
+
+[[158]edit] The Xerox 914
+
+   The first device recognizable as a modern photocopier was the Xerox
+   914. Although large and crude by modern standards, it allowed an
+   operator to place an original on a sheet of glass, press a button, and
+   receive a copy on plain paper. Manufactured in a leased building off
+   Orchard Street in Rochester, the 914 was introduced to the market at
+   the [159]Sherry Netherland Hotel in New York City on September 16,
+   1959. Even plagued with early problems—of the two demonstration units
+   at the hotel, one caught fire, and one worked fine—the Xerox 914 became
+   massively successful. Between 1959, when the Model 914 first shipped,
+   and 1961, Haloid Xerox's revenues nearly doubled.
+
+   The 914's success was not only due to its relative ease of use, its
+   design (that, unlike competing copiers, carried no risk of damage to
+   the original), and its low operating costs compared to other machines
+   that required special paper; Haloid Xerox's decision to rent the 914—at
+   the price of $25 per month, plus the cost of copies at four cents each
+   with a minimum of $49 per month—made it vastly more affordable than a
+   similar competing copier.^[160][42]
+
+   In 1961, because of the success of the Xerox 914, the company changed
+   its name again, to Xerox Corporation.^[161][43]
+
+   For Carlson, the commercial success of the Xerox 914 was the
+   culmination of his life's work: a device that could quickly and cheaply
+   make an exact copy of an existing document. After the 914 went into
+   production, Carlson's involvement with Xerox declined as he began
+   pursuing his philanthropic interests.^[162][44]
+
+[[163]edit] Personal life
+
+   In the fall of 1934, Carlson married Elsa von Mallon, whom he had met
+   at a YWCA party in New York City. Carlson described the marriage as "an
+   unhappy period interspersed with sporadic escapes."^[164][45] They were
+   divorced in 1945.
+
+   Carlson married his second wife, Dorris Helen Hudgins, while the
+   negotiations between Battelle and Haloid were under way.
+
+[[165]edit] Later life
+
+   “ To know Chester Carlson was to like him, to love him, and to respect
+     him. He was generally known as the inventor of xerography, and although
+     it was an extraordinary achievement in the technological and scientific
+     field, I respected him more as a man of exceptional moral stature and
+     as a humanist. His concern for the future of the human situation was
+     genuine, and his dedication to the principles of the United Nations was
+     profound. He belonged to that rare breed of leaders who generate in our
+     hearts faith in man and hope for the future.                           ”
+
+   —U Thant, secretary-general, United Nations, at the Xerox memorial
+   service for Chester Carlson
+
+   In 1951, Carlson's royalties from Battelle amounted to about $15,000
+   (in current terms, $127 thousand). Carlson continued to work at Haloid
+   until 1955, and he remained a consultant to the company until his
+   death. From 1956 to 1965, he continued to earn royalties on his patents
+   from Xerox, amounting to about one-sixteenth of a cent for every Xerox
+   copy made worldwide.^[166][39]
+
+   In 1968, Fortune magazine ranked Carlson among the wealthiest people in
+   America. He sent them a brief letter: "Your estimate of my net worth is
+   too high by $150 million. I belong in the 0 to $50 million bracket."
+   This was because Carlson had spent years quietly giving most of his
+   fortune away. He told his wife his remaining ambition was "to die a
+   poor man."^[167][39]
+
+   Carlson devoted his wealth to philanthropic purposes. He donated over
+   $150 million to charitable causes and was an active supporter of the
+   [168]NAACP. Carlson's wife Dorris got him interested in Hinduism,
+   particularly the ancient texts known as the Vedanta, as well as in Zen
+   Buddhism.^[169][39] They hosted Buddhist meetings, with meditation, at
+   their home. After reading [170]Philip Kapleau's book The Three Pillars
+   of Zen, Dorris invited Kapleau to join their meditation group; in June
+   1966, they provided the funding that allowed Kapleau to start the
+   [171]Rochester Zen
+   Center.^[172][46]^[173][47]^[174][48]^[175][49]^[176][50]^[177][51]
+   Dorris paid for 1,400 acres (5.7 km^2) of land that became [178]Dai
+   Bosatsu Zendo Kongo-ji, a Zen monastery in the [179]Catskill Mountains
+   of New York lead by [180]Eido Tai Shimano.^[181][52] Carlson had
+   purchased a New York City carriage house for use by Shimano; he died
+   four days after it was dedicated.^[182][52] Carlson is still
+   commemorated in special services by Shimano; his dharma name, Daitokuin
+   Zenshin Carlson Koji, is mentioned.^[183][53]
+
+   In his essay "Half a Career with the Paranormal," researcher [184]Ian
+   Stevenson describes Carlson's philanthropic style. According to
+   Stevenson, Carlson's wife, Dorris, had some skill at extrasensory
+   perception, and convinced Carlson to help support Stevenson's research.
+   Carlson not only made annual donations to the [185]University of
+   Virginia to fund Stevenson's work, but in 1964 he made a particularly
+   large donation that helped fund one of the first [186]endowed chairs at
+   the University. Stevenson was the first incumbent of this
+   chair.^[187][54]
+
+   Although Carlson insisted on anonymous donations, wrote Stevenson, he
+   was unusual in that he closely followed the details of the research,
+   maintaining contact with Stevenson. "He rarely made suggestions, but
+   what he said always deserved attention," wrote Stevenson.^[188][54]
+
+   In the spring of 1968, while on vacation in the Bahamas, Carlson had
+   his first heart attack. He was gravely ill, but hid this from his wife,
+   embarking on a number of unexpected household improvements and
+   concealing his doctor's visits. On September 19, 1968, Carlson died of
+   a heart attack in the Festival Theatre, on West 57th Street in New York
+   City, while watching the film [189]He Who Rides a Tiger. Dorris
+   arranged a small service in New York City; Xerox held a much larger
+   service in the corporate auditorium in Rochester on September 26,
+   1968.^[190][55]^[191][56]
+
+[[192]edit] Legacy
+
+   The [193]New York Civil Liberties Union was among the beneficiaries of
+   his bequests.^[[194]citation needed] The University of Virginia
+   received $1 million,^[195][54] under strict instructions that the money
+   was to be used only to fund parapsychology research.^[196][57] The
+   [197]Center for the Study of Democratic Institutions received a bequest
+   of over $4.2 million from Carlson, in addition to the more than $4
+   million he had contributed while alive.^[198][58]^[199][59]
+
+   In 1981 Carlson was inducted into the [200]National Inventors Hall of
+   Fame.
+   [201]Wikisource has original text related to this article:
+   [202]US Presidential Proclamation 5886
+
+   United States Public Law 100-548, signed into law by [203]Ronald
+   Reagan, designated October 22, 1988 as "National Chester F. Carlson
+   Recognition Day". He was honored by the [204]United States Postal
+   Service with a 21¢ [205]Great Americans series [206]postage
+   stamp.^[207][60]
+
+   Carlson is memorialized by buildings at the two largest institutions of
+   higher learning in [208]Rochester, New York, Xerox's hometown. The
+   Chester F. Carlson Center for Imaging Science, a department of the
+   [209]Rochester Institute of Technology, specializes in remote sensing,
+   eye tracking, and xerography.^[210][61] The [211]University of
+   Rochester's Carlson Science and Engineering Library is the University's
+   primary library for the science and engineering disciplines.^[212][62]
+
+   The following awards are named in Carlson's honor:
+     * American Society for Engineering Education: The Chester F. Carlson
+       Award is presented annually to an individual innovator in
+       engineering education who, by motivation and ability to extend
+       beyond the accepted tradition, has made a significant contribution
+       to the profession.^[213][63]
+     * Royal Swedish Academy of Engineering Science, IVA: The Chester
+       Carlson Award recognizes persons or institutions for significant
+       research or development within the area of information
+       science.^[214][64]
+     * Society for Imaging Science and Technology: The Chester F. Carlson
+       Award recognizes outstanding technical work that advances the state
+       of the art in electrophotographic printing.^[215][65]
+
+[[216]edit] See also
+
+     * [217]Copy art
+
+[[218]edit] References
+
+    1. ^ [219]^a [220]^b [221]^c Dinsdale, A. (1963). [222]"Chester F.
+       Carlson, Inventor of Xerography—A biography". Photographic Science
+       and Engineering 7: 1–4.
+       [223]http://www.library.rochester.edu/carlson/chester/biography.
+       Retrieved August 26, 2010.
+    2. [224]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 50.
+       [225]ISBN [226]0-7432-5118-0.
+    3. [227]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 52.
+       [228]ISBN [229]0-7432-5118-0.
+    4. [230]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 55–56. [231]ISBN [232]0-7432-5118-0.
+    5. [233]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 58.
+       [234]ISBN [235]0-7432-5118-0.
+    6. [236]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 61.
+       [237]ISBN [238]0-7432-5118-0.
+    7. [239]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 63.
+       [240]ISBN [241]0-7432-5118-0.
+    8. [242]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 65–66. [243]ISBN [244]0-7432-5118-0.
+    9. ^ [245]^a [246]^b Kearns, David T.; Nadler, David A. (1992).
+       Prophets in the Dark: How Xerox reinvented itself and beat back the
+       Japanese. HarperCollins. p. 15. [247]ISBN [248]0-88730-564-4.
+   10. [249]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 70.
+       [250]ISBN [251]0-7432-5118-0.
+   11. [252]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 68.
+       [253]ISBN [254]0-7432-5118-0. "'To my mind, it was practically the
+       back door of the laboratories,' he told Dumond seventeen years
+       later. 'It was one of the least desirable jobs, both as to job and
+       location of work. We were down in the basement of the old annex
+       building, four or five men all by ourselves. The place looked more
+       like a little factory or workshop.'"
+   12. [255]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. p. 16. [256]ISBN [257]0-88730-564-4. "Until after
+       1950, in fact, the only truly decent way of making a copy of a
+       letter was by sitting down in front of a typewriter and rolling in
+       a trusty piece of carbon paper."
+   13. [258]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 71.
+       [259]ISBN [260]0-7432-5118-0.
+   14. [261]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 86.
+       [262]ISBN [263]0-7432-5118-0.
+   15. [264]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 93–94. [265]ISBN [266]0-7432-5118-0.
+   16. [267]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. p. 17. [268]ISBN [269]0-88730-564-4.
+   17. [270]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 86–87. [271]ISBN [272]0-7432-5118-0.
+   18. [273]^ [274]"Astoria 10-22-38 (The first xerographic image)". Xerox
+       Images Library. Xerox Corporation.
+       [275]http://news.xerox.com/pr/xerox/photo.aspx?fid=93941&id=E0C1864
+       7. Retrieved August 31, 2010.  Courtesy of Xerox Corporation.
+   19. [276]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 96–99. [277]ISBN [278]0-7432-5118-0.
+   20. [279]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. pp. 17–18. [280]ISBN [281]0-88730-564-4.
+   21. [282]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 100.
+       [283]ISBN [284]0-7432-5118-0.
+   22. [285]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. p. 18. [286]ISBN [287]0-88730-564-4.
+   23. [288]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 265.
+       [289]ISBN [290]0-7432-5118-0.
+   24. [291]^ [292]"Fascinating facts about Chester Carlson inventor of
+       Xerography in 1938.". June 1, 2006.
+       [293]http://www.ideafinder.com/history/inventors/carlson.htm.
+       Retrieved 2009-11-09.
+   25. [294]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 103–107. [295]ISBN [296]0-7432-5118-0.
+   26. [297]^ [298]US 2297691  "Electrophotography".
+   27. [299]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 110.
+       [300]ISBN [301]0-7432-5118-0.
+   28. [302]^ Brooks, John (April 1, 1967). [303]"Profiles: XEROX XEROX
+       XEROX XEROX". New Yorker: 46. [304]ISSN [305]0028-792X.
+       [306]http://www.newyorker.com/archive/1967/04/01/1967_04_01_046_TNY
+       _CARDS_000284916.  (subscription required for online access)
+   29. [307]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 121–124. [308]ISBN [309]0-7432-5118-0. "The article [Dessauer]
+       read in the Kodak bulletin was less than three hundred words long,
+       but it described a process that sounded both technologically
+       promising and emotionally appealing."
+   30. [310]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 128–129. [311]ISBN [312]0-7432-5118-0. "Haloid knew that
+       several very large companies—among them Kodak, 3M, and IBM—were
+       almost certainly working on office copiers of their own, using
+       techniques unrelated to electrophotography. Why had all those
+       companies ignored Carlson's idea? Did they know something that
+       Haloid didn't?"
+   31. [313]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 135–136. [314]ISBN [315]0-7432-5118-0.
+   32. [316]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 144.
+       [317]ISBN [318]0-7432-5118-0.
+   33. [319]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 187.
+       [320]ISBN [321]0-7432-5118-0.
+   34. [322]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 145.
+       [323]ISBN [324]0-7432-5118-0.
+   35. [325]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. p. 23. [326]ISBN [327]0-88730-564-4.
+   36. [328]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 151–154. [329]ISBN [330]0-7432-5118-0.
+   37. [331]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 189.
+       [332]ISBN [333]0-7432-5118-0.
+   38. ^ [334]^a [335]^b Kearns, David T.; Nadler, David A. (1992).
+       Prophets in the Dark: How Xerox reinvented itself and beat back the
+       Japanese. HarperCollins. p. 25. [336]ISBN [337]0-88730-564-4.
+   39. ^ [338]^a [339]^b [340]^c [341]^d Owen, David (2004). Copies in
+       Seconds: Chester Carlson and the birth of the Xerox machine. New
+       York: Simon & Schuster. p. 260. [342]ISBN [343]0-7432-5118-0.
+   40. [344]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 195–196. [345]ISBN [346]0-7432-5118-0.
+   41. [347]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 194.
+       [348]ISBN [349]0-7432-5118-0.
+   42. [350]^ Kearns, David T.; Nadler, David A. (1992). Prophets in the
+       Dark: How Xerox reinvented itself and beat back the Japanese.
+       HarperCollins. p. 35. [351]ISBN [352]0-88730-564-4.
+   43. [353]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 252.
+       [354]ISBN [355]0-7432-5118-0.
+   44. [356]^ Ellis, Charles D. (2006). [357]Joe Wilson and the Creation
+       of Xerox. Hoboken, New Jersey: John Wiley & Sons. p. 236.
+       [358]ISBN [359]978-0-471-99835-8.
+       [360]http://books.google.com/books?id=juzBhWZ1jK4C&lpg=PA236&dq=%22
+       dorris%20carlson%22%20zen%20studies%20center%20-wikipedia&pg=PA236#
+       v=onepage&q&f=false.
+   45. [361]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster. p. 73.
+       [362]ISBN [363]0-7432-5118-0.
+   46. [364]^ [365]"Roshi Philip Kapleau". windhorsezen.org. Windhorse Zen
+       Community. [366]http://www.windhorsezen.org/roshi.asp. Retrieved
+       September 4, 2010. "During Philip Kapleau's book tour in 1965
+       Dorris Carlson, wife of Chester Carlson, the inventor of
+       xerography, invited him to visit her small meditation group in
+       Rochester, New York. In June 1966, with the support of the
+       Carlsons, he founded the Rochester Zen Center."
+   47. [367]^ [368]"Carlson, Chester Photographs". River Campus Libraries
+       Department of Rare Books, Special Collections and Preservation.
+       University of Rochester. Box 2.
+       [369]http://www.lib.rochester.edu/index.cfm?page=4433. "Chester
+       Carlson in front of Zen Center , 1968- contributed heavily to the
+       beliefs of Zen Buddhism. (1 photo)"
+   48. [370]^ "Rochester-area's Buddhists value meditative life". Democrat
+       and Chronicle (Rochester, New York: Gannett). August 28, 2008. "In
+       the days before the center, Fernandez was part of a small group of
+       Buddhists who met and meditated at the home of Doris and Chester
+       Carlson, the inventor of xerography. Few Rochesterians knew
+       anything of Buddhism at the time, Fernandez says. 'I’d hear people
+       refer to the center as the Zen medication center.' ¶ Carlson’s
+       fortune helped start the center, but he was not impressed with his
+       wealth."
+   49. [371]^ [372]"Buddhist Masters and Their Organisations: Philip
+       Kapleau Roshi". Buddha Dharma Education Association.
+       [373]http://www.buddhanet.net/masters/kapleau.htm. "During Philip
+       Kapleau's book tour in 1965 Dorris Carlson invited him to visit her
+       small meditation group and in June 1966, with the support of the
+       Carlsons, he founded the Rochester Zen Center."
+   50. [374]^ [375]"About Ralph Chapin". Rochester Zen Center. Rochester
+       Zen Center. [376]http://www.rzc.org/node/22. "Ralph obtained
+       galleys of the book and was instrumental in introducing the book as
+       well as Roshi Kapleau to Dorris and Chester Carlson, whose
+       Rochester meditation group later formed the nucleus of the
+       Rochester Zen Center."
+   51. [377]^ [378]"Roshi, Philip Kapleau #2". Zen Community of Oregon.
+       Zen Community of Oregon.
+       [379]http://www.zendust.org/kapleaumore.htm. "Two of the earliest
+       readers of Three Pillars were Ralph Chapin of Chapin Manufacturing
+       in Batavia, New York, and Dorris Carlson of Rochester, New York,
+       the wife of Chester Carlson, the inventor of xerography, the
+       technology that became the foundation for the Xerox Corporation.
+       During Philip Kapleau's book tour in 1965, Dorris Carlson invited
+       him to visit her small meditation group and in June 1966, with the
+       support of the Carlsons, he founded the Rochester Zen center."
+   52. ^ [380]^a [381]^b Neilan, Terence (June 18, 2001). [382]"Buddhism
+       Blooms Amid the Forests of the Catskills; Ancient Cures for Modern
+       Ills". The New York Times (New York: The New York Times).
+       [383]http://www.nytimes.com/2001/06/18/nyregion/buddhism-blooms-ami
+       d-the-forests-of-the-catskills-ancient-cures-for-modern-ills.html?s
+       cp=1&sq=Buddhism%20Blooms%20Amid%20the%20Forests%20of%20the%20Catsk
+       ills%20%20&st=cse. Retrieved September 4, 2010. "On July 4, Dai
+       Bosatsu will celebrate the 25th anniversary of establishing a
+       center on 1,400 acres that were paid for by Dorris Carlson, the
+       widow of Chester Carlson, who invented the process that brought the
+       world Xerox. The Carlsons had an interest in Eastern philosophy and
+       religions. They also wanted to help transmit the Buddhist message,
+       particularly the one taught by Eido Shimano Roshi, a Zen master.
+       Dai Bosatsu's city base is a converted East 67th Street carriage
+       house that was bought as a center for Eido Roshi by Mr. Carlson,
+       who died four days after its dedication on Sept. 15, 1968."
+   53. [384]^ Chadwick, David. [385]"Interviews: Eido T. Shimano Roshi".
+       Crooked Cucumber: The life and zen teaching of Shunryu Suzuki.
+       [386]http://www.cuke.com/Cucumber%20Project/interviews/eido.html.
+       Retrieved September 4, 2010.
+   54. ^ [387]^a [388]^b [389]^c Stevenson, Ian (2006). [390]"Half a
+       Career with the Paranormal" (PDF). Journal of Scientific
+       Exploration (Society for Scientific Exploration) 20 (1): 13–21.
+       [391]http://www.scientificexploration.org/journal/jse_20_1_stevenso
+       n.pdf.
+   55. [392]^ [393]"Chester Floyd Carlson Biography".
+       [394]http://www.madehow.com/inventorbios/67/Chester-Floyd-Carlson.h
+       tml. Retrieved 2009-11-09.
+   56. [395]^ Owen, David (2004). Copies in Seconds: Chester Carlson and
+       the birth of the Xerox machine. New York: Simon & Schuster.
+       pp. 273–275. [396]ISBN [397]0-7432-5118-0.
+   57. [398]^ Gordon, Dane R. (2007). [399]"Chapter 35: Several
+       Anniversaries". Rochester Institute of Technology: Industrial
+       development and educational innovation in an American city (2nd
+       ed.). RIT Press. p. 414.
+       [400]http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=roche
+       ster%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false.
+       Retrieved August 28, 2010. "'If the University is unwilling or
+       unable to accept the bequest for that purpose, his trustee is to
+       find another University or non-profit foundation which would use
+       the money for that purpose.'"
+   58. [401]^ Ashmore, Harry S. (November-December 1984). [402]"The End of
+       the Hutchins Era at the Center for the Study of Democratic
+       Institutions". The Center Magazine.
+       [403]http://www.cooperativeindividualism.org/ashmore-harry_on-the-c
+       enter-for-study-of-democratic-instns.html. Retrieved August 28,
+       2010.
+   59. [404]^ Mayer, Milton (1993). [405]"46. Is anybody listening? (2)".
+       Robert Maynard Hutchins: A memoir. Berkeley: University of
+       California Press. p. 483.
+       [406]http://ark.cdlib.org/ark:/13030/ft4w10061d/. "The financial
+       situation was perennially acute, and if it had not been for one
+       man, Chester Carlson, the inventor of Xerox, it would have been
+       fatal; over the years Carlson provided ten million of the
+       twenty-four million dollars the Center grossed between 1959 and
+       1978."
+   60. [407]^ [408]Pub.L. 100-548
+   61. [409]^ Gordon, Dane R. (2007). [410]"Chapter 35: Several
+       Anniversaries". Rochester Institute of Technology: Industrial
+       development and educational innovation in an American city (2nd
+       ed.). RIT Press. p. 412.
+       [411]http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=roche
+       ster%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false.
+       Retrieved August 28, 2010. "'My husband would be proud,' said Mrs.
+       Carlson, 'that RIT chose to name the center for him. He made a
+       great deal of money and gave most of it to education.'"
+   62. [412]^ [413]"Carlson Science & Engineering Library".
+       [414]http://www.library.rochester.edu/carlson/home. Retrieved
+       August 26, 2010.
+   63. [415]^ [416]"Member Awards". American Society for Engineering
+       Education.
+       [417]http://www.asee.org/member-resources/awards/full-list-of-award
+       s/national-awards/special#Chester_F._Carlson_Award. Retrieved
+       November 8, 2010.
+   64. [418]^ [419]"The Swedish IT-wonder is alive: Xerox honors Swedish
+       inventor of minimalistic operating system with maximal field of
+       application". January 7, 2008.
+       [420]http://www.xerox.com/news/news-archive/2008/swe-chester-carlso
+       n-award/svse.html. Retrieved August 27, 2010.
+   65. [421]^ [422]"Chester F. Carlson Award".
+       [423]http://www.imaging.org/ist/membership/honors_desc.cfm?AwardCod
+       e=C. Retrieved August 27, 2010.
+
+[[424]edit] Further reading
+
+   David Owen, Copies in Seconds: How a lone inventor and an unknown
+   company created the biggest communication breakthrough since
+   Gutenberg—Chester Carlson and the birth of the Xerox Machine (New York:
+   Simon and Schuster, 2004) [425]ISBN 0-7432-5117-2, [426]ISBN
+   0-7432-5118-0
+
+[[427]edit] External links
+
+     * [428]Making Copies from Carbon to Kinkos
+     * [429]Copies in Seconds (PDF)—excerpted from the book of the same
+       name
+
+                    [430]Persondata
+   Name              Carlson, Chester
+   Alternative names
+   Short description
+   Date of birth     February 8, 1906
+   Place of birth    [431]Seattle, Washington,
+                     [432]United States
+   Date of death     September 19, 1968
+   Place of death    [433]New York City, [434]New York
+                     [435]United States
+   Retrieved from "[436]http://en.wikipedia.org/wiki/Chester_Carlson"
+   [437]Categories: [438]1906 births | [439]1968 deaths | [440]American
+   inventors | [441]American physicists | [442]Office equipment |
+   [443]Patent attorneys | [444]National Inventors Hall of Fame inductees
+   | [445]New York Law School alumni | [446]People from Astoria, Queens |
+   [447]People from Jackson Heights, Queens | [448]People from Seattle,
+   Washington | [449]American people of Swedish descent | [450]California
+   Institute of Technology alumni
+   Hidden categories: [451]All articles with unsourced statements |
+   [452]Articles with unsourced statements from August 2010
+
+Personal tools
+
+     * [453]Log in / create account
+
+Namespaces
+
+     * [454]Article
+     * [455]Discussion
+
+Variants
+
+Views
+
+     * [456]Read
+     * [457]Edit
+     * [458]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [459]Main page
+     * [460]Contents
+     * [461]Featured content
+     * [462]Current events
+     * [463]Random article
+     * [464]Donate to Wikipedia
+
+Interaction
+
+     * [465]Help
+     * [466]About Wikipedia
+     * [467]Community portal
+     * [468]Recent changes
+     * [469]Contact Wikipedia
+
+Toolbox
+
+     * [470]What links here
+     * [471]Related changes
+     * [472]Upload file
+     * [473]Special pages
+     * [474]Permanent link
+     * [475]Cite this page
+
+Print/export
+
+     * [476]Create a book
+     * [477]Download as PDF
+     * [478]Printable version
+
+Languages
+
+     * [479]Azərbaycanca
+     * [480]Deutsch
+     * [481]Español
+     * [482]Italiano
+     * [483]ગુજરાતી
+     * [484]עברית
+     * [485]Bahasa Melayu
+     * [486]Nederlands
+     * [487]日本語
+     * [488]Português
+     * [489]Русский
+     * [490]Türkçe
+
+     * This page was last modified on 21 January 2011 at 02:00.
+     * Text is available under the [491]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [492]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [493]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [494]Contact us
+
+     * [495]Privacy policy
+     * [496]About Wikipedia
+     * [497]Disclaimers
+
+     * [498]Powered by MediaWiki
+     * [499]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Chester_Carlson&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#p-search
+   7. file://localhost/wiki/Seattle,_Washington
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/New_York_City
+  10. file://localhost/wiki/New_York
+  11. file://localhost/wiki/United_States
+  12. file://localhost/wiki/New_York_City
+  13. file://localhost/wiki/Rochester,_New_York
+  14. file://localhost/wiki/United_States
+  15. file://localhost/wiki/Electrophotography
+  16. file://localhost/wiki/Xerography
+  17. file://localhost/wiki/Bell_Labs
+  18. file://localhost/wiki/Battelle_Memorial_Institute
+  19. file://localhost/wiki/Xerox
+  20. file://localhost/wiki/Alma_mater
+  21. file://localhost/wiki/California_Institute_of_Technology
+  22. file://localhost/wiki/New_York_Law_School
+  23. file://localhost/wiki/Xerography
+  24. file://localhost/wiki/United_States
+  25. file://localhost/wiki/Physicist
+  26. file://localhost/wiki/Inventor
+  27. file://localhost/wiki/Patent_attorney
+  28. file://localhost/wiki/Seattle
+  29. file://localhost/wiki/Washington_(U.S._state)
+  30. file://localhost/wiki/Electrophotography
+  31. file://localhost/wiki/Mimeograph
+  32. file://localhost/wiki/Xerography
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Early_life
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Education
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Early_career
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#The_invention_of_electrophotography
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Electrophotography
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Battelle_Memorial_Institute
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Haloid_Company
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Xerox
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Xerography
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#XeroX_Model_A
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Haloid_Xerox
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#The_Xerox_914
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Personal_life
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Later_life
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Legacy
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#See_also
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#References
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#Further_reading
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#External_links
+  52. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=1
+  53. file://localhost/wiki/Thomas_Edison
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-dinsdale-0
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-1
+  56. file://localhost/wiki/Tuberculosis
+  57. file://localhost/wiki/Arthritis
+  58. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-2
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-3
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-4
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-5
+  62. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=2
+  63. file://localhost/wiki/Graphic_arts
+  64. file://localhost/wiki/Typewriter
+  65. file://localhost/wiki/Chemistry
+  66. file://localhost/wiki/Printing_press
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-dinsdale-0
+  68. file://localhost/wiki/Riverside_Junior_College
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-6
+  70. file://localhost/wiki/California_Institute_of_Technology
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-copies_65-66-7
+  72. file://localhost/wiki/Great_Depression
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-prophets_15-8
+  74. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=3
+  75. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-9
+  76. file://localhost/wiki/Bell_Labs
+  77. file://localhost/wiki/New_York_City
+  78. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-10
+  79. file://localhost/wiki/Patent
+  80. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-prophets_15-8
+  81. file://localhost/wiki/Carbon_paper
+  82. file://localhost/wiki/Mimeograph
+  83. file://localhost/wiki/Photostat
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-11
+  85. file://localhost/wiki/Great_Depression
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-12
+  87. file://localhost/wiki/Wall_Street
+  88. file://localhost/wiki/Philip_Mallory
+  89. file://localhost/wiki/Duracell
+  90. file://localhost/wiki/Procter_%26_Gamble
+  91. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=4
+  92. file://localhost/wiki/Xerography
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-dinsdale-0
+  94. file://localhost/wiki/New_York_Law_School
+  95. file://localhost/wiki/LL.B.
+  96. file://localhost/wiki/P%C3%A1l_Sel%C3%A9nyi
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-13
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-14
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-15
+ 100. file://localhost/wiki/Astoria,_Queens
+ 101. file://localhost/wiki/Xerox
+ 102. file://localhost/wiki/Photostat
+ 103. file://localhost/wiki/Eastman_Kodak
+ 104. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=5
+ 105. file://localhost/wiki/Electrophotography
+ 106. file://localhost/wiki/Photoconductor
+ 107. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-16
+ 108. file://localhost/wiki/Negative_(photography)
+ 109. file://localhost/wiki/File:First_xerographic_copy_-_10-22-38_ASTORIA_.jpg
+ 110. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-17
+ 111. file://localhost/wiki/India_ink
+ 112. file://localhost/wiki/Microscope_slide
+ 113. file://localhost/wiki/Zinc
+ 114. file://localhost/wiki/Sulfur
+ 115. file://localhost/wiki/Electrostatic
+ 116. file://localhost/wiki/Incandescent
+ 117. file://localhost/wiki/Lycopodium
+ 118. file://localhost/wiki/Wax_paper
+ 119. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-18
+ 120. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-19
+ 121. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-20
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-21
+ 123. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-22
+ 124. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-23
+ 125. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-24
+ 126. file://localhost/wiki/Wikipedia:Citation_needed
+ 127. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-25
+ 128. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=6
+ 129. file://localhost/wiki/Battelle_Memorial_Institute
+ 130. file://localhost/wiki/Columbus,_Ohio
+ 131. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-26
+ 132. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-27
+ 133. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=7
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-28
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-29
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-30
+ 137. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-31
+ 138. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=8
+ 139. file://localhost/wiki/Xerox
+ 140. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-32
+ 141. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=9
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-33
+ 143. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=10
+ 144. file://localhost/wiki/Microscope
+ 145. file://localhost/wiki/Ford_Motor_Company
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-34
+ 147. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-35
+ 148. file://localhost/wiki/3M
+ 149. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-36
+ 150. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=11
+ 151. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-prophets_25-37
+ 152. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-copies_260-38
+ 153. file://localhost/wiki/Rank_Organisation
+ 154. file://localhost/wiki/Rank_Xerox
+ 155. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-prophets_25-37
+ 156. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-39
+ 157. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-40
+ 158. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=12
+ 159. file://localhost/wiki/Sherry_Netherland_Hotel
+ 160. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-41
+ 161. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-42
+ 162. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-43
+ 163. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=13
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-44
+ 165. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=14
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-copies_260-38
+ 167. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-copies_260-38
+ 168. file://localhost/wiki/NAACP
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-copies_260-38
+ 170. file://localhost/wiki/Philip_Kapleau
+ 171. file://localhost/wiki/Rochester_Zen_Center
+ 172. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-45
+ 173. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-46
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-47
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-48
+ 176. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-49
+ 177. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-50
+ 178. file://localhost/wiki/Dai_Bosatsu_Zendo_Kongo-ji
+ 179. file://localhost/wiki/Catskill_Mountains
+ 180. file://localhost/wiki/Eido_Tai_Shimano
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-shimano-times-51
+ 182. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-shimano-times-51
+ 183. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-52
+ 184. file://localhost/wiki/Ian_Stevenson
+ 185. file://localhost/wiki/University_of_Virginia
+ 186. file://localhost/wiki/Financial_endowment#Endowed_professorships
+ 187. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-stevenson-53
+ 188. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-stevenson-53
+ 189. file://localhost/wiki/He_Who_Rides_a_Tiger
+ 190. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-54
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-55
+ 192. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=15
+ 193. file://localhost/wiki/New_York_Civil_Liberties_Union
+ 194. file://localhost/wiki/Wikipedia:Citation_needed
+ 195. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-stevenson-53
+ 196. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-56
+ 197. file://localhost/wiki/Center_for_the_Study_of_Democratic_Institutions
+ 198. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-57
+ 199. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-58
+ 200. file://localhost/wiki/National_Inventors_Hall_of_Fame
+ 201. file://localhost/wiki/Wikisource
+ 202. http://en.wikisource.org/wiki/Proclamation_5886
+ 203. file://localhost/wiki/Ronald_Reagan
+ 204. file://localhost/wiki/United_States_Postal_Service
+ 205. file://localhost/wiki/Great_Americans_series
+ 206. file://localhost/wiki/Postage_stamp
+ 207. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-59
+ 208. file://localhost/wiki/Rochester,_New_York
+ 209. file://localhost/wiki/Rochester_Institute_of_Technology
+ 210. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-60
+ 211. file://localhost/wiki/University_of_Rochester
+ 212. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-61
+ 213. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-62
+ 214. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-63
+ 215. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_note-64
+ 216. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=16
+ 217. file://localhost/wiki/Copy_art
+ 218. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=17
+ 219. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-dinsdale_0-0
+ 220. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-dinsdale_0-1
+ 221. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-dinsdale_0-2
+ 222. http://www.library.rochester.edu/carlson/chester/biography
+ 223. http://www.library.rochester.edu/carlson/chester/biography
+ 224. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-1
+ 225. file://localhost/wiki/International_Standard_Book_Number
+ 226. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 227. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-2
+ 228. file://localhost/wiki/International_Standard_Book_Number
+ 229. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 230. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-3
+ 231. file://localhost/wiki/International_Standard_Book_Number
+ 232. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 233. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-4
+ 234. file://localhost/wiki/International_Standard_Book_Number
+ 235. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 236. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-5
+ 237. file://localhost/wiki/International_Standard_Book_Number
+ 238. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 239. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-6
+ 240. file://localhost/wiki/International_Standard_Book_Number
+ 241. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 242. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-copies_65-66_7-0
+ 243. file://localhost/wiki/International_Standard_Book_Number
+ 244. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 245. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-prophets_15_8-0
+ 246. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-prophets_15_8-1
+ 247. file://localhost/wiki/International_Standard_Book_Number
+ 248. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 249. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-9
+ 250. file://localhost/wiki/International_Standard_Book_Number
+ 251. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 252. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-10
+ 253. file://localhost/wiki/International_Standard_Book_Number
+ 254. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 255. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-11
+ 256. file://localhost/wiki/International_Standard_Book_Number
+ 257. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 258. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-12
+ 259. file://localhost/wiki/International_Standard_Book_Number
+ 260. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 261. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-13
+ 262. file://localhost/wiki/International_Standard_Book_Number
+ 263. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 264. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-14
+ 265. file://localhost/wiki/International_Standard_Book_Number
+ 266. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 267. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-15
+ 268. file://localhost/wiki/International_Standard_Book_Number
+ 269. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 270. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-16
+ 271. file://localhost/wiki/International_Standard_Book_Number
+ 272. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 273. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-17
+ 274. http://news.xerox.com/pr/xerox/photo.aspx?fid=93941&id=E0C18647
+ 275. http://news.xerox.com/pr/xerox/photo.aspx?fid=93941&id=E0C18647
+ 276. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-18
+ 277. file://localhost/wiki/International_Standard_Book_Number
+ 278. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 279. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-19
+ 280. file://localhost/wiki/International_Standard_Book_Number
+ 281. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 282. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-20
+ 283. file://localhost/wiki/International_Standard_Book_Number
+ 284. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 285. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-21
+ 286. file://localhost/wiki/International_Standard_Book_Number
+ 287. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 288. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-22
+ 289. file://localhost/wiki/International_Standard_Book_Number
+ 290. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 291. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-23
+ 292. http://www.ideafinder.com/history/inventors/carlson.htm
+ 293. http://www.ideafinder.com/history/inventors/carlson.htm
+ 294. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-24
+ 295. file://localhost/wiki/International_Standard_Book_Number
+ 296. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 297. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-25
+ 298. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US2297691
+ 299. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-26
+ 300. file://localhost/wiki/International_Standard_Book_Number
+ 301. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 302. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-27
+ 303. http://www.newyorker.com/archive/1967/04/01/1967_04_01_046_TNY_CARDS_000284916
+ 304. file://localhost/wiki/International_Standard_Serial_Number
+ 305. http://www.worldcat.org/issn/0028-792X
+ 306. http://www.newyorker.com/archive/1967/04/01/1967_04_01_046_TNY_CARDS_000284916
+ 307. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-28
+ 308. file://localhost/wiki/International_Standard_Book_Number
+ 309. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 310. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-29
+ 311. file://localhost/wiki/International_Standard_Book_Number
+ 312. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 313. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-30
+ 314. file://localhost/wiki/International_Standard_Book_Number
+ 315. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 316. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-31
+ 317. file://localhost/wiki/International_Standard_Book_Number
+ 318. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 319. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-32
+ 320. file://localhost/wiki/International_Standard_Book_Number
+ 321. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 322. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-33
+ 323. file://localhost/wiki/International_Standard_Book_Number
+ 324. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 325. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-34
+ 326. file://localhost/wiki/International_Standard_Book_Number
+ 327. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 328. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-35
+ 329. file://localhost/wiki/International_Standard_Book_Number
+ 330. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 331. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-36
+ 332. file://localhost/wiki/International_Standard_Book_Number
+ 333. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 334. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-prophets_25_37-0
+ 335. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-prophets_25_37-1
+ 336. file://localhost/wiki/International_Standard_Book_Number
+ 337. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 338. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-copies_260_38-0
+ 339. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-copies_260_38-1
+ 340. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-copies_260_38-2
+ 341. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-copies_260_38-3
+ 342. file://localhost/wiki/International_Standard_Book_Number
+ 343. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 344. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-39
+ 345. file://localhost/wiki/International_Standard_Book_Number
+ 346. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 347. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-40
+ 348. file://localhost/wiki/International_Standard_Book_Number
+ 349. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 350. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-41
+ 351. file://localhost/wiki/International_Standard_Book_Number
+ 352. file://localhost/wiki/Special:BookSources/0-88730-564-4
+ 353. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-42
+ 354. file://localhost/wiki/International_Standard_Book_Number
+ 355. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 356. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-43
+ 357. http://books.google.com/books?id=juzBhWZ1jK4C&lpg=PA236&dq=%22dorris%20carlson%22%20zen%20studies%20center%20-wikipedia&pg=PA236#v=onepage&q&f=false
+ 358. file://localhost/wiki/International_Standard_Book_Number
+ 359. file://localhost/wiki/Special:BookSources/978-0-471-99835-8
+ 360. http://books.google.com/books?id=juzBhWZ1jK4C&lpg=PA236&dq=%22dorris%20carlson%22%20zen%20studies%20center%20-wikipedia&pg=PA236#v=onepage&q&f=false
+ 361. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-44
+ 362. file://localhost/wiki/International_Standard_Book_Number
+ 363. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 364. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-45
+ 365. http://www.windhorsezen.org/roshi.asp
+ 366. http://www.windhorsezen.org/roshi.asp
+ 367. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-46
+ 368. http://www.lib.rochester.edu/index.cfm?page=4433
+ 369. http://www.lib.rochester.edu/index.cfm?page=4433
+ 370. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-47
+ 371. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-48
+ 372. http://www.buddhanet.net/masters/kapleau.htm
+ 373. http://www.buddhanet.net/masters/kapleau.htm
+ 374. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-49
+ 375. http://www.rzc.org/node/22
+ 376. http://www.rzc.org/node/22
+ 377. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-50
+ 378. http://www.zendust.org/kapleaumore.htm
+ 379. http://www.zendust.org/kapleaumore.htm
+ 380. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-shimano-times_51-0
+ 381. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-shimano-times_51-1
+ 382. http://www.nytimes.com/2001/06/18/nyregion/buddhism-blooms-amid-the-forests-of-the-catskills-ancient-cures-for-modern-ills.html?scp=1&sq=Buddhism%20Blooms%20Amid%20the%20Forests%20of%20the%20Catskills%20%20&st=cse
+ 383. http://www.nytimes.com/2001/06/18/nyregion/buddhism-blooms-amid-the-forests-of-the-catskills-ancient-cures-for-modern-ills.html?scp=1&sq=Buddhism%20Blooms%20Amid%20the%20Forests%20of%20the%20Catskills%20%20&st=cse
+ 384. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-52
+ 385. http://www.cuke.com/Cucumber%20Project/interviews/eido.html
+ 386. http://www.cuke.com/Cucumber%20Project/interviews/eido.html
+ 387. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-stevenson_53-0
+ 388. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-stevenson_53-1
+ 389. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-stevenson_53-2
+ 390. http://www.scientificexploration.org/journal/jse_20_1_stevenson.pdf
+ 391. http://www.scientificexploration.org/journal/jse_20_1_stevenson.pdf
+ 392. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-54
+ 393. http://www.madehow.com/inventorbios/67/Chester-Floyd-Carlson.html
+ 394. http://www.madehow.com/inventorbios/67/Chester-Floyd-Carlson.html
+ 395. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-55
+ 396. file://localhost/wiki/International_Standard_Book_Number
+ 397. file://localhost/wiki/Special:BookSources/0-7432-5118-0
+ 398. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-56
+ 399. http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=rochester%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false
+ 400. http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=rochester%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false
+ 401. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-57
+ 402. http://www.cooperativeindividualism.org/ashmore-harry_on-the-center-for-study-of-democratic-instns.html
+ 403. http://www.cooperativeindividualism.org/ashmore-harry_on-the-center-for-study-of-democratic-instns.html
+ 404. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-58
+ 405. http://ark.cdlib.org/ark:/13030/ft4w10061d/
+ 406. http://ark.cdlib.org/ark:/13030/ft4w10061d/
+ 407. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-59
+ 408. http://assembler.law.cornell.edu/usc-cgi/get_external.cgi?type=pubL&target=100-548
+ 409. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-60
+ 410. http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=rochester%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false
+ 411. http://books.google.com/books?id=czZfU0ocXrkC&lpg=PP1&dq=rochester%20institute%20of%20technology&pg=PR4#v=onepage&q&f=false
+ 412. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-61
+ 413. http://www.library.rochester.edu/carlson/home
+ 414. http://www.library.rochester.edu/carlson/home
+ 415. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-62
+ 416. http://www.asee.org/member-resources/awards/full-list-of-awards/national-awards/special#Chester_F._Carlson_Award
+ 417. http://www.asee.org/member-resources/awards/full-list-of-awards/national-awards/special#Chester_F._Carlson_Award
+ 418. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-63
+ 419. http://www.xerox.com/news/news-archive/2008/swe-chester-carlson-award/svse.html
+ 420. http://www.xerox.com/news/news-archive/2008/swe-chester-carlson-award/svse.html
+ 421. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html#cite_ref-64
+ 422. http://www.imaging.org/ist/membership/honors_desc.cfm?AwardCode=C
+ 423. http://www.imaging.org/ist/membership/honors_desc.cfm?AwardCode=C
+ 424. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=18
+ 425. file://localhost/wiki/Special:BookSources/0743251172
+ 426. file://localhost/wiki/Special:BookSources/0743251180
+ 427. file://localhost/w/index.php?title=Chester_Carlson&action=edit&section=19
+ 428. http://www.creativepro.com/story/feature/23030.html
+ 429. http://pr.caltech.edu/periodicals/EandS/articles/LXVIII_3/Owen.pdf
+ 430. file://localhost/wiki/Wikipedia:Persondata
+ 431. file://localhost/wiki/Seattle,_Washington
+ 432. file://localhost/wiki/United_States
+ 433. file://localhost/wiki/New_York_City
+ 434. file://localhost/wiki/New_York
+ 435. file://localhost/wiki/United_States
+ 436. http://en.wikipedia.org/wiki/Chester_Carlson
+ 437. file://localhost/wiki/Special:Categories
+ 438. file://localhost/wiki/Category:1906_births
+ 439. file://localhost/wiki/Category:1968_deaths
+ 440. file://localhost/wiki/Category:American_inventors
+ 441. file://localhost/wiki/Category:American_physicists
+ 442. file://localhost/wiki/Category:Office_equipment
+ 443. file://localhost/wiki/Category:Patent_attorneys
+ 444. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 445. file://localhost/wiki/Category:New_York_Law_School_alumni
+ 446. file://localhost/wiki/Category:People_from_Astoria,_Queens
+ 447. file://localhost/wiki/Category:People_from_Jackson_Heights,_Queens
+ 448. file://localhost/wiki/Category:People_from_Seattle,_Washington
+ 449. file://localhost/wiki/Category:American_people_of_Swedish_descent
+ 450. file://localhost/wiki/Category:California_Institute_of_Technology_alumni
+ 451. file://localhost/wiki/Category:All_articles_with_unsourced_statements
+ 452. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_August_2010
+ 453. file://localhost/w/index.php?title=Special:UserLogin&returnto=Chester_Carlson
+ 454. file://localhost/wiki/Chester_Carlson
+ 455. file://localhost/wiki/Talk:Chester_Carlson
+ 456. file://localhost/wiki/Chester_Carlson
+ 457. file://localhost/w/index.php?title=Chester_Carlson&action=edit
+ 458. file://localhost/w/index.php?title=Chester_Carlson&action=history
+ 459. file://localhost/wiki/Main_Page
+ 460. file://localhost/wiki/Portal:Contents
+ 461. file://localhost/wiki/Portal:Featured_content
+ 462. file://localhost/wiki/Portal:Current_events
+ 463. file://localhost/wiki/Special:Random
+ 464. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 465. file://localhost/wiki/Help:Contents
+ 466. file://localhost/wiki/Wikipedia:About
+ 467. file://localhost/wiki/Wikipedia:Community_portal
+ 468. file://localhost/wiki/Special:RecentChanges
+ 469. file://localhost/wiki/Wikipedia:Contact_us
+ 470. file://localhost/wiki/Special:WhatLinksHere/Chester_Carlson
+ 471. file://localhost/wiki/Special:RecentChangesLinked/Chester_Carlson
+ 472. file://localhost/wiki/Wikipedia:Upload
+ 473. file://localhost/wiki/Special:SpecialPages
+ 474. file://localhost/w/index.php?title=Chester_Carlson&oldid=409089585
+ 475. file://localhost/w/index.php?title=Special:Cite&page=Chester_Carlson&id=409089585
+ 476. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Chester+Carlson
+ 477. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Chester+Carlson&oldid=409089585&writer=rl
+ 478. file://localhost/w/index.php?title=Chester_Carlson&printable=yes
+ 479. http://az.wikipedia.org/wiki/%C3%87ester_Karlson
+ 480. http://de.wikipedia.org/wiki/Chester_Carlson
+ 481. http://es.wikipedia.org/wiki/Chester_Carlson
+ 482. http://it.wikipedia.org/wiki/Chester_Carlson
+ 483. http://gu.wikipedia.org/wiki/%E0%AA%9A%E0%AB%87%E0%AA%B8%E0%AB%8D%E0%AA%9F%E0%AA%B0_%E0%AA%95%E0%AA%BE%E0%AA%B0%E0%AB%8D%E0%AA%B2%E0%AA%B8%E0%AA%A8
+ 484. http://he.wikipedia.org/wiki/%D7%A6%27%D7%A1%D7%98%D7%A8_%D7%A7%D7%A8%D7%9C%D7%A1%D7%95%D7%9F
+ 485. http://ms.wikipedia.org/wiki/Chester_Carlson
+ 486. http://nl.wikipedia.org/wiki/Chester_Carlson
+ 487. http://ja.wikipedia.org/wiki/%E3%83%81%E3%82%A7%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%AB%E3%82%BD%E3%83%B3
+ 488. http://pt.wikipedia.org/wiki/Chester_Carlson
+ 489. http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB%D1%81%D0%BE%D0%BD,_%D0%A7%D0%B5%D1%81%D1%82%D0%B5%D1%80
+ 490. http://tr.wikipedia.org/wiki/Chester_Carlson
+ 491. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 492. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 493. http://www.wikimediafoundation.org/
+ 494. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 495. http://wikimediafoundation.org/wiki/Privacy_policy
+ 496. file://localhost/wiki/Wikipedia:About
+ 497. file://localhost/wiki/Wikipedia:General_disclaimer
+ 498. http://www.mediawiki.org/
+ 499. http://wikimediafoundation.org/
+
+   Hidden links:
+ 500. file://localhost/wiki/File:First_xerographic_copy_-_10-22-38_ASTORIA_.jpg
+ 501. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html
+ 502. file://localhost/home/memfis/projects/put/tsiss/Downloads/chester_carlson.html
+ 503. file://localhost/wiki/Main_Page
+ 504. http://creativecommons.org/licenses/by-sa/3.0/

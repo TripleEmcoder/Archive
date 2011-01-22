@@ -1,0 +1,1103 @@
+   #[1]Wikipedia (en) [2]copyright [3]Wikipedia Atom feed
+
+Douglas Engelbart
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [4]navigation, [5]search
+   [6]Page semi-protected
+   Douglas Carl Engelbart ("Doug")
+   Douglas Engelbart in 2008
+   Born January 30, 1925 (1925-01-30) (age 85)
+   [7]Portland, [8]Oregon, [9]USA
+   Citizenship US
+   Nationality US
+   Fields [10]Inventor
+   Institutions [11]Stanford Research Institute, [12]Tymshare,
+   [13]McDonnell Douglas, [14]Bootstrap Institute/Alliance, [15]Doug
+   Engelbart Institute
+   [16]Alma mater [17]Oregon State College (BS); [18]UC Berkeley (PhD)
+   [19]Doctoral advisor [20]John R. Woodyard
+   Known for [21]Computer mouse, [22]Hypertext, [23]Groupware,
+   [24]Interactive Computing
+   Notable awards [25]National Medal of Technology, [26]Lemelson-MIT
+   Prize, [27]Turing Award, [28]Lovelace Medal, [29]Norbert Wiener Award
+   for Social and Professional Responsibility, [30]Fellow Award, Computer
+   History Museum
+
+   Douglas Carl Engelbart (born January 30, 1925) is an [31]American
+   [32]inventor and early computer pioneer. He is best known for inventing
+   the [33]computer mouse,^[34][1] as a pioneer of [35]human-computer
+   interaction whose team developed [36]hypertext, networked computers,
+   and precursors to [37]GUIs; and as a committed and vocal proponent of
+   the development and use of [38]computers and [39]networks to help cope
+   with the world’s increasingly urgent and complex problems.^[40][2]
+
+   Engelbart had embedded in his lab a set of organizing principles, which
+   he termed his "bootstrapping strategy", which he specifically designed
+   to bootstrap and accelerate the rate of innovation achievable.^[41][3]
+
+   Contents
+
+        * [42]1 Early life and education
+        * [43]2 Career and accomplishments
+             + [44]2.1 Epiphany
+             + [45]2.2 SRI and ARC
+             + [46]2.3 ARPANET
+             + [47]2.4 Anecdotal notes
+        * [48]3 End of research career and subsequent developments
+        * [49]4 Honors
+        * [50]5 At present
+        * [51]6 Family
+        * [52]7 References
+        * [53]8 Further reading
+        * [54]9 External links
+
+Early life and education
+
+   Engelbart was born in the [55]U.S. state of [56]Oregon on January 30,
+   1925 to Carl Louis Engelbart and Gladys Charlotte Amelia Munson
+   Engelbart. He is of [57]German, [58]Swedish and [59]Norwegian
+   descent.^[60][4]
+
+   He was the middle of three children, with a sister Dorianne (3 years
+   older), and a brother David (14 months younger). They lived in Portland
+   in his early years, and moved to the countryside to a place called
+   Johnson Creek when he was 9 or 10, after the death of his father. He
+   graduated from [61]Portland's [62]Franklin High School in 1942.
+
+   Midway through his college studies at [63]Oregon State University (then
+   called Oregon State College), just at the end of World War II, he was
+   drafted into the Navy, serving two years as a [64]radar [65]technician
+   in the [66]Philippines. It was there on a small island in a tiny hut up
+   on stilts that he first read [67]Vannevar Bush's article "[68]As We May
+   Think", which greatly inspired him. He returned to Oregon State and
+   completed his [69]Bachelor's degree in Electrical Engineering in 1948,
+   a B.Eng. from [70]UC Berkeley in 1952,^[71][5] and a [72]Ph.D. in
+   [73]EECS from UC Berkeley in 1955. While at Oregon State, he was a
+   member of [74]Sigma Phi Epsilon social fraternity.
+
+   As a graduate student at Berkeley he assisted in the construction of
+   the California Digital Computer project [75]CALDIC. His graduate work
+   led to several patents.^[76][6] After completing his PhD he stayed on
+   at Berkeley to teach for a year, and left when it was clear he could
+   not pursue his vision there. He then formed a [77]startup, Digital
+   Techniques, to commercialize some of his doctorate research on storage
+   devices, but after a year decided instead to find a venue where he
+   could pursue the research he had been dreaming of since 1951 (see
+   Epiphany).
+
+Career and accomplishments
+
+   The first [78]computer mouse held by Engelbart showing the wheels that
+   directly contact the working surface.
+
+Epiphany
+
+   Doug Engelbart's career was inspired in 1951 when he got engaged and
+   suddenly realized he had no career goals beyond getting a good
+   education and a decent job. Over several months he reasoned that: (1)
+   he would focus his career on making the world a better place; (2) any
+   serious effort to make the world better requires some kind of organized
+   effort; (3) harnessing the collective human intellect of all the people
+   contributing to effective solutions was the key; (4) if you could
+   dramatically improve how we do that, you'd be boosting every effort on
+   the planet to solve important problems - the sooner the better; and (5)
+   computers could be the vehicle for dramatically improving this
+   capability.
+
+   In 1945, Engelbart had read with interest [79]Vannevar Bush's article
+   "[80]As We May Think",^[81][7] a call to arms for making knowledge
+   widely available as a national peacetime grand challenge. Doug had also
+   read something about computers (a relatively recent phenomenon), and
+   from his experience as a radar technician he knew that information
+   could be analyzed and displayed on a screen. He suddenly envisioned
+   intellectual workers sitting at display 'working stations', flying
+   through information space, harnessing their collective intellectual
+   capacity to solve important problems together in much more powerful
+   ways. Harnessing collective intellect, facilitated by interactive
+   computers, became his life's mission at a time when computers were
+   viewed as number crunching tools. He went to UC Berkeley to learn
+   everything he could about computers, got his PhD, and was told to be
+   very careful about who he talked to about his "wild" ideas. After a
+   year of teaching at Berkeley as Acting Assistant Professor, he took a
+   position at [82]Stanford Research Institute (SRI) in [83]Menlo Park,
+   hoping one day to pursue his vision there. He initially worked for
+   [84]Hewitt Crane on devices. He and Hew became lifelong friends.
+
+SRI and ARC
+
+   At SRI, Engelbart gradually proved himself with over a dozen patents to
+   his name (some resulting from his graduate work), and within a few
+   years was funded to produce a report about his vision and proposed
+   research agenda titled Augmenting Human Intellect: A Conceptual
+   Framework.^[85][8] This led to funding from [86]ARPA to launch his
+   work. Engelbart recruited a research team in his new [87]Augmentation
+   Research Center (ARC, the lab he founded at SRI), and became the
+   driving force behind the design and development of the On-Line System,
+   or [88]NLS. He and his team developed computer-interface elements such
+   as bit-mapped screens, the mouse, [89]hypertext, collaborative tools,
+   and precursors to the [90]graphical user interface. He conceived and
+   developed many of his user interface ideas back in the mid-1960s, long
+   before the personal computer revolution, at a time when most
+   individuals were kept away from computers, and could only use computers
+   through intermediaries (see [91]batch processing), and when software
+   tended to be written for [92]vertical applications in proprietary
+   systems.
+   Two [93]Apple Macintosh Plus mice, 1986
+
+   Engelbart applied for a [94]patent in 1967 and received it in 1970, for
+   the wooden shell with two metal wheels ([95]computer mouse - [96]U.S.
+   Patent 3,541,541), which he had developed with Bill English, his lead
+   engineer, a few years earlier. In the patent application it is
+   described as an "X-Y position indicator for a display system".
+   Engelbart later revealed that it was nicknamed the "mouse" because the
+   tail came out the end. His group also called the on-screen cursor a
+   "bug", but this term was not widely adopted.
+
+   He never received any [97]royalties for his mouse invention. During an
+   interview, he says "[98]SRI patented the mouse, but they really had no
+   idea of its value. Some years later it was learned that they had
+   licensed it to [99]Apple for something like $40,000."
+
+   Engelbart showcased the [100]chorded keyboard and many more of his and
+   ARC's inventions in 1968 at the so-called [101]mother of all
+   demos.^[102][9]
+
+ARPANET
+
+   Engelbart's research was funded by [103]ARPA, SRI's ARC became involved
+   with the [104]ARPANET (the precursor of the [105]Internet).
+
+   On October 29, 1969, the world's first electronic computer network, the
+   [106]ARPANET, was established between nodes at [107]Leonard Kleinrock's
+   lab at [108]UCLA and Engelbart's lab at SRI. [109]Interface Message
+   Processors at both sites served as the [110]backbone of the first
+   [111]Internet.^[112][10]
+
+   In addition to SRI and UCLA, [113]UCSB, and the [114]University of Utah
+   were part of the original four network nodes. By December 5, 1969, the
+   entire 4-node network was connected.
+
+   ARC soon became the first [115]Network Information Center and thus
+   managed the directory for connections among all ARPANET nodes. ARC also
+   published a large percentage of the early [116]Request For Comments, an
+   ongoing series of publications that document the evolution of
+   ARPANET/Internet.
+
+Anecdotal notes
+
+   [117]Historian of science [118]Thierry Bardini has argued that
+   Engelbart's complex personal philosophy (which drove all his research
+   endeavors) foreshadowed the modern application of the concept of
+   [119]coevolution to the philosophy and use of technology.
+
+   Bardini points out that Engelbart was strongly influenced by the
+   [120]principle of linguistic relativity developed by [121]Benjamin Lee
+   Whorf.^[122][11] Where Whorf reasoned that the sophistication of a
+   language controls the sophistication of the thoughts that can be
+   expressed by a speaker of that language, Engelbart reasoned that the
+   state of our current technology controls our ability to manipulate
+   information, and that fact in turn will control our ability to develop
+   new, improved technologies. He thus set himself to the revolutionary
+   task of developing computer-based technologies for manipulating
+   information directly, and also to improve individual and group
+   processes for knowledge-work.
+
+   Engelbart's philosophy and research agenda is most clearly and directly
+   expressed in the 1962 research report which Engelbart refers to as his
+   'bible': [123]Augmenting Human Intellect: A Conceptual Framework. The
+   concept of network-augmented intelligence is attributed to Engelbart
+   based on this pioneering work.
+
+End of research career and subsequent developments
+
+   Engelbart slipped into relative obscurity after 1976. Several of
+   Engelbart's researchers became alienated from him and left his
+   organization for [124]Xerox PARC, in part due to frustration, and in
+   part due to differing views of the future of computing. Engelbart saw
+   the future in collaborative, networked, timeshare (client-server)
+   computers, which younger programmers rejected in favor of the personal
+   computer. The conflict was both technical and social: the younger
+   programmers came from an era where centralized power was highly
+   suspect, and personal computing was just barely on the horizon.
+
+   Engelbart served on the board of directors of [125]Erhard Seminars
+   Training. Several key ARC personnel were also involved. Although EST
+   seemed like a good idea at first, the controversial nature of EST
+   reduced the morale and social cohesion of the ARC community according
+   to Bardini's book.
+
+   The [126]Mansfield Amendment, the end of the [127]Vietnam War, and the
+   end of the [128]Apollo program reduced ARC's funding from ARPA and
+   [129]NASA. SRI's management, which disapproved of Engelbart's approach
+   to running the center, placed the remains of ARC under the control of
+   [130]artificial intelligence researcher [131]Bertram Raphael, who
+   negotiated the transfer of the laboratory to a company called
+   [132]Tymshare. Engelbart's house in [133]Atherton burned down during
+   this period, causing him and his family even further problems. Tymshare
+   took over [134]NLS and the lab that Engelbart had founded, hired most
+   of the lab's staff including its creator as a Senior Scientist, renamed
+   the software Augment, and offered it as a commercial service via its
+   new Office Automation Division. Tymshare was already somewhat familiar
+   with NLS; back when ARC was still operational, it had experimented with
+   its own local copy of the NLS software on a minicomputer called
+   OFFICE-1, as part of a joint project with ARC.
+
+   At Tymshare, Engelbart soon found himself marginalized and relegated to
+   obscurity. Operational concerns at Tymshare overrode Engelbart's desire
+   to do further research. Various executives, first at Tymshare and later
+   at [135]McDonnell Douglas (which took over Tymshare in 1984), expressed
+   interest in his ideas, but never committed the funds or the people to
+   further develop them. His interest inside of McDonnell Douglas was
+   focused on the enormous knowledge management and IT requirements
+   involved in the lifecycle of an aerospace program, which served to
+   strengthen Doug's resolve to motivate the IT arena toward global
+   interoperability and an open hyperdocument system.^[136][12] Engelbart
+   retired from McDonnell Douglas in 1986, determined to raise a flag on
+   neutral ground where he could pursue his work in earnest.
+
+   Teaming with his daughter, Christina Engelbart, in 1988 he founded the
+   Bootstrap Institute with modest funding to coalesce his ideas into a
+   series of three-day and half-day management seminars offered at
+   Stanford University 1989–2000, which served to refine his ideas while
+   inspiring candidate participants. By the early 1990s there was
+   sufficient interest among his seminar graduates to launch a
+   collaborative implementation of his work, and the Bootstrap Alliance
+   was formed as a non-profit home base for this effort. Although the
+   invasion of Iraq and subsequent recession spawned a rash of
+   belt-tightening reorganizations which drastically redirected the
+   efforts of their alliance partners, they continued with the management
+   seminars, consulting, and small-scale collaborations. In the mid-1990s
+   they were awarded some DARPA funding to develop a modern user interface
+   to Augment, called Visual AugTerm (VAT), while participating in a
+   larger program addressing the IT requirements of the Joint Task Force.
+
+Honors
+
+   Since the late 1980s, prominent individuals and organizations have
+   recognized the seminal importance of Engelbart's
+   contributions:^[137][13]
+
+   In December 1995, at the Fourth WWW Conference in Boston, he was the
+   first recipient of what would later become the [138]Yuri Rubinsky
+   Memorial Award. In 1997 he was awarded the [139]Lemelson-MIT Prize of
+   $500,000, the world's largest single prize for invention and
+   innovation, and the ACM [140]Turing Award. To mark the 30th anniversary
+   of Engelbart's 1968 demo, in 1998 the Stanford Silicon Valley Archives
+   [141][3] and the [142]Institute for the Future hosted Engelbart's
+   Unfinished Revolution[143][4], a large [144]symposium at [145]Stanford
+   University's Memorial Auditorium, to honor Engelbart and his ideas.
+   Also that year, [146]ACM [147]SIGCHI awarded him the CHI Lifetime
+   Achievement Award (and inducted him into the [148]CHI Academy in 2002).
+
+   Engelbart was awarded [149]The Franklin Institute's Certificate of
+   Merit in 1996 and [150]The Benjamin Franklin Medal in 1999 in Computer
+   and Cognitive Science.
+
+   In early 2000 Engelbart produced, with a dedicated team of volunteers
+   and sponsors, what was called The Unfinished Revolution — II[151][5],
+   also known as the Engelbart Colloquium at Stanford University, to
+   document and publicize his work and ideas to a larger audience (live,
+   and online).^[152][14]^[153][15]
+
+   In December 2000, US President [154]Bill Clinton awarded Engelbart the
+   [155]National Medal of Technology, the United States' highest
+   technology award. In 2001 he was awarded a [156]British Computer
+   Society's [157]Lovelace Medal, and in 2005 he was made a Fellow of the
+   [158]Computer History Museum and honored with the [159]Norbert Wiener
+   Award, which is given annually by [160]Computer Professionals for
+   Social Responsibility.
+
+   [161]Robert X. Cringely did an hour long interview with Dr. Engelbart
+   on 9 December 2005 in his NerdTV [162][6] video podcast series. On
+   December 9, 2008, Engelbart was honored at the 40th Anniversary
+   celebration of the 1968 "[163]Mother of All Demos".^[164][16] This
+   event, produced by SRI International, was held at Memorial Auditorium
+   at Stanford University. Speakers included several members of
+   Engelbart's original Augmentation Research Center (ARC) team including
+   Don Andrews, Bill Paxton, Bill English, and [165]Jeff Rulifson,
+   Engelbart's chief government sponsor [166]Bob Taylor, and other
+   pioneers of interactive computing, including [167]Andy van Dam and
+   [168]Alan Kay. In addition, Christina Engelbart spoke about her
+   father's early influences and the ongoing work of the Doug Engelbart
+   Institute.^[169][17] In June 2009, the [170]New Media Consortium
+   recognized Engelbart as an NMC Fellow ^[171][18] for his lifetime of
+   achievements.
+
+At present
+
+   Doug Engelbart attended Program for the Future 2010
+   Conference^[172][19] where hundreds of people convened at The Tech
+   Museum in San Jose and online to engage in dialog about how to pursue
+   Doug Engelbart's vision to augment collective intelligence.
+
+   The most complete coverage of Engelbart's bootstrapping ideas can be
+   found in Boosting Our Collective IQ,^[173][20] by Douglas C. Engelbart,
+   1995. This is a special keepsake including three of Engelbart's key
+   papers, artfully edited and produced into book form by Yuri Rubinsky
+   and Christina Engelbart to commemorate the presentation of the 1995
+   SoftQuad Web Award to Doug Engelbart at the World Wide Web conference
+   in Boston that December, honoring his early and seminal contribution to
+   the hypertext systems. Only 2,000 softcover copies were printed, and
+   100 hardcover, numbered and signed by Doug Engelbart and [174]Tim
+   Berners-Lee. 30 pages, 5.5″×9″ includes Epilogue and details of the
+   Award. Engelbart's book is now being republished by the Doug Engelbart
+   Institute.^[175][21]
+
+   Two comprehensive histories of Engelbart's laboratory and work are in
+   What the Dormouse Said: How the Sixties Counterculture Shaped the
+   Personal Computer Industry by [176]John Markoff and A Heritage of
+   Innovation: SRI's First Half Century[177][7] by Donald Neilson. Other
+   books on Engelbart and his laboratory include Bootstrapping: Douglas
+   Engelbart, Coevolution, and the Origins of Personal Computing by
+   [178]Thierry Bardini and The Engelbart Hypothesis: Dialogs with Douglas
+   Engelbart, by [179]Valerie Landau and [180]Eileen Clegg in conversation
+   with Douglas Engelbart.^[181][22] All four of these books are based on
+   interviews with Engelbart as well as other contributors in his
+   laboratory.
+
+   Engelbart is now Founder Emeritus of the Doug Engelbart Institute,
+   which he founded in 1988 with his daughter Christina Engelbart, who is
+   now Executive Director. The Institute promotes Engelbart's philosophy
+   for boosting Collective IQ—the concept of dramatically improving how we
+   can solve important problems together—using a strategic bootstrapping
+   approach for accelerating our progress toward that goal.^[182][23]
+
+   In 2005 Engelbart received a [183]National Science Foundation grant to
+   fund the open source HyperScope [184][8] project. The Hyperscope team
+   built a browser component using [185]Ajax and [186]DHTML designed to
+   replicate Augment's multiple viewing and jumping capabilities (linking
+   within and across various documents). HyperScope is perceived as the
+   first step of a process designed to engage a wider community in a
+   dialogue, on development of collaborative software and services, based
+   on Engelbart's goals and research. The Doug Engelbart Institute is now
+   based at [187]SRI International.
+
+   Engelbart has served on the Advisory Boards of the University of Santa
+   Clara Center for Science, Technology, and Society [188][9], Foresight
+   Institute [189][10], Computer Professionals for Social Responsibility,
+   The Technology Center of Silicon Valley, and The Hyperwords Company Ltd
+   (producer of the free Firefox Add-On called
+   '[190]Hyperwords'.^[191][24]
+
+Family
+
+   Dr. Engelbart has four children, Gerda, Diana, Christina and Norman
+   with his late wife of 47 years, Ballard who died in 1997. He has nine
+   grandchildren. He remarried on January 26, 2008 to Karen O'Leary
+   Engelbart.^[192][25]
+
+References
+
+    1. [193]^ [194]BBC News Online: [195]The Man behind the Mouse
+    2. [196]^ [197]The Unfinished Revolution II: Strategy and Means for
+       Coping with Complex Problems, Colloquium at Stanford University,
+       Jan–Mar 2000.
+    3. [198]^ [199]About a Bootstrapping Strategy — an introduction with
+       links to source materials.
+    4. [200]^ Lowood, Henry (Dec. 19, 1986): [201]Douglas Engelbart
+       Interview 1, Stanford and the Silicon Valley. Oral History
+       Interviews.
+    5. [202]^ [203]http://dougengelbart.org/about/cv.html
+    6. [204]^ [205]Engelbart Patents
+    7. [206]^ [207]How Doug was influenced by Vannevar Bush's "As We May
+       Think"
+    8. [208]^ [209]http://www.dougengelbart.org/pubs/augment-3906.html
+       Augmenting Human Intellect: A Conceptual Framework
+    9. [210]^ Engelbart, Douglas C., et al. (1968), "SRI-ARC. A technical
+       session presentation at the Fall Joint Computer Conference in San
+       Francisco, Dec. 9, 1968" (NLS demo ’68: The computer mouse debut),
+       11 film reels and 6 video tapes (100 min.), Engelbart Collection,
+       Stanford University Library, Menlo Park (CA).
+   10. [211]^ [212][1]
+   11. [213]^ [214]Thierry Bardini & [215]Michael Friedewald,
+       [216]Chronicle of the Death of a Laboratory: Douglas Engelbart and
+       the Failure of the Knowledge Workshop, [217]History of Technology
+       23, 2002, p193.
+   12. [218]^ [219]About an Open Hyperdocument System an introduction with
+       links to Doug's key writings on the subject
+   13. [220]^ [221]Honors Awarded to Doug Engelbart
+   14. [222]^ [223]http://scpd.stanford.edu/engelbart_colloquium/index.jsp
+       Video archives of 2000 UnRev-II: Engelbart's Colloquium at Stanford
+   15. [224]^ [225]Video rchives of 1998"Engelbart's Unfinished
+       Revolution" Symposium
+   16. [226]^ [227]Engelbart and the Dawn of Interactive Computing
+   17. [228]^ [229]The Doug Engelbart Institute
+   18. [230]^ [231]NMC Fellow award
+   19. [232]^ Program for the Future
+   20. [233]^ [234]Engelbart Books
+   21. [235]^ [236]The Doug Engelbart Institute
+   22. [237]^ "The Engelbart Hypothesis: Dialogs with Douglas Engelbart"
+   23. [238]^ [239]Doug's Vision Highlights: Augmenting Society's
+       Collective IQ
+   24. [240]^ [241]http://www.hyperwords.net/about_us_adv.html
+   25. [242]^ [243][2]
+
+Further reading
+
+     * Bardini, Thierry (2000). Bootstrapping: Douglas Engelbart,
+       Coevolution, and the Origins of Personal Computing. Stanford:
+       Stanford University Press. [244]ISBN [245]0804737231.
+     * Landau, Valerie; Clegg, Eileen (2009). [246]The Engelbart
+       Hypothesis: Dialogs with Douglas Engelbart. Berkeley: Next Press.
+       [247]http://engelbartbook.com.
+
+External links
+
+   [248]Wikiquote has a collection of quotations related to: [249]Douglas
+   Engelbart
+     * [250]Doug Engelbart's official website and home of the Doug
+       Engelbart Institute (formerly Bootstrap)
+     * [251]Engelbart's Biography, [252]Patents, [253]Awards,
+       [254]Curriculum Vitae
+     * [255]A Lifetime Pursuit — a short chronicle of his work by
+       Christina Engelbart
+     * [256]Engelbart's Vision and Mission Statements; Dec. 1999
+     * [257]Engelbart cousre facilitated by Valerie Landau at CSU Monterey
+       Bay
+     * [258]U.C. Berkeley Lecture in IEOR 190C Feb. 2008
+     * [259]Douglas C. Engelbart Papers, 1953-2005(call number M0638; 464
+       linear ft.) are housed in the [260]Department of Special
+       Collections and University Archives at [261]Stanford University
+       Libraries
+     * [262]Engelbart's Unfinished Revolution; December 1998 at Stanford
+       University
+     * [263]Engelbart's Unfinished Revolution II Colloquium; January –
+       Mach. 2000 at Stanford University ([264]view the sessions)
+     * [265]Engelbart and the Dawn of Interactive Computing — December 9,
+       2008 — 40th anniversary commemorative event
+     * [266]Interview with Doug Engelbart on 40th Anniversary of the Mouse
+     * [267]"Program for the Future"
+     * [268]The History of Doug Engelbart and Interactive Computing
+     * [269]Sloan Project MouseSite — Tim Lenoir, Stanford University
+     * [270]The Study of Engelbart: An Educational Networked Improvement
+       Community California State University Student Wiki studying
+       Engelbart, Directed by Valerie Landau
+     * [271]As We May Work — the Pursuit of Collective IQ, from IBM
+       Symposium site
+     * [272]Out of School: Doug Engelbart's Experience Shows That Even the
+       Best Technology Can Be Ignored If It Is Difficult to Classify,
+       column by [273]Robert X. Cringely, 2004
+     * [274]Wired article: The Click Heard Round The World
+     * [275]Transcript of 2003 visit to [276]San Jose State University
+     * [277]Multimedia: From Wagner to Virtual Reality, by Randall Packer
+     * [278]Doug Engelbart: Father of the Mouse
+     * [279]Doug Engelbart 1968 Demo Original 90-minute video from
+       [280]MouseSite
+     * [281]Doug Engelbart 1968 Demo on [282]Google Video
+     * [283]OpenAugment Consortium, dedicated to the preservation of the
+       Augment system
+     * [284]SRI mouse
+     * [285]Nerd TV, Inventor of the mouse hour long video interview by
+       Robert X. Cringely
+     * [286]Channel9 @MSDN Interview with Douglas Engelbart.
+     * [287]"A Manifesto for Collaborative Tools", by Eugene Eric Kim
+     * [288]"Douglas Engelbart interview"
+     * [289]Interview with Douglas Engelbart, December 19, 1986.
+     * [290]"Collective IQ and Human Augmentation", Interview with Douglas
+       Engelbart, April 4, 2007.
+     * [291]Douglas Engelbart and Valerie Landau January 2008 interview
+       [292]by Robert Scoble
+     * [293]CNET's Photo Gallery about Douglas Engelbart's demo.
+
+
+        [294]v · [295]d · [296]e[297]A. M. Turing Award [298]laureates
+
+   [299]Alan Perlis (1966) · [300]Maurice Vincent Wilkes (1967) ·
+   [301]Richard Hamming (1968) · [302]Marvin Minsky (1969) · [303]James H.
+   Wilkinson (1970) · [304]John McCarthy (1971) · [305]Edsger W. Dijkstra
+   (1972) · [306]Charles Bachman (1973) · [307]Donald Knuth (1974) ·
+   [308]Allen Newell / [309]Herbert Simon (1975) · [310]Michael O. Rabin /
+   [311]Dana Scott (1976) · [312]John Backus (1977) · [313]Robert Floyd
+   (1978) · [314]Kenneth E. Iverson (1979) · [315]C. A. R. Hoare (1980) ·
+   [316]Edgar F. Codd (1981) · [317]Stephen Cook (1982) · [318]Ken
+   Thompson / [319]Dennis Ritchie (1983) · [320]Niklaus Wirth (1984) ·
+   [321]Richard Karp (1985) · [322]John Hopcroft / [323]Robert Tarjan
+   (1986) · [324]John Cocke (1987) · [325]Ivan Sutherland (1988) ·
+   [326]William Kahan (1989) · [327]Fernando J. Corbató (1990) ·
+   [328]Robin Milner (1991) · [329]Butler Lampson (1992) · [330]Juris
+   Hartmanis / [331]Richard Stearns (1993) · [332]Edward Feigenbaum /
+   [333]Raj Reddy (1994) · [334]Manuel Blum (1995) · [335]Amir Pnueli
+   (1996) · Douglas Engelbart (1997) · [336]Jim Gray (1998) · [337]Fred
+   Brooks (1999) · [338]Andrew Yao (2000) · [339]Ole-Johan Dahl /
+   [340]Kristen Nygaard (2001) · [341]Ron Rivest / [342]Adi Shamir /
+   [343]Leonard Adleman (2002) · [344]Alan Kay (2003) · [345]Vint Cerf /
+   [346]Bob Kahn (2004) · [347]Peter Naur (2005) · [348]Frances E. Allen
+   (2006) · [349]Edmund M. Clarke / [350]E. Allen Emerson / [351]Joseph
+   Sifakis (2007) · [352]Barbara Liskov (2008) · [353]Charles P. Thacker
+   (2009)
+                       [354]Persondata
+   Name              Engelbart, Dr. Douglas C.
+   Alternative names
+   Short description [355]Inventor
+   Date of birth     January 30, 1925 (1925-01-30) (age 85)
+   Place of birth    [356]Oregon
+   Date of death
+   Place of death
+   Retrieved from "[357]http://en.wikipedia.org/wiki/Douglas_Engelbart"
+   [358]Categories: [359]1925 births | [360]Living people | [361]American
+   inventors | [362]Computer hardware engineers | [363]Computer pioneers |
+   [364]Futurologists | [365]American people of Norwegian descent |
+   [366]People from Portland, Oregon | [367]Turing Award laureates |
+   [368]Oregon State University alumni | [369]Lemelson-MIT Prize |
+   [370]National Medal of Technology recipients | [371]National Inventors
+   Hall of Fame inductees | [372]SRI International people | [373]Xerox
+   people
+   Hidden categories: [374]Wikipedia indefinitely semi-protected
+   biographies of living people
+
+Personal tools
+
+     * [375]Log in / create account
+
+Namespaces
+
+     * [376]Article
+     * [377]Discussion
+
+Variants
+
+Views
+
+     * [378]Read
+     * [379]View source
+     * [380]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [381]Main page
+     * [382]Contents
+     * [383]Featured content
+     * [384]Current events
+     * [385]Random article
+     * [386]Donate to Wikipedia
+
+Interaction
+
+     * [387]Help
+     * [388]About Wikipedia
+     * [389]Community portal
+     * [390]Recent changes
+     * [391]Contact Wikipedia
+
+Toolbox
+
+     * [392]What links here
+     * [393]Related changes
+     * [394]Upload file
+     * [395]Special pages
+     * [396]Permanent link
+     * [397]Cite this page
+
+Print/export
+
+     * [398]Create a book
+     * [399]Download as PDF
+     * [400]Printable version
+
+Languages
+
+     * [401]العربية
+     * [402]Bosanski
+     * [403]Български
+     * [404]Català
+     * [405]Dansk
+     * [406]Deutsch
+     * [407]Español
+     * [408]Esperanto
+     * [409]Français
+     * [410]Galego
+     * [411]한국어
+     * [412]Hrvatski
+     * [413]Bahasa Indonesia
+     * [414]Italiano
+     * [415]עברית
+     * [416]മലയാളം
+     * [417]Bahasa Melayu
+     * [418]Nederlands
+     * [419]日本語
+     * [420]‪Norsk (bokmål)‬
+     * [421]Polski
+     * [422]Português
+     * [423]Română
+     * [424]Русский
+     * [425]Slovenčina
+     * [426]Српски / Srpski
+     * [427]Suomi
+     * [428]Svenska
+     * [429]Türkçe
+     * [430]中文
+
+     * This page was last modified on 25 December 2010 at 18:44.
+     * Text is available under the [431]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [432]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [433]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [434]Contact us
+
+     * [435]Privacy policy
+     * [436]About Wikipedia
+     * [437]Disclaimers
+
+     * [438]Powered by MediaWiki
+     * [439]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/opensearch_desc.php
+   2. http://creativecommons.org/licenses/by-sa/3.0/
+   3. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   4. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#mw-head
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#p-search
+   6. file://localhost/wiki/Wikipedia:Protection_policy#semi
+   7. file://localhost/wiki/Portland,_Oregon
+   8. file://localhost/wiki/Oregon
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/Inventing
+  11. file://localhost/wiki/SRI_International
+  12. file://localhost/wiki/Tymshare
+  13. file://localhost/wiki/McDonnell_Douglas
+  14. http://www.dougengelbart.org/about/dei-footnote.html
+  15. http://dougengelbart.org/
+  16. file://localhost/wiki/Alma_mater
+  17. file://localhost/wiki/Oregon_State_University
+  18. file://localhost/wiki/University_of_California,_Berkeley
+  19. file://localhost/wiki/Doctoral_advisor
+  20. file://localhost/wiki/John_Robert_Woodyard
+  21. file://localhost/wiki/Computer_mouse
+  22. file://localhost/wiki/Hypertext
+  23. file://localhost/wiki/Groupware
+  24. file://localhost/wiki/Interactive_computing
+  25. file://localhost/wiki/National_Medal_of_Technology
+  26. file://localhost/wiki/Lemelson-MIT_Prize
+  27. file://localhost/wiki/Turing_Award
+  28. file://localhost/wiki/Lovelace_Medal
+  29. file://localhost/wiki/Norbert_Wiener_Award_for_Social_and_Professional_Responsibility
+  30. http://www.computerhistory.org/fellowawards/index.php?id=45
+  31. file://localhost/wiki/United_States
+  32. file://localhost/wiki/Inventor
+  33. file://localhost/wiki/Computer_mouse
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-0
+  35. file://localhost/wiki/Human-computer_interaction
+  36. file://localhost/wiki/Hypertext
+  37. file://localhost/wiki/Graphical_user_interface
+  38. file://localhost/wiki/Computers
+  39. file://localhost/wiki/Computer_network
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-1
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-2
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Early_life_and_education
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Career_and_accomplishments
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Epiphany
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#SRI_and_ARC
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#ARPANET
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Anecdotal_notes
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#End_of_research_career_and_subsequent_developments
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Honors
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#At_present
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Family
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#References
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#Further_reading
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#External_links
+  55. file://localhost/wiki/U.S._state
+  56. file://localhost/wiki/Oregon
+  57. file://localhost/wiki/Germans
+  58. file://localhost/wiki/Swedish_ethnic_group
+  59. file://localhost/wiki/Norwegian_people
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-3
+  61. file://localhost/wiki/Portland,_Oregon
+  62. file://localhost/wiki/Franklin_High_School_(Portland,_Oregon)
+  63. file://localhost/wiki/Oregon_State_University
+  64. file://localhost/wiki/Radar
+  65. file://localhost/wiki/Technician
+  66. file://localhost/wiki/Philippines
+  67. file://localhost/wiki/Vannevar_Bush
+  68. file://localhost/wiki/As_We_May_Think
+  69. file://localhost/wiki/Bachelor%27s_degree
+  70. file://localhost/wiki/University_of_California,_Berkeley
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-4
+  72. file://localhost/wiki/Doctor_of_Philosophy
+  73. file://localhost/wiki/EECS
+  74. file://localhost/wiki/Sigma_Phi_Epsilon
+  75. file://localhost/wiki/CALDIC
+  76. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-5
+  77. file://localhost/wiki/Startup_company
+  78. file://localhost/wiki/Computer_mouse
+  79. file://localhost/wiki/Vannevar_Bush
+  80. file://localhost/wiki/As_We_May_Think
+  81. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-6
+  82. file://localhost/wiki/Stanford_Research_Institute
+  83. file://localhost/wiki/Menlo_Park,_California
+  84. file://localhost/wiki/Hewitt_Crane
+  85. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-7
+  86. file://localhost/wiki/DARPA
+  87. file://localhost/wiki/Augmentation_Research_Center
+  88. file://localhost/wiki/NLS_(computer_system)
+  89. file://localhost/wiki/Hypertext
+  90. file://localhost/wiki/Graphical_user_interface
+  91. file://localhost/wiki/Batch_processing
+  92. file://localhost/wiki/Vertical_application
+  93. file://localhost/wiki/Macintosh_Plus
+  94. file://localhost/wiki/Patent
+  95. file://localhost/wiki/Computer_mouse
+  96. http://www.google.com/patents?vid=3541541
+  97. file://localhost/wiki/Royalties
+  98. file://localhost/wiki/SRI_International
+  99. file://localhost/wiki/Apple_Computer
+ 100. file://localhost/wiki/Chorded_keyboard
+ 101. file://localhost/wiki/The_Mother_of_All_Demos
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-8
+ 103. file://localhost/wiki/Advanced_Research_Projects_Agency
+ 104. file://localhost/wiki/ARPANET#Initial_ARPANET_deployment
+ 105. file://localhost/wiki/Internet
+ 106. file://localhost/wiki/ARPANET#Initial_ARPANET_deployment
+ 107. file://localhost/wiki/Leonard_Kleinrock
+ 108. file://localhost/wiki/UCLA
+ 109. file://localhost/wiki/Interface_Message_Processors
+ 110. file://localhost/wiki/Internet_backbone
+ 111. file://localhost/wiki/Internet
+ 112. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-9
+ 113. file://localhost/wiki/University_of_California,_Santa_Barbara
+ 114. file://localhost/wiki/University_of_Utah
+ 115. file://localhost/wiki/Network_Information_Center
+ 116. file://localhost/wiki/Request_For_Comment
+ 117. file://localhost/wiki/Historian
+ 118. file://localhost/wiki/Thierry_Bardini
+ 119. file://localhost/wiki/Coevolution
+ 120. file://localhost/wiki/Sapir%E2%80%93Whorf_hypothesis
+ 121. file://localhost/wiki/Benjamin_Lee_Whorf
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-10
+ 123. http://www.dougengelbart.org/pubs/augment-3906.html
+ 124. file://localhost/wiki/Xerox_PARC
+ 125. file://localhost/wiki/Erhard_Seminars_Training
+ 126. file://localhost/wiki/Mansfield_Amendment
+ 127. file://localhost/wiki/Vietnam_War
+ 128. file://localhost/wiki/Apollo_program
+ 129. file://localhost/wiki/NASA
+ 130. file://localhost/wiki/Artificial_intelligence
+ 131. file://localhost/wiki/Bertram_Raphael
+ 132. file://localhost/wiki/Tymshare
+ 133. file://localhost/wiki/Atherton,_California
+ 134. file://localhost/wiki/On-Line_System
+ 135. file://localhost/wiki/McDonnell_Douglas
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-11
+ 137. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-12
+ 138. file://localhost/wiki/Yuri_Rubinsky_Memorial_Award
+ 139. file://localhost/wiki/Lemelson-MIT_Prize
+ 140. file://localhost/wiki/Turing_Award
+ 141. http://svarchive.stanford.edu/
+ 142. file://localhost/wiki/Institute_for_the_Future
+ 143. http://unrev.stanford.edu/
+ 144. file://localhost/wiki/Symposium
+ 145. file://localhost/wiki/Stanford_University
+ 146. file://localhost/wiki/Association_for_Computing_Machinery
+ 147. file://localhost/wiki/SIGCHI
+ 148. file://localhost/wiki/CHI_Academy
+ 149. file://localhost/wiki/The_Franklin_Institute_Awards
+ 150. file://localhost/wiki/The_Franklin_Institute_Awards
+ 151. http://dougengelbart.org/colloquium/colloquium.html
+ 152. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-13
+ 153. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-14
+ 154. file://localhost/wiki/Bill_Clinton
+ 155. file://localhost/wiki/National_Medal_of_Technology
+ 156. file://localhost/wiki/British_Computer_Society
+ 157. file://localhost/wiki/Lovelace_Medal
+ 158. file://localhost/wiki/Computer_History_Museum
+ 159. file://localhost/wiki/Norbert_Wiener_Award_for_Social_and_Professional_Responsibility
+ 160. file://localhost/wiki/Computer_Professionals_for_Social_Responsibility
+ 161. file://localhost/wiki/Robert_X._Cringely
+ 162. http://www.pbs.org/cringely/nerdtv/shows/
+ 163. file://localhost/wiki/The_Mother_of_All_Demos
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-15
+ 165. file://localhost/wiki/Jeff_Rulifson
+ 166. file://localhost/wiki/Robert_Taylor_(computer_scientist)
+ 167. file://localhost/wiki/Andy_van_Dam
+ 168. file://localhost/wiki/Alan_Kay
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-16
+ 170. file://localhost/wiki/New_Media_Consortium
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-17
+ 172. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-18
+ 173. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-19
+ 174. file://localhost/wiki/Tim_Berners-Lee
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-20
+ 176. file://localhost/wiki/John_Markoff
+ 177. http://www.sri.com/about/history/nielson_book.html
+ 178. file://localhost/wiki/Thierry_Bardini
+ 179. file://localhost/wiki/Valerie_Landau
+ 180. file://localhost/wiki/Eileen_Clegg
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-21
+ 182. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-22
+ 183. file://localhost/wiki/National_Science_Foundation
+ 184. http://hyperscope.org/
+ 185. file://localhost/wiki/Ajax_(programming)
+ 186. file://localhost/wiki/Dynamic_HTML
+ 187. file://localhost/wiki/SRI_International
+ 188. http://www.scu.edu/sts/
+ 189. http://www.foresight.org/Updates/Update43/Update43.2.html
+ 190. file://localhost/wiki/Hyperwords
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-23
+ 192. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_note-24
+ 193. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-0
+ 194. file://localhost/wiki/BBC_News_Online
+ 195. http://news.bbc.co.uk/hi/english/sci/tech/newsid_1633000/1633972.stm
+ 196. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-1
+ 197. http://www.dougengelbart.org/colloquium/colloquium.html
+ 198. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-2
+ 199. http://www.dougengelbart.org/about/bootstrapping-strategy.html
+ 200. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-3
+ 201. http://www-sul.stanford.edu/depts/hasrg/histsci/ssvoral/engelbart/main1-ntb.html
+ 202. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-4
+ 203. http://dougengelbart.org/about/cv.html
+ 204. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-5
+ 205. http://www.dougengelbart.org/about/patents.html
+ 206. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-6
+ 207. http://dougengelbart.org/events/vannevar-bush-symposium.html#2
+ 208. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-7
+ 209. http://www.dougengelbart.org/pubs/augment-3906.html
+ 210. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-8
+ 211. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-9
+ 212. http://www.engineer.ucla.edu/stories/2004/Internet35.htm
+ 213. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-10
+ 214. file://localhost/wiki/Thierry_Bardini
+ 215. file://localhost/w/index.php?title=Michael_Friedewald&action=edit&redlink=1
+ 216. http://www.friedewald-family.de/Publikationen/HoT2002.pdf
+ 217. file://localhost/wiki/History_of_Technology_(magazine)
+ 218. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-11
+ 219. http://dougengelbart.org/about/ohs.html
+ 220. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-12
+ 221. http://www.dougengelbart.org/about/honors.html
+ 222. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-13
+ 223. http://scpd.stanford.edu/engelbart_colloquium/index.jsp
+ 224. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-14
+ 225. http://scpd.stanford.edu/engelbart_colloquium/index.jsp#EngelbartsUnfinishedRevolution
+ 226. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-15
+ 227. http://www.sri.com/engelbart-event.html
+ 228. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-16
+ 229. http://dougengelbart.org/
+ 230. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-17
+ 231. http://www.nmc.org/2009-summer-conference
+ 232. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-18
+ 233. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-19
+ 234. http://www.dougengelbart.org/library/books.html
+ 235. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-20
+ 236. http://www.dougengelbart.org/
+ 237. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-21
+ 238. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-22
+ 239. http://www.dougengelbart.org/about/vision-highlights.html
+ 240. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-23
+ 241. http://www.hyperwords.net/about_us_adv.html
+ 242. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html#cite_ref-24
+ 243. http://dougengelbart.org/events/celebrating-dougs-85th-birthday.html
+ 244. file://localhost/wiki/International_Standard_Book_Number
+ 245. file://localhost/wiki/Special:BookSources/0804737231
+ 246. http://engelbartbook.com/
+ 247. http://engelbartbook.com/
+ 248. file://localhost/wiki/Wikiquote
+ 249. http://en.wikiquote.org/wiki/Special:Search/Douglas_Engelbart
+ 250. http://dougengelbart.org/
+ 251. http://www.dougengelbart.org/about/dce-bio.html
+ 252. http://www.dougengelbart.org/about/patents.html
+ 253. http://www.dougengelbart.org/about/honors.html
+ 254. http://www.dougengelbart.org/about/cv.html
+ 255. http://www.dougengelbart.org/history/engelbart.html
+ 256. http://www.dougengelbart.org/about/visionmission.html
+ 257. http://www.roundworldmedia.com/engelbart.html
+ 258. http://www.youtube.com/watch?v=oBZXfCw7xIw
+ 259. http://www.oac.cdlib.org/findaid/ark:/13030/ft3n39n626
+ 260. http://library.stanford.edu/depts/spc/spc.html
+ 261. http://library.stanford.edu/
+ 262. http://unrev.stanford.edu/
+ 263. http://www.dougengelbart.org/colloquium/colloquium.html
+ 264. http://scpd.stanford.edu/engelbart_colloquium/index.jsp
+ 265. http://www.sri.com/engelbart-event.html
+ 266. http://www.telegraph.co.uk/scienceandtechnology/technology/technologynews/3538800/Computer-mouse-celebrates-40th-birthday.html
+ 267. http://programforthefuture.org/
+ 268. http://invisiblerevolution.net/
+ 269. http://www.stanford.edu/dept/HPS/sloanconference/MouseFinalReport.html
+ 270. http://opencourse.org/Collaboratories/hyperscope/hyperscope-wiki/FrontPage
+ 271. http://www.almaden.ibm.com/coevolution/bio/index.shtml?engelbart
+ 272. http://www.pbs.org/cringely/pulpit/pulpit20040826.html
+ 273. file://localhost/wiki/Robert_X._Cringely
+ 274. http://www.wired.com/wired/archive/12.01/mouse_pr.html
+ 275. http://switch.sjsu.edu/nextswitch/categories/issue18/invitational/switch_engelbart_transcript.pdf
+ 276. http://cadre.sjsu.edu/
+ 277. http://www.zakros.com/wvr/wvr.html
+ 278. http://www.superkids.com/aweb/pages/features/mouse/mouse.html
+ 279. http://sloan.stanford.edu/MouseSite/1968Demo.html
+ 280. http://sloan.stanford.edu/MouseSite/
+ 281. http://video.google.com/videoplay?docid=-8734787622017763097
+ 282. file://localhost/wiki/Google_Video
+ 283. http://www.openaugment.org/
+ 284. http://www.sri.com/about/timeline/mouse.html
+ 285. http://www.pbs.org/cringely/nerdtv/shows/#11
+ 286. http://channel9.msdn.com/Showpost.aspx?postid=141728
+ 287. http://www.blueoxen.com/papers/0000D/
+ 288. http://www-sul.stanford.edu/depts/hasrg/histsci/ssvoral/engelbart/main1-ntb.html
+ 289. http://www-sul.stanford.edu/depts/hasrg/histsci/ssvoral/engelbart/main1-ntb.html
+ 290. http://www.stranova.com/Podcasts/Stranova28.mp3
+ 291. http://www.podtech.net/scobleshow/technology/1734/meeting-the-user-input-visionary
+ 292. file://localhost/wiki/Robert_Scoble
+ 293. http://news.cnet.com/2300-1041_3-6248261-1.html
+ 294. file://localhost/wiki/Template:Turing_Award_laureates
+ 295. file://localhost/wiki/Template_talk:Turing_Award_laureates
+ 296. http://en.wikipedia.org/w/index.php?title=Template:Turing_Award_laureates&action=edit
+ 297. file://localhost/wiki/Turing_Award
+ 298. file://localhost/wiki/Laureate
+ 299. file://localhost/wiki/Alan_Perlis
+ 300. file://localhost/wiki/Maurice_Wilkes
+ 301. file://localhost/wiki/Richard_Hamming
+ 302. file://localhost/wiki/Marvin_Minsky
+ 303. file://localhost/wiki/James_H._Wilkinson
+ 304. file://localhost/wiki/John_McCarthy_(computer_scientist)
+ 305. file://localhost/wiki/Edsger_W._Dijkstra
+ 306. file://localhost/wiki/Charles_Bachman
+ 307. file://localhost/wiki/Donald_Knuth
+ 308. file://localhost/wiki/Allen_Newell
+ 309. file://localhost/wiki/Herbert_Simon
+ 310. file://localhost/wiki/Michael_O._Rabin
+ 311. file://localhost/wiki/Dana_Scott
+ 312. file://localhost/wiki/John_Backus
+ 313. file://localhost/wiki/Robert_Floyd
+ 314. file://localhost/wiki/Kenneth_E._Iverson
+ 315. file://localhost/wiki/C._A._R._Hoare
+ 316. file://localhost/wiki/Edgar_F._Codd
+ 317. file://localhost/wiki/Stephen_Cook
+ 318. file://localhost/wiki/Ken_Thompson
+ 319. file://localhost/wiki/Dennis_Ritchie
+ 320. file://localhost/wiki/Niklaus_Wirth
+ 321. file://localhost/wiki/Richard_Karp
+ 322. file://localhost/wiki/John_Hopcroft
+ 323. file://localhost/wiki/Robert_Tarjan
+ 324. file://localhost/wiki/John_Cocke
+ 325. file://localhost/wiki/Ivan_Sutherland
+ 326. file://localhost/wiki/William_Kahan
+ 327. file://localhost/wiki/Fernando_J._Corbat%C3%B3
+ 328. file://localhost/wiki/Robin_Milner
+ 329. file://localhost/wiki/Butler_Lampson
+ 330. file://localhost/wiki/Juris_Hartmanis
+ 331. file://localhost/wiki/Richard_Stearns_(computer_scientist)
+ 332. file://localhost/wiki/Edward_Feigenbaum
+ 333. file://localhost/wiki/Raj_Reddy
+ 334. file://localhost/wiki/Manuel_Blum
+ 335. file://localhost/wiki/Amir_Pnueli
+ 336. file://localhost/wiki/Jim_Gray_(computer_scientist)
+ 337. file://localhost/wiki/Fred_Brooks
+ 338. file://localhost/wiki/Andrew_Yao
+ 339. file://localhost/wiki/Ole-Johan_Dahl
+ 340. file://localhost/wiki/Kristen_Nygaard
+ 341. file://localhost/wiki/Ron_Rivest
+ 342. file://localhost/wiki/Adi_Shamir
+ 343. file://localhost/wiki/Leonard_Adleman
+ 344. file://localhost/wiki/Alan_Kay
+ 345. file://localhost/wiki/Vint_Cerf
+ 346. file://localhost/wiki/Bob_Kahn
+ 347. file://localhost/wiki/Peter_Naur
+ 348. file://localhost/wiki/Frances_E._Allen
+ 349. file://localhost/wiki/Edmund_M._Clarke
+ 350. file://localhost/wiki/E._Allen_Emerson
+ 351. file://localhost/wiki/Joseph_Sifakis
+ 352. file://localhost/wiki/Barbara_Liskov
+ 353. file://localhost/wiki/Charles_P._Thacker
+ 354. file://localhost/wiki/Wikipedia:Persondata
+ 355. file://localhost/wiki/Inventing
+ 356. file://localhost/wiki/Oregon
+ 357. http://en.wikipedia.org/wiki/Douglas_Engelbart
+ 358. file://localhost/wiki/Special:Categories
+ 359. file://localhost/wiki/Category:1925_births
+ 360. file://localhost/wiki/Category:Living_people
+ 361. file://localhost/wiki/Category:American_inventors
+ 362. file://localhost/wiki/Category:Computer_hardware_engineers
+ 363. file://localhost/wiki/Category:Computer_pioneers
+ 364. file://localhost/wiki/Category:Futurologists
+ 365. file://localhost/wiki/Category:American_people_of_Norwegian_descent
+ 366. file://localhost/wiki/Category:People_from_Portland,_Oregon
+ 367. file://localhost/wiki/Category:Turing_Award_laureates
+ 368. file://localhost/wiki/Category:Oregon_State_University_alumni
+ 369. file://localhost/wiki/Category:Lemelson-MIT_Prize
+ 370. file://localhost/wiki/Category:National_Medal_of_Technology_recipients
+ 371. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 372. file://localhost/wiki/Category:SRI_International_people
+ 373. file://localhost/wiki/Category:Xerox_people
+ 374. file://localhost/wiki/Category:Wikipedia_indefinitely_semi-protected_biographies_of_living_people
+ 375. file://localhost/w/index.php?title=Special:UserLogin&returnto=Douglas_Engelbart
+ 376. file://localhost/wiki/Douglas_Engelbart
+ 377. file://localhost/wiki/Talk:Douglas_Engelbart
+ 378. file://localhost/wiki/Douglas_Engelbart
+ 379. file://localhost/w/index.php?title=Douglas_Engelbart&action=edit
+ 380. file://localhost/w/index.php?title=Douglas_Engelbart&action=history
+ 381. file://localhost/wiki/Main_Page
+ 382. file://localhost/wiki/Portal:Contents
+ 383. file://localhost/wiki/Portal:Featured_content
+ 384. file://localhost/wiki/Portal:Current_events
+ 385. file://localhost/wiki/Special:Random
+ 386. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 387. file://localhost/wiki/Help:Contents
+ 388. file://localhost/wiki/Wikipedia:About
+ 389. file://localhost/wiki/Wikipedia:Community_portal
+ 390. file://localhost/wiki/Special:RecentChanges
+ 391. file://localhost/wiki/Wikipedia:Contact_us
+ 392. file://localhost/wiki/Special:WhatLinksHere/Douglas_Engelbart
+ 393. file://localhost/wiki/Special:RecentChangesLinked/Douglas_Engelbart
+ 394. file://localhost/wiki/Wikipedia:Upload
+ 395. file://localhost/wiki/Special:SpecialPages
+ 396. file://localhost/w/index.php?title=Douglas_Engelbart&oldid=404195931
+ 397. file://localhost/w/index.php?title=Special:Cite&page=Douglas_Engelbart&id=404195931
+ 398. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Douglas+Engelbart
+ 399. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Douglas+Engelbart&oldid=404195931&writer=rl
+ 400. file://localhost/w/index.php?title=Douglas_Engelbart&printable=yes
+ 401. http://ar.wikipedia.org/wiki/%D8%AF%D9%88%D8%AC%D9%84%D8%A7%D8%B3_%D8%A5%D9%86%D8%AC%D9%8A%D9%84%D8%A8%D8%A7%D8%B1%D8%AA
+ 402. http://bs.wikipedia.org/wiki/Douglas_Engelbart
+ 403. http://bg.wikipedia.org/wiki/%D0%94%D1%8A%D0%B3%D0%BB%D0%B0%D1%81_%D0%95%D0%BD%D0%B3%D1%8A%D0%BB%D0%B1%D1%8A%D1%80%D1%82
+ 404. http://ca.wikipedia.org/wiki/Douglas_Engelbart
+ 405. http://da.wikipedia.org/wiki/Douglas_C._Engelbart
+ 406. http://de.wikipedia.org/wiki/Douglas_C._Engelbart
+ 407. http://es.wikipedia.org/wiki/Douglas_Engelbart
+ 408. http://eo.wikipedia.org/wiki/Douglas_Engelbart
+ 409. http://fr.wikipedia.org/wiki/Douglas_Engelbart
+ 410. http://gl.wikipedia.org/wiki/Douglas_Engelbart
+ 411. http://ko.wikipedia.org/wiki/%EB%8D%94%EA%B8%80%EB%9F%AC%EC%8A%A4_%EC%97%A5%EA%B2%94%EB%B0%94%ED%8A%B8
+ 412. http://hr.wikipedia.org/wiki/Douglas_Engelbart
+ 413. http://id.wikipedia.org/wiki/Douglas_Engelbart
+ 414. http://it.wikipedia.org/wiki/Douglas_Engelbart
+ 415. http://he.wikipedia.org/wiki/%D7%93%D7%90%D7%92%D7%9C%D7%A1_%D7%90%D7%A0%D7%92%D7%9C%D7%91%D7%A8%D7%98
+ 416. http://ml.wikipedia.org/wiki/%E0%B4%A1%E0%B4%97%E0%B5%8D%E0%B4%B2%E0%B4%B8%E0%B5%8D_%E0%B4%8F%E0%B4%82%E0%B4%97%E0%B5%BD%E0%B4%AC%E0%B5%BC%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%8D
+ 417. http://ms.wikipedia.org/wiki/Douglas_Engelbart
+ 418. http://nl.wikipedia.org/wiki/Douglas_Engelbart
+ 419. http://ja.wikipedia.org/wiki/%E3%83%80%E3%82%B0%E3%83%A9%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%AB%E3%83%90%E3%83%BC%E3%83%88
+ 420. http://no.wikipedia.org/wiki/Douglas_C._Engelbart
+ 421. http://pl.wikipedia.org/wiki/Douglas_Engelbart
+ 422. http://pt.wikipedia.org/wiki/Douglas_Engelbart
+ 423. http://ro.wikipedia.org/wiki/Douglas_Engelbart
+ 424. http://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0%D1%80%D1%82,_%D0%94%D1%83%D0%B3%D0%BB%D0%B0%D1%81
+ 425. http://sk.wikipedia.org/wiki/Douglas_Engelbart
+ 426. http://sr.wikipedia.org/wiki/%D0%94%D0%B0%D0%B3%D0%BB%D0%B0%D1%81_%D0%95%D0%BD%D0%B3%D0%B5%D0%BB%D0%B1%D0%B0%D1%80%D1%82
+ 427. http://fi.wikipedia.org/wiki/Douglas_Engelbart
+ 428. http://sv.wikipedia.org/wiki/Douglas_Engelbart
+ 429. http://tr.wikipedia.org/wiki/Douglas_Engelbart
+ 430. http://zh.wikipedia.org/wiki/%E9%81%93%E6%A0%BC%E6%8B%89%E6%96%AF%C2%B7%E6%81%A9%E6%A0%BC%E5%B0%94%E5%B7%B4%E7%89%B9
+ 431. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 432. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 433. http://www.wikimediafoundation.org/
+ 434. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 435. http://wikimediafoundation.org/wiki/Privacy_policy
+ 436. file://localhost/wiki/Wikipedia:About
+ 437. file://localhost/wiki/Wikipedia:General_disclaimer
+ 438. http://www.mediawiki.org/
+ 439. http://wikimediafoundation.org/
+
+   Hidden links:
+ 440. file://localhost/wiki/File:Douglas_Engelbart_in_2008.jpg
+ 441. file://localhost/wiki/File:Firstmouseunderside.jpg
+ 442. file://localhost/wiki/File:Apple_Macintosh_Plus_mouse.jpg
+ 443. file://localhost/wiki/File:Apple_Macintosh_Plus_mouse.jpg
+ 444. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html
+ 445. file://localhost/home/memfis/projects/put/tsiss/Downloads/douglas_engelbart.html
+ 446. file://localhost/wiki/Main_Page
+ 447. http://creativecommons.org/licenses/by-sa/3.0/

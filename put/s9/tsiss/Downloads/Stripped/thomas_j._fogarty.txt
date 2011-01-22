@@ -1,0 +1,620 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Thomas J. Fogarty
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   [7]Mergefrom.svg
+   It has been suggested that [8]Thomas Fogarty be [9]merged into this
+   article or section. ([10]Discuss)
+              Thomas P. Fogarty
+      Born     February 25, 1934(1934-02-25)
+               [11]Cincinnati, Ohio
+    Residence  California
+   Nationality Irish American
+
+   Dr. Thomas J. Fogarty (born in [12]Cincinnati, Ohio on February 25,
+   1934) is an [13]American surgeon and inventor of the [14]embolectomy
+   [15]catheter. Before his invention the success rate for removing an
+   [16]embolus, or blood clot, was forty to fifty percent. In 1963, Dr.
+   Thomas Fogarty published an article describing "a new method for
+   extraction of arterial emboli and thrombi."^[17][1]
+
+   The balloon embolectomy catheter was used on a human patient for the
+   first time six weeks after Fogarty came up with the idea in 1961.
+   Today, using only [18]local anesthesia, the procedure only takes about
+   an hour.
+
+   Fogarty’s [19]inventions and the many others that resulted from his
+   original embolectomy catheter heavily influenced the way [20]surgery
+   was performed. When asked about the time the impact his invention had
+   on the field, he says, "I had no concept that [non-invasive surgery]
+   would reach the magnitude that it has."^[21][2] As a result of the
+   invention, Dr. Fogarty, still alive today, went on to win many prizes
+   and patent over sixty inventions.
+
+   Contents
+
+        * [22]1 Early life and education
+        * [23]2 Invention of the embolectomy catheter
+        * [24]3 Other inventions
+        * [25]4 Thomas Fogarty Winery and Vineyards
+        * [26]5 Three Arch Partners
+        * [27]6 The Fogarty Institute for Innovation
+        * [28]7 Awards
+        * [29]8 Affiliated organizations
+        * [30]9 See also
+        * [31]10 Notes
+        * [32]11 References
+        * [33]12 Selected patents
+        * [34]13 External links
+
+[[35]edit] Early life and education
+
+   On February 25, 1934, Fogarty was born into a poor, [36]Irish Catholic
+   family as the youngest of three children living in [37]Cincinnati. His
+   father worked as a railroad engineer, but he died when Fogarty was just
+   eight years old.
+
+   Fogarty assumed a role of greater responsibility at a young age, but,
+   as he points out later in life, his father’s absence also nurtured his
+   own creative nature as an inventor. He fixed things that his mother
+   needed fixed, and he worked with [38]soapbox derby cars and [39]model
+   airplanes. "I just had a natural inclination and inquisitive nature
+   about building things. I looked at things and just naturally thought,
+   'Okay, how can I make this better?'"^[40][2] His business side was
+   evident in childhood as well. The model airplanes that he built were
+   sold to neighborhood kids. When he became frustrated with motor scooter
+   gears, he built and sold a [41]centrifugal clutch.
+
+   As for Fogarty’s educational background, he was not a top-notch
+   student, and his original career goal was to be a boxer. “I wasn’t a
+   very good kid. They sent me to a camp to keep me out of trouble. One of
+   the routine activities was boxing. I became the Midwest [42]Golden
+   Glove champ.”^[43][3]
+
+   To help his family get by in the late 1940s, fourteen-year old Fogarty
+   started working at [44]Good Samaritan Hospital during a time when
+   hospitals were still exempt from [45]child labor laws. He began the job
+   cleaning medical equipment in the eighth grade, but he continued
+   working during his high school summer vacations and was soon promoted
+   to scrub technician, a person who handed medical instruments to
+   surgeons.
+
+   During his last year of high school, Fogarty discovered that he wanted
+   to be a doctor. At the age of 17, he quit his boxing career after he
+   broke his nose in a match that ended in a draw. A family priest gave
+   him a recommendation, and because of his awful grades, he was admitted
+   to Cincinnati’s [46]Xavier University on probation. In order to get
+   through college, Fogarty took on three jobs and received financial
+   assistance from Dr. Jack Cranley, Fogarty’s mentor and one of the most
+   prominent vascular surgeons in the United States. Fogarty was Cranley’s
+   private scrub technician at Good Samaritan Hospital. “I had a mentor
+   who encouraged me and helped to persuade me to go to college…He had 10
+   kids and I became the 11th. He always told me, ‘You are smarter than
+   you think.’”^[47][3]
+
+   Fogarty graduated from Xavier University with a bachelor’s degree in
+   biology in 1956 and went on to attend the Cincinnati College of
+   Medicine where he graduated in 1960. From 1960 to 1961, he interned at
+   the [48]University of Oregon Medical School in [49]Portland, Oregon,
+   and he completed his surgical residency at the same school in 1965.
+
+[[50]edit] Invention of the embolectomy catheter
+
+   During Fogarty’s years at Good Samaritan Hospital, he witnessed the
+   deaths of many patients who died from complications in blood clot
+   surgeries in their limbs. “Fifty percent of the patients died. I
+   thought there must be a better way.”^[51][4] Before Fogarty’s
+   invention, surgeons had to use forceps to remove the blood clots only
+   after a huge part of an [52]artery had been cut open, and the patient
+   would be under [53]general anesthesia for hours. Blood flow is usually
+   interrupted in the procedure, increasing the risk of the patient losing
+   a limb.^[54][5]
+
+   At home, the ideas that went through Fogarty’s head concerned different
+   ways of making the procedure better, and he especially concentrated on
+   avoiding the risky incisions. He tinkered with a urethral catheter and
+   a balloon in his attic. Because a catheter only required a small
+   incision, it would be able to get to the clot without much trauma to
+   the patient. The urethral catheter is also flexible yet strong enough
+   to be pushed through a blood [55]clot. As for the balloon, he basically
+   cut off the tip of the pinky finger of a size 5 surgical [56]latex
+   glove and attempted to incorporate it onto the end of the catheter. The
+   resulting balloon could be inflated with saline using a [57]syringe,
+   and once it expands to the size of the artery, it is then retracted,
+   withdrawing the clot through the artery and out the incision.
+
+   The main problem in building this device was the way the balloon could
+   be attached to the catheter. Glue that could hold [58]vinyl, the
+   material making up a catheter, and latex, the type of glove used, was
+   not available. Fogarty’s own take on the catheter came about because of
+   [59]fly fishing techniques he learned as a child. Precise hand-tying
+   was needed in fly fishing, and with these techniques, he tied the
+   balloon to the catheter. "I'd always tied flies and made lures so it
+   was just a natural thing."^[60][2] His experimental balloon catheter,
+   however, always seemed to burst when it was over inflated. It even
+   broke when he dragged it through glass tubes filled with [61]Jell-o, a
+   model he thought simulated a clot within an artery. After some time, he
+   figured out the type and thickness of rubber that was firm enough when
+   inflated to extract a clot and still flexible enough to move through
+   without breaking. The device, made before Fogarty even received his MD
+   from University of Cincinnati in 1960, became the first [62]minimally
+   invasive surgical device.
+
+   Fogarty, however, came across difficulties in getting a manufacturer to
+   produce it. From 1959 to 1961, nobody was willing to help. "Companies
+   thought I was some stooge fooling around. I didn't have any
+   credibility."^[63][6] Dr. Cranley continued to encourage him, and soon,
+   during his fellowship training at the University of Cincinnati in 1961
+   and 1962, Fogarty started to make the catheter system by hand for
+   himself and for other vascular surgeons.
+
+   At the University of Oregon, while Fogarty was completing his residency
+   in surgery, Dr. Al Starr, head of the cardiothoracic division, used
+   Fogarty’s balloon catheters. After he was informed that no company was
+   willing to manufacture Fogarty’s device, he asked one of his
+   acquaintances, Lowell Edwards, an electrical engineer and president of
+   his own company, to give the device consideration in producing it. In
+   1969, Fogarty patented his device, and Edwards Life Sciences from
+   Irvine, California, was assigned the patent to begin manufacturing the
+   Fogarty embolectomy catheter.
+
+   Because of the decreased risk associated with the device, it became the
+   industry standard. It is still the most widely used catheter for
+   blood-clot removal today and has been used in over three hundred
+   thousand procedures every year all over the world.^[64][7] It is
+   estimated to have saved the lives and limbs of approximately fifteen
+   million patients.
+
+[[65]edit] Other inventions
+
+   Numerous sequel applications of Fogarty’s catheter came about. The
+   first balloon [66]angioplasty, for example, was performed with a
+   Fogarty catheter in 1965, and has led to over six hundred fifty
+   thousand such operations per year. Fogarty has also modified his
+   catheter to less invasive [67]biopsy techniques.
+
+   After completing his residency and becoming a cardiovascular surgeon,
+   Fogarty continued to invent new medical devices as a holder of more
+   than 60 patents, with more still pending. Based on many of the devices
+   founded in his own Fogarty Engineering, Inc., around twenty companies
+   have been started.
+
+   One of Fogarty’s most successful products is the [68]Stent-Graft. This
+   dealt with the difficult problem of [69]abdominal aortic aneurysms,
+   which is a term referring to a weakened [70]blood vessel. The old
+   method was to remove the bad part of a weakened blood vessel, but
+   Fogarty’s idea was to support it with an implant. He used a stent, a
+   thin polyester tube that grabs onto the blood vessels. An catheter
+   transports the stent to the weakened blood vessel, and once the balloon
+   is inflated, the stent expands to the size of the blood vessel, and
+   blood flows normally.
+
+[[71]edit] Thomas Fogarty Winery and Vineyards
+
+   In 1969, when he began teaching surgery at the [72]Stanford University
+   Medical Center, Fogarty was first introduced to the wine industry. He
+   helped out a Stanford colleague’s small winery with vineyard and cellar
+   practices. Later on, he purchased land in the Santa Cruz Mountains. He
+   established a cellar there and began making wine with grapes bought
+   from nearby growers. He planted his first vines in 1978 and set up a
+   commercial winery, Thomas Fogarty Winery and Vineyards, in 1981. The
+   estate now consists of three hundred twenty-five acres. Fifteen
+   thousand cases of wine are produced annually.
+
+   Fogarty’s basis for [73]winemaking also stems from his explanation that
+   certain elements in the extracts from grape skin relax the blood
+   vessels and lower the affinity for blood to clot.
+
+   Of the wines produced in Fogarty’s vineyard, the 2004 SCM Lexington
+   Meritage wine received “double gold” status in the San Francisco
+   International Wine Competition in 2008, and the 2005 Santa Cruz
+   Mountains Chardonnay was the gold medal winner and the “Best Chardonnay
+   of Class” in the 2008 San Francisco Chronicle Wine Competition.
+
+[[74]edit] Three Arch Partners
+
+   Fogarty, along with Mark Wan and Wilfred Jaeger, co-founded a
+   [75]venture capital firm called Three Arch Partners in Portola Valley,
+   California, in 1993. Wan and Jaeger both had noteworthy experience in
+   the venture capitalism field, but it was Fogarty’s prestige that caused
+   the firm to grow.
+
+   Three Arch Partners focused on early stage medical device companies and
+   has helped with the growth of more than fifty new [76]healthcare
+   companies. It manages over one billion dollars in capital.
+
+   In 2004, however, Fogarty was fired from the firm. He was let go due to
+   issues pertaining to the amount of time Fogarty devoted to the firm.
+   His time spent teaching, making wine, and working Fogarty Engineering,
+   Inc. contributed to this decision. “It’s like giving birth to a child,
+   but then having to leave it behind, which is hurtful, but I’ve been
+   kicked of better places than [Three Arch], and I wouldn’t say that I
+   wish them well.”^[77][8]
+
+[[78]edit] The Fogarty Institute for Innovation
+
+   Fogarty left Stanford Medical School after about fourteen years as a
+   professor and practicing cardiovascular surgeon. In September 2007, at
+   Mountain View, California, in [79]Silicon Valley, he founded the Thomas
+   Fogarty Institute for [80]Innovation. It occupies forty-five hundred
+   square feet of offices and engineering labs on the campus of [81]El
+   Camino Hospital. The educational, non-profit organization mentors and
+   trains medical innovators. The idea for the institution dates back to
+   Fogarty’s early life when he received encouragement from Dr. Jack
+   Cranley.
+
+   “We are teaching people (doctors and engineers) how to get their
+   concepts and products into use. Very few have gone through the process
+   of coming up with a concept and getting it funded. That does not come
+   naturally. It comes through experience. We will teach how to address
+   these challenges.”^[82][3] Physician innovators, including Fogarty,
+   serve as the faculty of the Institute and make use of their networks
+   and experiences in the private industry to help those with projects
+   that are ready for [83]commercialization.
+
+[[84]edit] Awards
+
+     * Inventor of the Year, San Francisco Patent and Trademark
+       Association, 1980
+     * Distinguished Scientific Presentations, American College of
+       Surgeons, 1971, 1973, 1975, 1981
+     * Honorary Doctorate, Xavier University, 1987
+     * The Lemelson-MIT Prize, 2000
+     * AAMI Foundation Laufman-Greatbatch Prize, 2000
+     * National Inventors Hall of Fame, 2001
+
+[[85]edit] Affiliated organizations
+
+     * American Association for Thoracic Surgery
+     * American College of Physician Inventors
+     * American College of Surgeons, Fellow
+     * American Surgical Association
+     * International Society for Cardiovascular Surgery-North American
+       Chapter
+     * International Society of Endovascular Specialists
+     * Pacific Coast Surgical Association
+     * Society for Clinical Vascular Surgery
+     * Society of Vascular Technology; The Society for Vascular Surgery
+     * The Society of Thoracic Surgeons
+     * Western Thoracic Surgical Society
+
+[[86]edit] See also
+
+     * [87]Jerome H. Lemelson
+     * [88]National Inventors Hall of Fame
+     * [89]Surgical technologist
+     * [90]Vascular surgery
+
+[[91]edit] Notes
+
+    1. [92]^ Meyers, Michael, and Patrick O'Leary
+    2. ^ [93]^a [94]^b [95]^c Brown, David E.
+    3. ^ [96]^a [97]^b [98]^c Flood, John
+    4. [99]^ White, Tracy
+    5. [100]^ Riordan, Teresa.
+    6. [101]^ Riggins, Christie
+    7. [102]^ [103]“Embolectomy Balloon Catheter.”
+    8. [104]^ Primack, Dan
+
+[[105]edit] References
+
+    1. [106]“AAMI Foundation Laufman-Greatbatch Prize.” Association for
+       the Advancement of Medical Instrumentation.
+    2. [107]“About the Fogarty Institute for Innovation.” Fogarty
+       Institute for Innovation.
+    3. [108]“About Three Arch Partners.” Three Arch Partners.
+    4. Brown, David E. [109]“Thomas Fogarty.” in Inventing Modern America:
+       From the Microwave to the Mouse. The MIT Press.
+    5. [110]“Dr. Thomas Fogarty.”
+    6. [111]“Editorial Board Thomas Fogarty Editor-in-Chief.”
+       International Society of Endovascular Specialists.
+    7. [112]“Embolectomy Balloon Catheter.” Massachusetts Institute of
+       Technology.
+    8. [113]"A Legend At Heart," by John Flood, Los Altos Town Crier.
+       August 22, 2007, News Section.
+    9. Meyers, Michael, and Patrick O'Leary. [114]* * * “Fogarty and His
+       Catheter.” American Surgeon 64, no. 5 (May 1998), EBSCO MegaFILE.
+   10. Primack, Dan. [115]“Three Arch Co-Founder Fogarty Let Go.” Private
+       Equity Week 11, no. 43 (November 8, 2004)
+   11. Riggins, Christie. [116]“Great Inventions Don’t Happen Overnight.”
+       Stanford Medicine Magazine 17, no. 3 (Fall 2000)
+   12. Riordan, Teresa. [117]“PATENTS; Two inventors honored for seminal
+       work on the balloon catheter and wireless communications.” New York
+       Times, May 22, 2000, Business Section.
+   13. [118]“Thomas Fogarty.” National Inventors Hall of Fame.
+   14. White, Tracy. [119]“Father of invention” Stanford Medicine Magazine
+       23, no. 3 (Fall 2006)
+
+[[120]edit] Selected patents
+
+     * [121]Fogarty, U.S. Patent 3,435,826, “Embolectomy Catheter”
+     * [122]Fogarty, U.S. Patent 3,880,166, “Vessel Occluder”
+     * [123]Fogarty, U.S. Patent 4,643,194, “Flexible calibrator”
+     * [124]Fogarty, U.S. Patent 4,774,949, “Deflector guiding catheter”
+     * [125]Fogarty, U.S. Patent 4,821,719, “Cohesive-adhesive atraumatic
+       clamp”
+
+[[126]edit] External links
+
+     * [127]Journal of Endovascular Therapy
+     * [128]The Fogarty Institute for Innovation
+     * [129]Three Arch Partners
+     * [130]Thomas Fogarty Winery and Vineyards
+     * [131]Inventing Modern America: From the Microwave to the Mouse
+
+              [132]Persondata
+   Name              Fogarty,Thomas J.
+   Alternative names
+   Short description
+   Date of birth     February 25, 1934
+   Place of birth    [133]Cincinnati, Ohio
+   Date of death
+   Place of death
+   Retrieved from "[134]http://en.wikipedia.org/wiki/Thomas_J._Fogarty"
+   [135]Categories: [136]1934 births | [137]Living people | [138]People
+   from Cincinnati, Ohio | [139]American surgeons | [140]American
+   inventors | [141]National Inventors Hall of Fame inductees
+   Hidden categories: [142]Articles to be merged from July 2010 | [143]All
+   articles to be merged | [144]Articles with hCards
+
+Personal tools
+
+     * [145]Log in / create account
+
+Namespaces
+
+     * [146]Article
+     * [147]Discussion
+
+Variants
+
+Views
+
+     * [148]Read
+     * [149]Edit
+     * [150]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [151]Main page
+     * [152]Contents
+     * [153]Featured content
+     * [154]Current events
+     * [155]Random article
+     * [156]Donate to Wikipedia
+
+Interaction
+
+     * [157]Help
+     * [158]About Wikipedia
+     * [159]Community portal
+     * [160]Recent changes
+     * [161]Contact Wikipedia
+
+Toolbox
+
+     * [162]What links here
+     * [163]Related changes
+     * [164]Upload file
+     * [165]Special pages
+     * [166]Permanent link
+     * [167]Cite this page
+
+Print/export
+
+     * [168]Create a book
+     * [169]Download as PDF
+     * [170]Printable version
+
+     * This page was last modified on 3 January 2011 at 05:34.
+     * Text is available under the [171]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [172]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [173]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [174]Contact us
+
+     * [175]Privacy policy
+     * [176]About Wikipedia
+     * [177]Disclaimers
+
+     * [178]Powered by MediaWiki
+     * [179]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#p-search
+   7. file://localhost/wiki/File:Mergefrom.svg
+   8. file://localhost/wiki/Thomas_Fogarty
+   9. file://localhost/wiki/Wikipedia:Merging
+  10. file://localhost/wiki/Talk:Thomas_J._Fogarty
+  11. file://localhost/wiki/Cincinnati,_Ohio
+  12. file://localhost/wiki/Cincinnati,_Ohio
+  13. file://localhost/wiki/United_States_of_America
+  14. file://localhost/wiki/Embolectomy
+  15. file://localhost/wiki/Catheter
+  16. file://localhost/wiki/Embolus
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-0
+  18. file://localhost/wiki/Local_anesthesia
+  19. file://localhost/wiki/Invention
+  20. file://localhost/wiki/Surgery
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Brown.2C_David_E-1
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Early_life_and_education
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Invention_of_the_embolectomy_catheter
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Other_inventions
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Thomas_Fogarty_Winery_and_Vineyards
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Three_Arch_Partners
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#The_Fogarty_Institute_for_Innovation
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Awards
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Affiliated_organizations
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#See_also
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Notes
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#References
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#Selected_patents
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#External_links
+  35. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=1
+  36. file://localhost/wiki/Irish_Catholic
+  37. file://localhost/wiki/Cincinnati
+  38. file://localhost/wiki/Soapbox_derby
+  39. file://localhost/wiki/Model_airplanes
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Brown.2C_David_E-1
+  41. file://localhost/wiki/Centrifugal_clutch
+  42. file://localhost/wiki/Golden_Gloves
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Flood.2C_John-2
+  44. file://localhost/wiki/Good_Samaritan_Hospital
+  45. file://localhost/wiki/Child_labor_laws
+  46. file://localhost/wiki/Xavier_University
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Flood.2C_John-2
+  48. file://localhost/wiki/University_of_Oregon_Medical_School
+  49. file://localhost/wiki/Portland,_Oregon
+  50. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=2
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-3
+  52. file://localhost/wiki/Artery
+  53. file://localhost/wiki/General_anesthesia
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-4
+  55. file://localhost/wiki/Clot
+  56. file://localhost/wiki/Latex_glove
+  57. file://localhost/wiki/Syringe
+  58. file://localhost/wiki/Vinyl
+  59. file://localhost/wiki/Fly_fishing
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Brown.2C_David_E-1
+  61. file://localhost/wiki/Jell-o
+  62. file://localhost/wiki/Minimally_invasive
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-5
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-6
+  65. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=3
+  66. file://localhost/wiki/Angioplasty
+  67. file://localhost/wiki/Biopsy
+  68. file://localhost/wiki/Stent
+  69. file://localhost/wiki/Abdominal_aortic_aneurysm
+  70. file://localhost/wiki/Blood_vessel
+  71. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=4
+  72. file://localhost/wiki/Stanford_University_Medical_Center
+  73. file://localhost/wiki/Winemaking
+  74. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=5
+  75. file://localhost/wiki/Venture_capital
+  76. file://localhost/wiki/Healthcare
+  77. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-7
+  78. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=6
+  79. file://localhost/wiki/Silicon_Valley
+  80. file://localhost/wiki/Innovation
+  81. file://localhost/wiki/El_Camino_Hospital
+  82. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_note-Flood.2C_John-2
+  83. file://localhost/wiki/Commercialization
+  84. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=7
+  85. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=8
+  86. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=9
+  87. file://localhost/wiki/Jerome_H._Lemelson
+  88. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  89. file://localhost/wiki/Surgical_technologist
+  90. file://localhost/wiki/Vascular_surgery
+  91. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=10
+  92. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-0
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Brown.2C_David_E_1-0
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Brown.2C_David_E_1-1
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Brown.2C_David_E_1-2
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Flood.2C_John_2-0
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Flood.2C_John_2-1
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-Flood.2C_John_2-2
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-3
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-4
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-5
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-6
+ 103. http://web.mit.edu/invent/iow/fogarty.html
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html#cite_ref-7
+ 105. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=11
+ 106. http://www.aami.org/awards/greatbatch.html
+ 107. http://01659a8.netsolhost.com/aboutus.html
+ 108. http://www.threearchpartners.com/html/about_three_arch.html
+ 109. http://web.mit.edu/invent/www/ima/fogarty_bio.html
+ 110. http://www.fogartywinery.com/about_drfogarty.html
+ 111. http://www.jevt.org/editorial_board/bio_fogarty.htm
+ 112. http://web.mit.edu/invent/iow/fogarty.html
+ 113. http://www.latc2.com/wordpress/2007/08/22/cover_story/
+ 114. http://search.ebscohost.com/login.aspx?direct=true&db=keh&AN=587324&site=ehost-live
+ 115. http://search.ebscohost.com/login.aspx?direct=true&db=keh&AN=14969890&site=ehost-live
+ 116. http://stanmed.stanford.edu/2000fall/inventions.html
+ 117. http://query.nytimes.com/gst/fullpage.html?res=9F0DE6D9113AF931A15756C0A9669C8B63&scp=8&sq=thomas+fogarty&st=nyt
+ 118. http://www.invent.org/hall_of_fame/162.html
+ 119. http://stanmed.stanford.edu/2006fall/fogarty.html
+ 120. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=12
+ 121. http://www.google.com/patents?id=T6B0AAAAEBAJ&dq=Embolectomy+Catheter
+ 122. http://www.google.com/patents?id=GSQyAAAAEBAJ&dq=Vessel+Occluder
+ 123. http://www.google.com/patents?id=wEswAAAAEBAJ&dq=Flexible+calibrator
+ 124. http://www.google.com/patents?id=uPUzAAAAEBAJ&dq=Deflector+guiding+catheter
+ 125. http://www.google.com/patents?id=7xk2AAAAEBAJ&dq=Cohesive-adhesive+atraumatic+clamp
+ 126. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit&section=13
+ 127. http://www.jevt.org/
+ 128. http://01659a8.netsolhost.com/index.html
+ 129. http://www.threearchpartners.com/index.html
+ 130. http://www.fogartywinery.com/index.html
+ 131. http://web.mit.edu/invent/www/ima/index.html
+ 132. file://localhost/wiki/Wikipedia:Persondata
+ 133. file://localhost/wiki/Cincinnati,_Ohio
+ 134. http://en.wikipedia.org/wiki/Thomas_J._Fogarty
+ 135. file://localhost/wiki/Special:Categories
+ 136. file://localhost/wiki/Category:1934_births
+ 137. file://localhost/wiki/Category:Living_people
+ 138. file://localhost/wiki/Category:People_from_Cincinnati,_Ohio
+ 139. file://localhost/wiki/Category:American_surgeons
+ 140. file://localhost/wiki/Category:American_inventors
+ 141. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 142. file://localhost/wiki/Category:Articles_to_be_merged_from_July_2010
+ 143. file://localhost/wiki/Category:All_articles_to_be_merged
+ 144. file://localhost/wiki/Category:Articles_with_hCards
+ 145. file://localhost/w/index.php?title=Special:UserLogin&returnto=Thomas_J._Fogarty
+ 146. file://localhost/wiki/Thomas_J._Fogarty
+ 147. file://localhost/wiki/Talk:Thomas_J._Fogarty
+ 148. file://localhost/wiki/Thomas_J._Fogarty
+ 149. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=edit
+ 150. file://localhost/w/index.php?title=Thomas_J._Fogarty&action=history
+ 151. file://localhost/wiki/Main_Page
+ 152. file://localhost/wiki/Portal:Contents
+ 153. file://localhost/wiki/Portal:Featured_content
+ 154. file://localhost/wiki/Portal:Current_events
+ 155. file://localhost/wiki/Special:Random
+ 156. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 157. file://localhost/wiki/Help:Contents
+ 158. file://localhost/wiki/Wikipedia:About
+ 159. file://localhost/wiki/Wikipedia:Community_portal
+ 160. file://localhost/wiki/Special:RecentChanges
+ 161. file://localhost/wiki/Wikipedia:Contact_us
+ 162. file://localhost/wiki/Special:WhatLinksHere/Thomas_J._Fogarty
+ 163. file://localhost/wiki/Special:RecentChangesLinked/Thomas_J._Fogarty
+ 164. file://localhost/wiki/Wikipedia:Upload
+ 165. file://localhost/wiki/Special:SpecialPages
+ 166. file://localhost/w/index.php?title=Thomas_J._Fogarty&oldid=405637084
+ 167. file://localhost/w/index.php?title=Special:Cite&page=Thomas_J._Fogarty&id=405637084
+ 168. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Thomas+J.+Fogarty
+ 169. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Thomas+J.+Fogarty&oldid=405637084&writer=rl
+ 170. file://localhost/w/index.php?title=Thomas_J._Fogarty&printable=yes
+ 171. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 172. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 173. http://www.wikimediafoundation.org/
+ 174. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 175. http://wikimediafoundation.org/wiki/Privacy_policy
+ 176. file://localhost/wiki/Wikipedia:About
+ 177. file://localhost/wiki/Wikipedia:General_disclaimer
+ 178. http://www.mediawiki.org/
+ 179. http://wikimediafoundation.org/
+
+   Hidden links:
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/thomas_j._fogarty.html
+ 182. file://localhost/wiki/Main_Page
+ 183. http://creativecommons.org/licenses/by-sa/3.0/

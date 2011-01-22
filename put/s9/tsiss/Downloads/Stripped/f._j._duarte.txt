@@ -1,0 +1,623 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+F. J. Duarte
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   F. J. Duarte
+   Frank J. Duarte at a meeting of the [7]Optical Society of America in
+   2006.
+   Born [8]Santiago, [9]Chile
+   Residence [10]United States
+   Nationality [11]American
+   Fields [12]Physics
+   [13]Optics
+   Institutions [14]Macquarie University
+   [15]University of New South Wales
+   [16]University of Alabama
+   Imaging Research Laboratories
+   [17]State University of New York
+   [18]University of New Mexico
+   [19]Interferometric Optics
+   [20]Alma mater [21]Macquarie University
+   [22]Doctoral advisor [23]J. A. Piper
+   Known for [24]Tunable lasers
+   [25]Narrow-linewidth dye lasers
+   [26]Multiple-prism beam expanders
+   [27]Multiple-prism dispersion theory
+   [28]N-slit laser interferometer
+   [29]N-slit interferometric equation
+
+   F. J. Duarte is a [30]laser physicist and author/editor of several
+   well-known books on [31]tunable
+   lasers.^[32][1]^[33][2]^[34][3]^[35][4]^[36][5]^[37][6]^[38][7] He
+   introduced the generalized [39]multiple-prism dispersion
+   theory^[40][8]^[41][9]^[42][10] and has discovered various
+   multiple-prism grating oscillator laser configurations.^[43][11] These
+   configurations include the multiple-prism near-grazing-incidence
+   grating cavities originally disclosed as [44]copper-laser-pumped
+   narrow-linewidth tunable lasers.^[45][12]^[46][13] Duarte's
+   contributions have found applications in a variety of fields including:
+     * [47]atomic vapor laser isotope
+       separation,^[48][14]^[49][15]^[50][16]
+     * [51]laser medicine,^[52][17]^[53][18]^[54][19]
+     * laser [55]microscopy,^[56][20]^[57][21]
+     * [58]laser pulse compression,^[59][22]^[60][23]^[61][24]
+     * [62]laser spectroscopy,^[63][25]^[64][26]
+     * tunable [65]diode lasers.^[66][27]^[67][28]
+
+   Contents
+
+        * [68]1 Solid state dye laser development
+             + [69]1.1 Tunable lasers for the nuclear energy industry
+        * [70]2 Interferometry
+        * [71]3 Macquarie University
+        * [72]4 See also
+        * [73]5 References
+        * [74]6 External links
+
+[[75]edit] Solid state dye laser development
+
+   From the mid 1980s to early 1990s Duarte and scientists from the [76]US
+   Army Missile Command developed, and demonstrated, ruggedized
+   [77]narrow-linewidth laser oscillators tunable directly in the visible
+   spectrum.^[78][29]^[79][30] This pioneering work led to experimentation
+   with polymer gain media and in 1994 Duarte reported on the first
+   narrow-linewidth tunable [80]solid state dye laser
+   oscillators.^[81][31] These dispersive oscillator architectures were
+   then refined to yield single-longitudinal-mode emission limited only by
+   [82]Heisenberg's uncertainty principle.^[83][32] His work on
+   solid-state organic-inorganic materials led to the assessment of
+   intra-gain-medium interference phenomena and to the emission of
+   low-divergence homogeneous laser beams from polymer-nanoparticle gain
+   media.^[84][33] In 2005 Duarte and colleagues were the first to
+   demonstrate coherent emission from an electrically excited [85]organic
+   semiconductor.^[86][34]^[87][35]
+
+[[88]edit] Tunable lasers for the nuclear energy industry
+
+   As previously outlined, Duarte and Piper developed narrow-linewidth
+   [89]multiple-prism grating laser oscillators^[90][13]^[91][36] whose
+   designs have been adopted by various research groups working on
+   [92]uranium [93]atomic vapor laser isotope separation
+   (AVLIS).^[94][14]^[95][15]^[96][16] This work^[97][13]^[98][36] was
+   supported by the [99]Australian Atomic Energy Commission.^[100][36] In
+   a review article,^[101][37] Duarte discloses that during the course of
+   this research^[102][13]^[103][36] he did approach the then federal
+   minister for energy, [104]Sir John L. Carrick, to advocate for the
+   introduction of an AVLIS facility in Australia. In 2002, he
+   participated in research that led to the isotope separation of
+   [105]lithium using tunable diode lasers.^[106][38]
+
+[[107]edit] Interferometry
+
+   In the late 1980s, Duarte applied [108]Dirac’s notation to describe
+   quantum mechanically the [109]N-slit interferometer and to solve
+   problems in [110]industrial imaging and [111]optical
+   metrology.^[112][39]^[113][40]^[114][41] The electro-optical N-slit
+   interferometer uses prismatic [115]beam expansion to illuminate the
+   N-slit array and comprises a photodiode array, at the interference
+   plane, to register the interferograms.^[116][42] This work also led to
+   a generalized [117]N-slit interferometric equation that was then
+   applied to describe [118]interference, [119]diffraction,
+   [120]refraction, and [121]reflection, in a rational and unified
+   approach.^[122][43]^[123][44]
+
+[[124]edit] Macquarie University
+
+   Duarte studied physics at [125]Macquarie University ([126]Sydney,
+   Australia) where he also established the successful [127]science reform
+   movement of the late 1970s.^[128][45]^[129][46] Science reform, at
+   Macquarie, was widely supported by local scientists including
+   physicists [130]Ronald Ernest Aitchison, [131]R. E. B. Makinson, and
+   the famed [132]John Clive Ward.^[133][47] His career path includes
+   post-doctoral research in Australia, plus academic and
+   industrial-research appointments in the [134]United States.
+
+[[135]edit] See also
+
+     * [136]Multiple-prism grating laser oscillators
+     * [137]Prism pulse compressors
+     * [138]Solid state dye lasers
+
+[[139]edit] References
+
+    1. [140]^ [141]F. J. Duarte and L. W. Hillman (Eds.), Dye Laser
+       Principles (Academic, New York, 1990).
+    2. [142]^ [143]F. J. Duarte (Ed.), High Power Dye Lasers
+       (Springer-Verlag, Berlin,1991).
+    3. [144]^ [145]F. J. Duarte (Ed.), Selected Papers on Dye Lasers
+       (SPIE, Bellingham Wa, 1992).
+    4. [146]^ [147]F. J. Duarte (Ed.), Tunable Laser Applications
+       (Marcel-Dekker, New York, 1995).
+    5. [148]^ [149]F. J. Duarte (Ed.), Tunable Lasers Handbook (Academic,
+       New York, 1995).
+    6. [150]^ [151]F. J. Duarte, Tunable Laser Optics (Elsevier Academic,
+       New York, 2003).
+    7. [152]^ [153]F. J. Duarte (Ed.), Tunable Laser Applications, 2nd Ed.
+       (CRC, New York, 2009).
+    8. [154]^ F. J. Duarte and J. A. Piper, Dispersion theory of
+       multiple-prism beam expanders for pulsed dye lasers, Opt. Commun.
+       43, 303–307 (1982).
+    9. [155]^ F. J. Duarte and J. A. Piper, Generalized prism dispersion
+       theory, Am. J. Phys. 51, 1132–1134 (1983).
+   10. [156]^ F. J. Duarte, Generalized multiple-prism dispersion theory
+       for pulse compression in ultrafast dye lasers, Opt. Quantum
+       Electron. 19, 223–229 (1987).
+   11. [157]^ [158]References and schematics on tunable laser oscillators
+   12. [159]^ F. J. Duarte and J. A. Piper, A prism preexpanded grazing
+       incidence pulsed dye laser, Appl. Opt. 20, 2113-2116 (1981).
+   13. ^ [160]^a [161]^b [162]^c [163]^d F. J. Duarte and J. A. Piper,
+       Narrow linewidth high prf copper laser-pumped dye-laser
+       oscillators, Appl. Opt. 23, 1391-1394 (1984).
+   14. ^ [164]^a [165]^b S. Singh, K. Dasgupta, S. Kumar, K. G. Manohar,
+       L. G. Nair, U. K. Chatterjee, High-power high-repetition-rate
+       capper-vapor-pumped dye laser, Opt. Eng. 33, 1894-1904 (1994).
+   15. ^ [166]^a [167]^b A. Sugiyama, T. Nakayama, M. Kato, Y. Maruyama,
+       T. Arisawa, Characteristics of a pressure-tuned single-mode dye
+       laser oscillator pumped by a copper vapor oscillator, Opt. Eng. 35,
+       1093-1097 (1996).
+   16. ^ [168]^a [169]^b N. Singh, Influence of optical inhomogeneity in
+       the gain medium on the bandwidth of a high-repetition-rate dye
+       laser pumped by copper vapor laser, Opt. Eng. 45, 104204 (2006).
+   17. [170]^ L. Goldman, Dye lasers in medicine, in Dye Laser Principles
+       , F. J. Duarte and L. W. Hillman, Eds. (Academic, New York, 1990)
+       Chapter 10.
+   18. [171]^ R. M. Clement, M. N. Kiernan, and K . Donne, Treatment of
+       vascular lessions, US Patent 6398801 (2002).
+   19. [172]^ J. Sawinski and W. Denk, Miniature random-access fiber
+       scanner for in vivo multiphoton imaging, J. Appl. Phys. 102, 034701
+       (2007).
+   20. [173]^ B. A. Nechay, U. Siegner, M. Achermann, H. Bielefeldt, and
+       U. Keller, Femtosecond pump-probe near-field optical microscopy,
+       Rev. Sci. Instrum. 70, 2758-2764 (1999).
+   21. [174]^ U. Siegner, M. Achermann, and U. Keller, Spatially resolved
+       femtosecond spectroscopy beyond the diffraction limit, Meas. Sci.
+       Technol. 12, 1847-1857 (2001).
+   22. [175]^ L. Y. Pang, J. G. Fujimoto, and E. S. Kintzer,
+       Ultrashort-pulse generation from high-power diode arrays by using
+       intracavity optical nonlinearities, Opt. Lett. 17, 1599-1601
+       (1992).
+   23. [176]^ K. Osvay, A. P. Kovács, G. Kurdi, Z. Heiner, M. Divall, J.
+       Klebniczki, and I. E. Ferincz, Measurement of non-compensated
+       angular dispersion and the subsequent temporal lengthening of
+       femtosecond pulses in a CPA laser, Opt. Commun. 248, 201-209
+       (2005).
+   24. [177]^ J. C. Diels and W. Rudolph, Ultrashort Laser Pulse
+       Phenomena, 2nd Ed. (Academic, New York, 2006).
+   25. [178]^ [179]W. Demtröder, Laserspektroscopie: Grundlagen und
+       Techniken, 5th Ed. (Springer, Berlin, 2007).
+   26. [180]^ W. Demtröder, Laser Spectroscopy: Basic Principles, 4th Ed.
+       (Springer, Berlin, 2008).
+   27. [181]^ P. Zorabedian, Characteristics of a grating-external-cavity
+       semiconductor laser containing intracavity prism beam expanders, J.
+       Lightwave Tech. 10, 330-335 (1992).
+   28. [182]^ R. W. Fox, L. Hollberg, and A. S. Zibrov, Semiconductor
+       diode lasers, in Atomic, Molecular, and Optical Physics:
+       Electromagnetic Radiation, F. B. Dunning and R. G. Hulet (Eds.)
+       (Academic, New York, 1997) Chapter 4.
+   29. [183]^ F. J. Duarte, J. J. Ehrlich, W. E. Davenport, and T. S.
+       Taylor, Flashlamp-pumped narrow-linewidth dispersive dye laser
+       oscillators: very low amplified spontaneous emission levels and
+       reduction of linewidth instabilities, Appl. Opt. 29, 3176-3179
+       (1990).
+   30. [184]^ F. J. Duarte, W. E. Davenport, J. J. Ehrlich, and T. S.
+       Taylor, Ruggedized narrow-linewidth dispersive dye laser
+       oscillator, Opt. Commun. 84, 310-316 (1991).
+   31. [185]^ F. J. Duarte, Solid-state multiple-prism grating dye laser
+       oscillators, Appl. Opt. 33, 3857-3860 (1994).
+   32. [186]^ F. J. Duarte, Multiple-prism grating solid-state dye laser
+       oscillator: optimized architecture, Appl. Opt. 38, 6347-6349
+       (1999).
+   33. [187]^ F. J. Duarte and R. O. James, Tunable solid-state lasers
+       incorporating dye-doped polymer-nanoparticle gain media, Opt. Lett.
+       28, 2088-2090 (2003).
+   34. [188]^ F. J. Duarte, L. S. Liao, and K. M. Vaeth, Coherence
+       characteristics of electrically excited tandem organic
+       light-emitting diodes, Opt. Lett. 30, 3072-3074 (2005).
+   35. [189]^ F. J. Duarte, Coherent electrically excited organic
+       semiconductors: visibility of interferograms and emission
+       linewidth, Opt. Lett. 32, 412-414 (2007).
+   36. ^ [190]^a [191]^b [192]^c [193]^d F. J. Duarte and J. A. Piper,
+       Comparison of prism preexpanded and grazing incidence grating
+       cavities for copper laser pumped dye lasers, Appl. Opt. 21,
+       2782-2786 (1982).
+   37. [194]^ F. J. Duarte, Tunable lasers for atomic vapor laser isotope
+       separation: the Australian contribution, Australian Physics 47(2),
+       38-40 (2010).
+   38. [195]^ I. E. Olivares, A. E. Duarte, E. A. Saravia, F. J. Duarte,
+       Lithium isotope separation with tunable diode lasers, Appl. Opt.
+       41, 2973-2977 (2002).
+   39. [196]^ F. J. Duarte and D. J. Paine, Quantum mechanical description
+       of N-slit interference phenomena, in Proceedings of the
+       International Conference on Lasers '88, R. C. Sze and F. J. Duarte
+       (Eds.) (STS, McLean, Va, 1989) pp. 42-47.
+   40. [197]^ F. J. Duarte, in High Power Dye Lasers (Springer-Verlag,
+       Berlin,1991) Chapter 2.
+   41. [198]^ F. J. Duarte, On a generalized interference equation and
+       interferometric measurements, Opt. Commun. 103, 8–14 (1993).
+   42. [199]^ F. J. Duarte, Electro-optical interferometric
+       microdensitometer system, US Patent 5255069 (1993).
+   43. [200]^ F. J. Duarte, Interference, diffraction, and refraction via
+       Dirac’s notation, Am. J. Phys. 65, 637–640 (1997).
+   44. [201]^ F. J. Duarte, Tunable Laser Optics (Elsevier Academic, New
+       York, 2003). Chapter 2.
+   45. [202]^ F. J. Duarte et al., Science degree, University News 1 (100)
+       16 (1977).
+   46. [203]^ B. Mansfield and M. Hutchinson, Liberality of Opportunity: A
+       history of Macquarie University 1964-1989 (Hale and Iremonger,
+       Sydney, 1992).
+   47. [204]^ J. C. Ward, Memoirs of a Theoretical Physicist (Optics
+       Journal, Rochester, 2004).
+
+[[205]edit] External links
+
+     * [206]Duarte's home page
+     * [207]Prism and Multiple-Prism Pulse Compression: Tutorial
+     * [208]Tunable Laser Books
+     * [209]United States Patents by F. J. Duarte, at Patent Genius
+     * [210]Group photograph including, right to left, [211]Marlan Scully,
+       [212]Willis Lamb, [213]John L. Hall, and F. J. Duarte.
+
+                [214]Persondata
+   Name              Duarte, F. J.
+   Alternative names
+   Short description
+   Date of birth
+   Place of birth    [215]Santiago, [216]Chile
+   Date of death
+   Place of death
+   Retrieved from "[217]http://en.wikipedia.org/wiki/F._J._Duarte"
+   [218]Categories: [219]American physicists | [220]American inventors |
+   [221]Experimental physicists | [222]Quantum physicists | [223]Optical
+   physicists | [224]Laser researchers | [225]American people of Spanish
+   descent | [226]Hispanic and Latino American people | [227]Living people
+
+Personal tools
+
+     * [228]Log in / create account
+
+Namespaces
+
+     * [229]Article
+     * [230]Discussion
+
+Variants
+
+Views
+
+     * [231]Read
+     * [232]Edit
+     * [233]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [234]Main page
+     * [235]Contents
+     * [236]Featured content
+     * [237]Current events
+     * [238]Random article
+     * [239]Donate to Wikipedia
+
+Interaction
+
+     * [240]Help
+     * [241]About Wikipedia
+     * [242]Community portal
+     * [243]Recent changes
+     * [244]Contact Wikipedia
+
+Toolbox
+
+     * [245]What links here
+     * [246]Related changes
+     * [247]Upload file
+     * [248]Special pages
+     * [249]Permanent link
+     * [250]Cite this page
+
+Print/export
+
+     * [251]Create a book
+     * [252]Download as PDF
+     * [253]Printable version
+
+Languages
+
+     * [254]Español
+
+     * This page was last modified on 15 January 2011 at 19:06.
+     * Text is available under the [255]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [256]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [257]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [258]Contact us
+
+     * [259]Privacy policy
+     * [260]About Wikipedia
+     * [261]Disclaimers
+
+     * [262]Powered by MediaWiki
+     * [263]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=F._J._Duarte&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#p-search
+   7. file://localhost/wiki/Optical_Society_of_America
+   8. file://localhost/wiki/Santiago,_Chile
+   9. file://localhost/wiki/Chile
+  10. file://localhost/wiki/United_States
+  11. file://localhost/wiki/United_States
+  12. file://localhost/wiki/Physics
+  13. file://localhost/wiki/Optics
+  14. file://localhost/wiki/Macquarie_University
+  15. file://localhost/wiki/University_of_New_South_Wales
+  16. file://localhost/wiki/University_of_Alabama
+  17. file://localhost/wiki/State_University_of_New_York
+  18. file://localhost/wiki/University_of_New_Mexico
+  19. http://www.interferometricoptics.com/
+  20. file://localhost/wiki/Alma_mater
+  21. file://localhost/wiki/Macquarie_University
+  22. file://localhost/wiki/Doctoral_advisor
+  23. file://localhost/w/index.php?title=J._A._Piper&action=edit&redlink=1
+  24. file://localhost/wiki/Tunable_laser
+  25. file://localhost/wiki/Dye_laser
+  26. file://localhost/wiki/Beam_expander
+  27. file://localhost/wiki/Multiple-prism_dispersion_theory
+  28. file://localhost/wiki/N-Slit_interferometer
+  29. file://localhost/wiki/N-slit_interferometric_equation
+  30. file://localhost/wiki/Laser
+  31. file://localhost/wiki/Tunable_laser
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-0
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-1
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-2
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-3
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-4
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-5
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-6
+  39. file://localhost/wiki/Multiple-prism_dispersion_theory
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-7
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-8
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-9
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-10
+  44. file://localhost/wiki/Copper_vapor_laser
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-11
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl1-12
+  47. file://localhost/wiki/Atomic_vapor_laser_isotope_separation
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl2-13
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl3-14
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl4-15
+  51. file://localhost/wiki/Laser_medicine
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-16
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-17
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-18
+  55. file://localhost/wiki/Microscopy
+  56. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-19
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-20
+  58. file://localhost/wiki/Prism_compressor
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-21
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-22
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-23
+  62. file://localhost/wiki/Laser_spectroscopy
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-24
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-25
+  65. file://localhost/wiki/Diode_laser
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-26
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-27
+  68. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#Solid_state_dye_laser_development
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#Tunable_lasers_for_the_nuclear_energy_industry
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#Interferometry
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#Macquarie_University
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#See_also
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#References
+  74. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#External_links
+  75. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=1
+  76. file://localhost/wiki/United_States_Army_Aviation_and_Missile_Command
+  77. file://localhost/wiki/Multiple-prism_grating_laser_oscillators
+  78. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-28
+  79. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-29
+  80. file://localhost/wiki/Solid_state_dye_lasers
+  81. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-30
+  82. file://localhost/wiki/Uncertainty_principle
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-31
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-32
+  85. file://localhost/wiki/Organic_light-emitting_diode
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-33
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-34
+  88. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=2
+  89. file://localhost/wiki/Multiple-prism_grating_laser_oscillators
+  90. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl1-12
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl5-35
+  92. file://localhost/wiki/Uranium
+  93. file://localhost/wiki/Atomic_vapor_laser_isotope_separation
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl2-13
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl3-14
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl4-15
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl1-12
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl5-35
+  99. file://localhost/wiki/Australian_Atomic_Energy_Commission
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl5-35
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-36
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl1-12
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-dl5-35
+ 104. file://localhost/wiki/John_Carrick_(Australian_politician)
+ 105. file://localhost/wiki/Lithium
+ 106. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-37
+ 107. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=3
+ 108. file://localhost/wiki/Dirac%E2%80%99s_notation
+ 109. file://localhost/wiki/N-Slit_interferometer
+ 110. file://localhost/w/index.php?title=Industrial_imaging&action=edit&redlink=1
+ 111. file://localhost/w/index.php?title=Optical_metrology&action=edit&redlink=1
+ 112. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-38
+ 113. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-39
+ 114. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-40
+ 115. file://localhost/wiki/Beam_expander
+ 116. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-41
+ 117. file://localhost/wiki/N-slit_interferometric_equation
+ 118. file://localhost/wiki/Interference_(wave_propagation)
+ 119. file://localhost/wiki/Diffraction
+ 120. file://localhost/wiki/Refraction
+ 121. file://localhost/wiki/Reflection_(physics)
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-42
+ 123. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-43
+ 124. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=4
+ 125. file://localhost/wiki/Macquarie_University
+ 126. file://localhost/wiki/Sydney,_Australia
+ 127. file://localhost/wiki/Macquarie_science_reform_movement
+ 128. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-44
+ 129. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-45
+ 130. file://localhost/wiki/Ronald_Ernest_Aitchison
+ 131. file://localhost/wiki/R._E._B._Makinson
+ 132. file://localhost/wiki/John_Clive_Ward
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_note-46
+ 134. file://localhost/wiki/United_States
+ 135. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=5
+ 136. file://localhost/wiki/Multiple-prism_grating_laser_oscillators
+ 137. file://localhost/wiki/Prism_compressor
+ 138. file://localhost/wiki/Solid_state_dye_lasers
+ 139. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=6
+ 140. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-0
+ 141. http://www.opticsjournal.com/dlp.htm
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-1
+ 143. http://www.opticsjournal.com/hpdl.htm
+ 144. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-2
+ 145. http://www.opticsjournal.com/spie.htm
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-3
+ 147. http://www.opticsjournal.com/tla.htm
+ 148. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-4
+ 149. http://www.opticsjournal.com/tlh.htm
+ 150. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-5
+ 151. http://www.opticsjournal.com/tlo.htm
+ 152. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-6
+ 153. http://www.opticsjournal.com/tla.htm
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-7
+ 155. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-8
+ 156. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-9
+ 157. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-10
+ 158. http://www.opticsjournal.com/laseroscillators.htm
+ 159. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-11
+ 160. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl1_12-0
+ 161. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl1_12-1
+ 162. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl1_12-2
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl1_12-3
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl2_13-0
+ 165. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl2_13-1
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl3_14-0
+ 167. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl3_14-1
+ 168. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl4_15-0
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl4_15-1
+ 170. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-16
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-17
+ 172. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-18
+ 173. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-19
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-20
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-21
+ 176. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-22
+ 177. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-23
+ 178. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-24
+ 179. file://localhost/wiki/W._Demtr%C3%B6der
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-25
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-26
+ 182. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-27
+ 183. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-28
+ 184. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-29
+ 185. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-30
+ 186. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-31
+ 187. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-32
+ 188. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-33
+ 189. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-34
+ 190. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl5_35-0
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl5_35-1
+ 192. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl5_35-2
+ 193. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-dl5_35-3
+ 194. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-36
+ 195. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-37
+ 196. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-38
+ 197. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-39
+ 198. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-40
+ 199. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-41
+ 200. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-42
+ 201. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-43
+ 202. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-44
+ 203. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-45
+ 204. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html#cite_ref-46
+ 205. file://localhost/w/index.php?title=F._J._Duarte&action=edit&section=7
+ 206. http://www.opticsjournal.com/tunablelasers.htm
+ 207. http://www.opticsjournal.com/prismpulsecompression.htm
+ 208. http://www.opticsjournal.com/tunablelasersbooks.htm
+ 209. http://www.patentgenius.com/inventedby/DuarteFranciscoJRochesterNY.html
+ 210. http://www.opticsjournal.com/lamb.htm
+ 211. file://localhost/wiki/Marlan_Scully
+ 212. file://localhost/wiki/Willis_Lamb
+ 213. file://localhost/wiki/John_L._Hall
+ 214. file://localhost/wiki/Wikipedia:Persondata
+ 215. file://localhost/wiki/Santiago,_Chile
+ 216. file://localhost/wiki/Chile
+ 217. http://en.wikipedia.org/wiki/F._J._Duarte
+ 218. file://localhost/wiki/Special:Categories
+ 219. file://localhost/wiki/Category:American_physicists
+ 220. file://localhost/wiki/Category:American_inventors
+ 221. file://localhost/wiki/Category:Experimental_physicists
+ 222. file://localhost/wiki/Category:Quantum_physicists
+ 223. file://localhost/wiki/Category:Optical_physicists
+ 224. file://localhost/wiki/Category:Laser_researchers
+ 225. file://localhost/wiki/Category:American_people_of_Spanish_descent
+ 226. file://localhost/wiki/Category:Hispanic_and_Latino_American_people
+ 227. file://localhost/wiki/Category:Living_people
+ 228. file://localhost/w/index.php?title=Special:UserLogin&returnto=F._J._Duarte
+ 229. file://localhost/wiki/F._J._Duarte
+ 230. file://localhost/wiki/Talk:F._J._Duarte
+ 231. file://localhost/wiki/F._J._Duarte
+ 232. file://localhost/w/index.php?title=F._J._Duarte&action=edit
+ 233. file://localhost/w/index.php?title=F._J._Duarte&action=history
+ 234. file://localhost/wiki/Main_Page
+ 235. file://localhost/wiki/Portal:Contents
+ 236. file://localhost/wiki/Portal:Featured_content
+ 237. file://localhost/wiki/Portal:Current_events
+ 238. file://localhost/wiki/Special:Random
+ 239. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 240. file://localhost/wiki/Help:Contents
+ 241. file://localhost/wiki/Wikipedia:About
+ 242. file://localhost/wiki/Wikipedia:Community_portal
+ 243. file://localhost/wiki/Special:RecentChanges
+ 244. file://localhost/wiki/Wikipedia:Contact_us
+ 245. file://localhost/wiki/Special:WhatLinksHere/F._J._Duarte
+ 246. file://localhost/wiki/Special:RecentChangesLinked/F._J._Duarte
+ 247. file://localhost/wiki/Wikipedia:Upload
+ 248. file://localhost/wiki/Special:SpecialPages
+ 249. file://localhost/w/index.php?title=F._J._Duarte&oldid=408063931
+ 250. file://localhost/w/index.php?title=Special:Cite&page=F._J._Duarte&id=408063931
+ 251. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=F.+J.+Duarte
+ 252. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=F.+J.+Duarte&oldid=408063931&writer=rl
+ 253. file://localhost/w/index.php?title=F._J._Duarte&printable=yes
+ 254. http://es.wikipedia.org/wiki/F._J._Duarte
+ 255. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 256. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 257. http://www.wikimediafoundation.org/
+ 258. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 259. http://wikimediafoundation.org/wiki/Privacy_policy
+ 260. file://localhost/wiki/Wikipedia:About
+ 261. file://localhost/wiki/Wikipedia:General_disclaimer
+ 262. http://www.mediawiki.org/
+ 263. http://wikimediafoundation.org/
+
+   Hidden links:
+ 264. file://localhost/wiki/File:FJ_DUARTE_(2006).jpg
+ 265. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html
+ 266. file://localhost/home/memfis/projects/put/tsiss/Downloads/f._j._duarte.html
+ 267. file://localhost/wiki/Main_Page
+ 268. http://creativecommons.org/licenses/by-sa/3.0/

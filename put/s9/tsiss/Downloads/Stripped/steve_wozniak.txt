@@ -1,0 +1,1386 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Steve Wozniak
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   Stephen Gary "Woz" Wozniak
+   Born August 11, 1950 (1950-08-11) (age 60)
+   [7]San Jose, California, [8]USA
+   [9]Alma mater [10]University of California, Berkeley
+   Occupation [11]Computer scientist
+   [12]Electrical engineer
+   Spouse Alice Robertson (m. 1976–1980)
+   «start: (1976)–end+1: (1981)»"Marriage: Alice Robertson to Steve
+   Wozniak" Location:
+   (linkback:[13]http://en.wikipedia.org/wiki/Steve_Wozniak)
+   Candice Clark (m. 1981–1987) «start: (1981)–end+1: (1988)»"Marriage:
+   Candice Clark to Steve Wozniak" Location:
+   (linkback:[14]http://en.wikipedia.org/wiki/Steve_Wozniak)
+   Suzanne Mulkern (m. 1990–2004) «start: (1990)–end+1: (2005)»"Marriage:
+   Suzanne Mulkern to Steve Wozniak" Location:
+   (linkback:[15]http://en.wikipedia.org/wiki/Steve_Wozniak)
+   Janet Hill (m. 2008–present) «start: (2008)»"Marriage: Janet Hill to
+   Steve Wozniak" Location:
+   (linkback:[16]http://en.wikipedia.org/wiki/Steve_Wozniak)
+   Children 3
+   Website
+   [17]http://www.woz.org
+
+   Stephen Gary "Woz" Wozniak (born August 11, 1950 in [18]San Jose,
+   [19]California) is an [20]American [21]computer engineer who co-founded
+   Apple Computer, Inc. (now [22]Apple Inc.) with [23]Steve Jobs and
+   [24]Ronald Wayne. His inventions and machines are credited with
+   contributing significantly to the [25]personal computer revolution of
+   the 1970s. Wozniak created the [26]Apple I and [27]Apple II computers
+   in the mid-1970s.^[28][1]
+
+   Wozniak has several [29]nicknames, including "The Woz", "Wonderful
+   Wizard of Woz" and "iWoz" (a reference to the ubiquitous naming scheme
+   for Apple products). "WoZ" (short for "[30]Wheels of Zeus") is also the
+   name of a company Wozniak founded. He is sometimes known as the "Other
+   Steve" of Apple Computer, the better known Steve being co-founder
+   [31]Steve Jobs. He has Polish ancestry.^[32][2]
+
+   Contents
+
+        * [33]1 Apple Computer
+             + [34]1.1 Origins of Apple
+             + [35]1.2 Aircraft accident
+             + [36]1.3 Employment with Apple
+        * [37]2 Post-Apple career
+             + [38]2.1 Philanthropy
+             + [39]2.2 Honors and awards
+             + [40]2.3 Patents
+             + [41]2.4 Television appearances
+        * [42]3 Personal life
+        * [43]4 In popular culture
+        * [44]5 See also
+        * [45]6 References
+        * [46]7 External links
+             + [47]7.1 Interviews
+             + [48]7.2 Videos
+             + [49]7.3 Biographical
+
+[[50]edit] Apple Computer
+
+[[51]edit] Origins of Apple
+
+   In 1970, Wozniak became friends with Steve Jobs, when Jobs had a summer
+   job at the same business where Wozniak was working on a [52]mainframe
+   computer.^[53][3] According to Wozniak's autobiography, [54]iWoz, Jobs
+   had the idea to sell the computer as a fully assembled [55]printed
+   circuit board. Wozniak, at first skeptical, was later convinced by Jobs
+   that even if they were not successful they could at least say to their
+   grandkids they had had their own company. Together they sold some of
+   their possessions (such as Wozniak's HP [56]scientific calculator and
+   Jobs' [57]Volkswagen van), raised [58]USD $1,300, and assembled the
+   first prototypes in Jobs' bedroom and later (when there was no space
+   left) in Jobs' garage. Wozniak's apartment in San Jose was filled with
+   monitors, electronic devices, and some computer games Wozniak had
+   developed, similar to SuperPong but with voice overs to the blips on
+   the screen. Wozniak carried electronic devices with him often, and
+   would entertain party goers with novel devices.^[[59]citation needed]
+
+   By 1975, Wozniak withdrew from the [60]University of California,
+   Berkeley and came up with the computer that eventually made him famous
+   and some have compared to a work of art since the hardware, circuit
+   board designs, and operating system was the work solely of
+   Wozniak.^[61][4] With the Apple I design, he and Jobs were largely
+   working to impress other members of the [62]Palo Alto-based
+   [63]Homebrew Computer Club, a local group of electronics hobbyists very
+   interested in computing, one of several key centers which established
+   the home hobbyist era essentially creating the personal computer
+   industry over several years. Unlike other Home Brew competitors, the
+   Apple had an easy-to-achieve video capability that immediately created
+   buzz and drew a crowd when it was unveiled.^[64][4]
+
+   On April 1, 1976, Jobs and Wozniak formed [65]Apple Computer. Wozniak
+   quit his job at [66]Hewlett-Packard and became the vice president in
+   charge of research and development at Apple. Their first product, the
+   [67]Apple I computer, was similar to the [68]Altair 8800, the first
+   commercially available personal computer, except it had no provision
+   for internal expansion cards. With the addition of these cards, the
+   Altair could be attached to a computer terminal and could be programmed
+   in [69]BASIC. The Apple I was purely a hobbyist machine, a $25
+   [70]microprocessor ([71]MOS 6502) on a single-circuit board with 256
+   bytes of [72]ROM, 4K or 8K bytes of [73]RAM and a 40 character by 24
+   row display controller. It lacked a case, power supply, keyboard, or
+   display, which had to be provided by the user. The Apple I was priced
+   at $666.66. (Wozniak later said he had no idea about the correlation
+   between the number and the [74]mark of the beast, and "I came up with
+   [it] because I like repeating digits." It was $500 plus a 1/3 markup,
+   which is actually $666.67, rounding up to the nearest penny.) Jobs and
+   Wozniak sold their first 50 computers to [75]Paul Terrell, who was
+   starting a new computer shop, called the Byte Shop, in [76]Mountain
+   View, California. Terrell bought just the circuit board for the
+   Apple I; he had to supply the keyboard, monitor, transformer, and even
+   the case in which to put the computer.^[77][5]
+   Excerpt from the Apple I design manual, including Wozniak's hand-drawn
+   diagrams
+
+   Wozniak could now focus full-time on fixing the shortcomings of the
+   Apple I and adding new functionality. His new design was to retain the
+   most important characteristics: simplicity and usability. Wozniak
+   introduced high-resolution graphics in the [78]Apple II.^[79][5] His
+   computer could now display pictures instead of just letters: "I threw
+   in high-res. It was only two chips. I didn't know if people would use
+   it." By 1978, he had also designed an inexpensive disk drive
+   controller. He and [80]Randy Wigginton wrote a simple disk operating
+   system and file system. [81]Shepardson Microsystems was contracted to
+   build a simple command line interface for the disk operating system.
+
+   In addition to designing the hardware, Wozniak wrote most of the
+   software initially provided with the Apple. He wrote a programming
+   language interpreter, a set of virtual [82]16-bit processor
+   instructions known as [83]SWEET 16, a [84]Breakout game (which was also
+   a reason to add sound to the computer), the code needed to control the
+   disk drive, and more.
+
+   In 1980, Apple [85]went public and made Jobs and Wozniak
+   multimillionaires. However, Jobs had refused to allow some employees of
+   Apple to receive stock options, so Wozniak decided to share some of his
+   [86]founder stock with the rest of the team by either giving them away
+   for free or at a heavily discounted price. This was dubbed "The Woz
+   Plan".^[87][6]
+
+[[88]edit] Aircraft accident
+
+   In February 1981, Steve Wozniak crashed his [89]Beechcraft Bonanza
+   while taking off from [90]Santa Cruz Sky Park. The [91]NTSB
+   investigation revealed that Wozniak did not have a "high performance"
+   aircraft endorsement (making him legally unqualified to operate the
+   airplane), and had a "lack of familiarity with [the] aircraft."^[92][7]
+   The cause of the crash was determined to be a premature liftoff,
+   followed by a stall and "mush" into a 12-foot embankment. As a result
+   of the accident, he had [93]retrograde amnesia and temporary
+   [94]anterograde amnesia. He had no recollection of the accident and,
+   for a while, did not even know he had been involved in a crash. He also
+   did not remember his hospital stays or the things he did after he was
+   released: he followed his previous routine (except for flying), but
+   could not recall what had happened. He would walk into rooms and forget
+   why he was there and couldn't even remember which day it was. For
+   example, he would go to work on Sunday, or stay home on a Wednesday,
+   thinking it was the weekend.^[95][5] He began to piece together clues
+   from what people told him. He asked his girlfriend, Candice Clark (an
+   early Apple employee who worked in the accounting department), whether
+   he had been involved in an accident of some kind. When she told him
+   about the event, his short-term memory was restored; Wozniak also
+   credits Apple II [96]computer games for aiding him in restoring those
+   lost memories. Wozniak and Clark got engaged later that year.^[97][5]
+
+[[98]edit] Employment with Apple
+
+   Wozniak did not immediately return to Apple after recovering from the
+   crash. Instead, he married Clark and returned to UC Berkeley under the
+   name "[99]Rocky Raccoon Clark" (Rocky was his dog's name and Clark his
+   wife's maiden name), finally earning his undergraduate degree in
+   1986.^[100][8] In May 1982 and 1983, Wozniak also sponsored two [101]US
+   Festivals to celebrate evolving technologies; they ended up as a
+   technology exposition and a rock festival as a combination of music,
+   computers, television and people.
+
+   In 1983 he decided to return to Apple product development, but he
+   wanted no more of a role than that of an engineer and a motivational
+   factor for the Apple workforce.^[102][5]
+
+   Wozniak permanently ended his full-time employment with Apple on
+   February 6, 1987, 12 years after creating the company. He still remains
+   an employee (and receives a paycheck)^[103][5]^[104][9] and is a
+   shareholder.^[105][10] He also maintains connections with [106]Steve
+   Jobs.
+
+[[107]edit] Post-Apple career
+
+   Wozniak founded a new venture called [108]CL 9, which developed and
+   brought the first [109]universal remote control to market in
+   1987.^[110][5] Wozniak also taught fifth-grade students.
+
+   In 2001, Wozniak co-founded [111]Wheels of Zeus (note the [112]acronym,
+   "WoZ"), to create wireless [113]GPS technology to "help everyday people
+   find everyday things." In 2002, he joined the Board of Directors of
+   [114]Ripcord Networks, Inc., joining [115]Ellen Hancock, [116]Gil
+   Amelio, Mike Connor, and [117]Wheels of Zeus co-founder [118]Alex
+   Fielding, all Apple alumni, in a new [119]telecommunications venture.
+   Later the same year he joined the Board of Directors of [120]Danger,
+   Inc., the maker of the [121]Hip Top (a.k.a. Side Kick from T-Mobile).
+   [122]Joey Slotnick, left, poses with Steve Wozniak. Slotnick portrayed
+   Wozniak in the film [123]Pirates of Silicon Valley.
+
+   In 2006, Wheels of Zeus was closed, and Wozniak founded [124]Acquicor
+   Technology, a [125]holding company for acquiring technology companies
+   and developing them, with Apple alumni [126]Ellen Hancock and [127]Gil
+   Amelio.
+
+   In September 2006, Wozniak published his autobiography, [128]iWoz: From
+   Computer Geek to Cult Icon: How I Invented the Personal Computer,
+   Co-Founded Apple, and Had Fun Doing It. It was co-authored by writer
+   Gina Smith.
+
+   In March 2006, Wozniak attended the [129]FIRST National Competition in
+   Atlanta to show off [130]Lego robots.^[131][11] In 2010, he attended
+   another FIRST event, a regional event in downtown Phoenix Arizona at
+   the [132]Arizona State Fairgrounds.
+
+   In February 2009 Steve Wozniak joined [133]Fusion-io, a data storage
+   and server company, in [134]Salt Lake City, [135]Utah as their chief
+   scientist.^[136][12]
+
+   On November 18, 2010 Steve Wozniak gave a speech at the Science &
+   Technology Summit at the [137]World Forum Convention Center in [138]The
+   Hague in which he predicted that Android would be dominant over the
+   iPhone market-wise but the iPhone would retain the quality
+   edge.^[139][13]
+
+[[140]edit] Philanthropy
+
+   Since leaving Apple, Wozniak has provided all the money, as well as a
+   good amount of on-site technical support, for the technology program in
+   his local school district.^[141][5] Un.U.Son. (Unite Us In Song), an
+   organization Wozniak formed to organize the two US Festivals, is now
+   primarily tasked with supporting his educational and philanthropic
+   projects.^[142][5] In 1986, Wozniak lent his name to the Stephen G.
+   Wozniak Achievement Awards (referred to as Wozzie Awards), which he
+   presented to six Bay Area high school and college students for their
+   innovative use of computers in the fields of business, art and music.
+
+[[143]edit] Honors and awards
+
+   Wozniak received the [144]National Medal of Technology in 1985 (with
+   [145]Steve Jobs) from [146]Ronald Reagan, the [147]President of the
+   United States^[148][5] at that time. In December 1989, he received an
+   honorary Doctor of Engineering degree from the [149]University of
+   Colorado at Boulder, where he studied in the late sixties.^[150][14]
+   Later he donated funds to create the "Woz Lab" at the [151]University
+   of Colorado at Boulder. In 1997, he was named a Fellow of the
+   [152]Computer History Museum. Wozniak was a key contributor and
+   benefactor to the [153]Children's Discovery Museum of San Jose (the
+   street in front of the museum has been renamed Woz Way in his
+   honor).^[154][15]
+
+   In September 2000, Wozniak was inducted into the [155]National
+   Inventors Hall of Fame,^[156][16] and in 2001 he was awarded the 7th
+   Annual [157]Heinz Award for Technology, the Economy and
+   Employment.^[158][17]
+
+   In December 2005, Wozniak was awarded an honorary Doctor of Engineering
+   degree from [159]Kettering University, in [160]Flint,
+   [161]Michigan.^[162][18] He also received an honorary degree from
+   [163]North Carolina State University, [164]Nova Southeastern
+   University, Fort Lauderdale, Florida, and the Telluride Tech Festival
+   Award of Technology.
+
+[[165]edit] Patents
+
+   Wozniak is listed as the sole inventor on the following patents:
+     * US Patent No. 4,136,359 - "Microcomputer for use with video
+       display"^[166][19] - for which he was inducted into the National
+       Inventors Hall of Fame.
+     * US Patent No. 4,210,959 - "Controller for magnetic disc, recorder,
+       or the like"^[167][20]
+     * US Patent No. 4,217,604 - "Apparatus for digitally controlling
+       [168]PAL color display"^[169][21]
+     * US Patent No. 4,278,972 - "Digitally-controlled color signal
+       generation means for use with display"^[170][22]
+
+[[171]edit] Television appearances
+
+   After seeing her stand-up performance in Saratoga, California, Wozniak
+   began dating comedian [172]Kathy Griffin.^[173][23] Together, they
+   attended the [174]2007 Emmy Awards,^[175][24] and he subsequently made
+   many appearances on the fourth season of her show [176]Kathy Griffin:
+   My Life on the D-List. Woz is on the show as her date for the
+   [177]Producers Guild of America award show. However, on a June 19, 2008
+   appearance on [178]The Howard Stern Show, Griffin confirmed that they
+   are no longer dating and have decided to remain friends.^[179][25]
+
+   Wozniak portrays a parody of himself in the first episode of the
+   television series [180]Code Monkeys; he plays the owner of Gameavision
+   before selling it to help fund Apple. He later appears again in the
+   twelfth episode when he is in [181]Las Vegas at the annual Video Game
+   Convention and sees Dave and Jerry. He also appears in a parody of the
+   "Get a Mac" ads featured in the final episode of Code Monkeys' second
+   season. Wozniak is also interviewed and featured in the documentary
+   [182]Hackers Wanted and on BBC.
+
+   Wozniak competed on Season 8 of [183]Dancing with the Stars in
+   2009^[184][26]^[185][27] where he danced with [186]Karina Smirnoff.
+   Despite Wozniak and Smirnoff receiving 10 combined points from the
+   three judges out of 30, the lowest score of the evening, he remained in
+   the competition. He later posted on a [187]social networking site that
+   he felt that the vote count was not legitimate and suggested that the
+   Dancing with the Stars judges had lied about the vote count to keep him
+   on the show.^[188][28] After being briefed on the method of judging and
+   vote counting, he retracted and apologized for his
+   statements.^[189][29] Despite suffering a pulled [190]hamstring and a
+   fracture in his foot, Wozniak continued to compete,^[191][30] but was
+   eliminated from the competition on March 31, with a score of 12 out of
+   30 for an [192]Argentine Tango.^[193][31]
+
+   On September 30, 2010 he appeared as himself on [194]The Big Bang
+   Theory dining in [195]The Cheesecake Factory where Penny works and is
+   approached by a robot Sheldon. Leonard tries to explain to Penny who
+   Steve is, but she says she knows him from Dancing with the Stars.
+   Steve Wozniak signs a [196]Modbook for a fan during an appearance at
+   the Axiotron booth during [197]Macworld Expo 2009.
+
+[[198]edit] Personal life
+
+   Wozniak lives in [199]Los Gatos, California. He is a member of a
+   [200]Segway Polo team, the Silicon Valley Aftershocks. In 2006, they
+   were challenged to a game by the newly formed New Zealand Pole Blacks
+   (the Woz Challenge Cup); the match ended in a 2-2 tie, with the Woz
+   Challenge Cup staying in Auckland. In 2007, the Silicon Valley
+   Aftershocks avenged the tie by defeating the Pole Blacks 5-0 in the Woz
+   Challenge Cup finals. The 2008 Woz Challenge Cup was held at the
+   SegwayFesT 2008 in Indianapolis, Indiana from 8–10 August 2008 (polo
+   events ran 7–9 August 2008).^[201][32]
+
+   His favorite video game is [202]Tetris.^[203][33] In the 1990s he
+   submitted so many high scores for the game to [204]Nintendo Power that
+   they would no longer print his scores, so he started sending them in
+   under the alphabetically reversed "Evets Kainzow".^[205][34]
+
+   He is also a sworn member of the [206]Freemasons. Wozniak describes his
+   impetus for joining the Freemasons as being able to spend more time
+   with his wife at the time, Alice. Alice belonged to the [207]Order of
+   the Eastern Star, associated with the Masons. He says that although he
+   took the necessary oaths and is a lifetime Freemason, he doesn't
+   actually put a whole lot of stock in the mystical and religious
+   overtones of the oath or the order. He says that he joined the
+   Freemasons for one specific purpose, but he is very unlike the other
+   members of the order. He says he quickly rose to a third degree
+   Freemason because, whatever he does, he tries to do well. He was
+   initiated in 1980 at Charity Lodge No. 362 in Campbell,
+   California.^[208][35]
+
+   He is married to Janet Hill.^[209][36] According to his ex-girlfriend
+   [210]Kathy Griffin, “He met someone very quickly and then they [got]
+   engaged. I have had dinner with them, and she’s a thousand times more
+   appropriate!”^[211][37]
+
+[[212]edit] In popular culture
+
+   This "[213]In popular culture" section may contain minor or trivial
+   references. Please [214]reorganize this content to explain the
+   subject's impact on popular culture rather than simply listing
+   appearances, and remove trivial references. (March 2010)
+     * In 1979, Wozniak starred in a Nissan commercial for the then-new
+       [215]280ZX sports car, quoting Nissan's motto of the time, "It is
+       awesome." The other "impressive sports car" the narrator claimed he
+       owned at the time was never revealed.
+     * Steve Wozniak stars in several episodes of [216]Code Monkeys as
+       "The Woz".
+     * A likeness of Steve Wozniak working on a computer in a garage in
+       the late 1970s can be seen in the [217]EPCOT ride [218]Spaceship
+       Earth.
+     * Episode nine, Season six of [219]Futurama titled "[220]A Clockwork
+       Origin" pays homage to Wozniak with the orbiting "Wozniak Nerd
+       Academy".
+     * Mentioned in Hot Shot by [221]Susan Elizabeth Phillips.
+     * Made an appearance as himself in [222]The Big Bang Theory episode,
+       "The Cruciferous Vegetable Amplification".
+     * In [223]Kathy Griffin's memoir, "Official Book Club Selection', she
+       writes of their relationship in 2007 and publishes many of their
+       e-mail correspondences from that period.
+
+[[224]edit] See also
+
+     * [225]Blue box
+     * [226]iWoz - an autobiography
+     * [227]Pirates of Silicon Valley - A movie based on the rise of Apple
+       and Microsoft; Wozniak is portrayed by actor [228]Joey Slotnick.
+     * [229]Triumph of the Nerds - A documentary about the rise of the PC
+       industry by [230]Robert X. Cringely.
+     * [231]Nixie tube
+
+[[232]edit] References
+
+    1. [233]^ [234]"Nolan Bushnell Appointed to Atari Board - AtariAge
+       Forums - Page 30". Atariage.com. 2010-04-29.
+       [235]http://www.atariage.com/forums/topic/161774-nolan-bushnell-app
+       ointed-to-atari-board/page__view__findpost__p__2001071. Retrieved
+       2010-11-11.
+    2. [236]^ [237]"Welcome to". Woz.org. 2000-02-09.
+       [238]http://www.woz.org/letters/general/53.html. Retrieved
+       2010-11-11.
+    3. [239]^ Young, Jeffrey S. (December 1988). Steve Jobs: The Journey
+       is the Reward. Lynx Books. [240]ISBN [241]155802378X.
+    4. ^ [242]^a [243]^b Swaine, Michael (2000). Fire in the Valley.
+       McGraw-Hill. [244]ISBN [245]0071358927.
+    5. ^ [246]^a [247]^b [248]^c [249]^d [250]^e [251]^f [252]^g [253]^h
+       [254]^i [255]^j Wozniak, S. G.; Smith, G. (2006), [256]iWoz: From
+       Computer Geek to Cult Icon: How I Invented the Personal Computer,
+       Co-Founded Apple, and Had Fun Doing It. [257]W. W. Norton & Company
+    6. [258]^ [259]Dancing With The Woz, By Daniel Lyons, Published Mar 7,
+       2009, From the magazine issue dated Mar 16, 2009 from [260]Newsweek
+    7. [261]^ [262]NTSB Identification: LAX81FA044, National
+       Transportation Safety Board -- Aviation Accidents
+    8. [263]^ Harriet Stix (May 14, 1986). [264]"A UC Berkeley Degree Is
+       Now the Apple of Steve Wozniak's Eye". [265]Los Angeles Times.
+       [266]http://articles.latimes.com/1986-05-14/news/vw-5389_1_steve-wo
+       zniak. "Rocky Clark is Apple computer creator Steve Wozniak. He
+       used an alias at UC Berkeley because, he said, 'I knew I wouldn't
+       have time enough to be an A+ student.' Rocky was the first name of
+       his dog Rocky Raccoon, and Clark his wife Candi's last name."
+    9. [267]^ [268]Letters-General Questions Answered, Woz.org
+   10. [269]^ [270]Apple's Other Steve (Stock Research) March 2, 2000,
+       Fool.com
+   11. [271]^ Weisman, Robert (2006-03-25). [272]A star who aims to spark
+       innovation by students., The Boston Globe.
+   12. [273]^ [274]Wozniak Accepts Post at a Storage Start-Up [275]New
+       York Times February 4, 2009
+   13. [276]^ [277]iPhone vs. Android: Steve Wozniak Says Android Will Be
+       Dominant One Day, Nexus404.com, November 18th 2010
+   14. [278]^ Seibold, Chris. [279]"This Day in Apple History December 28,
+       1989: Woz Gets Honorary Doctorate, Dish Incident Forgotten".
+       [280]http://www.applematters.com/index.php/section/history/2006/12/
+       28/. Retrieved 2007-07-31
+   15. [281]^ [282]"maps.google.com". maps.google.com. 1970-01-01.
+       [283]http://maps.google.com/maps?f=q&hl=en&q=woz+way,+san+jose,+ca&
+       t=h&ll=37.326361,-121.891733&spn=0.003686,0.008497&t=h. Retrieved
+       2010-11-11.
+   16. [284]^ [285]Inventor Profile - National Inventors Hall of Fame
+   17. [286]^ [287]"The Heinz Awards, Steve Wozniak profile".
+       Heinzawards.net.
+       [288]http://www.heinzawards.net/recipients/steve-wozniak. Retrieved
+       2010-11-11.
+   18. [289]^ [290]Honorary Doctorate - Kettering University List of
+       Honorary Degrees
+   19. [291]^ [292]US Patent No. 4,136,359, US Patent & Trademark Office,
+       Patent Full Text and Image Database
+   20. [293]^ [294]Controller for magnetic disc, recorder, or the like US
+       Patent 4210959
+   21. [295]^ [296]Apparatus for digitally controlling PAL color display
+       US Patent 4217604
+   22. [297]^ [298]Digitally-controlled color signal generation means for
+       use with display US Patent 4278972
+   23. [299]^ Collins, Michelle. [300]"VH1 Best Week Ever - Off The
+       Market: Kathy Griffin Finds a New Man!". Archived from [301]the
+       original on 2007-08-20.
+       [302]http://web.archive.org/web/20070820012223/http://www.bestweeke
+       ver.tv/2007/08/17/off-the-market-kathy-griffin-finds-a-new-man/.
+       Retrieved 2007-09-18.
+   24. [303]^ [304]"Apple Co-Founder Steve Wozniak Escorted Comedian Kathy
+       Griffin & Her Potty Mouth To The Emmy’s.".
+       [305]http://www.ceosmack.com/2007/09/18/apple-co-founder-steve-wozn
+       iak-escorted-comedian-kathy-griffin-her-potty-mouth-to-the-emmys/.
+       Retrieved 2007-09-18. ^[[306]dead link]([307]Wayback Archive)
+   25. [308]^ [309]Who’s so vain? June 19, 2008 - The Howard Stern Show
+   26. [310]^ [311]"Apple co-founder Steve Wozniak to compete on 'Dancing
+       With the Stars'" from [312]Los Angeles Times. Retrieved on
+       2009-02-8.
+   27. [313]^ [314]"Why Apple founders got 'fired up.'". BBC News.
+       2008-11-21.
+       [315]http://news.bbc.co.uk/2/hi/programmes/click_online/7741472.stm
+       . Retrieved 2009-02-05.
+   28. [316]^ Matyszczyk, Chris (2009-03-17). [317]"Woz in ABC 'outright
+       lie' accusation". CNET.
+       [318]http://news.cnet.com/8301-17852_3-10198341-71.html?tag=mncol;t
+       xt.
+   29. [319]^ Fashingbauer Cooper, Gael (2009-03-19). [320]"Wozniak sorry
+       he called ‘Dancing’ show ‘fake’". MSNBC.
+       [321]http://www.msnbc.msn.com/id/29777570/.
+   30. [322]^ [323]Injured Woz Will Perform People.com, March 23, 2009
+   31. [324]^ [325]Woz Gets Hipchecked Off the Dance Floor, by Kara
+       Swisher, April 1, 2009, All Things Digital
+   32. [326]^ [327]"International Segway Polo Association".
+       [328]http://www.segwayhtpolo.com. Retrieved 2008-03-03.
+   33. [329]^ [330]"Woz and I agree: 'Tetris' for the Gameboy is the best
+       game ever, by Daniel Terdiman, December 11, 2007, Geek Gestalt on
+       CNET News
+   34. [331]^ [332]"Tetris: The pieces fall into place, By Brad Cook,
+       Apple Inc.
+   35. [333]^ [334][1] from "A Few Famous Masons"
+   36. [335]^ [336]"Meet Janet Hill, the woman secretly married to Steve
+       Wozniak" from ValleyWag.com
+   37. [337]^ [338]"Steve Wozniak Engaged", By Jamie on Aug 7, 2008,
+       Spreadit.org
+
+[[339]edit] External links
+
+   Wikimedia Commons has media related to: [340]Steve Wozniak
+   [341]Wikiquote has a collection of quotations related to: [342]Steve
+   Wozniak
+     * [343]woz.org Wozniak's official site
+     * [344]Steve Wozniak at the [345]Internet Movie Database
+     * [346]"Apple Computer The Early Days A Personal Perspective" by Paul
+       Laughton
+     * [347]Pictures of Steve Wozniak at the Axiotron booth during
+       Macworld 2009
+
+[[348]edit] Interviews
+
+     * [349]Interview in Knowledge@Wharton published February 20, 2008
+     * [350]Steve Wozniak's Youbentmywookie Geek of the Month Interview -
+       2008
+     * [351]Collection of more than 20 Interviews with Steve Wozniak
+     * [352]The San Jose Tech Museum interview with Wozniak
+     * [353]Colbert Interviews The Woz TV interview on Sept 28th, 2006
+     * [354]Wozniak giving history of himself at GnomeDex 2004
+     * [355]"Interview with Steve Wozniak" (from Failure Magazine, July
+       2000)
+     * [356]2005 Interview with Wozniak at the Stanford Cardinal Inquirer
+     * [357]TWIT with Woz, a podcast Wozniak participated in
+     * [358]TWIT with Woz - Wozniak and Kevin Mitnick on This Week In Tech
+       podcast
+     * [359]TWIT with Woz - Wozniak on This Week in Tech, episode 44
+     * [360]TWIT with Woz - Wozniak on This Week in Tech, episode 48
+     * [361]Founders At work - Chapter 3 is a lengthy and somewhat
+       technical interview of his early days at Apple conducted by Jessica
+       Livingston
+     * [362]Interviewed by R.U. Sirius on 10 Zen Monkeys
+     * [363]Wozniak's New Goal is Efficient Housing (ECNmag.com, Aug.
+       2007)
+     * [364]Wozniak on the iPhone, Apple's OS Leopard, and the future of
+       personal computing (by Joanna Stern of LAPTOPmag.com, Oct. 2007)
+     * [365]Steve Wozniak on Inventing as Art, Philanthropy and the Spirit
+       of Creativity Part 1 of 2
+     * [366]Social Networking Watch Interview with Steve Wozniak, August 8
+     * [367]Interview on The BusinessMakers Show.
+
+[[368]edit] Videos
+
+     * [369]Interview with Steve Wozniak at Digital Village Audio Archives
+     * [370]One night with The Woz, video - A video from the Computer
+       history museum, with a long speech from Woz
+     * [371]Series of Comments at the thirtieth anniversary celebration
+       for home computer pioneers (Video, below the ENIAC videos)
+     * [372]In Search of the Valley A 2006 documentary on Silicon Valley
+       featuring Steve Wozniak
+     * [373]iWoz: From Computer Geek to Culture Icon: How I Invented the
+       Personal Computer, Co-Founded Apple, and Had Fun Doing It
+     * [374]M.I.T. World Steve Wozniak on speaking to
+     * [375]M.I.T. students (includes Q&A session)
+     * [376]Steve Wozniak interview on iWoz Book An hour long video
+       interview by Guy Kawasaki, November, 2006
+     * [377]Steve Wozniak interviewed by Charlie Rose January 29, 2007
+     * [378]Steve Wozniak interview on Forbes.com November 30, 2006
+     * [379]Steve Wozniak Speaks at UC Berkeley April 22, 2008
+
+[[380]edit] Biographical
+
+     * [381]Bio. Stephen Wozniak
+     * [382]Stephen Wozniak Bio.
+     * [383]Dot Eaters page featuring an article on Wozniak and Atari's
+       Breakout
+     * [384]Steve Wozniak describes how he created the Apple I and II
+     * [385]The World According to Woz - Profile of Wozniak in Wired
+       magazine
+
+
+   [386]v · [387]d · [388]eKey figures in the [389]history of [390]Apple
+   Inc.
+   CEOs
+   [391]Michael Scott ([392]1977–1981) · [393]Mike Markkula
+   ([394]1981–1983) · [395]John Sculley ([396]1983–1993) · [397]Michael
+   Spindler ([398]1993–1996) · [399]Gil Amelio ([400]1996–1997) ·
+   [401]Steve Jobs (1976-1985, [402]1997-present)
+   Executives
+   and Alumni
+   Steve Wozniak · [403]Ronald Wayne · [404]Jef Raskin · [405]Andy
+   Hertzfeld · [406]Bill Atkinson · [407]Susan Kare · [408]Guy Kawasaki ·
+   [409]Jean-Louis Gassée · [410]Del Yocam · [411]Jonathan Ive ·
+   [412]David Nagel · [413]Philip W. Schiller · [414]Avie Tevanian ·
+   [415]Jon Rubinstein · [416]Chris Espinosa · [417]Scott Forstall  ·
+   [418]Bertrand Serlet · [419]Bob Mansfield · [420]Bud Tribble ·
+   [421]Greg Joswiak · [422]Daniel Kottke
+
+   [423]v · [424]d · [425]e[426]Hewlett-Packard
+   Company founders:
+   [427]William Hewlett • [428]David Packard • [429]Rod Canion • [430]Jim
+   Harris • [431]Bill Murto
+   Corporate directors:
+   [432]Marc Andreessen • [433]Lawrence T. Babbio, Jr. • [434]Sari M.
+   Baldauf • [435]Rajiv L. Gupta • [436]John H. Hammergren • [437]Joel Z.
+   Hyatt • [438]John R. Joyce • [439]Robert L. Ryan • [440]Lucille S.
+   Salhany • [441]G. Kennedy Thompson
+   Computer hardware products:
+   [442]Compaq Presario • [443]EliteBook • [444]ProBook • [445]Integrity •
+   [446]Mini • [447]NonStop • [448]Pavilion • [449]TouchSmart •
+   [450]VoodooPC • [451]HP Envy • [452]Slate 500 • [453]PalmPad
+   Consumer electronics and accessories:
+   [454]Calculators • [455]Deskjet • [456]Photosmart • [457]LaserJet •
+   [458]iPAQ • [459]LightScribe • [460]Palm • [461]Scitex • [462]Snapfish
+   Other divisions:
+   [463]3com • [464]Indigo Digital Press • [465]Scitex • [466]Insight
+   Software • [467]Logoworks • [468]Mercury • [469]Neoware • [470]ProCurve
+   • [471]HP Enterprise Services • [472]TOWER Software
+   Software:
+   [473]HP QuickPlay • [474]HyperSpace OS
+   Discontinued products:
+   [475]Compaq Deskpro • [476]Compaq Evo • [477]Compaq Portable •
+   [478]Compaq ProLinea • [479]Compaq ProSignia • [480]Compaq SystemPro •
+   [481]Jornada • [482]Omnibook • [483]iPod+HP
+   Alumni:
+   [484]List of HP CEO's in Order • [485]Patricia C. Dunn • [486]Robert
+   Wayman • [487]Michael Capellas • [488]Lewis E. Platt • [489]John A.
+   Young • [490]Carly Fiorina • [491]Mark Hurd • [492]Rahul Sood
+   Assets:
+   [493]HP Garage • [494]HP Labs
+   See also
+   [495]Acquisitions • [496]Agilent • [497]HP spying scandal •
+   [498]Products • [499]Mission: SPACE
+   Annual revenue: [500]US$104.2 billion ( increase 15% [501]FY 2007) •
+   Employees: 309,000 • Stock symbol: [502]NYSE: [503]HPQ • Website:
+   [504]hp.com
+
+                     [505]Persondata
+   Name              Wozniak, Stephen Gary
+   Alternative names Woz, Wonderful Wizard of Woz, iWoz
+   Short description Co-founder of [506]Apple Inc.
+   Date of birth     August 11, 1950
+   Place of birth    [507]San Jose, California, [508]USA
+   Date of death
+   Place of death
+   Retrieved from "[509]http://en.wikipedia.org/wiki/Steve_Wozniak"
+   [510]Categories: [511]Amateur radio people | [512]American computer
+   businesspeople | [513]American computer programmers | [514]American
+   computer scientists | [515]American engineers | [516]American inventors
+   | [517]American people of Polish descent | [518]Apple II family |
+   [519]Apple Inc. employees | [520]Computer designers | [521]Computer
+   pioneers | [522]Dancing with the Stars (US TV series) participants |
+   [523]Grace Murray Hopper Award laureates | [524]National Inventors Hall
+   of Fame inductees | [525]National Medal of Technology recipients |
+   [526]People from San Jose, California | [527]University of California,
+   Berkeley alumni | [528]University of Colorado alumni | [529]1950 births
+   | [530]Living people
+   Hidden categories: [531]All articles with dead external links |
+   [532]Articles with dead external links from August 2009 | [533]Articles
+   with hCards | [534]All articles with unsourced statements |
+   [535]Articles with unsourced statements from March 2009 | [536]Articles
+   with trivia sections from March 2010
+
+Personal tools
+
+     * [537]Log in / create account
+
+Namespaces
+
+     * [538]Article
+     * [539]Discussion
+
+Variants
+
+Views
+
+     * [540]Read
+     * [541]Edit
+     * [542]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [543]Main page
+     * [544]Contents
+     * [545]Featured content
+     * [546]Current events
+     * [547]Random article
+     * [548]Donate to Wikipedia
+
+Interaction
+
+     * [549]Help
+     * [550]About Wikipedia
+     * [551]Community portal
+     * [552]Recent changes
+     * [553]Contact Wikipedia
+
+Toolbox
+
+     * [554]What links here
+     * [555]Related changes
+     * [556]Upload file
+     * [557]Special pages
+     * [558]Permanent link
+     * [559]Cite this page
+
+Print/export
+
+     * [560]Create a book
+     * [561]Download as PDF
+     * [562]Printable version
+
+Languages
+
+     * [563]العربية
+     * [564]Български
+     * [565]Català
+     * [566]Česky
+     * [567]Dansk
+     * [568]Deutsch
+     * [569]Español
+     * [570]Esperanto
+     * [571]Euskara
+     * [572]فارسی
+     * [573]Français
+     * [574]한국어
+     * [575]Bahasa Indonesia
+     * [576]Íslenska
+     * [577]Italiano
+     * [578]עברית
+     * [579]മലയാളം
+     * [580]Bahasa Melayu
+     * [581]Nederlands
+     * [582]日本語
+     * [583]‪Norsk (bokmål)‬
+     * [584]‪Norsk (nynorsk)‬
+     * [585]O'zbek
+     * [586]Polski
+     * [587]Português
+     * [588]Română
+     * [589]Русский
+     * [590]Slovenčina
+     * [591]Slovenščina
+     * [592]Српски / Srpski
+     * [593]Suomi
+     * [594]Svenska
+     * [595]ไทย
+     * [596]Türkçe
+     * [597]Українська
+     * [598]中文
+
+     * This page was last modified on 18 January 2011 at 19:13.
+     * Text is available under the [599]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [600]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [601]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [602]Contact us
+
+     * [603]Privacy policy
+     * [604]About Wikipedia
+     * [605]Disclaimers
+
+     * [606]Powered by MediaWiki
+     * [607]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Steve_Wozniak&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#p-search
+   7. file://localhost/wiki/San_Jose,_California
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/Alma_mater
+  10. file://localhost/wiki/University_of_California,_Berkeley
+  11. file://localhost/wiki/Computer_scientist
+  12. file://localhost/wiki/Electrical_engineering
+  13. http://en.wikipedia.org/wiki/Steve_Wozniak
+  14. http://en.wikipedia.org/wiki/Steve_Wozniak
+  15. http://en.wikipedia.org/wiki/Steve_Wozniak
+  16. http://en.wikipedia.org/wiki/Steve_Wozniak
+  17. http://www.woz.org/
+  18. file://localhost/wiki/San_Jose,_California
+  19. file://localhost/wiki/California
+  20. file://localhost/wiki/United_States
+  21. file://localhost/wiki/Computer_engineer
+  22. file://localhost/wiki/Apple_Inc.
+  23. file://localhost/wiki/Steve_Jobs
+  24. file://localhost/wiki/Ronald_Wayne
+  25. file://localhost/wiki/Personal_computer
+  26. file://localhost/wiki/Apple_I
+  27. file://localhost/wiki/Apple_II_series
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-mit-0
+  29. file://localhost/wiki/Nickname
+  30. file://localhost/wiki/Wheels_of_Zeus
+  31. file://localhost/wiki/Steve_Jobs
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-woz-1
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Apple_Computer
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Origins_of_Apple
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Aircraft_accident
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Employment_with_Apple
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Post-Apple_career
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Philanthropy
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Honors_and_awards
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Patents
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Television_appearances
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Personal_life
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#In_popular_culture
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#See_also
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#References
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#External_links
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Interviews
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Videos
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#Biographical
+  50. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=1
+  51. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=2
+  52. file://localhost/wiki/Mainframe_computer
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-2
+  54. file://localhost/wiki/IWoz
+  55. file://localhost/wiki/Printed_circuit_board
+  56. file://localhost/wiki/Scientific_calculator
+  57. file://localhost/wiki/Volkswagen
+  58. file://localhost/wiki/United_States_dollar
+  59. file://localhost/wiki/Wikipedia:Citation_needed
+  60. file://localhost/wiki/University_of_California,_Berkeley
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-FireValley-3
+  62. file://localhost/wiki/Palo_Alto,_California
+  63. file://localhost/wiki/Homebrew_Computer_Club
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-FireValley-3
+  65. file://localhost/wiki/Apple_Computer
+  66. file://localhost/wiki/Hewlett-Packard
+  67. file://localhost/wiki/Apple_I
+  68. file://localhost/wiki/Altair_8800
+  69. file://localhost/wiki/BASIC
+  70. file://localhost/wiki/Microprocessor
+  71. file://localhost/wiki/MOS_Technology_6502
+  72. file://localhost/wiki/Read-only_memory
+  73. file://localhost/wiki/Random_access_memory
+  74. file://localhost/wiki/Number_of_the_Beast
+  75. file://localhost/wiki/Paul_Terrell
+  76. file://localhost/wiki/Mountain_View,_California
+  77. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+  78. file://localhost/wiki/Apple_II
+  79. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+  80. file://localhost/wiki/Randy_Wigginton
+  81. file://localhost/wiki/Shepardson_Microsystems
+  82. file://localhost/wiki/16-bit
+  83. file://localhost/wiki/SWEET16
+  84. file://localhost/wiki/Breakout_(arcade_game)
+  85. file://localhost/wiki/Initial_public_offering
+  86. file://localhost/w/index.php?title=Founder_stock&action=edit&redlink=1
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-5
+  88. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=3
+  89. file://localhost/wiki/Beechcraft_Bonanza
+  90. file://localhost/wiki/Santa_Cruz_Sky_Park
+  91. file://localhost/wiki/National_Transportation_Safety_Board
+  92. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-6
+  93. file://localhost/wiki/Retrograde_amnesia
+  94. file://localhost/wiki/Anterograde_amnesia
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+  96. file://localhost/wiki/Computer_game
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+  98. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=4
+  99. file://localhost/wiki/Rocky_Raccoon
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-7
+ 101. file://localhost/wiki/US_Festival
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-wozemployee-8
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-wozstock-9
+ 106. file://localhost/wiki/Steve_Jobs
+ 107. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=5
+ 108. file://localhost/wiki/CL_9
+ 109. file://localhost/wiki/Universal_remote
+ 110. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 111. file://localhost/wiki/Wheels_of_Zeus
+ 112. file://localhost/wiki/Acronym
+ 113. file://localhost/wiki/GPS
+ 114. file://localhost/wiki/Ripcord_Networks
+ 115. file://localhost/wiki/Ellen_Hancock
+ 116. file://localhost/wiki/Gil_Amelio
+ 117. file://localhost/wiki/Wheels_of_Zeus
+ 118. file://localhost/wiki/Alex_Fielding
+ 119. file://localhost/wiki/Telecommunications
+ 120. file://localhost/wiki/Danger_(company)
+ 121. file://localhost/wiki/Danger_Hiptop
+ 122. file://localhost/wiki/Joey_Slotnick
+ 123. file://localhost/wiki/Pirates_of_Silicon_Valley
+ 124. file://localhost/wiki/Acquicor_Technology
+ 125. file://localhost/wiki/Holding_company
+ 126. file://localhost/wiki/Ellen_Hancock
+ 127. file://localhost/wiki/Gil_Amelio
+ 128. file://localhost/wiki/IWoz
+ 129. file://localhost/wiki/FIRST
+ 130. file://localhost/wiki/Lego
+ 131. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-FIRST-10
+ 132. file://localhost/wiki/Arizona_State_Fairgrounds
+ 133. file://localhost/wiki/Fusion-io
+ 134. file://localhost/wiki/Salt_Lake_City
+ 135. file://localhost/wiki/Utah
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-11
+ 137. file://localhost/wiki/World_Forum_Convention_Center
+ 138. file://localhost/wiki/The_Hague
+ 139. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-12
+ 140. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=6
+ 141. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 143. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=7
+ 144. file://localhost/wiki/National_Medal_of_Technology
+ 145. file://localhost/wiki/Steve_Jobs
+ 146. file://localhost/wiki/Ronald_Reagan
+ 147. file://localhost/wiki/President_of_the_United_States
+ 148. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-iWoz-4
+ 149. file://localhost/wiki/University_of_Colorado_at_Boulder
+ 150. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-uofc-13
+ 151. file://localhost/wiki/University_of_Colorado_at_Boulder
+ 152. file://localhost/wiki/Computer_History_Museum
+ 153. file://localhost/wiki/Children%27s_Discovery_Museum_of_San_Jose
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-14
+ 155. file://localhost/wiki/National_Inventors_Hall_of_Fame
+ 156. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-15
+ 157. file://localhost/wiki/Heinz_Award
+ 158. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-16
+ 159. file://localhost/wiki/Kettering_University
+ 160. file://localhost/wiki/Flint,_Michigan
+ 161. file://localhost/wiki/Michigan
+ 162. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-17
+ 163. file://localhost/wiki/North_Carolina_State_University
+ 164. file://localhost/wiki/Nova_Southeastern_University
+ 165. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=8
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-18
+ 167. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-19
+ 168. file://localhost/wiki/PAL
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-20
+ 170. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-21
+ 171. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=9
+ 172. file://localhost/wiki/Kathy_Griffin
+ 173. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-bestweek-22
+ 174. file://localhost/wiki/59th_Primetime_Emmy_Awards
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-ceosmack-23
+ 176. file://localhost/wiki/Kathy_Griffin:_My_Life_on_the_D-List
+ 177. file://localhost/wiki/Producers_Guild_of_America
+ 178. file://localhost/wiki/The_Howard_Stern_Show
+ 179. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-24
+ 180. file://localhost/wiki/Code_Monkeys
+ 181. file://localhost/wiki/Las_Vegas,_Nevada
+ 182. file://localhost/wiki/Hackers_Wanted
+ 183. file://localhost/wiki/Dancing_with_the_Stars_(U.S._season_8)
+ 184. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-25
+ 185. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-26
+ 186. file://localhost/wiki/Karina_Smirnoff
+ 187. file://localhost/wiki/Social_networking
+ 188. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-27
+ 189. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-28
+ 190. file://localhost/wiki/Hamstring
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-29
+ 192. file://localhost/wiki/Argentine_Tango
+ 193. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-30
+ 194. file://localhost/wiki/The_Big_Bang_Theory
+ 195. file://localhost/wiki/The_Cheesecake_Factory
+ 196. file://localhost/wiki/Axiotron_Modbook
+ 197. file://localhost/wiki/Macworld_Expo
+ 198. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=10
+ 199. file://localhost/wiki/Los_Gatos,_California
+ 200. file://localhost/wiki/Segway_Polo
+ 201. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-Woz_Challenge_Cup-31
+ 202. file://localhost/wiki/Tetris
+ 203. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-32
+ 204. file://localhost/wiki/Nintendo_Power
+ 205. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-33
+ 206. file://localhost/wiki/Freemasonry
+ 207. file://localhost/wiki/Order_of_the_Eastern_Star
+ 208. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-34
+ 209. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-35
+ 210. file://localhost/wiki/Kathy_Griffin
+ 211. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_note-36
+ 212. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=11
+ 213. file://localhost/wiki/Wikipedia:%22In_popular_culture%22_content
+ 214. file://localhost/wiki/Wikipedia:Trivia_sections
+ 215. file://localhost/wiki/Nissan_280ZX
+ 216. file://localhost/wiki/Code_Monkeys
+ 217. file://localhost/wiki/EPCOT
+ 218. file://localhost/wiki/Spaceship_Earth_(Epcot)
+ 219. file://localhost/wiki/Futurama
+ 220. file://localhost/wiki/A_Clockwork_Origin
+ 221. file://localhost/wiki/Susan_Elizabeth_Phillips
+ 222. file://localhost/wiki/The_Big_Bang_Theory
+ 223. file://localhost/wiki/Kathy_Griffin
+ 224. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=12
+ 225. file://localhost/wiki/Blue_box
+ 226. file://localhost/wiki/IWoz
+ 227. file://localhost/wiki/Pirates_of_Silicon_Valley
+ 228. file://localhost/wiki/Joey_Slotnick
+ 229. file://localhost/wiki/Triumph_of_the_Nerds
+ 230. file://localhost/wiki/Robert_X._Cringely
+ 231. file://localhost/wiki/Nixie_tube#Revival
+ 232. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=13
+ 233. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-mit_0-0
+ 234. http://www.atariage.com/forums/topic/161774-nolan-bushnell-appointed-to-atari-board/page__view__findpost__p__2001071
+ 235. http://www.atariage.com/forums/topic/161774-nolan-bushnell-appointed-to-atari-board/page__view__findpost__p__2001071
+ 236. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-woz_1-0
+ 237. http://www.woz.org/letters/general/53.html
+ 238. http://www.woz.org/letters/general/53.html
+ 239. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-2
+ 240. file://localhost/wiki/International_Standard_Book_Number
+ 241. file://localhost/wiki/Special:BookSources/155802378X
+ 242. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-FireValley_3-0
+ 243. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-FireValley_3-1
+ 244. file://localhost/wiki/International_Standard_Book_Number
+ 245. file://localhost/wiki/Special:BookSources/0071358927
+ 246. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-0
+ 247. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-1
+ 248. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-2
+ 249. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-3
+ 250. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-4
+ 251. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-5
+ 252. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-6
+ 253. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-7
+ 254. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-8
+ 255. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-iWoz_4-9
+ 256. file://localhost/wiki/IWoz
+ 257. file://localhost/wiki/W._W._Norton_%26_Company
+ 258. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-5
+ 259. http://www.newsweek.com/id/188140
+ 260. file://localhost/wiki/Newsweek
+ 261. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-6
+ 262. http://www.ntsb.gov/ntsb/brief.asp?ev_id=27749
+ 263. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-7
+ 264. http://articles.latimes.com/1986-05-14/news/vw-5389_1_steve-wozniak
+ 265. file://localhost/wiki/Los_Angeles_Times
+ 266. http://articles.latimes.com/1986-05-14/news/vw-5389_1_steve-wozniak
+ 267. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-wozemployee_8-0
+ 268. http://www.woz.org/letters/general/53.html
+ 269. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-wozstock_9-0
+ 270. http://www.fool.com/research/2000/features000302.htm
+ 271. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-FIRST_10-0
+ 272. http://www.boston.com/business/technology/articles/2006/03/25/a_star_who_aims_to_spark_innovation_by_students
+ 273. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-11
+ 274. http://www.nytimes.com/2009/02/05/technology/business-computing/05wozniak.html?_r=1&ref=technology
+ 275. file://localhost/wiki/New_York_Times
+ 276. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-12
+ 277. http://nexus404.com/Blog/2010/11/18/iphone-vs-android-steve-wozniak-says-android-will-be-dominant-one-day-apple-co-founder-says-that-androids-features-will-put-it-out-on-top/
+ 278. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-uofc_13-0
+ 279. http://www.applematters.com/index.php/section/history/2006/12/28/
+ 280. http://www.applematters.com/index.php/section/history/2006/12/28/
+ 281. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-14
+ 282. http://maps.google.com/maps?f=q&hl=en&q=woz+way,+san+jose,+ca&t=h&ll=37.326361,-121.891733&spn=0.003686,0.008497&t=h
+ 283. http://maps.google.com/maps?f=q&hl=en&q=woz+way,+san+jose,+ca&t=h&ll=37.326361,-121.891733&spn=0.003686,0.008497&t=h
+ 284. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-15
+ 285. http://www.invent.org/Hall_Of_Fame/155.html
+ 286. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-16
+ 287. http://www.heinzawards.net/recipients/steve-wozniak
+ 288. http://www.heinzawards.net/recipients/steve-wozniak
+ 289. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-17
+ 290. http://www.kettering.edu/visitors/presidentsoffice/honorary_degrees.jsp
+ 291. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-18
+ 292. http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=4,136,359.PN.&OS=PN/4,136,359&RS=PN/4,136,359
+ 293. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-19
+ 294. http://ip.com/patent/US4210959
+ 295. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-20
+ 296. http://ip.com/patent/US4217604
+ 297. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-21
+ 298. http://ip.com/patent/US4278972
+ 299. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-bestweek_22-0
+ 300. http://web.archive.org/web/20070820012223/http://www.bestweekever.tv/2007/08/17/off-the-market-kathy-griffin-finds-a-new-man/
+ 301. http://www.bestweekever.tv/2007/08/17/off-the-market-kathy-griffin-finds-a-new-man/
+ 302. http://web.archive.org/web/20070820012223/http://www.bestweekever.tv/2007/08/17/off-the-market-kathy-griffin-finds-a-new-man/
+ 303. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-ceosmack_23-0
+ 304. http://www.ceosmack.com/2007/09/18/apple-co-founder-steve-wozniak-escorted-comedian-kathy-griffin-her-potty-mouth-to-the-emmys/
+ 305. http://www.ceosmack.com/2007/09/18/apple-co-founder-steve-wozniak-escorted-comedian-kathy-griffin-her-potty-mouth-to-the-emmys/
+ 306. file://localhost/wiki/Wikipedia:Link_rot
+ 307. http://web.archive.org/web/20071217011722/http://www.ceosmack.com/2007/09/18/apple-co-founder-steve-wozniak-escorted-comedian-kathy-griffin-her-potty-mouth-to-the-emmys/
+ 308. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-24
+ 309. http://www.howardstern.com/rundown.hs?month=June&day=19&year=2008&x=45&y=9
+ 310. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-25
+ 311. http://latimesblogs.latimes.com/technology/2009/02/wozniak-dancing.html
+ 312. file://localhost/wiki/Los_Angeles_Times
+ 313. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-26
+ 314. http://news.bbc.co.uk/2/hi/programmes/click_online/7741472.stm
+ 315. http://news.bbc.co.uk/2/hi/programmes/click_online/7741472.stm
+ 316. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-27
+ 317. http://news.cnet.com/8301-17852_3-10198341-71.html?tag=mncol;txt
+ 318. http://news.cnet.com/8301-17852_3-10198341-71.html?tag=mncol;txt
+ 319. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-28
+ 320. http://www.msnbc.msn.com/id/29777570/
+ 321. http://www.msnbc.msn.com/id/29777570/
+ 322. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-29
+ 323. http://tvwatch.people.com/2009/03/23/injured-steve-wozniak-will-perform-on-mondays-dwts/
+ 324. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-30
+ 325. http://kara.allthingsd.com/20090401/woz-gets-hipchecked-off-the-dance-floor-big-big-sigh
+ 326. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-Woz_Challenge_Cup_31-0
+ 327. http://www.segwayhtpolo.com/
+ 328. http://www.segwayhtpolo.com/
+ 329. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-32
+ 330. http://news.cnet.com/8301-13772_3-9832348-52.html
+ 331. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-33
+ 332. http://www.apple.com/games/ipod/tetris/
+ 333. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-34
+ 334. http://freemasonry.bcy.ca/biography/wozniak_s/wozniak_s.html
+ 335. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-35
+ 336. http://valleywag.com/5035639/meet-janet-hill-the-woman-secretly-married-to-steve-wozniak
+ 337. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html#cite_ref-36
+ 338. http://www.spreadit.org/steve-wozniak-engaged/
+ 339. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=14
+ 340. http://commons.wikimedia.org/wiki/Steve_Wozniak
+ 341. file://localhost/wiki/Wikiquote
+ 342. http://en.wikiquote.org/wiki/Special:Search/Steve_Wozniak
+ 343. http://www.woz.org/
+ 344. http://www.imdb.com/name/nm0941967/
+ 345. file://localhost/wiki/Internet_Movie_Database
+ 346. http://www.laughton.com/Apple/Apple.html
+ 347. http://www.flickr.com/photos/26654815@N08/sets/72157612998131849/
+ 348. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=15
+ 349. http://knowledge.wharton.upenn.edu/article.cfm?articleid=1903
+ 350. http://youbentmywookie.com/features/youbentmywookies-geek-of-the-month-steve-wozniak-1683
+ 351. http://myoldmac.net/interviews/
+ 352. http://thetech.org/exhibits/online/revolution/wozniak/
+ 353. http://www.colbertnation.com/the-colbert-report-videos/76007/september-28-2006/steve-wozniak
+ 354. http://www.itconversations.com/shows/detail214.html
+ 355. http://failuremag.com/index.php/feature/article/steve_wozniak_interview/
+ 356. http://inquirer.stanford.edu/2005/jstaffor/woz.html
+ 357. http://thisweekintech.com/35
+ 358. http://www.twit.tv/40
+ 359. http://www.twit.tv/44
+ 360. http://twit.tv/48
+ 361. http://www.amazon.com/dp/1590597141/
+ 362. http://www.10zenmonkeys.com/2007/07/03/steve-wozniak-v-stephen-colbert-and-other-pranks/
+ 363. http://www.ecnmag.com/article.aspx?id=146610&adcode=section=effzone
+ 364. http://laptopmag.com/Features/The-Way-it-Woz-Steve-Wozniak-on-All-Things-Apple.htm
+ 365. http://personallifemedia.com/podcasts/232-dishymix/episodes/3491-woz-steve-wozniak-apple-computer
+ 366. http://www.socialnetworkingwatch.com/2008/08/steve-wozniak-.html
+ 367. http://www.thebusinessmakers.com/episodes/shows/2008/february/episode-141/steve-wozniak-apple-computers.html
+ 368. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=16
+ 369. http://www.digitalvillage.org/audio.html
+ 370. http://video.google.com/videoplay?docid=-1406180788960771638&q=steve+wozniak
+ 371. http://news.com.com/2009-1006-6038105.html
+ 372. http://www.insearchofthevalley.com/
+ 373. http://mitworld.mit.edu/video/400/
+ 374. http://mitworld.mit.edu/
+ 375. http://web.mit.edu/
+ 376. http://www.zbiz.tv/category/guy-kawasakisteve-wozniak/
+ 377. http://video.google.com/videoplay?docid=-2006165445819945837#21m36s
+ 378. http://www.forbes.com/video/?video=fvn/tech/ms_woz112906b
+ 379. http://www.sproutly.com/2008/04/22/steve-wozniak-speaking-live-at-uc-berkeley/
+ 380. file://localhost/w/index.php?title=Steve_Wozniak&action=edit&section=17
+ 381. http://www.theapplemuseum.com/index.php?id=50
+ 382. http://www.thocp.net/biographies/wozniak_stephen.html
+ 383. http://www.thedoteaters.com/p2_stage1.php
+ 384. http://www.macworld.com/2002/10/macbeat/woz/
+ 385. http://www.wired.com/wired/archive/6.09/woz.html
+ 386. file://localhost/wiki/Template:Apple_celeb
+ 387. file://localhost/wiki/Template_talk:Apple_celeb
+ 388. http://en.wikipedia.org/w/index.php?title=Template:Apple_celeb&action=edit
+ 389. file://localhost/wiki/History_of_Apple_Inc.
+ 390. file://localhost/wiki/Apple_Inc.
+ 391. file://localhost/wiki/Michael_Scott_(Apple)
+ 392. file://localhost/wiki/Apple_Inc.#1976_to_1980:_The_early_years
+ 393. file://localhost/wiki/Mike_Markkula
+ 394. file://localhost/wiki/Apple_Inc.#1981_to_1989:_Lisa_and_Macintosh
+ 395. file://localhost/wiki/John_Sculley
+ 396. file://localhost/wiki/Apple_Inc.#1989_to_1991:_The_Golden_Age
+ 397. file://localhost/wiki/Michael_Spindler
+ 398. file://localhost/wiki/Apple_Inc.#1994_to_1997:_Attempts_at_reinvention
+ 399. file://localhost/wiki/Gil_Amelio
+ 400. file://localhost/wiki/Apple_Inc.#1994_to_1997:_Attempts_at_reinvention
+ 401. file://localhost/wiki/Steve_Jobs
+ 402. file://localhost/wiki/Apple_Inc.#1998_to_2005:_New_beginnings
+ 403. file://localhost/wiki/Ronald_Wayne
+ 404. file://localhost/wiki/Jef_Raskin
+ 405. file://localhost/wiki/Andy_Hertzfeld
+ 406. file://localhost/wiki/Bill_Atkinson
+ 407. file://localhost/wiki/Susan_Kare
+ 408. file://localhost/wiki/Guy_Kawasaki
+ 409. file://localhost/wiki/Jean-Louis_Gass%C3%A9e
+ 410. file://localhost/wiki/Del_Yocam
+ 411. file://localhost/wiki/Jonathan_Ive
+ 412. file://localhost/wiki/David_Nagel
+ 413. file://localhost/wiki/Philip_W._Schiller
+ 414. file://localhost/wiki/Avadis_Tevanian
+ 415. file://localhost/wiki/Jon_Rubinstein
+ 416. file://localhost/wiki/Chris_Espinosa
+ 417. file://localhost/wiki/Scott_Forstall
+ 418. file://localhost/wiki/Bertrand_Serlet
+ 419. file://localhost/wiki/Bob_Mansfield
+ 420. file://localhost/wiki/Bud_Tribble
+ 421. file://localhost/w/index.php?title=Greg_Joswiak&action=edit&redlink=1
+ 422. file://localhost/wiki/Daniel_Kottke
+ 423. file://localhost/wiki/Template:HP
+ 424. file://localhost/wiki/Template_talk:HP
+ 425. http://en.wikipedia.org/w/index.php?title=Template:HP&action=edit
+ 426. file://localhost/wiki/Hewlett-Packard
+ 427. file://localhost/wiki/William_Reddington_Hewlett
+ 428. file://localhost/wiki/David_Packard
+ 429. file://localhost/wiki/Rod_Canion
+ 430. file://localhost/wiki/Jim_Harris_(entrepreneur)
+ 431. file://localhost/wiki/Bill_Murto
+ 432. file://localhost/wiki/Marc_Andreessen
+ 433. file://localhost/wiki/Lawrence_Babbio,_Jr.
+ 434. file://localhost/wiki/Sari_Baldauf
+ 435. file://localhost/w/index.php?title=Rajiv_L._Gupta&action=edit&redlink=1
+ 436. file://localhost/w/index.php?title=John_H._Hammergren&action=edit&redlink=1
+ 437. file://localhost/wiki/Joel_Hyatt
+ 438. file://localhost/w/index.php?title=John_R._Joyce&action=edit&redlink=1
+ 439. file://localhost/w/index.php?title=Robert_L._Ryan&action=edit&redlink=1
+ 440. file://localhost/w/index.php?title=Lucille_S._Salhany&action=edit&redlink=1
+ 441. file://localhost/wiki/G._Kennedy_Thompson
+ 442. file://localhost/wiki/Compaq_Presario
+ 443. file://localhost/wiki/HP_EliteBook
+ 444. file://localhost/w/index.php?title=HP_ProBook&action=edit&redlink=1
+ 445. file://localhost/wiki/HP_Integrity
+ 446. file://localhost/wiki/HP_Mini
+ 447. file://localhost/wiki/NonStop
+ 448. file://localhost/wiki/HP_Pavilion_(computer)
+ 449. file://localhost/wiki/HP_TouchSmart
+ 450. file://localhost/wiki/VoodooPC
+ 451. file://localhost/wiki/HP_Envy
+ 452. file://localhost/wiki/HP_Slate_500
+ 453. file://localhost/wiki/PalmPad
+ 454. file://localhost/wiki/List_of_HP_calculators
+ 455. file://localhost/wiki/HP_Deskjet
+ 456. file://localhost/wiki/HP_Photosmart
+ 457. file://localhost/wiki/HP_LaserJet
+ 458. file://localhost/wiki/IPAQ
+ 459. file://localhost/wiki/LightScribe
+ 460. file://localhost/wiki/Palm,_Inc.
+ 461. file://localhost/wiki/Scitex_Vision
+ 462. file://localhost/wiki/Snapfish
+ 463. file://localhost/wiki/3Com
+ 464. file://localhost/wiki/Indigo_Digital_Press
+ 465. file://localhost/wiki/Scitex_Vision
+ 466. file://localhost/w/index.php?title=HP_Insight_Software&action=edit&redlink=1
+ 467. file://localhost/wiki/Logoworks
+ 468. file://localhost/wiki/Mercury_Interactive
+ 469. file://localhost/wiki/Neoware
+ 470. file://localhost/wiki/ProCurve
+ 471. file://localhost/wiki/HP_Enterprise_Services
+ 472. file://localhost/wiki/TOWER_Software
+ 473. file://localhost/wiki/QuickPlay
+ 474. file://localhost/wiki/HyperSpace_(software)
+ 475. file://localhost/wiki/Compaq_Deskpro
+ 476. file://localhost/wiki/Compaq_Evo
+ 477. file://localhost/wiki/Compaq_Portable_series
+ 478. file://localhost/w/index.php?title=Compaq_ProLinea&action=edit&redlink=1
+ 479. file://localhost/w/index.php?title=Compaq_ProSignia&action=edit&redlink=1
+ 480. file://localhost/wiki/Compaq_SystemPro
+ 481. file://localhost/wiki/Jornada_(PDA)
+ 482. file://localhost/wiki/HP_Omnibook
+ 483. file://localhost/wiki/IPod%2BHP
+ 484. file://localhost/wiki/List_of_Hewlett-Packard_executive_leadership
+ 485. file://localhost/wiki/Patricia_C._Dunn
+ 486. file://localhost/wiki/Robert_Wayman
+ 487. file://localhost/wiki/Michael_Capellas
+ 488. file://localhost/wiki/Lewis_E._Platt
+ 489. file://localhost/wiki/John_A._Young
+ 490. file://localhost/wiki/Carly_Fiorina
+ 491. file://localhost/wiki/Mark_Hurd
+ 492. file://localhost/wiki/Rahul_Sood
+ 493. file://localhost/wiki/HP_Garage
+ 494. file://localhost/wiki/HP_Labs
+ 495. file://localhost/wiki/List_of_acquisitions_by_Hewlett-Packard
+ 496. file://localhost/wiki/Agilent_Technologies
+ 497. file://localhost/wiki/HP_spying_scandal
+ 498. file://localhost/wiki/List_of_Hewlett-Packard_products
+ 499. file://localhost/wiki/Mission:_SPACE
+ 500. file://localhost/wiki/United_States_dollar
+ 501. file://localhost/wiki/Fiscal_year
+ 502. file://localhost/wiki/New_York_Stock_Exchange
+ 503. http://www.nyse.com/about/listed/lcddata.html?ticker=HPQ
+ 504. http://www.hp.com/
+ 505. file://localhost/wiki/Wikipedia:Persondata
+ 506. file://localhost/wiki/Apple_Inc.
+ 507. file://localhost/wiki/San_Jose,_California
+ 508. file://localhost/wiki/United_States
+ 509. http://en.wikipedia.org/wiki/Steve_Wozniak
+ 510. file://localhost/wiki/Special:Categories
+ 511. file://localhost/wiki/Category:Amateur_radio_people
+ 512. file://localhost/wiki/Category:American_computer_businesspeople
+ 513. file://localhost/wiki/Category:American_computer_programmers
+ 514. file://localhost/wiki/Category:American_computer_scientists
+ 515. file://localhost/wiki/Category:American_engineers
+ 516. file://localhost/wiki/Category:American_inventors
+ 517. file://localhost/wiki/Category:American_people_of_Polish_descent
+ 518. file://localhost/wiki/Category:Apple_II_family
+ 519. file://localhost/wiki/Category:Apple_Inc._employees
+ 520. file://localhost/wiki/Category:Computer_designers
+ 521. file://localhost/wiki/Category:Computer_pioneers
+ 522. file://localhost/wiki/Category:Dancing_with_the_Stars_(US_TV_series)_participants
+ 523. file://localhost/wiki/Category:Grace_Murray_Hopper_Award_laureates
+ 524. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 525. file://localhost/wiki/Category:National_Medal_of_Technology_recipients
+ 526. file://localhost/wiki/Category:People_from_San_Jose,_California
+ 527. file://localhost/wiki/Category:University_of_California,_Berkeley_alumni
+ 528. file://localhost/wiki/Category:University_of_Colorado_alumni
+ 529. file://localhost/wiki/Category:1950_births
+ 530. file://localhost/wiki/Category:Living_people
+ 531. file://localhost/wiki/Category:All_articles_with_dead_external_links
+ 532. file://localhost/wiki/Category:Articles_with_dead_external_links_from_August_2009
+ 533. file://localhost/wiki/Category:Articles_with_hCards
+ 534. file://localhost/wiki/Category:All_articles_with_unsourced_statements
+ 535. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_March_2009
+ 536. file://localhost/wiki/Category:Articles_with_trivia_sections_from_March_2010
+ 537. file://localhost/w/index.php?title=Special:UserLogin&returnto=Steve_Wozniak
+ 538. file://localhost/wiki/Steve_Wozniak
+ 539. file://localhost/wiki/Talk:Steve_Wozniak
+ 540. file://localhost/wiki/Steve_Wozniak
+ 541. file://localhost/w/index.php?title=Steve_Wozniak&action=edit
+ 542. file://localhost/w/index.php?title=Steve_Wozniak&action=history
+ 543. file://localhost/wiki/Main_Page
+ 544. file://localhost/wiki/Portal:Contents
+ 545. file://localhost/wiki/Portal:Featured_content
+ 546. file://localhost/wiki/Portal:Current_events
+ 547. file://localhost/wiki/Special:Random
+ 548. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 549. file://localhost/wiki/Help:Contents
+ 550. file://localhost/wiki/Wikipedia:About
+ 551. file://localhost/wiki/Wikipedia:Community_portal
+ 552. file://localhost/wiki/Special:RecentChanges
+ 553. file://localhost/wiki/Wikipedia:Contact_us
+ 554. file://localhost/wiki/Special:WhatLinksHere/Steve_Wozniak
+ 555. file://localhost/wiki/Special:RecentChangesLinked/Steve_Wozniak
+ 556. file://localhost/wiki/Wikipedia:Upload
+ 557. file://localhost/wiki/Special:SpecialPages
+ 558. file://localhost/w/index.php?title=Steve_Wozniak&oldid=408636880
+ 559. file://localhost/w/index.php?title=Special:Cite&page=Steve_Wozniak&id=408636880
+ 560. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Steve+Wozniak
+ 561. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Steve+Wozniak&oldid=408636880&writer=rl
+ 562. file://localhost/w/index.php?title=Steve_Wozniak&printable=yes
+ 563. http://ar.wikipedia.org/wiki/%D8%B3%D8%AA%D9%8A%D9%81_%D9%88%D8%B2%D9%86%D9%8A%D8%A7%D9%83
+ 564. http://bg.wikipedia.org/wiki/%D0%A1%D1%82%D0%B8%D0%B9%D0%B2_%D0%92%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA
+ 565. http://ca.wikipedia.org/wiki/Steve_Wozniak
+ 566. http://cs.wikipedia.org/wiki/Steve_Wozniak
+ 567. http://da.wikipedia.org/wiki/Steve_Wozniak
+ 568. http://de.wikipedia.org/wiki/Steve_Wozniak
+ 569. http://es.wikipedia.org/wiki/Stephen_Wozniak
+ 570. http://eo.wikipedia.org/wiki/Steve_Wozniak
+ 571. http://eu.wikipedia.org/wiki/Steve_Wozniak
+ 572. http://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%DB%8C%D9%88_%D9%88%D8%B2%D9%86%DB%8C%D8%A7%DA%A9
+ 573. http://fr.wikipedia.org/wiki/Steve_Wozniak
+ 574. http://ko.wikipedia.org/wiki/%EC%8A%A4%ED%8B%B0%EB%B8%8C_%EC%9B%8C%EC%A6%88%EB%8B%88%EC%95%85
+ 575. http://id.wikipedia.org/wiki/Steve_Wozniak
+ 576. http://is.wikipedia.org/wiki/Steve_Wozniak
+ 577. http://it.wikipedia.org/wiki/Steve_Wozniak
+ 578. http://he.wikipedia.org/wiki/%D7%A1%D7%98%D7%99%D7%91_%D7%95%D7%95%D7%96%D7%A0%D7%99%D7%90%D7%A7
+ 579. http://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%80%E0%B4%B5%E0%B5%8D_%E0%B4%B5%E0%B5%8B%E0%B4%B8%E0%B5%8D%E0%B4%A8%E0%B4%BF%E0%B4%AF%E0%B4%BE%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D
+ 580. http://ms.wikipedia.org/wiki/Steve_Wozniak
+ 581. http://nl.wikipedia.org/wiki/Steve_Wozniak
+ 582. http://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%96%E3%83%BB%E3%82%A6%E3%82%A9%E3%82%BA%E3%83%8B%E3%82%A2%E3%83%83%E3%82%AF
+ 583. http://no.wikipedia.org/wiki/Steve_Wozniak
+ 584. http://nn.wikipedia.org/wiki/Steve_Wozniak
+ 585. http://uz.wikipedia.org/wiki/Steve_Wozniak
+ 586. http://pl.wikipedia.org/wiki/Steve_Wozniak
+ 587. http://pt.wikipedia.org/wiki/Steve_Wozniak
+ 588. http://ro.wikipedia.org/wiki/Steve_Wozniak
+ 589. http://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA,_%D0%A1%D1%82%D0%B8%D0%B2%D0%B5%D0%BD
+ 590. http://sk.wikipedia.org/wiki/Steve_Wozniak
+ 591. http://sl.wikipedia.org/wiki/Steve_Wozniak
+ 592. http://sr.wikipedia.org/wiki/%D0%A1%D1%82%D0%B8%D0%B2_%D0%92%D0%BE%D0%B7%D0%BD%D0%B8%D1%98%D0%B0%D0%BA
+ 593. http://fi.wikipedia.org/wiki/Steve_Wozniak
+ 594. http://sv.wikipedia.org/wiki/Steve_Wozniak
+ 595. http://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%95%E0%B8%B5%E0%B8%9F_%E0%B8%A7%E0%B8%AD%E0%B8%8B%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2%E0%B8%81
+ 596. http://tr.wikipedia.org/wiki/Steve_Wozniak
+ 597. http://uk.wikipedia.org/wiki/%D0%A1%D1%82%D1%96%D0%B2_%D0%92%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA
+ 598. http://zh.wikipedia.org/wiki/%E6%96%AF%E8%92%82%E5%A4%AB%C2%B7%E6%B2%83%E5%85%B9%E5%B0%BC%E4%BA%9A%E5%85%8B
+ 599. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 600. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 601. http://www.wikimediafoundation.org/
+ 602. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 603. http://wikimediafoundation.org/wiki/Privacy_policy
+ 604. file://localhost/wiki/Wikipedia:About
+ 605. file://localhost/wiki/Wikipedia:General_disclaimer
+ 606. http://www.mediawiki.org/
+ 607. http://wikimediafoundation.org/
+
+   Hidden links:
+ 608. file://localhost/wiki/File:Steve_Wozniak.jpg
+ 609. file://localhost/wiki/File:Woz_notebook.png
+ 610. file://localhost/wiki/File:Woz_notebook.png
+ 611. file://localhost/wiki/File:Joey_Slotnick_%26_Steve_Wozniak.jpg
+ 612. file://localhost/wiki/File:Joey_Slotnick_%26_Steve_Wozniak.jpg
+ 613. file://localhost/wiki/File:Woz_signs_Modbook.jpg
+ 614. file://localhost/wiki/File:Woz_signs_Modbook.jpg
+ 615. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html
+ 616. file://localhost/home/memfis/projects/put/tsiss/Downloads/steve_wozniak.html
+ 617. file://localhost/wiki/Main_Page
+ 618. http://creativecommons.org/licenses/by-sa/3.0/

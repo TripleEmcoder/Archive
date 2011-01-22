@@ -1,0 +1,429 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+William Goddard
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                      William M. Goddard
+        Born      July 10, 1913(1913-07-10)
+                  [7]St. Joseph, Missouri
+        Died      September 29, 1997(1997-09-29) (aged 84)
+                  [8]Chico, California
+    Nationality   [9]United States
+       Fields     [10]Physics
+   [11]Alma mater [12]Occidental College
+   Notable awards [13]National Inventors Hall Of Fame in 2007
+
+   William Mark Goddard (July 10, 1913 in [14]St. Joseph, Missouri –
+   September 29, 1997 in [15]Chico, California) was an engineer for
+   [16]IBM and an American inventor. He earned a degree in [17]physics
+   from [18]Occidental College. Before working in industry, Goddard was a
+   high school science teacher in Los Angeles. He briefly worked in the
+   [19]aerospace industry^[20][1] for [21]North American Aviation, Inc.
+   before becoming an engineer at [22]International Business Machines
+   (IBM). His most acclaimed achievement is co-inventing along with
+   [23]John Lynott United States Patent 3,503,060, which is entitled
+   “Direct Access Magnetic Disc Storage Device”. This invention is the
+   claims modern-day [24]hard disk drives.
+
+   Contents
+
+        * [25]1 Pre-IBM
+        * [26]2 RAMAC Project at IBM
+        * [27]3 Specifications of the original IBM 350
+        * [28]4 Air-bearing head
+        * [29]5 Patents
+        * [30]6 Evolution of the IBM 350
+        * [31]7 Magnetic Disk Heritage Center
+        * [32]8 National Inventors Hall of Fame
+        * [33]9 Patents
+        * [34]10 References
+        * [35]11 External links
+
+[[36]edit] Pre-IBM
+
+   Goddard worked on wind tunnel work for [37]North American Aviation. He
+   was to work on similar wind tunnel innovations for a Los Angeles
+   airplane manufacturer at [38]IBM, but shortly after he was hired, the
+   contract for that project was dropped. Goddard was instead hired as an
+   engineer, and became involved in the magnetic storage disk project when
+   the [39]United States Air Force called upon [40]IBM in order to be
+   “mechanized”. The base required a mechanism to “store data” virtually
+   for its operations, and from this necessity, the disk storage project
+   was conceived.
+
+[[41]edit] RAMAC Project at IBM
+
+   William Goddard and John Lynott were key members of the San Jose,
+   California–based engineering team, led by Reynold Johnson with the help
+   of Louis Stevens, that developed the 350 Disk Storage Unit, a major
+   component of the 305 RAMAC Computer.^[42][1] The magnetic disk drive
+   symbolized a monumental advance in mass-storage technology. It is
+   responsible for the end of sequential storage and batch processing with
+   [43]punched cards and [44]paper tape.
+
+   The CPU unit, also known as the [45]305 Processing unit, was
+   responsible for the write-in and read-out operations of the [46]IBM
+   350. “Instructions” were provided to the unit coded as “memory
+   addresses”. These addresses referred to specific locations on the disc
+   in which a transducer was either commanded to write-in or read-out
+   data.
+
+   Goddard’s research began in the early 1950s at IBM’s Laboratory located
+   on 99 Notre Dame Avenue in [47]San Jose, [48]CA.
+
+   He did not see his work as particularly complex. As he puts it, “it was
+   not high tech, or very scientific. It was more like something you’d do
+   in your garage.”
+
+   The [49]350 Disk Storage Unit consisted of the magnetic disk memory
+   unit with an access mechanism, the controls for the access mechanism,
+   and a small air compressor. Assembled with covers, the 350 apparatus
+   was 60 inches (1.52 m) long, 68 inches (1.73 m) high and 29 inches
+   (0.74 m) deep. It was configured with 50 magnetic disks containing
+   50,000 sectors, each of which held 100 six-bit alphanumeric characters,
+   for a capacity of 5 million six-bit characters.
+
+   Disks rotated at 1,200 rpm, tracks were recorded at up to 100 bits per
+   inch, and typical head-to-disk spacing was 800 microinches (20 µm). The
+   execution of a "seek" instruction positioned a read-write head to the
+   track that contained the desired sector and selected the sector for a
+   later read or write operation. Seek time averaged about 600
+   milliseconds.
+
+[[50]edit] Specifications of the original IBM 350
+
+   • Capacity: 5 million characters • Disks: 50 • Access time: 800 ms •
+   Tracks per side: 100 • Area density: 2000 bit/in^2 • Rotational speed:
+   1200 rpm
+
+[[51]edit] Air-bearing head
+
+   The magnetic disk drive consisted of a stack of closely spaced,
+   magnetically coated disks mounted on a rotating shaft, with read-write
+   heads that did not physically touch the storage surface. Goddard’s and
+   Lynott's key innovation was the air-bearing head, which “floated” very
+   close to the rotating disks without actually touching them, greatly
+   increasing the speed of access.
+
+   This air-bearing head, also known as a magnetic transducer, had the
+   ability to move freely, which enabled the disk to be recorded and read
+   from a vast number of different positions.
+
+   The primary purpose of the air-bearing head was to allow the device to
+   have rapid random access ability to any storage location. Additionally,
+   the creation also allowed several magnetic discs to be mounted on a
+   shaft in which a transducer could interact with more than one magnetic
+   disk.
+
+[[52]edit] Patents
+
+   An [53]invention disclosure, filed on December 14, 1954 by Lou Stevens,
+   Ray Bowdle, Jim Davis, Dave Kean, Bill Goddard and John Lynott resulted
+   in two US Patents, 3,134,997, "Data Storage Machine" to Stevens,
+   Goddard and Lynott, claiming the RAMAC and subsequently 3,503,060,
+   "Direct Access Magnetic Storage Disk Device" to Goddard and Lynott,
+   claiming floating heads and disk drives in general. These patents make
+   an analogy to how his invention acts hypothetically: “the operation may
+   be compared with the manner in which skilled operators select cards
+   from a card file index.”
+
+[[54]edit] Evolution of the IBM 350
+
+   [55]Hard disk drives to this date follow the [56]350 Disk Storage Unit.
+   They are used as the main components for storage on today’s
+   [57]personal computers. Similar to [58]floppy disks, the data on hard
+   drives are read and written via a spindle. [59]Hard disk drives have
+   many times more storage space than the [60]IBM 350 due to considerable
+   innovations in storage space densities on disks. [61]Kryder's Law,
+   similar to [62]Moore's Law, indicates that storage space doubles on an
+   annual basis.
+
+[[63]edit] Magnetic Disk Heritage Center
+
+   The [64]Magnetic Disk Heritage Center has played an active role in
+   preserving RAMAC 350 units created by Johnson and his team at [65]IBM.
+   Originally located at [66]Santa Clara University, the project was
+   managed by Dr. [67]Al Hoagland and a group of seniors at the
+   university. Operations have since moved to the [68]Computer History
+   Museum in [69]Mountain View, [70]CA. Goddard’s daughter, Bonnie Burham,
+   is one of the organization’s major private donors.^[[71]citation
+   needed]
+
+[[72]edit] National Inventors Hall of Fame
+
+   William Goddard was inducted in the [73]National Inventors Hall of Fame
+   with [74]John Lynott in 2007 for their contribution to the invention of
+   the first magnetic disk drive. It is hailed as one of the most
+   significant inventions in the computer industry and it has since
+   emerged to become an industry of its own with an annual revenue of $22
+   billion worldwide.
+
+[[75]edit] Patents
+
+     * Goddard and Lynott, [76]U.S. Patent 3,503,060, "Direct Access
+       Magnetic Disk Storage Device"
+     * Stevens et al., [77]U.S. Patent 3,134,097, "Data Storage Machine"
+
+[[78]edit] References
+
+    1. ^ [79]^a [80]^b [81]IBM Pioneers to be Inducted Into the National
+       Inventors Hall of Fame
+
+[[82]edit] External links
+
+     * [83]Chicoan Recalls Early Days of Computers Seattle
+       Post-Intelligencer
+     * [84]Hitachi Absorbs IBM Hard-Disk Unit, Announces New Drives
+       Computerworld
+     * [85]Hard disk drives Wikipedia
+     * [86]Project RAMAC Update Magnetic Disk Heritage Center
+     * [87]350 Storage Unit IBM Storage Product Profiles
+     * [88]The IBM 350 RAMAC Disk File IBM
+     * [89]Life Without Hard Disk Drives PC Guide
+     * [90]Brief Historical Summary, IBM 350 RAMAC Disk Drive Magnetic
+       Disk Heritage Center
+     * [91]William Goddard National Inventors Hall of Fame
+     * [92]The Random-Access Memory Accounting Machine IBM Journal
+     * [93]San Jose City Council Names IBM Site Historical Landmark
+       Magnetic Disk Heritage Center
+     * [94]IBM Pioneers to be Inducted Into the National Inventors Hall of
+       Fame IBM Press Room
+
+                [95]Persondata
+   Name              Goddard, William
+   Alternative names
+   Short description
+   Date of birth     July 10, 1913
+   Place of birth    [96]St. Joseph, Missouri
+   Date of death     September 29, 1997
+   Place of death    [97]Chico, California
+   Retrieved from "[98]http://en.wikipedia.org/wiki/William_Goddard"
+   [99]Categories: [100]1913 births | [101]1997 deaths | [102]Computer
+   pioneers | [103]Computer designers | [104]American inventors |
+   [105]National Inventors Hall of Fame inductees
+   Hidden categories: [106]All articles with unsourced statements |
+   [107]Articles with unsourced statements from September 2008
+
+Personal tools
+
+     * [108]Log in / create account
+
+Namespaces
+
+     * [109]Article
+     * [110]Discussion
+
+Variants
+
+Views
+
+     * [111]Read
+     * [112]Edit
+     * [113]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [114]Main page
+     * [115]Contents
+     * [116]Featured content
+     * [117]Current events
+     * [118]Random article
+     * [119]Donate to Wikipedia
+
+Interaction
+
+     * [120]Help
+     * [121]About Wikipedia
+     * [122]Community portal
+     * [123]Recent changes
+     * [124]Contact Wikipedia
+
+Toolbox
+
+     * [125]What links here
+     * [126]Related changes
+     * [127]Upload file
+     * [128]Special pages
+     * [129]Permanent link
+     * [130]Cite this page
+
+Print/export
+
+     * [131]Create a book
+     * [132]Download as PDF
+     * [133]Printable version
+
+     * This page was last modified on 16 January 2011 at 11:07.
+     * Text is available under the [134]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [135]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [136]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [137]Contact us
+
+     * [138]Privacy policy
+     * [139]About Wikipedia
+     * [140]Disclaimers
+
+     * [141]Powered by MediaWiki
+     * [142]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=William_Goddard&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#p-search
+   7. file://localhost/wiki/St._Joseph,_Missouri
+   8. file://localhost/wiki/Chico,_California
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/Physics
+  11. file://localhost/wiki/Alma_mater
+  12. file://localhost/wiki/Occidental_College
+  13. http://www.invent.org/hall_of_fame/335.html
+  14. file://localhost/wiki/St._Joseph,_Missouri
+  15. file://localhost/wiki/Chico,_California
+  16. file://localhost/wiki/IBM
+  17. file://localhost/wiki/Physics
+  18. file://localhost/wiki/Occidental_College
+  19. file://localhost/wiki/Aerospace
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#cite_note-ibm-0
+  21. file://localhost/wiki/North_American_Aviation,_Inc.
+  22. file://localhost/wiki/International_Business_Machines
+  23. file://localhost/w/index.php?title=John_Lynott&action=edit&redlink=1
+  24. file://localhost/wiki/Hard_disk_drives
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Pre-IBM
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#RAMAC_Project_at_IBM
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Specifications_of_the_original_IBM_350
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Air-bearing_head
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Patents
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Evolution_of_the_IBM_350
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Magnetic_Disk_Heritage_Center
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#National_Inventors_Hall_of_Fame
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#Patents_2
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#References
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#External_links
+  36. file://localhost/w/index.php?title=William_Goddard&action=edit&section=1
+  37. file://localhost/wiki/North_American_Aviation
+  38. file://localhost/wiki/IBM
+  39. file://localhost/wiki/United_States_Air_Force
+  40. file://localhost/wiki/IBM
+  41. file://localhost/w/index.php?title=William_Goddard&action=edit&section=2
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#cite_note-ibm-0
+  43. file://localhost/wiki/Punched_cards
+  44. file://localhost/wiki/Paper_tape
+  45. file://localhost/wiki/305_Processing_unit
+  46. file://localhost/wiki/IBM_350
+  47. file://localhost/wiki/San_Jose,_California
+  48. file://localhost/wiki/California
+  49. file://localhost/wiki/RAMAC
+  50. file://localhost/w/index.php?title=William_Goddard&action=edit&section=3
+  51. file://localhost/w/index.php?title=William_Goddard&action=edit&section=4
+  52. file://localhost/w/index.php?title=William_Goddard&action=edit&section=5
+  53. file://localhost/wiki/Invention_disclosure
+  54. file://localhost/w/index.php?title=William_Goddard&action=edit&section=6
+  55. file://localhost/wiki/Hard_disk_drive
+  56. file://localhost/wiki/RAMAC
+  57. file://localhost/wiki/Personal_computers
+  58. file://localhost/wiki/Floppy_disks
+  59. file://localhost/wiki/Hard_disk_drive
+  60. file://localhost/wiki/IBM_350
+  61. file://localhost/wiki/Kryder%27s_Law
+  62. file://localhost/wiki/Moore%27s_Law
+  63. file://localhost/w/index.php?title=William_Goddard&action=edit&section=7
+  64. file://localhost/w/index.php?title=Magnetic_Disk_Heritage_Center&action=edit&redlink=1
+  65. file://localhost/wiki/IBM
+  66. file://localhost/wiki/Santa_Clara_University
+  67. file://localhost/w/index.php?title=Al_Hoagland&action=edit&redlink=1
+  68. file://localhost/wiki/Computer_History_Museum
+  69. file://localhost/wiki/Mountain_View,_California
+  70. file://localhost/wiki/California
+  71. file://localhost/wiki/Wikipedia:Citation_needed
+  72. file://localhost/w/index.php?title=William_Goddard&action=edit&section=8
+  73. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  74. file://localhost/w/index.php?title=John_Lynott&action=edit&redlink=1
+  75. file://localhost/w/index.php?title=William_Goddard&action=edit&section=9
+  76. http://www.google.com/patents?vid=3503060
+  77. http://www.google.com/patents?vid=3134097
+  78. file://localhost/w/index.php?title=William_Goddard&action=edit&section=10
+  79. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#cite_ref-ibm_0-0
+  80. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html#cite_ref-ibm_0-1
+  81. http://www-03.ibm.com/press/us/en/pressrelease/21040.wss
+  82. file://localhost/w/index.php?title=William_Goddard&action=edit&section=11
+  83. http://blog.seattlepi.nwsource.com/microsoft/archives/goddardtwo.html
+  84. http://www.computerworld.com/hardwaretopics/hardware/story/0,10801,77286,00.html
+  85. file://localhost/wiki/Hard_disk_drives
+  86. http://www.magneticdiskheritagecenter.org/MDHC/Restoration_project/THIC%20talk1.pdf
+  87. http://www-03.ibm.com/ibm/history/exhibits/storage/storage_350.html
+  88. http://www.magneticdiskheritagecenter.org/MDHC/RAMACBrochure.pdf
+  89. http://www.pcguide.com/ref/hdd/histWithout-c.html
+  90. http://www.magneticdiskheritagecenter.org/MDHC/Summary%20of%20RAMAC%20350.htm
+  91. http://invent.org/hall_of_fame/335.html
+  92. http://www.research.ibm.com/journal/rd/011/ibmrd0101K.pdf
+  93. http://www.magneticdiskheritagecenter.org/MDHC/news%20releases/IBM%20Press%20Release.pdf
+  94. http://www-03.ibm.com/press/us/en/pressrelease/21040.wss
+  95. file://localhost/wiki/Wikipedia:Persondata
+  96. file://localhost/wiki/St._Joseph,_Missouri
+  97. file://localhost/wiki/Chico,_California
+  98. http://en.wikipedia.org/wiki/William_Goddard
+  99. file://localhost/wiki/Special:Categories
+ 100. file://localhost/wiki/Category:1913_births
+ 101. file://localhost/wiki/Category:1997_deaths
+ 102. file://localhost/wiki/Category:Computer_pioneers
+ 103. file://localhost/wiki/Category:Computer_designers
+ 104. file://localhost/wiki/Category:American_inventors
+ 105. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 106. file://localhost/wiki/Category:All_articles_with_unsourced_statements
+ 107. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_September_2008
+ 108. file://localhost/w/index.php?title=Special:UserLogin&returnto=William_Goddard
+ 109. file://localhost/wiki/William_Goddard
+ 110. file://localhost/wiki/Talk:William_Goddard
+ 111. file://localhost/wiki/William_Goddard
+ 112. file://localhost/w/index.php?title=William_Goddard&action=edit
+ 113. file://localhost/w/index.php?title=William_Goddard&action=history
+ 114. file://localhost/wiki/Main_Page
+ 115. file://localhost/wiki/Portal:Contents
+ 116. file://localhost/wiki/Portal:Featured_content
+ 117. file://localhost/wiki/Portal:Current_events
+ 118. file://localhost/wiki/Special:Random
+ 119. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 120. file://localhost/wiki/Help:Contents
+ 121. file://localhost/wiki/Wikipedia:About
+ 122. file://localhost/wiki/Wikipedia:Community_portal
+ 123. file://localhost/wiki/Special:RecentChanges
+ 124. file://localhost/wiki/Wikipedia:Contact_us
+ 125. file://localhost/wiki/Special:WhatLinksHere/William_Goddard
+ 126. file://localhost/wiki/Special:RecentChangesLinked/William_Goddard
+ 127. file://localhost/wiki/Wikipedia:Upload
+ 128. file://localhost/wiki/Special:SpecialPages
+ 129. file://localhost/w/index.php?title=William_Goddard&oldid=408181990
+ 130. file://localhost/w/index.php?title=Special:Cite&page=William_Goddard&id=408181990
+ 131. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=William+Goddard
+ 132. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=William+Goddard&oldid=408181990&writer=rl
+ 133. file://localhost/w/index.php?title=William_Goddard&printable=yes
+ 134. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 135. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 136. http://www.wikimediafoundation.org/
+ 137. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 138. http://wikimediafoundation.org/wiki/Privacy_policy
+ 139. file://localhost/wiki/Wikipedia:About
+ 140. file://localhost/wiki/Wikipedia:General_disclaimer
+ 141. http://www.mediawiki.org/
+ 142. http://wikimediafoundation.org/
+
+   Hidden links:
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html
+ 144. file://localhost/home/memfis/projects/put/tsiss/Downloads/william_goddard.html
+ 145. file://localhost/wiki/Main_Page
+ 146. http://creativecommons.org/licenses/by-sa/3.0/

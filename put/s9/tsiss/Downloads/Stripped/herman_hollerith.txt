@@ -1,0 +1,521 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Herman Hollerith
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   Herman Hollerith
+   Born February 29, 1860(1860-02-29)
+   [7]Buffalo, New York
+   Died November 17, 1929(1929-11-17) (aged 69)
+   [8]Washington, D.C.
+   Resting place [9]Oak Hill Cemetery
+   Education [10]City College of New York (1875)
+   [11]Columbia University School of Mines (1879)
+   Occupation [12]Statistician, [13]inventor, [14]businessman
+   Known for mechanical tabulation of punched card data
+   Spouse Lucia Beverley Talcott (1865–1944) (m. 1890–1929)
+   «start: (1890-09-15)–end+1: (1930)»"Marriage: Lucia Beverley Talcott
+   (1865–1944) to Herman Hollerith" Location:
+   (linkback:[15]http://en.wikipedia.org/wiki/Herman_Hollerith)
+   Awards [16]Elliott Cresson Medal (1890)
+
+   Herman Hollerith (February 29, 1860 – November 17, 1929) was an
+   [17]American [18]statistician who developed a mechanical [19]tabulator
+   based on [20]punched cards to rapidly tabulate statistics from millions
+   of pieces of data. He was the founder of one of the companies that
+   later merged and became [21]IBM.
+
+   Contents
+
+        * [22]1 Personal life
+        * [23]2 Electronic tabulation of data
+        * [24]3 Inventions and businesses
+        * [25]4 See also
+        * [26]5 Notes
+        * [27]6 Further reading
+        * [28]7 External links
+
+[[29]edit] Personal life
+
+   Hollerith was born in [30]Buffalo, New York, where he spent his early
+   childhood. He entered the [31]City College of New York in 1875 and
+   graduated from the [32]Columbia University School of Mines with an
+   "Engineer of Mines" degree in 1879. In 1880 he listed himself as a
+   mining engineer while living in Manhattan, and completed his Ph.D. in
+   1890 at Columbia University. He eventually moved to [33]Washington,
+   D.C., living in [34]Georgetown, with a home on 29th Street and
+   ultimately a factory for manufacturing his tabulating machines at 31st
+   Street and the [35]C&O Canal, where today there is a commemorative
+   plaque placed by [36]IBM.
+
+[[37]edit] Electronic tabulation of data
+
+   At the urging of [38]John Shaw Billings^[39][1], Hollerith developed a
+   mechanism using electrical connections to trigger a counter, recording
+   information. A key idea was that data could be coded numerically.
+   Hollerith saw that if numbers could be punched in specified locations
+   on a card, in the now familiar rows and columns, then the cards could
+   be counted or sorted mechanically and the data recorded. A description
+   of this system, An Electric Tabulating System (1889), was submitted by
+   Hollerith to Columbia University as his doctoral thesis, and is
+   reprinted in Randell's book.^[40][2] On January 8, 1889, Hollerith was
+   issued U.S. Patent 395,782^[41][3], claim 2 of which reads:
+
+     The herein-described method of compiling statistics, which consists
+     in recording separate statistical items pertaining to the individual
+     by holes or combinations of holes punched in sheets of electrically
+     non-conducting material, and bearing a specific relation to each
+     other and to a standard, and then counting or tallying such
+     statistical items separately or in combination by means of
+     mechanical counters operated by electro-magnets the circuits through
+     which are controlled by the perforated sheets, substantially as and
+     for the purpose set forth.
+
+[[42]edit] Inventions and businesses
+
+   Hollerith punched card
+
+   Hollerith had left teaching and begun working for the [43]United States
+   Census Office in the year he filed his first patent application. Titled
+   "Art of Compiling Statistics", it was filed on September 23, 1884; U.S.
+   Patent 395,782 was granted on January 8, 1889.^[44][4]
+
+   Hollerith built machines under contract for the Census Office, which
+   used them to tabulate the [45]1890 census in only one year.^[46][5] The
+   [47]1880 census had taken eight years. Hollerith then started his own
+   business in 1896, founding the Tabulating Machine Company. Most of the
+   major census bureaus around the world leased his equipment and
+   purchased his cards, as did major insurance companies. To make his
+   system work, he invented the first automatic card-feed mechanism and
+   the first [48]key punch (that is, a punch operated by a [49]keyboard);
+   a skilled operator could punch 200–300 cards per hour. He also invented
+   a [50]tabulator. The [51]1890 Tabulator was [52]hardwired to operate
+   only on 1890 Census cards. A [53]control panel in his 1906 Type I
+   Tabulator allowed it to do different jobs without being rebuilt (the
+   first step towards programming). These inventions were among the
+   foundations of the modern information processing industry.
+
+   In 1911 four corporations, including Hollerith's firm, merged to form
+   the [54]Computing Tabulating Recording Corporation (CTR).^[55][6] Under
+   the presidency of [56]Thomas J. Watson, it was renamed
+   [57]International Business Machines Corporation (IBM) in 1924.
+
+[[58]edit] See also
+
+     * [59]Hollerith constant
+     * [60]Tabulating machine
+     * [61]Punched card
+     * [62]Joseph Marie Jacquard
+
+[[63]edit] Notes
+
+    1. [64]^ Lydenberg, Harry Miller (1924). John Shaw Billings: Creator
+       of the National Medical Library and its Catalogue, First Director
+       of the New York Public Library. American Library Association.
+       pp. 32.
+    2. [65]^ Randell (ed.), Brian (1982). The Origins of Digital
+       Computers, Selected Papers, 3rd ed. Springer-Verlag.
+       [66]ISBN [67]0-387-11319-3.
+    3. [68]^ [69]US patent 395782, Herman Hollerith, "Art of compiling
+       statistics", issued 1889-01-08
+    4. [70]^ [71]The Invention and Development of the Hollerith Punched
+       Card
+    5. [72]^ [73]Hollerith's Electric Sorting and Tabulating Machine, ca.
+       1895 from the [74]American Memory archives of the [75]Library of
+       Congress
+    6. [76]^ [77]"IBM Archives: Frequently Asked Questions" (PDF).
+       [78]http://www-03.ibm.com/ibm/history/documents/pdf/faq.pdf.  Some
+       accounts of the merger forming CTR state that three corporations
+       were merged. This reference notes that only three of the four
+       merged corporations are represented in the CTR name. That may be
+       the reason for the differing accounts.
+
+[[79]edit] Further reading
+
+     * Austrian, G.D. (1982). Herman Hollerith: The Forgotten Giant of
+       Information Processing. Columbia. [80]ISBN [81]0231051468.
+     * Heide, Lars (2009). Punched-Card Systems and the Early Information
+       Explosion, 1880-1945. Johns Hopkins. [82]ISBN [83]0801891434.
+
+     * Essinger, James (2004). Jacquard's Web: How a Hand-Loom Led to the
+       Birth of the Information Age. Oxford: Oxford University Press.
+
+     * Hollerith, Herman (1890). In connection with the electric
+       tabulation system which has been adopted by U.S. government for the
+       work of the census bureau (Ph.D. dissertation). [84]Columbia
+       University School of Mines.
+     * Hollerith, H. (April 1889). [85]"An Electric Tabulating System".
+       The Quarterly, Columbia University School of Mines X (16): 238–255.
+       [86]http://www.columbia.edu/acis/history/hh/index.html.
+     * Hollerith, Herman (December 1894). [87]"The Electric Tabulating
+       Machine". Journal of the Royal Statistical Society (Journal of the
+       Royal Statistical Society, Vol. 57, No. 4) 57 (4): 678–682.
+       [88]doi:[89]10.2307/2979610. [90]http://jstor.org/stable/2979610.
+
+[[91]edit] External links
+
+   Hollerith's grave at [92]Oak Hill Cemetery in [93]Georgetown in
+   Washington, D.C.
+     * [94]Works by or about Herman Hollerith in libraries ([95]WorldCat
+       catalog)
+     * Hollerith's patents from 1889: [96]US 395781  [97]US 395782  [98]US
+       395783
+     * [99]Computer History Museum: Hollerith 1889 patent
+     * [100]IBM Archives: Herman Hollerith
+     * [101]IBM Archives: Tabulating Machine Co. plant
+     * [102]Early Office Museum: Punched Card Tabulating Machines
+     * [103]Hollerith page at the National Hall of Fame
+     * [104]Map to his gravesite
+     * [105]Columbia University Computing History: Herman Hollerith
+     * [106]O'Connor, John J.; [107]Robertson, Edmund F., [108]"Herman
+       Hollerith", [109]MacTutor History of Mathematics archive,
+       [110]University of St Andrews,
+       [111]http://www-history.mcs.st-andrews.ac.uk/Biographies/Hollerith.
+       html .
+     * [112]The Norwegian Historical Data Center: Census 1900 Includes a
+       description of the use of Hollerith machines ("complicated,
+       American enumeration machines"), together with illustrations.
+     * Fleishman, Sandra (March 5, 2005). [113]"$8.5 Million And
+       Counting". [114]Washington Post.
+       [115]http://www.washingtonpost.com/wp-dyn/articles/A7878-2005Mar4.h
+       tml. Retrieved May 4, 2010.  – Hollerith's house
+
+                             [116]Persondata
+   Name              Hollerith, Herman
+   Alternative names
+   Short description [117]statistician, [118]inventor, [119]businessman
+   Date of birth     February 29, 1860(1860-02-29)
+   Place of birth    [120]Buffalo, New York
+   Date of death     November 17, 1929(1929-11-17)
+   Place of death    [121]Washington, D.C.
+   Retrieved from "[122]http://en.wikipedia.org/wiki/Herman_Hollerith"
+   [123]Categories: [124]American statisticians | [125]American inventors
+   | [126]Computer pioneers | [127]German inventors | [128]American people
+   of German descent | [129]1860 births | [130]1929 deaths | [131]National
+   Inventors Hall of Fame inductees | [132]People from Buffalo, New York |
+   [133]City College of New York alumni | [134]Columbia University alumni
+   | [135]Columbia Engineering alumni
+   Hidden categories: [136]Articles with hCards
+
+Personal tools
+
+     * [137]Log in / create account
+
+Namespaces
+
+     * [138]Article
+     * [139]Discussion
+
+Variants
+
+Views
+
+     * [140]Read
+     * [141]Edit
+     * [142]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [143]Main page
+     * [144]Contents
+     * [145]Featured content
+     * [146]Current events
+     * [147]Random article
+     * [148]Donate to Wikipedia
+
+Interaction
+
+     * [149]Help
+     * [150]About Wikipedia
+     * [151]Community portal
+     * [152]Recent changes
+     * [153]Contact Wikipedia
+
+Toolbox
+
+     * [154]What links here
+     * [155]Related changes
+     * [156]Upload file
+     * [157]Special pages
+     * [158]Permanent link
+     * [159]Cite this page
+
+Print/export
+
+     * [160]Create a book
+     * [161]Download as PDF
+     * [162]Printable version
+
+Languages
+
+     * [163]العربية
+     * [164]বাংলা
+     * [165]Català
+     * [166]Česky
+     * [167]Dansk
+     * [168]Deutsch
+     * [169]Español
+     * [170]فارسی
+     * [171]Français
+     * [172]Gaeilge
+     * [173]한국어
+     * [174]Hrvatski
+     * [175]Italiano
+     * [176]עברית
+     * [177]Magyar
+     * [178]മലയാളം
+     * [179]Bahasa Melayu
+     * [180]Nederlands
+     * [181]日本語
+     * [182]‪Norsk (bokmål)‬
+     * [183]Polski
+     * [184]Português
+     * [185]Русский
+     * [186]Slovenčina
+     * [187]Slovenščina
+     * [188]Српски / Srpski
+     * [189]Srpskohrvatski / Српскохрватски
+     * [190]Suomi
+     * [191]Svenska
+     * [192]Türkçe
+     * [193]中文
+
+     * This page was last modified on 19 January 2011 at 03:34.
+     * Text is available under the [194]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [195]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [196]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [197]Contact us
+
+     * [198]Privacy policy
+     * [199]About Wikipedia
+     * [200]Disclaimers
+
+     * [201]Powered by MediaWiki
+     * [202]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Herman_Hollerith&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#p-search
+   7. file://localhost/wiki/Buffalo,_New_York
+   8. file://localhost/wiki/Washington,_D.C.
+   9. file://localhost/wiki/Oak_Hill_Cemetery_(Washington,_D.C.)
+  10. file://localhost/wiki/City_College_of_New_York
+  11. file://localhost/wiki/Columbia_University_School_of_Mines
+  12. file://localhost/wiki/Statistics
+  13. file://localhost/wiki/Inventor
+  14. file://localhost/wiki/Businessman
+  15. http://en.wikipedia.org/wiki/Herman_Hollerith
+  16. file://localhost/wiki/Elliott_Cresson_Medal
+  17. file://localhost/wiki/United_States
+  18. file://localhost/wiki/Statistician
+  19. file://localhost/wiki/Tabulating_machine
+  20. file://localhost/wiki/Punched_card
+  21. file://localhost/wiki/IBM
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#Personal_life
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#Electronic_tabulation_of_data
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#Inventions_and_businesses
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#See_also
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#Notes
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#Further_reading
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#External_links
+  29. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=1
+  30. file://localhost/wiki/Buffalo,_New_York
+  31. file://localhost/wiki/City_College_of_New_York
+  32. file://localhost/wiki/Columbia_University_School_of_Mines
+  33. file://localhost/wiki/Washington,_D.C.
+  34. file://localhost/wiki/Georgetown,_Washington,_D.C.
+  35. file://localhost/wiki/C%26O_Canal
+  36. file://localhost/wiki/IBM
+  37. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=2
+  38. file://localhost/wiki/John_Shaw_Billings
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-0
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-1
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-2
+  42. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=3
+  43. file://localhost/wiki/United_States_Census_Bureau
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-3
+  45. file://localhost/wiki/United_States_Census,_1890
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-loc-4
+  47. file://localhost/wiki/United_States_Census,_1880
+  48. file://localhost/wiki/Key_punch
+  49. file://localhost/wiki/Keyboard_technology
+  50. file://localhost/wiki/Tabulating_machine
+  51. file://localhost/wiki/Tabulating_machine
+  52. file://localhost/wiki/Hardwired
+  53. file://localhost/wiki/Control_panel_(computer)
+  54. file://localhost/wiki/Computing_Tabulating_Recording_Corporation
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_note-5
+  56. file://localhost/wiki/Thomas_J._Watson
+  57. file://localhost/wiki/International_Business_Machines
+  58. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=4
+  59. file://localhost/wiki/Hollerith_constant
+  60. file://localhost/wiki/Tabulating_machine
+  61. file://localhost/wiki/Punched_card
+  62. file://localhost/wiki/Joseph_Marie_Jacquard
+  63. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=5
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-0
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-1
+  66. file://localhost/wiki/International_Standard_Book_Number
+  67. file://localhost/wiki/Special:BookSources/0-387-11319-3
+  68. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-2
+  69. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US395782
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-3
+  71. http://www2.computer.org/portal/web/csdl/doi/10.1109/MAHC.1991.10023
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-loc_4-0
+  73. http://memory.loc.gov/cgi-bin/query/r?ammem/mcc:@field(DOCID+@lit(mcc/023))
+  74. file://localhost/wiki/American_Memory
+  75. file://localhost/wiki/Library_of_Congress
+  76. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html#cite_ref-5
+  77. http://www-03.ibm.com/ibm/history/documents/pdf/faq.pdf
+  78. http://www-03.ibm.com/ibm/history/documents/pdf/faq.pdf
+  79. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=6
+  80. file://localhost/wiki/International_Standard_Book_Number
+  81. file://localhost/wiki/Special:BookSources/0231051468
+  82. file://localhost/wiki/International_Standard_Book_Number
+  83. file://localhost/wiki/Special:BookSources/0801891434
+  84. file://localhost/wiki/Columbia_University
+  85. http://www.columbia.edu/acis/history/hh/index.html
+  86. http://www.columbia.edu/acis/history/hh/index.html
+  87. http://jstor.org/stable/2979610
+  88. file://localhost/wiki/Digital_object_identifier
+  89. http://dx.doi.org/10.2307%2F2979610
+  90. http://jstor.org/stable/2979610
+  91. file://localhost/w/index.php?title=Herman_Hollerith&action=edit&section=7
+  92. file://localhost/wiki/Oak_Hill_Cemetery_(Washington,_D.C.)
+  93. file://localhost/wiki/Georgetown,_Washington,_D.C.
+  94. http://worldcat.org/identities/lccn-n81-49885
+  95. file://localhost/wiki/WorldCat
+  96. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US395781
+  97. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US395782
+  98. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US395783
+  99. http://www.computerhistory.org/archive/Hollerith%20patent.pdf
+ 100. http://www-03.ibm.com/ibm/history/exhibits/builders/builders_hollerith.html
+ 101. http://www-03.ibm.com/ibm/history/exhibits/vintage/vintage_4506VV2027.html
+ 102. http://www.officemuseum.com/data_processing_machines.htm
+ 103. http://museum.nist.gov/panels/conveyor/hollerithbio.htm
+ 104. http://www.oakhillcemeterydc.org/map.html
+ 105. http://www.columbia.edu/acis/history/hollerith.html
+ 106. file://localhost/wiki/John_J._O%27Connor_(mathematician)
+ 107. file://localhost/wiki/Edmund_F._Robertson
+ 108. http://www-history.mcs.st-andrews.ac.uk/Biographies/Hollerith.html
+ 109. file://localhost/wiki/MacTutor_History_of_Mathematics_archive
+ 110. file://localhost/wiki/University_of_St_Andrews
+ 111. http://www-history.mcs.st-andrews.ac.uk/Biographies/Hollerith.html
+ 112. http://www.rhd.uit.no/census/ft1900e.html
+ 113. http://www.washingtonpost.com/wp-dyn/articles/A7878-2005Mar4.html
+ 114. file://localhost/wiki/Washington_Post
+ 115. http://www.washingtonpost.com/wp-dyn/articles/A7878-2005Mar4.html
+ 116. file://localhost/wiki/Wikipedia:Persondata
+ 117. file://localhost/wiki/Statistics
+ 118. file://localhost/wiki/Inventor
+ 119. file://localhost/wiki/Businessman
+ 120. file://localhost/wiki/Buffalo,_New_York
+ 121. file://localhost/wiki/Washington,_D.C.
+ 122. http://en.wikipedia.org/wiki/Herman_Hollerith
+ 123. file://localhost/wiki/Special:Categories
+ 124. file://localhost/wiki/Category:American_statisticians
+ 125. file://localhost/wiki/Category:American_inventors
+ 126. file://localhost/wiki/Category:Computer_pioneers
+ 127. file://localhost/wiki/Category:German_inventors
+ 128. file://localhost/wiki/Category:American_people_of_German_descent
+ 129. file://localhost/wiki/Category:1860_births
+ 130. file://localhost/wiki/Category:1929_deaths
+ 131. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 132. file://localhost/wiki/Category:People_from_Buffalo,_New_York
+ 133. file://localhost/wiki/Category:City_College_of_New_York_alumni
+ 134. file://localhost/wiki/Category:Columbia_University_alumni
+ 135. file://localhost/wiki/Category:Columbia_Engineering_alumni
+ 136. file://localhost/wiki/Category:Articles_with_hCards
+ 137. file://localhost/w/index.php?title=Special:UserLogin&returnto=Herman_Hollerith
+ 138. file://localhost/wiki/Herman_Hollerith
+ 139. file://localhost/wiki/Talk:Herman_Hollerith
+ 140. file://localhost/wiki/Herman_Hollerith
+ 141. file://localhost/w/index.php?title=Herman_Hollerith&action=edit
+ 142. file://localhost/w/index.php?title=Herman_Hollerith&action=history
+ 143. file://localhost/wiki/Main_Page
+ 144. file://localhost/wiki/Portal:Contents
+ 145. file://localhost/wiki/Portal:Featured_content
+ 146. file://localhost/wiki/Portal:Current_events
+ 147. file://localhost/wiki/Special:Random
+ 148. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 149. file://localhost/wiki/Help:Contents
+ 150. file://localhost/wiki/Wikipedia:About
+ 151. file://localhost/wiki/Wikipedia:Community_portal
+ 152. file://localhost/wiki/Special:RecentChanges
+ 153. file://localhost/wiki/Wikipedia:Contact_us
+ 154. file://localhost/wiki/Special:WhatLinksHere/Herman_Hollerith
+ 155. file://localhost/wiki/Special:RecentChangesLinked/Herman_Hollerith
+ 156. file://localhost/wiki/Wikipedia:Upload
+ 157. file://localhost/wiki/Special:SpecialPages
+ 158. file://localhost/w/index.php?title=Herman_Hollerith&oldid=408719487
+ 159. file://localhost/w/index.php?title=Special:Cite&page=Herman_Hollerith&id=408719487
+ 160. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Herman+Hollerith
+ 161. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Herman+Hollerith&oldid=408719487&writer=rl
+ 162. file://localhost/w/index.php?title=Herman_Hollerith&printable=yes
+ 163. http://ar.wikipedia.org/wiki/%D9%87%D9%8A%D8%B1%D9%85%D8%A7%D9%86_%D9%87%D9%88%D9%84%D9%84%D9%8A%D8%B1%D9%8A%D8%AB
+ 164. http://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A7%87%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B9%E0%A6%B2%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%A5
+ 165. http://ca.wikipedia.org/wiki/Herman_Hollerith
+ 166. http://cs.wikipedia.org/wiki/Herman_Hollerith
+ 167. http://da.wikipedia.org/wiki/Herman_Hollerith
+ 168. http://de.wikipedia.org/wiki/Herman_Hollerith
+ 169. http://es.wikipedia.org/wiki/Herman_Hollerith
+ 170. http://fa.wikipedia.org/wiki/%D9%87%D8%B1%D9%85%D8%A7%D9%86_%D9%87%D9%88%D9%84%D8%B1%DB%8C%D8%AB
+ 171. http://fr.wikipedia.org/wiki/Herman_Hollerith
+ 172. http://ga.wikipedia.org/wiki/Herman_Hollerith
+ 173. http://ko.wikipedia.org/wiki/%ED%97%88%EB%A8%BC_%ED%99%80%EB%9F%AC%EB%A6%AC%EC%8A%A4
+ 174. http://hr.wikipedia.org/wiki/Hermann_Hollerith
+ 175. http://it.wikipedia.org/wiki/Herman_Hollerith
+ 176. http://he.wikipedia.org/wiki/%D7%94%D7%A8%D7%9E%D7%9F_%D7%94%D7%95%D7%9C%D7%A8%D7%99%D7%AA%27
+ 177. http://hu.wikipedia.org/wiki/Herman_Hollerith
+ 178. http://ml.wikipedia.org/wiki/%E0%B4%B9%E0%B5%86%E0%B5%BC%E0%B4%AE%E0%B5%BB_%E0%B4%B9%E0%B5%8B%E0%B4%B3%E0%B4%B1%E0%B4%BF%E0%B4%A4%E0%B5%8D
+ 179. http://ms.wikipedia.org/wiki/Herman_Hollerith
+ 180. http://nl.wikipedia.org/wiki/Herman_Hollerith
+ 181. http://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%AC%E3%83%AA%E3%82%B9
+ 182. http://no.wikipedia.org/wiki/Herman_Hollerith
+ 183. http://pl.wikipedia.org/wiki/Herman_Hollerith
+ 184. http://pt.wikipedia.org/wiki/Herman_Hollerith
+ 185. http://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%BB%D0%BB%D0%B5%D1%80%D0%B8%D1%82,_%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD
+ 186. http://sk.wikipedia.org/wiki/Herman_Hollerith
+ 187. http://sl.wikipedia.org/wiki/Herman_Hollerith
+ 188. http://sr.wikipedia.org/wiki/%D0%A5%D0%B5%D1%80%D0%BC%D0%B0%D0%BD_%D0%A5%D0%BE%D0%BB%D0%B5%D1%80%D0%B8%D1%82
+ 189. http://sh.wikipedia.org/wiki/Herman_Hollerith
+ 190. http://fi.wikipedia.org/wiki/Herman_Hollerith
+ 191. http://sv.wikipedia.org/wiki/Herman_Hollerith
+ 192. http://tr.wikipedia.org/wiki/Herman_Hollerith
+ 193. http://zh.wikipedia.org/wiki/%E8%B5%AB%E7%88%BE%E6%9B%BC%C2%B7%E4%BD%95%E6%A8%82%E7%A6%AE
+ 194. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 195. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 196. http://www.wikimediafoundation.org/
+ 197. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 198. http://wikimediafoundation.org/wiki/Privacy_policy
+ 199. file://localhost/wiki/Wikipedia:About
+ 200. file://localhost/wiki/Wikipedia:General_disclaimer
+ 201. http://www.mediawiki.org/
+ 202. http://wikimediafoundation.org/
+
+   Hidden links:
+ 203. file://localhost/wiki/File:Hollerith.jpg
+ 204. file://localhost/wiki/File:Hollerith_punched_card.jpg
+ 205. file://localhost/wiki/File:Hollerith_punched_card.jpg
+ 206. file://localhost/wiki/File:Hollerith_Herman_grave.jpg
+ 207. file://localhost/wiki/File:Hollerith_Herman_grave.jpg
+ 208. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html
+ 209. file://localhost/home/memfis/projects/put/tsiss/Downloads/herman_hollerith.html
+ 210. file://localhost/wiki/Main_Page
+ 211. http://creativecommons.org/licenses/by-sa/3.0/

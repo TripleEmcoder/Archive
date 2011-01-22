@@ -1,0 +1,413 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Harry Ward Leonard
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                   Harry Ward Leonard
+   Harry Ward Leonard
+        Born      February 8, 1861
+                  [7]Cincinnati, Ohio, [8]U.S.A
+        Died      February 18, 1915
+                  [9]New York, [10]U.S.A
+    Nationality   [11]American
+       Fields     [12]inventor, [13]electrical engineer
+     Known for    [14]Ward Leonard motor control system
+   Notable awards [15]John Scott Medal (1903)
+
+   Harry Ward Leonard (February 8, 1861 – February 18, 1915) was an
+   [16]electrical engineer and [17]inventor whose 30-year career spanned
+   the late 19th century and the early 20th century. He is best known for
+   his invention, the [18]Ward Leonard motor control system. Equipment
+   based on this invention remained in service into the 21st century.
+
+   Contents
+
+        * [19]1 Early life and heritage
+        * [20]2 Career
+        * [21]3 The Ward Leonard motor control system
+        * [22]4 Sudden death
+        * [23]5 See also
+        * [24]6 References
+
+[[25]edit] Early life and heritage
+
+   Harry was born on February 8, 1861 in [26]Cincinnati, Ohio to Ezra
+   George Leonard and Henrietta Dana Ward. He was the fourth of their six
+   children. He was a great great grandson of [27]American Revolutionary
+   War General [28]Artemas Ward. Although his surname was evidently
+   “Leonard” and not “Ward-Leonard,” he apparently identified himself as
+   either Harry Ward Leonard or H. Ward Leonard. In 1895, Harry was
+   married to Carolyn Good in Geneva, Switzerland.
+
+   As a student at the [29]Massachusetts Institute of Technology (MIT),
+   Harry was instrumental in founding the student newspaper, [30]The Tech,
+   and served as the president of the paper’s board of directors. He
+   graduated from MIT in 1883.^[31][1]
+
+[[32]edit] Career
+
+   After graduating from MIT, Mr. Leonard was employed by [33]Thomas
+   Edison to help introduce the Edison central-station [34]electric power
+   distribution system. Within four years, he was promoted to the position
+   of general superintendent of the Western Electric Light Company of
+   [35]Chicago, Illinois. The following year, he established Leonard and
+   Izard, a firm that set up [36]electric railways and [37]generating
+   stations. In 1889, his firm was acquired by Edison and Leonard became
+   the general manager of the Edison operations in the United States and
+   Canada. In 1896, Leonard organized and became president of Ward Leonard
+   Electric as an Edison company in [38]Hoboken, New Jersey. In 1898, Mr.
+   Leonard left the Edison organization and incorporated his own [39]Ward
+   Leonard Electric Company on February 19, 1898 in the village of
+   Bronxville in Westchester County, New York.^[40][2]
+
+   While working for Edison, Mr. Leonard patented a number of inventions
+   and he continued developing new ideas throughout his career. He was
+   granted patents for more than 100 inventions of electrical distribution
+   and control systems and related equipment.
+
+[[41]edit] The Ward Leonard motor control system
+
+   The Ward Leonard motor control system was Mr. Leonard’s best known and
+   most lasting invention. It was introduced in about 1891 and soon became
+   the most widely used type of [42]electric motor [43]speed control.
+
+   In a Ward Leonard system, a [44]prime mover drives a [45]direct current
+   (DC) [46]generator at a constant speed. The [47]armature of the DC
+   generator is connected directly to the armature of a DC motor. The DC
+   motor drives the load equipment at an adjustable speed. The motor speed
+   is adjusted by adjusting the output [48]voltage of the generator using
+   a [49]rheostat to adjust the excitation [50]current in the [51]field
+   winding. The motor field current is usually not adjusted, but the motor
+   field is sometimes reduced to increase the speed above the base speed.
+   The prime mover is usually an [52]alternating current (AC) motor, but a
+   DC motor or an [53]engine might be used instead. To provide the DC
+   field excitation power supply, Ward Leonard systems usually include an
+   exciter generator that is driven by the prime mover.^[54][3]^[55][4]
+
+   Although only technical specialists are likely to be familiar with Ward
+   Leonard systems, many millions of people have ridden in [56]elevators
+   powered by Ward Leonard drives. From the 1920’s through the 1980’s most
+   electrically driven elevators used Ward Leonard control and many
+   systems remained in use at the beginning of the 21st century.^[57][5]
+
+   Many variations of the Ward Leonard system have been implemented, but
+   they have generally continued to be called Ward Leonard systems. H.
+   Ward Leonard and many others have patented auxiliary [58]control
+   systems used to regulate the motor speed as required to automatically
+   perform specific tasks such as controlling [59]pump speed to regulate
+   flow.
+
+   Mechanical types of [60]adjustable-speed drives and other electrical
+   types continued to be used and new types developed after the Ward
+   Leonard system was introduced. [61]Electron tube types of DC motor
+   controls began to be developed in the 1920’s but electronic controls
+   didn’t seriously begin to displace the Ward Leonard system until
+   [62]thyristor controlled drives were developed in the late 1960’s. By
+   the mid 1970’s, Ward Leonard drives were rapidly becoming obsolete, but
+   the replacement of existing Ward Leonard drives has continued past the
+   end of the 20th century.
+
+[[63]edit] Sudden death
+
+   H. Ward Leonard was an active member of the [64]American Institute of
+   Electrical Engineers, publishing technical papers, attending meetings
+   and making presentations. He died suddenly on February 18, 1915 in New
+   York while attending the annual dinner of the American Institute of
+   Electrical Engineers.^[65][6]
+
+[[66]edit] See also
+
+     * [67]Motor-generator
+     * [68]Rotary transformer
+     * [69]Booster (electric power)
+     * [70]Ward leonard control
+
+[[71]edit] References
+
+   Citations
+
+    1. [72]^ [73]"The Tech" (PDF). Vol. 36. No. 52. Massachusetts
+       Institute of Technology. 1916-11-22.
+       [74]http://tech.mit.edu/archives/VOL_036/TECH_V036_S0100_P001.pdf.
+       Retrieved 2006-08-08.
+    2. [75]^ [76]"Westchester County Archives". Incorporation Records,
+       1876-1914 -- Personal Name Index -- L-M A-0050 (8), p. 64.
+       Westchester County, New York. 1898-02-19.
+       [77]http://www.westchestergov.com/wcarchives. Retrieved
+       2006-08-07.
+    3. [78]^ Siskind, Charles S. (1963). Electrical Control Systems in
+       Industry. New York: McGraw-Hill, Inc.. [79]ISBN [80]0-07-057746-3.
+    4. [81]^ Leonard, H. Ward (1891-11-24). [82]"Electrical Transmission
+       of Power patent no. 463,802". United States Patent Office.
+       [83]http://patimg1.uspto.gov/.piw?Docid=00463802&idkey=NONE.
+       Retrieved 2006-08-10.
+    5. [84]^ Kulkarni, A.B. (October 2000). "Energy consumption analysis
+       for geared elevator modernization: upgrade from DC Ward Leonard
+       system to AC vector controlled drive". Conference Record of the
+       2000 IEEE Industry Applications Conference. Institute of Electrical
+       and Electronics Engineers. pp. vol.4, pp.2066–2070.
+    6. [85]^ Everett, Jasen M.; Ed. (2006). [86]"“1915.” The People's
+       Chronology". Thompson Gale; eNotes.com.
+       [87]http://history.enotes.com/peoples-chronology/year-1915/energy.
+       Retrieved 2006-08-07.
+
+   General references
+
+     * Leonard, H. Ward (2006). [88]"Descendants Of William Ward of
+       Sudbury Born Abt 1603, and Other Related Families". rootsweb.com.
+       [89]http://worldconnect.genealogy.rootsweb.com/cgi-bin/igm.cgi?op=G
+       ET&db=rckline-wards&id=I14813. Retrieved 2006-08-08.
+     * The Editors (November 1989). "Technology for Electrical
+       Components". Power Transmission Design: 25–27.
+     * Staff (December 1971). "Motor Speed Drive Survey". Instruments and
+       Control Systems: 69–70.
+     * [90]"H. Ward Leonard Dies". The New York Times: pp. archives.
+       February 19, 1915.
+       [91]http://query.nytimes.com/gst/abstract.html?res=950CE6DD1238E633
+       A2575AC1A9649C946496D6CF
+
+                    [92]Persondata
+   Name              Leonard, Harry Ward
+   Alternative names
+   Short description
+   Date of birth     February 8, 1861
+   Place of birth    [93]Cincinnati, Ohio, [94]U.S.A
+   Date of death     February 18, 1915
+   Place of death    [95]New York, [96]U.S.A
+   Retrieved from "[97]http://en.wikipedia.org/wiki/Harry_Ward_Leonard"
+   [98]Categories: [99]American electrical engineers | [100]American
+   inventors | [101]Massachusetts Institute of Technology alumni |
+   [102]1861 births | [103]1915 deaths | [104]People from Cincinnati, Ohio
+
+Personal tools
+
+     * [105]Log in / create account
+
+Namespaces
+
+     * [106]Article
+     * [107]Discussion
+
+Variants
+
+Views
+
+     * [108]Read
+     * [109]Edit
+     * [110]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [111]Main page
+     * [112]Contents
+     * [113]Featured content
+     * [114]Current events
+     * [115]Random article
+     * [116]Donate to Wikipedia
+
+Interaction
+
+     * [117]Help
+     * [118]About Wikipedia
+     * [119]Community portal
+     * [120]Recent changes
+     * [121]Contact Wikipedia
+
+Toolbox
+
+     * [122]What links here
+     * [123]Related changes
+     * [124]Upload file
+     * [125]Special pages
+     * [126]Permanent link
+     * [127]Cite this page
+
+Print/export
+
+     * [128]Create a book
+     * [129]Download as PDF
+     * [130]Printable version
+
+Languages
+
+     * [131]Česky
+     * [132]Deutsch
+     * [133]Nederlands
+     * [134]Polski
+
+     * This page was last modified on 15 November 2010 at 20:04.
+     * Text is available under the [135]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [136]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [137]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [138]Contact us
+
+     * [139]Privacy policy
+     * [140]About Wikipedia
+     * [141]Disclaimers
+
+     * [142]Powered by MediaWiki
+     * [143]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#p-search
+   7. file://localhost/wiki/Cincinnati,_Ohio
+   8. file://localhost/wiki/U.S.A
+   9. file://localhost/wiki/New_York
+  10. file://localhost/wiki/U.S.A
+  11. file://localhost/wiki/United_States
+  12. file://localhost/wiki/Inventor
+  13. file://localhost/wiki/Electrical_engineer
+  14. file://localhost/wiki/Ward_Leonard_motor_control_system
+  15. file://localhost/wiki/The_Franklin_Institute_Awards
+  16. file://localhost/wiki/Electrical_engineer
+  17. file://localhost/wiki/Inventor
+  18. file://localhost/wiki/Ward_Leonard_control
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#Early_life_and_heritage
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#Career
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#The_Ward_Leonard_motor_control_system
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#Sudden_death
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#See_also
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#References
+  25. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=1
+  26. file://localhost/wiki/Cincinnati,_Ohio
+  27. file://localhost/wiki/American_Revolutionary_War
+  28. file://localhost/wiki/Artemas_Ward
+  29. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  30. file://localhost/wiki/The_MIT_Tech
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-0
+  32. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=2
+  33. file://localhost/wiki/Thomas_Edison
+  34. file://localhost/wiki/Electric_power_industry
+  35. file://localhost/wiki/Chicago,_Illinois
+  36. file://localhost/wiki/Railway_electrification_system
+  37. file://localhost/wiki/Power_station
+  38. file://localhost/wiki/Hoboken,_New_Jersey
+  39. http://www.wardleonard.com/
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-1
+  41. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=3
+  42. file://localhost/wiki/Electric_motor
+  43. file://localhost/wiki/Adjustable-speed_drive
+  44. http://en.wiktionary.org/wiki/prime_mover
+  45. file://localhost/wiki/Direct_current
+  46. file://localhost/wiki/Electrical_generator
+  47. file://localhost/wiki/Electric_motor#operation
+  48. file://localhost/wiki/Voltage
+  49. file://localhost/wiki/Potentiometer#high-power_types
+  50. file://localhost/wiki/Electric_current
+  51. file://localhost/wiki/Electric_motor#wound_field_dc_motor
+  52. file://localhost/wiki/Alternating_current
+  53. file://localhost/wiki/Heat_engine
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-2
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-3
+  56. file://localhost/wiki/Elevators
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-4
+  58. file://localhost/wiki/Control_systems
+  59. file://localhost/wiki/Pump
+  60. file://localhost/wiki/Adjustable-speed_drive
+  61. file://localhost/wiki/Electron_tube
+  62. file://localhost/wiki/Thyristor
+  63. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=4
+  64. file://localhost/wiki/American_Institute_of_Electrical_Engineers
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_note-5
+  66. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=5
+  67. file://localhost/wiki/Motor-generator
+  68. file://localhost/wiki/Rotary_transformer
+  69. file://localhost/wiki/Booster_(electric_power)
+  70. file://localhost/wiki/Ward_leonard_control
+  71. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit&section=6
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-0
+  73. http://tech.mit.edu/archives/VOL_036/TECH_V036_S0100_P001.pdf
+  74. http://tech.mit.edu/archives/VOL_036/TECH_V036_S0100_P001.pdf
+  75. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-1
+  76. http://www.westchestergov.com/wcarchives
+  77. http://www.westchestergov.com/wcarchives
+  78. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-2
+  79. file://localhost/wiki/International_Standard_Book_Number
+  80. file://localhost/wiki/Special:BookSources/0-07-057746-3
+  81. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-3
+  82. http://patimg1.uspto.gov/.piw?Docid=00463802&idkey=NONE
+  83. http://patimg1.uspto.gov/.piw?Docid=00463802&idkey=NONE
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-4
+  85. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html#cite_ref-5
+  86. http://history.enotes.com/peoples-chronology/year-1915/energy
+  87. http://history.enotes.com/peoples-chronology/year-1915/energy
+  88. http://worldconnect.genealogy.rootsweb.com/cgi-bin/igm.cgi?op=GET&db=rckline-wards&id=I14813
+  89. http://worldconnect.genealogy.rootsweb.com/cgi-bin/igm.cgi?op=GET&db=rckline-wards&id=I14813
+  90. http://query.nytimes.com/gst/abstract.html?res=950CE6DD1238E633A2575AC1A9649C946496D6CF
+  91. http://query.nytimes.com/gst/abstract.html?res=950CE6DD1238E633A2575AC1A9649C946496D6CF
+  92. file://localhost/wiki/Wikipedia:Persondata
+  93. file://localhost/wiki/Cincinnati,_Ohio
+  94. file://localhost/wiki/U.S.A
+  95. file://localhost/wiki/New_York
+  96. file://localhost/wiki/U.S.A
+  97. http://en.wikipedia.org/wiki/Harry_Ward_Leonard
+  98. file://localhost/wiki/Special:Categories
+  99. file://localhost/wiki/Category:American_electrical_engineers
+ 100. file://localhost/wiki/Category:American_inventors
+ 101. file://localhost/wiki/Category:Massachusetts_Institute_of_Technology_alumni
+ 102. file://localhost/wiki/Category:1861_births
+ 103. file://localhost/wiki/Category:1915_deaths
+ 104. file://localhost/wiki/Category:People_from_Cincinnati,_Ohio
+ 105. file://localhost/w/index.php?title=Special:UserLogin&returnto=Harry_Ward_Leonard
+ 106. file://localhost/wiki/Harry_Ward_Leonard
+ 107. file://localhost/wiki/Talk:Harry_Ward_Leonard
+ 108. file://localhost/wiki/Harry_Ward_Leonard
+ 109. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=edit
+ 110. file://localhost/w/index.php?title=Harry_Ward_Leonard&action=history
+ 111. file://localhost/wiki/Main_Page
+ 112. file://localhost/wiki/Portal:Contents
+ 113. file://localhost/wiki/Portal:Featured_content
+ 114. file://localhost/wiki/Portal:Current_events
+ 115. file://localhost/wiki/Special:Random
+ 116. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 117. file://localhost/wiki/Help:Contents
+ 118. file://localhost/wiki/Wikipedia:About
+ 119. file://localhost/wiki/Wikipedia:Community_portal
+ 120. file://localhost/wiki/Special:RecentChanges
+ 121. file://localhost/wiki/Wikipedia:Contact_us
+ 122. file://localhost/wiki/Special:WhatLinksHere/Harry_Ward_Leonard
+ 123. file://localhost/wiki/Special:RecentChangesLinked/Harry_Ward_Leonard
+ 124. file://localhost/wiki/Wikipedia:Upload
+ 125. file://localhost/wiki/Special:SpecialPages
+ 126. file://localhost/w/index.php?title=Harry_Ward_Leonard&oldid=396968124
+ 127. file://localhost/w/index.php?title=Special:Cite&page=Harry_Ward_Leonard&id=396968124
+ 128. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Harry+Ward+Leonard
+ 129. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Harry+Ward+Leonard&oldid=396968124&writer=rl
+ 130. file://localhost/w/index.php?title=Harry_Ward_Leonard&printable=yes
+ 131. http://cs.wikipedia.org/wiki/Harry_Ward_Leonard
+ 132. http://de.wikipedia.org/wiki/Harry_Ward_Leonard
+ 133. http://nl.wikipedia.org/wiki/Harry_Ward_Leonard
+ 134. http://pl.wikipedia.org/wiki/Harry_Ward_Leonard
+ 135. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 136. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 137. http://www.wikimediafoundation.org/
+ 138. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 139. http://wikimediafoundation.org/wiki/Privacy_policy
+ 140. file://localhost/wiki/Wikipedia:About
+ 141. file://localhost/wiki/Wikipedia:General_disclaimer
+ 142. http://www.mediawiki.org/
+ 143. http://wikimediafoundation.org/
+
+   Hidden links:
+ 144. file://localhost/wiki/File:Replace_this_image_male.svg
+ 145. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/harry_ward_leonard.html
+ 147. file://localhost/wiki/Main_Page
+ 148. http://creativecommons.org/licenses/by-sa/3.0/

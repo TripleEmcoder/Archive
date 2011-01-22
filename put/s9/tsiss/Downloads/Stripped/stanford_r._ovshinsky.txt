@@ -1,0 +1,832 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Stanford R. Ovshinsky
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                       Stanford R. Ovshinsky
+   Stanford R. Ovshinsky, August 2005
+      Born    Stanford R. Ovshinsky
+              November 24, 1922 (1922-11-24) (age 88)
+              [7]Akron, Ohio, [8]U.S.A.
+   Occupation American [9]inventor and [10]scientist
+     Spouse   [11]Norma Rifkin, [12]Iris Ovshinsky, [13]Rosa Young
+
+   Stanford R. Ovshinsky (born November 24, 1922, in Akron, Ohio) is an
+   American [14]inventor and [15]scientist who has been granted
+   approximately 400 [16]patents over the last fifty years, mostly in the
+   areas of energy or information.^[17][1] Many of his inventions have had
+   wide ranging applications. Among the most prominent are: an
+   environmentally friendly [18]nickel-metal hydride battery, which has
+   been widely used in [19]laptop computers, [20]digital cameras, [21]cell
+   phones, and [22]electric and [23]hybrid cars; continuous web
+   multi-junction flexible thin-film [24]solar energy laminates and
+   panels; flat screen [25]liquid crystal displays; rewritable [26]CD and
+   [27]DVD computer memories; [28]hydrogen fuel cells; and nonvolatile
+   phase-change [29]electronic memories.^[30][2] Ovshinsky opened the
+   scientific field of amorphous and disordered materials in the course of
+   his research in the 1940s and 50s in [31]neurophysiology, neural
+   disease, the nature of intelligence in mammals and machines, and
+   [32]cybernetics.^[33][3] [34]Amorphous silicon [35]semiconductors have
+   become the basis of many technologies and industries. Ovshinsky is also
+   distinguished in being [36]self-taught, without formal college or
+   graduate training.^[37][4] Throughout his life, his love for science
+   and his social convictions were the primary engines for his inventive
+   work.^[38][5]
+
+   In 1960 Ovshinsky and his soon-to-be second wife, [39]Iris Dibner,
+   founded Energy Conversion Laboratory in a storefront in [40]Detroit,
+   dedicating the laboratory to the solution of important societal
+   problems using science and technology.^[41][6] Focusing on the critical
+   areas of energy and information, their new company, reconstituted in
+   1964 as [42]Energy Conversion Devices (ECD), went on to become a
+   forefront invention and development laboratory whose products have
+   built new industries, many of them aimed at making [43]fossil fuel
+   obsolete. ECD continues (through joint ventures and license partners)
+   to be a leading [44]solar energy and [45]battery production
+   firm.^[46][7]
+
+   Roughly a year after Iris Ovshinsky's death in August 2006, Ovshinsky
+   left ECD and established a new company, Ovshinsky Innovation LLC,
+   devoted to developing the scientific basis for highly innovative and
+   revolutionary energy and information technologies. In October 2007 he
+   married Rosa Young, a physicist who had worked at ECD on numerous
+   energy technologies including a hydrogen-powered hybrid car and on
+   Ovshinsky’s vision of a hydrogen-based economy.
+
+   Contents
+
+        * [47]1 Early life
+        * [48]2 Work through the 1950s
+             + [49]2.1 Work as a machinist and the Benjamin Center Drive
+             + [50]2.2 Intelligent machines
+             + [51]2.3 The Ovitron
+        * [52]3 Work from 1960
+             + [53]3.1 Energy Conversion Laboratory
+             + [54]3.2 Energy conversion devices
+             + [55]3.3 Ovshinsky Innovation LLC
+        * [56]4 Honors and awards
+        * [57]5 In popular culture
+        * [58]6 Notes
+        * [59]7 Bibliography
+        * [60]8 External links
+
+[[61]edit] Early life
+
+   Ovshinsky was born and grew up in the industrial town of [62]Akron,
+   Ohio, then at the center of the American rubber industry. The elder son
+   of working-class Jewish immigrant parents who escaped [63]Eastern
+   Europe around 1905—Benjamin Ovshinsky from [64]Lithuania and Bertha
+   Munitz from what is now [65]Belarus—Ovshinsky became active in social
+   activities at an early age during the [66]Great Depression.^[67][8] His
+   lifelong concern to better the lives of workers and minorities, as well
+   as to advance culture and the interests of industry, derive largely
+   from his father, who was a generous, liberal, and highly cultured
+   activist. With his horse and wagon, and later his truck, Ben Ovshinsky
+   made his living collecting [68]metal scrap from [69]factories and
+   [70]foundries.^[71][9] Based on his father's example, and on teachings
+   offered by the Akron [72]Workmen's Circle, an organization mainly of
+   Jewish immigrants who believed in [73]social justice, Stan Ovshinsky
+   developed a deep commitment to social values, including [74]labor
+   rights, [75]civil rights and [76]civil liberties.^[77][10]
+
+[[78]edit] Work through the 1950s
+
+[[79]edit] Work as a machinist and the Benjamin Center Drive
+
+   Before graduating from high school in June 1941, he worked as a
+   [80]tool maker and [81]machinist in various local shops affiliated with
+   the rubber industry.^[82][11] During the [83]Second World War, he and
+   his bride Norma Rifkin moved to [84]Arizona where Stan worked for a
+   time in the tool room of a Goodyear plant in Litchfield, not far from
+   [85]Phoenix. Returning to [86]Akron shortly before the end of the war,
+   Ovshinsky eventually established his own machine company, Stanford
+   Roberts, initially in a barn.^[87][12] There he developed and patented
+   his first invention, the Benjamin Center Drive, named after his
+   father.^[88][13] This unique automatic high-speed center drive
+   [89]lathe had many important uses. After Ovshinsky sold his company to
+   the New Britain Machine Company in [90]Connecticut, it was used to help
+   solve the national crisis of making [91]artillery shells in large
+   enough volume for wartime needs during the [92]Korean War. Meanwhile
+   Ovshinsky continued to develop his growing interest in human and
+   machine intelligence, avidly studying the research literature on
+   [93]neurophysiology, neurological disease, and [94]cybernetics,
+   corresponding briefly with [95]Norbert Wiener.^[96][14]
+
+[[97]edit] Intelligent machines
+
+   In 1951, Ovshinsky accepted an offer to move to [98]Detroit and work in
+   the [99]automotive industry as the director of research at the Hupp
+   Motorcar Company. Continuing his work on intelligent machines he
+   invented electric power steering, but Hupp’s president was opposed to
+   completing the arrangements with [100]General Motors to utilize the
+   product. Not long after that, Stan and his younger brother Herb
+   Ovshinsky, a talented [101]mechanical engineer, established a small
+   company called General Automation in a Detroit storefront. There Stan
+   continued his study of intelligent machines and embarked on early
+   research and development of various energy and information
+   technologies. At the same time began studying [102]neurophysiology and
+   neurological diseases.^[103][15] On the basis of his early writings
+   about [104]nerve impulses and the nature of intelligence he was in June
+   1955 invited by [105]Wayne Medical School to participate in pioneering
+   experimental research on the mammalian cerebellum.
+
+[[106]edit] The Ovitron
+
+   By the late 1950s, working at General Automation, Ovshinsky brought
+   together these disparate studies in an [107]invention. Crossing
+   [108]scientific disciplines that [109]academics traditionally hold
+   separate, including [110]neurophysiology and [111]cybernetics, Stan
+   invented and Herb Ovshinsky helped build a mechanical model of a
+   [112]nerve cell, an amorphous thin-film switch they called the Ovitron.
+   Stan [113]patented the device and the brothers disclosed it publicly in
+   1959 in New York City. In an attempt to model the learning ability of
+   nerve cells, which Stan recognized as deriving from the [114]plasticity
+   of the cell's membrane, he drew on his knowledge of surfaces and
+   materials to fashion very thin layers of amorphous material, thus
+   pioneering the use of [115]nanostructures. He created these layers by
+   combining elements, especially from the [116]Group 16 elements under
+   [117]oxygen, known as [118]chalcogenides, including [119]sulphur,
+   [120]selenium, and [121]tellurium. He would continue to work with
+   chalcogenides in his inventions for decades to come.^[122][16]
+
+[[123]edit] Work from 1960
+
+[[124]edit] Energy Conversion Laboratory
+
+   On January 1, 1960, Ovshinsky and Iris Miroy Dibner, whom Stan married
+   soon after his divorce from Norma Rifkin, founded Energy Conversion
+   Laboratory to develop Stan’s inventions in the interest of solving
+   societal problems, especially those they identified in the areas of
+   information and energy, for example, pollution and wars over oil.
+   ^[125][17] Iris had a BA in [126]Zoology from [127]Swarthmore College,
+   an MS in [128]Biology from the [129]University of Michigan, and a PhD
+   in [130]Biochemistry from [131]Boston University.^[132][18] Continuing
+   to work on his atomically designed chalcogenide materials, which
+   Ovshinsky realized offer unique electronic physical mechanisms,
+   Ovshinsky utilized chain structures, cross links, polymeric concepts,
+   and divalent structural bonding with a huge number of unbounded lone
+   pairs to achieve what is now referred to as the Ovshinsky Effect, “an
+   effect that turns special types of glassy, thin films into
+   semiconductors upon application of low voltage.”^[133][19] Applying
+   this effect he built new types of electronic and optical switches,
+   including his Ovonic Phase Change Memory and his Threshold Switch. The
+   former would become the basis of his subsequent inventions of
+   rewritable CDs and DVDs and other new computer technologies including
+   his cognitive computer.^[134][20] While others working in the
+   crystalline field were building devices based on bulk materials,
+   Ovshinsky’s work in the 1960s and later continued to be based on
+   [135]thin films and nanostructures.^[136][21] Recognizing the
+   significance of his results, Ovshinsky applied for a patent on June 21,
+   1961 and in 1962 made his first licensing pact on [137]phase change
+   memory.
+
+[[138]edit] Energy conversion devices
+
+   By the spring of 1963, the Ovshinskys had exhausted the savings with
+   which they had initially funded ECL. Before seeking public funding,
+   Stan wanted validation of the importance of his work from a
+   well-recognized scientist. He telephoned [139]John Bardeen, a co
+   inventor of the [140]transistor and codiscoverer of the [141]BCS theory
+   of superconductivity, by this time a [142]Nobel Laureate. Bardeen
+   immediately recognized the importance of Ovshinsky’s result but his
+   schedule did not permit him to visit ECL for five months. Stan replied,
+   “We’ll be broke by then.”^[143][22] Instead Bardeen sent [144]Hellmut
+   Fritzsche, a [145]University of Chicago physicist. Fritzsche became
+   very positive in his support of Ovshinsky’s work and helped attract
+   other scientists to the Ovshinsky laboratory. As Fritzsche and Brian
+   Schwartz later wrote, “There is a mysterious quality in Ovshinsky’s
+   persona that attracts people into his sphere, builds life long
+   friendships and awakens deep respect and devotion. Meeting him leaves
+   each person with a deep impression of his superior intellect, his self
+   confidence, his compassion to improve society combined with his
+   certainty that his vision can be realized. His enthusiasm is
+   contagious. In his presence, you feel how exciting it would be to join
+   him in his endeavors.”^[146][23] Among the many famous scientists who
+   came regularly to ECD as friends or collaborators over the next years,
+   were [147]David Adler, Bardeen, Arthur Bienenstock, Morrel Cohen,
+   [148]Kenichi Fukui, [149]William Lipscomb, [150]Sir Nevill Mott,
+   [151]Linus Pauling, [152]Isadore I. Rabi, [153]Edward Teller,
+   [154]David Turnbull, [155]Victor Weisskopf, and [156]Robert R.
+   Wilson.^[157][24] Some joined as consultants or as members of the Board
+   of Directors. Meanwhile, the ECD community developed a uniquely
+   productive nonhierarchical multicultural and international culture
+   reflecting Stan and Iris’ social values. In 1964, Stan and Iris changed
+   the laboratory’s name to Energy Conversion Devices, at the time when
+   the company moved to larger quarters in [158]Troy, Michigan.
+
+   The laboratory continued to develop electronic memories, batteries, and
+   solar cells, reinvesting almost every penny of profit into the
+   scientific study of a wide variety of problems, many of which later
+   became the basis of lucrative industries, e.g., flat screen [159]liquid
+   crystal displays. In time license fees to ECD began to grow, especially
+   when amorphous silicon was used to make solar cells “by the mile,” with
+   an approach that originated from the non-silver photographic film work
+   on which Ovshinsky had been working.^[160][25] It led to the bold
+   approach of using the first continuous web photovoltaic machine,
+   designed and built under Stan’s direction by Herb Ovshinsky and a small
+   group in the machine division. Generations of machines later resulted
+   in sufficient monies to build Ovshinsky’s objective of having a 30
+   megawatt machine rather than a 5 megawatt machine. Despite considerable
+   skepticism toward the machine, it is now being cloned very successfully
+   by ECD in new plants.^[161][26] ECD also gained profits from the nickel
+   metal hydride batteries which were important for a time in laptop
+   computers and continue to be important in [162]hybrid gas-electric
+   automobiles.^[163][27]
+
+[[164]edit] Ovshinsky Innovation LLC
+
+   On August 16, 2006, Iris Ovshinsky, Stan's wife and partner of almost
+   fifty years, died suddenly while swimming.^[165][28] A year later
+   Ovshinsky retired from ECD and Ovshinsky launched a new company
+   together with Rosa Young, whom he later married. At Ovshinsky
+   Innovation LLC, Stan is continuing his work on information and energy
+   science, in strong relationships with colleagues and with industrial
+   partners (for example, Ovonyx, which is developing phase-change
+   semiconductor memory). Ovshinsky Innovation is focusing presently on a
+   new kind of photovoltaic plant based on a new concept promising to
+   lower the cost of photovoltaic energy sources below that of
+   coal.^[166][29] This latter innovation would help realize Ovshinsky's
+   long-term goal over the last half-century to make fossil fuels obsolete
+   while at the same time providing countless jobs in new industries. And
+   ECD is becoming recognized as the company that "developed solar roofing
+   shingles in the 1980s," is making "the best available flexible thin
+   film in the world," and is one of the first companies to work on
+   [167]building-integrated photovoltaics ([168]BIPV) ^[169][30] Because
+   of Ovshinsky’s independent and radical contributions to science, he has
+   been compared with [170]Einstein.^[171][31] Because of his many
+   inventions in [172]digital memory, [173]solar energy, battery
+   technology, optical media, and solid hydrogen storage and his hundreds
+   of basic scientific patents, he has often been compared with
+   [174]Thomas Edison.^[175][32] In the area of alternatives to fossil
+   fuel, his pioneering work has caused many writers to refer to him as
+   “the modern world’s most important energy visionary.”^[176][33]
+
+[[177]edit] Honors and awards
+
+   With more than 300 publications on his scientific vitae, Ovshinsky has
+   won many prizes for his contributions to science and
+   innovation.^[178][34] He is a fellow of the [179]American Physical
+   Society, the [180]American Association for the Advancement of Science
+   and the [181]Engineering Society of Detroit. His awards include: the
+   2005 Innovation Award for Energy and the Environment by [182]The
+   Economist; the [183]American Solar Energy Society Hoyt Clarke Hottel
+   Award; the Karl W. Böer Solar Energy Medal of Merit; the International
+   Association for Hydrogen Energy Sir William Grove Award; the Frederick
+   Douglass/Eugene V. Debs Award (2006); and the 2009 Thomas Midgley Award
+   from the Detroit Section of the American Chemical Society.
+
+   He was named “Hero for the Planet" by [184]TIME magazine (1999), with
+   Iris Ovshinsky Hero of Chemistry 2000 by the [185]American Chemical
+   Society, and he was inducted into the 2005 Solar Hall of Fame.
+
+   In 1968, he received the Diesel Gold Medal presented by the German
+   Inventors Association (Deutscher Erfinderverband), in recognition of
+   his discovery of the semiconductor switching effect in disordered and
+   amorphous materials.
+
+   On December 11, 2010 Ovshinsky was awarded an Honorary Doctorate of
+   Engineering degree from [186]Kettering University, [187]Flint,
+   Michigan. ^[188][35]
+
+   On May 1, 2010 Ovshinsky was awarded an Honorary Doctorate of Science
+   degree from [189]University of Michigan, [190]Ann Arbor, Michigan.
+
+   On May 7, 2009, Ovshinsky was awarded an [191]Honorary Doctorate in
+   Science from [192]Wayne State University, [193]Detroit, Michigan.
+
+   On May 16, 2009, Ovshinsky was awarded an Honorary Doctorate of
+   Engineering from [194]Illinois Institute of Technology, [195]Chicago,
+   Illinois.
+
+   On June 30, 2009, Ovshinsky was awarded an Honorary Doctorate from
+   [196]Ovidius University, [197]Constanţa, [198]Romania.
+
+   On May 18, 2008, Ovshinsky was awarded an Honorary Doctorate of Science
+   from [199]New York Institute of Technology, Old Westbury, New York.
+
+   On May 8, 2007, Ovshinsky was awarded an Honorary Doctorate of Science
+   from [200]Kean University, Union, New Jersey.
+
+[[201]edit] In popular culture
+
+   Ovshinsky appeared in the documentary [202]Who Killed the Electric Car?
+   as well as in parts 1 and 3 of the episode "Hydrogen Hopes" of
+   [203]Alan Alda’s television series [204]Scientific American Frontiers.
+   The website of Scientific American Frontiers makes "Hydrogen Hopes"
+   available for viewing at no charge, as well as the text of an interview
+   with Stan and Iris Ovshinsky.[205][1] Ovshinsky was profiled as
+   “Japan’s American Genius” in the PBS series [206]NOVA (October 1987).
+
+[[207]edit] Notes
+
+    1. [208]^ Avery Cohn, "A Revolution Fueled by the Sun," Berkeley
+       Review of Latin American Studies (Spring 2008): 22.
+    2. [209]^ "The Edison of our Age?" The Economist, December 2, 2006,
+       33-34; Hellmut Fritzsche and Brian Schwartz, Stanford R. Ovshinsky:
+       The Science and Technology of an American Genius (Singapore: World
+       Scientific, 2008), 1.
+    3. [210]^ "The Edison of our Age?"; Fritzsche and Schwartz, 3, 5, 51.
+    4. [211]^ Ibid.
+    5. [212]^ Ibid.
+    6. [213]^ Ibid.
+    7. [214]^ John Fialka, "Power Surge: After Decades, A Solar Pioneer
+       Sees Spark in Sales" Wall Street Journal, November 27, 2006; >"The
+       Edison of our Age?"
+    8. [215]^ George S. Howard, Stan Ovshinsky and the Hydrogen
+       Economy:…Creating a Better World (Notre Dame: Academic
+       Publications, 2006), 13, 15.
+    9. [216]^ "The Edison of our Age?" 33-34.
+   10. [217]^ Howard, 14.
+   11. [218]^ Ibid., 23.
+   12. [219]^ Margot Hornblower, "Listen, Detroit: You'll Get a Charge Out
+       of This," Time, Heroes for the Planet, February 22, 1999, 80.
+   13. [220]^ Howard, 50.
+   14. [221]^ Interview with Stanford and Iris Ovshinsky by Lillian
+       Hoddeson, January 4-5, 2006, July 19-20, 2006, and August 16, 2006,
+       available in Hoddeson's private collection, Urbana, IL.
+   15. [222]^ Fritzsche and Schwartz, 3.
+   16. [223]^ Interview with Stanford and Iris Ovshinsky by Lillian
+       Hoddeson.
+   17. [224]^ Vijay V. Vaitheeswaran, "Invent," The New York Times
+       Magazine, April 20, 2008, The green issue.
+   18. [225]^ Howard, 17.
+   19. [226]^ v 1.1 of the Random House Unabridged Dictionary, 2006.
+   20. [227]^ "The Edison of our Age?
+   21. [228]^ Ibid.
+   22. [229]^ Interview with Stanford and Iris Ovshinsky by Lillian
+       Hoddeson.
+   23. [230]^ Fritzsche and Schwartz, 3.
+   24. [231]^ Howard, 68-69; Fritzsche and Schwartz, 3.; "The Edison of
+       our Time?"; Harley Shaiken, "The Einstein of alternative energy?"
+       Berkeley Review of Latin American Studies (Spring 2008): 28-29.
+   25. [232]^ "The Edison of our Age?" 33-34.
+   26. [233]^ Vaitheeswaran, "Invent,"
+   27. [234]^ Ibid.; "The Edison of our Age?"
+   28. [235]^ Jeremy W. Peters, "Iris M. Ovshinsky, 79, Partner in Cleaner
+       Auto Technology, is Dead," New York Times, September 5, 2006.
+   29. [236]^ Interview with Stanford and Iris Ovshinsky by Lillian
+       Hoddeson.
+   30. [237]^ Jennifer Kho, "Energy Conversion Devices' turnaround: Is
+       BIPV finally ready to take off?" Renewable Energy World, January 16
+       2009 and Dominique Browning, "Extreme Makeover: White House
+       Edition," The Wall Street Journal, January 16, 2009, W1.
+   31. [238]^ Harley Shaiken, "The Einstein of alternative energy?" and
+       Harley Shaiken, "Jumpstarting the Americas," Berkeley Review of
+       Latin American Studies (Fall 2008): 2-7.
+   32. [239]^ "The Edison of our Age?"; "Invent," The New York Times
+       Magazine, April 20, 2008, The Green Issue; Fritzsche and Schwartz,
+       1.
+   33. [240]^ Iain Carson and Vijay V. Vaitheeswaran, Zoom: The Global
+       Race to Fuel the Car of the Future (Hachette, NY: Twelve, 2007), 5.
+   34. [241]^ Cohn, 22.
+   35. [242]^ Beata Mostafavi (09 December 2010). [243]"Kettering
+       University and University of Michigan-Flint to hold commencement
+       ceremonies; Energy icon Stanford Ovshinsky to be honored". The
+       Flint Journal.
+       [244]http://www.mlive.com/news/flint/index.ssf/2010/12/kettering_un
+       iversity_and_unive.html. Retrieved 27 December 2010.
+
+[[245]edit] Bibliography
+
+     * Herbert, Bob. "Signs of Hope" The New York Times Magazine, November
+       24, 2009.
+     * Carson, Iain and Vijay Vaitheeswaran. Zoom: The Global Race to Fuel
+       the Car of the Future. Hachette, New York: Twelve, 2007.
+     * Cohn, Avery. "A Revolution Fueled by the Sun" Berkeley Review of
+       Latin American Studies (Spring 2008): 22-24.
+     * "The Edison of our Age?" The Economist, December 2, 2006.[246][2]
+     * Fialka, John. "Power Surge: After Decades, A Solar Pioneer Sees
+       Spark in Sales." Wall Street Journal, November 27, 2006.
+     * Fritzsche, Hellmut, and Brian Schwartz. Stanford R. Ovshinsky: The
+       Science and Technology of an American Genius. Singapore: World
+       Scientific Publishing Co., 2008.
+     * Hornblower, Margot. "Listen, Detroit: You'll Get a Charge Out of
+       This." TIME, February 22, 1999, Heroes for the Planet.[247][3]
+     * Howard, George S. Stan Ovshinsky and the Hydrogen Economy:…Creating
+       a Better World. Notre Dame: Academic Publications, 2006.
+     * Kridel, Tim. "Meet Stan Ovshinsky, the Energy Genius." Mother Earth
+       News (October/ November 2006), Issue 218.[248][4]
+     * Kho, Jennifer. "Energy Conversion Devices' Turnaround: Is BIPV
+       Finally Ready to Take Off?" Renewable Energy World, January 16,
+       2009.[249][5]
+     * Shaiken, Harley. "The Einstein of Alternative Energy?" Berkeley
+       Review of Latin American Studies (Spring 2008): 28-31.
+     * Shaiken, Harley. "Jumpstarting the Americas." Berkeley Review of
+       Latin American Studies (Fall 2008): 2-7.
+     * Vaitheeswaran, Vijay V. "Invent." The New York Times Magazine,
+       April 20, 2008, The Green Issue.[250][6]
+     * Carlisle, Norman. "The Ovshinsky Invention" Science & Mechanics,
+       (February 1970): 38-40.
+
+[[251]edit] External links
+
+   Wikimedia Commons has media related to: [252]Stanford Ovshinsky
+     * [253]An overview of Stan and Iris's complete system to eliminate
+       fossil fuel.
+     * [254]Henry Ford's OnInnovation featuring Stanford Ovshinsky.
+     * [255]Alternative Energy and the Americas, April 8, 2008.
+
+                  [256]Persondata
+   Name              Ovshinsky, Stanford R.
+   Alternative names
+   Short description
+   Date of birth     November 24, 1922
+   Place of birth    [257]Akron, Ohio, [258]U.S.A.
+   Date of death
+   Place of death
+   Retrieved from
+   "[259]http://en.wikipedia.org/wiki/Stanford_R._Ovshinsky"
+   [260]Categories: [261]1922 births | [262]American engineers |
+   [263]American inventors | [264]Living people | [265]People from Akron,
+   Ohio | [266]Jewish inventors
+   Hidden categories: [267]Articles with hCards
+
+Personal tools
+
+     * [268]Log in / create account
+
+Namespaces
+
+     * [269]Article
+     * [270]Discussion
+
+Variants
+
+Views
+
+     * [271]Read
+     * [272]Edit
+     * [273]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [274]Main page
+     * [275]Contents
+     * [276]Featured content
+     * [277]Current events
+     * [278]Random article
+     * [279]Donate to Wikipedia
+
+Interaction
+
+     * [280]Help
+     * [281]About Wikipedia
+     * [282]Community portal
+     * [283]Recent changes
+     * [284]Contact Wikipedia
+
+Toolbox
+
+     * [285]What links here
+     * [286]Related changes
+     * [287]Upload file
+     * [288]Special pages
+     * [289]Permanent link
+     * [290]Cite this page
+
+Print/export
+
+     * [291]Create a book
+     * [292]Download as PDF
+     * [293]Printable version
+
+Languages
+
+     * [294]Português
+
+     * This page was last modified on 13 January 2011 at 21:40.
+     * Text is available under the [295]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [296]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [297]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [298]Contact us
+
+     * [299]Privacy policy
+     * [300]About Wikipedia
+     * [301]Disclaimers
+
+     * [302]Powered by MediaWiki
+     * [303]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#p-search
+   7. file://localhost/wiki/Akron,_Ohio
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/Inventor
+  10. file://localhost/wiki/Scientist
+  11. file://localhost/w/index.php?title=Norma_Rifkin&action=edit&redlink=1
+  12. file://localhost/wiki/Iris_Ovshinsky
+  13. file://localhost/w/index.php?title=Rosa_Young&action=edit&redlink=1
+  14. file://localhost/wiki/Inventor
+  15. file://localhost/wiki/Scientist
+  16. file://localhost/wiki/Patents
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-0
+  18. file://localhost/wiki/Nickel-metal_hydride_battery
+  19. file://localhost/wiki/Laptop_computer
+  20. file://localhost/wiki/Digital_camera
+  21. file://localhost/wiki/Cell_phone
+  22. file://localhost/wiki/Electric_car
+  23. file://localhost/wiki/Hybrid_car
+  24. file://localhost/wiki/Photovoltaics
+  25. file://localhost/wiki/Liquid_crystal_display
+  26. file://localhost/wiki/CD
+  27. file://localhost/wiki/DVD
+  28. file://localhost/wiki/Hydrogen_fuel_cell
+  29. file://localhost/wiki/Computer_data_storage
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-1
+  31. file://localhost/wiki/Neurophysiology
+  32. file://localhost/wiki/Cybernetics
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-2
+  34. file://localhost/wiki/Amorphous
+  35. file://localhost/wiki/Semiconductors
+  36. file://localhost/wiki/Self-taught
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-3
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-4
+  39. file://localhost/wiki/Iris_M._Ovshinsky
+  40. file://localhost/wiki/Detroit
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-5
+  42. file://localhost/wiki/Energy_Conversion_Devices
+  43. file://localhost/wiki/Fossil_fuel
+  44. file://localhost/wiki/Solar_power
+  45. file://localhost/wiki/Battery_(electricity)
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-6
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Early_life
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Work_through_the_1950s
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Work_as_a_machinist_and_the_Benjamin_Center_Drive
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Intelligent_machines
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#The_Ovitron
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Work_from_1960
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Energy_Conversion_Laboratory
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Energy_conversion_devices
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Ovshinsky_Innovation_LLC
+  56. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Honors_and_awards
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#In_popular_culture
+  58. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Notes
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#Bibliography
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#External_links
+  61. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=1
+  62. file://localhost/wiki/Akron,_Ohio
+  63. file://localhost/wiki/Eastern_Europe
+  64. file://localhost/wiki/Lithuania
+  65. file://localhost/wiki/Belarus
+  66. file://localhost/wiki/Great_Depression
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-7
+  68. file://localhost/wiki/Scrap_metal
+  69. file://localhost/wiki/Factories
+  70. file://localhost/wiki/Foundries
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-8
+  72. file://localhost/wiki/Workmen%27s_Circle
+  73. file://localhost/wiki/Social_justice
+  74. file://localhost/wiki/Labor_rights
+  75. file://localhost/wiki/Civil_rights
+  76. file://localhost/wiki/Civil_liberties
+  77. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-9
+  78. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=2
+  79. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=3
+  80. file://localhost/wiki/Tool_maker
+  81. file://localhost/wiki/Machinist
+  82. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-10
+  83. file://localhost/wiki/Second_World_War
+  84. file://localhost/wiki/Arizona
+  85. file://localhost/wiki/Phoenix,_Arizona
+  86. file://localhost/wiki/Akron
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-11
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-12
+  89. file://localhost/wiki/Lathe
+  90. file://localhost/wiki/Connecticut
+  91. file://localhost/wiki/Artillery_shells
+  92. file://localhost/wiki/Korean_War
+  93. file://localhost/wiki/Neurophysiology
+  94. file://localhost/wiki/Cybernetics
+  95. file://localhost/wiki/Norbert_Wiener
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-13
+  97. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=4
+  98. file://localhost/wiki/Detroit
+  99. file://localhost/wiki/Automotive_industry
+ 100. file://localhost/wiki/General_Motors
+ 101. file://localhost/wiki/Mechanical_engineer
+ 102. file://localhost/wiki/Neurophysiology
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-14
+ 104. file://localhost/wiki/Nerve_impulses
+ 105. file://localhost/wiki/Wayne_State_Medical_School
+ 106. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=5
+ 107. file://localhost/wiki/Invention
+ 108. file://localhost/wiki/Academic_discipline
+ 109. file://localhost/wiki/Academics
+ 110. file://localhost/wiki/Neurophysiology
+ 111. file://localhost/wiki/Cybernetics
+ 112. file://localhost/wiki/Nerve_cell
+ 113. file://localhost/wiki/Patented
+ 114. file://localhost/wiki/Neuroplasticity
+ 115. file://localhost/wiki/Nanostructures
+ 116. file://localhost/wiki/Group_16_elements
+ 117. file://localhost/wiki/Oxygen
+ 118. file://localhost/wiki/Chalcogenides
+ 119. file://localhost/wiki/Sulphur
+ 120. file://localhost/wiki/Selenium
+ 121. file://localhost/wiki/Tellurium
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-15
+ 123. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=6
+ 124. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=7
+ 125. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-16
+ 126. file://localhost/wiki/Zoology
+ 127. file://localhost/wiki/Swarthmore_College
+ 128. file://localhost/wiki/Biology
+ 129. file://localhost/wiki/University_of_Michigan
+ 130. file://localhost/wiki/Biochemistry
+ 131. file://localhost/wiki/Boston_University
+ 132. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-17
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-18
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-19
+ 135. file://localhost/wiki/Thin_films
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-20
+ 137. file://localhost/wiki/Phase_change_memory
+ 138. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=8
+ 139. file://localhost/wiki/John_Bardeen
+ 140. file://localhost/wiki/Transistor
+ 141. file://localhost/wiki/BCS_theory
+ 142. file://localhost/wiki/Nobel_Laureate
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-21
+ 144. file://localhost/wiki/Hellmut_Fritzsche
+ 145. file://localhost/wiki/University_of_Chicago
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-22
+ 147. file://localhost/wiki/David_Adler_(physicist)
+ 148. file://localhost/wiki/Kenichi_Fukui
+ 149. file://localhost/wiki/William_Lipscomb
+ 150. file://localhost/wiki/Sir_Nevill_Mott
+ 151. file://localhost/wiki/Linus_Pauling
+ 152. file://localhost/wiki/Isadore_I._Rabi
+ 153. file://localhost/wiki/Edward_Teller
+ 154. file://localhost/wiki/David_Turnbull_(materials_scientist)
+ 155. file://localhost/wiki/Victor_Weisskopf
+ 156. file://localhost/wiki/Robert_R._Wilson
+ 157. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-23
+ 158. file://localhost/wiki/Troy,_Michigan
+ 159. file://localhost/wiki/Liquid_crystal_displays
+ 160. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-24
+ 161. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-25
+ 162. file://localhost/wiki/Hybrid_vehicle
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-26
+ 164. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=9
+ 165. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-27
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-28
+ 167. file://localhost/wiki/Building-integrated_photovoltaics
+ 168. file://localhost/wiki/BIPV
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-29
+ 170. file://localhost/wiki/Einstein
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-30
+ 172. file://localhost/wiki/Digital_memory
+ 173. file://localhost/wiki/Solar_energy
+ 174. file://localhost/wiki/Thomas_Edison
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-31
+ 176. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-32
+ 177. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=10
+ 178. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-33
+ 179. file://localhost/wiki/American_Physical_Society
+ 180. file://localhost/wiki/American_Association_for_the_Advancement_of_Science
+ 181. file://localhost/wiki/Engineering_Society_of_Detroit
+ 182. file://localhost/wiki/The_Economist
+ 183. file://localhost/wiki/American_Solar_Energy_Society
+ 184. file://localhost/wiki/TIME
+ 185. file://localhost/wiki/American_Chemical_Society
+ 186. file://localhost/wiki/Kettering_University
+ 187. file://localhost/wiki/Flint,_Michigan
+ 188. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_note-34
+ 189. file://localhost/wiki/University_of_Michigan
+ 190. file://localhost/wiki/Ann_Arbor,_Michigan
+ 191. file://localhost/wiki/Honorary_Doctorate
+ 192. file://localhost/wiki/Wayne_State_University
+ 193. file://localhost/wiki/Detroit,_Michigan
+ 194. file://localhost/wiki/Illinois_Institute_of_Technology
+ 195. file://localhost/wiki/Chicago,_Illinois
+ 196. file://localhost/wiki/Ovidius_University
+ 197. file://localhost/wiki/Constan%C5%A3a
+ 198. file://localhost/wiki/Romania
+ 199. file://localhost/wiki/New_York_Institute_of_Technology
+ 200. file://localhost/wiki/Kean_University
+ 201. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=11
+ 202. file://localhost/wiki/Who_Killed_the_Electric_Car%3F
+ 203. file://localhost/wiki/Alan_Alda
+ 204. file://localhost/wiki/Scientific_American_Frontiers
+ 205. http://www.pbs.org/saf/1506/
+ 206. file://localhost/wiki/Nova_(TV_series)
+ 207. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=12
+ 208. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-0
+ 209. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-1
+ 210. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-2
+ 211. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-3
+ 212. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-4
+ 213. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-5
+ 214. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-6
+ 215. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-7
+ 216. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-8
+ 217. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-9
+ 218. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-10
+ 219. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-11
+ 220. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-12
+ 221. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-13
+ 222. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-14
+ 223. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-15
+ 224. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-16
+ 225. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-17
+ 226. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-18
+ 227. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-19
+ 228. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-20
+ 229. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-21
+ 230. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-22
+ 231. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-23
+ 232. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-24
+ 233. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-25
+ 234. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-26
+ 235. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-27
+ 236. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-28
+ 237. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-29
+ 238. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-30
+ 239. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-31
+ 240. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-32
+ 241. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-33
+ 242. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html#cite_ref-34
+ 243. http://www.mlive.com/news/flint/index.ssf/2010/12/kettering_university_and_unive.html
+ 244. http://www.mlive.com/news/flint/index.ssf/2010/12/kettering_university_and_unive.html
+ 245. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=13
+ 246. http://www.economist.com/search/displaystory.cfm?story_id=E1_RPTNPGS
+ 247. http://www.time.com/time/reports/environment/heroes/heroesgallery/0,2967,ovshinsky,00.html
+ 248. http://www.motherearthnews.com/Renewable-Energy/2006-10-01/Meet-Stan-Ovshinsky-the-Energy-Genius.aspx
+ 249. http://www.renewableenergyworld.com/rea/news/story?id=54510
+ 250. http://www.nytimes.com/2008/04/20/magazine/20invent-t.html?scp=7&sq=Ovshinsky&st=cse
+ 251. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit&section=14
+ 252. http://commons.wikimedia.org/wiki/Category:Stanford_Ovshinsky
+ 253. http://smartroofsystems.com/_wsn/page5.html
+ 254. http://www.oninnovation.org/innovators/detail.aspx?innovator=Ovshinsky
+ 255. http://webcast.berkeley.edu/event_details.php?seriesid=6f096a7a-6114-474e-af36-a74f4bc468e7
+ 256. file://localhost/wiki/Wikipedia:Persondata
+ 257. file://localhost/wiki/Akron,_Ohio
+ 258. file://localhost/wiki/United_States
+ 259. http://en.wikipedia.org/wiki/Stanford_R._Ovshinsky
+ 260. file://localhost/wiki/Special:Categories
+ 261. file://localhost/wiki/Category:1922_births
+ 262. file://localhost/wiki/Category:American_engineers
+ 263. file://localhost/wiki/Category:American_inventors
+ 264. file://localhost/wiki/Category:Living_people
+ 265. file://localhost/wiki/Category:People_from_Akron,_Ohio
+ 266. file://localhost/wiki/Category:Jewish_inventors
+ 267. file://localhost/wiki/Category:Articles_with_hCards
+ 268. file://localhost/w/index.php?title=Special:UserLogin&returnto=Stanford_R._Ovshinsky
+ 269. file://localhost/wiki/Stanford_R._Ovshinsky
+ 270. file://localhost/wiki/Talk:Stanford_R._Ovshinsky
+ 271. file://localhost/wiki/Stanford_R._Ovshinsky
+ 272. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=edit
+ 273. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&action=history
+ 274. file://localhost/wiki/Main_Page
+ 275. file://localhost/wiki/Portal:Contents
+ 276. file://localhost/wiki/Portal:Featured_content
+ 277. file://localhost/wiki/Portal:Current_events
+ 278. file://localhost/wiki/Special:Random
+ 279. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 280. file://localhost/wiki/Help:Contents
+ 281. file://localhost/wiki/Wikipedia:About
+ 282. file://localhost/wiki/Wikipedia:Community_portal
+ 283. file://localhost/wiki/Special:RecentChanges
+ 284. file://localhost/wiki/Wikipedia:Contact_us
+ 285. file://localhost/wiki/Special:WhatLinksHere/Stanford_R._Ovshinsky
+ 286. file://localhost/wiki/Special:RecentChangesLinked/Stanford_R._Ovshinsky
+ 287. file://localhost/wiki/Wikipedia:Upload
+ 288. file://localhost/wiki/Special:SpecialPages
+ 289. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&oldid=407730529
+ 290. file://localhost/w/index.php?title=Special:Cite&page=Stanford_R._Ovshinsky&id=407730529
+ 291. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Stanford+R.+Ovshinsky
+ 292. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Stanford+R.+Ovshinsky&oldid=407730529&writer=rl
+ 293. file://localhost/w/index.php?title=Stanford_R._Ovshinsky&printable=yes
+ 294. http://pt.wikipedia.org/wiki/Stanford_R._Ovshinsky
+ 295. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 296. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 297. http://www.wikimediafoundation.org/
+ 298. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 299. http://wikimediafoundation.org/wiki/Privacy_policy
+ 300. file://localhost/wiki/Wikipedia:About
+ 301. file://localhost/wiki/Wikipedia:General_disclaimer
+ 302. http://www.mediawiki.org/
+ 303. http://wikimediafoundation.org/
+
+   Hidden links:
+ 304. file://localhost/wiki/File:SRO_Aug_2005.jpg
+ 305. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html
+ 306. file://localhost/home/memfis/projects/put/tsiss/Downloads/stanford_r._ovshinsky.html
+ 307. file://localhost/wiki/Main_Page
+ 308. http://creativecommons.org/licenses/by-sa/3.0/

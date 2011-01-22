@@ -1,0 +1,475 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Harold Beverage
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+               Harold Beverage
+        Born      14 October 1893
+                  [7]North Haven, ME
+        Died      27 January 1993
+                  [8]Port Jefferson, NY
+     Residence    [9]Stony Brook, NY
+    Nationality   [10]American
+       Fields     [11]Electrical engineering
+    Institutions  [12]RCA
+   [13]Alma mater [14]University of Maine
+   Notable awards [15]IEEE Medal of Honor
+
+   Dr. Harold Henry "Bev" Beverage is perhaps most widely known today for
+   his invention and development of the wave antenna, which came to be
+   known as the [16]Beverage antenna and which for the last few decades
+   has seen a resurgence in use within the [17]amateur radio and broadcast
+   [18]DXing hobbyist communities. Less widely known (outside of the
+   community of science history researchers) is that Bev was a pioneer of
+   radio engineering and his engineering research paralleled the
+   development of radio transmission technology throughout his
+   professional career with significant contributions not only in the
+   field of radio frequency antennas but also radio frequency propagation
+   and systems engineering.
+
+[[19]edit] Biography
+
+   Harold Henry Beverage received a B.S. in Electrical Engineering from
+   the [20]University of Maine in 1915, and went to work for [21]General
+   Electric Company the following year as a radio-laboratory assistant to
+   Dr. [22]Ernst Alexanderson. In 1920, he was placed in charge of
+   developing receivers for [23]transoceanic communications at the
+   [24]Radio Corporation of America in [25]Riverhead, New York. Three
+   years later, at the age of 30, he received the [26]IRE Morris N.
+   Liebmann Memorial Prize "for his work on directional antennas."
+
+   RCA named Beverage chief research engineer of communications in 1929, a
+   position he held until 1940. At that time, he was promoted to vice
+   president in charge of research and development at [27]RCA
+   Communications Inc., a subsidiary of the [28]Radio Corporation of
+   America. He retired in 1958 from that position and as director of radio
+   research, but continued to work in communications as a consultant.
+
+   In 1938, the [29]Radio Club of America presented him with its
+   [30]Armstrong Medal for his work in the development of [31]antenna
+   systems. The Beverage antenna, the citation said, was "the precursor of
+   wave antennas of all types." Beverage was awarded the [32]IRE Medal of
+   Honor in 1945, "In recognition of his achievements in radio research
+   and invention, of his practical applications of engineering
+   developments that greatly extended and increased the efficiency of
+   domestic and world-wide radio communications and of his devotion to the
+   affairs of the Institute of Radio Engineers."[33][1] In awarding him
+   its [34]AIEE Lamme Medal in 1956 the [35]American Institute of
+   Electrical Engineers cited him "for his pioneering and outstanding
+   engineering achievements in the conception and application of
+   principles basic to progress in national and worldwide radio
+   communications."
+
+   Mr. Beverage died on 27 January 1993 at the John T. Mather Hospital in
+   Port Jefferson, L.I. He was 99, and lived in [36]Stony Brook, New York.
+
+[[37]edit] List of Patents
+
+     * [38]U.S. Patent 1,381,089 Jun 7, 1921 Radio Receiving System - the
+       Beverage antenna
+     * [39]U.S. Patent 1,434,984 Nov 7, 1922 Radio Receiving System - the
+       bidirectional Beverage antenna
+     * [40]U.S. Patent 1,434,985 Nov 7, 1922 Radio Receiving System -
+       using a Beverage antenna with multiple receivers
+     * [41]U.S. Patent 1,434,986 Nov 7, 1922 Radio Receiving System - a
+       Beverage antenna with selective circuits to eliminate interference
+       from adjacent wavelengths
+     * [42]U.S. Patent 1,487,308 Mar 18, 1924 Radio Receiving System -
+       improvements to the directivity of the Beverage Antenna
+     * [43]U.S. Patent 1,697,945 Jan 8, 1929 Artificial transmission lines
+       for phasing multiple antennas
+     * [44]U.S. Patent 1,989,965 Aug. 5, 1931 Means for testing recorded
+       sound -- automatic check film
+     * [45]U.S. Patent 1,819,589 Aug. 18,1931 H.H.B. % H.O. Peterson
+       --Means for eliminating fading on high frequencies (filed1/2/26)
+     * [46]U.S. Patent 1,849,608 Mar. 15,1932 Frequency modulate or
+       mark/space for AGC (automatic gain control)
+     * [47]U.S. Patent 1,874,865 Aug. 30, 1932 Acoustic combining system -
+       mix reflections
+     * [48]U.S. Patent 1,874,866 Aug. 30, 1932 Method for eliminating
+       fading -- basic rectifier telegraph
+     * [49]U.S. Patent 1,888,065 Nov. 15, 1932 Differential volume control
+       for diversity artificial line
+     * [50]U.S. Patent 1,917,290 Jul. 11, 1933 H.H.B. & H.O. Peterson --
+       Rotating switch, diversity
+     * [51]U.S. Patent 1,917,291 Jul. 11, 1933 H.H.B. & H.O. Peterson --
+       Artificial line pickup delay, diversity
+     * [52]U.S. Patent 1,962,169 Jun 12, 1934 Device for reducing the
+       effects of static or fading
+     * [53]U.S. Patent 1,967,604 Jul 24, 1934 Aerial System - to be used
+       adjacent to local noise sources
+     * [54]U.S. Patent 1,987,889 Jan. 15, 1935 H.H.B. & H.O. Peterson --
+       Means for elimination of fading on short wavelengths
+     * [55]U.S. Patent 1,989,965 Feb 5, 1935 Method of testing recorded
+       sound
+     * [56]U.S. Patent 2,014,518 Sept. 17, 1935 Remote control system for
+       relay stations
+     * [57]U.S. Patent RE19,784 Dec. 10, 1935 Aerial system -- balanced
+       bridge to reduce engine ignition noise of aircraft
+     * [58]U.S. Patent 2,025,190 Dec. 24, 1935 Multiplex signaling --
+       commutator and frequency change for multiplex
+     * [59]U.S. Patent 2,028,860 Jan. 28, 1936 Receiving system-rectifier
+       high frequency for C.W. Hansell electrolytic recorder
+     * [60]U.S. Patent 2,034,738 Mar. 24, 1936 Radio telegraph repeater --
+       electronic, no relays
+     * [61]U.S. Patent 2,067,432 Jan. 12, 1937 Radio communication --
+       frequency diversity
+     * [62]U.S. Patent 2,069,813 Feb. 9, 1937 H.H.B. & H.O. Peterson --
+       Fading eliminator -- different beat notes
+     * [63]U.S. Patent 2,070,418 Feb. 6, 1937 Multiplex cable code with
+       diversity receivers
+     * [64]U.S. Patent 2,076,361 Apr. 6, 1937 Crystal oscillator monitor
+       for centralized control
+     * [65]U.S. Patent 2,081,730 May 25, 1937 Television system -- AGC
+       based on density of film
+     * [66]U.S. Patent 2,084,760 June 22, 1937 System for radio
+       spectography, horizontal sync on oscillograph
+     * [67]U.S. Patent 2,095,050 Oct, 5, 1937 Signaling-space between
+       carrier and sidebands, phone
+     * [68]U.S. Patent 2,106,806 Feb 1, 1938 Relay system - Ultra short
+       radio waves
+     * [69]U.S. Patent 2,112,877 Aug. 5, 1938 Centralized control relay
+       stations
+     * [70]U.S. Patent 2,138,134 Nov 29, 1938 Phasing and spacing antennas
+       to eliminate undesired reflected rays
+     * [71]U.S. Patent 2,144,215 Jan, 17, 1939 Electrical energy measuring
+       system frequency modulation
+     * [72]U.S. Patent 2,146,301 Feb 7, 1939 Warren Knotts & H.H.B. --
+       Frequency assignments for relay stations
+     * [73]U.S. Patent 2,173,156 Sept. 191 1939 Amplitude modulation
+       reception -- change to phase modulation
+     * [74]U.S. Patent 2,247,743 Jul 1, 1941 Broadband Uni-directional
+       Shortwave Antenna
+     * [75]U.S. Patent 2,255,374 Sept 9, 1941 System for noise reduction -
+       noise random, signal in phase
+     * [76]U.S. Patent 2,271,909 Feb. 3, 1942 Ultra short wave noise
+       elimination -- balance local noise vertical suppressor
+     * [77]U.S. Patent 2,405,991 Aug 20, 1946 Secrecy system for multiplex
+       telegraphy
+     * [78]U.S. Patent 2,416,791 Mar 4, 1947 Radio receiver system for UHF
+       frequencies that removes unintentional frequency modulation from a
+       received signal
+     * [79]U.S. Patent 2,487,513 Nov 8, 1949 Radio Relaying System -
+       frequency selection for a chain of relay stations
+
+[[80]edit] External links
+
+     * [81]Biography with Lamme Gold Medal
+     * [82]Adventures in Cybersound - Harold Henry Beverage, Dr. 1893-1993
+     * [83]IEEE History Center, Legacies, Harold H Beverage 1893-1993
+     * [84]Harold Beverage Interview July 1, 1968
+     * [85]Harold Beverage Interview March 16-17 1992
+     * [86]Harold Henry Beverage - Explorer of the Wavelengths
+     * [87]Radio Pioneer Harold Beverage 2BML
+     * [88]A Letter from Harold Beverage
+     * [89]Photos of Beverage and his Ham Station
+     * [90]AA3PX -Several Photos of Harold Beverage
+     * [91]AA3PX - List of Patents
+     * [92]Rootsweb WorldConnect Project, Beverage and Extended Family,
+       Barry Beverage
+     * [93]Spotlight on a Radio Pioneer, Harold H Beverage 1893-1993, Long
+       Island Wireless Historical Society (reprint of an article by J
+       Marshall Etter W2ER in Proceedings of The Radio Club of America
+       Inc.)
+     * [94]The Wave Antenna, A New Type of Highly Directive Antenna,
+       Proceedings of the AIEE, February 1923
+     * [95]Beverage antenna projects
+
+
+   [96]v • [97]d • [98]e
+   [99]IEEE Medal of Honor
+   1926–1950
+
+   [100]Greenleaf W. Pickard (1926) · [101]Louis W. Austin (1927) ·
+   [102]Jonathan Zenneck (1928) · [103]George W. Pierce (1929) ·
+   [104]Peder Oluf Pedersen (1930) · [105]Gustave-Auguste Ferrié (1931) ·
+   [106]Arthur Edwin Kennelly (1932) · [107]John Ambrose Fleming (1933) ·
+   [108]Stanford Caldwell Hooper (1934) · [109]Balthasar van der Pol
+   (1935) · [110]George Ashley Campbell (1936) · [111]Melville Eastham
+   (1937) · [112]John H. Dellinger (1938) · [113]Albert G. Lee (1939) ·
+   [114]Lloyd Espenschied (1940) · [115]Alfred Norton Goldsmith (1941) ·
+   [116]Albert H. Taylor (1942) · [117]William Wilson (1943) ·
+   [118]Haraden Pratt (1944) · Harold Beverage (1945) · [119]Ralph Hartley
+   (1946) · [120]Lawrence C. F. Horle (1948) · [121]Ralph Bown (1949) ·
+   [122]Frederick Terman (1950)
+   [123]Complete roster: [124]1917–1925 · [125]1926–1950 ·
+   [126]1951–1975 · [127]1976–2000 · [128]2001–present
+               [129]Persondata
+   Name              Beverage, Harold
+   Alternative names
+   Short description
+   Date of birth     14 October 1893
+   Place of birth    [130]North Haven, ME
+   Date of death     27 January 1993
+   Place of death    [131]Port Jefferson, NY
+   Retrieved from "[132]http://en.wikipedia.org/wiki/Harold_Beverage"
+   [133]Categories: [134]1893 births | [135]1993 deaths | [136]American
+   inventors | [137]General Electric people | [138]IEEE Medal of Honor
+   recipients | [139]People from Knox County, Maine | [140]University of
+   Maine alumni | [141]People from Stony Brook, New York
+
+Personal tools
+
+     * [142]Log in / create account
+
+Namespaces
+
+     * [143]Article
+     * [144]Discussion
+
+Variants
+
+Views
+
+     * [145]Read
+     * [146]Edit
+     * [147]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [148]Main page
+     * [149]Contents
+     * [150]Featured content
+     * [151]Current events
+     * [152]Random article
+     * [153]Donate to Wikipedia
+
+Interaction
+
+     * [154]Help
+     * [155]About Wikipedia
+     * [156]Community portal
+     * [157]Recent changes
+     * [158]Contact Wikipedia
+
+Toolbox
+
+     * [159]What links here
+     * [160]Related changes
+     * [161]Upload file
+     * [162]Special pages
+     * [163]Permanent link
+     * [164]Cite this page
+
+Print/export
+
+     * [165]Create a book
+     * [166]Download as PDF
+     * [167]Printable version
+
+Languages
+
+     * [168]Deutsch
+     * [169]Português
+
+     * This page was last modified on 12 December 2010 at 23:20.
+     * Text is available under the [170]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [171]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [172]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [173]Contact us
+
+     * [174]Privacy policy
+     * [175]About Wikipedia
+     * [176]Disclaimers
+
+     * [177]Powered by MediaWiki
+     * [178]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Harold_Beverage&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/harold_beverage.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/harold_beverage.html#p-search
+   7. file://localhost/wiki/North_Haven,_ME
+   8. file://localhost/wiki/Port_Jefferson,_NY
+   9. file://localhost/wiki/Stony_Brook,_NY
+  10. file://localhost/wiki/United_States
+  11. file://localhost/wiki/Electrical_engineering
+  12. file://localhost/wiki/RCA
+  13. file://localhost/wiki/Alma_mater
+  14. file://localhost/wiki/University_of_Maine
+  15. file://localhost/wiki/IEEE_Medal_of_Honor
+  16. file://localhost/wiki/Beverage_antenna
+  17. file://localhost/wiki/Amateur_radio
+  18. file://localhost/wiki/DXing
+  19. file://localhost/w/index.php?title=Harold_Beverage&action=edit&section=1
+  20. file://localhost/wiki/University_of_Maine
+  21. file://localhost/wiki/General_Electric
+  22. file://localhost/wiki/Ernst_Alexanderson
+  23. file://localhost/w/index.php?title=Transoceanic&action=edit&redlink=1
+  24. file://localhost/wiki/RCA
+  25. file://localhost/wiki/Riverhead_(town),_New_York
+  26. file://localhost/wiki/IEEE_Morris_N._Liebmann_Memorial_Award
+  27. file://localhost/w/index.php?title=RCA_Communications_Inc.&action=edit&redlink=1
+  28. file://localhost/wiki/Radio_Corporation_of_America
+  29. http://www.radioclubofamerica.org/
+  30. http://www.radioclubofamerica.org/news.php?page=banquet.html
+  31. file://localhost/w/index.php?title=Aerial_systems&action=edit&redlink=1
+  32. file://localhost/wiki/IRE_Medal_of_Honor
+  33. http://www.ieee.org/portal/pages/about/awards/pr/mohpr.html
+  34. file://localhost/wiki/AIEE_Lamme_Medal
+  35. file://localhost/wiki/American_Institute_of_Electrical_Engineers
+  36. file://localhost/wiki/Stony_Brook,_New_York
+  37. file://localhost/w/index.php?title=Harold_Beverage&action=edit&section=2
+  38. http://www.google.com/patents?id=F6E_AAAAEBAJ&printsec=abstract&zoom=4&dq=1,381,089
+  39. http://www.google.com/patents?id=oN5iAAAAEBAJ&printsec=abstract&zoom=4&dq=1434984
+  40. http://www.google.com/patents?id=T6sPAAAAEBAJ&printsec=abstract&zoom=4&dq=1434985
+  41. http://www.google.com/patents?id=ot5iAAAAEBAJ&printsec=abstract&zoom=4&dq=1434986
+  42. http://www.google.com/patents?id=zlpJAAAAEBAJ&printsec=abstract&zoom=4&dq=1487308
+  43. http://www.google.com/patents?id=AdNcAAAAEBAJ&printsec=abstract&zoom=4&dq=1697945
+  44. http://www.google.com/patents?vid=1989965
+  45. http://www.google.com/patents?vid=1819589
+  46. http://www.google.com/patents?vid=1849608
+  47. http://www.google.com/patents?vid=1874865
+  48. http://www.google.com/patents?vid=1874866
+  49. http://www.google.com/patents?vid=1888065
+  50. http://www.google.com/patents?vid=1917290
+  51. http://www.google.com/patents?vid=1917291
+  52. http://www.google.com/patents?id=_41DAAAAEBAJ&printsec=abstract&zoom=4&dq=1962169
+  53. http://www.google.com/patents?id=pSxSAAAAEBAJ&printsec=abstract&zoom=4&dq=1967604
+  54. http://www.google.com/patents?vid=1987889
+  55. http://www.google.com/patents?id=2MJ5AAAAEBAJ&printsec=abstract&zoom=4&dq=1989965
+  56. http://www.google.com/patents?vid=2014518
+  57. http://www.google.com/patents?vid=RE19784
+  58. http://www.google.com/patents?vid=2025190
+  59. http://www.google.com/patents?vid=2028860
+  60. http://www.google.com/patents?vid=2034738
+  61. http://www.google.com/patents?vid=2067432
+  62. http://www.google.com/patents?vid=2069813
+  63. http://www.google.com/patents?vid=2070418
+  64. http://www.google.com/patents?vid=2076361
+  65. http://www.google.com/patents?vid=2081730
+  66. http://www.google.com/patents?vid=2084760
+  67. http://www.google.com/patents?vid=2095050
+  68. http://www.google.com/patents?id=3UFPAAAAEBAJ&printsec=abstract&zoom=4&dq=2106806
+  69. http://www.google.com/patents?vid=2112877
+  70. http://www.google.com/patents?id=bKABAAAAEBAJ&printsec=abstract&zoom=4&dq=2138134#PPA5,M1
+  71. http://www.google.com/patents?vid=2144215
+  72. http://www.google.com/patents?vid=2146301
+  73. http://www.google.com/patents?vid=2173156
+  74. http://www.google.com/patents?id=LjVaAAAAEBAJ&printsec=abstract&zoom=4&dq=%22harold+h+beverage%22#PPA3,M1
+  75. http://www.google.com/patents?vid=2255374
+  76. http://www.google.com/patents?vid=2271909
+  77. http://www.google.com/patents?id=KYpKAAAAEBAJ&printsec=abstract&zoom=4&dq=2405991#PPA3,M1
+  78. http://www.google.com/patents?id=rrRuAAAAEBAJ&printsec=abstract&zoom=4&dq=2416791
+  79. http://www.google.com/patents?id=usNXAAAAEBAJ&printsec=abstract&zoom=4&dq=2487513
+  80. file://localhost/w/index.php?title=Harold_Beverage&action=edit&section=3
+  81. http://www.ieee.org/web/aboutus/history_center/biography/beverage.html
+  82. http://www.acmi.net.au/AIC/BEVERAGE_BIO.html
+  83. http://www.ieee.org/organizations/history_center/legacies/beverage.html
+  84. http://www.ieee.org/organizations/history_center/oral_histories/abstracts/beverage1ab.html
+  85. http://www.ieee.org/organizations/history_center/oral_histories/abstracts/beverage138ab.html
+  86. http://www.oldradio.com/archives/people/Harold_Beverage
+  87. http://www.infoage.org/p-69Beverage.html
+  88. http://exax.net/letter.html
+  89. http://www.maine.gov/newsletter/dec2003/belfast_photos.htm
+  90. http://www.qsl.net/aa3px/beverage.htm
+  91. http://www.qsl.net/aa3px/patents.htm
+  92. http://wc.rootsweb.com/cgi-bin/igm.cgi?op=GET&db=barrybev&id=I00093#s1
+  93. http://www.liwhs.org/article.html
+  94. http://www.nrcdxas.org/articles/WaveAntenna.pdf
+  95. http://www.dxzone.com/catalog/Antennas/Beverage/
+  96. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+  97. file://localhost/w/index.php?title=Template_talk:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit&redlink=1
+  98. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit
+  99. file://localhost/wiki/IEEE_Medal_of_Honor
+ 100. file://localhost/wiki/Greenleaf_Whittier_Pickard
+ 101. file://localhost/wiki/Louis_W._Austin
+ 102. file://localhost/wiki/Jonathan_Zenneck
+ 103. file://localhost/wiki/George_W._Pierce
+ 104. file://localhost/wiki/Peder_Oluf_Pedersen
+ 105. file://localhost/wiki/Gustave-Auguste_Ferri%C3%A9
+ 106. file://localhost/wiki/Arthur_E._Kennelly
+ 107. file://localhost/wiki/John_Ambrose_Fleming
+ 108. file://localhost/wiki/Stanford_Caldwell_Hooper
+ 109. file://localhost/wiki/Balthasar_van_der_Pol
+ 110. file://localhost/wiki/George_Ashley_Campbell
+ 111. file://localhost/wiki/Melville_Eastham
+ 112. file://localhost/wiki/John_H._Dellinger
+ 113. file://localhost/wiki/Albert_G._Lee
+ 114. file://localhost/wiki/Lloyd_Espenschied
+ 115. file://localhost/wiki/Alfred_Norton_Goldsmith
+ 116. file://localhost/wiki/Albert_H._Taylor
+ 117. file://localhost/wiki/William_Wilson_(physicist)
+ 118. file://localhost/wiki/Haraden_Pratt
+ 119. file://localhost/wiki/Ralph_Hartley
+ 120. file://localhost/wiki/Lawrence_C._F._Horle
+ 121. file://localhost/wiki/Ralph_Bown
+ 122. file://localhost/wiki/Frederick_Terman
+ 123. file://localhost/wiki/Template:IEEE_Medal_of_Honor
+ 124. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+ 125. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+ 126. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+ 127. file://localhost/wiki/Template:IEEE_Medal_of_Honor_1976-2000
+ 128. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_2001-2025
+ 129. file://localhost/wiki/Wikipedia:Persondata
+ 130. file://localhost/wiki/North_Haven,_ME
+ 131. file://localhost/wiki/Port_Jefferson,_NY
+ 132. http://en.wikipedia.org/wiki/Harold_Beverage
+ 133. file://localhost/wiki/Special:Categories
+ 134. file://localhost/wiki/Category:1893_births
+ 135. file://localhost/wiki/Category:1993_deaths
+ 136. file://localhost/wiki/Category:American_inventors
+ 137. file://localhost/wiki/Category:General_Electric_people
+ 138. file://localhost/wiki/Category:IEEE_Medal_of_Honor_recipients
+ 139. file://localhost/wiki/Category:People_from_Knox_County,_Maine
+ 140. file://localhost/wiki/Category:University_of_Maine_alumni
+ 141. file://localhost/wiki/Category:People_from_Stony_Brook,_New_York
+ 142. file://localhost/w/index.php?title=Special:UserLogin&returnto=Harold_Beverage
+ 143. file://localhost/wiki/Harold_Beverage
+ 144. file://localhost/wiki/Talk:Harold_Beverage
+ 145. file://localhost/wiki/Harold_Beverage
+ 146. file://localhost/w/index.php?title=Harold_Beverage&action=edit
+ 147. file://localhost/w/index.php?title=Harold_Beverage&action=history
+ 148. file://localhost/wiki/Main_Page
+ 149. file://localhost/wiki/Portal:Contents
+ 150. file://localhost/wiki/Portal:Featured_content
+ 151. file://localhost/wiki/Portal:Current_events
+ 152. file://localhost/wiki/Special:Random
+ 153. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 154. file://localhost/wiki/Help:Contents
+ 155. file://localhost/wiki/Wikipedia:About
+ 156. file://localhost/wiki/Wikipedia:Community_portal
+ 157. file://localhost/wiki/Special:RecentChanges
+ 158. file://localhost/wiki/Wikipedia:Contact_us
+ 159. file://localhost/wiki/Special:WhatLinksHere/Harold_Beverage
+ 160. file://localhost/wiki/Special:RecentChangesLinked/Harold_Beverage
+ 161. file://localhost/wiki/Wikipedia:Upload
+ 162. file://localhost/wiki/Special:SpecialPages
+ 163. file://localhost/w/index.php?title=Harold_Beverage&oldid=402040175
+ 164. file://localhost/w/index.php?title=Special:Cite&page=Harold_Beverage&id=402040175
+ 165. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Harold+Beverage
+ 166. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Harold+Beverage&oldid=402040175&writer=rl
+ 167. file://localhost/w/index.php?title=Harold_Beverage&printable=yes
+ 168. http://de.wikipedia.org/wiki/Harold_Henry_Beverage
+ 169. http://pt.wikipedia.org/wiki/Harold_Henry_Beverage
+ 170. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 171. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 172. http://www.wikimediafoundation.org/
+ 173. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 174. http://wikimediafoundation.org/wiki/Privacy_policy
+ 175. file://localhost/wiki/Wikipedia:About
+ 176. file://localhost/wiki/Wikipedia:General_disclaimer
+ 177. http://www.mediawiki.org/
+ 178. http://wikimediafoundation.org/
+
+   Hidden links:
+ 179. file://localhost/wiki/File:Replace_this_image_male.svg
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/harold_beverage.html
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/harold_beverage.html
+ 182. file://localhost/wiki/Main_Page
+ 183. http://creativecommons.org/licenses/by-sa/3.0/

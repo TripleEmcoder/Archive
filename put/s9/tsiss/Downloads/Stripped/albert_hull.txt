@@ -1,0 +1,394 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Albert Hull
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                        Albert Wallace Hull
+   Albert Wallace Hull
+        Born      April 19, 1880(1880-04-19)
+                  [7]Southington, Connecticut
+        Died      January 22, 1966(1966-01-22) (aged 85)
+     Residence    [8]United States
+    Nationality   [9]American
+     Known for    [10]magnetron
+   Notable awards 1930 [11]IEEE Morris N. Liebmann Memorial Award
+                  [12]IRE Medal of Honor 1958
+
+   Albert W. Hull (19 April 1880 – 22 January 1966) is most remembered for
+   his early invention of the [13]magnetron.
+
+   Contents
+
+        * [14]1 Education and early career
+        * [15]2 Industry
+             + [16]2.1 Experimental work
+                  o [17]2.1.1 Dynatron
+                  o [18]2.1.2 Magnetron
+                  o [19]2.1.3 Gas-filled electron tubes
+        * [20]3 Publications
+        * [21]4 Career promotion
+        * [22]5 Awards
+        * [23]6 References
+
+[[24]edit] Education and early career
+
+   Albert Wallace Hull was born on a farm in [25]Southington,
+   [26]Connecticut. He was the son of Francis and Lewis Hull. He was the
+   second oldest of 9 brothers, and had an older sister. Despite rural
+   poverty all the brothers completed college, and two others, Thomas and
+   Daniel also pursued lives devoted to science --- medicine and chemistry
+   respectively.
+
+   He majored in [27]Greek and after taking one undergraduate course in
+   [28]physics, graduated from [29]Yale University. He taught languages at
+   [30]The Albany Academy before returning to Yale, to take a doctorate in
+   physics. He then undertook research on [31]photoelectricity whilst
+   teaching physics for five years at the Worcester Polytechnic Institute.
+
+[[32]edit] Industry
+
+   In 1914 Hull joined the [33]General Electric Research Laboratory (GERL)
+   in [34]Schenectady, [35]New York and remained there until his
+   retirement in 1949.
+
+[[36]edit] Experimental work
+
+   During 1916, Hull began investigation into the use of magnetic control
+   of [37]thermionic valves (vacuum tubes) as an alternative to grid or
+   electrostatic control and he had tested successfully magnetic control
+   by applying a magnetic field parallel to the axis of the tube.
+
+   Initially, Hull's work on these novel electron tubes was part of an
+   effort at General Electric to develop amplifiers and oscillators that
+   might be used to circumvent the vacuum- tube triode patents of Lee de
+   Forest and Edwin Armstrong.
+
+[[38]edit] Dynatron
+
+   He invented the [39]dynatron which had three electrodes: a thermionic
+   cathode, a perforated anode, and a supplementary anode or plate. In
+   normal operation the supplementary anode was maintained at a lower
+   positive voltage than the perforated anode. The secondary emission of
+   electrons from the plate made the dynatron behave as a true negative
+   resistance and so the tube could generate oscillations over a wide
+   range of frequencies or be used as an amplifier. When a control grid
+   was added between the cathode and the perforated anode, the device was
+   called a "pliodynatron."
+
+[[40]edit] Magnetron
+
+   By 1920 his research led to his invention of the [41]magnetron.^[42][1]
+   This took the form of a [43]coaxial cylindrical anode and cathode with
+   an [44]axial magnetic field produced by an external coil. The Hull
+   magnetron was tested as an amplifier in radio receivers and also as a
+   low-frequency oscillator. It was reported in 1925 that a magnetron made
+   at GERL could generate a power of 15 kW at a frequency of 20 kHz. At
+   the time Hull anticipated that the magnetron would find greater use as
+   a power converter than in communication applications.
+
+   The Magnetron was later used by Percy Spencer to create the microwave
+   and the British military to create radar.
+
+[[45]edit] Gas-filled electron tubes
+
+   During the 1920s, Hull also was a major contributor to the development
+   of gas-filled electron tubes at the GERL. He discovered how to protect
+   thermionic cathodes from rapid disintegration under ion bombardment.
+   This discovery enabled the successful development of hot-cathode
+   [46]thyratrons (gaseous triodes) and [47]phanotrons (gaseous diodes).
+
+[[48]edit] Publications
+
+   In the 1918 issue of the [49]Proceedings of the IRE he published a
+   paper on the [50]dynatron vacuum tube which he had invented.
+
+[[51]edit] Career promotion
+
+   Hull was promoted to assistant director of the GERL in 1928 and was
+   known for his collegial management style with minimal interference with
+   the research agenda of his staff members.
+
+[[52]edit] Awards
+
+   He was awarded the 1924 [53]Howard N. Potts Medal of the [54]Franklin
+   Institute.
+
+   He was awarded the 1930 [55]IEEE Morris N. Liebmann Memorial Award and
+   the [56]IRE Medal of Honor in 1958 by the [57]Institute of Radio
+   Engineers (IRE) "For outstanding scientific achievement and pioneering
+   inventions and development in the field of electron tubes."
+
+   He did consulting work and served on an advisory committee of the Army
+   Ballistics Research Laboratories after retirement from General Electric
+   and was elected a member of the National Academy of Sciences. He also
+   served as president of the American Physical Society in 1942.
+
+   He died on 22 January 1966 at the age of 85.
+
+[[58]edit] References
+
+    1. [59]^ Albert W. Hull, "The effect of a uniform magnetic field on
+       the motion of electrons between coaxial cylinders," Physical
+       Review, vol. 18, no. 1, pages 31-57 (1921). See also: Albert W.
+       Hull, "The magnetron," Journal of the American Institute of
+       Electrical Engineers, vol. 40, no. 9, pages 715-723 (September
+       1921).
+
+     * [60]Albert Hull at IEEE history center
+
+
+   [61]v · [62]d · [63]e[64]IEEE Medal of Honor
+   1951–1975
+
+   [65]Vladimir Zworykin (1951) · [66]Walter R. G. Baker (1952) · [67]John
+   M. Miller (1953) · [68]William L. Everitt (1954) · [69]Harald T. Friis
+   (1955) · [70]John V. L. Hogan (1956) · [71]Julius Adams Stratton
+   (1957) · Albert Hull (1958) · [72]Emory Leon Chaffee (1959) · [73]Harry
+   Nyquist (1960) · [74]Ernst A. Guillemin (1961) · [75]Edward Victor
+   Appleton (1962) · [76]George C. Southworth (1963) · [77]Harold A.
+   Wheeler (1964) · [78]Claude Elwood Shannon (1966) · [79]Charles H.
+   Townes (1967) · [80]Gordon K. Teal (1968) · [81]Edward Ginzton (1969) ·
+   [82]Dennis Gabor (1970) · [83]John Bardeen (1971) · [84]Jay W. Forester
+   (1972) · [85]Rudolf Kompfner (1973) · [86]Rudolf Kalman (1974) ·
+   [87]John Robinson Pierce (1975)
+   [88]Complete roster: [89]1917–1925 · [90]1926–1950 · [91]1951–1975 ·
+   [92]1976–2000 · [93]2001–present
+                  [94]Persondata
+   Name              Hull, Albert
+   Alternative names
+   Short description
+   Date of birth     19 April 1880
+   Place of birth    [95]Southington, Connecticut
+   Date of death     22 January 1966
+   Place of death
+   Retrieved from "[96]http://en.wikipedia.org/wiki/Albert_Hull"
+   [97]Categories: [98]1880 births | [99]1966 deaths | [100]American
+   inventors | [101]IEEE Medal of Honor recipients | [102]Yale University
+   alumni
+
+Personal tools
+
+     * [103]Log in / create account
+
+Namespaces
+
+     * [104]Article
+     * [105]Discussion
+
+Variants
+
+Views
+
+     * [106]Read
+     * [107]Edit
+     * [108]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [109]Main page
+     * [110]Contents
+     * [111]Featured content
+     * [112]Current events
+     * [113]Random article
+     * [114]Donate to Wikipedia
+
+Interaction
+
+     * [115]Help
+     * [116]About Wikipedia
+     * [117]Community portal
+     * [118]Recent changes
+     * [119]Contact Wikipedia
+
+Toolbox
+
+     * [120]What links here
+     * [121]Related changes
+     * [122]Upload file
+     * [123]Special pages
+     * [124]Permanent link
+     * [125]Cite this page
+
+Print/export
+
+     * [126]Create a book
+     * [127]Download as PDF
+     * [128]Printable version
+
+Languages
+
+     * [129]Deutsch
+     * [130]Português
+
+     * This page was last modified on 13 September 2010 at 19:22.
+     * Text is available under the [131]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [132]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [133]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [134]Contact us
+
+     * [135]Privacy policy
+     * [136]About Wikipedia
+     * [137]Disclaimers
+
+     * [138]Powered by MediaWiki
+     * [139]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Albert_Hull&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#p-search
+   7. file://localhost/wiki/Southington,_Connecticut
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/Magnetron
+  11. file://localhost/wiki/IEEE_Morris_N._Liebmann_Memorial_Award
+  12. file://localhost/wiki/IEEE_Medal_of_Honor
+  13. file://localhost/wiki/Magnetron
+  14. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Education_and_early_career
+  15. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Industry
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Experimental_work
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Dynatron
+  18. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Magnetron
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Gas-filled_electron_tubes
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Publications
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Career_promotion
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#Awards
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#References
+  24. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=1
+  25. file://localhost/wiki/Southington,_Connecticut
+  26. file://localhost/wiki/Connecticut
+  27. file://localhost/wiki/Greek_language
+  28. file://localhost/wiki/Physics
+  29. file://localhost/wiki/Yale_University
+  30. file://localhost/wiki/The_Albany_Academy
+  31. file://localhost/wiki/Photoelectricity
+  32. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=2
+  33. file://localhost/wiki/General_Electric
+  34. file://localhost/wiki/Schenectady
+  35. file://localhost/wiki/New_York
+  36. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=3
+  37. file://localhost/wiki/Thermionic_valves
+  38. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=4
+  39. file://localhost/wiki/Dynatron
+  40. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=5
+  41. file://localhost/wiki/Magnetron
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#cite_note-0
+  43. file://localhost/wiki/Coaxial
+  44. file://localhost/wiki/Axial
+  45. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=6
+  46. file://localhost/wiki/Thyratron
+  47. file://localhost/w/index.php?title=Phanotron&action=edit&redlink=1
+  48. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=7
+  49. file://localhost/wiki/Proceedings_of_the_IRE
+  50. file://localhost/wiki/Dynatron
+  51. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=8
+  52. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=9
+  53. file://localhost/wiki/The_Franklin_Institute_Awards
+  54. file://localhost/wiki/Franklin_Institute
+  55. file://localhost/wiki/IEEE_Morris_N._Liebmann_Memorial_Award
+  56. file://localhost/wiki/IEEE_Medal_of_Honor
+  57. file://localhost/wiki/Institute_of_Radio_Engineers
+  58. file://localhost/w/index.php?title=Albert_Hull&action=edit&section=10
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html#cite_ref-0
+  60. http://www.ieee.org/organizations/history_center/legacies/hull.html
+  61. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+  62. file://localhost/w/index.php?title=Template_talk:IEEE_Medal_of_Honor_Laureates_1951-1975&action=edit&redlink=1
+  63. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Medal_of_Honor_Laureates_1951-1975&action=edit
+  64. file://localhost/wiki/IEEE_Medal_of_Honor
+  65. file://localhost/wiki/Vladimir_Zworykin
+  66. file://localhost/wiki/Walter_Ransom_Gail_Baker
+  67. file://localhost/wiki/John_Milton_Miller
+  68. file://localhost/wiki/William_Littell_Everitt
+  69. file://localhost/wiki/Harald_T._Friis
+  70. file://localhost/wiki/John_V._L._Hogan
+  71. file://localhost/wiki/Julius_Adams_Stratton
+  72. file://localhost/wiki/Emory_Leon_Chaffee
+  73. file://localhost/wiki/Harry_Nyquist
+  74. file://localhost/wiki/Ernst_A._Guillemin
+  75. file://localhost/wiki/Edward_Victor_Appleton
+  76. file://localhost/wiki/George_C._Southworth
+  77. file://localhost/wiki/Harold_A._Wheeler
+  78. file://localhost/wiki/Claude_Shannon
+  79. file://localhost/wiki/Charles_Hard_Townes
+  80. file://localhost/wiki/Gordon_K._Teal
+  81. file://localhost/wiki/Edward_Ginzton
+  82. file://localhost/wiki/Dennis_Gabor
+  83. file://localhost/wiki/John_Bardeen
+  84. file://localhost/wiki/Jay_W._Forester
+  85. file://localhost/wiki/Rudolf_Kompfner
+  86. file://localhost/wiki/Rudolf_Kalman
+  87. file://localhost/wiki/John_Robinson_Pierce
+  88. file://localhost/wiki/Template:IEEE_Medal_of_Honor
+  89. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+  90. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+  91. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+  92. file://localhost/wiki/Template:IEEE_Medal_of_Honor_1976-2000
+  93. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_2001-2025
+  94. file://localhost/wiki/Wikipedia:Persondata
+  95. file://localhost/wiki/Southington,_Connecticut
+  96. http://en.wikipedia.org/wiki/Albert_Hull
+  97. file://localhost/wiki/Special:Categories
+  98. file://localhost/wiki/Category:1880_births
+  99. file://localhost/wiki/Category:1966_deaths
+ 100. file://localhost/wiki/Category:American_inventors
+ 101. file://localhost/wiki/Category:IEEE_Medal_of_Honor_recipients
+ 102. file://localhost/wiki/Category:Yale_University_alumni
+ 103. file://localhost/w/index.php?title=Special:UserLogin&returnto=Albert_Hull
+ 104. file://localhost/wiki/Albert_Hull
+ 105. file://localhost/wiki/Talk:Albert_Hull
+ 106. file://localhost/wiki/Albert_Hull
+ 107. file://localhost/w/index.php?title=Albert_Hull&action=edit
+ 108. file://localhost/w/index.php?title=Albert_Hull&action=history
+ 109. file://localhost/wiki/Main_Page
+ 110. file://localhost/wiki/Portal:Contents
+ 111. file://localhost/wiki/Portal:Featured_content
+ 112. file://localhost/wiki/Portal:Current_events
+ 113. file://localhost/wiki/Special:Random
+ 114. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 115. file://localhost/wiki/Help:Contents
+ 116. file://localhost/wiki/Wikipedia:About
+ 117. file://localhost/wiki/Wikipedia:Community_portal
+ 118. file://localhost/wiki/Special:RecentChanges
+ 119. file://localhost/wiki/Wikipedia:Contact_us
+ 120. file://localhost/wiki/Special:WhatLinksHere/Albert_Hull
+ 121. file://localhost/wiki/Special:RecentChangesLinked/Albert_Hull
+ 122. file://localhost/wiki/Wikipedia:Upload
+ 123. file://localhost/wiki/Special:SpecialPages
+ 124. file://localhost/w/index.php?title=Albert_Hull&oldid=384635967
+ 125. file://localhost/w/index.php?title=Special:Cite&page=Albert_Hull&id=384635967
+ 126. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Albert+Hull
+ 127. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Albert+Hull&oldid=384635967&writer=rl
+ 128. file://localhost/w/index.php?title=Albert_Hull&printable=yes
+ 129. http://de.wikipedia.org/wiki/Albert_W._Hull
+ 130. http://pt.wikipedia.org/wiki/Albert_Hull
+ 131. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 132. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 133. http://www.wikimediafoundation.org/
+ 134. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 135. http://wikimediafoundation.org/wiki/Privacy_policy
+ 136. file://localhost/wiki/Wikipedia:About
+ 137. file://localhost/wiki/Wikipedia:General_disclaimer
+ 138. http://www.mediawiki.org/
+ 139. http://wikimediafoundation.org/
+
+   Hidden links:
+ 140. file://localhost/wiki/File:Replace_this_image_male.svg
+ 141. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_hull.html
+ 143. file://localhost/wiki/Main_Page
+ 144. http://creativecommons.org/licenses/by-sa/3.0/

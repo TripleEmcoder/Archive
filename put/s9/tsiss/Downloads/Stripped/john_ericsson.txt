@@ -1,0 +1,831 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+John Ericsson
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   This article is about the Swedish-American inventor and engineer. For
+   John Ericson the actor, see [7]John Ericson (actor). For the U.S. Navy
+   oiler, see [8]USNS John Ericsson (T-AO-194).
+   For other people of the same name, see [9]John Erickson
+   (disambiguation).
+   [10]Text document with red question mark.svg
+   This article includes a [11]list of references, but its sources remain
+   unclear because it has insufficient [12]inline citations.
+   Please help to [13]improve this article by introducing more precise
+   citations [14]where appropriate. (April 2010)
+                   John Ericsson
+      Born    July 31, 1803(1803-07-31)
+              [15]Långbanshyttan, [16]Värmland
+      Died    March 8, 1889(1889-03-08) (aged 85)
+              [17]New York
+   Occupation Engineer, innovator
+
+   John Ericsson (July 31, 1803 – March 8, 1889) was an American
+   Swedish-born [18]inventor and [19]mechanical [20]engineer, as was his
+   brother, [21]Nils Ericson. He was born at [22]Långbanshyttan in
+   [23]Värmland, [24]Sweden, but primarily came to be active in the
+   [25]United States.
+
+   Contents
+
+        * [26]1 Early career
+        * [27]2 Propeller design
+        * [28]3 Friendship with Cornelius H. DeLamater
+        * [29]4 Hot air engine
+        * [30]5 Ship design
+        * [31]6 USS Monitor
+        * [32]7 Inventions
+        * [33]8 Fellowships
+        * [34]9 Monuments and memorials
+        * [35]10 See also
+        * [36]11 References
+        * [37]12 Trivia
+        * [38]13 External links
+
+[[39]edit] Early career
+
+   John's and Nils's father Olaf Ericsson who worked as the supervisor for
+   a [40]mine in Värmland had lost money in speculations and had to move
+   his family from Värmland to Forsvik in 1810. There he worked as a
+   'director of blastings' during the excavation of the Swedish [41]Göta
+   Canal. The extraordinary skills of the two brothers were discovered by
+   [42]Baltzar von Platen, the architect of the Göta Canal. The two
+   brothers were dubbed cadets of mechanics of the Swedish Royal Navy and
+   engaged as trainees at the canal enterprise. At the age of fourteen,
+   John was already working independently as a [43]surveyor. His assistant
+   had to carry a footstool for him to reach the instruments during
+   [44]surveying work.
+
+   At the age of seventeen he joined the [45]Swedish army in [46]Jämtland,
+   serving in the [47]Jämtland Field Ranger Regiment, as a [48]Second
+   Lieutenant, but was soon promoted to [49]Lieutenant. He was sent to
+   northern Sweden to do surveying, and in his spare time he constructed a
+   [50]heat engine which used the fumes from the fire instead of steam as
+   a propellant. His skill and interest in mechanics made him resign from
+   the army and move to [51]England in 1826. However, his heat engine was
+   not a success, as his prototype was designed to use [52]birch wood as
+   fuel, and would not work well with [53]coal, which was the main fuel
+   used in England.
+   [54]Novelty
+   Drawing of a steam locomotive named after [55]William IV
+
+   Notwithstanding the disappointment, he invented several other
+   mechanisms instead based on [56]steam, improving the heating process by
+   adding fans to increase [57]oxygen supply to the fire bed. In 1829 the
+   steam engine he built with [58]John Braithwaite, [59]"Novelty", joined
+   the [60]Rainhill Trials, a competition arranged by the [61]Liverpool
+   and Manchester Railway. Although it was the fastest in the competition,
+   it suffered recurring boiler problems and the competition was won by
+   the English engineer [62]George and his son [63]Robert Stephenson with
+   [64]Rocket.
+
+   By helping to quell the celebrated Astor House fire, Ericsson's steam
+   fire engine proved an outstanding technical success, but met with
+   resistance from London's established 'Fire Laddies' and municipal
+   authorities. An engine Ericsson constructed for [65]Sir John Franklin's
+   use failed under the Antarctic conditions for which, out of Franklin's
+   desire to conceal his destination, it had not been designed. At this
+   stage of Ercisson's career the most successful and enduring of his
+   inventions was the steam condenser, which allowed a steamer to produce
+   fresh water for its boilers while at sea. His 'deep sea lead,' a
+   pressure-activated fathometer was another minor, but enduring success.
+
+   The commercial failure and development costs of some of the machines
+   devised and built by Ericsson during this period put him into debtors'
+   prison for an interval and at this time he also married 19-year-old
+   Amelia Byam, a marriage that was nothing but a huge disaster and ended
+   in the couple's separation until Amelia's death.
+
+[[66]edit] Propeller design
+
+   Engraving of Ericsson
+   John Ericsson
+
+   He then improved the ship design with two screw-[67]propellers moving
+   in different directions (as opposed to earlier tests with this
+   technology, which used a single screw). However, the [68]Admiralty
+   disapproved of the invention, which led to the fortunate contact with
+   the encouraging American captain [69]Robert Stockton who had Ericsson
+   design a propeller steamer for him and told him to bring his invention
+   to the United States of America, as it would supposedly be more
+   welcomed in that place. As a result, Ericsson moved to [70]New York in
+   1839. Stockton's plan was for Ericsson to oversee the development of a
+   new class of [71]frigate with Stockton using his considerable political
+   connections to grease the wheels. Finally, after the succession to the
+   Presidency by [72]John Tyler, funds were allocated for a new design.
+   Unfortunately they only received funding for a 700-ton [73]sloop
+   instead of a frigate. The sloop eventually became the [74]USS
+   Princeton, named after Stockton's hometown.
+
+   The ship took about three years to complete and was perhaps the most
+   advanced warship of its time. In addition to twin screw propellers, it
+   was originally designed to mount a 12-inch muzzle loading gun on a
+   revolving pedestal. The gun had also been designed by Ericsson and used
+   the [75]hoop construction method to pre-tension the [76]breech, adding
+   to its strength and safely allowing the use of a larger charge. Other
+   innovations on the ship design included a collapsible funnel and an
+   improved recoil system.
+
+   The relations between Ericsson and Stockton had grown tense over time
+   and, nearing the completion of the ship, Stockton began working to
+   force Ericsson out of the project. Stockton carefully avoided letting
+   outsiders know that Ericsson was the primary inventor. Stockton
+   attempted to claim as much credit for himself as possible, even
+   designing a second 12-inch gun to be mounted on the Princeton.
+   Unfortunately, not understanding the design of the first gun
+   (originally name "The Orator", renamed by Stockton to "The Oregon"),
+   the second gun was fatally flawed.
+
+   When the ship was initially launched it was a tremendous success. On
+   October 20, 1843 [77]Princeton won a speed competition against the
+   paddle-steamer [78]SS Great Western, which had until then been regarded
+   as the fastest steamer afloat. Unfortunately, during a firing
+   demonstration of Stockton's gun the breech broke, killing the US
+   Secretary of State [79]Abel P. Upshur and the Secretary of the Navy
+   [80]Thomas Gilmer, as well as six others. Stockton attempted to deflect
+   blame onto Ericsson with moderate success despite the fact that
+   Ericsson's gun was sound and it was Stockton's gun that had failed.
+   Stockton also refused to pay Ericsson and, using his political
+   connections, Stockton managed to block the Navy from paying him. These
+   actions led to Ericsson's deep resentment toward the US Navy.
+
+[[81]edit] Friendship with Cornelius H. DeLamater
+
+   When Ericsson arrived from England and settled in New York, he was
+   persuaded by Samuel Risley of Greenwich Village to give his work to the
+   Phoenix Foundry. There he met [82]Cornelius H. DeLamater and soon a
+   mutual attachment developed between the two, and rarely thereafter did
+   Ericsson or DeLamater enter upon a business venture without first
+   consulting the other."^[83][1] Personally, their friendship never
+   faltered, though strained by the pressures of business and Ericsson's
+   quick temper, DeLamater called Ericsson "John" and Ericsson called
+   DeLamater by his middle nickname "Harry", intimacies almost unknown in
+   Ericsson's other relationships.^[84][2] In time, the DeLamater Iron
+   Works became known as the Asylum where Capt Ericsson had free rein to
+   experiment and attempt new feats. The Iron Witch was next constructed,
+   the first iron steamboat.^[85][3] The first hot-air invention of Capt
+   Ericsson was first introduced in the ship Ericsson, built entirely by
+   DeLamater. The DeLamater Iron Works also launched the first submarine
+   boat, first self propelled torpedo, and first torpedo boat.^[86][4]
+   When DeLamater died on February 2, 1889, Ericsson could not be
+   consoled. Ericsson's death one month later was not surprising to his
+   close friends and acquaintances."^[87][5]
+
+[[88]edit] Hot air engine
+
+   Ericsson then proceeded to invent independently the caloric, or [89]hot
+   air engine in the 1820s which used hot air, [90]caloric in the
+   scientific parlance of the day, instead of steam as a propellant. A
+   similar device had been patented in 1816 by the Reverend [91]Robert
+   Stirling, whose technical priority of invention provides the usual term
+   'Stirling Engine' for the device. Ericsson's engine was not initially
+   successful due to the differences in combustion temperatures between
+   Swedish wood and British coal. In spite of his setbacks, Ericsson was
+   awarded the [92]Rumford Prize of the American Academy of Arts and
+   Sciences in 1862 for his invention. In his later years, the caloric
+   engine would render Ericsson comfortably wealthy, as its boilerless
+   design made it a much safer and more practical means of power for small
+   industry than steam engines. Ericsson's incorporation of a
+   'regenerator' heat sink for his engine made it tremendously
+   fuel-efficient.
+
+[[93]edit] Ship design
+
+   On September 26, 1854 Ericsson presented [94]Napoleon III of France
+   with drawings of iron-clad armored [95]battle ships with a
+   [96]dome-shaped gun tower, and even though the French emperor praised
+   this invention, he did nothing to bring it to practical application.
+
+[[97]edit] USS Monitor
+
+   The Ericsson Mausoleum in [98]Filipstad
+
+   Shortly after the [99]American Civil War broke out in 1861, the
+   Confederacy began developing an ironclad based on the hull of the
+   [100]USS Merrimack which had been burned by Federal troops before the
+   naval base at Norfolk — Gosport Navy Yard — had been captured by the
+   recently seceded [101]Commonwealth of Virginia. The [102]United States
+   Congress addressed this issue in August 1861 and recommended that
+   armored ships be built for the Union Navy. Ericsson still had a dislike
+   of the U.S. Navy but he was convinced by [103]Cornelius Scranton
+   Bushnell to work on an ironclad for them. Ericsson presented drawings
+   of the [104]USS Monitor, a novel design of armored ship, which after
+   much controversy was eventually built and finished on March 6, 1862.
+   The ship went from plans to launch in approximately 100 days, an
+   amazing achievement.
+
+   On [105]March 8, the Southern ironclad [106]CSS Virginia was wreaking
+   havoc on the Union Blockading Squadron in Virginia. Then, with the
+   appearance of the Monitor, a battle on March 9, 1862 at [107]Hampton
+   Roads, [108]Virginia, ended in a stalemate between the two iron
+   warships, and saved the Northern fleet from defeat. After this,
+   numerous [109]monitors were built, and are believed to have
+   considerably influenced the victory of the Northern states. Although
+   primitive by modern standards, many basic design elements of the
+   Monitor were copied in future warships by other designers.
+
+   Later, Ericsson worked with [110]torpedo inventions, in particular the
+   Destroyer, a [111]torpedo boat that could fire a cannon from an
+   underwater port. He also provided some technical support for [112]John
+   Philip Holland in his early submarine experiments. In the book
+   Contributions to the Centennial Exhibition (1877, reprinted 1976) he
+   presented his "sun engines", which collected solar heat for a [113]hot
+   air engine. One of these designs earned Ericsson additional sums after
+   being converted to work as a methane gas engine.
+
+   Although none of his inventions created any large industries, he is
+   regarded as one of the most influential mechanical engineers ever.
+   After his death in 1889 his remains were brought from the United States
+   to [114]Stockholm by [115]USS Baltimore; his final resting place is at
+   [116]Filipstad, in [117]Värmland.
+
+[[118]edit] Inventions
+
+     * The [119]surface condenser
+     * The [120]hot air engine
+     * The world's first [121]monitor, [122]USS Monitor, was both designed
+       and built by Ericsson for the [123]Union Navy in the [124]American
+       Civil War
+     * [125]Torpedo technology, especially Destroyer, an advanced
+       [126]torpedo boat
+     * The [127]solar machine, using concave mirrors to gather sun
+       radiation strong enough to run an engine.
+     * [128]USS Princeton (1843)
+     * [129]Hoop gun construction
+     * the [130]Propeller
+
+[[131]edit] Fellowships
+
+     * Foreign member of the [132]Royal Swedish Academy of Sciences in
+       1850, Swedish member from 1863
+     * [133]Royal Swedish Academy of War Sciences in 1852
+     * Honorary Doctorate at [134]Lund University in 1868
+
+[[135]edit] Monuments and memorials
+
+   John Ericsson in Battery Park, NYC
+   Statue of John Ericsson in Gothenburg, Sweden
+
+   Monuments in honor of John Ericsson have been erected at:
+     * [136]John Ericsson National Memorial on [137]The Mall in
+       [138]Washington, D.C.
+     * The John Ericsson Room at the [139]American Swedish Historical
+       Museum in [140]Chicago
+     * [141]Battery Park, in [142]New York City
+     * [143]Nybroplan in [144]Stockholm
+     * [145]Kungsportsavenyn in [146]Gothenburg.
+     * John Ericsson Street, in [147]Lund, Sweden
+     * John Ericsson fountain, [148]Fairmount Park, [149]Philadelphia
+     * Neighborhood of [150]Ericsson, Minneapolis
+
+   For ships named in his honor, see:
+     * [151]USS Ericsson
+
+   Organizations:
+     * [152]The John Ericsson Republican League of Illinois is a
+       Swedish-American partisan organization.
+
+[[153]edit] See also
+
+     * [154]American Swedish Historical Museum, John Ericsson Room
+     * [155]HMS Sölve Is a Swedish monitor built 1875 and designed by
+       [156]John Ericson the "father" of all Monitors. Currently in a
+       Maritime Museum in [157]Gothenburg [158]Sweden
+
+[[159]edit] References
+
+    1. [160]^ [161]Legislative Document by New York State Legislature, vol
+       37, no. 117-118. J.B. Lyon Co. 1920. pp. 202–213.
+       [162]http://books.google.com/books?id=ig5LAAAAMAAJ&printsec=titlepa
+       ge#PPA202,M1.
+    2. [163]^ Nelson, James L. (2005). [164]Reign of Iron: The Story of
+       the First Battling Ironclads. Harper Collins.
+       [165]ISBN [166]0060524049, 9780060524043.
+       [167]http://books.google.com/books?id=d8XD-j--EVsC&pg=PA149&lpg=PA1
+       49&dq=Delamater+Iron+works+monitor&source=bl&ots=wb-P4Hew0q&sig=QH7
+       EKP0z-BCtWFqpPHrrQlQNNkw&hl=en&sa=X&oi=book_result&resnum=5&ct=resu
+       lt.
+    3. [168]^ [169]"6". Old Steamboat Days on the Hudson River. The
+       Grafton Press. 1907.
+       [170]http://www.hrmm.org/diglib/oldsteam/chapter6.html.
+    4. [171]^ [172]"Honors for Capt Ericsson" (PDF). The New York Times.
+       December 11, 1921.
+       [173]http://query.nytimes.com/mem/archive-free/pdf?res=9505E3D71431
+       EF33A25752C1A9649D946095D6CF.
+    5. [174]^ Carr, Edward A.T.; Michael W. Carr, Kari Ann Carr (1994).
+       [175]Faded Laurels, The History of Eaton's Neck and Asharoken.
+       Heart of the Lakes Publishing. [176]ISBN [177]1557871191,
+       9781557871190.
+       [178]http://books.google.com/books?id=OP4MAQAACAAJ&dq=faded+laurels
+       .
+
+[[179]edit] Trivia
+
+   [180]Lists of miscellaneous information should be avoided. Please
+   [181]relocate any relevant information into appropriate sections or
+   articles. (June 2008)
+     * In the 1936 film [182]Hearts in Bondage, which takes place
+       partially aboard the Monitor, John Ericsson was portrayed by actor
+       [183]Fritz Leiber, Sr.
+
+     * In [184]Harry Harrison's [185]Stars and Stripes trilogy, the
+       Monitor is just the beginning of Ericsson's contributions to the US
+       war effort. New ocean-going ironclads are built by the inventor,
+       superior to their British counterparts. He also creates an armored
+       self-propelled gun platform using his own [186]internal combustion
+       engine as well as a heavily-armored mortar carrier ship, capable of
+       leveling any fortification in under an hour. All these inventions
+       allow [187]General Sherman to implement his new [188]lightning
+       warfare strategy.
+
+     * In the US, John Ericsson is considered a hero to Republicans of
+       Scandinavian descent. In 1884, a group of Swedish American
+       Republicans in Illinois formed the [189]John Ericsson Republican
+       League. The League is divided into member chapters throughout
+       Illinois. Its activities have earned it the respect of the
+       Republican Party throughout the country, and its conventions have
+       been attended by two Presidents and innumerable national and
+       international civic leaders.
+
+[[190]edit] External links
+
+   Wikimedia Commons has media related to: [191]John Ericsson
+     * [192]The Life of John Ericsson By William Conant Church, published
+       1911, 660 pages.
+     * [193]The Original United States Warship "Monitor" Correspondence
+       between [194]Cornelius Scranton Bushnell, John Ericsson,
+       [195]Gideon Wells, published 1899, 52 pages, compiled by William S.
+       Wells.
+     * [196]John Ericsson National Memorial in Washington
+     * [197]John Ericsson Society, New York - Centennial Anniversary year
+       2007
+     * [198]John Ericsson at National Inventors Hall of Fame
+     * [199]Monitor National Marine Sanctuary
+     * [200]John Ericsson Statue in Gothenburg
+     * [201]Some Pioneers in Air Engine Design - John Ericsson
+     * [202]John Ericsson's solar engine
+
+
+   [203]v · [204]d · [205]eThe [206]Battle of Hampton Roads
+   People
+   [207]Gideon Welles · [208]Franklin Buchanan · [209]Catesby ap Roger
+   Jones · [210]Gustavus Fox · [211]Stephen Mallory · [212]French
+   Forrest · John Ericsson · [213]John Lorimer Worden
+   Ships
+   [214]USS Congress · [215]USS Cumberland · [216]USS Zouave · [217]CSS
+   Virginia · [218]USS Merrimack · [219]USS Roanoke · [220]USS Minnesota ·
+   [221]USS Monitor · [222]USS St. Lawrence · [223]CSS Beaufort · [224]CSS
+   Raleigh · [225]CSS Patrick Henry · [226]CSS Jamestown
+   Places
+   [227]Hampton Roads · [228]Tidewater · [229]James River · [230]Elizabeth
+   River · [231]Norfolk · [232]Fort Monroe
+
+                     [233]Persondata
+   Name              Ericsson, John
+   Alternative names
+   Short description
+   Date of birth     July 31, 1803
+   Place of birth    [234]Långbanshyttan, [235]Värmland
+   Date of death     March 8, 1889
+   Place of death    [236]New York
+   Retrieved from "[237]http://en.wikipedia.org/wiki/John_Ericsson"
+   [238]Categories: [239]1803 births | [240]1889 deaths | [241]American
+   Civil War industrialists | [242]American Lutherans | [243]American
+   people of Swedish descent | [244]Swedish inventors | [245]Swedish
+   engineers | [246]Swedish military personnel | [247]Swedish
+   businesspeople | [248]Swedish shipbuilders | [249]American shipbuilders
+   | [250]Mechanical engineers | [251]Marine engineers and naval
+   architects | [252]National Inventors Hall of Fame inductees |
+   [253]Members of the Royal Swedish Academy of Sciences | [254]Burials at
+   New York City Marble Cemetery | [255]Swedish immigrants to the United
+   States | [256]American inventors | [257]People from Filipstad
+   Municipality
+   Hidden categories: [258]Articles lacking in-text citations from April
+   2010 | [259]All articles lacking in-text citations | [260]Articles with
+   hCards | [261]Articles with trivia sections from June 2008 | [262]All
+   articles with trivia sections
+
+Personal tools
+
+     * [263]Log in / create account
+
+Namespaces
+
+     * [264]Article
+     * [265]Discussion
+
+Variants
+
+Views
+
+     * [266]Read
+     * [267]Edit
+     * [268]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [269]Main page
+     * [270]Contents
+     * [271]Featured content
+     * [272]Current events
+     * [273]Random article
+     * [274]Donate to Wikipedia
+
+Interaction
+
+     * [275]Help
+     * [276]About Wikipedia
+     * [277]Community portal
+     * [278]Recent changes
+     * [279]Contact Wikipedia
+
+Toolbox
+
+     * [280]What links here
+     * [281]Related changes
+     * [282]Upload file
+     * [283]Special pages
+     * [284]Permanent link
+     * [285]Cite this page
+
+Print/export
+
+     * [286]Create a book
+     * [287]Download as PDF
+     * [288]Printable version
+
+Languages
+
+     * [289]Česky
+     * [290]Deutsch
+     * [291]Eesti
+     * [292]Español
+     * [293]Français
+     * [294]Galego
+     * [295]Nederlands
+     * [296]日本語
+     * [297]‪Norsk (bokmål)‬
+     * [298]Polski
+     * [299]Português
+     * [300]Română
+     * [301]Suomi
+     * [302]Svenska
+
+     * This page was last modified on 8 January 2011 at 03:10.
+     * Text is available under the [303]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [304]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [305]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [306]Contact us
+
+     * [307]Privacy policy
+     * [308]About Wikipedia
+     * [309]Disclaimers
+
+     * [310]Powered by MediaWiki
+     * [311]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=John_Ericsson&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#p-search
+   7. file://localhost/wiki/John_Ericson_(actor)
+   8. file://localhost/wiki/USNS_John_Ericsson_(T-AO-194)
+   9. file://localhost/wiki/John_Erickson_(disambiguation)
+  10. file://localhost/wiki/File:Text_document_with_red_question_mark.svg
+  11. file://localhost/wiki/Wikipedia:Citing_sources
+  12. file://localhost/wiki/Wikipedia:Citing_sources#Adding_the_citation
+  13. file://localhost/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check
+  14. file://localhost/wiki/Wikipedia:When_to_cite
+  15. file://localhost/wiki/L%C3%A5ngbanshyttan
+  16. file://localhost/wiki/V%C3%A4rmland
+  17. file://localhost/wiki/New_York
+  18. file://localhost/wiki/Inventor
+  19. file://localhost/wiki/Mechanics
+  20. file://localhost/wiki/Engineer
+  21. file://localhost/wiki/Nils_Ericson
+  22. file://localhost/wiki/L%C3%A5ngbanshyttan
+  23. file://localhost/wiki/V%C3%A4rmland
+  24. file://localhost/wiki/Sweden
+  25. file://localhost/wiki/United_States
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Early_career
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Propeller_design
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Friendship_with_Cornelius_H._DeLamater
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Hot_air_engine
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Ship_design
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#USS_Monitor
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Inventions
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Fellowships
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Monuments_and_memorials
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#See_also
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#References
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#Trivia
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#External_links
+  39. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=1
+  40. file://localhost/wiki/Mining
+  41. file://localhost/wiki/G%C3%B6ta_Canal
+  42. file://localhost/wiki/Baltzar_von_Platen_(1766-1829)
+  43. file://localhost/wiki/Surveyor_(surveying)
+  44. file://localhost/wiki/Surveying
+  45. file://localhost/wiki/Swedish_army
+  46. file://localhost/wiki/J%C3%A4mtland
+  47. file://localhost/wiki/J%C3%A4mtland_Field_Ranger_Regiment
+  48. file://localhost/wiki/Second_Lieutenant#United_States
+  49. file://localhost/wiki/Lieutenant
+  50. file://localhost/wiki/Heat_engine
+  51. file://localhost/wiki/England
+  52. file://localhost/wiki/Birch
+  53. file://localhost/wiki/Coal
+  54. file://localhost/wiki/Novelty_(locomotive)
+  55. file://localhost/wiki/William_IV_of_the_United_Kingdom
+  56. file://localhost/wiki/Steam
+  57. file://localhost/wiki/Oxygen
+  58. file://localhost/wiki/John_Braithwaite_(engineer)
+  59. file://localhost/wiki/Novelty_(locomotive)
+  60. file://localhost/wiki/Rainhill_Trials
+  61. file://localhost/wiki/Liverpool_and_Manchester_Railway
+  62. file://localhost/wiki/George_Stephenson
+  63. file://localhost/wiki/Robert_Stephenson
+  64. file://localhost/wiki/Stephenson%27s_Rocket
+  65. file://localhost/wiki/John_Franklin
+  66. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=2
+  67. file://localhost/wiki/Propeller
+  68. file://localhost/wiki/Admiralty
+  69. file://localhost/wiki/Robert_Stockton
+  70. file://localhost/wiki/New_York
+  71. file://localhost/wiki/Frigate
+  72. file://localhost/wiki/John_Tyler
+  73. file://localhost/wiki/Sloop
+  74. file://localhost/wiki/USS_Princeton_(1843)
+  75. file://localhost/wiki/Hoop_gun
+  76. file://localhost/wiki/Breech-loading_weapon
+  77. file://localhost/wiki/USS_Princeton_(1843)
+  78. file://localhost/wiki/SS_Great_Western
+  79. file://localhost/wiki/Abel_P._Upshur
+  80. file://localhost/wiki/Thomas_Gilmer
+  81. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=3
+  82. file://localhost/wiki/Cornelius_H._DeLamater
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_note-Leg_Docs-0
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_note-Nelson-1
+  85. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_note-Maritme_Book-2
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_note-3
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_note-Carr-4
+  88. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=4
+  89. file://localhost/wiki/Hot_air_engine
+  90. file://localhost/wiki/Caloric
+  91. file://localhost/wiki/Robert_Stirling
+  92. file://localhost/wiki/Rumford_Prize
+  93. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=5
+  94. file://localhost/wiki/Napoleon_III_of_France
+  95. file://localhost/wiki/Battle_ship
+  96. file://localhost/wiki/Dome
+  97. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=6
+  98. file://localhost/wiki/Filipstad
+  99. file://localhost/wiki/American_Civil_War
+ 100. file://localhost/wiki/USS_Merrimack_(1855)
+ 101. file://localhost/wiki/Commonwealth_of_Virginia
+ 102. file://localhost/wiki/United_States_Congress
+ 103. file://localhost/wiki/Cornelius_Scranton_Bushnell
+ 104. file://localhost/wiki/USS_Monitor
+ 105. file://localhost/wiki/March_8
+ 106. file://localhost/wiki/CSS_Virginia
+ 107. file://localhost/wiki/Hampton_Roads
+ 108. file://localhost/wiki/Virginia
+ 109. file://localhost/wiki/Monitor_warship_type
+ 110. file://localhost/wiki/Torpedo
+ 111. file://localhost/wiki/Torpedo_boat
+ 112. file://localhost/wiki/John_Philip_Holland
+ 113. file://localhost/wiki/Hot_air_engine
+ 114. file://localhost/wiki/Stockholm
+ 115. file://localhost/wiki/USS_Baltimore_(C-3)
+ 116. file://localhost/wiki/Filipstad
+ 117. file://localhost/wiki/V%C3%A4rmland
+ 118. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=7
+ 119. file://localhost/wiki/Surface_condenser
+ 120. file://localhost/wiki/Hot_air_engine
+ 121. file://localhost/wiki/Monitor_(ship)
+ 122. file://localhost/wiki/USS_Monitor
+ 123. file://localhost/wiki/Union_Navy
+ 124. file://localhost/wiki/American_Civil_War
+ 125. file://localhost/wiki/Torpedo
+ 126. file://localhost/wiki/Torpedo_boat
+ 127. file://localhost/wiki/Solar_thermal_collector
+ 128. file://localhost/wiki/USS_Princeton_(1843)
+ 129. file://localhost/wiki/Hoop_gun
+ 130. file://localhost/wiki/Propeller
+ 131. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=8
+ 132. file://localhost/wiki/Royal_Swedish_Academy_of_Sciences
+ 133. file://localhost/wiki/Royal_Swedish_Academy_of_War_Sciences
+ 134. file://localhost/wiki/Lund_University
+ 135. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=9
+ 136. file://localhost/wiki/John_Ericsson_National_Memorial
+ 137. file://localhost/wiki/The_Mall_(Washington,_DC)
+ 138. file://localhost/wiki/Washington,_D.C.
+ 139. file://localhost/wiki/American_Swedish_Historical_Museum
+ 140. file://localhost/wiki/Chicago
+ 141. file://localhost/wiki/Battery_Park
+ 142. file://localhost/wiki/New_York_City
+ 143. file://localhost/wiki/Nybroplan
+ 144. file://localhost/wiki/Stockholm
+ 145. file://localhost/wiki/Kungsportsavenyn
+ 146. file://localhost/wiki/Gothenburg
+ 147. file://localhost/wiki/Lund
+ 148. file://localhost/wiki/Fairmount_Park
+ 149. file://localhost/wiki/Philadelphia
+ 150. file://localhost/wiki/Ericsson,_Minneapolis
+ 151. file://localhost/wiki/USS_Ericsson
+ 152. http://www.johnericssonleaguegopil.org/
+ 153. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=10
+ 154. file://localhost/wiki/American_Swedish_Historical_Museum
+ 155. file://localhost/wiki/HMS_S%C3%B6lve
+ 156. file://localhost/wiki/John_Ericson
+ 157. file://localhost/wiki/Gothenburg
+ 158. file://localhost/wiki/Sweden
+ 159. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=11
+ 160. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_ref-Leg_Docs_0-0
+ 161. http://books.google.com/books?id=ig5LAAAAMAAJ&printsec=titlepage#PPA202,M1
+ 162. http://books.google.com/books?id=ig5LAAAAMAAJ&printsec=titlepage#PPA202,M1
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_ref-Nelson_1-0
+ 164. http://books.google.com/books?id=d8XD-j--EVsC&pg=PA149&lpg=PA149&dq=Delamater+Iron+works+monitor&source=bl&ots=wb-P4Hew0q&sig=QH7EKP0z-BCtWFqpPHrrQlQNNkw&hl=en&sa=X&oi=book_result&resnum=5&ct=result
+ 165. file://localhost/wiki/International_Standard_Book_Number
+ 166. file://localhost/wiki/Special:BookSources/0060524049,_9780060524043
+ 167. http://books.google.com/books?id=d8XD-j--EVsC&pg=PA149&lpg=PA149&dq=Delamater+Iron+works+monitor&source=bl&ots=wb-P4Hew0q&sig=QH7EKP0z-BCtWFqpPHrrQlQNNkw&hl=en&sa=X&oi=book_result&resnum=5&ct=result
+ 168. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_ref-Maritme_Book_2-0
+ 169. http://www.hrmm.org/diglib/oldsteam/chapter6.html
+ 170. http://www.hrmm.org/diglib/oldsteam/chapter6.html
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_ref-3
+ 172. http://query.nytimes.com/mem/archive-free/pdf?res=9505E3D71431EF33A25752C1A9649D946095D6CF
+ 173. http://query.nytimes.com/mem/archive-free/pdf?res=9505E3D71431EF33A25752C1A9649D946095D6CF
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html#cite_ref-Carr_4-0
+ 175. http://books.google.com/books?id=OP4MAQAACAAJ&dq=faded+laurels
+ 176. file://localhost/wiki/International_Standard_Book_Number
+ 177. file://localhost/wiki/Special:BookSources/1557871191,_9781557871190
+ 178. http://books.google.com/books?id=OP4MAQAACAAJ&dq=faded+laurels
+ 179. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=12
+ 180. file://localhost/wiki/Wikipedia:Trivia_sections
+ 181. file://localhost/wiki/Wikipedia:Handling_trivia#Recommendations_for_handling_trivia
+ 182. file://localhost/wiki/Hearts_in_Bondage
+ 183. file://localhost/wiki/Fritz_Leiber,_Sr.
+ 184. file://localhost/wiki/Harry_Harrison
+ 185. file://localhost/wiki/Stars_and_Stripes_trilogy
+ 186. file://localhost/wiki/Internal_combustion_engine
+ 187. file://localhost/wiki/General_Sherman
+ 188. file://localhost/wiki/Blitzkrieg
+ 189. http://www.johnericssonleaguegopil.org/
+ 190. file://localhost/w/index.php?title=John_Ericsson&action=edit&section=13
+ 191. http://commons.wikimedia.org/wiki/John_Ericsson
+ 192. http://books.google.com/books?id=jKgTAAAAYAAJ&printsec=titlepage
+ 193. http://books.google.com/books?id=C3uNoWvmR48C&printsec=frontcover
+ 194. file://localhost/wiki/Cornelius_Scranton_Bushnell
+ 195. file://localhost/wiki/Gideon_Wells
+ 196. http://www.nps.gov/joer/
+ 197. http://www.johnericsson.org/
+ 198. http://www.invent.org/hall_of_fame/54.html
+ 199. http://www.monitor.noaa.gov/
+ 200. http://www.delectus.se/soren/staty/F/John_Ericsson_Fallstedt.html
+ 201. http://www.stirlingengines.org.uk/pioneers/pion4.html
+ 202. http://www.stirlingengines.org.uk/sun/sola2.html
+ 203. file://localhost/wiki/Template:Battle_of_Hampton_Roads
+ 204. file://localhost/w/index.php?title=Template_talk:Battle_of_Hampton_Roads&action=edit&redlink=1
+ 205. http://en.wikipedia.org/w/index.php?title=Template:Battle_of_Hampton_Roads&action=edit
+ 206. file://localhost/wiki/Battle_of_Hampton_Roads
+ 207. file://localhost/wiki/Gideon_Welles
+ 208. file://localhost/wiki/Franklin_Buchanan
+ 209. file://localhost/wiki/Catesby_ap_Roger_Jones
+ 210. file://localhost/wiki/Gustavus_Fox
+ 211. file://localhost/wiki/Stephen_Mallory
+ 212. file://localhost/wiki/French_Forrest
+ 213. file://localhost/wiki/John_Lorimer_Worden
+ 214. file://localhost/wiki/USS_Congress_(1841)
+ 215. file://localhost/wiki/USS_Cumberland_(1842)
+ 216. file://localhost/wiki/USS_Zouave_(1861)
+ 217. file://localhost/wiki/CSS_Virginia
+ 218. file://localhost/wiki/USS_Merrimack_(1855)
+ 219. file://localhost/wiki/USS_Roanoke_(1855)
+ 220. file://localhost/wiki/USS_Minnesota_(1855)
+ 221. file://localhost/wiki/USS_Monitor
+ 222. file://localhost/wiki/USS_St._Lawrence_(1848)
+ 223. file://localhost/wiki/CSS_Beaufort
+ 224. file://localhost/wiki/CSS_Raleigh_(1861)
+ 225. file://localhost/wiki/CSS_Patrick_Henry
+ 226. file://localhost/wiki/CSS_Jamestown
+ 227. file://localhost/wiki/Hampton_Roads
+ 228. file://localhost/wiki/Tidewater_region_of_Virginia
+ 229. file://localhost/wiki/James_River
+ 230. file://localhost/wiki/Elizabeth_River_(Virginia)
+ 231. file://localhost/wiki/Norfolk,_Virginia
+ 232. file://localhost/wiki/Fort_Monroe
+ 233. file://localhost/wiki/Wikipedia:Persondata
+ 234. file://localhost/wiki/L%C3%A5ngbanshyttan
+ 235. file://localhost/wiki/V%C3%A4rmland
+ 236. file://localhost/wiki/New_York
+ 237. http://en.wikipedia.org/wiki/John_Ericsson
+ 238. file://localhost/wiki/Special:Categories
+ 239. file://localhost/wiki/Category:1803_births
+ 240. file://localhost/wiki/Category:1889_deaths
+ 241. file://localhost/wiki/Category:American_Civil_War_industrialists
+ 242. file://localhost/wiki/Category:American_Lutherans
+ 243. file://localhost/wiki/Category:American_people_of_Swedish_descent
+ 244. file://localhost/wiki/Category:Swedish_inventors
+ 245. file://localhost/wiki/Category:Swedish_engineers
+ 246. file://localhost/wiki/Category:Swedish_military_personnel
+ 247. file://localhost/wiki/Category:Swedish_businesspeople
+ 248. file://localhost/wiki/Category:Swedish_shipbuilders
+ 249. file://localhost/wiki/Category:American_shipbuilders
+ 250. file://localhost/wiki/Category:Mechanical_engineers
+ 251. file://localhost/wiki/Category:Marine_engineers_and_naval_architects
+ 252. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 253. file://localhost/wiki/Category:Members_of_the_Royal_Swedish_Academy_of_Sciences
+ 254. file://localhost/wiki/Category:Burials_at_New_York_City_Marble_Cemetery
+ 255. file://localhost/wiki/Category:Swedish_immigrants_to_the_United_States
+ 256. file://localhost/wiki/Category:American_inventors
+ 257. file://localhost/wiki/Category:People_from_Filipstad_Municipality
+ 258. file://localhost/wiki/Category:Articles_lacking_in-text_citations_from_April_2010
+ 259. file://localhost/wiki/Category:All_articles_lacking_in-text_citations
+ 260. file://localhost/wiki/Category:Articles_with_hCards
+ 261. file://localhost/wiki/Category:Articles_with_trivia_sections_from_June_2008
+ 262. file://localhost/wiki/Category:All_articles_with_trivia_sections
+ 263. file://localhost/w/index.php?title=Special:UserLogin&returnto=John_Ericsson
+ 264. file://localhost/wiki/John_Ericsson
+ 265. file://localhost/wiki/Talk:John_Ericsson
+ 266. file://localhost/wiki/John_Ericsson
+ 267. file://localhost/w/index.php?title=John_Ericsson&action=edit
+ 268. file://localhost/w/index.php?title=John_Ericsson&action=history
+ 269. file://localhost/wiki/Main_Page
+ 270. file://localhost/wiki/Portal:Contents
+ 271. file://localhost/wiki/Portal:Featured_content
+ 272. file://localhost/wiki/Portal:Current_events
+ 273. file://localhost/wiki/Special:Random
+ 274. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 275. file://localhost/wiki/Help:Contents
+ 276. file://localhost/wiki/Wikipedia:About
+ 277. file://localhost/wiki/Wikipedia:Community_portal
+ 278. file://localhost/wiki/Special:RecentChanges
+ 279. file://localhost/wiki/Wikipedia:Contact_us
+ 280. file://localhost/wiki/Special:WhatLinksHere/John_Ericsson
+ 281. file://localhost/wiki/Special:RecentChangesLinked/John_Ericsson
+ 282. file://localhost/wiki/Wikipedia:Upload
+ 283. file://localhost/wiki/Special:SpecialPages
+ 284. file://localhost/w/index.php?title=John_Ericsson&oldid=406614359
+ 285. file://localhost/w/index.php?title=Special:Cite&page=John_Ericsson&id=406614359
+ 286. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=John+Ericsson
+ 287. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=John+Ericsson&oldid=406614359&writer=rl
+ 288. file://localhost/w/index.php?title=John_Ericsson&printable=yes
+ 289. http://cs.wikipedia.org/wiki/John_Ericsson
+ 290. http://de.wikipedia.org/wiki/John_Ericsson
+ 291. http://et.wikipedia.org/wiki/John_Ericsson
+ 292. http://es.wikipedia.org/wiki/John_Ericsson
+ 293. http://fr.wikipedia.org/wiki/John_Ericsson
+ 294. http://gl.wikipedia.org/wiki/John_Ericsson
+ 295. http://nl.wikipedia.org/wiki/John_Ericsson
+ 296. http://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%A8%E3%83%AA%E3%82%AF%E3%82%BD%E3%83%B3
+ 297. http://no.wikipedia.org/wiki/John_Ericsson
+ 298. http://pl.wikipedia.org/wiki/John_Ericsson
+ 299. http://pt.wikipedia.org/wiki/John_Ericsson
+ 300. http://ro.wikipedia.org/wiki/John_Ericsson
+ 301. http://fi.wikipedia.org/wiki/John_Ericsson
+ 302. http://sv.wikipedia.org/wiki/John_Ericsson
+ 303. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 304. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 305. http://www.wikimediafoundation.org/
+ 306. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 307. http://wikimediafoundation.org/wiki/Privacy_policy
+ 308. file://localhost/wiki/Wikipedia:About
+ 309. file://localhost/wiki/Wikipedia:General_disclaimer
+ 310. http://www.mediawiki.org/
+ 311. http://wikimediafoundation.org/
+
+   Hidden links:
+ 312. file://localhost/wiki/File:John_Ericsson_2.jpg
+ 313. file://localhost/wiki/File:Novelty_locomotive.jpg
+ 314. file://localhost/wiki/File:Novelty_locomotive.jpg
+ 315. file://localhost/wiki/File:DampfwagenWilhelmDerIV.JPG
+ 316. file://localhost/wiki/File:DampfwagenWilhelmDerIV.JPG
+ 317. file://localhost/wiki/File:John_Ericsson.jpg
+ 318. file://localhost/wiki/File:John_Ericsson.jpg
+ 319. file://localhost/wiki/File:JohnEriccsonPortrait.jpg
+ 320. file://localhost/wiki/File:JohnEriccsonPortrait.jpg
+ 321. file://localhost/wiki/File:John_Ericssons_gravkapell_i_Filipstad,_Nordisk_familjebok.png
+ 322. file://localhost/wiki/File:John_Ericssons_gravkapell_i_Filipstad,_Nordisk_familjebok.png
+ 323. file://localhost/wiki/File:Johnericsson.battary.jpg
+ 324. file://localhost/wiki/File:Johnericsson.battary.jpg
+ 325. file://localhost/wiki/File:John_Ericssons_staty_vid_korsningen_Nya_all%C3%A9n_och_Kungsportsavenyn_i_G%C3%B6teborg,_den_2_sept_2006.JPG
+ 326. file://localhost/wiki/File:John_Ericssons_staty_vid_korsningen_Nya_all%C3%A9n_och_Kungsportsavenyn_i_G%C3%B6teborg,_den_2_sept_2006.JPG
+ 327. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html
+ 328. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_ericsson.html
+ 329. file://localhost/wiki/Main_Page
+ 330. http://creativecommons.org/licenses/by-sa/3.0/

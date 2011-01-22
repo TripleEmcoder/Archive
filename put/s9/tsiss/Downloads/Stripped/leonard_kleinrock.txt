@@ -1,0 +1,1195 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Leonard Kleinrock
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   Leonard Kleinrock
+   Leonard Kleinrock and the first [7]Interface Message Processor
+   Born June 13, 1934 (1934-06-13) (age 76)
+   [8]New York
+   Residence [9]Los Angeles
+   Citizenship American
+   Nationality [10]American
+   Fields [11]Computer science
+   Institutions [12]UCLA
+   [13]Alma mater [14]City College of New York, [15]MIT
+   [16]Doctoral advisor Edward Arthurs^[17][1]
+   Doctoral students [18]Chris Ferguson
+   Known for [19]Internet development
+   Notable awards [20]National Medal of Science^[21][2]
+
+   Leonard Kleinrock (born June 13, 1934, in [22]New York) is an
+   [23]engineer and [24]computer scientist, and a computer science
+   professor at [25]UCLA's [26]Henry Samueli School of Engineering and
+   Applied Science, who made several important contributions to the field
+   of [27]computer networking, in particular to the theoretical side of
+   computer networking. He also played an important role in the
+   development of the [28]ARPANET, the precursor to the Internet, at
+   UCLA.^[29][3]
+
+   His most well-known and significant work is his early work on
+   [30]queueing theory, which has applications in many fields, among them
+   as a key mathematical background to [31]packet switching, the basic
+   technology behind the [32]Internet. His initial contribution to this
+   field was his doctoral thesis at [33]Massachusetts Institute of
+   Technology in 1962, published in book form in 1964; he later published
+   several of the standard works on the subject.
+
+   He has described this work as:
+
+     "Basically, what I did for my PhD research in 1961–1962 was to
+     establish a mathematical theory of packet networks...."
+
+   His theoretical work on [34]hierarchical routing, done in the late
+   1970s with his then-student [35]Farouk Kamoun, is now critical to the
+   operation of today's worldwide Internet.
+
+   Contents
+
+        * [36]1 ARPANET and the Internet
+        * [37]2 Education and career
+        * [38]3 Awards
+        * [39]4 See also
+        * [40]5 Further reading
+        * [41]6 References
+        * [42]7 External links
+
+[[43]edit] ARPANET and the Internet
+
+   In 1969, [44]ARPANET, the world's first packet switched computer
+   network, was established on October 29 between nodes at Kleinrock's lab
+   at [45]UCLA and [46]Douglas Engelbart's lab at [47]SRI. [48]Interface
+   Message Processors (IMP) at both sites served as the [49]backbone of
+   the first [50]Internet [51][1].
+
+   In addition to SRI and UCLA, the [52]University of California at Santa
+   Barbara, and the [53]University of Utah were part of the original four
+   network nodes. By December 5, 1969, the initial 4-node network was
+   connected.
+
+   In 1988, Kleinrock was the chairman of a group that presented the
+   report Toward a National Research Network to the [54]U.S. Congress
+   [55][2]. This report was highly influential and was used to develop the
+   [56]High Performance Computing Act of 1991 [57][3], which was
+   influential in the development of the Internet as it is known today.
+   [58][4] Funding from the bill was used in the development of the 1993
+   web browser [59]MOSAIC, at the [60]National Center for Supercomputing
+   Applications (NCSA).
+
+[[61]edit] Education and career
+
+   Kleinrock graduated from the noted [62]Bronx High School of Science in
+   1951, and received a Bachelor of Electrical Engineering degree in 1957
+   from the [63]City College of New York, and a master's degree and a
+   doctorate (Ph.D.) in [64]electrical engineering & [65]computer science
+   from the [66]Massachusetts Institute of Technology in 1959 and 1963
+   respectively. He then joined the faculty at the University of
+   California at Los Angeles (UCLA), where he remains to the present day;
+   during 1991-1995 he served as the Chairman of the Computer Science
+   Department there.
+
+[[67]edit] Awards
+
+   He has received numerous professional awards. Kleinrock was selected to
+   receive the prestigious [68]National Medal of Science, the nation's
+   highest scientific honor, from President [69]George W Bush in the
+   [70]White House on September 29, 2008. "The 2007 National Medal of
+   Science to Leonard Kleinrock for his fundamental contributions to the
+   mathematical theory of modern data networks, and for the functional
+   specification of packet switching, which is the foundation of Internet
+   technology. His mentoring of generations of students has led to the
+   commercialization of technologies that have transformed the world."
+   ^[71][4]
+
+[[72]edit] See also
+
+     * [73]ARPANET
+     * [74]Plan 55-A, a [75]message switching system analyzed in
+       Kleinrock's thesis.
+     * [76]UCLA Engineering School
+     * [77]Computer Science
+     * [78]Nerds 2.0.1 - 1998 documentary in which Kleinrock gives a
+       lengthy interview
+
+[[79]edit] Further reading
+
+     * Leonard Kleinrock, [80]"Information Flow in Large Communication
+       Nets", Ph.D. Thesis Proposal, Massachusetts Institute of
+       Technology, July 1961
+     * Leonard Kleinrock, [81]"Information Flow in Large Communication
+       Nets", RLE Quarterly Progress Report, Massachusetts Institute of
+       Technology, July 1961
+     * Leonard Kleinrock, [82]"Information Flow in Large Communication
+       Nets", RLE Quarterly Progress Report, Massachusetts Institute of
+       Technology, April 1962
+     * Kleinrock, Leonard (December 1962). [83]Message Delay in
+       Communication Nets with Storage (PhD thesis). Cambridge:
+       Massachusetts Institute of Technology.
+       [84]http://dspace.mit.edu/bitstream/handle/1721.1/11562/33840535.pd
+       f.
+     * Leonard Kleinrock, Communication Nets: Stochastic Message Flow and
+       Design (McGraw-Hill, 1964)
+     * Leonard Kleinrock, Queueing Systems: Volume I – Theory (Wiley
+       Interscience, New York, 1975)
+     * Leonard Kleinrock, Queueing Systems: Volume II – Computer
+       Applications (Wiley Interscience, New York, 1976)
+
+     * Leonard Kleinrock, Farok Kamoun, "Hierarchical Routing for Large
+       Networks, Performance Evaluation and Optimization", Computer
+       Networks, Vol. 1, No. 3, pp. 155–174, January 1977
+
+[[85]edit] References
+
+    1. [86]^ [87]Leonard Kleinrock at the [88]Mathematics Genealogy
+       Project
+    2. [89]^ see the [90]Awards section of this article
+    3. [91]^ Rosenbaum, Philip (October 29, 2009). [92]"Web pioneer
+       recalls 'birth of the Internet'". [93]CNN.
+       [94]http://www.cnn.com/2009/TECH/10/29/kleinrock.internet/index.htm
+       l. Retrieved October 30, 2009.
+    4. [95]^ White House News report
+
+[[96]edit] External links
+
+     * [97]Leonard Kleinrock's personal web site
+     * [98]Bibliography
+     * [99]Leonard Kleinrock's Personal History/Biography
+     * [100]Network history links
+     * [101]Oral history interview with Leonard Kleinrock at [102]Charles
+       Babbage Institute, University of Minnesota, Minneapolis. Kleinrock
+       discusses his dissertation work in queuing theory, and his move to
+       the University of California at Los Angeles (UCLA). As one of the
+       main contractors for the ARPANET, Kleinrock describes his
+       involvement in discussions before the official DARPA request was
+       issued, the people involved in the ARPANET work at UCLA, the
+       installation of the first node of the network, the Network
+       Measurement Center, and his relationships with Lawrence Roberts and
+       the IPT Office, Bolt Beranek and Newman, and the Network Analysis
+       Corporation.
+     * [103]Oral history interview with Howard Frank at [104]Charles
+       Babbage Institute, University of Minnesota, Minneapolis. Frank
+       describes his work on the ARPANET, including his interaction with
+       Roberts and the IPT Office.
+     * [105]Association for Computing Machinery [106]Video Interview with
+       Leonard Kleinrock
+     * [107]Video: Leonard Kleinrock on the first Internet connection
+     * [108]Video: Leonard Kleinrock displays Internet's first router
+     * [109]Video: Leonard Kleinrock on packet-switching, early Internet
+
+
+   [110]v · [111]d · [112]e[113]United States National Medal of Science
+   [114]laureates
+
+    Behavioral and social science
+
+   1960s
+
+        1964: [115]Roger Adams · [116]Othmar H. Ammann · [117]Theodosius
+        Dobzhansky · [118]Neal Elgar Miller
+   1980s
+
+        1986: [119]Herbert A. Simon · 1987: [120]Anne Anastasi · [121]George J.
+        Stigler · 1988: [122]Milton Friedman
+   1990s
+
+        1990: [123]Leonid Hurwicz · [124]Patrick Suppes · 1991: [125]Robert W.
+        Kates · [126]George A. Miller · 1992: [127]Eleanor J. Gibson · 1994:
+        [128]Robert K. Merton · 1995: [129]Roger N. Shepard · 1996: [130]Paul
+        Samuelson · 1997: [131]William K. Estes · 1998: [132]William Julius
+        Wilson · 1999: [133]Robert M. Solow
+   2000s
+
+        2000: [134]Gary Becker · 2001: [135]George Bass · 2003: [136]R. Duncan
+        Luce · 2004: [137]Kenneth Arrow · 2005: [138]Gordon H. Bower · 2008:
+        [139]Michael I. Posner
+    Biological sciences
+
+   1960s
+
+        1963: [140]C. B. van Niel · 1964: [141]Marshall W. Nirenberg · 1965:
+        [142]Francis P. Rous · [143]George G. Simpson · [144]Donald D. Van
+        Slyke · 1966: [145]Edward F. Knipling · [146]Fritz Albert Lipmann ·
+        [147]William C. Rose · [148]Sewall Wright · 1967: [149]Kenneth S.
+        Cole · [150]Harry F. Harlow · [151]Michael Heidelberger · [152]Alfred
+        H. Sturtevant · 1968: [153]Horace Barker · [154]Bernard B. Brodie ·
+        [155]Detlev W. Bronk · [156]Jay Lush · [157]Burrhus Frederic Skinner ·
+        1969: [158]Robert Huebner · [159]Ernst Mayr
+   1970s
+
+        1970: [160]Barbara McClintock · [161]Albert B. Sabin · 1973:
+        [162]Daniel I. Arnon · [163]Earl W. Sutherland, Jr. · 1974:
+        [164]Britton Chance · [165]Erwin Chargaff · [166]James V. Neel ·
+        [167]James Augustine Hannon · 1975: [168]Hallowell Davis · [169]Paul
+        Gyorgy · [170]Sterling Brown Hendricks · [171]Orville lvin Vogel ·
+        1976: [172]Roger C.L. Guillemin · [173]Keith Roberts Porter ·
+        [174]Efraim Racker · [175]E. O. Wilson · 1979: [176]Robert H. Burris ·
+        [177]Elizabeth C. Crosby · [178]Arthur Kornberg · [179]Severo Ochoa ·
+        [180]Earl Reece Stadtman · [181]George Ledyard Stebbins · [182]Paul
+        Alfred Weiss
+   1980s
+
+        1981: [183]Philip Handler · 1982: [184]Seymour Benzer · [185]Glenn W.
+        Burton · [186]Mildred Cohn · 1983: [187]Howard L. Bachrach · [188]Paul
+        Berg · [189]Wendell L. Roelofs · [190]Berta Scharrer · 1986:
+        [191]Stanley Cohen · [192]Donald A. Henderson · [193]Vernon B.
+        Mountcastle · [194]George Emil Palade · [195]Joan A. Steitz · 1987:
+        [196]Michael E. Debakey · [197]Theodor O. Diener · [198]Harry Eagle ·
+        [199]Har Gobind Khorana · [200]Rita Levi-Montalcini · 1988:
+        [201]Michael S. Brown · [202]Stanley Norman Cohen · [203]Joseph L.
+        Goldstein · [204]Maurice R. Hilleman · [205]Eric R. Kandel ·
+        [206]Rosalyn S. Yalow · 1989: [207]Katherine Esau · [208]Viktor
+        Hamburger · [209]Philip Leder · [210]Joshua Lederberg · [211]Roger W.
+        Sperry · [212]Harland G. Wood
+   1990s
+
+        1990: [213]Baruj Benacerraf · [214]Herbert W. Boyer · [215]Daniel E.
+        Koshland, Jr. · [216]Edward B. Lewis · [217]David G. Nathan · [218]E.
+        Donnall Thomas · 1991: [219]Mary Ellen Avery · [220]G. Evelyn
+        Hutchinson · [221]Elvin A. Kabat · [222]Salvador Luria · [223]Paul A.
+        Marks · [224]Folke K Skoog · [225]Paul C. Zamecnik · 1992: [226]Maxine
+        Singer · [227]Howard M. Temin · 1993: [228]Daniel Nathans · [229]Salome
+        G. Waelsch · 1994: [230]Thomas Eisner · [231]Elizabeth F. Neufeld ·
+        1995: [232]Alexander Rich · 1996: [233]Ruth Patrick · 1997: [234]James
+        D. Watson · [235]Robert A. Weinberg · 1998: [236]Bruce Ames ·
+        [237]Janet Rowley · 1999: [238]David Baltimore · [239]Jared Diamond ·
+        [240]Lynn Margulis
+   2000s
+
+        2000: [241]Nancy C. Andreasen · [242]Peter H. Raven · [243]Carl Woese ·
+        2001: [244]Francisco J. Ayala · [245]Mario R. Capecchi · [246]Ann M.
+        Graybiel · [247]Gene E. Likens · [248]Victor A. McKusick · [249]Harold
+        Varmus · 2002: [250]James E. Darnell · [251]Evelyn M. Witkin · 2003:
+        [252]J. Michael Bishop · [253]Solomon H. Snyder · [254]Charles
+        Yanofsky · 2004: [255]Norman E. Borlaug · [256]Phillip A. Sharp ·
+        [257]Thomas E. Starzl · 2005: [258]Anthony Fauci · [259]Torsten N.
+        Wiesel · 2006: [260]Rita R. Colwell · [261]Nina Fedoroff · [262]Lubert
+        Stryer · 2007: [263]Robert J. Lefkowitz · [264]Bert W. O'Malley · 2008:
+        [265]Francis S. Collins · [266]Elaine Fuchs · [267]J. Craig Venter
+    Chemistry
+
+   1980s
+
+        1982: [268]F. Albert Cotton · [269]Gilbert Stork · 1983: [270]Roald
+        Hoffmann · [271]George C. Pimentel · [272]Richard N. Zare · 1986:
+        [273]Harry B. Gray · [274]Yuan Tseh Lee · [275]Carl S. Marvel ·
+        [276]Frank H. Westheimer · 1987: [277]William S. Johnson · [278]Walter
+        H. Stockmayer · [279]Max Tishler · 1988: [280]William O. Baker ·
+        [281]Konrad E. Bloch · [282]Elias J. Corey · 1989: [283]Richard B.
+        Bernstein · [284]Melvin Calvin · [285]Rudoph A. Marcus · [286]Harden M.
+        McConnell
+   1990s
+
+        1990: [287]Elkan Blout · [288]Karl Folkers · [289]John D. Roberts ·
+        1991: [290]Ronald Breslow · [291]Gertrude B. Elion · [292]Dudley R.
+        Herschbach · [293]Glenn T. Seaborg · 1992: [294]Howard E. Simmons,
+        Jr. · 1993: [295]Donald J. Cram · [296]Norman Hackerman · 1994:
+        [297]George S. Hammond · 1995: [298]Thomas Cech · [299]Isabella L.
+        Karle · 1996: [300]Norman Davidson · 1997: [301]Darleane C. Hoffman ·
+        [302]Harold S. Johnston · 1998: [303]John W. Cahn · [304]George M.
+        Whitesides · 1999: [305]Stuart A. Rice · [306]John Ross · [307]Susan
+        Solomon
+   2000s
+
+        2000: [308]John D. Baldeschwieler · [309]Ralph F. Hirschmann · 2001:
+        [310]Ernest R. Davidson · [311]Gabor A. Somorjai · 2002: [312]John I.
+        Brauman · 2004: [313]Stephen J. Lippard · 2006: [314]Marvin H.
+        Caruthers · [315]Peter B. Dervan · 2007: [316]Mostafa A. El-Sayed ·
+        2008: [317]Joanna S. Fowler · [318]JoAnne Stubbe
+    Engineering sciences
+
+   1960s
+
+        1962: [319]Theodore von Karman · 1963: [320]Vannevar Bush · [321]John
+        Robinson Pierce · 1964: [322]Charles S. Draper · 1965: [323]Hugh L.
+        Dryden · [324]Clarence L. Johnson · [325]Warren K. Lewis · 1966:
+        [326]Claude E. Shannon · 1967: [327]Edwin H. Land · [328]Igor I.
+        Sikorsky · 1968: [329]J. Presper Eckert · [330]Nathan M. Newmark ·
+        1969: [331]Jack St. Clair Kilby
+   1970s
+
+        1970: [332]George E. Mueller · 1973: [333]Harold E. Edgerton ·
+        [334]Richard T. Whitcomb · 1974: [335]Rudolf Kompfner · [336]Ralph
+        Brazelton Peck · [337]Abel Wolman · 1975: [338]Manson Benedict ·
+        [339]William Hayward Pickering · [340]Frederick E. Terman ·
+        [341]Wernher von Braun · 1976: [342]Morris Cohen · [343]Peter C.
+        Goldmark · [344]Erwin Wilhelm Müller · 1979: [345]Emmett N. Leith ·
+        [346]Raymond D. Mindlin · [347]Robert N. Noyce · [348]Earl R. Parker ·
+        [349]Simon Ramo
+   1980s
+
+        1982: [350]Edward H. Heinemann · [351]Donald L. Katz · 1983:
+        [352]William R. Hewlett · [353]George M. Low · [354]John G. Trump ·
+        1986: [355]Hans Wolfgang Liepmann · [356]T. Y. Lin · [357]Bernard M.
+        Oliver · 1987: [358]R. Byron Bird · [359]H. Bolton Seed · [360]Ernst
+        Weber · 1988: [361]Daniel C. Drucker · [362]Willis M. Hawkins ·
+        [363]George W. Housner · 1989: [364]Harry George Drickamer ·
+        [365]Herbert E. Grier
+   1990s
+
+        1990: [366]Mildred S. Dresselhaus · [367]Nick Holonyak Jr. · 1991:
+        [368]George Heilmeier · [369]Luna B. Leopold · [370]H. Guyford Stever ·
+        1992: [371]Calvin F. Quate · [372]John Roy Whinnery · 1993: [373]Alfred
+        Y. Cho · 1994: [374]Ray W. Clough · 1995: [375]Hermann A. Haus · 1996:
+        [376]James L. Flanagan · [377]C. Kumar N. Patel · 1998: [378]Eli
+        Ruckenstein · 1999: [379]Kenneth N. Stevens
+   2000s
+
+        2000: [380]Yuan-Cheng B. Fung · 2001: [381]Andreas Acrivos · 2002:
+        [382]Leo Beranek · 2003: [383]John M. Prausnitz · 2004: [384]Edwin N.
+        Lightfoot · 2005: [385]Jan D. Achenbach · [386]Tobin J. Marks · 2006:
+        [387]Robert S. Langer · 2007: [388]David J. Wineland · 2008:
+        [389]Rudolf E. Kalman
+    Mathematical, statistical, and computer sciences
+
+   1960s
+
+        1963: [390]Norbert Wiener · 1964: [391]Solomon Lefschetz · [392]H.
+        Marston Morse · 1965: [393]Oscar Zariski · 1966: [394]John Milnor ·
+        1967: [395]Paul Cohen · 1968: [396]Jerzy Neyman · 1969: [397]William
+        Feller
+   1970s
+
+        1970: [398]Richard Brauer · 1973: [399]John Tukey · 1974: [400]Kurt
+        Gödel · 1975: [401]John W. Backus · [402]Shiing-Shen Chern ·
+        [403]George Dantzig · 1976: [404]Kurt Otto Friedrichs · [405]Hassler
+        Whitney · 1979: [406]Joseph Leo Doob · [407]Donald E. Knuth
+   1980s
+
+        1982: [408]Marshall Harvey Stone · 1983: [409]Herman Goldstine ·
+        [410]Isadore Singer · 1986: [411]Peter Lax · [412]Antoni Zygmund ·
+        1987: [413]Raoul Bott · [414]Michael Freedman · 1988: [415]Ralph E.
+        Gomory · [416]Joseph B. Keller · 1989: [417]Samuel Karlin ·
+        [418]Saunders MacLane · [419]Donald C. Spencer
+   1990s
+
+        1990: [420]George F. Carrier · [421]Stephen Cole Kleene · [422]John
+        McCarthy · 1991: [423]Alberto Calderón · 1992: [424]Allen Newell ·
+        1993: [425]Martin David Kruskal · 1994: [426]John Cocke · 1995:
+        [427]Louis Nirenberg · 1996: [428]Richard Karp · [429]Stephen Smale ·
+        1997: [430]Shing-Tung Yau · 1998: [431]Cathleen Synge Morawetz · 1999:
+        [432]Felix Browder · [433]Ronald R. Coifman
+   2000s
+
+        2000: [434]John Griggs Thompson · [435]Karen K. Uhlenbeck · 2001:
+        [436]Calyampudi R. Rao · [437]Elias M. Stein · 2002: [438]James G.
+        Glimm · 2003: [439]Carl R. de Boor · 2004: [440]Dennis P. Sullivan ·
+        2005: [441]Bradley Efron · 2006: [442]Hyman Bass · 2007: Leonard
+        Kleinrock · [443]Andrew J. Viterbi ·
+    Physical sciences
+
+   1960s
+
+        1963: [444]Luis W. Alvarez · 1964: [445]Julian Schwinger · [446]Harold
+        Clayton Urey · [447]Robert Burns Woodward · 1965: [448]John Bardeen ·
+        [449]Peter Debye · [450]Leon M. Lederman · [451]William Rubey · 1966:
+        [452]Jacob Bjerknes · [453]Subrahmanyan Chandrasekhar · [454]Henry
+        Eyring · [455]John H. Van Vleck · [456]Vladimir K. Zworykin · 1967:
+        [457]Jesse Beams · [458]Francis Birch · [459]Gregory Breit · [460]Louis
+        Hammett · [461]George Kistiakowsky · 1968: [462]Paul Bartlett ·
+        [463]Herbert Friedman · [464]Lars Onsager · [465]Eugene Wigner · 1969:
+        [466]Herbert C. Brown · [467]Wolfgang Panofsky
+   1970s
+
+        1970: [468]Robert H. Dicke · [469]Allan R. Sandage · [470]John C.
+        Slater · [471]John A. Wheeler · [472]Saul Winstein · 1973: [473]Carl
+        Djerassi · [474]Maurice Ewing · [475]Arie Jan Haagen-Smit ·
+        [476]Vladimir Haensel · [477]Frederick Seitz · [478]Robert Rathbun
+        Wilson · 1974: [479]Nicolaas Bloembergen · [480]Paul Flory ·
+        [481]William Alfred Fowler · [482]Linus Carl Pauling · [483]Kenneth
+        Sanborn Pitzer · 1975: [484]Hans A. Bethe · [485]Joseph Hirschfelder ·
+        [486]Lewis Sarett · [487]E. Bright Wilson · [488]Chien-Shiung Wu ·
+        1976: [489]Samuel Goudsmit · [490]Herbert S. Gutowsky · [491]Frederick
+        Rossini · [492]Verner Suomi · [493]Henry Taube · [494]George
+        Uhlenbeck · 1979: [495]Richard P. Feynman · [496]Herman Mark ·
+        [497]Edward M. Purcell · [498]John Sinfelt · [499]Lyman Spitzer ·
+        [500]Victor F. Weisskopf
+   1980s
+
+        1982: [501]Philip W. Anderson · [502]Yoichiro Nambu · [503]Edward
+        Teller · [504]Charles H. Townes · 1983: [505]E. Margaret Burbidge ·
+        [506]Maurice Goldhaber · [507]Helmut Landsberg · [508]Walter Munk ·
+        [509]Frederick Reines · [510]Bruno B. Rossi · [511]J. Robert
+        Schrieffer · 1986: [512]Solomon Buchsbaum · [513]Horace Crane ·
+        [514]Herman Feshbach · [515]Robert Hofstadter · [516]Chen Ning Yang ·
+        1987: [517]Philip Abelson · [518]Walter Elsasser · [519]Paul C.
+        Lauterbur · [520]George Pake · [521]James A. Van Allen · 1988: [522]D.
+        Allan Bromley · [523]Paul Ching-Wu Chu · [524]Walter Kohn · [525]Norman
+        F. Ramsey · [526]Jack Steinberger · 1989: [527]Arnold O. Beckman ·
+        [528]Eugene Parker · [529]Robert Sharp · [530]Henry Stommel
+   1990s
+
+        1990: [531]Allan M. Cormack · [532]Edwin M. McMillan · [533]Robert
+        Pound · [534]Roger Revelle · 1991: [535]Arthur L. Schawlow · [536]Ed
+        Stone · [537]Steven Weinberg · 1992: [538]Eugene M. Shoemaker · 1993:
+        [539]Val Fitch · [540]Vera Rubin · 1994: [541]Albert Overhauser ·
+        [542]Frank Press · 1995: [543]Hans Dehmelt · [544]Peter Goldreich ·
+        1996: [545]Wallace S. Broecker · 1997: [546]Marshall Rosenbluth ·
+        [547]Martin Schwarzschild · [548]George Wetherill · 1998: [549]Don L.
+        Anderson · [550]John N. Bahcall · 1999: [551]James Cronin · [552]Leo
+        Kadanoff
+   2000s
+
+        2000: [553]Willis E. Lamb · [554]Jeremiah P. Ostriker · [555]Gilbert F.
+        White · 2001: [556]Marvin L. Cohen · [557]Raymond Davis Jr. ·
+        [558]Charles Keeling · 2002: [559]Richard Garwin · [560]W. Jason
+        Morgan · [561]Edward Witten · 2003: [562]G. Brent Dalrymple ·
+        [563]Riccardo Giacconi · 2004: [564]Robert N. Clayton · 2005:
+        [565]Ralph A. Alpher · [566]Lonnie Thompson · 2006: [567]Daniel
+        Kleppner · 2007: [568]Fay Ajzenberg-Selove · [569]Charles P. Slichter ·
+        2009: [570]Berni Alder · [571]James E. Gunn
+             [572]Persondata
+   Name              Kleinrock, Leonard
+   Alternative names
+   Short description
+   Date of birth     June 13, 1934
+   Place of birth    [573]New York
+   Date of death
+   Place of death
+   Retrieved from "[574]http://en.wikipedia.org/wiki/Leonard_Kleinrock"
+   [575]Categories: [576]1934 births | [577]Living people | [578]American
+   computer scientists | [579]American Jews | [580]American inventors |
+   [581]Internet pioneers | [582]Massachusetts Institute of Technology
+   alumni | [583]Bronx High School of Science alumni | [584]City
+   University of New York alumni | [585]Fellows of the Association for
+   Computing Machinery | [586]Computer pioneers | [587]University of
+   California, Los Angeles faculty | [588]Queueing theorists | [589]People
+   from New York City | [590]Jewish inventors
+
+Personal tools
+
+     * [591]Log in / create account
+
+Namespaces
+
+     * [592]Article
+     * [593]Discussion
+
+Variants
+
+Views
+
+     * [594]Read
+     * [595]Edit
+     * [596]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [597]Main page
+     * [598]Contents
+     * [599]Featured content
+     * [600]Current events
+     * [601]Random article
+     * [602]Donate to Wikipedia
+
+Interaction
+
+     * [603]Help
+     * [604]About Wikipedia
+     * [605]Community portal
+     * [606]Recent changes
+     * [607]Contact Wikipedia
+
+Toolbox
+
+     * [608]What links here
+     * [609]Related changes
+     * [610]Upload file
+     * [611]Special pages
+     * [612]Permanent link
+     * [613]Cite this page
+
+Print/export
+
+     * [614]Create a book
+     * [615]Download as PDF
+     * [616]Printable version
+
+Languages
+
+     * [617]العربية
+     * [618]Català
+     * [619]Dansk
+     * [620]Deutsch
+     * [621]Español
+     * [622]Français
+     * [623]한국어
+     * [624]Italiano
+     * [625]മലയാളം
+     * [626]Polski
+     * [627]Português
+     * [628]Srpskohrvatski / Српскохрватски
+     * [629]ไทย
+     * [630]Українська
+
+     * This page was last modified on 31 December 2010 at 21:47.
+     * Text is available under the [631]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [632]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [633]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [634]Contact us
+
+     * [635]Privacy policy
+     * [636]About Wikipedia
+     * [637]Disclaimers
+
+     * [638]Powered by MediaWiki
+     * [639]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#p-search
+   7. file://localhost/wiki/Interface_Message_Processor
+   8. file://localhost/wiki/New_York
+   9. file://localhost/wiki/Los_Angeles
+  10. file://localhost/wiki/United_States
+  11. file://localhost/wiki/Computer_science
+  12. file://localhost/wiki/UCLA
+  13. file://localhost/wiki/Alma_mater
+  14. file://localhost/wiki/City_College_of_New_York
+  15. file://localhost/wiki/MIT
+  16. file://localhost/wiki/Doctoral_advisor
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_note-0
+  18. file://localhost/wiki/Chris_Ferguson
+  19. file://localhost/wiki/Internet
+  20. file://localhost/wiki/National_Medal_of_Science
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_note-1
+  22. file://localhost/wiki/New_York
+  23. file://localhost/wiki/Engineer
+  24. file://localhost/wiki/Computer_scientist
+  25. file://localhost/wiki/UCLA
+  26. file://localhost/wiki/Henry_Samueli_School_of_Engineering_and_Applied_Science
+  27. file://localhost/wiki/Computer_network
+  28. file://localhost/wiki/ARPANET
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_note-2
+  30. file://localhost/wiki/Queueing_theory
+  31. file://localhost/wiki/Packet_switching
+  32. file://localhost/wiki/Internet
+  33. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  34. file://localhost/wiki/Hierarchical_routing
+  35. file://localhost/wiki/Farouk_Kamoun
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#ARPANET_and_the_Internet
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#Education_and_career
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#Awards
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#See_also
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#Further_reading
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#References
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#External_links
+  43. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=1
+  44. file://localhost/wiki/ARPANET#Initial_ARPANET_deployment
+  45. file://localhost/wiki/UCLA
+  46. file://localhost/wiki/Douglas_Engelbart
+  47. file://localhost/wiki/SRI_International
+  48. file://localhost/wiki/Interface_Message_Processors
+  49. file://localhost/wiki/Internet_backbone
+  50. file://localhost/wiki/Internet
+  51. http://www.engineer.ucla.edu/stories/2004/Internet35.htm
+  52. file://localhost/wiki/University_of_California_at_Santa_Barbara
+  53. file://localhost/wiki/University_of_Utah
+  54. file://localhost/wiki/U.S._Congress
+  55. http://newton.nap.edu/books/NI000393/html
+  56. file://localhost/wiki/High_Performance_Computing_Act_of_1991
+  57. http://www.mit.edu/afs/net.mit.edu/dev/mit/jis/OldFiles/nrenbill.txt
+  58. http://www.lk.cs.ucla.edu/PS/paper224.pdf
+  59. file://localhost/wiki/Mosaic_(web_browser)
+  60. file://localhost/wiki/National_Center_for_Supercomputing_Applications
+  61. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=2
+  62. file://localhost/wiki/Bronx_High_School_of_Science
+  63. file://localhost/wiki/City_College_of_New_York
+  64. file://localhost/wiki/Electrical_engineering
+  65. file://localhost/wiki/Computer_science
+  66. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  67. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=3
+  68. file://localhost/wiki/National_Medal_of_Science
+  69. file://localhost/wiki/George_W_Bush
+  70. file://localhost/wiki/White_House
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_note-3
+  72. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=4
+  73. file://localhost/wiki/ARPANET
+  74. file://localhost/wiki/Plan_55-A
+  75. file://localhost/wiki/Message_switching
+  76. file://localhost/wiki/Henry_Samueli_School_of_Engineering_and_Applied_Science
+  77. file://localhost/wiki/Computer_Science
+  78. file://localhost/wiki/Nerds_2.0.1
+  79. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=5
+  80. http://www.lk.cs.ucla.edu/LK/Bib/REPORT/PhD/proposal.html
+  81. http://www.lk.cs.ucla.edu/LK/Bib/REPORT/RLEreport-1961.html
+  82. http://www.lk.cs.ucla.edu/LK/Bib/REPORT/RLEreport-1962.html
+  83. http://dspace.mit.edu/bitstream/handle/1721.1/11562/33840535.pdf
+  84. http://dspace.mit.edu/bitstream/handle/1721.1/11562/33840535.pdf
+  85. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=6
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_ref-0
+  87. http://genealogy.math.ndsu.nodak.edu/id.php?id=24334
+  88. file://localhost/wiki/Mathematics_Genealogy_Project
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_ref-1
+  90. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#Awards
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_ref-2
+  92. http://www.cnn.com/2009/TECH/10/29/kleinrock.internet/index.html
+  93. file://localhost/wiki/CNN
+  94. http://www.cnn.com/2009/TECH/10/29/kleinrock.internet/index.html
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html#cite_ref-3
+  96. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit&section=7
+  97. http://www.lk.cs.ucla.edu/
+  98. http://www.lk.cs.ucla.edu/LK/Bib/
+  99. http://www.lk.cs.ucla.edu/LK/Inet/birth.html
+ 100. http://www.lk.cs.ucla.edu/internet_history.html
+ 101. http://www.cbi.umn.edu/oh/display.phtml?id=117
+ 102. file://localhost/wiki/Charles_Babbage_Institute
+ 103. http://www.cbi.umn.edu/oh/display.phtml?id=115
+ 104. file://localhost/wiki/Charles_Babbage_Institute
+ 105. file://localhost/wiki/Association_for_Computing_Machinery
+ 106. http://portal.acm.org/citation.cfm?doid=1008213.1008229
+ 107. http://www.newsroom.ucla.edu/portal/ucla/electronicplay.aspx?fid=28176&id=E0C5478
+ 108. http://www.newsroom.ucla.edu/portal/ucla/electronicplay.aspx?fid=28175&id=E0C5478
+ 109. http://www.newsroom.ucla.edu/portal/ucla/electronicplay.aspx?fid=28174&id=E0C5478
+ 110. file://localhost/wiki/Template:Winners_of_the_National_Medal_of_Science
+ 111. file://localhost/wiki/Template_talk:Winners_of_the_National_Medal_of_Science
+ 112. http://en.wikipedia.org/w/index.php?title=Template:Winners_of_the_National_Medal_of_Science&action=edit
+ 113. file://localhost/wiki/National_Medal_of_Science
+ 114. file://localhost/wiki/Laureate
+ 115. file://localhost/wiki/Roger_Adams
+ 116. file://localhost/wiki/Othmar_H._Ammann
+ 117. file://localhost/wiki/Theodosius_Dobzhansky
+ 118. file://localhost/wiki/Neal_Elgar_Miller
+ 119. file://localhost/wiki/Herbert_A._Simon
+ 120. file://localhost/wiki/Anne_Anastasi
+ 121. file://localhost/wiki/George_Stigler
+ 122. file://localhost/wiki/Milton_Friedman
+ 123. file://localhost/wiki/Leonid_Hurwicz
+ 124. file://localhost/wiki/Patrick_Suppes
+ 125. file://localhost/wiki/Robert_Kates
+ 126. file://localhost/wiki/George_Armitage_Miller
+ 127. file://localhost/wiki/Eleanor_J._Gibson
+ 128. file://localhost/wiki/Robert_K._Merton
+ 129. file://localhost/wiki/Roger_N._Shepard
+ 130. file://localhost/wiki/Paul_Samuelson
+ 131. file://localhost/wiki/William_Kaye_Estes
+ 132. file://localhost/wiki/William_Julius_Wilson
+ 133. file://localhost/wiki/Robert_M._Solow
+ 134. file://localhost/wiki/Gary_Becker
+ 135. file://localhost/wiki/George_Bass_(archaeologist)
+ 136. file://localhost/wiki/R._Duncan_Luce
+ 137. file://localhost/wiki/Kenneth_Arrow
+ 138. file://localhost/wiki/Gordon_H._Bower
+ 139. file://localhost/wiki/Michael_I._Posner
+ 140. file://localhost/wiki/C._B._van_Niel
+ 141. file://localhost/wiki/Marshall_W._Nirenberg
+ 142. file://localhost/wiki/Francis_Peyton_Rous
+ 143. file://localhost/wiki/George_G._Simpson
+ 144. file://localhost/w/index.php?title=Donald_D._Van_Slyke&action=edit&redlink=1
+ 145. file://localhost/wiki/Edward_F._Knipling
+ 146. file://localhost/wiki/Fritz_Albert_Lipmann
+ 147. file://localhost/wiki/William_C._Rose
+ 148. file://localhost/wiki/Sewall_Wright
+ 149. file://localhost/wiki/Kenneth_S._Cole
+ 150. file://localhost/wiki/Harry_Harlow
+ 151. file://localhost/wiki/Michael_Heidelberger
+ 152. file://localhost/wiki/Alfred_Sturtevant
+ 153. file://localhost/wiki/Horace_Barker
+ 154. file://localhost/wiki/Bernard_Brodie_(biochemist)
+ 155. file://localhost/wiki/Detlev_Bronk
+ 156. file://localhost/wiki/Jay_Lush
+ 157. file://localhost/wiki/Burrhus_Frederic_Skinner
+ 158. file://localhost/wiki/Robert_Huebner
+ 159. file://localhost/wiki/Ernst_Mayr
+ 160. file://localhost/wiki/Barbara_McClintock
+ 161. file://localhost/wiki/Albert_Sabin
+ 162. file://localhost/wiki/Daniel_I._Arnon
+ 163. file://localhost/wiki/Earl_W._Sutherland,_Jr.
+ 164. file://localhost/wiki/Britton_Chance
+ 165. file://localhost/wiki/Erwin_Chargaff
+ 166. file://localhost/wiki/James_V._Neel
+ 167. file://localhost/w/index.php?title=James_Augustine_Hannon&action=edit&redlink=1
+ 168. file://localhost/wiki/Hallowell_Davis
+ 169. file://localhost/w/index.php?title=Paul_Gyorgy&action=edit&redlink=1
+ 170. file://localhost/w/index.php?title=Sterling_Brown_Hendricks&action=edit&redlink=1
+ 171. file://localhost/wiki/Orville_Vogel
+ 172. file://localhost/wiki/Roger_C.L._Guillemin
+ 173. file://localhost/wiki/Keith_Roberts_Porter
+ 174. file://localhost/wiki/Efraim_Racker
+ 175. file://localhost/wiki/E._O._Wilson
+ 176. file://localhost/wiki/Robert_H._Burris
+ 177. file://localhost/w/index.php?title=Elizabeth_C._Crosby&action=edit&redlink=1
+ 178. file://localhost/wiki/Arthur_Kornberg
+ 179. file://localhost/wiki/Severo_Ochoa
+ 180. file://localhost/w/index.php?title=Earl_Reece_Stadtman&action=edit&redlink=1
+ 181. file://localhost/wiki/George_Ledyard_Stebbins
+ 182. file://localhost/wiki/Paul_Alfred_Weiss
+ 183. file://localhost/wiki/Philip_Handler
+ 184. file://localhost/wiki/Seymour_Benzer
+ 185. file://localhost/w/index.php?title=Glenn_W._Burton&action=edit&redlink=1
+ 186. file://localhost/wiki/Mildred_Cohn
+ 187. file://localhost/w/index.php?title=Howard_L._Bachrach&action=edit&redlink=1
+ 188. file://localhost/wiki/Paul_Berg
+ 189. file://localhost/wiki/Wendell_L._Roelofs
+ 190. file://localhost/wiki/Berta_Scharrer
+ 191. file://localhost/wiki/Stanley_Cohen_(biochemist)
+ 192. file://localhost/wiki/Donald_Henderson
+ 193. file://localhost/wiki/Vernon_Mountcastle
+ 194. file://localhost/wiki/George_Emil_Palade
+ 195. file://localhost/wiki/Joan_A._Steitz
+ 196. file://localhost/wiki/Michael_E._Debakey
+ 197. file://localhost/wiki/Theodor_O._Diener
+ 198. file://localhost/wiki/Harry_Eagle
+ 199. file://localhost/wiki/Har_Gobind_Khorana
+ 200. file://localhost/wiki/Rita_Levi-Montalcini
+ 201. file://localhost/wiki/Michael_S._Brown
+ 202. file://localhost/wiki/Stanley_Norman_Cohen
+ 203. file://localhost/wiki/Joseph_L._Goldstein
+ 204. file://localhost/wiki/Maurice_Hilleman
+ 205. file://localhost/wiki/Eric_R._Kandel
+ 206. file://localhost/wiki/Rosalyn_S._Yalow
+ 207. file://localhost/wiki/Katherine_Esau
+ 208. file://localhost/wiki/Viktor_Hamburger
+ 209. file://localhost/wiki/Philip_Leder
+ 210. file://localhost/wiki/Joshua_Lederberg
+ 211. file://localhost/wiki/Roger_W._Sperry
+ 212. file://localhost/w/index.php?title=Harland_G._Wood&action=edit&redlink=1
+ 213. file://localhost/wiki/Baruj_Benacerraf
+ 214. file://localhost/wiki/Herbert_W._Boyer
+ 215. file://localhost/wiki/Daniel_E._Koshland,_Jr.
+ 216. file://localhost/wiki/Edward_B._Lewis
+ 217. file://localhost/wiki/David_G._Nathan
+ 218. file://localhost/wiki/E._Donnall_Thomas
+ 219. file://localhost/wiki/Mary_Ellen_Avery
+ 220. file://localhost/wiki/G._Evelyn_Hutchinson
+ 221. file://localhost/wiki/Elvin_A._Kabat
+ 222. file://localhost/wiki/Salvador_Luria
+ 223. file://localhost/w/index.php?title=Paul_A._Marks&action=edit&redlink=1
+ 224. file://localhost/wiki/Folke_K_Skoog
+ 225. file://localhost/wiki/Paul_C._Zamecnik
+ 226. file://localhost/wiki/Maxine_Singer
+ 227. file://localhost/wiki/Howard_M._Temin
+ 228. file://localhost/wiki/Daniel_Nathans
+ 229. file://localhost/wiki/Salome_G._Waelsch
+ 230. file://localhost/wiki/Thomas_Eisner
+ 231. file://localhost/wiki/Elizabeth_F._Neufeld
+ 232. file://localhost/wiki/Alexander_Rich
+ 233. file://localhost/wiki/Ruth_Patrick
+ 234. file://localhost/wiki/James_D._Watson
+ 235. file://localhost/wiki/Robert_A._Weinberg
+ 236. file://localhost/wiki/Bruce_Ames
+ 237. file://localhost/wiki/Janet_Rowley
+ 238. file://localhost/wiki/David_Baltimore
+ 239. file://localhost/wiki/Jared_Diamond
+ 240. file://localhost/wiki/Lynn_Margulis
+ 241. file://localhost/wiki/Nancy_C._Andreasen
+ 242. file://localhost/wiki/Peter_H._Raven
+ 243. file://localhost/wiki/Carl_Woese
+ 244. file://localhost/wiki/Francisco_J._Ayala
+ 245. file://localhost/wiki/Mario_R._Capecchi
+ 246. file://localhost/w/index.php?title=Ann_M._Graybiel&action=edit&redlink=1
+ 247. file://localhost/wiki/Gene_Likens
+ 248. file://localhost/wiki/Victor_A._McKusick
+ 249. file://localhost/wiki/Harold_Varmus
+ 250. file://localhost/wiki/James_E._Darnell
+ 251. file://localhost/wiki/Evelyn_M._Witkin
+ 252. file://localhost/wiki/J._Michael_Bishop
+ 253. file://localhost/wiki/Solomon_H._Snyder
+ 254. file://localhost/wiki/Charles_Yanofsky
+ 255. file://localhost/wiki/Norman_Borlaug
+ 256. file://localhost/wiki/Phillip_A._Sharp
+ 257. file://localhost/wiki/Thomas_Starzl
+ 258. file://localhost/wiki/Anthony_Fauci
+ 259. file://localhost/wiki/Torsten_N._Wiesel
+ 260. file://localhost/wiki/Rita_R._Colwell
+ 261. file://localhost/wiki/Nina_Fedoroff
+ 262. file://localhost/wiki/Lubert_Stryer
+ 263. file://localhost/wiki/Robert_Lefkowitz
+ 264. file://localhost/wiki/Bert_W._O%27Malley
+ 265. file://localhost/wiki/Francis_S._Collins
+ 266. file://localhost/wiki/Elaine_Fuchs
+ 267. file://localhost/wiki/J._Craig_Venter
+ 268. file://localhost/wiki/F._Albert_Cotton
+ 269. file://localhost/wiki/Gilbert_Stork
+ 270. file://localhost/wiki/Roald_Hoffmann
+ 271. file://localhost/wiki/George_C._Pimentel
+ 272. file://localhost/wiki/Richard_N._Zare
+ 273. file://localhost/wiki/Harry_B._Gray
+ 274. file://localhost/wiki/Yuan_Tseh_Lee
+ 275. file://localhost/wiki/Carl_S._Marvel
+ 276. file://localhost/wiki/Frank_H._Westheimer
+ 277. file://localhost/wiki/William_Summer_Johnson
+ 278. file://localhost/wiki/Walter_H._Stockmayer
+ 279. file://localhost/wiki/Max_Tishler
+ 280. file://localhost/wiki/William_O._Baker
+ 281. file://localhost/wiki/Konrad_E._Bloch
+ 282. file://localhost/wiki/Elias_J._Corey
+ 283. file://localhost/wiki/Richard_Barry_Bernstein
+ 284. file://localhost/wiki/Melvin_Calvin
+ 285. file://localhost/wiki/Rudolph_Marcus
+ 286. file://localhost/wiki/Harden_M._McConnell
+ 287. file://localhost/wiki/Elkan_Blout
+ 288. file://localhost/wiki/Karl_Folkers
+ 289. file://localhost/wiki/John_D._Roberts
+ 290. file://localhost/wiki/Ronald_Breslow
+ 291. file://localhost/wiki/Gertrude_B._Elion
+ 292. file://localhost/wiki/Dudley_R._Herschbach
+ 293. file://localhost/wiki/Glenn_T._Seaborg
+ 294. file://localhost/wiki/Howard_Ensign_Simmons,_Jr.
+ 295. file://localhost/wiki/Donald_J._Cram
+ 296. file://localhost/wiki/Norman_Hackerman
+ 297. file://localhost/wiki/George_S._Hammond
+ 298. file://localhost/wiki/Thomas_Cech
+ 299. file://localhost/wiki/Isabella_L._Karle
+ 300. file://localhost/w/index.php?title=Norman_Davidson&action=edit&redlink=1
+ 301. file://localhost/wiki/Darleane_C._Hoffman
+ 302. file://localhost/w/index.php?title=Harold_S._Johnston&action=edit&redlink=1
+ 303. file://localhost/wiki/John_W._Cahn
+ 304. file://localhost/wiki/George_M._Whitesides
+ 305. file://localhost/wiki/Stuart_A._Rice
+ 306. file://localhost/wiki/John_Ross_(chemist)
+ 307. file://localhost/wiki/Susan_Solomon
+ 308. file://localhost/w/index.php?title=John_D._Baldeschwieler&action=edit&redlink=1
+ 309. file://localhost/wiki/Ralph_F._Hirschmann
+ 310. file://localhost/wiki/Ernest_R._Davidson
+ 311. file://localhost/wiki/Gabor_A._Somorjai
+ 312. file://localhost/w/index.php?title=John_I._Brauman&action=edit&redlink=1
+ 313. file://localhost/wiki/Stephen_J._Lippard
+ 314. file://localhost/w/index.php?title=Marvin_H._Caruthers&action=edit&redlink=1
+ 315. file://localhost/wiki/Peter_Dervan
+ 316. file://localhost/wiki/Mostafa_El-Sayed
+ 317. file://localhost/wiki/Joanna_S._Fowler
+ 318. file://localhost/wiki/JoAnne_Stubbe
+ 319. file://localhost/wiki/Theodore_von_Karman
+ 320. file://localhost/wiki/Vannevar_Bush
+ 321. file://localhost/wiki/John_Robinson_Pierce
+ 322. file://localhost/wiki/Charles_S._Draper
+ 323. file://localhost/wiki/Hugh_L._Dryden
+ 324. file://localhost/wiki/Clarence_L._Johnson
+ 325. file://localhost/wiki/Warren_K._Lewis
+ 326. file://localhost/wiki/Claude_E._Shannon
+ 327. file://localhost/wiki/Edwin_H._Land
+ 328. file://localhost/wiki/Igor_I._Sikorsky
+ 329. file://localhost/wiki/J._Presper_Eckert
+ 330. file://localhost/wiki/Nathan_M._Newmark
+ 331. file://localhost/wiki/Jack_St._Clair_Kilby
+ 332. file://localhost/wiki/George_E._Mueller
+ 333. file://localhost/wiki/Harold_E._Edgerton
+ 334. file://localhost/wiki/Richard_T._Whitcomb
+ 335. file://localhost/wiki/Rudolf_Kompfner
+ 336. file://localhost/wiki/Ralph_Brazelton_Peck
+ 337. file://localhost/wiki/Abel_Wolman
+ 338. file://localhost/wiki/Manson_Benedict
+ 339. file://localhost/wiki/William_Hayward_Pickering
+ 340. file://localhost/wiki/Frederick_Terman
+ 341. file://localhost/wiki/Wernher_von_Braun
+ 342. file://localhost/wiki/Morris_Cohen_(scientist)
+ 343. file://localhost/wiki/Peter_C._Goldmark
+ 344. file://localhost/wiki/Erwin_Wilhelm_M%C3%BCller
+ 345. file://localhost/wiki/Emmett_N._Leith
+ 346. file://localhost/wiki/Raymond_D._Mindlin
+ 347. file://localhost/wiki/Robert_N._Noyce
+ 348. file://localhost/w/index.php?title=Earl_R._Parker&action=edit&redlink=1
+ 349. file://localhost/wiki/Simon_Ramo
+ 350. file://localhost/wiki/Edward_H._Heinemann
+ 351. file://localhost/w/index.php?title=Donald_L._Katz&action=edit&redlink=1
+ 352. file://localhost/wiki/William_R._Hewlett
+ 353. file://localhost/wiki/George_Low
+ 354. file://localhost/w/index.php?title=John_G._Trump&action=edit&redlink=1
+ 355. file://localhost/wiki/Hans_Wolfgang_Liepmann
+ 356. file://localhost/wiki/Tung-Yen_Lin
+ 357. file://localhost/wiki/Bernard_M._Oliver
+ 358. file://localhost/wiki/Robert_Byron_Bird
+ 359. file://localhost/wiki/H._Bolton_Seed
+ 360. file://localhost/wiki/Ernst_Weber_(engineer)
+ 361. file://localhost/wiki/Daniel_C._Drucker
+ 362. file://localhost/wiki/Willis_M._Hawkins
+ 363. file://localhost/wiki/George_W._Housner
+ 364. file://localhost/wiki/Harry_George_Drickamer
+ 365. file://localhost/w/index.php?title=Herbert_E._Grier&action=edit&redlink=1
+ 366. file://localhost/wiki/Mildred_S._Dresselhaus
+ 367. file://localhost/wiki/Nick_Holonyak_Jr.
+ 368. file://localhost/wiki/George_Heilmeier
+ 369. file://localhost/wiki/Luna_B._Leopold
+ 370. file://localhost/wiki/H._Guyford_Stever
+ 371. file://localhost/wiki/Calvin_F._Quate
+ 372. file://localhost/wiki/John_Roy_Whinnery
+ 373. file://localhost/wiki/Alfred_Y._Cho
+ 374. file://localhost/wiki/Ray_W._Clough
+ 375. file://localhost/wiki/Hermann_A._Haus
+ 376. file://localhost/wiki/James_L._Flanagan
+ 377. file://localhost/wiki/C._Kumar_N._Patel
+ 378. file://localhost/wiki/Eli_Ruckenstein
+ 379. file://localhost/wiki/Kenneth_N._Stevens
+ 380. file://localhost/wiki/Yuan-Cheng_Fung
+ 381. file://localhost/wiki/Andreas_Acrivos
+ 382. file://localhost/wiki/Leo_Beranek
+ 383. file://localhost/w/index.php?title=John_M._Prausnitz&action=edit&redlink=1
+ 384. file://localhost/wiki/Edwin_N._Lightfoot
+ 385. file://localhost/wiki/Jan_D._Achenbach
+ 386. file://localhost/wiki/Tobin_J._Marks
+ 387. file://localhost/wiki/Robert_S._Langer
+ 388. file://localhost/wiki/David_J._Wineland
+ 389. file://localhost/wiki/Rudolf_E._Kalman
+ 390. file://localhost/wiki/Norbert_Wiener
+ 391. file://localhost/wiki/Solomon_Lefschetz
+ 392. file://localhost/wiki/Marston_Morse
+ 393. file://localhost/wiki/Oscar_Zariski
+ 394. file://localhost/wiki/John_Milnor
+ 395. file://localhost/wiki/Paul_Cohen_(mathematician)
+ 396. file://localhost/wiki/Jerzy_Neyman
+ 397. file://localhost/wiki/William_Feller
+ 398. file://localhost/wiki/Richard_Brauer
+ 399. file://localhost/wiki/John_Tukey
+ 400. file://localhost/wiki/Kurt_G%C3%B6del
+ 401. file://localhost/wiki/John_W._Backus
+ 402. file://localhost/wiki/Shiing-Shen_Chern
+ 403. file://localhost/wiki/George_Dantzig
+ 404. file://localhost/wiki/Kurt_O._Friedrichs
+ 405. file://localhost/wiki/Hassler_Whitney
+ 406. file://localhost/wiki/Joseph_Leo_Doob
+ 407. file://localhost/wiki/Donald_Knuth
+ 408. file://localhost/wiki/Marshall_Harvey_Stone
+ 409. file://localhost/wiki/Herman_Goldstine
+ 410. file://localhost/wiki/Isadore_Singer
+ 411. file://localhost/wiki/Peter_Lax
+ 412. file://localhost/wiki/Antoni_Zygmund
+ 413. file://localhost/wiki/Raoul_Bott
+ 414. file://localhost/wiki/Michael_Freedman
+ 415. file://localhost/wiki/Ralph_E._Gomory
+ 416. file://localhost/wiki/Joseph_B._Keller
+ 417. file://localhost/wiki/Samuel_Karlin
+ 418. file://localhost/wiki/Saunders_MacLane
+ 419. file://localhost/wiki/Donald_C._Spencer
+ 420. file://localhost/wiki/George_F._Carrier
+ 421. file://localhost/wiki/Stephen_Cole_Kleene
+ 422. file://localhost/wiki/John_McCarthy_(computer_scientist)
+ 423. file://localhost/wiki/Alberto_Calder%C3%B3n
+ 424. file://localhost/wiki/Allen_Newell
+ 425. file://localhost/wiki/Martin_David_Kruskal
+ 426. file://localhost/wiki/John_Cocke
+ 427. file://localhost/wiki/Louis_Nirenberg
+ 428. file://localhost/wiki/Richard_Karp
+ 429. file://localhost/wiki/Stephen_Smale
+ 430. file://localhost/wiki/Shing-Tung_Yau
+ 431. file://localhost/wiki/Cathleen_Synge_Morawetz
+ 432. file://localhost/wiki/Felix_Browder
+ 433. file://localhost/wiki/Ronald_Coifman
+ 434. file://localhost/wiki/John_Griggs_Thompson
+ 435. file://localhost/wiki/Karen_K._Uhlenbeck
+ 436. file://localhost/wiki/Calyampudi_Radhakrishna_Rao
+ 437. file://localhost/wiki/Elias_M._Stein
+ 438. file://localhost/wiki/James_Glimm
+ 439. file://localhost/wiki/Carl_R._de_Boor
+ 440. file://localhost/wiki/Dennis_Sullivan
+ 441. file://localhost/wiki/Bradley_Efron
+ 442. file://localhost/wiki/Hyman_Bass
+ 443. file://localhost/wiki/Andrew_Viterbi
+ 444. file://localhost/wiki/Luis_Walter_Alvarez
+ 445. file://localhost/wiki/Julian_Schwinger
+ 446. file://localhost/wiki/Harold_Clayton_Urey
+ 447. file://localhost/wiki/Robert_Burns_Woodward
+ 448. file://localhost/wiki/John_Bardeen
+ 449. file://localhost/wiki/Peter_Debye
+ 450. file://localhost/wiki/Leon_M._Lederman
+ 451. file://localhost/wiki/William_Rubey
+ 452. file://localhost/wiki/Jacob_Bjerknes
+ 453. file://localhost/wiki/Subrahmanyan_Chandrasekhar
+ 454. file://localhost/wiki/Henry_Eyring
+ 455. file://localhost/wiki/John_H._Van_Vleck
+ 456. file://localhost/wiki/Vladimir_K._Zworykin
+ 457. file://localhost/wiki/Jesse_Beams
+ 458. file://localhost/wiki/Francis_Birch_(geophysicist)
+ 459. file://localhost/wiki/Gregory_Breit
+ 460. file://localhost/wiki/Louis_Hammett
+ 461. file://localhost/wiki/George_Kistiakowsky
+ 462. file://localhost/wiki/Paul_Bartlett
+ 463. file://localhost/wiki/Herbert_Friedman
+ 464. file://localhost/wiki/Lars_Onsager
+ 465. file://localhost/wiki/Eugene_Wigner
+ 466. file://localhost/wiki/Herbert_C._Brown
+ 467. file://localhost/wiki/Wolfgang_Panofsky
+ 468. file://localhost/wiki/Robert_H._Dicke
+ 469. file://localhost/wiki/Allan_R._Sandage
+ 470. file://localhost/wiki/John_C._Slater
+ 471. file://localhost/wiki/John_A._Wheeler
+ 472. file://localhost/wiki/Saul_Winstein
+ 473. file://localhost/wiki/Carl_Djerassi
+ 474. file://localhost/wiki/Maurice_Ewing
+ 475. file://localhost/wiki/Arie_Jan_Haagen-Smit
+ 476. file://localhost/wiki/Vladimir_Haensel
+ 477. file://localhost/wiki/Frederick_Seitz
+ 478. file://localhost/wiki/Robert_Rathbun_Wilson
+ 479. file://localhost/wiki/Nicolaas_Bloembergen
+ 480. file://localhost/wiki/Paul_Flory
+ 481. file://localhost/wiki/William_Alfred_Fowler
+ 482. file://localhost/wiki/Linus_Carl_Pauling
+ 483. file://localhost/wiki/Kenneth_Sanborn_Pitzer
+ 484. file://localhost/wiki/Hans_A._Bethe
+ 485. file://localhost/w/index.php?title=Joseph_Hirschfelder&action=edit&redlink=1
+ 486. file://localhost/wiki/Lewis_Sarett
+ 487. file://localhost/wiki/E._Bright_Wilson
+ 488. file://localhost/wiki/Chien-Shiung_Wu
+ 489. file://localhost/wiki/Samuel_Goudsmit
+ 490. file://localhost/wiki/Herbert_S._Gutowsky
+ 491. file://localhost/wiki/Frederick_Rossini
+ 492. file://localhost/wiki/Verner_Suomi
+ 493. file://localhost/wiki/Henry_Taube
+ 494. file://localhost/wiki/George_Uhlenbeck
+ 495. file://localhost/wiki/Richard_P._Feynman
+ 496. file://localhost/wiki/Herman_Mark
+ 497. file://localhost/wiki/Edward_M._Purcell
+ 498. file://localhost/w/index.php?title=John_Sinfelt&action=edit&redlink=1
+ 499. file://localhost/wiki/Lyman_Spitzer
+ 500. file://localhost/wiki/Victor_F._Weisskopf
+ 501. file://localhost/wiki/Philip_Warren_Anderson
+ 502. file://localhost/wiki/Yoichiro_Nambu
+ 503. file://localhost/wiki/Edward_Teller
+ 504. file://localhost/wiki/Charles_H._Townes
+ 505. file://localhost/wiki/E._Margaret_Burbidge
+ 506. file://localhost/wiki/Maurice_Goldhaber
+ 507. file://localhost/wiki/Helmut_Landsberg
+ 508. file://localhost/wiki/Walter_Munk
+ 509. file://localhost/wiki/Frederick_Reines
+ 510. file://localhost/wiki/Bruno_B._Rossi
+ 511. file://localhost/wiki/J._Robert_Schrieffer
+ 512. file://localhost/w/index.php?title=Solomon_Buchsbaum&action=edit&redlink=1
+ 513. file://localhost/w/index.php?title=Horace_Crane&action=edit&redlink=1
+ 514. file://localhost/wiki/Herman_Feshbach
+ 515. file://localhost/wiki/Robert_Hofstadter
+ 516. file://localhost/wiki/Chen_Ning_Yang
+ 517. file://localhost/wiki/Philip_Abelson
+ 518. file://localhost/wiki/Walter_Elsasser
+ 519. file://localhost/wiki/Paul_C._Lauterbur
+ 520. file://localhost/wiki/George_Pake
+ 521. file://localhost/wiki/James_A._Van_Allen
+ 522. file://localhost/wiki/D._Allan_Bromley
+ 523. file://localhost/wiki/Chu_Ching-wu
+ 524. file://localhost/wiki/Walter_Kohn
+ 525. file://localhost/wiki/Norman_F._Ramsey
+ 526. file://localhost/wiki/Jack_Steinberger
+ 527. file://localhost/wiki/Arnold_O._Beckman
+ 528. file://localhost/wiki/Eugene_Parker
+ 529. file://localhost/w/index.php?title=Robert_Sharp&action=edit&redlink=1
+ 530. file://localhost/wiki/Henry_Stommel
+ 531. file://localhost/wiki/Allan_McLeod_Cormack
+ 532. file://localhost/wiki/Edwin_M._McMillan
+ 533. file://localhost/wiki/Robert_Pound
+ 534. file://localhost/wiki/Roger_Revelle
+ 535. file://localhost/wiki/Arthur_L._Schawlow
+ 536. file://localhost/wiki/Ed_Stone
+ 537. file://localhost/wiki/Steven_Weinberg
+ 538. file://localhost/wiki/Eugene_M._Shoemaker
+ 539. file://localhost/wiki/Val_Fitch
+ 540. file://localhost/wiki/Vera_Rubin
+ 541. file://localhost/wiki/Albert_Overhauser
+ 542. file://localhost/wiki/Frank_Press
+ 543. file://localhost/wiki/Hans_Dehmelt
+ 544. file://localhost/wiki/Peter_Goldreich
+ 545. file://localhost/wiki/Wallace_S._Broecker
+ 546. file://localhost/wiki/Marshall_Rosenbluth
+ 547. file://localhost/wiki/Martin_Schwarzschild
+ 548. file://localhost/wiki/George_Wetherill
+ 549. file://localhost/wiki/Don_L._Anderson
+ 550. file://localhost/wiki/John_N._Bahcall
+ 551. file://localhost/wiki/James_Cronin
+ 552. file://localhost/wiki/Leo_Kadanoff
+ 553. file://localhost/wiki/Willis_E._Lamb
+ 554. file://localhost/wiki/Jeremiah_P._Ostriker
+ 555. file://localhost/wiki/Gilbert_F._White
+ 556. file://localhost/wiki/Marvin_L._Cohen
+ 557. file://localhost/wiki/Raymond_Davis_Jr.
+ 558. file://localhost/wiki/Charles_Keeling
+ 559. file://localhost/wiki/Richard_Garwin
+ 560. file://localhost/wiki/W._Jason_Morgan
+ 561. file://localhost/wiki/Edward_Witten
+ 562. file://localhost/wiki/G._Brent_Dalrymple
+ 563. file://localhost/wiki/Riccardo_Giacconi
+ 564. file://localhost/w/index.php?title=Robert_N._Clayton&action=edit&redlink=1
+ 565. file://localhost/wiki/Ralph_A._Alpher
+ 566. file://localhost/wiki/Lonnie_Thompson
+ 567. file://localhost/wiki/Daniel_Kleppner
+ 568. file://localhost/w/index.php?title=Fay_Ajzenberg-Selove&action=edit&redlink=1
+ 569. file://localhost/wiki/Charles_Pence_Slichter
+ 570. file://localhost/wiki/Berni_Alder
+ 571. file://localhost/wiki/James_E._Gunn
+ 572. file://localhost/wiki/Wikipedia:Persondata
+ 573. file://localhost/wiki/New_York
+ 574. http://en.wikipedia.org/wiki/Leonard_Kleinrock
+ 575. file://localhost/wiki/Special:Categories
+ 576. file://localhost/wiki/Category:1934_births
+ 577. file://localhost/wiki/Category:Living_people
+ 578. file://localhost/wiki/Category:American_computer_scientists
+ 579. file://localhost/wiki/Category:American_Jews
+ 580. file://localhost/wiki/Category:American_inventors
+ 581. file://localhost/wiki/Category:Internet_pioneers
+ 582. file://localhost/wiki/Category:Massachusetts_Institute_of_Technology_alumni
+ 583. file://localhost/wiki/Category:Bronx_High_School_of_Science_alumni
+ 584. file://localhost/wiki/Category:City_University_of_New_York_alumni
+ 585. file://localhost/wiki/Category:Fellows_of_the_Association_for_Computing_Machinery
+ 586. file://localhost/wiki/Category:Computer_pioneers
+ 587. file://localhost/wiki/Category:University_of_California,_Los_Angeles_faculty
+ 588. file://localhost/wiki/Category:Queueing_theorists
+ 589. file://localhost/wiki/Category:People_from_New_York_City
+ 590. file://localhost/wiki/Category:Jewish_inventors
+ 591. file://localhost/w/index.php?title=Special:UserLogin&returnto=Leonard_Kleinrock
+ 592. file://localhost/wiki/Leonard_Kleinrock
+ 593. file://localhost/wiki/Talk:Leonard_Kleinrock
+ 594. file://localhost/wiki/Leonard_Kleinrock
+ 595. file://localhost/w/index.php?title=Leonard_Kleinrock&action=edit
+ 596. file://localhost/w/index.php?title=Leonard_Kleinrock&action=history
+ 597. file://localhost/wiki/Main_Page
+ 598. file://localhost/wiki/Portal:Contents
+ 599. file://localhost/wiki/Portal:Featured_content
+ 600. file://localhost/wiki/Portal:Current_events
+ 601. file://localhost/wiki/Special:Random
+ 602. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 603. file://localhost/wiki/Help:Contents
+ 604. file://localhost/wiki/Wikipedia:About
+ 605. file://localhost/wiki/Wikipedia:Community_portal
+ 606. file://localhost/wiki/Special:RecentChanges
+ 607. file://localhost/wiki/Wikipedia:Contact_us
+ 608. file://localhost/wiki/Special:WhatLinksHere/Leonard_Kleinrock
+ 609. file://localhost/wiki/Special:RecentChangesLinked/Leonard_Kleinrock
+ 610. file://localhost/wiki/Wikipedia:Upload
+ 611. file://localhost/wiki/Special:SpecialPages
+ 612. file://localhost/w/index.php?title=Leonard_Kleinrock&oldid=405225915
+ 613. file://localhost/w/index.php?title=Special:Cite&page=Leonard_Kleinrock&id=405225915
+ 614. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Leonard+Kleinrock
+ 615. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Leonard+Kleinrock&oldid=405225915&writer=rl
+ 616. file://localhost/w/index.php?title=Leonard_Kleinrock&printable=yes
+ 617. http://ar.wikipedia.org/wiki/%D9%84%D9%8A%D9%88%D9%86%D8%A7%D8%B1%D8%AF_%D9%83%D9%84%D9%8A%D9%86%D8%B1%D9%88%D9%83
+ 618. http://ca.wikipedia.org/wiki/Leonard_Kleinrock
+ 619. http://da.wikipedia.org/wiki/Leonard_Kleinrock
+ 620. http://de.wikipedia.org/wiki/Leonard_Kleinrock
+ 621. http://es.wikipedia.org/wiki/Leonard_Kleinrock
+ 622. http://fr.wikipedia.org/wiki/Leonard_Kleinrock
+ 623. http://ko.wikipedia.org/wiki/%EB%A0%88%EC%98%A4%EB%82%98%EB%93%9C_%ED%81%B4%EB%9D%BC%EC%9D%B8%EB%9D%BD
+ 624. http://it.wikipedia.org/wiki/Leonard_Kleinrock
+ 625. http://ml.wikipedia.org/wiki/%E0%B4%B2%E0%B4%BF%E0%B4%AF%E0%B5%8B%E0%B4%A8%E0%B4%BE%E0%B5%BC%E0%B4%A1%E0%B5%8D_%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B5%80%E0%B5%BB%E2%80%8C%E0%B4%B1%E0%B5%8B%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D
+ 626. http://pl.wikipedia.org/wiki/Leonard_Kleinrock
+ 627. http://pt.wikipedia.org/wiki/Leonard_Kleinrock
+ 628. http://sh.wikipedia.org/wiki/Leonard_Kleinrock
+ 629. http://th.wikipedia.org/wiki/%E0%B8%A5%E0%B8%B5%E0%B9%82%E0%B8%AD%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%94_%E0%B9%84%E0%B8%84%E0%B8%A5%E0%B8%99%E0%B9%8C%E0%B8%A3%E0%B8%AD%E0%B8%81
+ 630. http://uk.wikipedia.org/wiki/%D0%9A%D0%BB%D1%8F%D0%B9%D0%BD%D1%80%D0%BE%D0%BA_%D0%9B%D0%B5%D0%BE%D0%BD%D0%B0%D1%80%D0%B4
+ 631. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 632. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 633. http://www.wikimediafoundation.org/
+ 634. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 635. http://wikimediafoundation.org/wiki/Privacy_policy
+ 636. file://localhost/wiki/Wikipedia:About
+ 637. file://localhost/wiki/Wikipedia:General_disclaimer
+ 638. http://www.mediawiki.org/
+ 639. http://wikimediafoundation.org/
+
+   Hidden links:
+ 640. file://localhost/wiki/File:Leonard-Kleinrock-and-IMP1.png
+ 641. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html
+ 642. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_kleinrock.html
+ 643. file://localhost/wiki/Main_Page
+ 644. http://creativecommons.org/licenses/by-sa/3.0/

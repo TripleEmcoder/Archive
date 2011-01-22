@@ -1,0 +1,720 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Elisha Gray
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                      Elisha Gray
+      Born    August 2, 1835(1835-08-02)
+              [7]Barnesville, [8]Ohio, U.S.
+      Died    January 21, 1901(1901-01-21) (aged 65)
+              [9]Newtonville, [10]Massachusetts, U.S.
+   Occupation Engineer/Inventor
+     Awards   [11]Elliott Cresson Medal (1897)
+
+   Elisha Gray (August 2, 1835 – January 21, 1901) was an American
+   [12]electrical engineer who co-founded the [13]Western Electric
+   Manufacturing Company. Gray is best known for his [14]development of a
+   telephone prototype in 1876 in [15]Highland Park, Illinois and is
+   considered by some writers^[16][1] to be the true inventor of the
+   variable resistance telephone, despite losing out to [17]Alexander
+   Graham Bell for the [18]telephone patent.
+
+   Gray is also considered to be the father of the modern [19]music
+   synthesizer,^[20][2] and was awarded over 70 patents for his
+   inventions.^[21][3]
+
+   Contents
+
+        * [22]1 Biography and early inventions
+        * [23]2 Elisha Gray and the telephone
+        * [24]3 Gray's further inventions
+        * [25]4 Gray's publications
+        * [26]5 See also
+        * [27]6 References
+        * [28]7 External links
+             + [29]7.1 Gray's Patents
+
+[[30]edit] Biography and early inventions
+
+   Born into a [31]Quaker family in [32]Barnesville, Ohio, Gray was
+   brought up on a farm. He spent several years at [33]Oberlin College
+   where he experimented with electrical devices. Although Gray was not a
+   graduate of Oberlin College, he taught electricity and science at
+   Oberlin and built laboratory equipment for Oberlin science departments.
+
+   In 1862 while at Oberlin, Gray met and married Delia Minerva Shepard.
+
+   In 1865 Gray invented a self-adjusting [34]telegraph relay that
+   automatically adapted to varying insulation of the telegraph line.
+
+   In 1867 Gray received a patent for the self-adjusting telegraph relay
+   and in later years he received patents for more than 70 other
+   inventions.
+
+   In 1869, Elisha Gray and his partner Enos M. Barton founded Gray &
+   Barton Co. in Cleveland, Ohio to supply telegraph equipment to the
+   giant [35]Western Union Telegraph Company. The electrical distribution
+   business was later spun off from Western Electric and organized into a
+   separate company, [36]Graybar Electric Company, Inc.. Barton had been
+   employed by [37]Western Union to examine and test new products.
+
+   In 1870 financing for Gray & Barton Co. was arranged by [38]General
+   Anson Stager, a superintendent of the Western Union Telegraph Company.
+   Stager became an active partner in Gray & Barton Co., which moved to
+   Chicago. Gray moved from Ohio to [39]Highland Park near Chicago and
+   remained on the board of directors. But he gave up his administrative
+   position as chief engineer to focus on inventions that could benefit
+   the telegraph industry. Gray's inventions and patent costs were
+   financed by a dentist, Dr. Samuel S. White of Philadelphia, who had
+   made a fortune producing porcelain teeth. White wanted Gray to focus on
+   the [40]acoustic telegraph which promised huge profits to the exclusion
+   of what appeared to be unpromising competing inventions such as the
+   telephone. It was White's decision in 1876 to abandon Gray's caveat for
+   the telephone.
+
+   In 1870, Gray developed a needle annunciator for hotels and another for
+   elevators. He also developed a telegraph printer which had a typewriter
+   keyboard and printed messages on paper tape.
+
+   In 1872 [41]Western Union, then financed by the Vanderbilts and [42]J.
+   P. Morgan, bought one-third of Gray and Barton Co. and changed the name
+   to [43]Western Electric Manufacturing Company of Chicago. Gray
+   continued to invent for Western Electric.
+
+   In 1874, Gray retired to do independent research and development. Gray
+   applied for a patent on a harmonic telegraph which consisted of
+   multi-tone transmitters, each tone being controlled by a separate
+   telegraph key. Gray gave several private demonstrations of this
+   invention in New York and Washington, D.C. in May and June 1874.
+
+   Gray was a charter member of the [44]Presbyterian Church in Highland
+   Park, Illinois. At the church, on December 29, 1874, Gray gave the
+   first public demonstration of his invention for transmitting musical
+   tones and transmitted "familiar melodies through telegraph wire"
+   according to a newspaper announcement. This was the first electric
+   music [45]synthesizer using self vibrating electromagnetic circuits
+   that were single-note oscillators operated by a two-octave piano
+   keyboard. The "Musical Telegraph" used steel reeds whose oscillations
+   were created by electromagnets and transmitted over a telegraph wire.
+   Gray also built a simple loudspeaker in later models consisting of a
+   vibrating diaphragm in a magnetic field to make the oscillator tones
+   audible and louder at the receiving end. In 1900 before Gray's death he
+   was working on an underwater signaling device, when officers were
+   investigating his house after his death they gave the invention in to
+   Oberlin College and some of the students were testing it out. After a
+   few years of testing he was recognised as the inventor of the
+   underwater signaling device.
+
+   On July 27, 1875, Gray was granted patent 166,096 for "Electric
+   Telegraph for Transmitting Musical Tones" ([46]acoustic telegraphy).
+
+[[47]edit] Elisha Gray and the telephone
+
+   Further information: [48]Elisha Gray and Alexander Bell telephone
+   controversy
+
+   Because of Samuel White's^[49][4] opposition to Gray working on the
+   telephone, Gray did not tell anybody about his new invention for
+   transmitting voice sounds until Friday 11 February 1876 when Gray
+   requested that his patent lawyer William D. Baldwin prepare a "caveat"
+   for filing at the US Patent Office. A [50]caveat was like a provisional
+   patent application with drawings and description but without claims.
+   Excerpts from Elisha Gray's patent caveat of February 14 and Alexander
+   Graham Bell's lab notebook entry of March 8, demonstrating their
+   surprising similarity.
+
+   On the morning of Monday 14 February [51]1876, Gray signed and had
+   notarized the caveat that described a telephone that used a liquid
+   microphone. Baldwin then submitted the caveat to the US Patent Office.
+   That same morning a lawyer for [52]Alexander Graham Bell submitted
+   Bell's patent application.
+
+   Which application arrived first is hotly disputed, although the most
+   recent evidence suggest Gray's caveat arrived a few hours before Bell's
+   application.^[53][5] Bell's lawyers in Washington, DC had been waiting
+   with Bell's patent application for months, under instructions not to
+   file it in the USA until it had been filed in Britain first. (At the
+   time, Britain would only issue patents on discoveries not previously
+   patented elsewhere.)
+
+   During the weekend of February 12–14, 1876, before either caveat or
+   application had been filed in the patent office, Bell's lawyer learned
+   about the liquid transmitter idea in Gray's caveat that would be filed
+   early Monday morning February 14.^[54][5] Bell's lawyer then added
+   seven sentences describing the liquid transmitter and a variable
+   resistance claim to Bell's draft application. After the lawyer's clerk
+   recopied the draft as a finished patent application, Bell's lawyer
+   hand-delivered the finished application to the patent office just
+   before noon on Monday, a few hours after Gray's caveat was delivered to
+   the patent office by Gray's lawyer. Bell's lawyer requested that Bell's
+   application be immediately recorded and hand-delivered to the examiner
+   on Monday so that later Bell could claim it had arrived first. Bell was
+   in Boston at this time and was not aware that his application had been
+   filed in the US patent office.^[55][6]
+
+   Five days later, on February 19, Zenas Fisk Wilber, the patent examiner
+   for both Bell's application and Gray's caveat, noticed that Bell's
+   application claimed the same variable resistance feature described in
+   Gray's caveat. Wilber declared an interference that would delay Bell's
+   application until Bell submitted proof, under the [56]first to invent
+   rules, that Bell had invented that feature before Gray.^[57][7] Bell's
+   lawyer telegraphed Bell, who was still in Boston, to come to Washington
+   DC. When Bell arrived on February 26, Bell visited his lawyers and then
+   visited examiner Wilber who told Bell that Gray's caveat showed a
+   liquid transmitter and asked Bell for proof that the liquid transmitter
+   idea (described in Bell's patent application as using mercury as the
+   liquid) was invented by Bell. Bell pointed to an application of Bell's
+   filed a year earlier where mercury was used in a circuit breaker. The
+   examiner accepted this argument, although mercury would not have worked
+   in a telephone transmitter. On March 3, Wilber approved Bell's
+   application and on March 7, 1876 patent 174,465 was published by the
+   [58]U.S. Patent Office.
+
+   Bell returned to Boston and resumed work on March 9, drawing a diagram
+   in his lab notebook of a water transmitter being used face down and
+   very similar to that shown in Gray's caveat."^[59][8] Bell and Watson
+   built and tested Gray's water transmitter design on 10 March and
+   successfully transmitted clear speech saying "Mr. Watson -- come here
+   -- I want to see you." Bell's notebooks did not become public until the
+   1990s.^[60][9]
+
+   The importance of Bell's test of Gray's water transmitter idea was it
+   proved that clear speech could be transmitted electrically. It was a
+   scientific experiment, not development of a commercial product. Prior
+   to that, Bell had only an unproven theory.
+
+   Although Gray had abandoned his caveat, Gray applied for a patent for
+   the same invention in late 1877. This put him in a second interference
+   with Bell's patents. The [61]Patent Office determined "while Gray was
+   undoubtedly the first to conceive of and disclose the [variable
+   resistance] invention, as in his caveat of 14 February 1876, his
+   failure to take any action amounting to completion until others had
+   demonstrated the utility of the invention deprives him of the right to
+   have it considered."^[62][10] Gray challenged Bell's patent anyway, and
+   after two years of litigation, Bell was awarded rights to the
+   invention, and as a result, Bell is credited as the inventor.
+
+   In 1886, the patent examiner (Zenas Fisk Wilber) stated in a sworn
+   affidavit^[63][11] that he was an alcoholic and deeply in debt to
+   Bell's lawyer [64]Marcellus Bailey with whom Wilber had served in the
+   Civil War. Wilber stated that, contrary to Patent Office rules, he
+   showed Bailey the caveat Gray had filed. Wilber also stated that he
+   showed the caveat to Bell and Bell gave him $100. Bell testified that
+   they only discussed the patent in general terms, although in a letter
+   to Gray, Bell admitted that he learned some of the technical details.
+
+   Bell's patent was also disputed in 1888 by attorney Lysander Hill who
+   accused Wilber of allowing Bell or his lawyer Pollok to add a
+   handwritten margin note of 7 sentences to Bell's application that
+   describe an alternate design similar to Gray's liquid microphone
+   design.^[65][12] However, the marginal note was added only to Bell's
+   earlier draft, not as a marginal addition to his patent application
+   that shows the 7 sentences already present in a paragraph in Bell's
+   patent application when it was filed in the Patent Office on February
+   14, 1876. Bell testified that he added those 7 sentences in the margin
+   of an earlier draft of his application "almost at the last moment
+   before sending it off to Washington" to his lawyers. Bell or his lawyer
+   could not have added the 7 sentences to the application after it was
+   filed in the Patent Office, because then there would not have been any
+   interference on February 19.^[66][13]
+
+   Although Bell was accused, and is still accused, of stealing the
+   telephone from Gray,^[67][14] Bell used Gray's water transmitter design
+   only after Bell's patent was granted and only as a [68]proof of concept
+   scientific experiment^[69][15] to prove to his own satisfaction that
+   intelligible "articulate speech" (Bell's words) could be electrically
+   transmitted.^[70][16] Bell's assistant Thomas Watson testified that he
+   tested all of the competing designs.^[71][17] After March 1876, Bell
+   and Watson focused on improving the electromagnetic telephone and never
+   used Gray's liquid transmitter in public demonstrations or commercial
+   use.^[72][18] When Bell demonstrated his telephone at the Centennial
+   Exhibition in June 1876, he used his improved electromagnetic
+   transmitter, not Gray's water transmitter.
+
+[[73]edit] Gray's further inventions
+
+   In 1887 Gray invented the "[74]telautograph", a device that could
+   remotely transmit handwriting through telegraph systems. Gray was
+   granted several patents for these pioneer fax machines, and the Gray
+   National Telautograph Company was charted in 1888 and continued in
+   business as The Telautograph Corporation for many years; after a series
+   of mergers it was finally absorbed by [75]Xerox in the 1990s. Gray's
+   telautograph machines were used by banks for signing documents at a
+   distance and by the military for sending written commands during gun
+   tests when the deafening noise from the guns made spoken orders on the
+   telephone impractical. The machines were also used at train stations
+   for schedule changes.
+
+   Gray displayed his telautograph invention in 1893 at the [76]1893
+   Columbian Exposition and sold his share in the telautograph shortly
+   after that. Gray was also chairman of the International Congress of
+   Electricians at the World's Columbian Exposition of 1893.
+
+   Gray conceived of a primitive [77]closed-circuit television system that
+   he called the "[78]telephote". Pictures would be focused on an array of
+   selenium cells and signals from the selenium cells would be transmitted
+   to a distant station on separate wires. At the receiving end each wire
+   would open or close a shutter to recreate the image.
+
+   In 1899 Gray moved to Boston where he continued inventing. One of his
+   projects was to develop an underwater signaling device to transmit
+   messages to ships. One such signaling device was tested on December 31,
+   1900. Three weeks later, on January 21, 1901, Gray died from a heart
+   attack in [79]Newtonville, Massachusetts.
+
+   As of 2006 no book-length biography has been written about the life of
+   Elisha Gray. An [80]Oberlin physics department head named Dr. Lloyd W.
+   Taylor began writing a Gray biography, but the book was never finished
+   because of Taylor's accidental death in July 1948. Dr Taylor's
+   unfinished manuscript is in the College Archives at Oberlin College.
+
+[[81]edit] Gray's publications
+
+   Gray wrote several books including:
+     * Experimental Researches in Electro-Harmonic Telegraphy and
+       Telephony, 1867-1876 (Appleton, 1878)
+     * Telegraphy and Telephony (1878)
+     * Electricity and Magnetism (1900) and
+     * Nature's Miracles (1900) a nontechnical discussion of science and
+       technology for the general public.
+
+[[82]edit] See also
+
+     * [83]Invention of the telephone
+     * [84]Timeline of the telephone
+     * [85]The Telephone Cases
+     * [86]Water microphone
+
+[[87]edit] References
+
+   Notes
+
+    1. [88]^ Shulman, Seth (2008)
+    2. [89]^ [90]What Is A Music Synthesizer
+    3. [91]^ [92]Elisha Gray
+    4. [93]^ Dr. Samuel S. White of Philadelphia was a wealthy dentist who
+       paid the legal costs and shared in any profits from Elisha Gray's
+       inventions.
+    5. ^ [94]^a [95]^b Evenson, pages 68-69
+    6. [96]^ Shulman, page 71
+    7. [97]^ Evenson, pages 80-81
+    8. [98]^ Shulman, pages 36-37
+    9. [99]^ [100]Inventor's Digest, July/August 1998, p. 26-28
+   10. [101]^ Baker, pages 90-91
+   11. [102]^ Evenson, pages 167-171
+   12. [103]^ Evenson, pages 92 and 180
+   13. [104]^ Evenson, pages 73-74
+   14. [105]^ The telephone Gambit, by Seth Shulman (2008), page 211.
+   15. [106]^ Evenson, page 99.
+   16. [107]^ Evenson, page 98.
+   17. [108]^ Evenson, page 130
+   18. [109]^ Evenson, page 100.
+
+   Bibliography
+
+     * Shulman, Seth (2008), [110]The Telephone Gambit, W. W. Norton, New
+       York, New York, 2008. [111]ISBN 0-3930-6206-6
+     * Evenson, A. Edward (2000), The Telephone Patent Conspiracy of 1876:
+       The Elisha Gray - Alexander Bell Controversy, McFarland, North
+       Carolina, 2000. [112]ISBN 0-7864-0883-9
+     * Baker, Burton H. (2000), The Gray Matter: The Forgotten Story of
+       the Telephone, Telepress, St. Joseph, MI, 2000. [113]ISBN
+       0-615-11329-X
+     * Coe, Lewis (1995), The Telephone and Its Several Inventors,
+       McFarland Publishers, North Carolina, [114]ISBN 0-7864-0138-9
+
+   [115]Question book-new.svg
+   This article needs additional [116]citations for [117]verification.
+   Please help [118]improve this article by adding [119]reliable
+   references. Unsourced material may be [120]challenged and [121]removed.
+   (February 2008)
+
+[[122]edit] External links
+
+   [123]Wikisource has original works written by or about: [124]Elisha
+   Gray
+   Wikimedia Commons has media related to: [125]Elisha Gray
+     * [126]Elisha Gray biography from Oberlin
+     * [127]Gray's telephone caveat filed on February 14, 1876 same day as
+       Bell's application
+     * [128]Gray's telephone caveat with drawings, filed on February 14,
+       1876
+     * [129]Gray's "Musical Telegraph" of 1876
+     * [130]Gray's "Harmonic Multiple Telegraph"
+     * [131]Bell-Gray conflict over the harmonic telegraph
+     * [132]"Telautograph" description
+     * [133]1911 Britannica article
+     * [134]Grave of Elish Gray in [135]Rosehill Cemetery, Chicago
+
+[[136]edit] Gray's Patents
+
+   Patent images in [137]TIFF format
+     * [138]U.S. Patent 166,095 Electric Telegraph for Transmitting
+       Musical Tones, filed Jan 19, 1875, issued July 27, 1875
+     * [139]U.S. Patent 166,096 Improvement in Electric Telegraph for
+       Transmitting Musical Tones, issued July 27, 1875
+     * [140]U.S. Patent 173,460 Automatic Circuit-Breakers for
+       Electro-Harmonic Telegraphs, filed Jan 8, 1876, issued Feb 15, 1876
+     * [141]U.S. Patent 173,618 Electro-Harmonic Telegraph, filed Jan 27,
+       1876, issued Feb 15, 1876
+     * [142]U.S. Patent 175,971 Telephonic Telegraph Apparatus, filed Jan
+       8, 1876, issued April 11, 1876
+     * [143]U.S. Patent 186,340 Electro-Harmonic Telegraph, filed Jan 27,
+       1876, issued Jan 16, 1877
+     * [144]U.S. Patent 386,814 Art of Telegraphy, issued July 1888
+       (writing telegraph or telautograph)
+     * [145]U.S. Patent 386,815 Telautograph, issued July 1888
+     * [146]U.S. Patent 461,470 Telautograph, issued October 1891
+     * [147]U.S. Patent 461,472 Art of and Apparatus for Telautographic
+       Communication, issued October 1891 (improved speed and accuracy)
+     * [148]U.S. Patent 491,347 Telautograph, issued February 1893
+     * [149]U.S. Patent 494,562 Telautograph, issued April 1893
+
+                         [150]Persondata
+   Name              Gray, Elisha
+   Alternative names
+   Short description
+   Date of birth     August 2, 1835
+   Place of birth    [151]Barnesville, [152]Ohio, U.S.
+   Date of death     January 21, 1901
+   Place of death    [153]Newtonville, [154]Massachusetts, U.S.
+   Retrieved from "[155]http://en.wikipedia.org/wiki/Elisha_Gray"
+   [156]Categories: [157]1835 births | [158]1901 deaths | [159]American
+   inventors | [160]Burials at Rosehill Cemetery, Chicago | [161]National
+   Inventors Hall of Fame inductees | [162]Oberlin College alumni |
+   [163]People from Belmont County, Ohio | [164]People from Boston,
+   Massachusetts | [165]People from Highland Park, Illinois | [166]History
+   of telecommunications | [167]Alexander Graham Bell | [168]Discovery and
+   invention controversies | [169]Videotelephony
+   Hidden categories: [170]Articles with hCards | [171]Articles needing
+   additional references from February 2008 | [172]All articles needing
+   additional references
+
+Personal tools
+
+     * [173]Log in / create account
+
+Namespaces
+
+     * [174]Article
+     * [175]Discussion
+
+Variants
+
+Views
+
+     * [176]Read
+     * [177]Edit
+     * [178]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [179]Main page
+     * [180]Contents
+     * [181]Featured content
+     * [182]Current events
+     * [183]Random article
+     * [184]Donate to Wikipedia
+
+Interaction
+
+     * [185]Help
+     * [186]About Wikipedia
+     * [187]Community portal
+     * [188]Recent changes
+     * [189]Contact Wikipedia
+
+Toolbox
+
+     * [190]What links here
+     * [191]Related changes
+     * [192]Upload file
+     * [193]Special pages
+     * [194]Permanent link
+     * [195]Cite this page
+
+Print/export
+
+     * [196]Create a book
+     * [197]Download as PDF
+     * [198]Printable version
+
+Languages
+
+     * [199]Afrikaans
+     * [200]العربية
+     * [201]Català
+     * [202]Deutsch
+     * [203]Español
+     * [204]Esperanto
+     * [205]فارسی
+     * [206]Français
+     * [207]한국어
+     * [208]Italiano
+     * [209]Nederlands
+     * [210]日本語
+     * [211]‪Norsk (bokmål)‬
+     * [212]Română
+     * [213]Suomi
+     * [214]ไทย
+     * [215]Türkçe
+
+     * This page was last modified on 20 January 2011 at 00:51.
+     * Text is available under the [216]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [217]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [218]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [219]Contact us
+
+     * [220]Privacy policy
+     * [221]About Wikipedia
+     * [222]Disclaimers
+
+     * [223]Powered by MediaWiki
+     * [224]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Elisha_Gray&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#p-search
+   7. file://localhost/wiki/Barnesville,_Ohio
+   8. file://localhost/wiki/Ohio
+   9. file://localhost/wiki/Newtonville,_Massachusetts
+  10. file://localhost/wiki/Massachusetts
+  11. file://localhost/wiki/Elliott_Cresson_Medal
+  12. file://localhost/wiki/Electrical_engineering
+  13. file://localhost/wiki/Western_Electric
+  14. file://localhost/wiki/Invention_of_the_telephone
+  15. file://localhost/wiki/Highland_Park,_Illinois
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-0
+  17. file://localhost/wiki/Alexander_Graham_Bell
+  18. file://localhost/wiki/Invention_of_the_telephone
+  19. file://localhost/wiki/Synthesizer
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-1
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-2
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#Biography_and_early_inventions
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#Elisha_Gray_and_the_telephone
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#Gray.27s_further_inventions
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#Gray.27s_publications
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#See_also
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#References
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#External_links
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#Gray.27s_Patents
+  30. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=1
+  31. file://localhost/wiki/Quaker
+  32. file://localhost/wiki/Barnesville,_Ohio
+  33. file://localhost/wiki/Oberlin_College
+  34. file://localhost/wiki/Telegraph
+  35. file://localhost/wiki/Western_Union_Telegraph_Company
+  36. file://localhost/wiki/Graybar_Electric_Company
+  37. file://localhost/wiki/Western_Union
+  38. file://localhost/wiki/Anson_Stager
+  39. file://localhost/wiki/Highland_Park,_Illinois
+  40. file://localhost/wiki/Acoustic_telegraphy
+  41. file://localhost/wiki/Western_Union
+  42. file://localhost/wiki/J._P._Morgan
+  43. file://localhost/wiki/Western_Electric
+  44. http://www.highlandpark.org/
+  45. file://localhost/wiki/Synthesizer
+  46. file://localhost/wiki/Acoustic_telegraphy
+  47. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=2
+  48. file://localhost/wiki/Elisha_Gray_and_Alexander_Bell_telephone_controversy
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-3
+  50. file://localhost/wiki/Patent_caveat
+  51. file://localhost/wiki/1876
+  52. file://localhost/wiki/Alexander_Graham_Bell
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-Evenson.2C_pages_68-69-4
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-Evenson.2C_pages_68-69-4
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-5
+  56. file://localhost/wiki/First_to_invent
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-6
+  58. file://localhost/wiki/United_States_Patent_and_Trademark_Office
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-7
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-8
+  61. file://localhost/wiki/United_States_Patent_Office
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-9
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-10
+  64. file://localhost/wiki/Marcellus_Bailey
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-11
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-12
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-13
+  68. file://localhost/wiki/Proof_of_concept
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-14
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-15
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-16
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_note-17
+  73. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=3
+  74. file://localhost/wiki/Telautograph
+  75. file://localhost/wiki/Xerox
+  76. file://localhost/wiki/1893_Columbian_Exposition
+  77. file://localhost/wiki/Closed-circuit_television
+  78. file://localhost/w/index.php?title=Telephote&action=edit&redlink=1
+  79. file://localhost/wiki/Newtonville,_Massachusetts
+  80. file://localhost/wiki/Oberlin_College
+  81. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=4
+  82. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=5
+  83. file://localhost/wiki/Invention_of_the_telephone
+  84. file://localhost/wiki/Timeline_of_the_telephone
+  85. file://localhost/wiki/The_Telephone_Cases
+  86. file://localhost/wiki/Water_microphone
+  87. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=6
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-0
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-1
+  90. http://www.playpiano.com/wordpress/musical-insruments/what-is-a-synthesizer-and-how-does-it-work
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-2
+  92. http://www.oberlin.edu/external/EOG/OYTT-images/ElishaGray.html
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-3
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-Evenson.2C_pages_68-69_4-0
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-Evenson.2C_pages_68-69_4-1
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-5
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-6
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-7
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-8
+ 100. file://localhost/w/index.php?title=Inventor%27s_Digest&action=edit&redlink=1
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-9
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-10
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-11
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-12
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-13
+ 106. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-14
+ 107. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-15
+ 108. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-16
+ 109. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html#cite_ref-17
+ 110. file://localhost/wiki/The_Telephone_Gambit
+ 111. file://localhost/wiki/Special:BookSources/0393062066
+ 112. file://localhost/wiki/Special:BookSources/0786408839
+ 113. file://localhost/wiki/Special:BookSources/061511329X
+ 114. file://localhost/wiki/Special:BookSources/0786401389
+ 115. file://localhost/wiki/File:Question_book-new.svg
+ 116. file://localhost/wiki/Wikipedia:Citing_sources#Inline_citations
+ 117. file://localhost/wiki/Wikipedia:Verifiability
+ 118. http://en.wikipedia.org/w/index.php?title=Elisha_Gray&action=edit
+ 119. file://localhost/wiki/Wikipedia:Identifying_reliable_sources
+ 120. file://localhost/wiki/Template:Citation_needed
+ 121. file://localhost/wiki/Wikipedia:Verifiability#Burden_of_evidence
+ 122. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=7
+ 123. file://localhost/wiki/Wikisource
+ 124. http://en.wikisource.org/wiki/Author:Elisha_Gray
+ 125. http://commons.wikimedia.org/wiki/Elisha_Gray
+ 126. http://www.oberlin.edu/external/EOG/OYTT-images/ElishaGray.html
+ 127. http://repo-nt.tcc.virginia.edu/classes/tcc315/Resources/ALM/Telephone/Exhibits/gray.html
+ 128. http://www.acmi.net.au/AIC/GRAY_PATENT.html
+ 129. http://www.obsolete.com/120_years/machines/telegraph/
+ 130. http://repo-nt.tcc.virginia.edu/book/chap3/chapter3sec4.html
+ 131. http://web.archive.org/web/19991004032858/http://jefferson.village.virginia.edu/~meg3c/id/TCC315/back.html
+ 132. http://www.jmcvey.net/cable/elements/telautograph1.htm
+ 133. http://www.1911encyclopedia.org/Elisha_Gray
+ 134. http://www.donparrish.com/ElishaGrayGrave.html
+ 135. file://localhost/wiki/Rosehill_Cemetery,_Chicago
+ 136. file://localhost/w/index.php?title=Elisha_Gray&action=edit&section=8
+ 137. file://localhost/wiki/TIFF
+ 138. http://www.google.com/patents?vid=166095
+ 139. http://www.google.com/patents?vid=166096
+ 140. http://www.google.com/patents?vid=173460
+ 141. http://www.google.com/patents?vid=173618
+ 142. http://www.google.com/patents?vid=175971
+ 143. http://www.google.com/patents?vid=186340
+ 144. http://www.google.com/patents?vid=386814
+ 145. http://www.google.com/patents?vid=386815
+ 146. http://www.google.com/patents?vid=461470
+ 147. http://www.google.com/patents?vid=461472
+ 148. http://www.google.com/patents?vid=491347
+ 149. http://www.google.com/patents?vid=494562
+ 150. file://localhost/wiki/Wikipedia:Persondata
+ 151. file://localhost/wiki/Barnesville,_Ohio
+ 152. file://localhost/wiki/Ohio
+ 153. file://localhost/wiki/Newtonville,_Massachusetts
+ 154. file://localhost/wiki/Massachusetts
+ 155. http://en.wikipedia.org/wiki/Elisha_Gray
+ 156. file://localhost/wiki/Special:Categories
+ 157. file://localhost/wiki/Category:1835_births
+ 158. file://localhost/wiki/Category:1901_deaths
+ 159. file://localhost/wiki/Category:American_inventors
+ 160. file://localhost/wiki/Category:Burials_at_Rosehill_Cemetery,_Chicago
+ 161. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 162. file://localhost/wiki/Category:Oberlin_College_alumni
+ 163. file://localhost/wiki/Category:People_from_Belmont_County,_Ohio
+ 164. file://localhost/wiki/Category:People_from_Boston,_Massachusetts
+ 165. file://localhost/wiki/Category:People_from_Highland_Park,_Illinois
+ 166. file://localhost/wiki/Category:History_of_telecommunications
+ 167. file://localhost/wiki/Category:Alexander_Graham_Bell
+ 168. file://localhost/wiki/Category:Discovery_and_invention_controversies
+ 169. file://localhost/wiki/Category:Videotelephony
+ 170. file://localhost/wiki/Category:Articles_with_hCards
+ 171. file://localhost/wiki/Category:Articles_needing_additional_references_from_February_2008
+ 172. file://localhost/wiki/Category:All_articles_needing_additional_references
+ 173. file://localhost/w/index.php?title=Special:UserLogin&returnto=Elisha_Gray
+ 174. file://localhost/wiki/Elisha_Gray
+ 175. file://localhost/wiki/Talk:Elisha_Gray
+ 176. file://localhost/wiki/Elisha_Gray
+ 177. file://localhost/w/index.php?title=Elisha_Gray&action=edit
+ 178. file://localhost/w/index.php?title=Elisha_Gray&action=history
+ 179. file://localhost/wiki/Main_Page
+ 180. file://localhost/wiki/Portal:Contents
+ 181. file://localhost/wiki/Portal:Featured_content
+ 182. file://localhost/wiki/Portal:Current_events
+ 183. file://localhost/wiki/Special:Random
+ 184. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 185. file://localhost/wiki/Help:Contents
+ 186. file://localhost/wiki/Wikipedia:About
+ 187. file://localhost/wiki/Wikipedia:Community_portal
+ 188. file://localhost/wiki/Special:RecentChanges
+ 189. file://localhost/wiki/Wikipedia:Contact_us
+ 190. file://localhost/wiki/Special:WhatLinksHere/Elisha_Gray
+ 191. file://localhost/wiki/Special:RecentChangesLinked/Elisha_Gray
+ 192. file://localhost/wiki/Wikipedia:Upload
+ 193. file://localhost/wiki/Special:SpecialPages
+ 194. file://localhost/w/index.php?title=Elisha_Gray&oldid=408886226
+ 195. file://localhost/w/index.php?title=Special:Cite&page=Elisha_Gray&id=408886226
+ 196. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Elisha+Gray
+ 197. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Elisha+Gray&oldid=408886226&writer=rl
+ 198. file://localhost/w/index.php?title=Elisha_Gray&printable=yes
+ 199. http://af.wikipedia.org/wiki/Elisha_Gray
+ 200. http://ar.wikipedia.org/wiki/%D8%A5%D9%84%D9%8A%D8%B4%D8%A7_%D8%BA%D8%B1%D8%A7%D9%8A
+ 201. http://ca.wikipedia.org/wiki/Elisha_Gray
+ 202. http://de.wikipedia.org/wiki/Elisha_Gray
+ 203. http://es.wikipedia.org/wiki/Elisha_Gray
+ 204. http://eo.wikipedia.org/wiki/Elisha_Gray
+ 205. http://fa.wikipedia.org/wiki/%D8%A7%D9%84%DB%8C%D8%B4%D8%A7_%DA%AF%D8%B1%DB%8C
+ 206. http://fr.wikipedia.org/wiki/Elisha_Gray
+ 207. http://ko.wikipedia.org/wiki/%EC%9D%BC%EB%9D%BC%EC%9D%B4%EC%85%94_%EA%B7%B8%EB%A0%88%EC%9D%B4
+ 208. http://it.wikipedia.org/wiki/Elisha_Gray
+ 209. http://nl.wikipedia.org/wiki/Elisha_Gray
+ 210. http://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%A9%E3%82%A4%E3%82%B7%E3%83%A3%E3%83%BB%E3%82%B0%E3%83%AC%E3%82%A4
+ 211. http://no.wikipedia.org/wiki/Elisha_Gray
+ 212. http://ro.wikipedia.org/wiki/Elisha_Gray
+ 213. http://fi.wikipedia.org/wiki/Elisha_Gray
+ 214. http://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B8%8A%E0%B8%B2_%E0%B9%80%E0%B8%81%E0%B8%A3%E0%B8%A2%E0%B9%8C
+ 215. http://tr.wikipedia.org/wiki/Elisha_Gray
+ 216. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 217. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 218. http://www.wikimediafoundation.org/
+ 219. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 220. http://wikimediafoundation.org/wiki/Privacy_policy
+ 221. file://localhost/wiki/Wikipedia:About
+ 222. file://localhost/wiki/Wikipedia:General_disclaimer
+ 223. http://www.mediawiki.org/
+ 224. http://wikimediafoundation.org/
+
+   Hidden links:
+ 225. file://localhost/wiki/File:Portrait_elisha_gray.jpg
+ 226. file://localhost/wiki/File:Bell-gray-smoking-gun.png
+ 227. file://localhost/wiki/File:Bell-gray-smoking-gun.png
+ 228. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html
+ 229. file://localhost/home/memfis/projects/put/tsiss/Downloads/elisha_gray.html
+ 230. file://localhost/wiki/Main_Page
+ 231. http://creativecommons.org/licenses/by-sa/3.0/

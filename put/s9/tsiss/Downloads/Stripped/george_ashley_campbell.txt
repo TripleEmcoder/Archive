@@ -1,0 +1,695 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+George Ashley Campbell
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   For other people named George Campbell, see [7]George Campbell
+   (disambiguation).
+                  George Ashley Campbell
+        Born      November 27, 1870(1870-11-27)
+                  [8]Hastings, Minnesota
+        Died      November 10, 1954(1954-11-10) (aged 83)
+     Residence    [9]United States
+    Nationality   [10]American
+       Fields     [11]Electrical engineering
+   [12]Alma mater [13]Harvard University
+                  [14]MIT
+   Notable awards [15]IEEE Medal of Honor
+                  [16]IEEE Edison Medal
+                  [17]Elliott Cresson Medal (1940)
+
+   George Ashley Campbell (November 27, 1870 – November 10, 1954) was a
+   pioneer in developing and applying quantitative mathematical methods to
+   the problems of long-distance telegraphy and telephony. His most
+   important contributions were to the theory and implementation of the
+   use of [18]loading coils and the first [19]wave filters designed to
+   what was to become known as the [20]image method. Both these areas of
+   work resulted in important economic advantages for the [21]American
+   Telephone and Telegraph Company (AT&T).
+
+   Contents
+
+        * [22]1 Education
+        * [23]2 Work on loading coils
+             + [24]2.1 Legal battle
+        * [25]3 Work on filters
+        * [26]4 Publications
+        * [27]5 See also
+             + [28]5.1 People
+             + [29]5.2 Circuits
+             + [30]5.3 Theory
+             + [31]5.4 Multiplexing terms
+             + [32]5.5 Filtering terms
+        * [33]6 Notes
+        * [34]7 References
+
+[[35]edit] Education
+
+   He graduated from [36]MIT in 1891, and then received a master’s degree
+   from [37]Harvard University in 1893. He was awarded a fellowship which
+   enabled him to spend three years on graduate work; one year studying
+   advanced mathematics under [38]Felix Klein at [39]Göttingen, one year
+   studying electricity and mechanics under [40]Ludwig Boltzmann in
+   Vienna, and one year studying under [41]Henri Poincaré in Paris.
+   Campbell received a doctorate from Harvard in 1901 with his
+   dissertation being on the subject of his [42]loading coil research at
+   [43]AT&T.^[44][1]
+
+[[45]edit] Work on loading coils
+
+   In 1897 Campbell went to work for AT&T in Boston. He developed a method
+   for transmitting analog telephony over much greater distances than had
+   previously been possible by the insertion of [46]loading coils into the
+   line at carefully calculated intervals to increase the [47]inductance.
+   Engineer [48]Michael I. Pupin also patented a similar system and AT&T
+   paid Pupin a very large sum for his patents, so that development would
+   continue without a legal battle. In fact, neither man was the first to
+   suggest the idea of loading coils, that credit goes to [49]Oliver
+   Heaviside in a 1887 article.^[50][2] Heaviside, however, never patented
+   the idea; indeed, he took no commercial advantage of any of his
+   brilliant work.^[51][3] Despite the rather arcane legal arguments
+   surrounding this, it is unquestionable that Campbell was the first to
+   actually construct a telephone circuit using loading coils.^[52][4]
+
+   Campbell was aware of Heaviside's work in discovering the [53]Heaviside
+   condition,^[54][5] in which the specification for distortionless
+   transmission of signals is formulated, but apparently was not aware of
+   Heaviside's suggestion of using loading coils to force a line to meet
+   it. Campbell initially attacked the problem from a completely different
+   basis. Campbell was tasked by AT&T to investigate the possibility of
+   improving line quality with the use of iron-copper bimetallic cable
+   invented by [55]John S. Stone,^[56][6] another AT&T engineer. This
+   cable of Stone's would similarly increase line inductance and had the
+   potential to meet the Heaviside condition. However, Campbell was
+   struggling to set up a practical demonstration over a real telephone
+   route with the budget he had been allocated. After considering that his
+   artificial line simulators used [57]lumped components rather than the
+   [58]distributed quantities found in a real line, he wondered if he
+   could not insert the inductance with lumped components instead of using
+   Stone's distributed line. When his calculations showed that the
+   manholes on telephone routes were sufficiently close together to be
+   able to insert the loading coils without the expense of either having
+   to dig up the route or lay in new cables he changed to this new
+   plan.^[59][7] The very first demonstration of loading coils on a
+   telephone cable was on a 46-mile length of the so-called Pittsburgh
+   cable (the test was actually in Boston, the cable had previously been
+   used for testing in Pittsburgh) on September 6, 1899 carried out by
+   Campbell himself and his assistant.^[60][8] The first telephone cable
+   using loaded lines put into public service was between Jamaica Plains
+   and West Newton in Boston on May 18, 1900.^[61][9]
+
+[[62]edit] Legal battle
+
+   AT&T fought a legal battle with Pupin over his claim. Pupin was first
+   to patent but Campbell had already conducted practical demonstrations
+   before Pupin had even filed his patent (December 1899),^[63][10]
+   Campbell's delay in filing being due to the slow internal machinations
+   of AT&T.^[64][11] The claim Pupin makes in his autobiography^[65][12]
+   that he had previously thought of the idea while climbing a mountain in
+   1894^[66][13]^[67][14] is widely doubted^[68][15]^[69][16]^[70][17] and
+   there is no evidence for this either documentary or in the subsequent
+   activities of Pupin and his students. However, AT&T foolishly deleted
+   from Campbell's proposed patent application all the tables and graphs
+   detailing the exact value of inductance that would be required before
+   the patent was submitted.^[71][18] Since Pupin's patent contained a
+   (less accurate) formula, AT&T was open to claims of incomplete
+   disclosure. Fearing that there was a risk that the battle would end
+   with the invention being declared unpatentable, they decided to buy an
+   option on Pupin's patent for a yearly fee so that AT&T would control
+   both patents. By January 1901 Pupin had been paid $200,000 and by 1917,
+   when the AT&T monopoly ended and payments ceased, he had received a
+   total of $455,000.^[72][19]
+
+   The invention was of enormous value to AT&T. Telephone cables could now
+   be used to twice the distance previously possible, or alternatively, a
+   cable of half the previous quality (and cost) could be used over the
+   same distance. When considering whether to allow Campbell to go ahead
+   with the demonstration, their engineers had estimated that they stood
+   to save $700,000 in new installation costs in New York and New Jersey
+   alone.^[73][20] It has been estimated that AT&T saved $100 million in
+   the first quarter of the 20th century.^[74][21]^[75][22] Heaviside, who
+   began it all, came away with nothing. He was offered a token payment
+   but would not accept, wanting the credit for his work. He remarked
+   ironically that if his prior publication had been admitted it would
+   "interfere . . . with the flow of dollars in the proper direction . .
+   .".^[76][23]
+
+[[77]edit] Work on filters
+
+   One of the important results of the work on loading coils was that the
+   loading caused a cut-off at a definite [78]frequency in the line
+   response, whose value could be predicted with a knowledge of the line
+   [79]capacitance and coil [80]inductance. An unloaded line had no such
+   behavior, the [81]attenuation simply steadily increased with frequency.
+   This behavior, and the [82]lumped element networks being used to create
+   artificial lines for test purposes, suggested to Campbell a possible
+   [83]topology for a filter with similar characteristics.^[84][24]
+
+   This work on filtering was begun in 1910. Using a [85]ladder network of
+   inductors and capacitors in appropriate configurations he produced
+   [86]low-pass, [87]high-pass and [88]band-pass filters. These filters
+   could be designed to pass frequencies in any specified range and reject
+   those in other ranges. This class of filter was later to be dubbed the
+   [89]constant k filter by [90]Otto Zobel working for AT&T in New
+   York.^[91][25]
+
+   The sharpness of transition from the [92]passband to the [93]stopband,
+   and the depth of rejection in the stopband were determined by the
+   number of sections in the ladder. If a tighter specification was
+   required for the filter, all that was necessary was to add more
+   inductors and capacitors to the ladder in exactly the same circuit
+   configuration as those for a less stringent specification.^[94][25]
+
+   The purpose of filtering a telephone channel so precisely was that AT&T
+   were attempting to use the same wires for many telephone conversations
+   simultaneously using the technique of [95]frequency division
+   multiplexing (FDM) and it was important for reasons of privacy, as well
+   as intelligibility, that there was no [96]crosstalk between the
+   channels. Filters were also required to separate out the various
+   conversations at the far end of the cable. Initially, a passband of 200
+   [97]Hz to 2.5 kHz was used for the voice [98]baseband, but soon the
+   [99]International Telecommunication Union (ITU) established the world
+   standard of 300 Hz to 3.4 kHz with 4 kHz spacing between
+   channels.^[100][25]
+
+   These filter designs, which Zobel was later to improve upon, were of
+   great economic value to AT&T. The ability to send multiple
+   conversations over the same wires resulted in very substantial savings
+   in cable installation costs. The modulation system used
+   ([101]single-sideband suppressed-carrier transmission) and the ITU
+   standard remained the primary method of telephone service distribution
+   until it began to be supplanted by digital techniques from the 1980s
+   onwards.^[102][26]
+
+[[103]edit] Publications
+
+     * Loaded lines in telephonic transmission (1903)
+     * Cisoidal oscillations (1911)
+     * Physical theory of the electric wave-filter (1922)^[104][27]
+     * Fourier integrals for practical applications (1931)
+
+[[105]edit] See also
+
+   [[106]edit] People
+
+        * [107]Oliver Heaviside
+        * [108]John Stone Stone
+        * [109]Mihajlo Idvorski Pupin
+        * [110]Otto Julius Zobel
+
+   [[111]edit] Circuits
+
+        * [112]Loading coil
+        * [113]Constant k filter
+
+   [[114]edit] Theory
+
+        * [115]Heaviside condition
+        * [116]Image impedance
+
+                                     [[117]edit] Multiplexing terms
+
+                                          * [118]Multiplexed
+                                          * [119]Frequency division multiplex
+                                          * [120]Single sideband
+
+                                     [[121]edit] Filtering terms
+
+                                          * [122]Low-pass filter
+                                          * [123]High-pass filter
+                                          * [124]Band-pass filter
+                                          * [125]Passband
+                                          * [126]Stopband
+
+[[127]edit] Notes
+
+    1. [128]^ Brittain, p41 (footnote)
+    2. [129]^ The Electrician, 1887 and reproduced (according to Brittain)
+       in Heaviside, O, Electromagnetic Theory, p112
+    3. [130]^ Bray, p53
+    4. [131]^ Brittain p56
+    5. [132]^ Heaviside, O, Electrical Papers, vol 1, pp 139–140, Boston,
+       1925.
+    6. [133]^ Stone, M S, Electric Circuit, US patent 0 578 275, filed 10
+       September 1896, issued 2 March 1897.
+    7. [134]^ Brittain, pp 42–45
+    8. [135]^ Brittain, pp 43–44
+    9. [136]^ Brittain p45
+   10. [137]^ Pupin, M I, Art of Reducing Attenuation of Electrical Waves
+       and Apparatus Therefore, US patent 0 652 230, filed 14th December
+       1899, issued 19th June 1900.
+   11. [138]^ Brittain, p44
+   12. [139]^ Pupin, M I, From Immigrant to Inventor, pp 330–331, Charles
+       Schribner & Sons, 1924
+   13. [140]^ Pupin does have a patent from 1894 which is sometimes
+       mistakenly quoted as his loading coil patent but it involves series
+       capacitors rather than inductors and they are not distributed along
+       the line. This would have precisely the opposite effect to loading
+       coils, as pointed out by the editor of Electrical World, vol 24,
+       p97, 1894.
+   14. [141]^ Pupin, M I, US patent 0 519 347, Transformer for
+       Telegraphic, Telephonic, or Other Electrical Systems, issued 8th
+       May 1894.
+   15. [142]^ Brittain, pp 36, 48–50
+   16. [143]^ Brittain, p37, quoting a letter Behrend to Searle
+   17. [144]^ Brittain, p37, quoting a letter Searle to Behrend, 1931
+   18. [145]^ Brittain pp 44–45
+   19. [146]^ Brittain, p54, p55 (footnote), p57
+   20. [147]^ Brittain, p45
+   21. [148]^ Brittain, p36
+   22. [149]^ Shaw, T & Fondiller, W, "Developments and Applications of
+       Loading for Telephone Circuits", Transactions of the American
+       Institute of Electrical Engineers, vol 45, pp 291–292, 1926.
+   23. [150]^ Brittain quoting Heaviside letter to Behrend, 1918.
+   24. [151]^ Brittain, p56
+   25. ^ [152]^a [153]^b [154]^c Bray, p62
+   26. [155]^ Bray, pp 62–64
+   27. [156]^ Campbell, G A, "Physical Theory of the Electric
+       Wave-Filter", Bell System Tech J, November 1922, vol 1, no 2, pp
+       1–32.
+
+[[157]edit] References
+
+     * Bray, J, Innovation and the Communications Revolution, Institute of
+       Electrical Engineers, 2002.
+     * James E. Brittain, "The Introduction of the Loading Coil: George A.
+       Campbell and Michael I. Pupin", Technology and Culture, Vol. 11,
+       No. 1 (Jan., 1970), pp. 36–57, The Johns Hopkins University Press
+       on behalf of the Society for the History of Technology.
+     * Heaviside, O, Electrical Papers, American Mathematical Society
+       Bookstore, 1970 (reprint from 1892).
+
+
+   [158]v · [159]d · [160]e[161]IEEE Edison Medal
+   1926–1950
+
+   [162]William D. Coolidge (1927) · [163]Frank B. Jewett (1928) ·
+   [164]Charles F. Scott (1929) · [165]Frank Conrad (1930) · [166]Edwin W.
+   Rice (1931) · [167]Bancroft Gherardi (1932) · [168]Arthur Edwin
+   Kennelly (1933) · [169]Willis R. Whitney (1934) · [170]Lewis B.
+   Stillwell (1935) · [171]Alex Dow (1936) · [172]Gano Dunn (1937) ·
+   [173]Dugald C. Jackson (1938) · [174]Philip Torchio (1939) · George
+   Ashley Campbell (1940) · [175]John B. Whitehead (1941) · [176]Edwin H.
+   Armstrong (1942) · [177]Vannevar Bush (1943) · [178]Ernst Alexanderson
+   (1944) · [179]Philip Sporn (1945) · [180]Lee De Forest (1946) ·
+   [181]Joseph Slepian (1947) · [182]Morris E. Leeds (1948) · [183]Karl B.
+   McEachron (1949) · [184]Otto B. Blackwell (1950)
+   [185]Complete roster: [186]1909–1925 · [187]1926–1950 ·
+   [188]1951–1975 · [189]1976–2000 · [190]2001–present
+
+   [191]v · [192]d · [193]e[194]IEEE Medal of Honor
+   1926–1950
+
+   [195]Greenleaf W. Pickard (1926) · [196]Louis W. Austin (1927) ·
+   [197]Jonathan Zenneck (1928) · [198]George W. Pierce (1929) ·
+   [199]Peder Oluf Pedersen (1930) · [200]Gustave-Auguste Ferrié (1931) ·
+   [201]Arthur Edwin Kennelly (1932) · [202]John Ambrose Fleming (1933) ·
+   [203]Stanford Caldwell Hooper (1934) · [204]Balthasar van der Pol
+   (1935) · George Ashley Campbell (1936) · [205]Melville Eastham (1937) ·
+   [206]John H. Dellinger (1938) · [207]Albert G. Lee (1939) · [208]Lloyd
+   Espenschied (1940) · [209]Alfred Norton Goldsmith (1941) · [210]Albert
+   H. Taylor (1942) · [211]William Wilson (1943) · [212]Haraden Pratt
+   (1944) · [213]Harold Beverage (1945) · [214]Ralph Hartley (1946) ·
+   [215]Lawrence C. F. Horle (1948) · [216]Ralph Bown (1949) ·
+   [217]Frederick Terman (1950)
+   [218]Complete roster: [219]1917–1925 · [220]1926–1950 ·
+   [221]1951–1975 · [222]1976–2000 · [223]2001–present
+                [224]Persondata
+   Name              Campbell, George Ashley
+   Alternative names
+   Short description
+   Date of birth     1870-11-27
+   Place of birth    [225]Hastings, Minnesota
+   Date of death     1954-11-10
+   Place of death
+   Retrieved from
+   "[226]http://en.wikipedia.org/wiki/George_Ashley_Campbell"
+   [227]Categories: [228]1870 births | [229]1954 deaths | [230]People from
+   Hastings, Minnesota | [231]IEEE Medal of Honor recipients |
+   [232]Harvard University alumni | [233]Massachusetts Institute of
+   Technology alumni | [234]IEEE Edison Medal recipients | [235]Scientists
+   at Bell Labs | [236]American inventors | [237]American electrical
+   engineers | [238]Electronics engineers
+
+Personal tools
+
+     * [239]Log in / create account
+
+Namespaces
+
+     * [240]Article
+     * [241]Discussion
+
+Variants
+
+Views
+
+     * [242]Read
+     * [243]Edit
+     * [244]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [245]Main page
+     * [246]Contents
+     * [247]Featured content
+     * [248]Current events
+     * [249]Random article
+     * [250]Donate to Wikipedia
+
+Interaction
+
+     * [251]Help
+     * [252]About Wikipedia
+     * [253]Community portal
+     * [254]Recent changes
+     * [255]Contact Wikipedia
+
+Toolbox
+
+     * [256]What links here
+     * [257]Related changes
+     * [258]Upload file
+     * [259]Special pages
+     * [260]Permanent link
+     * [261]Cite this page
+
+Print/export
+
+     * [262]Create a book
+     * [263]Download as PDF
+     * [264]Printable version
+
+Languages
+
+     * [265]Deutsch
+     * [266]Português
+
+     * This page was last modified on 26 December 2010 at 22:44.
+     * Text is available under the [267]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [268]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [269]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [270]Contact us
+
+     * [271]Privacy policy
+     * [272]About Wikipedia
+     * [273]Disclaimers
+
+     * [274]Powered by MediaWiki
+     * [275]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#p-search
+   7. file://localhost/wiki/George_Campbell_(disambiguation)
+   8. file://localhost/wiki/Hastings,_Minnesota
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/United_States
+  11. file://localhost/wiki/Electrical_engineering
+  12. file://localhost/wiki/Alma_mater
+  13. file://localhost/wiki/Harvard_University
+  14. file://localhost/wiki/MIT
+  15. file://localhost/wiki/IEEE_Medal_of_Honor
+  16. file://localhost/wiki/IEEE_Edison_Medal
+  17. file://localhost/wiki/Elliott_Cresson_Medal
+  18. file://localhost/wiki/Loading_coil
+  19. file://localhost/wiki/Otto_Julius_Zobel#Background_to_AT.26T_research
+  20. file://localhost/wiki/Composite_image_filter#The_image_method
+  21. file://localhost/wiki/American_Telephone_and_Telegraph
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Education
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Work_on_loading_coils
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Legal_battle
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Work_on_filters
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Publications
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#See_also
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#People
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Circuits
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Theory
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Multiplexing_terms
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Filtering_terms
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#Notes
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#References
+  35. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=1
+  36. file://localhost/wiki/MIT
+  37. file://localhost/wiki/Harvard_University
+  38. file://localhost/wiki/Felix_Klein
+  39. file://localhost/wiki/University_of_G%C3%B6ttingen
+  40. file://localhost/wiki/Ludwig_Boltzmann
+  41. file://localhost/wiki/Henri_Poincar%C3%A9
+  42. file://localhost/wiki/Loading_coil
+  43. file://localhost/wiki/AT%26T_Corp.
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-0
+  45. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=2
+  46. file://localhost/wiki/Loading_coil
+  47. file://localhost/wiki/Inductance
+  48. file://localhost/wiki/Michael_I._Pupin
+  49. file://localhost/wiki/Oliver_Heaviside
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-1
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-2
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-3
+  53. file://localhost/wiki/Heaviside_condition
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-4
+  55. file://localhost/wiki/John_Stone_Stone
+  56. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-5
+  57. file://localhost/wiki/Lumped_element_model
+  58. file://localhost/wiki/Distributed_element_model
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-6
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-7
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-8
+  62. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=3
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-9
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-10
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-11
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-12
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-13
+  68. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-14
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-15
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-16
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-17
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-18
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-19
+  74. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-20
+  75. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-21
+  76. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-22
+  77. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=4
+  78. file://localhost/wiki/Frequency
+  79. file://localhost/wiki/Capacitance
+  80. file://localhost/wiki/Inductance
+  81. file://localhost/wiki/Attenuation
+  82. file://localhost/wiki/Lumped_element_model
+  83. file://localhost/wiki/Electronic_filter_topology
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-23
+  85. file://localhost/wiki/Electronic_filter_topology#Ladder_topologies
+  86. file://localhost/wiki/Low-pass
+  87. file://localhost/wiki/High-pass
+  88. file://localhost/wiki/Band-pass
+  89. file://localhost/wiki/Constant_k_filter
+  90. file://localhost/wiki/Otto_Zobel
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-Bray.2C_p62-24
+  92. file://localhost/wiki/Passband
+  93. file://localhost/wiki/Stopband
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-Bray.2C_p62-24
+  95. file://localhost/wiki/Frequency_division_multiplexing
+  96. file://localhost/wiki/Crosstalk
+  97. file://localhost/wiki/Hertz
+  98. file://localhost/wiki/Baseband
+  99. file://localhost/wiki/International_Telecommunication_Union
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-Bray.2C_p62-24
+ 101. file://localhost/wiki/Single-sideband_suppressed-carrier_transmission
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-25
+ 103. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=5
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_note-filter-26
+ 105. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=6
+ 106. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=7
+ 107. file://localhost/wiki/Oliver_Heaviside
+ 108. file://localhost/wiki/John_Stone_Stone
+ 109. file://localhost/wiki/Mihajlo_Idvorski_Pupin
+ 110. file://localhost/wiki/Otto_Julius_Zobel
+ 111. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=8
+ 112. file://localhost/wiki/Loading_coil
+ 113. file://localhost/wiki/Constant_k_filter
+ 114. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=9
+ 115. file://localhost/wiki/Heaviside_condition
+ 116. file://localhost/wiki/Image_impedance
+ 117. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=10
+ 118. file://localhost/wiki/Multiplexed
+ 119. file://localhost/wiki/Frequency_division_multiplex
+ 120. file://localhost/wiki/Single_sideband
+ 121. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=11
+ 122. file://localhost/wiki/Low-pass_filter
+ 123. file://localhost/wiki/High-pass_filter
+ 124. file://localhost/wiki/Band-pass_filter
+ 125. file://localhost/wiki/Passband
+ 126. file://localhost/wiki/Stopband
+ 127. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=12
+ 128. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-0
+ 129. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-1
+ 130. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-2
+ 131. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-3
+ 132. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-4
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-5
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-6
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-7
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-8
+ 137. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-9
+ 138. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-10
+ 139. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-11
+ 140. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-12
+ 141. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-13
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-14
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-15
+ 144. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-16
+ 145. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-17
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-18
+ 147. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-19
+ 148. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-20
+ 149. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-21
+ 150. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-22
+ 151. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-23
+ 152. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-Bray.2C_p62_24-0
+ 153. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-Bray.2C_p62_24-1
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-Bray.2C_p62_24-2
+ 155. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-25
+ 156. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html#cite_ref-filter_26-0
+ 157. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit&section=13
+ 158. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950
+ 159. file://localhost/w/index.php?title=Template_talk:IEEE_Edison_Medal_Laureates_1926%E2%80%931950&action=edit&redlink=1
+ 160. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950&action=edit
+ 161. file://localhost/wiki/IEEE_Edison_Medal
+ 162. file://localhost/wiki/William_D._Coolidge
+ 163. file://localhost/wiki/Frank_B._Jewett
+ 164. file://localhost/wiki/Charles_F._Scott_(engineer)
+ 165. file://localhost/wiki/Frank_Conrad
+ 166. file://localhost/wiki/Edwin_W._Rice
+ 167. file://localhost/wiki/Bancroft_Gherardi,_Jr.
+ 168. file://localhost/wiki/Arthur_E._Kennelly
+ 169. file://localhost/wiki/Willis_R._Whitney
+ 170. file://localhost/wiki/Lewis_B._Stillwell
+ 171. file://localhost/wiki/Alex_Dow
+ 172. file://localhost/wiki/Gano_Dunn
+ 173. file://localhost/wiki/Dugald_C._Jackson
+ 174. file://localhost/wiki/Philip_Torchio
+ 175. file://localhost/wiki/John_B._Whitehead
+ 176. file://localhost/wiki/Edwin_Howard_Armstrong
+ 177. file://localhost/wiki/Vannevar_Bush
+ 178. file://localhost/wiki/Ernst_Alexanderson
+ 179. file://localhost/wiki/Philip_Sporn
+ 180. file://localhost/wiki/Lee_De_Forest
+ 181. file://localhost/wiki/Joseph_Slepian
+ 182. file://localhost/wiki/Morris_E._Leeds
+ 183. file://localhost/wiki/Karl_B._McEachron
+ 184. file://localhost/wiki/Otto_B._Blackwell
+ 185. file://localhost/wiki/Template:IEEE_Edison_Medal
+ 186. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909%E2%80%931925
+ 187. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950
+ 188. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1951-1975
+ 189. file://localhost/wiki/Template:IEEE_Edison_Medal_1976-2000
+ 190. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_2001-2025
+ 191. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+ 192. file://localhost/w/index.php?title=Template_talk:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit&redlink=1
+ 193. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit
+ 194. file://localhost/wiki/IEEE_Medal_of_Honor
+ 195. file://localhost/wiki/Greenleaf_Whittier_Pickard
+ 196. file://localhost/wiki/Louis_W._Austin
+ 197. file://localhost/wiki/Jonathan_Zenneck
+ 198. file://localhost/wiki/George_W._Pierce
+ 199. file://localhost/wiki/Peder_Oluf_Pedersen
+ 200. file://localhost/wiki/Gustave-Auguste_Ferri%C3%A9
+ 201. file://localhost/wiki/Arthur_E._Kennelly
+ 202. file://localhost/wiki/John_Ambrose_Fleming
+ 203. file://localhost/wiki/Stanford_Caldwell_Hooper
+ 204. file://localhost/wiki/Balthasar_van_der_Pol
+ 205. file://localhost/wiki/Melville_Eastham
+ 206. file://localhost/wiki/John_H._Dellinger
+ 207. file://localhost/wiki/Albert_G._Lee
+ 208. file://localhost/wiki/Lloyd_Espenschied
+ 209. file://localhost/wiki/Alfred_Norton_Goldsmith
+ 210. file://localhost/wiki/Albert_H._Taylor
+ 211. file://localhost/wiki/William_Wilson_(physicist)
+ 212. file://localhost/wiki/Haraden_Pratt
+ 213. file://localhost/wiki/Harold_Beverage
+ 214. file://localhost/wiki/Ralph_Hartley
+ 215. file://localhost/wiki/Lawrence_C._F._Horle
+ 216. file://localhost/wiki/Ralph_Bown
+ 217. file://localhost/wiki/Frederick_Terman
+ 218. file://localhost/wiki/Template:IEEE_Medal_of_Honor
+ 219. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+ 220. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+ 221. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+ 222. file://localhost/wiki/Template:IEEE_Medal_of_Honor_1976-2000
+ 223. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_2001-2025
+ 224. file://localhost/wiki/Wikipedia:Persondata
+ 225. file://localhost/wiki/Hastings,_Minnesota
+ 226. http://en.wikipedia.org/wiki/George_Ashley_Campbell
+ 227. file://localhost/wiki/Special:Categories
+ 228. file://localhost/wiki/Category:1870_births
+ 229. file://localhost/wiki/Category:1954_deaths
+ 230. file://localhost/wiki/Category:People_from_Hastings,_Minnesota
+ 231. file://localhost/wiki/Category:IEEE_Medal_of_Honor_recipients
+ 232. file://localhost/wiki/Category:Harvard_University_alumni
+ 233. file://localhost/wiki/Category:Massachusetts_Institute_of_Technology_alumni
+ 234. file://localhost/wiki/Category:IEEE_Edison_Medal_recipients
+ 235. file://localhost/wiki/Category:Scientists_at_Bell_Labs
+ 236. file://localhost/wiki/Category:American_inventors
+ 237. file://localhost/wiki/Category:American_electrical_engineers
+ 238. file://localhost/wiki/Category:Electronics_engineers
+ 239. file://localhost/w/index.php?title=Special:UserLogin&returnto=George_Ashley_Campbell
+ 240. file://localhost/wiki/George_Ashley_Campbell
+ 241. file://localhost/wiki/Talk:George_Ashley_Campbell
+ 242. file://localhost/wiki/George_Ashley_Campbell
+ 243. file://localhost/w/index.php?title=George_Ashley_Campbell&action=edit
+ 244. file://localhost/w/index.php?title=George_Ashley_Campbell&action=history
+ 245. file://localhost/wiki/Main_Page
+ 246. file://localhost/wiki/Portal:Contents
+ 247. file://localhost/wiki/Portal:Featured_content
+ 248. file://localhost/wiki/Portal:Current_events
+ 249. file://localhost/wiki/Special:Random
+ 250. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 251. file://localhost/wiki/Help:Contents
+ 252. file://localhost/wiki/Wikipedia:About
+ 253. file://localhost/wiki/Wikipedia:Community_portal
+ 254. file://localhost/wiki/Special:RecentChanges
+ 255. file://localhost/wiki/Wikipedia:Contact_us
+ 256. file://localhost/wiki/Special:WhatLinksHere/George_Ashley_Campbell
+ 257. file://localhost/wiki/Special:RecentChangesLinked/George_Ashley_Campbell
+ 258. file://localhost/wiki/Wikipedia:Upload
+ 259. file://localhost/wiki/Special:SpecialPages
+ 260. file://localhost/w/index.php?title=George_Ashley_Campbell&oldid=404363986
+ 261. file://localhost/w/index.php?title=Special:Cite&page=George_Ashley_Campbell&id=404363986
+ 262. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=George+Ashley+Campbell
+ 263. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=George+Ashley+Campbell&oldid=404363986&writer=rl
+ 264. file://localhost/w/index.php?title=George_Ashley_Campbell&printable=yes
+ 265. http://de.wikipedia.org/wiki/George_Ashley_Campbell
+ 266. http://pt.wikipedia.org/wiki/George_Ashley_Campbell
+ 267. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 268. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 269. http://www.wikimediafoundation.org/
+ 270. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 271. http://wikimediafoundation.org/wiki/Privacy_policy
+ 272. file://localhost/wiki/Wikipedia:About
+ 273. file://localhost/wiki/Wikipedia:General_disclaimer
+ 274. http://www.mediawiki.org/
+ 275. http://wikimediafoundation.org/
+
+   Hidden links:
+ 276. file://localhost/wiki/File:George_Ashley_Campbell.jpg
+ 277. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html
+ 278. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_ashley_campbell.html
+ 279. file://localhost/wiki/Main_Page
+ 280. http://creativecommons.org/licenses/by-sa/3.0/

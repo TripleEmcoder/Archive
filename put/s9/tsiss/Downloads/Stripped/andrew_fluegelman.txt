@@ -1,0 +1,351 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Andrew Fluegelman
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                    Andrew Fluegelman
+        Born      November 27, 1943(1943-11-27)
+        Died      c. July 6, 1985(1985-07-06) (aged 41)
+   Cause of death Alleged [7]suicide
+     Occupation   Publisher
+
+   Andrew Cardozo Fluegelman (November 27, 1943 - c. July 6, 1985) was a
+   publisher, [8]programmer and [9]attorney^[10][1] best known as the
+   [11]inventor of what is now known as the [12]shareware business model
+   for [13]software marketing. He was also the founding editor of both PC
+   World and Macworld and the leader of the 1970s [14]New Games movement
+   which advocated the development of [15]noncompetitive games.
+
+   Contents
+
+        * [16]1 Early business career
+             + [17]1.1 "Freeware"
+             + [18]1.2 Magazine editor
+        * [19]2 Disappearance
+        * [20]3 List of books published by Fluegelman
+        * [21]4 See also
+        * [22]5 References
+        * [23]6 External links
+
+[[24]edit] Early business career
+
+[[25]edit] "Freeware"
+
+   Shortly after the introduction of the [26]IBM PC Fluegelman developed
+   [27]PC-Talk, a very popular and successful communications software. He
+   marketed it under a system he called "[28]Freeware," which he
+   characterized as "an experiment in [29]economics more than
+   [30]altruism." Freeware was licensed under terms that encouraged users
+   to make voluntary payments for the software, and allowed users to copy
+   and redistribute the software freely as long as the license terms and
+   text were not altered.
+
+[[31]edit] Magazine editor
+
+   Fluegelman edited [32]PC World magazine from its introduction in 1982
+   until 1985, and [33]Macworld magazine from its introduction in 1984
+   until 1985.
+
+[[34]edit] Disappearance
+
+   In 1985, Fluegelman, already suffering from [35]colitis, was diagnosed
+   with [36]cancer. On the afternoon of July 6, 1985, he left his office
+   in [37]Tiburon, California. A week later, his abandoned car was found
+   at the north end of the [38]Golden Gate Bridge near [39]San Francisco.
+   A memorial service was held for Fluegelman by his family, and he is
+   [40]presumed dead, though his body has never been found. Kevin Strehlo,
+   then an [41]InfoWorld columnist, submitted a memorial column which
+   mentioned that "friends say a [42]suicide note was found inside" his
+   car. InfoWorld rejected this column, but an online news service
+   published it.^[43][2]
+
+[[44]edit] List of books published by Fluegelman
+
+   A successful book publisher/packager, Andrew created "The Headlands
+   Press," which produced the following books and negotiated publishing
+   contracts for them with major publishers. Many of the books were
+   designed by Howard Jacobsen and produced by his company, Community Type
+   and Design. This list is arranged by year of book publication:
+     * 1976 [45]New Games Book
+
+   Edited by Andrew Fluegelman and Shoshana Tembeck. A Headlands Press
+   Book, Dolphin/Doubleday. [46]ISBN 0-385-12516-X
+     * 1977 A Traveler's Guide to El Dorado & the Inca Empire
+
+   By Meisch, Lynn. A Headlands Press Book. Publisher: Penguin Books New
+   York 1977. [47]ISBN 0-14-046280-5
+     * 1978 Familiar Subjects: Polaroid SX-70 Impressions
+
+   By Norman Locks. A Headlands Press Book. HARPER & ROW, PUBLISHERS, San
+   Francisco. [48]ISBN 0-06-250530-0
+     * 1979 How to Make and Sell Your Own Record
+
+   By Diane Sward Rapaport. A Headlands Press Book. Putnam, Prentice-Hall.
+   [49]ISBN 0-8256-9932-0
+     * 1980 How to watch a football game
+
+   by Frank Barrett; Lynn Barrett. Publisher: New York : Holt, Rinehart,
+   and Winston, (1980). [50]ISBN 0-03-056958-3
+     * 1981 Worksteads: Living and Working in the Same Place
+
+   By Hewes, Jeremy Joan. The Headlands Press, Inc., San Francisco.
+   Doubleday (January 1981). [51]ISBN 0-385-15995-1
+     * 1981 More New Games
+
+   By The New Games Foundation. Main Street Books New York: Dolphin
+   Books/Doubleday & Company (1981). [52]ISBN 0-385-17514-0
+     * 1983 SUSHI
+
+   By Mia Detrick, Illustrated by Kathryn Kleinman A Headlands Press Book.
+   Chronicle Books LLC (November 1, 1983) [53]ISBN 0-87701-238-5
+
+[[54]edit] See also
+
+     * [55]Freeware
+     * [56]Software
+     * [57]Shareware
+     * [58]Free software
+     * [59]Competition (describes the nature of competitiveness)
+     * [60]List of programmers
+
+[[61]edit] References
+
+    1. [62]^ [63]California State Bar membership records
+    2. [64]^ Kevin Strehlo (1985-07-30). [65]"Andrew Fluegleman: In
+       Memoriam". [66]http://textfiles.fisher.hu/news/freeware.txt.
+       Retrieved 2006-05-29. [sic]. Note complicated provenance. The
+       Textfiles website is said to be an archive of text postings from
+       the days of text-based computer networking; this item is identified
+       as being from NEWSBYTES (dated 7/30/85), an electronic publication
+       available on [67]The Source. NEWSBYTES says that it is the full
+       text of an InfoWorld article that led to Strehlo's resignation from
+       that publication "because the editors saw the last few paragraphs
+       unfit for publication." Article says in part "Fluegelman had been
+       missing for about a week when his car was found parked near the
+       toll plaza on the Marin County side of the Golden Gate Bridge, the
+       site of so many of his moments of inspiration. Friends say a
+       suicide note was found inside. His family held a memorial service
+       in New York the following Sunday. Yet, as this is being written, no
+       body has been found. Police still list Fluegelman as a missing
+       person."
+
+[[68]edit] External links
+
+     * [69]Andrew Fluegelman at the CharleyProject.org
+
+   Retrieved from "[70]http://en.wikipedia.org/wiki/Andrew_Fluegelman"
+   [71]Categories: [72]American computer programmers | [73]Freeware |
+   [74]American writers | [75]American inventors | [76]Writers from
+   California | [77]California lawyers | [78]Designers who committed
+   suicide | [79]Inventors who committed suicide | [80]Missing people |
+   [81]1943 births | [82]1985 deaths | [83]Programmers who committed
+   suicide
+   Hidden categories: [84]Articles with hCards
+
+Personal tools
+
+     * [85]Log in / create account
+
+Namespaces
+
+     * [86]Article
+     * [87]Discussion
+
+Variants
+
+Views
+
+     * [88]Read
+     * [89]Edit
+     * [90]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [91]Main page
+     * [92]Contents
+     * [93]Featured content
+     * [94]Current events
+     * [95]Random article
+     * [96]Donate to Wikipedia
+
+Interaction
+
+     * [97]Help
+     * [98]About Wikipedia
+     * [99]Community portal
+     * [100]Recent changes
+     * [101]Contact Wikipedia
+
+Toolbox
+
+     * [102]What links here
+     * [103]Related changes
+     * [104]Upload file
+     * [105]Special pages
+     * [106]Permanent link
+     * [107]Cite this page
+
+Print/export
+
+     * [108]Create a book
+     * [109]Download as PDF
+     * [110]Printable version
+
+Languages
+
+     * [111]Italiano
+     * [112]Polski
+
+     * This page was last modified on 17 October 2010 at 15:19.
+     * Text is available under the [113]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [114]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [115]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [116]Contact us
+
+     * [117]Privacy policy
+     * [118]About Wikipedia
+     * [119]Disclaimers
+
+     * [120]Powered by MediaWiki
+     * [121]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#p-search
+   7. file://localhost/wiki/Suicide
+   8. file://localhost/wiki/Programmer
+   9. file://localhost/wiki/Lawyer
+  10. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#cite_note-0
+  11. file://localhost/wiki/Inventor
+  12. file://localhost/wiki/Shareware
+  13. file://localhost/wiki/Software
+  14. file://localhost/wiki/New_Games_Book
+  15. file://localhost/wiki/Competition
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#Early_business_career
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#.22Freeware.22
+  18. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#Magazine_editor
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#Disappearance
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#List_of_books_published_by_Fluegelman
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#See_also
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#References
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#External_links
+  24. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=1
+  25. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=2
+  26. file://localhost/wiki/IBM_PC
+  27. file://localhost/wiki/PC-Talk
+  28. file://localhost/wiki/Freeware
+  29. file://localhost/wiki/Economics
+  30. file://localhost/wiki/Altruism
+  31. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=3
+  32. file://localhost/wiki/PC_World_(magazine)
+  33. file://localhost/wiki/Macworld
+  34. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=4
+  35. file://localhost/wiki/Colitis
+  36. file://localhost/wiki/Cancer
+  37. file://localhost/wiki/Tiburon,_California
+  38. file://localhost/wiki/Golden_Gate_Bridge
+  39. file://localhost/wiki/San_Francisco
+  40. file://localhost/wiki/Death_in_absentia
+  41. file://localhost/wiki/InfoWorld
+  42. file://localhost/wiki/Suicide_note
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#cite_note-1
+  44. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=5
+  45. file://localhost/wiki/New_Games_Book
+  46. file://localhost/wiki/Special:BookSources/038512516X
+  47. file://localhost/wiki/Special:BookSources/0140462805
+  48. file://localhost/wiki/Special:BookSources/0062505300
+  49. file://localhost/wiki/Special:BookSources/0825699320
+  50. file://localhost/wiki/Special:BookSources/0030569583
+  51. file://localhost/wiki/Special:BookSources/0385159951
+  52. file://localhost/wiki/Special:BookSources/0385175140
+  53. file://localhost/wiki/Special:BookSources/0877012385
+  54. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=6
+  55. file://localhost/wiki/Freeware
+  56. file://localhost/wiki/Software
+  57. file://localhost/wiki/Shareware
+  58. file://localhost/wiki/Free_software
+  59. file://localhost/wiki/Competition
+  60. file://localhost/wiki/List_of_programmers
+  61. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=7
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#cite_ref-0
+  63. http://members.calbar.ca.gov/search/member_search.aspx?ms=Andrew+Fluegelman
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html#cite_ref-1
+  65. http://textfiles.fisher.hu/news/freeware.txt
+  66. http://textfiles.fisher.hu/news/freeware.txt
+  67. file://localhost/wiki/The_Source_(service)
+  68. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit&section=8
+  69. http://www.charleyproject.org/cases/f/fluegelman_andrew.html
+  70. http://en.wikipedia.org/wiki/Andrew_Fluegelman
+  71. file://localhost/wiki/Special:Categories
+  72. file://localhost/wiki/Category:American_computer_programmers
+  73. file://localhost/wiki/Category:Freeware
+  74. file://localhost/wiki/Category:American_writers
+  75. file://localhost/wiki/Category:American_inventors
+  76. file://localhost/wiki/Category:Writers_from_California
+  77. file://localhost/wiki/Category:California_lawyers
+  78. file://localhost/wiki/Category:Designers_who_committed_suicide
+  79. file://localhost/wiki/Category:Inventors_who_committed_suicide
+  80. file://localhost/wiki/Category:Missing_people
+  81. file://localhost/wiki/Category:1943_births
+  82. file://localhost/wiki/Category:1985_deaths
+  83. file://localhost/wiki/Category:Programmers_who_committed_suicide
+  84. file://localhost/wiki/Category:Articles_with_hCards
+  85. file://localhost/w/index.php?title=Special:UserLogin&returnto=Andrew_Fluegelman
+  86. file://localhost/wiki/Andrew_Fluegelman
+  87. file://localhost/wiki/Talk:Andrew_Fluegelman
+  88. file://localhost/wiki/Andrew_Fluegelman
+  89. file://localhost/w/index.php?title=Andrew_Fluegelman&action=edit
+  90. file://localhost/w/index.php?title=Andrew_Fluegelman&action=history
+  91. file://localhost/wiki/Main_Page
+  92. file://localhost/wiki/Portal:Contents
+  93. file://localhost/wiki/Portal:Featured_content
+  94. file://localhost/wiki/Portal:Current_events
+  95. file://localhost/wiki/Special:Random
+  96. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+  97. file://localhost/wiki/Help:Contents
+  98. file://localhost/wiki/Wikipedia:About
+  99. file://localhost/wiki/Wikipedia:Community_portal
+ 100. file://localhost/wiki/Special:RecentChanges
+ 101. file://localhost/wiki/Wikipedia:Contact_us
+ 102. file://localhost/wiki/Special:WhatLinksHere/Andrew_Fluegelman
+ 103. file://localhost/wiki/Special:RecentChangesLinked/Andrew_Fluegelman
+ 104. file://localhost/wiki/Wikipedia:Upload
+ 105. file://localhost/wiki/Special:SpecialPages
+ 106. file://localhost/w/index.php?title=Andrew_Fluegelman&oldid=391247796
+ 107. file://localhost/w/index.php?title=Special:Cite&page=Andrew_Fluegelman&id=391247796
+ 108. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Andrew+Fluegelman
+ 109. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Andrew+Fluegelman&oldid=391247796&writer=rl
+ 110. file://localhost/w/index.php?title=Andrew_Fluegelman&printable=yes
+ 111. http://it.wikipedia.org/wiki/Andrew_Fluegelman
+ 112. http://pl.wikipedia.org/wiki/Andrew_Fluegelman
+ 113. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 114. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 115. http://www.wikimediafoundation.org/
+ 116. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 117. http://wikimediafoundation.org/wiki/Privacy_policy
+ 118. file://localhost/wiki/Wikipedia:About
+ 119. file://localhost/wiki/Wikipedia:General_disclaimer
+ 120. http://www.mediawiki.org/
+ 121. http://wikimediafoundation.org/
+
+   Hidden links:
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html
+ 123. file://localhost/home/memfis/projects/put/tsiss/Downloads/andrew_fluegelman.html
+ 124. file://localhost/wiki/Main_Page
+ 125. http://creativecommons.org/licenses/by-sa/3.0/

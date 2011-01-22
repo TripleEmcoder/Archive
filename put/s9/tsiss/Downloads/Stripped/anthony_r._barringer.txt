@@ -1,0 +1,343 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Anthony R. Barringer
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                       Dr. Anthony R. Barringer
+        Born      October 20, 1925
+        Died      August 15, 2009
+                  [7]Golden, Colorado
+     Residence    [8]United States
+    Citizenship   American
+    Nationality   Canadian
+       Fields     [9]Geophysics
+    Institutions  Barringer Research Inc.
+   [10]Alma mater [11]Imperial College London
+     Known for    Development of technology for mineral, oil and gas
+                  exploration
+   Notable awards Mining Hall of Fame
+                  Logan Medal
+                  Virgil Kauffman Gold Medal
+                  Daniel C. Jackling Award
+
+   Anthony R. “Tony” Barringer (October 20, 1925 - August 15, 2009) is a
+   [12]Canadian/[13]American [14]geophysicist. He has made numerous
+   contributions to [15]mineral exploration technology. His most famous
+   work was the development of the INPUT airborne [16]electromagnetic
+   system, which has been credited in the discovery of tens of billions of
+   dollars worth of [17]ore deposits.
+
+   Before beginning his university studies, Barringer served with the
+   [18]British Army in [19]World War II. In 1948, he began attending the
+   [20]University of London. In 1951, he obtained a [21]B.Sc. in
+   [22]economic geology from the university’s [23]Imperial College of
+   Science and Technology. He obtained a [24]PhD degree in 1954, from the
+   same institution.
+
+   Contents
+
+        * [25]1 Career
+        * [26]2 Honours and awards
+        * [27]3 References
+        * [28]4 External links
+
+[[29]edit] Career
+
+   Barringer left the [30]United Kingdom to accept a post in [31]Toronto,
+   Canada with Selco Exploration as an exploration geologist. Eventually
+   he was promoted to Manager of its Airborne and Technical Services
+   division. At this time, he invented the INPUT (Induced Pulse Transient)
+   airborne electromagnetic system and the equipment for a portable ground
+   electromagnetic system. This technology uses one horizital transmitter
+   looped around a fixed wing aircraft and a vertically suspended receiver
+   loop about 120 meters behind the aircraft. The transmitter
+   electromagnetic pulses are half sine wave shape of millisecond
+   duration, the induced transient is picked up by the receiver coil;
+   analysis of the received wave pattern when matched against a catalog of
+   waves forms generated in the lab based upon analog scale modeling
+   allows explorers to get a better understanding of the [32]minerals in a
+   [33]rock formation, without extracting the rocks^[34][1]. The
+   [35]Society of Exploration Geophysicists said INPUT was “a meritorious
+   technical achievement which has been instrumental in the discovery of
+   many [36]base metal deposits in a number of countries around the
+   world.”
+
+   In 1961, he formed a private company, Barringer Research Ltd^[37][2].
+   He was the President and major shareholder. Barringer continued to
+   develop the airborne system and licenses its use to exploration
+   companies. Major oil and mining companies depended on this
+   remote-sensing technology for their exploration. It has been credited
+   in the discovery of over 25 commercial ore deposits, representing tens
+   of billions of dollars.
+
+   Barringer Research went public in 1967. Ten years later, Barringer
+   moved to [38]Denver, Colorado and brought the company's headquarters
+   with him. He later became a citizen of the United States.
+
+   Barringer made numerous technical contributions to the mining industry,
+   including a [39]laser-induced fluorescence-based system used primarily
+   in oil and gas exploration (FLUOROSCAN), [40]correlation
+   [41]spectrometer used to measure [42]atmospheric dispersions of various
+   gases (COSPEC), an [43]infrared remote sensor for atmospheric gases
+   which has been used by NASA to measure the worldwide atmospheric
+   distribution of [44]carbon dioxide (GASPEC), two airborne conductivity
+   mapping systems using [45]very low frequency fields (E-phase and
+   radiophase) and several particulate analyzers (COTRAN, SURTRACE,
+   LASERTRACE and AIRTRACE). He has presented more than 80 technical
+   papers and has been awarded more than 70 patents in Canada, the U.S.,
+   and other countries.
+
+   In 1989, Barringer officially retired. He died in Golden, Colorado at
+   the age of 84^[46][3]
+
+[[47]edit] Honours and awards
+
+     * inducted into the [48]Canadian Mining Hall of Fame by the
+       [49]Mining Association of Canada
+     * 1977, awarded the [50]Logan Medal by the [51]Geological Association
+       of Canada
+     * 1980, awarded the [52]Virgil Kauffman Gold Medal by the [53]Society
+       of Exploration Geophysicists
+     * 1985, awarded the [54]Daniel C. Jackling Award by the [55]American
+       Association of Mining and Petroleum Engineers
+
+[[56]edit] References
+
+    1. [57]^ Palacky et al, Interpretation of INPUT AEM measurements,
+       Geophysics, V 38 p1145-1158, 1973
+    2. [58]^ [59]Barringer Research
+    3. [60]^ [61]"Memorials- A. R. (Tony) Barringer". The Leading Edge
+       Volume 28 Number 11 (Society of Exploration Geophysicists).
+       November 2009.
+       [62]http://www.seg.org/SEGportalWEBproject/prod/SEG-Publications/Pu
+       b-The-Leading-Edge/Pub-TLE-Non-Technical-Past-Issues/pdf/pdf-archiv
+       e-2009/2811r1402tle.pdf. Retrieved 2009-12-14.
+
+[[63]edit] External links
+
+     * [64]Mining Hall of Fame Bio
+     * [65]Kauffman Gold Medal Bio
+     * [66]Lunar Blindness
+     * [67]Society for Mining , Metallurgy and Exploration
+
+               [68]Persondata
+   Name              Barringer, Anthony R.
+   Alternative names
+   Short description
+   Date of birth     October 20, 1925
+   Place of birth
+   Date of death     August 15, 2009
+   Place of death    [69]Golden, Colorado
+   Retrieved from "[70]http://en.wikipedia.org/wiki/Anthony_R._Barringer"
+   [71]Categories: [72]Alumni of Imperial College London | [73]Alumni of
+   the University of London | [74]American geologists | [75]American
+   inventors | [76]British Army personnel of World War II | [77]Canadian
+   geologists | [78]Canadian inventors | [79]Canadian Mining Hall of Fame
+   | [80]People from Denver, Colorado | [81]People from Toronto | [82]1925
+   births | [83]2009 deaths
+
+Personal tools
+
+     * [84]Log in / create account
+
+Namespaces
+
+     * [85]Article
+     * [86]Discussion
+
+Variants
+
+Views
+
+     * [87]Read
+     * [88]Edit
+     * [89]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [90]Main page
+     * [91]Contents
+     * [92]Featured content
+     * [93]Current events
+     * [94]Random article
+     * [95]Donate to Wikipedia
+
+Interaction
+
+     * [96]Help
+     * [97]About Wikipedia
+     * [98]Community portal
+     * [99]Recent changes
+     * [100]Contact Wikipedia
+
+Toolbox
+
+     * [101]What links here
+     * [102]Related changes
+     * [103]Upload file
+     * [104]Special pages
+     * [105]Permanent link
+     * [106]Cite this page
+
+Print/export
+
+     * [107]Create a book
+     * [108]Download as PDF
+     * [109]Printable version
+
+Languages
+
+     * [110]پنجابی
+
+     * This page was last modified on 12 October 2010 at 11:31.
+     * Text is available under the [111]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [112]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [113]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [114]Contact us
+
+     * [115]Privacy policy
+     * [116]About Wikipedia
+     * [117]Disclaimers
+
+     * [118]Powered by MediaWiki
+     * [119]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#p-search
+   7. file://localhost/wiki/Golden,_Colorado
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/Geophysics
+  10. file://localhost/wiki/Alma_mater
+  11. file://localhost/wiki/Imperial_College_London
+  12. file://localhost/wiki/Canada
+  13. file://localhost/wiki/United_States
+  14. file://localhost/wiki/Geophysics
+  15. file://localhost/wiki/Mineral_exploration
+  16. file://localhost/wiki/Electromagnetism
+  17. file://localhost/wiki/Ore
+  18. file://localhost/wiki/British_Army
+  19. file://localhost/wiki/World_War_II
+  20. file://localhost/wiki/University_of_London
+  21. file://localhost/wiki/Bachelor_of_Science
+  22. file://localhost/wiki/Economic_geology
+  23. file://localhost/wiki/Imperial_College_London
+  24. file://localhost/wiki/Doctor_of_Philosophy
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#Career
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#Honours_and_awards
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#References
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#External_links
+  29. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit&section=1
+  30. file://localhost/wiki/United_Kingdom
+  31. file://localhost/wiki/Toronto
+  32. file://localhost/wiki/Mineral
+  33. file://localhost/wiki/Rock_formation
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_note-0
+  35. file://localhost/wiki/Society_of_Exploration_Geophysicists
+  36. file://localhost/wiki/Base_metal
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_note-1
+  38. file://localhost/wiki/Denver,_Colorado
+  39. file://localhost/wiki/Laser-induced_fluorescence
+  40. file://localhost/wiki/Correlation
+  41. file://localhost/wiki/Spectrometer
+  42. file://localhost/wiki/Atmospheric_chemistry
+  43. file://localhost/wiki/Infrared
+  44. file://localhost/wiki/Carbon_dioxide
+  45. file://localhost/wiki/Very_low_frequency
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_note-2
+  47. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit&section=2
+  48. file://localhost/wiki/Canadian_Mining_Hall_of_Fame
+  49. file://localhost/w/index.php?title=Mining_Association_of_Canada&action=edit&redlink=1
+  50. file://localhost/wiki/Logan_Medal
+  51. file://localhost/wiki/Geological_Association_of_Canada
+  52. file://localhost/w/index.php?title=Virgil_Kauffman_Gold_Medal&action=edit&redlink=1
+  53. file://localhost/wiki/Society_of_Exploration_Geophysicists
+  54. file://localhost/wiki/Daniel_C._Jackling_Award
+  55. file://localhost/w/index.php?title=American_Association_of_Mining_and_Petroleum_Engineers&action=edit&redlink=1
+  56. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit&section=3
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_ref-0
+  58. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_ref-1
+  59. http://propertyfile.gov.bc.ca/PDFTemp/fileid_36294.pdf
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html#cite_ref-2
+  61. http://www.seg.org/SEGportalWEBproject/prod/SEG-Publications/Pub-The-Leading-Edge/Pub-TLE-Non-Technical-Past-Issues/pdf/pdf-archive-2009/2811r1402tle.pdf
+  62. http://www.seg.org/SEGportalWEBproject/prod/SEG-Publications/Pub-The-Leading-Edge/Pub-TLE-Non-Technical-Past-Issues/pdf/pdf-archive-2009/2811r1402tle.pdf
+  63. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit&section=4
+  64. http://www.halloffame.mining.ca/halloffame/english/bios/barringer.html
+  65. http://www.mssu.edu/seg-vm/bio_a__r__barringer.html
+  66. http://www.time.com/time/magazine/article/0,9171,834655,00.html?promoid=googlep
+  67. http://www.smenet.org/SCRD/awardDetail.cfm?awardId=446&buid=5
+  68. file://localhost/wiki/Wikipedia:Persondata
+  69. file://localhost/wiki/Golden,_Colorado
+  70. http://en.wikipedia.org/wiki/Anthony_R._Barringer
+  71. file://localhost/wiki/Special:Categories
+  72. file://localhost/wiki/Category:Alumni_of_Imperial_College_London
+  73. file://localhost/wiki/Category:Alumni_of_the_University_of_London
+  74. file://localhost/wiki/Category:American_geologists
+  75. file://localhost/wiki/Category:American_inventors
+  76. file://localhost/wiki/Category:British_Army_personnel_of_World_War_II
+  77. file://localhost/wiki/Category:Canadian_geologists
+  78. file://localhost/wiki/Category:Canadian_inventors
+  79. file://localhost/wiki/Category:Canadian_Mining_Hall_of_Fame
+  80. file://localhost/wiki/Category:People_from_Denver,_Colorado
+  81. file://localhost/wiki/Category:People_from_Toronto
+  82. file://localhost/wiki/Category:1925_births
+  83. file://localhost/wiki/Category:2009_deaths
+  84. file://localhost/w/index.php?title=Special:UserLogin&returnto=Anthony_R._Barringer
+  85. file://localhost/wiki/Anthony_R._Barringer
+  86. file://localhost/wiki/Talk:Anthony_R._Barringer
+  87. file://localhost/wiki/Anthony_R._Barringer
+  88. file://localhost/w/index.php?title=Anthony_R._Barringer&action=edit
+  89. file://localhost/w/index.php?title=Anthony_R._Barringer&action=history
+  90. file://localhost/wiki/Main_Page
+  91. file://localhost/wiki/Portal:Contents
+  92. file://localhost/wiki/Portal:Featured_content
+  93. file://localhost/wiki/Portal:Current_events
+  94. file://localhost/wiki/Special:Random
+  95. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+  96. file://localhost/wiki/Help:Contents
+  97. file://localhost/wiki/Wikipedia:About
+  98. file://localhost/wiki/Wikipedia:Community_portal
+  99. file://localhost/wiki/Special:RecentChanges
+ 100. file://localhost/wiki/Wikipedia:Contact_us
+ 101. file://localhost/wiki/Special:WhatLinksHere/Anthony_R._Barringer
+ 102. file://localhost/wiki/Special:RecentChangesLinked/Anthony_R._Barringer
+ 103. file://localhost/wiki/Wikipedia:Upload
+ 104. file://localhost/wiki/Special:SpecialPages
+ 105. file://localhost/w/index.php?title=Anthony_R._Barringer&oldid=390259836
+ 106. file://localhost/w/index.php?title=Special:Cite&page=Anthony_R._Barringer&id=390259836
+ 107. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Anthony+R.+Barringer
+ 108. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Anthony+R.+Barringer&oldid=390259836&writer=rl
+ 109. file://localhost/w/index.php?title=Anthony_R._Barringer&printable=yes
+ 110. http://pnb.wikipedia.org/wiki/%D8%A7%DB%8C%D9%86%D8%AA%DA%BE%D9%86%DB%8C_%D8%A8%D8%A7%D8%B1%D9%86%DA%AF%D8%B1
+ 111. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 112. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 113. http://www.wikimediafoundation.org/
+ 114. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 115. http://wikimediafoundation.org/wiki/Privacy_policy
+ 116. file://localhost/wiki/Wikipedia:About
+ 117. file://localhost/wiki/Wikipedia:General_disclaimer
+ 118. http://www.mediawiki.org/
+ 119. http://wikimediafoundation.org/
+
+   Hidden links:
+ 120. file://localhost/wiki/File:Replace_this_image_male.svg
+ 121. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html
+ 122. file://localhost/home/memfis/projects/put/tsiss/Downloads/anthony_r._barringer.html
+ 123. file://localhost/wiki/Main_Page
+ 124. http://creativecommons.org/licenses/by-sa/3.0/

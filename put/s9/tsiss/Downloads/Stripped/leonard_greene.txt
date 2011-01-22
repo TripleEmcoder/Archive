@@ -1,0 +1,656 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Leonard Greene
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   For those of a similar name, see [7]Leonard Green (disambiguation).
+                              Leonard Michael Greene
+        Born      June 8, 1918(1918-06-08)
+                  [8]New York City, NY
+        Died      November 30, 2006(2006-11-30) (aged 88)
+                  [9]Mamaroneck, NY
+   Cause of death [10]Lung Cancer
+    Nationality   [11]United States
+   [12]Alma mater [13]City College of New York ([14]B.S. and [15]M.S.)
+                  [16]New York University (Post-Graduate Work)
+                  [17]Pace University ([18]Honorary degree in 1977)
+     Occupation   [19]Inventor, [20]Aerodynamics [21]Engineer
+     Known for    Aircraft Stall Warning Device
+       Awards     Private Sector Initiative Commendation of the [22]President of
+                  the United States (1982 and 1984)
+                  [23]National Inventors Hall of Fame (1991)
+                  [24]USPTO's Contribution to American Innovation Award (2002)
+
+   Leonard Michael Greene (June 8, 1918 – November 30, 2006) was an
+   American [25]inventor and [26]aerodynamics [27]engineer who held more
+   than 200 [28]patents, many of which are aviation-related. He is most
+   well known for his contributions to [29]aviation [30]technology,
+   including his invention, the Aircraft Stall Warning device, which warns
+   pilots when a deadly aerodynamic [31]stall is imminent. To build the
+   device, Greene established the [32]Safe Flight Instrument Corporation
+   in 1946.
+
+   Apart from his inventive life, Greene also served as the founder and
+   president of the [33]Institute for Socioeconomic Studies, a think tank
+   to address issues such as poverty and social awareness. Additionally,
+   he co-founded the [34]Corporate Angel Network, a [35]charitable
+   organization that flies patients in corporate aircraft. In 1991, he was
+   inducted into the [36]National Inventors Hall of Fame. Greene died on
+   November 30, 2006 at the age of 88 in [37]Mamaroneck, New York. The
+   cause was complications from [38]lung cancer.
+
+   Contents
+
+        * [39]1 Early life & family
+        * [40]2 Education
+        * [41]3 Inventions
+             + [42]3.1 Aviation & safe flight instruments
+                  o [43]3.1.1 Stall Warning Device
+                  o [44]3.1.2 Automatic Throttle System & Wind Shear Warning
+                    System
+                  o [45]3.1.3 Supersonic aircraft
+             + [46]3.2 Outcome
+             + [47]3.3 Non-aviation interests
+        * [48]4 Policy and charitable work
+             + [49]4.1 Institute for Socioeconomic Studies
+             + [50]4.2 Corporate Angel Network
+        * [51]5 Sailing
+        * [52]6 Awards and achievements
+        * [53]7 Key patents
+        * [54]8 References
+
+[[55]edit] Early life & family
+
+   Leonard M. Greene was born in [56]New York City on June 8, 1918. Max
+   Greene, his chemist father, and Lyn Furman Greene, his artist mother,
+   encouraged their son to create his own toys. His parents made him a
+   gift of their old stove, which he could take apart. Greene experienced
+   [57]poverty as a youth during the [58]Depression and never forgot it.
+
+   Greene first married Beverly Kaufman, with whom he had three children;
+   this, however, ended in divorce. Then, he adopted four children of his
+   second wife, Phyllis Saks Greene, with whom he had another child.
+   Phyllis Saks Greene, an heiress of the [59]Saks Fifth Avenue department
+   store family, died in 1965. Greene’s third marriage was to Joyce Teck
+   Meller in 1967, which also ended up in divorce in 2005.
+
+   A son from the second marriage, [60]Donald Greene, died [61]Sept. 11,
+   2001, abroad [62]United Airlines Flight 93 when it crashed in
+   [63]Pennsylvania.
+
+[[64]edit] Education
+
+   Leonard Greene graduated in 1938 from the [65]City College of New York
+   with a [66]B.S. in [67]Chemistry, and went on to receive a [68]M.S. in
+   [69]aeronautical engineering. He received a [70]pilot’s license at the
+   age of 19 and later did postgraduate work in aeronautics at the
+   [71]Guggenheim School of Aeronautics at [72]New York University.
+
+   In 1977, he was awarded the degree of [73]Doctor of Civil Law honoris
+   causa by [74]Pace University.
+
+[[75]edit] Inventions
+
+[[76]edit] Aviation & safe flight instruments
+
+[[77]edit] Stall Warning Device
+
+   During [78]World War II, Greene joined the [79]Grumman Aircraft
+   Corporation in [80]Bethpage, NY, as an [81]aerodynamicist and
+   [82]engineering test pilot. There he witnessed an aircraft crash caused
+   by stall. In aviation, a stall occurs when the airflow over the wings
+   is no longer sufficient to provide [83]lift – essentially, a stalled
+   wing ceases to function. This happens at low airspeeds or during steep
+   climbs. Greene realized that the accident could have been avoided if
+   the pilot had been warned of an imminent stall. Aerodynamic stalls
+   caused the majority of aviation deaths at the time.
+
+   In the mid-1940s, Greene developed the first practical way to warn the
+   pilot of the aerodynamic stall. His first design and apparatus included
+   threaded [84]bolts, a [85]bicycle horn and other odd components, all
+   powered by [86]flashlight [87]batteries. Greene filed his device for a
+   patent in 1944, and the patent was issued in 1949. In order to develop
+   his design, Greene founded the Safe Flight Instrument Corporation in
+   [88]White Plains, NY, in 1946. There, he refined and marketed the stall
+   warning indicator.
+
+   Basically, his device sounded an alert when the plane was in danger of
+   not having enough lift to stay flying. This alert would allow time for
+   the pilot to take corrective measures. Since its invention, this device
+   became standard equipment for all aircraft and has also helped reduce
+   the number of accidents due to stalling. The Stall Warning Indicator
+   was called “the greatest lifesaver since the invention of the
+   [89]parachute”^[14] by the [90]Saturday Evening Post and the device
+   received the [91]Flight Safety Foundation’s first Air Safety Award.
+
+[[92]edit] Automatic Throttle System & Wind Shear Warning System
+
+   After developing the Stall Warning Device, Greene continued developing
+   aviation inventions. He and his engineering staff at Safe Flight went
+   on to conceive devices now commonplace in aircraft, including an
+   [93]automatic throttle system in 1956 and a [94]wind-shear warning
+   system that warns a pilot if an aircraft enters a dangerous
+   [95]microburst and provides escape guidance. He developed the latter in
+   the late 1970s after a series of wind-shear-related crashes that
+   claimed hundreds of lives.
+
+[[96]edit] Supersonic aircraft
+
+   In his 2001 book Inventorship: The Art of Innovation, Greene described
+   finding "creative ideas in the simplest things."^8 To address a key
+   problem of supersonic aircraft – window-shattering [97]sonic booms when
+   they break the [98]sound barrier – he turned to the [99]earthworm for
+   inspiration. Just as an earthworm eats and excretes the earth to move
+   past mounds of dirt, he figured a supersonic aircraft's deafening boom
+   is caused from its inability to move air out of its way fast enough to
+   avoid external [100]shock waves. He patented a device, sold to
+   [101]Boeing in 1994, that would use a hollow [102]fuselage and
+   strategically placed ducts to suck in, compress, and then release air
+   through a plane's tail.
+
+[[103]edit] Outcome
+
+   Today, his firm supplies unique air safety and performance technology
+   to virtually every major air carrier, the [104]U.S. Armed Forces, and
+   aircraft manufacturers worldwide. Safe Flight products are installed on
+   over two-thirds of the world’s aircraft – in the general aviation,
+   commercial, and military sectors.
+
+   Safe Flight made Leonard Greene a [105]multimillionaire. He remained
+   involved in the business until his death and as recently as 1998
+   co-patented and marketed an airborne power line detector and warning
+   system for [106]helicopters.
+
+[[107]edit] Non-aviation interests
+
+   While running Safe Flight, Greene received dozens of patents for his
+   varied interests; many of them went un-marketed. They included a
+   three-dimensional [108]chess game, a device to aid [109]blind painters
+   by using musical notes to identify colors, and an instrument of revenge
+   against [110]telemarketers who interrupted dinner. When a pitchman
+   called, the harassed resident could press a code that alerted the
+   marketer that he would be liable for a surcharge for continuing the
+   call.
+
+[[111]edit] Policy and charitable work
+
+[[112]edit] Institute for Socioeconomic Studies
+
+   As a successful businessman, Greene implemented innovative employment
+   policies, barring mandatory retirement age, actively recruiting the
+   differently abled, and providing profit sharing at his own
+   manufacturing facility
+
+   Seeking a broader forum and greater impact for his ideas, in 1974 he
+   founded and financed the Institute for Socioeconomic Studies (ISES), a
+   small policy research organization in [113]White Plains, NY, that
+   helped advance his ideas on welfare reform, health care, tax reform –
+   and after Greene’s son was killed in the [114]September 11 attacks in
+   2001 – foreign affairs.
+
+   According to Ostergren, who worked with Green at ISES, “He didn’t
+   consider himself a [115]Republican or [116]Democrat, [117]conservative
+   or [118]liberal,”^13 but searched for practical solutions to problems
+   that intrigued him. He advocated a national tax rebate – $12,000 for
+   any family of four, regardless of income, for instance – to alleviate
+   poverty.
+
+   Greene criticized the [119]Great Society anti-poverty programs of the
+   1960s as ineffective, a waste of taxpayer dollars, and a disincentive
+   to work.
+
+   He has also made his mark as a [120]social activist, having designed a
+   plan to transform the federal social budget to provide greater income
+   security, middle class tax relief, and market incentives for
+   productivity growth.
+
+   In pursuit of these interests, Greene was a member of both the Special
+   Committee on Welfare & Income Maintenance and the Council on Trends &
+   Perspectives of the [121]U.S. Chamber of Commerce. He also served as a
+   member in the Income Maintenance Committee of the [122]Community
+   Service Society and the Work Group on Welfare Reform of the Task Force
+   on the [123]New York City Fiscal Crisis.
+
+[[124]edit] Corporate Angel Network
+
+   In 1981, Greene, whose second wife died of cancer, helped start and
+   finance [125]Corporate Angel Network (CAN), a [126]charitable
+   organization which arranges free transportation on corporate jets for
+   [127]cancer patients. This organization has 530 participating
+   corporations who generously offer their empty seats to cancer patients.
+   CAN flies more than 2,500 cancer patients a year. To date, the
+   organization has flown more than 25,000 patients to treatment centers
+   nationwide.
+
+   Greene flew the first Corporate Angel Network Flight on December 22,
+   1981, when he brought a 16-year old cancer patient home to [128]Detroit
+   who had just received treatment in [129]New York City.
+
+[[130]edit] Sailing
+
+   An avid sailor, Greene became a technical adviser to several
+   [131]America's Cup races before buying two-time winner [132]Courageous
+   from [133]Ted Turner in the early 1980s. Sailing under the aegis of the
+   [134]Yale Corinthian Yacht Club, the only undergraduate sailing club
+   ever to participate, the Courageous Syndicates 1986 run at the Cup
+   spearheaded Greene's campaign to restore the [135]Corinthian ideals of
+   amateur sportsmanship to the competition, and more broadly, to team
+   sports in general. Despite several of Greene's modifications to the
+   [136]keel, the boat's age remained a problem, and his team withdrew
+   during the 1986 competition. Following the 1997 donation of Courageous
+   to the Museum of Yachting in [137]Newport, RI, the famed 12-meter was
+   named Rhode Island's State Yacht.
+
+[[138]edit] Awards and achievements
+
+     * Private Sector Initiative Commendation of the [139]President of the
+       United States (1982 and 1984)
+
+     * [140]National Inventors Hall of Fame (1991)
+          + [141]Senator [142]John H. Glenn Jr., a former [143]astronaut,
+            inducted Greene into the National Inventors Hall of Fame in
+            1991 and placed him among "American inventors who have changed
+            our world in ways we can see every day of our lives."^2
+
+     * [144]U.S. Patent and Trademark Office's Contribution to American
+       Innovation Award (2002)
+
+     * Special Act Award of the [145]U.S. Environmental Protection Agency
+
+     * [146]Flight Safety Foundation’s:
+          + Air Safety Award (1949 and 1981)
+          + Award for Meritorious Service (1981)
+          + Allied Signal/Bendix Trophy Award for Aviation Safety (1999)
+
+     * [147]National Business Aviation Association's:
+          + Pilot Safety Award (1961)
+          + Award for Meritorious Service to Aviation (1996)
+
+     * [148]Aviation Week & Space Technology's:
+          + Laurels Award in the Field of Electronics (1999)
+          + Laureate Award for Lifetime Achievement as a Pioneer in Flight
+            Safety, Performance and Innovation (2001)
+
+     * Foundation for [149]Westchester Community College's:
+          + Medallion Award for Distinguished Achievement in Business,
+            Science and Humanitarianism
+
+     * Life member of the [150]Society of Experimental Test Pilots
+
+[[151]edit] Key patents
+
+     * Greene, [152]U.S. Patent 2,478,967, "Air Stall Warning Device for
+       Airplanes"
+     * Greene, [153]U.S. Patent 5,613,652, "Aircraft Auto Throttle System"
+     * Greene, [154]U.S. Patent 4,855,738, "Wind Shear Warning System"
+     * Greene, [155]U.S. Patent 5,289,995, "Supersonic Aircraft"
+
+[[156]edit] References
+
+    1. Bailey, Jeff. "Leonard M. Greene, 88, Inventor, Dies." The New York
+       Times. December 11, 2006.
+       [157]http://www.nytimes.com/2006/12/11/business/11greene.html?_r=1
+       (accessed March 30, 2009).
+    2. Bernstein, Adam. "Leonard Greene; Invented Lifesaving Aviation
+       Tools." The Washington Post. December 6, 2006.
+       [158]http://www.washingtonpost.com/wp-dyn/content/article/2006/12/0
+       5/AR2006120501496.html (accessed March 30, 2009).
+    3. Corporate Angel Network. "Leonard Greene, Co-Founder of Corporate
+       Angel Network, 1918-2006." CAN Flight Lines, Spring 2007: 1.
+    4. —. "Corporate Angel Network Co-Founder Passes Away." December 4,
+       2006.
+       [159]http://www.corpangelnetwork.org/news/press/12-04-06%20LMG.html
+       (accessed March 30, 2009).
+    5. —. "Corporate History."
+       [160]http://www.corpangelnetwork.org/about/history.html (accessed
+       March 30, 2009).
+    6. Flight Safety Foundation. "1999 Bendix Trophy Citation for Greene."
+       November 10, 1999.
+       [161]http://www.flightsafety.org/citations/greene_cit.html
+       (accessed April 7, 2009).
+    7. Greene, Leonard. Free enterprise without poverty. 1st Edition. New
+       York: Norton, 1981.
+    8. —. Inventorship: The Art of Innovation. New York: Wiley, 2001.
+    9. —. The national tax rebate: a new America with less government.
+       Washington, D.C.: Regnery, 1998.
+   10. Institute for SocioEconomic Studies. "About ISES - Founder."
+       [162]http://www.socioeconomic.org/About_ISES/Founder/founder.HTM
+       (accessed March 30, 2009).
+   11. MIT. Inventor of the Week Archive.
+       [163]http://web.mit.edu/invent/iow/greene.html (accessed March 30,
+       2009).
+   12. National Inventors Hall of Fame. "Leonard Michael Greene." Hall of
+       Fame / Inventor Profile.
+       [164]http://www.invent.org/Hall_Of_Fame/71.html (accessed April 11,
+       2009).
+   13. Ostergren, Allan. "The Legacy of Leonard Greene." BIG Annual
+       Convention. New York City, 2009.
+   14. Price, Wesley. "Look Out! She's Stalling!" Saturday Evening Post
+       220, no. 17 (October 1947): 12.
+   15. Riordan, Teresa. "Patents." The New York Times. March 7, 1994.
+       [165]http://www.nytimes.com/1994/03/07/business/patents-391387.html
+       ?scp=1&sq=1994%20%22march%207%22%20leonard%20greene&st=cse
+       (accessed April 7, 2009).
+   16. Safe Flight Instrument Corporation. About Safe Flight - History.
+       [166]http://www.safeflight.com/mmain.php?px=1&cm=1&cs=15 (accessed
+       March 2009, 2009).
+   17. The New York Times. "Paid Notice: Deaths GREENE, LEONARD MICHAEL."
+       December 2, 2006.
+       [167]http://query.nytimes.com/gst/fullpage.html?res=9805E2DA103AF93
+       1A35751C1A9609C8B63 (accessed March 30, 2009).
+
+               [168]Persondata
+   Name              Greene, Leonard
+   Alternative names
+   Short description
+   Date of birth     June 8, 1918
+   Place of birth    [169]New York City, NY
+   Date of death     November 30, 2006
+   Place of death    [170]Mamaroneck, NY
+   Retrieved from "[171]http://en.wikipedia.org/wiki/Leonard_Greene"
+   [172]Categories: [173]1918 births | [174]2006 deaths | [175]American
+   engineers | [176]American inventors | [177]American philanthropists |
+   [178]City College of New York alumni | [179]New York University alumni
+   | [180]Deaths from lung cancer | [181]People from New York City |
+   [182]National Inventors Hall of Fame inductees
+   Hidden categories: [183]Articles with hCards
+
+Personal tools
+
+     * [184]Log in / create account
+
+Namespaces
+
+     * [185]Article
+     * [186]Discussion
+
+Variants
+
+Views
+
+     * [187]Read
+     * [188]Edit
+     * [189]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [190]Main page
+     * [191]Contents
+     * [192]Featured content
+     * [193]Current events
+     * [194]Random article
+     * [195]Donate to Wikipedia
+
+Interaction
+
+     * [196]Help
+     * [197]About Wikipedia
+     * [198]Community portal
+     * [199]Recent changes
+     * [200]Contact Wikipedia
+
+Toolbox
+
+     * [201]What links here
+     * [202]Related changes
+     * [203]Upload file
+     * [204]Special pages
+     * [205]Permanent link
+     * [206]Cite this page
+
+Print/export
+
+     * [207]Create a book
+     * [208]Download as PDF
+     * [209]Printable version
+
+     * This page was last modified on 30 December 2010 at 00:10.
+     * Text is available under the [210]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [211]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [212]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [213]Contact us
+
+     * [214]Privacy policy
+     * [215]About Wikipedia
+     * [216]Disclaimers
+
+     * [217]Powered by MediaWiki
+     * [218]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Leonard_Greene&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#p-search
+   7. file://localhost/wiki/Leonard_Green_(disambiguation)
+   8. file://localhost/wiki/New_York_City,_NY
+   9. file://localhost/wiki/Mamaroneck_(town),_New_York
+  10. file://localhost/wiki/Lung_Cancer
+  11. file://localhost/wiki/United_States
+  12. file://localhost/wiki/Alma_mater
+  13. file://localhost/wiki/City_College_of_New_York
+  14. file://localhost/wiki/Bachelor_of_Science
+  15. file://localhost/wiki/Master_of_Science
+  16. file://localhost/wiki/New_York_University
+  17. file://localhost/wiki/Pace_University
+  18. file://localhost/wiki/Honorary_degree
+  19. file://localhost/wiki/Inventor
+  20. file://localhost/wiki/Aerodynamics
+  21. file://localhost/wiki/Engineer
+  22. file://localhost/wiki/President_of_the_United_States
+  23. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  24. file://localhost/wiki/USPTO
+  25. file://localhost/wiki/Inventor
+  26. file://localhost/wiki/Aerodynamics
+  27. file://localhost/wiki/Engineer
+  28. file://localhost/wiki/Patents
+  29. file://localhost/wiki/Aviation
+  30. file://localhost/wiki/Technology
+  31. file://localhost/wiki/Stall_(flight)
+  32. file://localhost/w/index.php?title=Safe_Flight_Instrument_Corporation&action=edit&redlink=1
+  33. file://localhost/w/index.php?title=Institute_for_Socioeconomic_Studies&action=edit&redlink=1
+  34. file://localhost/wiki/Corporate_Angel_Network
+  35. file://localhost/wiki/Charitable_organization
+  36. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  37. file://localhost/wiki/Mamaroneck_(town),_New_York
+  38. file://localhost/wiki/Lung_cancer
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Early_life_.26_family
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Education
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Inventions
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Aviation_.26_safe_flight_instruments
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Stall_Warning_Device
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Automatic_Throttle_System_.26_Wind_Shear_Warning_System
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Supersonic_aircraft
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Outcome
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Non-aviation_interests
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Policy_and_charitable_work
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Institute_for_Socioeconomic_Studies
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Corporate_Angel_Network
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Sailing
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Awards_and_achievements
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#Key_patents
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html#References
+  55. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=1
+  56. file://localhost/wiki/New_York_City
+  57. file://localhost/wiki/Poverty
+  58. file://localhost/wiki/Great_Depression
+  59. file://localhost/wiki/Saks_Fifth_Avenue
+  60. file://localhost/wiki/Donald_Greene
+  61. file://localhost/wiki/Sept._11,_2001
+  62. file://localhost/wiki/United_Airlines_Flight_93
+  63. file://localhost/wiki/Pennsylvania
+  64. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=2
+  65. file://localhost/wiki/City_College_of_New_York
+  66. file://localhost/wiki/Bachelor_of_Science
+  67. file://localhost/wiki/Chemistry
+  68. file://localhost/wiki/Master_of_Science
+  69. file://localhost/wiki/Aeronautical_engineering
+  70. file://localhost/wiki/Pilot_license
+  71. file://localhost/wiki/Harry_Frank_Guggenheim#Guggenheim_School_of_Aeronautics
+  72. file://localhost/wiki/New_York_University
+  73. file://localhost/wiki/Doctor_honoris_causa
+  74. file://localhost/wiki/Pace_University
+  75. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=3
+  76. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=4
+  77. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=5
+  78. file://localhost/wiki/World_War_II
+  79. file://localhost/wiki/Grumman_Aircraft_Corporation
+  80. file://localhost/wiki/Bethpage,_NY
+  81. file://localhost/wiki/Aerodynamicist
+  82. file://localhost/wiki/Test_pilot
+  83. file://localhost/wiki/Lift_(force)
+  84. file://localhost/wiki/Screw
+  85. file://localhost/wiki/Bicycle_horn
+  86. file://localhost/wiki/Flashlight
+  87. file://localhost/wiki/Battery_(electricity)
+  88. file://localhost/wiki/White_Plains,_NY
+  89. file://localhost/wiki/Parachute
+  90. file://localhost/wiki/Saturday_Evening_Post
+  91. file://localhost/wiki/Flight_Safety_Foundation
+  92. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=6
+  93. file://localhost/wiki/Autothrottle
+  94. file://localhost/wiki/Wind_shear
+  95. file://localhost/wiki/Microburst
+  96. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=7
+  97. file://localhost/wiki/Sonic_booms
+  98. file://localhost/wiki/Sound_barrier
+  99. file://localhost/wiki/Earthworm
+ 100. file://localhost/wiki/Shock_waves
+ 101. file://localhost/wiki/Boeing
+ 102. file://localhost/wiki/Fuselage
+ 103. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=8
+ 104. file://localhost/wiki/U.S._Armed_Forces
+ 105. file://localhost/wiki/Multimillionaire
+ 106. file://localhost/wiki/Helicopters
+ 107. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=9
+ 108. file://localhost/wiki/Chess
+ 109. file://localhost/wiki/Blindness
+ 110. file://localhost/wiki/Telemarketers
+ 111. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=10
+ 112. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=11
+ 113. file://localhost/wiki/White_Plains,_NY
+ 114. file://localhost/wiki/September_11_attacks
+ 115. file://localhost/wiki/Republican_Party_(United_States)
+ 116. file://localhost/wiki/Democratic_Party_(United_States)
+ 117. file://localhost/w/index.php?title=Conservatism_im_the_United_States&action=edit&redlink=1
+ 118. file://localhost/wiki/Liberalism
+ 119. file://localhost/wiki/Great_Society
+ 120. file://localhost/wiki/Activism
+ 121. file://localhost/wiki/U.S._Chamber_of_Commerce
+ 122. file://localhost/w/index.php?title=Community_Service_Society&action=edit&redlink=1
+ 123. file://localhost/wiki/New_York_City
+ 124. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=12
+ 125. file://localhost/wiki/Corporate_Angel_Network
+ 126. file://localhost/wiki/Charitable_organization
+ 127. file://localhost/wiki/Cancer
+ 128. file://localhost/wiki/Detroit
+ 129. file://localhost/wiki/New_York_City
+ 130. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=13
+ 131. file://localhost/wiki/America%27s_Cup
+ 132. file://localhost/wiki/Courageous_(yacht)
+ 133. file://localhost/wiki/Ted_Turner
+ 134. file://localhost/wiki/Yale_Corinthian_Yacht_Club
+ 135. file://localhost/wiki/Yale_Corinthian_Yacht_Club
+ 136. file://localhost/wiki/Keel
+ 137. file://localhost/wiki/Newport,_RI
+ 138. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=14
+ 139. file://localhost/wiki/President_of_the_United_States
+ 140. file://localhost/wiki/National_Inventors_Hall_of_Fame
+ 141. file://localhost/wiki/Senator
+ 142. file://localhost/wiki/John_H._Glenn_Jr.
+ 143. file://localhost/wiki/Astronaut
+ 144. file://localhost/wiki/U.S._Patent_and_Trademark_Office
+ 145. file://localhost/wiki/U.S._Environmental_Protection_Agency
+ 146. file://localhost/wiki/Flight_Safety_Foundation
+ 147. file://localhost/wiki/National_Business_Aviation_Association
+ 148. file://localhost/wiki/Aviation_Week_%26_Space_Technology
+ 149. file://localhost/wiki/Westchester_Community_College
+ 150. file://localhost/wiki/Society_of_Experimental_Test_Pilots
+ 151. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=15
+ 152. http://www.google.com/patents?vid=2478967
+ 153. http://www.google.com/patents?vid=5613652
+ 154. http://www.google.com/patents?vid=4855738
+ 155. http://www.google.com/patents?vid=5289995
+ 156. file://localhost/w/index.php?title=Leonard_Greene&action=edit&section=16
+ 157. http://www.nytimes.com/2006/12/11/business/11greene.html?_r=1
+ 158. http://www.washingtonpost.com/wp-dyn/content/article/2006/12/05/AR2006120501496.html
+ 159. http://www.corpangelnetwork.org/news/press/12-04-06%20LMG.html
+ 160. http://www.corpangelnetwork.org/about/history.html
+ 161. http://www.flightsafety.org/citations/greene_cit.html
+ 162. http://www.socioeconomic.org/About_ISES/Founder/founder.HTM
+ 163. http://web.mit.edu/invent/iow/greene.html
+ 164. http://www.invent.org/Hall_Of_Fame/71.html
+ 165. http://www.nytimes.com/1994/03/07/business/patents-391387.html?scp=1&sq=1994%20%22march%207%22%20leonard%20greene&st=cse
+ 166. http://www.safeflight.com/mmain.php?px=1&cm=1&cs=15
+ 167. http://query.nytimes.com/gst/fullpage.html?res=9805E2DA103AF931A35751C1A9609C8B63
+ 168. file://localhost/wiki/Wikipedia:Persondata
+ 169. file://localhost/wiki/New_York_City,_NY
+ 170. file://localhost/wiki/Mamaroneck_(town),_New_York
+ 171. http://en.wikipedia.org/wiki/Leonard_Greene
+ 172. file://localhost/wiki/Special:Categories
+ 173. file://localhost/wiki/Category:1918_births
+ 174. file://localhost/wiki/Category:2006_deaths
+ 175. file://localhost/wiki/Category:American_engineers
+ 176. file://localhost/wiki/Category:American_inventors
+ 177. file://localhost/wiki/Category:American_philanthropists
+ 178. file://localhost/wiki/Category:City_College_of_New_York_alumni
+ 179. file://localhost/wiki/Category:New_York_University_alumni
+ 180. file://localhost/wiki/Category:Deaths_from_lung_cancer
+ 181. file://localhost/wiki/Category:People_from_New_York_City
+ 182. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 183. file://localhost/wiki/Category:Articles_with_hCards
+ 184. file://localhost/w/index.php?title=Special:UserLogin&returnto=Leonard_Greene
+ 185. file://localhost/wiki/Leonard_Greene
+ 186. file://localhost/wiki/Talk:Leonard_Greene
+ 187. file://localhost/wiki/Leonard_Greene
+ 188. file://localhost/w/index.php?title=Leonard_Greene&action=edit
+ 189. file://localhost/w/index.php?title=Leonard_Greene&action=history
+ 190. file://localhost/wiki/Main_Page
+ 191. file://localhost/wiki/Portal:Contents
+ 192. file://localhost/wiki/Portal:Featured_content
+ 193. file://localhost/wiki/Portal:Current_events
+ 194. file://localhost/wiki/Special:Random
+ 195. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 196. file://localhost/wiki/Help:Contents
+ 197. file://localhost/wiki/Wikipedia:About
+ 198. file://localhost/wiki/Wikipedia:Community_portal
+ 199. file://localhost/wiki/Special:RecentChanges
+ 200. file://localhost/wiki/Wikipedia:Contact_us
+ 201. file://localhost/wiki/Special:WhatLinksHere/Leonard_Greene
+ 202. file://localhost/wiki/Special:RecentChangesLinked/Leonard_Greene
+ 203. file://localhost/wiki/Wikipedia:Upload
+ 204. file://localhost/wiki/Special:SpecialPages
+ 205. file://localhost/w/index.php?title=Leonard_Greene&oldid=404903743
+ 206. file://localhost/w/index.php?title=Special:Cite&page=Leonard_Greene&id=404903743
+ 207. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Leonard+Greene
+ 208. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Leonard+Greene&oldid=404903743&writer=rl
+ 209. file://localhost/w/index.php?title=Leonard_Greene&printable=yes
+ 210. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 211. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 212. http://www.wikimediafoundation.org/
+ 213. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 214. http://wikimediafoundation.org/wiki/Privacy_policy
+ 215. file://localhost/wiki/Wikipedia:About
+ 216. file://localhost/wiki/Wikipedia:General_disclaimer
+ 217. http://www.mediawiki.org/
+ 218. http://wikimediafoundation.org/
+
+   Hidden links:
+ 219. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html
+ 220. file://localhost/home/memfis/projects/put/tsiss/Downloads/leonard_greene.html
+ 221. file://localhost/wiki/Main_Page
+ 222. http://creativecommons.org/licenses/by-sa/3.0/

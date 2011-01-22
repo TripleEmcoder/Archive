@@ -1,0 +1,3022 @@
+   #[1]Wikipedia (en) [2]copyright [3]Wikipedia Atom feed
+
+Nikola Tesla
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [4]navigation, [5]search
+   [6]Page semi-protected
+                               Nikola Tesla
+   circa 1890.
+        Born      10 July 1856(1856-07-10)
+                  [7]Smiljan, [8]Austrian Empire
+        Died      7 January 1943(1943-01-07) (aged 86)
+                  New York City, New York, USA
+     Residence    [9]Austria-Hungary^a
+                  [10]France
+                  [11]United States of America
+    Citizenship   [12]Austro-Hungarian^a (1856-1891)
+                  [13]American (1891-1943)
+    Nationality   [14]Yugoslav American
+       Fields     [15]Mechanical and [16]electrical engineering
+    Institutions  [17]Edison Machine Works
+                  [18]Tesla Electric Light & Manufacturing
+                  [19]Westinghouse Electric & Manufacturing Co.
+     Known for
+
+                  [20]Tesla coil
+                  [21]Tesla turbine
+                  [22]Teleforce
+                  [23]Tesla's oscillator
+                  [24]Tesla electric car
+                  [25]Tesla principle
+                  [26]Tesla's Egg of Columbus
+                  [27]Alternating current
+                  [28]Induction motor
+                  [29]Rotating magnetic field
+                  [30]Wireless technology
+                  [31]Particle beam weapon
+                  [32]Death ray
+                  [33]Terrestrial stationary waves
+                  [34]Bifilar coil
+                  [35]Telegeodynamics
+                  [36]Electrogravitics
+     Influences   [37]Ernst Mach
+     Influenced   [38]Gano Dunn
+   Notable awards [39]Edison Medal (1916)
+                  [40]Elliott Cresson Medal (1893)
+                  [41]John Scott Medal (1934)
+   Signature
+   Notes
+   ^a [42]Austrian Empire (1804–1867) reorganized and renamed into the
+   [43]Austria-Hungary (1867-1918) in 1867.
+
+   Nikola Tesla ([44]Serbian: Никола Тесла; 10 July 1856 – 7 January 1943)
+   was an [45]inventor, [46]mechanical engineer, and [47]electrical
+   engineer. He was an important contributor to the birth of commercial
+   [48]electricity, and is best known for his many revolutionary
+   developments in the field of [49]electromagnetism in the late 19th and
+   early 20th centuries. [50]Tesla's patents and theoretical work formed
+   the basis of modern [51]alternating current (AC) [52]electric power
+   systems, including the [53]polyphase system of electrical distribution
+   and the [54]AC motor. This work helped usher in the [55]Second
+   Industrial Revolution.
+
+   Born an ethnic [56]Serb in the village of [57]Smiljan (now part of
+   [58]Gospić), then part of the [59]Austrian Empire (modern-day
+   [60]Croatia). Tesla was a subject of the Austrian Empire by birth and
+   later became an American citizen.^[61][1] Because of his 1894
+   demonstration of wireless communication through [62]radio and as the
+   eventual victor in the "[63]War of Currents", he was widely respected
+   as one of the greatest electrical engineers who worked in
+   America.^[64][2] He pioneered modern electrical engineering and many of
+   his discoveries were of groundbreaking importance. In the United States
+   during this time, Tesla's fame rivaled that of any other inventor or
+   scientist in history or popular culture.^[65][3] Tesla demonstrated
+   [66]wireless energy transfer to power electronic devices as early as
+   1893, and aspired to intercontinental wireless transmission of
+   industrial power in his unfinished [67]Wardenclyffe Tower project.
+
+   Because of his eccentric personality and his seemingly unbelievable and
+   sometimes bizarre claims about possible scientific and technological
+   developments, Tesla was ultimately ostracized and regarded as a [68]mad
+   scientist by many late in his life.^[69][4] Tesla never put much focus
+   on his finances and died with little funds at the age of 86, alone in
+   the two room hotel suite in which he lived, in New York City.^[70][5]
+
+   The [71]International System of Units unit measuring [72]magnetic field
+   B (also referred to as the magnetic flux density and magnetic
+   induction), the [73]tesla, was named in his honor (at the Conférence
+   Générale des Poids et Mesures, Paris, 1960).
+
+   In addition to his work on electromagnetism and [74]electromechanical
+   [75]engineering, Tesla contributed in varying degrees to the
+   establishment of [76]robotics, [77]remote control, [78]radar, and
+   [79]computer science, and to the expansion of [80]ballistics,
+   [81]nuclear physics, and [82]theoretical physics.
+
+   Contents
+
+        * [83]1 Early years
+             + [84]1.1 France and the United States
+        * [85]2 Middle years
+             + [86]2.1 American citizenship
+             + [87]2.2 Edison
+             + [88]2.3 Colorado Springs
+        * [89]3 Wardenclyffe years
+        * [90]4 Nobel prize and Tesla
+        * [91]5 Later years
+             + [92]5.1 Field theories
+             + [93]5.2 Directed-energy weapon
+             + [94]5.3 Theoretical inventions
+        * [95]6 Personal life
+             + [96]6.1 Death
+        * [97]7 Legacy and honors
+             + [98]7.1 Monuments
+             + [99]7.2 Portrayals in popular culture
+        * [100]8 See also
+        * [101]9 References
+             + [102]9.1 Notes
+             + [103]9.2 Sources
+             + [104]9.3 Further reading
+                  o [105]9.3.1 Publications
+                  o [106]9.3.2 Books
+                  o [107]9.3.3 Journals
+                  o [108]9.3.4 Filmography
+        * [109]10 External links
+
+Early years
+
+   Nikola Tesla's birth house and statue in the village of [110]Smiljan,
+   [111]Croatia
+   c.1879 at age 23
+
+   Tesla was born to Serbian parents in the village of Smiljan,
+   [112]Austrian Empire near the town of [113]Gospić, in the territory of
+   modern-day Croatia. His baptismal certificate reports that he was born
+   on 28 June ([114]N.S. 10 July), 1856, to Father Milutin Tesla, a priest
+   in the [115]Serbian Orthodox Church.^[116][6] His paternal origin is
+   thought to be either of one of the local [117]Serb clans in the
+   [118]Tara valley or from the [119]Herzegovinian noble [120]Pavle
+   Orlović.^[121][7] His mother, Đuka, daughter of a Serbian Orthodox
+   Church priest, came from a family domiciled in Lika and [122]Banija,
+   but with deeper origins to [123]Kosovo. She was talented in making home
+   craft tools and memorized many [124]Serbian epic poems, but never
+   learned to read.^[125][8]
+
+   Nikola was the fourth of five children, having one older brother (Dane,
+   who was killed in a horse-riding accident when Nikola was five) and
+   three sisters (Milka, Angelina and Marica).^[126][9] His family moved
+   to Gospić in 1862. Tesla attended school at [127]Higher Real Gymnasium
+   in [128]Karlovac.^[129][10] He finished a four-year term in the span of
+   three years.^[130][11]
+
+   Tesla went on to study electrical engineering at the [131]Austrian
+   Polytechnic in [132]Graz (1875). While there, he studied the uses of
+   alternating current. Some sources say he received Baccalaureate degrees
+   from the university at Graz.^[133][12]^[134][13]^[135][14] However, the
+   university says that he did not receive a degree and did not continue
+   beyond the first semester of his third year, during which he stopped
+   attending lectures.^[136][15]^[137][16]^[138][17]^[139][18] In December
+   1878, Tesla left Graz and broke all relations with his family. His
+   friends thought that he had drowned in the [140]Mura River. He went to
+   [141]Marburg, (today's Maribor, in [142]Slovenia), where he was first
+   employed as an assistant engineer for a year. He suffered a
+   [143]nervous breakdown during this time. Tesla was later persuaded by
+   his father to attend the [144]Charles-Ferdinand University in
+   [145]Prague, which he attended for the summer term of 1880. Here, he
+   was influenced by [146]Ernst Mach. However, after his father died, he
+   left the university, having completed only one term.^[147][19]
+
+   Tesla engaged in reading many works, memorizing complete books,
+   supposedly having a [148]photographic memory.^[149][20] Tesla related
+   in his autobiography that he experienced detailed moments of
+   inspiration. During his early life, Tesla was stricken with illness
+   time and time again. He suffered a peculiar affliction in which
+   blinding flashes of light would appear before his eyes, often
+   accompanied by visions. Much of the time the visions were linked to a
+   word or idea he might have come across, at other times they would
+   provide the solution to a particular problem he had been encountering;
+   just by hearing the name of an item, he would be able to envision it in
+   realistic detail. Modern-day [150]synesthetes report similar symptoms.
+   Tesla would visualize an invention in his mind with extreme precision,
+   including all dimensions, before moving to the construction stage; a
+   technique sometimes known as [151]picture thinking. He typically did
+   not make drawings by hand, instead just conceiving all ideas with his
+   mind. Tesla also often had flashbacks to events that had happened
+   previously in his life; these began during his childhood.^[152][20]
+
+   In 1880, he moved to [153]Budapest to work under [154]Tivadar Puskás in
+   a [155]telegraph company,^[156][21] the National [157]Telephone
+   Company. There, he met Nebojša Petrović, a young, Serbian inventor who
+   lived in Austria. Although their encounter was brief, they did work on
+   a project together using twin turbines to create continual power. On
+   the opening of the [158]telephone exchange in Budapest, 1881, Tesla
+   became the chief electrician to the company, and was later engineer for
+   the country's first telephone system. He also developed a device that,
+   according to some, was a [159]telephone [160]repeater or
+   [161]amplifier, but according to others could have been the first
+   [162]loudspeaker.^[163][22]
+   Drawing from U.S. [164]Patent 381968, illustrating principle of
+   alternating current motor invention
+
+France and the United States
+
+   In 1882 he moved to Paris, to work as an engineer for the Continental
+   Edison Company, designing improvements to electric equipment brought
+   overseas from Edison's ideas. According to his autobiography, in the
+   same year he conceived the [165]induction motor and began developing
+   various devices that use [166]rotating magnetic fields for which he
+   received patents in 1888.
+
+   Soon thereafter, Tesla was awakened from a dream in which his mother
+   had died.^[167][23] After her death, Tesla fell ill. He spent two to
+   three weeks recuperating in Gospić and the village of Tomingaj near
+   [168]Gračac, his mother's birthplace.
+
+   On 6 June 1884, Tesla first arrived in the United States, in New York
+   City^[169][24] with little besides a letter of recommendation from
+   [170]Charles Batchelor, a former employer. In the letter of
+   recommendation to [171]Thomas Edison, it is claimed that Batchelor
+   wrote, 'I know two great men and you are one of them; the other is this
+   young man', but the exact contents of the letter is disputed in
+   McNichol's book. Edison hired Tesla to work for his Edison Machine
+   Works. Tesla's work for Edison began with simple electrical engineering
+   and quickly progressed to solving some of the company's most difficult
+   problems. Tesla was even offered the task of completely redesigning the
+   Edison company's [172]direct current [173]generators.^[174][25]
+
+   Tesla claimed he was offered [175]US$50,000 (~ US$1.1 million in 2007,
+   adjusted for inflation)^[176][26] if he redesigned Edison's inefficient
+   motor and generators, making an improvement in both service and
+   economy.^[177][27] In 1885 when Tesla inquired about the payment for
+   his work, Edison replied, "Tesla, you don't understand our
+   [178]American humor," thus breaking his word.^[179][28]^[180][29]
+   Earning US$18 per week, Tesla would have had to work for 53 years to
+   earn the amount he was promised. The offer was equal to the initial
+   capital of the company. Tesla immediately resigned when he was refused
+   a raise to US$25 per week.^[181][30]
+
+   Tesla, in need of work, eventually found himself digging ditches for a
+   short period of time for the Edison company. He used this time to focus
+   on his AC polyphase system.^[182][31]
+
+Middle years
+
+   [183]Wireless transmission of power and energy demonstration during his
+   high frequency and potential lecture of 1891
+   Electromechanical devices and principles developed by Nikola Tesla:
+     __________________________________________________________________
+
+     * Various devices that use [184]rotating magnetic fields (1882)
+     * The [185]Induction motor, rotary transformers, and "high" frequency
+       [186]alternators
+     * The [187]Tesla coil,^[188][32] his [189]magnifying transmitter, and
+       other means for increasing the intensity of electrical
+       [190]oscillations (including condenser discharge transformations
+       and the Tesla oscillators^[191][33]^[192][34])
+     * [193]Alternating current [194]long-distance electrical transmission
+       system^[195][35] (1888) and other methods and devices for
+       [196]power transmission
+     * [197]Systems for [198]wireless [199]communication ([200]prior art
+       for the [201]invention of radio) and radio frequency
+       [202]oscillators^[203][36]
+     * [204]Robotics and the [205]electronic logic gate^[206][37]
+     * [207]Electrotherapy Tesla currents^[208][38]^[209][39]^[210][40]
+     * [211]Wireless transfer of electricity and the Tesla
+       effect^[212][41]^[213][42]
+     * Tesla impedance phenonomena^[214][43]
+     * Tesla [215]electro-static field
+     * [216]Tesla principle
+     * [217]Bifilar coil
+     * [218]Telegeodynamics
+     * Tesla insulation
+     * Tesla impulses^[219][44]
+     * Tesla frequencies^[220][32]
+     * Tesla discharge^[221][32]
+     * Forms of [222]commutators and methods of regulating third brushes
+     * [223]Tesla turbines (e.g., bladeless turbines) for water, steam and
+       gas and the Tesla pumps
+     * Tesla igniter
+     * Corona discharge ozone generator
+     * Tesla compressor
+     * [224]X-rays Tubes using the [225]Bremsstrahlung process
+     * Devices for [226]ionized gases and "Hot Saint Elmo's
+       Fire".^[227][45]
+     * Devices for [228]high field emission
+     * Devices for [229]charged particle beams
+     * Phantom streaming devices^[230][46]
+     * [231]Arc light systems
+     * Methods for providing extremely low level of resistance to the
+       passage of electric current (predecessor to [232]superconductivity)
+     * [233]Voltage multiplication [234]circuitry
+     * Devices for high [235]voltage discharges
+     * Devices for [236]lightning protection
+     * [237]VTOL aircraft
+     * Dynamic theory of gravity
+     * Concepts for [238]electric vehicles
+     * [239]Polyphase systems
+
+   In 1886, Tesla formed his own company, [240]Tesla Electric Light &
+   Manufacturing. The initial financial investors disagreed with Tesla on
+   his plan for an alternating current motor and eventually relieved him
+   of his duties at the company. Tesla worked in New York as a laborer
+   from 1886 to 1887 to feed himself and raise capital for his next
+   project. In 1887, he constructed the initial [241]brushless alternating
+   current [242]induction motor, which he demonstrated to the American
+   Institute of Electrical Engineers (now [243]IEEE) in 1888. In the same
+   year, he developed the principles of his [244]Tesla coil, and began
+   working with [245]George Westinghouse at [246]Westinghouse Electric &
+   Manufacturing Company's [247]Pittsburgh labs. Westinghouse listened to
+   his ideas for polyphase systems which would allow transmission of
+   alternating current electricity over long distances.
+
+   In April 1887, Tesla began investigating what would later be called
+   [248]X-rays using his own single terminal [249]vacuum tubes (similar to
+   his patent [250]#514,170). This device differed from other early X-ray
+   tubes in that it had no target electrode. The modern term for the
+   phenomenon produced by this device is [251]bremsstrahlung (or braking
+   radiation). We now know that this device operated by emitting
+   [252]electrons from the single electrode through a combination of
+   [253]field electron emission and [254]thermionic emission. Once
+   liberated, electrons are strongly repelled by the high [255]electric
+   field near the electrode during negative voltage peaks from the
+   oscillating HV output of the Tesla Coil, generating X rays as they
+   collide with the glass envelope. He also used [256]Geissler tubes. By
+   1892, Tesla became aware of the skin damage that [257]Wilhelm Röntgen
+   later identified as an effect of X rays.
+
+   In the early research, Tesla devised several experimental setups to
+   produce X-rays. Tesla held that, with his circuits, the "instrument
+   will [... enable one to] generate [258]Roentgen rays of much greater
+   power than obtainable with ordinary apparatus".^[259][47]
+
+   He also commented on the hazards of working with his circuit and
+   single-node X-ray-producing devices. Of his many notes in the early
+   investigation of this phenomenon, he attributed the skin damage to
+   various causes. He believed early on that damage to the skin was not
+   caused by the Roentgen rays, but the [260]ozone generated in contact
+   with the skin, and to a lesser extent, [261]nitrous acid. Tesla
+   incorrectly held that x-rays were [262]longitudinal waves, such as
+   those produced in [263]waves in plasma. There are known examples of
+   this and these plasma waves can occur in the situation of
+   [264]force-free magnetic fields.^[265][48]^[266][49] His hypotheses and
+   experiments were confirmed by others.^[267][50]
+
+   Tesla continued research in the field. He performed several experiments
+   prior to Roentgen's discovery (including photographing the bones of his
+   hand; later, he sent these images to Roentgen) but did not make his
+   findings widely known; much of his research was lost in the 5th Avenue
+   laboratory fire of March 1895.
+
+   Tesla demonstrated [268]wireless energy transmission as early as 1891.
+   The Tesla effect is a term for an application of this type of
+   electrical conduction (that is, the movement of energy through space
+   and matter, not just the production of voltage across a
+   conductor).^[269][51]^[270][52]
+
+American citizenship
+
+   On 30 July 1891, he became a [271]naturalized citizen of the United
+   States at the age of 35. Tesla established his South [272]Fifth Avenue
+   laboratory in New York in the same year. Later, Tesla established his
+   Houston Street laboratory in New York at 46 E. [273]Houston Street. He
+   lit electric lamps wirelessly at both of the New York locations,
+   providing evidence for the potential of wireless power
+   transmission.^[274][53]
+
+   Some of Tesla's closest friends were artists. He befriended
+   [275]Century Magazine editor [276]Robert Underwood Johnson, who adapted
+   several Serbian poems of [277]Jovan Jovanović Zmaj (which Tesla
+   translated). Also during this time, Tesla was influenced by the
+   [278]Vedic philosophy (i.e., [279]Hinduism) teachings of the [280]Swami
+   Vivekananda; so much so that, after his exposure to Hindu-Vedic
+   thought, Tesla started using [281]Sanskrit words to name some of his
+   fundamental concepts regarding matter and energy.^[282][54]
+   Nikola Tesla's AC [283]dynamo used to generate AC which is used to
+   transport [284]electricity across great distances. It is contained in
+   [285]U.S. Patent 390,721.
+
+   When Tesla was 36 years old, the first patents concerning the polyphase
+   power system were granted. He continued research of the system and
+   rotating magnetic field principles. Tesla served, from 1892 to 1894, as
+   the vice president of the [286]American Institute of Electrical
+   Engineers, the forerunner (along with the [287]Institute of Radio
+   Engineers) of the modern-day [288]IEEE. From 1893 to 1895, he
+   investigated [289]high frequency alternating currents. He generated AC
+   of one million [290]volts using a conical Tesla coil and investigated
+   the [291]skin effect in [292]conductors, designed tuned circuits,
+   invented a machine for inducing sleep, cordless [293]gas discharge
+   lamps, and transmitted [294]electromagnetic energy without wires,
+   building the first [295]radio transmitter. In [296]St. Louis, Missouri,
+   Tesla made a demonstration related to radio communication in 1893.
+   Addressing the [297]Franklin Institute in [298]Philadelphia,
+   [299]Pennsylvania and the [300]National Electric Light Association, he
+   described and demonstrated in detail its principles. Tesla's
+   demonstrations were written about widely through various media outlets.
+   Tesla also investigated harvesting [301]energy that is present
+   throughout space. He believed that it was merely a question of time
+   when men would succeed in attaching their machinery to the very
+   wheelwork of nature, stating: "Ere many generations pass, our machinery
+   will be driven by a power obtainable at any point of the
+   universe."^[302][55]
+
+   At the 1893 [303]World's Fair, the [304]World's Columbian Exposition in
+   Chicago, an international exposition was held which, for the first
+   time, devoted a building to electrical exhibits. It was a historic
+   event as Tesla and George Westinghouse introduced visitors to [305]AC
+   power by using it to illuminate the Exposition. On display were Tesla's
+   [306]fluorescent lamps and single node bulbs. An observer noted:
+
+   Within the room was suspended two hard-rubber plates covered with tin
+   foil. These were about fifteen feet apart, and served as terminals of
+   the wires leading from the transformers. When the current was turned
+   on, the lamps or tubes, which had no wires connected to them, but lay
+   on a table between the suspended plates, or which might be held in the
+   hand in almost any part of the room, were made luminous. These were the
+   same experiments and the same apparatus shown by Tesla in London about
+   two years previous, "where they produced so much wonder and
+   astonishment".^[307][56]
+
+   Tesla also explained the principles of the rotating magnetic field and
+   [308]induction motor by demonstrating how to make an egg made of
+   [309]copper stand on end in his demonstration of the device he
+   constructed known as the "[310]Egg of Columbus".
+
+   The Tesla generator was developed by Tesla in 1895, in conjunction with
+   his developments concerning the [311]liquefaction of air. Tesla knew,
+   from Lord Kelvin's discoveries, that more heat is absorbed by liquefied
+   air when it is re-gasified and used to drive something, than is
+   required by theory; in other words, that the liquefaction process is
+   somewhat anomalous or 'over unity'.^[312][57] Just prior to Tesla's
+   completion of his work and the filing of a patent application, Tesla's
+   laboratory burned down, destroying all his equipment, models and
+   inventions. Immediately after the fire, [313]Carl von Linde, in
+   Germany, filed a patent application for the same process.^[314][58]
+
+   A "world system" for "the transmission of electrical energy without
+   wires" that depends upon the [315]electrical conductivity of the earth
+   was proposed, in which transmission in various natural media with
+   current that passes between the two points are used to power devices.
+   In a practical wireless energy transmission system using this
+   principle, a high-power ultraviolet beam might be used to form a
+   vertical ionized channel in the air directly above the
+   transmitter-receiver stations. The same concept is used in virtual
+   [316]lightning rods, the [317]electrolaser [318]electroshock
+   weapon,^[319][59] and has been proposed for disabling vehicles.
+
+Edison
+
+   Also in the late 1880s, Tesla and [320]Thomas Edison became adversaries
+   in part because of Edison's promotion of direct current (DC) for
+   [321]electric power distribution over the more efficient alternating
+   current advocated by Tesla and Westinghouse. Until Tesla invented the
+   induction motor, AC's advantages for long distance [322]high voltage
+   transmission were counterbalanced by the inability to operate motors on
+   AC. As a result of the "[323]War of Currents", Edison and Westinghouse
+   went nearly bankrupt, so in 1897, Tesla released Westinghouse from
+   contract, providing Westinghouse a break from Tesla's patent royalties.
+   Also in 1897, Tesla researched [324]radiation, which led to setting up
+   the basic formulation of [325]cosmic rays.^[326][60]
+
+   In 1897, at the age of 41 years old, Tesla filed the first radio patent
+   ([327]U.S. Patent 645,576). A year later, he demonstrated a
+   [328]radio-controlled boat to the US military, believing that the
+   military would want things such as radio-controlled [329]torpedoes.
+   Tesla claimed to have developed the "Art of [330]Telautomatics", a form
+   of [331]robotics, as well as the technology of remote
+   control.^[332][61] In 1898, he demonstrated a radio-controlled boat to
+   the public during an electrical exhibition at [333]Madison Square
+   Garden. Tesla called his boat a "teleautomaton".^[334][62] In the same
+   year, Tesla devised an "electric igniter" or [335]spark plug for
+   [336]Internal combustion gasoline engines. He gained [337]U.S. Patent
+   609,250, "Electrical Igniter for Gas Engines", on this [338]mechanical
+   ignition system. Tesla lived in the former Gerlach Hotel, renamed The
+   Radio Wave building, at 49 W 27th St. (between Broadway and Sixth
+   Avenue), [339]Lower Manhattan, before the end of the century where he
+   conducted the radio wave experiments. A [340]commemorative plaque was
+   placed on the building in 1977 to honor his work. Remote [341]radio
+   control remained a novelty until WWI and afterward, when a number of
+   countries used it in military programs.
+
+Colorado Springs
+
+   See also: [342]Magnifying transmitter
+   Publicity picture of a participant sitting in his laboratory in
+   Colorado Springs with his "[343]Magnifying transmitter" generating
+   millions of volts. The arcs are about 7 meters (23 ft) long. (Tesla's
+   notes identify this as a [344]multiple exposure photograph.)
+   An experiment in Colorado Springs. This bank of lights is receiving
+   power by means of electrodynamic induction from a nearby transmitter
+   A Colorado Springs experiment: here a grounded tuned coil in
+   [345]resonance with a distant transmitter illuminates a light near the
+   bottom of the picture.
+
+   In 1899, Tesla decided to move and began research in [346]Colorado
+   Springs, Colorado in a lab located near Foote Ave. and Kiowa
+   St.,^[347][63] where he would have room for his high-voltage,
+   high-frequency experiments. Upon his arrival he told reporters that he
+   was conducting [348]wireless telegraphy experiments transmitting
+   signals from [349]Pikes Peak to Paris. Tesla's diary contains
+   explanations of his experiments concerning the [350]ionosphere and the
+   ground's [351]telluric currents via [352]transverse waves and
+   [353]longitudinal waves.^[354][64] At his lab, Tesla proved that the
+   earth was a conductor, and he produced artificial [355]lightning (with
+   discharges consisting of millions of volts, and up to 135 feet
+   long).^[356][65] Tesla also investigated [357]atmospheric electricity,
+   observing lightning signals via his receivers. Reproductions of Tesla's
+   receivers and coherer circuits show an unpredicted level of complexity
+   (e.g., [358]distributed [359]high-Q [360]helical [361]resonators,
+   [362]radio frequency [363]feedback, crude [364]heterodyne effects, and
+   [365]regeneration techniques).^[366][66] Tesla stated that he observed
+   [367]stationary waves during this time.^[368][67]
+
+   Tesla researched ways to transmit power and energy wirelessly over long
+   distances (via transverse waves, to a lesser extent, and, more readily,
+   longitudinal waves). He transmitted [369]extremely low frequencies
+   through the ground as well as between the Earth's surface and the
+   [370]Kennelly–Heaviside layer. He received patents on wireless
+   transceivers that developed standing waves by this method. In his
+   experiments, he made mathematical calculations and computations based
+   on his experiments and discovered that the [371]resonant frequency of
+   the Earth was approximately 8 hertz (Hz). In the 1950s, researchers
+   confirmed that the resonant frequency of the Earth's ionospheric cavity
+   was in this range (later named the [372]Schumann resonance).
+
+   In Colorado Springs Tesla carried out various long distance wireless
+   transmission-reception experiments. [373]Tesla effect is the
+   application of a type of electrical conduction (that is, the movement
+   of energy through space and matter; not just the production of voltage
+   across a conductor). Through [374]longitudinal waves, Tesla transferred
+   energy to receiving devices. He sent electrostatic forces through
+   natural media across a conductor situated in the changing [375]magnetic
+   flux and transferred electrical energy to a wireless receiver.
+
+   In the Colorado Springs lab, Tesla observed unusual signals that he
+   later thought may have been evidence of [376]extraterrestrial radio
+   wave communications coming from [377]Venus or [378]Mars.^[379][68] He
+   noticed repetitive signals from his receiver which were substantially
+   different from the signals he had noted from storms and earth noise.
+   Specifically, he later recalled that the signals appeared in groups of
+   one, two, three, and four clicks together. Tesla had mentioned that he
+   thought his inventions could be used to talk with other planets. There
+   have even been claims that he invented a "[380]Teslascope" for just
+   such a purpose. It is debatable what type of signals Tesla received or
+   whether he picked up anything at all. Research has suggested that Tesla
+   may have had a misunderstanding of the new technology he was working
+   with,^[381][69] or that the signals Tesla observed may have been
+   non-terrestrial natural radio source such as the [382]Jovian
+   [383]plasma torus signals.^[384][70]
+
+   Tesla left [385]Colorado Springs on 7 January 1900. The lab was torn
+   down ca. 1905 and its contents sold to pay debts. The Colorado
+   experiments prepared Tesla for the establishment of the trans-Atlantic
+   wireless telecommunications facility known as Wardenclyffe.
+
+Wardenclyffe years
+
+   In 1900, with US$150,000 (51% from [386]J. Pierpont Morgan), Tesla
+   began planning the [387]Wardenclyffe Tower facility. In June 1902,
+   Tesla's lab operations were moved to Wardenclyffe from Houston Street.
+   The tower was dismantled for scrap during [388]World War I.^[389][71]
+   Newspapers of the time labeled Wardenclyffe "Tesla's million-dollar
+   folly". In 1904, the US [390]Patent Office reversed its decision and
+   awarded [391]Guglielmo Marconi the patent for radio, and Tesla began
+   his fight to re-acquire the radio patent. On his 50th birthday in 1906,
+   Tesla demonstrated his 200 [392]hp (150 kW) 16,000 rpm [393]bladeless
+   turbine. During 1910–1911 at the Waterside Power Station in New York,
+   several of his bladeless turbine engines were tested at 100–5000 hp.
+
+Nobel prize and Tesla
+
+   Since the [394]Nobel Prize in Physics was awarded to Marconi for radio
+   in 1909, [395]Thomas Edison and Tesla were mentioned in a press
+   dispatch as potential laureates to share the [396]Nobel Prize of 1915,
+   leading to one of several [397]Nobel Prize controversies. Some sources
+   have claimed that because of their animosity toward each other neither
+   was given the award, despite their scientific contributions; that each
+   sought to minimize the other's achievements and right to win the award;
+   that both refused to ever accept the award if the other received it
+   first; and that both rejected any possibility of sharing
+   it.^[398][8]^[399][72]
+
+   In the years after these rumors, neither Tesla nor Edison won the Prize
+   (although Edison did receive one of 38 possible bids in 1915, and Tesla
+   did receive one bid out of 38 in 1937).^[400][73] Earlier, Tesla alone
+   was rumored to have been nominated for the [401]Nobel Prize of 1912.
+   The rumored nomination was primarily for his experiments with tuned
+   circuits using high-voltage high-frequency resonant transformers.
+
+Later years
+
+   In 1915, Tesla filed a lawsuit against Marconi attempting,
+   unsuccessfully, to obtain a court injunction against Marconi's claims.
+   After Wardenclyffe, Tesla built the [402]Telefunken Wireless Station in
+   Sayville, Long Island. Some of what he wanted to achieve at
+   Wardenclyffe was accomplished with the Telefunken Wireless. In 1917,
+   the facility was seized and torn down by the [403]Marines, because it
+   was suspected that it could be used by German spies.
+   The [404]Wardenclyffe Tower facility
+
+   Before [405]World War I, Tesla looked overseas for investors to fund
+   his research. When the war started, Tesla lost the funding he was
+   receiving from his patents in European countries. After the war ended,
+   Tesla made predictions regarding the relevant issues of the post-World
+   War I environment, in a printed article (20 December 1914). Tesla
+   believed that the [406]League of Nations was not a remedy for the times
+   and issues. Tesla started to exhibit pronounced symptoms of
+   [407]obsessive-compulsive disorder in the years following. He became
+   obsessed with the number three; he often felt compelled to walk around
+   a block three times before entering a building, demanded a stack of
+   three folded cloth napkins beside his plate at every meal, etc. The
+   nature of OCD was little understood at the time and no treatments were
+   available, so his symptoms were considered by some to be evidence of
+   partial insanity, and this undoubtedly hurt what was left of his
+   reputation.
+
+   At this time, he was staying at [408]The Waldorf-Astoria Hotel, renting
+   in an arrangement for deferred payments. Eventually, the Wardenclyffe
+   deed was turned over to [409]George Boldt, proprietor of the
+   Waldorf-Astoria, to pay a US$20,000 debt. In 1917, around the time that
+   the Wardenclyffe Tower was demolished by Boldt to make the land a more
+   viable real estate asset, Tesla received [410]AIEE's highest honor, the
+   [411]Edison Medal.
+
+   Tesla, in August 1917, first established principles regarding frequency
+   and power level for the first primitive [412]radar units.^[413][74]
+
+   In 1934, [414]Émile Girardeau, working with the first French radar
+   systems, stated he was building them "according to the principles
+   stated by Tesla". By the 1920s, Tesla was reportedly negotiating with
+   the United Kingdom government about a ray system. Tesla had also stated
+   that efforts had been made to steal the so called "death ray". It is
+   suggested that the removal of the [415]Chamberlain government ended
+   negotiations.
+
+   On Tesla's 75th birthday in 1931, [416]Time magazine put him on its
+   cover. The cover caption noted his contribution to [417]electrical
+   power generation. Tesla received his last patent in 1928 for an
+   apparatus for [418]aerial transportation which was the first instance
+   of [419]VTOL [420]aircraft. By the end of 1931, Tesla released "On
+   Future Motive Power" which covered an [421]ocean thermal energy
+   conversion system. In 1934, Tesla wrote to consul Janković of his
+   homeland. The letter contained a message of gratitude to [422]Mihajlo
+   Pupin who had initiated a donation scheme by which American companies
+   could support Tesla. Tesla refused the assistance, choosing instead to
+   live on a modest pension received from Yugoslavia, and to continue his
+   research.
+
+   In 1936, Tesla wrote in a telegram to [423]Vladko Maček: "I'm equally
+   proud of my Serbian origin and my Croatian homeland. Long live all
+   Yugoslavs."
+
+Field theories
+
+   When he was 81, Tesla stated he had completed a "dynamic theory of
+   gravity". He stated that it was "worked out in all details" and that he
+   hoped to soon give it to the world.^[424][75] The theory was never
+   published.
+
+   The bulk of the theory was developed between 1892 and 1894, during the
+   period that he was conducting experiments with high frequency and high
+   [425]potential electromagnetism and patenting devices for their use.
+   Reminiscent of [426]Mach's principle, Tesla stated in 1925 that:
+   Nikola Tesla, with [427]Ruđer Bošković's book Theoria Philosophiae
+   Naturalis, sits in front of the spiral coil of his high-frequency
+   transformer at East Houston Street, New York.
+
+     There is no thing endowed with life—from man, who is enslaving the
+     elements, to the nimblest creature—in all this world that does not
+     sway in its turn. Whenever action is born from force, though it be
+     infinitesimal, the cosmic balance is upset and the universal motion
+     results.
+
+   Tesla was critical of Einstein's relativity work, calling it:
+
+     ...[a] magnificent mathematical garb which fascinates, dazzles and
+     makes people blind to the underlying errors. The theory is like a
+     beggar clothed in purple whom ignorant people take for a king ...
+     its exponents are brilliant men but they are metaphysicists rather
+     than scientists ...^[428][76]
+
+   Tesla also argued:
+
+     I hold that space cannot be curved, for the simple reason that it
+     can have no properties. It might as well be said that God has
+     properties. He has not, but only attributes and these are of our own
+     making. Of properties we can only speak when dealing with matter
+     filling the space. To say that in the presence of large bodies space
+     becomes curved is equivalent to stating that something can act upon
+     nothing. I, for one, refuse to subscribe to such a view.^[429][77]
+
+   Tesla also believed that much of [430]Albert Einstein's [431]relativity
+   theory had already been proposed by [432]Ruđer Bošković, stating in an
+   unpublished interview:
+
+     ...the relativity theory, by the way, is much older than its present
+     proponents. It was advanced over 200 years ago by my illustrious
+     countryman Ruđer Bošković, the great philosopher, who, not
+     withstanding other and multifold obligations, wrote a thousand
+     volumes of excellent literature on a vast variety of subjects.
+     Bošković dealt with relativity, including the so-called time-space
+     continuum ...'.^[433][78]
+
+Directed-energy weapon
+
+   Later in life, Tesla made remarkable claims concerning a
+   "[434]teleforce" weapon.^[435][79] The press called it a "peace ray" or
+   [436]death ray.^[437][80]^[438][81] In total, the components and
+   methods included:^[439][82]^[440][83]
+     * An apparatus for producing manifestations of energy in free air
+       instead of in a [441]high vacuum as in the past. This, according to
+       Tesla in 1934, was accomplished.
+     * A mechanism for generating tremendous electrical force. This,
+       according to Tesla, was also accomplished.
+     * A means of intensifying and amplifying the force developed by the
+       second mechanism.
+     * A new method for producing a tremendous electrical repelling force.
+       This would be the projector, or gun, of the invention.
+
+   Tesla worked on plans for a [442]directed-energy weapon from the early
+   1900s until his death. In 1937, Tesla wrote a treatise entitled "The
+   Art of Projecting Concentrated Non-dispersive Energy through the
+   Natural Media", which concerned [443]charged particle beams.^[444][84]
+   Tesla published the document in an attempt to expound on the technical
+   description of a "[445]superweapon that would put an end to all war."
+   This treatise describing the [446]particle beam is currently in the
+   [447]Nikola Tesla Museum archive in [448]Belgrade. It describes an
+   open-ended vacuum tube with a gas jet seal that allows particles to
+   exit, a method of charging particles to millions of volts, and a method
+   of creating and directing nondispersive particle streams (through
+   [449]electrostatic repulsion).^[450][84]
+
+   His records indicate that the device is based on a narrow stream of
+   [451]atomic clusters of liquid [452]mercury or [453]tungsten
+   accelerated via high voltage (by means akin to his [454]magnifying
+   transformer). Tesla gives the following description concerning the
+   [455]particle gun's operation:
+
+     [The nozzle would] send concentrated beams of particles through the
+     free air, of such tremendous energy that they will bring down a
+     fleet of 10,000 enemy airplanes at a distance of 200 miles from a
+     defending nation's border and will cause armies to drop dead in
+     their tracks.^[456][85]
+
+   The weapon could be used against ground based infantry or for
+   antiaircraft purposes.^[457][86] Tesla tried to interest the [458]US
+   War Department in the device.^[459][87] He also offered this invention
+   to European countries.^[460][88] None of the governments purchased a
+   contract to build the device. He was unable to act on his
+   plans.^[461][89]
+
+Theoretical inventions
+
+   Another of Tesla's theorized inventions is commonly referred to as
+   Tesla's Flying Machine, which appears to resemble an [462]ion-propelled
+   aircraft.^[463][90] Tesla claimed that one of his life goals was to
+   create a flying machine that would run without the use of an airplane
+   engine, wings, [464]ailerons, [465]propellers, or an onboard fuel
+   source. Initially, Tesla pondered about the idea of a flying craft that
+   would fly using an electric motor powered by grounded base stations. As
+   time progressed, Tesla suggested that perhaps such an aircraft could be
+   run entirely electro-mechanically. The theorized appearance would
+   typically take the form of a cigar or saucer.^[466][91]
+
+Personal life
+
+   Tesla's father Milutin Tesla
+
+   Tesla was fluent in eight languages. Along with [467]Serbian, he spoke
+   [468]Czech, English, French, German, Hungarian, Italian, and
+   [469]Latin.^[470][92]
+
+   Tesla may have suffered from [471]obsessive-compulsive disorder, and
+   had many unusual quirks and [472]phobias. He did things in threes, and
+   was adamant about staying in a hotel room with a number divisible by
+   three. Tesla was physically revolted by jewelry, notably pearl
+   earrings.^[473][93] He was fastidious about cleanliness and hygiene,
+   and was by all accounts [474]mysophobic.
+
+   Tesla was obsessed with pigeons, ordering special seeds for the pigeons
+   he fed in [475]Central Park and even bringing injured ones into his
+   hotel room to nurse them back to health. Tesla was an animal-lover,
+   often reflecting contentedly about a childhood cat, "The Magnificent
+   Mačak." Tesla never married. He was [476]celibate and claimed that his
+   chastity was very helpful to his scientific abilities.^[477][20]
+   Nonetheless there have been numerous accounts of women vying for
+   Tesla's affection, even some madly in love with him. Tesla, though
+   polite, behaved rather ambivalently to these women in the romantic
+   sense.
+
+   Tesla was prone to alienating himself and was generally soft-spoken.
+   However, when he did engage in a social life, many people spoke very
+   positively and admiringly of him. Robert Underwood Johnson described
+   him as attaining a "distinguished sweetness, sincerity, modesty,
+   refinement, generosity, and force." His loyal secretary, Dorothy
+   Skerrit, wrote: "his genial smile and nobility of bearing always
+   denoted the gentlemanly characteristics that were so ingrained in his
+   soul." Tesla's friend Hawthorne wrote that "seldom did one meet a
+   scientist or engineer who was also a poet, a philosopher, an
+   appreciator of fine music, a linguist, and a connoisseur of food and
+   drink."
+
+   Nevertheless, Tesla displayed the occasional cruel streak; he openly
+   expressed his disgust for overweight people, once firing a secretary
+   because of her weight.^[478][94] He was quick to criticize others'
+   clothing as well, on several occasions directing a subordinate to go
+   home and change her dress.^[479][20]
+
+   Tesla was widely known for his great showmanship, presenting his
+   innovations and demonstrations to the public as an artform, almost like
+   a magician. This seems to conflict with his observed reclusiveness;
+   Tesla was a complicated figure. He refused to hold conventions without
+   his Tesla coil blasting electricity throughout the room, despite the
+   audience often being terrified, though he assured them everything was
+   perfectly safe.
+   [480]Mark Twain in Tesla's lab, early 1894
+
+   In middle age, Tesla became close friends with [481]Mark Twain. They
+   spent a lot of time together in his lab and elsewhere.
+
+   Tesla remained bitter in the aftermath of his dispute with Edison. The
+   day after Edison died the [482]New York Times contained extensive
+   coverage of Edison's life, with the only negative opinion coming from
+   Tesla, who was quoted as saying:
+
+   He had no hobby, cared for no sort of amusement of any kind and lived
+   in utter disregard of the most elementary rules of hygiene  ... His
+   method was inefficient in the extreme, for an immense ground had to be
+   covered to get anything at all unless blind chance intervened and, at
+   first, I was almost a sorry witness of his doings, knowing that just a
+   little theory and calculation would have saved him 90 percent of the
+   labor. But he had a veritable contempt for book learning and
+   mathematical knowledge, trusting himself entirely to his inventor's
+   instinct and practical American sense.^[483][95]
+
+   Shortly before he died, Edison said that his biggest mistake had been
+   in trying to develop direct current, rather than the superior
+   alternating current system that Tesla had put within his
+   grasp.^[484][96]
+
+   Tesla was good friends with [485]Robert Underwood Johnson. He had
+   amicable relations with [486]Francis Marion Crawford, [487]Stanford
+   White, Fritz Lowenstein, George Scherff, and Kenneth Swezey. He ripped
+   up a [488]Westinghouse contract that would have made him the world's
+   first billionaire, in part because of the implications it would have on
+   his future vision of free power, and in part because it would run
+   Westinghouse out of business, and Tesla had no desire to deal with the
+   creditors.
+
+   Tesla lived the last ten years of his life in a two-room suite on the
+   33rd floor of the [489]Hotel New Yorker, room 3327. There, near the end
+   of his life, Tesla showed signs of encroaching senility, claiming to be
+   visited by a specific white pigeon daily. Several biographers note that
+   Tesla viewed the death of the pigeon as a "final blow" to himself and
+   his work.
+
+   Tesla believed that war could not be avoided until the cause for its
+   recurrence was removed, but was opposed to wars in general. However,
+   Tesla came to find exceptions in which he thought certain situations
+   and wars were justifiable.^[490][97] Tesla sought to reduce distance,
+   such as in communication for better understanding, transportation, and
+   transmission of energy, as a means to ensure friendly
+   [491]international relations.^[492][98]
+
+   Tesla was a life-long bachelor. Like many of his era, he became a
+   proponent of a self-imposed [493]selective breeding version of
+   [494]eugenics. In a 1937 interview, he stated:
+
+   ... man's new sense of pity began to interfere with the ruthless
+   workings of nature. The only method compatible with our notions of
+   civilization and the race is to prevent the breeding of the unfit by
+   sterilization and the deliberate guidance of the mating instinct ....
+   The trend of opinion among eugenists is that we must make marriage more
+   difficult. Certainly no one who is not a desirable parent should be
+   permitted to produce progeny. A century from now it will no more occur
+   to a normal person to mate with a person eugenically unfit than to
+   marry a habitual criminal.^[495][99]
+
+   In 1926, Tesla commented on the ills of the social subservience of
+   women and the struggle of women toward [496]gender equality, indicated
+   that humanity's future would be run by "Queen Bees". He believed that
+   women would become the dominant sex in the future.^[497][100]
+
+   In his later years Tesla became a vegetarian. In an article for
+   [498]Century Illustrated Magazine he wrote: "It is certainly preferable
+   to raise vegetables, and I think, therefore, that vegetarianism is a
+   commendable departure from the established barbarous habit." Tesla
+   argued that it is wrong to eat uneconomic meat when large numbers of
+   people are starving; he also believed that plant food was "superior to
+   [meat] in regard to both mechanical and mental performance". He also
+   argued that animal slaughter was "wanton and cruel".^[499][101]
+
+   In his final years he suffered from extreme sensitivity to light, sound
+   and other influences.^[500][102]
+
+Death
+
+   Urn with Tesla's ashes, [501]Nikola Tesla Museum, Belgrade
+
+   Tesla died of [502]heart failure alone in room 3327 of the [503]New
+   Yorker Hotel, on 7 January 1943.^[504][103] Despite having sold his AC
+   electricity patents, Tesla died with significant debts. Later that year
+   the [505]US Supreme Court upheld Tesla's patent number 645576 in a
+   ruling that served as the basis for patented radio technology in the
+   United States.^[506][104]
+
+   Tesla's funeral took place on 12 January 1943, at the [507]Cathedral of
+   Saint John the Divine in [508]Manhattan, New York City.^[509][105] His
+   body was cremated and his ashes taken to Belgrade, Serbia,
+   then-[510]Yugoslavia in 1957. The urn was placed in the [511]Nikola
+   Tesla Museum in Belgrade.
+   Bust of Tesla by [512]Ivan Meštrović, 1952, in [513]Zagreb, Croatia
+
+   Soon after his death Tesla's safe was opened by his nephew Sava
+   Kosanović. Shortly thereafter Tesla's papers and other property were
+   impounded by the United States' [514]Alien Property Custodian office in
+   Tesla's compound at the Manhattan Warehouse, even though he was a
+   [515]naturalized citizen.
+
+   Dr. John G. Trump was the main government official who went over
+   Tesla's secret papers after his death in 1943. At the time, Trump was a
+   well-known electrical engineer serving as a technical aide to the
+   National Defense Research Committee of the Office of Scientific
+   Research & Development, Technical Aids, Div. 14, NTRC (predecessor
+   agency to the CIA's Office of Scientific Intelligence). Trump was also
+   a professor at M.I.T., and had his feelings hurt by Tesla's 1938 review
+   and critique of M.I.T.'s huge Van de Graaff generator with its two
+   thirty-foot towers and two 15-foot-diameter (4.6 m) balls, mounted on
+   railroad tracks—which Tesla showed could be out-performed in both
+   voltage and current by one of his tiny coils about two feet
+   tall.^[516][106] Trump was asked to participate in the examination of
+   Tesla's papers at the Manhattan Warehouse & Storage Co. Trump reported
+   afterwards that no examination had been made of the vast amount of
+   Tesla's property, that had been in the basement of the New Yorker
+   Hotel, ten years prior to Tesla's death, or of any of his papers,
+   except those in his immediate possession at the time of his death.
+   Trump concluded in his report, that there was nothing that would
+   constitute a hazard in unfriendly hands.
+
+   At the time of his death, Tesla had been working on the [517]Teleforce
+   weapon, or 'death ray,' that he had unsuccessfully marketed to the US
+   War Department. It appears that Teleforce was related to his research
+   into [518]ball lightning and [519]plasma, and was conceived as a
+   [520]particle beam weapon. The US government did not find a prototype
+   of the device in the safe.
+
+   After the FBI was contacted by the War Department, his papers were
+   declared to be [521]top secret. The personal effects were sequestered
+   on the advice of presidential advisers; [522]J. Edgar Hoover declared
+   the case most secret, because of the nature of Tesla's inventions and
+   patents.^[523][107] One document stated that "[he] is reported to have
+   some 80 trunks in different places containing transcripts and plans
+   having to do with his experiments [...]". Altogether, in Tesla's
+   effects, there were the contents of his safe, two truckloads of papers
+   and apparati from his hotel, another 75 packing crates and trunks in a
+   storage facility, and another 80 large storage trunks in another
+   storage facility. The Navy and several "federal officials" spent two
+   days microfilming some of the stuff at the Office of Alien Properties
+   storage facility in 1943, and that was it, until Oct., 1945.^[524][108]
+
+   Tesla's family and the Yugoslav embassy struggled with the American
+   authorities to gain these items after his death because of the
+   potential significance of some of his research. Eventually Mr.
+   Kosanović won possession of the materials, which are now housed in the
+   [525]Nikola Tesla Museum.^[526][109]
+
+Legacy and honors
+
+   See also: [527]Nikola Tesla in popular culture
+   Nikola Tesla on contemporary 100 [528]Serbian dinar bill.
+     * The [529]tesla (symbol T) - compound derived SI unit of
+       [530]magnetic flux density.^[531][110]
+     * [532]Tesla - a crater on the far side of the moon of 26 kilometers
+       in diameter at -2,0° width, -132.0° height.^[533][111]
+     * [534]2244 Tesla - a minor planet.^[535][111]
+     * [536]TPP Nikola Tesla - the largest power plant in Serbia.
+     * The rock band [537]Tesla takes its name from Nikola
+       Tesla.^[538][112]
+     * An [539]electric car company, [540]Tesla Motors, named their
+       company in tribute to Tesla.^[541][113]
+     * The [542]Belgrade Nikola Tesla Airport is named in his
+       honor.^[543][114]
+     * [544]Google honoured Tesla on his birthday on 10 July 2009 by
+       displaying a [545]doodle in the Google search home page, that
+       showed the G as a [546]tesla coil.^[547][115]^[548][116]
+
+Monuments
+
+   A monument to Tesla was established at [549]Niagara Falls, New York.
+   This monument, portraying Tesla reading a set of notes, is a copy of a
+   monument standing in front of the [550]University of Belgrade Faculty
+   of Electrical Engineering. Another monument to Tesla, featuring him
+   standing on a portion of an alternator, was established at [551]Queen
+   Victoria Park in Niagara Falls, [552]Ontario, Canada. The monument was
+   officially unveiled on 9 July 2006 on the 150th anniversary of Tesla's
+   birth. The monument was sponsored by St. George Serbian Church,
+   [553]Niagara Falls, and designed by Les Drysdale of [554]Hamilton,
+   Ontario. Drysdale's design was the winning design from an international
+   competition.
+
+   In 1994, acting on the advice of the President's Advisory Council on
+   Historic Preservation, a formal nomination process was initiated by the
+   [555]Tesla Wardenclyffe Project seeking placement of the Wardenclyffe
+   laboratory-office building and the Tesla tower foundation on both the
+   New York State and National Registers of Historic Places. This would
+   result in the creation of a monument to Tesla out of the Wardenclyffe
+   site itself.^[556][117]
+
+Portrayals in popular culture
+
+   Main article: [557]Nikola Tesla in popular culture
+
+   Nikola Tesla has appeared in popular culture as a character in books,
+   films, radio, TV, music, live theatre, comics and video games. The lack
+   of recognition received by Tesla during his own lifetime has made him a
+   tragic and inspirational character well suited to dramatic fiction. The
+   impact of the technologies invented by Tesla is a recurring theme in
+   several types of science fiction. His work also featured in
+   [558]Bethesda Softworks game [559]Fallout 3.
+
+See also
+
+   [560]Nuvola apps ksim.png [561]Electronics portal
+     * [562]List of Tesla patents
+     * [563]Electrical Experimenter
+     * [564]Timeline of low-temperature technology
+
+References
+
+Notes
+
+    1. [565]^ [566]"Electrical pioneer Tesla honoured". BBC News.
+       2006-07-10. [567]http://news.bbc.co.uk/2/hi/europe/5167054.stm.
+       Retrieved 2009-08-15.
+    2. [568]^ [569]"Nikola Tesla - electrical engineer and inventor".
+       [570]Serbian Unity Congress. Archived from [571]the original on
+       2008-02-19.
+       [572]http://web.archive.org/web/20080219051318/http://www.serbianun
+       ity.net/people/tesla/index.html. Retrieved 2009-08-15.
+    3. [573]^ Valone, Thomas (2002). [574]Harnessing the Wheelwork of
+       Nature: Tesla's Science of Energy. [575]Adventures Unlimited Press.
+       p. 102. [576]ISBN [577]1931882045.
+       [578]http://books.google.com/books?id=ZNqo1zaZRTYC&printsec=frontco
+       ver&dq=Harnessing+the+Wheelwork+of+Nature:+Tesla%27s+Science+of+Ene
+       rgy&hl=en&ei=sHLpTKP9C8O78gb_4tHUDQ&sa=X&oi=book_result&ct=result&r
+       esnum=1&ved=0CDIQ6AEwAA#v=onepage&q&f=false. Retrieved 21 November
+       2010.
+    4. [579]^ Robert Lomas (1999-08-21). [580]"Spark of genius".
+       Independent Magazine.
+       [581]http://www.robertlomas.com/Tesla/Independent_Article.html.
+       Retrieved 2008-07-29.
+    5. [582]^ Bennett, Scott (2007). [583]Encyclopedia of Energy.
+       [584]ISBN [585]818994052X.
+       [586]http://books.google.com/books?id=DZXhE38wOKoC&pg=PT59&dq=tesla
+       +death+hotel+room+alone&hl=en&ei=BovtTJn2IYep8AawlIjVAQ&sa=X&oi=boo
+       k_result&ct=result&resnum=7&ved=0CEsQ6AEwBg#v=onepage&q=tesla%20dea
+       th%20hotel%20room%20alone&f=false. Retrieved 24 November 2010.
+    6. [587]^ [588]"Tesla, Nikola". Encyclopedia Britannica.
+       neuronet.pitt.edu.
+       [589]http://www.neuronet.pitt.edu/~bogdan/tesla/bio.htm. Retrieved
+       1 January 2011.
+    7. [590]^ Obrad Mićov Samardžić, "Porijeklo Samardžića i ostalih
+       bratstava roda Orlovića", Mostar 1992.[591]ISBN 86-82271-53-2.
+    8. ^ [592]^a [593]^b [594]Seifer 2001, p. 7
+    9. [595]^ [596]Cheney, Uth & Glenn 1999, p. 3
+   10. [597]^ [598]O'Neill 2007, p. 32
+   11. [599]^ [600]O'Neill 2007, p. 33
+   12. [601]^ Wysock, W.C.; J.F. Corum, J.M. Hardesty and K.L. Corum (22
+       October 2001). [602]"Who Was The Real Dr. Nikola Tesla? (A Look At
+       His Professional Credentials)" (PDF). Antenna Measurement
+       Techniques Association, posterpape.
+       [603]http://www.teresonic.com/pdf/Who%20was%20the%20real%20Tesla.pd
+       f.
+   13. [604]^ "[605]The Book of New York: Forty Years' Recollections of
+       the American Metropolis" says he [606]matriculated 4 degrees
+       (physics, mathematics, mechanical engineering and electrical
+       engineering)
+   14. [607]^ Lossing, Benson John (1906). [608]Harper's Encyclopædia of
+       United States History from 458 A.D. to 1906. 8. [609]University of
+       Michigan Library. p. 52.
+       [610]http://books.google.com/books?id=0nwiAAAAMAAJ&printsec=frontco
+       ver&dq=Harper%27s+Encyclop%C3%A6dia+of+United+States+History+from+4
+       58+A.D.+to+1906&hl=en&ei=lSjpTJeZDIP88Abn0fHUCQ&sa=X&oi=book_result
+       &ct=result&resnum=1&ved=0CCkQ6AEwAA#v=onepage&q&f=false. Retrieved
+       21 November 2010.
+   15. [611]^ [612]Nikola Tesla: the European Years, D. Mrkich
+   16. [613]^ Wohinz, Josef W. (16 May 2006). [614]"Nikola Tesla und Graz"
+       (in German). Technischen Universität Graz.
+       [615]http://www.presse.tugraz.at//pressemitteilungen/2006/16.05.200
+       6_graz.htm. Retrieved 2006-01-29.
+   17. [616]^ Wohinz, Josef W. (Ed,) (2006). Nikola Tesla und die Technik
+       in Graz. Graz, Austria: Verlag der Technischen Universität Graz.
+       pp.  16. [617]ISBN [618]3902465395.
+   18. [619]^ Kulishich, Kosta (27 August 1931). "Tesla Nearly Missed His
+       Career as Inventor: College Roommate Tells". Newark News. . Cited
+       in Seifer, Marc, The Life and Times of Nikola Tesla, 1996
+   19. [620]^ [621]Seifer 2001, p. 18
+   20. ^ [622]^a [623]^b [624]^c [625]^d [626]Cheney 2001, p. 33
+   21. [627]^ Wilson, James Grant; John Fiske. [628]Appleton's cyclopædia
+       of American biography. p. 261.
+       [629]http://books.google.com/books?id=f6oLAAAAIAAJ&pg=PA261&dq=Appl
+       eton%27s+Cyclop%C3%A6dia+of+American+Biography+tesla&hl=en&ei=YC3pT
+       OrQC8P88AaB-4m5CQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CC4Q6
+       AEwAA#v=onepage&q&f=false. Retrieved 21 November 2010.
+   22. [630]^ Klein, Maury (26 May 2009). [631]The Power Makers: Steam,
+       Electricity, and the Men Who Invented Modern America. Bloomsbury
+       Press. [632]ISBN [633]159691677X.
+       [634]http://books.google.com/books?id=w0o5Ld53wAEC&lpg=PT180&dq=Did
+       %20Tesla%20really%20invent%20the%20loudspeaker%3F&pg=PT180#v=onepag
+       e&q&f=false. Retrieved 14 November 2010.
+   23. [635]^ [636]Seifer 2001, p. 94
+   24. [637]^ [638]"Coming to America". [639]Public Broadcasting Service.
+       [640]http://www.pbs.org/tesla/ll/ll_america.html. Retrieved 14
+       November 2010.
+   25. [641]^ Carey, Charles W. (2002). [642]American inventors,
+       entrepreneurs & business visionaries. Infobase Publishing. p. 337.
+       [643]ISBN [644]0816045593.
+       [645]http://books.google.com/books?id=XKiGgl36bkgC&source=gbs_navli
+       nks_s. Retrieved 27 November 2010.
+   26. [646]^ [647]"Adjusting the reported given amount of money for
+       inflation, the US$50,000 in 1885 would equal US$1,140,112.60 in
+       2007". Westegg.com. [648]http://www.westegg.com/inflation/.
+       Retrieved 2010-08-01.
+   27. [649]^ [650]Cheney 2001, pp. 54 – 57
+   28. [651]^ Pickover, Clifford A. (1999). [652]Strange brains and
+       genius: the secret lives of eccentric scientists and madmen. Harper
+       Perennial. p. 14. [653]ISBN [654]0688168949.
+       [655]http://books.google.com/books?id=P0CSxB2aHMcC&printsec=frontco
+       ver&dq=Strange+Brains+and+Genius:+The+Secret+Lives+of+Eccentric+Sci
+       entists+and+Madmen&hl=en&ei=8mbkTK6RNYG78gaj9ZmHDg&sa=X&oi=book_res
+       ult&ct=result&resnum=1&ved=0CCUQ6AEwAA#v=onepage&q&f=false.
+       Retrieved 17 November 2010.
+   29. [656]^ [657]O'Neill 2007, p. 64
+   30. [658]^ [659]Jonnes 2004, p. 110
+   31. [660]^ [661]Tesla 2000, p. 17
+   32. ^ [662]^a [663]^b [664]^c [665]Houston, E. J. (1889). A dictionary
+       of electrical words, terms and phrases. New York: W.J. Johnston.
+       [666]Page 956.
+   33. [667]^ Routledge, R., & Pepper, J. H. (1876). Discoveries and
+       inventions of the nineteenth century. London: G. Routledge and
+       sons. [668]Page 545.
+   34. [669]^ Archie Frederick Collins, Wireless Telegraphy: Its History,
+       Theory and Practice. McGraw publishing company, 1905. [670]Page 131
+   35. [671]^ Tesla, Nikola, "A New System of Alternating Current Motors
+       and Transformers". American Institute of Electrical Engineers, May
+       1888.
+   36. [672]^ Robert Routledge, Discoveries and Inventions of the
+       Nineteenth Century. G. Routledge and Sons, 1903. [673]Page 542.
+   37. [674]^ "[675]Tesla's invention of the electronic AND gate". 21st
+       Century Books, Breckenridge, CO. (ed., this pertains to electronic
+       logic gates in general; [676]U.S. Patent 723,188 and [677]U.S.
+       Patent 725,605)
+   38. [678]^ Institute of Electrical and Electronics Engineers, "The IEEE
+       standard dictionary of electrical and electronics terms". 6th ed.
+       New York, N.Y., Institute of Electrical and Electronics Engineers,
+       c1997. IEEE Std 100-1996. [679]ISBN 1-55937-833-6 [ed. Standards
+       Coordinating Committee 10, Terms and Definitions; Jane Radatz,
+       (chair)]
+   39. [680]^ Dugan, William James, "Hand-book of electro-therapeutics".
+       F.A.Davis Company, 1910. Page 123. "[...] speak of "Tesla currents"
+       when we really mean the high frequency currents."
+   40. [681]^ Snow, William Benham, "Currents of high potential of high
+       and other frequencies". Scientific authors' publishing Co., 1918.
+       Page 121.
+   41. [682]^ Norrie, H. S., "Induction Coils: How to make, use, and
+       repair them".Norman H. Schneider, 1907, New York. 4th edition.
+   42. [683]^ Electrical experimenter, January 1919. Page 615
+   43. [684]^ The Electrical engineer. (1884). London: Biggs & Co.
+       [685]Page 19
+   44. [686]^ Bengt Anders Benson, Perseption apparatus for the Blind,
+       [687]U.S. Patent 3,250,023
+   45. [688]^ [689]Houston, E. J. (1889). A dictionary of electrical
+       words, terms and phrases. New York: W.J. Johnston. [690]Page 801.
+   46. [691]^ [692]Houston, E. J. (1889). A dictionary of electrical
+       words, terms and phrases. New York: W.J. Johnston. [693]Page 878.
+   47. [694]^ N. Tesla, [695]HIGH FREQUENCY OSCILLATORS FOR
+       ELECTRO-THERAPEUTIC AND OTHER PURPOSES. [696]Proceedings of the
+       American Electro-Therapeutic Association, American
+       Electro-Therapeutic Association. Page 25.
+   48. [697]^ Griffiths, David J. Introduction to Electrodynamics,
+       [698]ISBN 0-13-805326-X and Jackson, John D. Classical
+       Electrodynamics, [699]ISBN 0-471-30932-X.
+   49. [700]^ Anonymous (1899). [701]Transactions of the American
+       Electro-therapeutic Association. p. 16.
+       [702]http://books.google.com/books?vid=0ulmMIkNisnAACpaud&id=bUo7vY
+       NkbKQC. Retrieved 25 November 2010.
+   50. [703]^ Shrady, George Frederick; Stedman, Thomas Lathrop (1897).
+       [704]Medical record. p. 287.
+       [705]http://books.google.com/books?id=Jx4CAAAAYAAJ&vq=tesla&lr=&as_
+       brr=1&source=gbs_navlinks_s. Retrieved 25 November 2010.
+   51. [706]^ [707]Cheney 2001, p. 174
+   52. [708]^ Norrie, H. S., "Induction Coils: How to make, use, and
+       repair them". Norman H. Schneider, 1907, New York. 4th edition.
+   53. [709]^ Krumme, Katherine (2000) (pdf). [710]Mark Twain and Nikola
+       Tesla: Thunder and Lightning. University of California, Berkeley.
+       [711]http://www.nuc.berkeley.edu/dept/Courses/E-24/E-24Projects/Kru
+       mme1.pdf.
+   54. [712]^ [713]"THE INFLUENCE OF VEDIC PHILOSOPHY ON NIKOLA TESLA'S
+       UNDERSTANDING OF FREE ENERGY".
+       [714]http://arizonaenergy.org/CommunityEnergy/INFLUENCE%20OF%20VEDI
+       C%20ON%20TESLA%27S%20UNDERSTANDING%20OF%20FREE%20ENERGY.htm.
+       Retrieved 27 November 2010.
+   55. [715]^ Tesla, Nikola (1892). [716]Experiments with alternate
+       currents of high potential and high frequency. p. 58.
+       [717]http://books.google.com/books?id=kNhCQPbYIsgC&printsec=frontco
+       ver#v=onepage&q&f=false. Retrieved 26 November 2010.
+   56. [718]^ Barrett, John Patrick (1894). [719]Electricity at the
+       Columbian Exposition; Including an Account of the Exhibits in the
+       Electricity Building, the Power Plant in Machinery Hall. pp. 268 –
+       269.
+       [720]http://books.google.com/books?id=CLtIAAAAMAAJ&printsec=frontco
+       ver&source=gbs_atb#v=onepage&q&f=false. Retrieved 29 November
+       2010.
+   57. [721]^ Nikola Tesla, Startling Prediction of the World's Greatest
+       Living Scientist (Article, the North American, 18 May 1902).
+   58. [722]^ Pages 284-285, William R. Lyne, Pentagon Aliens, 1993.
+   59. [723]^ [724]A Survey of Laser Lightning Rod Techniques. Barnes,
+       Arnold A., Jr.; Berthel, Robert O.
+   60. [725]^ Waser, André, "Nikola Tesla’s Radiations and the Cosmic
+       Rays".
+   61. [726]^ Tesla, Nikola, "[727]My Inventions", Electrical Experimenter
+       magazine, Feb, June, and Oct, 1919. ISBN ([728]also "[729]The
+       Strange Life of Nikola Tesla" at rastko.org)
+   62. [730]^ [731]Jonnes 2004, p. 355
+   63. [732]^ According to the Tesla memorial marker in Memorial park on
+       Pikes Peak Ave.
+   64. [733]^ Tesla, Nikola, "The True Wireless". Electrical Experimenter,
+       May 1919. ([734]also at pbs.org)
+   65. [735]^ Gillispie, Charles Coulston, "Dictionary of Scientific
+       Biography"; Tesla, Nikola. Charles Scribner's Sons, New York. ISBN
+   66. [736]^ Corum, K. L., J. F. Corum, and A. H. Aidinejad, "Atmospheric
+       Fields, Tesla's Receivers and Regenerative Detectors". 1994.
+   67. [737]^ Corum, K. L., J. F. Corum, "Nikola Tesla, Lightning
+       Observations, and Stationary Waves". 1994.
+   68. [738]^ Tesla, Nikola, "[739]Talking with Planets". Collier's
+       Weekly, 19 February 1901. (EarlyRadioHistory.us)
+   69. [740]^ Spencer, John (1991). The UFO Encyclopedia. New York:
+       [741]Avon Books. [742]ISBN [743]978-0-38-076887-5.
+   70. [744]^ Corum, Kenneth L.; James F. Corum (1996). Nikola Tesla and
+       the electrical signals of planetary origin. p. 14.
+       [745]OCLC [746]68193760.
+   71. [747]^ Broad, William J. (4 May 2009). [748]"A Battle to Preserve a
+       Visionary’s Bold Failure". [749]New York Times.
+       [750]http://www.nytimes.com/2009/05/05/science/05tesla.html?hp.
+       Retrieved 2009-05-05. "He eventually sold Wardenclyffe to satisfy
+       $20,000 (today about $400,000) in bills at the Waldorf. In 1917,
+       the new owners had the giant tower blown up and sold for scrap."
+   72. [751]^ Research, Health. [752]Nikola Tesla Research. p. 9.
+       [753]ISBN [754]0787304042.
+       [755]http://books.google.com/books?id=N0gD7HxMfsUC&printsec=frontco
+       ver&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false. Retrieved 28
+       November 2010.
+   73. [756]^ [757]Seifer 2001, pp. 378 – 380
+   74. [758]^ Page, R.M., "The Early History of RADAR", [759]Proceedings
+       of the IRE, Volume 50, Number 5, May 1962, (special 50th
+       Anniversary Issue).
+   75. [760]^ [761]Prepared Statement by Nikola Tesla downloadable from
+       www.tesla.hu
+   76. [762]^ New York Times, 11 July 1935, p 23, c.8
+   77. [763]^ [764]New York Herald Tribune, 11 September 1932
+   78. [765]^ 1936 unpublished interview, quoted in Anderson, L, ed.
+       Nikola Tesla: Lecture Before the New York Academy of Sciences. 6
+       April 1897 : The Streams of Lenard and Roentgen and Novel Apparatus
+       for Their Production, reconstructed 1994
+   79. [766]^ "Tesla's Ray". Time. 23 July 1934.
+   80. [767]^ [768]"Tesla, at 78, Bares New 'Death-Beam'". New York Times.
+       11 July 1934.
+       [769]http://select.nytimes.com/gst/abstract.html?res=FB0817FD3E5B10
+       7A93C3A8178CD85F408385F9.
+   81. [770]^ "Tesla Invents Peace Ray". New York Sun. 10 July 1934.
+   82. [771]^ "Death-Ray Machine Described". New York Sun. 11 July 1934.
+   83. [772]^ "A Machine to End War". Feb. 1935.
+   84. ^ [773]^a [774]^b [775]Seifer 2001, p. 454
+   85. [776]^ "Beam to Kill Army at 200 Miles, Tesla's Claim on 78th
+       Birthday". New York Times. 11 July 1934.
+   86. [777]^ "'Death Ray' for Planes". New York Times. 22 September
+       1940.
+   87. [778]^ "Aerial Defense 'Death-Beam' Offered to U. S. By Tesla" 12
+       July 1940
+   88. [779]^ O'Neill, John J.. "Tesla Tries To Prevent World War II
+       (unpublished Chapter 34 of Prodigal Genius)". PBS.
+   89. [780]^ Velox, [781]Particle beam weapon. everything2.com
+   90. [782]^ Tesla, Nikola (1993). [783]The fantastic inventions of
+       Nikola Tesla. Adventures Unlimited Press. p. 256.
+       [784]ISBN [785]0932813194.
+       [786]http://books.google.com/books?id=fXB0fm-QqLMC. Retrieved 29
+       November 2010.
+   91. [787]^ The Lost Journals of Nikola Tesla. by Tim Swartz. Inner
+       Light – Global Communications (15 October 2000). Also see
+       [788]bibliotecapleyades.net
+   92. [789]^ [790]O'Neill 2007, p. 282
+   93. [791]^ Mast, Amy (PDF). [792]America’s forgotten innovator, Nikola
+       Tesla. Florida State University. pp. 14 – 15.
+       [793]http://www.magnet.fsu.edu/mediacenter/publications/flux/vol1is
+       sue1/documents/magnetmilestones.pdf.
+   94. [794]^ [795]Cheney 2001, p. 110
+   95. [796]^ [797]Thomas Edison: Life of an Electrifying Man. Biographiq.
+       2008. p. 23. [798]ISBN [799]1599862166.
+       [800]http://books.google.com/books?id=LHHPo0vsdgMC&printsec=frontco
+       ver#v=onepage&q&f=false. Retrieved 25 November 2010.
+   96. [801]^ [802]Cheney, Uth & Glenn 1999, p. 19
+   97. [803]^ [804]O'Neill 2007, p. 238
+   98. [805]^ "[806]Giant Eye to See Round the World" Albany Telegram, 25
+       February 1923 (doc).
+   99. [807]^ [808]"A Machine to End War". Public Broadcasting Service.
+       February 1937. [809]http://www.pbs.org/tesla/res/res_art11.html.
+       Retrieved 23 November 2010.
+   100. [810]^ Kennedy, John B., "[811]When woman is boss, An interview
+       with Nikola Tesla". [812]Colliers, 30 January 1926.
+   101. [813]^ [814]The century illustrated monthly magazine, Volume 60.
+       1900. p. 180.
+       [815]http://books.google.com/books?id=314iAQAAIAAJ&pg=PA178&dq=The+
+       Problem+of+Increasing+Human+Energy&hl=en&ei=K4rpTIyUFcKt8Ab00ISNDQ&
+       sa=X&oi=book_result&ct=result&resnum=3&ved=0CDQQ6AEwAg#v=onepage&q=
+       The%20Problem%20of%20Increasing%20Human%20Energy&f=false. Retrieved
+       21 November 2010.
+   102. [816]^ Munson, Richard (2008). [817]From Edison to Enron: The
+       Business of Power and What It Means for the Future of Electricity.
+       Praeger. p. 37. [818]ISBN [819]027598740X.
+       [820]http://books.google.com/books?id=MNCea_BbzQcC&printsec=frontco
+       ver#v=onepage&q&f=false. Retrieved 24 November 2010.
+   103. [821]^ [822]"Nikola Tesla Dies. Prolific Inventor. Alternating
+       Power Current's Developer Found Dead in Hotel Suite Here. Claimed a
+       'Death Beam'. He Insisted the Invention Could Annihilate an Army of
+       1,000,000 at Once.". New York Times. 8 January 1943, Friday.
+       [823]http://select.nytimes.com/gst/abstract.html?res=F10D13F93D5914
+       7B93CAA9178AD85F478485F9. Retrieved 2007-07-21.
+   104. [824]^ [825]U.S. Patent 645,576
+   105. [826]^ [827]Cheney, Uth & Glenn 1999, p. 158
+   106. [828]^ Page 278, William R. Lyne, Pentagon Aliens, 1993
+   107. [829]^ Hoover, John Edgar, et al.
+   108. [830]^ Pages 278-279, William R. Lyne, Pentagon Aliens, 1993
+   109. [831]^ [832]"Nikola Tesla Museum". Tesla-museum.org.
+       [833]http://www.tesla-museum.org/. Retrieved 2010-08-01.
+   110. [834]^ [835]Seifer 2001, p. 464
+   111. ^ [836]^a [837]^b Schmadel, Lutz D. (2003). [838]Dictionary of
+       minor planet names. Springer. p. 183. [839]ISBN [840]3540002383.
+       [841]http://books.google.com/books?id=KWrB1jPCa8AC&source=gbs_navli
+       nks_s. Retrieved 28 November 2010.
+   112. [842]^ [843]Seifer 2001, p. 468
+   113. [844]^ [845]"Why the Name "Tesla"?". Tesla Motors. Archived from
+       [846]the original on October 16, 2007.
+       [847]http://web.archive.org/web/20071016044752/http://www.teslamoto
+       rs.com/learn_more/why_tesla.php. Retrieved 2008-06-10.
+   114. [848]^ [849]"Belgrade Nikola Tesla Airport". airport-desk.com.
+       [850]http://www.airport-desk.com/airports/europe/serbia/belgrade-ni
+       kola-tesla-airport.html. Retrieved 29 November 2010.
+   115. [851]^ [852]"Google Doodles: 2009 July - September". Google.
+       [853]http://www.google.com/logos/logos09-3.html. Retrieved
+       2011-01-09.
+   116. [854]^ Wardrop, Murray (10 July 2009). [855]"Nikola Tesla: Google
+       commemorates birthday of pioneering electrical engineer". [856]The
+       Telegraph.
+       [857]http://www.telegraph.co.uk/technology/google/5793540/Nikola-Te
+       sla-Google-commemorates-birthday-of-pioneering-electrical-engineer.
+       html. Retrieved 28 November 2010.
+   117. [858]^ [859]"A MUSEUM AT WARDENCLYFFE The Creation of a Monument
+       to Nikola TeslaT". Tesla Wardenclyffe Project, Inc..
+       [860]http://www.tfcbooks.com/articles/monument.htm. Retrieved
+       2010-09-23.
+
+Sources
+
+     * Seifer, Marc J (2001). [861]Wizard: the life and times of Nikola
+       Tesla : biography of a genius. Citadel. pp. 542.
+       [862]ISBN [863]0806519606.
+       [864]http://books.google.com/books?id=h2DTNDFcC14C&source=gbs_navli
+       nks_s. Retrieved 14 November 2010.
+     * O'Neill, John J (2007). [865]Prodigal Genius: The Life of Nikola
+       Tesla. Book Tree. pp. 336. [866]ISBN [867]1602067430.
+       [868]http://books.google.com/books?id=-cHJQL8qCEMC&printsec=frontco
+       ver&dq=Prodigal+Genius:+The+Life+of+Nikola+Tesla&hl=en&src=bmrr&ei=
+       1LPuTJTZHY-t8AbO46HKDA&sa=X&oi=book_result&ct=result&resnum=1&ved=0
+       CCYQ6AEwAA#v=onepage&q&f=false. Retrieved 14 November 2010.
+     * Cheney, Margaret (2001) [1979]. [869]Tesla: Man Out of Time.
+       [870]Simon and Schuster. [871]ISBN [872]0743215362.
+       [873]http://books.google.com/?id=ti2Jt7XarzMC. Retrieved
+       2007-06-17.
+     * Cheney, Margaret; Uth, Robert; Glenn, Jim (1999). [874]Tesla,
+       Master of Lightning. Barnes & Noble Books. pp. 184.
+       [875]ISBN [876]0760710058.
+       [877]http://books.google.com/books?id=3W6_h6XG6VAC&printsec=frontco
+       ver&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false. Retrieved 22
+       November 2010.
+     * Tesla, Nikola (2000). Childress, David Hatcher. ed. [878]The Tesla
+       Papers: Nikola Tesla on Free Energy & Wireless Transmission of
+       Power. Adventures Unlimited Press. pp. 316.
+       [879]ISBN [880]0932813860.
+       [881]http://books.google.com/books?id=rwekkS3oD0EC&printsec=frontco
+       ver&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false. Retrieved 24
+       November 2010.
+     * Jonnes, Jill (2004). [882]Empires of Light: Edison, Tesla,
+       Westinghouse, and the Race to Electrify the World. Random House
+       Trade Paperbacks. pp. 464. [883]ISBN [884]0375758844.
+       [885]http://books.google.com/books?id=BKX5UYWzVyQC&printsec=frontco
+       ver&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false. Retrieved 25
+       November 2010.
+     * Lomas, Robert, [886]The Man who Invented the Twentieth Century.
+       Lecture to South Western Branch of Instititute of Physics.
+     * [887]Martin, Thomas Commerford, The Inventions, Researches, and
+       Writings of Nikola Tesla, New York: The Electrical Engineer, 1894
+       (3rd Ed.); reprinted by Barnes & Noble, 1995 ISBN-X
+     * Penner, John R.H. [888]The Strange Life of Nikola Tesla, corrupted
+       version of "[889]My Inventions".
+     * Pratt, H., Nikola Tesla 1856–1943, Proceedings of the IRE, Vol. 44,
+       September, 1956.
+     * Weisstein, Eric W., [890]Tesla, Nikola (1856–1943). Eric
+       Weisstein's World of Science.
+     * Dimitrijevic, Milan S., Belgrade Astronomical Observatory
+       Historical Review. Publ. Astron. Obs. Belgrade,), 162–170. Also,
+       Srpski asteroidi, [891]Tesla. Astronomski magazine.
+     * Roguin, Ariel, Historical Note: Nikola Tesla: The man behind the
+       magnetic field unit. J. Magn. Reson. Imaging 2004;19:369–374. ©
+       2004 Wiley-Liss, Inc.
+     * Sellon, J. L., The impact of Nikola Tesla on the cement industry.
+       Behrent Eng. Co., Wheat Ridge, CO. Cement Industry Technical
+       Conference. 1997. XXXIX Conference Record., 1997 IEEE/PC. Page(s)
+       125–133. ISBN
+     * Valentinuzzi, M.E., Nikola Tesla: why was he so much resisted and
+       forgotten? Inst. de Bioingenieria, Univ. Nacional de Tucuman;
+       Engineering in Medicine and Biology Magazine, IEEE. July/August
+       1998, 17:4, pp. 74–75. ISSN
+     * Secor, H. Winfield, Tesla's views on Electricity and the War,
+       Electrical Experimenter, Volume 5, Number 4, August, 1917.
+     * Florey, Glen, Tesla and the Military. Engineering 24, 5 December
+       2000.
+     * Corum, K. L., J. F. Corum, Nikola Tesla, Lightning Observations,
+       and Stationary Waves. 1994.
+     * Corum, K. L., J. F. Corum, and A. H. Aidinejad, Atmospheric Fields,
+       Tesla's Receivers and Regenerative Detectors. 1994.
+     * Meyl, Konstantin, H. Weidner, E. Zentgraf, T. Senkel, T. Junker,
+       and P. Winkels, Experiments to proof the evidence of scalar waves
+       Tests with a Tesla reproduction. Institut für Gravitationsforschung
+       (IGF), Am Heerbach 5, D-63857 Waldaschaff.
+     * Anderson, L. I., John Stone Stone on Nikola Tesla’s Priority in
+       Radio and Continuous Wave Radiofrequency Apparatus. The Antique
+       Wireless Association Review, Vol. 1, 1986, pp. 18–41.
+     * Anderson, L. I., Priority in Invention of Radio, Tesla v. Marconi.
+       Antique Wireless Association monograph, March 1980.
+     * Marincic, A., and D. Budimir, Tesla's contribution to radiowave
+       propagation. Dept. of Electron. Eng., Belgrade Univ. (5th
+       International Conference on Telecommunications in Modern Satellite,
+       Cable and Broadcasting Service, 2001. TELSIKS 2001. pp. 327–331
+       vol.1) ISBN-X
+     * Page, R.M., The Early History of Radar, Proceedings of the IRE,
+       Volume 50, Number 5, May, 1962, (special 50th Anniversary Issue).
+     * C Mackechnie Jarvis Nikola Tesla and the induction motor. 1970
+       Phys. Educ. 5 280–287.
+     * [892]Giant Eye to See Round the World (DOC)
+     * Toby Grotz, [893]The Influence of Vedic Philosophy on Nikola
+       Tesla's Understanding of Free Energy.
+
+Further reading
+
+Publications
+
+     * [894]A New System of Alternating Current Motors and Transformers,
+       American Institute of Electrical Engineers, May 1888.
+     * [895]Selected Tesla Writings, Scientific papers and articles
+       written by Tesla and others, spanning the years 1888–1940.
+     * [896]Light Without Heat, The Manufacturer and Builder, January
+       1892, Vol. 24
+     * Biography: [897]Nikola Tesla, The Century Magazine, November 1893,
+       Vol. 47
+     * [898]Tesla's Oscillator and Other Inventions, The Century Magazine,
+       November 1894, Vol. 49
+     * [899]The New Telegraphy. Recent Experiments in Telegraphy with
+       Sparks, The Century Magazine, November 1897, Vol. 55
+
+Books
+
+     * Tesla, Nikola, "[900]My Inventions" Parts I through V published in
+       the Electrical Experimenter monthly magazine from February through
+       June, 1919. Part VI published October, 1919. Reprint edition with
+       introductory notes by Ben Johnson, New York: Barnes and Noble,1982,
+       ISBN; also online at [901]Lucid Cafe, [902]et cetera as [903]My
+       Inventions: The Autobiography of Nikola Tesla, 1919. ISBN
+     * [904]Martin, Thomas C., [905]The Inventions, Researches, and
+       Writings of Nikola Tesla, 1894 . ISBN-X
+     * [906]Auster, Paul, [907]Moon Palace, 1989. Tells Tesla's story
+       within the history of the United States.
+     * [908]Lomas, Robert, [909]The Man Who Invented the Twentieth
+       Century: Nikola Tesla, forgotten genius of electricity, 1999. ISBN
+     * Childress, David H., [910]The Fantastic Inventions of Nikola Tesla,
+       1993. ISBN
+     * Glenn, Jim, [911]The Complete Patents of Nikola Tesla, 1994. ISBN
+     * Trinkaus, George TESLA: The Lost Inventions, High Voltage Press,
+       2002. [912]ISBN 09-7096-182-0
+     * Valone, Thomas, [913]Harnessing the Wheelwork of Nature: Tesla's
+       Science of Energy, 2002. ISBN
+     * McNichol, Tom, AC/DC The Savage Tale of the First Standards War,
+       Jossey-Bass 2006 [914]ISBN 078798267-9
+
+Journals
+
+     * Carlson, W. Bernard, "Inventor of dreams". [915]Scientific
+       American, March 2005 Vol. 292 Issue 3 p. 78(7).
+     * Jatras, Stella L., "[916]The genius of Nikola Tesla". [917]The New
+       American, 28 July 2003 Vol. 19 Issue 15 p. 9(1)
+     * Rybak, James P., "Nikola Tesla: Scientific Savant". [918]Popular
+       Electronics, 1042170X, November 1999, Vol. 16, Issue 11.
+     * Lawren, B., "Rediscovering Tesla". [919]Omni, March 1988, Vol. 10
+       Issue 6.
+
+Filmography
+
+   See also: [920]Nikola Tesla in popular culture
+     * There are at least two films describing Tesla's life. In the first,
+       filmed in 1977, arranged for TV, Tesla was portrayed by [921]Rade
+       Šerbedžija. In 1980, [922]Orson Welles produced a [923]Yugoslav
+       film named [924]Tajna Nikole Tesle (The Secret of Nikola Tesla), in
+       which Welles himself played the part of Tesla's patron, [925]J.P.
+       Morgan. The film was directed by [926]Krsto Papić, and Nikola Tesla
+       was portrayed by [927]Petar Božović.
+     * "[928]Tesla: Master of Lightning". 1999. ISBN (Book) ISBN (PBS
+       Video)
+     * [929]Lost Lightning: The Missing Secrets of Nikola Tesla (at Google
+       Video.) Tesla's designs for free energy and defensive weapons
+       systems.
+     * [930]David Bowie portrayed Tesla in the 2006 film [931]The
+       Prestige. Tesla's time in Colorado Springs was the focus of several
+       scenes in the film, which featured speculations on the explosive
+       power of Tesla's electrical experiments.
+     * [932]Tesla: Master of Lightning, produced by Robert Uth for New
+       Voyage Communications in 2003, tapped [933]Stacy Keach to supply
+       the voice of Tesla.
+
+External links
+
+   Find more about Nikola Tesla on Wikipedia's [934]sister projects:
+   [935]Definitions from Wiktionary
+   [936]Images and media from Commons
+   [937]Learning resources from Wikiversity
+   [938]News stories from Wikinews
+   [939]Quotations from Wikiquote
+   [940]Source texts from Wikisource
+   [941]Textbooks from Wikibooks
+     * [942]The Nikola Tesla Museum
+     * [943]Nikola Tesla Niagara Falls Power
+     * [944]Tesla Resource Surrounding the PBS "Master of Lightning"
+       documentary
+     * [945]World of Scientific Biography: Nikola Tesla, by Wolfram
+       Research
+     * [946]Nikola Tesla Page
+     * [947]Tesla's grand-nephew William H. Terbo's site
+     * [948]Nikola Tesla, Forgotten American Scientist
+     * [949]Tesla Wardenclyffe Project, Long Island New York. Mission is
+       the adaptive reuse of the [950]Wardenclyffe laboratory building.
+     * [951]Nikola Tesla's Father: Milutin Tesla
+     * [952]Tesla: The European Years
+     * Jim Bieberich's [953]The Complete Nikola Tesla U.S. Patent
+       Collection
+     * [954]Online archive of many of Tesla's writings, articles and
+       published papers
+     * Seifer, Marc J., and Michael Behar, [955]Electric Mind, [956]Wired
+       Magazine, October 1998.
+     * [957]Works by Nikola Tesla at [958]Project Gutenberg
+     * [959]Nikola Tesla's FBI file in pdf
+     * [960]Nikola Tesla Complete Patents in pdf
+     * [961]Kenneth M. Swezey Papers, 1891–1982, Archives Center,
+       [962]National Museum of American History, archival resources.
+     * [963]The Case Files of Nikola Tesla, [964]Franklin Institute
+
+   [965]Authority control: [966]LCCN: [967]n78086404
+
+               [968]v · [969]d · [970]e[971]IEEE Edison Medal
+
+   [972]Elihu Thomson (1909) · [973]Frank J. Sprague (1910) · [974]George
+   Westinghouse (1911) · [975]William Stanley, Jr. (1912) · [976]Charles
+   F. Brush (1913) · [977]Alexander Graham Bell (1914) · Nikola Tesla
+   (1916) · [978]John J. Carty (1917) · [979]Benjamin G. Lamme (1918) ·
+   [980]William Le Roy Emmet (1919) · [981]Mihajlo I. Pupin (1920) ·
+   [982]Cummings C. Chesney (1921) · [983]Robert A. Millikan (1922) ·
+   [984]John W. Lieb (1923) · [985]John W. Howell (1924) · [986]Harris J.
+   Ryan (1925)
+   [987]Complete roster: [988]1909–1925 · [989]1926–1950 ·
+   [990]1951–1975 · [991]1976–2000 · [992]2001–present
+
+   [993]v · [994]d · [995]e[996]Scientists whose names are used as SI
+   units
+   Base units
+   [997]André-Marie Ampère • [998]Lord Kelvin (William Thomson)
+   Derived units
+   [999]Blaise Pascal • [1000]Isaac Newton • [1001]Anders Celsius •
+   [1002]Charles-Augustin de Coulomb • [1003]James Watt • [1004]Alessandro
+   Volta • [1005]Georg Simon Ohm • [1006]Michael Faraday • [1007]Joseph
+   Henry • [1008]Wilhelm Eduard Weber • [1009]Ernst Werner von Siemens •
+   [1010]James Prescott Joule • [1011]Antoine Henri Becquerel • Nikola
+   Tesla • [1012]Heinrich Rudolf Hertz • [1013]Rolf Maximilian Sievert •
+   [1014]Louis Harold Gray
+   Non SI units
+   [1015]Scientists whose names are used as non SI units
+   Constants
+   [1016]List of scientists whose names are used in physical constants
+   [1017]Persondata
+   Name Tesla, Nikola
+   Alternative names
+   Short description [1018]Serbian–American [1019]inventor,
+   [1020]physicist, [1021]mechanical engineer and [1022]electrical
+   engineer
+   Date of birth 10 July 1856
+   Place of birth [1023]Smiljan, [1024]Austrian Empire
+   Date of death 7 January 1943
+   Place of death New York City
+
+   Retrieved from "[1025]http://en.wikipedia.org/wiki/Nikola_Tesla"
+   [1026]Categories: [1027]1856 births | [1028]1943 deaths | [1029]People
+   from Gospić | [1030]Serbs of Croatia | [1031]American inventors |
+   [1032]American physicists | [1033]Austro-Hungarian Empire immigrants to
+   the United States | [1034]Electrical engineers | [1035]Charles
+   University alumni | [1036]Fellows of the American Association for the
+   Advancement of Science | [1037]Fellows of the Institute of Electrical
+   and Electronics Engineers | [1038]IEEE Edison Medal recipients |
+   [1039]National Inventors Hall of Fame inductees | [1040]People
+   associated with electricity | [1041]People with eidetic memory |
+   [1042]Nikola Tesla | [1043]Radio pioneers | [1044]Thomas Edison |
+   [1045]Serbian inventors | [1046]Serbian physicists | [1047]Serbian
+   vegetarians | [1048]American people of Serbian descent |
+   [1049]Naturalized citizens of the United States |
+   [1050]Austro-Hungarian Serbs | [1051]People from Colorado Springs,
+   Colorado | [1052]Cardiovascular disease deaths in New York |
+   [1053]Deaths from heart failure | [1054]Wireless energy transfer |
+   [1055]People from Karlovac
+   Hidden categories: [1056]Wikipedia pages semi-protected against
+   vandalism | [1057]Wikipedia protected pages without expiry |
+   [1058]Wikipedia indefinitely move-protected pages | [1059]Articles
+   containing Serbian language text
+
+Personal tools
+
+     * [1060]Log in / create account
+
+Namespaces
+
+     * [1061]Article
+     * [1062]Discussion
+
+Variants
+
+Views
+
+     * [1063]Read
+     * [1064]View source
+     * [1065]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [1066]Main page
+     * [1067]Contents
+     * [1068]Featured content
+     * [1069]Current events
+     * [1070]Random article
+     * [1071]Donate to Wikipedia
+
+Interaction
+
+     * [1072]Help
+     * [1073]About Wikipedia
+     * [1074]Community portal
+     * [1075]Recent changes
+     * [1076]Contact Wikipedia
+
+Toolbox
+
+     * [1077]What links here
+     * [1078]Related changes
+     * [1079]Upload file
+     * [1080]Special pages
+     * [1081]Permanent link
+     * [1082]Cite this page
+
+Print/export
+
+     * [1083]Create a book
+     * [1084]Download as PDF
+     * [1085]Printable version
+
+Languages
+
+     * [1086]العربية
+     * [1087]Aragonés
+     * [1088]Azərbaycanca
+     * [1089]বাংলা
+     * [1090]Bân-lâm-gú
+     * [1091]Беларуская
+     * [1092]Беларуская (тарашкевіца)
+     * [1093]Bosanski
+     * [1094]Brezhoneg
+     * [1095]Български
+     * [1096]Català
+     * [1097]Чӑвашла
+     * [1098]Česky
+     * [1099]Cymraeg
+     * [1100]Dansk
+     * [1101]Deutsch
+     * [1102]Eesti
+     * [1103]Ελληνικά
+     * [1104]Español
+     * [1105]Esperanto
+     * [1106]Euskara
+     * [1107]فارسی
+     * [1108]Fiji Hindi
+     * [1109]Français
+     * [1110]Frysk
+     * [1111]Galego
+     * [1112]贛語
+     * [1113]한국어
+     * [1114]Հայերեն
+     * [1115]हिन्दी
+     * [1116]Hrvatski
+     * [1117]Bahasa Indonesia
+     * [1118]Íslenska
+     * [1119]Italiano
+     * [1120]עברית
+     * [1121]ಕನ್ನಡ
+     * [1122]Kapampangan
+     * [1123]ქართული
+     * [1124]Қазақша
+     * [1125]Kiswahili
+     * [1126]Kreyòl ayisyen
+     * [1127]Kurdî
+     * [1128]Latina
+     * [1129]Latviešu
+     * [1130]Lietuvių
+     * [1131]Líguru
+     * [1132]Magyar
+     * [1133]Македонски
+     * [1134]മലയാളം
+     * [1135]मराठी
+     * [1136]مصرى
+     * [1137]Bahasa Melayu
+     * [1138]Монгол
+     * [1139]မြန်မာဘာသာ
+     * [1140]Nederlands
+     * [1141]日本語
+     * [1142]‪Norsk (bokmål)‬
+     * [1143]‪Norsk (nynorsk)‬
+     * [1144]پنجابی
+     * [1145]Polski
+     * [1146]Português
+     * [1147]Qaraqalpaqsha
+     * [1148]Română
+     * [1149]Runa Simi
+     * [1150]Русский
+     * [1151]Саха тыла
+     * [1152]संस्कृत
+     * [1153]Scots
+     * [1154]Shqip
+     * [1155]Sicilianu
+     * [1156]Simple English
+     * [1157]Slovenčina
+     * [1158]Slovenščina
+     * [1159]Српски / Srpski
+     * [1160]Srpskohrvatski / Српскохрватски
+     * [1161]Suomi
+     * [1162]Svenska
+     * [1163]Tagalog
+     * [1164]தமிழ்
+     * [1165]తెలుగు
+     * [1166]ไทย
+     * [1167]Тоҷикӣ
+     * [1168]Türkçe
+     * [1169]Українська
+     * [1170]Tiếng Việt
+     * [1171]Volapük
+     * [1172]Winaray
+     * [1173]Yorùbá
+     * [1174]Žemaitėška
+     * [1175]中文
+
+     * This page was last modified on 21 January 2011 at 23:16.
+     * Text is available under the [1176]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [1177]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [1178]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [1179]Contact us
+
+     * [1180]Privacy policy
+     * [1181]About Wikipedia
+     * [1182]Disclaimers
+
+     * [1183]Powered by MediaWiki
+     * [1184]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/opensearch_desc.php
+   2. http://creativecommons.org/licenses/by-sa/3.0/
+   3. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   4. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#mw-head
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#p-search
+   6. file://localhost/wiki/Wikipedia:Protection_policy#semi
+   7. file://localhost/wiki/Smiljan
+   8. file://localhost/wiki/Austrian_Empire
+   9. file://localhost/wiki/Austria-Hungary
+  10. file://localhost/wiki/France
+  11. file://localhost/wiki/United_States_of_America
+  12. file://localhost/wiki/Austro-Hungarian
+  13. file://localhost/wiki/Citizenship_in_the_United_States
+  14. file://localhost/wiki/Yugoslav_American
+  15. file://localhost/wiki/Mechanical_engineering
+  16. file://localhost/wiki/Electrical_engineering
+  17. file://localhost/wiki/Thomas_Edison
+  18. file://localhost/wiki/Tesla_Electric_Light_%26_Manufacturing
+  19. file://localhost/wiki/Westinghouse_Electric_(1886)
+  20. file://localhost/wiki/Tesla_coil
+  21. file://localhost/wiki/Tesla_turbine
+  22. file://localhost/wiki/Teleforce
+  23. file://localhost/wiki/Tesla%27s_oscillator
+  24. file://localhost/wiki/Tesla_electric_car
+  25. file://localhost/wiki/Tesla_principle
+  26. file://localhost/wiki/Tesla%27s_Egg_of_Columbus
+  27. file://localhost/wiki/Alternating_current
+  28. file://localhost/wiki/Induction_motor
+  29. file://localhost/wiki/Rotating_magnetic_field
+  30. file://localhost/wiki/Wireless_technology
+  31. file://localhost/wiki/Particle_beam_weapon
+  32. file://localhost/wiki/Death_ray
+  33. file://localhost/wiki/Terrestrial_stationary_waves
+  34. file://localhost/wiki/Bifilar_coil
+  35. file://localhost/wiki/Telegeodynamics
+  36. file://localhost/wiki/Electrogravitics
+  37. file://localhost/wiki/Ernst_Mach
+  38. file://localhost/wiki/Gano_Dunn
+  39. file://localhost/wiki/Edison_Medal
+  40. file://localhost/wiki/Elliott_Cresson_Medal
+  41. file://localhost/wiki/John_Scott_Medal
+  42. file://localhost/wiki/Austrian_Empire
+  43. file://localhost/wiki/Austria-Hungary
+  44. file://localhost/wiki/Serbian_language
+  45. file://localhost/wiki/Inventor
+  46. file://localhost/wiki/Mechanical_engineering
+  47. file://localhost/wiki/Electrical_engineer
+  48. file://localhost/wiki/Electricity
+  49. file://localhost/wiki/Electromagnetism
+  50. file://localhost/wiki/List_of_Tesla_patents
+  51. file://localhost/wiki/Alternating_current
+  52. file://localhost/wiki/Electric_power
+  53. file://localhost/wiki/Polyphase_system
+  54. file://localhost/wiki/AC_motor
+  55. file://localhost/wiki/Second_Industrial_Revolution
+  56. file://localhost/wiki/Serbs
+  57. file://localhost/wiki/Smiljan
+  58. file://localhost/wiki/Gospi%C4%87
+  59. file://localhost/wiki/Austrian_Empire
+  60. file://localhost/wiki/Croatia
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-0
+  62. file://localhost/wiki/Radio
+  63. file://localhost/wiki/War_of_Currents
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-1
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-2
+  66. file://localhost/wiki/Wireless_energy_transfer
+  67. file://localhost/wiki/Wardenclyffe_Tower
+  68. file://localhost/wiki/Mad_scientist
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-3
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-4
+  71. file://localhost/wiki/International_System_of_Units
+  72. file://localhost/wiki/Magnetic_field
+  73. file://localhost/wiki/Tesla_(unit)
+  74. file://localhost/wiki/Electromechanical
+  75. file://localhost/wiki/Engineering
+  76. file://localhost/wiki/Robotics
+  77. file://localhost/wiki/Remote_control
+  78. file://localhost/wiki/Radar
+  79. file://localhost/wiki/Computer_science
+  80. file://localhost/wiki/Ballistics
+  81. file://localhost/wiki/Nuclear_physics
+  82. file://localhost/wiki/Theoretical_physics
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Early_years
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#France_and_the_United_States
+  85. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Middle_years
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#American_citizenship
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Edison
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Colorado_Springs
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Wardenclyffe_years
+  90. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Nobel_prize_and_Tesla
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Later_years
+  92. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Field_theories
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Directed-energy_weapon
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Theoretical_inventions
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Personal_life
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Death
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Legacy_and_honors
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Monuments
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Portrayals_in_popular_culture
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#See_also
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#References
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Notes
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Sources
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Further_reading
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Publications
+ 106. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Books
+ 107. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Journals
+ 108. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#Filmography
+ 109. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#External_links
+ 110. file://localhost/wiki/Smiljan
+ 111. file://localhost/wiki/Croatia
+ 112. file://localhost/wiki/Austrian_Empire
+ 113. file://localhost/wiki/Gospi%C4%87
+ 114. file://localhost/wiki/Old_Style_and_New_Style_dates
+ 115. file://localhost/wiki/Serbian_Orthodox_Church
+ 116. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Bio-5
+ 117. file://localhost/wiki/Serb_clans
+ 118. file://localhost/wiki/Tara_River_(Montenegro)
+ 119. file://localhost/wiki/Herzegovinians
+ 120. file://localhost/wiki/Pavle_Orlovi%C4%87
+ 121. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-6
+ 122. file://localhost/wiki/Banija
+ 123. file://localhost/wiki/Kosovo
+ 124. file://localhost/wiki/Serbian_epic_poetry
+ 125. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Seifer_2001_7-7
+ 126. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-8
+ 127. file://localhost/wiki/Gymnasium_Karlovac
+ 128. file://localhost/wiki/Karlovac
+ 129. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-9
+ 130. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-10
+ 131. file://localhost/wiki/Graz_University_of_Technology
+ 132. file://localhost/wiki/Graz
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-11
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-12
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-13
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-14
+ 137. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-15
+ 138. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-16
+ 139. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-17
+ 140. file://localhost/wiki/Mur_River
+ 141. file://localhost/wiki/Maribor
+ 142. file://localhost/wiki/Slovenia
+ 143. file://localhost/wiki/Nervous_breakdown
+ 144. file://localhost/wiki/Charles_University_in_Prague
+ 145. file://localhost/wiki/Prague
+ 146. file://localhost/wiki/Ernst_Mach
+ 147. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-18
+ 148. file://localhost/wiki/Photographic_memory
+ 149. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-cheney-79-19
+ 150. file://localhost/wiki/Synesthesia
+ 151. file://localhost/wiki/Picture_thinking
+ 152. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-cheney-79-19
+ 153. file://localhost/wiki/Budapest
+ 154. file://localhost/wiki/Tivadar_Pusk%C3%A1s
+ 155. file://localhost/wiki/Telegraphy
+ 156. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-20
+ 157. file://localhost/wiki/Telephone_company
+ 158. file://localhost/wiki/Telephone_exchange
+ 159. file://localhost/wiki/Telephone
+ 160. file://localhost/wiki/Repeater
+ 161. file://localhost/wiki/Amplifier
+ 162. file://localhost/wiki/Loudspeaker
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-21
+ 164. file://localhost/wiki/Patent
+ 165. file://localhost/wiki/Induction_motor
+ 166. file://localhost/wiki/Rotating_magnetic_field
+ 167. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-22
+ 168. file://localhost/wiki/Gra%C4%8Dac
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-PBS-23
+ 170. file://localhost/wiki/Charles_Batchelor
+ 171. file://localhost/wiki/Thomas_Edison
+ 172. file://localhost/wiki/Direct_current
+ 173. file://localhost/wiki/Electrical_generator
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-24
+ 175. file://localhost/wiki/United_States_Dollar
+ 176. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-25
+ 177. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-26
+ 178. file://localhost/wiki/American_humor
+ 179. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-27
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-28
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-29
+ 182. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-30
+ 183. file://localhost/wiki/Wireless_energy_transfer
+ 184. file://localhost/wiki/Rotating_magnetic_field
+ 185. file://localhost/wiki/Induction_motor
+ 186. file://localhost/wiki/Alternator
+ 187. file://localhost/wiki/Tesla_coil
+ 188. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-WJJohnstondictionary-31
+ 189. file://localhost/wiki/Magnifying_transmitter
+ 190. file://localhost/wiki/Oscillation
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-32
+ 192. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-33
+ 193. file://localhost/wiki/Alternating_current
+ 194. file://localhost/wiki/Electric_power_transmission
+ 195. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-34
+ 196. file://localhost/wiki/Power_transmission
+ 197. file://localhost/wiki/System
+ 198. file://localhost/wiki/Wireless
+ 199. file://localhost/wiki/Telecommunication
+ 200. file://localhost/wiki/Prior_art
+ 201. file://localhost/wiki/Invention_of_radio
+ 202. file://localhost/wiki/Electronic_oscillator
+ 203. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-35
+ 204. file://localhost/wiki/Robot
+ 205. file://localhost/wiki/Logic_gate
+ 206. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-36
+ 207. file://localhost/wiki/Electrotherapy
+ 208. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-37
+ 209. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-38
+ 210. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-39
+ 211. file://localhost/wiki/Wireless_energy_transfer
+ 212. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-40
+ 213. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-41
+ 214. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-42
+ 215. file://localhost/wiki/Electrostatic
+ 216. file://localhost/wiki/Tesla_principle
+ 217. file://localhost/wiki/Bifilar_coil
+ 218. file://localhost/wiki/Telegeodynamics
+ 219. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-43
+ 220. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-WJJohnstondictionary-31
+ 221. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-WJJohnstondictionary-31
+ 222. file://localhost/wiki/Commutator_(electric)
+ 223. file://localhost/wiki/Tesla_turbine
+ 224. file://localhost/wiki/X-ray
+ 225. file://localhost/wiki/Bremsstrahlung
+ 226. file://localhost/wiki/Plasma_(physics)
+ 227. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-44
+ 228. file://localhost/wiki/Electric_field_gradient
+ 229. file://localhost/wiki/Charged_particle_beam
+ 230. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-45
+ 231. file://localhost/wiki/Arc_light
+ 232. file://localhost/wiki/Superconductivity
+ 233. file://localhost/wiki/Voltage
+ 234. file://localhost/wiki/Electronic_circuit
+ 235. file://localhost/wiki/Voltage
+ 236. file://localhost/wiki/Lightning
+ 237. file://localhost/wiki/VTOL
+ 238. file://localhost/wiki/Electric_vehicles
+ 239. file://localhost/wiki/Polyphase_system
+ 240. file://localhost/wiki/Tesla_Electric_Light_%26_Manufacturing
+ 241. file://localhost/wiki/Brush_(electric)
+ 242. file://localhost/wiki/Induction_motor
+ 243. file://localhost/wiki/Institute_of_Electrical_and_Electronics_Engineers
+ 244. file://localhost/wiki/Tesla_coil
+ 245. file://localhost/wiki/George_Westinghouse
+ 246. file://localhost/wiki/Westinghouse_Electric_Corporation
+ 247. file://localhost/wiki/Pittsburgh,_Pennsylvania
+ 248. file://localhost/wiki/X-ray
+ 249. file://localhost/wiki/Vacuum_tube
+ 250. http://www.google.com/patents?vid=514170
+ 251. file://localhost/wiki/Bremsstrahlung
+ 252. file://localhost/wiki/Electron
+ 253. file://localhost/wiki/Field_electron_emission
+ 254. file://localhost/wiki/Thermionic_emission
+ 255. file://localhost/wiki/Electric_field
+ 256. file://localhost/wiki/Geissler_tube
+ 257. file://localhost/wiki/Wilhelm_R%C3%B6ntgen
+ 258. file://localhost/wiki/Roentgen_rays
+ 259. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-46
+ 260. file://localhost/wiki/Ozone
+ 261. file://localhost/wiki/Nitrous_acid
+ 262. file://localhost/wiki/Longitudinal_wave
+ 263. file://localhost/wiki/Waves_in_plasma
+ 264. file://localhost/wiki/Force-free_magnetic_field
+ 265. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-47
+ 266. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-48
+ 267. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-49
+ 268. file://localhost/wiki/Wireless_energy_transmission
+ 269. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-50
+ 270. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-51
+ 271. file://localhost/wiki/Naturalization
+ 272. file://localhost/wiki/Fifth_Avenue_(Manhattan)
+ 273. file://localhost/wiki/Houston_Street
+ 274. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-52
+ 275. file://localhost/wiki/The_Century_Magazine
+ 276. file://localhost/wiki/Robert_Underwood_Johnson
+ 277. file://localhost/wiki/Jovan_Jovanovic_Zmaj
+ 278. file://localhost/wiki/Vedanta
+ 279. file://localhost/wiki/Hinduism
+ 280. file://localhost/wiki/Swami_Vivekananda
+ 281. file://localhost/wiki/Sanskrit
+ 282. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-53
+ 283. file://localhost/wiki/Dynamo
+ 284. file://localhost/wiki/Electricity
+ 285. http://www.google.com/patents?vid=390721
+ 286. file://localhost/wiki/American_Institute_of_Electrical_Engineers
+ 287. file://localhost/wiki/Institute_of_Radio_Engineers
+ 288. file://localhost/wiki/Institute_of_Electrical_and_Electronics_Engineers
+ 289. file://localhost/wiki/High_frequency
+ 290. file://localhost/wiki/Volt
+ 291. file://localhost/wiki/Skin_effect
+ 292. file://localhost/wiki/Electrical_conductor
+ 293. file://localhost/wiki/Gas_discharge
+ 294. file://localhost/wiki/Electrical_energy
+ 295. file://localhost/wiki/Transmitter
+ 296. file://localhost/wiki/St._Louis,_Missouri
+ 297. file://localhost/wiki/Franklin_Institute
+ 298. file://localhost/wiki/Philadelphia
+ 299. file://localhost/wiki/Pennsylvania
+ 300. file://localhost/wiki/National_Electric_Light_Association
+ 301. file://localhost/wiki/Cosmic_background_radiation
+ 302. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-54
+ 303. file://localhost/wiki/World%27s_Fair
+ 304. file://localhost/wiki/World%27s_Columbian_Exposition
+ 305. file://localhost/wiki/AC_power
+ 306. file://localhost/wiki/Fluorescent_lamp
+ 307. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-55
+ 308. file://localhost/wiki/Induction_motor
+ 309. file://localhost/wiki/Copper
+ 310. file://localhost/wiki/Tesla%27s_Egg_of_Columbus
+ 311. file://localhost/wiki/Liquefaction
+ 312. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-56
+ 313. file://localhost/wiki/Carl_von_Linde
+ 314. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-57
+ 315. file://localhost/wiki/Electrical_conductivity
+ 316. file://localhost/wiki/Lightning_rod
+ 317. file://localhost/wiki/Electrolaser
+ 318. file://localhost/wiki/Electroshock_weapon
+ 319. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-58
+ 320. file://localhost/wiki/Thomas_Edison
+ 321. file://localhost/wiki/Electric_power
+ 322. file://localhost/wiki/High_voltage
+ 323. file://localhost/wiki/War_of_Currents
+ 324. file://localhost/wiki/Particle_radiation
+ 325. file://localhost/wiki/Cosmic_ray
+ 326. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-59
+ 327. http://www.google.com/patents?vid=645576
+ 328. file://localhost/wiki/Radio_control
+ 329. file://localhost/wiki/Torpedo
+ 330. file://localhost/w/index.php?title=Telautomatics&action=edit&redlink=1
+ 331. file://localhost/wiki/Robotics
+ 332. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-60
+ 333. file://localhost/wiki/Madison_Square_Garden
+ 334. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-61
+ 335. file://localhost/wiki/Spark_plug
+ 336. file://localhost/wiki/Internal_combustion_engine
+ 337. http://www.google.com/patents?vid=609250
+ 338. file://localhost/wiki/Ignition_system
+ 339. file://localhost/wiki/Lower_Manhattan
+ 340. file://localhost/wiki/Commemorative_plaque
+ 341. file://localhost/wiki/Radio_control
+ 342. file://localhost/wiki/Magnifying_transmitter
+ 343. file://localhost/wiki/Magnifying_transmitter
+ 344. file://localhost/wiki/Multiple_exposure
+ 345. file://localhost/wiki/Resonance
+ 346. file://localhost/wiki/Colorado_Springs,_Colorado
+ 347. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-62
+ 348. file://localhost/wiki/Wireless_telegraphy
+ 349. file://localhost/wiki/Pikes_Peak
+ 350. file://localhost/wiki/Ionosphere
+ 351. file://localhost/wiki/Telluric_current
+ 352. file://localhost/wiki/Transverse_wave
+ 353. file://localhost/wiki/Longitudinal_wave
+ 354. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-63
+ 355. file://localhost/wiki/Lightning
+ 356. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-64
+ 357. file://localhost/wiki/Atmospheric_electricity
+ 358. file://localhost/wiki/Distributed_element_model
+ 359. file://localhost/wiki/Q_factor
+ 360. file://localhost/wiki/Helix
+ 361. file://localhost/wiki/Cavity_resonator
+ 362. file://localhost/wiki/Radio_frequency
+ 363. file://localhost/wiki/Feedback
+ 364. file://localhost/wiki/Heterodyne
+ 365. file://localhost/wiki/Regenerative_circuit
+ 366. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-65
+ 367. file://localhost/wiki/Stationary_wave
+ 368. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-66
+ 369. file://localhost/wiki/Extremely_low_frequency
+ 370. file://localhost/wiki/Kennelly%E2%80%93Heaviside_layer
+ 371. file://localhost/wiki/Resonant_frequency
+ 372. file://localhost/wiki/Schumann_resonance
+ 373. file://localhost/wiki/Tesla_effect
+ 374. file://localhost/wiki/Longitudinal_wave
+ 375. file://localhost/wiki/Magnetic_flux
+ 376. file://localhost/wiki/Extraterrestrial_life
+ 377. file://localhost/wiki/Venus
+ 378. file://localhost/wiki/Mars
+ 379. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-67
+ 380. file://localhost/wiki/Teslascope
+ 381. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-68
+ 382. file://localhost/wiki/Jupiter
+ 383. file://localhost/wiki/Jupiter%27s_magnetosphere
+ 384. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-69
+ 385. file://localhost/wiki/Colorado_Springs
+ 386. file://localhost/wiki/J._Pierpont_Morgan
+ 387. file://localhost/wiki/Wardenclyffe_Tower
+ 388. file://localhost/wiki/World_War_I
+ 389. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-bold-70
+ 390. file://localhost/wiki/Patent_office
+ 391. file://localhost/wiki/Guglielmo_Marconi
+ 392. file://localhost/wiki/Horsepower
+ 393. file://localhost/wiki/Tesla_turbine
+ 394. file://localhost/wiki/Nobel_Prize_in_Physics
+ 395. file://localhost/wiki/Thomas_Edison
+ 396. file://localhost/wiki/Nobel_Prize_in_Physics
+ 397. file://localhost/wiki/Nobel_Prize_controversies
+ 398. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Seifer_2001_7-7
+ 399. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-71
+ 400. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-72
+ 401. file://localhost/wiki/Nobel_Prize_in_Physics
+ 402. file://localhost/wiki/Telefunken
+ 403. file://localhost/wiki/United_States_Marine_Corps
+ 404. file://localhost/wiki/Wardenclyffe_Tower
+ 405. file://localhost/wiki/World_War_I
+ 406. file://localhost/wiki/League_of_Nations
+ 407. file://localhost/wiki/Obsessive-compulsive_disorder
+ 408. file://localhost/wiki/The_Waldorf-Astoria_Hotel
+ 409. file://localhost/wiki/George_Boldt
+ 410. file://localhost/wiki/American_Institute_of_Electrical_Engineers
+ 411. file://localhost/wiki/Edison_Medal
+ 412. file://localhost/wiki/Radar
+ 413. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-73
+ 414. file://localhost/wiki/%C3%89mile_Girardeau
+ 415. file://localhost/wiki/Neville_Chamberlain
+ 416. file://localhost/wiki/Time_magazine
+ 417. file://localhost/wiki/Electricity_generation
+ 418. file://localhost/wiki/Aviation
+ 419. file://localhost/wiki/Vertical_take-off_and_landing
+ 420. file://localhost/wiki/Aircraft
+ 421. file://localhost/wiki/Ocean_thermal_energy_conversion
+ 422. file://localhost/wiki/Mihajlo_Pupin
+ 423. file://localhost/wiki/Vladko_Ma%C4%8Dek
+ 424. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-74
+ 425. file://localhost/wiki/Potential
+ 426. file://localhost/wiki/Mach%27s_principle
+ 427. file://localhost/wiki/Roger_Joseph_Boscovich
+ 428. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-75
+ 429. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-76
+ 430. file://localhost/wiki/Albert_Einstein
+ 431. file://localhost/wiki/Theory_of_relativity
+ 432. file://localhost/wiki/Ru%C4%91er_Bo%C5%A1kovi%C4%87
+ 433. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-77
+ 434. file://localhost/wiki/Teleforce
+ 435. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-78
+ 436. file://localhost/wiki/Death_ray
+ 437. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-79
+ 438. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-80
+ 439. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-81
+ 440. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-82
+ 441. file://localhost/wiki/Vacuum
+ 442. file://localhost/wiki/Directed-energy_weapon
+ 443. file://localhost/wiki/Charged_particle_beam
+ 444. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Seifer454-83
+ 445. file://localhost/wiki/Superweapon
+ 446. file://localhost/wiki/Particle_beam
+ 447. file://localhost/wiki/Nikola_Tesla_Museum
+ 448. file://localhost/wiki/Belgrade
+ 449. file://localhost/wiki/Electrostatic
+ 450. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Seifer454-83
+ 451. file://localhost/wiki/Superatom
+ 452. file://localhost/wiki/Mercury_(element)
+ 453. file://localhost/wiki/Tungsten
+ 454. file://localhost/wiki/Magnifying_transmitter
+ 455. file://localhost/wiki/Charged_particle_beam
+ 456. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-84
+ 457. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-85
+ 458. file://localhost/wiki/United_States_Department_of_Defense
+ 459. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-86
+ 460. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-87
+ 461. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-88
+ 462. file://localhost/wiki/Ionocraft
+ 463. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-89
+ 464. file://localhost/wiki/Ailerons
+ 465. file://localhost/wiki/Propellers
+ 466. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-90
+ 467. file://localhost/wiki/Serbian_language
+ 468. file://localhost/wiki/Czech_language
+ 469. file://localhost/wiki/Latin
+ 470. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-91
+ 471. file://localhost/wiki/Obsessive-compulsive_disorder
+ 472. file://localhost/wiki/Phobias
+ 473. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-92
+ 474. file://localhost/wiki/Mysophobia
+ 475. file://localhost/wiki/Central_Park
+ 476. file://localhost/wiki/Celibacy
+ 477. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-cheney-79-19
+ 478. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-93
+ 479. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-cheney-79-19
+ 480. file://localhost/wiki/Mark_Twain
+ 481. file://localhost/wiki/Mark_Twain
+ 482. file://localhost/wiki/New_York_Times
+ 483. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-94
+ 484. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-95
+ 485. file://localhost/wiki/Robert_Underwood_Johnson
+ 486. file://localhost/wiki/Francis_Marion_Crawford
+ 487. file://localhost/wiki/Stanford_White
+ 488. file://localhost/wiki/Westinghouse_Electric_Corporation_(1886)
+ 489. file://localhost/wiki/Hotel_New_Yorker
+ 490. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-96
+ 491. file://localhost/wiki/International_relations
+ 492. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-97
+ 493. file://localhost/wiki/Selective_breeding
+ 494. file://localhost/wiki/Eugenics
+ 495. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-98
+ 496. file://localhost/wiki/Gender_equality
+ 497. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-99
+ 498. file://localhost/wiki/Century_Illustrated_Magazine
+ 499. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-100
+ 500. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-101
+ 501. file://localhost/wiki/Nikola_Tesla_Museum
+ 502. file://localhost/wiki/Heart_failure
+ 503. file://localhost/wiki/New_Yorker_Hotel
+ 504. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-102
+ 505. file://localhost/wiki/Supreme_Court_of_the_United_States
+ 506. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-103
+ 507. file://localhost/wiki/Cathedral_of_Saint_John_the_Divine
+ 508. file://localhost/wiki/Manhattan
+ 509. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-104
+ 510. file://localhost/wiki/SFRJ
+ 511. file://localhost/wiki/Nikola_Tesla_Museum
+ 512. file://localhost/wiki/Ivan_Me%C5%A1trovi%C4%87
+ 513. file://localhost/wiki/Zagreb
+ 514. file://localhost/wiki/Alien_Property_Custodian
+ 515. file://localhost/wiki/United_States_nationality_law
+ 516. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-105
+ 517. file://localhost/wiki/Teleforce
+ 518. file://localhost/wiki/Ball_lightning
+ 519. file://localhost/wiki/Plasma_(physics)
+ 520. file://localhost/wiki/Particle_beam_weapon
+ 521. file://localhost/wiki/Classified_information
+ 522. file://localhost/wiki/J._Edgar_Hoover
+ 523. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-106
+ 524. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-107
+ 525. file://localhost/wiki/Nikola_Tesla_Museum
+ 526. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-108
+ 527. file://localhost/wiki/Nikola_Tesla_in_popular_culture
+ 528. file://localhost/wiki/Serbian_dinar
+ 529. file://localhost/wiki/Tesla_(unit)
+ 530. file://localhost/wiki/Magnetic_flux_density
+ 531. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-109
+ 532. file://localhost/wiki/Tesla_(crater)
+ 533. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Minorplanet-110
+ 534. file://localhost/wiki/2244_Tesla
+ 535. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-Minorplanet-110
+ 536. file://localhost/wiki/TPP_Nikola_Tesla
+ 537. file://localhost/wiki/Tesla_(band)
+ 538. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-111
+ 539. file://localhost/wiki/Battery_electric_vehicle
+ 540. file://localhost/wiki/Tesla_Motors
+ 541. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-112
+ 542. file://localhost/wiki/Belgrade_Nikola_Tesla_Airport
+ 543. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-113
+ 544. file://localhost/wiki/Google
+ 545. file://localhost/wiki/Google_logo
+ 546. file://localhost/wiki/Tesla_coil
+ 547. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-114
+ 548. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-115
+ 549. file://localhost/wiki/Niagara_Falls,_New_York
+ 550. file://localhost/wiki/University_of_Belgrade_Faculty_of_Electrical_Engineering
+ 551. file://localhost/wiki/Queen_Victoria_Park
+ 552. file://localhost/wiki/Ontario,_Canada
+ 553. file://localhost/wiki/Niagara_Falls
+ 554. file://localhost/wiki/Hamilton,_Ontario
+ 555. file://localhost/wiki/Tesla_Wardenclyffe_Project
+ 556. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_note-116
+ 557. file://localhost/wiki/Nikola_Tesla_in_popular_culture
+ 558. file://localhost/wiki/Bethesda_Softworks
+ 559. file://localhost/wiki/Fallout_3
+ 560. file://localhost/wiki/File:Nuvola_apps_ksim.png
+ 561. file://localhost/wiki/Portal:Electronics
+ 562. file://localhost/wiki/List_of_Tesla_patents
+ 563. file://localhost/wiki/Electrical_Experimenter
+ 564. file://localhost/wiki/Timeline_of_low-temperature_technology
+ 565. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-0
+ 566. http://news.bbc.co.uk/2/hi/europe/5167054.stm
+ 567. http://news.bbc.co.uk/2/hi/europe/5167054.stm
+ 568. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-1
+ 569. http://web.archive.org/web/20080219051318/http://www.serbianunity.net/people/tesla/index.html
+ 570. file://localhost/wiki/Serbian_Unity_Congress
+ 571. http://www.serbianunity.net/people/tesla/index.html
+ 572. http://web.archive.org/web/20080219051318/http://www.serbianunity.net/people/tesla/index.html
+ 573. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-2
+ 574. http://books.google.com/books?id=ZNqo1zaZRTYC&printsec=frontcover&dq=Harnessing+the+Wheelwork+of+Nature:+Tesla%27s+Science+of+Energy&hl=en&ei=sHLpTKP9C8O78gb_4tHUDQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CDIQ6AEwAA#v=onepage&q&f=false
+ 575. file://localhost/wiki/Adventures_Unlimited_Press
+ 576. file://localhost/wiki/International_Standard_Book_Number
+ 577. file://localhost/wiki/Special:BookSources/1931882045
+ 578. http://books.google.com/books?id=ZNqo1zaZRTYC&printsec=frontcover&dq=Harnessing+the+Wheelwork+of+Nature:+Tesla%27s+Science+of+Energy&hl=en&ei=sHLpTKP9C8O78gb_4tHUDQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CDIQ6AEwAA#v=onepage&q&f=false
+ 579. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-3
+ 580. http://www.robertlomas.com/Tesla/Independent_Article.html
+ 581. http://www.robertlomas.com/Tesla/Independent_Article.html
+ 582. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-4
+ 583. http://books.google.com/books?id=DZXhE38wOKoC&pg=PT59&dq=tesla+death+hotel+room+alone&hl=en&ei=BovtTJn2IYep8AawlIjVAQ&sa=X&oi=book_result&ct=result&resnum=7&ved=0CEsQ6AEwBg#v=onepage&q=tesla%20death%20hotel%20room%20alone&f=false
+ 584. file://localhost/wiki/International_Standard_Book_Number
+ 585. file://localhost/wiki/Special:BookSources/818994052X
+ 586. http://books.google.com/books?id=DZXhE38wOKoC&pg=PT59&dq=tesla+death+hotel+room+alone&hl=en&ei=BovtTJn2IYep8AawlIjVAQ&sa=X&oi=book_result&ct=result&resnum=7&ved=0CEsQ6AEwBg#v=onepage&q=tesla%20death%20hotel%20room%20alone&f=false
+ 587. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Bio_5-0
+ 588. http://www.neuronet.pitt.edu/~bogdan/tesla/bio.htm
+ 589. http://www.neuronet.pitt.edu/~bogdan/tesla/bio.htm
+ 590. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-6
+ 591. file://localhost/wiki/Special:BookSources/8682271532
+ 592. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Seifer_2001_7_7-0
+ 593. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Seifer_2001_7_7-1
+ 594. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 595. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-8
+ 596. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheneyUthGlenn1999
+ 597. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-9
+ 598. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFO.27Neill2007
+ 599. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-10
+ 600. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFO.27Neill2007
+ 601. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-11
+ 602. http://www.teresonic.com/pdf/Who%20was%20the%20real%20Tesla.pdf
+ 603. http://www.teresonic.com/pdf/Who%20was%20the%20real%20Tesla.pdf
+ 604. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-12
+ 605. http://books.google.com/books?vid=LCCN12014701&id=q_rZX7Gs_iwC&q=+Gratz&dq=&pgis=1
+ 606. file://localhost/wiki/Matriculate
+ 607. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-13
+ 608. http://books.google.com/books?id=0nwiAAAAMAAJ&printsec=frontcover&dq=Harper%27s+Encyclop%C3%A6dia+of+United+States+History+from+458+A.D.+to+1906&hl=en&ei=lSjpTJeZDIP88Abn0fHUCQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCkQ6AEwAA#v=onepage&q&f=false
+ 609. file://localhost/wiki/University_of_Michigan
+ 610. http://books.google.com/books?id=0nwiAAAAMAAJ&printsec=frontcover&dq=Harper%27s+Encyclop%C3%A6dia+of+United+States+History+from+458+A.D.+to+1906&hl=en&ei=lSjpTJeZDIP88Abn0fHUCQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCkQ6AEwAA#v=onepage&q&f=false
+ 611. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-14
+ 612. http://www.serbnatlfed.org/Archives/Tesla/tesla-ey.pdf
+ 613. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-15
+ 614. http://www.presse.tugraz.at//pressemitteilungen/2006/16.05.2006_graz.htm
+ 615. http://www.presse.tugraz.at//pressemitteilungen/2006/16.05.2006_graz.htm
+ 616. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-16
+ 617. file://localhost/wiki/International_Standard_Book_Number
+ 618. file://localhost/wiki/Special:BookSources/3902465395
+ 619. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-17
+ 620. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-18
+ 621. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 622. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-cheney-79_19-0
+ 623. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-cheney-79_19-1
+ 624. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-cheney-79_19-2
+ 625. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-cheney-79_19-3
+ 626. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheney2001
+ 627. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-20
+ 628. http://books.google.com/books?id=f6oLAAAAIAAJ&pg=PA261&dq=Appleton%27s+Cyclop%C3%A6dia+of+American+Biography+tesla&hl=en&ei=YC3pTOrQC8P88AaB-4m5CQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CC4Q6AEwAA#v=onepage&q&f=false
+ 629. http://books.google.com/books?id=f6oLAAAAIAAJ&pg=PA261&dq=Appleton%27s+Cyclop%C3%A6dia+of+American+Biography+tesla&hl=en&ei=YC3pTOrQC8P88AaB-4m5CQ&sa=X&oi=book_result&ct=result&resnum=1&ved=0CC4Q6AEwAA#v=onepage&q&f=false
+ 630. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-21
+ 631. http://books.google.com/books?id=w0o5Ld53wAEC&lpg=PT180&dq=Did%20Tesla%20really%20invent%20the%20loudspeaker%3F&pg=PT180#v=onepage&q&f=false
+ 632. file://localhost/wiki/International_Standard_Book_Number
+ 633. file://localhost/wiki/Special:BookSources/159691677X
+ 634. http://books.google.com/books?id=w0o5Ld53wAEC&lpg=PT180&dq=Did%20Tesla%20really%20invent%20the%20loudspeaker%3F&pg=PT180#v=onepage&q&f=false
+ 635. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-22
+ 636. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 637. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-PBS_23-0
+ 638. http://www.pbs.org/tesla/ll/ll_america.html
+ 639. file://localhost/wiki/Public_Broadcasting_Service
+ 640. http://www.pbs.org/tesla/ll/ll_america.html
+ 641. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-24
+ 642. http://books.google.com/books?id=XKiGgl36bkgC&source=gbs_navlinks_s
+ 643. file://localhost/wiki/International_Standard_Book_Number
+ 644. file://localhost/wiki/Special:BookSources/0816045593
+ 645. http://books.google.com/books?id=XKiGgl36bkgC&source=gbs_navlinks_s
+ 646. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-25
+ 647. http://www.westegg.com/inflation/
+ 648. http://www.westegg.com/inflation/
+ 649. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-26
+ 650. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheney2001
+ 651. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-27
+ 652. http://books.google.com/books?id=P0CSxB2aHMcC&printsec=frontcover&dq=Strange+Brains+and+Genius:+The+Secret+Lives+of+Eccentric+Scientists+and+Madmen&hl=en&ei=8mbkTK6RNYG78gaj9ZmHDg&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCUQ6AEwAA#v=onepage&q&f=false
+ 653. file://localhost/wiki/International_Standard_Book_Number
+ 654. file://localhost/wiki/Special:BookSources/0688168949
+ 655. http://books.google.com/books?id=P0CSxB2aHMcC&printsec=frontcover&dq=Strange+Brains+and+Genius:+The+Secret+Lives+of+Eccentric+Scientists+and+Madmen&hl=en&ei=8mbkTK6RNYG78gaj9ZmHDg&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCUQ6AEwAA#v=onepage&q&f=false
+ 656. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-28
+ 657. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFO.27Neill2007
+ 658. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-29
+ 659. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFJonnes2004
+ 660. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-30
+ 661. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFTesla2000
+ 662. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-WJJohnstondictionary_31-0
+ 663. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-WJJohnstondictionary_31-1
+ 664. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-WJJohnstondictionary_31-2
+ 665. http://books.google.com/books?id=UKYJAAAAIAAJ
+ 666. http://books.google.com/books?id=UKYJAAAAIAAJ&pg=PA956
+ 667. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-32
+ 668. http://books.google.com/books?id=E1cJAAAAIAAJ&pg=PA545
+ 669. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-33
+ 670. http://books.google.com/books?id=RBNLAAAAMAAJ&pg=PA130&lr=&as_brr=1#PPA131,M1
+ 671. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-34
+ 672. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-35
+ 673. http://books.google.com/books?id=E1cJAAAAIAAJ&pg=PR7&lr=&as_brr=1&source=gbs_search_r&cad=1_1#PPA542,M1
+ 674. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-36
+ 675. http://www.tfcbooks.com/teslafaq/q&a_024.htm
+ 676. http://www.google.com/patents?vid=723188
+ 677. http://www.google.com/patents?vid=725605
+ 678. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-37
+ 679. file://localhost/wiki/Special:BookSources/1559378336
+ 680. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-38
+ 681. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-39
+ 682. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-40
+ 683. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-41
+ 684. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-42
+ 685. http://books.google.com/books?id=CAwAAAAAMAAJ&pg=PA19&ie=ISO-8859-1#PPA19,M1
+ 686. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-43
+ 687. http://www.google.com/patents?vid=3250023
+ 688. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-44
+ 689. http://books.google.com/books?id=UKYJAAAAIAAJ
+ 690. http://books.google.com/books?id=UKYJAAAAIAAJ&pg=PA801
+ 691. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-45
+ 692. http://books.google.com/books?id=UKYJAAAAIAAJ
+ 693. http://books.google.com/books?id=UKYJAAAAIAAJ&pg=PA878
+ 694. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-46
+ 695. http://www.tfcbooks.com/tesla/1898-11-17.htm
+ 696. http://books.google.com/books?vid=0ulmMIkNisnAACpaud&id=bUo7vYNkbKQC
+ 697. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-47
+ 698. file://localhost/wiki/Special:BookSources/013805326X
+ 699. file://localhost/wiki/Special:BookSources/047130932X
+ 700. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-48
+ 701. http://books.google.com/books?vid=0ulmMIkNisnAACpaud&id=bUo7vYNkbKQC
+ 702. http://books.google.com/books?vid=0ulmMIkNisnAACpaud&id=bUo7vYNkbKQC
+ 703. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-49
+ 704. http://books.google.com/books?id=Jx4CAAAAYAAJ&vq=tesla&lr=&as_brr=1&source=gbs_navlinks_s
+ 705. http://books.google.com/books?id=Jx4CAAAAYAAJ&vq=tesla&lr=&as_brr=1&source=gbs_navlinks_s
+ 706. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-50
+ 707. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheney2001
+ 708. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-51
+ 709. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-52
+ 710. http://www.nuc.berkeley.edu/dept/Courses/E-24/E-24Projects/Krumme1.pdf
+ 711. http://www.nuc.berkeley.edu/dept/Courses/E-24/E-24Projects/Krumme1.pdf
+ 712. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-53
+ 713. http://arizonaenergy.org/CommunityEnergy/INFLUENCE%20OF%20VEDIC%20ON%20TESLA%27S%20UNDERSTANDING%20OF%20FREE%20ENERGY.htm
+ 714. http://arizonaenergy.org/CommunityEnergy/INFLUENCE%20OF%20VEDIC%20ON%20TESLA%27S%20UNDERSTANDING%20OF%20FREE%20ENERGY.htm
+ 715. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-54
+ 716. http://books.google.com/books?id=kNhCQPbYIsgC&printsec=frontcover#v=onepage&q&f=false
+ 717. http://books.google.com/books?id=kNhCQPbYIsgC&printsec=frontcover#v=onepage&q&f=false
+ 718. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-55
+ 719. http://books.google.com/books?id=CLtIAAAAMAAJ&printsec=frontcover&source=gbs_atb#v=onepage&q&f=false
+ 720. http://books.google.com/books?id=CLtIAAAAMAAJ&printsec=frontcover&source=gbs_atb#v=onepage&q&f=false
+ 721. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-56
+ 722. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-57
+ 723. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-58
+ 724. http://stinet.dtic.mil/oai/oai?&verb=getRecord&metadataPrefix=html&identifier=ADA239988
+ 725. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-59
+ 726. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-60
+ 727. http://www.teslaplay.com/autobody.htm
+ 728. http://www.rastko.org.rs/istorija/tesla/ntesla-autobiography.html
+ 729. file://localhost/wiki/The_Strange_Life_of_Nikola_Tesla
+ 730. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-61
+ 731. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFJonnes2004
+ 732. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-62
+ 733. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-63
+ 734. http://www.pbs.org/tesla/res/res_art06.html
+ 735. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-64
+ 736. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-65
+ 737. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-66
+ 738. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-67
+ 739. http://earlyradiohistory.us/1901talk.htm
+ 740. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-68
+ 741. file://localhost/wiki/Avon_(publishers)
+ 742. file://localhost/wiki/International_Standard_Book_Number
+ 743. file://localhost/wiki/Special:BookSources/978-0-38-076887-5
+ 744. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-69
+ 745. file://localhost/wiki/Online_Computer_Library_Center
+ 746. http://www.worldcat.org/oclc/68193760
+ 747. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-bold_70-0
+ 748. http://www.nytimes.com/2009/05/05/science/05tesla.html?hp
+ 749. file://localhost/wiki/New_York_Times
+ 750. http://www.nytimes.com/2009/05/05/science/05tesla.html?hp
+ 751. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-71
+ 752. http://books.google.com/books?id=N0gD7HxMfsUC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 753. file://localhost/wiki/International_Standard_Book_Number
+ 754. file://localhost/wiki/Special:BookSources/0787304042
+ 755. http://books.google.com/books?id=N0gD7HxMfsUC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 756. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-72
+ 757. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 758. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-73
+ 759. file://localhost/wiki/Proceedings_of_the_IRE
+ 760. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-74
+ 761. http://www.tesla.hu/tesla/articles/19370710.doc
+ 762. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-75
+ 763. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-76
+ 764. file://localhost/wiki/New_York_Herald_Tribune
+ 765. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-77
+ 766. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-78
+ 767. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-79
+ 768. http://select.nytimes.com/gst/abstract.html?res=FB0817FD3E5B107A93C3A8178CD85F408385F9
+ 769. http://select.nytimes.com/gst/abstract.html?res=FB0817FD3E5B107A93C3A8178CD85F408385F9
+ 770. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-80
+ 771. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-81
+ 772. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-82
+ 773. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Seifer454_83-0
+ 774. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Seifer454_83-1
+ 775. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 776. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-84
+ 777. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-85
+ 778. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-86
+ 779. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-87
+ 780. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-88
+ 781. http://everything2.com/index.pl?node_id=1207042
+ 782. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-89
+ 783. http://books.google.com/books?id=fXB0fm-QqLMC
+ 784. file://localhost/wiki/International_Standard_Book_Number
+ 785. file://localhost/wiki/Special:BookSources/0932813194
+ 786. http://books.google.com/books?id=fXB0fm-QqLMC
+ 787. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-90
+ 788. http://www.bibliotecapleyades.net/tesla/lostjournals/lostjournals06.htm
+ 789. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-91
+ 790. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFO.27Neill2007
+ 791. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-92
+ 792. http://www.magnet.fsu.edu/mediacenter/publications/flux/vol1issue1/documents/magnetmilestones.pdf
+ 793. http://www.magnet.fsu.edu/mediacenter/publications/flux/vol1issue1/documents/magnetmilestones.pdf
+ 794. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-93
+ 795. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheney2001
+ 796. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-94
+ 797. http://books.google.com/books?id=LHHPo0vsdgMC&printsec=frontcover#v=onepage&q&f=false
+ 798. file://localhost/wiki/International_Standard_Book_Number
+ 799. file://localhost/wiki/Special:BookSources/1599862166
+ 800. http://books.google.com/books?id=LHHPo0vsdgMC&printsec=frontcover#v=onepage&q&f=false
+ 801. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-95
+ 802. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheneyUthGlenn1999
+ 803. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-96
+ 804. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFO.27Neill2007
+ 805. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-97
+ 806. http://www.tesla.hu/tesla/articles/19230225.doc
+ 807. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-98
+ 808. http://www.pbs.org/tesla/res/res_art11.html
+ 809. http://www.pbs.org/tesla/res/res_art11.html
+ 810. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-99
+ 811. http://www.tfcbooks.com/tesla/1926-01-30.htm
+ 812. file://localhost/wiki/Collier%27s_Weekly
+ 813. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-100
+ 814. http://books.google.com/books?id=314iAQAAIAAJ&pg=PA178&dq=The+Problem+of+Increasing+Human+Energy&hl=en&ei=K4rpTIyUFcKt8Ab00ISNDQ&sa=X&oi=book_result&ct=result&resnum=3&ved=0CDQQ6AEwAg#v=onepage&q=The%20Problem%20of%20Increasing%20Human%20Energy&f=false
+ 815. http://books.google.com/books?id=314iAQAAIAAJ&pg=PA178&dq=The+Problem+of+Increasing+Human+Energy&hl=en&ei=K4rpTIyUFcKt8Ab00ISNDQ&sa=X&oi=book_result&ct=result&resnum=3&ved=0CDQQ6AEwAg#v=onepage&q=The%20Problem%20of%20Increasing%20Human%20Energy&f=false
+ 816. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-101
+ 817. http://books.google.com/books?id=MNCea_BbzQcC&printsec=frontcover#v=onepage&q&f=false
+ 818. file://localhost/wiki/International_Standard_Book_Number
+ 819. file://localhost/wiki/Special:BookSources/027598740X
+ 820. http://books.google.com/books?id=MNCea_BbzQcC&printsec=frontcover#v=onepage&q&f=false
+ 821. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-102
+ 822. http://select.nytimes.com/gst/abstract.html?res=F10D13F93D59147B93CAA9178AD85F478485F9
+ 823. http://select.nytimes.com/gst/abstract.html?res=F10D13F93D59147B93CAA9178AD85F478485F9
+ 824. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-103
+ 825. http://www.google.com/patents?vid=645576
+ 826. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-104
+ 827. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFCheneyUthGlenn1999
+ 828. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-105
+ 829. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-106
+ 830. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-107
+ 831. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-108
+ 832. http://www.tesla-museum.org/
+ 833. http://www.tesla-museum.org/
+ 834. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-109
+ 835. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 836. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Minorplanet_110-0
+ 837. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-Minorplanet_110-1
+ 838. http://books.google.com/books?id=KWrB1jPCa8AC&source=gbs_navlinks_s
+ 839. file://localhost/wiki/International_Standard_Book_Number
+ 840. file://localhost/wiki/Special:BookSources/3540002383
+ 841. http://books.google.com/books?id=KWrB1jPCa8AC&source=gbs_navlinks_s
+ 842. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-111
+ 843. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#CITEREFSeifer2001
+ 844. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-112
+ 845. http://web.archive.org/web/20071016044752/http://www.teslamotors.com/learn_more/why_tesla.php
+ 846. http://www.teslamotors.com/learn_more/why_tesla.php
+ 847. http://web.archive.org/web/20071016044752/http://www.teslamotors.com/learn_more/why_tesla.php
+ 848. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-113
+ 849. http://www.airport-desk.com/airports/europe/serbia/belgrade-nikola-tesla-airport.html
+ 850. http://www.airport-desk.com/airports/europe/serbia/belgrade-nikola-tesla-airport.html
+ 851. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-114
+ 852. http://www.google.com/logos/logos09-3.html
+ 853. http://www.google.com/logos/logos09-3.html
+ 854. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-115
+ 855. http://www.telegraph.co.uk/technology/google/5793540/Nikola-Tesla-Google-commemorates-birthday-of-pioneering-electrical-engineer.html
+ 856. file://localhost/wiki/The_Daily_Telegraph
+ 857. http://www.telegraph.co.uk/technology/google/5793540/Nikola-Tesla-Google-commemorates-birthday-of-pioneering-electrical-engineer.html
+ 858. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html#cite_ref-116
+ 859. http://www.tfcbooks.com/articles/monument.htm
+ 860. http://www.tfcbooks.com/articles/monument.htm
+ 861. http://books.google.com/books?id=h2DTNDFcC14C&source=gbs_navlinks_s
+ 862. file://localhost/wiki/International_Standard_Book_Number
+ 863. file://localhost/wiki/Special:BookSources/0806519606
+ 864. http://books.google.com/books?id=h2DTNDFcC14C&source=gbs_navlinks_s
+ 865. http://books.google.com/books?id=-cHJQL8qCEMC&printsec=frontcover&dq=Prodigal+Genius:+The+Life+of+Nikola+Tesla&hl=en&src=bmrr&ei=1LPuTJTZHY-t8AbO46HKDA&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCYQ6AEwAA#v=onepage&q&f=false
+ 866. file://localhost/wiki/International_Standard_Book_Number
+ 867. file://localhost/wiki/Special:BookSources/1602067430
+ 868. http://books.google.com/books?id=-cHJQL8qCEMC&printsec=frontcover&dq=Prodigal+Genius:+The+Life+of+Nikola+Tesla&hl=en&src=bmrr&ei=1LPuTJTZHY-t8AbO46HKDA&sa=X&oi=book_result&ct=result&resnum=1&ved=0CCYQ6AEwAA#v=onepage&q&f=false
+ 869. http://books.google.com/?id=ti2Jt7XarzMC
+ 870. file://localhost/wiki/Simon_and_Schuster
+ 871. file://localhost/wiki/International_Standard_Book_Number
+ 872. file://localhost/wiki/Special:BookSources/0743215362
+ 873. http://books.google.com/?id=ti2Jt7XarzMC
+ 874. http://books.google.com/books?id=3W6_h6XG6VAC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 875. file://localhost/wiki/International_Standard_Book_Number
+ 876. file://localhost/wiki/Special:BookSources/0760710058
+ 877. http://books.google.com/books?id=3W6_h6XG6VAC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 878. http://books.google.com/books?id=rwekkS3oD0EC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 879. file://localhost/wiki/International_Standard_Book_Number
+ 880. file://localhost/wiki/Special:BookSources/0932813860
+ 881. http://books.google.com/books?id=rwekkS3oD0EC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 882. http://books.google.com/books?id=BKX5UYWzVyQC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 883. file://localhost/wiki/International_Standard_Book_Number
+ 884. file://localhost/wiki/Special:BookSources/0375758844
+ 885. http://books.google.com/books?id=BKX5UYWzVyQC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+ 886. http://www.robertlomas.com/Tesla/presentation/index.htm
+ 887. file://localhost/wiki/Thomas_Commerford_Martin
+ 888. http://www.tfcbooks.com/special/mi_link.htm
+ 889. file://localhost/wiki/My_Inventions
+ 890. http://scienceworld.wolfram.com/biography/Tesla.html
+ 891. http://www.astronomija.co.rs/suncsist/asteroidi/srbi.htm#Tesla
+ 892. http://www.tesla.hu/tesla/articles/19230225.doc
+ 893. http://arizonaenergy.org/CommunityEnergy/INFLUENCE%20OF%20VEDIC%20ON%20TESLA'S%20UNDERSTANDING%20OF%20FREE%20ENERGY.htm
+ 894. http://en.wikisource.org/wiki/A_New_System_of_Alternating_Current_Motors_and_Transformers
+ 895. http://www.tfcbooks.com/tesla/contents.htm
+ 896. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fmanu%2Fmanu0024%2F&tif=00119.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABS1821-0024-287
+ 897. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fcent%2Fcent0047%2F&tif=00592.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABP2287-0047-151
+ 898. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fcent%2Fcent0049%2F&tif=00924.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABP2287-0049-178
+ 899. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fcent%2Fcent0055%2F&tif=00879.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABP2287-0055-194
+ 900. file://localhost/wiki/My_Inventions
+ 901. http://www.lucidcafe.com/library/96jul/teslaauto01.html
+ 902. http://www.tfcbooks.com/special/mi_link.htm
+ 903. file://localhost/wiki/My_Inventions:_The_Autobiography_of_Nikola_Tesla
+ 904. file://localhost/wiki/Thomas_Commerford_Martin
+ 905. file://localhost/wiki/The_Inventions,_Researches,_and_Writings_of_Nikola_Tesla
+ 906. file://localhost/wiki/Paul_Auster
+ 907. file://localhost/wiki/Moon_Palace
+ 908. file://localhost/wiki/Robert_Lomas
+ 909. file://localhost/wiki/The_Man_Who_Invented_the_Twentieth_Century
+ 910. file://localhost/wiki/The_Fantastic_Inventions_of_Nikola_Tesla
+ 911. file://localhost/wiki/The_Complete_Patents_of_Nikola_Tesla
+ 912. file://localhost/wiki/Special:BookSources/0970961820
+ 913. file://localhost/w/index.php?title=Harnessing_the_Wheelwork_of_Nature:_Tesla%27s_Science_of_Energy&action=edit&redlink=1
+ 914. file://localhost/wiki/Special:BookSources/0787982679
+ 915. file://localhost/wiki/Scientific_American
+ 916. http://www.thefreelibrary.com/The+genius+of+Nikola+Tesla-a0107043721
+ 917. file://localhost/wiki/The_New_American
+ 918. file://localhost/wiki/Popular_Electronics
+ 919. file://localhost/wiki/Omni_(magazine)
+ 920. file://localhost/wiki/Nikola_Tesla_in_popular_culture
+ 921. file://localhost/wiki/Rade_Serbedzija
+ 922. file://localhost/wiki/Orson_Welles
+ 923. file://localhost/wiki/Socialist_Federal_Republic_of_Yugoslavia
+ 924. http://www.imdb.com/title/tt0079985/
+ 925. file://localhost/wiki/J.P._Morgan
+ 926. file://localhost/wiki/Krsto_Papi%C4%87
+ 927. file://localhost/wiki/Petar_Bo%C5%BEovi%C4%87
+ 928. http://www.pbs.org/tesla/boutiq/index.html
+ 929. http://video.google.com/videoplay?docid=2188562935002257117
+ 930. file://localhost/wiki/David_Bowie
+ 931. file://localhost/wiki/The_Prestige_(film)
+ 932. http://www.pbs.org/tesla/
+ 933. file://localhost/wiki/Stacy_Keach
+ 934. file://localhost/wiki/Wikipedia:Wikimedia_sister_projects
+ 935. http://en.wiktionary.org/wiki/Special:Search/Nikola_Tesla
+ 936. http://commons.wikimedia.org/wiki/Special:Search/Nikola_Tesla
+ 937. http://en.wikiversity.org/wiki/Special:Search/Nikola_Tesla
+ 938. http://en.wikinews.org/wiki/Special:Search/Nikola_Tesla
+ 939. http://en.wikiquote.org/wiki/Special:Search/Nikola_Tesla
+ 940. http://en.wikisource.org/wiki/Special:Search/Nikola_Tesla
+ 941. http://en.wikibooks.org/wiki/Special:Search/Nikola_Tesla
+ 942. http://www.tesla-museum.org/meni_en.htm
+ 943. http://www.onlineniagara.com/info/niagara-falls-power.htm
+ 944. http://www.pbs.org/tesla/
+ 945. http://scienceworld.wolfram.com/biography/Tesla.html
+ 946. http://amasci.com/tesla/tesla.html
+ 947. http://www.teslamemorialsociety.org/
+ 948. http://www.ntesla.org/
+ 949. http://www.teslascience.org/
+ 950. file://localhost/wiki/Wardenclyffe_Tower
+ 951. http://www.serbnatlfed.org/Archives/Tesla/tesla-father.htm
+ 952. http://www.serbnatlfed.org/Archives/Tesla/TeslaBook.htm
+ 953. http://web.mit.edu/most/Public/Tesla1/alpha_tesla.html
+ 954. http://www.teslaresearch.com/
+ 955. http://www.wired.com/wired/archive/6.10/tesla.html
+ 956. file://localhost/wiki/Wired_(magazine)
+ 957. http://www.gutenberg.org/author/Nikola+Tesla
+ 958. file://localhost/wiki/Project_Gutenberg
+ 959. http://www.lostartsmedia.com/images/teslafbifile.pdf
+ 960. http://issuu.com/ericm814/docs/complete_patents_nikola_tesla
+ 961. http://americanhistory.si.edu/archives/d8047.htm
+ 962. file://localhost/wiki/National_Museum_of_American_History
+ 963. http://www.fi.edu/learn/case-files/tesla/
+ 964. file://localhost/wiki/Franklin_Institute
+ 965. file://localhost/wiki/Authority_control
+ 966. file://localhost/wiki/Library_of_Congress_Control_Number
+ 967. http://errol.oclc.org/laf/n78086404.html
+ 968. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909-1925
+ 969. file://localhost/w/index.php?title=Template_talk:IEEE_Edison_Medal_Laureates_1909-1925&action=edit&redlink=1
+ 970. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Edison_Medal_Laureates_1909-1925&action=edit
+ 971. file://localhost/wiki/IEEE_Edison_Medal
+ 972. file://localhost/wiki/Elihu_Thomson
+ 973. file://localhost/wiki/Frank_J._Sprague
+ 974. file://localhost/wiki/George_Westinghouse
+ 975. file://localhost/wiki/William_Stanley,_Jr.
+ 976. file://localhost/wiki/Charles_F._Brush
+ 977. file://localhost/wiki/Alexander_Graham_Bell
+ 978. file://localhost/wiki/John_J._Carty
+ 979. file://localhost/wiki/Benjamin_G._Lamme
+ 980. file://localhost/wiki/William_Le_Roy_Emmet
+ 981. file://localhost/wiki/Mihajlo_Idvorski_Pupin
+ 982. file://localhost/wiki/Cummings_C._Chesney
+ 983. file://localhost/wiki/Robert_Andrews_Millikan
+ 984. file://localhost/wiki/John_W._Lieb
+ 985. file://localhost/wiki/John_White_Howell
+ 986. file://localhost/wiki/Harris_J._Ryan
+ 987. file://localhost/wiki/Template:IEEE_Edison_Medal
+ 988. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909-1925
+ 989. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926-1950
+ 990. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1951-1975
+ 991. file://localhost/wiki/Template:IEEE_Edison_Medal_1976-2000
+ 992. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_2001-2025
+ 993. file://localhost/wiki/Template:Scientists_whose_names_are_used_as_SI_units
+ 994. file://localhost/wiki/Template_talk:Scientists_whose_names_are_used_as_SI_units
+ 995. http://en.wikipedia.org/w/index.php?title=Template:Scientists_whose_names_are_used_as_SI_units&action=edit
+ 996. file://localhost/wiki/Scientists_whose_names_are_used_as_SI_units
+ 997. file://localhost/wiki/Andr%C3%A9-Marie_Amp%C3%A8re
+ 998. file://localhost/wiki/William_Thomson,_1st_Baron_Kelvin
+ 999. file://localhost/wiki/Blaise_Pascal
+1000. file://localhost/wiki/Isaac_Newton
+1001. file://localhost/wiki/Anders_Celsius
+1002. file://localhost/wiki/Charles-Augustin_de_Coulomb
+1003. file://localhost/wiki/James_Watt
+1004. file://localhost/wiki/Alessandro_Volta
+1005. file://localhost/wiki/Georg_Simon_Ohm
+1006. file://localhost/wiki/Michael_Faraday
+1007. file://localhost/wiki/Joseph_Henry
+1008. file://localhost/wiki/Wilhelm_Eduard_Weber
+1009. file://localhost/wiki/Ernst_Werner_von_Siemens
+1010. file://localhost/wiki/James_Prescott_Joule
+1011. file://localhost/wiki/Henri_Becquerel
+1012. file://localhost/wiki/Heinrich_Rudolf_Hertz
+1013. file://localhost/wiki/Rolf_Maximilian_Sievert
+1014. file://localhost/wiki/Louis_Harold_Gray
+1015. file://localhost/wiki/Template:Scientists_whose_names_are_used_as_non_SI_units
+1016. file://localhost/wiki/List_of_scientists_whose_names_are_used_in_physical_constants
+1017. file://localhost/wiki/Wikipedia:Persondata
+1018. file://localhost/wiki/Serbs
+1019. file://localhost/wiki/Inventor
+1020. file://localhost/wiki/Physicist
+1021. file://localhost/wiki/Mechanical_engineer
+1022. file://localhost/wiki/Electrical_engineer
+1023. file://localhost/wiki/Smiljan
+1024. file://localhost/wiki/Austrian_Empire
+1025. http://en.wikipedia.org/wiki/Nikola_Tesla
+1026. file://localhost/wiki/Special:Categories
+1027. file://localhost/wiki/Category:1856_births
+1028. file://localhost/wiki/Category:1943_deaths
+1029. file://localhost/wiki/Category:People_from_Gospi%C4%87
+1030. file://localhost/wiki/Category:Serbs_of_Croatia
+1031. file://localhost/wiki/Category:American_inventors
+1032. file://localhost/wiki/Category:American_physicists
+1033. file://localhost/wiki/Category:Austro-Hungarian_Empire_immigrants_to_the_United_States
+1034. file://localhost/wiki/Category:Electrical_engineers
+1035. file://localhost/wiki/Category:Charles_University_alumni
+1036. file://localhost/wiki/Category:Fellows_of_the_American_Association_for_the_Advancement_of_Science
+1037. file://localhost/wiki/Category:Fellows_of_the_Institute_of_Electrical_and_Electronics_Engineers
+1038. file://localhost/wiki/Category:IEEE_Edison_Medal_recipients
+1039. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+1040. file://localhost/wiki/Category:People_associated_with_electricity
+1041. file://localhost/wiki/Category:People_with_eidetic_memory
+1042. file://localhost/wiki/Category:Nikola_Tesla
+1043. file://localhost/wiki/Category:Radio_pioneers
+1044. file://localhost/wiki/Category:Thomas_Edison
+1045. file://localhost/wiki/Category:Serbian_inventors
+1046. file://localhost/wiki/Category:Serbian_physicists
+1047. file://localhost/wiki/Category:Serbian_vegetarians
+1048. file://localhost/wiki/Category:American_people_of_Serbian_descent
+1049. file://localhost/wiki/Category:Naturalized_citizens_of_the_United_States
+1050. file://localhost/wiki/Category:Austro-Hungarian_Serbs
+1051. file://localhost/wiki/Category:People_from_Colorado_Springs,_Colorado
+1052. file://localhost/wiki/Category:Cardiovascular_disease_deaths_in_New_York
+1053. file://localhost/wiki/Category:Deaths_from_heart_failure
+1054. file://localhost/wiki/Category:Wireless_energy_transfer
+1055. file://localhost/wiki/Category:People_from_Karlovac
+1056. file://localhost/wiki/Category:Wikipedia_pages_semi-protected_against_vandalism
+1057. file://localhost/wiki/Category:Wikipedia_protected_pages_without_expiry
+1058. file://localhost/wiki/Category:Wikipedia_indefinitely_move-protected_pages
+1059. file://localhost/wiki/Category:Articles_containing_Serbian_language_text
+1060. file://localhost/w/index.php?title=Special:UserLogin&returnto=Nikola_Tesla
+1061. file://localhost/wiki/Nikola_Tesla
+1062. file://localhost/wiki/Talk:Nikola_Tesla
+1063. file://localhost/wiki/Nikola_Tesla
+1064. file://localhost/w/index.php?title=Nikola_Tesla&action=edit
+1065. file://localhost/w/index.php?title=Nikola_Tesla&action=history
+1066. file://localhost/wiki/Main_Page
+1067. file://localhost/wiki/Portal:Contents
+1068. file://localhost/wiki/Portal:Featured_content
+1069. file://localhost/wiki/Portal:Current_events
+1070. file://localhost/wiki/Special:Random
+1071. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+1072. file://localhost/wiki/Help:Contents
+1073. file://localhost/wiki/Wikipedia:About
+1074. file://localhost/wiki/Wikipedia:Community_portal
+1075. file://localhost/wiki/Special:RecentChanges
+1076. file://localhost/wiki/Wikipedia:Contact_us
+1077. file://localhost/wiki/Special:WhatLinksHere/Nikola_Tesla
+1078. file://localhost/wiki/Special:RecentChangesLinked/Nikola_Tesla
+1079. file://localhost/wiki/Wikipedia:Upload
+1080. file://localhost/wiki/Special:SpecialPages
+1081. file://localhost/w/index.php?title=Nikola_Tesla&oldid=409254651
+1082. file://localhost/w/index.php?title=Special:Cite&page=Nikola_Tesla&id=409254651
+1083. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Nikola+Tesla
+1084. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Nikola+Tesla&oldid=409254651&writer=rl
+1085. file://localhost/w/index.php?title=Nikola_Tesla&printable=yes
+1086. http://ar.wikipedia.org/wiki/%D9%86%D9%8A%D9%83%D9%88%D9%84%D8%A7_%D8%AA%D8%B3%D9%84%D8%A7
+1087. http://an.wikipedia.org/wiki/Nikola_Tesla
+1088. http://az.wikipedia.org/wiki/Nikola_Tesla
+1089. http://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BF%E0%A6%95%E0%A7%8B%E0%A6%B2%E0%A6%BE_%E0%A6%9F%E0%A7%87%E0%A6%B8%E0%A6%B2%E0%A6%BE
+1090. http://zh-min-nan.wikipedia.org/wiki/Nikola_Tesla
+1091. http://be.wikipedia.org/wiki/%D0%9D%D1%96%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D1%8D%D1%81%D0%BB%D0%B0
+1092. http://be-x-old.wikipedia.org/wiki/%D0%9D%D1%96%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D1%8D%D1%81%D0%BB%D0%B0
+1093. http://bs.wikipedia.org/wiki/Nikola_Tesla
+1094. http://br.wikipedia.org/wiki/Nikola_Tesla
+1095. http://bg.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1096. http://ca.wikipedia.org/wiki/Nikola_Tesla
+1097. http://cv.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1098. http://cs.wikipedia.org/wiki/Nikola_Tesla
+1099. http://cy.wikipedia.org/wiki/Nikola_Tesla
+1100. http://da.wikipedia.org/wiki/Nikola_Tesla
+1101. http://de.wikipedia.org/wiki/Nikola_Tesla
+1102. http://et.wikipedia.org/wiki/Nikola_Tesla
+1103. http://el.wikipedia.org/wiki/%CE%9D%CE%AF%CE%BA%CE%BF%CE%BB%CE%B1_%CE%A4%CE%AD%CF%83%CE%BB%CE%B1
+1104. http://es.wikipedia.org/wiki/Nikola_Tesla
+1105. http://eo.wikipedia.org/wiki/Nikola_Tesla
+1106. http://eu.wikipedia.org/wiki/Nikola_Tesla
+1107. http://fa.wikipedia.org/wiki/%D9%86%DB%8C%DA%A9%D9%88%D9%84%D8%A7_%D8%AA%D8%B3%D9%84%D8%A7
+1108. http://hif.wikipedia.org/wiki/Nikola_Tesla
+1109. http://fr.wikipedia.org/wiki/Nikola_Tesla
+1110. http://fy.wikipedia.org/wiki/Nikola_Tesla
+1111. http://gl.wikipedia.org/wiki/Nikola_Tesla
+1112. http://gan.wikipedia.org/wiki/%E5%B0%BC%E5%93%A5%E6%8B%89%C2%B7%E7%89%B9%E6%96%AF%E6%8B%89
+1113. http://ko.wikipedia.org/wiki/%EB%8B%88%EC%BD%9C%EB%9D%BC_%ED%85%8C%EC%8A%AC%EB%9D%BC
+1114. http://hy.wikipedia.org/wiki/%D5%86%D5%AB%D5%AF%D5%B8%D5%AC%D5%A1_%D5%8F%D5%A5%D5%BD%D5%AC%D5%A1
+1115. http://hi.wikipedia.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE_%E0%A4%9F%E0%A5%87%E0%A4%B8%E0%A5%8D%E0%A4%B2%E0%A4%BE
+1116. http://hr.wikipedia.org/wiki/Nikola_Tesla
+1117. http://id.wikipedia.org/wiki/Nikola_Tesla
+1118. http://is.wikipedia.org/wiki/Nikola_Tesla
+1119. http://it.wikipedia.org/wiki/Nikola_Tesla
+1120. http://he.wikipedia.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%9C%D7%94_%D7%98%D7%A1%D7%9C%D7%94
+1121. http://kn.wikipedia.org/wiki/%E0%B2%A8%E0%B2%BF%E0%B2%95%E0%B3%8B%E0%B2%B2%E0%B2%BE_%E0%B2%9F%E0%B3%86%E0%B2%B8%E0%B3%8D%E0%B2%B2%E0%B2%BE
+1122. http://pam.wikipedia.org/wiki/Nikola_Tesla
+1123. http://ka.wikipedia.org/wiki/%E1%83%9C%E1%83%98%E1%83%99%E1%83%9D%E1%83%9A%E1%83%90_%E1%83%A2%E1%83%94%E1%83%A1%E1%83%9A%E1%83%90
+1124. http://kk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D0%BB%D0%B0,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0
+1125. http://sw.wikipedia.org/wiki/Nikola_Tesla
+1126. http://ht.wikipedia.org/wiki/Nikola_Tesla
+1127. http://ku.wikipedia.org/wiki/N%C3%AEkola_T%C3%AAsla
+1128. http://la.wikipedia.org/wiki/Nicolaus_Tesla
+1129. http://lv.wikipedia.org/wiki/Nikola_Tesla
+1130. http://lt.wikipedia.org/wiki/Nikola_Tesla
+1131. http://lij.wikipedia.org/wiki/Nikola_Tesla
+1132. http://hu.wikipedia.org/wiki/Nikola_Tesla
+1133. http://mk.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1134. http://ml.wikipedia.org/wiki/%E0%B4%A8%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8B%E0%B4%B3_%E0%B4%9F%E0%B5%86%E0%B4%B8%E0%B5%8D%E2%80%8C%E0%B4%B2
+1135. http://mr.wikipedia.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE_%E0%A4%9F%E0%A5%87%E0%A4%B8%E0%A4%B2%E0%A4%BE
+1136. http://arz.wikipedia.org/wiki/%D9%86%D9%8A%D9%83%D9%88%D9%84%D8%A7_%D8%AA%D9%8A%D8%B3%D9%84%D8%A7
+1137. http://ms.wikipedia.org/wiki/Nikola_Tesla
+1138. http://mn.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1139. http://my.wikipedia.org/wiki/%E1%80%94%E1%80%AE%E1%80%80%E1%80%AD%E1%80%AF%E1%80%9C%E1%80%AC_%E1%80%90%E1%80%80%E1%80%BA%E1%80%85%E1%80%9C%E1%80%AC
+1140. http://nl.wikipedia.org/wiki/Nikola_Tesla
+1141. http://ja.wikipedia.org/wiki/%E3%83%8B%E3%82%B3%E3%83%A9%E3%83%BB%E3%83%86%E3%82%B9%E3%83%A9
+1142. http://no.wikipedia.org/wiki/Nikola_Tesla
+1143. http://nn.wikipedia.org/wiki/Nikola_Tesla
+1144. http://pnb.wikipedia.org/wiki/%D9%86%DA%A9%D9%88%D9%84%D8%A7_%D9%B9%DB%8C%D8%B3%D9%84%D8%A7
+1145. http://pl.wikipedia.org/wiki/Nikola_Tesla
+1146. http://pt.wikipedia.org/wiki/Nikola_Tesla
+1147. http://kaa.wikipedia.org/wiki/Nikola_Tesla
+1148. http://ro.wikipedia.org/wiki/Nikola_Tesla
+1149. http://qu.wikipedia.org/wiki/Nikola_Tesla
+1150. http://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D0%BB%D0%B0,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0
+1151. http://sah.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1152. http://sa.wikipedia.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A5%8B%E0%A4%B2%E0%A4%BE_%E0%A4%9F%E0%A5%87%E0%A4%B8%E0%A5%8D%E0%A4%B2%E0%A4%BE
+1153. http://sco.wikipedia.org/wiki/Nikola_Tesla
+1154. http://sq.wikipedia.org/wiki/Nikola_Tesla
+1155. http://scn.wikipedia.org/wiki/Nikola_Tesla
+1156. http://simple.wikipedia.org/wiki/Nikola_Tesla
+1157. http://sk.wikipedia.org/wiki/Nikola_Tesla
+1158. http://sl.wikipedia.org/wiki/Nikola_Tesla
+1159. http://sr.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1160. http://sh.wikipedia.org/wiki/Nikola_Tesla
+1161. http://fi.wikipedia.org/wiki/Nikola_Tesla
+1162. http://sv.wikipedia.org/wiki/Nikola_Tesla
+1163. http://tl.wikipedia.org/wiki/Nikola_Tesla
+1164. http://ta.wikipedia.org/wiki/%E0%AE%A8%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%8B%E0%AE%B2%E0%AE%BE_%E0%AE%A4%E0%AF%86%E0%AE%B8%E0%AF%8D%E0%AE%B2%E0%AE%BE
+1165. http://te.wikipedia.org/wiki/%E0%B0%A8%E0%B0%BF%E0%B0%95%E0%B1%8B%E0%B0%B2%E0%B0%BE_%E0%B0%9F%E0%B1%86%E0%B0%B8%E0%B1%8D%E0%B0%B2%E0%B0%BE
+1166. http://th.wikipedia.org/wiki/%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B8%B2_%E0%B9%80%E0%B8%97%E0%B8%AA%E0%B8%A5%E0%B8%B2
+1167. http://tg.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1168. http://tr.wikipedia.org/wiki/Nikola_Tesla
+1169. http://uk.wikipedia.org/wiki/%D0%9D%D1%96%D0%BA%D0%BE%D0%BB%D0%B0_%D0%A2%D0%B5%D1%81%D0%BB%D0%B0
+1170. http://vi.wikipedia.org/wiki/Nikola_Tesla
+1171. http://vo.wikipedia.org/wiki/Nikola_Tesla
+1172. http://war.wikipedia.org/wiki/Nikola_Tesla
+1173. http://yo.wikipedia.org/wiki/Nikola_Tesla
+1174. http://bat-smg.wikipedia.org/wiki/Nikola_Tesla
+1175. http://zh.wikipedia.org/wiki/%E5%B0%BC%E5%8F%A4%E6%8B%89%C2%B7%E7%89%B9%E6%96%AF%E6%8B%89
+1176. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+1177. http://wikimediafoundation.org/wiki/Terms_of_Use
+1178. http://www.wikimediafoundation.org/
+1179. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+1180. http://wikimediafoundation.org/wiki/Privacy_policy
+1181. file://localhost/wiki/Wikipedia:About
+1182. file://localhost/wiki/Wikipedia:General_disclaimer
+1183. http://www.mediawiki.org/
+1184. http://wikimediafoundation.org/
+
+   Hidden links:
+1185. file://localhost/wiki/File:Tesla3.jpg
+1186. file://localhost/wiki/File:TeslaSignature.svg
+1187. file://localhost/wiki/File:Nikola_Tesla_Memorial_Center.JPG
+1188. file://localhost/wiki/File:Nikola_Tesla_Memorial_Center.JPG
+1189. file://localhost/wiki/File:Tesla_young.jpg
+1190. file://localhost/wiki/File:Tesla_young.jpg
+1191. file://localhost/wiki/File:RMFpatent.PNG
+1192. file://localhost/wiki/File:RMFpatent.PNG
+1193. file://localhost/wiki/File:TeslaWirelessPower1891_adjusted.png
+1194. file://localhost/wiki/File:TeslaWirelessPower1891_adjusted.png
+1195. file://localhost/wiki/File:US390721.png
+1196. file://localhost/wiki/File:US390721.png
+1197. file://localhost/wiki/File:Tesla_colorado_adjusted.jpg
+1198. file://localhost/wiki/File:Tesla_colorado_adjusted.jpg
+1199. file://localhost/wiki/File:TeslaWirelessLightsCS.png
+1200. file://localhost/wiki/File:TeslaWirelessLightsCS.png
+1201. file://localhost/wiki/File:TeslaWirelessIllustration.png
+1202. file://localhost/wiki/File:TeslaWirelessIllustration.png
+1203. file://localhost/wiki/File:BrochureWardenclyffe_.PNG
+1204. file://localhost/wiki/File:BrochureWardenclyffe_.PNG
+1205. file://localhost/wiki/File:Teslathinker.jpg
+1206. file://localhost/wiki/File:Teslathinker.jpg
+1207. file://localhost/wiki/File:Milutin_Tesla.jpg
+1208. file://localhost/wiki/File:Milutin_Tesla.jpg
+1209. file://localhost/wiki/File:Twain_in_Tesla%27s_Lab.jpg
+1210. file://localhost/wiki/File:Twain_in_Tesla%27s_Lab.jpg
+1211. file://localhost/wiki/File:Urn_with_Teslas_ashes.jpg
+1212. file://localhost/wiki/File:Urn_with_Teslas_ashes.jpg
+1213. file://localhost/wiki/File:Teslabust_adjusted.jpg
+1214. file://localhost/wiki/File:Teslabust_adjusted.jpg
+1215. file://localhost/wiki/File:100RSD_front.jpg
+1216. file://localhost/wiki/File:100RSD_front.jpg
+1217. http://en.wiktionary.org/wiki/Special:Search/Nikola_Tesla
+1218. http://commons.wikimedia.org/wiki/Special:Search/Nikola_Tesla
+1219. http://en.wikiversity.org/wiki/Special:Search/Nikola_Tesla
+1220. http://en.wikinews.org/wiki/Special:Search/Nikola_Tesla
+1221. http://en.wikiquote.org/wiki/Special:Search/Nikola_Tesla
+1222. http://en.wikisource.org/wiki/Special:Search/Nikola_Tesla
+1223. http://en.wikibooks.org/wiki/Special:Search/Nikola_Tesla
+1224. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html
+1225. file://localhost/home/memfis/projects/put/tsiss/Downloads/nikola_tesla.html
+1226. file://localhost/wiki/Main_Page
+1227. http://creativecommons.org/licenses/by-sa/3.0/

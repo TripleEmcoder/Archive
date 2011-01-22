@@ -1,0 +1,458 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+George Devol
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+               George Charles Devol, Jr
+   George Devol in 1982
+      Born    February 20, 1912 (1912-02-20) (age 98)
+              [7]Louisville, Kentucky
+   Occupation [8]Inventor, [9]entrepreneur
+
+   George Charles Devol, Jr. (born February 20, 1912) is the [10]inventor
+   of the patent which led to the development of the first [11]industrial
+   robot, called Unimate. As an inventor he has over 40 patents and is
+   president of Devol Research. Devol has resided in [12]Fort Lauderdale,
+   Florida and [13]Wilton, Connecticut operating a robot consulting
+   business.^[14][1]
+
+   Contents
+
+        * [15]1 Biography
+             + [16]1.1 United Cinephone
+             + [17]1.2 World War II
+             + [18]1.3 Other post-war work
+             + [19]1.4 The first industrial robot: Unimate
+             + [20]1.5 Additional work
+        * [21]2 References
+
+[[22]edit] Biography
+
+   Born in [23]Louisville, Kentucky in 1912, Devol was interested from
+   boyhood in all things electrical and mechanical such as boats,
+   airplanes, and engines.
+
+   He got some practical experience at [24]Riordan Prep, where, in
+   addition to studying traditional subjects, he helped construct some
+   buildings and run the school's electric light plant. Although he wasn't
+   very scholarly he read everything he could about mechanical devices,
+   trying to discover what, besides building radios, could be done with
+   vacuum tubes when applied as control devices.
+
+[[25]edit] United Cinephone
+
+   [26]File:United Cinephoeene Brochure p1.jpg
+   Brochure for United Cinephone
+
+   Choosing to forego higher education, in 1932 Devol went into business,
+   forming [27]United Cinephone Corp. to produce variable area recording
+   directly onto film for the new sound motion pictures ("talkies").
+   However, he later learned that companies like RCA and Western Electric
+   were working in the same area, and decided to discontinue the product.
+   Phantom Doorman [28]Automatic Door
+
+   At that time, Devol asked himself "what else can we do with all these
+   photocells and vacuum tubes?"
+
+   United Cinephone manufactured Devol's invention, the "Phantom Doorman"
+   photoelectric door, which were sold to Yale & Towne. This was the first
+   automatic opening door, now ubiquitous in grocery stores and elsewhere.
+   The Company manufactured many other products using photoelectric cells
+   and vacuum tube control systems. Among these was a very early bar code
+   system which was used for sorting packages at the Railway Express
+   Company, years before others would separately come up with similar
+   technology.
+   [29]File:George Devol - United Cinephone 1935 Bar Code System.jpg
+   Bar Code System, 1935
+   Orthoplane Lighting
+
+   United Cinephone also manufactured Orthoplane lighting, another product
+   Devol patented, for garment factories. United Cinephone also created
+   revolutionary registration controls for printing presses and packaging
+   machinery. The company also manufactured phonograph arms and
+   amplifiers. In fact, Devol installed amplifiers at the [30]Cotton Club
+   and enjoyed watching [31]Count Basie, [32]Fred Waring and others,
+   occasionally taking in the after-hours jam sessions.
+
+   In 1939 United Cinephone installed automated photoelectric counters at
+   New York World's Fair to count customers entering the fairgrounds.
+
+[[33]edit] World War II
+
+   Around the time the [34]World War II began, Devol sold his interest in
+   United Cinephone and approached Sperry Gyroscope to see if they were
+   interested in his ideas on radar technology. He was retained by Sperry
+   as manager of the Special Projects Department that developed radar
+   devices and microwave test equipment.
+
+   In 1939, Devol applied for a patent for proximity controls for use in
+   laundry press machines, based on a radio frequency field. This control
+   would automatically open and close laundry presses when workers
+   approached the machines. Once the War began, Devol was advised by the
+   patent office that his patent application would be placed on hold for
+   the duration of the conflict.
+
+   Later in the war, he approached Auto Ordinance Company regarding
+   products that company could produce aside from their primary product
+   line, which were Thompson machine guns. Devol told them that the field
+   of radar counter-measures was about to emerge as an urgently needed
+   defense technology.
+
+   In 1943, he organized General Electronics Industries in Greenwich, CT
+   as a subsidiary of the Auto Ordinance Corporation. General Electronics
+   produced counter-radar devices until the end of the War. General
+   Electronics was one of the largest producers of radar and radar
+   counter-measure equipment for the U.S. Navy, U.S. Army Air Force and
+   other government agencies. The company's radar counter-measure systems
+   were on allied planes on D-Day.
+
+   Over a difference of opinion regarding the future of certain projects,
+   Devol resigned from Auto Ordinnce and joined RCA. After a short stint
+   as eastern sales manager of electronics products, which he felt "wasn't
+   his ball of wax", Devol left RCA to develop ideas which eventually led
+   to the patent application for the first industrial robot. In 1946 he
+   applied for a patent on a magnetic recording system for controlling
+   machines and a digital playback device for machines. (2)
+
+[[35]edit] Other post-war work
+
+   Speedy Weeny Automatic Hot Dog Machine
+
+   Devol was part of the team that developed the first commercial use of
+   microwave oven technology, the Speedy Weeny, which automatically cooked
+   and dispensed hotdogs in places such as [36]Grand Central Station.
+
+   In the early 1950s, Devol licensed his digital magnetic recording
+   device to Remington Rand of Norwalk, CT and became manager of their
+   magnetics department. There he worked with a team to develop his
+   magnetic recording system for business data applications. He also
+   worked on developing the first high-speed printing systems. While the
+   magnetic recording system proved too slow for business data, Devol's
+   invention was re-purposed as a machine control that would eventually
+   become the "brains" of the Unimate robot.
+
+[[37]edit] The first industrial robot: Unimate
+
+   Main article: [38]Unimate
+   Photo of the first static magnetic recorder which used a saw blade to
+   record information
+
+   In the 1940s, Devol wasn't thinking about robots. Instead, he was
+   focusing on manipulators and his patent on [39]magnetic recording
+   devices. He felt the world was ready for new ideas as he saw the
+   introduction of automation into factories during this time. With the
+   development of the computer and the invention of the transistor in the
+   late 1940s, most of the ingredients for an industrial robot were
+   available.^[40][2]
+
+   With this new technology in place, Devol worked on his invention. In
+   1954, he applied for patent No. 2,988,237 for Universal Automation or
+   [41]Unimation, which was issued in 1961. At the suggestion of Devol's
+   wife, Evelyn, the word "Unimate" was coined to define the product much
+   the same as [42]George Eastman had coined [43]Kodak.^[44][3]
+   Original Robot Patent
+
+   When he filed the patent for a programmable method for transferring
+   articles, he wrote, "the present invention makes available for the
+   first time a more or less general purpose machine that has universal
+   application to a vast diversity of applications where cyclic digital
+   control is desired."
+
+   After applying for this seminal patent, Devol searched for a company
+   willing to give him financial backing to develop his programmable
+   articles transfer system. He talked with many major corporations in the
+   [45]United States during his search. Then Devol met Joseph F.
+   Engelberger at a cocktail party. Engelberger, at that time, was chief
+   of engineering in the aircraft products division at [46]Manning,
+   Maxwell and Moore in [47]Stratford, Connecticut. Engelberger was very
+   interested, and Devol agreed to sell Manning, Maxwell and Moore a
+   license to his patent and some future patents in the field.^[48][2]
+   Just as this decision was being made, however, Dresser Industries
+   bought Manning, Maxwell and Moore and didn't see the need for its
+   aircraft division and its industrial robot patent licenses.
+
+   This development prompted Engelberger to seek a backer to buy out the
+   aircraft division and found one in Consolidated Diesel Electronic
+   (Condec), which agreed to put up the financing for the continued
+   development of the robot. This new Condec division was called Unimation
+   Incorporated with Joseph Engelberger as its president.^[49][4]
+
+   In 1961, Devol personally sold the first [50]Unimate robot which was
+   shipped from Danbury, Connecticut to General Motors.^[51][5] GM first
+   used the machine for die casting handling and spot welding.^[52][6] The
+   first Unimate robot was installed at GM's plant in [53]Trenton, New
+   Jersey to lift hot pieces of metal from a die-casting machine and stack
+   them. Soon companies such as Chrysler, Ford, and Fiat saw the necessity
+   for large Unimate purchases.
+   The first Unimate
+
+   Approximately five million dollars was spent to develop the first
+   Unimate. In 1966, after many years of market surveys and field tests,
+   full scale production began in Connecticut. Unimation's first robot was
+   a materials handling robot and was soon followed by robots for welding
+   and other applications.
+
+   In 1975, Unimation showed its first profit. In 1978, the PUMA
+   (Programmable Universal Machine for Assembly) robot was developed by
+   Unimation from Vicarm (Victor Scheinman) and with support from General
+   Motors.
+
+[[54]edit] Additional work
+
+   Devol later obtained patents on visual and tactile sensors for robots,
+   coaxial connectors, non-refillable containers, and magnetostrictive
+   manipulators or "microrobotics", a field he created.
+
+   - Lifetime member of the Society of Manufacturing Engineers
+
+   - Automation Hall of Fame
+
+   - PhD
+
+   - Henry Ford and Smithsonian Museum collections include [55]Unimate
+   Robots
+
+[[56]edit] References
+
+    1. [57]^ [58]He Brought Robot to Life[59]New York Times March 21, 1982
+    2. ^ [60]^a [61]^b Handbook of Design, Manufacturing and Automation by
+       Richard C. Dorf and Andrew Kusiak (Wiley-IEEE) Page 260 [62]ISBN
+       0471552186
+    3. [63]^ [64]vidyaonline.org - robot
+    4. [65]^ [66]Robotics Research Group - The first robot:"Ultimate"
+    5. [67]^ [68]"Unimate." Encyclopædia Britannica. 2008. Encyclopædia
+       Britannica Online. 08 Oct. 2008
+    6. [69]^ [70]Used-Robots.com - The History and Benefits of Industrial
+       Robots
+
+                [71]Persondata
+   Name              Devol, George
+   Alternative names
+   Short description
+   Date of birth     February 20, 1912
+   Place of birth    [72]Louisville, Kentucky
+   Date of death
+   Place of death
+   Retrieved from "[73]http://en.wikipedia.org/wiki/George_Devol"
+   [74]Categories: [75]People from Louisville, Kentucky | [76]American
+   inventors | [77]1912 births | [78]Roboticists | [79]Living people
+   Hidden categories: [80]Articles with hCards
+
+Personal tools
+
+     * [81]Log in / create account
+
+Namespaces
+
+     * [82]Article
+     * [83]Discussion
+
+Variants
+
+Views
+
+     * [84]Read
+     * [85]Edit
+     * [86]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [87]Main page
+     * [88]Contents
+     * [89]Featured content
+     * [90]Current events
+     * [91]Random article
+     * [92]Donate to Wikipedia
+
+Interaction
+
+     * [93]Help
+     * [94]About Wikipedia
+     * [95]Community portal
+     * [96]Recent changes
+     * [97]Contact Wikipedia
+
+Toolbox
+
+     * [98]What links here
+     * [99]Related changes
+     * [100]Upload file
+     * [101]Special pages
+     * [102]Permanent link
+     * [103]Cite this page
+
+Print/export
+
+     * [104]Create a book
+     * [105]Download as PDF
+     * [106]Printable version
+
+Languages
+
+     * [107]Deutsch
+     * [108]Español
+     * [109]فارسی
+
+     * This page was last modified on 17 January 2011 at 21:59.
+     * Text is available under the [110]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [111]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [112]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [113]Contact us
+
+     * [114]Privacy policy
+     * [115]About Wikipedia
+     * [116]Disclaimers
+
+     * [117]Powered by MediaWiki
+     * [118]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=George_Devol&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#p-search
+   7. file://localhost/wiki/Louisville,_Kentucky
+   8. file://localhost/wiki/Inventor
+   9. file://localhost/wiki/Entrepreneur
+  10. file://localhost/wiki/Inventor
+  11. file://localhost/wiki/Industrial_robot
+  12. file://localhost/wiki/Fort_Lauderdale,_Florida
+  13. file://localhost/wiki/Wilton,_Connecticut
+  14. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-0
+  15. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#Biography
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#United_Cinephone
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#World_War_II
+  18. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#Other_post-war_work
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#The_first_industrial_robot:_Unimate
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#Additional_work
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#References
+  22. file://localhost/w/index.php?title=George_Devol&action=edit&section=1
+  23. file://localhost/wiki/Louisville,_Kentucky
+  24. file://localhost/w/index.php?title=Riordan_Prep&action=edit&redlink=1
+  25. file://localhost/w/index.php?title=George_Devol&action=edit&section=2
+  26. file://localhost/wiki/Wikipedia:Upload?wpDestFile=United_Cinephoeene_Brochure_p1.jpg
+  27. file://localhost/w/index.php?title=United_Cinephone_Corp.&action=edit&redlink=1
+  28. file://localhost/w/index.php?title=Automatic_Door&action=edit&redlink=1
+  29. file://localhost/wiki/Wikipedia:Upload?wpDestFile=George_Devol_-_United_Cinephone_1935_Bar_Code_System.jpg
+  30. file://localhost/wiki/Cotton_Club
+  31. file://localhost/wiki/Count_Basie
+  32. file://localhost/wiki/Fred_Waring
+  33. file://localhost/w/index.php?title=George_Devol&action=edit&section=3
+  34. file://localhost/wiki/World_War_II
+  35. file://localhost/w/index.php?title=George_Devol&action=edit&section=4
+  36. file://localhost/wiki/Grand_Central_Station
+  37. file://localhost/w/index.php?title=George_Devol&action=edit&section=5
+  38. file://localhost/wiki/Unimate
+  39. file://localhost/wiki/Magnetic
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-book-1
+  41. file://localhost/wiki/Unimation
+  42. file://localhost/wiki/George_Eastman
+  43. file://localhost/wiki/Kodak
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-2
+  45. file://localhost/wiki/United_States
+  46. file://localhost/wiki/Manning,_Maxwell_and_Moore
+  47. file://localhost/wiki/Stratford,_Connecticut
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-book-1
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-3
+  50. file://localhost/wiki/Unimate
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-4
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_note-5
+  53. file://localhost/wiki/Trenton,_New_Jersey
+  54. file://localhost/w/index.php?title=George_Devol&action=edit&section=6
+  55. file://localhost/wiki/Unimate
+  56. file://localhost/w/index.php?title=George_Devol&action=edit&section=7
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-0
+  58. http://query.nytimes.com/gst/fullpage.html?res=9502E0DC1639F932A15750C0A964948260&sec=technology&spon=&pagewanted=all
+  59. file://localhost/wiki/New_York_Times
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-book_1-0
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-book_1-1
+  62. file://localhost/wiki/Special:BookSources/0471552186
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-2
+  64. http://www.vidyaonline.org/arvindgupta/robot.pdf
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-3
+  66. http://www.robotics.utexas.edu/rrg/learn_more/history/
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-4
+  68. http://www.britannica.com/EBchecked/topic/1086638/Unimate
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html#cite_ref-5
+  70. http://www.used-robots.com/robot-education.php?page=benefits+of+industrial+robots
+  71. file://localhost/wiki/Wikipedia:Persondata
+  72. file://localhost/wiki/Louisville,_Kentucky
+  73. http://en.wikipedia.org/wiki/George_Devol
+  74. file://localhost/wiki/Special:Categories
+  75. file://localhost/wiki/Category:People_from_Louisville,_Kentucky
+  76. file://localhost/wiki/Category:American_inventors
+  77. file://localhost/wiki/Category:1912_births
+  78. file://localhost/wiki/Category:Roboticists
+  79. file://localhost/wiki/Category:Living_people
+  80. file://localhost/wiki/Category:Articles_with_hCards
+  81. file://localhost/w/index.php?title=Special:UserLogin&returnto=George_Devol
+  82. file://localhost/wiki/George_Devol
+  83. file://localhost/wiki/Talk:George_Devol
+  84. file://localhost/wiki/George_Devol
+  85. file://localhost/w/index.php?title=George_Devol&action=edit
+  86. file://localhost/w/index.php?title=George_Devol&action=history
+  87. file://localhost/wiki/Main_Page
+  88. file://localhost/wiki/Portal:Contents
+  89. file://localhost/wiki/Portal:Featured_content
+  90. file://localhost/wiki/Portal:Current_events
+  91. file://localhost/wiki/Special:Random
+  92. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+  93. file://localhost/wiki/Help:Contents
+  94. file://localhost/wiki/Wikipedia:About
+  95. file://localhost/wiki/Wikipedia:Community_portal
+  96. file://localhost/wiki/Special:RecentChanges
+  97. file://localhost/wiki/Wikipedia:Contact_us
+  98. file://localhost/wiki/Special:WhatLinksHere/George_Devol
+  99. file://localhost/wiki/Special:RecentChangesLinked/George_Devol
+ 100. file://localhost/wiki/Wikipedia:Upload
+ 101. file://localhost/wiki/Special:SpecialPages
+ 102. file://localhost/w/index.php?title=George_Devol&oldid=408470555
+ 103. file://localhost/w/index.php?title=Special:Cite&page=George_Devol&id=408470555
+ 104. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=George+Devol
+ 105. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=George+Devol&oldid=408470555&writer=rl
+ 106. file://localhost/w/index.php?title=George_Devol&printable=yes
+ 107. http://de.wikipedia.org/wiki/George_Devol
+ 108. http://es.wikipedia.org/wiki/George_Devol
+ 109. http://fa.wikipedia.org/wiki/%D8%AC%D9%88%D8%B1%D8%AC_%D8%AF%D9%88%D9%88%D9%84
+ 110. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 111. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 112. http://www.wikimediafoundation.org/
+ 113. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 114. http://wikimediafoundation.org/wiki/Privacy_policy
+ 115. file://localhost/wiki/Wikipedia:About
+ 116. file://localhost/wiki/Wikipedia:General_disclaimer
+ 117. http://www.mediawiki.org/
+ 118. http://wikimediafoundation.org/
+
+   Hidden links:
+ 119. file://localhost/wiki/File:George_C_Devol_Color_Photo.jpg
+ 120. file://localhost/wiki/File:Phantom_Doorman.jpg
+ 121. file://localhost/wiki/File:Phantom_Doorman.jpg
+ 122. file://localhost/wiki/File:Orthoplane_Lighting.jpg
+ 123. file://localhost/wiki/File:Orthoplane_Lighting.jpg
+ 124. file://localhost/wiki/File:Speedy_Weeny.jpg
+ 125. file://localhost/wiki/File:Speedy_Weeny.jpg
+ 126. file://localhost/wiki/File:First_DC_Magnetic_Recorder.jpg
+ 127. file://localhost/wiki/File:First_DC_Magnetic_Recorder.jpg
+ 128. file://localhost/wiki/File:Original_Robot_Patent.jpg
+ 129. file://localhost/wiki/File:Original_Robot_Patent.jpg
+ 130. file://localhost/wiki/File:Unimate.jpg
+ 131. file://localhost/wiki/File:Unimate.jpg
+ 132. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/george_devol.html
+ 134. file://localhost/wiki/Main_Page
+ 135. http://creativecommons.org/licenses/by-sa/3.0/

@@ -1,0 +1,202 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Albert Macovski
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                         Albert Macovski
+      Born    1929
+   Occupation Professor of [7]Electrical Engineering (Emeritus),
+              [8]Stanford University
+
+   Albert Macovski is an [9]American [10]Professor (Emeritus) at
+   [11]Stanford University, know for his many innovations in the area of
+   imaging, particularly in the medical field. He has over 150 [12]patents
+   and has authored over 200 technical articles. His innovations include
+   the single-tube color camera and real-time [13]phased array imaging for
+   [14]ultrasound. He has also made significant contributions to
+   [15]magnetic resonance imaging (MRI), [16]computerized axial tomography
+   (CAT scans), and [17]digital radiography. His honors include Founding
+   Fellow of the [18]American Institute of Medical and Biological
+   Engineering, the [19]IEEE [20]Zworykin Award, and the gold medal of the
+   [21]International Society of Magnetic Resonance. ^[22][1]
+
+[[23]edit] External links
+
+     * [24]Smart Computing Encyclopedia Entry
+     * [25]Stanford Faculty Page
+     * [26]Description of ultrasound phased array patent
+
+[[27]edit] References
+
+    1. [28]^ [29]"Inventor of the Week: Albert Macovski, Medical Imaging
+       Systems". web.mit.edu/invent. 2000-08.
+       [30]http://web.mit.edu/invent/iow/macovski.html. Retrieved
+       2007-03-11.
+
+            [31]Persondata
+   Name              Macovski, Albert
+   Alternative names
+   Short description
+   Date of birth
+   Place of birth
+   Date of death
+   Place of death
+   Retrieved from "[32]http://en.wikipedia.org/wiki/Albert_Macovski"
+   [33]Categories: [34]American inventors | [35]American electrical
+   engineers | [36]1929 births | [37]Living people
+   Hidden categories: [38]Articles with hCards
+
+Personal tools
+
+     * [39]Log in / create account
+
+Namespaces
+
+     * [40]Article
+     * [41]Discussion
+
+Variants
+
+Views
+
+     * [42]Read
+     * [43]Edit
+     * [44]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [45]Main page
+     * [46]Contents
+     * [47]Featured content
+     * [48]Current events
+     * [49]Random article
+     * [50]Donate to Wikipedia
+
+Interaction
+
+     * [51]Help
+     * [52]About Wikipedia
+     * [53]Community portal
+     * [54]Recent changes
+     * [55]Contact Wikipedia
+
+Toolbox
+
+     * [56]What links here
+     * [57]Related changes
+     * [58]Upload file
+     * [59]Special pages
+     * [60]Permanent link
+     * [61]Cite this page
+
+Print/export
+
+     * [62]Create a book
+     * [63]Download as PDF
+     * [64]Printable version
+
+     * This page was last modified on 14 October 2010 at 10:39.
+     * Text is available under the [65]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [66]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [67]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [68]Contact us
+
+     * [69]Privacy policy
+     * [70]About Wikipedia
+     * [71]Disclaimers
+
+     * [72]Powered by MediaWiki
+     * [73]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Albert_Macovski&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html#p-search
+   7. file://localhost/wiki/Electrical_Engineering
+   8. file://localhost/wiki/Stanford_University
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/Professor
+  11. file://localhost/wiki/Stanford_University
+  12. file://localhost/wiki/Patents
+  13. file://localhost/wiki/Phased_array_ultrasonics
+  14. file://localhost/wiki/Ultrasound
+  15. file://localhost/wiki/Magnetic_resonance_imaging
+  16. file://localhost/wiki/Computerized_axial_tomography
+  17. file://localhost/wiki/Digital_radiography
+  18. file://localhost/w/index.php?title=American_Institute_of_Medical_and_Biological_Engineering&action=edit&redlink=1
+  19. file://localhost/wiki/IEEE
+  20. file://localhost/w/index.php?title=Zworykin_Award&action=edit&redlink=1
+  21. file://localhost/w/index.php?title=International_Society_of_Magnetic_Resonance&action=edit&redlink=1
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html#cite_note-0
+  23. file://localhost/w/index.php?title=Albert_Macovski&action=edit&section=1
+  24. http://www.smartcomputing.com/editorial/dictionary/detail.asp?guid=&searchtype=1&DicID=16317&RefType=Encyclopedia
+  25. http://www-ee.stanford.edu/Faculty/Macovski_Albert.html
+  26. http://www.ob-ultrasound.net/macovski_patent.html
+  27. file://localhost/w/index.php?title=Albert_Macovski&action=edit&section=2
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html#cite_ref-0
+  29. http://web.mit.edu/invent/iow/macovski.html
+  30. http://web.mit.edu/invent/iow/macovski.html
+  31. file://localhost/wiki/Wikipedia:Persondata
+  32. http://en.wikipedia.org/wiki/Albert_Macovski
+  33. file://localhost/wiki/Special:Categories
+  34. file://localhost/wiki/Category:American_inventors
+  35. file://localhost/wiki/Category:American_electrical_engineers
+  36. file://localhost/wiki/Category:1929_births
+  37. file://localhost/wiki/Category:Living_people
+  38. file://localhost/wiki/Category:Articles_with_hCards
+  39. file://localhost/w/index.php?title=Special:UserLogin&returnto=Albert_Macovski
+  40. file://localhost/wiki/Albert_Macovski
+  41. file://localhost/wiki/Talk:Albert_Macovski
+  42. file://localhost/wiki/Albert_Macovski
+  43. file://localhost/w/index.php?title=Albert_Macovski&action=edit
+  44. file://localhost/w/index.php?title=Albert_Macovski&action=history
+  45. file://localhost/wiki/Main_Page
+  46. file://localhost/wiki/Portal:Contents
+  47. file://localhost/wiki/Portal:Featured_content
+  48. file://localhost/wiki/Portal:Current_events
+  49. file://localhost/wiki/Special:Random
+  50. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+  51. file://localhost/wiki/Help:Contents
+  52. file://localhost/wiki/Wikipedia:About
+  53. file://localhost/wiki/Wikipedia:Community_portal
+  54. file://localhost/wiki/Special:RecentChanges
+  55. file://localhost/wiki/Wikipedia:Contact_us
+  56. file://localhost/wiki/Special:WhatLinksHere/Albert_Macovski
+  57. file://localhost/wiki/Special:RecentChangesLinked/Albert_Macovski
+  58. file://localhost/wiki/Wikipedia:Upload
+  59. file://localhost/wiki/Special:SpecialPages
+  60. file://localhost/w/index.php?title=Albert_Macovski&oldid=390671938
+  61. file://localhost/w/index.php?title=Special:Cite&page=Albert_Macovski&id=390671938
+  62. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Albert+Macovski
+  63. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Albert+Macovski&oldid=390671938&writer=rl
+  64. file://localhost/w/index.php?title=Albert_Macovski&printable=yes
+  65. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+  66. http://wikimediafoundation.org/wiki/Terms_of_Use
+  67. http://www.wikimediafoundation.org/
+  68. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+  69. http://wikimediafoundation.org/wiki/Privacy_policy
+  70. file://localhost/wiki/Wikipedia:About
+  71. file://localhost/wiki/Wikipedia:General_disclaimer
+  72. http://www.mediawiki.org/
+  73. http://wikimediafoundation.org/
+
+   Hidden links:
+  74. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html
+  75. file://localhost/home/memfis/projects/put/tsiss/Downloads/albert_macovski.html
+  76. file://localhost/wiki/Main_Page
+  77. http://creativecommons.org/licenses/by-sa/3.0/

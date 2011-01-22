@@ -1,0 +1,602 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Christopher Latham Sholes
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                           Christopher Latham Sholes
+       Born      February 14, 1819(1819-02-14)
+                 [7]Mooresburg, [8]Montour County, Pennsylvania, United States
+       Died      February 17, 1890(1890-02-17) (aged 71)
+   Resting place [9]Forest Home Cemetery, [10]Milwaukee, [11]Wisconsin,
+                 U.S.A ^[12][1]
+    Nationality  American
+     Known for   "The Father of the typewriter"^[13][1]
+
+   Christopher Latham Sholes^[14][2] (February 14, 1819 - February 17,
+   1890) was an American [15]inventor who invented the first practical
+   [16]typewriter and the [17]QWERTY keyboard still in use today.^[18][3]
+   He was also a newspaper publisher and Wisconsin politician.
+
+   Contents
+
+        * [19]1 Youth and political career
+        * [20]2 The "Voree plates"
+        * [21]3 Inventing the typewriter
+        * [22]4 Notes
+        * [23]5 References
+        * [24]6 External links
+
+[[25]edit] Youth and political career
+
+   Born in [26]Mooresburg, Pennsylvania, Sholes moved to nearby
+   [27]Danville as a teenager, where he worked as an [28]apprentice to a
+   [29]printer. After completing his [30]apprenticeship, Sholes moved to
+   [31]Milwaukee, Wisconsin in 1837. He became a [32]newspaper
+   [33]publisher and [34]politician, serving in the [35]Wisconsin State
+   Senate 1848-1849, 1856–1857, and the [36]Wisconsin State Assembly
+   1852-1853.^[37][4]^[38][5] He was instrumental in the successful
+   movement to abolish [39]capital punishment in Wisconsin: his newspaper,
+   The Kenosha Telegraph, reported on the trial of [40]John McCaffary in
+   1851, and then in 1853 he led the campaign in the Wisconsin State
+   Assembly.^[41][6] He was the younger brother of [42]Charles Sholes
+   (1816–1867) who was a newspaper publisher and politician who served in
+   both houses of the Wisconsin State Legislature and as mayor of
+   [43]Kenosha, Wisconsin.^[44][7]
+
+[[45]edit] The "Voree plates"
+
+   In 1845, Sholes was working as editor of the Southport Telegraph, a
+   small newspaper in [46]Kenosha, Wisconsin. During this time he heard
+   about the alleged discovery of the [47]Voree Record, a set of three
+   minuscule [48]brass plates unearthed by [49]James J. Strang, a would-be
+   successor to the murdered [50]Mormon prophet [51]Joseph Smith,
+   Jr..^[52][8] Strang asserted that this proved that he was a true
+   [53]prophet of God, and he invited the public to call upon him and see
+   the plates for themselves. Sholes accordingly visited Strang, examined
+   his "Voree Record," and wrote an article about their meeting. He
+   indicated that while he could not accept Strang's plates or his
+   prophetic claims, Strang himself seemed to be "honest and earnest" and
+   his disciples were "among the most honest and intelligent men in the
+   neighborhood." As for the "record" itself, Sholes indicated that he was
+   "content to have no opinion about it."^[54][9]
+
+[[55]edit] Inventing the typewriter
+
+   Main article: [56]Sholes and Glidden typewriter
+   John Pratt's Pterotype, the inspiration for Sholes in July 1867.
+   [57]Wisconsin Historical Marker
+
+   Typewriters had been invented as early as 1714 by [58]Henry Mill and
+   reinvented in various forms throughout the 1800s. It was to be Sholes,
+   however, who invented the first one to be commercially successful.
+
+   Sholes had moved to [59]Milwaukee and became the editor of a newspaper.
+   Following a strike by compositors at his printing press, he tried
+   building a machine for [60]typesetting, but this was a failure and he
+   quickly abandoned the idea. He arrived at the typewriter through a
+   different route. His initial goal was to create a machine to number
+   pages of a book, tickets, and so on. He began work on this at
+   Kleinsteubers machine shop in Milwaukee, together with a fellow printer
+   [61]Samuel W. Soule, and they [62]patented a numbering machine on
+   November 13, 1866.^[63][10]
+
+   Sholes and Soule showed their machine to [64]Carlos Glidden, a lawyer
+   and amateur inventor at the machine shop working on a mechanical plow,
+   who wondered if the machine could not be made to produce letters and
+   words as well. Further inspiration came in July 1867, when Sholes came
+   across a short note in [65]Scientific American^[66][11] describing the
+   "Pterotype", a prototype typewriter that had been invented by [67]John
+   Pratt. From the description, Sholes decided that the pterotype was too
+   complex and set out to make his own machine, whose name he got from the
+   article: the typewriting machine, or typewriter.
+
+   For this project, Soule was again enlisted, and Glidden joined them as
+   a third partner who provided the funds. The Scientific American article
+   (unillustrated) had figuratively used the phrase "literary piano"; the
+   first model that the trio built had a keyboard literally resembling a
+   piano. It had black keys and white keys, laid out in two rows. It did
+   not contain keys for the numerals 0 or 1 because the letters O and I
+   were deemed sufficient:
+  3 5 7 9 N O P Q R S T U V W X Y Z
+ 2 4 6 8 . A B C D E F G H I J K L M
+
+   with the first row made of [68]ivory and the second of [69]ebony, the
+   rest of the framework being wooden. It was in this form that Sholes,
+   Glidden and Soule were granted patents for their invention on June 23,
+   1868^[70][12] and July 14.^[71][13] The first document to be produced
+   on a typewriter was a contract that Sholes had written, in his capacity
+   as the Comptroller for the city of Milwaukee. Machines similar to
+   Sholes's had been previously used by the blind for embossing, but by
+   Sholes's time the inked ribbon had been invented, which made
+   typewriting in its current form possible.^[72][10]
+
+   At this stage, the Sholes-Glidden-Soule typewriter was only one among
+   dozens of similar inventions. They wrote hundreds of letters on their
+   machine to various people, one of whom was [73]James Densmore of
+   [74]Meadville, Pennsylvania. Densmore foresaw that the typewriter would
+   be highly profitable, and offered to buy a share of the patent, without
+   even having laid eyes on the machine. The trio immediately sold him
+   one-fourth of the patent in return for his paying all their expenses so
+   far. When Densmore eventually examined the machine in March 1867, he
+   declared that it was good for nothing in its current form, and urged
+   them to start improving it. Discouraged, Soule and Glidden left the
+   project, leaving Sholes and Densmore in sole possession of the patent.
+
+   Realizing that [75]stenographers would be among the first and most
+   important users of the machine, and therefore best in a position to
+   judge its suitability, they sent experimental versions to a few
+   stenographers. The most important of them was [76]James O. Clephane, of
+   [77]Washington D.C., who tried the instruments as no one else had tried
+   them, subjecting them to such unsparing tests that he destroyed them,
+   one after another, as fast as they could be made and sent to him. His
+   judgments were similarly caustic, causing Sholes to lose his patience
+   and temper. But Densmore insisted that this was exactly what they
+   needed:^[78][10]^[79][14]
+
+   "This candid fault-finding is just what we need. We had better have it
+   now than after we begin manufacturing. Where Clephane points out a weak
+   lever or rod let us make it strong. Where a spacer or an inker works
+   stiffly, let us make it work smoothly. Then, depend upon Clephane for
+   all the praise we deserve."
+
+   Sholes typewriter, 1873. Museum, [80]Buffalo and Erie County Historical
+   Society.
+
+   Sholes took this advice and set to improve the machine at every
+   iteration, until they were satisfied that Clephane had taught them
+   everything he could. By this time, they had manufactured 50 machines or
+   so, at an average cost of $250. They decided to have the machine
+   examined by an expert mechanic, who directed them to [81]E. Remington
+   and Sons (which later became the Remington Arms Company), manufacturers
+   of firearms, sewing machines, and farm tools. In early 1873 they
+   approached Remington, who decided to buy the patent from them. Sholes
+   sold his half for $12,000, while Densmore, still a stronger believer in
+   the machine, insisted on a royalty, which would eventually fetch him
+   $1.5 million.^[82][10]
+
+   Sholes returned to Milwaukee and continued to work on new improvements
+   for the typewriter throughout the 1870s, which included the [83]QWERTY
+   keyboard (1873).^[84][15] [85]James Densmore had suggested splitting up
+   commonly used letter combinations in order to solve a jamming problem
+   caused by the slow method of recovering from a keystroke: weights, not
+   springs, returned all parts to the "rest" position. This concept was
+   later refined by Sholes and the resulting QWERTY layout is still used
+   today on both typewriters and English language computer keyboards,
+   although the jamming problem no longer exists.
+
+   Sholes died on February 17, 1890 after battling [86]tuberculosis for
+   nine years, and is buried at [87]Forest Home Cemetery in Milwaukee.
+
+[[88]edit] Notes
+
+    1. ^ [89]^a [90]^b Weller, Charles Edward (1918). The Early History of
+       the Typewriter. Chase & Shepard, printers. pp. 75.
+    2. [91]^ In his time, Sholes went by the names "C. Latham Sholes",
+       "Latham Sholes", or "C. L. Sholes", but never "Christopher Sholes"
+       or "Christopher L. Sholes".
+    3. [92]^ "Early Typewriter History,"
+       [93]http://www.mit.edu/~jcb/Dvorak/history.html.
+    4. [94]^
+       [95]http://www.wisconsinhistory.org/dictionary/index.asp?action=vie
+       w&term_id=1741&keyword=sholes
+    5. [96]^ [97]http://www.legis.state.wi.us/lrb/pubs/ib/99ib1.pdf
+    6. [98]^ [99]A Brief History of Wisconsin's Death Penalty
+    7. [100]^
+       [101]http://www.wisconsinhistory.org/dictionary/index.asp?action=vi
+       ew&term_id=2625&keyword=sholes
+    8. [102]^ See "Voree Plates" at
+       [103]http://www.strangite.org/Plates.htm.
+    9. [104]^ Fitzpatrick, Doyle, The King Strang Story (National
+       Heritage, 1970), pp. 36-37.
+   10. ^ [105]^a [106]^b [107]^c [108]^d Iles, George (1912), [109]Leading
+       American Inventors, New York: Henry Holt and Company,
+       [110]http://www.archive.org/details/leadingamericani00ilesrich
+   11. [111]^ [112]"Type Writing Machine.", [113]Scientific American, New
+       (New York) 17 (1): 3, 1867-07-06,
+       [114]http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1
+       &coll=moa&view=50&root=%2Fmoa%2Fscia%2Fscia1017%2F&tif=00011.TIF&ci
+       te=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3
+       Fnotisid%3DABF2204-1017-3, retrieved 2009-01-14
+   12. [115]^ [116]#79265
+   13. [117]^ [118]#79868
+   14. [119]^ Mares, G.C. (1909), The history of the typewriter, successor
+       to the pen: An illustrated account of the origin, rise, and
+       development of the writing machine, London: Guilbert Putnam
+       Reprinted by Post-era Books, Arcadia, CA, 1985.
+   15. [120]^ [121]http://cs.ttu.ee/kursused/itv0010/maxmon/1874ad.htm
+
+[[122]edit] References
+
+     * Darryl Rehr. [123]"The First Typewriter". The QWERTY Connection.
+       [124]http://home.earthlink.net/~dcrehr/firsttw.html. Retrieved May
+       11, 2005.
+     * [125]Who invented the typewriter?
+     * [126]Sholes and Glidden typewriter
+     * [127]US 79265, Sholes, C. L., issued 1868
+     * [128]US 79868, Sholes, C. L., issued 1868
+     * [129]US 182511, Sholes, C. L., issued 1876
+     * [130]US 199382, Sholes, C. L., issued 1878
+     * [131]US 200321, Sholes, C. L., issued 1878
+     * [132]US 207557, Sholes, C. L., issued 1878
+     * [133]US 207558, Sholes, C. L., issued 1878
+     * [134]US 207559, Sholes, C. L., issued 1878
+
+[[135]edit] External links
+
+     * [136]Christopher Latham Sholes, The Wisconsin State Historical
+       Society
+     * [137]Christopher Latham Sholes at [138]Find A Grave
+
+
+   [139]v · [140]d · [141]e[142]Typewriters
+   Manufacturers
+   [143]Brother  · [144]E. Remington and Sons  · [145]IBM  · [146]Imperial
+   Typewriter Company  · [147]Oliver Typewriter Company  · [148]Olivetti
+   · [149]Royal Typewriter Company  · [150]Smith Corona  · [151]Underwood
+   Typewriter Company
+   Models
+   [152]Blickensderfer typewriter  · [153]Data Recall Diamond  ·
+   [154]Hansen Writing Ball  · [155]IBM Selectric typewriter  ·
+   [156]Sholes and Glidden typewriter
+   Prominent Figures
+   [157]Lucien Stephen Crandall  · [158]James Densmore  · [159]Carlos
+   Glidden  · [160]Rasmus Malling-Hansen  · [161]Henry Mill  ·
+   [162]Clarence Seamans  · Christopher Sholes  · [163]James Fields
+   Smathers  · [164]Samuel W. Soule  · [165]Kyota Sugimoto
+   Components
+   [166]Platen  · [167]QWERTY  · [168]Typebar
+                             [169]Persondata
+   Name              Sholes, Christopher
+   Alternative names
+   Short description
+   Date of birth     February 14, 1819
+   Place of birth    [170]Mooresburg, [171]Montour County, Pennsylvania,
+                     United States
+   Date of death     February 17, 1890
+   Place of death
+   Retrieved from
+   "[172]http://en.wikipedia.org/wiki/Christopher_Latham_Sholes"
+   [173]Categories: [174]1819 births | [175]1890 deaths | [176]Wisconsin
+   State Senators | [177]Members of the Wisconsin State Assembly |
+   [178]American inventors | [179]Typewriters | [180]National Inventors
+   Hall of Fame inductees | [181]People from Milwaukee, Wisconsin |
+   [182]People from Montour County, Pennsylvania | [183]American
+   anti-death penalty activists
+   Hidden categories: [184]Articles with hCards
+
+Personal tools
+
+     * [185]Log in / create account
+
+Namespaces
+
+     * [186]Article
+     * [187]Discussion
+
+Variants
+
+Views
+
+     * [188]Read
+     * [189]Edit
+     * [190]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [191]Main page
+     * [192]Contents
+     * [193]Featured content
+     * [194]Current events
+     * [195]Random article
+     * [196]Donate to Wikipedia
+
+Interaction
+
+     * [197]Help
+     * [198]About Wikipedia
+     * [199]Community portal
+     * [200]Recent changes
+     * [201]Contact Wikipedia
+
+Toolbox
+
+     * [202]What links here
+     * [203]Related changes
+     * [204]Upload file
+     * [205]Special pages
+     * [206]Permanent link
+     * [207]Cite this page
+
+Print/export
+
+     * [208]Create a book
+     * [209]Download as PDF
+     * [210]Printable version
+
+Languages
+
+     * [211]العربية
+     * [212]Български
+     * [213]Deutsch
+     * [214]Español
+     * [215]فارسی
+     * [216]Français
+     * [217]Galego
+     * [218]Italiano
+     * [219]日本語
+     * [220]Português
+     * [221]Русский
+     * [222]Svenska
+     * [223]Türkçe
+
+     * This page was last modified on 10 January 2011 at 10:54.
+     * Text is available under the [224]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [225]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [226]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [227]Contact us
+
+     * [228]Privacy policy
+     * [229]About Wikipedia
+     * [230]Disclaimers
+
+     * [231]Powered by MediaWiki
+     * [232]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#p-search
+   7. file://localhost/wiki/Mooresburg,_Pennsylvania
+   8. file://localhost/wiki/Montour_County,_Pennsylvania
+   9. file://localhost/wiki/Forest_Home_Cemetery
+  10. file://localhost/wiki/Milwaukee
+  11. file://localhost/wiki/Wisconsin
+  12. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-weller-0
+  13. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-weller-0
+  14. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-1
+  15. file://localhost/wiki/Inventor
+  16. file://localhost/wiki/Typewriter
+  17. file://localhost/wiki/QWERTY
+  18. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-2
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#Youth_and_political_career
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#The_.22Voree_plates.22
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#Inventing_the_typewriter
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#Notes
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#References
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#External_links
+  25. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=1
+  26. file://localhost/wiki/Mooresburg,_Pennsylvania
+  27. file://localhost/wiki/Danville,_Pennsylvania
+  28. file://localhost/wiki/Apprentice
+  29. file://localhost/wiki/Printer_(publisher)
+  30. file://localhost/wiki/Apprenticeship
+  31. file://localhost/wiki/Milwaukee,_Wisconsin
+  32. file://localhost/wiki/Newspaper
+  33. file://localhost/wiki/Publisher
+  34. file://localhost/wiki/Politician
+  35. file://localhost/wiki/Wisconsin_State_Senate
+  36. file://localhost/wiki/Wisconsin_State_Assembly
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-3
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-4
+  39. file://localhost/wiki/Capital_punishment_in_Wisconsin
+  40. file://localhost/wiki/John_McCaffary
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-5
+  42. file://localhost/wiki/Charles_Sholes_(Wisconsin_politician)
+  43. file://localhost/wiki/Kenosha,_Wisconsin
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-6
+  45. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=2
+  46. file://localhost/wiki/Kenosha,_Wisconsin
+  47. file://localhost/wiki/Voree_plates
+  48. file://localhost/wiki/Brass
+  49. file://localhost/wiki/James_J._Strang
+  50. file://localhost/wiki/Latter_Day_Saint
+  51. file://localhost/wiki/Joseph_Smith,_Jr.
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-7
+  53. file://localhost/wiki/Prophet,_seer_and_revelator
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-8
+  55. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=3
+  56. file://localhost/wiki/Sholes_and_Glidden_typewriter
+  57. file://localhost/wiki/Wisconsin
+  58. file://localhost/wiki/Henry_Mill
+  59. file://localhost/wiki/Milwaukee
+  60. file://localhost/wiki/Typesetting
+  61. file://localhost/wiki/Samuel_W._Soule
+  62. file://localhost/wiki/Patent
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-iles-9
+  64. file://localhost/wiki/Carlos_Glidden
+  65. file://localhost/wiki/Scientific_American
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-10
+  67. file://localhost/w/index.php?title=John_Pratt_(inventor)&action=edit&redlink=1
+  68. file://localhost/wiki/Ivory
+  69. file://localhost/wiki/Ebony
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-11
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-12
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-iles-9
+  73. file://localhost/wiki/James_Densmore
+  74. file://localhost/wiki/Meadville,_Pennsylvania
+  75. file://localhost/wiki/Stenographers
+  76. file://localhost/wiki/James_O._Clephane
+  77. file://localhost/wiki/Washington_D.C.
+  78. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-iles-9
+  79. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-13
+  80. file://localhost/wiki/Buffalo_and_Erie_County_Historical_Society
+  81. file://localhost/wiki/E._Remington_and_Sons
+  82. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-iles-9
+  83. file://localhost/wiki/QWERTY
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_note-14
+  85. file://localhost/wiki/James_Densmore
+  86. file://localhost/wiki/Tuberculosis
+  87. file://localhost/wiki/Forest_Home_Cemetery
+  88. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=4
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-weller_0-0
+  90. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-weller_0-1
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-1
+  92. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-2
+  93. http://www.mit.edu/~jcb/Dvorak/history.html
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-3
+  95. http://www.wisconsinhistory.org/dictionary/index.asp?action=view&term_id=1741&keyword=sholes
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-4
+  97. http://www.legis.state.wi.us/lrb/pubs/ib/99ib1.pdf
+  98. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-5
+  99. http://www.wisbar.org/AM/Template.cfm?Section=Home&CONTENTID=50092&TEMPLATE=/CM/ContentDisplay.cfm
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-6
+ 101. http://www.wisconsinhistory.org/dictionary/index.asp?action=view&term_id=2625&keyword=sholes
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-7
+ 103. http://www.strangite.org/Plates.htm
+ 104. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-8
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-iles_9-0
+ 106. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-iles_9-1
+ 107. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-iles_9-2
+ 108. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-iles_9-3
+ 109. http://www.archive.org/details/leadingamericani00ilesrich
+ 110. http://www.archive.org/details/leadingamericani00ilesrich
+ 111. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-10
+ 112. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fscia%2Fscia1017%2F&tif=00011.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABF2204-1017-3
+ 113. file://localhost/wiki/Scientific_American
+ 114. http://cdl.library.cornell.edu/cgi-bin/moa/pageviewer?frames=1&coll=moa&view=50&root=%2Fmoa%2Fscia%2Fscia1017%2F&tif=00011.TIF&cite=http%3A%2F%2Fcdl.library.cornell.edu%2Fcgi-bin%2Fmoa%2Fmoa-cgi%3Fnotisid%3DABF2204-1017-3
+ 115. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-11
+ 116. http://www.google.com/patents?id=t7YAAAAAEBAJ
+ 117. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-12
+ 118. http://www.google.com/patents?id=ErkAAAAAEBAJ
+ 119. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-13
+ 120. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html#cite_ref-14
+ 121. http://cs.ttu.ee/kursused/itv0010/maxmon/1874ad.htm
+ 122. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=5
+ 123. http://home.earthlink.net/~dcrehr/firsttw.html
+ 124. http://home.earthlink.net/~dcrehr/firsttw.html
+ 125. http://www.typewriter.be/missinvention.htm
+ 126. http://www.typewriter.be/missindustry.htm
+ 127. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US79265
+ 128. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US79868
+ 129. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US182511
+ 130. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US199382
+ 131. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US200321
+ 132. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US207557
+ 133. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US207558
+ 134. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US207559
+ 135. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit&section=6
+ 136. http://www.wisconsinhistory.org/dictionary/index.asp?action=view&term_id=1741&keyword=sholes
+ 137. http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=7656870
+ 138. file://localhost/wiki/Find_A_Grave
+ 139. file://localhost/wiki/Template:Typewriter
+ 140. file://localhost/w/index.php?title=Template_talk:Typewriter&action=edit&redlink=1
+ 141. http://en.wikipedia.org/w/index.php?title=Template:Typewriter&action=edit
+ 142. file://localhost/wiki/Typewriter
+ 143. file://localhost/wiki/Brother_Industries
+ 144. file://localhost/wiki/E._Remington_and_Sons
+ 145. file://localhost/wiki/IBM
+ 146. file://localhost/wiki/Imperial_Typewriter_Company
+ 147. file://localhost/wiki/Oliver_Typewriter_Company
+ 148. file://localhost/wiki/Olivetti
+ 149. file://localhost/wiki/Royal_Typewriter_Company
+ 150. file://localhost/wiki/Smith_Corona
+ 151. file://localhost/wiki/Underwood_Typewriter_Company
+ 152. file://localhost/wiki/Blickensderfer_typewriter
+ 153. file://localhost/wiki/Data_Recall_Diamond
+ 154. file://localhost/wiki/Hansen_Writing_Ball
+ 155. file://localhost/wiki/IBM_Selectric_typewriter
+ 156. file://localhost/wiki/Sholes_and_Glidden_typewriter
+ 157. file://localhost/wiki/Lucien_Stephen_Crandall
+ 158. file://localhost/wiki/James_Densmore
+ 159. file://localhost/wiki/Carlos_Glidden
+ 160. file://localhost/wiki/Rasmus_Malling-Hansen
+ 161. file://localhost/wiki/Henry_Mill
+ 162. file://localhost/wiki/Clarence_Seamans
+ 163. file://localhost/wiki/James_Fields_Smathers
+ 164. file://localhost/wiki/Samuel_W._Soule
+ 165. file://localhost/wiki/Kyota_Sugimoto
+ 166. file://localhost/wiki/Platen
+ 167. file://localhost/wiki/QWERTY
+ 168. file://localhost/wiki/Typebar
+ 169. file://localhost/wiki/Wikipedia:Persondata
+ 170. file://localhost/wiki/Mooresburg,_Pennsylvania
+ 171. file://localhost/wiki/Montour_County,_Pennsylvania
+ 172. http://en.wikipedia.org/wiki/Christopher_Latham_Sholes
+ 173. file://localhost/wiki/Special:Categories
+ 174. file://localhost/wiki/Category:1819_births
+ 175. file://localhost/wiki/Category:1890_deaths
+ 176. file://localhost/wiki/Category:Wisconsin_State_Senators
+ 177. file://localhost/wiki/Category:Members_of_the_Wisconsin_State_Assembly
+ 178. file://localhost/wiki/Category:American_inventors
+ 179. file://localhost/wiki/Category:Typewriters
+ 180. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 181. file://localhost/wiki/Category:People_from_Milwaukee,_Wisconsin
+ 182. file://localhost/wiki/Category:People_from_Montour_County,_Pennsylvania
+ 183. file://localhost/wiki/Category:American_anti-death_penalty_activists
+ 184. file://localhost/wiki/Category:Articles_with_hCards
+ 185. file://localhost/w/index.php?title=Special:UserLogin&returnto=Christopher_Latham_Sholes
+ 186. file://localhost/wiki/Christopher_Latham_Sholes
+ 187. file://localhost/wiki/Talk:Christopher_Latham_Sholes
+ 188. file://localhost/wiki/Christopher_Latham_Sholes
+ 189. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=edit
+ 190. file://localhost/w/index.php?title=Christopher_Latham_Sholes&action=history
+ 191. file://localhost/wiki/Main_Page
+ 192. file://localhost/wiki/Portal:Contents
+ 193. file://localhost/wiki/Portal:Featured_content
+ 194. file://localhost/wiki/Portal:Current_events
+ 195. file://localhost/wiki/Special:Random
+ 196. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 197. file://localhost/wiki/Help:Contents
+ 198. file://localhost/wiki/Wikipedia:About
+ 199. file://localhost/wiki/Wikipedia:Community_portal
+ 200. file://localhost/wiki/Special:RecentChanges
+ 201. file://localhost/wiki/Wikipedia:Contact_us
+ 202. file://localhost/wiki/Special:WhatLinksHere/Christopher_Latham_Sholes
+ 203. file://localhost/wiki/Special:RecentChangesLinked/Christopher_Latham_Sholes
+ 204. file://localhost/wiki/Wikipedia:Upload
+ 205. file://localhost/wiki/Special:SpecialPages
+ 206. file://localhost/w/index.php?title=Christopher_Latham_Sholes&oldid=407049420
+ 207. file://localhost/w/index.php?title=Special:Cite&page=Christopher_Latham_Sholes&id=407049420
+ 208. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Christopher+Latham+Sholes
+ 209. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Christopher+Latham+Sholes&oldid=407049420&writer=rl
+ 210. file://localhost/w/index.php?title=Christopher_Latham_Sholes&printable=yes
+ 211. http://ar.wikipedia.org/wiki/%D9%83%D8%B1%D9%88%D8%B3%D8%AA%D9%88%D9%81%D8%B1_%D8%B4%D9%88%D9%84%D8%B2
+ 212. http://bg.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%BE%D1%84%D1%8A%D1%80_%D0%A8%D0%BE%D1%83%D0%BB%D1%81
+ 213. http://de.wikipedia.org/wiki/Christopher_Latham_Sholes
+ 214. http://es.wikipedia.org/wiki/Christopher_Sholes
+ 215. http://fa.wikipedia.org/wiki/%DA%A9%D8%B1%DB%8C%D8%B3%D8%AA%D9%88%D9%81%D8%B1_%D9%84%D8%AA%D9%85_%D8%B4%D9%88%D9%84%D8%B2
+ 216. http://fr.wikipedia.org/wiki/Christopher_Latham_Sholes
+ 217. http://gl.wikipedia.org/wiki/Cristopher_Sholes
+ 218. http://it.wikipedia.org/wiki/Christopher_Sholes
+ 219. http://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%AC%E3%82%A4%E3%82%B5%E3%83%A0%E3%83%BB%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%AB%E3%82%BA
+ 220. http://pt.wikipedia.org/wiki/Christopher_Sholes
+ 221. http://ru.wikipedia.org/wiki/%D0%A8%D0%BE%D1%83%D0%BB%D0%B7,_%D0%9B%D1%8D%D1%82%D0%B5%D0%BC_%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%BE%D1%84%D0%B5%D1%80
+ 222. http://sv.wikipedia.org/wiki/Christopher_Sholes
+ 223. http://tr.wikipedia.org/wiki/Christopher_Latham_Sholes
+ 224. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 225. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 226. http://www.wikimediafoundation.org/
+ 227. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 228. http://wikimediafoundation.org/wiki/Privacy_policy
+ 229. file://localhost/wiki/Wikipedia:About
+ 230. file://localhost/wiki/Wikipedia:General_disclaimer
+ 231. http://www.mediawiki.org/
+ 232. http://wikimediafoundation.org/
+
+   Hidden links:
+ 233. file://localhost/wiki/File:Sholes.jpg
+ 234. file://localhost/wiki/File:Pterotype.jpg
+ 235. file://localhost/wiki/File:Pterotype.jpg
+ 236. file://localhost/wiki/File:Invention_of_the_Typewriter.jpg
+ 237. file://localhost/wiki/File:Invention_of_the_Typewriter.jpg
+ 238. file://localhost/wiki/File:Sholes_typewriter.jpg
+ 239. file://localhost/wiki/File:Sholes_typewriter.jpg
+ 240. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html
+ 241. file://localhost/home/memfis/projects/put/tsiss/Downloads/christopher_latham_sholes.html
+ 242. file://localhost/wiki/Main_Page
+ 243. http://creativecommons.org/licenses/by-sa/3.0/

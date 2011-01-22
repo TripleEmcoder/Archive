@@ -1,0 +1,1026 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Edwin Howard Armstrong
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   This article's [7]tone or style may not be appropriate for Wikipedia.
+   Specific concerns may be found on the [8]talk page. See Wikipedia's
+   [9]guide to writing better articles for suggestions. (April 2010)
+                     Edwin H. Armstrong
+   Developed and advanced the utility of FM technology.
+      Born    December 18, 1890(1890-12-18)
+              [10]New York City, [11]U.S. ^[12][1]
+      Died    January 31, 1954(1954-01-31) (aged 63)
+              [13]New York City ([14]Manhattan) [15]U.S.
+   Education  [16]Columbia University
+   Occupation [17]Electrical engineer
+              [18]Inventor
+   Known for  Inventor of [19]FM radio
+     Spouse   Marion MacInnis (1922–1954) (his death)
+
+   Edwin Howard Armstrong (December 18, 1890 – January 31, 1954) was an
+   American [20]electrical engineer and [21]inventor. Armstrong was the
+   inventor of modern [22]frequency modulation (FM) radio.
+
+   Edwin Howard Armstrong was born in New York City, New York, in 1890. He
+   studied at [23]Columbia University and later became a professor there.
+   He invented the [24]regenerative circuit while he was an undergraduate
+   and [25]patented it in 1914, the super-regenerative circuit (patented
+   1922), and the [26]superheterodyne receiver (patented 1918).^[27][2]
+
+   Contents
+
+        * [28]1 Early life
+        * [29]2 Work and patent disputes
+        * [30]3 FM radio
+        * [31]4 Personal life
+        * [32]5 Death
+        * [33]6 Legacy
+        * [34]7 Honors
+        * [35]8 Patents
+        * [36]9 See also
+        * [37]10 References and notes
+        * [38]11 Further reading
+        * [39]12 External links
+
+[[40]edit] Early life
+
+   Armstrong was born in the [41]Chelsea district of [42]New York City to
+   John and Emily Armstrong.^[43][1] The family moved in 1902 to
+   [44]Yonkers. He showed an interest in electrical and mechanical
+   devices, particularly trains, from an early age.^[45][3]
+
+   He loved heights and constructed a makeshift radio antenna tower in his
+   back yard. Swinging on a bosun's chair, he would hoist himself up and
+   down the tower to the concern of his neighbors. A case of rheumatic
+   fever as a child left him with a tic in one eye.
+
+   In late 1917, Armstrong was invited to join the [46]U.S. Army Signal
+   Corps as a captain and was sent to Paris to help set up a wireless
+   communication system for the Army. He returned to the United States in
+   the fall of 1919.^[47][3]
+
+   During his service in two world wars, Armstrong gave the U.S. military
+   free use of his patents. Use of these patents was critical to Allied
+   victory during the wars.
+
+   Unlike many engineers, Armstrong was never a corporate employee. He
+   performed research and development on his own and owned his patents
+   outright. He did not subscribe to conventional wisdom and was quick to
+   question the opinions of his professors and his peers.
+
+[[48]edit] Work and patent disputes
+
+   Howard Armstrong contributed the most to modern electronics technology.
+   His discoveries revolutionized electronic communications.
+   [49]Regeneration, or amplification via [50]positive feedback is still
+   in use to this day. Also, Armstrong discovered that [51]Lee De Forest's
+   [52]Audion would go into [53]oscillation when feedback was increased.
+   Thus, the Audion could not only detect and amplify radio signals, it
+   could transmit them as well.
+
+   While De Forest's addition of a third element to the [54]Audion (the
+   grid) and the subsequent move to modulated (voice) radio is not
+   disputed, De Forest did not put his device to work. Armstrong's
+   research and experimentation with the Audion moved radio reception
+   beyond the crystal set and spark-gap transmitters. Radio signals could
+   be amplified via regeneration to the point of human hearing without a
+   headset. Armstrong later published a paper detailing how the Audion
+   worked,^[55][4] something De Forest could not do. De Forest did not
+   understand the workings of his Audion.
+
+   Armstrong's discovery and development of [56]superheterodyne technology
+   made radio receivers, then the primary communications devices of the
+   time, more sensitive and selective. Before heterodyning, radio signals
+   often overrode and interfered with each other. Heterodyning also made
+   radio receivers much easier to use, rendering obsolete the multitude of
+   tuning controls on radio sets of the time. The superheterodyne
+   technology is still used today.
+
+   Armstrong is possibly best known for his discovery of wide-band
+   [57]frequency modulation. FM was born of a request by [58]David Sarnoff
+   of [59]RCA as a means to eliminate static in radio reception. While
+   Sarnoff was understandably impressed with Armstrong's FM system, he
+   also understood that it was not compatible with his own AM empire.
+   Sarnoff came to see FM as a threat and refused to support it further.
+
+   Many of Armstrong's inventions were ultimately claimed by others in
+   patent lawsuits. In particular, the regenerative circuit, which
+   Armstrong patented in 1914 as a "wireless receiving system," was
+   subsequently patented by [60]Lee De Forest in 1916; De Forest then sold
+   the rights to his patent to [61]AT&T. Between 1922 and 1934, Armstrong
+   found himself embroiled in a patent war, between himself, [62]RCA, and
+   [63]Westinghouse on one side, and De Forest and AT&T on the other. At
+   the time, this action was the longest patent lawsuit ever litigated, at
+   12 years. Armstrong won the first round of the lawsuit, lost the
+   second, and stalemated in a third. Before the [64]Supreme Court of the
+   United States, De Forest was granted the regeneration patent in what is
+   today widely believed to be a misunderstanding of the technical facts
+   by the Supreme Court.^[65][5]
+
+   By early 1923, Armstrong was a millionaire as a result of licensing his
+   patents to RCA.^[66][3]
+
+   In 1946 the FCC's decision to use Armstrong's FM system as the standard
+   for [67]NTSC television sound gave Armstrong another chance at royalty
+   payments. However, RCA refused to pay royalties and encouraged other
+   television makers not to pay them either.
+
+[[68]edit] FM radio
+
+   Columbia's Philosophy Hall. Armstrong developed FM radio in its
+   basement laboratory.
+
+   Even as the regenerative-circuit lawsuit continued, Armstrong was
+   working on another momentous invention. While working in the basement
+   laboratory of Columbia's [69]Philosophy Hall, he created wide-band
+   [70]frequency modulation radio (FM). Rather than varying the amplitude
+   of a radio wave to create sound, Armstrong's method varied the
+   frequency of the wave instead. FM radio broadcasts delivered a much
+   clearer sound, free of static, than the [71]AM radio dominant at the
+   time. (Armstrong received a patent on wide-band FM on December 26,
+   1933.^[72][6]
+
+   In 1922, [73]John Renshaw Carson of AT&T, inventor of
+   [74]Single-sideband modulation (SSB modulation), had published a paper
+   in the [75]Proceedings of the IRE arguing that FM did not appear to
+   offer any particular advantage.^[76][7] Armstrong managed to
+   demonstrate the advantages of FM radio despite Carson's skepticism in a
+   now-famous paper on FM in the Proceedings of the IRE in 1936,^[77][8]
+   which was reprinted in the August 1984 issue of [78]Proceedings of the
+   IEEE.^[79][9]
+
+   Today the consensus regarding FM is that narrow band FM is not so
+   advantageous in terms of noise reduction, but wide band FM can bring
+   great improvement in [80]signal to noise ratio if the signal is
+   stronger than a certain threshold. Hence Carson was not entirely wrong,
+   and the [81]Carson bandwidth rule for FM is still important today.
+   Thus, both Carson and Armstrong ultimately contributed significantly to
+   the science and technology of radio. The threshold concept was
+   discussed by Murray G. Crosby (inventor of [82]Crosby system for FM
+   Stereo) who pointed out that for wide band FM to provide better signal
+   to noise ratio, the signal should be above a certain threshold,
+   according to his paper published in Proceedings of the IRE in
+   1937.^[83][10] Thus Crosby's work supplemented Armstrong's paper in
+   1936.
+
+   Armstrong conducted the first large scale field tests of his FM radio
+   technology on the 85th floor of [84]RCA's (Radio Corporation of
+   America) [85]Empire State Building from May 1934 until October 1935.
+   However RCA had its eye on television broadcasting, and chose not to
+   buy the patents for the FM technology.^[86][11] A June 17, 1936,
+   presentation at the [87]Federal Communications Commission (FCC)
+   headquarters made headlines nationwide. He played a jazz record over
+   conventional AM radio, then switched to an FM broadcast. "[I]f the
+   audience of 50 engineers had shut their eyes they would have believed
+   the jazz band was in the same room. There were no extraneous sounds,"
+   noted one reporter. He added that several engineers described the
+   invention "as one of the most important radio developments since the
+   first earphone crystal sets were introduced."^[88][12]
+
+   In 1937, Armstrong financed construction of the first FM radio station,
+   [89]W2XMN, a 40 kilowatt broadcaster in [90]Alpine, New Jersey. The
+   signal (at 42.8 MHz) could be heard clearly 100 miles (160 km) away,
+   despite the use of less power than an AM radio station.^[91][13]
+
+   RCA began to [92]lobby for a change in the law or FCC regulations that
+   would prevent FM radios from becoming dominant. By June 1945, the RCA
+   had pushed the FCC hard on the allocation of electromagnetic
+   frequencies for the fledgling television industry. Although they denied
+   wrongdoing, [93]David Sarnoff and RCA managed to get the FCC to move
+   the FM radio spectrum from (42-50 MHz), to (88-108 MHz), while getting
+   new low-powered community television stations allocated to a new
+   Channel 1 in the 44-50 MHz range. In fairness to the FCC, the 42-50 MHz
+   band was plagued by frequent tropospheric and E-layer stratospheric
+   propagation which caused distant high powered stations to interfere
+   with each other. The problem becomes even more severe on a cyclical
+   basis when sunspot levels reach a maximum every 11 years and lower VHF
+   band signals below 50 MHz can travel across the Atlantic Ocean or from
+   coast to coast within North America on occasion. Sunspot levels were
+   near their cyclical peak when the FCC reallocated FM in 1945. The
+   88-108 MHz range is a technically better location for FM broadcast
+   because it is less susceptible to this kind of frequent interference.
+   (Channel 1 eventually had to be deleted as well, with all TV broadcasts
+   licensed at frequencies 54 MHz or higher, and the band is no longer
+   widely used for emergency first responders either, those services
+   having moved mostly to UHF.)
+
+   But the immediate economic impact of the shift, whatever its technical
+   merit, was devastating to early FM broadcasters. This single FCC action
+   would render all Armstrong-era FM receivers useless within a short time
+   as stations were moved to the new band, and it also protected both
+   RCA's AM-radio stronghold and that of the other major competing
+   networks, CBS, ABC and Mutual. Armstrong's radio network did not
+   survive the shift into the high frequencies and was set back by the FCC
+   decision. This change was strongly supported by [94]AT&T, because loss
+   of FM relaying stations forced radio stations to buy wired links from
+   AT&T.
+
+   Furthermore, RCA also claimed invention of FM radio and won its own
+   patent on the technology. A patent fight between RCA and Armstrong
+   ensued. RCA's momentous victory in the courts left Armstrong unable to
+   claim royalties on any FM receivers, including televisions, sold in the
+   United States. The undermining of the [95]Yankee Network and his costly
+   legal battles brought ruin to Armstrong, by then almost penniless and
+   emotionally distraught. Eventually, after Armstrong's death, many of
+   the lawsuits were decided or settled in his favor, greatly enriching
+   his estate and heirs—but the decisions came too late for Armstrong
+   himself to enjoy his legal vindication.
+
+[[96]edit] Personal life
+
+   Armstrong married Sarnoff's secretary, Marion MacInnis, in December
+   1922. He gave Marion the world's first portable radio as a wedding
+   gift. Armstrong bought a [97]Hispano-Suiza motor car before the
+   wedding, which they drove to [98]Palm Beach, Florida for their
+   honeymoon. He kept the car until his death. He was an avid tennis
+   player until an injury in 1940, and drank an [99]Old Fashioned with
+   dinner.^[100][3]
+
+[[101]edit] Death
+
+   Financially broken and mentally beaten after years of legal tussles
+   with RCA and others, Armstrong lashed out at his wife with a fireplace
+   poker, striking her on the arm. Fearing for her life, Marion fled their
+   apartment and went to stay with her sister. Alone and depressed over
+   the FM patent disputes, Armstrong removed the air conditioner from the
+   window, dressed in his coat and hat and jumped to his death from the
+   thirteenth floor of his New York City apartment on January 31, 1954.
+   His body was found the next morning by a maintenance worker. His
+   suicide note to his wife read: "May God help you and have mercy on my
+   soul".^[102][14]^[103][15] Upon hearing the news, [104]David Sarnoff
+   remarked "I did not kill Armstrong." Amstrong's widow Marion renewed
+   the patent fight against RCA and finally prevailed. Unlike her husband,
+   Marion was willing to compromise.^[105][16]^[106][17]
+
+[[107]edit] Legacy
+
+   It took decades following Armstrong's death for [108]FM broadcasting to
+   meet and surpass the saturation of the AM band, and longer still for FM
+   radio to become profitable for broadcasters. Two developments made a
+   difference in the 1960s. One was the development of true stereophonic
+   broadcasting on FM by General Electric, which resulted in the approval
+   of an FM stereo broadcast standard by the FCC in 1961, and the
+   conversion of hundreds of stations to stereo within a few years.
+
+   The other was an FCC rulemaking in 1966 that required broadcasters who
+   owned both fulltime AM stations and FM properties in the same city to
+   program each of them with separate programming during a majority of the
+   day. This meant FM no longer just simulcast AM with better sound
+   quality, but offered unique program choices expanding what listeners
+   could hear. Programmers took advantage by turning their FM stations
+   into venues for formats from country to progressive rock to jazz and
+   classical music, all with the enhanced quality that stereo sound could
+   bring. For example, some AM stations paused Sunday morning music
+   programming for religious voicetracks by ministers. Sister stations on
+   FM continued the music programming.
+
+   Within a few years a majority of households were FM equipped, by the
+   1980s a majority of cars sold had FM stereo radios and a majority of
+   listening in the U.S. was devoted to FM signals according to the
+   Arbitron rating service. The stereo sound revolution, followed by the
+   programming revolution, accomplished what cleaner and crisper sound
+   alone was unable to achieve, and made FM radio a permanent and
+   important part of the communications landscape.
+
+   Armstrong was of the opinion that anyone who had actual contact with
+   the [109]development of radio understood that the radio art was the
+   product of [110]experiment and work based on [111]physical reasoning,
+   rather than on the [112]mathematicians' [113]calculations and
+   [114]formulae (known today as part of "[115]mathematical physics"). His
+   work, as important as it was in its own right, was a part of a
+   continuum of progress in communications and electronics that since his
+   time has brought forward color television, the personal computer, the
+   Internet, cable and satellite radio and TV, personal mobile phones,
+   audio, video and computing, digital stereo radio on both the medium
+   wave and VHF-FM bands, and digital high definition television on VHF,
+   UHF, cable and satellite. Armstrong's FM system was used for
+   communications between [116]NASA and the [117]Apollo program
+   astronauts.
+
+[[118]edit] Honors
+
+   Armstrong's house, circa 1975. It was demolished in 1983 due to fire
+   damage.
+
+   In 1917 Armstrong was the first recipient of the [119]IRE's, now
+   [120]IEEE Medal of Honor. For his wartime work on radio the French
+   government gave him the [121]Legion of Honor in 1919. He was awarded
+   the 1941 [122]Franklin Medal. He received in 1942 the [123]AIEEs
+   [124]Edison Medal "for distinguished contributions to the art of
+   electric communication, notably the regenerative circuit, the
+   superheterodyne, and frequency modulation". The [125]ITU added him to
+   its roster of great inventors of electricity in 1955. In 1980 he was
+   inducted into the [126]National Inventors Hall of Fame, and was on a
+   U.S. [127]postage stamp in 1983. The [128]Consumer Electronics Hall of
+   Fame inducted him in 2000, "in recognition of his contributions and
+   pioneering spirit that have laid the foundation for consumer
+   electronics."
+
+   Philosophy Hall, the Columbia building where Armstrong developed FM,
+   was declared a [129]National Historic Landmark in 2003 in recognition
+   of that fact. [130]Armstrong's home in [131]Yonkers also received
+   designation in both the NHL and the [132]National Register of Historic
+   Places, but both were withdrawn when the house was later
+   [133]demolished.^[134][18]^[135][19]
+
+   Armstrong Hall at Columbia is also named in his honor. The building, at
+   the northeast corner of [136]Broadway and 112th Street, was originally
+   an apartment house but was converted to research space after Columbia
+   bought it. It is now home to the [137]Goddard Institute for Space
+   Studies, a research institute jointly operated by Columbia and the
+   [138]National Aeronautics and Space Administration dedicated to
+   atmospheric and climate science. A storefront in the corner of the
+   building houses [139]Tom's Restaurant, a longtime neighborhood fixture
+   that was featured as the fictional diner "Monk's" for establishing
+   shots in the television series "[140]Seinfeld". The same restaurant
+   also inspired [141]Susanne Vega's song "[142]Tom's Diner".
+
+   In addition, Columbia established the Edwin Howard Armstrong
+   [143]Professorship in [144]Computer Science in Armstrong's memory.
+
+[[145]edit] Patents
+
+   Armstrong received 42 patents in total; a selection are listed below:
+     * [146]U.S. Patent 1,113,149 : "Wireless Receiving System"
+     * [147]U.S. Patent 1,334,165 : "Electric Wave Transmission" (Note:
+       Co-patentee with [148]Michael I. Pupin)
+     * [149]U.S. Patent 1,336,378: "Antenna with Distributed Positive
+       Resistance"
+     * [150]U.S. Patent 1,342,885 : "Method of Receiving High Frequency
+       Oscillation"
+     * [151]U.S. Patent 1,415,845 : "Selectively Opposing Impedance to
+       Received Electrical Oscillations" (Note: Co-patentee with M. I.
+       Pupin)
+     * [152]U.S. Patent 1,424,065: "Signaling System"
+     * [153]U.S. Patent 1,611,848 : "Wireless Receiving System for
+       Continuous Wave"
+     * [154]U.S. Patent 1,941,066 : "Radio Signaling System" (Note: This
+       is one of the patents issued for wideband FM in 1933.)
+     * [155]U.S. Patent 1,941,068 : "Radiosignaling" (Note: This is one of
+       the patents issued for wideband FM in 1933.)
+     * [156]U.S. Patent 1,941,069 : "Radiosignaling" (Note: This is one of
+       the patents issued for wideband FM in 1933.)
+
+[[157]edit] See also
+
+   [158]Fokker Dr. I (117710246).jpg [159]World War I portal
+     * [160]Armstrong oscillator — basic circuit for reception of AM radio
+       signals
+     * [161]Armstrong Tower — tall lattice tower built and used by Edwin
+       Armstrong in 1938
+     * [162]Armstrong Phase Modulator
+     * [163]Awards named after E. H. Armstrong
+
+[[164]edit] References and notes
+
+    1. ^ [165]^a [166]^b Tsividis, Yannis (Spring, 2002). [167]"Edwin
+       Armstrong: Pioneer of the Airwaves". Columbia Alumni Magazine.
+       [168]http://www.columbia.edu/cu/alumni/Magazine/Spring2002/Armstron
+       g.html. Retrieved 12 December 2010.
+    2. [169]^ There was a dispute regarding who invented superheterodyne
+       radio. For example, [170]Walter Schottky claimed that he had
+       independently invented super heterodyne radio too.
+    3. ^ [171]^a [172]^b [173]^c [174]^d Lawrence Lessing (1956). Man Of
+       High Fidelity. J. B. Lippincott.
+    4. [175]^ E. H. Armstrong (1917-08-02). [176]"Operating Features of
+       the Audion". Annals of the New York Academy of Sciences 27 (1):
+       215–243. [177]doi:[178]10.1111/j.1749-6632.1916.tb55188.x.
+       [179]http://www3.interscience.wiley.com/journal/119811389/abstract?
+       CRETRY=1&SRETRY=0.
+    5. [180]^ Tom Lewis (1991). Empire of the air: the men who made radio.
+       E. Burlingame Books. [181]ISBN [182]0060981199.
+    6. [183]^ [184]Dana M. Raymond: Air War: Legal Battles Over FM Radio
+    7. [185]^ J.R. Carson, [186]Notes on the theory of modulation, Proc.
+       IRE, vol. 10, no. 1 (February 1922),pp. 57-64
+    8. [187]^ E.H. Armstrong, [188]A method of reducing disturbances in
+       radio signaling by a system of frequency modulation, Proc. IRE,
+       vol. 24, no. 5 (May 1936),pp. 689-740.
+    9. [189]^ E.H. Armstrong, [190]A method of reducing disturbances in
+       radio signaling by a system of frequency modulation, Proc. IEEE,
+       vol. 72, no. 8 (August 1984),pp. 1042-1062.
+   10. [191]^ M.G. Crosby, [192]Frequency modulation noise
+       characteristics, Proc. IRE, vol. 25, no. 4 (April 1937), pp.
+       472-514.
+   11. [193]^ [194]http://users.erols.com/oldradio/eha65.htm
+   12. [195]^ United Press report, "Radio Set-up Eliminates All Noise,"
+       Ogden Standard-Examiner, June 18, 1936, p1
+   13. [196]^ Current Biography 1940, pp.23-26.
+   14. [197]^ [198]"Edwin H. Armstrong, Inventor, Dies in Plunge".
+       [199]The Hartford Courant. February 2, 1954.
+       [200]http://pqasb.pqarchiver.com/courant/access/887794342.html?dids
+       =887794342:887794342&FMT=CITE&FMTS=CITE:AI&date=Feb+02%2C+1954&auth
+       or=&pub=The+Hartford+Courant&desc=Edwin+H.+Armstrong%2C+Inventor%2C
+       +Dies+in+Plunge&pqatl=google. Retrieved 2008-11-21.
+   15. [201]^ [202]"Died". [203]Time (magazine). February 8, 1954.
+       [204]http://www.time.com/time/magazine/article/0,9171,860424,00.htm
+       l. Retrieved 2008-06-21. "Edwin Howard Armstrong, 63, electronics
+       genius, one of the fathers of modern radio; by his own hand (a jump
+       from his 13th floor apartment) after writing a note to his wife
+       that concluded: "May God help you and have mercy on my soul"; in
+       Manhattan. In 1913 he worked out the regenerative circuit, which
+       outmoded crystal receiving sets with a sensitive vacuum tube
+       system; his superheterodyne circuit, developed in 1918 while
+       serving in France, is still the basic circuit of AM radio. In 1939,
+       he perfected a method for eliminating static (now known as FM). A
+       professor of electrical engineering at Columbia University for the
+       last 20 years, the earnest, driving inventor earned millions of
+       dollars in patent royalties, died a rich man."
+   16. [205]^ "Esther Armstrong, 81, the Wife Of Inventor of FM Radio
+       System". [206]New York Times. 1979-08-10, Friday. "Esther Marion
+       Armstrong, the wife of the late Maj. Edwin Howard Armstrong, a
+       leading American inventor, died Wednesday at the Exeter (N.H.)
+       Hospital, after a brief illness. She was 81 years old and lived in
+       Rye Beach, N.H."
+   17. [207]^ [208]"Armstrong Suit Over FM Settled. R.C.A. and N.B.C. to
+       Pay '$1,000,000' Ending Action Begun by Late Inventor.". [209]New
+       York Times. December 31, 1954.
+       [210]http://select.nytimes.com/gst/abstract.html?res=F40E1EFC345A15
+       7B93C3AA1789D95F408585F9. Retrieved 2007-07-21. "The Radio
+       Corporation of America and the National Broadcasting Company have
+       settled for "approximately $1,000,000" claims against them by the
+       estate of the late Maj. Edwin H. Armstrong."
+   18. [211]^ Sheire, James (July, 1975). [212]"National Register of
+       Historic Places Inventory/Nomination: Edwin H. Armstrong House".
+       [213]http://www.oprhp.state.ny.us/hpimaging/hp_view.asp?GroupView=1
+       0774. Retrieved 2008-01-25.  (includes 1 photo)
+   19. [214]^ [215]"Withdrawal of National Historic Landmark Designation:
+       Edwin H. Armstrong House". National Historic Landmark summary
+       listing. National Park Service.
+       [216]http://www.nps.gov/nhl/DOE_dedesignations/Armstrong.htm.
+       Retrieved 2008-01-25.
+
+[[217]edit] Further reading
+
+     * Ira Brodsky. The History of Wireless: How Creative Minds Produced
+       Technology for the Masses. St. Louis: Telescope Books, 2008.
+     * [218]Ken Burns. [219]Empire of the Air. Documentary that first
+       aired on [220]PBS in 1992.
+     * Gary L. Frost. Early FM Radio: Incremental Technology in
+       Twentieth-Century America. Baltimore: Johns Hopkins University
+       Press, 2010. [221]ISBN 0801894409, [222]ISBN 978-0801894404.
+     * [223]Lawrence Lessing. Man of High Fidelity: Edwin Howard
+       Armstrong. Philadelphia: J.B. Lippincott Company, 1956.
+     * Tom Lewis. Empire of the Air: the Men Who Made Radio. New York:
+       HarperCollins, 1991.
+     * Süsskind, Charles (1970). "Armstrong, Edwin Howard".
+       [224]Dictionary of Scientific Biography. New York: Charles
+       Scribner's Sons. pp. 287–288. [225]ISBN [226]0684101149.
+
+[[227]edit] External links
+
+     * [228]Finding Aid for the Edwin H. Armstrong Papers housed at
+       Columbia University's Rare Book and Manuscript Library
+
+   [229]Wikiquote has a collection of quotations related to: [230]Edwin
+   Howard Armstrong
+     * [231]a Biography of Armstrong
+     * [232]Photos and records relating to Edwin H. Armstrong, from the
+       Houck Collection
+     * Katzdorn, Mike, "[233]Edwin H. Armstrong"
+     * Halper, Donna, "[234]Major Edwin Howard Armstrong" (Barry Mishkind
+       website)
+     * Ammon, Richard T., "[235]The Rolls Royce Of Reception : Super
+       Heterodynes - 1918 to 1930".
+     * IEEE History Center's [236]Edwin H. Armstrong : Excerpt from "The
+       Legacy of Edwin Howard Armstrong," by J. E. Brittain Proceedings of
+       the IEEE, vol. 79, no. 2, February 1991
+     * Hong, Sungook, "[237]A History of the Regeneration Circuit: From
+       Invention to Patent Litigation" University, Seoul, Korea (PDF)
+     * [238]Who Invented the Superhetrodyne? The history of the invention
+       of the superhetrodyne receiver and related patent disputes
+     * Yannis Tsividis, "[239]Edwin Armstrong: Pioneer of the Airwaves",
+       2002. A profile on the web site of [240]Columbia University,
+       Armstong's alma mater
+
+
+   [241]v · [242]d · [243]e[244]IEEE Edison Medal
+   1926–1950
+
+   [245]William D. Coolidge (1927) · [246]Frank B. Jewett (1928) ·
+   [247]Charles F. Scott (1929) · [248]Frank Conrad (1930) · [249]Edwin W.
+   Rice (1931) · [250]Bancroft Gherardi (1932) · [251]Arthur Edwin
+   Kennelly (1933) · [252]Willis R. Whitney (1934) · [253]Lewis B.
+   Stillwell (1935) · [254]Alex Dow (1936) · [255]Gano Dunn (1937) ·
+   [256]Dugald C. Jackson (1938) · [257]Philip Torchio (1939) ·
+   [258]George Ashley Campbell (1940) · [259]John B. Whitehead (1941) ·
+   Edwin H. Armstrong (1942) · [260]Vannevar Bush (1943) · [261]Ernst
+   Alexanderson (1944) · [262]Philip Sporn (1945) · [263]Lee De Forest
+   (1946) · [264]Joseph Slepian (1947) · [265]Morris E. Leeds (1948) ·
+   [266]Karl B. McEachron (1949) · [267]Otto B. Blackwell (1950)
+   [268]Complete roster: [269]1909–1925 · [270]1926–1950 ·
+   [271]1951–1975 · [272]1976–2000 · [273]2001–present
+
+   [274]v · [275]d · [276]e[277]IEEE Medal of Honor
+   1917–1925
+
+   Edwin H. Armstrong (1917) · [278]Ernst Alexanderson (1919) ·
+   [279]Guglielmo Marconi (1920) · [280]Reginald A. Fessenden (1921) ·
+   [281]Lee De Forest (1922) · [282]John Stone Stone (1923) · [283]Michael
+   I. Pupin (1924)
+   [284]Complete roster: [285]1917–1925 · [286]1926–1950 ·
+   [287]1951–1975 · [288]1976–2000 · [289]2001–present
+                              [290]Persondata
+   Name              Armstrong, Edwin Howard
+   Alternative names
+   Short description American [291]electrical engineer and [292]inventor
+   Date of birth     December 18, 1890(1890-12-18)
+   Place of birth    [293]Chelsea, Manhattan, New York City, United States
+   Date of death     January 31, 1954(1954-01-31)
+   Place of death    New York City, United States
+   Retrieved from
+   "[294]http://en.wikipedia.org/wiki/Edwin_Howard_Armstrong"
+   [295]Categories: [296]1890 births | [297]1954 deaths | [298]American
+   inventors | [299]American electrical engineers | [300]Electronics
+   engineers | [301]Radio pioneers | [302]IEEE Medal of Honor recipients |
+   [303]IEEE Edison Medal recipients | [304]Columbia University alumni |
+   [305]Columbia Engineering alumni | [306]Columbia University faculty |
+   [307]People from Manhattan | [308]People from Yonkers, New York |
+   [309]American Presbyterians | [310]National Inventors Hall of Fame
+   inductees | [311]Inventors who committed suicide | [312]Suicides by
+   jumping from a height | [313]Discovery and invention controversies |
+   [314]Légion d'honneur recipients | [315]American military personnel of
+   World War I | [316]Suicides in New York
+   Hidden categories: [317]Wikipedia articles needing style editing from
+   April 2010 | [318]All articles needing style editing | [319]Articles
+   with hCards
+
+Personal tools
+
+     * [320]Log in / create account
+
+Namespaces
+
+     * [321]Article
+     * [322]Discussion
+
+Variants
+
+Views
+
+     * [323]Read
+     * [324]Edit
+     * [325]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [326]Main page
+     * [327]Contents
+     * [328]Featured content
+     * [329]Current events
+     * [330]Random article
+     * [331]Donate to Wikipedia
+
+Interaction
+
+     * [332]Help
+     * [333]About Wikipedia
+     * [334]Community portal
+     * [335]Recent changes
+     * [336]Contact Wikipedia
+
+Toolbox
+
+     * [337]What links here
+     * [338]Related changes
+     * [339]Upload file
+     * [340]Special pages
+     * [341]Permanent link
+     * [342]Cite this page
+
+Print/export
+
+     * [343]Create a book
+     * [344]Download as PDF
+     * [345]Printable version
+
+Languages
+
+     * [346]العربية
+     * [347]Català
+     * [348]Deutsch
+     * [349]Español
+     * [350]فارسی
+     * [351]Français
+     * [352]Galego
+     * [353]Bahasa Indonesia
+     * [354]Italiano
+     * [355]Nederlands
+     * [356]日本語
+     * [357]‪Norsk (bokmål)‬
+     * [358]پنجابی
+     * [359]Polski
+     * [360]Português
+     * [361]Русский
+     * [362]Suomi
+     * [363]中文
+
+     * This page was last modified on 7 January 2011 at 01:55.
+     * Text is available under the [364]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [365]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [366]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [367]Contact us
+
+     * [368]Privacy policy
+     * [369]About Wikipedia
+     * [370]Disclaimers
+
+     * [371]Powered by MediaWiki
+     * [372]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#p-search
+   7. file://localhost/wiki/Wikipedia:TONE
+   8. file://localhost/wiki/Talk:Edwin_Howard_Armstrong
+   9. file://localhost/wiki/Wikipedia:Guide_to_writing_better_articles
+  10. file://localhost/wiki/New_York_City
+  11. file://localhost/wiki/United_States
+  12. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Columbia-0
+  13. file://localhost/wiki/New_York_City
+  14. file://localhost/wiki/Manhattan
+  15. file://localhost/wiki/United_States
+  16. file://localhost/wiki/Columbia_University
+  17. file://localhost/wiki/Electrical_engineer
+  18. file://localhost/wiki/Inventor
+  19. file://localhost/wiki/FM_radio
+  20. file://localhost/wiki/Electrical_engineer
+  21. file://localhost/wiki/Inventor
+  22. file://localhost/wiki/Frequency_modulation
+  23. file://localhost/wiki/Columbia_University
+  24. file://localhost/wiki/Regenerative_circuit
+  25. file://localhost/wiki/Patent
+  26. file://localhost/wiki/Superheterodyne_receiver
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-1
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Early_life
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Work_and_patent_disputes
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#FM_radio
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Personal_life
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Death
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Legacy
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Honors
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Patents
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#See_also
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#References_and_notes
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#Further_reading
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#External_links
+  40. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=1
+  41. file://localhost/wiki/Chelsea,_Manhattan
+  42. file://localhost/wiki/New_York_City
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Columbia-0
+  44. file://localhost/wiki/Yonkers,_New_York
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Lessing-2
+  46. file://localhost/wiki/Signal_Corps_(United_States_Army)
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Lessing-2
+  48. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=2
+  49. file://localhost/wiki/Regeneration
+  50. file://localhost/wiki/Positive_feedback
+  51. file://localhost/wiki/Lee_De_Forest
+  52. file://localhost/wiki/Audion
+  53. file://localhost/wiki/Oscillation
+  54. file://localhost/wiki/Audion
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Armstrong-audion-3
+  56. file://localhost/wiki/Superheterodyne
+  57. file://localhost/wiki/Frequency_modulation
+  58. file://localhost/wiki/David_Sarnoff
+  59. file://localhost/wiki/RCA
+  60. file://localhost/wiki/Lee_De_Forest
+  61. file://localhost/wiki/AT%26T
+  62. file://localhost/wiki/RCA
+  63. file://localhost/wiki/Westinghouse_Electric_Corporation
+  64. file://localhost/wiki/Supreme_Court_of_the_United_States
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-4
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Lessing-2
+  67. file://localhost/wiki/NTSC
+  68. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=3
+  69. file://localhost/wiki/Philosophy_Hall
+  70. file://localhost/wiki/Frequency_modulation
+  71. file://localhost/wiki/AM_radio
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-5
+  73. file://localhost/wiki/John_Renshaw_Carson
+  74. file://localhost/wiki/Single-sideband_modulation
+  75. file://localhost/wiki/Proceedings_of_the_IRE
+  76. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-6
+  77. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-7
+  78. file://localhost/wiki/Proceedings_of_the_IEEE
+  79. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-8
+  80. file://localhost/wiki/Signal_to_noise_ratio
+  81. file://localhost/wiki/Carson_bandwidth_rule
+  82. file://localhost/wiki/Crosby_system
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-9
+  84. file://localhost/wiki/RCA
+  85. file://localhost/wiki/Empire_State_Building
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-10
+  87. file://localhost/wiki/Federal_Communications_Commission
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-11
+  89. file://localhost/w/index.php?title=W2XMN&action=edit&redlink=1
+  90. file://localhost/wiki/Alpine,_New_Jersey
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-12
+  92. file://localhost/wiki/Lobbying
+  93. file://localhost/wiki/David_Sarnoff
+  94. file://localhost/wiki/AT%26T
+  95. file://localhost/wiki/Yankee_Network
+  96. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=4
+  97. file://localhost/wiki/Hispano-Suiza
+  98. file://localhost/wiki/Palm_Beach,_Florida
+  99. file://localhost/wiki/Old_Fashioned
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-Lessing-2
+ 101. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=5
+ 102. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-13
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-14
+ 104. file://localhost/wiki/David_Sarnoff
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-15
+ 106. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-16
+ 107. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=6
+ 108. file://localhost/wiki/FM_broadcasting
+ 109. file://localhost/wiki/History_of_radio
+ 110. file://localhost/wiki/Experiment
+ 111. file://localhost/w/index.php?title=Physical_reasoning&action=edit&redlink=1
+ 112. file://localhost/wiki/Mathematician
+ 113. file://localhost/wiki/Calculation
+ 114. file://localhost/wiki/Formulae
+ 115. file://localhost/wiki/Mathematical_physics
+ 116. file://localhost/wiki/NASA
+ 117. file://localhost/wiki/Apollo_program
+ 118. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=7
+ 119. file://localhost/wiki/Institute_of_Radio_Engineers
+ 120. file://localhost/wiki/IEEE_Medal_of_Honor
+ 121. file://localhost/wiki/Legion_of_Honor
+ 122. file://localhost/wiki/The_Franklin_Institute_Awards
+ 123. file://localhost/wiki/AIEE
+ 124. file://localhost/wiki/Edison_Medal
+ 125. file://localhost/wiki/ITU
+ 126. file://localhost/wiki/National_Inventors_Hall_of_Fame
+ 127. file://localhost/wiki/Postage_stamp
+ 128. file://localhost/wiki/Consumer_Electronics_Hall_of_Fame
+ 129. file://localhost/wiki/National_Historic_Landmark
+ 130. file://localhost/wiki/Edwin_H._Armstrong_House
+ 131. file://localhost/wiki/Yonkers,_New_York
+ 132. file://localhost/wiki/National_Register_of_Historic_Places
+ 133. file://localhost/wiki/Demolition
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-nrhptext-17
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_note-nhlsum-18
+ 136. file://localhost/wiki/Broadway_(New_York_City)
+ 137. file://localhost/wiki/Goddard_Institute_for_Space_Studies
+ 138. file://localhost/wiki/National_Aeronautics_and_Space_Administration
+ 139. file://localhost/wiki/Tom%27s_Restaurant
+ 140. file://localhost/wiki/Seinfeld
+ 141. file://localhost/wiki/Susanne_Vega
+ 142. file://localhost/wiki/Tom%27s_Diner
+ 143. file://localhost/wiki/Professorship
+ 144. file://localhost/wiki/Computer_Science
+ 145. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=8
+ 146. http://www.google.com/patents?vid=1113149
+ 147. http://www.google.com/patents?vid=1334165
+ 148. file://localhost/wiki/Michael_I._Pupin
+ 149. http://www.google.com/patents/about?id=ybtgAAAAEBAJ&dq=
+ 150. http://www.google.com/patents?vid=1342885
+ 151. http://www.google.com/patents?vid=1415845
+ 152. http://www.google.com/patents/about?id=2i5HAAAAEBAJ&dq=
+ 153. http://www.google.com/patents?vid=1611848
+ 154. http://www.google.com/patents?vid=1941066
+ 155. http://www.google.com/patents?vid=1941068
+ 156. http://www.google.com/patents?vid=1941069
+ 157. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=9
+ 158. file://localhost/wiki/File:Fokker_Dr._I_(117710246).jpg
+ 159. file://localhost/wiki/Portal:World_War_I
+ 160. file://localhost/wiki/Armstrong_oscillator
+ 161. file://localhost/wiki/Armstrong_Tower
+ 162. file://localhost/wiki/Armstrong_phase_modulator
+ 163. file://localhost/wiki/Armstrong_award#Edwin_Howard_Armstrong_awards
+ 164. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=10
+ 165. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Columbia_0-0
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Columbia_0-1
+ 167. http://www.columbia.edu/cu/alumni/Magazine/Spring2002/Armstrong.html
+ 168. http://www.columbia.edu/cu/alumni/Magazine/Spring2002/Armstrong.html
+ 169. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-1
+ 170. file://localhost/wiki/Walter_Schottky
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Lessing_2-0
+ 172. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Lessing_2-1
+ 173. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Lessing_2-2
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Lessing_2-3
+ 175. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-Armstrong-audion_3-0
+ 176. http://www3.interscience.wiley.com/journal/119811389/abstract?CRETRY=1&SRETRY=0
+ 177. file://localhost/wiki/Digital_object_identifier
+ 178. http://dx.doi.org/10.1111%2Fj.1749-6632.1916.tb55188.x
+ 179. http://www3.interscience.wiley.com/journal/119811389/abstract?CRETRY=1&SRETRY=0
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-4
+ 181. file://localhost/wiki/International_Standard_Book_Number
+ 182. file://localhost/wiki/Special:BookSources/0060981199
+ 183. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-5
+ 184. http://www.fathom.com/seminars/10701020/session2.html
+ 185. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-6
+ 186. http://ieeexplore.ieee.org/search/wrapper.jsp?arnumber=1666700
+ 187. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-7
+ 188. http://web.archive.org/web/20080102101819/http://ieeexplore.ieee.org/search/wrapper.jsp?arnumber=1686149
+ 189. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-8
+ 190. http://web.archive.org/web/20080102102729/http://ieeexplore.ieee.org/search/wrapper.jsp?arnumber=1457239
+ 191. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-9
+ 192. http://ieeexplore.ieee.org/xpls/abs_all.jsp?isnumber=35539&arnumber=1686378
+ 193. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-10
+ 194. http://users.erols.com/oldradio/eha65.htm
+ 195. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-11
+ 196. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-12
+ 197. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-13
+ 198. http://pqasb.pqarchiver.com/courant/access/887794342.html?dids=887794342:887794342&FMT=CITE&FMTS=CITE:AI&date=Feb+02%2C+1954&author=&pub=The+Hartford+Courant&desc=Edwin+H.+Armstrong%2C+Inventor%2C+Dies+in+Plunge&pqatl=google
+ 199. file://localhost/wiki/The_Hartford_Courant
+ 200. http://pqasb.pqarchiver.com/courant/access/887794342.html?dids=887794342:887794342&FMT=CITE&FMTS=CITE:AI&date=Feb+02%2C+1954&author=&pub=The+Hartford+Courant&desc=Edwin+H.+Armstrong%2C+Inventor%2C+Dies+in+Plunge&pqatl=google
+ 201. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-14
+ 202. http://www.time.com/time/magazine/article/0,9171,860424,00.html
+ 203. file://localhost/wiki/Time_(magazine)
+ 204. http://www.time.com/time/magazine/article/0,9171,860424,00.html
+ 205. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-15
+ 206. file://localhost/wiki/New_York_Times
+ 207. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-16
+ 208. http://select.nytimes.com/gst/abstract.html?res=F40E1EFC345A157B93C3AA1789D95F408585F9
+ 209. file://localhost/wiki/New_York_Times
+ 210. http://select.nytimes.com/gst/abstract.html?res=F40E1EFC345A157B93C3AA1789D95F408585F9
+ 211. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-nrhptext_17-0
+ 212. http://www.oprhp.state.ny.us/hpimaging/hp_view.asp?GroupView=10774
+ 213. http://www.oprhp.state.ny.us/hpimaging/hp_view.asp?GroupView=10774
+ 214. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html#cite_ref-nhlsum_18-0
+ 215. http://www.nps.gov/nhl/DOE_dedesignations/Armstrong.htm
+ 216. http://www.nps.gov/nhl/DOE_dedesignations/Armstrong.htm
+ 217. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=11
+ 218. file://localhost/wiki/Ken_Burns
+ 219. http://www.pbs.org/kenburns/empire/
+ 220. file://localhost/wiki/PBS
+ 221. file://localhost/wiki/Special:BookSources/0801894409
+ 222. file://localhost/wiki/Special:BookSources/9780801894404
+ 223. file://localhost/wiki/Lawrence_Lessing
+ 224. file://localhost/wiki/Dictionary_of_Scientific_Biography
+ 225. file://localhost/wiki/International_Standard_Book_Number
+ 226. file://localhost/wiki/Special:BookSources/0684101149
+ 227. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit&section=12
+ 228. http://findingaids.cul.columbia.edu/ead//nnc-rb/ldpd_4078687
+ 229. file://localhost/wiki/Wikiquote
+ 230. http://en.wikiquote.org/wiki/Special:Search/Edwin_Howard_Armstrong
+ 231. http://world.std.com/~jlr/doom/armstrng.htm
+ 232. http://users.erols.com/oldradio/
+ 233. http://users.erols.com/oldradio/
+ 234. http://www.oldradio.com/archives/people/armstrong.htm
+ 235. http://www.superhets.info/
+ 236. http://www.ieee.org/organizations/history_center/legacies/armstrong.html
+ 237. http://www.ieee.org/organizations/history_center/Che2004/Hong.pdf
+ 238. http://antiqueradios.com/superhet/
+ 239. http://www.ee.columbia.edu/misc-pages/armstrong_main.html?mode=interactive
+ 240. file://localhost/wiki/Columbia_University
+ 241. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950
+ 242. file://localhost/w/index.php?title=Template_talk:IEEE_Edison_Medal_Laureates_1926%E2%80%931950&action=edit&redlink=1
+ 243. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950&action=edit
+ 244. file://localhost/wiki/IEEE_Edison_Medal
+ 245. file://localhost/wiki/William_D._Coolidge
+ 246. file://localhost/wiki/Frank_B._Jewett
+ 247. file://localhost/wiki/Charles_F._Scott_(engineer)
+ 248. file://localhost/wiki/Frank_Conrad
+ 249. file://localhost/wiki/Edwin_W._Rice
+ 250. file://localhost/wiki/Bancroft_Gherardi,_Jr.
+ 251. file://localhost/wiki/Arthur_E._Kennelly
+ 252. file://localhost/wiki/Willis_R._Whitney
+ 253. file://localhost/wiki/Lewis_B._Stillwell
+ 254. file://localhost/wiki/Alex_Dow
+ 255. file://localhost/wiki/Gano_Dunn
+ 256. file://localhost/wiki/Dugald_C._Jackson
+ 257. file://localhost/wiki/Philip_Torchio
+ 258. file://localhost/wiki/George_Ashley_Campbell
+ 259. file://localhost/wiki/John_B._Whitehead
+ 260. file://localhost/wiki/Vannevar_Bush
+ 261. file://localhost/wiki/Ernst_Alexanderson
+ 262. file://localhost/wiki/Philip_Sporn
+ 263. file://localhost/wiki/Lee_De_Forest
+ 264. file://localhost/wiki/Joseph_Slepian
+ 265. file://localhost/wiki/Morris_E._Leeds
+ 266. file://localhost/wiki/Karl_B._McEachron
+ 267. file://localhost/wiki/Otto_B._Blackwell
+ 268. file://localhost/wiki/Template:IEEE_Edison_Medal
+ 269. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1909%E2%80%931925
+ 270. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1926%E2%80%931950
+ 271. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_1951-1975
+ 272. file://localhost/wiki/Template:IEEE_Edison_Medal_1976-2000
+ 273. file://localhost/wiki/Template:IEEE_Edison_Medal_Laureates_2001-2025
+ 274. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+ 275. file://localhost/w/index.php?title=Template_talk:IEEE_Medal_of_Honor_Laureates_1917-1925&action=edit&redlink=1
+ 276. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Medal_of_Honor_Laureates_1917-1925&action=edit
+ 277. file://localhost/wiki/IEEE_Medal_of_Honor
+ 278. file://localhost/wiki/Ernst_Alexanderson
+ 279. file://localhost/wiki/Guglielmo_Marconi
+ 280. file://localhost/wiki/Reginald_Aubrey_Fessenden
+ 281. file://localhost/wiki/Lee_De_Forest
+ 282. file://localhost/wiki/John_Stone_Stone
+ 283. file://localhost/wiki/Mihajlo_Idvorski_Pupin
+ 284. file://localhost/wiki/Template:IEEE_Medal_of_Honor
+ 285. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+ 286. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+ 287. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+ 288. file://localhost/wiki/Template:IEEE_Medal_of_Honor_1976-2000
+ 289. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_2001-2025
+ 290. file://localhost/wiki/Wikipedia:Persondata
+ 291. file://localhost/wiki/Electrical_engineer
+ 292. file://localhost/wiki/Inventor
+ 293. file://localhost/wiki/Chelsea,_Manhattan
+ 294. http://en.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 295. file://localhost/wiki/Special:Categories
+ 296. file://localhost/wiki/Category:1890_births
+ 297. file://localhost/wiki/Category:1954_deaths
+ 298. file://localhost/wiki/Category:American_inventors
+ 299. file://localhost/wiki/Category:American_electrical_engineers
+ 300. file://localhost/wiki/Category:Electronics_engineers
+ 301. file://localhost/wiki/Category:Radio_pioneers
+ 302. file://localhost/wiki/Category:IEEE_Medal_of_Honor_recipients
+ 303. file://localhost/wiki/Category:IEEE_Edison_Medal_recipients
+ 304. file://localhost/wiki/Category:Columbia_University_alumni
+ 305. file://localhost/wiki/Category:Columbia_Engineering_alumni
+ 306. file://localhost/wiki/Category:Columbia_University_faculty
+ 307. file://localhost/wiki/Category:People_from_Manhattan
+ 308. file://localhost/wiki/Category:People_from_Yonkers,_New_York
+ 309. file://localhost/wiki/Category:American_Presbyterians
+ 310. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 311. file://localhost/wiki/Category:Inventors_who_committed_suicide
+ 312. file://localhost/wiki/Category:Suicides_by_jumping_from_a_height
+ 313. file://localhost/wiki/Category:Discovery_and_invention_controversies
+ 314. file://localhost/wiki/Category:L%C3%A9gion_d%27honneur_recipients
+ 315. file://localhost/wiki/Category:American_military_personnel_of_World_War_I
+ 316. file://localhost/wiki/Category:Suicides_in_New_York
+ 317. file://localhost/wiki/Category:Wikipedia_articles_needing_style_editing_from_April_2010
+ 318. file://localhost/wiki/Category:All_articles_needing_style_editing
+ 319. file://localhost/wiki/Category:Articles_with_hCards
+ 320. file://localhost/w/index.php?title=Special:UserLogin&returnto=Edwin_Howard_Armstrong
+ 321. file://localhost/wiki/Edwin_Howard_Armstrong
+ 322. file://localhost/wiki/Talk:Edwin_Howard_Armstrong
+ 323. file://localhost/wiki/Edwin_Howard_Armstrong
+ 324. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=edit
+ 325. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&action=history
+ 326. file://localhost/wiki/Main_Page
+ 327. file://localhost/wiki/Portal:Contents
+ 328. file://localhost/wiki/Portal:Featured_content
+ 329. file://localhost/wiki/Portal:Current_events
+ 330. file://localhost/wiki/Special:Random
+ 331. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+ 332. file://localhost/wiki/Help:Contents
+ 333. file://localhost/wiki/Wikipedia:About
+ 334. file://localhost/wiki/Wikipedia:Community_portal
+ 335. file://localhost/wiki/Special:RecentChanges
+ 336. file://localhost/wiki/Wikipedia:Contact_us
+ 337. file://localhost/wiki/Special:WhatLinksHere/Edwin_Howard_Armstrong
+ 338. file://localhost/wiki/Special:RecentChangesLinked/Edwin_Howard_Armstrong
+ 339. file://localhost/wiki/Wikipedia:Upload
+ 340. file://localhost/wiki/Special:SpecialPages
+ 341. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&oldid=406402968
+ 342. file://localhost/w/index.php?title=Special:Cite&page=Edwin_Howard_Armstrong&id=406402968
+ 343. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Edwin+Howard+Armstrong
+ 344. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Edwin+Howard+Armstrong&oldid=406402968&writer=rl
+ 345. file://localhost/w/index.php?title=Edwin_Howard_Armstrong&printable=yes
+ 346. http://ar.wikipedia.org/wiki/%D8%A3%D8%AF%D9%88%D9%8A%D9%86_%D9%87%D8%A7%D9%88%D8%A7%D8%B1%D8%AF_%D8%A2%D8%B1%D9%85%D8%B3%D8%AA%D8%B1%D9%88%D9%86%D8%BA
+ 347. http://ca.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 348. http://de.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 349. http://es.wikipedia.org/wiki/Edwin_Armstrong
+ 350. http://fa.wikipedia.org/wiki/%D8%A7%D8%AF%D9%88%DB%8C%D9%86_%D9%87%D8%A7%D9%88%D8%A7%D8%B1%D8%AF_%D8%A2%D8%B1%D9%85%D8%B3%D8%AA%D8%B1%D8%A7%D9%86%DA%AF
+ 351. http://fr.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 352. http://gl.wikipedia.org/wiki/Edwin_Armstrong
+ 353. http://id.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 354. http://it.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 355. http://nl.wikipedia.org/wiki/Edwin_Armstrong
+ 356. http://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%89%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%BB%E3%82%A2%E3%83%BC%E3%83%A0%E3%82%B9%E3%83%88%E3%83%AD%E3%83%B3%E3%82%B0
+ 357. http://no.wikipedia.org/wiki/Edwin_H._Armstrong
+ 358. http://pnb.wikipedia.org/wiki/%D8%A7%DB%8C%DA%88%D9%88%D9%86_%D8%A2%D8%B1%D9%85%D8%B3%D9%B9%D8%B1%D8%A7%D9%86%DA%AF
+ 359. http://pl.wikipedia.org/wiki/Edwin_Howard_Armstrong
+ 360. http://pt.wikipedia.org/wiki/Edwin_Armstrong
+ 361. http://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%BC%D1%81%D1%82%D1%80%D0%BE%D0%BD%D0%B3,_%D0%AD%D0%B4%D0%B2%D0%B8%D0%BD
+ 362. http://fi.wikipedia.org/wiki/Edwin_Armstrong
+ 363. http://zh.wikipedia.org/wiki/%E5%9F%83%E5%BE%B7%E6%B8%A9%C2%B7%E9%9C%8D%E5%8D%8E%E5%BE%B7%C2%B7%E9%98%BF%E5%A7%86%E6%96%AF%E7%89%B9%E6%9C%97
+ 364. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 365. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 366. http://www.wikimediafoundation.org/
+ 367. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 368. http://wikimediafoundation.org/wiki/Privacy_policy
+ 369. file://localhost/wiki/Wikipedia:About
+ 370. file://localhost/wiki/Wikipedia:General_disclaimer
+ 371. http://www.mediawiki.org/
+ 372. http://wikimediafoundation.org/
+
+   Hidden links:
+ 373. file://localhost/wiki/File:EdwinHowardArmstrong.jpg
+ 374. file://localhost/wiki/File:Philohall.JPEG
+ 375. file://localhost/wiki/File:Philohall.JPEG
+ 376. file://localhost/wiki/File:EdwinHArmstrongHouse_c1975.jpg
+ 377. file://localhost/wiki/File:EdwinHArmstrongHouse_c1975.jpg
+ 378. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html
+ 379. file://localhost/home/memfis/projects/put/tsiss/Downloads/edwin_howard_armstrong.html
+ 380. file://localhost/wiki/Main_Page
+ 381. http://creativecommons.org/licenses/by-sa/3.0/

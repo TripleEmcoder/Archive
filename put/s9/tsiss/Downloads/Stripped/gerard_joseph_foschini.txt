@@ -1,0 +1,355 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Gerard Joseph Foschini
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   Gerard Joseph Foschini
+   Residence [7]United States
+   Nationality [8]American
+   Fields [9]Mathematics, Telecommunications
+   [10]Alma mater [11]Stevens Institute of Technology
+   Notable awards [12]IEEE Fellow, [13]IEEE Alexander Graham Bell Medal
+   for 2008, [14]Bell Labs Fellow, [15]IEEE Best Paper Award, [16]IEEE
+   Eric E. Sumner Award, [17]Bell Labs Inventor's Award, [18]Thomas Alva
+   Edison Patent Award and the [19]Bell Labs President's Gold Award.
+
+   Gerard Joseph Foschini (born in [20]Jersey City, New Jersey in 1940),
+   is an American [21]telecommunications [22]engineer who has worked for
+   [23]Bell Laboratories since 1961. His research has covered many kinds
+   of data communications, particularly [24]wireless communications and
+   [25]optical communications. Foschini has also worked on
+   [26]point-to-point systems and [27]networks.
+
+[[28]edit] Biography
+
+   Foschini received the [29]B.S.E.E. [30]degree from the [31]New Jersey
+   Institute of Technology, the M.E.E. degree from [32]New York University
+   and a [33]Ph.D. from the [34]Stevens Institute of Technology. He has
+   also taught at [35]Princeton University and [36]Rutgers University.
+
+   Within the telecommunications engineering field, he is best known for
+   his invention of [37]Bell Laboratories Layered Space-Time
+   (BLAST).^[38][1]^[39][2]^[40][3] This is a scheme for use in wireless
+   communications which recommends the use of multiple [41]antennas at
+   both the transmitter and receiver. By careful allocation of the data to
+   be transmitted to the transmitting antennas, multiple data streams can
+   be transmitted simultaneously within a single [42]frequency band — the
+   [43]data capacity of the system then grows directly in line with the
+   number of antennas. This represents a significant advance on current,
+   single-antenna systems.
+
+   Foschini's 1996 paper^[44][1] (not published until 1998), "On limits of
+   wireless communications in a fading environment when using multiple
+   antennas", sparked the massive international research effort on
+   [45]multiple-input multiple-output wireless systems that continues
+   today. Shortly after that publication, in a technical memorandum for
+   his employers^[46][2], Foschini introduced the BLAST concept which is
+   one of the most widely examined techniques in wireless communications
+   research today. Among his later contributions, the paper offering a
+   simplified form of the original BLAST architecture, called [47]Vertical
+   BLAST (V-BLAST)^[48][3], has also resulted in intensive international
+   research efforts. In 2002, Bell Laboratories' patent on BLAST was named
+   by [49]MIT's Technology Review Magazine as one of five "Patents to
+   watch". According to the [50]American Society for Information Science
+   and Technology, Foschini is in the top 0.5% of most widely cited
+   authors.^[51][4]
+
+   In 2002, Foschini received the [52]Thomas Alva Edison Patent Award, an
+   [53]honor given to [54]New Jersey people who have changed the world
+   with their inventions; he has also received the Bell Labs Inventor's
+   Award, Gold Award and Teamwork Award and holds the titles of
+   "Distinguished Member of Staff, Distinguished Inventor" in the
+   Laboratories.^[55][5] Before his work on BLAST, Foschini had already
+   been elected a Fellow of the [56]Institute of Electrical and
+   Electronics Engineers in 1986, "for contributions to communications
+   theory".^[57][6]
+
+   Foschini received the 2008 [58]IEEE Alexander Graham Bell Medal "For
+   seminal contributions to the science and technology of multiple-antenna
+   wireless communications."
+                                     Awards
+       Preceded by
+   [59]Norman Abramson [60]IEEE Alexander Graham Bell Medal
+                       2008                                   Succeeded by
+                                                           [61]Robert McEliece
+
+[[62]edit] Publications
+
+    1. Gerard. J. Foschini and Michael. J. Gans (1998). [63]"On limits of
+       wireless communications in a fading environment when using multiple
+       antennas". Wireless Personal Communications 6 (3): 311–335.
+       [64]doi:[65]10.1023/A:1008889222784.
+       [66]http://www1.bell-labs.com/project/blast/wpc-v6n3.pdf.
+    2. Gerard. J. Foschini (1996). [67]"Layered Space-Time Architecture
+       for Wireless Communication in a Fading Environment When Using
+       Multi-Element Antennas". Bell Laboratories Technical Journal
+       October: 41–59.
+       [68]http://www.ece.ualberta.ca/~hcdc/Library/StCommClass/Fosc96.pdf
+       .
+    3. Gerard J. Foschini, Glen D. Golden, Reinaldo A. Valenzuela and
+       Peter W. Wolniansky (1999). "Simplified Processing for High
+       Spectral Efficiency Wireless Communication Employing Multi-Element
+       Arrays". IEEE Journal on Selected Areas in Communications 17 (11):
+       1841–1852. [69]doi:[70]10.1109/49.806815.
+
+[[71]edit] References
+
+    1. [72]^ "Radio Blast" 19 August 2000 Justin Mullins [73]New Scientist
+       Magazine issue 2252
+    2. [74]^ "WHAT'S NEXT; Bouncing Signals Push the Limits of Bandwidth"
+       IAN AUSTEN January 16, 2003 New York Times
+    3. [75]^ [76]ISI Highly Cited Researchers Version 1.1: Foschini, G. J.
+       [77]Thomson Scientific Retrieved on 10 July 2007
+    4. [78]^ [79]"Bell Labs Researchers' Papers Prove Fertile for Peer".
+       Bell Labs News & Features. Alcatel–Lucent. 2002-12-19.
+       [80]http://www.bell-labs.com/news/2002/december/citations.html.
+       Retrieved 2007-07-02. "two independent institutions named them as
+       being among the most cited scientific authors of our time"
+    5. [81]^ [82]"Gerard J. Foschini". Eric E. Sumner Award. IEEE.
+       [83]http://www.ieee.org/portal/pages/about/awards/bios/2004sumner.h
+       tml. Retrieved 2007-07-02.
+    6. [84]^ [85]"Fellow Class of 1986". IEEE.
+       [86]http://www.ieee.org/web/membership/fellows/Chronology/1986.html
+       . Retrieved 2007-07-02.
+
+                              [87]Persondata
+   Name              Foschini, Gerard J.
+   Alternative names
+   Short description Inventor of [88]Bell Laboratories Layered Space-Time
+   Date of birth
+   Place of birth    [89]Jersey City, New Jersey
+   Date of death
+   Place of death
+   Retrieved from
+   "[90]http://en.wikipedia.org/wiki/Gerard_Joseph_Foschini"
+   [91]Categories: [92]American inventors | [93]American scientists of
+   Italian descent | [94]American electrical engineers | [95]Stevens
+   Institute of Technology alumni | [96]New York University alumni |
+   [97]Princeton University faculty | [98]Rutgers University faculty |
+   [99]Fellows of the Institute of Electrical and Electronics Engineers |
+   [100]New Jersey Institute of Technology alumni | [101]People from
+   Jersey City, New Jersey | [102]Scientists at Bell Labs | [103]Wireless
+   technology people | [104]Living people | [105]1940 births
+
+Personal tools
+
+     * [106]Log in / create account
+
+Namespaces
+
+     * [107]Article
+     * [108]Discussion
+
+Variants
+
+Views
+
+     * [109]Read
+     * [110]Edit
+     * [111]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [112]Main page
+     * [113]Contents
+     * [114]Featured content
+     * [115]Current events
+     * [116]Random article
+     * [117]Donate to Wikipedia
+
+Interaction
+
+     * [118]Help
+     * [119]About Wikipedia
+     * [120]Community portal
+     * [121]Recent changes
+     * [122]Contact Wikipedia
+
+Toolbox
+
+     * [123]What links here
+     * [124]Related changes
+     * [125]Upload file
+     * [126]Special pages
+     * [127]Permanent link
+     * [128]Cite this page
+
+Print/export
+
+     * [129]Create a book
+     * [130]Download as PDF
+     * [131]Printable version
+
+     * This page was last modified on 20 November 2010 at 00:23.
+     * Text is available under the [132]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [133]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [134]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [135]Contact us
+
+     * [136]Privacy policy
+     * [137]About Wikipedia
+     * [138]Disclaimers
+
+     * [139]Powered by MediaWiki
+     * [140]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#p-search
+   7. file://localhost/wiki/United_States
+   8. file://localhost/wiki/United_States
+   9. file://localhost/w/index.php?title=Mathematics,_Telecommunications&action=edit&redlink=1
+  10. file://localhost/wiki/Alma_mater
+  11. file://localhost/wiki/Stevens_Institute_of_Technology
+  12. file://localhost/wiki/IEEE_Fellow
+  13. file://localhost/wiki/IEEE_Alexander_Graham_Bell_Medal
+  14. file://localhost/w/index.php?title=Bell_Labs_Fellow&action=edit&redlink=1
+  15. file://localhost/w/index.php?title=IEEE_Best_Paper_Award&action=edit&redlink=1
+  16. file://localhost/wiki/IEEE_Eric_E._Sumner_Award
+  17. file://localhost/w/index.php?title=Bell_Labs_Inventor%27s_Award&action=edit&redlink=1
+  18. file://localhost/w/index.php?title=Thomas_Alva_Edison_Patent_Award&action=edit&redlink=1
+  19. file://localhost/w/index.php?title=Bell_Labs_President%27s_Gold_Award.&action=edit&redlink=1
+  20. file://localhost/wiki/Jersey_City,_New_Jersey
+  21. file://localhost/wiki/Telecommunication
+  22. file://localhost/wiki/Engineer
+  23. file://localhost/wiki/Bell_Laboratories
+  24. file://localhost/wiki/Wireless
+  25. file://localhost/wiki/Optical_communications
+  26. file://localhost/wiki/Point-to-point_(telecommunications)
+  27. file://localhost/wiki/Computer_network
+  28. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=edit&section=1
+  29. file://localhost/wiki/Engineer%27s_degree
+  30. file://localhost/wiki/Academic_degree
+  31. file://localhost/wiki/New_Jersey_Institute_of_Technology
+  32. file://localhost/wiki/New_York_University
+  33. file://localhost/wiki/Ph.D.
+  34. file://localhost/wiki/Stevens_Institute_of_Technology
+  35. file://localhost/wiki/Princeton_University
+  36. file://localhost/wiki/Rutgers_University
+  37. file://localhost/wiki/Bell_Laboratories_Layered_Space-Time
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-0
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-1
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-2
+  41. file://localhost/wiki/Antenna_(radio)
+  42. file://localhost/wiki/Frequency
+  43. file://localhost/wiki/Shannon_capacity
+  44. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#References
+  45. file://localhost/wiki/Multiple-input_multiple-output
+  46. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#References
+  47. file://localhost/w/index.php?title=Vertical_BLAST&action=edit&redlink=1
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#References
+  49. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  50. file://localhost/wiki/American_Society_for_Information_Science_and_Technology
+  51. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-3
+  52. file://localhost/w/index.php?title=Thomas_Alva_Edison_Patent_Award&action=edit&redlink=1
+  53. file://localhost/wiki/Honor
+  54. file://localhost/wiki/New_Jersey
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-4
+  56. file://localhost/wiki/Institute_of_Electrical_and_Electronics_Engineers
+  57. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_note-5
+  58. file://localhost/wiki/IEEE_Alexander_Graham_Bell_Medal
+  59. file://localhost/wiki/Norman_Abramson
+  60. file://localhost/wiki/IEEE_Alexander_Graham_Bell_Medal
+  61. file://localhost/wiki/Robert_McEliece
+  62. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=edit&section=2
+  63. http://www1.bell-labs.com/project/blast/wpc-v6n3.pdf
+  64. file://localhost/wiki/Digital_object_identifier
+  65. http://dx.doi.org/10.1023%2FA%3A1008889222784
+  66. http://www1.bell-labs.com/project/blast/wpc-v6n3.pdf
+  67. http://www.ece.ualberta.ca/~hcdc/Library/StCommClass/Fosc96.pdf
+  68. http://www.ece.ualberta.ca/~hcdc/Library/StCommClass/Fosc96.pdf
+  69. file://localhost/wiki/Digital_object_identifier
+  70. http://dx.doi.org/10.1109%2F49.806815
+  71. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=edit&section=3
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-0
+  73. file://localhost/wiki/New_Scientist
+  74. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-1
+  75. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-2
+  76. http://hcr3.isiknowledge.com/formViewCharacteristic.cgi?id=3937&link1=browse&table=Publication
+  77. file://localhost/wiki/Thomson_Scientific
+  78. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-3
+  79. http://www.bell-labs.com/news/2002/december/citations.html
+  80. http://www.bell-labs.com/news/2002/december/citations.html
+  81. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-4
+  82. http://www.ieee.org/portal/pages/about/awards/bios/2004sumner.html
+  83. http://www.ieee.org/portal/pages/about/awards/bios/2004sumner.html
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html#cite_ref-5
+  85. http://www.ieee.org/web/membership/fellows/Chronology/1986.html
+  86. http://www.ieee.org/web/membership/fellows/Chronology/1986.html
+  87. file://localhost/wiki/Wikipedia:Persondata
+  88. file://localhost/wiki/Bell_Laboratories_Layered_Space-Time
+  89. file://localhost/wiki/Jersey_City,_New_Jersey
+  90. http://en.wikipedia.org/wiki/Gerard_Joseph_Foschini
+  91. file://localhost/wiki/Special:Categories
+  92. file://localhost/wiki/Category:American_inventors
+  93. file://localhost/wiki/Category:American_scientists_of_Italian_descent
+  94. file://localhost/wiki/Category:American_electrical_engineers
+  95. file://localhost/wiki/Category:Stevens_Institute_of_Technology_alumni
+  96. file://localhost/wiki/Category:New_York_University_alumni
+  97. file://localhost/wiki/Category:Princeton_University_faculty
+  98. file://localhost/wiki/Category:Rutgers_University_faculty
+  99. file://localhost/wiki/Category:Fellows_of_the_Institute_of_Electrical_and_Electronics_Engineers
+ 100. file://localhost/wiki/Category:New_Jersey_Institute_of_Technology_alumni
+ 101. file://localhost/wiki/Category:People_from_Jersey_City,_New_Jersey
+ 102. file://localhost/wiki/Category:Scientists_at_Bell_Labs
+ 103. file://localhost/wiki/Category:Wireless_technology_people
+ 104. file://localhost/wiki/Category:Living_people
+ 105. file://localhost/wiki/Category:1940_births
+ 106. file://localhost/w/index.php?title=Special:UserLogin&returnto=Gerard_Joseph_Foschini
+ 107. file://localhost/wiki/Gerard_Joseph_Foschini
+ 108. file://localhost/wiki/Talk:Gerard_Joseph_Foschini
+ 109. file://localhost/wiki/Gerard_Joseph_Foschini
+ 110. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=edit
+ 111. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&action=history
+ 112. file://localhost/wiki/Main_Page
+ 113. file://localhost/wiki/Portal:Contents
+ 114. file://localhost/wiki/Portal:Featured_content
+ 115. file://localhost/wiki/Portal:Current_events
+ 116. file://localhost/wiki/Special:Random
+ 117. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 118. file://localhost/wiki/Help:Contents
+ 119. file://localhost/wiki/Wikipedia:About
+ 120. file://localhost/wiki/Wikipedia:Community_portal
+ 121. file://localhost/wiki/Special:RecentChanges
+ 122. file://localhost/wiki/Wikipedia:Contact_us
+ 123. file://localhost/wiki/Special:WhatLinksHere/Gerard_Joseph_Foschini
+ 124. file://localhost/wiki/Special:RecentChangesLinked/Gerard_Joseph_Foschini
+ 125. file://localhost/wiki/Wikipedia:Upload
+ 126. file://localhost/wiki/Special:SpecialPages
+ 127. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&oldid=397772816
+ 128. file://localhost/w/index.php?title=Special:Cite&page=Gerard_Joseph_Foschini&id=397772816
+ 129. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Gerard+Joseph+Foschini
+ 130. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Gerard+Joseph+Foschini&oldid=397772816&writer=rl
+ 131. file://localhost/w/index.php?title=Gerard_Joseph_Foschini&printable=yes
+ 132. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 133. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 134. http://www.wikimediafoundation.org/
+ 135. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 136. http://wikimediafoundation.org/wiki/Privacy_policy
+ 137. file://localhost/wiki/Wikipedia:About
+ 138. file://localhost/wiki/Wikipedia:General_disclaimer
+ 139. http://www.mediawiki.org/
+ 140. http://wikimediafoundation.org/
+
+   Hidden links:
+ 141. file://localhost/wiki/File:Gerard_Foschini_2009.JPG
+ 142. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/gerard_joseph_foschini.html
+ 144. file://localhost/wiki/Main_Page
+ 145. http://creativecommons.org/licenses/by-sa/3.0/

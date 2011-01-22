@@ -1,0 +1,452 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+David Allais
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                               Dr. David Allais
+       Born      March 5, 1933 (1933-03-05) (age 77)
+                 [7]Chicago, Illinois, USA
+   [8]Alma mater [9]University of Arizona, [10]Stanford University
+    Occupation   [11]Inventor, [12]Chairman of PathGuide Technologies, Former
+                 [13]Chief executive officer of [14]Intermec Inc.
+
+   Dr. David Allais (born March 5, 1933) is an internationally recognized
+   [15]expert and [16]inventor in the fields of [17]bar coding and
+   [18]automatic identification and data capture.^[19][1] As vice
+   president and later president and [20]chief executive officer of
+   [21]Everett, Washington-based [22]Intermec Inc. (NYSE:IN),^[23][2] he
+   built the company from a small startup into the leading manufacturer of
+   bar code and [24]printing equipment.^[25][3] Prior to Allais' role at
+   Intermec, he served as a manager for [26]IBM. Most recently, Allais
+   founded PathGuide Technologies, a [27]Mukilteo, Washington-based
+   developer of [28]warehouse management systems for [29]distributors.
+
+   Contents
+
+        * [30]1 Education and Accolades
+        * [31]2 Inventions and Patents
+             + [32]2.1 Interleaved 2 of 5
+             + [33]2.2 Code 39
+             + [34]2.3 Code 11
+             + [35]2.4 Code 93
+             + [36]2.5 Code 49
+        * [37]3 Corporate Life
+        * [38]4 Associations
+        * [39]5 References
+        * [40]6 Further reading
+        * [41]7 External links
+
+[[42]edit] Education and Accolades
+
+   Allais received a [43]bachelor of science degree in mechanical
+   engineering in [44]1954. He received a [45]master of science degree in
+   mechanical engineering from the [46]University of Arizona in [47]1958
+   and a master of science degree in [48]electrical engineering from
+   [49]Stanford University in [50]1962. In [51]1965, Allais received a
+   [52]doctor of philosophy degree from Stanford University. In 1988,
+   Allais was awarded the Association for Automatic Identification and
+   Mobility (AIM) Richard R. Dilling Award as a preeminent contributor to
+   bar code technology^[53][4] and on October 16, 2009, Allais received
+   the University of Arizona College of Engineering Lifetime Achievement
+   Award.^[54][5]
+
+[[55]edit] Inventions and Patents
+
+   Allais is credited with creating five bar code symbologies: [56]Code
+   39, [57]Interleaved 2 of 5 (ITF), [58]Code 11, [59]Code 93 and Code 49.
+   He is also named inventor on the following seven U.S. patents:
+     * Patent # 3,001,369, Hydraulic System for Driving Several Actuators,
+       1962, Assigned to IBM.^[60][6]
+     * Patent # 3,067,333, Motion Control Apparatus, Assigned to
+       IBM.^[61][7]
+     * Patent # 3,670,145, Tape Feed System, 1972, Assigned to Intermec
+       Corporation.^[62][8]
+     * Patent # 3,784,794, Electro-Optical Reader for Bar Codes, 1974,
+       Assigned to National Bank Of Commerce of Seattle.^[63][9]
+     * Patent # 3,844,210, Multi-Color (bar code) Printer, 1974, Assigned
+       to Intermec Corporation.^[64][10]
+     * Patent # 3,909,594, Circuit for Establishing a Reference Voltage in
+       Bar Code Readers, 1975, Assigned to Intermec Corporation.^[65][11]
+     * Patent # 4,794,239, Multi-Track Bar Code (Code 49), 1988, Assigned
+       to Intermec Corporation.^[66][12]
+
+[[67]edit] Interleaved 2 of 5
+
+   Allais developed Interleaved 2 of 5 in 1972 while at Intermec. It is a
+   numeric only barcode used to encode pairs of numbers into a
+   self-checking, high-density barcode format. The first digit is encoded
+   in the five bars (or black lines), while the second digit is encoded in
+   the five spaces (or white lines) [68]interleaved with them. Two out of
+   every five bars or spaces are wide (therefore 2 of 5). Applications
+   include labeling [69]corrugated [70]shipping containers and identifying
+   [71]casino tickets.
+
+[[72]edit] Code 39
+
+   In 1974, Allais and Ray Stevens, both at Intermec at the time,
+   developed Code 39.^[73][13] Code 39 is a barcode symbology that can
+   encode uppercase letters (A through Z), digits (0 through 9) and a
+   handful of special characters like the $ sign. Code 39 is broadly used
+   particularly in the [74]automobile industry and [75]manufacturing.
+
+[[76]edit] Code 11
+
+   Code 11 is a barcode symbology developed by Allais while at Intermec in
+   1977. It is used primarily in telecommunications. The symbol can encode
+   any length string consisting of the digits 0-9 and the dash character
+   (-).
+
+[[77]edit] Code 93
+
+   Code 93 is a barcode symbology developed by Allais in 1982 while at
+   Intermec to provide a higher density and data security enhancement to
+   Code 39. It is an alphanumeric, variable length symbology. Code 93 is
+   designed to encode 26 upper case letters, 10 digits and 7 special
+   characters:
+
+          A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U,
+          V, W, X, Y, Z
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+          -, ., $, /, +, %, SPACE.
+
+[[78]edit] Code 49
+
+   In 1987 Allais, while at Intermec, developed Code 49 as the next
+   evolution in bar code symbology to solve scanning large amounts of data
+   on small objects. Although the practical uses of Code 49 would be
+   limited, it set the stage for the later development of [79]PDF417, a
+   stacked linear bar code symbol that is widely used.
+
+[[80]edit] Corporate Life
+
+   After receiving his master of science degree in mechanical engineering
+   from the University of Arizona in 1958, Allais went on to serve in
+   various engineering and engineering management positions at IBM in both
+   [81]California and [82]New York state from [83]1958 to [84]1968.
+
+   In 1968, Allais was hired as the vice president of engineering by then
+   Interface Mechanisms, now Intermec. From 1968 to 1988, he served in a
+   number of executive management roles at Intermec as executive vice
+   president, president & chief executive officer, chairman & chief
+   executive officer, and chief scientist. 14 of those years at Intermec
+   were spent as chief executive officer.
+
+   In 1989, Allais founded PathGuide Technologies and served as its
+   president until 2006. PathGuide, formerly Applied Tactical Systems of
+   Washington, develops, markets, and implements real time warehouse
+   management systems and time and attendance systems. PathGuide’s
+   warehouse management systems make extensive use of bar code scanning
+   and RF data communications. Allais currently serves as chairman of
+   PathGuide.
+
+[[85]edit] Associations
+
+     * [86]GS1 consultant member since 1974 ^[87][14]
+     * AIDC 100 charter member and president ^[88][15]
+     * WERC (Warehouseing Education and Research Council) member ^[89][16]
+
+[[90]edit] References
+
+    1. [91]^ [92]"RFID: A balanced perspective" Progressive Distributor,
+       March 2005
+    2. [93]^ [94]Intermec New York Stock Exchange Listing Yahoo! Finance
+    3. [95]^ [96]“Way beyond bar codes, In its 40 years of business,
+       Intermec has steadily diversified” Everett Herald, 2006-11-11
+    4. [97]^ [98]1988 AIM Richard R. Dilling Award
+    5. [99]^ [100]University of Arizona Lifetime Achievement Award
+    6. [101]^ [102]Patent 3,001,369
+    7. [103]^ [104]Patent 3,067,333
+    8. [105]^ [106]Patent 3,670,145
+    9. [107]^ [108]Patent 3,784,794
+   10. [109]^ [110]Patent 3,844,210
+   11. [111]^ [112]Patent 3,909,594
+   12. [113]^ [114]Patent 4,794,239
+   13. [115]^ [116]“RFID and Automated Data Collection News: How Well Do
+       You Know Bar Codes?” Supply Chain Digest, 2009-07-15
+   14. [117]^ [118]GS 1
+   15. [119]^ [120]AIDC 100
+   16. [121]^ [122]WERC
+
+[[123]edit] Further reading
+
+     * [124]“Bar Code History: The People Behind Its Success” Association
+       for Automatic Identification and Mobility, 2009-08-19
+     * [125]“AIDC Memoirs” – AIDC 100, 2006-09-14
+
+[[126]edit] External links
+
+     * [127]Intermec – Intermec official website
+     * [128]PathGuide – PathGuide official website
+
+                 [129]Persondata
+   Name              Allais, David
+   Alternative names
+   Short description
+   Date of birth     1933-03-05
+   Place of birth    [130]Chicago, Illinois, USA
+   Date of death
+   Place of death
+   Retrieved from "[131]http://en.wikipedia.org/wiki/David_Allais"
+   [132]Categories: [133]American chief executives | [134]American
+   businesspeople | [135]American inventors | [136]University of Arizona
+   alumni | [137]Stanford University alumni | [138]1933 births |
+   [139]Living people
+   Hidden categories: [140]Articles with hCards
+
+Personal tools
+
+     * [141]Log in / create account
+
+Namespaces
+
+     * [142]Article
+     * [143]Discussion
+
+Variants
+
+Views
+
+     * [144]Read
+     * [145]Edit
+     * [146]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [147]Main page
+     * [148]Contents
+     * [149]Featured content
+     * [150]Current events
+     * [151]Random article
+     * [152]Donate to Wikipedia
+
+Interaction
+
+     * [153]Help
+     * [154]About Wikipedia
+     * [155]Community portal
+     * [156]Recent changes
+     * [157]Contact Wikipedia
+
+Toolbox
+
+     * [158]What links here
+     * [159]Related changes
+     * [160]Upload file
+     * [161]Special pages
+     * [162]Permanent link
+     * [163]Cite this page
+
+Print/export
+
+     * [164]Create a book
+     * [165]Download as PDF
+     * [166]Printable version
+
+     * This page was last modified on 26 December 2010 at 03:12.
+     * Text is available under the [167]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [168]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [169]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [170]Contact us
+
+     * [171]Privacy policy
+     * [172]About Wikipedia
+     * [173]Disclaimers
+
+     * [174]Powered by MediaWiki
+     * [175]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=David_Allais&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#p-search
+   7. file://localhost/wiki/Chicago,_Illinois
+   8. file://localhost/wiki/Alma_mater
+   9. file://localhost/wiki/University_of_Arizona
+  10. file://localhost/wiki/Stanford_University
+  11. file://localhost/wiki/Inventor
+  12. file://localhost/wiki/Chairman
+  13. file://localhost/wiki/Chief_executive_officer
+  14. file://localhost/wiki/Intermec
+  15. file://localhost/wiki/Expert
+  16. file://localhost/wiki/Inventor
+  17. file://localhost/wiki/Bar_coding
+  18. file://localhost/wiki/Automatic_identification_and_data_capture
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-0
+  20. file://localhost/wiki/Chief_executive_officer
+  21. file://localhost/wiki/Everett,_Washington
+  22. file://localhost/wiki/Intermec
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-1
+  24. file://localhost/wiki/Printing
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-2
+  26. file://localhost/wiki/IBM
+  27. file://localhost/wiki/Mukilteo,_Washington
+  28. file://localhost/wiki/Warehouse_management_system
+  29. file://localhost/wiki/Distributors
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Education_and_Accolades
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Inventions_and_Patents
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Interleaved_2_of_5
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Code_39
+  34. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Code_11
+  35. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Code_93
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Code_49
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Corporate_Life
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Associations
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#References
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#Further_reading
+  41. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#External_links
+  42. file://localhost/w/index.php?title=David_Allais&action=edit&section=1
+  43. file://localhost/wiki/Bachelor_of_science
+  44. file://localhost/wiki/1954
+  45. file://localhost/wiki/Master_of_science
+  46. file://localhost/wiki/University_of_Arizona
+  47. file://localhost/wiki/1958
+  48. file://localhost/wiki/Electrical_engineering
+  49. file://localhost/wiki/Stanford_University
+  50. file://localhost/wiki/1962
+  51. file://localhost/wiki/1965
+  52. file://localhost/wiki/Doctor_of_philosophy
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-3
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-4
+  55. file://localhost/w/index.php?title=David_Allais&action=edit&section=2
+  56. file://localhost/wiki/Code_39
+  57. file://localhost/wiki/Interleaved_2_of_5
+  58. file://localhost/wiki/Code_11
+  59. file://localhost/wiki/Code_93
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-5
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-6
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-7
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-8
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-9
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-10
+  66. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-11
+  67. file://localhost/w/index.php?title=David_Allais&action=edit&section=3
+  68. file://localhost/wiki/Interleaved
+  69. file://localhost/wiki/Corrugated
+  70. file://localhost/wiki/Shipping_containers
+  71. file://localhost/wiki/Casino
+  72. file://localhost/w/index.php?title=David_Allais&action=edit&section=4
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-12
+  74. file://localhost/wiki/Automobile
+  75. file://localhost/wiki/Manufacturing
+  76. file://localhost/w/index.php?title=David_Allais&action=edit&section=5
+  77. file://localhost/w/index.php?title=David_Allais&action=edit&section=6
+  78. file://localhost/w/index.php?title=David_Allais&action=edit&section=7
+  79. file://localhost/wiki/PDF417
+  80. file://localhost/w/index.php?title=David_Allais&action=edit&section=8
+  81. file://localhost/wiki/California
+  82. file://localhost/wiki/New_York
+  83. file://localhost/wiki/1958
+  84. file://localhost/wiki/1968
+  85. file://localhost/w/index.php?title=David_Allais&action=edit&section=9
+  86. file://localhost/wiki/GS1
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-13
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-14
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_note-15
+  90. file://localhost/w/index.php?title=David_Allais&action=edit&section=10
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-0
+  92. http://www.progressivedistributor.com/pages/E-business_--_RFID_A_balanced_perspective.php
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-1
+  94. http://finance.yahoo.com/q?s=in
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-2
+  96. http://www.heraldnet.com/article/20061111/BIZ/611110731
+  97. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-3
+  98. http://www.aimglobal.org/aboutaim/dillingpast.asp
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-4
+ 100. http://uatechandmgmt.com/awardees/
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-5
+ 102. http://www.freepatentsonline.com/3001369.html
+ 103. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-6
+ 104. http://www.freepatentsonline.com/3067333.html
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-7
+ 106. http://www.freepatentsonline.com/3670145.html
+ 107. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-8
+ 108. http://news.google.com/patents?id=N_8zAAAAEBAJ&printsec=abstract&zoom=4&source=gbs_overview_r&cad=0#v=onepage&q=&f=false
+ 109. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-9
+ 110. http://www.wikipatents.com/3844210.html
+ 111. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-10
+ 112. http://www.freepatentsonline.com/3909594.html
+ 113. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-11
+ 114. http://www.freepatentsonline.com/4794239.html
+ 115. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-12
+ 116. http://www.scdigest.com/assets/On_Target/09-07-15-4.php
+ 117. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-13
+ 118. http://www.gs1.org/
+ 119. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-14
+ 120. http://www.aidc100.org/
+ 121. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html#cite_ref-15
+ 122. http://www.werc.org/
+ 123. file://localhost/w/index.php?title=David_Allais&action=edit&section=11
+ 124. http://www.aimglobal.org/members/news/templates/template.aspx?articleid=3524&zoneid=26
+ 125. http://www.aidc100.org/files/Allais-_David_Memoirs.pdf
+ 126. file://localhost/w/index.php?title=David_Allais&action=edit&section=12
+ 127. http://www.intermec.com/
+ 128. http://www.pathguide.com/
+ 129. file://localhost/wiki/Wikipedia:Persondata
+ 130. file://localhost/wiki/Chicago,_Illinois
+ 131. http://en.wikipedia.org/wiki/David_Allais
+ 132. file://localhost/wiki/Special:Categories
+ 133. file://localhost/wiki/Category:American_chief_executives
+ 134. file://localhost/wiki/Category:American_businesspeople
+ 135. file://localhost/wiki/Category:American_inventors
+ 136. file://localhost/wiki/Category:University_of_Arizona_alumni
+ 137. file://localhost/wiki/Category:Stanford_University_alumni
+ 138. file://localhost/wiki/Category:1933_births
+ 139. file://localhost/wiki/Category:Living_people
+ 140. file://localhost/wiki/Category:Articles_with_hCards
+ 141. file://localhost/w/index.php?title=Special:UserLogin&returnto=David_Allais
+ 142. file://localhost/wiki/David_Allais
+ 143. file://localhost/wiki/Talk:David_Allais
+ 144. file://localhost/wiki/David_Allais
+ 145. file://localhost/w/index.php?title=David_Allais&action=edit
+ 146. file://localhost/w/index.php?title=David_Allais&action=history
+ 147. file://localhost/wiki/Main_Page
+ 148. file://localhost/wiki/Portal:Contents
+ 149. file://localhost/wiki/Portal:Featured_content
+ 150. file://localhost/wiki/Portal:Current_events
+ 151. file://localhost/wiki/Special:Random
+ 152. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 153. file://localhost/wiki/Help:Contents
+ 154. file://localhost/wiki/Wikipedia:About
+ 155. file://localhost/wiki/Wikipedia:Community_portal
+ 156. file://localhost/wiki/Special:RecentChanges
+ 157. file://localhost/wiki/Wikipedia:Contact_us
+ 158. file://localhost/wiki/Special:WhatLinksHere/David_Allais
+ 159. file://localhost/wiki/Special:RecentChangesLinked/David_Allais
+ 160. file://localhost/wiki/Wikipedia:Upload
+ 161. file://localhost/wiki/Special:SpecialPages
+ 162. file://localhost/w/index.php?title=David_Allais&oldid=404241152
+ 163. file://localhost/w/index.php?title=Special:Cite&page=David_Allais&id=404241152
+ 164. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=David+Allais
+ 165. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=David+Allais&oldid=404241152&writer=rl
+ 166. file://localhost/w/index.php?title=David_Allais&printable=yes
+ 167. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 168. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 169. http://www.wikimediafoundation.org/
+ 170. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 171. http://wikimediafoundation.org/wiki/Privacy_policy
+ 172. file://localhost/wiki/Wikipedia:About
+ 173. file://localhost/wiki/Wikipedia:General_disclaimer
+ 174. http://www.mediawiki.org/
+ 175. http://wikimediafoundation.org/
+
+   Hidden links:
+ 176. file://localhost/wiki/File:David_Allais.jpg
+ 177. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html
+ 178. file://localhost/home/memfis/projects/put/tsiss/Downloads/david_allais.html
+ 179. file://localhost/wiki/Main_Page
+ 180. http://creativecommons.org/licenses/by-sa/3.0/

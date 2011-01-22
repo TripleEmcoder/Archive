@@ -1,0 +1,647 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Frank Cepollina
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   This biographical article is written [7]like a résumé. Please [8]help
+   improve it by revising it to be [9]neutral and [10]encyclopedic. (July
+   2008)
+   Frank J. Cepollina
+   Frank Cepollina at National Inventors Hall of Fame Induction Ceremony
+   Born 1936
+   [11]Castro Valley, California
+   Residence Annandale, VA
+   Nationality [12]United States
+   Fields [13]Aerospace
+   Institutions NASA
+   [14]Alma mater [15]University of Santa Clara
+   Known for In-Orbit Satellite Servicing Techniques
+
+   Frank J. "Cepi" Cepollina was born in 1936 in [16]Castro Valley,
+   California is an [17]American [18]engineer and [19]inventor. He was
+   officially inducted to the [20]National Inventors Hall of Fame for his
+   pioneering concept of in-orbit satellite servicing in May 2003. His
+   organizational leadership style has been compared to that of [21]Al
+   Davis of the [22]National Football League's [23]Oakland Raiders.
+
+   Contents
+
+        * [24]1 Life and education
+        * [25]2 Cepollina as an inventor
+        * [26]3 In-Orbit Serviced Satellites
+        * [27]4 Solar Maximum Mission Satellite
+        * [28]5 Hubble Space Telescope
+        * [29]6 Inventions Applied in Other Fields
+        * [30]7 Cepollina as a Team Leader
+        * [31]8 Awards
+        * [32]9 Patents
+        * [33]10 References
+
+[[34]edit] Life and education
+
+   A [35]Northern California native, Cepollina was born in 1936 in
+   [36]Castro Valley. He attended the [37]University of Santa Clara and
+   earned a [38]B.S. in [39]mechanical engineering in 1959. Before joining
+   [40]NASA in 1963, he worked for four years for the [41]Aerojet General
+   Corporation and the [42]Defense Intelligence Agency. When he was 27
+   years old, he signed on with NASA's [43]Goddard Space Flight Center
+   where he helped developing several [44]spacecraft. He also led the
+   development of the [45]Explorer Platform, which enabled the exchange of
+   scientific [46]payloads in [47]orbit.
+
+   Since his early career, he specialized in designing [48]satellites and
+   spacecraft, and looked for engineering solutions that would make
+   satellites more robust. The problems he dealt with were the
+   difficulties spacecraft industry was facing in the late 1960s. His list
+   of accomplishments includes innovative techniques for servicing
+   satellites, designing new tools and interfaces for [49]astronauts, and
+   leading the historic 1993 repair mission for the [50]Hubble Space
+   Telescope.
+
+   Cepollina is a researcher even in his everyday life; it is noted that
+   when he is not busy looking for ways to improve Hubble's eye on the
+   universe, he can be found at home tinkering with model [51]O gauge
+   [52]railroads. "I've found great satisfaction in this hobby for more
+   than 40 years," he says. "And it's a nice escape from the daily
+   grind.^[53][1] "
+
+   Cepollina is currently the manager of NASA's [54]Hubble Space Telescope
+   Development Project at the NASA Goddard Space Flight Center in
+   [55]Greenbelt, [56]Maryland. He and his wife, Ann [deceased] raised
+   their 4 children in [57]Annandale, [58]Virginia. Cepollina has eight
+   grandchildren (one deceased) located in the Northern Virginia area, as
+   well as on the West Coast.
+
+[[59]edit] Cepollina as an inventor
+
+   It is important to note the dissatisfaction and the problems in the
+   early days of [60]space exploration in order to understand better the
+   improvements made by Cepollina. The amount of engineering and effort
+   required to do work in space were surprising for the engineers in the
+   early days of the manned space program. For instance, the astronauts
+   [61]Eugene Cernan and [62]Thomas Stafford who were launched into space
+   aboard [63]Gemini 9 on June 3, 1966 had to deal with unimagined
+   difficulties as soon as Cernan began a [64]space walk. The plan called
+   for Cernan to take some [65]photographs and enjoy [66]weightlessness
+   for a few minutes before working his way to the rear of the capsule.
+   From the moment he emerged from the capsule, everything Cernan did was
+   much harder than what he expected. He said his space suit felt like a
+   suit of armor, and that every weightless movement triggered an
+   [67]equal, opposite reaction. He found himself repeatedly flying out to
+   the end of the [68]umbilical cord connecting him to the [69]Gemini
+   capsule and then rebounding in an unexpected direction. [70]Medics on
+   the ground were alarmed when his heart rate increased to 155 [71]beats
+   a minute. He perspired enough to fog his helmet visor, and sweat pooled
+   in his eyes . He ripped an insulating layer in the back of his suit,
+   and he instantly felt the fierce, bare sunshine; he returned to
+   [72]Earth with painful burns.^[73][2]
+
+   Cepollina marks that “the experiences of NASA’s first space walkers
+   pioneered a lot of the technologies we use today.” First of all, these
+   initial attempts made clear the need for a change in space-suit design.
+   The [74]Gemini 9 astronauts wore suits inflated to 14 [75]pounds per
+   square inch because that’s about normal pressure on earth. NASA cut the
+   level to 4 PSI, reducing the feeling of working inside an overinflated
+   [76]balloon. Furthermore, a new training was developed for moving about
+   in space: practice sessions underwater since moving in a liquid
+   resembles the effects of weightlessness.^[77][3] However, the main
+   challenge was conquering the exhaustion that Cernan had encountered.
+   Cepollina states that their solution was to come up with [78]power
+   tools they could use to limit [79]fatigue, and in order to reduce
+   fatigue, an engineer in Cepollina’s team, [80]Paul Richard came up with
+   a pistol-grip device that looks like a battery-powered hand drill on
+   steroids.
+
+   In-Orbit Servicing In his article “In-Orbit Servicing”, Cepollina
+   states that in the late 1960s, as inflation and constrained budgets
+   limited the space program, NASA determined three ways of reducing
+   costs: standardized spacecraft components; use of the same spacecraft
+   to do several missions; and use of the [81]Shuttle to extend or renew
+   the useful life of the spacecraft by replacing [82]subsystems and
+   instruments in the orbit.^[83][4]
+
+   Why in-orbit servicing? [84]Earth Observing System (EOS), which is a
+   program of NASA comprising a series of artificial satellite missions
+   and scientific instruments in Earth orbit, asked [85]Grumman Aerospace,
+   [86]General Electric and [87]TRW Systems to define the most cost
+   effective mode for using the space shuttle. The companies identified
+   four different methods of “renewing” the defective spacecrafts^[88][5]:
+
+   - Launch replacement satellites on conventional booster
+
+   - Launch replacement satellites by shuttle
+
+   - Launch replacement satellites by any of the methods mentioned above
+   and retrieve the defective one for ground refurbishment by Shuttle
+
+   - Replace the malfunctioning system of the defective satellite in orbit
+   by Shuttle
+
+   When the costs of these four methods were compared, in-orbit servicing
+   was found to be the lowest.
+
+   What are the changes that comes with in-orbit servicing? On the other
+   hand, such an approach called for a totally different spacecraft
+   design. In this new concept, each subsystem occupied its own separate
+   drawer or removable module in the spacecraft. For example, all the
+   components having to do with supplying power (the power unit of the
+   space craft) would make up one module so that if something wrong
+   happened with the power unit, that part of the spacecraft was easily
+   taken out and renewed.
+
+[[89]edit] In-Orbit Serviced Satellites
+
+   From his early days with NASA, Cepollina has worked on engineering
+   solutions for satellites and spacecraft. In the late 1960s, satellite
+   failure was becoming a significant problem, and engineers at NASA,
+   including Cepollina, began working on a new type of [90]Multimission
+   Modular Craft.^[91][6] As described by Cepollina, these crafts would
+   have swappable parts and could potentially be fixed easily by
+   space-walking astronauts.
+
+[[92]edit] Solar Maximum Mission Satellite
+
+   The first modular craft to fly was the [93]Solar Maximum Mission
+   satellite, launched in 1980 to conduct astronomical observations of the
+   sun.^[94][7] When it began to fail several months into orbit, Cepollina
+   was asked to lead the repair mission, begun in 1984. The mission the
+   first of its kind was a success; the modular craft concept proved
+   effective. Cepollina was lauded for his leadership on the project and
+   was subsequently named Satellite Servicing Project Manager.^[95][8]
+
+[[96]edit] Hubble Space Telescope
+
+   After the [97]Solar Maximum Mission Satellite, as the Satellite
+   Servicing Project Manager, Cepollina was faced with an enormous
+   challenge: repairing the [98]Hubble Space Telescope. The mission he
+   undertook has widely been cited as the most difficult on-orbit repair
+   mission ever attempted. Having worked on the development of its modular
+   design, as well as its command and control subsystem, Cepollina knew
+   the Hubble well. However, few could have anticipated that the Hubble,
+   launched in 1990 and orbiting 375 miles above the Earth, would have
+   such a simple but crucial problem: a flawed mirror.^[99][9] NASA
+   officials were appalled and embarrassed to discover that the contractor
+   responsible had a miscalculation that made the telescope incapable of
+   coming to a sharp focus.^[100][10]
+
+   This unexpected problem was too serious to fix by simply swapping out a
+   defective module, so Cepollina became project manager of a hurriedly
+   assembled team charged with repairing the telescope. “The first Hubble
+   repair mission took us to the next level of servicing,” he said. His
+   team designed new optical elements that could correct the Hubble’s
+   flawed vision yet also fit in with the modular instrument design
+   philosophy. Cepollina's leading additional successful repair and
+   improvement missions for Hubble followed in 1997, 1999 and
+   2002.^[101][11] These additional missions enhanced the satellite so
+   that the technologies which were not available at the time of Hubble's
+   initial deployment, including better [102]cameras, more efficient
+   [103]solar arrays, and a more powerful [104]processor for data
+   transfer.^[105][12]
+
+[[106]edit] Inventions Applied in Other Fields
+
+   Not only has Cepollina's work benefited the advancement of space
+   technology, but it has also led to improvements in several other
+   industries including a much more accurate method to detect [107]breast
+   cancer that uses technology originally developed for Hubble's charge
+   coupled device (CCD).^[108][13] Other improvements are smaller and
+   faster microchips created with highly sophisticated Hubble-type
+   optics,^[109][14] and manufacturing applications employing an
+   intelligent, programmable, hand-held power tool.^[110][15]
+
+[[111]edit] Cepollina as a Team Leader
+
+   In addition to being a successful inventor, Cepollina is also a team
+   leader. His work with the Hubble highlights his character as a leader.
+   He is currently the manager of NASA's Hubble Space Telescope
+   Development Project at the NASA Goddard Space Flight Center in
+   Greenbelt, Maryland. Among his numerous awards, Cepollina received the
+   NASA [112]Outstanding Leadership Medal for the Hubble Space Telescope
+   First Servicing Mission.
+
+   In his presentation “The Hubble Experience”,^[113][16] he mentions that
+   the success of the Hubble repair mission was due to the harmony among
+   the partners of the project. [114]Johnson Space Center, [115]Kennedy
+   Space Center, [116]Marshall Space Flight Center, [117]Glenn Research
+   Facility, [118]Langley Research Center, [119]Jet Propulsion Labaratory
+   of NASA all worked together and shared responsibilities in order to
+   repair Hubble. As the team leader, Cepollina was responsible for
+   keeping the individual groups in accord, and he managed to do so.
+
+[[120]edit] Awards
+
+   In 1985, Cepollina received a [121]NASA Exceptional Achievement Award
+   for leading the Solar Max Repair Mission. For his outstanding
+   leadership of the Hubble Space Telescope First Servicing Mission, which
+   corrected Hubble's vision, he was awarded a NASA Outstanding Leadership
+   Medal, as well as the prestigious 1994 [122]National Space Club Eagle
+   Manned Mission Success Award. In April 1995, he received the
+   [123]University of Santa Clara Distinguished Engineering Alumni Award
+   and was inducted into [124]Tau Beta Pi Engineering Honor Society as an
+   Eminent Engineer. In October 1997, Mr. Cepollina was presented with the
+   [125]James J. Kerley Award, the top NASA/Goddard Space Flight Center
+   Award for innovation and exceptional contributions to NASA’s technology
+   transfer and [126]commercialization efforts.
+
+   In 1997, Mr. Cepollina was named a finalist for the [127]Design News
+   Engineer of the Year Award. In April 1998, he received the
+   distinguished [128]Federal Laboratory Consortium Award for Excellence
+   in Technology Transfer. In February 2000, he was awarded Goddard Space
+   Flight Center's highest honor for mission success, the [129]Robert C.
+   Baumann Memorial Award. In 1999, he and his team received the
+   [130]Aviation Week & Space Technology Laurels Award for Outstanding
+   Achievement. In 2000, the [131]President of the United States of
+   America conferred upon Mr. Cepollina the rank of [132]Meritorious
+   Executive in Senior Executive Service for his sustained, superior
+   accomplishments in managing NASA programs. He and the entire Hubble
+   Space Telescope Team won the prestigious 2001 [133]Space Foundation
+   Space Achievement Award. In 2003, he was inducted to the [134]National
+   Inventor's Hall of Fame for satellite servicing
+   techniques.^[135][17]^[136][18]
+
+[[137]edit] Patents
+
+     * Method and Associated Apparatus for Capturing, Servicing, and
+       De-Orbiting
+
+          + Application US 2007/0125910 A1
+          + Application US 2007/0138344 A1
+          + Application US 2007/0164164 A1
+          + Application US 2008/0011904 A1
+          + Patent Number: 7240879
+
+     * Strain Gauge Measuring Techniques
+
+          + Patent Number: 3460378
+
+[[138]edit] References
+
+    1. [139]^ "Press Release -HUBBLE MANAGER PART OF TEAM TO RECEIVE IAA
+       AWARD - October 05, 2004." NASA Goddard Space Flight Center.
+       [140]http://www.gsfc.nasa.gov/news-release/releases/2004/04-060.htm
+       (accessed June 24, 2008).
+    2. [141]^ "AmericanHeritage.com ." American History from
+       AmericanHeritage.com.
+       [142]http://www.americanheritage.com/articles/magazine/it/2003/1/20
+       03_1_8.shtml (accessed June 25, 2008).
+    3. [143]^ Roth, E.M.. "Physiological Effects of Space Cabin
+       Atmospheres." Radiation Research Supplement 7 (1967): 413.
+    4. [144]^ Cepollina, Frank. "In-Orbit Servicing." American Institute
+       of Aeronautics and Astronautics 3 (1975): 48-56.
+    5. [145]^ Cepollina, Frank. "In-Orbit Servicing." American Institute
+       of Aeronautics and Astronautics 3 (1975): 48-56.
+    6. [146]^ Cepollina, F.J., and E.I. Pritchard. "STS multimission
+       modular spacecraft - A new horizon in social and industrial
+       benefits." Astronautics and aeronautics 15 (1977): 36-43.
+    7. [147]^ "The Solar Maximum Mission." HEASARC: NASA's Archive of Data
+       on Energetic Phenomena.
+       [148]http://heasarc.gsfc.nasa.gov/docs/heasarc/missions/solarmax.ht
+       ml (accessed June 25, 2008).
+    8. [149]^ "Goddard News." NASA Goddard Space Flight Center.
+       [150]http://www.gsfc.nasa.gov/goddardnews/20030606/index.html
+       (accessed June 26, 2008).
+    9. [151]^ "The Hubble Program - Servicing Missions - SM1." Main Hubble
+       Page. [152]http://hubble.nasa.gov/missions/sm1.php (accessed June
+       25, 2008).
+   10. [153]^ Jim, Quinn. "Repairman In Space." Invention & Technology
+       Magazine. 19. (2003)
+   11. [154]^ Cepollina, Frank. "Economic and technical aspects of repair,
+       servicing, and retrieval of low earth orbit free flying
+       spacecraft." AIAA October (1982): 4.
+   12. [155]^ "Inventor of the Week: Archive." MIT.
+       [156]http://web.mit.edu/invent/iow/cepollina.html (accessed June
+       24, 2008).
+   13. [157]^ "Invent Now | Hall of Fame | Search | Inventor Profile."
+       Invent Now. [158]http://www.invent.org/Hall_Of_Fame/186.html
+       (accessed June 25, 2008).
+   14. [159]^ "Cepollina, Frank - Biography." NASA Goddard Space Flight
+       Center. [160]http://www.gsfc.nasa.gov/bios/profiles/Cepollina.html
+       (accessed June 24, 2008).
+   15. [161]^ "Inventor of the Week: Archive." MIT.
+       [162]http://web.mit.edu/invent/iow/cepollina.html (accessed June
+       24, 2008).
+   16. [163]^ Cepollina, Frank. "The Hubble Experience: Working in a
+       Multiple Center Environment." Project Management Challenge 2006,
+       NASA, Galveston, TX , March 21, 2006.
+   17. [164]^ "Inventor of the Week: Archive." MIT.
+       [165]http://web.mit.edu/invent/iow/cepollina.html (accessed June
+       24, 2008).
+   18. [166]^ "Invent Now | Hall of Fame | Search | Inventor Profile."
+       Invent Now. [167]http://www.invent.org/Hall_Of_Fame/186.html
+       (accessed June 25, 2008).
+
+                   [168]Persondata
+   Name              Cepollina
+   Alternative names
+   Short description
+   Date of birth     1936
+   Place of birth    [169]Castro Valley, California
+   Date of death
+   Place of death
+   Retrieved from "[170]http://en.wikipedia.org/wiki/Frank_Cepollina"
+   [171]Categories: [172]American inventors | [173]American engineers |
+   [174]Living people | [175]National Inventors Hall of Fame inductees |
+   [176]1936 births
+   Hidden categories: [177]Articles with a promotional tone from July 2008
+   | [178]All articles with a promotional tone
+
+Personal tools
+
+     * [179]Log in / create account
+
+Namespaces
+
+     * [180]Article
+     * [181]Discussion
+
+Variants
+
+Views
+
+     * [182]Read
+     * [183]Edit
+     * [184]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [185]Main page
+     * [186]Contents
+     * [187]Featured content
+     * [188]Current events
+     * [189]Random article
+     * [190]Donate to Wikipedia
+
+Interaction
+
+     * [191]Help
+     * [192]About Wikipedia
+     * [193]Community portal
+     * [194]Recent changes
+     * [195]Contact Wikipedia
+
+Toolbox
+
+     * [196]What links here
+     * [197]Related changes
+     * [198]Upload file
+     * [199]Special pages
+     * [200]Permanent link
+     * [201]Cite this page
+
+Print/export
+
+     * [202]Create a book
+     * [203]Download as PDF
+     * [204]Printable version
+
+Languages
+
+     * [205]Português
+
+     * This page was last modified on 5 January 2011 at 04:20.
+     * Text is available under the [206]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [207]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [208]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [209]Contact us
+
+     * [210]Privacy policy
+     * [211]About Wikipedia
+     * [212]Disclaimers
+
+     * [213]Powered by MediaWiki
+     * [214]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Frank_Cepollina&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#p-search
+   7. file://localhost/wiki/Wikipedia:Conflict_of_interest
+   8. http://en.wikipedia.org/w/index.php?title=Frank_Cepollina&action=edit
+   9. file://localhost/wiki/Wikipedia:NPOV
+  10. file://localhost/wiki/Wikipedia:BLP
+  11. file://localhost/wiki/Castro_Valley,_California
+  12. file://localhost/wiki/United_States
+  13. file://localhost/wiki/Aerospace
+  14. file://localhost/wiki/Alma_mater
+  15. file://localhost/wiki/University_of_Santa_Clara
+  16. file://localhost/wiki/Castro_Valley,_California
+  17. file://localhost/wiki/United_States
+  18. file://localhost/wiki/Engineer
+  19. file://localhost/wiki/Inventor
+  20. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  21. file://localhost/wiki/Al_Davis
+  22. file://localhost/wiki/National_Football_League
+  23. file://localhost/wiki/Oakland_Raiders
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Life_and_education
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Cepollina_as_an_inventor
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#In-Orbit_Serviced_Satellites
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Solar_Maximum_Mission_Satellite
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Hubble_Space_Telescope
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Inventions_Applied_in_Other_Fields
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Cepollina_as_a_Team_Leader
+  31. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Awards
+  32. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#Patents
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#References
+  34. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=1
+  35. file://localhost/wiki/Northern_California
+  36. file://localhost/wiki/Castro_Valley
+  37. file://localhost/wiki/University_of_Santa_Clara
+  38. file://localhost/wiki/B.S.
+  39. file://localhost/wiki/Mechanical_engineering
+  40. file://localhost/wiki/NASA
+  41. file://localhost/w/index.php?title=Aerojet_General_Corporation&action=edit&redlink=1
+  42. file://localhost/wiki/Defense_Intelligence_Agency
+  43. file://localhost/wiki/Goddard_Space_Flight_Center
+  44. file://localhost/wiki/Spacecraft
+  45. file://localhost/w/index.php?title=Explorer_Platform&action=edit&redlink=1
+  46. file://localhost/wiki/Payloads
+  47. file://localhost/wiki/Orbit
+  48. file://localhost/wiki/Satellites
+  49. file://localhost/wiki/Astronauts
+  50. file://localhost/wiki/Hubble_Space_Telescope
+  51. file://localhost/wiki/O_gauge
+  52. file://localhost/wiki/Rail_transport_modelling
+  53. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-0
+  54. file://localhost/w/index.php?title=Hubble_Space_Telescope_Development_Project&action=edit&redlink=1
+  55. file://localhost/wiki/Greenbelt,_Maryland
+  56. file://localhost/wiki/Maryland
+  57. file://localhost/wiki/Annandale
+  58. file://localhost/wiki/Virginia
+  59. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=2
+  60. file://localhost/wiki/Space_exploration
+  61. file://localhost/wiki/Eugene_Cernan
+  62. file://localhost/wiki/Thomas_Stafford
+  63. file://localhost/wiki/Gemini_9
+  64. file://localhost/wiki/Space_walk
+  65. file://localhost/wiki/Photographs
+  66. file://localhost/wiki/Weightlessness
+  67. file://localhost/wiki/Newton%27s_laws_of_motion
+  68. file://localhost/wiki/Umbilical_cord
+  69. file://localhost/wiki/Project_Gemini
+  70. file://localhost/wiki/Medics
+  71. file://localhost/wiki/Heart_rate
+  72. file://localhost/wiki/Earth
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-1
+  74. file://localhost/wiki/Gemini_9
+  75. file://localhost/wiki/Pounds_per_square_inch
+  76. file://localhost/wiki/Balloon
+  77. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-2
+  78. file://localhost/wiki/Power_tools
+  79. file://localhost/wiki/Fatigue_(medical)
+  80. file://localhost/wiki/Paul_Richard
+  81. file://localhost/wiki/Space_Shuttle
+  82. file://localhost/wiki/Subsystems
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-3
+  84. file://localhost/wiki/Earth_Observing_System
+  85. file://localhost/wiki/Grumman_Aerospace
+  86. file://localhost/wiki/General_Electric
+  87. file://localhost/wiki/TRW
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-4
+  89. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=3
+  90. file://localhost/w/index.php?title=Multimission_Modular_Craft&action=edit&redlink=1
+  91. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-5
+  92. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=4
+  93. file://localhost/wiki/Solar_Maximum_Mission
+  94. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-6
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-7
+  96. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=5
+  97. file://localhost/wiki/Solar_Maximum_Mission
+  98. file://localhost/wiki/Hubble_Space_Telescope
+  99. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-8
+ 100. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-9
+ 101. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-10
+ 102. file://localhost/wiki/Cameras
+ 103. file://localhost/wiki/Solar_arrays
+ 104. file://localhost/wiki/Microprocessor
+ 105. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-11
+ 106. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=6
+ 107. file://localhost/wiki/Breast_cancer
+ 108. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-12
+ 109. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-13
+ 110. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-14
+ 111. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=7
+ 112. file://localhost/w/index.php?title=Outstanding_Leadership_Medal&action=edit&redlink=1
+ 113. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-15
+ 114. file://localhost/wiki/Johnson_Space_Center
+ 115. file://localhost/wiki/Kennedy_Space_Center
+ 116. file://localhost/wiki/Marshall_Space_Flight_Center
+ 117. file://localhost/w/index.php?title=Glenn_Research_Facility&action=edit&redlink=1
+ 118. file://localhost/wiki/Langley_Research_Center
+ 119. file://localhost/w/index.php?title=Jet_Propulsion_Labaratory&action=edit&redlink=1
+ 120. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=8
+ 121. file://localhost/w/index.php?title=NASA_Exceptional_Achievement_Award&action=edit&redlink=1
+ 122. file://localhost/wiki/National_Space_Club
+ 123. file://localhost/wiki/University_of_Santa_Clara
+ 124. file://localhost/wiki/Tau_Beta_Pi
+ 125. file://localhost/w/index.php?title=James_J._Kerley_Award&action=edit&redlink=1
+ 126. file://localhost/wiki/Commercialization
+ 127. file://localhost/wiki/Design_News
+ 128. file://localhost/wiki/Federal_Laboratory_Consortium
+ 129. file://localhost/w/index.php?title=Robert_C._Baumann_Memorial_Award&action=edit&redlink=1
+ 130. file://localhost/wiki/Aviation_Week_%26_Space_Technology
+ 131. file://localhost/wiki/President_of_the_United_States_of_America
+ 132. file://localhost/w/index.php?title=Meritorious_Executive_in_Senior_Executive_Service&action=edit&redlink=1
+ 133. file://localhost/wiki/Space_Foundation
+ 134. file://localhost/wiki/National_Inventor%27s_Hall_of_Fame
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-16
+ 136. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_note-17
+ 137. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=9
+ 138. file://localhost/w/index.php?title=Frank_Cepollina&action=edit&section=10
+ 139. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-0
+ 140. http://www.gsfc.nasa.gov/news-release/releases/2004/04-060.htm
+ 141. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-1
+ 142. http://www.americanheritage.com/articles/magazine/it/2003/1/2003_1_8.shtml
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-2
+ 144. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-3
+ 145. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-4
+ 146. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-5
+ 147. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-6
+ 148. http://heasarc.gsfc.nasa.gov/docs/heasarc/missions/solarmax.html
+ 149. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-7
+ 150. http://www.gsfc.nasa.gov/goddardnews/20030606/index.html
+ 151. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-8
+ 152. http://hubble.nasa.gov/missions/sm1.php
+ 153. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-9
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-10
+ 155. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-11
+ 156. http://web.mit.edu/invent/iow/cepollina.html
+ 157. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-12
+ 158. http://www.invent.org/Hall_Of_Fame/186.html
+ 159. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-13
+ 160. http://www.gsfc.nasa.gov/bios/profiles/Cepollina.html
+ 161. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-14
+ 162. http://web.mit.edu/invent/iow/cepollina.html
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-15
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-16
+ 165. http://web.mit.edu/invent/iow/cepollina.html
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html#cite_ref-17
+ 167. http://www.invent.org/Hall_Of_Fame/186.html
+ 168. file://localhost/wiki/Wikipedia:Persondata
+ 169. file://localhost/wiki/Castro_Valley,_California
+ 170. http://en.wikipedia.org/wiki/Frank_Cepollina
+ 171. file://localhost/wiki/Special:Categories
+ 172. file://localhost/wiki/Category:American_inventors
+ 173. file://localhost/wiki/Category:American_engineers
+ 174. file://localhost/wiki/Category:Living_people
+ 175. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 176. file://localhost/wiki/Category:1936_births
+ 177. file://localhost/wiki/Category:Articles_with_a_promotional_tone_from_July_2008
+ 178. file://localhost/wiki/Category:All_articles_with_a_promotional_tone
+ 179. file://localhost/w/index.php?title=Special:UserLogin&returnto=Frank_Cepollina
+ 180. file://localhost/wiki/Frank_Cepollina
+ 181. file://localhost/wiki/Talk:Frank_Cepollina
+ 182. file://localhost/wiki/Frank_Cepollina
+ 183. file://localhost/w/index.php?title=Frank_Cepollina&action=edit
+ 184. file://localhost/w/index.php?title=Frank_Cepollina&action=history
+ 185. file://localhost/wiki/Main_Page
+ 186. file://localhost/wiki/Portal:Contents
+ 187. file://localhost/wiki/Portal:Featured_content
+ 188. file://localhost/wiki/Portal:Current_events
+ 189. file://localhost/wiki/Special:Random
+ 190. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 191. file://localhost/wiki/Help:Contents
+ 192. file://localhost/wiki/Wikipedia:About
+ 193. file://localhost/wiki/Wikipedia:Community_portal
+ 194. file://localhost/wiki/Special:RecentChanges
+ 195. file://localhost/wiki/Wikipedia:Contact_us
+ 196. file://localhost/wiki/Special:WhatLinksHere/Frank_Cepollina
+ 197. file://localhost/wiki/Special:RecentChangesLinked/Frank_Cepollina
+ 198. file://localhost/wiki/Wikipedia:Upload
+ 199. file://localhost/wiki/Special:SpecialPages
+ 200. file://localhost/w/index.php?title=Frank_Cepollina&oldid=406024148
+ 201. file://localhost/w/index.php?title=Special:Cite&page=Frank_Cepollina&id=406024148
+ 202. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Frank+Cepollina
+ 203. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Frank+Cepollina&oldid=406024148&writer=rl
+ 204. file://localhost/w/index.php?title=Frank_Cepollina&printable=yes
+ 205. http://pt.wikipedia.org/wiki/Frank_Cepollina
+ 206. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 207. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 208. http://www.wikimediafoundation.org/
+ 209. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 210. http://wikimediafoundation.org/wiki/Privacy_policy
+ 211. file://localhost/wiki/Wikipedia:About
+ 212. file://localhost/wiki/Wikipedia:General_disclaimer
+ 213. http://www.mediawiki.org/
+ 214. http://wikimediafoundation.org/
+
+   Hidden links:
+ 215. file://localhost/wiki/File:Ceppi_inventor_lg.jpg
+ 216. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html
+ 217. file://localhost/home/memfis/projects/put/tsiss/Downloads/frank_cepollina.html
+ 218. file://localhost/wiki/Main_Page
+ 219. http://creativecommons.org/licenses/by-sa/3.0/

@@ -1,0 +1,329 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Raj Jain
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   [7]Wiki letter w.svg
+   This article is an [8]orphan, as few or no other articles [9]link to
+   it. Please [10]introduce links to this page from [11]related articles;
+   [12]suggestions may be available. (June 2010)
+                         Raj Jain
+   Prof. Raj Jain.
+        Born      August 17, 1951 (1951-08-17) (age 59)
+                  Satna, India
+    Citizenship   American
+       Fields     [13]Computer science
+    Institutions  [14]Washington University in St. Louis
+                  [15]Ohio State University
+                  [16]MIT
+   [17]Alma mater IISc, [18]Harvard
+     Known for    The Art of Performance Analysis
+                  DEC-bit
+   Notable awards CDAC-ACCS Foundation Award
+                  ACM SIGCOMM Test of Time Award
+
+   Raj Jain (born 17 August 1951) is a professor of [19]Computer Science
+   and [20]Engineering in the [21]Washington University School of
+   Engineering and Applied Science at [22]Washington University in St.
+   Louis, [23]Missouri.
+
+   Contents
+
+        * [24]1 Affiliations
+        * [25]2 Research Contributions
+        * [26]3 Publications
+        * [27]4 Education
+        * [28]5 External references
+
+[[29]edit] Affiliations
+
+   Until 2005 he was the Chief Technology Officer and Co-Founder of Nayna
+   Networks, Inc. – a next generation telecommunications systems company
+   in San Jose, CA. Prior to that he was a professor of Computer and
+   Information Sciences at the [30]Ohio State University in [31]Columbus,
+   Ohio and a Senior Consulting Engineer at [32]Digital Equipment
+   Corporation in Littleton, Massachusetts. He was also a visiting
+   scientist at [33]Massachusetts Institute of Technology in 1983, 1985,
+   and 1987.
+
+[[34]edit] Research Contributions
+
+   Dr. Jain is the co-inventor of the DEC-bit scheme for [35]congestion
+   avoidance in computer networks^[36][1] which has been adapted for
+   implementation in Frame Relay networks as forward explicit congestion
+   notification (FECN), [37]ATM Networks as Explicit Forward Congestion
+   Indication ([38]EFCI), and [39]TCP/IP networks as [40]Explicit
+   Congestion Notification(ECN).
+
+   He is also the co-inventor of the Additive Increase Multiplicative
+   Decrease ([41]AIMD) principle used for traffic management in computer
+   networks and Jain’s fairness Index.^[42][2]^[43][3]
+
+   His work on timeout based [44]congestion control influenced the design
+   of the [45]slow start algorithm in [46]TCP/IP networks.^[47][4]
+   ^[48][5]
+
+[[49]edit] Publications
+
+   He is author of four books. His second book The Art of Computer Systems
+   Performance Analysis published by [50]Wiley Interscience won the 1991
+   Best Advanced How-to Book, Systems award from [51]Computer Press
+   Association.^[52][6]
+
+[[53]edit] Education
+
+   Dr. Jain obtained a Ph.D. in Applied Mathematics ([54]Computer Science)
+   from [55]Harvard University, Cambridge, Massachusetts in 1978, an M.E.
+   in Automation from [56]Indian Institute of Science Bangalore, India in
+   1974, and a B.E. in Electrical Engineering from [57]Awdhesh Pratap
+   Singh University, Rewa, Madhya Pradesh, India in 1972.
+
+[[58]edit] External references
+
+    1. [59]^ [60]DEC-bit Patent
+    2. [61]^ [62]Analysis of the increase and decrease algorithms for
+       congestion avoidance in computer networks
+    3. [63]^ [64]A Quantitative Measure Of Fairness And Discrimination For
+       Resource Allocation In Shared Computer Systems
+    4. [65]^ [66]A timeout-based congestion control scheme for window
+       flow-controlled networks
+    5. [67]^ [68]Congestion avoidance and control
+    6. [69]^ [70]The Art of Computer Systems Performance Analysis:
+       Techniques for Experimental Design, Measurement, Simulation, and
+       Modeling
+
+           [71]Persondata
+   Name              Jain, Raj
+   Alternative names
+   Short description
+   Date of birth     17 August 1951
+   Place of birth    Satna, India
+   Date of death
+   Place of death
+   Retrieved from "[72]http://en.wikipedia.org/wiki/Raj_Jain"
+   [73]Categories: [74]American computer scientists | [75]American
+   technology writers | [76]Researchers in distributed computing |
+   [77]Fellows of the Institute of Electrical and Electronics Engineers |
+   [78]Fellows of the Association for Computing Machinery | [79]Harvard
+   University alumni | [80]Indian Institute of Science alumni |
+   [81]Washington University in St. Louis faculty | [82]American
+   businesspeople | [83]People from Madhya Pradesh | [84]Indian immigrants
+   to the United States | [85]People from Satna | [86]Technology
+   evangelists | [87]American engineers | [88]1951 births | [89]Living
+   people | [90]People from St. Louis, Missouri | [91]People from Missouri
+   | [92]American Jains | [93]American inventors
+   Hidden categories: [94]Orphaned articles from June 2010 | [95]All
+   orphaned articles
+
+Personal tools
+
+     * [96]Log in / create account
+
+Namespaces
+
+     * [97]Article
+     * [98]Discussion
+
+Variants
+
+Views
+
+     * [99]Read
+     * [100]Edit
+     * [101]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [102]Main page
+     * [103]Contents
+     * [104]Featured content
+     * [105]Current events
+     * [106]Random article
+     * [107]Donate to Wikipedia
+
+Interaction
+
+     * [108]Help
+     * [109]About Wikipedia
+     * [110]Community portal
+     * [111]Recent changes
+     * [112]Contact Wikipedia
+
+Toolbox
+
+     * [113]What links here
+     * [114]Related changes
+     * [115]Upload file
+     * [116]Special pages
+     * [117]Permanent link
+     * [118]Cite this page
+
+Print/export
+
+     * [119]Create a book
+     * [120]Download as PDF
+     * [121]Printable version
+
+     * This page was last modified on 15 December 2010 at 05:50.
+     * Text is available under the [122]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [123]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [124]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [125]Contact us
+
+     * [126]Privacy policy
+     * [127]About Wikipedia
+     * [128]Disclaimers
+
+     * [129]Powered by MediaWiki
+     * [130]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Raj_Jain&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#p-search
+   7. file://localhost/wiki/File:Wiki_letter_w.svg
+   8. file://localhost/wiki/Wikipedia:Orphan
+   9. http://en.wikipedia.org/w/index.php?title=Special:Whatlinkshere&target=Raj_Jain&namespace=0
+  10. file://localhost/wiki/Help:Link
+  11. http://en.wikipedia.org/w/index.php?title=Special%3ASearch&redirs=1&search=Raj+Jain&fulltext=Search&ns0=1&title=Special%3ASearch&advanced=1&fulltext=Raj+Jain
+  12. http://edwardbetts.com/find_link?q=Raj_Jain
+  13. file://localhost/wiki/Computer_science
+  14. file://localhost/wiki/Washington_University_in_St._Louis
+  15. file://localhost/wiki/Ohio_State_University
+  16. file://localhost/wiki/MIT
+  17. file://localhost/wiki/Alma_mater
+  18. file://localhost/wiki/Harvard
+  19. file://localhost/wiki/Computer_Science
+  20. file://localhost/wiki/Engineering
+  21. file://localhost/wiki/Washington_University_School_of_Engineering_and_Applied_Science
+  22. file://localhost/wiki/Washington_University_in_St._Louis
+  23. file://localhost/wiki/Missouri
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#Affiliations
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#Research_Contributions
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#Publications
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#Education
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#External_references
+  29. file://localhost/w/index.php?title=Raj_Jain&action=edit&section=1
+  30. file://localhost/wiki/Ohio_State_University
+  31. file://localhost/wiki/Columbus,_Ohio
+  32. file://localhost/wiki/Digital_Equipment_Corporation
+  33. file://localhost/wiki/Massachusetts_Institute_of_Technology
+  34. file://localhost/w/index.php?title=Raj_Jain&action=edit&section=2
+  35. file://localhost/wiki/Congestion_avoidance
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname9-0
+  37. file://localhost/wiki/Asynchronous_Transfer_Mode
+  38. file://localhost/wiki/EFCI
+  39. file://localhost/wiki/TCP/IP
+  40. file://localhost/wiki/Explicit_Congestion_Notification
+  41. file://localhost/wiki/AIMD
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname10-1
+  43. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname11-2
+  44. file://localhost/wiki/Congestion_control
+  45. file://localhost/wiki/Slow_start
+  46. file://localhost/wiki/TCP/IP
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname12-3
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname13-4
+  49. file://localhost/w/index.php?title=Raj_Jain&action=edit&section=3
+  50. file://localhost/wiki/Wiley_Interscience
+  51. file://localhost/wiki/Computer_Press_Association
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_note-refname15-5
+  53. file://localhost/w/index.php?title=Raj_Jain&action=edit&section=4
+  54. file://localhost/wiki/Computer_Science
+  55. file://localhost/wiki/Harvard_University
+  56. file://localhost/wiki/Indian_Institute_of_Science
+  57. file://localhost/wiki/Awdhesh_Pratap_Singh_University
+  58. file://localhost/w/index.php?title=Raj_Jain&action=edit&section=5
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname9_0-0
+  60. http://www.freepatentsonline.com/5377327.html
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname10_1-0
+  62. http://portal.acm.org/citation.cfm?id=70208
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname11_2-0
+  64. http://www.cse.wustl.edu/~jain/papers/fairness.htm
+  65. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname12_3-0
+  66. http://portal.acm.org/citation.cfm?id=59330
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname13_4-0
+  68. http://portal.acm.org/citation.cfm?id=52356
+  69. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html#cite_ref-refname15_5-0
+  70. http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471503363.html
+  71. file://localhost/wiki/Wikipedia:Persondata
+  72. http://en.wikipedia.org/wiki/Raj_Jain
+  73. file://localhost/wiki/Special:Categories
+  74. file://localhost/wiki/Category:American_computer_scientists
+  75. file://localhost/wiki/Category:American_technology_writers
+  76. file://localhost/wiki/Category:Researchers_in_distributed_computing
+  77. file://localhost/wiki/Category:Fellows_of_the_Institute_of_Electrical_and_Electronics_Engineers
+  78. file://localhost/wiki/Category:Fellows_of_the_Association_for_Computing_Machinery
+  79. file://localhost/wiki/Category:Harvard_University_alumni
+  80. file://localhost/wiki/Category:Indian_Institute_of_Science_alumni
+  81. file://localhost/wiki/Category:Washington_University_in_St._Louis_faculty
+  82. file://localhost/wiki/Category:American_businesspeople
+  83. file://localhost/wiki/Category:People_from_Madhya_Pradesh
+  84. file://localhost/wiki/Category:Indian_immigrants_to_the_United_States
+  85. file://localhost/wiki/Category:People_from_Satna
+  86. file://localhost/wiki/Category:Technology_evangelists
+  87. file://localhost/wiki/Category:American_engineers
+  88. file://localhost/wiki/Category:1951_births
+  89. file://localhost/wiki/Category:Living_people
+  90. file://localhost/wiki/Category:People_from_St._Louis,_Missouri
+  91. file://localhost/wiki/Category:People_from_Missouri
+  92. file://localhost/wiki/Category:American_Jains
+  93. file://localhost/wiki/Category:American_inventors
+  94. file://localhost/wiki/Category:Orphaned_articles_from_June_2010
+  95. file://localhost/wiki/Category:All_orphaned_articles
+  96. file://localhost/w/index.php?title=Special:UserLogin&returnto=Raj_Jain
+  97. file://localhost/wiki/Raj_Jain
+  98. file://localhost/wiki/Talk:Raj_Jain
+  99. file://localhost/wiki/Raj_Jain
+ 100. file://localhost/w/index.php?title=Raj_Jain&action=edit
+ 101. file://localhost/w/index.php?title=Raj_Jain&action=history
+ 102. file://localhost/wiki/Main_Page
+ 103. file://localhost/wiki/Portal:Contents
+ 104. file://localhost/wiki/Portal:Featured_content
+ 105. file://localhost/wiki/Portal:Current_events
+ 106. file://localhost/wiki/Special:Random
+ 107. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 108. file://localhost/wiki/Help:Contents
+ 109. file://localhost/wiki/Wikipedia:About
+ 110. file://localhost/wiki/Wikipedia:Community_portal
+ 111. file://localhost/wiki/Special:RecentChanges
+ 112. file://localhost/wiki/Wikipedia:Contact_us
+ 113. file://localhost/wiki/Special:WhatLinksHere/Raj_Jain
+ 114. file://localhost/wiki/Special:RecentChangesLinked/Raj_Jain
+ 115. file://localhost/wiki/Wikipedia:Upload
+ 116. file://localhost/wiki/Special:SpecialPages
+ 117. file://localhost/w/index.php?title=Raj_Jain&oldid=402470842
+ 118. file://localhost/w/index.php?title=Special:Cite&page=Raj_Jain&id=402470842
+ 119. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Raj+Jain
+ 120. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Raj+Jain&oldid=402470842&writer=rl
+ 121. file://localhost/w/index.php?title=Raj_Jain&printable=yes
+ 122. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 123. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 124. http://www.wikimediafoundation.org/
+ 125. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 126. http://wikimediafoundation.org/wiki/Privacy_policy
+ 127. file://localhost/wiki/Wikipedia:About
+ 128. file://localhost/wiki/Wikipedia:General_disclaimer
+ 129. http://www.mediawiki.org/
+ 130. http://wikimediafoundation.org/
+
+   Hidden links:
+ 131. file://localhost/wiki/File:Jain8cr.jpg
+ 132. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/raj_jain.html
+ 134. file://localhost/wiki/Main_Page
+ 135. http://creativecommons.org/licenses/by-sa/3.0/

@@ -1,0 +1,728 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Samuel Colt
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   This article is about the firearms inventor. For the industrialist and
+   politician from Rhode Island, see [7]Samuel P. Colt.
+   Samuel Colt (19th century engraving)
+
+   Samuel Colt (July 19, 1814 – January 10, 1862) was an [8]American
+   [9]inventor and [10]industrialist. He was the founder of Colt's Patent
+   Fire-Arms Manufacturing Company (now known as [11]Colt's Manufacturing
+   Company), and is widely credited with popularizing the [12]revolver.
+   Colt's innovative contributions to the weapons industry have been
+   described by arms historian James E. Serven as "events which shaped the
+   destiny of American Firearms."^[13][1] In 2006, he was inducted into
+   the [14]National Inventors Hall of Fame.^[15][2]
+
+   Contents
+
+        * [16]1 Early years
+        * [17]2 Gunsmithing
+        * [18]3 Early problems and failures
+        * [19]4 The two Sams
+        * [20]5 The return of the revolver
+        * [21]6 Later years
+        * [22]7 Popular media
+        * [23]8 See also
+        * [24]9 Footnotes
+        * [25]10 References
+        * [26]11 External links
+
+[[27]edit] Early years
+
+   Samuel Colt was born in [28]Hartford, Connecticut, to Christopher Colt,
+   a farmer who had moved his family to Hartford when he changed
+   professions and became a businessman, and Sarah Colt née Caldwell, who
+   died before Samuel was seven years old. Christopher Colt was remarried
+   two years later to Olive Sargeant. The Colt family included eight
+   siblings: five boys and three girls. Two of the sisters died in
+   childhood and the other committed suicide later in life, but Samuel's
+   brothers were a huge part of his professional life.
+
+   Colt was [29]indentured to a farm in [30]Glastonbury at age 11, where
+   he did chores and attended school. At Glastonbury, he was introduced to
+   the [31]Compendium of Knowledge, a scientific encyclopedia that he
+   preferred to read rather than doing his [32]Bible studies. This
+   encyclopedia contained articles on [33]Robert Fulton and [34]gunpowder,
+   both of which provided motivation and ideas that would influence Colt
+   throughout his life. While reading the Compendium, "he discovered that
+   Robert Fulton and several other inventors had accomplished things
+   deemed impossible—until they were done". Later, after hearing soldiers
+   talk about the success of the double barreled [35]rifle and the
+   impossibility of a gun that could shoot five or six times, Colt
+   "decided he would be an inventor and create the 'impossible'
+   gun".^[36][3]
+
+   In 1829, Colt began working in his father's [37]textile plant in
+   [38]Ware, [39]Massachusetts, where he had access to tools, materials,
+   and the factory workers' expertise. Using the ideas and technical
+   knowledge he had acquired earlier from the encyclopedia, Samuel built a
+   homemade [40]galvanic cell and used it to explode a gunpowder charge in
+   the waters of Ware Lake. In 1832, Colt's father sent him to sea to
+   learn the seaman's trade. Colt would later say that the concept of the
+   revolver was inspired by his observations of the ship's wheel during
+   his first voyage. He discovered that "regardless of which way the wheel
+   was spun, each spoke always came in direct line with a [41]clutch that
+   could be set to hold it... the revolver was conceived!" On this voyage,
+   Colt made a wooden model of a revolver.^[42][4]
+
+   When Colt returned to the United States in 1832, he went back to work
+   for his father, who financed the production of two [43]pistols. The
+   guns turned out to be of poor quality because Christopher Colt believed
+   the idea to be folly and would hire only inexpensive mechanics. One of
+   the guns burst upon firing, and the other would not fire at all. Later,
+   after learning about [44]nitrous oxide (laughing gas) from the factory
+   chemist, Colt took a portable lab on the road and earned a living
+   performing laughing gas demonstrations across the United States and
+   Canada. It was during this time that he made arrangements to begin
+   building guns using proper [45]gunsmiths from [46]Baltimore,
+   [47]Maryland. In 1832, at the age of 18, Colt applied for a [48]patent
+   on his revolver and declared that he would "be back soon with a
+   model".^[49][4]
+
+[[50]edit] Gunsmithing
+
+   Reproduction of an engraving taken from an oil painting displayed at
+   Wadsworth Atheneum, Hartford, CT.
+
+   In 1835, Samuel Colt traveled to [51]England, following in the
+   footsteps of [52]Elisha Collier, a [53]Bostonian who had patented a
+   revolving [54]flintlock. Despite the reluctance of English officials to
+   issue the patent, no fault could be found with the gun and he was
+   issued his first patent (Number 6909). He then traveled to [55]France
+   to promote his invention, and there he heard about the emerging
+   conflict between the United States and Germany^[[56]citation needed].
+   Colt wanted to serve his country, so he returned home. Upon his return,
+   however, he learned that England had mediated the conflict and that
+   there would be no fighting, so he set up a factory for the manufacture
+   of his [57]firearms in [58]Paterson, [59]New Jersey. Shortly after his
+   return to the United States, Colt applied for a patent for a "revolving
+   gun", and he was granted the patent on 25 February 1836 (later numbered
+   9430X).^[60][5] This instrument and patent No. 1304, dated August 29,
+   1836, protected the basic principles of his revolving-breech loading,
+   folding trigger firearm named the [61]Paterson Pistol.^[62][6]^[63][7]
+
+   Colt never claimed to have invented the revolver, as his design was
+   merely a more practical adaption of Collier's revolving flintlock,
+   which was patented in England and achieved great popularity
+   there.^[64][8] He did, however, greatly contribute to the use of
+   [65]interchangeable parts. "Unhappy with high cost of hand made guns,
+   and with the knowledge that some parts of guns were currently being
+   made by machine, Colt wanted all the parts on every Colt gun to be
+   interchangeable and made by machine. His goal was the [66]assembly
+   line".^[67][9] This is shown clearly in a letter that Samuel Colt wrote
+   to his father in which he said, "The first workman would receive two or
+   three of the most important parts…and would affix these and pass them
+   on to the next who add a part and pass the growing article on to
+   another who would do the same, and so on until the complete arm is put
+   together".^[68][10]
+
+   It was this first "practical revolver and the first practical repeating
+   firearm," made possible by converging percussion technology, that would
+   be the genesis of what would later germinate into an industrial and
+   cultural legacy and a priceless contribution to the development of
+   [69]war [70]technology, ironically personified in the name of one of
+   his later revolving innovations, the [71]Peacemaker.^[72][10] Colt
+   quickly formed a corporation of [73]New York and New Jersey [74]venture
+   capitalists in April 1836. Through the political connections of the
+   subscribers, the Patent Arms Manufacturing Company of Paterson, New
+   Jersey, was chartered by the New Jersey legislature on March 5, 1837.
+   Colt was given a [75]commission for each gun sold in exchange for his
+   share of patent rights, and stipulated the return of the rights if the
+   company disbanded.
+
+[[76]edit] Early problems and failures
+
+   Because the company's owners were reluctant to fund the new machinery
+   to make the [77]interchangeable parts, Colt went back on the road to
+   raise money. Demonstrating his gun to people in [78]general stores did
+   not work, so with a loan from a cousin he went to Washington, D.C., and
+   demonstrated it to President [79]Andrew Jackson. Jackson approved of
+   the gun and wrote Colt a note saying so. With that approval, Colt got a
+   bill through [80]Congress endorsing a demonstration for the military,
+   but no appropriation for them to purchase the weapon. A promising order
+   from the state of [81]South Carolina for fifty to seventy-five pistols
+   was canceled when the company did not produce them quickly enough. One
+   recurring problem Colt had in selling his revolvers was that "it was
+   not possible to change the provisions of the Militia Act of 1808. Any
+   arms purchased under the Militia Act had to be those in the current
+   service to the [82]United States".^[83][11] In other words, state
+   [84]militias could not officially allocate funds towards the purchase
+   of weapons not also used by the [85]United States military.
+
+   When [86]Martin Van Buren assumed the [87]Presidency in 1837, the
+   ensuing [88]economic crash almost ruined Colt's company. The company
+   was saved by the [89]war against the [90]Seminoles in [91]Florida which
+   provided the first sale of Colt's revolvers and his new revolving
+   [92]muskets. The soldiers in Florida loved the new weapon, but "the
+   unusual hammerless design, sixty years ahead of its time ... led to
+   difficulty training men used to exposed-hammer guns and many curious
+   soldiers took the locks apart. This resulted in breakage of parts,
+   stripped screw heads, and jammed actions".^[93][12] Colt soon reworked
+   his design to leave the firing [94]hammer exposed, but problems
+   continued and in late 1843, after numerous setbacks including loss of
+   payment for the Florida pistols, the Paterson, New Jersey plant closed.
+
+[[95]edit] The two Sams
+
+   Colt did not refrain long from manufacturing. Soon after the failure of
+   his former company, while he was marketing the underwater electrical
+   [96]detonators that he had invented, Colt met [97]Samuel Morse. They
+   became friends and they both lobbied the U.S. government for funds.
+   Colt's waterproof cable was valuable when Morse ran [98]telegraph lines
+   under lakes and rivers, and bays, and especially for attempts to lay a
+   [99]telegraph line across the entire [100]Atlantic Ocean.
+
+   When tensions with Great Britain prompted Congress to appropriate funds
+   for Colt's project toward the end of 1841, he demonstrated his
+   underwater [101]mines to the U.S. government. In 1842 he used the
+   device to destroy a moving vessel to the satisfaction of the [102]navy
+   and President [103]John Tyler. However, opposition from [104]John
+   Quincy Adams, who was serving as a [105]U.S. Representative from
+   [106]Massachusetts's 8th congressional district, and who personally
+   disliked Colt, scuttled the project. After this setback, Colt
+   concentrated on manufacturing his waterproof telegraph cable, believing
+   the business would boom alongside Morse's invention. He began promoting
+   the telegraph companies so he could create a wider market for his
+   cable, for which he was to be paid $50 per mile.
+
+[[107]edit] The return of the revolver
+
+   Samuel Hamilton Walker (1817–1847)
+
+   In 1847, [108]Captain Samuel Walker and the [109]Texas Rangers, who had
+   acquired some of the first Colt revolvers produced during the Seminole
+   War, ordered an additional 1,000 revolvers to use in the
+   [110]Mexican-American War. The large order allowed Colt to re-establish
+   his firearm business. Because he no longer owned a firearm factory, or
+   even a model of a firearm, Colt hired [111]Eli Whitney Blake, who was
+   established in the arms business, to make his guns. Colt and Captain
+   Walker drew up a new improved model from which Whitney produced the
+   first thousand-piece order. The company then received an order for a
+   thousand more; Colt took a share of the profits at $10 per pistol for
+   both orders. He later built the Colt's Patent Fire-Arms Manufacturing
+   Company factory at [112]Hartford, [113]Connecticut. His
+   revolving-breech pistol became so popular that the word "Colt" was
+   sometimes used as a generic term for the revolver. The [114]California
+   gold rush and [115]western expansion made the firearm business boom so
+   much that Colt had to expand the Hartford factory repeatedly.
+
+   During this period Colt received an extension on his patent because he
+   did not collect on it in the early years. When someone^[[116]who?]
+   infringed on the patent, Colt sued and the court ordered that Colt
+   receive [117]royalties on each gun that had been sold by the rival
+   company. This caused the rival to go out of business. With a virtual
+   monopoly, Colt began to sell his pistols in [118]Europe, where demand
+   was high due to tense international relations. By telling each nation
+   that the others were buying Colt's pistols, Colt was able to get large
+   orders from many countries who feared falling behind in the [119]arms
+   race^[[120]citation needed].
+
+[[121]edit] Later years
+
+   Colt later purchased a large tract of land beside the [122]Connecticut
+   River, where he built a larger factory called the [123]Colt Armory, a
+   [124]manor that he called [125]Armsmear, and employee housing. He
+   established a ten-hour day for employees, installed washing stations in
+   the factory, mandated a one-hour lunch break, and built the Charter Oak
+   Hall, a club where employees could enjoy games, newspapers, and
+   discussion rooms. On June 5, 1856, Colt married Elizabeth Jarvis, the
+   daughter of the Reverend William Jarvis, who lived just downriver from
+   Hartford.
+   Colt Model 1855 Carbine
+
+   At the outbreak of the U.S. Civil War, Colt—who had called himself
+   "Colonel"—was actually commissioned a Colonel by the state of
+   Connecticut on May 16, 1861, in the 1st Regiment Colts Revolving Rifles
+   of Connecticut armed with the [126]Colt revolving rifle. However the
+   unit never took the field and Colt was discharged on June 20, 1861.
+   Samuel Colt died in Hartford in 1862 and was buried in [127]Cedar Hill
+   Cemetery. At the time of his death, Colt's estate, which he left to his
+   wife and son, was estimated to be valued at around $15,000,000. His
+   professional responsibilities were turned over to his brother-in-law,
+   Richard Jarvis.
+
+[[128]edit] Popular media
+
+     * In the TV series [129]Supernatural, Sam Colt is the creator of a
+       revolver that can kill almost anything.
+     * Samuel Colt appears briefly in Rose, Joel (2007). The Blackest
+       Bird. New York: W.W. Norton.^[[130]citation needed]
+
+[[131]edit] See also
+
+     * [132]Daniel Leavitt
+
+[[133]edit] Footnotes
+
+    1. [134]^ Serven, J. E.; Metzger, C. (1946). Paterson Pistols, First
+       of the Famous Repeating Firearms patented and promoted by Sam'l
+       Colt. Foundation Press.
+    2. [135]^ [136]National Inventors Hall of Fame
+    3. [137]^ Rohan, Jack (1935). Yankee Arms Maker: the incredible career
+       of Samuel Colt (1st ed.). Harper and Brothers Publishers. pp. 301.
+    4. ^ [138]^a [139]^b Soule, Gardner (1961). "The story of Sam Colt's
+       Equalizer". Popular Science 12: 88–93.
+    5. [140]^ Colt, S. (February 25, 1836). [141]"Revolving Gun (9430X)"
+       (html or *.pdf). United States Patent Office Database. United
+       States Patent Office; Google.
+       [142]http://www.google.com/patents?id=Jy0qAAAAEBAJ&dq=Samuel+Colt.
+       Retrieved September 2, 2008.
+    6. [143]^ Serven, J. E.; C. Metzger (1946). Paterson Pistols, First of
+       the Famous Repeating Firearms patented and promoted by Sam'l Colt.
+       Santa Ana, CA: Foundation Press. p. 5.
+    7. [144]^ [145]"United States Utility Patent 1304, Improvement in
+       fire-arms and in the apparatus used therewith". United States
+       Patent Office; Google. August 1839.
+       [146]http://www.google.com/patents?id=bNI_AAAAEBAJ&dq=Samuel+Colt.
+       Retrieved September 2, 2008.
+    8. [147]^ Bowman, H.W. (1963). Lucian Cary. ed (Abridged Edition
+       Fawcett Book 553). Antique Guns (4th printing ed.). Greenwich,
+       Connecticut: Fawcett Publications. p. 94.
+    9. [148]^ Rohan, Jack (1935). Yankee Arms Maker: the incredible career
+       of Samuel Colt (1st ed.). Harper and Brothers Publishers. p. 41.
+   10. ^ [149]^a [150]^b Hosley, William (1996). Colt: The Making of an
+       American Legend. Massachusetts: University of Massachusetts Press.
+       p. 12. [151]ISBN [152]978-1558490420.
+   11. [153]^ Rohan, Jack (1935). Yankee Arms Maker: the incredible career
+       of Samuel Colt (1st ed.). Harper and Brothers Publishers. p. 74.
+   12. [154]^ Rohan, Jack (1935). Yankee Arms Maker: the incredible career
+       of Samuel Colt (1st ed.). Harper and Brothers Publishers. p. 77.
+
+[[155]edit] References
+
+     * J. E., Serven; C. Metzger (1946). Colt Percussion Pistols. Santa
+       Ana, CA: Foundation Press.
+
+     * J. E., Serven; C. Metzger (1946). Colt Cartridge Pistols. Santa
+       Ana, CA: Foundation Press.
+
+     * J. E., Serven; C. Metzger (1946). Colt Dragoon Pistols. Santa Ana,
+       CA: Foundation Press.
+
+     * Kelner, William L. (June 1969). On Samuel Colt and the Patent Arms
+       Manufacturing Company, New Jersey: A Thesis Presented to the
+       Faculty of the Graduate School Farleigh Dickinson University.
+
+     * Grant, Ellsworth S. (1982). The Colt Legacy. Providence, RI:
+       Mowbray Company.
+
+[[156]edit] External links
+
+     * [157]Samuel Colt Biography
+
+                             [158]Persondata
+   Name              Colt, Samuel
+   Alternative names
+   Short description inventor of the [159]Colt revolver; founder of Colt
+                     Firearms
+   Date of birth     July 19, 1814
+   Place of birth    [160]Hartford, Connecticut
+   Date of death     January 10, 1872
+   Place of death    Hartford, Connecticut
+   Retrieved from "[161]http://en.wikipedia.org/wiki/Samuel_Colt"
+   [162]Categories: [163]1814 births | [164]1862 deaths | [165]American
+   inventors | [166]American Civil War industrialists | [167]Union Army
+   officers | [168]Burials at Cedar Hill Cemetery (Hartford, Connecticut)
+   | [169]Colt | [170]Weapon designers | [171]Weapon design | [172]Firearm
+   designers | [173]National Inventors Hall of Fame inductees |
+   [174]People of Connecticut in the American Civil War | [175]People from
+   Hartford, Connecticut | [176]Businesspeople from Connecticut |
+   [177]American people of Scottish descent
+   Hidden categories: [178]All articles with unsourced statements |
+   [179]Articles with unsourced statements from October 2010 | [180]All
+   articles with specifically marked weasel-worded phrases | [181]Articles
+   with specifically marked weasel-worded phrases from March 2009 |
+   [182]Articles with unsourced statements from February 2009 |
+   [183]Articles with unsourced statements from April 2010
+
+Personal tools
+
+     * [184]Log in / create account
+
+Namespaces
+
+     * [185]Article
+     * [186]Discussion
+
+Variants
+
+Views
+
+     * [187]Read
+     * [188]Edit
+     * [189]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [190]Main page
+     * [191]Contents
+     * [192]Featured content
+     * [193]Current events
+     * [194]Random article
+     * [195]Donate to Wikipedia
+
+Interaction
+
+     * [196]Help
+     * [197]About Wikipedia
+     * [198]Community portal
+     * [199]Recent changes
+     * [200]Contact Wikipedia
+
+Toolbox
+
+     * [201]What links here
+     * [202]Related changes
+     * [203]Upload file
+     * [204]Special pages
+     * [205]Permanent link
+     * [206]Cite this page
+
+Print/export
+
+     * [207]Create a book
+     * [208]Download as PDF
+     * [209]Printable version
+
+Languages
+
+     * [210]العربية
+     * [211]Aragonés
+     * [212]Беларуская
+     * [213]Bosanski
+     * [214]Brezhoneg
+     * [215]Български
+     * [216]Česky
+     * [217]Dansk
+     * [218]Deutsch
+     * [219]Ελληνικά
+     * [220]Español
+     * [221]Esperanto
+     * [222]فارسی
+     * [223]Français
+     * [224]Frysk
+     * [225]Galego
+     * [226]Hrvatski
+     * [227]Íslenska
+     * [228]Italiano
+     * [229]עברית
+     * [230]ქართული
+     * [231]Lëtzebuergesch
+     * [232]मराठी
+     * [233]Bahasa Melayu
+     * [234]Nederlands
+     * [235]日本語
+     * [236]‪Norsk (bokmål)‬
+     * [237]Polski
+     * [238]Português
+     * [239]Română
+     * [240]Русский
+     * [241]Slovenčina
+     * [242]Slovenščina
+     * [243]Српски / Srpski
+     * [244]Suomi
+     * [245]Svenska
+     * [246]Türkçe
+     * [247]Українська
+     * [248]中文
+
+     * This page was last modified on 19 January 2011 at 15:17.
+     * Text is available under the [249]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [250]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [251]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [252]Contact us
+
+     * [253]Privacy policy
+     * [254]About Wikipedia
+     * [255]Disclaimers
+
+     * [256]Powered by MediaWiki
+     * [257]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Samuel_Colt&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#p-search
+   7. file://localhost/wiki/Samuel_P._Colt
+   8. file://localhost/wiki/United_States
+   9. file://localhost/wiki/Inventor
+  10. file://localhost/wiki/Industrialist
+  11. file://localhost/wiki/Colt%27s_Manufacturing_Company
+  12. file://localhost/wiki/Revolver
+  13. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Serven-Metzger1946-0
+  14. file://localhost/wiki/National_Inventors_Hall_of_Fame
+  15. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-1
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Early_years
+  17. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Gunsmithing
+  18. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Early_problems_and_failures
+  19. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#The_two_Sams
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#The_return_of_the_revolver
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Later_years
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Popular_media
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#See_also
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#Footnotes
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#References
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#External_links
+  27. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=1
+  28. file://localhost/wiki/Hartford,_Connecticut
+  29. file://localhost/wiki/Indenture
+  30. file://localhost/wiki/Glastonbury,_Connecticut
+  31. file://localhost/w/index.php?title=Compendium_of_Knowledge&action=edit&redlink=1
+  32. file://localhost/wiki/Bible#Christian_Bible
+  33. file://localhost/wiki/Robert_Fulton
+  34. file://localhost/wiki/Gunpowder
+  35. file://localhost/wiki/Rifle
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-2
+  37. file://localhost/wiki/Textile
+  38. file://localhost/wiki/Ware,_Massachusetts
+  39. file://localhost/wiki/Massachusetts
+  40. file://localhost/wiki/Galvanic_cell
+  41. file://localhost/wiki/Clutch
+  42. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-gardner-3
+  43. file://localhost/wiki/Pistol
+  44. file://localhost/wiki/Nitrous_oxide
+  45. file://localhost/wiki/Gunsmith
+  46. file://localhost/wiki/Baltimore
+  47. file://localhost/wiki/Maryland
+  48. file://localhost/wiki/Patent
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-gardner-3
+  50. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=2
+  51. file://localhost/wiki/England
+  52. file://localhost/wiki/Elisha_Collier
+  53. file://localhost/wiki/Boston
+  54. file://localhost/wiki/Flintlock
+  55. file://localhost/wiki/France
+  56. file://localhost/wiki/Wikipedia:Citation_needed
+  57. file://localhost/wiki/Firearm
+  58. file://localhost/wiki/Paterson,_New_Jersey
+  59. file://localhost/wiki/New_Jersey
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Patent9430X-4
+  61. file://localhost/wiki/Colt_Paterson
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Serven-Metzger1946_p5-5
+  63. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Patent1304-6
+  64. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Bowman1963_p94-7
+  65. file://localhost/wiki/Interchangeable_parts
+  66. file://localhost/wiki/Assembly_line
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-8
+  68. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Hosley-9
+  69. file://localhost/wiki/War
+  70. file://localhost/wiki/Technology
+  71. file://localhost/wiki/Colt_Single_Action_Army
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-Hosley-9
+  73. file://localhost/wiki/New_York
+  74. file://localhost/wiki/Venture_capital
+  75. file://localhost/wiki/Commission_(remuneration)
+  76. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=3
+  77. file://localhost/wiki/Interchangeable_parts
+  78. file://localhost/wiki/General_store
+  79. file://localhost/wiki/Andrew_Jackson
+  80. file://localhost/wiki/United_States_Congress
+  81. file://localhost/wiki/South_Carolina
+  82. file://localhost/wiki/United_States
+  83. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-10
+  84. file://localhost/wiki/Militia
+  85. file://localhost/wiki/United_States_Armed_Forces
+  86. file://localhost/wiki/Martin_Van_Buren
+  87. file://localhost/wiki/President_of_the_United_States
+  88. file://localhost/wiki/Panic_of_1837
+  89. file://localhost/wiki/Seminole_Wars#Second_Seminole_War
+  90. file://localhost/wiki/Seminoles
+  91. file://localhost/wiki/Florida
+  92. file://localhost/wiki/Musket
+  93. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_note-11
+  94. file://localhost/wiki/Hammer_(firearm)
+  95. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=4
+  96. file://localhost/wiki/Detonator
+  97. file://localhost/wiki/Samuel_Morse
+  98. file://localhost/wiki/Telegraphy
+  99. file://localhost/wiki/Transatlantic_telegraph_cable
+ 100. file://localhost/wiki/Atlantic_Ocean
+ 101. file://localhost/wiki/Naval_mine
+ 102. file://localhost/wiki/United_States_Navy
+ 103. file://localhost/wiki/John_Tyler
+ 104. file://localhost/wiki/John_Quincy_Adams
+ 105. file://localhost/wiki/United_States_House_of_Representatives
+ 106. file://localhost/wiki/Massachusetts%27s_8th_congressional_district
+ 107. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=5
+ 108. file://localhost/wiki/Samuel_Hamilton_Walker
+ 109. file://localhost/wiki/Texas_Ranger_Division
+ 110. file://localhost/wiki/Mexican-American_War
+ 111. file://localhost/wiki/Eli_Whitney_Blake
+ 112. file://localhost/wiki/Hartford,_Connecticut
+ 113. file://localhost/wiki/Connecticut
+ 114. file://localhost/wiki/California_gold_rush
+ 115. file://localhost/wiki/Manifest_destiny
+ 116. file://localhost/wiki/Wikipedia:Avoid_weasel_words
+ 117. file://localhost/wiki/Royalties
+ 118. file://localhost/wiki/Europe
+ 119. file://localhost/wiki/Arms_race
+ 120. file://localhost/wiki/Wikipedia:Citation_needed
+ 121. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=6
+ 122. file://localhost/wiki/Connecticut_River
+ 123. file://localhost/wiki/Colt_Armory
+ 124. file://localhost/wiki/Manor_house
+ 125. file://localhost/wiki/Armsmear
+ 126. file://localhost/wiki/Colt_revolving_rifle
+ 127. file://localhost/wiki/Cedar_Hill_Cemetery_(Hartford,_Connecticut)
+ 128. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=7
+ 129. file://localhost/wiki/Supernatural_(TV_Series)
+ 130. file://localhost/wiki/Wikipedia:Citation_needed
+ 131. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=8
+ 132. file://localhost/wiki/Daniel_Leavitt
+ 133. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=9
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Serven-Metzger1946_0-0
+ 135. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-1
+ 136. http://www.invent.org/hall_of_fame/257.html
+ 137. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-2
+ 138. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-gardner_3-0
+ 139. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-gardner_3-1
+ 140. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Patent9430X_4-0
+ 141. http://www.google.com/patents?id=Jy0qAAAAEBAJ&dq=Samuel+Colt
+ 142. http://www.google.com/patents?id=Jy0qAAAAEBAJ&dq=Samuel+Colt
+ 143. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Serven-Metzger1946_p5_5-0
+ 144. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Patent1304_6-0
+ 145. http://www.google.com/patents?id=bNI_AAAAEBAJ&dq=Samuel+Colt
+ 146. http://www.google.com/patents?id=bNI_AAAAEBAJ&dq=Samuel+Colt
+ 147. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Bowman1963_p94_7-0
+ 148. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-8
+ 149. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Hosley_9-0
+ 150. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-Hosley_9-1
+ 151. file://localhost/wiki/International_Standard_Book_Number
+ 152. file://localhost/wiki/Special:BookSources/978-1558490420
+ 153. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-10
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html#cite_ref-11
+ 155. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=10
+ 156. file://localhost/w/index.php?title=Samuel_Colt&action=edit&section=11
+ 157. http://www.netstate.com/states/peop/people/ct_sc.htm
+ 158. file://localhost/wiki/Wikipedia:Persondata
+ 159. file://localhost/wiki/Colt_revolver
+ 160. file://localhost/wiki/Hartford,_Connecticut
+ 161. http://en.wikipedia.org/wiki/Samuel_Colt
+ 162. file://localhost/wiki/Special:Categories
+ 163. file://localhost/wiki/Category:1814_births
+ 164. file://localhost/wiki/Category:1862_deaths
+ 165. file://localhost/wiki/Category:American_inventors
+ 166. file://localhost/wiki/Category:American_Civil_War_industrialists
+ 167. file://localhost/wiki/Category:Union_Army_officers
+ 168. file://localhost/wiki/Category:Burials_at_Cedar_Hill_Cemetery_(Hartford,_Connecticut)
+ 169. file://localhost/wiki/Category:Colt
+ 170. file://localhost/wiki/Category:Weapon_designers
+ 171. file://localhost/wiki/Category:Weapon_design
+ 172. file://localhost/wiki/Category:Firearm_designers
+ 173. file://localhost/wiki/Category:National_Inventors_Hall_of_Fame_inductees
+ 174. file://localhost/wiki/Category:People_of_Connecticut_in_the_American_Civil_War
+ 175. file://localhost/wiki/Category:People_from_Hartford,_Connecticut
+ 176. file://localhost/wiki/Category:Businesspeople_from_Connecticut
+ 177. file://localhost/wiki/Category:American_people_of_Scottish_descent
+ 178. file://localhost/wiki/Category:All_articles_with_unsourced_statements
+ 179. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_October_2010
+ 180. file://localhost/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases
+ 181. file://localhost/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_March_2009
+ 182. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_February_2009
+ 183. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_April_2010
+ 184. file://localhost/w/index.php?title=Special:UserLogin&returnto=Samuel_Colt
+ 185. file://localhost/wiki/Samuel_Colt
+ 186. file://localhost/wiki/Talk:Samuel_Colt
+ 187. file://localhost/wiki/Samuel_Colt
+ 188. file://localhost/w/index.php?title=Samuel_Colt&action=edit
+ 189. file://localhost/w/index.php?title=Samuel_Colt&action=history
+ 190. file://localhost/wiki/Main_Page
+ 191. file://localhost/wiki/Portal:Contents
+ 192. file://localhost/wiki/Portal:Featured_content
+ 193. file://localhost/wiki/Portal:Current_events
+ 194. file://localhost/wiki/Special:Random
+ 195. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 196. file://localhost/wiki/Help:Contents
+ 197. file://localhost/wiki/Wikipedia:About
+ 198. file://localhost/wiki/Wikipedia:Community_portal
+ 199. file://localhost/wiki/Special:RecentChanges
+ 200. file://localhost/wiki/Wikipedia:Contact_us
+ 201. file://localhost/wiki/Special:WhatLinksHere/Samuel_Colt
+ 202. file://localhost/wiki/Special:RecentChangesLinked/Samuel_Colt
+ 203. file://localhost/wiki/Wikipedia:Upload
+ 204. file://localhost/wiki/Special:SpecialPages
+ 205. file://localhost/w/index.php?title=Samuel_Colt&oldid=408794451
+ 206. file://localhost/w/index.php?title=Special:Cite&page=Samuel_Colt&id=408794451
+ 207. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Samuel+Colt
+ 208. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Samuel+Colt&oldid=408794451&writer=rl
+ 209. file://localhost/w/index.php?title=Samuel_Colt&printable=yes
+ 210. http://ar.wikipedia.org/wiki/%D8%B5%D9%85%D9%88%D9%8A%D9%84_%D9%83%D9%88%D9%84%D8%AA
+ 211. http://an.wikipedia.org/wiki/Samuel_Colt
+ 212. http://be.wikipedia.org/wiki/%D0%A1%D1%8D%D0%BC%D1%8E%D1%8D%D0%BB%D1%8C_%D0%9A%D0%BE%D0%BB%D1%8C%D1%82
+ 213. http://bs.wikipedia.org/wiki/Samuel_Colt
+ 214. http://br.wikipedia.org/wiki/Samuel_Colt
+ 215. http://bg.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BC%D1%8E%D1%8A%D0%BB_%D0%9A%D0%BE%D0%BB%D1%82
+ 216. http://cs.wikipedia.org/wiki/Samuel_Colt
+ 217. http://da.wikipedia.org/wiki/Samuel_Colt
+ 218. http://de.wikipedia.org/wiki/Samuel_Colt
+ 219. http://el.wikipedia.org/wiki/%CE%A3%CE%AC%CE%BC%CE%BF%CF%85%CE%B5%CE%BB_%CE%9A%CE%BF%CE%BB%CF%84
+ 220. http://es.wikipedia.org/wiki/Samuel_Colt
+ 221. http://eo.wikipedia.org/wiki/Samuel_Colt
+ 222. http://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%85%D9%88%D8%A6%D9%84_%DA%A9%D9%84%D8%AA
+ 223. http://fr.wikipedia.org/wiki/Samuel_Colt
+ 224. http://fy.wikipedia.org/wiki/Samuel_Colt
+ 225. http://gl.wikipedia.org/wiki/Samuel_Colt
+ 226. http://hr.wikipedia.org/wiki/Samuel_Colt
+ 227. http://is.wikipedia.org/wiki/Samuel_Colt
+ 228. http://it.wikipedia.org/wiki/Samuel_Colt
+ 229. http://he.wikipedia.org/wiki/%D7%A1%D7%9E%D7%95%D7%90%D7%9C_%D7%A7%D7%95%D7%9C%D7%98
+ 230. http://ka.wikipedia.org/wiki/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%A3%E1%83%94%E1%83%9A_%E1%83%99%E1%83%9D%E1%83%9A%E1%83%A2%E1%83%98
+ 231. http://lb.wikipedia.org/wiki/Samuel_Colt
+ 232. http://mr.wikipedia.org/wiki/%E0%A4%B8%E0%A5%85%E0%A4%AE%E0%A5%8D%E0%A4%AF%E0%A5%81%E0%A4%85%E0%A4%B2_%E0%A4%95%E0%A5%89%E0%A4%B2%E0%A5%8D%E0%A4%9F
+ 233. http://ms.wikipedia.org/wiki/Samuel_Colt
+ 234. http://nl.wikipedia.org/wiki/Samuel_Colt
+ 235. http://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%9F%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%BB%E3%82%B3%E3%83%AB%E3%83%88
+ 236. http://no.wikipedia.org/wiki/Samuel_Colt
+ 237. http://pl.wikipedia.org/wiki/Samuel_Colt
+ 238. http://pt.wikipedia.org/wiki/Samuel_Colt
+ 239. http://ro.wikipedia.org/wiki/Samuel_Colt
+ 240. http://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D1%8C%D1%82,_%D0%A1%D1%8D%D0%BC%D1%8E%D1%8D%D0%BB
+ 241. http://sk.wikipedia.org/wiki/Samuel_Colt
+ 242. http://sl.wikipedia.org/wiki/Samuel_Colt
+ 243. http://sr.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BC%D1%98%D1%83%D0%B5%D0%BB_%D0%9A%D0%BE%D0%BB%D1%82
+ 244. http://fi.wikipedia.org/wiki/Samuel_Colt
+ 245. http://sv.wikipedia.org/wiki/Samuel_Colt
+ 246. http://tr.wikipedia.org/wiki/Samuel_Colt
+ 247. http://uk.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BC%D1%8E%D0%B5%D0%BB_%D0%9A%D0%BE%D0%BB%D1%8C%D1%82
+ 248. http://zh.wikipedia.org/wiki/%E5%A1%9E%E7%BC%AA%E5%B0%94%C2%B7%E6%9F%AF%E5%B0%94%E7%89%B9
+ 249. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 250. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 251. http://www.wikimediafoundation.org/
+ 252. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 253. http://wikimediafoundation.org/wiki/Privacy_policy
+ 254. file://localhost/wiki/Wikipedia:About
+ 255. file://localhost/wiki/Wikipedia:General_disclaimer
+ 256. http://www.mediawiki.org/
+ 257. http://wikimediafoundation.org/
+
+   Hidden links:
+ 258. file://localhost/wiki/File:SamuelColt.jpg
+ 259. file://localhost/wiki/File:SamuelColt.jpg
+ 260. file://localhost/wiki/File:Samuel-Colt-copy.jpg
+ 261. file://localhost/wiki/File:Samuel-Colt-copy.jpg
+ 262. file://localhost/wiki/File:Hamilton-Captain-Samuel-Walker.jpg
+ 263. file://localhost/wiki/File:Hamilton-Captain-Samuel-Walker.jpg
+ 264. file://localhost/wiki/File:Colt_Roots_British_Carbine.JPG
+ 265. file://localhost/wiki/File:Colt_Roots_British_Carbine.JPG
+ 266. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html
+ 267. file://localhost/home/memfis/projects/put/tsiss/Downloads/samuel_colt.html
+ 268. file://localhost/wiki/Main_Page
+ 269. http://creativecommons.org/licenses/by-sa/3.0/

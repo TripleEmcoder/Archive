@@ -1,0 +1,302 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Arthur Claude Ruge
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+               Arthur Claude Ruge
+    Born   July 28, 1905(1905-07-28)
+           [7]Tomah, Wisconsin
+    Died   April 3, 2000(2000-04-03) (aged 94)
+           [8]Lexington, Massachusetts
+   Parents Rosa March
+           C.A. Ferdinand Ruge
+
+   Arthur Claude Ruge (pronounced ROO-gee) (July 28, 1905 – April 3, 2000)
+   was an American mechanical engineer and inventor who developed and
+   pioneered the modern bonded wire resistance [9]strain gauge.^[10][1]
+
+   Contents
+
+        * [11]1 Background
+        * [12]2 Seismology
+        * [13]3 Invention of the Strain Gauge
+        * [14]4 Founding of a Company
+        * [15]5 Awards, Distinctions, Legacy
+        * [16]6 References
+
+[[17]edit] Background
+
+   Ruge graduated from [18]Carnegie Mellon University with a mechanical
+   engineering degree in 1925, and worked as a structural engineer for
+   several years thereafter. He then earned his master's degree in civil
+   engineering and a doctorate in engineering seismology from [19]MIT. In
+   1932, Ruge joined the faculty of MIT^1, where he would spend the rest
+   of his academic career, becoming America's first professor of
+   engineering seismology^2.
+
+[[20]edit] Seismology
+
+   The [21]1933 Long Beach earthquake gave Ruge a new direction ^3. The
+   disaster had proved the importance of [22]earthquake engineering.
+   Buildings that had been appropriately engineered and reinforced
+   sustained little to no structural damage, while the rest of Long Beach
+   suffered catastrophic ruin. Ruge turned the focus of his research to
+   the development of earthquake-resistant architecture, specifically a
+   method to provide seismic insulation for water towers. In his lab at
+   MIT, Ruge and his research assistant constructed a hydraulic shake
+   table that simulated the effects of the Long Beach earthquake; on this
+   table they placed a replica of a water tower ^4. It was this research,
+   and the need to measure stress caused by earthquakes that eventually
+   led to Ruge's invention of the strain gauge.
+
+[[23]edit] Invention of the Strain Gauge
+
+   During the course of his seismic insulation research, Ruge discovered
+   that he needed to measure the stress on the water tanks that was caused
+   by the earthquakes, and so he set about devising a means for attaining
+   this measurement. According to Ruge, he had a [24]Eureka moment on
+   April 3, 1938 when “the invention just popped into my mind, whole. I
+   could see it clearly and knew that it would work.” His solution was to
+   glue a piece of cigarette paper on the tank and glue a small wire with
+   end connections to the paper ^4. Ruge and his assistants quickly
+   developed this rudimentary device [25][1] into the more advanced
+   version that would later be patented.
+
+   Barnaby Feder writes:
+
+     The SR-4 was a deceptively simple invention composed of four thin
+     tungsten filaments, similar to those used in light bulbs, glued
+     together in the shape of a diamond. When an electrical current is
+     run across the wires, no voltage can be measured as long as they
+     remain perfectly aligned. But if some force disturbs the symmetry,
+     and thus the resistance in the wires, the gauge puts out a voltage
+     proportional to the force.^[26][1]
+
+   When MIT released the right to Ruge's invention, saying that, while
+   “interesting,” the strain gauge didn’t show much potential, he
+   immediately went about commercializing it. Only then did he discover
+   that his strain gauge had already been invented the year before by
+   [27]Edward E. Simmons, an electrical engineer at [28]Caltech. Though
+   the Simmons was the first to invent the resistance wire strain gauge,
+   both men are credited with the discovery and share the original patent.
+   The trade name of the device, SR-4, which stands for “Simmons Ruge – 4
+   people,” acknowledges both men and indicates that four people (Simmons,
+   Ruge and their respective assistants) were responsible for its
+   realization^5.
+
+[[29]edit] Founding of a Company
+
+   In 1939, Arthur Ruge and Alfred deForest, a colleague from MIT and
+   fellow inventor, founded a company, Ruge Consulting, that pioneered and
+   manufactured the SR-4 and continued to innovate new, related
+   technologies. They produced the first commercial shipment of strain
+   gages – a 50,000-piece order in 1941 [30][2] ^6. In 1955,
+   [31]Baldwin-Lima-Hamilton bought the Ruge Consulting and rights to the
+   SR-4 strain gage and renamed the company BLH Electronics Inc. A new
+   company, [32]RdF Corporation was formed to continue development and
+   manufacturing of temperature sensors. The name RdF is short for Ruge
+   and deForest.
+
+[[33]edit] Awards, Distinctions, Legacy
+
+     * 1938 to 1939 - Served as Vice-Chairman of Seismological Society of
+       America (Eastern Section)
+     * 1939 to 1940 - Served as Chairman of Seismological Society of
+       America (Eastern Section) [34][3]
+     * 1955 – Delivered Murray Lecture at the annual SEM Meeting
+     * 1959 – Alumni Achievement Award from Carnegie Mellon University
+     * 1986 – Inventor of the Year Award from Boston Museum of Science
+     * Arthur C. Ruge Charitable Fund
+
+[[35]edit] References
+
+    1. ^ [36]^a [37]^b Feder, Barnaby J. (April 4, 2000). [38]"Arthur C.
+       Ruge, Inventor of Vital Stress Gauge, Dies at 94". [39]New York
+       Times.
+       [40]http://query.nytimes.com/gst/fullpage.html?res=9503EED9113FF93B
+       A35757C0A9669C8B63. Retrieved 2008-05-23. "Arthur C. Ruge, who
+       invented a fingernail-sized gauge that helped the United States win
+       World War II and revolutionized the way things are weighed and
+       tested for stress, died Monday at his home in Lexington, Mass.,
+       according to his daughter, Claire Bertucci. He was 94."
+
+                  [41]Persondata
+   Name              Ruge, Arthur Claude
+   Alternative names
+   Short description
+   Date of birth     July 28, 1905
+   Place of birth    [42]Tomah, Wisconsin
+   Date of death     April 3, 2000
+   Place of death    [43]Lexington, Massachusetts
+   Retrieved from "[44]http://en.wikipedia.org/wiki/Arthur_Claude_Ruge"
+   [45]Categories: [46]1905 births | [47]2000 deaths | [48]American
+   inventors | [49]Mechanical engineers | [50]Seismology
+   Hidden categories: [51]Articles with hCards
+
+Personal tools
+
+     * [52]Log in / create account
+
+Namespaces
+
+     * [53]Article
+     * [54]Discussion
+
+Variants
+
+Views
+
+     * [55]Read
+     * [56]Edit
+     * [57]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [58]Main page
+     * [59]Contents
+     * [60]Featured content
+     * [61]Current events
+     * [62]Random article
+     * [63]Donate to Wikipedia
+
+Interaction
+
+     * [64]Help
+     * [65]About Wikipedia
+     * [66]Community portal
+     * [67]Recent changes
+     * [68]Contact Wikipedia
+
+Toolbox
+
+     * [69]What links here
+     * [70]Related changes
+     * [71]Upload file
+     * [72]Special pages
+     * [73]Permanent link
+     * [74]Cite this page
+
+Print/export
+
+     * [75]Create a book
+     * [76]Download as PDF
+     * [77]Printable version
+
+     * This page was last modified on 5 October 2010 at 05:00.
+     * Text is available under the [78]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [79]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [80]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [81]Contact us
+
+     * [82]Privacy policy
+     * [83]About Wikipedia
+     * [84]Disclaimers
+
+     * [85]Powered by MediaWiki
+     * [86]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#p-search
+   7. file://localhost/wiki/Tomah,_Wisconsin
+   8. file://localhost/wiki/Lexington,_Massachusetts
+   9. file://localhost/wiki/Strain_gauge
+  10. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#cite_note-nytobit-0
+  11. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#Background
+  12. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#Seismology
+  13. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#Invention_of_the_Strain_Gauge
+  14. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#Founding_of_a_Company
+  15. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#Awards.2C_Distinctions.2C_Legacy
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#References
+  17. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=1
+  18. file://localhost/wiki/Carnegie_Mellon_University
+  19. file://localhost/wiki/MIT
+  20. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=2
+  21. file://localhost/wiki/1933_Long_Beach_earthquake
+  22. file://localhost/wiki/Earthquake_engineering
+  23. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=3
+  24. file://localhost/wiki/Eureka_moment
+  25. http://cee.mit.edu/index.pl?id=4606&isa=Category&op=show
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#cite_note-nytobit-0
+  27. file://localhost/wiki/Edward_E._Simmons
+  28. file://localhost/wiki/Caltech
+  29. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=4
+  30. http://www.sandvmag.com/downloads/0701walt.pdf
+  31. file://localhost/wiki/Baldwin-Lima-Hamilton
+  32. http://www.rdfcorp.com/
+  33. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=5
+  34. http://www.seismosoc.org/about/ES_pastoff.html
+  35. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit&section=6
+  36. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#cite_ref-nytobit_0-0
+  37. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html#cite_ref-nytobit_0-1
+  38. http://query.nytimes.com/gst/fullpage.html?res=9503EED9113FF93BA35757C0A9669C8B63
+  39. file://localhost/wiki/New_York_Times
+  40. http://query.nytimes.com/gst/fullpage.html?res=9503EED9113FF93BA35757C0A9669C8B63
+  41. file://localhost/wiki/Wikipedia:Persondata
+  42. file://localhost/wiki/Tomah,_Wisconsin
+  43. file://localhost/wiki/Lexington,_Massachusetts
+  44. http://en.wikipedia.org/wiki/Arthur_Claude_Ruge
+  45. file://localhost/wiki/Special:Categories
+  46. file://localhost/wiki/Category:1905_births
+  47. file://localhost/wiki/Category:2000_deaths
+  48. file://localhost/wiki/Category:American_inventors
+  49. file://localhost/wiki/Category:Mechanical_engineers
+  50. file://localhost/wiki/Category:Seismology
+  51. file://localhost/wiki/Category:Articles_with_hCards
+  52. file://localhost/w/index.php?title=Special:UserLogin&returnto=Arthur_Claude_Ruge
+  53. file://localhost/wiki/Arthur_Claude_Ruge
+  54. file://localhost/wiki/Talk:Arthur_Claude_Ruge
+  55. file://localhost/wiki/Arthur_Claude_Ruge
+  56. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=edit
+  57. file://localhost/w/index.php?title=Arthur_Claude_Ruge&action=history
+  58. file://localhost/wiki/Main_Page
+  59. file://localhost/wiki/Portal:Contents
+  60. file://localhost/wiki/Portal:Featured_content
+  61. file://localhost/wiki/Portal:Current_events
+  62. file://localhost/wiki/Special:Random
+  63. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA1&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB001
+  64. file://localhost/wiki/Help:Contents
+  65. file://localhost/wiki/Wikipedia:About
+  66. file://localhost/wiki/Wikipedia:Community_portal
+  67. file://localhost/wiki/Special:RecentChanges
+  68. file://localhost/wiki/Wikipedia:Contact_us
+  69. file://localhost/wiki/Special:WhatLinksHere/Arthur_Claude_Ruge
+  70. file://localhost/wiki/Special:RecentChangesLinked/Arthur_Claude_Ruge
+  71. file://localhost/wiki/Wikipedia:Upload
+  72. file://localhost/wiki/Special:SpecialPages
+  73. file://localhost/w/index.php?title=Arthur_Claude_Ruge&oldid=388836878
+  74. file://localhost/w/index.php?title=Special:Cite&page=Arthur_Claude_Ruge&id=388836878
+  75. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Arthur+Claude+Ruge
+  76. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Arthur+Claude+Ruge&oldid=388836878&writer=rl
+  77. file://localhost/w/index.php?title=Arthur_Claude_Ruge&printable=yes
+  78. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+  79. http://wikimediafoundation.org/wiki/Terms_of_Use
+  80. http://www.wikimediafoundation.org/
+  81. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+  82. http://wikimediafoundation.org/wiki/Privacy_policy
+  83. file://localhost/wiki/Wikipedia:About
+  84. file://localhost/wiki/Wikipedia:General_disclaimer
+  85. http://www.mediawiki.org/
+  86. http://wikimediafoundation.org/
+
+   Hidden links:
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/arthur_claude_ruge.html
+  89. file://localhost/wiki/Main_Page
+  90. http://creativecommons.org/licenses/by-sa/3.0/

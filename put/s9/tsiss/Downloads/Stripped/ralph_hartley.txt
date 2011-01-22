@@ -1,0 +1,406 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Ralph Hartley
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                    Ralph Hartley
+        Born      November 30, 1888(1888-11-30)
+                  [7]Spruce, Nevada
+        Died      May 1, 1970(1970-05-01) (aged 81)
+                  [8]New Jersey
+     Residence    [9]United States
+    Nationality   [10]American
+       Fields     [11]Electrical engineering
+   [12]Alma mater [13]University of Utah
+                  [14]Oxford University
+   Notable awards [15]IEEE Medal of Honor
+
+   Ralph Vinton Lyon Hartley (November 30, 1888 – May 1, 1970) was an
+   [16]electronics researcher. He invented the [17]Hartley oscillator and
+   the [18]Hartley transform, and contributed to the foundations of
+   [19]information theory.
+
+   Contents
+
+        * [20]1 Biography
+        * [21]2 Awards
+        * [22]3 Publications
+        * [23]4 See also
+        * [24]5 References
+
+[[25]edit] Biography
+
+   Hartley was born in [26]Spruce, Nevada, [27]USA and attended the
+   [28]University of Utah, receiving an A.B. degree in 1909. He became a
+   [29]Rhodes Scholar at [30]St Johns, [31]Oxford University, in 1910 and
+   received a B.A. degree in 1912 and a B.Sc. degree in 1913. He married
+   Florence Vail of [32]Brooklyn on March 21, 1916.^[33][1] The Hartleys
+   had no children.
+
+   He returned to the [34]United States and was employed at the Research
+   Laboratory of the [35]Western Electric Company. In 1915 he was in
+   charge of [36]radio receiver development for the [37]Bell System
+   transatlantic [38]radiotelephone tests. For this he developed the
+   Hartley oscillator and also a neutralizing circuit to eliminate triode
+   singing resulting from internal coupling. A [39]patent for the
+   oscillator was filed on June 1, 1915 and awarded on October 26, 1920.
+
+   During [40]World War I he established the principles that led to
+   sound-type [41]directional finders.
+
+   Following the war he returned to [42]Western Electric. He later worked
+   at [43]Bell Laboratories. He performed research on [44]repeaters and
+   voice and carrier transmission and formulated the law "that the total
+   amount of information that can be transmitted is proportional to
+   frequency range transmitted and the time of the transmission." After
+   about 10 years of illness he returned to Bell Labs in 1939 as a
+   [45]consultant.
+
+   During [46]World War II he was particularly involved with
+   [47]servomechanism problems.
+
+   He retired from Bell Labs in 1950 and died on May 1, 1970.
+
+[[48]edit] Awards
+
+     * [49]IRE Medal of Honor, 1946, for his oscillator and information
+       proportionality law. This was an award from the [50]Institute of
+       Radio Engineers which later merged into the [51]Institute of
+       Electrical and Electronics Engineers; the award became the [52]IEEE
+       Medal of Honor.
+     * Fellow of the [53]American Association for the Advancement of
+       Science
+
+[[54]edit] Publications
+
+   Probably incomplete.
+     * Hartley, R.V.L., [55]"Transmission of Information", Bell System
+       Technical Journal, July 1928, pp.535–563.
+     * Hartley, R.V.L., "A More Symmetrical Fourier Analysis Applied to
+       Transmission Problems," [56]Proceedings of the IRE 30, pp.144–150
+       (1942).
+     * Hartley, R.V.L., "A New System of Logarithmic Units", Proceedings
+       of the IRE, January 1955, Vol. 43, No. 1.
+     * Hartley, R.V.L., "Information Theory of The Fourier Analysis and
+       Wave Mechanics", August 10, 1955, publication information unknown.
+     * Hartley, R.V.L., "The Mechanism of Gravitation", January 11, 1956,
+       publication information unknown.
+     * Hartley, R.V.L., "A Wave Mechanism of Quantum Phenomena",
+       [57]Physical Review, Volume 33, Page 289, 1929 (abstract only)
+     * Hartley, R.V.L., "Oscillations in Systems with Non-Linear
+       Reactance", The Bell System Technical Journal, Volume 15, Number 3,
+       July 1936, pp 424 - 440
+
+[[58]edit] See also
+
+     * [59]Shannon–Hartley law
+     * [60]Discrete Hartley transform
+
+[[61]edit] References
+
+    1. [62]^ Frank Aydelotte (1916). [63]The American Oxonian. Association
+       of American Rhodes Scholars. p. 84.
+       [64]http://books.google.com/books?id=4gYVAAAAIAAJ&dq=hartley%20%22F
+       lorence%20Vail%20%22&pg=PA84#v=onepage&q=Hartley%20%22Florence%20Va
+       il%20%22&f=false.
+
+     * Ralph V. L. Hartley, Legacies, IEEE History Center, updated January
+       23 2003, [65][1]
+     * US Patent 1,356,763, Oscillation Generator, October 26, 1920,
+       United States Patent and Trademark Office, [66][2]; page images can
+       be downloaded.
+     * US Patent 1,666,206, Modulation System, April 17, 1928, United
+       States Patent and Trademark Office, [67][3]; page images can be
+       downloaded.
+
+
+   [68]v · [69]d · [70]e[71]IEEE Medal of Honor
+   1926–1950
+
+   [72]Greenleaf W. Pickard (1926) · [73]Louis W. Austin (1927) ·
+   [74]Jonathan Zenneck (1928) · [75]George W. Pierce (1929) · [76]Peder
+   Oluf Pedersen (1930) · [77]Gustave-Auguste Ferrié (1931) · [78]Arthur
+   Edwin Kennelly (1932) · [79]John Ambrose Fleming (1933) · [80]Stanford
+   Caldwell Hooper (1934) · [81]Balthasar van der Pol (1935) · [82]George
+   Ashley Campbell (1936) · [83]Melville Eastham (1937) · [84]John H.
+   Dellinger (1938) · [85]Albert G. Lee (1939) · [86]Lloyd Espenschied
+   (1940) · [87]Alfred Norton Goldsmith (1941) · [88]Albert H. Taylor
+   (1942) · [89]William Wilson (1943) · [90]Haraden Pratt (1944) ·
+   [91]Harold Beverage (1945) · Ralph Hartley (1946) · [92]Lawrence C. F.
+   Horle (1948) · [93]Ralph Bown (1949) · [94]Frederick Terman (1950)
+   [95]Complete roster: [96]1917–1925 · [97]1926–1950 · [98]1951–1975 ·
+   [99]1976–2000 · [100]2001–present
+             [101]Persondata
+   Name              Hartley, Ralph
+   Alternative names
+   Short description
+   Date of birth     November 30, 1888
+   Place of birth    [102]Spruce, Nevada
+   Date of death     May 1, 1970
+   Place of death    [103]New Jersey
+   Retrieved from "[104]http://en.wikipedia.org/wiki/Ralph_Hartley"
+   [105]Categories: [106]1888 births | [107]1970 deaths | [108]Alumni of
+   St John's College, Oxford | [109]American inventors | [110]American
+   Rhodes scholars | [111]Electronics engineers | [112]Fellows of the
+   American Association for the Advancement of Science | [113]IEEE Medal
+   of Honor recipients | [114]Information theorists | [115]Scientists at
+   Bell Labs | [116]University of Utah alumni
+
+Personal tools
+
+     * [117]Log in / create account
+
+Namespaces
+
+     * [118]Article
+     * [119]Discussion
+
+Variants
+
+Views
+
+     * [120]Read
+     * [121]Edit
+     * [122]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [123]Main page
+     * [124]Contents
+     * [125]Featured content
+     * [126]Current events
+     * [127]Random article
+     * [128]Donate to Wikipedia
+
+Interaction
+
+     * [129]Help
+     * [130]About Wikipedia
+     * [131]Community portal
+     * [132]Recent changes
+     * [133]Contact Wikipedia
+
+Toolbox
+
+     * [134]What links here
+     * [135]Related changes
+     * [136]Upload file
+     * [137]Special pages
+     * [138]Permanent link
+     * [139]Cite this page
+
+Print/export
+
+     * [140]Create a book
+     * [141]Download as PDF
+     * [142]Printable version
+
+Languages
+
+     * [143]Deutsch
+     * [144]Français
+     * [145]Italiano
+     * [146]Nederlands
+     * [147]日本語
+     * [148]Polski
+     * [149]Português
+     * [150]Română
+     * [151]Русский
+     * [152]Slovenčina
+     * [153]Српски / Srpski
+
+     * This page was last modified on 14 October 2010 at 11:15.
+     * Text is available under the [154]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [155]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [156]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [157]Contact us
+
+     * [158]Privacy policy
+     * [159]About Wikipedia
+     * [160]Disclaimers
+
+     * [161]Powered by MediaWiki
+     * [162]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Ralph_Hartley&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#p-search
+   7. file://localhost/wiki/Spruce_Mountain_(Nevada)
+   8. file://localhost/wiki/New_Jersey
+   9. file://localhost/wiki/United_States
+  10. file://localhost/wiki/United_States
+  11. file://localhost/wiki/Electrical_engineering
+  12. file://localhost/wiki/Alma_mater
+  13. file://localhost/wiki/University_of_Utah
+  14. file://localhost/wiki/Oxford_University
+  15. file://localhost/wiki/IEEE_Medal_of_Honor
+  16. file://localhost/wiki/Electronics
+  17. file://localhost/wiki/Hartley_oscillator
+  18. file://localhost/wiki/Hartley_transform
+  19. file://localhost/wiki/Information_theory
+  20. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#Biography
+  21. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#Awards
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#Publications
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#See_also
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#References
+  25. file://localhost/w/index.php?title=Ralph_Hartley&action=edit&section=1
+  26. file://localhost/wiki/Spruce_Mountain_(Nevada)
+  27. file://localhost/wiki/USA
+  28. file://localhost/wiki/University_of_Utah
+  29. file://localhost/wiki/Rhodes_Scholarship
+  30. file://localhost/wiki/St_John%27s_College,_Oxford
+  31. file://localhost/wiki/University_of_Oxford
+  32. file://localhost/wiki/Brooklyn
+  33. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#cite_note-0
+  34. file://localhost/wiki/United_States
+  35. file://localhost/wiki/Western_Electric
+  36. file://localhost/wiki/Radio_receiver
+  37. file://localhost/wiki/Bell_System
+  38. file://localhost/wiki/Radiotelephone
+  39. file://localhost/wiki/Patent
+  40. file://localhost/wiki/World_War_I
+  41. file://localhost/wiki/Radio_direction_finder
+  42. file://localhost/wiki/Western_Electric
+  43. file://localhost/wiki/Bell_Laboratories
+  44. file://localhost/wiki/Repeater
+  45. file://localhost/wiki/Consultant
+  46. file://localhost/wiki/World_War_II
+  47. file://localhost/wiki/Servomechanism
+  48. file://localhost/w/index.php?title=Ralph_Hartley&action=edit&section=2
+  49. file://localhost/wiki/IEEE_Medal_of_Honor
+  50. file://localhost/wiki/Institute_of_Radio_Engineers
+  51. file://localhost/wiki/Institute_of_Electrical_and_Electronics_Engineers
+  52. file://localhost/wiki/IEEE_Medal_of_Honor
+  53. file://localhost/wiki/American_Association_for_the_Advancement_of_Science
+  54. file://localhost/w/index.php?title=Ralph_Hartley&action=edit&section=3
+  55. http://www.dotrose.com/etext/90_Miscellaneous/transmission_of_information_1928b.pdf
+  56. file://localhost/wiki/Proceedings_of_the_IRE
+  57. file://localhost/wiki/Physical_Review
+  58. file://localhost/w/index.php?title=Ralph_Hartley&action=edit&section=4
+  59. file://localhost/wiki/Shannon%E2%80%93Hartley_law
+  60. file://localhost/wiki/Discrete_Hartley_transform
+  61. file://localhost/w/index.php?title=Ralph_Hartley&action=edit&section=5
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html#cite_ref-0
+  63. http://books.google.com/books?id=4gYVAAAAIAAJ&dq=hartley%20%22Florence%20Vail%20%22&pg=PA84#v=onepage&q=Hartley%20%22Florence%20Vail%20%22&f=false
+  64. http://books.google.com/books?id=4gYVAAAAIAAJ&dq=hartley%20%22Florence%20Vail%20%22&pg=PA84#v=onepage&q=Hartley%20%22Florence%20Vail%20%22&f=false
+  65. http://www.ieee.org/organizations/history_center/legacies/hartley.html
+  66. http://www.uspto.gov/
+  67. http://www.uspto.gov/
+  68. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+  69. file://localhost/w/index.php?title=Template_talk:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit&redlink=1
+  70. http://en.wikipedia.org/w/index.php?title=Template:IEEE_Medal_of_Honor_Laureates_1926-1950&action=edit
+  71. file://localhost/wiki/IEEE_Medal_of_Honor
+  72. file://localhost/wiki/Greenleaf_Whittier_Pickard
+  73. file://localhost/wiki/Louis_W._Austin
+  74. file://localhost/wiki/Jonathan_Zenneck
+  75. file://localhost/wiki/George_W._Pierce
+  76. file://localhost/wiki/Peder_Oluf_Pedersen
+  77. file://localhost/wiki/Gustave-Auguste_Ferri%C3%A9
+  78. file://localhost/wiki/Arthur_E._Kennelly
+  79. file://localhost/wiki/John_Ambrose_Fleming
+  80. file://localhost/wiki/Stanford_Caldwell_Hooper
+  81. file://localhost/wiki/Balthasar_van_der_Pol
+  82. file://localhost/wiki/George_Ashley_Campbell
+  83. file://localhost/wiki/Melville_Eastham
+  84. file://localhost/wiki/John_H._Dellinger
+  85. file://localhost/wiki/Albert_G._Lee
+  86. file://localhost/wiki/Lloyd_Espenschied
+  87. file://localhost/wiki/Alfred_Norton_Goldsmith
+  88. file://localhost/wiki/Albert_H._Taylor
+  89. file://localhost/wiki/William_Wilson_(physicist)
+  90. file://localhost/wiki/Haraden_Pratt
+  91. file://localhost/wiki/Harold_Beverage
+  92. file://localhost/wiki/Lawrence_C._F._Horle
+  93. file://localhost/wiki/Ralph_Bown
+  94. file://localhost/wiki/Frederick_Terman
+  95. file://localhost/wiki/Template:IEEE_Medal_of_Honor
+  96. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1917-1925
+  97. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1926-1950
+  98. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_1951-1975
+  99. file://localhost/wiki/Template:IEEE_Medal_of_Honor_1976-2000
+ 100. file://localhost/wiki/Template:IEEE_Medal_of_Honor_Laureates_2001-2025
+ 101. file://localhost/wiki/Wikipedia:Persondata
+ 102. file://localhost/wiki/Spruce_Mountain_(Nevada)
+ 103. file://localhost/wiki/New_Jersey
+ 104. http://en.wikipedia.org/wiki/Ralph_Hartley
+ 105. file://localhost/wiki/Special:Categories
+ 106. file://localhost/wiki/Category:1888_births
+ 107. file://localhost/wiki/Category:1970_deaths
+ 108. file://localhost/wiki/Category:Alumni_of_St_John%27s_College,_Oxford
+ 109. file://localhost/wiki/Category:American_inventors
+ 110. file://localhost/wiki/Category:American_Rhodes_scholars
+ 111. file://localhost/wiki/Category:Electronics_engineers
+ 112. file://localhost/wiki/Category:Fellows_of_the_American_Association_for_the_Advancement_of_Science
+ 113. file://localhost/wiki/Category:IEEE_Medal_of_Honor_recipients
+ 114. file://localhost/wiki/Category:Information_theorists
+ 115. file://localhost/wiki/Category:Scientists_at_Bell_Labs
+ 116. file://localhost/wiki/Category:University_of_Utah_alumni
+ 117. file://localhost/w/index.php?title=Special:UserLogin&returnto=Ralph_Hartley
+ 118. file://localhost/wiki/Ralph_Hartley
+ 119. file://localhost/wiki/Talk:Ralph_Hartley
+ 120. file://localhost/wiki/Ralph_Hartley
+ 121. file://localhost/w/index.php?title=Ralph_Hartley&action=edit
+ 122. file://localhost/w/index.php?title=Ralph_Hartley&action=history
+ 123. file://localhost/wiki/Main_Page
+ 124. file://localhost/wiki/Portal:Contents
+ 125. file://localhost/wiki/Portal:Featured_content
+ 126. file://localhost/wiki/Portal:Current_events
+ 127. file://localhost/wiki/Special:Random
+ 128. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 129. file://localhost/wiki/Help:Contents
+ 130. file://localhost/wiki/Wikipedia:About
+ 131. file://localhost/wiki/Wikipedia:Community_portal
+ 132. file://localhost/wiki/Special:RecentChanges
+ 133. file://localhost/wiki/Wikipedia:Contact_us
+ 134. file://localhost/wiki/Special:WhatLinksHere/Ralph_Hartley
+ 135. file://localhost/wiki/Special:RecentChangesLinked/Ralph_Hartley
+ 136. file://localhost/wiki/Wikipedia:Upload
+ 137. file://localhost/wiki/Special:SpecialPages
+ 138. file://localhost/w/index.php?title=Ralph_Hartley&oldid=390675487
+ 139. file://localhost/w/index.php?title=Special:Cite&page=Ralph_Hartley&id=390675487
+ 140. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Ralph+Hartley
+ 141. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Ralph+Hartley&oldid=390675487&writer=rl
+ 142. file://localhost/w/index.php?title=Ralph_Hartley&printable=yes
+ 143. http://de.wikipedia.org/wiki/Ralph_Hartley
+ 144. http://fr.wikipedia.org/wiki/Ralph_Hartley
+ 145. http://it.wikipedia.org/wiki/Ralph_Hartley
+ 146. http://nl.wikipedia.org/wiki/Ralph_Hartley
+ 147. http://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%AB%E3%83%95%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%88%E3%83%AC%E3%83%BC
+ 148. http://pl.wikipedia.org/wiki/Ralph_Hartley
+ 149. http://pt.wikipedia.org/wiki/Ralph_Hartley
+ 150. http://ro.wikipedia.org/wiki/Ralph_Hartley
+ 151. http://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D1%82%D0%BB%D0%B8,_%D0%A0%D0%B0%D0%BB%D1%8C%D1%84
+ 152. http://sk.wikipedia.org/wiki/Ralph_Hartley
+ 153. http://sr.wikipedia.org/wiki/%D0%A0%D0%B0%D0%BB%D1%84_%D0%A5%D0%B0%D1%80%D1%82%D0%BB%D0%B8
+ 154. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 155. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 156. http://www.wikimediafoundation.org/
+ 157. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 158. http://wikimediafoundation.org/wiki/Privacy_policy
+ 159. file://localhost/wiki/Wikipedia:About
+ 160. file://localhost/wiki/Wikipedia:General_disclaimer
+ 161. http://www.mediawiki.org/
+ 162. http://wikimediafoundation.org/
+
+   Hidden links:
+ 163. file://localhost/wiki/File:Hartley_ralph-vinton-lyon-001.jpg
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html
+ 165. file://localhost/home/memfis/projects/put/tsiss/Downloads/ralph_hartley.html
+ 166. file://localhost/wiki/Main_Page
+ 167. http://creativecommons.org/licenses/by-sa/3.0/

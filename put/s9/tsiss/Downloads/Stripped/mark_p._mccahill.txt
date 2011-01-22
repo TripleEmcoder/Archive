@@ -1,0 +1,370 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+Mark P. McCahill
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+                          Mark P. McCahill
+      Born     February 7, 1956(1956-02-07)
+   Nationality [7]United States
+   Occupation  Programmer/systems architect
+    Known for  Developing and popularizing a number of [8]Internet
+               technologies
+
+   Mark P. McCahill (born February 7, 1956) is an American programmer who
+   has been involved in developing and popularizing a number of
+   [9]Internet technologies since the late 1980s.
+
+   Mark McCahill received a BA in Chemistry at the [10]University of
+   Minnesota in 1979, spent one year doing analytical environmental
+   chemistry, and then joined the University of Minnesota Computer
+   Center's microcomputer support group as an [11]Apple II and [12]CDC
+   Cyber programmer.
+
+   In 1989, McCahill lead the team at the University of Minnesota that
+   developed one of the first popular Internet e-mail clients,
+   [13]POPmail, for the Macintosh (and later the PC). The usage of
+   graphical user interface clients for Internet standards-based protocols
+   proved to be one of the dominant themes in the popularization of the
+   Internet. At about the same time as POPmail was being developed,
+   [14]Steve Dorner at the [15]University of Illinois at Urbana-Champaign
+   developed [16]Eudora, and the user interface conventions found in these
+   early efforts continue to be present in modern-day e-mail clients.
+
+   In 1991, McCahill led the original [17]Gopher development team (Farhad
+   Anklesaria, Paul Lindner, Dan Torrey, Bob Alberti), which invented a
+   simple way to navigate distributed information resources on the
+   Internet. Gopher's menu-based [18]hypermedia combined with full-text
+   [19]search engines paved the way for the popularization of the
+   [20]World Wide Web and was the de facto standard for Internet
+   information systems in the early to mid 1990s.
+
+   Working with other pioneers such as [21]Tim Berners-Lee, [22]Marc
+   Andreessen, [23]Alan Emtage and [24]Peter J. Deutsch (creators of
+   [25]Archie) and [26]Jon Postel, McCahill was involved in creating and
+   codifing the standard for [27]Uniform Resource Locators (URLs).
+
+   In 1994-95 McCahill's team developed [28]GopherVR, a 3D user interface
+   for the Gopher protocol to explore how spatial metaphors could be used
+   to organize information and create social spaces. While there was
+   significant interest in the mid-1990s in 3D Internet-enabled
+   information/social spaces (see [29]VRML), the limitied capabilities of
+   mainstream hardware resulted in little uptake of these technologies.
+   Mark McCahill was involved in the [30]Croquet project along with
+   [31]David P. Reed, Andreas Raab, [32]David A Smith, [33]Julian
+   Lombardi, and [34]Alan Kay.
+
+   In April 2007, McCahill left the [35]University of Minnesota to join
+   the Office of Information Technology at [36]Duke University as an
+   architect of 3-D learning and collaborative systems.
+
+   In February 2010, Mark McCahill was revealed by [37]Peter Ludlow
+   (Urizenus Sklar) to be the Internet persona Pixeleen Mistral, the
+   editor of [38]The Alphaville Herald, a newspaper covering [39]virtual
+   worlds founded by Ludlow.^[40][1]
+
+[[41]edit] Notes
+
+     * [42]Hobbes' Internet Timeline
+     * Oral History Interview with [43]Mark P. McCahill - [44]Charles
+       Babbage Institute, University of Minnesota. McCahill, in 2001
+       Assistant Director of Academic and Distributed Computing Services,
+       recounts his role as leader of the team that created the popular
+       client/server software for organizing and sharing information on
+       the Internet. McCahill also describes his work in the development
+       of [45]POPmail, [46]GopherVR, and several University of Minnesota
+       financial applications.
+
+[[47]edit] References
+
+    1. [48]^
+       [49]http://foo.secondlifeherald.com/slh/2010/02/pixeleen-outs-self-
+       files-legal-response-to-venkmans-dmca-abuses.html#more
+
+
+   [50]v · [51]d · [52]e[53]Gopher
+   Active clients
+   [54]Amaya · [55]Arachne · [56]Camino · [57]Classilla · [58]Conkeror ·
+   [59]ELinks · [60]Epiphany · [61]Firefox for mobile · [62]Flock ·
+   [63]Galeon · [64]Gnuzilla · [65]K-Meleon · [66]K-Ninja ·
+   [67]Kazehakase · [68]Line Mode Browser · [69]Lynx · [70]Mosaic-CK ·
+   [71]Mothra · [72]Mozilla Firefox [73]3 · [74]OmniWeb · [75]SeaMonkey ·
+   [76]Sleipnir · [77]Songbird · [78]VMS Mosaic · [79]W3m · [80]XeroBank
+   Browser
+   Discontinued clients
+   [81]Agora · [82]Arena · [83]AT&T Pogo · [84]Beonex Communicator ·
+   [85]Cello · [86]Cyberjack · [87]IBrowse · [88]Internet Explorer [89]2,
+   [90]3, [91]4, [92]5, [93]for Mac · [94]Minimo · [95]Minuet ·
+   [96]Mosaic · [97]Mozilla Application Suite · [98]Netscape Browser ·
+   [99]Netscape Communicator · [100]Netscape Navigator [101]9 ·
+   [102]SlipKnot · [103]tkWWW · [104]UdiWWW
+   Server software
+   [105]Bucktooth · [106]PyGopherd · [107]Squid
+   Persons
+   Mark P. McCahill
+   See also
+   [108]Gopher+ · [109]GopherVR · [110]Jughead · [111]Libwww ·
+   [112]Phlog · [113]SDF Public Access Unix System · [114]Veronica ·
+   [115]CCSO Nameserver · [116]Wide area information server
+
+             [117]Persondata
+   Name              Maccahill, Mark P.
+   Alternative names
+   Short description
+   Date of birth     February 7, 1956
+   Place of birth
+   Date of death
+   Place of death
+   Retrieved from "[118]http://en.wikipedia.org/wiki/Mark_P._McCahill"
+   [119]Categories: [120]1956 births | [121]Internet Gopher |
+   [122]American inventors | [123]Computer pioneers | [124]Internet
+   pioneers | [125]Living people | [126]Duke University alumni
+   Hidden categories: [127]Articles with hCards
+
+Personal tools
+
+     * [128]Log in / create account
+
+Namespaces
+
+     * [129]Article
+     * [130]Discussion
+
+Variants
+
+Views
+
+     * [131]Read
+     * [132]Edit
+     * [133]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [134]Main page
+     * [135]Contents
+     * [136]Featured content
+     * [137]Current events
+     * [138]Random article
+     * [139]Donate to Wikipedia
+
+Interaction
+
+     * [140]Help
+     * [141]About Wikipedia
+     * [142]Community portal
+     * [143]Recent changes
+     * [144]Contact Wikipedia
+
+Toolbox
+
+     * [145]What links here
+     * [146]Related changes
+     * [147]Upload file
+     * [148]Special pages
+     * [149]Permanent link
+     * [150]Cite this page
+
+Print/export
+
+     * [151]Create a book
+     * [152]Download as PDF
+     * [153]Printable version
+
+Languages
+
+     * [154]Deutsch
+
+     * This page was last modified on 3 October 2010 at 09:05.
+     * Text is available under the [155]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [156]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [157]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [158]Contact us
+
+     * [159]Privacy policy
+     * [160]About Wikipedia
+     * [161]Disclaimers
+
+     * [162]Powered by MediaWiki
+     * [163]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=Mark_P._McCahill&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html#p-search
+   7. file://localhost/wiki/United_States
+   8. file://localhost/wiki/Internet
+   9. file://localhost/wiki/Internet
+  10. file://localhost/wiki/University_of_Minnesota
+  11. file://localhost/wiki/Apple_II
+  12. file://localhost/wiki/CDC_Cyber
+  13. file://localhost/wiki/POPmail
+  14. file://localhost/wiki/Steve_Dorner
+  15. file://localhost/wiki/University_of_Illinois_at_Urbana-Champaign
+  16. file://localhost/wiki/Eudora_(e-mail_client)
+  17. file://localhost/wiki/Gopher_(protocol)
+  18. file://localhost/wiki/Hypermedia
+  19. file://localhost/wiki/Search_engine
+  20. file://localhost/wiki/World_Wide_Web
+  21. file://localhost/wiki/Tim_Berners-Lee
+  22. file://localhost/wiki/Marc_Andreessen
+  23. file://localhost/wiki/Alan_Emtage
+  24. file://localhost/w/index.php?title=Peter_J._Deutsch&action=edit&redlink=1
+  25. file://localhost/wiki/Archie_search_engine
+  26. file://localhost/wiki/Jon_Postel
+  27. file://localhost/wiki/Uniform_Resource_Locators
+  28. file://localhost/wiki/GopherVR
+  29. file://localhost/wiki/VRML
+  30. file://localhost/wiki/Croquet_project
+  31. file://localhost/wiki/David_P._Reed
+  32. file://localhost/wiki/David_A._Smith_(computer_scientist)
+  33. file://localhost/wiki/Julian_Lombardi
+  34. file://localhost/wiki/Alan_Kay
+  35. file://localhost/wiki/University_of_Minnesota
+  36. file://localhost/wiki/Duke_University
+  37. file://localhost/wiki/Peter_Ludlow
+  38. file://localhost/wiki/The_Alphaville_Herald
+  39. file://localhost/wiki/Virtual_worlds
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html#cite_note-0
+  41. file://localhost/w/index.php?title=Mark_P._McCahill&action=edit&section=1
+  42. http://www.zakon.org/robert/internet/timeline
+  43. http://www.cbi.umn.edu/oh/display.phtml?id=316
+  44. file://localhost/wiki/Charles_Babbage_Institute
+  45. file://localhost/wiki/POPmail
+  46. file://localhost/wiki/GopherVR
+  47. file://localhost/w/index.php?title=Mark_P._McCahill&action=edit&section=2
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html#cite_ref-0
+  49. http://foo.secondlifeherald.com/slh/2010/02/pixeleen-outs-self-files-legal-response-to-venkmans-dmca-abuses.html#more
+  50. file://localhost/wiki/Template:Gopher_clients
+  51. file://localhost/wiki/Template_talk:Gopher_clients
+  52. http://en.wikipedia.org/w/index.php?title=Template:Gopher_clients&action=edit
+  53. file://localhost/wiki/Gopher_(protocol)
+  54. file://localhost/wiki/Amaya_(web_browser)
+  55. file://localhost/wiki/Arachne_(web_browser)
+  56. file://localhost/wiki/Camino
+  57. file://localhost/wiki/Classilla
+  58. file://localhost/wiki/Conkeror
+  59. file://localhost/wiki/ELinks
+  60. file://localhost/wiki/Epiphany_(web_browser)
+  61. file://localhost/wiki/Firefox_for_mobile
+  62. file://localhost/wiki/Flock_(web_browser)
+  63. file://localhost/wiki/Galeon
+  64. file://localhost/wiki/Gnuzilla
+  65. file://localhost/wiki/K-Meleon
+  66. file://localhost/wiki/K-Meleon#K-Ninja
+  67. file://localhost/wiki/Kazehakase
+  68. file://localhost/wiki/Line_Mode_Browser
+  69. file://localhost/wiki/Lynx_(web_browser)
+  70. file://localhost/wiki/Mosaic-CK
+  71. file://localhost/wiki/Mothra_(web_browser)
+  72. file://localhost/wiki/Mozilla_Firefox
+  73. file://localhost/wiki/Mozilla_Firefox_3
+  74. file://localhost/wiki/OmniWeb
+  75. file://localhost/wiki/SeaMonkey
+  76. file://localhost/wiki/Sleipnir_(web_browser)
+  77. file://localhost/wiki/Songbird_(software)
+  78. file://localhost/wiki/VMS_Mosaic
+  79. file://localhost/wiki/W3m
+  80. file://localhost/wiki/XeroBank_Browser
+  81. file://localhost/wiki/Agora_(web_browser)
+  82. file://localhost/wiki/Arena_(web_browser)
+  83. file://localhost/wiki/AT%26T_Pogo
+  84. file://localhost/wiki/Beonex_Communicator
+  85. file://localhost/wiki/Cello_(web_browser)
+  86. file://localhost/wiki/Cyberjack
+  87. file://localhost/wiki/IBrowse
+  88. file://localhost/wiki/Internet_Explorer
+  89. file://localhost/wiki/Internet_Explorer_2
+  90. file://localhost/wiki/Internet_Explorer_3
+  91. file://localhost/wiki/Internet_Explorer_4
+  92. file://localhost/wiki/Internet_Explorer_5
+  93. file://localhost/wiki/Internet_Explorer_for_Mac
+  94. file://localhost/wiki/Minimo
+  95. file://localhost/wiki/Minnesota_Internet_Users_Essential_Tool
+  96. file://localhost/wiki/Mosaic_(web_browser)
+  97. file://localhost/wiki/Mozilla_Application_Suite
+  98. file://localhost/wiki/Netscape_Browser
+  99. file://localhost/wiki/Netscape_Communicator
+ 100. file://localhost/wiki/Netscape_Navigator
+ 101. file://localhost/wiki/Netscape_Navigator_9
+ 102. file://localhost/wiki/SlipKnot_(web_browser)
+ 103. file://localhost/wiki/TkWWW
+ 104. file://localhost/wiki/UdiWWW
+ 105. file://localhost/wiki/Bucktooth
+ 106. file://localhost/wiki/PyGopherd
+ 107. file://localhost/wiki/Squid_(software)
+ 108. file://localhost/wiki/Gopher%2B
+ 109. file://localhost/wiki/GopherVR
+ 110. file://localhost/wiki/Jughead_(search_engine)
+ 111. file://localhost/wiki/Libwww
+ 112. file://localhost/wiki/Phlog
+ 113. file://localhost/wiki/SDF_Public_Access_Unix_System
+ 114. file://localhost/wiki/Veronica_(computer)
+ 115. file://localhost/wiki/CCSO_Nameserver
+ 116. file://localhost/wiki/Wide_area_information_server
+ 117. file://localhost/wiki/Wikipedia:Persondata
+ 118. http://en.wikipedia.org/wiki/Mark_P._McCahill
+ 119. file://localhost/wiki/Special:Categories
+ 120. file://localhost/wiki/Category:1956_births
+ 121. file://localhost/wiki/Category:Internet_Gopher
+ 122. file://localhost/wiki/Category:American_inventors
+ 123. file://localhost/wiki/Category:Computer_pioneers
+ 124. file://localhost/wiki/Category:Internet_pioneers
+ 125. file://localhost/wiki/Category:Living_people
+ 126. file://localhost/wiki/Category:Duke_University_alumni
+ 127. file://localhost/wiki/Category:Articles_with_hCards
+ 128. file://localhost/w/index.php?title=Special:UserLogin&returnto=Mark_P._McCahill
+ 129. file://localhost/wiki/Mark_P._McCahill
+ 130. file://localhost/wiki/Talk:Mark_P._McCahill
+ 131. file://localhost/wiki/Mark_P._McCahill
+ 132. file://localhost/w/index.php?title=Mark_P._McCahill&action=edit
+ 133. file://localhost/w/index.php?title=Mark_P._McCahill&action=history
+ 134. file://localhost/wiki/Main_Page
+ 135. file://localhost/wiki/Portal:Contents
+ 136. file://localhost/wiki/Portal:Featured_content
+ 137. file://localhost/wiki/Portal:Current_events
+ 138. file://localhost/wiki/Special:Random
+ 139. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 140. file://localhost/wiki/Help:Contents
+ 141. file://localhost/wiki/Wikipedia:About
+ 142. file://localhost/wiki/Wikipedia:Community_portal
+ 143. file://localhost/wiki/Special:RecentChanges
+ 144. file://localhost/wiki/Wikipedia:Contact_us
+ 145. file://localhost/wiki/Special:WhatLinksHere/Mark_P._McCahill
+ 146. file://localhost/wiki/Special:RecentChangesLinked/Mark_P._McCahill
+ 147. file://localhost/wiki/Wikipedia:Upload
+ 148. file://localhost/wiki/Special:SpecialPages
+ 149. file://localhost/w/index.php?title=Mark_P._McCahill&oldid=388436767
+ 150. file://localhost/w/index.php?title=Special:Cite&page=Mark_P._McCahill&id=388436767
+ 151. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Mark+P.+McCahill
+ 152. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Mark+P.+McCahill&oldid=388436767&writer=rl
+ 153. file://localhost/w/index.php?title=Mark_P._McCahill&printable=yes
+ 154. http://de.wikipedia.org/wiki/Mark_P._McCahill
+ 155. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 156. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 157. http://www.wikimediafoundation.org/
+ 158. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 159. http://wikimediafoundation.org/wiki/Privacy_policy
+ 160. file://localhost/wiki/Wikipedia:About
+ 161. file://localhost/wiki/Wikipedia:General_disclaimer
+ 162. http://www.mediawiki.org/
+ 163. http://wikimediafoundation.org/
+
+   Hidden links:
+ 164. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html
+ 165. file://localhost/home/memfis/projects/put/tsiss/Downloads/mark_p._mccahill.html
+ 166. file://localhost/wiki/Main_Page
+ 167. http://creativecommons.org/licenses/by-sa/3.0/

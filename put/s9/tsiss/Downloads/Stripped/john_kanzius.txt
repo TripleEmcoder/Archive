@@ -1,0 +1,737 @@
+   #[1]Edit this page [2]Wikipedia (en) [3]copyright [4]Wikipedia Atom
+   feed
+
+John Kanzius
+
+   From Wikipedia, the free encyclopedia
+   Jump to: [5]navigation, [6]search
+   This article is about the inventor John Kanzius. For the 15th century
+   theologian, see [7]John Cantius.
+                       John S. Kanzius
+        Born      March 1, 1944(1944-03-01)
+                  [8]Washington, Pennsylvania, United States
+        Died      February 18, 2009(2009-02-18) (aged 64)
+                  [9]Fort Myers, Florida, United States
+   Cause of death [10]Pneumonia
+     Residence    [11]Sanibel, Florida, United States
+     Home town    [12]Erie, Pennsylvania, United States
+
+   John S. Kanzius (March 1, 1944 – February 18, 2009) was an American
+   inventor, radio and TV engineer, one-time station owner and [13]ham
+   radio operator (Call Sign K3TUP) from [14]Erie, Pennsylvania. He
+   invented a method that has the potential to treat cancer, inspired by
+   his own such battle.^[15][1] ^[16][2] He also demonstrated a device
+   that generated flammable hydrogen-containing gas from
+   salt-water-solution by the use of radiowaves. In the media this was
+   dubbed "burning salt water". Both effects involve the use of his
+   [17]radio frequency [18]transmitter.
+
+   Kanzius, an [19]autodidact, stated that he was motivated to research
+   the subject of cancer treatment by his own experiences undergoing
+   [20]chemotherapy for treatment of [21]non-Hodgkin's
+   lymphoma.^[22][3]^[23][4]
+
+   Contents
+
+        * [24]1 Cancer therapy
+        * [25]2 Water-related discovery
+        * [26]3 Death
+        * [27]4 Patent applications
+        * [28]5 See also
+        * [29]6 References
+        * [30]7 External links
+
+[[31]edit] Cancer therapy
+
+   [32]Kanzius RF Therapy is an [33]experimental cancer treatment that
+   employs a combination of either [34]gold or [35]carbon
+   [36]nanoparticles and [37]radio waves to heat and destroy cancer cells
+   without damaging healthy cells.^[38][5]^[39][6]^[40][7]
+
+   The [41]specific absorption rate for radio waves by living tissue in
+   the proposed wavelengths and intensity levels is very low. Metals
+   absorb this energy much more efficiently than tissue through
+   [42]dielectric heating; [43]Richard Smalley has suggested that
+   [44]carbon nanotubes could be used to similar purpose.^[45][8] If
+   nanoparticles were to be preferentially bound to cancer sites, cancer
+   cells could be destroyed or induced into [46]apoptosis while leaving
+   healthy tissue relatively unharmed.^[47][9] This preferential targeting
+   represents a major technical challenge. According to a presentation by
+   Dr. Steven Curley, the types of cancer potentially treatable using
+   Kanzius RF therapy include essentially all forms of cancer.^[48][10]
+
+   Kanzius built a prototype Kanzius RF device in his home, and formed
+   Therm Med., LLC to test and market his inventions.^[49][11]^[50][12]
+   The device was successfully tested at [51]University of Pittsburgh
+   Medical Center in 2005.^[52][2] As of 2007-04-23, preliminary research
+   using the device at [53]The University of Texas M. D. Anderson Cancer
+   Center^[54][13]^[55][14]^[56][15] and the [57]University of Pittsburgh
+   Medical Center^[58][11] has shown early promise. If federal approval is
+   granted, testing on human patients may follow.^[59][9]^[60][16]^[61][4]
+   An article published in late 2010 illustrates that radiofrequency
+   fields induce intracellular hyperthermia and necrosis in pancreatic
+   tumors without injury to the human pancreatic tissue grafts tested.
+   ^[62][17]
+
+[[63]edit] Water-related discovery
+
+   Later in 2007, Kanzius announced that the same [64]radio frequency
+   [65]transmitter can also be used to generate a hydrogen-oxygen mixture
+   dissociated from [66]salt water.^[67][14]^[68][18] The discovery was
+   made accidentally while he was researching the use of radio waves for
+   [69]desalination. Kanzius said that "In this case we weren't looking
+   for energy, we were looking for something that might do desalinization.
+   The more we tried desalinization, the more heat we produced, until we
+   got fire".^[70][18] Kanzius admitted that this process could not be
+   considered an energy source, as more energy is used to produce the RF
+   signal than can be obtained from the burning gas and stated in July
+   2007 that he never claimed his discovery would replace oil, asserting
+   only that his discovery was "thought provoking."^[71][19] The details
+   of the process are still unreleased pending the issuance of a
+   patent.^[72][19]
+
+   Kanzius proposed that the flame is produced by burning of hydrogen and
+   oxygen, released from the water by radio waves "forcing together" the
+   "normally separated" hydrogen and oxygen in the water, a process he
+   calls "reunification". ^[73][19] In water (H[2]O), hydrogen is
+   [74]covalently bonded to oxygen, and thus the process must "reunite"
+   pairs of hydrogen atoms and pairs of oxygen atoms, releasing
+   di[75]hydrogen (H[2]) and di[76]oxygen (O[2]). The energy from the
+   radio waves is absorbed by the water and splits the water into hydrogen
+   and oxygen which then react together to reform the water and re-release
+   the energy and form a flame. In other words, the process turns radio
+   energy into chemical energy, which then turns to heat and light energy,
+   but does not "take energy from water". Rather, energy is put into the
+   water in order to break it up into its components, which now may
+   combust. The [77]water torch, a form of [78]oxyhydrogen torch, is an
+   earlier example of the process of breaking down water and then
+   recombining oxygen and hydrogen to release heat and light
+   energy.^[[79]citation needed]
+
+   Nevertheless, this discovery may be a clean way to break down water
+   into its elements and perhaps a cheaper way than [80]electrolysis which
+   in most forms produces toxic output from chemical reactions with the
+   electrodes, or otherwise is produced with platinum electrodes, which
+   are very expensive. It is difficult to compare the processes without
+   detailed analysis.^[[81]citation needed]
+
+   Kanzius' experiment has been confirmed by [82]Rustum Roy, a materials
+   scientist at [83]Pennsylvania State University, in a demonstration
+   before the Material Science faculty, using Kanzius' RF
+   transceiver^[84][20], which Kanzius had brought to the lab for the
+   day.^[85][14] On his website, Roy writes: "It is clear that Mr. Kanzius
+   has demonstrated the ability to dissociate aqueous solutions of sodium
+   chloride at normal sea water concentrations into hydrogen and
+   oxygen."^[86][21]^[87][14]^[88][18]
+
+   According to Roy, "The salt water isn't burning per se, despite
+   appearances. The radio frequencies act to weaken the bonds between the
+   elements that make up salt water, releasing the hydrogen. Once ignited,
+   the hydrogen will burn as long as it is exposed to the
+   frequencies."^[89][22] The temperature and flame color varies with
+   water solutions and concentrations.^[90][22]
+
+[[91]edit] Death
+
+   John Kanzius died from [92]pneumonia on February 18, 2009, aged 64, at
+   a hospital near [93]Sanibel, Florida, where he had a winter home. The
+   pneumonia developed as complication after two recent rounds of
+   [94]chemotherapy.^[95][23]^[96][24]
+
+[[97]edit] Patent applications
+
+   Published [98]patent applications as of September 16, 2007:
+     * [99]WO application 2005120639
+
+   Systems and methods for Combined RF-induced hyperthermia and
+   radioimmunotherapy
+     * [100]WO application 2005110544  Systems and methods for RF-induced
+       hyperthermia
+     * [101]US application 2006190063  Enhanced systems and methods for
+       RF-induced hyperthermia
+     * [102]EP application 1758648  Enhanced systems and methods for
+       RF-induced hyperthermia
+     * [103]WO application 2007027620  Enhanced systems and methods for
+       RF-induced hyperthermia II
+
+[[104]edit] See also
+
+   [105]Crystal energy.svg [106]Energy portal
+     * [107]Hydrogen production
+     * [108]Electrolysis of water
+     * [109]Laws of thermodynamics
+
+[[110]edit] References
+
+    1. [111]^ Christopher J. Gannon, MD; Paul Cherukuri, PhD, Boris I.
+       Yakobson, PhD, Laurent Cognet, PhD, John S. Kanzius, Carter
+       Kittrell, PhD, R. Bruce Weisman, PhD, Matteo Pasquali, PhD, Howard
+       K. Schmidt, PhD, [112]Richard E. Smalley, PhD, Steven A. Curley, MD
+       (October 24, 2007). [113]"Carbon nanotube-enhanced thermal
+       destruction of cancer cells in a noninvasive radiofrequency field".
+       Cancer (Wiley) 110 (12): 2654. [114]doi:[115]10.1002/cncr.23155.
+       [116]PMID [117]17960610.
+       [118]http://www3.interscience.wiley.com/cgi-bin/fulltext/116834125/
+       HTMLSTART?CRETRY=1&SRETRY=0. Retrieved 2007-10-31. "Our results
+       demonstrate that [119]SWNTs can be used as a therapeutic agent to
+       treat malignant tumors through RF-induced thermoablation, not just
+       as a vector for the delivery of anticancer agents.".
+    2. ^ [120]^a [121]^b Klune, J.R.; Jeyabalan, G., Chory, E.S., Kanzius,
+       J., Geller, D.A. (February 2007). [122]"Pilot investigation of a
+       new instrument for non-invasive radiofrequency ablation of cancer".
+       Journal of Surgical Research 137 (2): 263.
+       [123]doi:[124]10.1016/j.jss.2006.12.293.
+       [125]http://linkinghub.elsevier.com/retrieve/pii/S0022480406009127.
+       Retrieved 2007-09-17. "Exposure to the radiowave ﬁeld produced
+       [126]in vitro cell death as well as [127]in vivo tissue destruction
+       when metal ion enhancer solutions were utilized. Future work will
+       focus on specific tumor destruction with tagged enhancer solutions
+       and targeting of in vivo tumors.".
+    3. [128]^ [129]Associated Press (2005-05-11). [130]"Center to Test
+       Radio Wave Cancer Treatment". [131]First Coast News.
+       [132]http://www.firstcoastnews.com/news/usworld/news-article.aspx?s
+       toryid=37036. Retrieved 2007-09-15.
+    4. ^ [133]^a [134]^b [135]"Cancer Patient Invents Treatment Machine".
+       CBS13. August 27, 2007. Archived from [136]the original on
+       2007-08-31.
+       [137]http://web.archive.org/web/20070831092126/http://cbs13.com/hea
+       lth/health_story_240004016.html. Retrieved 2007-09-10.
+    5. [138]^ [139]doi:[140]10.1002/cncr.23155
+    6. [141]^ Paul Cherukuri; Christopher J. Gannon, Tonya K. Leeuw,
+       Howard K. Schmidt, [142]Richard E. Smalley, Steven A. Curley and R.
+       Bruce Weisman (2006-12-12). [143]"Mammalian pharmacokinetics of
+       carbon nanotubes using intrinsic near-infrared fluorescence" (PDF).
+       Proceedings of the National Academy of Sciences of the United
+       States of America 103 (50): 18882–86.
+       [144]doi:[145]10.1073/pnas.0609265103. [146]PMID [147]17135351.
+       [148]PMC [149]1665645.
+       [150]http://www.pnas.org/cgi/reprint/103/50/18882.pdf.
+    7. [151]^ C. J. Gannon, P. Mukherjee and S. A. Curley. [152]"In vitro
+       gold nanoparticle targeting enhances non-invasive radiofrequency
+       destruction of human gastrointestinal malignancies".
+       [153]http://www.asco.org/portal/site/ASCO/menuitem.34d60f5624ba07fd
+       506fe310ee37a01d/?vgnextoid=76f8201eb61a7010VgnVCM100000ed730ad1RCR
+       D&vmview=abst_detail_view&confID=45&abstractID=10550.  Poster
+       presented at the 2007 Gastrointestinal Cancers Symposium by Dr.
+       Christopher J. Gannon, M.D.
+    8. [154]^ Peter Panepento (2007). [155]"Cancer Therapy Takes Next
+       Step". Erie Times-News. Archived from [156]the original on
+       2007-11-21.
+       [157]http://web.archive.org/web/20071121143205/http://www.redorbit.
+       com/news/health/439566/cancer_therapy_takes_next_step. Retrieved
+       2007-10-31.
+    9. ^ [158]^a [159]^b [160]"'Hurst hosts Kanzius cancer symposium".
+       Mercyhurst College. 2007-04-23. Archived from [161]the original on
+       2007-11-17.
+       [162]http://web.archive.org/web/20071117065604/http://www.mercyhurs
+       t.edu/news/press_releases/detail.php?id=1081&m=04&y=2007. Retrieved
+       2007-09-16.
+   10. [163]^ [164]RF-Induced Thermal Destruction of Cancer Cells
+       Presentation by Steven Curley, accessed November 2, 2007^[[165]dead
+       link]
+   11. ^ [166]^a [167]^b [168]"Cancer survivor John Kanzius isn't a
+       doctor". [169]Fox News. 2007-05-11.
+       [170]http://www.foxnews.com/story/0,2933,156268,00.html. Retrieved
+       2007-09-16.
+   12. [171]^ David Templeton (2005-02-20). [172]"UPMC set to test cancer
+       treatment". Pittsburgh Post-Gazette.
+       [173]http://www.post-gazette.com/pg/05051/459069.stm. Retrieved
+       2007-10-31.
+   13. [174]^ [175]"Bio for Dr. Steven A. Curley". [176]Alliance for
+       NanoHealth. 2007-02-13. Archived from [177]the original on
+       2008-02-23.
+       [178]http://web.archive.org/web/20080223230556/http://www.nanohealt
+       halliance.org/events-2/events-1/nanoparticles-as-intracellular-targ
+       ets-to-produce-rf-induced-thermal-destruction-of-cancer-cells/.
+       Retrieved 2007-09-16.
+   14. ^ [179]^a [180]^b [181]^c [182]^d O'Mara, Michael (2007-09-12).
+       [183]"Salt water fuel gets major university review". [184]WKYC.
+       [185]http://www.wkyc.com/news/news_article.aspx?storyid=74285.
+       Retrieved 2007-09-14.  Note: This video transcript, although
+       published in September 2007, contains quotes by Kanzius from May,
+       as the video contained archive footage. For more information,
+       please see [186]the discussion on this issue.
+   15. [187]^ Gannon, Christopher J.; Cherukuri, Paul; Yakobson, Boris I.;
+       Cognet, Laurent; Kanzius, John S.; Kittrell, Carter; Weisman, R.
+       Bruce; Pasquali, Matteo; Schmidt, Howard K.; Smalley, Richard E.;
+       Curley, Steven A. (2007). "Carbon nanotube-enhanced thermal
+       destruction of cancer cells in a noninvasive radiofrequency field".
+       Cancer December 2007 (12): 2654. [188]doi:[189]10.1002/cncr.23155.
+       [190]PMID [191]17960610.
+   16. [192]^ David Templeton (2007-05-02). [193]"Cancer research inspires
+       Erie community". [194]Pittsburgh Post-Gazette.
+       [195]http://www.post-gazette.com/pg/07122/782492-114.stm. Retrieved
+       2007-09-17. "Dr. Curley has submitted two research manuscripts for
+       publication and was unable to provide the latest results. But he
+       said he is testing the treatment of human cancer strains in
+       animals. (...) "This is the most exciting new therapy for cancer
+       that I have seen in over 20 years of cancer research," he said."
+   17. [196]^ {{cite journal|journal=Clinical Cancer Research
+       |title=Noninvasive Radiofrequency Field Destruction of Pancreatic
+       Adenocarcinoma Xenografts Treated with Targeted Gold Nanoparticles
+       |coauthors=Steven A. Curley and Evan S.
+       Glazer|url=[197]http://www.kanziuscancerresearch.org/_files/docs/fi
+       le_117.pdf
+   18. ^ [198]^a [199]^b [200]^c O'Mara, Michael. (September 12 2007).
+       [201]Burning Water. Erie, P.A.: [202]WKYC.
+       [203]http://wm.wkyc.gannett.edgestreams.net/news/20070912_saltwater
+       burn11_wkyc.wmv. Retrieved 2007-09-14.  Note: This broadcast video,
+       although aired in September 2007, contains archive footage of John
+       Kanzius from May 2007. For more information, please see [204]the
+       discussion on this issue.
+   19. ^ [205]^a [206]^b [207]^c Ogden, Shannon (2007-07-05). [208]"Salt
+       Water Fuel". [209]First Coast News.
+       [210]http://www.firstcoastnews.com/news/mostpopular/news-article.as
+       px?storyid=85990&provider=top. Retrieved 2007-07-26.
+   20. [211]^ Roy, Rustum (2007-09-14). [212]"Response to email".
+       rustumroy.com. [213]http://www.rustumroy.com/response_to_email.htm.
+       Retrieved 2007-09-15.
+   21. [214]^ Roy, Rustum (2007-09-14). [215]"Response to email".
+       rustumroy.com. [216]http://www.rustumroy.com/response_to_email.htm.
+       Retrieved 2007-09-15.
+   22. ^ [217]^a [218]^b Templeton, David (2007-09-09). [219]"Salt water
+       as fuel? Erie man hopes so". [220]Pittsburgh Post-Gazette.
+       [221]http://www.post-gazette.com/pg/07252/815920-85.stm. Retrieved
+       2007-09-10.
+   23. [222]^ [223]"John Kanzius has died". [224]Erie Times-News.
+       [225]http://www.goerie.com/apps/pbcs.dll/article?AID=/20090218/NEWS
+       02/902189983. Retrieved February 18, 2009.
+   24. [226]^ [227]"Sanibel remembers innovator John Kanzius". Fort Myers
+       News-Press.
+       [228]http://www.news-press.com/article/20090305/NEWS0116/903050325/
+       1075. Retrieved March 5, 2009. ^[[229]dead link]
+
+[[230]edit] External links
+
+     * [231]Unlikely Hero- Mike G. Update
+     * [232]John Kanzius Cancer Research Official Web Site
+     * [233]The Kanzius Project published by the [234]Erie Times-News
+     * [235]WJET 24 - Erie news story
+     * [236]WSEE 35 - Erie news story
+     * [237]Florida Man Invents Machine To Turn Water Into Fire wpbf-TV
+     * [238]WKYC 3/Cleveland news
+     * Templeton, David (2007-09-09). [239]"Salt water as fuel? Erie man
+       hopes so". [240]Pittsburgh Post-Gazette.
+       [241]http://www.post-gazette.com/pg/07252/815920-85.stm. Retrieved
+       2009-04-08.
+     * [242]"Sending his cancer a signal" [243]Los Angeles Times article
+       (November 2, 2007)
+     * [244]"The Kanzius Machine: A Cancer Cure?" [245]60 Minutes story
+
+                          [246]Persondata
+   Name              Kanzius, John
+   Alternative names
+   Short description
+   Date of birth     1944-03-01
+   Place of birth    [247]Washington, Pennsylvania, United States
+   Date of death     2009-02-18
+   Place of death    [248]Fort Myers, Florida, United States
+   Retrieved from "[249]http://en.wikipedia.org/wiki/John_Kanzius"
+   [250]Categories: [251]1944 births | [252]2009 deaths | [253]American
+   businesspeople | [254]American engineers | [255]American inventors |
+   [256]Cancer deaths in Florida | [257]Deaths from leukemia | [258]Deaths
+   from lymphoma | [259]Deaths from pneumonia | [260]American people of
+   Slovenian descent | [261]American people of Ukrainian descent |
+   [262]American people of Austrian descent | [263]Russian Orthodox
+   Christians | [264]Episcopalian Christians | [265]People from Erie,
+   Pennsylvania
+   Hidden categories: [266]All articles with dead external links |
+   [267]Articles with dead external links from October 2010 |
+   [268]Articles with hCards | [269]All articles with unsourced statements
+   | [270]Articles with unsourced statements from October 2009
+
+Personal tools
+
+     * [271]Log in / create account
+
+Namespaces
+
+     * [272]Article
+     * [273]Discussion
+
+Variants
+
+Views
+
+     * [274]Read
+     * [275]Edit
+     * [276]View history
+
+Actions
+
+Search
+
+   ____________________ (Submit) Search
+
+Navigation
+
+     * [277]Main page
+     * [278]Contents
+     * [279]Featured content
+     * [280]Current events
+     * [281]Random article
+     * [282]Donate to Wikipedia
+
+Interaction
+
+     * [283]Help
+     * [284]About Wikipedia
+     * [285]Community portal
+     * [286]Recent changes
+     * [287]Contact Wikipedia
+
+Toolbox
+
+     * [288]What links here
+     * [289]Related changes
+     * [290]Upload file
+     * [291]Special pages
+     * [292]Permanent link
+     * [293]Cite this page
+
+Print/export
+
+     * [294]Create a book
+     * [295]Download as PDF
+     * [296]Printable version
+
+Languages
+
+     * [297]Català
+     * [298]Français
+     * [299]Italiano
+     * [300]Nederlands
+
+     * This page was last modified on 15 January 2011 at 13:23.
+     * Text is available under the [301]Creative Commons
+       Attribution-ShareAlike License; additional terms may apply. See
+       [302]Terms of Use for details.
+       Wikipedia® is a registered trademark of the [303]Wikimedia
+       Foundation, Inc., a non-profit organization.
+     * [304]Contact us
+
+     * [305]Privacy policy
+     * [306]About Wikipedia
+     * [307]Disclaimers
+
+     * [308]Powered by MediaWiki
+     * [309]Wikimedia Foundation
+
+References
+
+   Visible links
+   1. file://localhost/w/index.php?title=John_Kanzius&action=edit
+   2. file://localhost/w/opensearch_desc.php
+   3. http://creativecommons.org/licenses/by-sa/3.0/
+   4. file://localhost/w/index.php?title=Special:RecentChanges&feed=atom
+   5. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#mw-head
+   6. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#p-search
+   7. file://localhost/wiki/John_Cantius
+   8. file://localhost/wiki/Washington,_Pennsylvania
+   9. file://localhost/wiki/Fort_Myers,_Florida
+  10. file://localhost/wiki/Pneumonia
+  11. file://localhost/wiki/Sanibel,_Florida
+  12. file://localhost/wiki/Erie,_Pennsylvania
+  13. file://localhost/wiki/Ham_radio
+  14. file://localhost/wiki/Erie,_Pennsylvania
+  15. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-doi:10.1002.2Fcncr.23155-0
+  16. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-j.surgicalresearch-vol137issue2-1
+  17. file://localhost/wiki/Radio_frequency
+  18. file://localhost/wiki/Transmitter
+  19. file://localhost/wiki/Autodidacticism
+  20. file://localhost/wiki/Chemotherapy
+  21. file://localhost/wiki/Non-Hodgkin%27s_lymphoma
+  22. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-ap-news-2005-05-2
+  23. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-cbs-3
+  24. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#Cancer_therapy
+  25. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#Water-related_discovery
+  26. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#Death
+  27. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#Patent_applications
+  28. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#See_also
+  29. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#References
+  30. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#External_links
+  31. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=1
+  32. file://localhost/wiki/Kanzius_RF_Therapy
+  33. file://localhost/wiki/Experimental_cancer_treatment
+  34. file://localhost/wiki/Colloidal_gold
+  35. file://localhost/wiki/Carbon_nanotube
+  36. file://localhost/wiki/Nanoparticles
+  37. file://localhost/wiki/Radio_wave
+  38. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-4
+  39. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-doi:10.1073.2Fpnas.0609265103-5
+  40. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-asco-2007-poster-6
+  41. file://localhost/wiki/Specific_absorption_rate
+  42. file://localhost/wiki/Dielectric_heating
+  43. file://localhost/wiki/Richard_Smalley
+  44. file://localhost/wiki/Carbon_nanotubes
+  45. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-Cancer_Therapy_Takes_Next_Step-7
+  46. file://localhost/wiki/Apoptosis
+  47. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-mercyhurst-2007-04-8
+  48. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-9
+  49. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-foxnews-2007-05-10
+  50. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-UPMC_set_to_test_cancer_treatment-11
+  51. file://localhost/wiki/University_of_Pittsburgh_Medical_Center
+  52. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-j.surgicalresearch-vol137issue2-1
+  53. file://localhost/wiki/The_University_of_Texas_M._D._Anderson_Cancer_Center
+  54. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-curley-bio-2007-02-12
+  55. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-09-12-web-13
+  56. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-Carbon_nanotube-enhanced_thermal_destruction_of_cancer_cells_in_a_noninvasive_radiofrequency_field-14
+  57. file://localhost/wiki/University_of_Pittsburgh_Medical_Center
+  58. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-foxnews-2007-05-10
+  59. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-mercyhurst-2007-04-8
+  60. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-post-gazette-2007-04-mercyhurst-15
+  61. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-cbs-3
+  62. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-CCR-2010-12-16
+  63. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=2
+  64. file://localhost/wiki/Radio_frequency
+  65. file://localhost/wiki/Transmitter
+  66. file://localhost/wiki/Seawater
+  67. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-09-12-web-13
+  68. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-sep-12-video-17
+  69. file://localhost/wiki/Desalination
+  70. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-sep-12-video-17
+  71. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-saltwater1-18
+  72. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-saltwater1-18
+  73. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-saltwater1-18
+  74. file://localhost/wiki/Covalent_bond
+  75. file://localhost/wiki/Hydrogen
+  76. file://localhost/wiki/Oxygen
+  77. file://localhost/wiki/Water_torch
+  78. file://localhost/wiki/Oxyhydrogen
+  79. file://localhost/wiki/Wikipedia:Citation_needed
+  80. file://localhost/wiki/Electrolysis_of_water
+  81. file://localhost/wiki/Wikipedia:Citation_needed
+  82. file://localhost/wiki/Rustum_Roy
+  83. file://localhost/wiki/Pennsylvania_State_University
+  84. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-rustumroy.com-responsetoemail-19
+  85. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-09-12-web-13
+  86. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-rustumroy.com-response...........................................................................................................................................toemail-20
+  87. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-09-12-web-13
+  88. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-wkyc-sep-12-video-17
+  89. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-post-gazette-sep-9-21
+  90. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-post-gazette-sep-9-21
+  91. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=3
+  92. file://localhost/wiki/Pneumonia
+  93. file://localhost/wiki/Sanibel,_Florida
+  94. file://localhost/wiki/Chemotherapy
+  95. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-22
+  96. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_note-23
+  97. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=4
+  98. file://localhost/wiki/Patent_application
+  99. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=WO2005120639
+ 100. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=WO2005110544
+ 101. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=US2006190063
+ 102. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=EP1758648
+ 103. http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=WO2007027620
+ 104. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=5
+ 105. file://localhost/wiki/File:Crystal_energy.svg
+ 106. file://localhost/wiki/Portal:Energy
+ 107. file://localhost/wiki/Hydrogen_production
+ 108. file://localhost/wiki/Electrolysis_of_water
+ 109. file://localhost/wiki/Laws_of_thermodynamics
+ 110. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=6
+ 111. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-doi:10.1002.2Fcncr.23155_0-0
+ 112. file://localhost/wiki/Richard_E._Smalley
+ 113. http://www3.interscience.wiley.com/cgi-bin/fulltext/116834125/HTMLSTART?CRETRY=1&SRETRY=0
+ 114. file://localhost/wiki/Digital_object_identifier
+ 115. http://dx.doi.org/10.1002%2Fcncr.23155
+ 116. file://localhost/wiki/PubMed_Identifier
+ 117. http://www.ncbi.nlm.nih.gov/pubmed/17960610
+ 118. http://www3.interscience.wiley.com/cgi-bin/fulltext/116834125/HTMLSTART?CRETRY=1&SRETRY=0
+ 119. file://localhost/wiki/Carbon_nanotube#Single-walled
+ 120. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-j.surgicalresearch-vol137issue2_1-0
+ 121. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-j.surgicalresearch-vol137issue2_1-1
+ 122. http://linkinghub.elsevier.com/retrieve/pii/S0022480406009127
+ 123. file://localhost/wiki/Digital_object_identifier
+ 124. http://dx.doi.org/10.1016%2Fj.jss.2006.12.293
+ 125. http://linkinghub.elsevier.com/retrieve/pii/S0022480406009127
+ 126. file://localhost/wiki/In_vitro
+ 127. file://localhost/wiki/In_vivo
+ 128. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-ap-news-2005-05_2-0
+ 129. file://localhost/wiki/Associated_Press
+ 130. http://www.firstcoastnews.com/news/usworld/news-article.aspx?storyid=37036
+ 131. file://localhost/wiki/First_Coast_News
+ 132. http://www.firstcoastnews.com/news/usworld/news-article.aspx?storyid=37036
+ 133. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-cbs_3-0
+ 134. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-cbs_3-1
+ 135. http://web.archive.org/web/20070831092126/http://cbs13.com/health/health_story_240004016.html
+ 136. http://cbs13.com/health/health_story_240004016.html
+ 137. http://web.archive.org/web/20070831092126/http://cbs13.com/health/health_story_240004016.html
+ 138. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-4
+ 139. file://localhost/wiki/Digital_object_identifier
+ 140. http://dx.doi.org/10.1002%2Fcncr.23155
+ 141. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-doi:10.1073.2Fpnas.0609265103_5-0
+ 142. file://localhost/wiki/Richard_E._Smalley
+ 143. http://www.pnas.org/cgi/reprint/103/50/18882.pdf
+ 144. file://localhost/wiki/Digital_object_identifier
+ 145. http://dx.doi.org/10.1073%2Fpnas.0609265103
+ 146. file://localhost/wiki/PubMed_Identifier
+ 147. http://www.ncbi.nlm.nih.gov/pubmed/17135351
+ 148. file://localhost/wiki/PubMed_Central
+ 149. http://www.pubmedcentral.gov/articlerender.fcgi?tool=pmcentrez&artid=1665645
+ 150. http://www.pnas.org/cgi/reprint/103/50/18882.pdf
+ 151. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-asco-2007-poster_6-0
+ 152. http://www.asco.org/portal/site/ASCO/menuitem.34d60f5624ba07fd506fe310ee37a01d/?vgnextoid=76f8201eb61a7010VgnVCM100000ed730ad1RCRD&vmview=abst_detail_view&confID=45&abstractID=10550
+ 153. http://www.asco.org/portal/site/ASCO/menuitem.34d60f5624ba07fd506fe310ee37a01d/?vgnextoid=76f8201eb61a7010VgnVCM100000ed730ad1RCRD&vmview=abst_detail_view&confID=45&abstractID=10550
+ 154. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-Cancer_Therapy_Takes_Next_Step_7-0
+ 155. http://web.archive.org/web/20071121143205/http://www.redorbit.com/news/health/439566/cancer_therapy_takes_next_step
+ 156. http://www.redorbit.com/news/health/439566/cancer_therapy_takes_next_step
+ 157. http://web.archive.org/web/20071121143205/http://www.redorbit.com/news/health/439566/cancer_therapy_takes_next_step
+ 158. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-mercyhurst-2007-04_8-0
+ 159. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-mercyhurst-2007-04_8-1
+ 160. http://web.archive.org/web/20071117065604/http://www.mercyhurst.edu/news/press_releases/detail.php?id=1081&m=04&y=2007
+ 161. http://www.mercyhurst.edu/news/press_releases/detail.php?id=1081&m=04&y=2007
+ 162. http://web.archive.org/web/20071117065604/http://www.mercyhurst.edu/news/press_releases/detail.php?id=1081&m=04&y=2007
+ 163. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-9
+ 164. http://www.manp.org/assets/pdf/erieapril2007.pdf
+ 165. file://localhost/wiki/Wikipedia:Link_rot
+ 166. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-foxnews-2007-05_10-0
+ 167. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-foxnews-2007-05_10-1
+ 168. http://www.foxnews.com/story/0,2933,156268,00.html
+ 169. file://localhost/wiki/Fox_News
+ 170. http://www.foxnews.com/story/0,2933,156268,00.html
+ 171. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-UPMC_set_to_test_cancer_treatment_11-0
+ 172. http://www.post-gazette.com/pg/05051/459069.stm
+ 173. http://www.post-gazette.com/pg/05051/459069.stm
+ 174. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-curley-bio-2007-02_12-0
+ 175. http://web.archive.org/web/20080223230556/http://www.nanohealthalliance.org/events-2/events-1/nanoparticles-as-intracellular-targets-to-produce-rf-induced-thermal-destruction-of-cancer-cells/
+ 176. file://localhost/w/index.php?title=Alliance_for_NanoHealth&action=edit&redlink=1
+ 177. http://www.nanohealthalliance.org/events-2/events-1/nanoparticles-as-intracellular-targets-to-produce-rf-induced-thermal-destruction-of-cancer-cells/
+ 178. http://web.archive.org/web/20080223230556/http://www.nanohealthalliance.org/events-2/events-1/nanoparticles-as-intracellular-targets-to-produce-rf-induced-thermal-destruction-of-cancer-cells/
+ 179. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-09-12-web_13-0
+ 180. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-09-12-web_13-1
+ 181. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-09-12-web_13-2
+ 182. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-09-12-web_13-3
+ 183. http://www.wkyc.com/news/news_article.aspx?storyid=74285
+ 184. file://localhost/wiki/WKYC
+ 185. http://www.wkyc.com/news/news_article.aspx?storyid=74285
+ 186. file://localhost/wiki/Talk:John_Kanzius#Warning:_Energy_quotes_dating_issues_on_web_.26_video
+ 187. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-Carbon_nanotube-enhanced_thermal_destruction_of_cancer_cells_in_a_noninvasive_radiofrequency_field_14-0
+ 188. file://localhost/wiki/Digital_object_identifier
+ 189. http://dx.doi.org/10.1002%2Fcncr.23155
+ 190. file://localhost/wiki/PubMed_Identifier
+ 191. http://www.ncbi.nlm.nih.gov/pubmed/17960610
+ 192. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-post-gazette-2007-04-mercyhurst_15-0
+ 193. http://www.post-gazette.com/pg/07122/782492-114.stm
+ 194. file://localhost/wiki/Pittsburgh_Post-Gazette
+ 195. http://www.post-gazette.com/pg/07122/782492-114.stm
+ 196. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-CCR-2010-12_16-0
+ 197. http://www.kanziuscancerresearch.org/_files/docs/file_117.pdf
+ 198. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-sep-12-video_17-0
+ 199. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-sep-12-video_17-1
+ 200. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-wkyc-sep-12-video_17-2
+ 201. http://wm.wkyc.gannett.edgestreams.net/news/20070912_saltwaterburn11_wkyc.wmv
+ 202. file://localhost/wiki/WKYC
+ 203. http://wm.wkyc.gannett.edgestreams.net/news/20070912_saltwaterburn11_wkyc.wmv
+ 204. file://localhost/wiki/Talk:John_Kanzius#Warning:_Energy_quotes_dating_issues_on_web_.26_video
+ 205. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-saltwater1_18-0
+ 206. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-saltwater1_18-1
+ 207. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-saltwater1_18-2
+ 208. http://www.firstcoastnews.com/news/mostpopular/news-article.aspx?storyid=85990&provider=top
+ 209. file://localhost/wiki/First_Coast_News
+ 210. http://www.firstcoastnews.com/news/mostpopular/news-article.aspx?storyid=85990&provider=top
+ 211. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-rustumroy.com-responsetoemail_19-0
+ 212. http://www.rustumroy.com/response_to_email.htm
+ 213. http://www.rustumroy.com/response_to_email.htm
+ 214. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-rustumroy.com-response...........................................................................................................................................toemail_20-0
+ 215. http://www.rustumroy.com/response_to_email.htm
+ 216. http://www.rustumroy.com/response_to_email.htm
+ 217. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-post-gazette-sep-9_21-0
+ 218. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-post-gazette-sep-9_21-1
+ 219. http://www.post-gazette.com/pg/07252/815920-85.stm
+ 220. file://localhost/wiki/Pittsburgh_Post-Gazette
+ 221. http://www.post-gazette.com/pg/07252/815920-85.stm
+ 222. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-22
+ 223. http://www.goerie.com/apps/pbcs.dll/article?AID=/20090218/NEWS02/902189983
+ 224. file://localhost/wiki/Erie_Times-News
+ 225. http://www.goerie.com/apps/pbcs.dll/article?AID=/20090218/NEWS02/902189983
+ 226. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html#cite_ref-23
+ 227. http://www.news-press.com/article/20090305/NEWS0116/903050325/1075
+ 228. http://www.news-press.com/article/20090305/NEWS0116/903050325/1075
+ 229. file://localhost/wiki/Wikipedia:Link_rot
+ 230. file://localhost/w/index.php?title=John_Kanzius&action=edit&section=7
+ 231. http://atlanta.artactivism.com/commentary/unlikely-hero/
+ 232. http://www.kanziuscancerresearch.com/
+ 233. http://goerie.com/kanzius
+ 234. file://localhost/wiki/Erie_Times-News
+ 235. http://yourerie.com/media_player.php?media_id=1357
+ 236. http://www.youtube.com/watch?v=BtmK3hwYO6U
+ 237. http://www.wpbf.com/news/13383827/detail.html
+ 238. http://www.youtube.com/watch?v=aGg0ATfoBgo
+ 239. http://www.post-gazette.com/pg/07252/815920-85.stm
+ 240. file://localhost/wiki/Pittsburgh_Post-Gazette
+ 241. http://www.post-gazette.com/pg/07252/815920-85.stm
+ 242. http://www.southcoasttoday.com/apps/pbcs.dll/article?AID=/20071111/NEWS/711110306
+ 243. file://localhost/wiki/Los_Angeles_Times
+ 244. http://www.cbsnews.com/stories/2008/04/10/60minutes/main4006951.shtml
+ 245. file://localhost/wiki/60_Minutes
+ 246. file://localhost/wiki/Wikipedia:Persondata
+ 247. file://localhost/wiki/Washington,_Pennsylvania
+ 248. file://localhost/wiki/Fort_Myers,_Florida
+ 249. http://en.wikipedia.org/wiki/John_Kanzius
+ 250. file://localhost/wiki/Special:Categories
+ 251. file://localhost/wiki/Category:1944_births
+ 252. file://localhost/wiki/Category:2009_deaths
+ 253. file://localhost/wiki/Category:American_businesspeople
+ 254. file://localhost/wiki/Category:American_engineers
+ 255. file://localhost/wiki/Category:American_inventors
+ 256. file://localhost/wiki/Category:Cancer_deaths_in_Florida
+ 257. file://localhost/wiki/Category:Deaths_from_leukemia
+ 258. file://localhost/wiki/Category:Deaths_from_lymphoma
+ 259. file://localhost/wiki/Category:Deaths_from_pneumonia
+ 260. file://localhost/wiki/Category:American_people_of_Slovenian_descent
+ 261. file://localhost/wiki/Category:American_people_of_Ukrainian_descent
+ 262. file://localhost/wiki/Category:American_people_of_Austrian_descent
+ 263. file://localhost/wiki/Category:Russian_Orthodox_Christians
+ 264. file://localhost/w/index.php?title=Category:Episcopalian_Christians&action=edit&redlink=1
+ 265. file://localhost/wiki/Category:People_from_Erie,_Pennsylvania
+ 266. file://localhost/wiki/Category:All_articles_with_dead_external_links
+ 267. file://localhost/wiki/Category:Articles_with_dead_external_links_from_October_2010
+ 268. file://localhost/wiki/Category:Articles_with_hCards
+ 269. file://localhost/wiki/Category:All_articles_with_unsourced_statements
+ 270. file://localhost/wiki/Category:Articles_with_unsourced_statements_from_October_2009
+ 271. file://localhost/w/index.php?title=Special:UserLogin&returnto=John_Kanzius
+ 272. file://localhost/wiki/John_Kanzius
+ 273. file://localhost/wiki/Talk:John_Kanzius
+ 274. file://localhost/wiki/John_Kanzius
+ 275. file://localhost/w/index.php?title=John_Kanzius&action=edit
+ 276. file://localhost/w/index.php?title=John_Kanzius&action=history
+ 277. file://localhost/wiki/Main_Page
+ 278. file://localhost/wiki/Portal:Contents
+ 279. file://localhost/wiki/Portal:Featured_content
+ 280. file://localhost/wiki/Portal:Current_events
+ 281. file://localhost/wiki/Special:Random
+ 282. http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&language=en&utm_source=donate&utm_medium=sidebar&utm_campaign=20101204SB002
+ 283. file://localhost/wiki/Help:Contents
+ 284. file://localhost/wiki/Wikipedia:About
+ 285. file://localhost/wiki/Wikipedia:Community_portal
+ 286. file://localhost/wiki/Special:RecentChanges
+ 287. file://localhost/wiki/Wikipedia:Contact_us
+ 288. file://localhost/wiki/Special:WhatLinksHere/John_Kanzius
+ 289. file://localhost/wiki/Special:RecentChangesLinked/John_Kanzius
+ 290. file://localhost/wiki/Wikipedia:Upload
+ 291. file://localhost/wiki/Special:SpecialPages
+ 292. file://localhost/w/index.php?title=John_Kanzius&oldid=408014029
+ 293. file://localhost/w/index.php?title=Special:Cite&page=John_Kanzius&id=408014029
+ 294. file://localhost/w/index.php?title=Special:Book&bookcmd=book_creator&referer=John+Kanzius
+ 295. file://localhost/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=John+Kanzius&oldid=408014029&writer=rl
+ 296. file://localhost/w/index.php?title=John_Kanzius&printable=yes
+ 297. http://ca.wikipedia.org/wiki/John_Kanzius
+ 298. http://fr.wikipedia.org/wiki/John_Kanzius
+ 299. http://it.wikipedia.org/wiki/John_Kanzius
+ 300. http://nl.wikipedia.org/wiki/John_Kanzius
+ 301. http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+ 302. http://wikimediafoundation.org/wiki/Terms_of_Use
+ 303. http://www.wikimediafoundation.org/
+ 304. http://en.wikipedia.org/wiki/Wikipedia:Contact_us
+ 305. http://wikimediafoundation.org/wiki/Privacy_policy
+ 306. file://localhost/wiki/Wikipedia:About
+ 307. file://localhost/wiki/Wikipedia:General_disclaimer
+ 308. http://www.mediawiki.org/
+ 309. http://wikimediafoundation.org/
+
+   Hidden links:
+ 310. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html
+ 311. file://localhost/home/memfis/projects/put/tsiss/Downloads/john_kanzius.html
+ 312. file://localhost/wiki/Main_Page
+ 313. http://creativecommons.org/licenses/by-sa/3.0/
