@@ -11,7 +11,8 @@
     <RootNamespace>FlightFinder</RootNamespace>
     <AssemblyName>FlightFinder</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,6 +35,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Data.Services">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Linq">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Db4objects.Db4o.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Reflection">
+      <HintPath>..\packages\db4o-devel.8.1.184.15492\lib\net40\Mono.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz.Contracts">
+      <HintPath>..\packages\QuickGraph.3.3.51106.0\lib\net35\CodeContracts\QuickGraph.Graphviz.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,10 +78,38 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Chrome">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.Chrome.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Common">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Firefox">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.Firefox.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.IE">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.IE.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Remote">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.Remote.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Remote.Common">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\WebDriver.Remote.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Webdriver.Support">
+      <HintPath>..\packages\SeleniumDotNet.2.0.3\lib\net20\Webdriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
