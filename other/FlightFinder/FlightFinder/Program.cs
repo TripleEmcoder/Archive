@@ -251,7 +251,7 @@ namespace FlightFinder
                 }
 
                 var localAirports = new[] { "POZ", "WRO", "BZG" };
-                var extraAirports = new[] { "NRN" };
+                var extraAirports = new[] { "NRN", "RYG" };
                 var airports = localAirports.Concat(extraAirports);
                 var from = "_FROM";
                 var to = "_TO";
@@ -262,24 +262,24 @@ namespace FlightFinder
                 var fromRoutes = allRoutes.Where(route => airports.Contains(route.Source)).ToArray();
                 var toRoutes = allRoutes.Where(route => airports.Contains(route.Target)).ToArray();
 
-                //using (var driver = new FirefoxDriver())
-                //{
-                //    foreach (var routes in new[] { fromRoutes, toRoutes })
-                //        foreach (var route in routes)
-                //        {
-                //            if (IsIgnoredRoute(route))
-                //                continue;
+                using (var driver = new FirefoxDriver())
+                {
+                    foreach (var routes in new[] { fromRoutes, toRoutes })
+                        foreach (var route in routes)
+                        {
+                            if (IsIgnoredRoute(route))
+                                continue;
 
-                //            var flights = cache.AsQueryable<Flight>()
-                //                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
+                            var flights = cache.AsQueryable<Flight>()
+                                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
 
-                //            if (!flights.Any())
-                //            {
-                //                LoadFlights(cache, route, driver, when, weeks);
-                //                cache.Commit();
-                //            }
-                //        }
-                //}
+                            if (!flights.Any())
+                            {
+                                LoadFlights(cache, route, driver, when, weeks);
+                                cache.Commit();
+                            }
+                        }
+                }
 
                 var allFlights = cache.AsQueryable<Flight>().ToArray();
                 var fromFlights = allFlights.Where(flight => fromRoutes.Any(route => flight.Source == route.Source && flight.Target == route.Target));
