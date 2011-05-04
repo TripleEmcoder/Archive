@@ -307,12 +307,15 @@ namespace FlightFinder
                 Console.WriteLine(string.Join(", ", path));
         }
 
-        private static object GetPathDuration(IEnumerable<Edge<string>> path)
+        private static TimeSpan GetPathDuration(IEnumerable<Edge<string>> path)
         {
             var flights = path.OfType<Flight>()
                 .Where(flight => flight.Tag.When > DateTime.MinValue)
                 .Where(flight => flight.Tag.When < DateTime.MaxValue)
                 .ToArray();
+
+            if (!flights.Any())
+                return TimeSpan.Zero;
 
             return flights.Last().Tag.When - flights.First().Tag.When;
         }
