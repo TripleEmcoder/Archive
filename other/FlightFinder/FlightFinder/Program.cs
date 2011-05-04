@@ -298,11 +298,28 @@ namespace FlightFinder
 
         private static void FindRoutes(BidirectionalGraph<string, Edge<string>> graph, string from, string to)
         {
-            foreach (var path in graph.RankedShortestPathHoffmanPavley(edge => edge is Flight ? (edge as Flight).Tag.Price : 100000, from, to, 1000))
-            {
-                if (IsValidPath(path))
-                    Console.WriteLine(string.Join(", ", path));
-            }
+            var paths = graph
+                .RankedShortestPathHoffmanPavley(GetEdgeWeight, from, to, 500)
+                .Where(IsValidPath)
+                .OrderByDescending(GetPathDuration);
+
+            foreach (var path in paths)
+                Console.WriteLine(string.Join(", ", path));
+        }
+
+        private static object GetPathDuration(IEnumerable<Edge<string>> path)
+        {
+            var flights = path.OfType<Flight>()
+                .Where(flight => flight.Tag.When > DateTime.MinValue)
+                .Where(flight => flight.Tag.When < DateTime.MaxValue)
+                .ToArray();
+
+            return flights.Last().Tag.When - flights.First().Tag.When;
+        }
+
+        private static double GetEdgeWeight(Edge<string> edge)
+        {
+            return edge is Flight ? (edge as Flight).Tag.Price : 100000;
         }
 
         private static bool IsIgnoredRoute(Route route)
