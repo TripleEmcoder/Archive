@@ -262,28 +262,36 @@ namespace FlightFinder
                 var fromRoutes = allRoutes.Where(route => airports.Contains(route.Source)).ToArray();
                 var toRoutes = allRoutes.Where(route => airports.Contains(route.Target)).ToArray();
 
-                using (var driver = new FirefoxDriver())
-                {
-                    foreach (var routes in new[] { fromRoutes, toRoutes })
-                        foreach (var route in routes)
-                        {
-                            if (IsIgnoredRoute(route))
-                                continue;
+                //using (var driver = new FirefoxDriver())
+                //{
+                //    foreach (var routes in new[] { fromRoutes, toRoutes })
+                //        foreach (var route in routes)
+                //        {
+                //            if (IsIgnoredRoute(route))
+                //                continue;
 
-                            var flights = cache.AsQueryable<Flight>()
-                                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
+                //            var flights = cache.AsQueryable<Flight>()
+                //                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
 
-                            if (!flights.Any())
-                            {
-                                LoadFlights(cache, route, driver, when, weeks);
-                                cache.Commit();
-                            }
-                        }
-                }
+                //            if (!flights.Any())
+                //            {
+                //                LoadFlights(cache, route, driver, when, weeks);
+                //                cache.Commit();
+                //            }
+                //        }
+                //}
 
                 var allFlights = cache.AsQueryable<Flight>().ToArray();
                 var fromFlights = allFlights.Where(flight => fromRoutes.Any(route => flight.Source == route.Source && flight.Target == route.Target));
                 var toFlights = allFlights.Where(flight => toRoutes.Any(route => flight.Source == route.Source && flight.Target == route.Target));
+
+                foreach (var g in allFlights
+                    .GroupBy(f => f.Source + "-" + f.Target, f => f.Tag.Price)
+                    .OrderByDescending(g => g.Min()/g.Count()))
+                {
+                    
+                    Console.WriteLine(g.Key + " - " + g.Min() + " - " + g.Count());
+                }
 
                 var graph = new BidirectionalGraph<string, Edge<string>>();
                 graph.AddVerticesAndEdgeRange(fromFlights);
