@@ -262,36 +262,24 @@ namespace FlightFinder
                 var fromRoutes = allRoutes.Where(route => airports.Contains(route.Source)).ToArray();
                 var toRoutes = allRoutes.Where(route => airports.Contains(route.Target)).ToArray();
 
-                using (var driver = new FirefoxDriver())
-                {
-                    foreach (var routes in new[] { fromRoutes, toRoutes })
-                        foreach (var route in routes)
-                        {
-                            if (route.Source == "WRO" && route.Target == "CIA")
-                                continue;
+                //using (var driver = new FirefoxDriver())
+                //{
+                //    foreach (var routes in new[] { fromRoutes, toRoutes })
+                //        foreach (var route in routes)
+                //        {
+                //            if (IsIgnoredRoute(route))
+                //                continue;
 
-                            if (route.Source == "CIA" && route.Target == "WRO")
-                                continue;
+                //            var flights = cache.AsQueryable<Flight>()
+                //                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
 
-                            if (route.Source == "AOC" || route.Target == "AOC")
-                                continue;
-
-                            if (route.Source == "TSF" || route.Target == "TSF")
-                                continue;
-
-                            if (route.Source == "VCE" || route.Target == "VCE")
-                                continue;
-
-                            var flights = cache.AsQueryable<Flight>()
-                                .Where(flight => flight.Source == route.Source && flight.Target == route.Target);
-
-                            if (!flights.Any())
-                            {
-                                LoadFlights(cache, route, driver, when, weeks);
-                                cache.Commit();
-                            }
-                        }
-                }
+                //            if (!flights.Any())
+                //            {
+                //                LoadFlights(cache, route, driver, when, weeks);
+                //                cache.Commit();
+                //            }
+                //        }
+                //}
 
                 var allFlights = cache.AsQueryable<Flight>().ToArray();
                 var fromFlights = allFlights.Where(flight => fromRoutes.Any(route => flight.Source == route.Source && flight.Target == route.Target));
@@ -304,9 +292,57 @@ namespace FlightFinder
                 graph.AddVerticesAndEdgeRange(localAirports.Select(airport => new Flight(from, airport, DateTime.MinValue, 0)));
                 graph.AddVerticesAndEdgeRange(localAirports.Select(airport => new Flight(airport, to, DateTime.MaxValue, 0)));
 
-                foreach (var path in graph.RankedShortestPathHoffmanPavley(edge => edge is Flight ? (edge as Flight).Tag.Price : 100000, from, to, 30))
+                FindRoutes(graph, from, to);
+            }
+        }
+
+        private static void FindRoutes(BidirectionalGraph<string, Edge<string>> graph, string from, string to)
+        {
+            foreach (var path in graph.RankedShortestPathHoffmanPavley(edge => edge is Flight ? (edge as Flight).Tag.Price : 100000, from, to, 1000))
+            {
+                if (IsValidPath(path))
                     Console.WriteLine(string.Join(", ", path));
             }
+        }
+
+        private static bool IsIgnoredRoute(Route route)
+        {
+            if (route.Source == "WRO" && route.Target == "CIA")
+                return true;
+
+            if (route.Source == "CIA" && route.Target == "WRO")
+                return true;
+
+            if (route.Source == "AOC" || route.Target == "AOC")
+                return true;
+
+            if (route.Source == "TSF" || route.Target == "TSF")
+                return true;
+
+            if (route.Source == "VCE" || route.Target == "VCE")
+                return true;
+
+            return false;
+        }
+
+        private static bool IsValidPath(IEnumerable<Edge<string>> path)
+        {
+            var now = DateTime.MinValue;
+
+            foreach (var edge in path)
+            {
+                if (edge is Flight)
+                {
+                    var flight = (edge as Flight);
+
+                    if (now > flight.Tag.When)
+                        return false;
+
+                    now = flight.Tag.When;
+                }
+            }
+
+            return true;
         }
 
         private static void LoadFlights(IEmbeddedObjectContainer cache, Route route, FirefoxDriver driver, DateTime when, int weeks)
