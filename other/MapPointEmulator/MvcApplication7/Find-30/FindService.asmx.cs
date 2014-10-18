@@ -99,8 +99,12 @@ namespace MvcApplication7.Find_30
 
             //                };
 
-            Thread.Sleep(100);
-            var result = response.Results.Where(IsBestChoice).Select(GetLocation).ToArray();
+            Thread.Sleep(250);
+            var result = response.Results
+                .Where(IsBestChoice)
+                .Select(GetLocation)
+                .ToArray();
+
             return result;
         }
 
@@ -149,7 +153,8 @@ namespace MvcApplication7.Find_30
 
         private static string GetSubdivision(Result result)
         {
-            return GetComponent(result, "administrative_area_level_1");
+            return GetComponent(result, "administrative_area_level_1")
+                   ?? GetComponent(result, "country");
         }
 
         private static string GetPrimaryCity(Result result)
