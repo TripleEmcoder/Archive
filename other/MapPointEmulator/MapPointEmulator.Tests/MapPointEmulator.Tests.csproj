@@ -50,7 +50,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MvcApplication7\MvcApplication7.csproj">
+    <ProjectReference Include="..\MapPointEmulator\MapPointEmulator.csproj">
       <Project>{27821125-3b01-4a61-862f-eedadce5a8ce}</Project>
       <Name>MvcApplication7</Name>
     </ProjectReference>
