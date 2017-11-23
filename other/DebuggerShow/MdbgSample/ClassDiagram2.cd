@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgProcess">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Property Name="AppDomains" Hidden="true" />
+      <Method Name="AsyncStop" Hidden="true" />
+      <Method Name="AttachToDump" Hidden="true" />
+      <Method Name="BindToExistingClrInTarget" Hidden="true" />
+      <Method Name="CanExecute" Hidden="true" />
+      <Property Name="CorDebugger" Hidden="true" />
+      <Property Name="CorProcess" Hidden="true" />
+      <Property Name="DebuggerVars" Hidden="true" />
+      <Property Name="DebugMode" Hidden="true" />
+      <Property Name="DumpReader" Hidden="true" />
+      <Property Name="EnableUserEntryBreakpoint" Hidden="true" />
+      <Property Name="IsAlive" Hidden="true" />
+      <Property Name="IsRunning" Hidden="true" />
+      <Property Name="LibraryProvider" Hidden="true" />
+      <Method Name="MDbgProcess" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Method Name="NativeProcessCreated" Hidden="true" />
+      <Property Name="Number" Hidden="true" />
+      <Property Name="RawModeType" Hidden="true" />
+      <Method Name="RegisterCustomBreakpoint" Hidden="true" />
+      <Method Name="RegisterCustomEval" Hidden="true" />
+      <Method Name="RegisterCustomStepper" Hidden="true" />
+      <Method Name="ResolveClass" Hidden="true" />
+      <Method Name="ResolveFunctionName" Hidden="true" />
+      <Method Name="ResolveFunctionNameFromScope" Hidden="true" />
+      <Method Name="ResolveType" Hidden="true" />
+      <Method Name="ResolveVariable" Hidden="true" />
+      <Method Name="SetActiveStepper" Hidden="true" />
+      <Property Name="StopEvent" Hidden="true" />
+      <Property Name="StopReason" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgProcess.RawMode" Collapsed="true">
+        <TypeIdentifier />
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Breakpoints" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Threads" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgBreakpointCollection">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <Members>
+      <Method Name="Lookup" Hidden="true" />
+      <Property Name="Item" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgFunction">
+    <Position X="8" Y="1" Width="2.25" />
+    <Members>
+      <Property Name="CorFunction" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="GetIPFromLine" Hidden="true" />
+      <Method Name="GetSourcePositionFromFrame" Hidden="true" />
+      <Method Name="GetSourcePositionFromIP" Hidden="true" />
+      <Method Name="GetStepRangesFromIP" Hidden="true" />
+      <Property Name="Module" Hidden="true" />
+      <Field Name="SpecialSequencePoint" Hidden="true" />
+      <Property Name="SymMethod" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgThread">
+    <Position X="4" Y="3.75" Width="2.5" />
+    <Members>
+      <Property Name="BottomFrame" Hidden="true" />
+      <Property Name="CorThread" Hidden="true" />
+      <Property Name="HaveCurrentFrame" Hidden="true" />
+      <Property Name="Id" Hidden="true" />
+      <Method Name="InvalidateStackWalker" Hidden="true" />
+      <Method Name="LookupFrame" Hidden="true" />
+      <Method Name="MoveCurrentFrame" Hidden="true" />
+      <Property Name="Number" Hidden="true" />
+      <Property Name="Suspended" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="CurrentFrame" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.Samples.Debugging.MdbgEngine.MDbgFrame">
+    <Position X="8" Y="3.75" Width="2.25" />
+    <Members>
+      <Method Name="Equals" Hidden="true" />
+      <Method Name="GetHashCode" Hidden="true" />
+      <Property Name="IsInfoOnly" Hidden="true" />
+      <Method Name="MDbgFrame" Hidden="true" />
+      <Method Name="op_Inequality" Hidden="true" />
+      <Method Name="op_Equality" Hidden="true" />
+      <Property Name="Thread" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Function" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

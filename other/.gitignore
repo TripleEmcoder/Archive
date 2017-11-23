@@ -2,3 +2,6 @@
 bin
 obj
 packages
+*.suo
+_ReSharper.*
+*.user

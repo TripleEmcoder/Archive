@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="Microsoft.Samples.Debugging.CorDebug.NativeApi.ICorDebugProcess">
+    <Position X="3.25" Y="2.5" Width="2" />
+    <Members>
+      <Method Name="CanCommitChanges" Hidden="true" />
+      <Method Name="ClearCurrentException" Hidden="true" />
+      <Method Name="CommitChanges" Hidden="true" />
+      <Method Name="EnableLogMessages" Hidden="true" />
+      <Method Name="EnumerateAppDomains" Hidden="true" />
+      <Method Name="EnumerateObjects" Hidden="true" />
+      <Method Name="GetHandle" Hidden="true" />
+      <Method Name="GetHelperThreadID" Hidden="true" />
+      <Method Name="GetID" Hidden="true" />
+      <Method Name="GetObject" Hidden="true" />
+      <Method Name="GetThread" Hidden="true" />
+      <Method Name="HasQueuedCallbacks" Hidden="true" />
+      <Method Name="IsOSSuspended" Hidden="true" />
+      <Method Name="IsRunning" Hidden="true" />
+      <Method Name="IsTransitionStub" Hidden="true" />
+      <Method Name="ModifyLogSwitch" Hidden="true" />
+      <Method Name="SetAllThreadsDebugState" Hidden="true" />
+      <Method Name="ThreadForFiberCookie" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.Samples.Debugging.CorDebug.NativeApi.ICorDebug">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="CanLaunchOrAttach" Hidden="true" />
+      <Method Name="GetProcess" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="SetUnmanagedHandler" Hidden="true" />
+      <Method Name="Terminate" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.Samples.Debugging.CorDebug.NativeApi.ICorDebugManagedCallback">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <Members>
+      <Method Name="BreakpointSetError" Hidden="true" />
+      <Method Name="ControlCTrap" Hidden="true" />
+      <Method Name="CreateAppDomain" Hidden="true" />
+      <Method Name="CreateProcess" Hidden="true" />
+      <Method Name="DebuggerError" Hidden="true" />
+      <Method Name="EditAndContinueRemap" Hidden="true" />
+      <Method Name="EvalException" Hidden="true" />
+      <Method Name="ExitAppDomain" Hidden="true" />
+      <Method Name="ExitProcess" Hidden="true" />
+      <Method Name="LoadClass" Hidden="true" />
+      <Method Name="LogMessage" Hidden="true" />
+      <Method Name="LogSwitch" Hidden="true" />
+      <Method Name="UnloadAssembly" Hidden="true" />
+      <Method Name="UnloadClass" Hidden="true" />
+      <Method Name="UnloadModule" Hidden="true" />
+      <Method Name="UpdateModuleSymbols" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.Samples.Debugging.CorDebug.NativeApi.ICorDebugFunction">
+    <Position X="5.75" Y="1.5" Width="2.25" />
+    <Members>
+      <Method Name="GetClass" Hidden="true" />
+      <Method Name="GetCurrentVersionNumber" Hidden="true" />
+      <Method Name="GetILCode" Hidden="true" />
+      <Method Name="GetLocalVarSigToken" Hidden="true" />
+      <Method Name="GetModule" Hidden="true" />
+      <Method Name="GetNativeCode" Hidden="true" />
+      <Method Name="GetToken" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.Samples.Debugging.CorDebug.NativeApi.ICorDebugFunctionBreakpoint">
+    <Position X="5.75" Y="4" Width="2.25" />
+    <Members>
+      <Method Name="Activate" Hidden="true" />
+      <Method Name="GetFunction" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
